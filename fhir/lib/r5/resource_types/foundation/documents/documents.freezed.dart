@@ -5974,3 +5974,385 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
   _$DocumentReferenceContentCopyWith<_DocumentReferenceContent> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+DocumentReferenceProfile _$DocumentReferenceProfileFromJson(
+    Map<String, dynamic> json) {
+  return _DocumentReferenceProfile.fromJson(json);
+}
+
+/// @nodoc
+class _$DocumentReferenceProfileTearOff {
+  const _$DocumentReferenceProfileTearOff();
+
+  _DocumentReferenceProfile call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding? valueCoding,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement}) {
+    return _DocumentReferenceProfile(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      valueCoding: valueCoding,
+      valueUri: valueUri,
+      valueUriElement: valueUriElement,
+      valueCanonical: valueCanonical,
+      valueCanonicalElement: valueCanonicalElement,
+    );
+  }
+
+  DocumentReferenceProfile fromJson(Map<String, Object?> json) {
+    return DocumentReferenceProfile.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DocumentReferenceProfile = _$DocumentReferenceProfileTearOff();
+
+/// @nodoc
+mixin _$DocumentReferenceProfile {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUri')
+  Element? get valueUriElement => throw _privateConstructorUsedError;
+  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueCanonical')
+  Element? get valueCanonicalElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DocumentReferenceProfileCopyWith<DocumentReferenceProfile> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DocumentReferenceProfileCopyWith<$Res> {
+  factory $DocumentReferenceProfileCopyWith(DocumentReferenceProfile value,
+          $Res Function(DocumentReferenceProfile) then) =
+      _$DocumentReferenceProfileCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding? valueCoding,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement});
+
+  $CodingCopyWith<$Res>? get valueCoding;
+  $ElementCopyWith<$Res>? get valueUriElement;
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
+}
+
+/// @nodoc
+class _$DocumentReferenceProfileCopyWithImpl<$Res>
+    implements $DocumentReferenceProfileCopyWith<$Res> {
+  _$DocumentReferenceProfileCopyWithImpl(this._value, this._then);
+
+  final DocumentReferenceProfile _value;
+  // ignore: unused_field
+  final $Res Function(DocumentReferenceProfile) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? valueCoding = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $CodingCopyWith<$Res>? get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.valueCoding!, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUriElement!, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueCanonicalElement {
+    if (_value.valueCanonicalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueCanonicalElement!, (value) {
+      return _then(_value.copyWith(valueCanonicalElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$DocumentReferenceProfileCopyWith<$Res>
+    implements $DocumentReferenceProfileCopyWith<$Res> {
+  factory _$DocumentReferenceProfileCopyWith(_DocumentReferenceProfile value,
+          $Res Function(_DocumentReferenceProfile) then) =
+      __$DocumentReferenceProfileCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding? valueCoding,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement});
+
+  @override
+  $CodingCopyWith<$Res>? get valueCoding;
+  @override
+  $ElementCopyWith<$Res>? get valueUriElement;
+  @override
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
+}
+
+/// @nodoc
+class __$DocumentReferenceProfileCopyWithImpl<$Res>
+    extends _$DocumentReferenceProfileCopyWithImpl<$Res>
+    implements _$DocumentReferenceProfileCopyWith<$Res> {
+  __$DocumentReferenceProfileCopyWithImpl(_DocumentReferenceProfile _value,
+      $Res Function(_DocumentReferenceProfile) _then)
+      : super(_value, (v) => _then(v as _DocumentReferenceProfile));
+
+  @override
+  _DocumentReferenceProfile get _value =>
+      super._value as _DocumentReferenceProfile;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? valueCoding = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+  }) {
+    return _then(_DocumentReferenceProfile(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
+  _$_DocumentReferenceProfile(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.valueCoding,
+      this.valueUri,
+      @JsonKey(name: '_valueUri') this.valueUriElement,
+      this.valueCanonical,
+      @JsonKey(name: '_valueCanonical') this.valueCanonicalElement})
+      : super._();
+
+  factory _$_DocumentReferenceProfile.fromJson(Map<String, dynamic> json) =>
+      _$$_DocumentReferenceProfileFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Coding? valueCoding;
+  @override
+  final FhirUri? valueUri;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element? valueUriElement;
+  @override
+  final Canonical? valueCanonical;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  final Element? valueCanonicalElement;
+
+  @override
+  String toString() {
+    return 'DocumentReferenceProfile(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueCoding: $valueCoding, valueUri: $valueUri, valueUriElement: $valueUriElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DocumentReferenceProfile &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCoding, valueCoding) &&
+            const DeepCollectionEquality().equals(other.valueUri, valueUri) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUriElement, valueUriElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCanonical, valueCanonical) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCanonicalElement, valueCanonicalElement));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(valueCoding),
+      const DeepCollectionEquality().hash(valueUri),
+      const DeepCollectionEquality().hash(valueUriElement),
+      const DeepCollectionEquality().hash(valueCanonical),
+      const DeepCollectionEquality().hash(valueCanonicalElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DocumentReferenceProfileCopyWith<_DocumentReferenceProfile> get copyWith =>
+      __$DocumentReferenceProfileCopyWithImpl<_DocumentReferenceProfile>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DocumentReferenceProfileToJson(this);
+  }
+}
+
+abstract class _DocumentReferenceProfile extends DocumentReferenceProfile {
+  factory _DocumentReferenceProfile(
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Coding? valueCoding,
+          FhirUri? valueUri,
+          @JsonKey(name: '_valueUri') Element? valueUriElement,
+          Canonical? valueCanonical,
+          @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement}) =
+      _$_DocumentReferenceProfile;
+  _DocumentReferenceProfile._() : super._();
+
+  factory _DocumentReferenceProfile.fromJson(Map<String, dynamic> json) =
+      _$_DocumentReferenceProfile.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Coding? get valueCoding;
+  @override
+  FhirUri? get valueUri;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element? get valueUriElement;
+  @override
+  Canonical? get valueCanonical;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  Element? get valueCanonicalElement;
+  @override
+  @JsonKey(ignore: true)
+  _$DocumentReferenceProfileCopyWith<_DocumentReferenceProfile> get copyWith =>
+      throw _privateConstructorUsedError;
+}

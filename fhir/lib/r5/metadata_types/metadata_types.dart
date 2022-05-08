@@ -108,7 +108,7 @@ class Contributor with _$Contributor {
   factory Contributor({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-     ContributorType? type,
+    ContributorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -300,8 +300,7 @@ class DataRequirementSort with _$DataRequirementSort {
     List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    
-        DataRequirementSortDirection? direction,
+    DataRequirementSortDirection? direction,
     @JsonKey(name: '_direction') Element? directionElement,
   }) = _DataRequirementSort;
 
@@ -394,8 +393,7 @@ class RelatedArtifact with _$RelatedArtifact {
   factory RelatedArtifact({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    
-        RelatedArtifactType? type,
+    RelatedArtifactType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
@@ -446,8 +444,7 @@ class TriggerDefinition with _$TriggerDefinition {
   factory TriggerDefinition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    
-        TriggerDefinitionType? type,
+    TriggerDefinitionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,

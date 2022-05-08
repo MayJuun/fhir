@@ -4887,6 +4887,295 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       throw _privateConstructorUsedError;
 }
 
+AllergyIntoleranceParticipant _$AllergyIntoleranceParticipantFromJson(
+    Map<String, dynamic> json) {
+  return _AllergyIntoleranceParticipant.fromJson(json);
+}
+
+/// @nodoc
+class _$AllergyIntoleranceParticipantTearOff {
+  const _$AllergyIntoleranceParticipantTearOff();
+
+  _AllergyIntoleranceParticipant call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      required Reference actor}) {
+    return _AllergyIntoleranceParticipant(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      function: function,
+      actor: actor,
+    );
+  }
+
+  AllergyIntoleranceParticipant fromJson(Map<String, Object?> json) {
+    return AllergyIntoleranceParticipant.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $AllergyIntoleranceParticipant = _$AllergyIntoleranceParticipantTearOff();
+
+/// @nodoc
+mixin _$AllergyIntoleranceParticipant {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get function => throw _privateConstructorUsedError;
+  Reference get actor => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AllergyIntoleranceParticipantCopyWith<AllergyIntoleranceParticipant>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AllergyIntoleranceParticipantCopyWith<$Res> {
+  factory $AllergyIntoleranceParticipantCopyWith(
+          AllergyIntoleranceParticipant value,
+          $Res Function(AllergyIntoleranceParticipant) then) =
+      _$AllergyIntoleranceParticipantCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      Reference actor});
+
+  $CodeableConceptCopyWith<$Res>? get function;
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+/// @nodoc
+class _$AllergyIntoleranceParticipantCopyWithImpl<$Res>
+    implements $AllergyIntoleranceParticipantCopyWith<$Res> {
+  _$AllergyIntoleranceParticipantCopyWithImpl(this._value, this._then);
+
+  final AllergyIntoleranceParticipant _value;
+  // ignore: unused_field
+  final $Res Function(AllergyIntoleranceParticipant) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? function = freezed,
+    Object? actor = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get function {
+    if (_value.function == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.function!, (value) {
+      return _then(_value.copyWith(function: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get actor {
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$AllergyIntoleranceParticipantCopyWith<$Res>
+    implements $AllergyIntoleranceParticipantCopyWith<$Res> {
+  factory _$AllergyIntoleranceParticipantCopyWith(
+          _AllergyIntoleranceParticipant value,
+          $Res Function(_AllergyIntoleranceParticipant) then) =
+      __$AllergyIntoleranceParticipantCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      Reference actor});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get function;
+  @override
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+/// @nodoc
+class __$AllergyIntoleranceParticipantCopyWithImpl<$Res>
+    extends _$AllergyIntoleranceParticipantCopyWithImpl<$Res>
+    implements _$AllergyIntoleranceParticipantCopyWith<$Res> {
+  __$AllergyIntoleranceParticipantCopyWithImpl(
+      _AllergyIntoleranceParticipant _value,
+      $Res Function(_AllergyIntoleranceParticipant) _then)
+      : super(_value, (v) => _then(v as _AllergyIntoleranceParticipant));
+
+  @override
+  _AllergyIntoleranceParticipant get _value =>
+      super._value as _AllergyIntoleranceParticipant;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? function = freezed,
+    Object? actor = freezed,
+  }) {
+    return _then(_AllergyIntoleranceParticipant(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_AllergyIntoleranceParticipant extends _AllergyIntoleranceParticipant {
+  _$_AllergyIntoleranceParticipant(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.function,
+      required this.actor})
+      : super._();
+
+  factory _$_AllergyIntoleranceParticipant.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_AllergyIntoleranceParticipantFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final CodeableConcept? function;
+  @override
+  final Reference actor;
+
+  @override
+  String toString() {
+    return 'AllergyIntoleranceParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function: $function, actor: $actor)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _AllergyIntoleranceParticipant &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.function, function) &&
+            const DeepCollectionEquality().equals(other.actor, actor));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(function),
+      const DeepCollectionEquality().hash(actor));
+
+  @JsonKey(ignore: true)
+  @override
+  _$AllergyIntoleranceParticipantCopyWith<_AllergyIntoleranceParticipant>
+      get copyWith => __$AllergyIntoleranceParticipantCopyWithImpl<
+          _AllergyIntoleranceParticipant>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_AllergyIntoleranceParticipantToJson(this);
+  }
+}
+
+abstract class _AllergyIntoleranceParticipant
+    extends AllergyIntoleranceParticipant {
+  factory _AllergyIntoleranceParticipant(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      required Reference actor}) = _$_AllergyIntoleranceParticipant;
+  _AllergyIntoleranceParticipant._() : super._();
+
+  factory _AllergyIntoleranceParticipant.fromJson(Map<String, dynamic> json) =
+      _$_AllergyIntoleranceParticipant.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  CodeableConcept? get function;
+  @override
+  Reference get actor;
+  @override
+  @JsonKey(ignore: true)
+  _$AllergyIntoleranceParticipantCopyWith<_AllergyIntoleranceParticipant>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 AllergyIntoleranceReaction _$AllergyIntoleranceReactionFromJson(
     Map<String, dynamic> json) {
   return _AllergyIntoleranceReaction.fromJson(json);
@@ -8344,6 +8633,288 @@ abstract class _Condition extends Condition {
   @override
   @JsonKey(ignore: true)
   _$ConditionCopyWith<_Condition> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ConditionParticipant _$ConditionParticipantFromJson(Map<String, dynamic> json) {
+  return _ConditionParticipant.fromJson(json);
+}
+
+/// @nodoc
+class _$ConditionParticipantTearOff {
+  const _$ConditionParticipantTearOff();
+
+  _ConditionParticipant call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      required Reference actor}) {
+    return _ConditionParticipant(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      function: function,
+      actor: actor,
+    );
+  }
+
+  ConditionParticipant fromJson(Map<String, Object?> json) {
+    return ConditionParticipant.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ConditionParticipant = _$ConditionParticipantTearOff();
+
+/// @nodoc
+mixin _$ConditionParticipant {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get function => throw _privateConstructorUsedError;
+  Reference get actor => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConditionParticipantCopyWith<ConditionParticipant> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConditionParticipantCopyWith<$Res> {
+  factory $ConditionParticipantCopyWith(ConditionParticipant value,
+          $Res Function(ConditionParticipant) then) =
+      _$ConditionParticipantCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      Reference actor});
+
+  $CodeableConceptCopyWith<$Res>? get function;
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+/// @nodoc
+class _$ConditionParticipantCopyWithImpl<$Res>
+    implements $ConditionParticipantCopyWith<$Res> {
+  _$ConditionParticipantCopyWithImpl(this._value, this._then);
+
+  final ConditionParticipant _value;
+  // ignore: unused_field
+  final $Res Function(ConditionParticipant) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? function = freezed,
+    Object? actor = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get function {
+    if (_value.function == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.function!, (value) {
+      return _then(_value.copyWith(function: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get actor {
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$ConditionParticipantCopyWith<$Res>
+    implements $ConditionParticipantCopyWith<$Res> {
+  factory _$ConditionParticipantCopyWith(_ConditionParticipant value,
+          $Res Function(_ConditionParticipant) then) =
+      __$ConditionParticipantCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      Reference actor});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get function;
+  @override
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+/// @nodoc
+class __$ConditionParticipantCopyWithImpl<$Res>
+    extends _$ConditionParticipantCopyWithImpl<$Res>
+    implements _$ConditionParticipantCopyWith<$Res> {
+  __$ConditionParticipantCopyWithImpl(
+      _ConditionParticipant _value, $Res Function(_ConditionParticipant) _then)
+      : super(_value, (v) => _then(v as _ConditionParticipant));
+
+  @override
+  _ConditionParticipant get _value => super._value as _ConditionParticipant;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? function = freezed,
+    Object? actor = freezed,
+  }) {
+    return _then(_ConditionParticipant(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ConditionParticipant extends _ConditionParticipant {
+  _$_ConditionParticipant(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.function,
+      required this.actor})
+      : super._();
+
+  factory _$_ConditionParticipant.fromJson(Map<String, dynamic> json) =>
+      _$$_ConditionParticipantFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final CodeableConcept? function;
+  @override
+  final Reference actor;
+
+  @override
+  String toString() {
+    return 'ConditionParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function: $function, actor: $actor)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ConditionParticipant &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.function, function) &&
+            const DeepCollectionEquality().equals(other.actor, actor));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(function),
+      const DeepCollectionEquality().hash(actor));
+
+  @JsonKey(ignore: true)
+  @override
+  _$ConditionParticipantCopyWith<_ConditionParticipant> get copyWith =>
+      __$ConditionParticipantCopyWithImpl<_ConditionParticipant>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConditionParticipantToJson(this);
+  }
+}
+
+abstract class _ConditionParticipant extends ConditionParticipant {
+  factory _ConditionParticipant(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      required Reference actor}) = _$_ConditionParticipant;
+  _ConditionParticipant._() : super._();
+
+  factory _ConditionParticipant.fromJson(Map<String, dynamic> json) =
+      _$_ConditionParticipant.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  CodeableConcept? get function;
+  @override
+  Reference get actor;
+  @override
+  @JsonKey(ignore: true)
+  _$ConditionParticipantCopyWith<_ConditionParticipant> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

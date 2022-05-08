@@ -11,7 +11,6 @@ enum BiologicallyDerivedProductProductCategory {
   cells,
   @JsonValue('biologicalAgent')
   biologicalagent,
-
 }
 
 enum BiologicallyDerivedProductStatus {
@@ -19,7 +18,6 @@ enum BiologicallyDerivedProductStatus {
   available,
   @JsonValue('unavailable')
   unavailable,
-
 }
 
 enum BiologicallyDerivedProductStorageScale {
@@ -29,7 +27,6 @@ enum BiologicallyDerivedProductStorageScale {
   celsius,
   @JsonValue('kelvin')
   kelvin,
-
 }
 
 enum DeviceStatus {
@@ -39,7 +36,6 @@ enum DeviceStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
-
 }
 
 enum DeviceUdiCarrierEntryType {
@@ -55,7 +51,6 @@ enum DeviceUdiCarrierEntryType {
   self_reported,
   @JsonValue('electronic-transmission')
   electronic_transmission,
-
 }
 
 enum DeviceDeviceNameType {
@@ -71,7 +66,6 @@ enum DeviceDeviceNameType {
   model_name,
   @JsonValue('other')
   other,
-
 }
 
 enum DeviceMetricOperationalStatus {
@@ -83,7 +77,6 @@ enum DeviceMetricOperationalStatus {
   standby,
   @JsonValue('entered-in-error')
   entered_in_error,
-
 }
 
 enum DeviceMetricColor {
@@ -103,7 +96,6 @@ enum DeviceMetricColor {
   cyan,
   @JsonValue('white')
   white,
-
 }
 
 enum DeviceMetricCategory {
@@ -115,7 +107,6 @@ enum DeviceMetricCategory {
   calculation,
   @JsonValue('unspecified')
   unspecified,
-
 }
 
 enum DeviceMetricCalibrationType {
@@ -127,7 +118,6 @@ enum DeviceMetricCalibrationType {
   gain,
   @JsonValue('two-point')
   two_point,
-
 }
 
 enum DeviceMetricCalibrationState {
@@ -139,7 +129,6 @@ enum DeviceMetricCalibrationState {
   calibrated,
   @JsonValue('unspecified')
   unspecified,
-
 }
 
 enum NutritionProductStatus {
@@ -149,7 +138,6 @@ enum NutritionProductStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
-
 }
 
 enum SubstanceStatus {
@@ -159,5 +147,4 @@ enum SubstanceStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
-
 }

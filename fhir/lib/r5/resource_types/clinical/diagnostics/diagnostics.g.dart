@@ -49,8 +49,14 @@ _$_BodyStructure _$$_BodyStructureFromJson(Map<String, dynamic> json) =>
           ? null
           : CodeableConcept.fromJson(
               json['morphology'] as Map<String, dynamic>),
-      includedStructure: json['includedStructure'] as List<dynamic>,
-      excludedStructure: json['excludedStructure'] as List<dynamic>?,
+      includedStructure: (json['includedStructure'] as List<dynamic>)
+          .map((e) => BodyStructureIncludedStructure.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+      excludedStructure: (json['excludedStructure'] as List<dynamic>?)
+          ?.map((e) => BodyStructureExcludedStructure.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
       description: json['description'] as String?,
       descriptionElement: json['_description'] == null
           ? null
@@ -90,8 +96,10 @@ Map<String, dynamic> _$$_BodyStructureToJson(_$_BodyStructure instance) {
   writeNotNull('active', instance.active?.toJson());
   writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('morphology', instance.morphology?.toJson());
-  val['includedStructure'] = instance.includedStructure;
-  writeNotNull('excludedStructure', instance.excludedStructure);
+  val['includedStructure'] =
+      instance.includedStructure.map((e) => e.toJson()).toList();
+  writeNotNull('excludedStructure',
+      instance.excludedStructure?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('image', instance.image?.map((e) => e.toJson()).toList());
@@ -250,6 +258,92 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
+
+_$_BodyStructureIncludedStructure _$$_BodyStructureIncludedStructureFromJson(
+        Map<String, dynamic> json) =>
+    _$_BodyStructureIncludedStructure(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      structure:
+          CodeableConcept.fromJson(json['structure'] as Map<String, dynamic>),
+      laterality: json['laterality'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['laterality'] as Map<String, dynamic>),
+      qualifier: (json['qualifier'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_BodyStructureIncludedStructureToJson(
+    _$_BodyStructureIncludedStructure instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['structure'] = instance.structure.toJson();
+  writeNotNull('laterality', instance.laterality?.toJson());
+  writeNotNull(
+      'qualifier', instance.qualifier?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_BodyStructureExcludedStructure _$$_BodyStructureExcludedStructureFromJson(
+        Map<String, dynamic> json) =>
+    _$_BodyStructureExcludedStructure(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      structure:
+          CodeableConcept.fromJson(json['structure'] as Map<String, dynamic>),
+      laterality: json['laterality'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['laterality'] as Map<String, dynamic>),
+      qualifier: (json['qualifier'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_BodyStructureExcludedStructureToJson(
+    _$_BodyStructureExcludedStructure instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['structure'] = instance.structure.toJson();
+  writeNotNull('laterality', instance.laterality?.toJson());
+  writeNotNull(
+      'qualifier', instance.qualifier?.map((e) => e.toJson()).toList());
+  return val;
+}
 
 _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
     _$_DiagnosticReport(
@@ -847,7 +941,10 @@ _$_MolecularSequence _$$_MolecularSequenceFromJson(Map<String, dynamic> json) =>
       formatted: json['formatted'] == null
           ? null
           : Attachment.fromJson(json['formatted'] as Map<String, dynamic>),
-      relative: json['relative'],
+      relative: json['relative'] == null
+          ? null
+          : MolecularSequenceRelative.fromJson(
+              json['relative'] as Map<String, dynamic>),
       pointer: (json['pointer'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -889,8 +986,200 @@ Map<String, dynamic> _$$_MolecularSequenceToJson(
   writeNotNull('literal', instance.literal);
   writeNotNull('_literal', instance.literalElement?.toJson());
   writeNotNull('formatted', instance.formatted?.toJson());
-  writeNotNull('relative', instance.relative);
+  writeNotNull('relative', instance.relative?.toJson());
   writeNotNull('pointer', instance.pointer?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_MolecularSequenceRelative _$$_MolecularSequenceRelativeFromJson(
+        Map<String, dynamic> json) =>
+    _$_MolecularSequenceRelative(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      coordinateSystem: CodeableConcept.fromJson(
+          json['coordinateSystem'] as Map<String, dynamic>),
+      reference: json['reference'] == null
+          ? null
+          : MolecularSequenceReference.fromJson(
+              json['reference'] as Map<String, dynamic>),
+      edit: (json['edit'] as List<dynamic>?)
+          ?.map(
+              (e) => MolecularSequenceEdit.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_MolecularSequenceRelativeToJson(
+    _$_MolecularSequenceRelative instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['coordinateSystem'] = instance.coordinateSystem.toJson();
+  writeNotNull('reference', instance.reference?.toJson());
+  writeNotNull('edit', instance.edit?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_MolecularSequenceReference _$$_MolecularSequenceReferenceFromJson(
+        Map<String, dynamic> json) =>
+    _$_MolecularSequenceReference(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      chromosome: json['chromosome'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['chromosome'] as Map<String, dynamic>),
+      genomeBuild: json['genomeBuild'] as String?,
+      genomeBuildElement: json['_genomeBuild'] == null
+          ? null
+          : Element.fromJson(json['_genomeBuild'] as Map<String, dynamic>),
+      orientation: json['orientation'] == null
+          ? null
+          : Code.fromJson(json['orientation']),
+      orientationElement: json['_orientation'] == null
+          ? null
+          : Element.fromJson(json['_orientation'] as Map<String, dynamic>),
+      referenceSeqId: json['referenceSeqId'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['referenceSeqId'] as Map<String, dynamic>),
+      referenceSeqPointer: json['referenceSeqPointer'] == null
+          ? null
+          : Reference.fromJson(
+              json['referenceSeqPointer'] as Map<String, dynamic>),
+      referenceSeqString: json['referenceSeqString'] as String?,
+      referenceSeqStringElement: json['_referenceSeqString'] == null
+          ? null
+          : Element.fromJson(
+              json['_referenceSeqString'] as Map<String, dynamic>),
+      strand: json['strand'] == null ? null : Code.fromJson(json['strand']),
+      strandElement: json['_strand'] == null
+          ? null
+          : Element.fromJson(json['_strand'] as Map<String, dynamic>),
+      windowStart: json['windowStart'] == null
+          ? null
+          : Integer.fromJson(json['windowStart']),
+      windowStartElement: json['_windowStart'] == null
+          ? null
+          : Element.fromJson(json['_windowStart'] as Map<String, dynamic>),
+      windowEnd: json['windowEnd'] == null
+          ? null
+          : Integer.fromJson(json['windowEnd']),
+      windowEndElement: json['_windowEnd'] == null
+          ? null
+          : Element.fromJson(json['_windowEnd'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_MolecularSequenceReferenceToJson(
+    _$_MolecularSequenceReference instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('chromosome', instance.chromosome?.toJson());
+  writeNotNull('genomeBuild', instance.genomeBuild);
+  writeNotNull('_genomeBuild', instance.genomeBuildElement?.toJson());
+  writeNotNull('orientation', instance.orientation?.toJson());
+  writeNotNull('_orientation', instance.orientationElement?.toJson());
+  writeNotNull('referenceSeqId', instance.referenceSeqId?.toJson());
+  writeNotNull('referenceSeqPointer', instance.referenceSeqPointer?.toJson());
+  writeNotNull('referenceSeqString', instance.referenceSeqString);
+  writeNotNull(
+      '_referenceSeqString', instance.referenceSeqStringElement?.toJson());
+  writeNotNull('strand', instance.strand?.toJson());
+  writeNotNull('_strand', instance.strandElement?.toJson());
+  writeNotNull('windowStart', instance.windowStart?.toJson());
+  writeNotNull('_windowStart', instance.windowStartElement?.toJson());
+  writeNotNull('windowEnd', instance.windowEnd?.toJson());
+  writeNotNull('_windowEnd', instance.windowEndElement?.toJson());
+  return val;
+}
+
+_$_MolecularSequenceEdit _$$_MolecularSequenceEditFromJson(
+        Map<String, dynamic> json) =>
+    _$_MolecularSequenceEdit(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      start: json['start'] == null ? null : Integer.fromJson(json['start']),
+      startElement: json['_start'] == null
+          ? null
+          : Element.fromJson(json['_start'] as Map<String, dynamic>),
+      end: json['end'] == null ? null : Integer.fromJson(json['end']),
+      endElement: json['_end'] == null
+          ? null
+          : Element.fromJson(json['_end'] as Map<String, dynamic>),
+      observedAllele: json['observedAllele'] as String?,
+      observedAlleleElement: json['_observedAllele'] == null
+          ? null
+          : Element.fromJson(json['_observedAllele'] as Map<String, dynamic>),
+      referenceAllele: json['referenceAllele'] as String?,
+      referenceAlleleElement: json['_referenceAllele'] == null
+          ? null
+          : Element.fromJson(json['_referenceAllele'] as Map<String, dynamic>),
+      cigar: json['cigar'] as String?,
+      cigarElement: json['_cigar'] == null
+          ? null
+          : Element.fromJson(json['_cigar'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_MolecularSequenceEditToJson(
+    _$_MolecularSequenceEdit instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('start', instance.start?.toJson());
+  writeNotNull('_start', instance.startElement?.toJson());
+  writeNotNull('end', instance.end?.toJson());
+  writeNotNull('_end', instance.endElement?.toJson());
+  writeNotNull('observedAllele', instance.observedAllele);
+  writeNotNull('_observedAllele', instance.observedAlleleElement?.toJson());
+  writeNotNull('referenceAllele', instance.referenceAllele);
+  writeNotNull('_referenceAllele', instance.referenceAlleleElement?.toJson());
+  writeNotNull('cigar', instance.cigar);
+  writeNotNull('_cigar', instance.cigarElement?.toJson());
   return val;
 }
 
@@ -943,7 +1232,10 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      triggeredBy: json['triggeredBy'] as List<dynamic>?,
+      triggeredBy: (json['triggeredBy'] as List<dynamic>?)
+          ?.map(
+              (e) => ObservationTriggeredBy.fromJson(e as Map<String, dynamic>))
+          .toList(),
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1116,7 +1408,8 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
   writeNotNull(
       'instantiatesReference', instance.instantiatesReference?.toJson());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('triggeredBy', instance.triggeredBy);
+  writeNotNull(
+      'triggeredBy', instance.triggeredBy?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
@@ -1171,6 +1464,51 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
       'derivedFrom', instance.derivedFrom?.map((e) => e.toJson()).toList());
   writeNotNull(
       'component', instance.component?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_ObservationTriggeredBy _$$_ObservationTriggeredByFromJson(
+        Map<String, dynamic> json) =>
+    _$_ObservationTriggeredBy(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      observation:
+          Reference.fromJson(json['observation'] as Map<String, dynamic>),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      typeElement: json['_type'] == null
+          ? null
+          : Element.fromJson(json['_type'] as Map<String, dynamic>),
+      reason: json['reason'] as String?,
+      reasonElement: json['_reason'] == null
+          ? null
+          : Element.fromJson(json['_reason'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_ObservationTriggeredByToJson(
+    _$_ObservationTriggeredBy instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['observation'] = instance.observation.toJson();
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('reason', instance.reason);
+  writeNotNull('_reason', instance.reasonElement?.toJson());
   return val;
 }
 
@@ -1702,7 +2040,9 @@ _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
       request: (json['request'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      feature: json['feature'] as List<dynamic>?,
+      feature: (json['feature'] as List<dynamic>?)
+          ?.map((e) => SpecimenFeature.fromJson(e as Map<String, dynamic>))
+          .toList(),
       collection: json['collection'] == null
           ? null
           : SpecimenCollection.fromJson(
@@ -1756,7 +2096,7 @@ Map<String, dynamic> _$$_SpecimenToJson(_$_Specimen instance) {
   writeNotNull('_receivedTime', instance.receivedTimeElement?.toJson());
   writeNotNull('parent', instance.parent?.map((e) => e.toJson()).toList());
   writeNotNull('request', instance.request?.map((e) => e.toJson()).toList());
-  writeNotNull('feature', instance.feature);
+  writeNotNull('feature', instance.feature?.map((e) => e.toJson()).toList());
   writeNotNull('collection', instance.collection?.toJson());
   writeNotNull(
       'processing', instance.processing?.map((e) => e.toJson()).toList());
@@ -1765,6 +2105,42 @@ Map<String, dynamic> _$$_SpecimenToJson(_$_Specimen instance) {
   writeNotNull(
       'condition', instance.condition?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_SpecimenFeature _$$_SpecimenFeatureFromJson(Map<String, dynamic> json) =>
+    _$_SpecimenFeature(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      description: json['description'] as String?,
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_SpecimenFeatureToJson(_$_SpecimenFeature instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  writeNotNull('description', instance.description);
+  writeNotNull('_description', instance.descriptionElement?.toJson());
   return val;
 }
 

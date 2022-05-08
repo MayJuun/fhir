@@ -127,7 +127,7 @@ class Immunization with Resource, _$Immunization {
     @Default(R5ResourceType.Immunization) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -303,7 +303,7 @@ class ImmunizationEducation with _$ImmunizationEducation {
     List<FhirExtension>? modifierExtension,
     String? documentType,
     @JsonKey(name: '_documentType') Element? documentTypeElement,
-   FhirUri? reference,
+    FhirUri? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     DateTime? publicationDate,
     @JsonKey(name: '_publicationDate') Element? publicationDateElement,
@@ -558,7 +558,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     @Default(R5ResourceType.ImmunizationEvaluation) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -672,7 +672,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
         R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -944,7 +944,7 @@ class Medication with Resource, _$Medication {
     @Default(R5ResourceType.Medication) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1222,7 +1222,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
         R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1531,7 +1531,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     @Default(R5ResourceType.MedicationDispense) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1813,7 +1813,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     @Default(R5ResourceType.MedicationKnowledge) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1845,7 +1845,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     List<Reference>? clinicalUseIssue,
     List<MedicationKnowledgeStorageGuideline>? storageGuideline,
     List<MedicationKnowledgeRegulatory>? regulatory,
-    MedicationKnowledgeDefinitional? definitional,
+    // MedicationKnowledgeDefinitional? definitional,
   }) = _MedicationKnowledge;
 
   /// Produces a Yaml formatted String version of the object
@@ -2853,6 +2853,205 @@ class MedicationKnowledgeDrugCharacteristic
 }
 
 @freezed
+class MedicationKnowledgeStorageGuideline
+    with _$MedicationKnowledgeStorageGuideline {
+  MedicationKnowledgeStorageGuideline._();
+
+  /// [MedicationKnowledgeStorageGuideline]: Information about a medication that is used to support knowledge.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [reference]: Reference to additional information about the storage guidelines.;
+  ///
+  /// [referenceElement] (_reference): Extensions for reference;
+  ///
+  /// [note]: Additional notes about the storage.;
+  ///
+  /// [stabilityDuration]: Duration that the medication remains stable if the environmentalSetting is respected.;
+  ///
+  /// [environmentalSetting]: Describes a setting/value on the environment for the adequate storage of the medication and other substances.  Environment settings may involve temperature, humidity, or exposure to light.;
+  factory MedicationKnowledgeStorageGuideline({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? reference,
+    @JsonKey(name: '_reference') Element? referenceElement,
+    List<Annotation>? note,
+    Duration? stabilityDuration,
+    List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting,
+  }) = _MedicationKnowledgeStorageGuideline;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MedicationKnowledgeStorageGuideline.fromYaml(dynamic yaml) => yaml
+          is String
+      ? MedicationKnowledgeStorageGuideline.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? MedicationKnowledgeStorageGuideline.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MedicationKnowledgeStorageGuideline cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MedicationKnowledgeStorageGuideline.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicationKnowledgeStorageGuidelineFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicationKnowledgeStorageGuideline], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicationKnowledgeStorageGuideline.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicationKnowledgeStorageGuidelineFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class MedicationKnowledgeDefinitional with _$MedicationKnowledgeDefinitional {
+  MedicationKnowledgeDefinitional._();
+
+  /// [MedicationKnowledgeDefinitional]: Information about a medication that is used to support knowledge.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [definition]: Associated definitions for this medication.;
+  ///
+  /// [doseForm]: Describes the form of the item.  Powder; tablets; capsule.;
+  ///
+  /// [intendedRoute]: The intended or approved route of administration.;
+  ///
+  /// [ingredient]: Identifies a particular constituent of interest in the product.;
+  ///
+  /// [drugCharacteristic]: Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.;
+  factory MedicationKnowledgeDefinitional({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Reference>? definition,
+    CodeableConcept? doseForm,
+    List<CodeableConcept>? intendedRoute,
+    List<MedicationKnowledgeIngredient>? ingredient,
+    List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
+  }) = _MedicationKnowledgeDefinitional;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MedicationKnowledgeDefinitional.fromYaml(dynamic yaml) => yaml
+          is String
+      ? MedicationKnowledgeDefinitional.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? MedicationKnowledgeDefinitional.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MedicationKnowledgeDefinitional cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MedicationKnowledgeDefinitional.fromJson(Map<String, dynamic> json) =>
+      _$MedicationKnowledgeDefinitionalFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicationKnowledgeDefinitional], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicationKnowledgeDefinitional.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicationKnowledgeDefinitionalFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class MedicationKnowledgeEnvironmentalSetting
+    with _$MedicationKnowledgeEnvironmentalSetting {
+  MedicationKnowledgeEnvironmentalSetting._();
+
+  /// [MedicationKnowledgeEnvironmentalSetting]: Information about a medication that is used to support knowledge.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: Identifies the category or type of setting (e.g., type of location, temperature, humidity).;
+  ///
+  /// [valueQuantity]: Value associated to the setting. E.g., 40° – 50°F for temperature.;
+  ///
+  /// [valueRange]: Value associated to the setting. E.g., 40° – 50°F for temperature.;
+  ///
+  /// [valueCodeableConcept]: Value associated to the setting. E.g., 40° – 50°F for temperature.;
+  factory MedicationKnowledgeEnvironmentalSetting({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    CodeableConcept? valueCodeableConcept,
+  }) = _MedicationKnowledgeEnvironmentalSetting;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MedicationKnowledgeEnvironmentalSetting.fromYaml(dynamic yaml) => yaml
+          is String
+      ? MedicationKnowledgeEnvironmentalSetting.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? MedicationKnowledgeEnvironmentalSetting.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MedicationKnowledgeEnvironmentalSetting cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MedicationKnowledgeEnvironmentalSetting.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicationKnowledgeEnvironmentalSettingFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicationKnowledgeEnvironmentalSetting], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicationKnowledgeEnvironmentalSetting.fromJsonString(
+      String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicationKnowledgeEnvironmentalSettingFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
 class MedicationRequest with Resource, _$MedicationRequest {
   MedicationRequest._();
 
@@ -2966,7 +3165,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     @Default(R5ResourceType.MedicationRequest) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -3041,6 +3240,69 @@ class MedicationRequest with Resource, _$MedicationRequest {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationRequestFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class MedicationRequestDose with _$MedicationRequestDose {
+  MedicationRequestDose._();
+
+  /// [MedicationRequestDose]: An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [renderedDosageInstruction]: The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.;
+  ///
+  /// [renderedDosageInstructionElement] (_renderedDosageInstruction): Extensions for renderedDosageInstruction;
+  ///
+  /// [effectiveDosePeriod]: The period over which the medication is to be taken.  Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions.;
+  ///
+  /// [dosageInstruction]: Specific instructions for how the medication is to be used by the patient.;
+  factory MedicationRequestDose({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? renderedDosageInstruction,
+    @JsonKey(name: '_renderedDosageInstruction')
+        Element? renderedDosageInstructionElement,
+    Period? effectiveDosePeriod,
+    List<Dosage>? dosageInstruction,
+  }) = _MedicationRequestDose;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MedicationRequestDose.fromYaml(dynamic yaml) => yaml is String
+      ? MedicationRequestDose.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? MedicationRequestDose.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MedicationRequestDose cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MedicationRequestDose.fromJson(Map<String, dynamic> json) =>
+      _$MedicationRequestDoseFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicationRequestDose], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicationRequestDose.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicationRequestDoseFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -3331,7 +3593,7 @@ class MedicationUsage with Resource, _$MedicationUsage {
     @Default(R5ResourceType.MedicationUsage) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -3387,6 +3649,62 @@ class MedicationUsage with Resource, _$MedicationUsage {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationUsageFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class MedicationUsageAdherence with _$MedicationUsageAdherence {
+  MedicationUsageAdherence._();
+
+  /// [MedicationUsageAdherence]: A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. The primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information. The MedicationUsage resource was previously called MedicationStatement.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: Type of the adherence for the medication.;
+  ///
+  /// [reason]: Captures the reason for the current use or adherence of a medication.;
+  factory MedicationUsageAdherence({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept code,
+    CodeableConcept? reason,
+  }) = _MedicationUsageAdherence;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MedicationUsageAdherence.fromYaml(dynamic yaml) => yaml is String
+      ? MedicationUsageAdherence.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? MedicationUsageAdherence.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MedicationUsageAdherence cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MedicationUsageAdherence.fromJson(Map<String, dynamic> json) =>
+      _$MedicationUsageAdherenceFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicationUsageAdherence], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicationUsageAdherence.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicationUsageAdherenceFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');

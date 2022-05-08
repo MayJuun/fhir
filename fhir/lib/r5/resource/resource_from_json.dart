@@ -37,8 +37,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return CarePlan.fromJson(json);
     case 'CareTeam':
       return CareTeam.fromJson(json);
-    case 'CatalogEntry':
-      return CatalogEntry.fromJson(json);
     case 'ChargeItem':
       return ChargeItem.fromJson(json);
     case 'ChargeItemDefinition':
@@ -51,8 +49,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return ClaimResponse.fromJson(json);
     case 'ClinicalImpression':
       return ClinicalImpression.fromJson(json);
-    case 'ClinicalUseIssue':
-      return ClinicalUseIssue.fromJson(json);
     case 'CodeSystem':
       return CodeSystem.fromJson(json);
     case 'Communication':

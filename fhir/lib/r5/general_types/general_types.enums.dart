@@ -24,7 +24,6 @@ enum QuantityComparator {
   gt,
   @JsonValue('ad')
   ad,
-
 }
 
 enum DurationComparator {
@@ -38,7 +37,6 @@ enum DurationComparator {
   gt,
   @JsonValue('ad')
   ad,
-
 }
 
 enum DistanceComparator {
@@ -52,7 +50,6 @@ enum DistanceComparator {
   gt,
   @JsonValue('ad')
   ad,
-
 }
 
 enum CountComparator {
@@ -66,7 +63,6 @@ enum CountComparator {
   gt,
   @JsonValue('ad')
   ad,
-
 }
 
 enum AgeComparator {
@@ -80,7 +76,6 @@ enum AgeComparator {
   gt,
   @JsonValue('ad')
   ad,
-
 }
 
 enum HumanNameUse {
@@ -98,7 +93,6 @@ enum HumanNameUse {
   old,
   @JsonValue('maiden')
   maiden,
-
 }
 
 enum AddressUse {
@@ -112,7 +106,6 @@ enum AddressUse {
   old,
   @JsonValue('billing')
   billing,
-
 }
 
 enum AddressType {
@@ -122,7 +115,6 @@ enum AddressType {
   physical,
   @JsonValue('both')
   both,
-
 }
 
 enum ContactPointSystem {
@@ -140,7 +132,6 @@ enum ContactPointSystem {
   sms,
   @JsonValue('other')
   other,
-
 }
 
 enum ContactPointUse {
@@ -154,7 +145,6 @@ enum ContactPointUse {
   old,
   @JsonValue('mobile')
   mobile,
-
 }
 
 enum TimingRepeatDurationUnit {
@@ -172,7 +162,6 @@ enum TimingRepeatDurationUnit {
   mo,
   @JsonValue('a')
   a,
-
 }
 
 enum TimingRepeatPeriodUnit {
@@ -190,7 +179,6 @@ enum TimingRepeatPeriodUnit {
   mo,
   @JsonValue('a')
   a,
-
 }
 
 enum TimingRepeatWhen {
@@ -248,5 +236,4 @@ enum TimingRepeatWhen {
   pcd,
   @JsonValue('PCV')
   pcv,
-
 }

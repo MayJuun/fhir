@@ -7575,6 +7575,1009 @@ abstract class _Library extends Library {
       throw _privateConstructorUsedError;
 }
 
+List_ _$List_FromJson(Map<String, dynamic> json) {
+  return _List_.fromJson(json);
+}
+
+/// @nodoc
+class _$List_TearOff {
+  const _$List_TearOff();
+
+  _List_ call(
+      {R5ResourceType resourceType = R5ResourceType.List_,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List_Status? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List_Mode? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      CodeableConcept? code,
+      Reference? subject,
+      Reference? encounter,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Reference? source,
+      CodeableConcept? orderedBy,
+      List<Annotation>? note,
+      List<ListEntry>? entry,
+      CodeableConcept? emptyReason}) {
+    return _List_(
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      status: status,
+      statusElement: statusElement,
+      mode: mode,
+      modeElement: modeElement,
+      title: title,
+      titleElement: titleElement,
+      code: code,
+      subject: subject,
+      encounter: encounter,
+      date: date,
+      dateElement: dateElement,
+      source: source,
+      orderedBy: orderedBy,
+      note: note,
+      entry: entry,
+      emptyReason: emptyReason,
+    );
+  }
+
+  List_ fromJson(Map<String, Object?> json) {
+    return List_.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $List_ = _$List_TearOff();
+
+/// @nodoc
+mixin _$List_ {
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List_Status? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  List_Mode? get mode => throw _privateConstructorUsedError;
+  @JsonKey(name: '_mode')
+  Element? get modeElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get encounter => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  Reference? get source => throw _privateConstructorUsedError;
+  CodeableConcept? get orderedBy => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<ListEntry>? get entry => throw _privateConstructorUsedError;
+  CodeableConcept? get emptyReason => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $List_CopyWith<List_> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $List_CopyWith<$Res> {
+  factory $List_CopyWith(List_ value, $Res Function(List_) then) =
+      _$List_CopyWithImpl<$Res>;
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List_Status? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List_Mode? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      CodeableConcept? code,
+      Reference? subject,
+      Reference? encounter,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Reference? source,
+      CodeableConcept? orderedBy,
+      List<Annotation>? note,
+      List<ListEntry>? entry,
+      CodeableConcept? emptyReason});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get modeElement;
+  $ElementCopyWith<$Res>? get titleElement;
+  $CodeableConceptCopyWith<$Res>? get code;
+  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res>? get encounter;
+  $ElementCopyWith<$Res>? get dateElement;
+  $ReferenceCopyWith<$Res>? get source;
+  $CodeableConceptCopyWith<$Res>? get orderedBy;
+  $CodeableConceptCopyWith<$Res>? get emptyReason;
+}
+
+/// @nodoc
+class _$List_CopyWithImpl<$Res> implements $List_CopyWith<$Res> {
+  _$List_CopyWithImpl(this._value, this._then);
+
+  final List_ _value;
+  // ignore: unused_field
+  final $Res Function(List_) _then;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? mode = freezed,
+    Object? modeElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? code = freezed,
+    Object? subject = freezed,
+    Object? encounter = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? source = freezed,
+    Object? orderedBy = freezed,
+    Object? note = freezed,
+    Object? entry = freezed,
+    Object? emptyReason = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as List_Status?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as List_Mode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      orderedBy: orderedBy == freezed
+          ? _value.orderedBy
+          : orderedBy // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      entry: entry == freezed
+          ? _value.entry
+          : entry // ignore: cast_nullable_to_non_nullable
+              as List<ListEntry>?,
+      emptyReason: emptyReason == freezed
+          ? _value.emptyReason
+          : emptyReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get modeElement {
+    if (_value.modeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.modeElement!, (value) {
+      return _then(_value.copyWith(modeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get code {
+    if (_value.code == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get encounter {
+    if (_value.encounter == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.encounter!, (value) {
+      return _then(_value.copyWith(encounter: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get source {
+    if (_value.source == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.source!, (value) {
+      return _then(_value.copyWith(source: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get orderedBy {
+    if (_value.orderedBy == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.orderedBy!, (value) {
+      return _then(_value.copyWith(orderedBy: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get emptyReason {
+    if (_value.emptyReason == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.emptyReason!, (value) {
+      return _then(_value.copyWith(emptyReason: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$List_CopyWith<$Res> implements $List_CopyWith<$Res> {
+  factory _$List_CopyWith(_List_ value, $Res Function(_List_) then) =
+      __$List_CopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List_Status? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List_Mode? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      CodeableConcept? code,
+      Reference? subject,
+      Reference? encounter,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Reference? source,
+      CodeableConcept? orderedBy,
+      List<Annotation>? note,
+      List<ListEntry>? entry,
+      CodeableConcept? emptyReason});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $ElementCopyWith<$Res>? get modeElement;
+  @override
+  $ElementCopyWith<$Res>? get titleElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get code;
+  @override
+  $ReferenceCopyWith<$Res>? get subject;
+  @override
+  $ReferenceCopyWith<$Res>? get encounter;
+  @override
+  $ElementCopyWith<$Res>? get dateElement;
+  @override
+  $ReferenceCopyWith<$Res>? get source;
+  @override
+  $CodeableConceptCopyWith<$Res>? get orderedBy;
+  @override
+  $CodeableConceptCopyWith<$Res>? get emptyReason;
+}
+
+/// @nodoc
+class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
+    implements _$List_CopyWith<$Res> {
+  __$List_CopyWithImpl(_List_ _value, $Res Function(_List_) _then)
+      : super(_value, (v) => _then(v as _List_));
+
+  @override
+  _List_ get _value => super._value as _List_;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? mode = freezed,
+    Object? modeElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? code = freezed,
+    Object? subject = freezed,
+    Object? encounter = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? source = freezed,
+    Object? orderedBy = freezed,
+    Object? note = freezed,
+    Object? entry = freezed,
+    Object? emptyReason = freezed,
+  }) {
+    return _then(_List_(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as List_Status?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as List_Mode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      orderedBy: orderedBy == freezed
+          ? _value.orderedBy
+          : orderedBy // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      entry: entry == freezed
+          ? _value.entry
+          : entry // ignore: cast_nullable_to_non_nullable
+              as List<ListEntry>?,
+      emptyReason: emptyReason == freezed
+          ? _value.emptyReason
+          : emptyReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_List_ extends _List_ {
+  _$_List_(
+      {this.resourceType = R5ResourceType.List_,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.mode,
+      @JsonKey(name: '_mode') this.modeElement,
+      this.title,
+      @JsonKey(name: '_title') this.titleElement,
+      this.code,
+      this.subject,
+      this.encounter,
+      this.date,
+      @JsonKey(name: '_date') this.dateElement,
+      this.source,
+      this.orderedBy,
+      this.note,
+      this.entry,
+      this.emptyReason})
+      : super._();
+
+  factory _$_List_.fromJson(Map<String, dynamic> json) =>
+      _$$_List_FromJson(json);
+
+  @JsonKey()
+  @override
+  final R5ResourceType resourceType;
+  @override
+  final Id? id;
+  @override
+  final Meta? meta;
+  @override
+  final FhirUri? implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
+  final Code? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+  @override
+  final Narrative? text;
+  @override
+  final List<Resource>? contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final List<Identifier>? identifier;
+  @override
+  final List_Status? status;
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+  @override
+  final List_Mode? mode;
+  @override
+  @JsonKey(name: '_mode')
+  final Element? modeElement;
+  @override
+  final String? title;
+  @override
+  @JsonKey(name: '_title')
+  final Element? titleElement;
+  @override
+  final CodeableConcept? code;
+  @override
+  final Reference? subject;
+  @override
+  final Reference? encounter;
+  @override
+  final FhirDateTime? date;
+  @override
+  @JsonKey(name: '_date')
+  final Element? dateElement;
+  @override
+  final Reference? source;
+  @override
+  final CodeableConcept? orderedBy;
+  @override
+  final List<Annotation>? note;
+  @override
+  final List<ListEntry>? entry;
+  @override
+  final CodeableConcept? emptyReason;
+
+  @override
+  String toString() {
+    return 'List_(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, mode: $mode, modeElement: $modeElement, title: $title, titleElement: $titleElement, code: $code, subject: $subject, encounter: $encounter, date: $date, dateElement: $dateElement, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _List_ &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality().equals(other.mode, mode) &&
+            const DeepCollectionEquality()
+                .equals(other.modeElement, modeElement) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.titleElement, titleElement) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.subject, subject) &&
+            const DeepCollectionEquality().equals(other.encounter, encounter) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.dateElement, dateElement) &&
+            const DeepCollectionEquality().equals(other.source, source) &&
+            const DeepCollectionEquality().equals(other.orderedBy, orderedBy) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality().equals(other.entry, entry) &&
+            const DeepCollectionEquality()
+                .equals(other.emptyReason, emptyReason));
+  }
+
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(mode),
+        const DeepCollectionEquality().hash(modeElement),
+        const DeepCollectionEquality().hash(title),
+        const DeepCollectionEquality().hash(titleElement),
+        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(subject),
+        const DeepCollectionEquality().hash(encounter),
+        const DeepCollectionEquality().hash(date),
+        const DeepCollectionEquality().hash(dateElement),
+        const DeepCollectionEquality().hash(source),
+        const DeepCollectionEquality().hash(orderedBy),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(entry),
+        const DeepCollectionEquality().hash(emptyReason)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$List_CopyWith<_List_> get copyWith =>
+      __$List_CopyWithImpl<_List_>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_List_ToJson(this);
+  }
+}
+
+abstract class _List_ extends List_ {
+  factory _List_(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List_Status? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List_Mode? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      CodeableConcept? code,
+      Reference? subject,
+      Reference? encounter,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Reference? source,
+      CodeableConcept? orderedBy,
+      List<Annotation>? note,
+      List<ListEntry>? entry,
+      CodeableConcept? emptyReason}) = _$_List_;
+  _List_._() : super._();
+
+  factory _List_.fromJson(Map<String, dynamic> json) = _$_List_.fromJson;
+
+  @override
+  R5ResourceType get resourceType;
+  @override
+  Id? get id;
+  @override
+  Meta? get meta;
+  @override
+  FhirUri? get implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
+  Code? get language;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement;
+  @override
+  Narrative? get text;
+  @override
+  List<Resource>? get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  List<Identifier>? get identifier;
+  @override
+  List_Status? get status;
+  @override
+  @JsonKey(name: '_status')
+  Element? get statusElement;
+  @override
+  List_Mode? get mode;
+  @override
+  @JsonKey(name: '_mode')
+  Element? get modeElement;
+  @override
+  String? get title;
+  @override
+  @JsonKey(name: '_title')
+  Element? get titleElement;
+  @override
+  CodeableConcept? get code;
+  @override
+  Reference? get subject;
+  @override
+  Reference? get encounter;
+  @override
+  FhirDateTime? get date;
+  @override
+  @JsonKey(name: '_date')
+  Element? get dateElement;
+  @override
+  Reference? get source;
+  @override
+  CodeableConcept? get orderedBy;
+  @override
+  List<Annotation>? get note;
+  @override
+  List<ListEntry>? get entry;
+  @override
+  CodeableConcept? get emptyReason;
+  @override
+  @JsonKey(ignore: true)
+  _$List_CopyWith<_List_> get copyWith => throw _privateConstructorUsedError;
+}
+
 ListEntry _$ListEntryFromJson(Map<String, dynamic> json) {
   return _ListEntry.fromJson(json);
 }

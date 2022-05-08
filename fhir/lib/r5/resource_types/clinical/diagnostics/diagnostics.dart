@@ -68,7 +68,7 @@ class BodyStructure with Resource, _$BodyStructure {
     @Default(R5ResourceType.BodyStructure) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -113,6 +113,126 @@ class BodyStructure with Resource, _$BodyStructure {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BodyStructureFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
+  BodyStructureIncludedStructure._();
+
+  /// [BodyStructureIncludedStructure]: Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [structure]: Code that represents the included structure.;
+  ///
+  /// [laterality]: Code that represents the included structure laterality.;
+  ///
+  /// [qualifier]: Code that represents the included structure qualifier.;
+  factory BodyStructureIncludedStructure({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept structure,
+    CodeableConcept? laterality,
+    List<CodeableConcept>? qualifier,
+  }) = _BodyStructureIncludedStructure;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory BodyStructureIncludedStructure.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BodyStructureIncludedStructure.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? BodyStructureIncludedStructure.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'BodyStructureIncludedStructure cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory BodyStructureIncludedStructure.fromJson(Map<String, dynamic> json) =>
+      _$BodyStructureIncludedStructureFromJson(json);
+
+  /// Acts like a constructor, returns a [BodyStructureIncludedStructure], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory BodyStructureIncludedStructure.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$BodyStructureIncludedStructureFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class BodyStructureExcludedStructure with _$BodyStructureExcludedStructure {
+  BodyStructureExcludedStructure._();
+
+  /// [BodyStructureExcludedStructure]: Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [structure]: Code that represents the excluded structure.;
+  ///
+  /// [laterality]: Code that represents the excluded structure laterality.;
+  ///
+  /// [qualifier]: Code that represents the excluded structure qualifier.;
+  factory BodyStructureExcludedStructure({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept structure,
+    CodeableConcept? laterality,
+    List<CodeableConcept>? qualifier,
+  }) = _BodyStructureExcludedStructure;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory BodyStructureExcludedStructure.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BodyStructureExcludedStructure.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? BodyStructureExcludedStructure.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'BodyStructureExcludedStructure cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory BodyStructureExcludedStructure.fromJson(Map<String, dynamic> json) =>
+      _$BodyStructureExcludedStructureFromJson(json);
+
+  /// Acts like a constructor, returns a [BodyStructureExcludedStructure], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory BodyStructureExcludedStructure.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$BodyStructureExcludedStructureFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -204,7 +324,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     @Default(R5ResourceType.DiagnosticReport) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -412,7 +532,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @Default(R5ResourceType.ImagingStudy) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -769,7 +889,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     @Default(R5ResourceType.MolecularSequence) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -816,6 +936,240 @@ class MolecularSequence with Resource, _$MolecularSequence {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MolecularSequenceFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class MolecularSequenceRelative with _$MolecularSequenceRelative {
+  MolecularSequenceRelative._();
+
+  /// [MolecularSequenceRelative]: Representation of a molecular sequence.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [coordinateSystem]: These are different ways of identifying nucleotides or amino acids within a sequence. Different databases and file types may use different systems. For detail definitions, see https://loinc.org/92822-6/ for more detail.;
+  ///
+  /// [reference]: A sequence that is used as a reference to describe variants that are present in a sequence analyzed.;
+  ///
+  /// [edit]: Changes in sequence from the reference.;
+  factory MolecularSequenceRelative({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept coordinateSystem,
+    MolecularSequenceReference? reference,
+    List<MolecularSequenceEdit>? edit,
+  }) = _MolecularSequenceRelative;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MolecularSequenceRelative.fromYaml(dynamic yaml) => yaml is String
+      ? MolecularSequenceRelative.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? MolecularSequenceRelative.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MolecularSequenceRelative cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MolecularSequenceRelative.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceRelativeFromJson(json);
+
+  /// Acts like a constructor, returns a [MolecularSequenceRelative], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MolecularSequenceRelative.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MolecularSequenceRelativeFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class MolecularSequenceReference with _$MolecularSequenceReference {
+  MolecularSequenceReference._();
+
+  /// [MolecularSequenceReference]: Representation of a molecular sequence.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [chromosome]: Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).;
+  ///
+  /// [genomeBuild]: The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37'.  Version number must be included if a versioned release of a primary build was used.;
+  ///
+  /// [genomeBuildElement] (_genomeBuild): Extensions for genomeBuild;
+  ///
+  /// [orientation]: A relative reference to a DNA strand based on gene orientation. The strand that contains the open reading frame of the gene is the "sense" strand, and the opposite complementary strand is the "antisense" strand.;
+  ///
+  /// [orientationElement] (_orientation): Extensions for orientation;
+  ///
+  /// [referenceSeqId]: This field carries the ID for the reference sequence. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers when they become available. (See- Report sponsored by GEN2PHEN at the European Bioinformatics Institute at Hinxton UK April 24-25, 2008).;
+  ///
+  /// [referenceSeqPointer]: A pointer to another MolecularSequence entity as reference sequence.;
+  ///
+  /// [referenceSeqString]: A string like "ACGT".;
+  ///
+  /// [referenceSeqStringElement] (_referenceSeqString): Extensions for referenceSeqString;
+  ///
+  /// [strand]: An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.;
+  ///
+  /// [strandElement] (_strand): Extensions for strand;
+  ///
+  /// [windowStart]: Start position of the window on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.;
+  ///
+  /// [windowStartElement] (_windowStart): Extensions for windowStart;
+  ///
+  /// [windowEnd]: End position of the window on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.;
+  ///
+  /// [windowEndElement] (_windowEnd): Extensions for windowEnd;
+  factory MolecularSequenceReference({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? chromosome,
+    String? genomeBuild,
+    @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
+    Code? orientation,
+    @JsonKey(name: '_orientation') Element? orientationElement,
+    CodeableConcept? referenceSeqId,
+    Reference? referenceSeqPointer,
+    String? referenceSeqString,
+    @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
+    Code? strand,
+    @JsonKey(name: '_strand') Element? strandElement,
+    Integer? windowStart,
+    @JsonKey(name: '_windowStart') Element? windowStartElement,
+    Integer? windowEnd,
+    @JsonKey(name: '_windowEnd') Element? windowEndElement,
+  }) = _MolecularSequenceReference;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MolecularSequenceReference.fromYaml(dynamic yaml) => yaml is String
+      ? MolecularSequenceReference.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? MolecularSequenceReference.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MolecularSequenceReference cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MolecularSequenceReference.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceReferenceFromJson(json);
+
+  /// Acts like a constructor, returns a [MolecularSequenceReference], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MolecularSequenceReference.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MolecularSequenceReferenceFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class MolecularSequenceEdit with _$MolecularSequenceEdit {
+  MolecularSequenceEdit._();
+
+  /// [MolecularSequenceEdit]: Representation of a molecular sequence.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [start]: Start position of the edit on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.;
+  ///
+  /// [startElement] (_start): Extensions for start;
+  ///
+  /// [end]: End position of the edit on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.;
+  ///
+  /// [endElement] (_end): Extensions for end;
+  ///
+  /// [observedAllele]: Allele that was observed. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed  sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.;
+  ///
+  /// [observedAlleleElement] (_observedAllele): Extensions for observedAllele;
+  ///
+  /// [referenceAllele]: Allele in the reference sequence. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.;
+  ///
+  /// [referenceAlleleElement] (_referenceAllele): Extensions for referenceAllele;
+  ///
+  /// [cigar]: Extended CIGAR string for aligning the sequence with reference bases. See documentation [here](https://samtools.github.io/hts-specs/SAMv1.pdf) and search for CIGAR.;
+  ///
+  /// [cigarElement] (_cigar): Extensions for cigar;
+  factory MolecularSequenceEdit({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Integer? start,
+    @JsonKey(name: '_start') Element? startElement,
+    Integer? end,
+    @JsonKey(name: '_end') Element? endElement,
+    String? observedAllele,
+    @JsonKey(name: '_observedAllele') Element? observedAlleleElement,
+    String? referenceAllele,
+    @JsonKey(name: '_referenceAllele') Element? referenceAlleleElement,
+    String? cigar,
+    @JsonKey(name: '_cigar') Element? cigarElement,
+  }) = _MolecularSequenceEdit;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MolecularSequenceEdit.fromYaml(dynamic yaml) => yaml is String
+      ? MolecularSequenceEdit.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? MolecularSequenceEdit.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MolecularSequenceEdit cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MolecularSequenceEdit.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceEditFromJson(json);
+
+  /// Acts like a constructor, returns a [MolecularSequenceEdit], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MolecularSequenceEdit.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MolecularSequenceEditFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -961,7 +1315,7 @@ class Observation with Resource, _$Observation {
     @Default(R5ResourceType.Observation) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1049,6 +1403,71 @@ class Observation with Resource, _$Observation {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ObservationFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class ObservationTriggeredBy with _$ObservationTriggeredBy {
+  ObservationTriggeredBy._();
+
+  /// [ObservationTriggeredBy]: Measurements and simple assertions made about a patient, device or other subject.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [observation]: Reference to the triggering observation.;
+  ///
+  /// [type]: The type of trigger. Reflex | Repeat | Re-run.;
+  ///
+  /// [typeElement] (_type): Extensions for type;
+  ///
+  /// [reason]: Provides the reason why this observation was performed as a result of the observation(s) referenced.;
+  ///
+  /// [reasonElement] (_reason): Extensions for reason;
+  factory ObservationTriggeredBy({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference observation,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? reason,
+    @JsonKey(name: '_reason') Element? reasonElement,
+  }) = _ObservationTriggeredBy;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ObservationTriggeredBy.fromYaml(dynamic yaml) => yaml is String
+      ? ObservationTriggeredBy.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? ObservationTriggeredBy.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ObservationTriggeredBy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ObservationTriggeredBy.fromJson(Map<String, dynamic> json) =>
+      _$ObservationTriggeredByFromJson(json);
+
+  /// Acts like a constructor, returns a [ObservationTriggeredBy], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ObservationTriggeredBy.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ObservationTriggeredByFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -1307,7 +1726,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @Default(R5ResourceType.QuestionnaireResponse) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1398,7 +1817,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
     List<FhirExtension>? modifierExtension,
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
-   FhirUri? definition,
+    FhirUri? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -1619,7 +2038,7 @@ class Specimen with Resource, _$Specimen {
     @Default(R5ResourceType.Specimen) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1670,6 +2089,65 @@ class Specimen with Resource, _$Specimen {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SpecimenFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SpecimenFeature with _$SpecimenFeature {
+  SpecimenFeature._();
+
+  /// [SpecimenFeature]: A sample to be used for analysis.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: The landmark or feature being highlighted.;
+  ///
+  /// [description]: Description of the feature of the specimen.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  factory SpecimenFeature({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+  }) = _SpecimenFeature;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SpecimenFeature.fromYaml(dynamic yaml) => yaml is String
+      ? SpecimenFeature.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SpecimenFeature.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SpecimenFeature cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SpecimenFeature.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenFeatureFromJson(json);
+
+  /// Acts like a constructor, returns a [SpecimenFeature], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SpecimenFeature.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SpecimenFeatureFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');

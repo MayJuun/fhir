@@ -110,7 +110,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     @Default(R5ResourceType.AdverseEvent) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -683,7 +683,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     @Default(R5ResourceType.AllergyIntolerance) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -744,6 +744,62 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AllergyIntoleranceFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
+  AllergyIntoleranceParticipant._();
+
+  /// [AllergyIntoleranceParticipant]: Risk of harmful or undesirable physiological response which is specific to an individual and associated with exposure to a substance.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [function]: Distinguishes the type of involvement of the actor in the activities related to the allergy or intolerance.;
+  ///
+  /// [actor]: Indicates who or what participated in the activities related to the allergy or intolerance.;
+  factory AllergyIntoleranceParticipant({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? function,
+    required Reference actor,
+  }) = _AllergyIntoleranceParticipant;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory AllergyIntoleranceParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? AllergyIntoleranceParticipant.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? AllergyIntoleranceParticipant.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'AllergyIntoleranceParticipant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory AllergyIntoleranceParticipant.fromJson(Map<String, dynamic> json) =>
+      _$AllergyIntoleranceParticipantFromJson(json);
+
+  /// Acts like a constructor, returns a [AllergyIntoleranceParticipant], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AllergyIntoleranceParticipant.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AllergyIntoleranceParticipantFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -917,7 +973,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     @Default(R5ResourceType.ClinicalImpression) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1137,7 +1193,7 @@ class Condition with Resource, _$Condition {
     @Default(R5ResourceType.Condition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1201,6 +1257,62 @@ class Condition with Resource, _$Condition {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class ConditionParticipant with _$ConditionParticipant {
+  ConditionParticipant._();
+
+  /// [ConditionParticipant]: A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [function]: Distinguishes the type of involvement of the actor in the activities related to the condition.;
+  ///
+  /// [actor]: Indicates who or what participated in the activities related to the condition.;
+  factory ConditionParticipant({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? function,
+    required Reference actor,
+  }) = _ConditionParticipant;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ConditionParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? ConditionParticipant.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? ConditionParticipant.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConditionParticipant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ConditionParticipant.fromJson(Map<String, dynamic> json) =>
+      _$ConditionParticipantFromJson(json);
+
+  /// Acts like a constructor, returns a [ConditionParticipant], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConditionParticipant.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConditionParticipantFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -1339,7 +1451,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     @Default(R5ResourceType.DetectedIssue) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1362,7 +1474,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     List<DetectedIssueEvidence>? evidence,
     String? detail,
     @JsonKey(name: '_detail') Element? detailElement,
-   FhirUri? reference,
+    FhirUri? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     List<DetectedIssueMitigation>? mitigation,
   }) = _DetectedIssue;
@@ -1629,7 +1741,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @Default(R5ResourceType.FamilyMemberHistory) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1992,7 +2104,7 @@ class Procedure with Resource, _$Procedure {
     @Default(R5ResourceType.Procedure) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,

@@ -9,7 +9,6 @@ enum NarrativeStatus {
   additional,
   @JsonValue('empty')
   empty,
-
 }
 
 enum ElementDefinitionRepresentation {
@@ -23,7 +22,6 @@ enum ElementDefinitionRepresentation {
   cdatext,
   @JsonValue('xhtml')
   xhtml,
-
 }
 
 enum ElementDefinitionSlicingRules {
@@ -33,7 +31,6 @@ enum ElementDefinitionSlicingRules {
   open,
   @JsonValue('openAtEnd')
   openatend,
-
 }
 
 enum ElementDefinitionDiscriminatorType {
@@ -47,7 +44,6 @@ enum ElementDefinitionDiscriminatorType {
   type,
   @JsonValue('profile')
   profile,
-
 }
 
 enum ElementDefinitionTypeAggregation {
@@ -57,7 +53,6 @@ enum ElementDefinitionTypeAggregation {
   referenced,
   @JsonValue('bundled')
   bundled,
-
 }
 
 enum ElementDefinitionTypeVersioning {
@@ -67,7 +62,6 @@ enum ElementDefinitionTypeVersioning {
   independent,
   @JsonValue('specific')
   specific,
-
 }
 
 enum ElementDefinitionConstraintSeverity {
@@ -75,7 +69,6 @@ enum ElementDefinitionConstraintSeverity {
   error,
   @JsonValue('warning')
   warning,
-
 }
 
 enum ElementDefinitionBindingStrength {
@@ -87,5 +80,4 @@ enum ElementDefinitionBindingStrength {
   preferred,
   @JsonValue('example')
   example,
-
 }

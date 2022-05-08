@@ -12398,7 +12398,7 @@ class _$TerminologyCapabilitiesImplementationTearOff {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement}) {
     return _TerminologyCapabilitiesImplementation(
       id: id,
@@ -12430,7 +12430,7 @@ mixin _$TerminologyCapabilitiesImplementation {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  Url? get url => throw _privateConstructorUsedError;
+  FhirUrl? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
 
@@ -12453,7 +12453,7 @@ abstract class $TerminologyCapabilitiesImplementationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -12503,7 +12503,7 @@ class _$TerminologyCapabilitiesImplementationCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -12548,7 +12548,7 @@ abstract class _$TerminologyCapabilitiesImplementationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement});
 
   @override
@@ -12605,7 +12605,7 @@ class __$TerminologyCapabilitiesImplementationCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -12645,7 +12645,7 @@ class _$_TerminologyCapabilitiesImplementation
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Url? url;
+  final FhirUrl? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -12706,7 +12706,7 @@ abstract class _TerminologyCapabilitiesImplementation
           List<FhirExtension>? modifierExtension,
           String? description,
           @JsonKey(name: '_description') Element? descriptionElement,
-          Url? url,
+          FhirUrl? url,
           @JsonKey(name: '_url') Element? urlElement}) =
       _$_TerminologyCapabilitiesImplementation;
   _TerminologyCapabilitiesImplementation._() : super._();
@@ -12728,7 +12728,7 @@ abstract class _TerminologyCapabilitiesImplementation
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  Url? get url;
+  FhirUrl? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;

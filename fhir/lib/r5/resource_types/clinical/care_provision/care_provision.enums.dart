@@ -13,7 +13,6 @@ enum CarePlanStatus {
   completed,
   @JsonValue('entered-in-error')
   entered_in_error,
-
 }
 
 enum CarePlanIntent {
@@ -27,7 +26,6 @@ enum CarePlanIntent {
   option,
   @JsonValue('directive')
   directive,
-
 }
 
 enum CarePlanPlannedActivityDetailKind {
@@ -47,7 +45,6 @@ enum CarePlanPlannedActivityDetailKind {
   ServiceRequest,
   @JsonValue('VisionPrescription')
   VisionPrescription,
-
 }
 
 enum CarePlanPlannedActivityDetailStatus {
@@ -81,7 +78,6 @@ enum CareTeamStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
-
 }
 
 enum GoalLifecycleStatus {
@@ -103,7 +99,6 @@ enum GoalLifecycleStatus {
   entered_in_error,
   @JsonValue('rejected')
   rejected,
-
 }
 
 enum VisionPrescriptionLensSpecificationEye {
@@ -111,7 +106,6 @@ enum VisionPrescriptionLensSpecificationEye {
   right,
   @JsonValue('left')
   left,
-
 }
 
 enum VisionPrescriptionPrismBase {
@@ -123,5 +117,4 @@ enum VisionPrescriptionPrismBase {
   in_,
   @JsonValue('out')
   out,
-
 }

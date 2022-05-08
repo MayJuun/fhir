@@ -127,7 +127,7 @@ enum NamingSystemUniqueIdType {
   @JsonValue('uuid')
   uuid,
   @JsonValue('uri')
-   FhirUri,
+  FhirUri,
   @JsonValue('other')
   other,
   @JsonValue('unknown')

@@ -13,7 +13,6 @@ enum EndpointStatus {
   entered_in_error,
   @JsonValue('test')
   test,
-
 }
 
 enum HealthcareServiceAvailableTimeDaysOfWeek {
@@ -31,7 +30,6 @@ enum HealthcareServiceAvailableTimeDaysOfWeek {
   sat,
   @JsonValue('sun')
   sun,
-
 }
 
 enum LocationStatus {
@@ -41,7 +39,6 @@ enum LocationStatus {
   suspended,
   @JsonValue('inactive')
   inactive,
-
 }
 
 enum LocationMode {
@@ -49,5 +46,4 @@ enum LocationMode {
   instance,
   @JsonValue('kind')
   kind,
-
 }

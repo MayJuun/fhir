@@ -21,7 +21,7 @@ class Narrative with _$Narrative {
   factory Narrative({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-     NarrativeStatus? status,
+    NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required String div,
   }) = _Narrative;
@@ -1033,8 +1033,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     @JsonKey(name: '_description') Element? descriptionElement,
     Boolean? ordered,
     @JsonKey(name: '_ordered') Element? orderedElement,
-    
-        ElementDefinitionSlicingRules? rules,
+    ElementDefinitionSlicingRules? rules,
     @JsonKey(name: '_rules') Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 
@@ -1076,8 +1075,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    
-        ElementDefinitionDiscriminatorType? type,
+    ElementDefinitionDiscriminatorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -1175,8 +1173,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     List<Canonical>? targetProfile,
     List<ElementDefinitionTypeAggregation>? aggregation,
     @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
-    
-        ElementDefinitionTypeVersioning? versioning,
+    ElementDefinitionTypeVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
   }) = _ElementDefinitionType;
 
@@ -1335,8 +1332,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
-    
-        ElementDefinitionConstraintSeverity? severity,
+    ElementDefinitionConstraintSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     String? human,
     @JsonKey(name: '_human') Element? humanElement,
@@ -1385,8 +1381,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    
-        ElementDefinitionBindingStrength? strength,
+    ElementDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,

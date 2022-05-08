@@ -68,9 +68,6 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R5ResourceType.CareTeam:
       return (resource as CareTeam)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R5ResourceType.CatalogEntry:
-      return (resource as CatalogEntry)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.ChargeItem:
       return (resource as ChargeItem)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
@@ -88,9 +85,6 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.ClinicalImpression:
       return (resource as ClinicalImpression)
-          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R5ResourceType.ClinicalUseIssue:
-      return (resource as ClinicalUseIssue)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.CodeSystem:
       return (resource as CodeSystem)

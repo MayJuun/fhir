@@ -735,7 +735,10 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
       recordedDateElement: json['_recordedDate'] == null
           ? null
           : Element.fromJson(json['_recordedDate'] as Map<String, dynamic>),
-      participant: json['participant'] as List<dynamic>?,
+      participant: (json['participant'] as List<dynamic>?)
+          ?.map((e) =>
+              AllergyIntoleranceParticipant.fromJson(e as Map<String, dynamic>))
+          .toList(),
       lastOccurrence: json['lastOccurrence'] == null
           ? null
           : DateTime.parse(json['lastOccurrence'] as String),
@@ -799,11 +802,48 @@ Map<String, dynamic> _$$_AllergyIntoleranceToJson(
   writeNotNull('_onsetString', instance.onsetStringElement?.toJson());
   writeNotNull('recordedDate', instance.recordedDate?.toIso8601String());
   writeNotNull('_recordedDate', instance.recordedDateElement?.toJson());
-  writeNotNull('participant', instance.participant);
+  writeNotNull(
+      'participant', instance.participant?.map((e) => e.toJson()).toList());
   writeNotNull('lastOccurrence', instance.lastOccurrence?.toIso8601String());
   writeNotNull('_lastOccurrence', instance.lastOccurrenceElement?.toJson());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('reaction', instance.reaction?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_AllergyIntoleranceParticipant _$$_AllergyIntoleranceParticipantFromJson(
+        Map<String, dynamic> json) =>
+    _$_AllergyIntoleranceParticipant(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      function: json['function'] == null
+          ? null
+          : CodeableConcept.fromJson(json['function'] as Map<String, dynamic>),
+      actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_AllergyIntoleranceParticipantToJson(
+    _$_AllergyIntoleranceParticipant instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('function', instance.function?.toJson());
+  val['actor'] = instance.actor.toJson();
   return val;
 }
 
@@ -1186,7 +1226,9 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
       recordedDateElement: json['_recordedDate'] == null
           ? null
           : Element.fromJson(json['_recordedDate'] as Map<String, dynamic>),
-      participant: json['participant'] as List<dynamic>?,
+      participant: (json['participant'] as List<dynamic>?)
+          ?.map((e) => ConditionParticipant.fromJson(e as Map<String, dynamic>))
+          .toList(),
       stage: (json['stage'] as List<dynamic>?)
           ?.map((e) => ConditionStage.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1250,10 +1292,47 @@ Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
   writeNotNull('_abatementString', instance.abatementStringElement?.toJson());
   writeNotNull('recordedDate', instance.recordedDate?.toIso8601String());
   writeNotNull('_recordedDate', instance.recordedDateElement?.toJson());
-  writeNotNull('participant', instance.participant);
+  writeNotNull(
+      'participant', instance.participant?.map((e) => e.toJson()).toList());
   writeNotNull('stage', instance.stage?.map((e) => e.toJson()).toList());
   writeNotNull('evidence', instance.evidence?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_ConditionParticipant _$$_ConditionParticipantFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConditionParticipant(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      function: json['function'] == null
+          ? null
+          : CodeableConcept.fromJson(json['function'] as Map<String, dynamic>),
+      actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_ConditionParticipantToJson(
+    _$_ConditionParticipant instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('function', instance.function?.toJson());
+  val['actor'] = instance.actor.toJson();
   return val;
 }
 

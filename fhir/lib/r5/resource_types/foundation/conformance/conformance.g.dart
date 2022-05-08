@@ -451,7 +451,7 @@ _$_CapabilityStatementImplementation
           descriptionElement: json['_description'] == null
               ? null
               : Element.fromJson(json['_description'] as Map<String, dynamic>),
-          url: json['url'],
+          url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
           urlElement: json['_url'] == null
               ? null
               : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -477,7 +477,7 @@ Map<String, dynamic> _$$_CapabilityStatementImplementationToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('url', instance.url);
+  writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('custodian', instance.custodian?.toJson());
   return val;
@@ -1023,7 +1023,8 @@ _$_CapabilityStatementEndpoint _$$_CapabilityStatementEndpointFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       protocol: Coding.fromJson(json['protocol'] as Map<String, dynamic>),
-      address: json['address'],
+      address:
+          json['address'] == null ? null : FhirUrl.fromJson(json['address']),
       addressElement: json['_address'] == null
           ? null
           : Element.fromJson(json['_address'] as Map<String, dynamic>),
@@ -1045,7 +1046,7 @@ Map<String, dynamic> _$$_CapabilityStatementEndpointToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['protocol'] = instance.protocol.toJson();
-  writeNotNull('address', instance.address);
+  writeNotNull('address', instance.address?.toJson());
   writeNotNull('_address', instance.addressElement?.toJson());
   return val;
 }
@@ -1417,7 +1418,7 @@ _$_CapabilityStatement2Implementation
           descriptionElement: json['_description'] == null
               ? null
               : Element.fromJson(json['_description'] as Map<String, dynamic>),
-          url: json['url'],
+          url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
           urlElement: json['_url'] == null
               ? null
               : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -1443,7 +1444,7 @@ Map<String, dynamic> _$$_CapabilityStatement2ImplementationToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('url', instance.url);
+  writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('custodian', instance.custodian?.toJson());
   return val;
@@ -3684,7 +3685,9 @@ _$_ImplementationGuideManifest _$$_ImplementationGuideManifestFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      rendering: json['rendering'],
+      rendering: json['rendering'] == null
+          ? null
+          : FhirUrl.fromJson(json['rendering']),
       renderingElement: json['_rendering'] == null
           ? null
           : Element.fromJson(json['_rendering'] as Map<String, dynamic>),
@@ -3723,7 +3726,7 @@ Map<String, dynamic> _$$_ImplementationGuideManifestToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('rendering', instance.rendering);
+  writeNotNull('rendering', instance.rendering?.toJson());
   writeNotNull('_rendering', instance.renderingElement?.toJson());
   val['resource'] = instance.resource.map((e) => e.toJson()).toList();
   writeNotNull('page', instance.page?.map((e) => e.toJson()).toList());
@@ -3759,7 +3762,9 @@ _$_ImplementationGuideResource1 _$$_ImplementationGuideResource1FromJson(
       exampleCanonicalElement: json['_exampleCanonical'] == null
           ? null
           : Element.fromJson(json['_exampleCanonical'] as Map<String, dynamic>),
-      relativePath: json['relativePath'],
+      relativePath: json['relativePath'] == null
+          ? null
+          : FhirUrl.fromJson(json['relativePath']),
       relativePathElement: json['_relativePath'] == null
           ? null
           : Element.fromJson(json['_relativePath'] as Map<String, dynamic>),
@@ -3785,7 +3790,7 @@ Map<String, dynamic> _$$_ImplementationGuideResource1ToJson(
   writeNotNull('_exampleBoolean', instance.exampleBooleanElement?.toJson());
   writeNotNull('exampleCanonical', instance.exampleCanonical?.toJson());
   writeNotNull('_exampleCanonical', instance.exampleCanonicalElement?.toJson());
-  writeNotNull('relativePath', instance.relativePath);
+  writeNotNull('relativePath', instance.relativePath?.toJson());
   writeNotNull('_relativePath', instance.relativePathElement?.toJson());
   return val;
 }

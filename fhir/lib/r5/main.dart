@@ -26,7 +26,7 @@ Future<void> main() async {
         stringMap[stringMap.keys.toList()[index]] =
             stringMap[stringMap.keys.toList()[index]]! + addOn;
       } else {
-        print('This was null: stringMap.keys.toList()[index]');
+        print('This was null: ${stringMap.keys.toList()[index]}');
       }
     } else {
       print('No resource found: $resource');
@@ -44,12 +44,14 @@ Future<void> main() async {
   final definitions = map['definitions'];
   for (final resource in definitions.keys) {
     if (regExp.hasMatch(resource[0].toString())) {
-      if (classList.contains(resource.toString().replaceAll('_', ''))) {
+      final start = resource.toString().split('_').first;
+      if (classList.contains(resource.toString().replaceAll('_', '')) ||
+          classList.contains(start)) {
         final displayResource = resource.replaceAll('_', '');
         addToStringMap(resource.toString(), '''
 
   @freezed\n
-  class $displayResource with ${resourceTypes.contains(displayResource) ? "Resource, " : ""} _$displayResource {
+  class $displayResource with ${resourceTypes.contains(displayResource) ? "Resource, " : ""} _\$$displayResource {
   ${resource.replaceAll('_', '')}._();
 
   /// [${resource.replaceAll('_', '')}]: ${definitions[resource]["description"]}
@@ -283,6 +285,8 @@ Future<void> main() async {
   }
 }''');
       }
+    } else {
+      print('Resource did not match the Regex: $resource');
     }
   }
   for (final r in replaceMap.keys) {
@@ -308,10 +312,10 @@ Future<void> main() async {
       }
     }
   }
-  await File('enums.dart').writeAsString(enums);
-  // final bigString = stringMap.values
-  //     .join('\n\n/// ***********************************************\n\n');
-  // File('temp.dart').writeAsString(bigString);
+  // await File('enums.dart').writeAsString(enums);
+  final bigString = stringMap.values
+      .join('\n\n/// ***********************************************\n\n');
+  File('temp.dart').writeAsString(bigString);
 }
 
 const finalReplace = <String, String>{

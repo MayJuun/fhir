@@ -2175,7 +2175,7 @@ class _$BundleEntryTearOff {
       List<BundleLink>? link,
       FhirUri? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
-      ResourceList? resource,
+      Resource? resource,
       BundleSearch? search,
       BundleRequest? request,
       BundleResponse? response}) {
@@ -2212,7 +2212,7 @@ mixin _$BundleEntry {
   FhirUri? get fullUrl => throw _privateConstructorUsedError;
   @JsonKey(name: '_fullUrl')
   Element? get fullUrlElement => throw _privateConstructorUsedError;
-  ResourceList? get resource => throw _privateConstructorUsedError;
+  Resource? get resource => throw _privateConstructorUsedError;
   BundleSearch? get search => throw _privateConstructorUsedError;
   BundleRequest? get request => throw _privateConstructorUsedError;
   BundleResponse? get response => throw _privateConstructorUsedError;
@@ -2235,7 +2235,7 @@ abstract class $BundleEntryCopyWith<$Res> {
       List<BundleLink>? link,
       FhirUri? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
-      ResourceList? resource,
+      Resource? resource,
       BundleSearch? search,
       BundleRequest? request,
       BundleResponse? response});
@@ -2295,7 +2295,7 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
       resource: resource == freezed
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as ResourceList?,
+              as Resource?,
       search: search == freezed
           ? _value.search
           : search // ignore: cast_nullable_to_non_nullable
@@ -2370,7 +2370,7 @@ abstract class _$BundleEntryCopyWith<$Res>
       List<BundleLink>? link,
       FhirUri? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
-      ResourceList? resource,
+      Resource? resource,
       BundleSearch? search,
       BundleRequest? request,
       BundleResponse? response});
@@ -2436,7 +2436,7 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
       resource: resource == freezed
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as ResourceList?,
+              as Resource?,
       search: search == freezed
           ? _value.search
           : search // ignore: cast_nullable_to_non_nullable
@@ -2487,7 +2487,7 @@ class _$_BundleEntry extends _BundleEntry {
   @JsonKey(name: '_fullUrl')
   final Element? fullUrlElement;
   @override
-  final ResourceList? resource;
+  final Resource? resource;
   @override
   final BundleSearch? search;
   @override
@@ -2553,7 +2553,7 @@ abstract class _BundleEntry extends BundleEntry {
       List<BundleLink>? link,
       FhirUri? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
-      ResourceList? resource,
+      Resource? resource,
       BundleSearch? search,
       BundleRequest? request,
       BundleResponse? response}) = _$_BundleEntry;
@@ -2577,7 +2577,7 @@ abstract class _BundleEntry extends BundleEntry {
   @JsonKey(name: '_fullUrl')
   Element? get fullUrlElement;
   @override
-  ResourceList? get resource;
+  Resource? get resource;
   @override
   BundleSearch? get search;
   @override
@@ -3546,7 +3546,7 @@ class _$BundleResponseTearOff {
       @JsonKey(name: '_etag') Element? etagElement,
       Instant? lastModified,
       @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-      ResourceList? outcome}) {
+      Resource? outcome}) {
     return _BundleResponse(
       id: id,
       extension_: extension_,
@@ -3590,7 +3590,7 @@ mixin _$BundleResponse {
   Instant? get lastModified => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastModified')
   Element? get lastModifiedElement => throw _privateConstructorUsedError;
-  ResourceList? get outcome => throw _privateConstructorUsedError;
+  Resource? get outcome => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3615,7 +3615,7 @@ abstract class $BundleResponseCopyWith<$Res> {
       @JsonKey(name: '_etag') Element? etagElement,
       Instant? lastModified,
       @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-      ResourceList? outcome});
+      Resource? outcome});
 
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get locationElement;
@@ -3695,7 +3695,7 @@ class _$BundleResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as ResourceList?,
+              as Resource?,
     ));
   }
 
@@ -3763,7 +3763,7 @@ abstract class _$BundleResponseCopyWith<$Res>
       @JsonKey(name: '_etag') Element? etagElement,
       Instant? lastModified,
       @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-      ResourceList? outcome});
+      Resource? outcome});
 
   @override
   $ElementCopyWith<$Res>? get statusElement;
@@ -3849,7 +3849,7 @@ class __$BundleResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as ResourceList?,
+              as Resource?,
     ));
   }
 }
@@ -3903,7 +3903,7 @@ class _$_BundleResponse extends _BundleResponse {
   @JsonKey(name: '_lastModified')
   final Element? lastModifiedElement;
   @override
-  final ResourceList? outcome;
+  final Resource? outcome;
 
   @override
   String toString() {
@@ -3976,7 +3976,7 @@ abstract class _BundleResponse extends BundleResponse {
       @JsonKey(name: '_etag') Element? etagElement,
       Instant? lastModified,
       @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-      ResourceList? outcome}) = _$_BundleResponse;
+      Resource? outcome}) = _$_BundleResponse;
   _BundleResponse._() : super._();
 
   factory _BundleResponse.fromJson(Map<String, dynamic> json) =
@@ -4010,7 +4010,7 @@ abstract class _BundleResponse extends BundleResponse {
   @JsonKey(name: '_lastModified')
   Element? get lastModifiedElement;
   @override
-  ResourceList? get outcome;
+  Resource? get outcome;
   @override
   @JsonKey(ignore: true)
   _$BundleResponseCopyWith<_BundleResponse> get copyWith =>
@@ -5810,7 +5810,7 @@ class _$MessageHeaderDestinationTearOff {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       Reference? target,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
       Reference? receiver}) {
     return _MessageHeaderDestination(
@@ -5845,7 +5845,7 @@ mixin _$MessageHeaderDestination {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   Reference? get target => throw _privateConstructorUsedError;
-  Url? get endpoint => throw _privateConstructorUsedError;
+  FhirUrl? get endpoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_endpoint')
   Element? get endpointElement => throw _privateConstructorUsedError;
   Reference? get receiver => throw _privateConstructorUsedError;
@@ -5868,7 +5868,7 @@ abstract class $MessageHeaderDestinationCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       Reference? target,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
       Reference? receiver});
 
@@ -5927,7 +5927,7 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
           : endpointElement // ignore: cast_nullable_to_non_nullable
@@ -5998,7 +5998,7 @@ abstract class _$MessageHeaderDestinationCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       Reference? target,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
       Reference? receiver});
 
@@ -6064,7 +6064,7 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
           : endpointElement // ignore: cast_nullable_to_non_nullable
@@ -6110,7 +6110,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
   @override
   final Reference? target;
   @override
-  final Url? endpoint;
+  final FhirUrl? endpoint;
   @override
   @JsonKey(name: '_endpoint')
   final Element? endpointElement;
@@ -6175,7 +6175,7 @@ abstract class _MessageHeaderDestination extends MessageHeaderDestination {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       Reference? target,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
       Reference? receiver}) = _$_MessageHeaderDestination;
   _MessageHeaderDestination._() : super._();
@@ -6198,7 +6198,7 @@ abstract class _MessageHeaderDestination extends MessageHeaderDestination {
   @override
   Reference? get target;
   @override
-  Url? get endpoint;
+  FhirUrl? get endpoint;
   @override
   @JsonKey(name: '_endpoint')
   Element? get endpointElement;
@@ -6229,7 +6229,7 @@ class _$MessageHeaderSourceTearOff {
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
       ContactPoint? contact,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement}) {
     return _MessageHeaderSource(
       id: id,
@@ -6272,7 +6272,7 @@ mixin _$MessageHeaderSource {
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
   ContactPoint? get contact => throw _privateConstructorUsedError;
-  Url? get endpoint => throw _privateConstructorUsedError;
+  FhirUrl? get endpoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_endpoint')
   Element? get endpointElement => throw _privateConstructorUsedError;
 
@@ -6298,7 +6298,7 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
       ContactPoint? contact,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -6376,7 +6376,7 @@ class _$MessageHeaderSourceCopyWithImpl<$Res>
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
           : endpointElement // ignore: cast_nullable_to_non_nullable
@@ -6458,7 +6458,7 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
       ContactPoint? contact,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement});
 
   @override
@@ -6543,7 +6543,7 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
           : endpointElement // ignore: cast_nullable_to_non_nullable
@@ -6598,7 +6598,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
   @override
   final ContactPoint? contact;
   @override
-  final Url? endpoint;
+  final FhirUrl? endpoint;
   @override
   @JsonKey(name: '_endpoint')
   final Element? endpointElement;
@@ -6673,7 +6673,7 @@ abstract class _MessageHeaderSource extends MessageHeaderSource {
           String? version,
           @JsonKey(name: '_version') Element? versionElement,
           ContactPoint? contact,
-          Url? endpoint,
+          FhirUrl? endpoint,
           @JsonKey(name: '_endpoint') Element? endpointElement}) =
       _$_MessageHeaderSource;
   _MessageHeaderSource._() : super._();
@@ -6706,7 +6706,7 @@ abstract class _MessageHeaderSource extends MessageHeaderSource {
   @override
   ContactPoint? get contact;
   @override
-  Url? get endpoint;
+  FhirUrl? get endpoint;
   @override
   @JsonKey(name: '_endpoint')
   Element? get endpointElement;
@@ -8552,7 +8552,7 @@ class _$ParametersParameterTearOff {
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
       Meta? valueMeta,
-      ResourceList? resource,
+      Resource? resource,
       @JsonKey(name: 'part') List<ParametersParameter>? part_}) {
     return _ParametersParameter(
       id: id,
@@ -8755,7 +8755,7 @@ mixin _$ParametersParameter {
   UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
   Dosage? get valueDosage => throw _privateConstructorUsedError;
   Meta? get valueMeta => throw _privateConstructorUsedError;
-  ResourceList? get resource => throw _privateConstructorUsedError;
+  Resource? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: 'part')
   List<ParametersParameter>? get part_ => throw _privateConstructorUsedError;
 
@@ -8849,7 +8849,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
       Meta? valueMeta,
-      ResourceList? resource,
+      Resource? resource,
       @JsonKey(name: 'part') List<ParametersParameter>? part_});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -9315,7 +9315,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
       resource: resource == freezed
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as ResourceList?,
+              as Resource?,
       part_: part_ == freezed
           ? _value.part_
           : part_ // ignore: cast_nullable_to_non_nullable
@@ -9999,7 +9999,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
       Meta? valueMeta,
-      ResourceList? resource,
+      Resource? resource,
       @JsonKey(name: 'part') List<ParametersParameter>? part_});
 
   @override
@@ -10520,7 +10520,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
       resource: resource == freezed
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
-              as ResourceList?,
+              as Resource?,
       part_: part_ == freezed
           ? _value.part_
           : part_ // ignore: cast_nullable_to_non_nullable
@@ -10797,7 +10797,7 @@ class _$_ParametersParameter extends _ParametersParameter {
   @override
   final Meta? valueMeta;
   @override
-  final ResourceList? resource;
+  final Resource? resource;
   @override
   @JsonKey(name: 'part')
   final List<ParametersParameter>? part_;
@@ -11136,7 +11136,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
       Meta? valueMeta,
-      ResourceList? resource,
+      Resource? resource,
       @JsonKey(name: 'part')
           List<ParametersParameter>? part_}) = _$_ParametersParameter;
   _ParametersParameter._() : super._();
@@ -11323,7 +11323,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
   Meta? get valueMeta;
   @override
-  ResourceList? get resource;
+  Resource? get resource;
   @override
   @JsonKey(name: 'part')
   List<ParametersParameter>? get part_;
@@ -11366,7 +11366,7 @@ class _$SubscriptionTearOff {
       @JsonKey(name: '_reason') Element? reasonElement,
       List<SubscriptionFilterBy>? filterBy,
       required Coding channelType,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
       List<String>? header,
       @JsonKey(name: '_header') List<Element>? headerElement,
@@ -11465,7 +11465,7 @@ mixin _$Subscription {
   List<SubscriptionFilterBy>? get filterBy =>
       throw _privateConstructorUsedError;
   Coding get channelType => throw _privateConstructorUsedError;
-  Url? get endpoint => throw _privateConstructorUsedError;
+  FhirUrl? get endpoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_endpoint')
   Element? get endpointElement => throw _privateConstructorUsedError;
   List<String>? get header => throw _privateConstructorUsedError;
@@ -11523,7 +11523,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       @JsonKey(name: '_reason') Element? reasonElement,
       List<SubscriptionFilterBy>? filterBy,
       Coding channelType,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
       List<String>? header,
       @JsonKey(name: '_header') List<Element>? headerElement,
@@ -11704,7 +11704,7 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
           : endpointElement // ignore: cast_nullable_to_non_nullable
@@ -11954,7 +11954,7 @@ abstract class _$SubscriptionCopyWith<$Res>
       @JsonKey(name: '_reason') Element? reasonElement,
       List<SubscriptionFilterBy>? filterBy,
       Coding channelType,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
       List<String>? header,
       @JsonKey(name: '_header') List<Element>? headerElement,
@@ -12152,7 +12152,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
           : endpointElement // ignore: cast_nullable_to_non_nullable
@@ -12313,7 +12313,7 @@ class _$_Subscription extends _Subscription {
   @override
   final Coding channelType;
   @override
-  final Url? endpoint;
+  final FhirUrl? endpoint;
   @override
   @JsonKey(name: '_endpoint')
   final Element? endpointElement;
@@ -12499,7 +12499,7 @@ abstract class _Subscription extends Subscription {
       @JsonKey(name: '_reason') Element? reasonElement,
       List<SubscriptionFilterBy>? filterBy,
       required Coding channelType,
-      Url? endpoint,
+      FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
       List<String>? header,
       @JsonKey(name: '_header') List<Element>? headerElement,
@@ -12574,7 +12574,7 @@ abstract class _Subscription extends Subscription {
   @override
   Coding get channelType;
   @override
-  Url? get endpoint;
+  FhirUrl? get endpoint;
   @override
   @JsonKey(name: '_endpoint')
   Element? get endpointElement;
@@ -13882,6 +13882,422 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @JsonKey(ignore: true)
   _$SubscriptionStatusCopyWith<_SubscriptionStatus> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+SubscriptionStatusNotificationEvent
+    _$SubscriptionStatusNotificationEventFromJson(Map<String, dynamic> json) {
+  return _SubscriptionStatusNotificationEvent.fromJson(json);
+}
+
+/// @nodoc
+class _$SubscriptionStatusNotificationEventTearOff {
+  const _$SubscriptionStatusNotificationEventTearOff();
+
+  _SubscriptionStatusNotificationEvent call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Integer64? eventNumber,
+      @JsonKey(name: '_eventNumber') Element? eventNumberElement,
+      Instant? timestamp,
+      @JsonKey(name: '_timestamp') Element? timestampElement,
+      Reference? focus,
+      List<Reference>? additionalContext}) {
+    return _SubscriptionStatusNotificationEvent(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      eventNumber: eventNumber,
+      eventNumberElement: eventNumberElement,
+      timestamp: timestamp,
+      timestampElement: timestampElement,
+      focus: focus,
+      additionalContext: additionalContext,
+    );
+  }
+
+  SubscriptionStatusNotificationEvent fromJson(Map<String, Object?> json) {
+    return SubscriptionStatusNotificationEvent.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $SubscriptionStatusNotificationEvent =
+    _$SubscriptionStatusNotificationEventTearOff();
+
+/// @nodoc
+mixin _$SubscriptionStatusNotificationEvent {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Integer64? get eventNumber => throw _privateConstructorUsedError;
+  @JsonKey(name: '_eventNumber')
+  Element? get eventNumberElement => throw _privateConstructorUsedError;
+  Instant? get timestamp => throw _privateConstructorUsedError;
+  @JsonKey(name: '_timestamp')
+  Element? get timestampElement => throw _privateConstructorUsedError;
+  Reference? get focus => throw _privateConstructorUsedError;
+  List<Reference>? get additionalContext => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SubscriptionStatusNotificationEventCopyWith<
+          SubscriptionStatusNotificationEvent>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SubscriptionStatusNotificationEventCopyWith<$Res> {
+  factory $SubscriptionStatusNotificationEventCopyWith(
+          SubscriptionStatusNotificationEvent value,
+          $Res Function(SubscriptionStatusNotificationEvent) then) =
+      _$SubscriptionStatusNotificationEventCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Integer64? eventNumber,
+      @JsonKey(name: '_eventNumber') Element? eventNumberElement,
+      Instant? timestamp,
+      @JsonKey(name: '_timestamp') Element? timestampElement,
+      Reference? focus,
+      List<Reference>? additionalContext});
+
+  $ElementCopyWith<$Res>? get eventNumberElement;
+  $ElementCopyWith<$Res>? get timestampElement;
+  $ReferenceCopyWith<$Res>? get focus;
+}
+
+/// @nodoc
+class _$SubscriptionStatusNotificationEventCopyWithImpl<$Res>
+    implements $SubscriptionStatusNotificationEventCopyWith<$Res> {
+  _$SubscriptionStatusNotificationEventCopyWithImpl(this._value, this._then);
+
+  final SubscriptionStatusNotificationEvent _value;
+  // ignore: unused_field
+  final $Res Function(SubscriptionStatusNotificationEvent) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? eventNumber = freezed,
+    Object? eventNumberElement = freezed,
+    Object? timestamp = freezed,
+    Object? timestampElement = freezed,
+    Object? focus = freezed,
+    Object? additionalContext = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      eventNumber: eventNumber == freezed
+          ? _value.eventNumber
+          : eventNumber // ignore: cast_nullable_to_non_nullable
+              as Integer64?,
+      eventNumberElement: eventNumberElement == freezed
+          ? _value.eventNumberElement
+          : eventNumberElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      timestamp: timestamp == freezed
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      timestampElement: timestampElement == freezed
+          ? _value.timestampElement
+          : timestampElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      additionalContext: additionalContext == freezed
+          ? _value.additionalContext
+          : additionalContext // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get eventNumberElement {
+    if (_value.eventNumberElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.eventNumberElement!, (value) {
+      return _then(_value.copyWith(eventNumberElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get timestampElement {
+    if (_value.timestampElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.timestampElement!, (value) {
+      return _then(_value.copyWith(timestampElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get focus {
+    if (_value.focus == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.focus!, (value) {
+      return _then(_value.copyWith(focus: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$SubscriptionStatusNotificationEventCopyWith<$Res>
+    implements $SubscriptionStatusNotificationEventCopyWith<$Res> {
+  factory _$SubscriptionStatusNotificationEventCopyWith(
+          _SubscriptionStatusNotificationEvent value,
+          $Res Function(_SubscriptionStatusNotificationEvent) then) =
+      __$SubscriptionStatusNotificationEventCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Integer64? eventNumber,
+      @JsonKey(name: '_eventNumber') Element? eventNumberElement,
+      Instant? timestamp,
+      @JsonKey(name: '_timestamp') Element? timestampElement,
+      Reference? focus,
+      List<Reference>? additionalContext});
+
+  @override
+  $ElementCopyWith<$Res>? get eventNumberElement;
+  @override
+  $ElementCopyWith<$Res>? get timestampElement;
+  @override
+  $ReferenceCopyWith<$Res>? get focus;
+}
+
+/// @nodoc
+class __$SubscriptionStatusNotificationEventCopyWithImpl<$Res>
+    extends _$SubscriptionStatusNotificationEventCopyWithImpl<$Res>
+    implements _$SubscriptionStatusNotificationEventCopyWith<$Res> {
+  __$SubscriptionStatusNotificationEventCopyWithImpl(
+      _SubscriptionStatusNotificationEvent _value,
+      $Res Function(_SubscriptionStatusNotificationEvent) _then)
+      : super(_value, (v) => _then(v as _SubscriptionStatusNotificationEvent));
+
+  @override
+  _SubscriptionStatusNotificationEvent get _value =>
+      super._value as _SubscriptionStatusNotificationEvent;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? eventNumber = freezed,
+    Object? eventNumberElement = freezed,
+    Object? timestamp = freezed,
+    Object? timestampElement = freezed,
+    Object? focus = freezed,
+    Object? additionalContext = freezed,
+  }) {
+    return _then(_SubscriptionStatusNotificationEvent(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      eventNumber: eventNumber == freezed
+          ? _value.eventNumber
+          : eventNumber // ignore: cast_nullable_to_non_nullable
+              as Integer64?,
+      eventNumberElement: eventNumberElement == freezed
+          ? _value.eventNumberElement
+          : eventNumberElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      timestamp: timestamp == freezed
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      timestampElement: timestampElement == freezed
+          ? _value.timestampElement
+          : timestampElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      additionalContext: additionalContext == freezed
+          ? _value.additionalContext
+          : additionalContext // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_SubscriptionStatusNotificationEvent
+    extends _SubscriptionStatusNotificationEvent {
+  _$_SubscriptionStatusNotificationEvent(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.eventNumber,
+      @JsonKey(name: '_eventNumber') this.eventNumberElement,
+      this.timestamp,
+      @JsonKey(name: '_timestamp') this.timestampElement,
+      this.focus,
+      this.additionalContext})
+      : super._();
+
+  factory _$_SubscriptionStatusNotificationEvent.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SubscriptionStatusNotificationEventFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Integer64? eventNumber;
+  @override
+  @JsonKey(name: '_eventNumber')
+  final Element? eventNumberElement;
+  @override
+  final Instant? timestamp;
+  @override
+  @JsonKey(name: '_timestamp')
+  final Element? timestampElement;
+  @override
+  final Reference? focus;
+  @override
+  final List<Reference>? additionalContext;
+
+  @override
+  String toString() {
+    return 'SubscriptionStatusNotificationEvent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, eventNumber: $eventNumber, eventNumberElement: $eventNumberElement, timestamp: $timestamp, timestampElement: $timestampElement, focus: $focus, additionalContext: $additionalContext)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _SubscriptionStatusNotificationEvent &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.eventNumber, eventNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.eventNumberElement, eventNumberElement) &&
+            const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
+            const DeepCollectionEquality()
+                .equals(other.timestampElement, timestampElement) &&
+            const DeepCollectionEquality().equals(other.focus, focus) &&
+            const DeepCollectionEquality()
+                .equals(other.additionalContext, additionalContext));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(eventNumber),
+      const DeepCollectionEquality().hash(eventNumberElement),
+      const DeepCollectionEquality().hash(timestamp),
+      const DeepCollectionEquality().hash(timestampElement),
+      const DeepCollectionEquality().hash(focus),
+      const DeepCollectionEquality().hash(additionalContext));
+
+  @JsonKey(ignore: true)
+  @override
+  _$SubscriptionStatusNotificationEventCopyWith<
+          _SubscriptionStatusNotificationEvent>
+      get copyWith => __$SubscriptionStatusNotificationEventCopyWithImpl<
+          _SubscriptionStatusNotificationEvent>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SubscriptionStatusNotificationEventToJson(this);
+  }
+}
+
+abstract class _SubscriptionStatusNotificationEvent
+    extends SubscriptionStatusNotificationEvent {
+  factory _SubscriptionStatusNotificationEvent(
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Integer64? eventNumber,
+          @JsonKey(name: '_eventNumber') Element? eventNumberElement,
+          Instant? timestamp,
+          @JsonKey(name: '_timestamp') Element? timestampElement,
+          Reference? focus,
+          List<Reference>? additionalContext}) =
+      _$_SubscriptionStatusNotificationEvent;
+  _SubscriptionStatusNotificationEvent._() : super._();
+
+  factory _SubscriptionStatusNotificationEvent.fromJson(
+          Map<String, dynamic> json) =
+      _$_SubscriptionStatusNotificationEvent.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Integer64? get eventNumber;
+  @override
+  @JsonKey(name: '_eventNumber')
+  Element? get eventNumberElement;
+  @override
+  Instant? get timestamp;
+  @override
+  @JsonKey(name: '_timestamp')
+  Element? get timestampElement;
+  @override
+  Reference? get focus;
+  @override
+  List<Reference>? get additionalContext;
+  @override
+  @JsonKey(ignore: true)
+  _$SubscriptionStatusNotificationEventCopyWith<
+          _SubscriptionStatusNotificationEvent>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubscriptionTopic _$SubscriptionTopicFromJson(Map<String, dynamic> json) {
@@ -16515,6 +16931,388 @@ abstract class _SubscriptionTopicQueryCriteria
       get copyWith => throw _privateConstructorUsedError;
 }
 
+SubscriptionTopicEventTrigger _$SubscriptionTopicEventTriggerFromJson(
+    Map<String, dynamic> json) {
+  return _SubscriptionTopicEventTrigger.fromJson(json);
+}
+
+/// @nodoc
+class _$SubscriptionTopicEventTriggerTearOff {
+  const _$SubscriptionTopicEventTriggerTearOff();
+
+  _SubscriptionTopicEventTrigger call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Markdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      required CodeableConcept event,
+      FhirUri? resource,
+      @JsonKey(name: '_resource') Element? resourceElement}) {
+    return _SubscriptionTopicEventTrigger(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      description: description,
+      descriptionElement: descriptionElement,
+      event: event,
+      resource: resource,
+      resourceElement: resourceElement,
+    );
+  }
+
+  SubscriptionTopicEventTrigger fromJson(Map<String, Object?> json) {
+    return SubscriptionTopicEventTrigger.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $SubscriptionTopicEventTrigger = _$SubscriptionTopicEventTriggerTearOff();
+
+/// @nodoc
+mixin _$SubscriptionTopicEventTrigger {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  CodeableConcept get event => throw _privateConstructorUsedError;
+  FhirUri? get resource => throw _privateConstructorUsedError;
+  @JsonKey(name: '_resource')
+  Element? get resourceElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SubscriptionTopicEventTriggerCopyWith<SubscriptionTopicEventTrigger>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SubscriptionTopicEventTriggerCopyWith<$Res> {
+  factory $SubscriptionTopicEventTriggerCopyWith(
+          SubscriptionTopicEventTrigger value,
+          $Res Function(SubscriptionTopicEventTrigger) then) =
+      _$SubscriptionTopicEventTriggerCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Markdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      CodeableConcept event,
+      FhirUri? resource,
+      @JsonKey(name: '_resource') Element? resourceElement});
+
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $CodeableConceptCopyWith<$Res> get event;
+  $ElementCopyWith<$Res>? get resourceElement;
+}
+
+/// @nodoc
+class _$SubscriptionTopicEventTriggerCopyWithImpl<$Res>
+    implements $SubscriptionTopicEventTriggerCopyWith<$Res> {
+  _$SubscriptionTopicEventTriggerCopyWithImpl(this._value, this._then);
+
+  final SubscriptionTopicEventTrigger _value;
+  // ignore: unused_field
+  final $Res Function(SubscriptionTopicEventTrigger) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? event = freezed,
+    Object? resource = freezed,
+    Object? resourceElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      event: event == freezed
+          ? _value.event
+          : event // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      resourceElement: resourceElement == freezed
+          ? _value.resourceElement
+          : resourceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get event {
+    return $CodeableConceptCopyWith<$Res>(_value.event, (value) {
+      return _then(_value.copyWith(event: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get resourceElement {
+    if (_value.resourceElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.resourceElement!, (value) {
+      return _then(_value.copyWith(resourceElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$SubscriptionTopicEventTriggerCopyWith<$Res>
+    implements $SubscriptionTopicEventTriggerCopyWith<$Res> {
+  factory _$SubscriptionTopicEventTriggerCopyWith(
+          _SubscriptionTopicEventTrigger value,
+          $Res Function(_SubscriptionTopicEventTrigger) then) =
+      __$SubscriptionTopicEventTriggerCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Markdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      CodeableConcept event,
+      FhirUri? resource,
+      @JsonKey(name: '_resource') Element? resourceElement});
+
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get event;
+  @override
+  $ElementCopyWith<$Res>? get resourceElement;
+}
+
+/// @nodoc
+class __$SubscriptionTopicEventTriggerCopyWithImpl<$Res>
+    extends _$SubscriptionTopicEventTriggerCopyWithImpl<$Res>
+    implements _$SubscriptionTopicEventTriggerCopyWith<$Res> {
+  __$SubscriptionTopicEventTriggerCopyWithImpl(
+      _SubscriptionTopicEventTrigger _value,
+      $Res Function(_SubscriptionTopicEventTrigger) _then)
+      : super(_value, (v) => _then(v as _SubscriptionTopicEventTrigger));
+
+  @override
+  _SubscriptionTopicEventTrigger get _value =>
+      super._value as _SubscriptionTopicEventTrigger;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? event = freezed,
+    Object? resource = freezed,
+    Object? resourceElement = freezed,
+  }) {
+    return _then(_SubscriptionTopicEventTrigger(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      event: event == freezed
+          ? _value.event
+          : event // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      resourceElement: resourceElement == freezed
+          ? _value.resourceElement
+          : resourceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_SubscriptionTopicEventTrigger extends _SubscriptionTopicEventTrigger {
+  _$_SubscriptionTopicEventTrigger(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      required this.event,
+      this.resource,
+      @JsonKey(name: '_resource') this.resourceElement})
+      : super._();
+
+  factory _$_SubscriptionTopicEventTrigger.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SubscriptionTopicEventTriggerFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Markdown? description;
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+  @override
+  final CodeableConcept event;
+  @override
+  final FhirUri? resource;
+  @override
+  @JsonKey(name: '_resource')
+  final Element? resourceElement;
+
+  @override
+  String toString() {
+    return 'SubscriptionTopicEventTrigger(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, event: $event, resource: $resource, resourceElement: $resourceElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _SubscriptionTopicEventTrigger &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality().equals(other.event, event) &&
+            const DeepCollectionEquality().equals(other.resource, resource) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceElement, resourceElement));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(descriptionElement),
+      const DeepCollectionEquality().hash(event),
+      const DeepCollectionEquality().hash(resource),
+      const DeepCollectionEquality().hash(resourceElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$SubscriptionTopicEventTriggerCopyWith<_SubscriptionTopicEventTrigger>
+      get copyWith => __$SubscriptionTopicEventTriggerCopyWithImpl<
+          _SubscriptionTopicEventTrigger>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SubscriptionTopicEventTriggerToJson(this);
+  }
+}
+
+abstract class _SubscriptionTopicEventTrigger
+    extends SubscriptionTopicEventTrigger {
+  factory _SubscriptionTopicEventTrigger(
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Markdown? description,
+          @JsonKey(name: '_description') Element? descriptionElement,
+          required CodeableConcept event,
+          FhirUri? resource,
+          @JsonKey(name: '_resource') Element? resourceElement}) =
+      _$_SubscriptionTopicEventTrigger;
+  _SubscriptionTopicEventTrigger._() : super._();
+
+  factory _SubscriptionTopicEventTrigger.fromJson(Map<String, dynamic> json) =
+      _$_SubscriptionTopicEventTrigger.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Markdown? get description;
+  @override
+  @JsonKey(name: '_description')
+  Element? get descriptionElement;
+  @override
+  CodeableConcept get event;
+  @override
+  FhirUri? get resource;
+  @override
+  @JsonKey(name: '_resource')
+  Element? get resourceElement;
+  @override
+  @JsonKey(ignore: true)
+  _$SubscriptionTopicEventTriggerCopyWith<_SubscriptionTopicEventTrigger>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 SubscriptionTopicCanFilterBy _$SubscriptionTopicCanFilterByFromJson(
     Map<String, dynamic> json) {
   return _SubscriptionTopicCanFilterBy.fromJson(json);
@@ -17040,5 +17838,396 @@ abstract class _SubscriptionTopicCanFilterBy
   @override
   @JsonKey(ignore: true)
   _$SubscriptionTopicCanFilterByCopyWith<_SubscriptionTopicCanFilterBy>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+SubscriptionTopicNotificationShape _$SubscriptionTopicNotificationShapeFromJson(
+    Map<String, dynamic> json) {
+  return _SubscriptionTopicNotificationShape.fromJson(json);
+}
+
+/// @nodoc
+class _$SubscriptionTopicNotificationShapeTearOff {
+  const _$SubscriptionTopicNotificationShapeTearOff();
+
+  _SubscriptionTopicNotificationShape call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? resource,
+      @JsonKey(name: '_resource') Element? resourceElement,
+      List<String>? include,
+      @JsonKey(name: '_include') List<Element>? includeElement,
+      List<String>? revInclude,
+      @JsonKey(name: '_revInclude') List<Element>? revIncludeElement}) {
+    return _SubscriptionTopicNotificationShape(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      resource: resource,
+      resourceElement: resourceElement,
+      include: include,
+      includeElement: includeElement,
+      revInclude: revInclude,
+      revIncludeElement: revIncludeElement,
+    );
+  }
+
+  SubscriptionTopicNotificationShape fromJson(Map<String, Object?> json) {
+    return SubscriptionTopicNotificationShape.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $SubscriptionTopicNotificationShape =
+    _$SubscriptionTopicNotificationShapeTearOff();
+
+/// @nodoc
+mixin _$SubscriptionTopicNotificationShape {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get resource => throw _privateConstructorUsedError;
+  @JsonKey(name: '_resource')
+  Element? get resourceElement => throw _privateConstructorUsedError;
+  List<String>? get include => throw _privateConstructorUsedError;
+  @JsonKey(name: '_include')
+  List<Element>? get includeElement => throw _privateConstructorUsedError;
+  List<String>? get revInclude => throw _privateConstructorUsedError;
+  @JsonKey(name: '_revInclude')
+  List<Element>? get revIncludeElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SubscriptionTopicNotificationShapeCopyWith<
+          SubscriptionTopicNotificationShape>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SubscriptionTopicNotificationShapeCopyWith<$Res> {
+  factory $SubscriptionTopicNotificationShapeCopyWith(
+          SubscriptionTopicNotificationShape value,
+          $Res Function(SubscriptionTopicNotificationShape) then) =
+      _$SubscriptionTopicNotificationShapeCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? resource,
+      @JsonKey(name: '_resource') Element? resourceElement,
+      List<String>? include,
+      @JsonKey(name: '_include') List<Element>? includeElement,
+      List<String>? revInclude,
+      @JsonKey(name: '_revInclude') List<Element>? revIncludeElement});
+
+  $ElementCopyWith<$Res>? get resourceElement;
+}
+
+/// @nodoc
+class _$SubscriptionTopicNotificationShapeCopyWithImpl<$Res>
+    implements $SubscriptionTopicNotificationShapeCopyWith<$Res> {
+  _$SubscriptionTopicNotificationShapeCopyWithImpl(this._value, this._then);
+
+  final SubscriptionTopicNotificationShape _value;
+  // ignore: unused_field
+  final $Res Function(SubscriptionTopicNotificationShape) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? resource = freezed,
+    Object? resourceElement = freezed,
+    Object? include = freezed,
+    Object? includeElement = freezed,
+    Object? revInclude = freezed,
+    Object? revIncludeElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      resourceElement: resourceElement == freezed
+          ? _value.resourceElement
+          : resourceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      include: include == freezed
+          ? _value.include
+          : include // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      includeElement: includeElement == freezed
+          ? _value.includeElement
+          : includeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      revInclude: revInclude == freezed
+          ? _value.revInclude
+          : revInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      revIncludeElement: revIncludeElement == freezed
+          ? _value.revIncludeElement
+          : revIncludeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get resourceElement {
+    if (_value.resourceElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.resourceElement!, (value) {
+      return _then(_value.copyWith(resourceElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$SubscriptionTopicNotificationShapeCopyWith<$Res>
+    implements $SubscriptionTopicNotificationShapeCopyWith<$Res> {
+  factory _$SubscriptionTopicNotificationShapeCopyWith(
+          _SubscriptionTopicNotificationShape value,
+          $Res Function(_SubscriptionTopicNotificationShape) then) =
+      __$SubscriptionTopicNotificationShapeCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? resource,
+      @JsonKey(name: '_resource') Element? resourceElement,
+      List<String>? include,
+      @JsonKey(name: '_include') List<Element>? includeElement,
+      List<String>? revInclude,
+      @JsonKey(name: '_revInclude') List<Element>? revIncludeElement});
+
+  @override
+  $ElementCopyWith<$Res>? get resourceElement;
+}
+
+/// @nodoc
+class __$SubscriptionTopicNotificationShapeCopyWithImpl<$Res>
+    extends _$SubscriptionTopicNotificationShapeCopyWithImpl<$Res>
+    implements _$SubscriptionTopicNotificationShapeCopyWith<$Res> {
+  __$SubscriptionTopicNotificationShapeCopyWithImpl(
+      _SubscriptionTopicNotificationShape _value,
+      $Res Function(_SubscriptionTopicNotificationShape) _then)
+      : super(_value, (v) => _then(v as _SubscriptionTopicNotificationShape));
+
+  @override
+  _SubscriptionTopicNotificationShape get _value =>
+      super._value as _SubscriptionTopicNotificationShape;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? resource = freezed,
+    Object? resourceElement = freezed,
+    Object? include = freezed,
+    Object? includeElement = freezed,
+    Object? revInclude = freezed,
+    Object? revIncludeElement = freezed,
+  }) {
+    return _then(_SubscriptionTopicNotificationShape(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      resourceElement: resourceElement == freezed
+          ? _value.resourceElement
+          : resourceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      include: include == freezed
+          ? _value.include
+          : include // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      includeElement: includeElement == freezed
+          ? _value.includeElement
+          : includeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      revInclude: revInclude == freezed
+          ? _value.revInclude
+          : revInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      revIncludeElement: revIncludeElement == freezed
+          ? _value.revIncludeElement
+          : revIncludeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_SubscriptionTopicNotificationShape
+    extends _SubscriptionTopicNotificationShape {
+  _$_SubscriptionTopicNotificationShape(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.resource,
+      @JsonKey(name: '_resource') this.resourceElement,
+      this.include,
+      @JsonKey(name: '_include') this.includeElement,
+      this.revInclude,
+      @JsonKey(name: '_revInclude') this.revIncludeElement})
+      : super._();
+
+  factory _$_SubscriptionTopicNotificationShape.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SubscriptionTopicNotificationShapeFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final FhirUri? resource;
+  @override
+  @JsonKey(name: '_resource')
+  final Element? resourceElement;
+  @override
+  final List<String>? include;
+  @override
+  @JsonKey(name: '_include')
+  final List<Element>? includeElement;
+  @override
+  final List<String>? revInclude;
+  @override
+  @JsonKey(name: '_revInclude')
+  final List<Element>? revIncludeElement;
+
+  @override
+  String toString() {
+    return 'SubscriptionTopicNotificationShape(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, resource: $resource, resourceElement: $resourceElement, include: $include, includeElement: $includeElement, revInclude: $revInclude, revIncludeElement: $revIncludeElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _SubscriptionTopicNotificationShape &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.resource, resource) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceElement, resourceElement) &&
+            const DeepCollectionEquality().equals(other.include, include) &&
+            const DeepCollectionEquality()
+                .equals(other.includeElement, includeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.revInclude, revInclude) &&
+            const DeepCollectionEquality()
+                .equals(other.revIncludeElement, revIncludeElement));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(resource),
+      const DeepCollectionEquality().hash(resourceElement),
+      const DeepCollectionEquality().hash(include),
+      const DeepCollectionEquality().hash(includeElement),
+      const DeepCollectionEquality().hash(revInclude),
+      const DeepCollectionEquality().hash(revIncludeElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$SubscriptionTopicNotificationShapeCopyWith<
+          _SubscriptionTopicNotificationShape>
+      get copyWith => __$SubscriptionTopicNotificationShapeCopyWithImpl<
+          _SubscriptionTopicNotificationShape>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SubscriptionTopicNotificationShapeToJson(this);
+  }
+}
+
+abstract class _SubscriptionTopicNotificationShape
+    extends SubscriptionTopicNotificationShape {
+  factory _SubscriptionTopicNotificationShape(
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          FhirUri? resource,
+          @JsonKey(name: '_resource') Element? resourceElement,
+          List<String>? include,
+          @JsonKey(name: '_include') List<Element>? includeElement,
+          List<String>? revInclude,
+          @JsonKey(name: '_revInclude') List<Element>? revIncludeElement}) =
+      _$_SubscriptionTopicNotificationShape;
+  _SubscriptionTopicNotificationShape._() : super._();
+
+  factory _SubscriptionTopicNotificationShape.fromJson(
+          Map<String, dynamic> json) =
+      _$_SubscriptionTopicNotificationShape.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  FhirUri? get resource;
+  @override
+  @JsonKey(name: '_resource')
+  Element? get resourceElement;
+  @override
+  List<String>? get include;
+  @override
+  @JsonKey(name: '_include')
+  List<Element>? get includeElement;
+  @override
+  List<String>? get revInclude;
+  @override
+  @JsonKey(name: '_revInclude')
+  List<Element>? get revIncludeElement;
+  @override
+  @JsonKey(ignore: true)
+  _$SubscriptionTopicNotificationShapeCopyWith<
+          _SubscriptionTopicNotificationShape>
       get copyWith => throw _privateConstructorUsedError;
 }

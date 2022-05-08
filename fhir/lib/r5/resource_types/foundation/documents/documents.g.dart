@@ -898,7 +898,10 @@ _$_DocumentReferenceContent _$$_DocumentReferenceContentFromJson(
           .toList(),
       attachment:
           Attachment.fromJson(json['attachment'] as Map<String, dynamic>),
-      profile: json['profile'] as List<dynamic>?,
+      profile: (json['profile'] as List<dynamic>?)
+          ?.map((e) =>
+              DocumentReferenceProfile.fromJson(e as Map<String, dynamic>))
+          .toList(),
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -920,7 +923,56 @@ Map<String, dynamic> _$$_DocumentReferenceContentToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['attachment'] = instance.attachment.toJson();
-  writeNotNull('profile', instance.profile);
+  writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
+  return val;
+}
+
+_$_DocumentReferenceProfile _$$_DocumentReferenceProfileFromJson(
+        Map<String, dynamic> json) =>
+    _$_DocumentReferenceProfile(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      valueCoding: json['valueCoding'] == null
+          ? null
+          : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
+      valueUri:
+          json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
+      valueUriElement: json['_valueUri'] == null
+          ? null
+          : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
+      valueCanonical: json['valueCanonical'] == null
+          ? null
+          : Canonical.fromJson(json['valueCanonical']),
+      valueCanonicalElement: json['_valueCanonical'] == null
+          ? null
+          : Element.fromJson(json['_valueCanonical'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_DocumentReferenceProfileToJson(
+    _$_DocumentReferenceProfile instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueUri', instance.valueUri?.toJson());
+  writeNotNull('_valueUri', instance.valueUriElement?.toJson());
+  writeNotNull('valueCanonical', instance.valueCanonical?.toJson());
+  writeNotNull('_valueCanonical', instance.valueCanonicalElement?.toJson());
   return val;
 }

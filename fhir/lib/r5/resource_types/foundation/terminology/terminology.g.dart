@@ -1692,7 +1692,7 @@ _$_TerminologyCapabilitiesImplementation
           descriptionElement: json['_description'] == null
               ? null
               : Element.fromJson(json['_description'] as Map<String, dynamic>),
-          url: json['url'],
+          url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
           urlElement: json['_url'] == null
               ? null
               : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -1715,7 +1715,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesImplementationToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('url', instance.url);
+  writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
   return val;
 }

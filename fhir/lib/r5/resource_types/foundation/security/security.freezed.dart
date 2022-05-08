@@ -190,6 +190,7 @@ abstract class $AuditEventCopyWith<$Res> {
   $PeriodCopyWith<$Res>? get occurredPeriod;
   $ElementCopyWith<$Res>? get occurredDateTimeElement;
   $ElementCopyWith<$Res>? get recordedElement;
+  $AuditEventOutcomeCopyWith<$Res>? get outcome;
   $ReferenceCopyWith<$Res>? get patient;
   $ReferenceCopyWith<$Res>? get encounter;
   $AuditEventSourceCopyWith<$Res> get source;
@@ -467,6 +468,17 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
   }
 
   @override
+  $AuditEventOutcomeCopyWith<$Res>? get outcome {
+    if (_value.outcome == null) {
+      return null;
+    }
+
+    return $AuditEventOutcomeCopyWith<$Res>(_value.outcome!, (value) {
+      return _then(_value.copyWith(outcome: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res>? get patient {
     if (_value.patient == null) {
       return null;
@@ -554,6 +566,8 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
   $ElementCopyWith<$Res>? get occurredDateTimeElement;
   @override
   $ElementCopyWith<$Res>? get recordedElement;
+  @override
+  $AuditEventOutcomeCopyWith<$Res>? get outcome;
   @override
   $ReferenceCopyWith<$Res>? get patient;
   @override
@@ -1046,6 +1060,273 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   @JsonKey(ignore: true)
   _$AuditEventCopyWith<_AuditEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AuditEventOutcome _$AuditEventOutcomeFromJson(Map<String, dynamic> json) {
+  return _AuditEventOutcome.fromJson(json);
+}
+
+/// @nodoc
+class _$AuditEventOutcomeTearOff {
+  const _$AuditEventOutcomeTearOff();
+
+  _AuditEventOutcome call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Coding code,
+      List<CodeableConcept>? detail}) {
+    return _AuditEventOutcome(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      code: code,
+      detail: detail,
+    );
+  }
+
+  AuditEventOutcome fromJson(Map<String, Object?> json) {
+    return AuditEventOutcome.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $AuditEventOutcome = _$AuditEventOutcomeTearOff();
+
+/// @nodoc
+mixin _$AuditEventOutcome {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Coding get code => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get detail => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AuditEventOutcomeCopyWith<AuditEventOutcome> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AuditEventOutcomeCopyWith<$Res> {
+  factory $AuditEventOutcomeCopyWith(
+          AuditEventOutcome value, $Res Function(AuditEventOutcome) then) =
+      _$AuditEventOutcomeCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding code,
+      List<CodeableConcept>? detail});
+
+  $CodingCopyWith<$Res> get code;
+}
+
+/// @nodoc
+class _$AuditEventOutcomeCopyWithImpl<$Res>
+    implements $AuditEventOutcomeCopyWith<$Res> {
+  _$AuditEventOutcomeCopyWithImpl(this._value, this._then);
+
+  final AuditEventOutcome _value;
+  // ignore: unused_field
+  final $Res Function(AuditEventOutcome) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? detail = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      detail: detail == freezed
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+    ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get code {
+    return $CodingCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$AuditEventOutcomeCopyWith<$Res>
+    implements $AuditEventOutcomeCopyWith<$Res> {
+  factory _$AuditEventOutcomeCopyWith(
+          _AuditEventOutcome value, $Res Function(_AuditEventOutcome) then) =
+      __$AuditEventOutcomeCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding code,
+      List<CodeableConcept>? detail});
+
+  @override
+  $CodingCopyWith<$Res> get code;
+}
+
+/// @nodoc
+class __$AuditEventOutcomeCopyWithImpl<$Res>
+    extends _$AuditEventOutcomeCopyWithImpl<$Res>
+    implements _$AuditEventOutcomeCopyWith<$Res> {
+  __$AuditEventOutcomeCopyWithImpl(
+      _AuditEventOutcome _value, $Res Function(_AuditEventOutcome) _then)
+      : super(_value, (v) => _then(v as _AuditEventOutcome));
+
+  @override
+  _AuditEventOutcome get _value => super._value as _AuditEventOutcome;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? detail = freezed,
+  }) {
+    return _then(_AuditEventOutcome(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      detail: detail == freezed
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_AuditEventOutcome extends _AuditEventOutcome {
+  _$_AuditEventOutcome(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      required this.code,
+      this.detail})
+      : super._();
+
+  factory _$_AuditEventOutcome.fromJson(Map<String, dynamic> json) =>
+      _$$_AuditEventOutcomeFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Coding code;
+  @override
+  final List<CodeableConcept>? detail;
+
+  @override
+  String toString() {
+    return 'AuditEventOutcome(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, detail: $detail)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _AuditEventOutcome &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.detail, detail));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(detail));
+
+  @JsonKey(ignore: true)
+  @override
+  _$AuditEventOutcomeCopyWith<_AuditEventOutcome> get copyWith =>
+      __$AuditEventOutcomeCopyWithImpl<_AuditEventOutcome>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_AuditEventOutcomeToJson(this);
+  }
+}
+
+abstract class _AuditEventOutcome extends AuditEventOutcome {
+  factory _AuditEventOutcome(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Coding code,
+      List<CodeableConcept>? detail}) = _$_AuditEventOutcome;
+  _AuditEventOutcome._() : super._();
+
+  factory _AuditEventOutcome.fromJson(Map<String, dynamic> json) =
+      _$_AuditEventOutcome.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Coding get code;
+  @override
+  List<CodeableConcept>? get detail;
+  @override
+  @JsonKey(ignore: true)
+  _$AuditEventOutcomeCopyWith<_AuditEventOutcome> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3420,6 +3701,7 @@ abstract class $ConsentCopyWith<$Res> {
   $ElementCopyWith<$Res>? get statusElement;
   $ReferenceCopyWith<$Res>? get subject;
   $ElementCopyWith<$Res>? get dateTimeElement;
+  $ConsentPolicyBasisCopyWith<$Res>? get policyBasis;
   $ConsentProvisionCopyWith<$Res>? get provision;
 }
 
@@ -3661,6 +3943,17 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
   }
 
   @override
+  $ConsentPolicyBasisCopyWith<$Res>? get policyBasis {
+    if (_value.policyBasis == null) {
+      return null;
+    }
+
+    return $ConsentPolicyBasisCopyWith<$Res>(_value.policyBasis!, (value) {
+      return _then(_value.copyWith(policyBasis: value));
+    });
+  }
+
+  @override
   $ConsentProvisionCopyWith<$Res>? get provision {
     if (_value.provision == null) {
       return null;
@@ -3722,6 +4015,8 @@ abstract class _$ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get subject;
   @override
   $ElementCopyWith<$Res>? get dateTimeElement;
+  @override
+  $ConsentPolicyBasisCopyWith<$Res>? get policyBasis;
   @override
   $ConsentProvisionCopyWith<$Res>? get provision;
 }
@@ -4194,6 +4489,318 @@ abstract class _Consent extends Consent {
   @override
   @JsonKey(ignore: true)
   _$ConsentCopyWith<_Consent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ConsentPolicyBasis _$ConsentPolicyBasisFromJson(Map<String, dynamic> json) {
+  return _ConsentPolicyBasis.fromJson(json);
+}
+
+/// @nodoc
+class _$ConsentPolicyBasisTearOff {
+  const _$ConsentPolicyBasisTearOff();
+
+  _ConsentPolicyBasis call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? reference,
+      FhirUrl? url,
+      @JsonKey(name: '_url') Element? urlElement}) {
+    return _ConsentPolicyBasis(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      reference: reference,
+      url: url,
+      urlElement: urlElement,
+    );
+  }
+
+  ConsentPolicyBasis fromJson(Map<String, Object?> json) {
+    return ConsentPolicyBasis.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ConsentPolicyBasis = _$ConsentPolicyBasisTearOff();
+
+/// @nodoc
+mixin _$ConsentPolicyBasis {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Reference? get reference => throw _privateConstructorUsedError;
+  FhirUrl? get url => throw _privateConstructorUsedError;
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConsentPolicyBasisCopyWith<ConsentPolicyBasis> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConsentPolicyBasisCopyWith<$Res> {
+  factory $ConsentPolicyBasisCopyWith(
+          ConsentPolicyBasis value, $Res Function(ConsentPolicyBasis) then) =
+      _$ConsentPolicyBasisCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? reference,
+      FhirUrl? url,
+      @JsonKey(name: '_url') Element? urlElement});
+
+  $ReferenceCopyWith<$Res>? get reference;
+  $ElementCopyWith<$Res>? get urlElement;
+}
+
+/// @nodoc
+class _$ConsentPolicyBasisCopyWithImpl<$Res>
+    implements $ConsentPolicyBasisCopyWith<$Res> {
+  _$ConsentPolicyBasisCopyWithImpl(this._value, this._then);
+
+  final ConsentPolicyBasis _value;
+  // ignore: unused_field
+  final $Res Function(ConsentPolicyBasis) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? reference = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get reference {
+    if (_value.reference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reference!, (value) {
+      return _then(_value.copyWith(reference: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$ConsentPolicyBasisCopyWith<$Res>
+    implements $ConsentPolicyBasisCopyWith<$Res> {
+  factory _$ConsentPolicyBasisCopyWith(
+          _ConsentPolicyBasis value, $Res Function(_ConsentPolicyBasis) then) =
+      __$ConsentPolicyBasisCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? reference,
+      FhirUrl? url,
+      @JsonKey(name: '_url') Element? urlElement});
+
+  @override
+  $ReferenceCopyWith<$Res>? get reference;
+  @override
+  $ElementCopyWith<$Res>? get urlElement;
+}
+
+/// @nodoc
+class __$ConsentPolicyBasisCopyWithImpl<$Res>
+    extends _$ConsentPolicyBasisCopyWithImpl<$Res>
+    implements _$ConsentPolicyBasisCopyWith<$Res> {
+  __$ConsentPolicyBasisCopyWithImpl(
+      _ConsentPolicyBasis _value, $Res Function(_ConsentPolicyBasis) _then)
+      : super(_value, (v) => _then(v as _ConsentPolicyBasis));
+
+  @override
+  _ConsentPolicyBasis get _value => super._value as _ConsentPolicyBasis;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? reference = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+  }) {
+    return _then(_ConsentPolicyBasis(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ConsentPolicyBasis extends _ConsentPolicyBasis {
+  _$_ConsentPolicyBasis(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.reference,
+      this.url,
+      @JsonKey(name: '_url') this.urlElement})
+      : super._();
+
+  factory _$_ConsentPolicyBasis.fromJson(Map<String, dynamic> json) =>
+      _$$_ConsentPolicyBasisFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Reference? reference;
+  @override
+  final FhirUrl? url;
+  @override
+  @JsonKey(name: '_url')
+  final Element? urlElement;
+
+  @override
+  String toString() {
+    return 'ConsentPolicyBasis(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, reference: $reference, url: $url, urlElement: $urlElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ConsentPolicyBasis &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.reference, reference) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.urlElement, urlElement));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(reference),
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(urlElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$ConsentPolicyBasisCopyWith<_ConsentPolicyBasis> get copyWith =>
+      __$ConsentPolicyBasisCopyWithImpl<_ConsentPolicyBasis>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConsentPolicyBasisToJson(this);
+  }
+}
+
+abstract class _ConsentPolicyBasis extends ConsentPolicyBasis {
+  factory _ConsentPolicyBasis(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? reference,
+      FhirUrl? url,
+      @JsonKey(name: '_url') Element? urlElement}) = _$_ConsentPolicyBasis;
+  _ConsentPolicyBasis._() : super._();
+
+  factory _ConsentPolicyBasis.fromJson(Map<String, dynamic> json) =
+      _$_ConsentPolicyBasis.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Reference? get reference;
+  @override
+  FhirUrl? get url;
+  @override
+  @JsonKey(name: '_url')
+  Element? get urlElement;
+  @override
+  @JsonKey(ignore: true)
+  _$ConsentPolicyBasisCopyWith<_ConsentPolicyBasis> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

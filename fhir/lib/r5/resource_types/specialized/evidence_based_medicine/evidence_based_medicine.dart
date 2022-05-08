@@ -134,7 +134,7 @@ class Citation with Resource, _$Citation {
     @Default(R5ResourceType.Citation) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -142,7 +142,7 @@ class Citation with Resource, _$Citation {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -1281,7 +1281,7 @@ class CitationWebLocation with _$CitationWebLocation {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? classifier,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
   }) = _CitationWebLocation;
 
@@ -1435,6 +1435,71 @@ class CitationContributorship with _$CitationContributorship {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationContributorshipFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class CitationSummary1 with _$CitationSummary1 {
+  CitationSummary1._();
+
+  /// [CitationSummary1]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: Used most commonly to express an author list or a contributorship statement.;
+  ///
+  /// [style]: The format for the display string.;
+  ///
+  /// [source]: Used to code the producer or rule for creating the display string.;
+  ///
+  /// [value]: The display string for the author list, contributor list, or contributorship statement.;
+  ///
+  /// [valueElement] (_value): Extensions for value;
+  factory CitationSummary1({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    CodeableConcept? style,
+    CodeableConcept? source,
+    Markdown? value,
+    @JsonKey(name: '_value') Element? valueElement,
+  }) = _CitationSummary1;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationSummary1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationSummary1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CitationSummary1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationSummary1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CitationSummary1.fromJson(Map<String, dynamic> json) =>
+      _$CitationSummary1FromJson(json);
+
+  /// Acts like a constructor, returns a [CitationSummary1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CitationSummary1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CitationSummary1FromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -1719,7 +1784,7 @@ class Evidence with Resource, _$Evidence {
     @Default(R5ResourceType.Evidence) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1727,7 +1792,7 @@ class Evidence with Resource, _$Evidence {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -1883,19 +1948,324 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
 }
 
 @freezed
-class EvidenceVariable with Resource, _$EvidenceVariable {
-  EvidenceVariable._();
+class EvidenceStatistic with _$EvidenceStatistic {
+  EvidenceStatistic._();
 
-  /// [EvidenceVariable]: The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
+  /// [EvidenceStatistic]: The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
   ///
   /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [description]: A description of the content value of the statistic.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [note]: Footnotes and/or explanatory notes.;
+  ///
+  /// [statisticType]: Type of statistic, e.g., relative risk.;
+  ///
+  /// [category]: When the measured variable is handled categorically, the category element is used to define which category the statistic is reporting.;
+  ///
+  /// [quantity]: Statistic value.;
+  ///
+  /// [numberOfEvents]: The number of events associated with the statistic, where the unit of analysis is different from numberAffected, sampleSize.knownDataCount and sampleSize.numberOfParticipants.;
+  ///
+  /// [numberOfEventsElement] (_numberOfEvents): Extensions for numberOfEvents;
+  ///
+  /// [numberAffected]: The number of participants affected where the unit of analysis is the same as sampleSize.knownDataCount and sampleSize.numberOfParticipants.;
+  ///
+  /// [numberAffectedElement] (_numberAffected): Extensions for numberAffected;
+  ///
+  /// [sampleSize]: Number of samples in the statistic.;
+  ///
+  /// [attributeEstimate]: A statistical attribute of the statistic such as a measure of heterogeneity.;
+  ///
+  /// [modelCharacteristic]: A component of the method to generate the statistic.;
+  factory EvidenceStatistic({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Annotation>? note,
+    CodeableConcept? statisticType,
+    CodeableConcept? category,
+    Quantity? quantity,
+    UnsignedInt? numberOfEvents,
+    @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
+    UnsignedInt? numberAffected,
+    @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
+    EvidenceSampleSize? sampleSize,
+    List<EvidenceAttributeEstimate>? attributeEstimate,
+    List<EvidenceModelCharacteristic>? modelCharacteristic,
+  }) = _EvidenceStatistic;
 
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory EvidenceStatistic.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceStatistic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? EvidenceStatistic.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceStatistic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory EvidenceStatistic.fromJson(Map<String, dynamic> json) =>
+      _$EvidenceStatisticFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceStatistic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceStatistic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceStatisticFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class EvidenceSampleSize with _$EvidenceSampleSize {
+  EvidenceSampleSize._();
+
+  /// [EvidenceSampleSize]: The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [description]: Human-readable summary of population sample size.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [note]: Footnote or explanatory note about the sample size.;
+  ///
+  /// [numberOfStudies]: Number of participants in the population.;
+  ///
+  /// [numberOfStudiesElement] (_numberOfStudies): Extensions for numberOfStudies;
+  ///
+  /// [numberOfParticipants]: A human-readable string to clarify or explain concepts about the sample size.;
+  ///
+  /// [numberOfParticipantsElement] (_numberOfParticipants): Extensions for numberOfParticipants;
+  ///
+  /// [knownDataCount]: Number of participants with known results for measured variables.;
+  ///
+  /// [knownDataCountElement] (_knownDataCount): Extensions for knownDataCount;
+  factory EvidenceSampleSize({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Annotation>? note,
+    UnsignedInt? numberOfStudies,
+    @JsonKey(name: '_numberOfStudies') Element? numberOfStudiesElement,
+    UnsignedInt? numberOfParticipants,
+    @JsonKey(name: '_numberOfParticipants')
+        Element? numberOfParticipantsElement,
+    UnsignedInt? knownDataCount,
+    @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
+  }) = _EvidenceSampleSize;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory EvidenceSampleSize.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceSampleSize.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? EvidenceSampleSize.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceSampleSize cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory EvidenceSampleSize.fromJson(Map<String, dynamic> json) =>
+      _$EvidenceSampleSizeFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceSampleSize], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceSampleSize.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceSampleSizeFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
+  EvidenceAttributeEstimate._();
+
+  /// [EvidenceAttributeEstimate]: The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [description]: Human-readable summary of the estimate.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [note]: Footnote or explanatory note about the estimate.;
+  ///
+  /// [type]: The type of attribute estimate, e.g., confidence interval or p value.;
+  ///
+  /// [quantity]: The singular quantity of the attribute estimate, for attribute estimates represented as single values; also used to report unit of measure.;
+  ///
+  /// [level]: Use 95 for a 95% confidence interval.;
+  ///
+  /// [levelElement] (_level): Extensions for level;
+  ///
+  /// [range]: Lower bound of confidence interval.;
+  ///
+  /// [attributeEstimate]: A nested attribute estimate; which is the attribute estimate of an attribute estimate.;
+  factory EvidenceAttributeEstimate({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Annotation>? note,
+    CodeableConcept? type,
+    Quantity? quantity,
+    Decimal? level,
+    @JsonKey(name: '_level') Element? levelElement,
+    Range? range,
+    List<EvidenceAttributeEstimate>? attributeEstimate,
+  }) = _EvidenceAttributeEstimate;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory EvidenceAttributeEstimate.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceAttributeEstimate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? EvidenceAttributeEstimate.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceAttributeEstimate cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory EvidenceAttributeEstimate.fromJson(Map<String, dynamic> json) =>
+      _$EvidenceAttributeEstimateFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceAttributeEstimate], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceAttributeEstimate.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceAttributeEstimateFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
+  EvidenceModelCharacteristic._();
+
+  /// [EvidenceModelCharacteristic]: The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: Description of a component of the method to generate the statistic.;
+  ///
+  /// [value]: Further specification of the quantified value of the component of the method to generate the statistic.;
+  ///
+  /// [variable]: A variable adjusted for in the adjusted analysis.;
+  ///
+  /// [attributeEstimate]: An attribute of the statistic used as a model characteristic.;
+  factory EvidenceModelCharacteristic({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept code,
+    Quantity? value,
+    List<EvidenceModelCharacteristicVariable>? variable,
+    List<EvidenceAttributeEstimate>? attributeEstimate,
+  }) = _EvidenceModelCharacteristic;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory EvidenceModelCharacteristic.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceModelCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? EvidenceModelCharacteristic.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceModelCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory EvidenceModelCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$EvidenceModelCharacteristicFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceModelCharacteristic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceModelCharacteristic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceModelCharacteristicFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class EvidenceModelCharacteristicVariable
+    with _$EvidenceModelCharacteristicVariable {
+  EvidenceModelCharacteristicVariable._();
+
+  /// [EvidenceModelCharacteristicVariable]: The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [variableDefinition]: Description of the variable.;
   ///
@@ -1908,7 +2278,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [valueQuantity]: Discrete value for grouping of ordinal or polychotomous variables.;
   ///
   /// [valueRange]: Range of values for grouping of ordinal or polychotomous variables.;
-  factory EvidenceVariable({
+  factory EvidenceModelCharacteristicVariable({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1918,33 +2288,35 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     List<CodeableConcept>? valueCategory,
     List<Quantity>? valueQuantity,
     List<Range>? valueRange,
-  }) = _EvidenceVariable;
+  }) = _EvidenceModelCharacteristicVariable;
 
   /// Produces a Yaml formatted String version of the object
   @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceVariable.fromJson(
+  factory EvidenceModelCharacteristicVariable.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EvidenceModelCharacteristicVariable.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceVariable.fromJson(
+          ? EvidenceModelCharacteristicVariable.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'EvidenceVariable cannot be constructed from input provided,'
+              'EvidenceModelCharacteristicVariable cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
-      _$EvidenceVariableFromJson(json);
+  factory EvidenceModelCharacteristicVariable.fromJson(
+          Map<String, dynamic> json) =>
+      _$EvidenceModelCharacteristicVariableFromJson(json);
 
-  /// Acts like a constructor, returns a [EvidenceVariable], accepts a
+  /// Acts like a constructor, returns a [EvidenceModelCharacteristicVariable], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory EvidenceVariable.fromJsonString(String source) {
+  factory EvidenceModelCharacteristicVariable.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$EvidenceVariableFromJson(json);
+      return _$EvidenceModelCharacteristicVariableFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -2154,7 +2526,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
     @Default(R5ResourceType.EvidenceReport) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -2162,7 +2534,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -2444,6 +2816,76 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
 }
 
 @freezed
+class EvidenceReportTarget with _$EvidenceReportTarget {
+  EvidenceReportTarget._();
+
+  /// [EvidenceReportTarget]: The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [url]: Target of the relationship URL.;
+  ///
+  /// [urlElement] (_url): Extensions for url;
+  ///
+  /// [identifier]: Target of the relationship Identifier.;
+  ///
+  /// [display]: Target of the relationship Display.;
+  ///
+  /// [displayElement] (_display): Extensions for display;
+  ///
+  /// [resource]: Target of the relationship Resource reference.;
+  factory EvidenceReportTarget({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    Identifier? identifier,
+    Markdown? display,
+    @JsonKey(name: '_display') Element? displayElement,
+    Reference? resource,
+  }) = _EvidenceReportTarget;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory EvidenceReportTarget.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceReportTarget.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? EvidenceReportTarget.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceReportTarget cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory EvidenceReportTarget.fromJson(Map<String, dynamic> json) =>
+      _$EvidenceReportTargetFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceReportTarget], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceReportTarget.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceReportTargetFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
 class EvidenceReportSection with _$EvidenceReportSection {
   EvidenceReportSection._();
 
@@ -2667,7 +3109,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @Default(R5ResourceType.EvidenceVariable) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -2675,7 +3117,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -2936,6 +3378,251 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceVariableCategoryFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class EvidenceVariableDefByTypeAndValue
+    with _$EvidenceVariableDefByTypeAndValue {
+  EvidenceVariableDefByTypeAndValue._();
+
+  /// [EvidenceVariableDefByTypeAndValue]: The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [typeCodeableConcept]: Used to express the type of characteristic.;
+  ///
+  /// [typeReference]: Used to express the type of characteristic.;
+  ///
+  /// [typeId]: Used to express the type of characteristic.;
+  ///
+  /// [typeIdElement] (_typeId): Extensions for typeId;
+  ///
+  /// [valueCodeableConcept]: Defines the characteristic when paired with characteristic.type[x].;
+  ///
+  /// [valueBoolean]: Defines the characteristic when paired with characteristic.type[x].;
+  ///
+  /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
+  ///
+  /// [valueQuantity]: Defines the characteristic when paired with characteristic.type[x].;
+  ///
+  /// [valueRange]: Defines the characteristic when paired with characteristic.type[x].;
+  ///
+  /// [valueReference]: Defines the characteristic when paired with characteristic.type[x].;
+  ///
+  /// [valueId]: Defines the characteristic when paired with characteristic.type[x].;
+  ///
+  /// [valueIdElement] (_valueId): Extensions for valueId;
+  factory EvidenceVariableDefByTypeAndValue({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? typeCodeableConcept,
+    Reference? typeReference,
+    Id? typeId,
+    @JsonKey(name: '_typeId') Element? typeIdElement,
+    CodeableConcept? valueCodeableConcept,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Reference? valueReference,
+    Id? valueId,
+    @JsonKey(name: '_valueId') Element? valueIdElement,
+  }) = _EvidenceVariableDefByTypeAndValue;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory EvidenceVariableDefByTypeAndValue.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EvidenceVariableDefByTypeAndValue.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? EvidenceVariableDefByTypeAndValue.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceVariableDefByTypeAndValue cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory EvidenceVariableDefByTypeAndValue.fromJson(
+          Map<String, dynamic> json) =>
+      _$EvidenceVariableDefByTypeAndValueFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableDefByTypeAndValue], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableDefByTypeAndValue.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableDefByTypeAndValueFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class EvidenceVariableDefByCombination with _$EvidenceVariableDefByCombination {
+  EvidenceVariableDefByCombination._();
+
+  /// [EvidenceVariableDefByCombination]: The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: Used to specify if two or more characteristics are combined with OR or AND.;
+  ///
+  /// [codeElement] (_code): Extensions for code;
+  ///
+  /// [threshold]: Provides the value of "n" when "at-least" or "at-most" codes are used.;
+  ///
+  /// [thresholdElement] (_threshold): Extensions for threshold;
+  ///
+  /// [characteristic]: A defining factor of the characteristic.;
+  factory EvidenceVariableDefByCombination({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    PositiveInt? threshold,
+    @JsonKey(name: '_threshold') Element? thresholdElement,
+    required List<EvidenceVariableCharacteristic> characteristic,
+  }) = _EvidenceVariableDefByCombination;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory EvidenceVariableDefByCombination.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EvidenceVariableDefByCombination.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? EvidenceVariableDefByCombination.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceVariableDefByCombination cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory EvidenceVariableDefByCombination.fromJson(
+          Map<String, dynamic> json) =>
+      _$EvidenceVariableDefByCombinationFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableDefByCombination], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableDefByCombination.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableDefByCombinationFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class EvidenceVariableTimeFromEvent with _$EvidenceVariableTimeFromEvent {
+  EvidenceVariableTimeFromEvent._();
+
+  /// [EvidenceVariableTimeFromEvent]: The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [description]: Human readable description.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [note]: A human-readable string to clarify or explain concepts about the timeFromEvent.;
+  ///
+  /// [eventCodeableConcept]: The event used as a base point (reference point) in time.;
+  ///
+  /// [eventReference]: The event used as a base point (reference point) in time.;
+  ///
+  /// [eventDateTime]: The event used as a base point (reference point) in time.;
+  ///
+  /// [eventDateTimeElement] (_eventDateTime): Extensions for eventDateTime;
+  ///
+  /// [eventId]: The event used as a base point (reference point) in time.;
+  ///
+  /// [eventIdElement] (_eventId): Extensions for eventId;
+  ///
+  /// [quantity]: Used to express the observation at a defined amount of time after the study start.;
+  ///
+  /// [range]: Used to express the observation within a period after the study start.;
+  factory EvidenceVariableTimeFromEvent({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Annotation>? note,
+    CodeableConcept? eventCodeableConcept,
+    Reference? eventReference,
+    DateTime? eventDateTime,
+    @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
+    Id? eventId,
+    @JsonKey(name: '_eventId') Element? eventIdElement,
+    Quantity? quantity,
+    Range? range,
+  }) = _EvidenceVariableTimeFromEvent;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory EvidenceVariableTimeFromEvent.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceVariableTimeFromEvent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? EvidenceVariableTimeFromEvent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceVariableTimeFromEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory EvidenceVariableTimeFromEvent.fromJson(Map<String, dynamic> json) =>
+      _$EvidenceVariableTimeFromEventFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableTimeFromEvent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableTimeFromEvent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableTimeFromEventFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');

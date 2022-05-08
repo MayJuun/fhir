@@ -192,7 +192,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     @Default(R5ResourceType.ActivityDefinition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -200,7 +200,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -583,7 +583,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     @Default(R5ResourceType.ConditionDefinition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -591,7 +591,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -1086,7 +1086,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     @Default(R5ResourceType.DeviceDefinition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1196,9 +1196,9 @@ class DeviceDefinitionUdiDeviceIdentifier
     List<FhirExtension>? modifierExtension,
     String? deviceIdentifier,
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-   FhirUri? issuer,
-   FhirUrionKey(name: '_issuer') Element? issuerElement,
-    Uri? jurisdiction,
+    FhirUri? issuer,
+    @JsonKey(name: '_issuer') Element? issuerElement,
+    FhirUri? jurisdiction,
     @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
     List<DeviceDefinitionMarketDistribution>? marketDistribution,
   }) = _DeviceDefinitionUdiDeviceIdentifier;
@@ -1295,6 +1295,65 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionDeviceNameFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class DeviceDefinitionClassification with _$DeviceDefinitionClassification {
+  DeviceDefinitionClassification._();
+
+  /// [DeviceDefinitionClassification]: The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: A classification or risk class of the device model.;
+  ///
+  /// [justification]: Further information qualifying this classification of the device model.;
+  factory DeviceDefinitionClassification({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    List<RelatedArtifact>? justification,
+  }) = _DeviceDefinitionClassification;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionClassification.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceDefinitionClassification.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDefinitionClassification.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDefinitionClassification cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionClassification.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionClassificationFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDefinitionClassification], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDefinitionClassification.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDefinitionClassificationFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -1532,9 +1591,9 @@ class DeviceDefinitionUdiDeviceIdentifier1
     List<FhirExtension>? modifierExtension,
     String? deviceIdentifier,
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-   FhirUri? issuer,
-   FhirUrionKey(name: '_issuer') Element? issuerElement,
-    Uri? jurisdiction,
+    FhirUri? issuer,
+    @JsonKey(name: '_issuer') Element? issuerElement,
+    FhirUri? jurisdiction,
     @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
     DeviceDefinitionMarketDistribution1? marketDistribution,
   }) = _DeviceDefinitionUdiDeviceIdentifier1;
@@ -1723,6 +1782,64 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
 }
 
 @freezed
+class DeviceDefinitionLink with _$DeviceDefinitionLink {
+  DeviceDefinitionLink._();
+
+  /// [DeviceDefinitionLink]: The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [relation]: The type indicates the relationship of the related device to the device instance.;
+  ///
+  /// [relatedDevice]: A reference to the linked device.;
+  factory DeviceDefinitionLink({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Coding relation,
+    required CodeableReference relatedDevice,
+  }) = _DeviceDefinitionLink;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionLink.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDefinitionLink.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDefinitionLink.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDefinitionLink cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionLink.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionLinkFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDefinitionLink], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDefinitionLink.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDefinitionLinkFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
 class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   DeviceDefinitionMaterial._();
 
@@ -1782,6 +1899,344 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionMaterialFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class DeviceDefinitionGuideline with _$DeviceDefinitionGuideline {
+  DeviceDefinitionGuideline._();
+
+  /// [DeviceDefinitionGuideline]: The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [useContext]: The circumstances that form the setting for using the device.;
+  ///
+  /// [usageInstruction]: Detailed written and visual directions for the user on how to use the device.;
+  ///
+  /// [usageInstructionElement] (_usageInstruction): Extensions for usageInstruction;
+  ///
+  /// [relatedArtifact]: A source of information or reference for this guideline.;
+  ///
+  /// [indication]: A clinical condition for which the device was designed to be used.;
+  ///
+  /// [contraindication]: A specific situation when a device should not be used because it may cause harm.;
+  ///
+  /// [warning]: Specific hazard alert information that a user needs to know before using the device.;
+  ///
+  /// [intendedUse]: A description of the general purpose or medical use of the device or its function.;
+  ///
+  /// [intendedUseElement] (_intendedUse): Extensions for intendedUse;
+  factory DeviceDefinitionGuideline({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<UsageContext>? useContext,
+    Markdown? usageInstruction,
+    @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
+    List<RelatedArtifact>? relatedArtifact,
+    List<CodeableReference>? indication,
+    List<CodeableReference>? contraindication,
+    List<CodeableReference>? warning,
+    String? intendedUse,
+    @JsonKey(name: '_intendedUse') Element? intendedUseElement,
+  }) = _DeviceDefinitionGuideline;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionGuideline.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDefinitionGuideline.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDefinitionGuideline.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDefinitionGuideline cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionGuideline.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionGuidelineFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDefinitionGuideline], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDefinitionGuideline.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDefinitionGuidelineFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class DeviceDefinitionCorrectiveAction with _$DeviceDefinitionCorrectiveAction {
+  DeviceDefinitionCorrectiveAction._();
+
+  /// [DeviceDefinitionCorrectiveAction]: The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [recall]: Whether the last corrective action known for this device was a recall.;
+  ///
+  /// [recallElement] (_recall): Extensions for recall;
+  ///
+  /// [scope]: The scope of the corrective action - whether the action targeted all units of a given device model, or only a specific set of batches identified by lot numbers, or individually identified devices identified by the serial name.;
+  ///
+  /// [scopeElement] (_scope): Extensions for scope;
+  ///
+  /// [period]: Start and end dates of the  corrective action.;
+  factory DeviceDefinitionCorrectiveAction({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? recall,
+    @JsonKey(name: '_recall') Element? recallElement,
+    Code? scope,
+    @JsonKey(name: '_scope') Element? scopeElement,
+    required Period period,
+  }) = _DeviceDefinitionCorrectiveAction;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionCorrectiveAction.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceDefinitionCorrectiveAction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDefinitionCorrectiveAction.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDefinitionCorrectiveAction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionCorrectiveAction.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceDefinitionCorrectiveActionFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDefinitionCorrectiveAction], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDefinitionCorrectiveAction.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDefinitionCorrectiveActionFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class DeviceDefinitionChargeItem with _$DeviceDefinitionChargeItem {
+  DeviceDefinitionChargeItem._();
+
+  /// [DeviceDefinitionChargeItem]: The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [chargeItemCode]: The code or reference for the charge item.;
+  ///
+  /// [count]: Coefficient applicable to the billing code.;
+  ///
+  /// [effectivePeriod]: A specific time period in which this charge item applies.;
+  ///
+  /// [useContext]: The context to which this charge item applies.;
+  factory DeviceDefinitionChargeItem({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableReference chargeItemCode,
+    required Quantity count,
+    Period? effectivePeriod,
+    List<UsageContext>? useContext,
+  }) = _DeviceDefinitionChargeItem;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionChargeItem.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDefinitionChargeItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDefinitionChargeItem.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDefinitionChargeItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionChargeItem.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionChargeItemFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDefinitionChargeItem], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDefinitionChargeItem.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDefinitionChargeItemFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class DeviceDefinitionMarketDistribution
+    with _$DeviceDefinitionMarketDistribution {
+  DeviceDefinitionMarketDistribution._();
+
+  /// [DeviceDefinitionMarketDistribution]: The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [marketPeriod]: Begin and end dates for the commercial distribution of the device.;
+  ///
+  /// [subJurisdiction]: National state or territory to which the marketDistribution recers, typically where the device is commercialized.;
+  ///
+  /// [subJurisdictionElement] (_subJurisdiction): Extensions for subJurisdiction;
+  factory DeviceDefinitionMarketDistribution({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Period marketPeriod,
+    FhirUri? subJurisdiction,
+    @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement,
+  }) = _DeviceDefinitionMarketDistribution;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionMarketDistribution.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceDefinitionMarketDistribution.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDefinitionMarketDistribution.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDefinitionMarketDistribution cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionMarketDistribution.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceDefinitionMarketDistributionFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDefinitionMarketDistribution], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDefinitionMarketDistribution.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDefinitionMarketDistributionFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class DeviceDefinitionMarketDistribution1
+    with _$DeviceDefinitionMarketDistribution1 {
+  DeviceDefinitionMarketDistribution1._();
+
+  /// [DeviceDefinitionMarketDistribution1]: The characteristics, operational status and capabilities of a medical-related component of a medical device.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [marketPeriod]: Begin and end dates for the commercial distribution of the device.;
+  ///
+  /// [subJurisdiction]: National state or territory to which the marketDistribution refers, typically where the device is commercialized.;
+  ///
+  /// [subJurisdictionElement] (_subJurisdiction): Extensions for subJurisdiction;
+  factory DeviceDefinitionMarketDistribution1({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Period? marketPeriod,
+    FhirUri? subJurisdiction,
+    @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement,
+  }) = _DeviceDefinitionMarketDistribution1;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionMarketDistribution1.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceDefinitionMarketDistribution1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDefinitionMarketDistribution1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDefinitionMarketDistribution1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionMarketDistribution1.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceDefinitionMarketDistribution1FromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDefinitionMarketDistribution1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDefinitionMarketDistribution1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDefinitionMarketDistribution1FromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -1911,7 +2366,7 @@ class EventDefinition with Resource, _$EventDefinition {
     @Default(R5ResourceType.EventDefinition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1919,7 +2374,7 @@ class EventDefinition with Resource, _$EventDefinition {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -2133,7 +2588,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     @Default(R5ResourceType.ObservationDefinition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -2141,7 +2596,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
     String? version,
@@ -2605,7 +3060,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     @Default(R5ResourceType.PlanDefinition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -2613,7 +3068,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -3708,7 +4163,7 @@ class Questionnaire with Resource, _$Questionnaire {
     @Default(R5ResourceType.Questionnaire) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -3716,7 +4171,7 @@ class Questionnaire with Resource, _$Questionnaire {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier>? identifier,
     String? version,
@@ -3872,7 +4327,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
     List<FhirExtension>? modifierExtension,
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
-   FhirUri? definition,
+    FhirUri? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
     List<Coding>? code,
     String? prefix,
@@ -4361,7 +4816,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     @Default(R5ResourceType.SpecimenDefinition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -4369,7 +4824,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-   FhirUri? url,
+    FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
     String? version,

@@ -35,8 +35,6 @@ Resource _newId(Resource resource) {
       return (resource as CarePlan).copyWith(id: newId());
     case R5ResourceType.CareTeam:
       return (resource as CareTeam).copyWith(id: newId());
-    case R5ResourceType.CatalogEntry:
-      return (resource as CatalogEntry).copyWith(id: newId());
     case R5ResourceType.ChargeItem:
       return (resource as ChargeItem).copyWith(id: newId());
     case R5ResourceType.ChargeItemDefinition:
@@ -49,8 +47,6 @@ Resource _newId(Resource resource) {
       return (resource as ClaimResponse).copyWith(id: newId());
     case R5ResourceType.ClinicalImpression:
       return (resource as ClinicalImpression).copyWith(id: newId());
-    case R5ResourceType.ClinicalUseIssue:
-      return (resource as ClinicalUseIssue).copyWith(id: newId());
     case R5ResourceType.CodeSystem:
       return (resource as CodeSystem).copyWith(id: newId());
     case R5ResourceType.Communication:

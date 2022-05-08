@@ -26,7 +26,7 @@ class _$ActivityDefinitionTearOff {
       {R5ResourceType resourceType = R5ResourceType.ActivityDefinition,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -34,7 +34,7 @@ class _$ActivityDefinitionTearOff {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -206,7 +206,7 @@ mixin _$ActivityDefinition {
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  Uri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -218,7 +218,7 @@ mixin _$ActivityDefinition {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Uri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
@@ -335,7 +335,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -343,7 +343,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -564,7 +564,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -596,7 +596,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -1283,7 +1283,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -1291,7 +1291,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -1549,7 +1549,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -1581,7 +1581,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -1970,7 +1970,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final Meta? meta;
   @override
-  final Uri? implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -1989,7 +1989,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Uri? url;
+  final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -2397,7 +2397,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           {R5ResourceType resourceType,
           Id? id,
           Meta? meta,
-          Uri? implicitRules,
+          FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
           Code? language,
           @JsonKey(name: '_language') Element? languageElement,
@@ -2405,7 +2405,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           List<Resource>? contained,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
-          Uri? url,
+          FhirUri? url,
           @JsonKey(name: '_url') Element? urlElement,
           List<Identifier>? identifier,
           String? version,
@@ -2490,7 +2490,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   Meta? get meta;
   @override
-  Uri? get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
@@ -2509,7 +2509,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Uri? get url;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -3405,7 +3405,7 @@ class _$ConditionDefinitionTearOff {
       {R5ResourceType resourceType = R5ResourceType.ConditionDefinition,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -3413,7 +3413,7 @@ class _$ConditionDefinitionTearOff {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -3555,7 +3555,7 @@ mixin _$ConditionDefinition {
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  Uri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -3567,7 +3567,7 @@ mixin _$ConditionDefinition {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Uri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
@@ -3663,7 +3663,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -3671,7 +3671,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -3853,7 +3853,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -3885,7 +3885,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -4407,7 +4407,7 @@ abstract class _$ConditionDefinitionCopyWith<$Res>
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -4415,7 +4415,7 @@ abstract class _$ConditionDefinitionCopyWith<$Res>
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -4625,7 +4625,7 @@ class __$ConditionDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -4657,7 +4657,7 @@ class __$ConditionDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -4971,7 +4971,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   @override
   final Meta? meta;
   @override
-  final Uri? implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -4990,7 +4990,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Uri? url;
+  final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -5332,7 +5332,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -5340,7 +5340,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -5409,7 +5409,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
   @override
   Meta? get meta;
   @override
-  Uri? get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
@@ -5428,7 +5428,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Uri? get url;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -7163,7 +7163,7 @@ class _$DeviceDefinitionTearOff {
       {R5ResourceType resourceType = R5ResourceType.DeviceDefinition,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -7271,7 +7271,7 @@ mixin _$DeviceDefinition {
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  Uri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -7351,7 +7351,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -7411,6 +7411,8 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res>? get modelNumberElement;
   $ReferenceCopyWith<$Res>? get owner;
   $ReferenceCopyWith<$Res>? get parentDevice;
+  $DeviceDefinitionGuidelineCopyWith<$Res>? get guideline;
+  $DeviceDefinitionCorrectiveActionCopyWith<$Res>? get correctiveAction;
 }
 
 /// @nodoc
@@ -7484,7 +7486,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -7765,6 +7767,29 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(parentDevice: value));
     });
   }
+
+  @override
+  $DeviceDefinitionGuidelineCopyWith<$Res>? get guideline {
+    if (_value.guideline == null) {
+      return null;
+    }
+
+    return $DeviceDefinitionGuidelineCopyWith<$Res>(_value.guideline!, (value) {
+      return _then(_value.copyWith(guideline: value));
+    });
+  }
+
+  @override
+  $DeviceDefinitionCorrectiveActionCopyWith<$Res>? get correctiveAction {
+    if (_value.correctiveAction == null) {
+      return null;
+    }
+
+    return $DeviceDefinitionCorrectiveActionCopyWith<$Res>(
+        _value.correctiveAction!, (value) {
+      return _then(_value.copyWith(correctiveAction: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -7778,7 +7803,7 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -7849,6 +7874,10 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res>? get owner;
   @override
   $ReferenceCopyWith<$Res>? get parentDevice;
+  @override
+  $DeviceDefinitionGuidelineCopyWith<$Res>? get guideline;
+  @override
+  $DeviceDefinitionCorrectiveActionCopyWith<$Res>? get correctiveAction;
 }
 
 /// @nodoc
@@ -7924,7 +7953,7 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -8154,7 +8183,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   @override
   final Meta? meta;
   @override
-  final Uri? implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -8389,7 +8418,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -8449,7 +8478,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   @override
   Meta? get meta;
   @override
-  Uri? get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
@@ -8557,9 +8586,9 @@ class _$DeviceDefinitionUdiDeviceIdentifierTearOff {
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      Uri? issuer,
+      FhirUri? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      Uri? jurisdiction,
+      FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
       List<DeviceDefinitionMarketDistribution>? marketDistribution}) {
     return _DeviceDefinitionUdiDeviceIdentifier(
@@ -8595,10 +8624,10 @@ mixin _$DeviceDefinitionUdiDeviceIdentifier {
   String? get deviceIdentifier => throw _privateConstructorUsedError;
   @JsonKey(name: '_deviceIdentifier')
   Element? get deviceIdentifierElement => throw _privateConstructorUsedError;
-  Uri? get issuer => throw _privateConstructorUsedError;
+  FhirUri? get issuer => throw _privateConstructorUsedError;
   @JsonKey(name: '_issuer')
   Element? get issuerElement => throw _privateConstructorUsedError;
-  Uri? get jurisdiction => throw _privateConstructorUsedError;
+  FhirUri? get jurisdiction => throw _privateConstructorUsedError;
   @JsonKey(name: '_jurisdiction')
   Element? get jurisdictionElement => throw _privateConstructorUsedError;
   List<DeviceDefinitionMarketDistribution>? get marketDistribution =>
@@ -8623,9 +8652,9 @@ abstract class $DeviceDefinitionUdiDeviceIdentifierCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      Uri? issuer,
+      FhirUri? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      Uri? jurisdiction,
+      FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
       List<DeviceDefinitionMarketDistribution>? marketDistribution});
 
@@ -8680,7 +8709,7 @@ class _$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
       issuer: issuer == freezed
           ? _value.issuer
           : issuer // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       issuerElement: issuerElement == freezed
           ? _value.issuerElement
           : issuerElement // ignore: cast_nullable_to_non_nullable
@@ -8688,7 +8717,7 @@ class _$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       jurisdictionElement: jurisdictionElement == freezed
           ? _value.jurisdictionElement
           : jurisdictionElement // ignore: cast_nullable_to_non_nullable
@@ -8748,9 +8777,9 @@ abstract class _$DeviceDefinitionUdiDeviceIdentifierCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      Uri? issuer,
+      FhirUri? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      Uri? jurisdiction,
+      FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
       List<DeviceDefinitionMarketDistribution>? marketDistribution});
 
@@ -8812,7 +8841,7 @@ class __$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
       issuer: issuer == freezed
           ? _value.issuer
           : issuer // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       issuerElement: issuerElement == freezed
           ? _value.issuerElement
           : issuerElement // ignore: cast_nullable_to_non_nullable
@@ -8820,7 +8849,7 @@ class __$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       jurisdictionElement: jurisdictionElement == freezed
           ? _value.jurisdictionElement
           : jurisdictionElement // ignore: cast_nullable_to_non_nullable
@@ -8867,12 +8896,12 @@ class _$_DeviceDefinitionUdiDeviceIdentifier
   @JsonKey(name: '_deviceIdentifier')
   final Element? deviceIdentifierElement;
   @override
-  final Uri? issuer;
+  final FhirUri? issuer;
   @override
   @JsonKey(name: '_issuer')
   final Element? issuerElement;
   @override
-  final Uri? jurisdiction;
+  final FhirUri? jurisdiction;
   @override
   @JsonKey(name: '_jurisdiction')
   final Element? jurisdictionElement;
@@ -8944,9 +8973,9 @@ abstract class _DeviceDefinitionUdiDeviceIdentifier
           List<FhirExtension>? modifierExtension,
           String? deviceIdentifier,
           @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-          Uri? issuer,
+          FhirUri? issuer,
           @JsonKey(name: '_issuer') Element? issuerElement,
-          Uri? jurisdiction,
+          FhirUri? jurisdiction,
           @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
           List<DeviceDefinitionMarketDistribution>? marketDistribution}) =
       _$_DeviceDefinitionUdiDeviceIdentifier;
@@ -8969,12 +8998,12 @@ abstract class _DeviceDefinitionUdiDeviceIdentifier
   @JsonKey(name: '_deviceIdentifier')
   Element? get deviceIdentifierElement;
   @override
-  Uri? get issuer;
+  FhirUri? get issuer;
   @override
   @JsonKey(name: '_issuer')
   Element? get issuerElement;
   @override
-  Uri? get jurisdiction;
+  FhirUri? get jurisdiction;
   @override
   @JsonKey(name: '_jurisdiction')
   Element? get jurisdictionElement;
@@ -9328,6 +9357,286 @@ abstract class _DeviceDefinitionDeviceName extends DeviceDefinitionDeviceName {
   @override
   @JsonKey(ignore: true)
   _$DeviceDefinitionDeviceNameCopyWith<_DeviceDefinitionDeviceName>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+DeviceDefinitionClassification _$DeviceDefinitionClassificationFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceDefinitionClassification.fromJson(json);
+}
+
+/// @nodoc
+class _$DeviceDefinitionClassificationTearOff {
+  const _$DeviceDefinitionClassificationTearOff();
+
+  _DeviceDefinitionClassification call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      List<RelatedArtifact>? justification}) {
+    return _DeviceDefinitionClassification(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      type: type,
+      justification: justification,
+    );
+  }
+
+  DeviceDefinitionClassification fromJson(Map<String, Object?> json) {
+    return DeviceDefinitionClassification.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeviceDefinitionClassification =
+    _$DeviceDefinitionClassificationTearOff();
+
+/// @nodoc
+mixin _$DeviceDefinitionClassification {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get justification =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDefinitionClassificationCopyWith<DeviceDefinitionClassification>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDefinitionClassificationCopyWith<$Res> {
+  factory $DeviceDefinitionClassificationCopyWith(
+          DeviceDefinitionClassification value,
+          $Res Function(DeviceDefinitionClassification) then) =
+      _$DeviceDefinitionClassificationCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      List<RelatedArtifact>? justification});
+
+  $CodeableConceptCopyWith<$Res> get type;
+}
+
+/// @nodoc
+class _$DeviceDefinitionClassificationCopyWithImpl<$Res>
+    implements $DeviceDefinitionClassificationCopyWith<$Res> {
+  _$DeviceDefinitionClassificationCopyWithImpl(this._value, this._then);
+
+  final DeviceDefinitionClassification _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDefinitionClassification) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? justification = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      justification: justification == freezed
+          ? _value.justification
+          : justification // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$DeviceDefinitionClassificationCopyWith<$Res>
+    implements $DeviceDefinitionClassificationCopyWith<$Res> {
+  factory _$DeviceDefinitionClassificationCopyWith(
+          _DeviceDefinitionClassification value,
+          $Res Function(_DeviceDefinitionClassification) then) =
+      __$DeviceDefinitionClassificationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      List<RelatedArtifact>? justification});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+}
+
+/// @nodoc
+class __$DeviceDefinitionClassificationCopyWithImpl<$Res>
+    extends _$DeviceDefinitionClassificationCopyWithImpl<$Res>
+    implements _$DeviceDefinitionClassificationCopyWith<$Res> {
+  __$DeviceDefinitionClassificationCopyWithImpl(
+      _DeviceDefinitionClassification _value,
+      $Res Function(_DeviceDefinitionClassification) _then)
+      : super(_value, (v) => _then(v as _DeviceDefinitionClassification));
+
+  @override
+  _DeviceDefinitionClassification get _value =>
+      super._value as _DeviceDefinitionClassification;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? justification = freezed,
+  }) {
+    return _then(_DeviceDefinitionClassification(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      justification: justification == freezed
+          ? _value.justification
+          : justification // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDefinitionClassification
+    extends _DeviceDefinitionClassification {
+  _$_DeviceDefinitionClassification(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      required this.type,
+      this.justification})
+      : super._();
+
+  factory _$_DeviceDefinitionClassification.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_DeviceDefinitionClassificationFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final CodeableConcept type;
+  @override
+  final List<RelatedArtifact>? justification;
+
+  @override
+  String toString() {
+    return 'DeviceDefinitionClassification(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, justification: $justification)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DeviceDefinitionClassification &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.justification, justification));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(justification));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeviceDefinitionClassificationCopyWith<_DeviceDefinitionClassification>
+      get copyWith => __$DeviceDefinitionClassificationCopyWithImpl<
+          _DeviceDefinitionClassification>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDefinitionClassificationToJson(this);
+  }
+}
+
+abstract class _DeviceDefinitionClassification
+    extends DeviceDefinitionClassification {
+  factory _DeviceDefinitionClassification(
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          required CodeableConcept type,
+          List<RelatedArtifact>? justification}) =
+      _$_DeviceDefinitionClassification;
+  _DeviceDefinitionClassification._() : super._();
+
+  factory _DeviceDefinitionClassification.fromJson(Map<String, dynamic> json) =
+      _$_DeviceDefinitionClassification.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  CodeableConcept get type;
+  @override
+  List<RelatedArtifact>? get justification;
+  @override
+  @JsonKey(ignore: true)
+  _$DeviceDefinitionClassificationCopyWith<_DeviceDefinitionClassification>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -10394,9 +10703,9 @@ class _$DeviceDefinitionUdiDeviceIdentifier1TearOff {
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      Uri? issuer,
+      FhirUri? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      Uri? jurisdiction,
+      FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
       DeviceDefinitionMarketDistribution1? marketDistribution}) {
     return _DeviceDefinitionUdiDeviceIdentifier1(
@@ -10432,10 +10741,10 @@ mixin _$DeviceDefinitionUdiDeviceIdentifier1 {
   String? get deviceIdentifier => throw _privateConstructorUsedError;
   @JsonKey(name: '_deviceIdentifier')
   Element? get deviceIdentifierElement => throw _privateConstructorUsedError;
-  Uri? get issuer => throw _privateConstructorUsedError;
+  FhirUri? get issuer => throw _privateConstructorUsedError;
   @JsonKey(name: '_issuer')
   Element? get issuerElement => throw _privateConstructorUsedError;
-  Uri? get jurisdiction => throw _privateConstructorUsedError;
+  FhirUri? get jurisdiction => throw _privateConstructorUsedError;
   @JsonKey(name: '_jurisdiction')
   Element? get jurisdictionElement => throw _privateConstructorUsedError;
   DeviceDefinitionMarketDistribution1? get marketDistribution =>
@@ -10460,15 +10769,16 @@ abstract class $DeviceDefinitionUdiDeviceIdentifier1CopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      Uri? issuer,
+      FhirUri? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      Uri? jurisdiction,
+      FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
       DeviceDefinitionMarketDistribution1? marketDistribution});
 
   $ElementCopyWith<$Res>? get deviceIdentifierElement;
   $ElementCopyWith<$Res>? get issuerElement;
   $ElementCopyWith<$Res>? get jurisdictionElement;
+  $DeviceDefinitionMarketDistribution1CopyWith<$Res>? get marketDistribution;
 }
 
 /// @nodoc
@@ -10517,7 +10827,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier1CopyWithImpl<$Res>
       issuer: issuer == freezed
           ? _value.issuer
           : issuer // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       issuerElement: issuerElement == freezed
           ? _value.issuerElement
           : issuerElement // ignore: cast_nullable_to_non_nullable
@@ -10525,7 +10835,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier1CopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       jurisdictionElement: jurisdictionElement == freezed
           ? _value.jurisdictionElement
           : jurisdictionElement // ignore: cast_nullable_to_non_nullable
@@ -10569,6 +10879,18 @@ class _$DeviceDefinitionUdiDeviceIdentifier1CopyWithImpl<$Res>
       return _then(_value.copyWith(jurisdictionElement: value));
     });
   }
+
+  @override
+  $DeviceDefinitionMarketDistribution1CopyWith<$Res>? get marketDistribution {
+    if (_value.marketDistribution == null) {
+      return null;
+    }
+
+    return $DeviceDefinitionMarketDistribution1CopyWith<$Res>(
+        _value.marketDistribution!, (value) {
+      return _then(_value.copyWith(marketDistribution: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -10585,9 +10907,9 @@ abstract class _$DeviceDefinitionUdiDeviceIdentifier1CopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      Uri? issuer,
+      FhirUri? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      Uri? jurisdiction,
+      FhirUri? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
       DeviceDefinitionMarketDistribution1? marketDistribution});
 
@@ -10597,6 +10919,8 @@ abstract class _$DeviceDefinitionUdiDeviceIdentifier1CopyWith<$Res>
   $ElementCopyWith<$Res>? get issuerElement;
   @override
   $ElementCopyWith<$Res>? get jurisdictionElement;
+  @override
+  $DeviceDefinitionMarketDistribution1CopyWith<$Res>? get marketDistribution;
 }
 
 /// @nodoc
@@ -10649,7 +10973,7 @@ class __$DeviceDefinitionUdiDeviceIdentifier1CopyWithImpl<$Res>
       issuer: issuer == freezed
           ? _value.issuer
           : issuer // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       issuerElement: issuerElement == freezed
           ? _value.issuerElement
           : issuerElement // ignore: cast_nullable_to_non_nullable
@@ -10657,7 +10981,7 @@ class __$DeviceDefinitionUdiDeviceIdentifier1CopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       jurisdictionElement: jurisdictionElement == freezed
           ? _value.jurisdictionElement
           : jurisdictionElement // ignore: cast_nullable_to_non_nullable
@@ -10704,12 +11028,12 @@ class _$_DeviceDefinitionUdiDeviceIdentifier1
   @JsonKey(name: '_deviceIdentifier')
   final Element? deviceIdentifierElement;
   @override
-  final Uri? issuer;
+  final FhirUri? issuer;
   @override
   @JsonKey(name: '_issuer')
   final Element? issuerElement;
   @override
-  final Uri? jurisdiction;
+  final FhirUri? jurisdiction;
   @override
   @JsonKey(name: '_jurisdiction')
   final Element? jurisdictionElement;
@@ -10781,9 +11105,9 @@ abstract class _DeviceDefinitionUdiDeviceIdentifier1
           List<FhirExtension>? modifierExtension,
           String? deviceIdentifier,
           @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-          Uri? issuer,
+          FhirUri? issuer,
           @JsonKey(name: '_issuer') Element? issuerElement,
-          Uri? jurisdiction,
+          FhirUri? jurisdiction,
           @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
           DeviceDefinitionMarketDistribution1? marketDistribution}) =
       _$_DeviceDefinitionUdiDeviceIdentifier1;
@@ -10806,12 +11130,12 @@ abstract class _DeviceDefinitionUdiDeviceIdentifier1
   @JsonKey(name: '_deviceIdentifier')
   Element? get deviceIdentifierElement;
   @override
-  Uri? get issuer;
+  FhirUri? get issuer;
   @override
   @JsonKey(name: '_issuer')
   Element? get issuerElement;
   @override
-  Uri? get jurisdiction;
+  FhirUri? get jurisdiction;
   @override
   @JsonKey(name: '_jurisdiction')
   Element? get jurisdictionElement;
@@ -11773,6 +12097,285 @@ abstract class _DeviceDefinitionProperty extends DeviceDefinitionProperty {
       throw _privateConstructorUsedError;
 }
 
+DeviceDefinitionLink _$DeviceDefinitionLinkFromJson(Map<String, dynamic> json) {
+  return _DeviceDefinitionLink.fromJson(json);
+}
+
+/// @nodoc
+class _$DeviceDefinitionLinkTearOff {
+  const _$DeviceDefinitionLinkTearOff();
+
+  _DeviceDefinitionLink call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Coding relation,
+      required CodeableReference relatedDevice}) {
+    return _DeviceDefinitionLink(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      relation: relation,
+      relatedDevice: relatedDevice,
+    );
+  }
+
+  DeviceDefinitionLink fromJson(Map<String, Object?> json) {
+    return DeviceDefinitionLink.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeviceDefinitionLink = _$DeviceDefinitionLinkTearOff();
+
+/// @nodoc
+mixin _$DeviceDefinitionLink {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Coding get relation => throw _privateConstructorUsedError;
+  CodeableReference get relatedDevice => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDefinitionLinkCopyWith<DeviceDefinitionLink> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDefinitionLinkCopyWith<$Res> {
+  factory $DeviceDefinitionLinkCopyWith(DeviceDefinitionLink value,
+          $Res Function(DeviceDefinitionLink) then) =
+      _$DeviceDefinitionLinkCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding relation,
+      CodeableReference relatedDevice});
+
+  $CodingCopyWith<$Res> get relation;
+  $CodeableReferenceCopyWith<$Res> get relatedDevice;
+}
+
+/// @nodoc
+class _$DeviceDefinitionLinkCopyWithImpl<$Res>
+    implements $DeviceDefinitionLinkCopyWith<$Res> {
+  _$DeviceDefinitionLinkCopyWithImpl(this._value, this._then);
+
+  final DeviceDefinitionLink _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDefinitionLink) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? relation = freezed,
+    Object? relatedDevice = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      relation: relation == freezed
+          ? _value.relation
+          : relation // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      relatedDevice: relatedDevice == freezed
+          ? _value.relatedDevice
+          : relatedDevice // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
+    ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get relation {
+    return $CodingCopyWith<$Res>(_value.relation, (value) {
+      return _then(_value.copyWith(relation: value));
+    });
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res> get relatedDevice {
+    return $CodeableReferenceCopyWith<$Res>(_value.relatedDevice, (value) {
+      return _then(_value.copyWith(relatedDevice: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$DeviceDefinitionLinkCopyWith<$Res>
+    implements $DeviceDefinitionLinkCopyWith<$Res> {
+  factory _$DeviceDefinitionLinkCopyWith(_DeviceDefinitionLink value,
+          $Res Function(_DeviceDefinitionLink) then) =
+      __$DeviceDefinitionLinkCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Coding relation,
+      CodeableReference relatedDevice});
+
+  @override
+  $CodingCopyWith<$Res> get relation;
+  @override
+  $CodeableReferenceCopyWith<$Res> get relatedDevice;
+}
+
+/// @nodoc
+class __$DeviceDefinitionLinkCopyWithImpl<$Res>
+    extends _$DeviceDefinitionLinkCopyWithImpl<$Res>
+    implements _$DeviceDefinitionLinkCopyWith<$Res> {
+  __$DeviceDefinitionLinkCopyWithImpl(
+      _DeviceDefinitionLink _value, $Res Function(_DeviceDefinitionLink) _then)
+      : super(_value, (v) => _then(v as _DeviceDefinitionLink));
+
+  @override
+  _DeviceDefinitionLink get _value => super._value as _DeviceDefinitionLink;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? relation = freezed,
+    Object? relatedDevice = freezed,
+  }) {
+    return _then(_DeviceDefinitionLink(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      relation: relation == freezed
+          ? _value.relation
+          : relation // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      relatedDevice: relatedDevice == freezed
+          ? _value.relatedDevice
+          : relatedDevice // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDefinitionLink extends _DeviceDefinitionLink {
+  _$_DeviceDefinitionLink(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      required this.relation,
+      required this.relatedDevice})
+      : super._();
+
+  factory _$_DeviceDefinitionLink.fromJson(Map<String, dynamic> json) =>
+      _$$_DeviceDefinitionLinkFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Coding relation;
+  @override
+  final CodeableReference relatedDevice;
+
+  @override
+  String toString() {
+    return 'DeviceDefinitionLink(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, relation: $relation, relatedDevice: $relatedDevice)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DeviceDefinitionLink &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.relation, relation) &&
+            const DeepCollectionEquality()
+                .equals(other.relatedDevice, relatedDevice));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(relation),
+      const DeepCollectionEquality().hash(relatedDevice));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeviceDefinitionLinkCopyWith<_DeviceDefinitionLink> get copyWith =>
+      __$DeviceDefinitionLinkCopyWithImpl<_DeviceDefinitionLink>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDefinitionLinkToJson(this);
+  }
+}
+
+abstract class _DeviceDefinitionLink extends DeviceDefinitionLink {
+  factory _DeviceDefinitionLink(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Coding relation,
+      required CodeableReference relatedDevice}) = _$_DeviceDefinitionLink;
+  _DeviceDefinitionLink._() : super._();
+
+  factory _DeviceDefinitionLink.fromJson(Map<String, dynamic> json) =
+      _$_DeviceDefinitionLink.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Coding get relation;
+  @override
+  CodeableReference get relatedDevice;
+  @override
+  @JsonKey(ignore: true)
+  _$DeviceDefinitionLinkCopyWith<_DeviceDefinitionLink> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 DeviceDefinitionMaterial _$DeviceDefinitionMaterialFromJson(
     Map<String, dynamic> json) {
   return _DeviceDefinitionMaterial.fromJson(json);
@@ -12161,6 +12764,1853 @@ abstract class _DeviceDefinitionMaterial extends DeviceDefinitionMaterial {
       throw _privateConstructorUsedError;
 }
 
+DeviceDefinitionGuideline _$DeviceDefinitionGuidelineFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceDefinitionGuideline.fromJson(json);
+}
+
+/// @nodoc
+class _$DeviceDefinitionGuidelineTearOff {
+  const _$DeviceDefinitionGuidelineTearOff();
+
+  _DeviceDefinitionGuideline call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<UsageContext>? useContext,
+      Markdown? usageInstruction,
+      @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
+      List<RelatedArtifact>? relatedArtifact,
+      List<CodeableReference>? indication,
+      List<CodeableReference>? contraindication,
+      List<CodeableReference>? warning,
+      String? intendedUse,
+      @JsonKey(name: '_intendedUse') Element? intendedUseElement}) {
+    return _DeviceDefinitionGuideline(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      useContext: useContext,
+      usageInstruction: usageInstruction,
+      usageInstructionElement: usageInstructionElement,
+      relatedArtifact: relatedArtifact,
+      indication: indication,
+      contraindication: contraindication,
+      warning: warning,
+      intendedUse: intendedUse,
+      intendedUseElement: intendedUseElement,
+    );
+  }
+
+  DeviceDefinitionGuideline fromJson(Map<String, Object?> json) {
+    return DeviceDefinitionGuideline.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeviceDefinitionGuideline = _$DeviceDefinitionGuidelineTearOff();
+
+/// @nodoc
+mixin _$DeviceDefinitionGuideline {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  Markdown? get usageInstruction => throw _privateConstructorUsedError;
+  @JsonKey(name: '_usageInstruction')
+  Element? get usageInstructionElement => throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  List<CodeableReference>? get indication => throw _privateConstructorUsedError;
+  List<CodeableReference>? get contraindication =>
+      throw _privateConstructorUsedError;
+  List<CodeableReference>? get warning => throw _privateConstructorUsedError;
+  String? get intendedUse => throw _privateConstructorUsedError;
+  @JsonKey(name: '_intendedUse')
+  Element? get intendedUseElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDefinitionGuidelineCopyWith<DeviceDefinitionGuideline> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDefinitionGuidelineCopyWith<$Res> {
+  factory $DeviceDefinitionGuidelineCopyWith(DeviceDefinitionGuideline value,
+          $Res Function(DeviceDefinitionGuideline) then) =
+      _$DeviceDefinitionGuidelineCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<UsageContext>? useContext,
+      Markdown? usageInstruction,
+      @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
+      List<RelatedArtifact>? relatedArtifact,
+      List<CodeableReference>? indication,
+      List<CodeableReference>? contraindication,
+      List<CodeableReference>? warning,
+      String? intendedUse,
+      @JsonKey(name: '_intendedUse') Element? intendedUseElement});
+
+  $ElementCopyWith<$Res>? get usageInstructionElement;
+  $ElementCopyWith<$Res>? get intendedUseElement;
+}
+
+/// @nodoc
+class _$DeviceDefinitionGuidelineCopyWithImpl<$Res>
+    implements $DeviceDefinitionGuidelineCopyWith<$Res> {
+  _$DeviceDefinitionGuidelineCopyWithImpl(this._value, this._then);
+
+  final DeviceDefinitionGuideline _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDefinitionGuideline) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? useContext = freezed,
+    Object? usageInstruction = freezed,
+    Object? usageInstructionElement = freezed,
+    Object? relatedArtifact = freezed,
+    Object? indication = freezed,
+    Object? contraindication = freezed,
+    Object? warning = freezed,
+    Object? intendedUse = freezed,
+    Object? intendedUseElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      useContext: useContext == freezed
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      usageInstruction: usageInstruction == freezed
+          ? _value.usageInstruction
+          : usageInstruction // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      usageInstructionElement: usageInstructionElement == freezed
+          ? _value.usageInstructionElement
+          : usageInstructionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      indication: indication == freezed
+          ? _value.indication
+          : indication // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+      contraindication: contraindication == freezed
+          ? _value.contraindication
+          : contraindication // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+      warning: warning == freezed
+          ? _value.warning
+          : warning // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+      intendedUse: intendedUse == freezed
+          ? _value.intendedUse
+          : intendedUse // ignore: cast_nullable_to_non_nullable
+              as String?,
+      intendedUseElement: intendedUseElement == freezed
+          ? _value.intendedUseElement
+          : intendedUseElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get usageInstructionElement {
+    if (_value.usageInstructionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.usageInstructionElement!, (value) {
+      return _then(_value.copyWith(usageInstructionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get intendedUseElement {
+    if (_value.intendedUseElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.intendedUseElement!, (value) {
+      return _then(_value.copyWith(intendedUseElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$DeviceDefinitionGuidelineCopyWith<$Res>
+    implements $DeviceDefinitionGuidelineCopyWith<$Res> {
+  factory _$DeviceDefinitionGuidelineCopyWith(_DeviceDefinitionGuideline value,
+          $Res Function(_DeviceDefinitionGuideline) then) =
+      __$DeviceDefinitionGuidelineCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<UsageContext>? useContext,
+      Markdown? usageInstruction,
+      @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
+      List<RelatedArtifact>? relatedArtifact,
+      List<CodeableReference>? indication,
+      List<CodeableReference>? contraindication,
+      List<CodeableReference>? warning,
+      String? intendedUse,
+      @JsonKey(name: '_intendedUse') Element? intendedUseElement});
+
+  @override
+  $ElementCopyWith<$Res>? get usageInstructionElement;
+  @override
+  $ElementCopyWith<$Res>? get intendedUseElement;
+}
+
+/// @nodoc
+class __$DeviceDefinitionGuidelineCopyWithImpl<$Res>
+    extends _$DeviceDefinitionGuidelineCopyWithImpl<$Res>
+    implements _$DeviceDefinitionGuidelineCopyWith<$Res> {
+  __$DeviceDefinitionGuidelineCopyWithImpl(_DeviceDefinitionGuideline _value,
+      $Res Function(_DeviceDefinitionGuideline) _then)
+      : super(_value, (v) => _then(v as _DeviceDefinitionGuideline));
+
+  @override
+  _DeviceDefinitionGuideline get _value =>
+      super._value as _DeviceDefinitionGuideline;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? useContext = freezed,
+    Object? usageInstruction = freezed,
+    Object? usageInstructionElement = freezed,
+    Object? relatedArtifact = freezed,
+    Object? indication = freezed,
+    Object? contraindication = freezed,
+    Object? warning = freezed,
+    Object? intendedUse = freezed,
+    Object? intendedUseElement = freezed,
+  }) {
+    return _then(_DeviceDefinitionGuideline(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      useContext: useContext == freezed
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      usageInstruction: usageInstruction == freezed
+          ? _value.usageInstruction
+          : usageInstruction // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      usageInstructionElement: usageInstructionElement == freezed
+          ? _value.usageInstructionElement
+          : usageInstructionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      indication: indication == freezed
+          ? _value.indication
+          : indication // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+      contraindication: contraindication == freezed
+          ? _value.contraindication
+          : contraindication // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+      warning: warning == freezed
+          ? _value.warning
+          : warning // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
+      intendedUse: intendedUse == freezed
+          ? _value.intendedUse
+          : intendedUse // ignore: cast_nullable_to_non_nullable
+              as String?,
+      intendedUseElement: intendedUseElement == freezed
+          ? _value.intendedUseElement
+          : intendedUseElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDefinitionGuideline extends _DeviceDefinitionGuideline {
+  _$_DeviceDefinitionGuideline(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.useContext,
+      this.usageInstruction,
+      @JsonKey(name: '_usageInstruction') this.usageInstructionElement,
+      this.relatedArtifact,
+      this.indication,
+      this.contraindication,
+      this.warning,
+      this.intendedUse,
+      @JsonKey(name: '_intendedUse') this.intendedUseElement})
+      : super._();
+
+  factory _$_DeviceDefinitionGuideline.fromJson(Map<String, dynamic> json) =>
+      _$$_DeviceDefinitionGuidelineFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final List<UsageContext>? useContext;
+  @override
+  final Markdown? usageInstruction;
+  @override
+  @JsonKey(name: '_usageInstruction')
+  final Element? usageInstructionElement;
+  @override
+  final List<RelatedArtifact>? relatedArtifact;
+  @override
+  final List<CodeableReference>? indication;
+  @override
+  final List<CodeableReference>? contraindication;
+  @override
+  final List<CodeableReference>? warning;
+  @override
+  final String? intendedUse;
+  @override
+  @JsonKey(name: '_intendedUse')
+  final Element? intendedUseElement;
+
+  @override
+  String toString() {
+    return 'DeviceDefinitionGuideline(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, useContext: $useContext, usageInstruction: $usageInstruction, usageInstructionElement: $usageInstructionElement, relatedArtifact: $relatedArtifact, indication: $indication, contraindication: $contraindication, warning: $warning, intendedUse: $intendedUse, intendedUseElement: $intendedUseElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DeviceDefinitionGuideline &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.useContext, useContext) &&
+            const DeepCollectionEquality()
+                .equals(other.usageInstruction, usageInstruction) &&
+            const DeepCollectionEquality().equals(
+                other.usageInstructionElement, usageInstructionElement) &&
+            const DeepCollectionEquality()
+                .equals(other.relatedArtifact, relatedArtifact) &&
+            const DeepCollectionEquality()
+                .equals(other.indication, indication) &&
+            const DeepCollectionEquality()
+                .equals(other.contraindication, contraindication) &&
+            const DeepCollectionEquality().equals(other.warning, warning) &&
+            const DeepCollectionEquality()
+                .equals(other.intendedUse, intendedUse) &&
+            const DeepCollectionEquality()
+                .equals(other.intendedUseElement, intendedUseElement));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(useContext),
+      const DeepCollectionEquality().hash(usageInstruction),
+      const DeepCollectionEquality().hash(usageInstructionElement),
+      const DeepCollectionEquality().hash(relatedArtifact),
+      const DeepCollectionEquality().hash(indication),
+      const DeepCollectionEquality().hash(contraindication),
+      const DeepCollectionEquality().hash(warning),
+      const DeepCollectionEquality().hash(intendedUse),
+      const DeepCollectionEquality().hash(intendedUseElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeviceDefinitionGuidelineCopyWith<_DeviceDefinitionGuideline>
+      get copyWith =>
+          __$DeviceDefinitionGuidelineCopyWithImpl<_DeviceDefinitionGuideline>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDefinitionGuidelineToJson(this);
+  }
+}
+
+abstract class _DeviceDefinitionGuideline extends DeviceDefinitionGuideline {
+  factory _DeviceDefinitionGuideline(
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          List<UsageContext>? useContext,
+          Markdown? usageInstruction,
+          @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
+          List<RelatedArtifact>? relatedArtifact,
+          List<CodeableReference>? indication,
+          List<CodeableReference>? contraindication,
+          List<CodeableReference>? warning,
+          String? intendedUse,
+          @JsonKey(name: '_intendedUse') Element? intendedUseElement}) =
+      _$_DeviceDefinitionGuideline;
+  _DeviceDefinitionGuideline._() : super._();
+
+  factory _DeviceDefinitionGuideline.fromJson(Map<String, dynamic> json) =
+      _$_DeviceDefinitionGuideline.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  List<UsageContext>? get useContext;
+  @override
+  Markdown? get usageInstruction;
+  @override
+  @JsonKey(name: '_usageInstruction')
+  Element? get usageInstructionElement;
+  @override
+  List<RelatedArtifact>? get relatedArtifact;
+  @override
+  List<CodeableReference>? get indication;
+  @override
+  List<CodeableReference>? get contraindication;
+  @override
+  List<CodeableReference>? get warning;
+  @override
+  String? get intendedUse;
+  @override
+  @JsonKey(name: '_intendedUse')
+  Element? get intendedUseElement;
+  @override
+  @JsonKey(ignore: true)
+  _$DeviceDefinitionGuidelineCopyWith<_DeviceDefinitionGuideline>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+DeviceDefinitionCorrectiveAction _$DeviceDefinitionCorrectiveActionFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceDefinitionCorrectiveAction.fromJson(json);
+}
+
+/// @nodoc
+class _$DeviceDefinitionCorrectiveActionTearOff {
+  const _$DeviceDefinitionCorrectiveActionTearOff();
+
+  _DeviceDefinitionCorrectiveAction call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? recall,
+      @JsonKey(name: '_recall') Element? recallElement,
+      Code? scope,
+      @JsonKey(name: '_scope') Element? scopeElement,
+      required Period period}) {
+    return _DeviceDefinitionCorrectiveAction(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      recall: recall,
+      recallElement: recallElement,
+      scope: scope,
+      scopeElement: scopeElement,
+      period: period,
+    );
+  }
+
+  DeviceDefinitionCorrectiveAction fromJson(Map<String, Object?> json) {
+    return DeviceDefinitionCorrectiveAction.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeviceDefinitionCorrectiveAction =
+    _$DeviceDefinitionCorrectiveActionTearOff();
+
+/// @nodoc
+mixin _$DeviceDefinitionCorrectiveAction {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Boolean? get recall => throw _privateConstructorUsedError;
+  @JsonKey(name: '_recall')
+  Element? get recallElement => throw _privateConstructorUsedError;
+  Code? get scope => throw _privateConstructorUsedError;
+  @JsonKey(name: '_scope')
+  Element? get scopeElement => throw _privateConstructorUsedError;
+  Period get period => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDefinitionCorrectiveActionCopyWith<DeviceDefinitionCorrectiveAction>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDefinitionCorrectiveActionCopyWith<$Res> {
+  factory $DeviceDefinitionCorrectiveActionCopyWith(
+          DeviceDefinitionCorrectiveAction value,
+          $Res Function(DeviceDefinitionCorrectiveAction) then) =
+      _$DeviceDefinitionCorrectiveActionCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? recall,
+      @JsonKey(name: '_recall') Element? recallElement,
+      Code? scope,
+      @JsonKey(name: '_scope') Element? scopeElement,
+      Period period});
+
+  $ElementCopyWith<$Res>? get recallElement;
+  $ElementCopyWith<$Res>? get scopeElement;
+  $PeriodCopyWith<$Res> get period;
+}
+
+/// @nodoc
+class _$DeviceDefinitionCorrectiveActionCopyWithImpl<$Res>
+    implements $DeviceDefinitionCorrectiveActionCopyWith<$Res> {
+  _$DeviceDefinitionCorrectiveActionCopyWithImpl(this._value, this._then);
+
+  final DeviceDefinitionCorrectiveAction _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDefinitionCorrectiveAction) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? recall = freezed,
+    Object? recallElement = freezed,
+    Object? scope = freezed,
+    Object? scopeElement = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      recall: recall == freezed
+          ? _value.recall
+          : recall // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      recallElement: recallElement == freezed
+          ? _value.recallElement
+          : recallElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      scopeElement: scopeElement == freezed
+          ? _value.scopeElement
+          : scopeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get recallElement {
+    if (_value.recallElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.recallElement!, (value) {
+      return _then(_value.copyWith(recallElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get scopeElement {
+    if (_value.scopeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.scopeElement!, (value) {
+      return _then(_value.copyWith(scopeElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$DeviceDefinitionCorrectiveActionCopyWith<$Res>
+    implements $DeviceDefinitionCorrectiveActionCopyWith<$Res> {
+  factory _$DeviceDefinitionCorrectiveActionCopyWith(
+          _DeviceDefinitionCorrectiveAction value,
+          $Res Function(_DeviceDefinitionCorrectiveAction) then) =
+      __$DeviceDefinitionCorrectiveActionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? recall,
+      @JsonKey(name: '_recall') Element? recallElement,
+      Code? scope,
+      @JsonKey(name: '_scope') Element? scopeElement,
+      Period period});
+
+  @override
+  $ElementCopyWith<$Res>? get recallElement;
+  @override
+  $ElementCopyWith<$Res>? get scopeElement;
+  @override
+  $PeriodCopyWith<$Res> get period;
+}
+
+/// @nodoc
+class __$DeviceDefinitionCorrectiveActionCopyWithImpl<$Res>
+    extends _$DeviceDefinitionCorrectiveActionCopyWithImpl<$Res>
+    implements _$DeviceDefinitionCorrectiveActionCopyWith<$Res> {
+  __$DeviceDefinitionCorrectiveActionCopyWithImpl(
+      _DeviceDefinitionCorrectiveAction _value,
+      $Res Function(_DeviceDefinitionCorrectiveAction) _then)
+      : super(_value, (v) => _then(v as _DeviceDefinitionCorrectiveAction));
+
+  @override
+  _DeviceDefinitionCorrectiveAction get _value =>
+      super._value as _DeviceDefinitionCorrectiveAction;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? recall = freezed,
+    Object? recallElement = freezed,
+    Object? scope = freezed,
+    Object? scopeElement = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_DeviceDefinitionCorrectiveAction(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      recall: recall == freezed
+          ? _value.recall
+          : recall // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      recallElement: recallElement == freezed
+          ? _value.recallElement
+          : recallElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      scopeElement: scopeElement == freezed
+          ? _value.scopeElement
+          : scopeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDefinitionCorrectiveAction
+    extends _DeviceDefinitionCorrectiveAction {
+  _$_DeviceDefinitionCorrectiveAction(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.recall,
+      @JsonKey(name: '_recall') this.recallElement,
+      this.scope,
+      @JsonKey(name: '_scope') this.scopeElement,
+      required this.period})
+      : super._();
+
+  factory _$_DeviceDefinitionCorrectiveAction.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_DeviceDefinitionCorrectiveActionFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Boolean? recall;
+  @override
+  @JsonKey(name: '_recall')
+  final Element? recallElement;
+  @override
+  final Code? scope;
+  @override
+  @JsonKey(name: '_scope')
+  final Element? scopeElement;
+  @override
+  final Period period;
+
+  @override
+  String toString() {
+    return 'DeviceDefinitionCorrectiveAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, recall: $recall, recallElement: $recallElement, scope: $scope, scopeElement: $scopeElement, period: $period)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DeviceDefinitionCorrectiveAction &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.recall, recall) &&
+            const DeepCollectionEquality()
+                .equals(other.recallElement, recallElement) &&
+            const DeepCollectionEquality().equals(other.scope, scope) &&
+            const DeepCollectionEquality()
+                .equals(other.scopeElement, scopeElement) &&
+            const DeepCollectionEquality().equals(other.period, period));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(recall),
+      const DeepCollectionEquality().hash(recallElement),
+      const DeepCollectionEquality().hash(scope),
+      const DeepCollectionEquality().hash(scopeElement),
+      const DeepCollectionEquality().hash(period));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeviceDefinitionCorrectiveActionCopyWith<_DeviceDefinitionCorrectiveAction>
+      get copyWith => __$DeviceDefinitionCorrectiveActionCopyWithImpl<
+          _DeviceDefinitionCorrectiveAction>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDefinitionCorrectiveActionToJson(this);
+  }
+}
+
+abstract class _DeviceDefinitionCorrectiveAction
+    extends DeviceDefinitionCorrectiveAction {
+  factory _DeviceDefinitionCorrectiveAction(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? recall,
+      @JsonKey(name: '_recall') Element? recallElement,
+      Code? scope,
+      @JsonKey(name: '_scope') Element? scopeElement,
+      required Period period}) = _$_DeviceDefinitionCorrectiveAction;
+  _DeviceDefinitionCorrectiveAction._() : super._();
+
+  factory _DeviceDefinitionCorrectiveAction.fromJson(
+      Map<String, dynamic> json) = _$_DeviceDefinitionCorrectiveAction.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Boolean? get recall;
+  @override
+  @JsonKey(name: '_recall')
+  Element? get recallElement;
+  @override
+  Code? get scope;
+  @override
+  @JsonKey(name: '_scope')
+  Element? get scopeElement;
+  @override
+  Period get period;
+  @override
+  @JsonKey(ignore: true)
+  _$DeviceDefinitionCorrectiveActionCopyWith<_DeviceDefinitionCorrectiveAction>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+DeviceDefinitionChargeItem _$DeviceDefinitionChargeItemFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceDefinitionChargeItem.fromJson(json);
+}
+
+/// @nodoc
+class _$DeviceDefinitionChargeItemTearOff {
+  const _$DeviceDefinitionChargeItemTearOff();
+
+  _DeviceDefinitionChargeItem call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableReference chargeItemCode,
+      required Quantity count,
+      Period? effectivePeriod,
+      List<UsageContext>? useContext}) {
+    return _DeviceDefinitionChargeItem(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      chargeItemCode: chargeItemCode,
+      count: count,
+      effectivePeriod: effectivePeriod,
+      useContext: useContext,
+    );
+  }
+
+  DeviceDefinitionChargeItem fromJson(Map<String, Object?> json) {
+    return DeviceDefinitionChargeItem.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeviceDefinitionChargeItem = _$DeviceDefinitionChargeItemTearOff();
+
+/// @nodoc
+mixin _$DeviceDefinitionChargeItem {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableReference get chargeItemCode => throw _privateConstructorUsedError;
+  Quantity get count => throw _privateConstructorUsedError;
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDefinitionChargeItemCopyWith<DeviceDefinitionChargeItem>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDefinitionChargeItemCopyWith<$Res> {
+  factory $DeviceDefinitionChargeItemCopyWith(DeviceDefinitionChargeItem value,
+          $Res Function(DeviceDefinitionChargeItem) then) =
+      _$DeviceDefinitionChargeItemCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableReference chargeItemCode,
+      Quantity count,
+      Period? effectivePeriod,
+      List<UsageContext>? useContext});
+
+  $CodeableReferenceCopyWith<$Res> get chargeItemCode;
+  $QuantityCopyWith<$Res> get count;
+  $PeriodCopyWith<$Res>? get effectivePeriod;
+}
+
+/// @nodoc
+class _$DeviceDefinitionChargeItemCopyWithImpl<$Res>
+    implements $DeviceDefinitionChargeItemCopyWith<$Res> {
+  _$DeviceDefinitionChargeItemCopyWithImpl(this._value, this._then);
+
+  final DeviceDefinitionChargeItem _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDefinitionChargeItem) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? chargeItemCode = freezed,
+    Object? count = freezed,
+    Object? effectivePeriod = freezed,
+    Object? useContext = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      chargeItemCode: chargeItemCode == freezed
+          ? _value.chargeItemCode
+          : chargeItemCode // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as Quantity,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      useContext: useContext == freezed
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+    ));
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res> get chargeItemCode {
+    return $CodeableReferenceCopyWith<$Res>(_value.chargeItemCode, (value) {
+      return _then(_value.copyWith(chargeItemCode: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get count {
+    return $QuantityCopyWith<$Res>(_value.count, (value) {
+      return _then(_value.copyWith(count: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod!, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$DeviceDefinitionChargeItemCopyWith<$Res>
+    implements $DeviceDefinitionChargeItemCopyWith<$Res> {
+  factory _$DeviceDefinitionChargeItemCopyWith(
+          _DeviceDefinitionChargeItem value,
+          $Res Function(_DeviceDefinitionChargeItem) then) =
+      __$DeviceDefinitionChargeItemCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableReference chargeItemCode,
+      Quantity count,
+      Period? effectivePeriod,
+      List<UsageContext>? useContext});
+
+  @override
+  $CodeableReferenceCopyWith<$Res> get chargeItemCode;
+  @override
+  $QuantityCopyWith<$Res> get count;
+  @override
+  $PeriodCopyWith<$Res>? get effectivePeriod;
+}
+
+/// @nodoc
+class __$DeviceDefinitionChargeItemCopyWithImpl<$Res>
+    extends _$DeviceDefinitionChargeItemCopyWithImpl<$Res>
+    implements _$DeviceDefinitionChargeItemCopyWith<$Res> {
+  __$DeviceDefinitionChargeItemCopyWithImpl(_DeviceDefinitionChargeItem _value,
+      $Res Function(_DeviceDefinitionChargeItem) _then)
+      : super(_value, (v) => _then(v as _DeviceDefinitionChargeItem));
+
+  @override
+  _DeviceDefinitionChargeItem get _value =>
+      super._value as _DeviceDefinitionChargeItem;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? chargeItemCode = freezed,
+    Object? count = freezed,
+    Object? effectivePeriod = freezed,
+    Object? useContext = freezed,
+  }) {
+    return _then(_DeviceDefinitionChargeItem(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      chargeItemCode: chargeItemCode == freezed
+          ? _value.chargeItemCode
+          : chargeItemCode // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as Quantity,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      useContext: useContext == freezed
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDefinitionChargeItem extends _DeviceDefinitionChargeItem {
+  _$_DeviceDefinitionChargeItem(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      required this.chargeItemCode,
+      required this.count,
+      this.effectivePeriod,
+      this.useContext})
+      : super._();
+
+  factory _$_DeviceDefinitionChargeItem.fromJson(Map<String, dynamic> json) =>
+      _$$_DeviceDefinitionChargeItemFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final CodeableReference chargeItemCode;
+  @override
+  final Quantity count;
+  @override
+  final Period? effectivePeriod;
+  @override
+  final List<UsageContext>? useContext;
+
+  @override
+  String toString() {
+    return 'DeviceDefinitionChargeItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, chargeItemCode: $chargeItemCode, count: $count, effectivePeriod: $effectivePeriod, useContext: $useContext)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DeviceDefinitionChargeItem &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.chargeItemCode, chargeItemCode) &&
+            const DeepCollectionEquality().equals(other.count, count) &&
+            const DeepCollectionEquality()
+                .equals(other.effectivePeriod, effectivePeriod) &&
+            const DeepCollectionEquality()
+                .equals(other.useContext, useContext));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(chargeItemCode),
+      const DeepCollectionEquality().hash(count),
+      const DeepCollectionEquality().hash(effectivePeriod),
+      const DeepCollectionEquality().hash(useContext));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeviceDefinitionChargeItemCopyWith<_DeviceDefinitionChargeItem>
+      get copyWith => __$DeviceDefinitionChargeItemCopyWithImpl<
+          _DeviceDefinitionChargeItem>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDefinitionChargeItemToJson(this);
+  }
+}
+
+abstract class _DeviceDefinitionChargeItem extends DeviceDefinitionChargeItem {
+  factory _DeviceDefinitionChargeItem(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableReference chargeItemCode,
+      required Quantity count,
+      Period? effectivePeriod,
+      List<UsageContext>? useContext}) = _$_DeviceDefinitionChargeItem;
+  _DeviceDefinitionChargeItem._() : super._();
+
+  factory _DeviceDefinitionChargeItem.fromJson(Map<String, dynamic> json) =
+      _$_DeviceDefinitionChargeItem.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  CodeableReference get chargeItemCode;
+  @override
+  Quantity get count;
+  @override
+  Period? get effectivePeriod;
+  @override
+  List<UsageContext>? get useContext;
+  @override
+  @JsonKey(ignore: true)
+  _$DeviceDefinitionChargeItemCopyWith<_DeviceDefinitionChargeItem>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+DeviceDefinitionMarketDistribution _$DeviceDefinitionMarketDistributionFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceDefinitionMarketDistribution.fromJson(json);
+}
+
+/// @nodoc
+class _$DeviceDefinitionMarketDistributionTearOff {
+  const _$DeviceDefinitionMarketDistributionTearOff();
+
+  _DeviceDefinitionMarketDistribution call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Period marketPeriod,
+      FhirUri? subJurisdiction,
+      @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement}) {
+    return _DeviceDefinitionMarketDistribution(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      marketPeriod: marketPeriod,
+      subJurisdiction: subJurisdiction,
+      subJurisdictionElement: subJurisdictionElement,
+    );
+  }
+
+  DeviceDefinitionMarketDistribution fromJson(Map<String, Object?> json) {
+    return DeviceDefinitionMarketDistribution.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeviceDefinitionMarketDistribution =
+    _$DeviceDefinitionMarketDistributionTearOff();
+
+/// @nodoc
+mixin _$DeviceDefinitionMarketDistribution {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Period get marketPeriod => throw _privateConstructorUsedError;
+  FhirUri? get subJurisdiction => throw _privateConstructorUsedError;
+  @JsonKey(name: '_subJurisdiction')
+  Element? get subJurisdictionElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDefinitionMarketDistributionCopyWith<
+          DeviceDefinitionMarketDistribution>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDefinitionMarketDistributionCopyWith<$Res> {
+  factory $DeviceDefinitionMarketDistributionCopyWith(
+          DeviceDefinitionMarketDistribution value,
+          $Res Function(DeviceDefinitionMarketDistribution) then) =
+      _$DeviceDefinitionMarketDistributionCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Period marketPeriod,
+      FhirUri? subJurisdiction,
+      @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement});
+
+  $PeriodCopyWith<$Res> get marketPeriod;
+  $ElementCopyWith<$Res>? get subJurisdictionElement;
+}
+
+/// @nodoc
+class _$DeviceDefinitionMarketDistributionCopyWithImpl<$Res>
+    implements $DeviceDefinitionMarketDistributionCopyWith<$Res> {
+  _$DeviceDefinitionMarketDistributionCopyWithImpl(this._value, this._then);
+
+  final DeviceDefinitionMarketDistribution _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDefinitionMarketDistribution) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? marketPeriod = freezed,
+    Object? subJurisdiction = freezed,
+    Object? subJurisdictionElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      marketPeriod: marketPeriod == freezed
+          ? _value.marketPeriod
+          : marketPeriod // ignore: cast_nullable_to_non_nullable
+              as Period,
+      subJurisdiction: subJurisdiction == freezed
+          ? _value.subJurisdiction
+          : subJurisdiction // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      subJurisdictionElement: subJurisdictionElement == freezed
+          ? _value.subJurisdictionElement
+          : subJurisdictionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get marketPeriod {
+    return $PeriodCopyWith<$Res>(_value.marketPeriod, (value) {
+      return _then(_value.copyWith(marketPeriod: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get subJurisdictionElement {
+    if (_value.subJurisdictionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.subJurisdictionElement!, (value) {
+      return _then(_value.copyWith(subJurisdictionElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$DeviceDefinitionMarketDistributionCopyWith<$Res>
+    implements $DeviceDefinitionMarketDistributionCopyWith<$Res> {
+  factory _$DeviceDefinitionMarketDistributionCopyWith(
+          _DeviceDefinitionMarketDistribution value,
+          $Res Function(_DeviceDefinitionMarketDistribution) then) =
+      __$DeviceDefinitionMarketDistributionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Period marketPeriod,
+      FhirUri? subJurisdiction,
+      @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement});
+
+  @override
+  $PeriodCopyWith<$Res> get marketPeriod;
+  @override
+  $ElementCopyWith<$Res>? get subJurisdictionElement;
+}
+
+/// @nodoc
+class __$DeviceDefinitionMarketDistributionCopyWithImpl<$Res>
+    extends _$DeviceDefinitionMarketDistributionCopyWithImpl<$Res>
+    implements _$DeviceDefinitionMarketDistributionCopyWith<$Res> {
+  __$DeviceDefinitionMarketDistributionCopyWithImpl(
+      _DeviceDefinitionMarketDistribution _value,
+      $Res Function(_DeviceDefinitionMarketDistribution) _then)
+      : super(_value, (v) => _then(v as _DeviceDefinitionMarketDistribution));
+
+  @override
+  _DeviceDefinitionMarketDistribution get _value =>
+      super._value as _DeviceDefinitionMarketDistribution;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? marketPeriod = freezed,
+    Object? subJurisdiction = freezed,
+    Object? subJurisdictionElement = freezed,
+  }) {
+    return _then(_DeviceDefinitionMarketDistribution(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      marketPeriod: marketPeriod == freezed
+          ? _value.marketPeriod
+          : marketPeriod // ignore: cast_nullable_to_non_nullable
+              as Period,
+      subJurisdiction: subJurisdiction == freezed
+          ? _value.subJurisdiction
+          : subJurisdiction // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      subJurisdictionElement: subJurisdictionElement == freezed
+          ? _value.subJurisdictionElement
+          : subJurisdictionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDefinitionMarketDistribution
+    extends _DeviceDefinitionMarketDistribution {
+  _$_DeviceDefinitionMarketDistribution(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      required this.marketPeriod,
+      this.subJurisdiction,
+      @JsonKey(name: '_subJurisdiction') this.subJurisdictionElement})
+      : super._();
+
+  factory _$_DeviceDefinitionMarketDistribution.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_DeviceDefinitionMarketDistributionFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Period marketPeriod;
+  @override
+  final FhirUri? subJurisdiction;
+  @override
+  @JsonKey(name: '_subJurisdiction')
+  final Element? subJurisdictionElement;
+
+  @override
+  String toString() {
+    return 'DeviceDefinitionMarketDistribution(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, marketPeriod: $marketPeriod, subJurisdiction: $subJurisdiction, subJurisdictionElement: $subJurisdictionElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DeviceDefinitionMarketDistribution &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.marketPeriod, marketPeriod) &&
+            const DeepCollectionEquality()
+                .equals(other.subJurisdiction, subJurisdiction) &&
+            const DeepCollectionEquality()
+                .equals(other.subJurisdictionElement, subJurisdictionElement));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(marketPeriod),
+      const DeepCollectionEquality().hash(subJurisdiction),
+      const DeepCollectionEquality().hash(subJurisdictionElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeviceDefinitionMarketDistributionCopyWith<
+          _DeviceDefinitionMarketDistribution>
+      get copyWith => __$DeviceDefinitionMarketDistributionCopyWithImpl<
+          _DeviceDefinitionMarketDistribution>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDefinitionMarketDistributionToJson(this);
+  }
+}
+
+abstract class _DeviceDefinitionMarketDistribution
+    extends DeviceDefinitionMarketDistribution {
+  factory _DeviceDefinitionMarketDistribution(
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          required Period marketPeriod,
+          FhirUri? subJurisdiction,
+          @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement}) =
+      _$_DeviceDefinitionMarketDistribution;
+  _DeviceDefinitionMarketDistribution._() : super._();
+
+  factory _DeviceDefinitionMarketDistribution.fromJson(
+          Map<String, dynamic> json) =
+      _$_DeviceDefinitionMarketDistribution.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Period get marketPeriod;
+  @override
+  FhirUri? get subJurisdiction;
+  @override
+  @JsonKey(name: '_subJurisdiction')
+  Element? get subJurisdictionElement;
+  @override
+  @JsonKey(ignore: true)
+  _$DeviceDefinitionMarketDistributionCopyWith<
+          _DeviceDefinitionMarketDistribution>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+DeviceDefinitionMarketDistribution1
+    _$DeviceDefinitionMarketDistribution1FromJson(Map<String, dynamic> json) {
+  return _DeviceDefinitionMarketDistribution1.fromJson(json);
+}
+
+/// @nodoc
+class _$DeviceDefinitionMarketDistribution1TearOff {
+  const _$DeviceDefinitionMarketDistribution1TearOff();
+
+  _DeviceDefinitionMarketDistribution1 call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Period? marketPeriod,
+      FhirUri? subJurisdiction,
+      @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement}) {
+    return _DeviceDefinitionMarketDistribution1(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      marketPeriod: marketPeriod,
+      subJurisdiction: subJurisdiction,
+      subJurisdictionElement: subJurisdictionElement,
+    );
+  }
+
+  DeviceDefinitionMarketDistribution1 fromJson(Map<String, Object?> json) {
+    return DeviceDefinitionMarketDistribution1.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeviceDefinitionMarketDistribution1 =
+    _$DeviceDefinitionMarketDistribution1TearOff();
+
+/// @nodoc
+mixin _$DeviceDefinitionMarketDistribution1 {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Period? get marketPeriod => throw _privateConstructorUsedError;
+  FhirUri? get subJurisdiction => throw _privateConstructorUsedError;
+  @JsonKey(name: '_subJurisdiction')
+  Element? get subJurisdictionElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDefinitionMarketDistribution1CopyWith<
+          DeviceDefinitionMarketDistribution1>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDefinitionMarketDistribution1CopyWith<$Res> {
+  factory $DeviceDefinitionMarketDistribution1CopyWith(
+          DeviceDefinitionMarketDistribution1 value,
+          $Res Function(DeviceDefinitionMarketDistribution1) then) =
+      _$DeviceDefinitionMarketDistribution1CopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Period? marketPeriod,
+      FhirUri? subJurisdiction,
+      @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement});
+
+  $PeriodCopyWith<$Res>? get marketPeriod;
+  $ElementCopyWith<$Res>? get subJurisdictionElement;
+}
+
+/// @nodoc
+class _$DeviceDefinitionMarketDistribution1CopyWithImpl<$Res>
+    implements $DeviceDefinitionMarketDistribution1CopyWith<$Res> {
+  _$DeviceDefinitionMarketDistribution1CopyWithImpl(this._value, this._then);
+
+  final DeviceDefinitionMarketDistribution1 _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDefinitionMarketDistribution1) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? marketPeriod = freezed,
+    Object? subJurisdiction = freezed,
+    Object? subJurisdictionElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      marketPeriod: marketPeriod == freezed
+          ? _value.marketPeriod
+          : marketPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      subJurisdiction: subJurisdiction == freezed
+          ? _value.subJurisdiction
+          : subJurisdiction // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      subJurisdictionElement: subJurisdictionElement == freezed
+          ? _value.subJurisdictionElement
+          : subJurisdictionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get marketPeriod {
+    if (_value.marketPeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.marketPeriod!, (value) {
+      return _then(_value.copyWith(marketPeriod: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get subJurisdictionElement {
+    if (_value.subJurisdictionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.subJurisdictionElement!, (value) {
+      return _then(_value.copyWith(subJurisdictionElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$DeviceDefinitionMarketDistribution1CopyWith<$Res>
+    implements $DeviceDefinitionMarketDistribution1CopyWith<$Res> {
+  factory _$DeviceDefinitionMarketDistribution1CopyWith(
+          _DeviceDefinitionMarketDistribution1 value,
+          $Res Function(_DeviceDefinitionMarketDistribution1) then) =
+      __$DeviceDefinitionMarketDistribution1CopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Period? marketPeriod,
+      FhirUri? subJurisdiction,
+      @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement});
+
+  @override
+  $PeriodCopyWith<$Res>? get marketPeriod;
+  @override
+  $ElementCopyWith<$Res>? get subJurisdictionElement;
+}
+
+/// @nodoc
+class __$DeviceDefinitionMarketDistribution1CopyWithImpl<$Res>
+    extends _$DeviceDefinitionMarketDistribution1CopyWithImpl<$Res>
+    implements _$DeviceDefinitionMarketDistribution1CopyWith<$Res> {
+  __$DeviceDefinitionMarketDistribution1CopyWithImpl(
+      _DeviceDefinitionMarketDistribution1 _value,
+      $Res Function(_DeviceDefinitionMarketDistribution1) _then)
+      : super(_value, (v) => _then(v as _DeviceDefinitionMarketDistribution1));
+
+  @override
+  _DeviceDefinitionMarketDistribution1 get _value =>
+      super._value as _DeviceDefinitionMarketDistribution1;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? marketPeriod = freezed,
+    Object? subJurisdiction = freezed,
+    Object? subJurisdictionElement = freezed,
+  }) {
+    return _then(_DeviceDefinitionMarketDistribution1(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      marketPeriod: marketPeriod == freezed
+          ? _value.marketPeriod
+          : marketPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      subJurisdiction: subJurisdiction == freezed
+          ? _value.subJurisdiction
+          : subJurisdiction // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      subJurisdictionElement: subJurisdictionElement == freezed
+          ? _value.subJurisdictionElement
+          : subJurisdictionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDefinitionMarketDistribution1
+    extends _DeviceDefinitionMarketDistribution1 {
+  _$_DeviceDefinitionMarketDistribution1(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.marketPeriod,
+      this.subJurisdiction,
+      @JsonKey(name: '_subJurisdiction') this.subJurisdictionElement})
+      : super._();
+
+  factory _$_DeviceDefinitionMarketDistribution1.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_DeviceDefinitionMarketDistribution1FromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Period? marketPeriod;
+  @override
+  final FhirUri? subJurisdiction;
+  @override
+  @JsonKey(name: '_subJurisdiction')
+  final Element? subJurisdictionElement;
+
+  @override
+  String toString() {
+    return 'DeviceDefinitionMarketDistribution1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, marketPeriod: $marketPeriod, subJurisdiction: $subJurisdiction, subJurisdictionElement: $subJurisdictionElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DeviceDefinitionMarketDistribution1 &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.marketPeriod, marketPeriod) &&
+            const DeepCollectionEquality()
+                .equals(other.subJurisdiction, subJurisdiction) &&
+            const DeepCollectionEquality()
+                .equals(other.subJurisdictionElement, subJurisdictionElement));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(marketPeriod),
+      const DeepCollectionEquality().hash(subJurisdiction),
+      const DeepCollectionEquality().hash(subJurisdictionElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeviceDefinitionMarketDistribution1CopyWith<
+          _DeviceDefinitionMarketDistribution1>
+      get copyWith => __$DeviceDefinitionMarketDistribution1CopyWithImpl<
+          _DeviceDefinitionMarketDistribution1>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDefinitionMarketDistribution1ToJson(this);
+  }
+}
+
+abstract class _DeviceDefinitionMarketDistribution1
+    extends DeviceDefinitionMarketDistribution1 {
+  factory _DeviceDefinitionMarketDistribution1(
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Period? marketPeriod,
+          FhirUri? subJurisdiction,
+          @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement}) =
+      _$_DeviceDefinitionMarketDistribution1;
+  _DeviceDefinitionMarketDistribution1._() : super._();
+
+  factory _DeviceDefinitionMarketDistribution1.fromJson(
+          Map<String, dynamic> json) =
+      _$_DeviceDefinitionMarketDistribution1.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
+  @override
+  Period? get marketPeriod;
+  @override
+  FhirUri? get subJurisdiction;
+  @override
+  @JsonKey(name: '_subJurisdiction')
+  Element? get subJurisdictionElement;
+  @override
+  @JsonKey(ignore: true)
+  _$DeviceDefinitionMarketDistribution1CopyWith<
+          _DeviceDefinitionMarketDistribution1>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 EventDefinition _$EventDefinitionFromJson(Map<String, dynamic> json) {
   return _EventDefinition.fromJson(json);
 }
@@ -12173,7 +14623,7 @@ class _$EventDefinitionTearOff {
       {R5ResourceType resourceType = R5ResourceType.EventDefinition,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -12181,7 +14631,7 @@ class _$EventDefinitionTearOff {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -12297,7 +14747,7 @@ mixin _$EventDefinition {
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  Uri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -12309,7 +14759,7 @@ mixin _$EventDefinition {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Uri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
@@ -12386,7 +14836,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -12394,7 +14844,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -12546,7 +14996,7 @@ class _$EventDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -12578,7 +15028,7 @@ class _$EventDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -13009,7 +15459,7 @@ abstract class _$EventDefinitionCopyWith<$Res>
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -13017,7 +15467,7 @@ abstract class _$EventDefinitionCopyWith<$Res>
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -13193,7 +15643,7 @@ class __$EventDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -13225,7 +15675,7 @@ class __$EventDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -13474,7 +15924,7 @@ class _$_EventDefinition extends _EventDefinition {
   @override
   final Meta? meta;
   @override
-  final Uri? implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -13493,7 +15943,7 @@ class _$_EventDefinition extends _EventDefinition {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Uri? url;
+  final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -13771,7 +16221,7 @@ abstract class _EventDefinition extends EventDefinition {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -13779,7 +16229,7 @@ abstract class _EventDefinition extends EventDefinition {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -13835,7 +16285,7 @@ abstract class _EventDefinition extends EventDefinition {
   @override
   Meta? get meta;
   @override
-  Uri? get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
@@ -13854,7 +16304,7 @@ abstract class _EventDefinition extends EventDefinition {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Uri? get url;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -13975,7 +16425,7 @@ class _$ObservationDefinitionTearOff {
       {R5ResourceType resourceType = R5ResourceType.ObservationDefinition,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -13986,7 +16436,7 @@ class _$ObservationDefinitionTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Identifier? identifier,
@@ -14132,7 +16582,7 @@ mixin _$ObservationDefinition {
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  Uri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -14144,7 +16594,7 @@ mixin _$ObservationDefinition {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Uri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
@@ -14234,7 +16684,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -14245,7 +16695,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Identifier? identifier,
@@ -14432,7 +16882,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -14464,7 +16914,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -14965,7 +17415,7 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -14976,7 +17426,7 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Identifier? identifier,
@@ -15191,7 +17641,7 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -15223,7 +17673,7 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -15526,7 +17976,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   @override
   final Meta? meta;
   @override
-  final Uri? implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -15545,7 +17995,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Uri? url;
+  final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -15860,7 +18310,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
           {R5ResourceType resourceType,
           Id? id,
           Meta? meta,
-          Uri? implicitRules,
+          FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               Element? implicitRulesElement,
           Code? language,
@@ -15871,7 +18321,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
           @JsonKey(name: 'extension')
               List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
-          Uri? url,
+          FhirUri? url,
           @JsonKey(name: '_url')
               Element? urlElement,
           Identifier? identifier,
@@ -15951,7 +18401,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   @override
   Meta? get meta;
   @override
-  Uri? get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
@@ -15970,7 +18420,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Uri? get url;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -17612,7 +20062,7 @@ class _$PlanDefinitionTearOff {
       {R5ResourceType resourceType = R5ResourceType.PlanDefinition,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -17620,7 +20070,7 @@ class _$PlanDefinitionTearOff {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -17748,7 +20198,7 @@ mixin _$PlanDefinition {
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  Uri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -17760,7 +20210,7 @@ mixin _$PlanDefinition {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Uri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
@@ -17845,7 +20295,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -17853,7 +20303,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -18019,7 +20469,7 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -18051,7 +20501,7 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -18528,7 +20978,7 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -18536,7 +20986,7 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -18728,7 +21178,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -18760,7 +21210,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -19039,7 +21489,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final Meta? meta;
   @override
-  final Uri? implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -19058,7 +21508,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Uri? url;
+  final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -19364,7 +21814,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -19372,7 +21822,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -19434,7 +21884,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   Meta? get meta;
   @override
-  Uri? get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
@@ -19453,7 +21903,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Uri? get url;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -25428,7 +27878,7 @@ class _$QuestionnaireTearOff {
       {R5ResourceType resourceType = R5ResourceType.Questionnaire,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -25436,7 +27886,7 @@ class _$QuestionnaireTearOff {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -25548,7 +27998,7 @@ mixin _$Questionnaire {
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  Uri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -25560,7 +28010,7 @@ mixin _$Questionnaire {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Uri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
@@ -25633,7 +28083,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -25641,7 +28091,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -25785,7 +28235,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -25817,7 +28267,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -26195,7 +28645,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -26203,7 +28653,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -26367,7 +28817,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -26399,7 +28849,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -26638,7 +29088,7 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final Meta? meta;
   @override
-  final Uri? implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -26657,7 +29107,7 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Uri? url;
+  final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -26925,7 +29375,7 @@ abstract class _Questionnaire extends Questionnaire {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -26933,7 +29383,7 @@ abstract class _Questionnaire extends Questionnaire {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -26987,7 +29437,7 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   Meta? get meta;
   @override
-  Uri? get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
@@ -27006,7 +29456,7 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Uri? get url;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -27123,7 +29573,7 @@ class _$QuestionnaireItemTearOff {
       List<FhirExtension>? modifierExtension,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      Uri? definition,
+      FhirUri? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
       List<Coding>? code,
       String? prefix,
@@ -27206,7 +29656,7 @@ mixin _$QuestionnaireItem {
   String? get linkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_linkId')
   Element? get linkIdElement => throw _privateConstructorUsedError;
-  Uri? get definition => throw _privateConstructorUsedError;
+  FhirUri? get definition => throw _privateConstructorUsedError;
   @JsonKey(name: '_definition')
   Element? get definitionElement => throw _privateConstructorUsedError;
   List<Coding>? get code => throw _privateConstructorUsedError;
@@ -27266,7 +29716,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      Uri? definition,
+      FhirUri? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
       List<Coding>? code,
       String? prefix,
@@ -27378,7 +29828,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       definition: definition == freezed
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
@@ -27636,7 +30086,7 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      Uri? definition,
+      FhirUri? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
       List<Coding>? code,
       String? prefix,
@@ -27762,7 +30212,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
       definition: definition == freezed
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
@@ -27930,7 +30380,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @JsonKey(name: '_linkId')
   final Element? linkIdElement;
   @override
-  final Uri? definition;
+  final FhirUri? definition;
   @override
   @JsonKey(name: '_definition')
   final Element? definitionElement;
@@ -28120,7 +30570,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       List<FhirExtension>? modifierExtension,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      Uri? definition,
+      FhirUri? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
       List<Coding>? code,
       String? prefix,
@@ -28166,7 +30616,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @JsonKey(name: '_linkId')
   Element? get linkIdElement;
   @override
-  Uri? get definition;
+  FhirUri? get definition;
   @override
   @JsonKey(name: '_definition')
   Element? get definitionElement;
@@ -30663,7 +33113,7 @@ class _$SpecimenDefinitionTearOff {
       {R5ResourceType resourceType = R5ResourceType.SpecimenDefinition,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -30671,7 +33121,7 @@ class _$SpecimenDefinitionTearOff {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       Identifier? identifier,
       String? version,
@@ -30777,7 +33227,7 @@ mixin _$SpecimenDefinition {
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  Uri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -30789,7 +33239,7 @@ mixin _$SpecimenDefinition {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Uri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
@@ -30862,7 +33312,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -30870,7 +33320,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       Identifier? identifier,
       String? version,
@@ -31012,7 +33462,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -31044,7 +33494,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -31455,7 +33905,7 @@ abstract class _$SpecimenDefinitionCopyWith<$Res>
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -31463,7 +33913,7 @@ abstract class _$SpecimenDefinitionCopyWith<$Res>
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       Identifier? identifier,
       String? version,
@@ -31629,7 +34079,7 @@ class __$SpecimenDefinitionCopyWithImpl<$Res>
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -31661,7 +34111,7 @@ class __$SpecimenDefinitionCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
+              as FhirUri?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -31885,7 +34335,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   @override
   final Meta? meta;
   @override
-  final Uri? implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -31904,7 +34354,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Uri? url;
+  final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -32164,7 +34614,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
       {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
-      Uri? implicitRules,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -32172,7 +34622,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Uri? url,
+      FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       Identifier? identifier,
       String? version,
@@ -32223,7 +34673,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   @override
   Meta? get meta;
   @override
-  Uri? get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
@@ -32242,7 +34692,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Uri? get url;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;

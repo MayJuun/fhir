@@ -86,7 +86,7 @@ class AuditEvent with Resource, _$AuditEvent {
     @Default(R5ResourceType.AuditEvent) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -140,6 +140,62 @@ class AuditEvent with Resource, _$AuditEvent {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class AuditEventOutcome with _$AuditEventOutcome {
+  AuditEventOutcome._();
+
+  /// [AuditEventOutcome]: A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: Indicates whether the event succeeded or failed.;
+  ///
+  /// [detail]: Additional details about the error. This may be a text description of the error or a system code that identifies the error.;
+  factory AuditEventOutcome({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Coding code,
+    List<CodeableConcept>? detail,
+  }) = _AuditEventOutcome;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory AuditEventOutcome.fromYaml(dynamic yaml) => yaml is String
+      ? AuditEventOutcome.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? AuditEventOutcome.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'AuditEventOutcome cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory AuditEventOutcome.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventOutcomeFromJson(json);
+
+  /// Acts like a constructor, returns a [AuditEventOutcome], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AuditEventOutcome.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AuditEventOutcomeFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -551,7 +607,7 @@ class Consent with Resource, _$Consent {
     @Default(R5ResourceType.Consent) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -604,6 +660,67 @@ class Consent with Resource, _$Consent {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConsentFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class ConsentPolicyBasis with _$ConsentPolicyBasis {
+  ConsentPolicyBasis._();
+
+  /// [ConsentPolicyBasis]: A record of a healthcare consumer’s  choices  or choices made on their behalf by a third party, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [reference]: A Reference that identifies the policy the organization will enforce for this Consent.;
+  ///
+  /// [url]: A URL that links to a computable version of the policy the organization will enforce for this Consent.;
+  ///
+  /// [urlElement] (_url): Extensions for url;
+  factory ConsentPolicyBasis({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? reference,
+    FhirUrl? url,
+    @JsonKey(name: '_url') Element? urlElement,
+  }) = _ConsentPolicyBasis;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ConsentPolicyBasis.fromYaml(dynamic yaml) => yaml is String
+      ? ConsentPolicyBasis.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? ConsentPolicyBasis.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConsentPolicyBasis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ConsentPolicyBasis.fromJson(Map<String, dynamic> json) =>
+      _$ConsentPolicyBasisFromJson(json);
+
+  /// Acts like a constructor, returns a [ConsentPolicyBasis], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConsentPolicyBasis.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConsentPolicyBasisFromJson(json);
     } else {
       throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -952,7 +1069,7 @@ class Permission with Resource, _$Permission {
     @Default(R5ResourceType.Permission) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1194,7 +1311,7 @@ class Provenance with Resource, _$Provenance {
     @Default(R5ResourceType.Provenance) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-   FhirUri? implicitRules,
+    FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,

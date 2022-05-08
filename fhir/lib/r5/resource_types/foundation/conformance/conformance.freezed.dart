@@ -2158,7 +2158,7 @@ class _$CapabilityStatementImplementationTearOff {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian}) {
     return _CapabilityStatementImplementation(
@@ -2192,7 +2192,7 @@ mixin _$CapabilityStatementImplementation {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  Url? get url => throw _privateConstructorUsedError;
+  FhirUrl? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   Reference? get custodian => throw _privateConstructorUsedError;
@@ -2215,7 +2215,7 @@ abstract class $CapabilityStatementImplementationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian});
 
@@ -2268,7 +2268,7 @@ class _$CapabilityStatementImplementationCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -2328,7 +2328,7 @@ abstract class _$CapabilityStatementImplementationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian});
 
@@ -2388,7 +2388,7 @@ class __$CapabilityStatementImplementationCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -2433,7 +2433,7 @@ class _$_CapabilityStatementImplementation
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Url? url;
+  final FhirUrl? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -2498,7 +2498,7 @@ abstract class _CapabilityStatementImplementation
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian}) = _$_CapabilityStatementImplementation;
   _CapabilityStatementImplementation._() : super._();
@@ -2520,7 +2520,7 @@ abstract class _CapabilityStatementImplementation
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  Url? get url;
+  FhirUrl? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -6465,7 +6465,7 @@ class _$CapabilityStatementEndpointTearOff {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required Coding protocol,
-      Url? address,
+      FhirUrl? address,
       @JsonKey(name: '_address') Element? addressElement}) {
     return _CapabilityStatementEndpoint(
       id: id,
@@ -6493,7 +6493,7 @@ mixin _$CapabilityStatementEndpoint {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Coding get protocol => throw _privateConstructorUsedError;
-  Url? get address => throw _privateConstructorUsedError;
+  FhirUrl? get address => throw _privateConstructorUsedError;
   @JsonKey(name: '_address')
   Element? get addressElement => throw _privateConstructorUsedError;
 
@@ -6514,7 +6514,7 @@ abstract class $CapabilityStatementEndpointCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding protocol,
-      Url? address,
+      FhirUrl? address,
       @JsonKey(name: '_address') Element? addressElement});
 
   $CodingCopyWith<$Res> get protocol;
@@ -6559,7 +6559,7 @@ class _$CapabilityStatementEndpointCopyWithImpl<$Res>
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       addressElement: addressElement == freezed
           ? _value.addressElement
           : addressElement // ignore: cast_nullable_to_non_nullable
@@ -6599,7 +6599,7 @@ abstract class _$CapabilityStatementEndpointCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding protocol,
-      Url? address,
+      FhirUrl? address,
       @JsonKey(name: '_address') Element? addressElement});
 
   @override
@@ -6650,7 +6650,7 @@ class __$CapabilityStatementEndpointCopyWithImpl<$Res>
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       addressElement: addressElement == freezed
           ? _value.addressElement
           : addressElement // ignore: cast_nullable_to_non_nullable
@@ -6684,7 +6684,7 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
   @override
   final Coding protocol;
   @override
-  final Url? address;
+  final FhirUrl? address;
   @override
   @JsonKey(name: '_address')
   final Element? addressElement;
@@ -6739,7 +6739,7 @@ abstract class _CapabilityStatementEndpoint
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
           required Coding protocol,
-          Url? address,
+          FhirUrl? address,
           @JsonKey(name: '_address') Element? addressElement}) =
       _$_CapabilityStatementEndpoint;
   _CapabilityStatementEndpoint._() : super._();
@@ -6757,7 +6757,7 @@ abstract class _CapabilityStatementEndpoint
   @override
   Coding get protocol;
   @override
-  Url? get address;
+  FhirUrl? get address;
   @override
   @JsonKey(name: '_address')
   Element? get addressElement;
@@ -9547,7 +9547,7 @@ class _$CapabilityStatement2ImplementationTearOff {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian}) {
     return _CapabilityStatement2Implementation(
@@ -9581,7 +9581,7 @@ mixin _$CapabilityStatement2Implementation {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  Url? get url => throw _privateConstructorUsedError;
+  FhirUrl? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   Reference? get custodian => throw _privateConstructorUsedError;
@@ -9605,7 +9605,7 @@ abstract class $CapabilityStatement2ImplementationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian});
 
@@ -9658,7 +9658,7 @@ class _$CapabilityStatement2ImplementationCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -9718,7 +9718,7 @@ abstract class _$CapabilityStatement2ImplementationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian});
 
@@ -9778,7 +9778,7 @@ class __$CapabilityStatement2ImplementationCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       urlElement: urlElement == freezed
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
@@ -9823,7 +9823,7 @@ class _$_CapabilityStatement2Implementation
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Url? url;
+  final FhirUrl? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -9888,7 +9888,7 @@ abstract class _CapabilityStatement2Implementation
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Url? url,
+      FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian}) = _$_CapabilityStatement2Implementation;
   _CapabilityStatement2Implementation._() : super._();
@@ -9910,7 +9910,7 @@ abstract class _CapabilityStatement2Implementation
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  Url? get url;
+  FhirUrl? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -27448,7 +27448,7 @@ class _$ImplementationGuideManifestTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Url? rendering,
+      FhirUrl? rendering,
       @JsonKey(name: '_rendering') Element? renderingElement,
       required List<ImplementationGuideResource1> resource,
       List<ImplementationGuidePage1>? page,
@@ -27486,7 +27486,7 @@ mixin _$ImplementationGuideManifest {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Url? get rendering => throw _privateConstructorUsedError;
+  FhirUrl? get rendering => throw _privateConstructorUsedError;
   @JsonKey(name: '_rendering')
   Element? get renderingElement => throw _privateConstructorUsedError;
   List<ImplementationGuideResource1> get resource =>
@@ -27516,7 +27516,7 @@ abstract class $ImplementationGuideManifestCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Url? rendering,
+      FhirUrl? rendering,
       @JsonKey(name: '_rendering') Element? renderingElement,
       List<ImplementationGuideResource1> resource,
       List<ImplementationGuidePage1>? page,
@@ -27567,7 +27567,7 @@ class _$ImplementationGuideManifestCopyWithImpl<$Res>
       rendering: rendering == freezed
           ? _value.rendering
           : rendering // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       renderingElement: renderingElement == freezed
           ? _value.renderingElement
           : renderingElement // ignore: cast_nullable_to_non_nullable
@@ -27623,7 +27623,7 @@ abstract class _$ImplementationGuideManifestCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Url? rendering,
+      FhirUrl? rendering,
       @JsonKey(name: '_rendering') Element? renderingElement,
       List<ImplementationGuideResource1> resource,
       List<ImplementationGuidePage1>? page,
@@ -27679,7 +27679,7 @@ class __$ImplementationGuideManifestCopyWithImpl<$Res>
       rendering: rendering == freezed
           ? _value.rendering
           : rendering // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       renderingElement: renderingElement == freezed
           ? _value.renderingElement
           : renderingElement // ignore: cast_nullable_to_non_nullable
@@ -27740,7 +27740,7 @@ class _$_ImplementationGuideManifest extends _ImplementationGuideManifest {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Url? rendering;
+  final FhirUrl? rendering;
   @override
   @JsonKey(name: '_rendering')
   final Element? renderingElement;
@@ -27820,7 +27820,7 @@ abstract class _ImplementationGuideManifest
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
-          Url? rendering,
+          FhirUrl? rendering,
           @JsonKey(name: '_rendering') Element? renderingElement,
           required List<ImplementationGuideResource1> resource,
           List<ImplementationGuidePage1>? page,
@@ -27842,7 +27842,7 @@ abstract class _ImplementationGuideManifest
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Url? get rendering;
+  FhirUrl? get rendering;
   @override
   @JsonKey(name: '_rendering')
   Element? get renderingElement;
@@ -27884,7 +27884,7 @@ class _$ImplementationGuideResource1TearOff {
       @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
       Canonical? exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
-      Url? relativePath,
+      FhirUrl? relativePath,
       @JsonKey(name: '_relativePath') Element? relativePathElement}) {
     return _ImplementationGuideResource1(
       id: id,
@@ -27922,7 +27922,7 @@ mixin _$ImplementationGuideResource1 {
   Canonical? get exampleCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleCanonical')
   Element? get exampleCanonicalElement => throw _privateConstructorUsedError;
-  Url? get relativePath => throw _privateConstructorUsedError;
+  FhirUrl? get relativePath => throw _privateConstructorUsedError;
   @JsonKey(name: '_relativePath')
   Element? get relativePathElement => throw _privateConstructorUsedError;
 
@@ -27947,7 +27947,7 @@ abstract class $ImplementationGuideResource1CopyWith<$Res> {
       @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
       Canonical? exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
-      Url? relativePath,
+      FhirUrl? relativePath,
       @JsonKey(name: '_relativePath') Element? relativePathElement});
 
   $ReferenceCopyWith<$Res> get reference;
@@ -28014,7 +28014,7 @@ class _$ImplementationGuideResource1CopyWithImpl<$Res>
       relativePath: relativePath == freezed
           ? _value.relativePath
           : relativePath // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       relativePathElement: relativePathElement == freezed
           ? _value.relativePathElement
           : relativePathElement // ignore: cast_nullable_to_non_nullable
@@ -28080,7 +28080,7 @@ abstract class _$ImplementationGuideResource1CopyWith<$Res>
       @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
       Canonical? exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
-      Url? relativePath,
+      FhirUrl? relativePath,
       @JsonKey(name: '_relativePath') Element? relativePathElement});
 
   @override
@@ -28155,7 +28155,7 @@ class __$ImplementationGuideResource1CopyWithImpl<$Res>
       relativePath: relativePath == freezed
           ? _value.relativePath
           : relativePath // ignore: cast_nullable_to_non_nullable
-              as Url?,
+              as FhirUrl?,
       relativePathElement: relativePathElement == freezed
           ? _value.relativePathElement
           : relativePathElement // ignore: cast_nullable_to_non_nullable
@@ -28203,7 +28203,7 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
   @JsonKey(name: '_exampleCanonical')
   final Element? exampleCanonicalElement;
   @override
-  final Url? relativePath;
+  final FhirUrl? relativePath;
   @override
   @JsonKey(name: '_relativePath')
   final Element? relativePathElement;
@@ -28275,7 +28275,7 @@ abstract class _ImplementationGuideResource1
           @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
           Canonical? exampleCanonical,
           @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
-          Url? relativePath,
+          FhirUrl? relativePath,
           @JsonKey(name: '_relativePath') Element? relativePathElement}) =
       _$_ImplementationGuideResource1;
   _ImplementationGuideResource1._() : super._();
@@ -28303,7 +28303,7 @@ abstract class _ImplementationGuideResource1
   @JsonKey(name: '_exampleCanonical')
   Element? get exampleCanonicalElement;
   @override
-  Url? get relativePath;
+  FhirUrl? get relativePath;
   @override
   @JsonKey(name: '_relativePath')
   Element? get relativePathElement;
