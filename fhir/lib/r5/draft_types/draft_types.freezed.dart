@@ -12,44 +12,11 @@ part of 'draft_types.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Population _$PopulationFromJson(Map<String, dynamic> json) {
   return _Population.fromJson(json);
 }
-
-/// @nodoc
-class _$PopulationTearOff {
-  const _$PopulationTearOff();
-
-  _Population call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Range? ageRange,
-      CodeableConcept? ageCodeableConcept,
-      CodeableConcept? gender,
-      CodeableConcept? race,
-      CodeableConcept? physiologicalCondition}) {
-    return _Population(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      ageRange: ageRange,
-      ageCodeableConcept: ageCodeableConcept,
-      gender: gender,
-      race: race,
-      physiologicalCondition: physiologicalCondition,
-    );
-  }
-
-  Population fromJson(Map<String, Object?> json) {
-    return Population.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Population = _$PopulationTearOff();
 
 /// @nodoc
 mixin _$Population {
@@ -206,10 +173,11 @@ class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
-  factory _$PopulationCopyWith(
-          _Population value, $Res Function(_Population) then) =
-      __$PopulationCopyWithImpl<$Res>;
+abstract class _$$_PopulationCopyWith<$Res>
+    implements $PopulationCopyWith<$Res> {
+  factory _$$_PopulationCopyWith(
+          _$_Population value, $Res Function(_$_Population) then) =
+      __$$_PopulationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -234,14 +202,14 @@ abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
-    implements _$PopulationCopyWith<$Res> {
-  __$PopulationCopyWithImpl(
-      _Population _value, $Res Function(_Population) _then)
-      : super(_value, (v) => _then(v as _Population));
+class __$$_PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
+    implements _$$_PopulationCopyWith<$Res> {
+  __$$_PopulationCopyWithImpl(
+      _$_Population _value, $Res Function(_$_Population) _then)
+      : super(_value, (v) => _then(v as _$_Population));
 
   @override
-  _Population get _value => super._value as _Population;
+  _$_Population get _value => super._value as _$_Population;
 
   @override
   $Res call({
@@ -254,17 +222,17 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
     Object? race = freezed,
     Object? physiologicalCondition = freezed,
   }) {
-    return _then(_Population(
+    return _then(_$_Population(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       ageRange: ageRange == freezed
@@ -296,25 +264,41 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
 class _$_Population extends _Population {
   _$_Population(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.ageRange,
       this.ageCodeableConcept,
       this.gender,
       this.race,
       this.physiologicalCondition})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_Population.fromJson(Map<String, dynamic> json) =>
       _$$_PopulationFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Range? ageRange;
   @override
@@ -335,12 +319,12 @@ class _$_Population extends _Population {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Population &&
+            other is _$_Population &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.ageRange, ageRange) &&
             const DeepCollectionEquality()
                 .equals(other.ageCodeableConcept, ageCodeableConcept) &&
@@ -350,12 +334,13 @@ class _$_Population extends _Population {
                 .equals(other.physiologicalCondition, physiologicalCondition));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(ageRange),
       const DeepCollectionEquality().hash(ageCodeableConcept),
       const DeepCollectionEquality().hash(gender),
@@ -364,8 +349,8 @@ class _$_Population extends _Population {
 
   @JsonKey(ignore: true)
   @override
-  _$PopulationCopyWith<_Population> get copyWith =>
-      __$PopulationCopyWithImpl<_Population>(this, _$identity);
+  _$$_PopulationCopyWith<_$_Population> get copyWith =>
+      __$$_PopulationCopyWithImpl<_$_Population>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -375,78 +360,47 @@ class _$_Population extends _Population {
 
 abstract class _Population extends Population {
   factory _Population(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Range? ageRange,
-      CodeableConcept? ageCodeableConcept,
-      CodeableConcept? gender,
-      CodeableConcept? race,
-      CodeableConcept? physiologicalCondition}) = _$_Population;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Range? ageRange,
+      final CodeableConcept? ageCodeableConcept,
+      final CodeableConcept? gender,
+      final CodeableConcept? race,
+      final CodeableConcept? physiologicalCondition}) = _$_Population;
   _Population._() : super._();
 
   factory _Population.fromJson(Map<String, dynamic> json) =
       _$_Population.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Range? get ageRange;
+  Range? get ageRange => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get ageCodeableConcept;
+  CodeableConcept? get ageCodeableConcept => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get gender;
+  CodeableConcept? get gender => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get race;
+  CodeableConcept? get race => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get physiologicalCondition;
+  CodeableConcept? get physiologicalCondition =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PopulationCopyWith<_Population> get copyWith =>
+  _$$_PopulationCopyWith<_$_Population> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ProductShelfLife _$ProductShelfLifeFromJson(Map<String, dynamic> json) {
   return _ProductShelfLife.fromJson(json);
 }
-
-/// @nodoc
-class _$ProductShelfLifeTearOff {
-  const _$ProductShelfLifeTearOff();
-
-  _ProductShelfLife call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Duration? periodDuration,
-      Markdown? periodString,
-      @JsonKey(name: '_periodString') Element? periodStringElement,
-      List<CodeableConcept>? specialPrecautionsForStorage}) {
-    return _ProductShelfLife(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      periodDuration: periodDuration,
-      periodString: periodString,
-      periodStringElement: periodStringElement,
-      specialPrecautionsForStorage: specialPrecautionsForStorage,
-    );
-  }
-
-  ProductShelfLife fromJson(Map<String, Object?> json) {
-    return ProductShelfLife.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ProductShelfLife = _$ProductShelfLifeTearOff();
 
 /// @nodoc
 mixin _$ProductShelfLife {
@@ -568,11 +522,11 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ProductShelfLifeCopyWith<$Res>
+abstract class _$$_ProductShelfLifeCopyWith<$Res>
     implements $ProductShelfLifeCopyWith<$Res> {
-  factory _$ProductShelfLifeCopyWith(
-          _ProductShelfLife value, $Res Function(_ProductShelfLife) then) =
-      __$ProductShelfLifeCopyWithImpl<$Res>;
+  factory _$$_ProductShelfLifeCopyWith(
+          _$_ProductShelfLife value, $Res Function(_$_ProductShelfLife) then) =
+      __$$_ProductShelfLifeCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -591,15 +545,15 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ProductShelfLifeCopyWithImpl<$Res>
+class __$$_ProductShelfLifeCopyWithImpl<$Res>
     extends _$ProductShelfLifeCopyWithImpl<$Res>
-    implements _$ProductShelfLifeCopyWith<$Res> {
-  __$ProductShelfLifeCopyWithImpl(
-      _ProductShelfLife _value, $Res Function(_ProductShelfLife) _then)
-      : super(_value, (v) => _then(v as _ProductShelfLife));
+    implements _$$_ProductShelfLifeCopyWith<$Res> {
+  __$$_ProductShelfLifeCopyWithImpl(
+      _$_ProductShelfLife _value, $Res Function(_$_ProductShelfLife) _then)
+      : super(_value, (v) => _then(v as _$_ProductShelfLife));
 
   @override
-  _ProductShelfLife get _value => super._value as _ProductShelfLife;
+  _$_ProductShelfLife get _value => super._value as _$_ProductShelfLife;
 
   @override
   $Res call({
@@ -612,17 +566,17 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
     Object? periodStringElement = freezed,
     Object? specialPrecautionsForStorage = freezed,
   }) {
-    return _then(_ProductShelfLife(
+    return _then(_$_ProductShelfLife(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -642,7 +596,7 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
           : periodStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
-          ? _value.specialPrecautionsForStorage
+          ? _value._specialPrecautionsForStorage
           : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -654,25 +608,42 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.periodDuration,
       this.periodString,
       @JsonKey(name: '_periodString') this.periodStringElement,
-      this.specialPrecautionsForStorage})
-      : super._();
+      final List<CodeableConcept>? specialPrecautionsForStorage})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _specialPrecautionsForStorage = specialPrecautionsForStorage,
+        super._();
 
   factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$$_ProductShelfLifeFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -682,8 +653,14 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   @override
   @JsonKey(name: '_periodString')
   final Element? periodStringElement;
+  final List<CodeableConcept>? _specialPrecautionsForStorage;
   @override
-  final List<CodeableConcept>? specialPrecautionsForStorage;
+  List<CodeableConcept>? get specialPrecautionsForStorage {
+    final value = _specialPrecautionsForStorage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -694,12 +671,12 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ProductShelfLife &&
+            other is _$_ProductShelfLife &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.periodDuration, periodDuration) &&
@@ -708,26 +685,27 @@ class _$_ProductShelfLife extends _ProductShelfLife {
             const DeepCollectionEquality()
                 .equals(other.periodStringElement, periodStringElement) &&
             const DeepCollectionEquality().equals(
-                other.specialPrecautionsForStorage,
-                specialPrecautionsForStorage));
+                other._specialPrecautionsForStorage,
+                _specialPrecautionsForStorage));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(periodDuration),
       const DeepCollectionEquality().hash(periodString),
       const DeepCollectionEquality().hash(periodStringElement),
-      const DeepCollectionEquality().hash(specialPrecautionsForStorage));
+      const DeepCollectionEquality().hash(_specialPrecautionsForStorage));
 
   @JsonKey(ignore: true)
   @override
-  _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith =>
-      __$ProductShelfLifeCopyWithImpl<_ProductShelfLife>(this, _$identity);
+  _$$_ProductShelfLifeCopyWith<_$_ProductShelfLife> get copyWith =>
+      __$$_ProductShelfLifeCopyWithImpl<_$_ProductShelfLife>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -737,14 +715,14 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
 abstract class _ProductShelfLife extends ProductShelfLife {
   factory _ProductShelfLife(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? type,
-          Duration? periodDuration,
-          Markdown? periodString,
-          @JsonKey(name: '_periodString') Element? periodStringElement,
-          List<CodeableConcept>? specialPrecautionsForStorage}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final Duration? periodDuration,
+          final Markdown? periodString,
+          @JsonKey(name: '_periodString') final Element? periodStringElement,
+          final List<CodeableConcept>? specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
   _ProductShelfLife._() : super._();
 
@@ -752,67 +730,34 @@ abstract class _ProductShelfLife extends ProductShelfLife {
       _$_ProductShelfLife.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Duration? get periodDuration;
+  Duration? get periodDuration => throw _privateConstructorUsedError;
   @override
-  Markdown? get periodString;
+  Markdown? get periodString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_periodString')
-  Element? get periodStringElement;
+  Element? get periodStringElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get specialPrecautionsForStorage;
+  List<CodeableConcept>? get specialPrecautionsForStorage =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith =>
+  _$$_ProductShelfLifeCopyWith<_$_ProductShelfLife> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 MarketingStatus _$MarketingStatusFromJson(Map<String, dynamic> json) {
   return _MarketingStatus.fromJson(json);
 }
-
-/// @nodoc
-class _$MarketingStatusTearOff {
-  const _$MarketingStatusTearOff();
-
-  _MarketingStatus call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? country,
-      CodeableConcept? jurisdiction,
-      required CodeableConcept status,
-      Period? dateRange,
-      DateTime? restoreDate,
-      @JsonKey(name: '_restoreDate') Element? restoreDateElement}) {
-    return _MarketingStatus(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      country: country,
-      jurisdiction: jurisdiction,
-      status: status,
-      dateRange: dateRange,
-      restoreDate: restoreDate,
-      restoreDateElement: restoreDateElement,
-    );
-  }
-
-  MarketingStatus fromJson(Map<String, Object?> json) {
-    return MarketingStatus.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MarketingStatus = _$MarketingStatusTearOff();
 
 /// @nodoc
 mixin _$MarketingStatus {
@@ -972,11 +917,11 @@ class _$MarketingStatusCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MarketingStatusCopyWith<$Res>
+abstract class _$$_MarketingStatusCopyWith<$Res>
     implements $MarketingStatusCopyWith<$Res> {
-  factory _$MarketingStatusCopyWith(
-          _MarketingStatus value, $Res Function(_MarketingStatus) then) =
-      __$MarketingStatusCopyWithImpl<$Res>;
+  factory _$$_MarketingStatusCopyWith(
+          _$_MarketingStatus value, $Res Function(_$_MarketingStatus) then) =
+      __$$_MarketingStatusCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -1002,15 +947,15 @@ abstract class _$MarketingStatusCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MarketingStatusCopyWithImpl<$Res>
+class __$$_MarketingStatusCopyWithImpl<$Res>
     extends _$MarketingStatusCopyWithImpl<$Res>
-    implements _$MarketingStatusCopyWith<$Res> {
-  __$MarketingStatusCopyWithImpl(
-      _MarketingStatus _value, $Res Function(_MarketingStatus) _then)
-      : super(_value, (v) => _then(v as _MarketingStatus));
+    implements _$$_MarketingStatusCopyWith<$Res> {
+  __$$_MarketingStatusCopyWithImpl(
+      _$_MarketingStatus _value, $Res Function(_$_MarketingStatus) _then)
+      : super(_value, (v) => _then(v as _$_MarketingStatus));
 
   @override
-  _MarketingStatus get _value => super._value as _MarketingStatus;
+  _$_MarketingStatus get _value => super._value as _$_MarketingStatus;
 
   @override
   $Res call({
@@ -1024,17 +969,17 @@ class __$MarketingStatusCopyWithImpl<$Res>
     Object? restoreDate = freezed,
     Object? restoreDateElement = freezed,
   }) {
-    return _then(_MarketingStatus(
+    return _then(_$_MarketingStatus(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       country: country == freezed
@@ -1070,26 +1015,42 @@ class __$MarketingStatusCopyWithImpl<$Res>
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.country,
       this.jurisdiction,
       required this.status,
       this.dateRange,
       this.restoreDate,
       @JsonKey(name: '_restoreDate') this.restoreDateElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$$_MarketingStatusFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? country;
   @override
@@ -1113,12 +1074,12 @@ class _$_MarketingStatus extends _MarketingStatus {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MarketingStatus &&
+            other is _$_MarketingStatus &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.country, country) &&
             const DeepCollectionEquality()
                 .equals(other.jurisdiction, jurisdiction) &&
@@ -1130,12 +1091,13 @@ class _$_MarketingStatus extends _MarketingStatus {
                 .equals(other.restoreDateElement, restoreDateElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(country),
       const DeepCollectionEquality().hash(jurisdiction),
       const DeepCollectionEquality().hash(status),
@@ -1145,8 +1107,8 @@ class _$_MarketingStatus extends _MarketingStatus {
 
   @JsonKey(ignore: true)
   @override
-  _$MarketingStatusCopyWith<_MarketingStatus> get copyWith =>
-      __$MarketingStatusCopyWithImpl<_MarketingStatus>(this, _$identity);
+  _$$_MarketingStatusCopyWith<_$_MarketingStatus> get copyWith =>
+      __$$_MarketingStatusCopyWithImpl<_$_MarketingStatus>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1156,15 +1118,15 @@ class _$_MarketingStatus extends _MarketingStatus {
 
 abstract class _MarketingStatus extends MarketingStatus {
   factory _MarketingStatus(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? country,
-          CodeableConcept? jurisdiction,
-          required CodeableConcept status,
-          Period? dateRange,
-          DateTime? restoreDate,
-          @JsonKey(name: '_restoreDate') Element? restoreDateElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? country,
+          final CodeableConcept? jurisdiction,
+          required final CodeableConcept status,
+          final Period? dateRange,
+          final DateTime? restoreDate,
+          @JsonKey(name: '_restoreDate') final Element? restoreDateElement}) =
       _$_MarketingStatus;
   _MarketingStatus._() : super._();
 
@@ -1172,27 +1134,28 @@ abstract class _MarketingStatus extends MarketingStatus {
       _$_MarketingStatus.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get country;
+  CodeableConcept? get country => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get jurisdiction;
+  CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get status;
+  CodeableConcept get status => throw _privateConstructorUsedError;
   @override
-  Period? get dateRange;
+  Period? get dateRange => throw _privateConstructorUsedError;
   @override
-  DateTime? get restoreDate;
+  DateTime? get restoreDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_restoreDate')
-  Element? get restoreDateElement;
+  Element? get restoreDateElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MarketingStatusCopyWith<_MarketingStatus> get copyWith =>
+  _$$_MarketingStatusCopyWith<_$_MarketingStatus> get copyWith =>
       throw _privateConstructorUsedError;
 }

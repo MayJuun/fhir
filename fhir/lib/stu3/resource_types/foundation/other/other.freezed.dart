@@ -12,67 +12,11 @@ part of 'other.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Basic _$BasicFromJson(Map<String, dynamic> json) {
   return _Basic.fromJson(json);
 }
-
-/// @nodoc
-class _$BasicTearOff {
-  const _$BasicTearOff();
-
-  _Basic call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
-          Stu3ResourceType resourceType = Stu3ResourceType.Basic,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      required CodeableConcept code,
-      Reference? subject,
-      String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
-      Reference? author}) {
-    return _Basic(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      code: code,
-      subject: subject,
-      created: created,
-      createdElement: createdElement,
-      author: author,
-    );
-  }
-
-  Basic fromJson(Map<String, Object?> json) {
-    return Basic.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Basic = _$BasicTearOff();
 
 /// @nodoc
 mixin _$Basic {
@@ -329,9 +273,9 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
-  factory _$BasicCopyWith(_Basic value, $Res Function(_Basic) then) =
-      __$BasicCopyWithImpl<$Res>;
+abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
+  factory _$$_BasicCopyWith(_$_Basic value, $Res Function(_$_Basic) then) =
+      __$$_BasicCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
@@ -376,13 +320,13 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
-    implements _$BasicCopyWith<$Res> {
-  __$BasicCopyWithImpl(_Basic _value, $Res Function(_Basic) _then)
-      : super(_value, (v) => _then(v as _Basic));
+class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
+    implements _$$_BasicCopyWith<$Res> {
+  __$$_BasicCopyWithImpl(_$_Basic _value, $Res Function(_$_Basic) _then)
+      : super(_value, (v) => _then(v as _$_Basic));
 
   @override
-  _Basic get _value => super._value as _Basic;
+  _$_Basic get _value => super._value as _$_Basic;
 
   @override
   $Res call({
@@ -404,7 +348,7 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
     Object? createdElement = freezed,
     Object? author = freezed,
   }) {
-    return _then(_Basic(
+    return _then(_$_Basic(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -438,19 +382,19 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       code: code == freezed
@@ -492,18 +436,22 @@ class _$_Basic extends _Basic {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       required this.code,
       this.subject,
       this.created,
       @JsonKey(name: '_created')
           this.createdElement,
       this.author})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
 
   factory _$_Basic.fromJson(Map<String, dynamic> json) =>
       _$$_BasicFromJson(json);
@@ -527,15 +475,43 @@ class _$_Basic extends _Basic {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept code;
   @override
@@ -557,7 +533,7 @@ class _$_Basic extends _Basic {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Basic &&
+            other is _$_Basic &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -570,13 +546,14 @@ class _$_Basic extends _Basic {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality().equals(other.created, created) &&
@@ -585,6 +562,7 @@ class _$_Basic extends _Basic {
             const DeepCollectionEquality().equals(other.author, author));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -596,10 +574,10 @@ class _$_Basic extends _Basic {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_identifier),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(subject),
       const DeepCollectionEquality().hash(created),
@@ -608,8 +586,8 @@ class _$_Basic extends _Basic {
 
   @JsonKey(ignore: true)
   @override
-  _$BasicCopyWith<_Basic> get copyWith =>
-      __$BasicCopyWithImpl<_Basic>(this, _$identity);
+  _$$_BasicCopyWith<_$_Basic> get copyWith =>
+      __$$_BasicCopyWithImpl<_$_Basic>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -620,133 +598,80 @@ class _$_Basic extends _Basic {
 abstract class _Basic extends Basic {
   factory _Basic(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      required CodeableConcept code,
-      Reference? subject,
-      String? created,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      required final CodeableConcept code,
+      final Reference? subject,
+      final String? created,
       @JsonKey(name: '_created')
-          Element? createdElement,
-      Reference? author}) = _$_Basic;
+          final Element? createdElement,
+      final Reference? author}) = _$_Basic;
   _Basic._() : super._();
 
   factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  String? get created;
+  String? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element? get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference? get author;
+  Reference? get author => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BasicCopyWith<_Basic> get copyWith => throw _privateConstructorUsedError;
+  _$$_BasicCopyWith<_$_Basic> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Binary _$BinaryFromJson(Map<String, dynamic> json) {
   return _Binary.fromJson(json);
 }
-
-/// @nodoc
-class _$BinaryTearOff {
-  const _$BinaryTearOff();
-
-  _Binary call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
-          Stu3ResourceType resourceType = Stu3ResourceType.Binary,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
-      Reference? securityContext,
-      String? content,
-      @JsonKey(name: '_content')
-          Element? contentElement}) {
-    return _Binary(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      contentType: contentType,
-      contentTypeElement: contentTypeElement,
-      securityContext: securityContext,
-      content: content,
-      contentElement: contentElement,
-    );
-  }
-
-  Binary fromJson(Map<String, Object?> json) {
-    return Binary.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Binary = _$BinaryTearOff();
 
 /// @nodoc
 mixin _$Binary {
@@ -990,9 +915,9 @@ class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
-  factory _$BinaryCopyWith(_Binary value, $Res Function(_Binary) then) =
-      __$BinaryCopyWithImpl<$Res>;
+abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
+  factory _$$_BinaryCopyWith(_$_Binary value, $Res Function(_$_Binary) then) =
+      __$$_BinaryCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
@@ -1035,13 +960,13 @@ abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
-    implements _$BinaryCopyWith<$Res> {
-  __$BinaryCopyWithImpl(_Binary _value, $Res Function(_Binary) _then)
-      : super(_value, (v) => _then(v as _Binary));
+class __$$_BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
+    implements _$$_BinaryCopyWith<$Res> {
+  __$$_BinaryCopyWithImpl(_$_Binary _value, $Res Function(_$_Binary) _then)
+      : super(_value, (v) => _then(v as _$_Binary));
 
   @override
-  _Binary get _value => super._value as _Binary;
+  _$_Binary get _value => super._value as _$_Binary;
 
   @override
   $Res call({
@@ -1062,7 +987,7 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
     Object? content = freezed,
     Object? contentElement = freezed,
   }) {
-    return _then(_Binary(
+    return _then(_$_Binary(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -1096,15 +1021,15 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       contentType: contentType == freezed
@@ -1146,10 +1071,10 @@ class _$_Binary extends _Binary {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.contentType,
       @JsonKey(name: '_contentType')
           this.contentTypeElement,
@@ -1157,7 +1082,10 @@ class _$_Binary extends _Binary {
       this.content,
       @JsonKey(name: '_content')
           this.contentElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_Binary.fromJson(Map<String, dynamic> json) =>
       _$$_BinaryFromJson(json);
@@ -1181,13 +1109,34 @@ class _$_Binary extends _Binary {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? contentType;
   @override
@@ -1210,7 +1159,7 @@ class _$_Binary extends _Binary {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Binary &&
+            other is _$_Binary &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1223,11 +1172,12 @@ class _$_Binary extends _Binary {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.contentType, contentType) &&
             const DeepCollectionEquality()
@@ -1239,6 +1189,7 @@ class _$_Binary extends _Binary {
                 .equals(other.contentElement, contentElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1250,9 +1201,9 @@ class _$_Binary extends _Binary {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(contentType),
       const DeepCollectionEquality().hash(contentTypeElement),
       const DeepCollectionEquality().hash(securityContext),
@@ -1261,8 +1212,8 @@ class _$_Binary extends _Binary {
 
   @JsonKey(ignore: true)
   @override
-  _$BinaryCopyWith<_Binary> get copyWith =>
-      __$BinaryCopyWithImpl<_Binary>(this, _$identity);
+  _$$_BinaryCopyWith<_$_Binary> get copyWith =>
+      __$$_BinaryCopyWithImpl<_$_Binary>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1273,138 +1224,79 @@ class _$_Binary extends _Binary {
 abstract class _Binary extends Binary {
   factory _Binary(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? contentType,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? contentType,
       @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
-      Reference? securityContext,
-      String? content,
+          final Element? contentTypeElement,
+      final Reference? securityContext,
+      final String? content,
       @JsonKey(name: '_content')
-          Element? contentElement}) = _$_Binary;
+          final Element? contentElement}) = _$_Binary;
   _Binary._() : super._();
 
   factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get contentType;
+  String? get contentType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_contentType')
-  Element? get contentTypeElement;
+  Element? get contentTypeElement => throw _privateConstructorUsedError;
   @override
-  Reference? get securityContext;
+  Reference? get securityContext => throw _privateConstructorUsedError;
   @override
-  String? get content;
+  String? get content => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_content')
-  Element? get contentElement;
+  Element? get contentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BinaryCopyWith<_Binary> get copyWith => throw _privateConstructorUsedError;
+  _$$_BinaryCopyWith<_$_Binary> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Bundle _$BundleFromJson(Map<String, dynamic> json) {
   return _Bundle.fromJson(json);
 }
-
-/// @nodoc
-class _$BundleTearOff {
-  const _$BundleTearOff();
-
-  _Bundle call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
-          Stu3ResourceType resourceType = Stu3ResourceType.Bundle,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      BundleType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      Decimal? total,
-      @JsonKey(name: '_total')
-          Element? totalElement,
-      List<BundleLink>? link,
-      List<BundleEntry>? entry,
-      Signature? signature}) {
-    return _Bundle(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      typeElement: typeElement,
-      total: total,
-      totalElement: totalElement,
-      link: link,
-      entry: entry,
-      signature: signature,
-    );
-  }
-
-  Bundle fromJson(Map<String, Object?> json) {
-    return Bundle.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Bundle = _$BundleTearOff();
 
 /// @nodoc
 mixin _$Bundle {
@@ -1681,9 +1573,9 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
-  factory _$BundleCopyWith(_Bundle value, $Res Function(_Bundle) then) =
-      __$BundleCopyWithImpl<$Res>;
+abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
+  factory _$$_BundleCopyWith(_$_Bundle value, $Res Function(_$_Bundle) then) =
+      __$$_BundleCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
@@ -1731,13 +1623,13 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
-    implements _$BundleCopyWith<$Res> {
-  __$BundleCopyWithImpl(_Bundle _value, $Res Function(_Bundle) _then)
-      : super(_value, (v) => _then(v as _Bundle));
+class __$$_BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
+    implements _$$_BundleCopyWith<$Res> {
+  __$$_BundleCopyWithImpl(_$_Bundle _value, $Res Function(_$_Bundle) _then)
+      : super(_value, (v) => _then(v as _$_Bundle));
 
   @override
-  _Bundle get _value => super._value as _Bundle;
+  _$_Bundle get _value => super._value as _$_Bundle;
 
   @override
   $Res call({
@@ -1761,7 +1653,7 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
     Object? entry = freezed,
     Object? signature = freezed,
   }) {
-    return _then(_Bundle(
+    return _then(_$_Bundle(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -1795,15 +1687,15 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -1827,11 +1719,11 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
           : totalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       link: link == freezed
-          ? _value.link
+          ? _value._link
           : link // ignore: cast_nullable_to_non_nullable
               as List<BundleLink>?,
       entry: entry == freezed
-          ? _value.entry
+          ? _value._entry
           : entry // ignore: cast_nullable_to_non_nullable
               as List<BundleEntry>?,
       signature: signature == freezed
@@ -1857,10 +1749,10 @@ class _$_Bundle extends _Bundle {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.type,
       @JsonKey(name: '_type')
@@ -1868,10 +1760,15 @@ class _$_Bundle extends _Bundle {
       this.total,
       @JsonKey(name: '_total')
           this.totalElement,
-      this.link,
-      this.entry,
+      final List<BundleLink>? link,
+      final List<BundleEntry>? entry,
       this.signature})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _link = link,
+        _entry = entry,
+        super._();
 
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$$_BundleFromJson(json);
@@ -1895,13 +1792,34 @@ class _$_Bundle extends _Bundle {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -1914,10 +1832,24 @@ class _$_Bundle extends _Bundle {
   @override
   @JsonKey(name: '_total')
   final Element? totalElement;
+  final List<BundleLink>? _link;
   @override
-  final List<BundleLink>? link;
+  List<BundleLink>? get link {
+    final value = _link;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<BundleEntry>? _entry;
   @override
-  final List<BundleEntry>? entry;
+  List<BundleEntry>? get entry {
+    final value = _entry;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Signature? signature;
 
@@ -1930,7 +1862,7 @@ class _$_Bundle extends _Bundle {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Bundle &&
+            other is _$_Bundle &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1943,11 +1875,12 @@ class _$_Bundle extends _Bundle {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.type, type) &&
@@ -1956,11 +1889,12 @@ class _$_Bundle extends _Bundle {
             const DeepCollectionEquality().equals(other.total, total) &&
             const DeepCollectionEquality()
                 .equals(other.totalElement, totalElement) &&
-            const DeepCollectionEquality().equals(other.link, link) &&
-            const DeepCollectionEquality().equals(other.entry, entry) &&
+            const DeepCollectionEquality().equals(other._link, _link) &&
+            const DeepCollectionEquality().equals(other._entry, _entry) &&
             const DeepCollectionEquality().equals(other.signature, signature));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1972,23 +1906,23 @@ class _$_Bundle extends _Bundle {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(identifier),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(typeElement),
         const DeepCollectionEquality().hash(total),
         const DeepCollectionEquality().hash(totalElement),
-        const DeepCollectionEquality().hash(link),
-        const DeepCollectionEquality().hash(entry),
+        const DeepCollectionEquality().hash(_link),
+        const DeepCollectionEquality().hash(_entry),
         const DeepCollectionEquality().hash(signature)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$BundleCopyWith<_Bundle> get copyWith =>
-      __$BundleCopyWithImpl<_Bundle>(this, _$identity);
+  _$$_BundleCopyWith<_$_Bundle> get copyWith =>
+      __$$_BundleCopyWithImpl<_$_Bundle>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1999,111 +1933,88 @@ class _$_Bundle extends _Bundle {
 abstract class _Bundle extends Bundle {
   factory _Bundle(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      BundleType? type,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final BundleType? type,
       @JsonKey(name: '_type')
-          Element? typeElement,
-      Decimal? total,
+          final Element? typeElement,
+      final Decimal? total,
       @JsonKey(name: '_total')
-          Element? totalElement,
-      List<BundleLink>? link,
-      List<BundleEntry>? entry,
-      Signature? signature}) = _$_Bundle;
+          final Element? totalElement,
+      final List<BundleLink>? link,
+      final List<BundleEntry>? entry,
+      final Signature? signature}) = _$_Bundle;
   _Bundle._() : super._();
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  BundleType? get type;
+  BundleType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get total;
+  Decimal? get total => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_total')
-  Element? get totalElement;
+  Element? get totalElement => throw _privateConstructorUsedError;
   @override
-  List<BundleLink>? get link;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
   @override
-  List<BundleEntry>? get entry;
+  List<BundleEntry>? get entry => throw _privateConstructorUsedError;
   @override
-  Signature? get signature;
+  Signature? get signature => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleCopyWith<_Bundle> get copyWith => throw _privateConstructorUsedError;
+  _$$_BundleCopyWith<_$_Bundle> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
   return _BundleLink.fromJson(json);
 }
-
-/// @nodoc
-class _$BundleLinkTearOff {
-  const _$BundleLinkTearOff();
-
-  _BundleLink call(
-      {String? relation,
-      @JsonKey(name: '_relation') Element? relationElement,
-      String? url,
-      @JsonKey(name: '_url') Element? urlElement}) {
-    return _BundleLink(
-      relation: relation,
-      relationElement: relationElement,
-      url: url,
-      urlElement: urlElement,
-    );
-  }
-
-  BundleLink fromJson(Map<String, Object?> json) {
-    return BundleLink.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BundleLink = _$BundleLinkTearOff();
 
 /// @nodoc
 mixin _$BundleLink {
@@ -2194,10 +2105,11 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
-  factory _$BundleLinkCopyWith(
-          _BundleLink value, $Res Function(_BundleLink) then) =
-      __$BundleLinkCopyWithImpl<$Res>;
+abstract class _$$_BundleLinkCopyWith<$Res>
+    implements $BundleLinkCopyWith<$Res> {
+  factory _$$_BundleLinkCopyWith(
+          _$_BundleLink value, $Res Function(_$_BundleLink) then) =
+      __$$_BundleLinkCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? relation,
@@ -2212,14 +2124,14 @@ abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
-    implements _$BundleLinkCopyWith<$Res> {
-  __$BundleLinkCopyWithImpl(
-      _BundleLink _value, $Res Function(_BundleLink) _then)
-      : super(_value, (v) => _then(v as _BundleLink));
+class __$$_BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
+    implements _$$_BundleLinkCopyWith<$Res> {
+  __$$_BundleLinkCopyWithImpl(
+      _$_BundleLink _value, $Res Function(_$_BundleLink) _then)
+      : super(_value, (v) => _then(v as _$_BundleLink));
 
   @override
-  _BundleLink get _value => super._value as _BundleLink;
+  _$_BundleLink get _value => super._value as _$_BundleLink;
 
   @override
   $Res call({
@@ -2228,7 +2140,7 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
-    return _then(_BundleLink(
+    return _then(_$_BundleLink(
       relation: relation == freezed
           ? _value.relation
           : relation // ignore: cast_nullable_to_non_nullable
@@ -2282,7 +2194,7 @@ class _$_BundleLink extends _BundleLink {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BundleLink &&
+            other is _$_BundleLink &&
             const DeepCollectionEquality().equals(other.relation, relation) &&
             const DeepCollectionEquality()
                 .equals(other.relationElement, relationElement) &&
@@ -2291,6 +2203,7 @@ class _$_BundleLink extends _BundleLink {
                 .equals(other.urlElement, urlElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2301,8 +2214,8 @@ class _$_BundleLink extends _BundleLink {
 
   @JsonKey(ignore: true)
   @override
-  _$BundleLinkCopyWith<_BundleLink> get copyWith =>
-      __$BundleLinkCopyWithImpl<_BundleLink>(this, _$identity);
+  _$$_BundleLinkCopyWith<_$_BundleLink> get copyWith =>
+      __$$_BundleLinkCopyWithImpl<_$_BundleLink>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2312,65 +2225,34 @@ class _$_BundleLink extends _BundleLink {
 
 abstract class _BundleLink extends BundleLink {
   factory _BundleLink(
-      {String? relation,
-      @JsonKey(name: '_relation') Element? relationElement,
-      String? url,
-      @JsonKey(name: '_url') Element? urlElement}) = _$_BundleLink;
+      {final String? relation,
+      @JsonKey(name: '_relation') final Element? relationElement,
+      final String? url,
+      @JsonKey(name: '_url') final Element? urlElement}) = _$_BundleLink;
   _BundleLink._() : super._();
 
   factory _BundleLink.fromJson(Map<String, dynamic> json) =
       _$_BundleLink.fromJson;
 
   @override
-  String? get relation;
+  String? get relation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_relation')
-  Element? get relationElement;
+  Element? get relationElement => throw _privateConstructorUsedError;
   @override
-  String? get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleLinkCopyWith<_BundleLink> get copyWith =>
+  _$$_BundleLinkCopyWith<_$_BundleLink> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
   return _BundleEntry.fromJson(json);
 }
-
-/// @nodoc
-class _$BundleEntryTearOff {
-  const _$BundleEntryTearOff();
-
-  _BundleEntry call(
-      {List<BundleLink>? link,
-      String? fullUrl,
-      @JsonKey(name: '_fullUrl') Element? fullUrlElement,
-      Resource? resource,
-      BundleSearch? search,
-      BundleRequest? request,
-      BundleResponse? response}) {
-    return _BundleEntry(
-      link: link,
-      fullUrl: fullUrl,
-      fullUrlElement: fullUrlElement,
-      resource: resource,
-      search: search,
-      request: request,
-      response: response,
-    );
-  }
-
-  BundleEntry fromJson(Map<String, Object?> json) {
-    return BundleEntry.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BundleEntry = _$BundleEntryTearOff();
 
 /// @nodoc
 mixin _$BundleEntry {
@@ -2505,11 +2387,11 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BundleEntryCopyWith<$Res>
+abstract class _$$_BundleEntryCopyWith<$Res>
     implements $BundleEntryCopyWith<$Res> {
-  factory _$BundleEntryCopyWith(
-          _BundleEntry value, $Res Function(_BundleEntry) then) =
-      __$BundleEntryCopyWithImpl<$Res>;
+  factory _$$_BundleEntryCopyWith(
+          _$_BundleEntry value, $Res Function(_$_BundleEntry) then) =
+      __$$_BundleEntryCopyWithImpl<$Res>;
   @override
   $Res call(
       {List<BundleLink>? link,
@@ -2531,14 +2413,14 @@ abstract class _$BundleEntryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
-    implements _$BundleEntryCopyWith<$Res> {
-  __$BundleEntryCopyWithImpl(
-      _BundleEntry _value, $Res Function(_BundleEntry) _then)
-      : super(_value, (v) => _then(v as _BundleEntry));
+class __$$_BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
+    implements _$$_BundleEntryCopyWith<$Res> {
+  __$$_BundleEntryCopyWithImpl(
+      _$_BundleEntry _value, $Res Function(_$_BundleEntry) _then)
+      : super(_value, (v) => _then(v as _$_BundleEntry));
 
   @override
-  _BundleEntry get _value => super._value as _BundleEntry;
+  _$_BundleEntry get _value => super._value as _$_BundleEntry;
 
   @override
   $Res call({
@@ -2550,9 +2432,9 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
     Object? request = freezed,
     Object? response = freezed,
   }) {
-    return _then(_BundleEntry(
+    return _then(_$_BundleEntry(
       link: link == freezed
-          ? _value.link
+          ? _value._link
           : link // ignore: cast_nullable_to_non_nullable
               as List<BundleLink>?,
       fullUrl: fullUrl == freezed
@@ -2587,20 +2469,28 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_BundleEntry extends _BundleEntry {
   _$_BundleEntry(
-      {this.link,
+      {final List<BundleLink>? link,
       this.fullUrl,
       @JsonKey(name: '_fullUrl') this.fullUrlElement,
       this.resource,
       this.search,
       this.request,
       this.response})
-      : super._();
+      : _link = link,
+        super._();
 
   factory _$_BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$$_BundleEntryFromJson(json);
 
+  final List<BundleLink>? _link;
   @override
-  final List<BundleLink>? link;
+  List<BundleLink>? get link {
+    final value = _link;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? fullUrl;
   @override
@@ -2624,8 +2514,8 @@ class _$_BundleEntry extends _BundleEntry {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BundleEntry &&
-            const DeepCollectionEquality().equals(other.link, link) &&
+            other is _$_BundleEntry &&
+            const DeepCollectionEquality().equals(other._link, _link) &&
             const DeepCollectionEquality().equals(other.fullUrl, fullUrl) &&
             const DeepCollectionEquality()
                 .equals(other.fullUrlElement, fullUrlElement) &&
@@ -2635,10 +2525,11 @@ class _$_BundleEntry extends _BundleEntry {
             const DeepCollectionEquality().equals(other.response, response));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(link),
+      const DeepCollectionEquality().hash(_link),
       const DeepCollectionEquality().hash(fullUrl),
       const DeepCollectionEquality().hash(fullUrlElement),
       const DeepCollectionEquality().hash(resource),
@@ -2648,8 +2539,8 @@ class _$_BundleEntry extends _BundleEntry {
 
   @JsonKey(ignore: true)
   @override
-  _$BundleEntryCopyWith<_BundleEntry> get copyWith =>
-      __$BundleEntryCopyWithImpl<_BundleEntry>(this, _$identity);
+  _$$_BundleEntryCopyWith<_$_BundleEntry> get copyWith =>
+      __$$_BundleEntryCopyWithImpl<_$_BundleEntry>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2659,67 +2550,42 @@ class _$_BundleEntry extends _BundleEntry {
 
 abstract class _BundleEntry extends BundleEntry {
   factory _BundleEntry(
-      {List<BundleLink>? link,
-      String? fullUrl,
-      @JsonKey(name: '_fullUrl') Element? fullUrlElement,
-      Resource? resource,
-      BundleSearch? search,
-      BundleRequest? request,
-      BundleResponse? response}) = _$_BundleEntry;
+      {final List<BundleLink>? link,
+      final String? fullUrl,
+      @JsonKey(name: '_fullUrl') final Element? fullUrlElement,
+      final Resource? resource,
+      final BundleSearch? search,
+      final BundleRequest? request,
+      final BundleResponse? response}) = _$_BundleEntry;
   _BundleEntry._() : super._();
 
   factory _BundleEntry.fromJson(Map<String, dynamic> json) =
       _$_BundleEntry.fromJson;
 
   @override
-  List<BundleLink>? get link;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
   @override
-  String? get fullUrl;
+  String? get fullUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fullUrl')
-  Element? get fullUrlElement;
+  Element? get fullUrlElement => throw _privateConstructorUsedError;
   @override
-  Resource? get resource;
+  Resource? get resource => throw _privateConstructorUsedError;
   @override
-  BundleSearch? get search;
+  BundleSearch? get search => throw _privateConstructorUsedError;
   @override
-  BundleRequest? get request;
+  BundleRequest? get request => throw _privateConstructorUsedError;
   @override
-  BundleResponse? get response;
+  BundleResponse? get response => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleEntryCopyWith<_BundleEntry> get copyWith =>
+  _$$_BundleEntryCopyWith<_$_BundleEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 BundleSearch _$BundleSearchFromJson(Map<String, dynamic> json) {
   return _BundleSearch.fromJson(json);
 }
-
-/// @nodoc
-class _$BundleSearchTearOff {
-  const _$BundleSearchTearOff();
-
-  _BundleSearch call(
-      {BundleSearchMode? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
-      Decimal? score,
-      @JsonKey(name: '_score') Element? scoreElement}) {
-    return _BundleSearch(
-      mode: mode,
-      modeElement: modeElement,
-      score: score,
-      scoreElement: scoreElement,
-    );
-  }
-
-  BundleSearch fromJson(Map<String, Object?> json) {
-    return BundleSearch.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BundleSearch = _$BundleSearchTearOff();
 
 /// @nodoc
 mixin _$BundleSearch {
@@ -2810,11 +2676,11 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BundleSearchCopyWith<$Res>
+abstract class _$$_BundleSearchCopyWith<$Res>
     implements $BundleSearchCopyWith<$Res> {
-  factory _$BundleSearchCopyWith(
-          _BundleSearch value, $Res Function(_BundleSearch) then) =
-      __$BundleSearchCopyWithImpl<$Res>;
+  factory _$$_BundleSearchCopyWith(
+          _$_BundleSearch value, $Res Function(_$_BundleSearch) then) =
+      __$$_BundleSearchCopyWithImpl<$Res>;
   @override
   $Res call(
       {BundleSearchMode? mode,
@@ -2829,14 +2695,15 @@ abstract class _$BundleSearchCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
-    implements _$BundleSearchCopyWith<$Res> {
-  __$BundleSearchCopyWithImpl(
-      _BundleSearch _value, $Res Function(_BundleSearch) _then)
-      : super(_value, (v) => _then(v as _BundleSearch));
+class __$$_BundleSearchCopyWithImpl<$Res>
+    extends _$BundleSearchCopyWithImpl<$Res>
+    implements _$$_BundleSearchCopyWith<$Res> {
+  __$$_BundleSearchCopyWithImpl(
+      _$_BundleSearch _value, $Res Function(_$_BundleSearch) _then)
+      : super(_value, (v) => _then(v as _$_BundleSearch));
 
   @override
-  _BundleSearch get _value => super._value as _BundleSearch;
+  _$_BundleSearch get _value => super._value as _$_BundleSearch;
 
   @override
   $Res call({
@@ -2845,7 +2712,7 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
     Object? score = freezed,
     Object? scoreElement = freezed,
   }) {
-    return _then(_BundleSearch(
+    return _then(_$_BundleSearch(
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
@@ -2899,7 +2766,7 @@ class _$_BundleSearch extends _BundleSearch {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BundleSearch &&
+            other is _$_BundleSearch &&
             const DeepCollectionEquality().equals(other.mode, mode) &&
             const DeepCollectionEquality()
                 .equals(other.modeElement, modeElement) &&
@@ -2908,6 +2775,7 @@ class _$_BundleSearch extends _BundleSearch {
                 .equals(other.scoreElement, scoreElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2918,8 +2786,8 @@ class _$_BundleSearch extends _BundleSearch {
 
   @JsonKey(ignore: true)
   @override
-  _$BundleSearchCopyWith<_BundleSearch> get copyWith =>
-      __$BundleSearchCopyWithImpl<_BundleSearch>(this, _$identity);
+  _$$_BundleSearchCopyWith<_$_BundleSearch> get copyWith =>
+      __$$_BundleSearchCopyWithImpl<_$_BundleSearch>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2929,75 +2797,34 @@ class _$_BundleSearch extends _BundleSearch {
 
 abstract class _BundleSearch extends BundleSearch {
   factory _BundleSearch(
-      {BundleSearchMode? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
-      Decimal? score,
-      @JsonKey(name: '_score') Element? scoreElement}) = _$_BundleSearch;
+      {final BundleSearchMode? mode,
+      @JsonKey(name: '_mode') final Element? modeElement,
+      final Decimal? score,
+      @JsonKey(name: '_score') final Element? scoreElement}) = _$_BundleSearch;
   _BundleSearch._() : super._();
 
   factory _BundleSearch.fromJson(Map<String, dynamic> json) =
       _$_BundleSearch.fromJson;
 
   @override
-  BundleSearchMode? get mode;
+  BundleSearchMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get score;
+  Decimal? get score => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_score')
-  Element? get scoreElement;
+  Element? get scoreElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleSearchCopyWith<_BundleSearch> get copyWith =>
+  _$$_BundleSearchCopyWith<_$_BundleSearch> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 BundleRequest _$BundleRequestFromJson(Map<String, dynamic> json) {
   return _BundleRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$BundleRequestTearOff {
-  const _$BundleRequestTearOff();
-
-  _BundleRequest call(
-      {BundleRequestMethod? method,
-      @JsonKey(name: '_method') Element? methodElement,
-      String? url,
-      @JsonKey(name: '_url') Element? urlElement,
-      String? ifNoneMatch,
-      @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
-      String? ifModifiedSince,
-      @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
-      String? ifMatch,
-      @JsonKey(name: '_ifMatch') Element? ifMatchElement,
-      String? ifNoneExist,
-      @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement}) {
-    return _BundleRequest(
-      method: method,
-      methodElement: methodElement,
-      url: url,
-      urlElement: urlElement,
-      ifNoneMatch: ifNoneMatch,
-      ifNoneMatchElement: ifNoneMatchElement,
-      ifModifiedSince: ifModifiedSince,
-      ifModifiedSinceElement: ifModifiedSinceElement,
-      ifMatch: ifMatch,
-      ifMatchElement: ifMatchElement,
-      ifNoneExist: ifNoneExist,
-      ifNoneExistElement: ifNoneExistElement,
-    );
-  }
-
-  BundleRequest fromJson(Map<String, Object?> json) {
-    return BundleRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BundleRequest = _$BundleRequestTearOff();
 
 /// @nodoc
 mixin _$BundleRequest {
@@ -3197,11 +3024,11 @@ class _$BundleRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$BundleRequestCopyWith<$Res>
+abstract class _$$_BundleRequestCopyWith<$Res>
     implements $BundleRequestCopyWith<$Res> {
-  factory _$BundleRequestCopyWith(
-          _BundleRequest value, $Res Function(_BundleRequest) then) =
-      __$BundleRequestCopyWithImpl<$Res>;
+  factory _$$_BundleRequestCopyWith(
+          _$_BundleRequest value, $Res Function(_$_BundleRequest) then) =
+      __$$_BundleRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {BundleRequestMethod? method,
@@ -3232,15 +3059,15 @@ abstract class _$BundleRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BundleRequestCopyWithImpl<$Res>
+class __$$_BundleRequestCopyWithImpl<$Res>
     extends _$BundleRequestCopyWithImpl<$Res>
-    implements _$BundleRequestCopyWith<$Res> {
-  __$BundleRequestCopyWithImpl(
-      _BundleRequest _value, $Res Function(_BundleRequest) _then)
-      : super(_value, (v) => _then(v as _BundleRequest));
+    implements _$$_BundleRequestCopyWith<$Res> {
+  __$$_BundleRequestCopyWithImpl(
+      _$_BundleRequest _value, $Res Function(_$_BundleRequest) _then)
+      : super(_value, (v) => _then(v as _$_BundleRequest));
 
   @override
-  _BundleRequest get _value => super._value as _BundleRequest;
+  _$_BundleRequest get _value => super._value as _$_BundleRequest;
 
   @override
   $Res call({
@@ -3257,7 +3084,7 @@ class __$BundleRequestCopyWithImpl<$Res>
     Object? ifNoneExist = freezed,
     Object? ifNoneExistElement = freezed,
   }) {
-    return _then(_BundleRequest(
+    return _then(_$_BundleRequest(
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
@@ -3371,7 +3198,7 @@ class _$_BundleRequest extends _BundleRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BundleRequest &&
+            other is _$_BundleRequest &&
             const DeepCollectionEquality().equals(other.method, method) &&
             const DeepCollectionEquality()
                 .equals(other.methodElement, methodElement) &&
@@ -3395,6 +3222,7 @@ class _$_BundleRequest extends _BundleRequest {
                 .equals(other.ifNoneExistElement, ifNoneExistElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3413,8 +3241,8 @@ class _$_BundleRequest extends _BundleRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$BundleRequestCopyWith<_BundleRequest> get copyWith =>
-      __$BundleRequestCopyWithImpl<_BundleRequest>(this, _$identity);
+  _$$_BundleRequestCopyWith<_$_BundleRequest> get copyWith =>
+      __$$_BundleRequestCopyWithImpl<_$_BundleRequest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3424,98 +3252,68 @@ class _$_BundleRequest extends _BundleRequest {
 
 abstract class _BundleRequest extends BundleRequest {
   factory _BundleRequest(
-          {BundleRequestMethod? method,
-          @JsonKey(name: '_method') Element? methodElement,
-          String? url,
-          @JsonKey(name: '_url') Element? urlElement,
-          String? ifNoneMatch,
-          @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
-          String? ifModifiedSince,
-          @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
-          String? ifMatch,
-          @JsonKey(name: '_ifMatch') Element? ifMatchElement,
-          String? ifNoneExist,
-          @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement}) =
-      _$_BundleRequest;
+      {final BundleRequestMethod? method,
+      @JsonKey(name: '_method')
+          final Element? methodElement,
+      final String? url,
+      @JsonKey(name: '_url')
+          final Element? urlElement,
+      final String? ifNoneMatch,
+      @JsonKey(name: '_ifNoneMatch')
+          final Element? ifNoneMatchElement,
+      final String? ifModifiedSince,
+      @JsonKey(name: '_ifModifiedSince')
+          final Element? ifModifiedSinceElement,
+      final String? ifMatch,
+      @JsonKey(name: '_ifMatch')
+          final Element? ifMatchElement,
+      final String? ifNoneExist,
+      @JsonKey(name: '_ifNoneExist')
+          final Element? ifNoneExistElement}) = _$_BundleRequest;
   _BundleRequest._() : super._();
 
   factory _BundleRequest.fromJson(Map<String, dynamic> json) =
       _$_BundleRequest.fromJson;
 
   @override
-  BundleRequestMethod? get method;
+  BundleRequestMethod? get method => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_method')
-  Element? get methodElement;
+  Element? get methodElement => throw _privateConstructorUsedError;
   @override
-  String? get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get ifNoneMatch;
+  String? get ifNoneMatch => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ifNoneMatch')
-  Element? get ifNoneMatchElement;
+  Element? get ifNoneMatchElement => throw _privateConstructorUsedError;
   @override
-  String? get ifModifiedSince;
+  String? get ifModifiedSince => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ifModifiedSince')
-  Element? get ifModifiedSinceElement;
+  Element? get ifModifiedSinceElement => throw _privateConstructorUsedError;
   @override
-  String? get ifMatch;
+  String? get ifMatch => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ifMatch')
-  Element? get ifMatchElement;
+  Element? get ifMatchElement => throw _privateConstructorUsedError;
   @override
-  String? get ifNoneExist;
+  String? get ifNoneExist => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ifNoneExist')
-  Element? get ifNoneExistElement;
+  Element? get ifNoneExistElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleRequestCopyWith<_BundleRequest> get copyWith =>
+  _$$_BundleRequestCopyWith<_$_BundleRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 BundleResponse _$BundleResponseFromJson(Map<String, dynamic> json) {
   return _BundleResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$BundleResponseTearOff {
-  const _$BundleResponseTearOff();
-
-  _BundleResponse call(
-      {String? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      String? location,
-      @JsonKey(name: '_location') Element? locationElement,
-      String? etag,
-      @JsonKey(name: '_etag') Element? etagElement,
-      String? lastModified,
-      @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-      Resource? outcome}) {
-    return _BundleResponse(
-      status: status,
-      statusElement: statusElement,
-      location: location,
-      locationElement: locationElement,
-      etag: etag,
-      etagElement: etagElement,
-      lastModified: lastModified,
-      lastModifiedElement: lastModifiedElement,
-      outcome: outcome,
-    );
-  }
-
-  BundleResponse fromJson(Map<String, Object?> json) {
-    return BundleResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BundleResponse = _$BundleResponseTearOff();
 
 /// @nodoc
 mixin _$BundleResponse {
@@ -3668,11 +3466,11 @@ class _$BundleResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$BundleResponseCopyWith<$Res>
+abstract class _$$_BundleResponseCopyWith<$Res>
     implements $BundleResponseCopyWith<$Res> {
-  factory _$BundleResponseCopyWith(
-          _BundleResponse value, $Res Function(_BundleResponse) then) =
-      __$BundleResponseCopyWithImpl<$Res>;
+  factory _$$_BundleResponseCopyWith(
+          _$_BundleResponse value, $Res Function(_$_BundleResponse) then) =
+      __$$_BundleResponseCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? status,
@@ -3696,15 +3494,15 @@ abstract class _$BundleResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BundleResponseCopyWithImpl<$Res>
+class __$$_BundleResponseCopyWithImpl<$Res>
     extends _$BundleResponseCopyWithImpl<$Res>
-    implements _$BundleResponseCopyWith<$Res> {
-  __$BundleResponseCopyWithImpl(
-      _BundleResponse _value, $Res Function(_BundleResponse) _then)
-      : super(_value, (v) => _then(v as _BundleResponse));
+    implements _$$_BundleResponseCopyWith<$Res> {
+  __$$_BundleResponseCopyWithImpl(
+      _$_BundleResponse _value, $Res Function(_$_BundleResponse) _then)
+      : super(_value, (v) => _then(v as _$_BundleResponse));
 
   @override
-  _BundleResponse get _value => super._value as _BundleResponse;
+  _$_BundleResponse get _value => super._value as _$_BundleResponse;
 
   @override
   $Res call({
@@ -3718,7 +3516,7 @@ class __$BundleResponseCopyWithImpl<$Res>
     Object? lastModifiedElement = freezed,
     Object? outcome = freezed,
   }) {
-    return _then(_BundleResponse(
+    return _then(_$_BundleResponse(
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -3809,7 +3607,7 @@ class _$_BundleResponse extends _BundleResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BundleResponse &&
+            other is _$_BundleResponse &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -3826,6 +3624,7 @@ class _$_BundleResponse extends _BundleResponse {
             const DeepCollectionEquality().equals(other.outcome, outcome));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3841,8 +3640,8 @@ class _$_BundleResponse extends _BundleResponse {
 
   @JsonKey(ignore: true)
   @override
-  _$BundleResponseCopyWith<_BundleResponse> get copyWith =>
-      __$BundleResponseCopyWithImpl<_BundleResponse>(this, _$identity);
+  _$$_BundleResponseCopyWith<_$_BundleResponse> get copyWith =>
+      __$$_BundleResponseCopyWithImpl<_$_BundleResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3852,103 +3651,51 @@ class _$_BundleResponse extends _BundleResponse {
 
 abstract class _BundleResponse extends BundleResponse {
   factory _BundleResponse(
-      {String? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      String? location,
-      @JsonKey(name: '_location') Element? locationElement,
-      String? etag,
-      @JsonKey(name: '_etag') Element? etagElement,
-      String? lastModified,
-      @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-      Resource? outcome}) = _$_BundleResponse;
+      {final String? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final String? location,
+      @JsonKey(name: '_location') final Element? locationElement,
+      final String? etag,
+      @JsonKey(name: '_etag') final Element? etagElement,
+      final String? lastModified,
+      @JsonKey(name: '_lastModified') final Element? lastModifiedElement,
+      final Resource? outcome}) = _$_BundleResponse;
   _BundleResponse._() : super._();
 
   factory _BundleResponse.fromJson(Map<String, dynamic> json) =
       _$_BundleResponse.fromJson;
 
   @override
-  String? get status;
+  String? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  String? get location;
+  String? get location => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_location')
-  Element? get locationElement;
+  Element? get locationElement => throw _privateConstructorUsedError;
   @override
-  String? get etag;
+  String? get etag => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_etag')
-  Element? get etagElement;
+  Element? get etagElement => throw _privateConstructorUsedError;
   @override
-  String? get lastModified;
+  String? get lastModified => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastModified')
-  Element? get lastModifiedElement;
+  Element? get lastModifiedElement => throw _privateConstructorUsedError;
   @override
-  Resource? get outcome;
+  Resource? get outcome => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleResponseCopyWith<_BundleResponse> get copyWith =>
+  _$$_BundleResponseCopyWith<_$_BundleResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Linkage _$LinkageFromJson(Map<String, dynamic> json) {
   return _Linkage.fromJson(json);
 }
-
-/// @nodoc
-class _$LinkageTearOff {
-  const _$LinkageTearOff();
-
-  _Linkage call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
-          Stu3ResourceType resourceType = Stu3ResourceType.Linkage,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
-      Reference? author,
-      required List<LinkageItem> item}) {
-    return _Linkage(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      active: active,
-      activeElement: activeElement,
-      author: author,
-      item: item,
-    );
-  }
-
-  Linkage fromJson(Map<String, Object?> json) {
-    return Linkage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Linkage = _$LinkageTearOff();
 
 /// @nodoc
 mixin _$Linkage {
@@ -4171,9 +3918,10 @@ class _$LinkageCopyWithImpl<$Res> implements $LinkageCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
-  factory _$LinkageCopyWith(_Linkage value, $Res Function(_Linkage) then) =
-      __$LinkageCopyWithImpl<$Res>;
+abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
+  factory _$$_LinkageCopyWith(
+          _$_Linkage value, $Res Function(_$_Linkage) then) =
+      __$$_LinkageCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
@@ -4212,13 +3960,13 @@ abstract class _$LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
-    implements _$LinkageCopyWith<$Res> {
-  __$LinkageCopyWithImpl(_Linkage _value, $Res Function(_Linkage) _then)
-      : super(_value, (v) => _then(v as _Linkage));
+class __$$_LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
+    implements _$$_LinkageCopyWith<$Res> {
+  __$$_LinkageCopyWithImpl(_$_Linkage _value, $Res Function(_$_Linkage) _then)
+      : super(_value, (v) => _then(v as _$_Linkage));
 
   @override
-  _Linkage get _value => super._value as _Linkage;
+  _$_Linkage get _value => super._value as _$_Linkage;
 
   @override
   $Res call({
@@ -4238,7 +3986,7 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
     Object? author = freezed,
     Object? item = freezed,
   }) {
-    return _then(_Linkage(
+    return _then(_$_Linkage(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4272,15 +4020,15 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       active: active == freezed
@@ -4296,7 +4044,7 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
           : author // ignore: cast_nullable_to_non_nullable
               as Reference?,
       item: item == freezed
-          ? _value.item
+          ? _value._item
           : item // ignore: cast_nullable_to_non_nullable
               as List<LinkageItem>,
     ));
@@ -4318,16 +4066,20 @@ class _$_Linkage extends _Linkage {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.active,
       @JsonKey(name: '_active')
           this.activeElement,
       this.author,
-      required this.item})
-      : super._();
+      required final List<LinkageItem> item})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _item = item,
+        super._();
 
   factory _$_Linkage.fromJson(Map<String, dynamic> json) =>
       _$$_LinkageFromJson(json);
@@ -4351,13 +4103,34 @@ class _$_Linkage extends _Linkage {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? active;
   @override
@@ -4365,8 +4138,12 @@ class _$_Linkage extends _Linkage {
   final Element? activeElement;
   @override
   final Reference? author;
+  final List<LinkageItem> _item;
   @override
-  final List<LinkageItem> item;
+  List<LinkageItem> get item {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_item);
+  }
 
   @override
   String toString() {
@@ -4377,7 +4154,7 @@ class _$_Linkage extends _Linkage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Linkage &&
+            other is _$_Linkage &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -4390,18 +4167,20 @@ class _$_Linkage extends _Linkage {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.active, active) &&
             const DeepCollectionEquality()
                 .equals(other.activeElement, activeElement) &&
             const DeepCollectionEquality().equals(other.author, author) &&
-            const DeepCollectionEquality().equals(other.item, item));
+            const DeepCollectionEquality().equals(other._item, _item));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4413,18 +4192,18 @@ class _$_Linkage extends _Linkage {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(active),
       const DeepCollectionEquality().hash(activeElement),
       const DeepCollectionEquality().hash(author),
-      const DeepCollectionEquality().hash(item));
+      const DeepCollectionEquality().hash(_item));
 
   @JsonKey(ignore: true)
   @override
-  _$LinkageCopyWith<_Linkage> get copyWith =>
-      __$LinkageCopyWithImpl<_Linkage>(this, _$identity);
+  _$$_LinkageCopyWith<_$_Linkage> get copyWith =>
+      __$$_LinkageCopyWithImpl<_$_Linkage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4435,96 +4214,74 @@ class _$_Linkage extends _Linkage {
 abstract class _Linkage extends Linkage {
   factory _Linkage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? active,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Boolean? active,
       @JsonKey(name: '_active')
-          Element? activeElement,
-      Reference? author,
-      required List<LinkageItem> item}) = _$_Linkage;
+          final Element? activeElement,
+      final Reference? author,
+      required final List<LinkageItem> item}) = _$_Linkage;
   _Linkage._() : super._();
 
   factory _Linkage.fromJson(Map<String, dynamic> json) = _$_Linkage.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get active;
+  Boolean? get active => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_active')
-  Element? get activeElement;
+  Element? get activeElement => throw _privateConstructorUsedError;
   @override
-  Reference? get author;
+  Reference? get author => throw _privateConstructorUsedError;
   @override
-  List<LinkageItem> get item;
+  List<LinkageItem> get item => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LinkageCopyWith<_Linkage> get copyWith =>
+  _$$_LinkageCopyWith<_$_Linkage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 LinkageItem _$LinkageItemFromJson(Map<String, dynamic> json) {
   return _LinkageItem.fromJson(json);
 }
-
-/// @nodoc
-class _$LinkageItemTearOff {
-  const _$LinkageItemTearOff();
-
-  _LinkageItem call(
-      {LinkageItemType? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      required Reference resource}) {
-    return _LinkageItem(
-      type: type,
-      typeElement: typeElement,
-      resource: resource,
-    );
-  }
-
-  LinkageItem fromJson(Map<String, Object?> json) {
-    return LinkageItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $LinkageItem = _$LinkageItemTearOff();
 
 /// @nodoc
 mixin _$LinkageItem {
@@ -4603,11 +4360,11 @@ class _$LinkageItemCopyWithImpl<$Res> implements $LinkageItemCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LinkageItemCopyWith<$Res>
+abstract class _$$_LinkageItemCopyWith<$Res>
     implements $LinkageItemCopyWith<$Res> {
-  factory _$LinkageItemCopyWith(
-          _LinkageItem value, $Res Function(_LinkageItem) then) =
-      __$LinkageItemCopyWithImpl<$Res>;
+  factory _$$_LinkageItemCopyWith(
+          _$_LinkageItem value, $Res Function(_$_LinkageItem) then) =
+      __$$_LinkageItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {LinkageItemType? type,
@@ -4621,14 +4378,14 @@ abstract class _$LinkageItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
-    implements _$LinkageItemCopyWith<$Res> {
-  __$LinkageItemCopyWithImpl(
-      _LinkageItem _value, $Res Function(_LinkageItem) _then)
-      : super(_value, (v) => _then(v as _LinkageItem));
+class __$$_LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
+    implements _$$_LinkageItemCopyWith<$Res> {
+  __$$_LinkageItemCopyWithImpl(
+      _$_LinkageItem _value, $Res Function(_$_LinkageItem) _then)
+      : super(_value, (v) => _then(v as _$_LinkageItem));
 
   @override
-  _LinkageItem get _value => super._value as _LinkageItem;
+  _$_LinkageItem get _value => super._value as _$_LinkageItem;
 
   @override
   $Res call({
@@ -4636,7 +4393,7 @@ class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
     Object? typeElement = freezed,
     Object? resource = freezed,
   }) {
-    return _then(_LinkageItem(
+    return _then(_$_LinkageItem(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -4682,13 +4439,14 @@ class _$_LinkageItem extends _LinkageItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _LinkageItem &&
+            other is _$_LinkageItem &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
             const DeepCollectionEquality().equals(other.resource, resource));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4698,8 +4456,8 @@ class _$_LinkageItem extends _LinkageItem {
 
   @JsonKey(ignore: true)
   @override
-  _$LinkageItemCopyWith<_LinkageItem> get copyWith =>
-      __$LinkageItemCopyWithImpl<_LinkageItem>(this, _$identity);
+  _$$_LinkageItemCopyWith<_$_LinkageItem> get copyWith =>
+      __$$_LinkageItemCopyWithImpl<_$_LinkageItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4709,130 +4467,30 @@ class _$_LinkageItem extends _LinkageItem {
 
 abstract class _LinkageItem extends LinkageItem {
   factory _LinkageItem(
-      {LinkageItemType? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      required Reference resource}) = _$_LinkageItem;
+      {final LinkageItemType? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      required final Reference resource}) = _$_LinkageItem;
   _LinkageItem._() : super._();
 
   factory _LinkageItem.fromJson(Map<String, dynamic> json) =
       _$_LinkageItem.fromJson;
 
   @override
-  LinkageItemType? get type;
+  LinkageItemType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Reference get resource;
+  Reference get resource => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LinkageItemCopyWith<_LinkageItem> get copyWith =>
+  _$$_LinkageItemCopyWith<_$_LinkageItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Media _$MediaFromJson(Map<String, dynamic> json) {
   return _Media.fromJson(json);
 }
-
-/// @nodoc
-class _$MediaTearOff {
-  const _$MediaTearOff();
-
-  _Media call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.Media)
-          Stu3ResourceType resourceType = Stu3ResourceType.Media,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      MediaType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      CodeableConcept? subtype,
-      CodeableConcept? view,
-      Reference? subject,
-      Reference? context,
-      FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      @JsonKey(name: 'operator')
-          Reference? operator_,
-      List<CodeableConcept>? reasonCode,
-      CodeableConcept? bodySite,
-      Reference? device,
-      Decimal? height,
-      @JsonKey(name: '_height')
-          Element? heightElement,
-      Id? width,
-      @JsonKey(name: '_width')
-          Element? widthElement,
-      Decimal? frames,
-      @JsonKey(name: '_frames')
-          Element? framesElement,
-      Decimal? duration,
-      @JsonKey(name: '_duration')
-          Element? durationElement,
-      required Attachment content,
-      List<Annotation>? note}) {
-    return _Media(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      type: type,
-      typeElement: typeElement,
-      subtype: subtype,
-      view: view,
-      subject: subject,
-      context: context,
-      occurrenceDateTime: occurrenceDateTime,
-      occurrenceDateTimeElement: occurrenceDateTimeElement,
-      occurrencePeriod: occurrencePeriod,
-      operator_: operator_,
-      reasonCode: reasonCode,
-      bodySite: bodySite,
-      device: device,
-      height: height,
-      heightElement: heightElement,
-      width: width,
-      widthElement: widthElement,
-      frames: frames,
-      framesElement: framesElement,
-      duration: duration,
-      durationElement: durationElement,
-      content: content,
-      note: note,
-    );
-  }
-
-  Media fromJson(Map<String, Object?> json) {
-    return Media.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Media = _$MediaTearOff();
 
 /// @nodoc
 mixin _$Media {
@@ -5366,9 +5024,9 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
-  factory _$MediaCopyWith(_Media value, $Res Function(_Media) then) =
-      __$MediaCopyWithImpl<$Res>;
+abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
+  factory _$$_MediaCopyWith(_$_Media value, $Res Function(_$_Media) then) =
+      __$$_MediaCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Media)
@@ -5460,13 +5118,13 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
-    implements _$MediaCopyWith<$Res> {
-  __$MediaCopyWithImpl(_Media _value, $Res Function(_Media) _then)
-      : super(_value, (v) => _then(v as _Media));
+class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
+    implements _$$_MediaCopyWith<$Res> {
+  __$$_MediaCopyWithImpl(_$_Media _value, $Res Function(_$_Media) _then)
+      : super(_value, (v) => _then(v as _$_Media));
 
   @override
-  _Media get _value => super._value as _Media;
+  _$_Media get _value => super._value as _$_Media;
 
   @override
   $Res call({
@@ -5507,7 +5165,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     Object? content = freezed,
     Object? note = freezed,
   }) {
-    return _then(_Media(
+    return _then(_$_Media(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5541,23 +5199,23 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       type: type == freezed
@@ -5601,7 +5259,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
           : operator_ // ignore: cast_nullable_to_non_nullable
               as Reference?,
       reasonCode: reasonCode == freezed
-          ? _value.reasonCode
+          ? _value._reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       bodySite: bodySite == freezed
@@ -5649,7 +5307,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
           : content // ignore: cast_nullable_to_non_nullable
               as Attachment,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -5671,12 +5329,12 @@ class _$_Media extends _Media {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.basedOn,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
       this.type,
       @JsonKey(name: '_type')
           this.typeElement,
@@ -5690,7 +5348,7 @@ class _$_Media extends _Media {
       this.occurrencePeriod,
       @JsonKey(name: 'operator')
           this.operator_,
-      this.reasonCode,
+      final List<CodeableConcept>? reasonCode,
       this.bodySite,
       this.device,
       this.height,
@@ -5706,8 +5364,15 @@ class _$_Media extends _Media {
       @JsonKey(name: '_duration')
           this.durationElement,
       required this.content,
-      this.note})
-      : super._();
+      final List<Annotation>? note})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _basedOn = basedOn,
+        _reasonCode = reasonCode,
+        _note = note,
+        super._();
 
   factory _$_Media.fromJson(Map<String, dynamic> json) =>
       _$$_MediaFromJson(json);
@@ -5731,17 +5396,52 @@ class _$_Media extends _Media {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _basedOn;
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final MediaType? type;
   @override
@@ -5765,8 +5465,15 @@ class _$_Media extends _Media {
   @override
   @JsonKey(name: 'operator')
   final Reference? operator_;
+  final List<CodeableConcept>? _reasonCode;
   @override
-  final List<CodeableConcept>? reasonCode;
+  List<CodeableConcept>? get reasonCode {
+    final value = _reasonCode;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? bodySite;
   @override
@@ -5793,8 +5500,14 @@ class _$_Media extends _Media {
   final Element? durationElement;
   @override
   final Attachment content;
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -5805,7 +5518,7 @@ class _$_Media extends _Media {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Media &&
+            other is _$_Media &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -5818,14 +5531,15 @@ class _$_Media extends _Media {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -5841,7 +5555,7 @@ class _$_Media extends _Media {
                 .equals(other.occurrencePeriod, occurrencePeriod) &&
             const DeepCollectionEquality().equals(other.operator_, operator_) &&
             const DeepCollectionEquality()
-                .equals(other.reasonCode, reasonCode) &&
+                .equals(other._reasonCode, _reasonCode) &&
             const DeepCollectionEquality().equals(other.bodySite, bodySite) &&
             const DeepCollectionEquality().equals(other.device, device) &&
             const DeepCollectionEquality().equals(other.height, height) &&
@@ -5857,9 +5571,10 @@ class _$_Media extends _Media {
             const DeepCollectionEquality()
                 .equals(other.durationElement, durationElement) &&
             const DeepCollectionEquality().equals(other.content, content) &&
-            const DeepCollectionEquality().equals(other.note, note));
+            const DeepCollectionEquality().equals(other._note, _note));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -5871,11 +5586,11 @@ class _$_Media extends _Media {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_basedOn),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(typeElement),
         const DeepCollectionEquality().hash(subtype),
@@ -5886,7 +5601,7 @@ class _$_Media extends _Media {
         const DeepCollectionEquality().hash(occurrenceDateTimeElement),
         const DeepCollectionEquality().hash(occurrencePeriod),
         const DeepCollectionEquality().hash(operator_),
-        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(_reasonCode),
         const DeepCollectionEquality().hash(bodySite),
         const DeepCollectionEquality().hash(device),
         const DeepCollectionEquality().hash(height),
@@ -5898,13 +5613,13 @@ class _$_Media extends _Media {
         const DeepCollectionEquality().hash(duration),
         const DeepCollectionEquality().hash(durationElement),
         const DeepCollectionEquality().hash(content),
-        const DeepCollectionEquality().hash(note)
+        const DeepCollectionEquality().hash(_note)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MediaCopyWith<_Media> get copyWith =>
-      __$MediaCopyWithImpl<_Media>(this, _$identity);
+  _$$_MediaCopyWith<_$_Media> get copyWith =>
+      __$$_MediaCopyWithImpl<_$_Media>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5915,217 +5630,149 @@ class _$_Media extends _Media {
 abstract class _Media extends Media {
   factory _Media(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Media)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      MediaType? type,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final MediaType? type,
       @JsonKey(name: '_type')
-          Element? typeElement,
-      CodeableConcept? subtype,
-      CodeableConcept? view,
-      Reference? subject,
-      Reference? context,
-      FhirDateTime? occurrenceDateTime,
+          final Element? typeElement,
+      final CodeableConcept? subtype,
+      final CodeableConcept? view,
+      final Reference? subject,
+      final Reference? context,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
+          final Element? occurrenceDateTimeElement,
+      final Period? occurrencePeriod,
       @JsonKey(name: 'operator')
-          Reference? operator_,
-      List<CodeableConcept>? reasonCode,
-      CodeableConcept? bodySite,
-      Reference? device,
-      Decimal? height,
+          final Reference? operator_,
+      final List<CodeableConcept>? reasonCode,
+      final CodeableConcept? bodySite,
+      final Reference? device,
+      final Decimal? height,
       @JsonKey(name: '_height')
-          Element? heightElement,
-      Id? width,
+          final Element? heightElement,
+      final Id? width,
       @JsonKey(name: '_width')
-          Element? widthElement,
-      Decimal? frames,
+          final Element? widthElement,
+      final Decimal? frames,
       @JsonKey(name: '_frames')
-          Element? framesElement,
-      Decimal? duration,
+          final Element? framesElement,
+      final Decimal? duration,
       @JsonKey(name: '_duration')
-          Element? durationElement,
-      required Attachment content,
-      List<Annotation>? note}) = _$_Media;
+          final Element? durationElement,
+      required final Attachment content,
+      final List<Annotation>? note}) = _$_Media;
   _Media._() : super._();
 
   factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get basedOn;
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override
-  MediaType? get type;
+  MediaType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get subtype;
+  CodeableConcept? get subtype => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get view;
+  CodeableConcept? get view => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  Reference? get context;
+  Reference? get context => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get occurrenceDateTime;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement;
+  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Period? get occurrencePeriod;
+  Period? get occurrencePeriod => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'operator')
-  Reference? get operator_;
+  Reference? get operator_ => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get reasonCode;
+  List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get bodySite;
+  CodeableConcept? get bodySite => throw _privateConstructorUsedError;
   @override
-  Reference? get device;
+  Reference? get device => throw _privateConstructorUsedError;
   @override
-  Decimal? get height;
+  Decimal? get height => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_height')
-  Element? get heightElement;
+  Element? get heightElement => throw _privateConstructorUsedError;
   @override
-  Id? get width;
+  Id? get width => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_width')
-  Element? get widthElement;
+  Element? get widthElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get frames;
+  Decimal? get frames => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_frames')
-  Element? get framesElement;
+  Element? get framesElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get duration;
+  Decimal? get duration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_duration')
-  Element? get durationElement;
+  Element? get durationElement => throw _privateConstructorUsedError;
   @override
-  Attachment get content;
+  Attachment get content => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MediaCopyWith<_Media> get copyWith => throw _privateConstructorUsedError;
+  _$$_MediaCopyWith<_$_Media> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) {
   return _MessageHeader.fromJson(json);
 }
-
-/// @nodoc
-class _$MessageHeaderTearOff {
-  const _$MessageHeaderTearOff();
-
-  _MessageHeader call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
-          Stu3ResourceType resourceType = Stu3ResourceType.MessageHeader,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Coding event,
-      List<MessageHeaderDestination>? destination,
-      Reference? receiver,
-      Reference? sender,
-      String? timestamp,
-      @JsonKey(name: '_timestamp')
-          Element? timestampElement,
-      Reference? enterer,
-      Reference? author,
-      required MessageHeaderSource source,
-      Reference? responsible,
-      CodeableConcept? reason,
-      MessageHeaderResponse? response,
-      List<Reference>? focus}) {
-    return _MessageHeader(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      event: event,
-      destination: destination,
-      receiver: receiver,
-      sender: sender,
-      timestamp: timestamp,
-      timestampElement: timestampElement,
-      enterer: enterer,
-      author: author,
-      source: source,
-      responsible: responsible,
-      reason: reason,
-      response: response,
-      focus: focus,
-    );
-  }
-
-  MessageHeader fromJson(Map<String, Object?> json) {
-    return MessageHeader.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MessageHeader = _$MessageHeaderTearOff();
 
 /// @nodoc
 mixin _$MessageHeader {
@@ -6503,11 +6150,11 @@ class _$MessageHeaderCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MessageHeaderCopyWith<$Res>
+abstract class _$$_MessageHeaderCopyWith<$Res>
     implements $MessageHeaderCopyWith<$Res> {
-  factory _$MessageHeaderCopyWith(
-          _MessageHeader value, $Res Function(_MessageHeader) then) =
-      __$MessageHeaderCopyWithImpl<$Res>;
+  factory _$$_MessageHeaderCopyWith(
+          _$_MessageHeader value, $Res Function(_$_MessageHeader) then) =
+      __$$_MessageHeaderCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
@@ -6571,15 +6218,15 @@ abstract class _$MessageHeaderCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MessageHeaderCopyWithImpl<$Res>
+class __$$_MessageHeaderCopyWithImpl<$Res>
     extends _$MessageHeaderCopyWithImpl<$Res>
-    implements _$MessageHeaderCopyWith<$Res> {
-  __$MessageHeaderCopyWithImpl(
-      _MessageHeader _value, $Res Function(_MessageHeader) _then)
-      : super(_value, (v) => _then(v as _MessageHeader));
+    implements _$$_MessageHeaderCopyWith<$Res> {
+  __$$_MessageHeaderCopyWithImpl(
+      _$_MessageHeader _value, $Res Function(_$_MessageHeader) _then)
+      : super(_value, (v) => _then(v as _$_MessageHeader));
 
   @override
-  _MessageHeader get _value => super._value as _MessageHeader;
+  _$_MessageHeader get _value => super._value as _$_MessageHeader;
 
   @override
   $Res call({
@@ -6608,7 +6255,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
     Object? response = freezed,
     Object? focus = freezed,
   }) {
-    return _then(_MessageHeader(
+    return _then(_$_MessageHeader(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -6642,15 +6289,15 @@ class __$MessageHeaderCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       event: event == freezed
@@ -6658,7 +6305,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
           : event // ignore: cast_nullable_to_non_nullable
               as Coding,
       destination: destination == freezed
-          ? _value.destination
+          ? _value._destination
           : destination // ignore: cast_nullable_to_non_nullable
               as List<MessageHeaderDestination>?,
       receiver: receiver == freezed
@@ -6702,7 +6349,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
           : response // ignore: cast_nullable_to_non_nullable
               as MessageHeaderResponse?,
       focus: focus == freezed
-          ? _value.focus
+          ? _value._focus
           : focus // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -6724,12 +6371,12 @@ class _$_MessageHeader extends _MessageHeader {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.event,
-      this.destination,
+      final List<MessageHeaderDestination>? destination,
       this.receiver,
       this.sender,
       this.timestamp,
@@ -6741,8 +6388,13 @@ class _$_MessageHeader extends _MessageHeader {
       this.responsible,
       this.reason,
       this.response,
-      this.focus})
-      : super._();
+      final List<Reference>? focus})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _destination = destination,
+        _focus = focus,
+        super._();
 
   factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$$_MessageHeaderFromJson(json);
@@ -6766,17 +6418,45 @@ class _$_MessageHeader extends _MessageHeader {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Coding event;
+  final List<MessageHeaderDestination>? _destination;
   @override
-  final List<MessageHeaderDestination>? destination;
+  List<MessageHeaderDestination>? get destination {
+    final value = _destination;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? receiver;
   @override
@@ -6798,8 +6478,14 @@ class _$_MessageHeader extends _MessageHeader {
   final CodeableConcept? reason;
   @override
   final MessageHeaderResponse? response;
+  final List<Reference>? _focus;
   @override
-  final List<Reference>? focus;
+  List<Reference>? get focus {
+    final value = _focus;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -6810,7 +6496,7 @@ class _$_MessageHeader extends _MessageHeader {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MessageHeader &&
+            other is _$_MessageHeader &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -6823,14 +6509,15 @@ class _$_MessageHeader extends _MessageHeader {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.event, event) &&
             const DeepCollectionEquality()
-                .equals(other.destination, destination) &&
+                .equals(other._destination, _destination) &&
             const DeepCollectionEquality().equals(other.receiver, receiver) &&
             const DeepCollectionEquality().equals(other.sender, sender) &&
             const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
@@ -6843,9 +6530,10 @@ class _$_MessageHeader extends _MessageHeader {
                 .equals(other.responsible, responsible) &&
             const DeepCollectionEquality().equals(other.reason, reason) &&
             const DeepCollectionEquality().equals(other.response, response) &&
-            const DeepCollectionEquality().equals(other.focus, focus));
+            const DeepCollectionEquality().equals(other._focus, _focus));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -6857,11 +6545,11 @@ class _$_MessageHeader extends _MessageHeader {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(event),
-        const DeepCollectionEquality().hash(destination),
+        const DeepCollectionEquality().hash(_destination),
         const DeepCollectionEquality().hash(receiver),
         const DeepCollectionEquality().hash(sender),
         const DeepCollectionEquality().hash(timestamp),
@@ -6872,13 +6560,13 @@ class _$_MessageHeader extends _MessageHeader {
         const DeepCollectionEquality().hash(responsible),
         const DeepCollectionEquality().hash(reason),
         const DeepCollectionEquality().hash(response),
-        const DeepCollectionEquality().hash(focus)
+        const DeepCollectionEquality().hash(_focus)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MessageHeaderCopyWith<_MessageHeader> get copyWith =>
-      __$MessageHeaderCopyWithImpl<_MessageHeader>(this, _$identity);
+  _$$_MessageHeaderCopyWith<_$_MessageHeader> get copyWith =>
+      __$$_MessageHeaderCopyWithImpl<_$_MessageHeader>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -6889,34 +6577,34 @@ class _$_MessageHeader extends _MessageHeader {
 abstract class _MessageHeader extends MessageHeader {
   factory _MessageHeader(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Coding event,
-      List<MessageHeaderDestination>? destination,
-      Reference? receiver,
-      Reference? sender,
-      String? timestamp,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Coding event,
+      final List<MessageHeaderDestination>? destination,
+      final Reference? receiver,
+      final Reference? sender,
+      final String? timestamp,
       @JsonKey(name: '_timestamp')
-          Element? timestampElement,
-      Reference? enterer,
-      Reference? author,
-      required MessageHeaderSource source,
-      Reference? responsible,
-      CodeableConcept? reason,
-      MessageHeaderResponse? response,
-      List<Reference>? focus}) = _$_MessageHeader;
+          final Element? timestampElement,
+      final Reference? enterer,
+      final Reference? author,
+      required final MessageHeaderSource source,
+      final Reference? responsible,
+      final CodeableConcept? reason,
+      final MessageHeaderResponse? response,
+      final List<Reference>? focus}) = _$_MessageHeader;
   _MessageHeader._() : super._();
 
   factory _MessageHeader.fromJson(Map<String, dynamic> json) =
@@ -6924,60 +6612,62 @@ abstract class _MessageHeader extends MessageHeader {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Coding get event;
+  Coding get event => throw _privateConstructorUsedError;
   @override
-  List<MessageHeaderDestination>? get destination;
+  List<MessageHeaderDestination>? get destination =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get receiver;
+  Reference? get receiver => throw _privateConstructorUsedError;
   @override
-  Reference? get sender;
+  Reference? get sender => throw _privateConstructorUsedError;
   @override
-  String? get timestamp;
+  String? get timestamp => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_timestamp')
-  Element? get timestampElement;
+  Element? get timestampElement => throw _privateConstructorUsedError;
   @override
-  Reference? get enterer;
+  Reference? get enterer => throw _privateConstructorUsedError;
   @override
-  Reference? get author;
+  Reference? get author => throw _privateConstructorUsedError;
   @override
-  MessageHeaderSource get source;
+  MessageHeaderSource get source => throw _privateConstructorUsedError;
   @override
-  Reference? get responsible;
+  Reference? get responsible => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get reason;
+  CodeableConcept? get reason => throw _privateConstructorUsedError;
   @override
-  MessageHeaderResponse? get response;
+  MessageHeaderResponse? get response => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get focus;
+  List<Reference>? get focus => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageHeaderCopyWith<_MessageHeader> get copyWith =>
+  _$$_MessageHeaderCopyWith<_$_MessageHeader> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6985,33 +6675,6 @@ MessageHeaderDestination _$MessageHeaderDestinationFromJson(
     Map<String, dynamic> json) {
   return _MessageHeaderDestination.fromJson(json);
 }
-
-/// @nodoc
-class _$MessageHeaderDestinationTearOff {
-  const _$MessageHeaderDestinationTearOff();
-
-  _MessageHeaderDestination call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      Reference? target,
-      String? endpoint,
-      @JsonKey(name: '_endpoint') Element? endpointElement}) {
-    return _MessageHeaderDestination(
-      name: name,
-      nameElement: nameElement,
-      target: target,
-      endpoint: endpoint,
-      endpointElement: endpointElement,
-    );
-  }
-
-  MessageHeaderDestination fromJson(Map<String, Object?> json) {
-    return MessageHeaderDestination.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MessageHeaderDestination = _$MessageHeaderDestinationTearOff();
 
 /// @nodoc
 mixin _$MessageHeaderDestination {
@@ -7122,11 +6785,12 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MessageHeaderDestinationCopyWith<$Res>
+abstract class _$$_MessageHeaderDestinationCopyWith<$Res>
     implements $MessageHeaderDestinationCopyWith<$Res> {
-  factory _$MessageHeaderDestinationCopyWith(_MessageHeaderDestination value,
-          $Res Function(_MessageHeaderDestination) then) =
-      __$MessageHeaderDestinationCopyWithImpl<$Res>;
+  factory _$$_MessageHeaderDestinationCopyWith(
+          _$_MessageHeaderDestination value,
+          $Res Function(_$_MessageHeaderDestination) then) =
+      __$$_MessageHeaderDestinationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -7144,16 +6808,16 @@ abstract class _$MessageHeaderDestinationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MessageHeaderDestinationCopyWithImpl<$Res>
+class __$$_MessageHeaderDestinationCopyWithImpl<$Res>
     extends _$MessageHeaderDestinationCopyWithImpl<$Res>
-    implements _$MessageHeaderDestinationCopyWith<$Res> {
-  __$MessageHeaderDestinationCopyWithImpl(_MessageHeaderDestination _value,
-      $Res Function(_MessageHeaderDestination) _then)
-      : super(_value, (v) => _then(v as _MessageHeaderDestination));
+    implements _$$_MessageHeaderDestinationCopyWith<$Res> {
+  __$$_MessageHeaderDestinationCopyWithImpl(_$_MessageHeaderDestination _value,
+      $Res Function(_$_MessageHeaderDestination) _then)
+      : super(_value, (v) => _then(v as _$_MessageHeaderDestination));
 
   @override
-  _MessageHeaderDestination get _value =>
-      super._value as _MessageHeaderDestination;
+  _$_MessageHeaderDestination get _value =>
+      super._value as _$_MessageHeaderDestination;
 
   @override
   $Res call({
@@ -7163,7 +6827,7 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
     Object? endpoint = freezed,
     Object? endpointElement = freezed,
   }) {
-    return _then(_MessageHeaderDestination(
+    return _then(_$_MessageHeaderDestination(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -7224,7 +6888,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MessageHeaderDestination &&
+            other is _$_MessageHeaderDestination &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -7234,6 +6898,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
                 .equals(other.endpointElement, endpointElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7245,9 +6910,9 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
 
   @JsonKey(ignore: true)
   @override
-  _$MessageHeaderDestinationCopyWith<_MessageHeaderDestination> get copyWith =>
-      __$MessageHeaderDestinationCopyWithImpl<_MessageHeaderDestination>(
-          this, _$identity);
+  _$$_MessageHeaderDestinationCopyWith<_$_MessageHeaderDestination>
+      get copyWith => __$$_MessageHeaderDestinationCopyWithImpl<
+          _$_MessageHeaderDestination>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7257,11 +6922,11 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
 
 abstract class _MessageHeaderDestination extends MessageHeaderDestination {
   factory _MessageHeaderDestination(
-          {String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          Reference? target,
-          String? endpoint,
-          @JsonKey(name: '_endpoint') Element? endpointElement}) =
+          {final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final Reference? target,
+          final String? endpoint,
+          @JsonKey(name: '_endpoint') final Element? endpointElement}) =
       _$_MessageHeaderDestination;
   _MessageHeaderDestination._() : super._();
 
@@ -7269,61 +6934,26 @@ abstract class _MessageHeaderDestination extends MessageHeaderDestination {
       _$_MessageHeaderDestination.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Reference? get target;
+  Reference? get target => throw _privateConstructorUsedError;
   @override
-  String? get endpoint;
+  String? get endpoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_endpoint')
-  Element? get endpointElement;
+  Element? get endpointElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageHeaderDestinationCopyWith<_MessageHeaderDestination> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_MessageHeaderDestinationCopyWith<_$_MessageHeaderDestination>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MessageHeaderSource _$MessageHeaderSourceFromJson(Map<String, dynamic> json) {
   return _MessageHeaderSource.fromJson(json);
 }
-
-/// @nodoc
-class _$MessageHeaderSourceTearOff {
-  const _$MessageHeaderSourceTearOff();
-
-  _MessageHeaderSource call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? software,
-      @JsonKey(name: '_software') Element? softwareElement,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      ContactPoint? contact,
-      String? endpoint,
-      @JsonKey(name: '_endpoint') Element? endpointElement}) {
-    return _MessageHeaderSource(
-      name: name,
-      nameElement: nameElement,
-      software: software,
-      softwareElement: softwareElement,
-      version: version,
-      versionElement: versionElement,
-      contact: contact,
-      endpoint: endpoint,
-      endpointElement: endpointElement,
-    );
-  }
-
-  MessageHeaderSource fromJson(Map<String, Object?> json) {
-    return MessageHeaderSource.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MessageHeaderSource = _$MessageHeaderSourceTearOff();
 
 /// @nodoc
 mixin _$MessageHeaderSource {
@@ -7488,11 +7118,11 @@ class _$MessageHeaderSourceCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MessageHeaderSourceCopyWith<$Res>
+abstract class _$$_MessageHeaderSourceCopyWith<$Res>
     implements $MessageHeaderSourceCopyWith<$Res> {
-  factory _$MessageHeaderSourceCopyWith(_MessageHeaderSource value,
-          $Res Function(_MessageHeaderSource) then) =
-      __$MessageHeaderSourceCopyWithImpl<$Res>;
+  factory _$$_MessageHeaderSourceCopyWith(_$_MessageHeaderSource value,
+          $Res Function(_$_MessageHeaderSource) then) =
+      __$$_MessageHeaderSourceCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -7518,15 +7148,15 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MessageHeaderSourceCopyWithImpl<$Res>
+class __$$_MessageHeaderSourceCopyWithImpl<$Res>
     extends _$MessageHeaderSourceCopyWithImpl<$Res>
-    implements _$MessageHeaderSourceCopyWith<$Res> {
-  __$MessageHeaderSourceCopyWithImpl(
-      _MessageHeaderSource _value, $Res Function(_MessageHeaderSource) _then)
-      : super(_value, (v) => _then(v as _MessageHeaderSource));
+    implements _$$_MessageHeaderSourceCopyWith<$Res> {
+  __$$_MessageHeaderSourceCopyWithImpl(_$_MessageHeaderSource _value,
+      $Res Function(_$_MessageHeaderSource) _then)
+      : super(_value, (v) => _then(v as _$_MessageHeaderSource));
 
   @override
-  _MessageHeaderSource get _value => super._value as _MessageHeaderSource;
+  _$_MessageHeaderSource get _value => super._value as _$_MessageHeaderSource;
 
   @override
   $Res call({
@@ -7540,7 +7170,7 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
     Object? endpoint = freezed,
     Object? endpointElement = freezed,
   }) {
-    return _then(_MessageHeaderSource(
+    return _then(_$_MessageHeaderSource(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -7631,7 +7261,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MessageHeaderSource &&
+            other is _$_MessageHeaderSource &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -7647,6 +7277,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
                 .equals(other.endpointElement, endpointElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7662,8 +7293,8 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
 
   @JsonKey(ignore: true)
   @override
-  _$MessageHeaderSourceCopyWith<_MessageHeaderSource> get copyWith =>
-      __$MessageHeaderSourceCopyWithImpl<_MessageHeaderSource>(
+  _$$_MessageHeaderSourceCopyWith<_$_MessageHeaderSource> get copyWith =>
+      __$$_MessageHeaderSourceCopyWithImpl<_$_MessageHeaderSource>(
           this, _$identity);
 
   @override
@@ -7674,15 +7305,15 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
 
 abstract class _MessageHeaderSource extends MessageHeaderSource {
   factory _MessageHeaderSource(
-          {String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          String? software,
-          @JsonKey(name: '_software') Element? softwareElement,
-          String? version,
-          @JsonKey(name: '_version') Element? versionElement,
-          ContactPoint? contact,
-          String? endpoint,
-          @JsonKey(name: '_endpoint') Element? endpointElement}) =
+          {final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? software,
+          @JsonKey(name: '_software') final Element? softwareElement,
+          final String? version,
+          @JsonKey(name: '_version') final Element? versionElement,
+          final ContactPoint? contact,
+          final String? endpoint,
+          @JsonKey(name: '_endpoint') final Element? endpointElement}) =
       _$_MessageHeaderSource;
   _MessageHeaderSource._() : super._();
 
@@ -7690,30 +7321,30 @@ abstract class _MessageHeaderSource extends MessageHeaderSource {
       _$_MessageHeaderSource.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get software;
+  String? get software => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_software')
-  Element? get softwareElement;
+  Element? get softwareElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get contact;
+  ContactPoint? get contact => throw _privateConstructorUsedError;
   @override
-  String? get endpoint;
+  String? get endpoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_endpoint')
-  Element? get endpointElement;
+  Element? get endpointElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageHeaderSourceCopyWith<_MessageHeaderSource> get copyWith =>
+  _$$_MessageHeaderSourceCopyWith<_$_MessageHeaderSource> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7721,33 +7352,6 @@ MessageHeaderResponse _$MessageHeaderResponseFromJson(
     Map<String, dynamic> json) {
   return _MessageHeaderResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$MessageHeaderResponseTearOff {
-  const _$MessageHeaderResponseTearOff();
-
-  _MessageHeaderResponse call(
-      {Id? identifier,
-      @JsonKey(name: '_identifier') Element? identifierElement,
-      MessageHeaderResponseCode? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      Reference? details}) {
-    return _MessageHeaderResponse(
-      identifier: identifier,
-      identifierElement: identifierElement,
-      code: code,
-      codeElement: codeElement,
-      details: details,
-    );
-  }
-
-  MessageHeaderResponse fromJson(Map<String, Object?> json) {
-    return MessageHeaderResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MessageHeaderResponse = _$MessageHeaderResponseTearOff();
 
 /// @nodoc
 mixin _$MessageHeaderResponse {
@@ -7858,11 +7462,11 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MessageHeaderResponseCopyWith<$Res>
+abstract class _$$_MessageHeaderResponseCopyWith<$Res>
     implements $MessageHeaderResponseCopyWith<$Res> {
-  factory _$MessageHeaderResponseCopyWith(_MessageHeaderResponse value,
-          $Res Function(_MessageHeaderResponse) then) =
-      __$MessageHeaderResponseCopyWithImpl<$Res>;
+  factory _$$_MessageHeaderResponseCopyWith(_$_MessageHeaderResponse value,
+          $Res Function(_$_MessageHeaderResponse) then) =
+      __$$_MessageHeaderResponseCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? identifier,
@@ -7880,15 +7484,16 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MessageHeaderResponseCopyWithImpl<$Res>
+class __$$_MessageHeaderResponseCopyWithImpl<$Res>
     extends _$MessageHeaderResponseCopyWithImpl<$Res>
-    implements _$MessageHeaderResponseCopyWith<$Res> {
-  __$MessageHeaderResponseCopyWithImpl(_MessageHeaderResponse _value,
-      $Res Function(_MessageHeaderResponse) _then)
-      : super(_value, (v) => _then(v as _MessageHeaderResponse));
+    implements _$$_MessageHeaderResponseCopyWith<$Res> {
+  __$$_MessageHeaderResponseCopyWithImpl(_$_MessageHeaderResponse _value,
+      $Res Function(_$_MessageHeaderResponse) _then)
+      : super(_value, (v) => _then(v as _$_MessageHeaderResponse));
 
   @override
-  _MessageHeaderResponse get _value => super._value as _MessageHeaderResponse;
+  _$_MessageHeaderResponse get _value =>
+      super._value as _$_MessageHeaderResponse;
 
   @override
   $Res call({
@@ -7898,7 +7503,7 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
     Object? codeElement = freezed,
     Object? details = freezed,
   }) {
-    return _then(_MessageHeaderResponse(
+    return _then(_$_MessageHeaderResponse(
       identifier: identifier == freezed
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
@@ -7959,7 +7564,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MessageHeaderResponse &&
+            other is _$_MessageHeaderResponse &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality()
@@ -7970,6 +7575,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
             const DeepCollectionEquality().equals(other.details, details));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7981,8 +7587,8 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 
   @JsonKey(ignore: true)
   @override
-  _$MessageHeaderResponseCopyWith<_MessageHeaderResponse> get copyWith =>
-      __$MessageHeaderResponseCopyWithImpl<_MessageHeaderResponse>(
+  _$$_MessageHeaderResponseCopyWith<_$_MessageHeaderResponse> get copyWith =>
+      __$$_MessageHeaderResponseCopyWithImpl<_$_MessageHeaderResponse>(
           this, _$identity);
 
   @override
@@ -7993,82 +7599,37 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 
 abstract class _MessageHeaderResponse extends MessageHeaderResponse {
   factory _MessageHeaderResponse(
-      {Id? identifier,
-      @JsonKey(name: '_identifier') Element? identifierElement,
-      MessageHeaderResponseCode? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      Reference? details}) = _$_MessageHeaderResponse;
+      {final Id? identifier,
+      @JsonKey(name: '_identifier') final Element? identifierElement,
+      final MessageHeaderResponseCode? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      final Reference? details}) = _$_MessageHeaderResponse;
   _MessageHeaderResponse._() : super._();
 
   factory _MessageHeaderResponse.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderResponse.fromJson;
 
   @override
-  Id? get identifier;
+  Id? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_identifier')
-  Element? get identifierElement;
+  Element? get identifierElement => throw _privateConstructorUsedError;
   @override
-  MessageHeaderResponseCode? get code;
+  MessageHeaderResponseCode? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Reference? get details;
+  Reference? get details => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageHeaderResponseCopyWith<_MessageHeaderResponse> get copyWith =>
+  _$$_MessageHeaderResponseCopyWith<_$_MessageHeaderResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
   return _OperationOutcome.fromJson(json);
 }
-
-/// @nodoc
-class _$OperationOutcomeTearOff {
-  const _$OperationOutcomeTearOff();
-
-  _OperationOutcome call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
-          Stu3ResourceType resourceType = Stu3ResourceType.OperationOutcome,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required List<OperationOutcomeIssue> issue}) {
-    return _OperationOutcome(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      issue: issue,
-    );
-  }
-
-  OperationOutcome fromJson(Map<String, Object?> json) {
-    return OperationOutcome.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OperationOutcome = _$OperationOutcomeTearOff();
 
 /// @nodoc
 mixin _$OperationOutcome {
@@ -8247,11 +7808,11 @@ class _$OperationOutcomeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$OperationOutcomeCopyWith<$Res>
+abstract class _$$_OperationOutcomeCopyWith<$Res>
     implements $OperationOutcomeCopyWith<$Res> {
-  factory _$OperationOutcomeCopyWith(
-          _OperationOutcome value, $Res Function(_OperationOutcome) then) =
-      __$OperationOutcomeCopyWithImpl<$Res>;
+  factory _$$_OperationOutcomeCopyWith(
+          _$_OperationOutcome value, $Res Function(_$_OperationOutcome) then) =
+      __$$_OperationOutcomeCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
@@ -8282,15 +7843,15 @@ abstract class _$OperationOutcomeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$OperationOutcomeCopyWithImpl<$Res>
+class __$$_OperationOutcomeCopyWithImpl<$Res>
     extends _$OperationOutcomeCopyWithImpl<$Res>
-    implements _$OperationOutcomeCopyWith<$Res> {
-  __$OperationOutcomeCopyWithImpl(
-      _OperationOutcome _value, $Res Function(_OperationOutcome) _then)
-      : super(_value, (v) => _then(v as _OperationOutcome));
+    implements _$$_OperationOutcomeCopyWith<$Res> {
+  __$$_OperationOutcomeCopyWithImpl(
+      _$_OperationOutcome _value, $Res Function(_$_OperationOutcome) _then)
+      : super(_value, (v) => _then(v as _$_OperationOutcome));
 
   @override
-  _OperationOutcome get _value => super._value as _OperationOutcome;
+  _$_OperationOutcome get _value => super._value as _$_OperationOutcome;
 
   @override
   $Res call({
@@ -8307,7 +7868,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? issue = freezed,
   }) {
-    return _then(_OperationOutcome(
+    return _then(_$_OperationOutcome(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -8341,19 +7902,19 @@ class __$OperationOutcomeCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       issue: issue == freezed
-          ? _value.issue
+          ? _value._issue
           : issue // ignore: cast_nullable_to_non_nullable
               as List<OperationOutcomeIssue>,
     ));
@@ -8375,12 +7936,16 @@ class _$_OperationOutcome extends _OperationOutcome {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      required this.issue})
-      : super._();
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final List<OperationOutcomeIssue> issue})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _issue = issue,
+        super._();
 
   factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$$_OperationOutcomeFromJson(json);
@@ -8404,15 +7969,40 @@ class _$_OperationOutcome extends _OperationOutcome {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<OperationOutcomeIssue> _issue;
   @override
-  final List<OperationOutcomeIssue> issue;
+  List<OperationOutcomeIssue> get issue {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_issue);
+  }
 
   @override
   String toString() {
@@ -8423,7 +8013,7 @@ class _$_OperationOutcome extends _OperationOutcome {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _OperationOutcome &&
+            other is _$_OperationOutcome &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -8436,14 +8026,16 @@ class _$_OperationOutcome extends _OperationOutcome {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.issue, issue));
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._issue, _issue));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8455,15 +8047,15 @@ class _$_OperationOutcome extends _OperationOutcome {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(issue));
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_issue));
 
   @JsonKey(ignore: true)
   @override
-  _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith =>
-      __$OperationOutcomeCopyWithImpl<_OperationOutcome>(this, _$identity);
+  _$$_OperationOutcomeCopyWith<_$_OperationOutcome> get copyWith =>
+      __$$_OperationOutcomeCopyWithImpl<_$_OperationOutcome>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8474,21 +8066,21 @@ class _$_OperationOutcome extends _OperationOutcome {
 abstract class _OperationOutcome extends OperationOutcome {
   factory _OperationOutcome(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
   _OperationOutcome._() : super._();
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
@@ -8496,35 +8088,36 @@ abstract class _OperationOutcome extends OperationOutcome {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<OperationOutcomeIssue> get issue;
+  List<OperationOutcomeIssue> get issue => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith =>
+  _$$_OperationOutcomeCopyWith<_$_OperationOutcome> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -8532,45 +8125,6 @@ OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
     Map<String, dynamic> json) {
   return _OperationOutcomeIssue.fromJson(json);
 }
-
-/// @nodoc
-class _$OperationOutcomeIssueTearOff {
-  const _$OperationOutcomeIssueTearOff();
-
-  _OperationOutcomeIssue call(
-      {OperationOutcomeIssueSeverity? severity,
-      @JsonKey(name: '_severity') Element? severityElement,
-      OperationOutcomeIssueCode? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      CodeableConcept? details,
-      String? diagnostics,
-      @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
-      List<String>? location,
-      @JsonKey(name: '_location') List<Element?>? locationElement,
-      List<String>? expression,
-      @JsonKey(name: '_expression') List<Element?>? expressionElement}) {
-    return _OperationOutcomeIssue(
-      severity: severity,
-      severityElement: severityElement,
-      code: code,
-      codeElement: codeElement,
-      details: details,
-      diagnostics: diagnostics,
-      diagnosticsElement: diagnosticsElement,
-      location: location,
-      locationElement: locationElement,
-      expression: expression,
-      expressionElement: expressionElement,
-    );
-  }
-
-  OperationOutcomeIssue fromJson(Map<String, Object?> json) {
-    return OperationOutcomeIssue.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OperationOutcomeIssue = _$OperationOutcomeIssueTearOff();
 
 /// @nodoc
 mixin _$OperationOutcomeIssue {
@@ -8739,11 +8293,11 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$OperationOutcomeIssueCopyWith<$Res>
+abstract class _$$_OperationOutcomeIssueCopyWith<$Res>
     implements $OperationOutcomeIssueCopyWith<$Res> {
-  factory _$OperationOutcomeIssueCopyWith(_OperationOutcomeIssue value,
-          $Res Function(_OperationOutcomeIssue) then) =
-      __$OperationOutcomeIssueCopyWithImpl<$Res>;
+  factory _$$_OperationOutcomeIssueCopyWith(_$_OperationOutcomeIssue value,
+          $Res Function(_$_OperationOutcomeIssue) then) =
+      __$$_OperationOutcomeIssueCopyWithImpl<$Res>;
   @override
   $Res call(
       {OperationOutcomeIssueSeverity? severity,
@@ -8769,15 +8323,16 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$OperationOutcomeIssueCopyWithImpl<$Res>
+class __$$_OperationOutcomeIssueCopyWithImpl<$Res>
     extends _$OperationOutcomeIssueCopyWithImpl<$Res>
-    implements _$OperationOutcomeIssueCopyWith<$Res> {
-  __$OperationOutcomeIssueCopyWithImpl(_OperationOutcomeIssue _value,
-      $Res Function(_OperationOutcomeIssue) _then)
-      : super(_value, (v) => _then(v as _OperationOutcomeIssue));
+    implements _$$_OperationOutcomeIssueCopyWith<$Res> {
+  __$$_OperationOutcomeIssueCopyWithImpl(_$_OperationOutcomeIssue _value,
+      $Res Function(_$_OperationOutcomeIssue) _then)
+      : super(_value, (v) => _then(v as _$_OperationOutcomeIssue));
 
   @override
-  _OperationOutcomeIssue get _value => super._value as _OperationOutcomeIssue;
+  _$_OperationOutcomeIssue get _value =>
+      super._value as _$_OperationOutcomeIssue;
 
   @override
   $Res call({
@@ -8793,7 +8348,7 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
     Object? expression = freezed,
     Object? expressionElement = freezed,
   }) {
-    return _then(_OperationOutcomeIssue(
+    return _then(_$_OperationOutcomeIssue(
       severity: severity == freezed
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
@@ -8823,19 +8378,19 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
           : diagnosticsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       location: location == freezed
-          ? _value.location
+          ? _value._location
           : location // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       locationElement: locationElement == freezed
-          ? _value.locationElement
+          ? _value._locationElement
           : locationElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       expression: expression == freezed
-          ? _value.expression
+          ? _value._expression
           : expression // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       expressionElement: expressionElement == freezed
-          ? _value.expressionElement
+          ? _value._expressionElement
           : expressionElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
     ));
@@ -8853,11 +8408,15 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
       this.details,
       this.diagnostics,
       @JsonKey(name: '_diagnostics') this.diagnosticsElement,
-      this.location,
-      @JsonKey(name: '_location') this.locationElement,
-      this.expression,
-      @JsonKey(name: '_expression') this.expressionElement})
-      : super._();
+      final List<String>? location,
+      @JsonKey(name: '_location') final List<Element?>? locationElement,
+      final List<String>? expression,
+      @JsonKey(name: '_expression') final List<Element?>? expressionElement})
+      : _location = location,
+        _locationElement = locationElement,
+        _expression = expression,
+        _expressionElement = expressionElement,
+        super._();
 
   factory _$_OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$$_OperationOutcomeIssueFromJson(json);
@@ -8879,16 +8438,43 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   @override
   @JsonKey(name: '_diagnostics')
   final Element? diagnosticsElement;
+  final List<String>? _location;
   @override
-  final List<String>? location;
+  List<String>? get location {
+    final value = _location;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element?>? _locationElement;
   @override
   @JsonKey(name: '_location')
-  final List<Element?>? locationElement;
+  List<Element?>? get locationElement {
+    final value = _locationElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _expression;
   @override
-  final List<String>? expression;
+  List<String>? get expression {
+    final value = _expression;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element?>? _expressionElement;
   @override
   @JsonKey(name: '_expression')
-  final List<Element?>? expressionElement;
+  List<Element?>? get expressionElement {
+    final value = _expressionElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -8899,7 +8485,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _OperationOutcomeIssue &&
+            other is _$_OperationOutcomeIssue &&
             const DeepCollectionEquality().equals(other.severity, severity) &&
             const DeepCollectionEquality()
                 .equals(other.severityElement, severityElement) &&
@@ -8911,15 +8497,16 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
                 .equals(other.diagnostics, diagnostics) &&
             const DeepCollectionEquality()
                 .equals(other.diagnosticsElement, diagnosticsElement) &&
-            const DeepCollectionEquality().equals(other.location, location) &&
+            const DeepCollectionEquality().equals(other._location, _location) &&
             const DeepCollectionEquality()
-                .equals(other.locationElement, locationElement) &&
+                .equals(other._locationElement, _locationElement) &&
             const DeepCollectionEquality()
-                .equals(other.expression, expression) &&
+                .equals(other._expression, _expression) &&
             const DeepCollectionEquality()
-                .equals(other.expressionElement, expressionElement));
+                .equals(other._expressionElement, _expressionElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8930,15 +8517,15 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
       const DeepCollectionEquality().hash(details),
       const DeepCollectionEquality().hash(diagnostics),
       const DeepCollectionEquality().hash(diagnosticsElement),
-      const DeepCollectionEquality().hash(location),
-      const DeepCollectionEquality().hash(locationElement),
-      const DeepCollectionEquality().hash(expression),
-      const DeepCollectionEquality().hash(expressionElement));
+      const DeepCollectionEquality().hash(_location),
+      const DeepCollectionEquality().hash(_locationElement),
+      const DeepCollectionEquality().hash(_expression),
+      const DeepCollectionEquality().hash(_expressionElement));
 
   @JsonKey(ignore: true)
   @override
-  _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith =>
-      __$OperationOutcomeIssueCopyWithImpl<_OperationOutcomeIssue>(
+  _$$_OperationOutcomeIssueCopyWith<_$_OperationOutcomeIssue> get copyWith =>
+      __$$_OperationOutcomeIssueCopyWithImpl<_$_OperationOutcomeIssue>(
           this, _$identity);
 
   @override
@@ -8949,104 +8536,64 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 
 abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   factory _OperationOutcomeIssue(
-          {OperationOutcomeIssueSeverity? severity,
-          @JsonKey(name: '_severity') Element? severityElement,
-          OperationOutcomeIssueCode? code,
-          @JsonKey(name: '_code') Element? codeElement,
-          CodeableConcept? details,
-          String? diagnostics,
-          @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
-          List<String>? location,
-          @JsonKey(name: '_location') List<Element?>? locationElement,
-          List<String>? expression,
-          @JsonKey(name: '_expression') List<Element?>? expressionElement}) =
-      _$_OperationOutcomeIssue;
+      {final OperationOutcomeIssueSeverity? severity,
+      @JsonKey(name: '_severity')
+          final Element? severityElement,
+      final OperationOutcomeIssueCode? code,
+      @JsonKey(name: '_code')
+          final Element? codeElement,
+      final CodeableConcept? details,
+      final String? diagnostics,
+      @JsonKey(name: '_diagnostics')
+          final Element? diagnosticsElement,
+      final List<String>? location,
+      @JsonKey(name: '_location')
+          final List<Element?>? locationElement,
+      final List<String>? expression,
+      @JsonKey(name: '_expression')
+          final List<Element?>? expressionElement}) = _$_OperationOutcomeIssue;
   _OperationOutcomeIssue._() : super._();
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
 
   @override
-  OperationOutcomeIssueSeverity? get severity;
+  OperationOutcomeIssueSeverity? get severity =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_severity')
-  Element? get severityElement;
+  Element? get severityElement => throw _privateConstructorUsedError;
   @override
-  OperationOutcomeIssueCode? get code;
+  OperationOutcomeIssueCode? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get details;
+  CodeableConcept? get details => throw _privateConstructorUsedError;
   @override
-  String? get diagnostics;
+  String? get diagnostics => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_diagnostics')
-  Element? get diagnosticsElement;
+  Element? get diagnosticsElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get location;
+  List<String>? get location => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_location')
-  List<Element?>? get locationElement;
+  List<Element?>? get locationElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get expression;
+  List<String>? get expression => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expression')
-  List<Element?>? get expressionElement;
+  List<Element?>? get expressionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith =>
+  _$$_OperationOutcomeIssueCopyWith<_$_OperationOutcomeIssue> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Parameters _$ParametersFromJson(Map<String, dynamic> json) {
   return _Parameters.fromJson(json);
 }
-
-/// @nodoc
-class _$ParametersTearOff {
-  const _$ParametersTearOff();
-
-  _Parameters call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
-          Stu3ResourceType resourceType = Stu3ResourceType.Parameters,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<ParametersParameter>? parameter}) {
-    return _Parameters(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      parameter: parameter,
-    );
-  }
-
-  Parameters fromJson(Map<String, Object?> json) {
-    return Parameters.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Parameters = _$ParametersTearOff();
 
 /// @nodoc
 mixin _$Parameters {
@@ -9225,10 +8772,11 @@ class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
-  factory _$ParametersCopyWith(
-          _Parameters value, $Res Function(_Parameters) then) =
-      __$ParametersCopyWithImpl<$Res>;
+abstract class _$$_ParametersCopyWith<$Res>
+    implements $ParametersCopyWith<$Res> {
+  factory _$$_ParametersCopyWith(
+          _$_Parameters value, $Res Function(_$_Parameters) then) =
+      __$$_ParametersCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
@@ -9259,14 +8807,14 @@ abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
-    implements _$ParametersCopyWith<$Res> {
-  __$ParametersCopyWithImpl(
-      _Parameters _value, $Res Function(_Parameters) _then)
-      : super(_value, (v) => _then(v as _Parameters));
+class __$$_ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
+    implements _$$_ParametersCopyWith<$Res> {
+  __$$_ParametersCopyWithImpl(
+      _$_Parameters _value, $Res Function(_$_Parameters) _then)
+      : super(_value, (v) => _then(v as _$_Parameters));
 
   @override
-  _Parameters get _value => super._value as _Parameters;
+  _$_Parameters get _value => super._value as _$_Parameters;
 
   @override
   $Res call({
@@ -9283,7 +8831,7 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? parameter = freezed,
   }) {
-    return _then(_Parameters(
+    return _then(_$_Parameters(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -9317,19 +8865,19 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       parameter: parameter == freezed
-          ? _value.parameter
+          ? _value._parameter
           : parameter // ignore: cast_nullable_to_non_nullable
               as List<ParametersParameter>?,
     ));
@@ -9351,12 +8899,16 @@ class _$_Parameters extends _Parameters {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.parameter})
-      : super._();
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<ParametersParameter>? parameter})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _parameter = parameter,
+        super._();
 
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
       _$$_ParametersFromJson(json);
@@ -9380,15 +8932,42 @@ class _$_Parameters extends _Parameters {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ParametersParameter>? _parameter;
   @override
-  final List<ParametersParameter>? parameter;
+  List<ParametersParameter>? get parameter {
+    final value = _parameter;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -9399,7 +8978,7 @@ class _$_Parameters extends _Parameters {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Parameters &&
+            other is _$_Parameters &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -9412,14 +8991,17 @@ class _$_Parameters extends _Parameters {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.parameter, parameter));
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._parameter, _parameter));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -9431,15 +9013,15 @@ class _$_Parameters extends _Parameters {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(parameter));
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_parameter));
 
   @JsonKey(ignore: true)
   @override
-  _$ParametersCopyWith<_Parameters> get copyWith =>
-      __$ParametersCopyWithImpl<_Parameters>(this, _$identity);
+  _$$_ParametersCopyWith<_$_Parameters> get copyWith =>
+      __$$_ParametersCopyWithImpl<_$_Parameters>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -9450,21 +9032,21 @@ class _$_Parameters extends _Parameters {
 abstract class _Parameters extends Parameters {
   factory _Parameters(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<ParametersParameter>? parameter}) = _$_Parameters;
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<ParametersParameter>? parameter}) = _$_Parameters;
   _Parameters._() : super._();
 
   factory _Parameters.fromJson(Map<String, dynamic> json) =
@@ -9472,206 +9054,43 @@ abstract class _Parameters extends Parameters {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<ParametersParameter>? get parameter;
+  List<ParametersParameter>? get parameter =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ParametersCopyWith<_Parameters> get copyWith =>
+  _$$_ParametersCopyWith<_$_Parameters> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) {
   return _ParametersParameter.fromJson(json);
 }
-
-/// @nodoc
-class _$ParametersParameterTearOff {
-  const _$ParametersParameterTearOff();
-
-  _ParametersParameter call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Decimal? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      String? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      String? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      String? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Id? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      Id? valueUuid,
-      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      Decimal? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      Decimal? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      String? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Element? valueElement,
-      FhirExtension? valueExtension,
-      BackboneElement? valueBackboneElement,
-      Narrative? valueNarrative,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      Identifier? valueIdentifier,
-      CodeableConcept? valueCodeableConcept,
-      Coding? valueCoding,
-      Quantity? valueQuantity,
-      FhirDuration? valueDuration,
-      Quantity? valueSimpleQuantity,
-      Distance? valueDistance,
-      Count? valueCount,
-      Money? valueMoney,
-      Age? valueAge,
-      Range? valueRange,
-      Period? valuePeriod,
-      Ratio? valueRatio,
-      Reference? valueReference,
-      SampledData? valueSampledData,
-      Signature? valueSignature,
-      HumanName? valueHumanName,
-      Address? valueAddress,
-      ContactPoint? valueContactPoint,
-      Timing? valueTiming,
-      Meta? valueMeta,
-      ElementDefinition? valueElementDefinition,
-      ContactDetail? valueContactDetail,
-      Contributor? valueContributor,
-      Dosage? valueDosage,
-      RelatedArtifact? valueRelatedArtifact,
-      UsageContext? valueUsageContext,
-      DataRequirement? valueDataRequirement,
-      ParameterDefinition? valueParameterDefinition,
-      TriggerDefinition? valueTriggerDefinition,
-      Resource? resource,
-      @JsonKey(name: 'part') List<ParametersParameter>? part_}) {
-    return _ParametersParameter(
-      name: name,
-      nameElement: nameElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueDecimal: valueDecimal,
-      valueDecimalElement: valueDecimalElement,
-      valueBase64Binary: valueBase64Binary,
-      valueBase64BinaryElement: valueBase64BinaryElement,
-      valueInstant: valueInstant,
-      valueInstantElement: valueInstantElement,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueUri: valueUri,
-      valueUriElement: valueUriElement,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valueTime: valueTime,
-      valueTimeElement: valueTimeElement,
-      valueCode: valueCode,
-      valueCodeElement: valueCodeElement,
-      valueOid: valueOid,
-      valueOidElement: valueOidElement,
-      valueUuid: valueUuid,
-      valueUuidElement: valueUuidElement,
-      valueId: valueId,
-      valueIdElement: valueIdElement,
-      valueUnsignedInt: valueUnsignedInt,
-      valueUnsignedIntElement: valueUnsignedIntElement,
-      valuePositiveInt: valuePositiveInt,
-      valuePositiveIntElement: valuePositiveIntElement,
-      valueMarkdown: valueMarkdown,
-      valueMarkdownElement: valueMarkdownElement,
-      valueElement: valueElement,
-      valueExtension: valueExtension,
-      valueBackboneElement: valueBackboneElement,
-      valueNarrative: valueNarrative,
-      valueAnnotation: valueAnnotation,
-      valueAttachment: valueAttachment,
-      valueIdentifier: valueIdentifier,
-      valueCodeableConcept: valueCodeableConcept,
-      valueCoding: valueCoding,
-      valueQuantity: valueQuantity,
-      valueDuration: valueDuration,
-      valueSimpleQuantity: valueSimpleQuantity,
-      valueDistance: valueDistance,
-      valueCount: valueCount,
-      valueMoney: valueMoney,
-      valueAge: valueAge,
-      valueRange: valueRange,
-      valuePeriod: valuePeriod,
-      valueRatio: valueRatio,
-      valueReference: valueReference,
-      valueSampledData: valueSampledData,
-      valueSignature: valueSignature,
-      valueHumanName: valueHumanName,
-      valueAddress: valueAddress,
-      valueContactPoint: valueContactPoint,
-      valueTiming: valueTiming,
-      valueMeta: valueMeta,
-      valueElementDefinition: valueElementDefinition,
-      valueContactDetail: valueContactDetail,
-      valueContributor: valueContributor,
-      valueDosage: valueDosage,
-      valueRelatedArtifact: valueRelatedArtifact,
-      valueUsageContext: valueUsageContext,
-      valueDataRequirement: valueDataRequirement,
-      valueParameterDefinition: valueParameterDefinition,
-      valueTriggerDefinition: valueTriggerDefinition,
-      resource: resource,
-      part_: part_,
-    );
-  }
-
-  ParametersParameter fromJson(Map<String, Object?> json) {
-    return ParametersParameter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ParametersParameter = _$ParametersParameterTearOff();
 
 /// @nodoc
 mixin _$ParametersParameter {
@@ -10908,11 +10327,11 @@ class _$ParametersParameterCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ParametersParameterCopyWith<$Res>
+abstract class _$$_ParametersParameterCopyWith<$Res>
     implements $ParametersParameterCopyWith<$Res> {
-  factory _$ParametersParameterCopyWith(_ParametersParameter value,
-          $Res Function(_ParametersParameter) then) =
-      __$ParametersParameterCopyWithImpl<$Res>;
+  factory _$$_ParametersParameterCopyWith(_$_ParametersParameter value,
+          $Res Function(_$_ParametersParameter) then) =
+      __$$_ParametersParameterCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -11101,15 +10520,15 @@ abstract class _$ParametersParameterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ParametersParameterCopyWithImpl<$Res>
+class __$$_ParametersParameterCopyWithImpl<$Res>
     extends _$ParametersParameterCopyWithImpl<$Res>
-    implements _$ParametersParameterCopyWith<$Res> {
-  __$ParametersParameterCopyWithImpl(
-      _ParametersParameter _value, $Res Function(_ParametersParameter) _then)
-      : super(_value, (v) => _then(v as _ParametersParameter));
+    implements _$$_ParametersParameterCopyWith<$Res> {
+  __$$_ParametersParameterCopyWithImpl(_$_ParametersParameter _value,
+      $Res Function(_$_ParametersParameter) _then)
+      : super(_value, (v) => _then(v as _$_ParametersParameter));
 
   @override
-  _ParametersParameter get _value => super._value as _ParametersParameter;
+  _$_ParametersParameter get _value => super._value as _$_ParametersParameter;
 
   @override
   $Res call({
@@ -11188,7 +10607,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
     Object? resource = freezed,
     Object? part_ = freezed,
   }) {
-    return _then(_ParametersParameter(
+    return _then(_$_ParametersParameter(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -11482,7 +10901,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
           : resource // ignore: cast_nullable_to_non_nullable
               as Resource?,
       part_: part_ == freezed
-          ? _value.part_
+          ? _value._part_
           : part_ // ignore: cast_nullable_to_non_nullable
               as List<ParametersParameter>?,
     ));
@@ -11566,8 +10985,9 @@ class _$_ParametersParameter extends _ParametersParameter {
       this.valueParameterDefinition,
       this.valueTriggerDefinition,
       this.resource,
-      @JsonKey(name: 'part') this.part_})
-      : super._();
+      @JsonKey(name: 'part') final List<ParametersParameter>? part_})
+      : _part_ = part_,
+        super._();
 
   factory _$_ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$$_ParametersParameterFromJson(json);
@@ -11736,9 +11156,15 @@ class _$_ParametersParameter extends _ParametersParameter {
   final TriggerDefinition? valueTriggerDefinition;
   @override
   final Resource? resource;
+  final List<ParametersParameter>? _part_;
   @override
   @JsonKey(name: 'part')
-  final List<ParametersParameter>? part_;
+  List<ParametersParameter>? get part_ {
+    final value = _part_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -11749,7 +11175,7 @@ class _$_ParametersParameter extends _ParametersParameter {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ParametersParameter &&
+            other is _$_ParametersParameter &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -11866,9 +11292,10 @@ class _$_ParametersParameter extends _ParametersParameter {
             const DeepCollectionEquality().equals(other.valueParameterDefinition, valueParameterDefinition) &&
             const DeepCollectionEquality().equals(other.valueTriggerDefinition, valueTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
-            const DeepCollectionEquality().equals(other.part_, part_));
+            const DeepCollectionEquality().equals(other._part_, _part_));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -11945,13 +11372,13 @@ class _$_ParametersParameter extends _ParametersParameter {
         const DeepCollectionEquality().hash(valueParameterDefinition),
         const DeepCollectionEquality().hash(valueTriggerDefinition),
         const DeepCollectionEquality().hash(resource),
-        const DeepCollectionEquality().hash(part_)
+        const DeepCollectionEquality().hash(_part_)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ParametersParameterCopyWith<_ParametersParameter> get copyWith =>
-      __$ParametersParameterCopyWithImpl<_ParametersParameter>(
+  _$$_ParametersParameterCopyWith<_$_ParametersParameter> get copyWith =>
+      __$$_ParametersParameterCopyWithImpl<_$_ParametersParameter>(
           this, _$identity);
 
   @override
@@ -11962,354 +11389,287 @@ class _$_ParametersParameter extends _ParametersParameter {
 
 abstract class _ParametersParameter extends ParametersParameter {
   factory _ParametersParameter(
-      {String? name,
+      {final String? name,
       @JsonKey(name: '_name')
-          Element? nameElement,
-      Boolean? valueBoolean,
+          final Element? nameElement,
+      final Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
-          Element? valueBooleanElement,
-      Decimal? valueInteger,
+          final Element? valueBooleanElement,
+      final Decimal? valueInteger,
       @JsonKey(name: '_valueInteger')
-          Element? valueIntegerElement,
-      Decimal? valueDecimal,
+          final Element? valueIntegerElement,
+      final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
-          Element? valueDecimalElement,
-      String? valueBase64Binary,
+          final Element? valueDecimalElement,
+      final String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
-          Element? valueBase64BinaryElement,
-      String? valueInstant,
+          final Element? valueBase64BinaryElement,
+      final String? valueInstant,
       @JsonKey(name: '_valueInstant')
-          Element? valueInstantElement,
-      String? valueString,
+          final Element? valueInstantElement,
+      final String? valueString,
       @JsonKey(name: '_valueString')
-          Element? valueStringElement,
-      String? valueUri,
+          final Element? valueStringElement,
+      final String? valueUri,
       @JsonKey(name: '_valueUri')
-          Element? valueUriElement,
-      Date? valueDate,
+          final Element? valueUriElement,
+      final Date? valueDate,
       @JsonKey(name: '_valueDate')
-          Element? valueDateElement,
-      FhirDateTime? valueDateTime,
+          final Element? valueDateElement,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
-          Element? valueDateTimeElement,
-      Time? valueTime,
+          final Element? valueDateTimeElement,
+      final Time? valueTime,
       @JsonKey(name: '_valueTime')
-          Element? valueTimeElement,
-      Code? valueCode,
+          final Element? valueTimeElement,
+      final Code? valueCode,
       @JsonKey(name: '_valueCode')
-          Element? valueCodeElement,
-      Id? valueOid,
+          final Element? valueCodeElement,
+      final Id? valueOid,
       @JsonKey(name: '_valueOid')
-          Element? valueOidElement,
-      Id? valueUuid,
+          final Element? valueOidElement,
+      final Id? valueUuid,
       @JsonKey(name: '_valueUuid')
-          Element? valueUuidElement,
-      Id? valueId,
+          final Element? valueUuidElement,
+      final Id? valueId,
       @JsonKey(name: '_valueId')
-          Element? valueIdElement,
-      Decimal? valueUnsignedInt,
+          final Element? valueIdElement,
+      final Decimal? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt')
-          Element? valueUnsignedIntElement,
-      Decimal? valuePositiveInt,
+          final Element? valueUnsignedIntElement,
+      final Decimal? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt')
-          Element? valuePositiveIntElement,
-      String? valueMarkdown,
+          final Element? valuePositiveIntElement,
+      final String? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
-          Element? valueMarkdownElement,
-      Element? valueElement,
-      FhirExtension? valueExtension,
-      BackboneElement? valueBackboneElement,
-      Narrative? valueNarrative,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      Identifier? valueIdentifier,
-      CodeableConcept? valueCodeableConcept,
-      Coding? valueCoding,
-      Quantity? valueQuantity,
-      FhirDuration? valueDuration,
-      Quantity? valueSimpleQuantity,
-      Distance? valueDistance,
-      Count? valueCount,
-      Money? valueMoney,
-      Age? valueAge,
-      Range? valueRange,
-      Period? valuePeriod,
-      Ratio? valueRatio,
-      Reference? valueReference,
-      SampledData? valueSampledData,
-      Signature? valueSignature,
-      HumanName? valueHumanName,
-      Address? valueAddress,
-      ContactPoint? valueContactPoint,
-      Timing? valueTiming,
-      Meta? valueMeta,
-      ElementDefinition? valueElementDefinition,
-      ContactDetail? valueContactDetail,
-      Contributor? valueContributor,
-      Dosage? valueDosage,
-      RelatedArtifact? valueRelatedArtifact,
-      UsageContext? valueUsageContext,
-      DataRequirement? valueDataRequirement,
-      ParameterDefinition? valueParameterDefinition,
-      TriggerDefinition? valueTriggerDefinition,
-      Resource? resource,
+          final Element? valueMarkdownElement,
+      final Element? valueElement,
+      final FhirExtension? valueExtension,
+      final BackboneElement? valueBackboneElement,
+      final Narrative? valueNarrative,
+      final Annotation? valueAnnotation,
+      final Attachment? valueAttachment,
+      final Identifier? valueIdentifier,
+      final CodeableConcept? valueCodeableConcept,
+      final Coding? valueCoding,
+      final Quantity? valueQuantity,
+      final FhirDuration? valueDuration,
+      final Quantity? valueSimpleQuantity,
+      final Distance? valueDistance,
+      final Count? valueCount,
+      final Money? valueMoney,
+      final Age? valueAge,
+      final Range? valueRange,
+      final Period? valuePeriod,
+      final Ratio? valueRatio,
+      final Reference? valueReference,
+      final SampledData? valueSampledData,
+      final Signature? valueSignature,
+      final HumanName? valueHumanName,
+      final Address? valueAddress,
+      final ContactPoint? valueContactPoint,
+      final Timing? valueTiming,
+      final Meta? valueMeta,
+      final ElementDefinition? valueElementDefinition,
+      final ContactDetail? valueContactDetail,
+      final Contributor? valueContributor,
+      final Dosage? valueDosage,
+      final RelatedArtifact? valueRelatedArtifact,
+      final UsageContext? valueUsageContext,
+      final DataRequirement? valueDataRequirement,
+      final ParameterDefinition? valueParameterDefinition,
+      final TriggerDefinition? valueTriggerDefinition,
+      final Resource? resource,
       @JsonKey(name: 'part')
-          List<ParametersParameter>? part_}) = _$_ParametersParameter;
+          final List<ParametersParameter>? part_}) = _$_ParametersParameter;
   _ParametersParameter._() : super._();
 
   factory _ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$_ParametersParameter.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valueInteger;
+  Decimal? get valueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valueDecimal;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
   @override
-  String? get valueBase64Binary;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  Element? get valueBase64BinaryElement;
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
   @override
-  String? get valueInstant;
+  String? get valueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInstant')
-  Element? get valueInstantElement;
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
   @override
-  String? get valueString;
+  String? get valueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   @override
-  String? get valueUri;
+  String? get valueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUri')
-  Element? get valueUriElement;
+  Element? get valueUriElement => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get valueDateTime;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element? get valueDateTimeElement;
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Time? get valueTime;
+  Time? get valueTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueTime')
-  Element? get valueTimeElement;
+  Element? get valueTimeElement => throw _privateConstructorUsedError;
   @override
-  Code? get valueCode;
+  Code? get valueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueCode')
-  Element? get valueCodeElement;
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
   @override
-  Id? get valueOid;
+  Id? get valueOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueOid')
-  Element? get valueOidElement;
+  Element? get valueOidElement => throw _privateConstructorUsedError;
   @override
-  Id? get valueUuid;
+  Id? get valueUuid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUuid')
-  Element? get valueUuidElement;
+  Element? get valueUuidElement => throw _privateConstructorUsedError;
   @override
-  Id? get valueId;
+  Id? get valueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueId')
-  Element? get valueIdElement;
+  Element? get valueIdElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valueUnsignedInt;
+  Decimal? get valueUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  Element? get valueUnsignedIntElement;
+  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valuePositiveInt;
+  Decimal? get valuePositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  Element? get valuePositiveIntElement;
+  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
   @override
-  String? get valueMarkdown;
+  String? get valueMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueMarkdown')
-  Element? get valueMarkdownElement;
+  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
-  FhirExtension? get valueExtension;
+  FhirExtension? get valueExtension => throw _privateConstructorUsedError;
   @override
-  BackboneElement? get valueBackboneElement;
+  BackboneElement? get valueBackboneElement =>
+      throw _privateConstructorUsedError;
   @override
-  Narrative? get valueNarrative;
+  Narrative? get valueNarrative => throw _privateConstructorUsedError;
   @override
-  Annotation? get valueAnnotation;
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get valueIdentifier;
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get valueCoding;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  FhirDuration? get valueDuration;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   @override
-  Quantity? get valueSimpleQuantity;
+  Quantity? get valueSimpleQuantity => throw _privateConstructorUsedError;
   @override
-  Distance? get valueDistance;
+  Distance? get valueDistance => throw _privateConstructorUsedError;
   @override
-  Count? get valueCount;
+  Count? get valueCount => throw _privateConstructorUsedError;
   @override
-  Money? get valueMoney;
+  Money? get valueMoney => throw _privateConstructorUsedError;
   @override
-  Age? get valueAge;
+  Age? get valueAge => throw _privateConstructorUsedError;
   @override
-  Range? get valueRange;
+  Range? get valueRange => throw _privateConstructorUsedError;
   @override
-  Period? get valuePeriod;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   @override
-  Ratio? get valueRatio;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
   @override
-  Reference? get valueReference;
+  Reference? get valueReference => throw _privateConstructorUsedError;
   @override
-  SampledData? get valueSampledData;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
   @override
-  Signature? get valueSignature;
+  Signature? get valueSignature => throw _privateConstructorUsedError;
   @override
-  HumanName? get valueHumanName;
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override
-  Address? get valueAddress;
+  Address? get valueAddress => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get valueContactPoint;
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   @override
-  Timing? get valueTiming;
+  Timing? get valueTiming => throw _privateConstructorUsedError;
   @override
-  Meta? get valueMeta;
+  Meta? get valueMeta => throw _privateConstructorUsedError;
   @override
-  ElementDefinition? get valueElementDefinition;
+  ElementDefinition? get valueElementDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  ContactDetail? get valueContactDetail;
+  ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
   @override
-  Contributor? get valueContributor;
+  Contributor? get valueContributor => throw _privateConstructorUsedError;
   @override
-  Dosage? get valueDosage;
+  Dosage? get valueDosage => throw _privateConstructorUsedError;
   @override
-  RelatedArtifact? get valueRelatedArtifact;
+  RelatedArtifact? get valueRelatedArtifact =>
+      throw _privateConstructorUsedError;
   @override
-  UsageContext? get valueUsageContext;
+  UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
   @override
-  DataRequirement? get valueDataRequirement;
+  DataRequirement? get valueDataRequirement =>
+      throw _privateConstructorUsedError;
   @override
-  ParameterDefinition? get valueParameterDefinition;
+  ParameterDefinition? get valueParameterDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  TriggerDefinition? get valueTriggerDefinition;
+  TriggerDefinition? get valueTriggerDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  Resource? get resource;
+  Resource? get resource => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  List<ParametersParameter>? get part_;
+  List<ParametersParameter>? get part_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ParametersParameterCopyWith<_ParametersParameter> get copyWith =>
+  _$$_ParametersParameterCopyWith<_$_ParametersParameter> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
   return _Subscription.fromJson(json);
 }
-
-/// @nodoc
-class _$SubscriptionTearOff {
-  const _$SubscriptionTearOff();
-
-  _Subscription call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
-          Stu3ResourceType resourceType = Stu3ResourceType.Subscription,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      SubscriptionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      List<ContactPoint>? contact,
-      String? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
-      String? reason,
-      @JsonKey(name: '_reason')
-          Element? reasonElement,
-      String? criteria,
-      @JsonKey(name: '_criteria')
-          Element? criteriaElement,
-      String? error,
-      @JsonKey(name: '_error')
-          Element? errorElement,
-      required SubscriptionChannel channel,
-      List<Coding>? tag}) {
-    return _Subscription(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      status: status,
-      statusElement: statusElement,
-      contact: contact,
-      end: end,
-      endElement: endElement,
-      reason: reason,
-      reasonElement: reasonElement,
-      criteria: criteria,
-      criteriaElement: criteriaElement,
-      error: error,
-      errorElement: errorElement,
-      channel: channel,
-      tag: tag,
-    );
-  }
-
-  Subscription fromJson(Map<String, Object?> json) {
-    return Subscription.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Subscription = _$SubscriptionTearOff();
 
 /// @nodoc
 mixin _$Subscription {
@@ -12649,11 +12009,11 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SubscriptionCopyWith<$Res>
+abstract class _$$_SubscriptionCopyWith<$Res>
     implements $SubscriptionCopyWith<$Res> {
-  factory _$SubscriptionCopyWith(
-          _Subscription value, $Res Function(_Subscription) then) =
-      __$SubscriptionCopyWithImpl<$Res>;
+  factory _$$_SubscriptionCopyWith(
+          _$_Subscription value, $Res Function(_$_Subscription) then) =
+      __$$_SubscriptionCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
@@ -12713,14 +12073,15 @@ abstract class _$SubscriptionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
-    implements _$SubscriptionCopyWith<$Res> {
-  __$SubscriptionCopyWithImpl(
-      _Subscription _value, $Res Function(_Subscription) _then)
-      : super(_value, (v) => _then(v as _Subscription));
+class __$$_SubscriptionCopyWithImpl<$Res>
+    extends _$SubscriptionCopyWithImpl<$Res>
+    implements _$$_SubscriptionCopyWith<$Res> {
+  __$$_SubscriptionCopyWithImpl(
+      _$_Subscription _value, $Res Function(_$_Subscription) _then)
+      : super(_value, (v) => _then(v as _$_Subscription));
 
   @override
-  _Subscription get _value => super._value as _Subscription;
+  _$_Subscription get _value => super._value as _$_Subscription;
 
   @override
   $Res call({
@@ -12749,7 +12110,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
     Object? channel = freezed,
     Object? tag = freezed,
   }) {
-    return _then(_Subscription(
+    return _then(_$_Subscription(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -12783,15 +12144,15 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       status: status == freezed
@@ -12803,7 +12164,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: contact == freezed
-          ? _value.contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
       end: end == freezed
@@ -12843,7 +12204,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
           : channel // ignore: cast_nullable_to_non_nullable
               as SubscriptionChannel,
       tag: tag == freezed
-          ? _value.tag
+          ? _value._tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
     ));
@@ -12865,14 +12226,14 @@ class _$_Subscription extends _Subscription {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.contact,
+      final List<ContactPoint>? contact,
       this.end,
       @JsonKey(name: '_end')
           this.endElement,
@@ -12886,8 +12247,13 @@ class _$_Subscription extends _Subscription {
       @JsonKey(name: '_error')
           this.errorElement,
       required this.channel,
-      this.tag})
-      : super._();
+      final List<Coding>? tag})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _tag = tag,
+        super._();
 
   factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
       _$$_SubscriptionFromJson(json);
@@ -12911,20 +12277,48 @@ class _$_Subscription extends _Subscription {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final SubscriptionStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+  final List<ContactPoint>? _contact;
   @override
-  final List<ContactPoint>? contact;
+  List<ContactPoint>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? end;
   @override
@@ -12947,8 +12341,14 @@ class _$_Subscription extends _Subscription {
   final Element? errorElement;
   @override
   final SubscriptionChannel channel;
+  final List<Coding>? _tag;
   @override
-  final List<Coding>? tag;
+  List<Coding>? get tag {
+    final value = _tag;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -12959,7 +12359,7 @@ class _$_Subscription extends _Subscription {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Subscription &&
+            other is _$_Subscription &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -12972,15 +12372,16 @@ class _$_Subscription extends _Subscription {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
             const DeepCollectionEquality().equals(other.end, end) &&
             const DeepCollectionEquality()
                 .equals(other.endElement, endElement) &&
@@ -12994,9 +12395,10 @@ class _$_Subscription extends _Subscription {
             const DeepCollectionEquality()
                 .equals(other.errorElement, errorElement) &&
             const DeepCollectionEquality().equals(other.channel, channel) &&
-            const DeepCollectionEquality().equals(other.tag, tag));
+            const DeepCollectionEquality().equals(other._tag, _tag));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -13008,12 +12410,12 @@ class _$_Subscription extends _Subscription {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(contact),
+        const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(end),
         const DeepCollectionEquality().hash(endElement),
         const DeepCollectionEquality().hash(reason),
@@ -13023,13 +12425,13 @@ class _$_Subscription extends _Subscription {
         const DeepCollectionEquality().hash(error),
         const DeepCollectionEquality().hash(errorElement),
         const DeepCollectionEquality().hash(channel),
-        const DeepCollectionEquality().hash(tag)
+        const DeepCollectionEquality().hash(_tag)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$SubscriptionCopyWith<_Subscription> get copyWith =>
-      __$SubscriptionCopyWithImpl<_Subscription>(this, _$identity);
+  _$$_SubscriptionCopyWith<_$_Subscription> get copyWith =>
+      __$$_SubscriptionCopyWithImpl<_$_Subscription>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13040,38 +12442,38 @@ class _$_Subscription extends _Subscription {
 abstract class _Subscription extends Subscription {
   factory _Subscription(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      SubscriptionStatus? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final SubscriptionStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      List<ContactPoint>? contact,
-      String? end,
+          final Element? statusElement,
+      final List<ContactPoint>? contact,
+      final String? end,
       @JsonKey(name: '_end')
-          Element? endElement,
-      String? reason,
+          final Element? endElement,
+      final String? reason,
       @JsonKey(name: '_reason')
-          Element? reasonElement,
-      String? criteria,
+          final Element? reasonElement,
+      final String? criteria,
       @JsonKey(name: '_criteria')
-          Element? criteriaElement,
-      String? error,
+          final Element? criteriaElement,
+      final String? error,
       @JsonKey(name: '_error')
-          Element? errorElement,
-      required SubscriptionChannel channel,
-      List<Coding>? tag}) = _$_Subscription;
+          final Element? errorElement,
+      required final SubscriptionChannel channel,
+      final List<Coding>? tag}) = _$_Subscription;
   _Subscription._() : super._();
 
   factory _Subscription.fromJson(Map<String, dynamic> json) =
@@ -13079,103 +12481,71 @@ abstract class _Subscription extends Subscription {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  SubscriptionStatus? get status;
+  SubscriptionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get contact;
+  List<ContactPoint>? get contact => throw _privateConstructorUsedError;
   @override
-  String? get end;
+  String? get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_end')
-  Element? get endElement;
+  Element? get endElement => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_reason')
-  Element? get reasonElement;
+  Element? get reasonElement => throw _privateConstructorUsedError;
   @override
-  String? get criteria;
+  String? get criteria => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_criteria')
-  Element? get criteriaElement;
+  Element? get criteriaElement => throw _privateConstructorUsedError;
   @override
-  String? get error;
+  String? get error => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_error')
-  Element? get errorElement;
+  Element? get errorElement => throw _privateConstructorUsedError;
   @override
-  SubscriptionChannel get channel;
+  SubscriptionChannel get channel => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get tag;
+  List<Coding>? get tag => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubscriptionCopyWith<_Subscription> get copyWith =>
+  _$$_SubscriptionCopyWith<_$_Subscription> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) {
   return _SubscriptionChannel.fromJson(json);
 }
-
-/// @nodoc
-class _$SubscriptionChannelTearOff {
-  const _$SubscriptionChannelTearOff();
-
-  _SubscriptionChannel call(
-      {SubscriptionChannelType? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      String? endpoint,
-      @JsonKey(name: '_endpoint') Element? endpointElement,
-      String? payload,
-      @JsonKey(name: '_payload') Element? payloadElement,
-      List<String>? header,
-      @JsonKey(name: '_header') List<Element?>? headerElement}) {
-    return _SubscriptionChannel(
-      type: type,
-      typeElement: typeElement,
-      endpoint: endpoint,
-      endpointElement: endpointElement,
-      payload: payload,
-      payloadElement: payloadElement,
-      header: header,
-      headerElement: headerElement,
-    );
-  }
-
-  SubscriptionChannel fromJson(Map<String, Object?> json) {
-    return SubscriptionChannel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubscriptionChannel = _$SubscriptionChannelTearOff();
 
 /// @nodoc
 mixin _$SubscriptionChannel {
@@ -13309,11 +12679,11 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubscriptionChannelCopyWith<$Res>
+abstract class _$$_SubscriptionChannelCopyWith<$Res>
     implements $SubscriptionChannelCopyWith<$Res> {
-  factory _$SubscriptionChannelCopyWith(_SubscriptionChannel value,
-          $Res Function(_SubscriptionChannel) then) =
-      __$SubscriptionChannelCopyWithImpl<$Res>;
+  factory _$$_SubscriptionChannelCopyWith(_$_SubscriptionChannel value,
+          $Res Function(_$_SubscriptionChannel) then) =
+      __$$_SubscriptionChannelCopyWithImpl<$Res>;
   @override
   $Res call(
       {SubscriptionChannelType? type,
@@ -13334,15 +12704,15 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubscriptionChannelCopyWithImpl<$Res>
+class __$$_SubscriptionChannelCopyWithImpl<$Res>
     extends _$SubscriptionChannelCopyWithImpl<$Res>
-    implements _$SubscriptionChannelCopyWith<$Res> {
-  __$SubscriptionChannelCopyWithImpl(
-      _SubscriptionChannel _value, $Res Function(_SubscriptionChannel) _then)
-      : super(_value, (v) => _then(v as _SubscriptionChannel));
+    implements _$$_SubscriptionChannelCopyWith<$Res> {
+  __$$_SubscriptionChannelCopyWithImpl(_$_SubscriptionChannel _value,
+      $Res Function(_$_SubscriptionChannel) _then)
+      : super(_value, (v) => _then(v as _$_SubscriptionChannel));
 
   @override
-  _SubscriptionChannel get _value => super._value as _SubscriptionChannel;
+  _$_SubscriptionChannel get _value => super._value as _$_SubscriptionChannel;
 
   @override
   $Res call({
@@ -13355,7 +12725,7 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
     Object? header = freezed,
     Object? headerElement = freezed,
   }) {
-    return _then(_SubscriptionChannel(
+    return _then(_$_SubscriptionChannel(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -13381,11 +12751,11 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
           : payloadElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       header: header == freezed
-          ? _value.header
+          ? _value._header
           : header // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       headerElement: headerElement == freezed
-          ? _value.headerElement
+          ? _value._headerElement
           : headerElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
     ));
@@ -13402,9 +12772,11 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
       @JsonKey(name: '_endpoint') this.endpointElement,
       this.payload,
       @JsonKey(name: '_payload') this.payloadElement,
-      this.header,
-      @JsonKey(name: '_header') this.headerElement})
-      : super._();
+      final List<String>? header,
+      @JsonKey(name: '_header') final List<Element?>? headerElement})
+      : _header = header,
+        _headerElement = headerElement,
+        super._();
 
   factory _$_SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$$_SubscriptionChannelFromJson(json);
@@ -13424,11 +12796,24 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
   @override
   @JsonKey(name: '_payload')
   final Element? payloadElement;
+  final List<String>? _header;
   @override
-  final List<String>? header;
+  List<String>? get header {
+    final value = _header;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element?>? _headerElement;
   @override
   @JsonKey(name: '_header')
-  final List<Element?>? headerElement;
+  List<Element?>? get headerElement {
+    final value = _headerElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -13439,7 +12824,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubscriptionChannel &&
+            other is _$_SubscriptionChannel &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -13449,11 +12834,12 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
             const DeepCollectionEquality().equals(other.payload, payload) &&
             const DeepCollectionEquality()
                 .equals(other.payloadElement, payloadElement) &&
-            const DeepCollectionEquality().equals(other.header, header) &&
+            const DeepCollectionEquality().equals(other._header, _header) &&
             const DeepCollectionEquality()
-                .equals(other.headerElement, headerElement));
+                .equals(other._headerElement, _headerElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13463,13 +12849,13 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
       const DeepCollectionEquality().hash(endpointElement),
       const DeepCollectionEquality().hash(payload),
       const DeepCollectionEquality().hash(payloadElement),
-      const DeepCollectionEquality().hash(header),
-      const DeepCollectionEquality().hash(headerElement));
+      const DeepCollectionEquality().hash(_header),
+      const DeepCollectionEquality().hash(_headerElement));
 
   @JsonKey(ignore: true)
   @override
-  _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith =>
-      __$SubscriptionChannelCopyWithImpl<_SubscriptionChannel>(
+  _$$_SubscriptionChannelCopyWith<_$_SubscriptionChannel> get copyWith =>
+      __$$_SubscriptionChannelCopyWithImpl<_$_SubscriptionChannel>(
           this, _$identity);
 
   @override
@@ -13480,14 +12866,14 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
 
 abstract class _SubscriptionChannel extends SubscriptionChannel {
   factory _SubscriptionChannel(
-          {SubscriptionChannelType? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          String? endpoint,
-          @JsonKey(name: '_endpoint') Element? endpointElement,
-          String? payload,
-          @JsonKey(name: '_payload') Element? payloadElement,
-          List<String>? header,
-          @JsonKey(name: '_header') List<Element?>? headerElement}) =
+          {final SubscriptionChannelType? type,
+          @JsonKey(name: '_type') final Element? typeElement,
+          final String? endpoint,
+          @JsonKey(name: '_endpoint') final Element? endpointElement,
+          final String? payload,
+          @JsonKey(name: '_payload') final Element? payloadElement,
+          final List<String>? header,
+          @JsonKey(name: '_header') final List<Element?>? headerElement}) =
       _$_SubscriptionChannel;
   _SubscriptionChannel._() : super._();
 
@@ -13495,27 +12881,27 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
       _$_SubscriptionChannel.fromJson;
 
   @override
-  SubscriptionChannelType? get type;
+  SubscriptionChannelType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String? get endpoint;
+  String? get endpoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_endpoint')
-  Element? get endpointElement;
+  Element? get endpointElement => throw _privateConstructorUsedError;
   @override
-  String? get payload;
+  String? get payload => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_payload')
-  Element? get payloadElement;
+  Element? get payloadElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get header;
+  List<String>? get header => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_header')
-  List<Element?>? get headerElement;
+  List<Element?>? get headerElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith =>
+  _$$_SubscriptionChannelCopyWith<_$_SubscriptionChannel> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,5 +1,12 @@
 # fhir
 
+## [0.7.0]
+
+* Finally updating R5 to most recent releast (0.4.6) - complete with comments
+* Removed commented out 'flutter/foundation.dart' because I don't want these to require Flutter dependence even if it would make it easily readable in Flutter's devtool.
+* Updated dependencies (most importantly to Freezed 2.0.0)
+
+
 ## [0.6.2]
 
 * 3 Resource methods changed to getters: resourceTypeString, thisReference, path (this will break some things, but I think they make more sense as getters)

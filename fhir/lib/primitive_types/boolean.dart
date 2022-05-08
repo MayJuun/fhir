@@ -6,7 +6,7 @@ import 'dart:convert';
 // Package imports:
 import 'package:yaml/yaml.dart';
 
-// import 'package:flutter/foundation.dart';
+//
 
 class Boolean {
   const Boolean._(this._valueString, this._valueBoolean, this._isValid,

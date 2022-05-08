@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-// import 'package:flutter/foundation.dart';
 part 'individuals.enums.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';

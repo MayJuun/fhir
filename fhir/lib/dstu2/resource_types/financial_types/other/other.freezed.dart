@@ -12,85 +12,11 @@ part of 'other.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
   return _ExplanationOfBenefit.fromJson(json);
 }
-
-/// @nodoc
-class _$ExplanationOfBenefitTearOff {
-  const _$ExplanationOfBenefitTearOff();
-
-  _ExplanationOfBenefit call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
-          Dstu2ResourceType
-              resourceType = Dstu2ResourceType.ExplanationOfBenefit,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Reference? request,
-      @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-          ExplanationOfBenefitOutcome? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
-      String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
-      Coding? ruleset,
-      Coding? originalRuleset,
-      FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
-      Reference? organization,
-      Reference? requestProvider,
-      Reference? requestOrganization}) {
-    return _ExplanationOfBenefit(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      request: request,
-      outcome: outcome,
-      outcomeElement: outcomeElement,
-      disposition: disposition,
-      dispositionElement: dispositionElement,
-      ruleset: ruleset,
-      originalRuleset: originalRuleset,
-      created: created,
-      createdElement: createdElement,
-      organization: organization,
-      requestProvider: requestProvider,
-      requestOrganization: requestOrganization,
-    );
-  }
-
-  ExplanationOfBenefit fromJson(Map<String, Object?> json) {
-    return ExplanationOfBenefit.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 /// @nodoc
 mixin _$ExplanationOfBenefit {
@@ -470,11 +396,11 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ExplanationOfBenefitCopyWith<$Res>
+abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
     implements $ExplanationOfBenefitCopyWith<$Res> {
-  factory _$ExplanationOfBenefitCopyWith(_ExplanationOfBenefit value,
-          $Res Function(_ExplanationOfBenefit) then) =
-      __$ExplanationOfBenefitCopyWithImpl<$Res>;
+  factory _$$_ExplanationOfBenefitCopyWith(_$_ExplanationOfBenefit value,
+          $Res Function(_$_ExplanationOfBenefit) then) =
+      __$$_ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
@@ -539,15 +465,15 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ExplanationOfBenefitCopyWithImpl<$Res>
+class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
     extends _$ExplanationOfBenefitCopyWithImpl<$Res>
-    implements _$ExplanationOfBenefitCopyWith<$Res> {
-  __$ExplanationOfBenefitCopyWithImpl(
-      _ExplanationOfBenefit _value, $Res Function(_ExplanationOfBenefit) _then)
-      : super(_value, (v) => _then(v as _ExplanationOfBenefit));
+    implements _$$_ExplanationOfBenefitCopyWith<$Res> {
+  __$$_ExplanationOfBenefitCopyWithImpl(_$_ExplanationOfBenefit _value,
+      $Res Function(_$_ExplanationOfBenefit) _then)
+      : super(_value, (v) => _then(v as _$_ExplanationOfBenefit));
 
   @override
-  _ExplanationOfBenefit get _value => super._value as _ExplanationOfBenefit;
+  _$_ExplanationOfBenefit get _value => super._value as _$_ExplanationOfBenefit;
 
   @override
   $Res call({
@@ -576,7 +502,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
     Object? requestProvider = freezed,
     Object? requestOrganization = freezed,
   }) {
-    return _then(_ExplanationOfBenefit(
+    return _then(_$_ExplanationOfBenefit(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -610,19 +536,19 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       request: request == freezed
@@ -692,11 +618,11 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           this.outcome,
@@ -713,7 +639,11 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       this.organization,
       this.requestProvider,
       this.requestOrganization})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
 
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitFromJson(json);
@@ -737,15 +667,43 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? request;
   @override
@@ -784,7 +742,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ExplanationOfBenefit &&
+            other is _$_ExplanationOfBenefit &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -797,13 +755,14 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.request, request) &&
             const DeepCollectionEquality().equals(other.outcome, outcome) &&
             const DeepCollectionEquality()
@@ -826,6 +785,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
                 .equals(other.requestOrganization, requestOrganization));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -837,10 +797,10 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(request),
         const DeepCollectionEquality().hash(outcome),
         const DeepCollectionEquality().hash(outcomeElement),
@@ -857,8 +817,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   @JsonKey(ignore: true)
   @override
-  _$ExplanationOfBenefitCopyWith<_ExplanationOfBenefit> get copyWith =>
-      __$ExplanationOfBenefitCopyWithImpl<_ExplanationOfBenefit>(
+  _$$_ExplanationOfBenefitCopyWith<_$_ExplanationOfBenefit> get copyWith =>
+      __$$_ExplanationOfBenefitCopyWithImpl<_$_ExplanationOfBenefit>(
           this, _$identity);
 
   @override
@@ -870,37 +830,37 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   factory _ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Reference? request,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-          ExplanationOfBenefitOutcome? outcome,
+          final ExplanationOfBenefitOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element? outcomeElement,
-      String? disposition,
+          final Element? outcomeElement,
+      final String? disposition,
       @JsonKey(name: '_disposition')
-          Element? dispositionElement,
-      Coding? ruleset,
-      Coding? originalRuleset,
-      FhirDateTime? created,
+          final Element? dispositionElement,
+      final Coding? ruleset,
+      final Coding? originalRuleset,
+      final FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element? createdElement,
-      Reference? organization,
-      Reference? requestProvider,
-      Reference? requestOrganization}) = _$_ExplanationOfBenefit;
+          final Element? createdElement,
+      final Reference? organization,
+      final Reference? requestProvider,
+      final Reference? requestOrganization}) = _$_ExplanationOfBenefit;
   _ExplanationOfBenefit._() : super._();
 
   factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
@@ -908,62 +868,64 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Reference? get request;
+  Reference? get request => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-  ExplanationOfBenefitOutcome? get outcome;
+  ExplanationOfBenefitOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
-  Element? get outcomeElement;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
   @override
-  String? get disposition;
+  String? get disposition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_disposition')
-  Element? get dispositionElement;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
   @override
-  Coding? get ruleset;
+  Coding? get ruleset => throw _privateConstructorUsedError;
   @override
-  Coding? get originalRuleset;
+  Coding? get originalRuleset => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element? get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference? get organization;
+  Reference? get organization => throw _privateConstructorUsedError;
   @override
-  Reference? get requestProvider;
+  Reference? get requestProvider => throw _privateConstructorUsedError;
   @override
-  Reference? get requestOrganization;
+  Reference? get requestOrganization => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExplanationOfBenefitCopyWith<_ExplanationOfBenefit> get copyWith =>
+  _$$_ExplanationOfBenefitCopyWith<_$_ExplanationOfBenefit> get copyWith =>
       throw _privateConstructorUsedError;
 }

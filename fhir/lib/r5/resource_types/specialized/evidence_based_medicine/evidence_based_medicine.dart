@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-// import 'package:flutter/foundation.dart';
 part 'evidence_based_medicine.enums.dart';
 part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';

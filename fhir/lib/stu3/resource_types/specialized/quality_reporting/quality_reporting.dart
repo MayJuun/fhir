@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../stu3.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'quality_reporting.enums.dart';
 part 'quality_reporting.freezed.dart';
 part 'quality_reporting.g.dart';

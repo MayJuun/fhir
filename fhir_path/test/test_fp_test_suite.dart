@@ -99,8 +99,7 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(context: patientExample(), p
         [true]);
   });
 
-  // TODO: Test makes wrong assumption about precedence ??
-  // Or does it actually make the correct assumptions, and the test is wrong
+  // TODO: Test makes wrong assumption about precedence
   // test("testPolymorphismIsB", () {
   //   expect(
   //       walkFhirPath(
@@ -108,31 +107,31 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(context: patientExample(), p
   //           pathExpression: r"Observation.value is Period.not()"),
   //       [true]);
   // });
-//   test("testPolymorphismIsB-fixed", () {
-//     expect(
-//         walkFhirPath(
-//             context: observationExample(),
-//             pathExpression: r"Observation.value is Period.not()"),
-//         [true]);
-//   });
-
-// testBoolean(observation(), "Observation.value.as(Quantity).unit", true);
-// TODO: .as() is deprecated and intentionally not supported
-  test("testPolymorphismAsA", () {
+  test("testPolymorphismIsB-fixed", () {
     expect(
         walkFhirPath(
             context: observationExample(),
+            pathExpression: r"(Observation.value is Period).not()"),
+        [true]);
+  });
+
+// testBoolean(observation(), "Observation.value.as(Quantity).unit", true);
+  test("testPolymorphismAsA", () {
+    expect(
+        () => walkFhirPath(
+            context: observationExample(),
             pathExpression: r"Observation.value.as(Quantity).unit"),
+        throwsA(isA<FhirPathDeprecatedExpressionException>()));
+  });
+
+// testBoolean(observation(), "(Observation.value as Quantity).unit", true);
+  test("testPolymorphismAsAFunction", () {
+    expect(
+        walkFhirPath(
+            context: observationExample(),
+            pathExpression: r"(Observation.value as Quantity).unit"),
         ["lbs"]);
   });
-// // testBoolean(observation(), "(Observation.value as Quantity).unit", true);
-//   test("testPolymorphismAsAFunction", () {
-//     expect(
-//         walkFhirPath(
-//             context: observationExample(),
-//             pathExpression: r"(Observation.value as Quantity).unit"),
-//         ["lbs"]);
-//   });
 
 // // testWrong(observation(), "(Observation.value as Period).unit");
 // /*<test name="testPolymorphismAsB" inputfile="observation-example.xml" mode="strict">
@@ -145,16 +144,16 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(context: patientExample(), p
 // });
 // });
 // */
-//   group('testDollar', () {
+  group('testDollar', () {
 // // test(patient(), "Patient.name.given.where(substring($this.length()-3) = 'out')", 0);
-//     test('testDollarThis1', () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression:
-//                   r"Patient.name.given.where(substring($this.length()-3) = 'out')"),
-//           []);
-//     });
+    test('testDollarThis1', () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression:
+                  r"Patient.name.given.where(substring($this.length()-3) = 'out')"),
+          []);
+    });
 
 // // test(patient(), "Patient.name.given.where(substring($this.length()-3) = 'ter')", 1, "string");
 //     test("testDollarThis2", () {
@@ -179,7 +178,7 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(context: patientExample(), p
 // <test name="testDollarOrderNotAllowed" inputfile="patient-example.xml" mode="strict" checkOrderedFunctions="true">
 // <expression invalid="semantic">Patient.children().skip(1)</expression>
 // });
-//   });*/
+  });
 
 //   group('testLiterals', () {
 // // testBoolean(patient(), "Patient.name.exists() = true", true);

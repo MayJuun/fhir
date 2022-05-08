@@ -12,134 +12,11 @@ part of 'fhir_extension.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) {
   return _FhirExtension.fromJson(json);
 }
-
-/// @nodoc
-class _$FhirExtensionTearOff {
-  const _$FhirExtensionTearOff();
-
-  _FhirExtension call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      required FhirUri url,
-      @JsonKey(name: '_url') Element? urlElement,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Instant? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Oid? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      UnsignedInt? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      PositiveInt? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      Markdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      Identifier? valueIdentifier,
-      CodeableConcept? valueCodeableConcept,
-      Coding? valueCoding,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Period? valuePeriod,
-      Ratio? valueRatio,
-      SampledData? valueSampledData,
-      HumanName? valueHumanName,
-      Address? valueAddress,
-      ContactPoint? valueContactPoint,
-      Timing? valueTiming,
-      Reference? valueReference,
-      Meta? valueMeta}) {
-    return _FhirExtension(
-      id: id,
-      extension_: extension_,
-      url: url,
-      urlElement: urlElement,
-      fhirComments: fhirComments,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueDecimal: valueDecimal,
-      valueDecimalElement: valueDecimalElement,
-      valueBase64Binary: valueBase64Binary,
-      valueBase64BinaryElement: valueBase64BinaryElement,
-      valueInstant: valueInstant,
-      valueInstantElement: valueInstantElement,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueUri: valueUri,
-      valueUriElement: valueUriElement,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valueTime: valueTime,
-      valueTimeElement: valueTimeElement,
-      valueCode: valueCode,
-      valueCodeElement: valueCodeElement,
-      valueOid: valueOid,
-      valueOidElement: valueOidElement,
-      valueId: valueId,
-      valueIdElement: valueIdElement,
-      valueUnsignedInt: valueUnsignedInt,
-      valueUnsignedIntElement: valueUnsignedIntElement,
-      valuePositiveInt: valuePositiveInt,
-      valuePositiveIntElement: valuePositiveIntElement,
-      valueMarkdown: valueMarkdown,
-      valueMarkdownElement: valueMarkdownElement,
-      valueAnnotation: valueAnnotation,
-      valueAttachment: valueAttachment,
-      valueIdentifier: valueIdentifier,
-      valueCodeableConcept: valueCodeableConcept,
-      valueCoding: valueCoding,
-      valueQuantity: valueQuantity,
-      valueRange: valueRange,
-      valuePeriod: valuePeriod,
-      valueRatio: valueRatio,
-      valueSampledData: valueSampledData,
-      valueHumanName: valueHumanName,
-      valueAddress: valueAddress,
-      valueContactPoint: valueContactPoint,
-      valueTiming: valueTiming,
-      valueReference: valueReference,
-      valueMeta: valueMeta,
-    );
-  }
-
-  FhirExtension fromJson(Map<String, Object?> json) {
-    return FhirExtension.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FhirExtension = _$FhirExtensionTearOff();
 
 /// @nodoc
 mixin _$FhirExtension {
@@ -965,11 +842,11 @@ class _$FhirExtensionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$FhirExtensionCopyWith<$Res>
+abstract class _$$_FhirExtensionCopyWith<$Res>
     implements $FhirExtensionCopyWith<$Res> {
-  factory _$FhirExtensionCopyWith(
-          _FhirExtension value, $Res Function(_FhirExtension) then) =
-      __$FhirExtensionCopyWithImpl<$Res>;
+  factory _$$_FhirExtensionCopyWith(
+          _$_FhirExtension value, $Res Function(_$_FhirExtension) then) =
+      __$$_FhirExtensionCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -1095,15 +972,15 @@ abstract class _$FhirExtensionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirExtensionCopyWithImpl<$Res>
+class __$$_FhirExtensionCopyWithImpl<$Res>
     extends _$FhirExtensionCopyWithImpl<$Res>
-    implements _$FhirExtensionCopyWith<$Res> {
-  __$FhirExtensionCopyWithImpl(
-      _FhirExtension _value, $Res Function(_FhirExtension) _then)
-      : super(_value, (v) => _then(v as _FhirExtension));
+    implements _$$_FhirExtensionCopyWith<$Res> {
+  __$$_FhirExtensionCopyWithImpl(
+      _$_FhirExtension _value, $Res Function(_$_FhirExtension) _then)
+      : super(_value, (v) => _then(v as _$_FhirExtension));
 
   @override
-  _FhirExtension get _value => super._value as _FhirExtension;
+  _$_FhirExtension get _value => super._value as _$_FhirExtension;
 
   @override
   $Res call({
@@ -1161,13 +1038,13 @@ class __$FhirExtensionCopyWithImpl<$Res>
     Object? valueReference = freezed,
     Object? valueMeta = freezed,
   }) {
-    return _then(_FhirExtension(
+    return _then(_$_FhirExtension(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: url == freezed
@@ -1179,7 +1056,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       valueBoolean: valueBoolean == freezed
@@ -1383,10 +1260,10 @@ class __$FhirExtensionCopyWithImpl<$Res>
 class _$_FhirExtension extends _FhirExtension {
   _$_FhirExtension(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       required this.url,
       @JsonKey(name: '_url') this.urlElement,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueInteger,
@@ -1435,24 +1312,40 @@ class _$_FhirExtension extends _FhirExtension {
       this.valueTiming,
       this.valueReference,
       this.valueMeta})
-      : super._();
+      : _extension_ = extension_,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$$_FhirExtensionFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? valueBoolean;
   @override
@@ -1575,15 +1468,15 @@ class _$_FhirExtension extends _FhirExtension {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirExtension &&
+            other is _$_FhirExtension &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality()
                 .equals(other.valueBoolean, valueBoolean) &&
             const DeepCollectionEquality()
@@ -1674,14 +1567,15 @@ class _$_FhirExtension extends _FhirExtension {
             const DeepCollectionEquality().equals(other.valueMeta, valueMeta));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(url),
         const DeepCollectionEquality().hash(urlElement),
-        const DeepCollectionEquality().hash(fhirComments),
+        const DeepCollectionEquality().hash(_fhirComments),
         const DeepCollectionEquality().hash(valueBoolean),
         const DeepCollectionEquality().hash(valueBooleanElement),
         const DeepCollectionEquality().hash(valueInteger),
@@ -1734,8 +1628,8 @@ class _$_FhirExtension extends _FhirExtension {
 
   @JsonKey(ignore: true)
   @override
-  _$FhirExtensionCopyWith<_FhirExtension> get copyWith =>
-      __$FhirExtensionCopyWithImpl<_FhirExtension>(this, _$identity);
+  _$$_FhirExtensionCopyWith<_$_FhirExtension> get copyWith =>
+      __$$_FhirExtensionCopyWithImpl<_$_FhirExtension>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1745,191 +1639,211 @@ class _$_FhirExtension extends _FhirExtension {
 
 abstract class _FhirExtension extends FhirExtension {
   factory _FhirExtension(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      required FhirUri url,
-      @JsonKey(name: '_url') Element? urlElement,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Instant? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Oid? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      UnsignedInt? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      PositiveInt? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      Markdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      Identifier? valueIdentifier,
-      CodeableConcept? valueCodeableConcept,
-      Coding? valueCoding,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Period? valuePeriod,
-      Ratio? valueRatio,
-      SampledData? valueSampledData,
-      HumanName? valueHumanName,
-      Address? valueAddress,
-      ContactPoint? valueContactPoint,
-      Timing? valueTiming,
-      Reference? valueReference,
-      Meta? valueMeta}) = _$_FhirExtension;
+      {final Id? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      required final FhirUri url,
+      @JsonKey(name: '_url')
+          final Element? urlElement,
+      @JsonKey(name: 'fhir_comments')
+          final List<String>? fhirComments,
+      final Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          final Element? valueBooleanElement,
+      final Integer? valueInteger,
+      @JsonKey(name: '_valueInteger')
+          final Element? valueIntegerElement,
+      final Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal')
+          final Element? valueDecimalElement,
+      final Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary')
+          final Element? valueBase64BinaryElement,
+      final Instant? valueInstant,
+      @JsonKey(name: '_valueInstant')
+          final Element? valueInstantElement,
+      final String? valueString,
+      @JsonKey(name: '_valueString')
+          final Element? valueStringElement,
+      final FhirUri? valueUri,
+      @JsonKey(name: '_valueUri')
+          final Element? valueUriElement,
+      final Date? valueDate,
+      @JsonKey(name: '_valueDate')
+          final Element? valueDateElement,
+      final FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime')
+          final Element? valueDateTimeElement,
+      final Time? valueTime,
+      @JsonKey(name: '_valueTime')
+          final Element? valueTimeElement,
+      final Code? valueCode,
+      @JsonKey(name: '_valueCode')
+          final Element? valueCodeElement,
+      final Oid? valueOid,
+      @JsonKey(name: '_valueOid')
+          final Element? valueOidElement,
+      final Id? valueId,
+      @JsonKey(name: '_valueId')
+          final Element? valueIdElement,
+      final UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt')
+          final Element? valueUnsignedIntElement,
+      final PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt')
+          final Element? valuePositiveIntElement,
+      final Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown')
+          final Element? valueMarkdownElement,
+      final Annotation? valueAnnotation,
+      final Attachment? valueAttachment,
+      final Identifier? valueIdentifier,
+      final CodeableConcept? valueCodeableConcept,
+      final Coding? valueCoding,
+      final Quantity? valueQuantity,
+      final Range? valueRange,
+      final Period? valuePeriod,
+      final Ratio? valueRatio,
+      final SampledData? valueSampledData,
+      final HumanName? valueHumanName,
+      final Address? valueAddress,
+      final ContactPoint? valueContactPoint,
+      final Timing? valueTiming,
+      final Reference? valueReference,
+      final Meta? valueMeta}) = _$_FhirExtension;
   _FhirExtension._() : super._();
 
   factory _FhirExtension.fromJson(Map<String, dynamic> json) =
       _$_FhirExtension.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  FhirUri get url;
+  FhirUri get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valueDecimal;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get valueBase64Binary;
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  Element? get valueBase64BinaryElement;
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
   @override
-  Instant? get valueInstant;
+  Instant? get valueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInstant')
-  Element? get valueInstantElement;
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
   @override
-  String? get valueString;
+  String? get valueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get valueUri;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUri')
-  Element? get valueUriElement;
+  Element? get valueUriElement => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get valueDateTime;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element? get valueDateTimeElement;
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Time? get valueTime;
+  Time? get valueTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueTime')
-  Element? get valueTimeElement;
+  Element? get valueTimeElement => throw _privateConstructorUsedError;
   @override
-  Code? get valueCode;
+  Code? get valueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueCode')
-  Element? get valueCodeElement;
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
   @override
-  Oid? get valueOid;
+  Oid? get valueOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueOid')
-  Element? get valueOidElement;
+  Element? get valueOidElement => throw _privateConstructorUsedError;
   @override
-  Id? get valueId;
+  Id? get valueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueId')
-  Element? get valueIdElement;
+  Element? get valueIdElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get valueUnsignedInt;
+  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  Element? get valueUnsignedIntElement;
+  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get valuePositiveInt;
+  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  Element? get valuePositiveIntElement;
+  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get valueMarkdown;
+  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueMarkdown')
-  Element? get valueMarkdownElement;
+  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Annotation? get valueAnnotation;
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get valueIdentifier;
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get valueCoding;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get valueRange;
+  Range? get valueRange => throw _privateConstructorUsedError;
   @override
-  Period? get valuePeriod;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   @override
-  Ratio? get valueRatio;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get valueSampledData;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
   @override
-  HumanName? get valueHumanName;
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override
-  Address? get valueAddress;
+  Address? get valueAddress => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get valueContactPoint;
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   @override
-  Timing? get valueTiming;
+  Timing? get valueTiming => throw _privateConstructorUsedError;
   @override
-  Reference? get valueReference;
+  Reference? get valueReference => throw _privateConstructorUsedError;
   @override
-  Meta? get valueMeta;
+  Meta? get valueMeta => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirExtensionCopyWith<_FhirExtension> get copyWith =>
+  _$$_FhirExtensionCopyWith<_$_FhirExtension> get copyWith =>
       throw _privateConstructorUsedError;
 }

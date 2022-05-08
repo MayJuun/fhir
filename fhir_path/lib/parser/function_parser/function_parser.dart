@@ -1,6 +1,6 @@
 export 'combining_parser.dart';
 export 'conversions_parser.dart';
-export 'deprecated_parsers.dart';
+export 'deprecated_parser.dart';
 export 'existence_parser.dart';
 export 'extension_parser.dart';
 export 'filtering_projection_parser.dart';

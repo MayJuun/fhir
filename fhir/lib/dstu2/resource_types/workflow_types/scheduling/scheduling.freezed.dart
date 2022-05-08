@@ -12,100 +12,11 @@ part of 'scheduling.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
   return _Appointment.fromJson(json);
 }
-
-/// @nodoc
-class _$AppointmentTearOff {
-  const _$AppointmentTearOff();
-
-  _Appointment call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.Appointment,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          required AppointmentStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? type,
-      CodeableConcept? reason,
-      UnsignedInt? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Instant? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
-      Instant? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
-      PositiveInt? minutesDuration,
-      @JsonKey(name: '_minutesDuration')
-          Element? minutesDurationElement,
-      List<Reference>? slot,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
-      required List<AppointmentParticipant> participant}) {
-    return _Appointment(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      type: type,
-      reason: reason,
-      priority: priority,
-      priorityElement: priorityElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-      minutesDuration: minutesDuration,
-      minutesDurationElement: minutesDurationElement,
-      slot: slot,
-      comment: comment,
-      commentElement: commentElement,
-      participant: participant,
-    );
-  }
-
-  Appointment fromJson(Map<String, Object?> json) {
-    return Appointment.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Appointment = _$AppointmentTearOff();
 
 /// @nodoc
 mixin _$Appointment {
@@ -534,11 +445,11 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AppointmentCopyWith<$Res>
+abstract class _$$_AppointmentCopyWith<$Res>
     implements $AppointmentCopyWith<$Res> {
-  factory _$AppointmentCopyWith(
-          _Appointment value, $Res Function(_Appointment) then) =
-      __$AppointmentCopyWithImpl<$Res>;
+  factory _$$_AppointmentCopyWith(
+          _$_Appointment value, $Res Function(_$_Appointment) then) =
+      __$$_AppointmentCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
@@ -613,14 +524,14 @@ abstract class _$AppointmentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
-    implements _$AppointmentCopyWith<$Res> {
-  __$AppointmentCopyWithImpl(
-      _Appointment _value, $Res Function(_Appointment) _then)
-      : super(_value, (v) => _then(v as _Appointment));
+class __$$_AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
+    implements _$$_AppointmentCopyWith<$Res> {
+  __$$_AppointmentCopyWithImpl(
+      _$_Appointment _value, $Res Function(_$_Appointment) _then)
+      : super(_value, (v) => _then(v as _$_Appointment));
 
   @override
-  _Appointment get _value => super._value as _Appointment;
+  _$_Appointment get _value => super._value as _$_Appointment;
 
   @override
   $Res call({
@@ -655,7 +566,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     Object? commentElement = freezed,
     Object? participant = freezed,
   }) {
-    return _then(_Appointment(
+    return _then(_$_Appointment(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -689,19 +600,19 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: status == freezed
@@ -761,7 +672,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : minutesDurationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       slot: slot == freezed
-          ? _value.slot
+          ? _value._slot
           : slot // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       comment: comment == freezed
@@ -773,7 +684,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : commentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       participant: participant == freezed
-          ? _value.participant
+          ? _value._participant
           : participant // ignore: cast_nullable_to_non_nullable
               as List<AppointmentParticipant>,
     ));
@@ -795,11 +706,11 @@ class _$_Appointment extends _Appointment {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           required this.status,
       @JsonKey(name: '_status')
@@ -821,12 +732,18 @@ class _$_Appointment extends _Appointment {
       this.minutesDuration,
       @JsonKey(name: '_minutesDuration')
           this.minutesDurationElement,
-      this.slot,
+      final List<Reference>? slot,
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement,
-      required this.participant})
-      : super._();
+      required final List<AppointmentParticipant> participant})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _slot = slot,
+        _participant = participant,
+        super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentFromJson(json);
@@ -850,15 +767,43 @@ class _$_Appointment extends _Appointment {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   final AppointmentStatus status;
@@ -894,15 +839,26 @@ class _$_Appointment extends _Appointment {
   @override
   @JsonKey(name: '_minutesDuration')
   final Element? minutesDurationElement;
+  final List<Reference>? _slot;
   @override
-  final List<Reference>? slot;
+  List<Reference>? get slot {
+    final value = _slot;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? comment;
   @override
   @JsonKey(name: '_comment')
   final Element? commentElement;
+  final List<AppointmentParticipant> _participant;
   @override
-  final List<AppointmentParticipant> participant;
+  List<AppointmentParticipant> get participant {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_participant);
+  }
 
   @override
   String toString() {
@@ -913,7 +869,7 @@ class _$_Appointment extends _Appointment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Appointment &&
+            other is _$_Appointment &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -926,13 +882,14 @@ class _$_Appointment extends _Appointment {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -955,14 +912,15 @@ class _$_Appointment extends _Appointment {
                 .equals(other.minutesDuration, minutesDuration) &&
             const DeepCollectionEquality()
                 .equals(other.minutesDurationElement, minutesDurationElement) &&
-            const DeepCollectionEquality().equals(other.slot, slot) &&
+            const DeepCollectionEquality().equals(other._slot, _slot) &&
             const DeepCollectionEquality().equals(other.comment, comment) &&
             const DeepCollectionEquality()
                 .equals(other.commentElement, commentElement) &&
             const DeepCollectionEquality()
-                .equals(other.participant, participant));
+                .equals(other._participant, _participant));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -974,10 +932,10 @@ class _$_Appointment extends _Appointment {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(type),
@@ -992,16 +950,16 @@ class _$_Appointment extends _Appointment {
         const DeepCollectionEquality().hash(endElement),
         const DeepCollectionEquality().hash(minutesDuration),
         const DeepCollectionEquality().hash(minutesDurationElement),
-        const DeepCollectionEquality().hash(slot),
+        const DeepCollectionEquality().hash(_slot),
         const DeepCollectionEquality().hash(comment),
         const DeepCollectionEquality().hash(commentElement),
-        const DeepCollectionEquality().hash(participant)
+        const DeepCollectionEquality().hash(_participant)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$AppointmentCopyWith<_Appointment> get copyWith =>
-      __$AppointmentCopyWithImpl<_Appointment>(this, _$identity);
+  _$$_AppointmentCopyWith<_$_Appointment> get copyWith =>
+      __$$_AppointmentCopyWithImpl<_$_Appointment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1011,48 +969,49 @@ class _$_Appointment extends _Appointment {
 
 abstract class _Appointment extends Appointment {
   factory _Appointment(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          required AppointmentStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? type,
-      CodeableConcept? reason,
-      UnsignedInt? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Instant? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
-      Instant? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
-      PositiveInt? minutesDuration,
-      @JsonKey(name: '_minutesDuration')
-          Element? minutesDurationElement,
-      List<Reference>? slot,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
-      required List<AppointmentParticipant> participant}) = _$_Appointment;
+          {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+              final Dstu2ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules')
+              final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language')
+              final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+              required final AppointmentStatus status,
+          @JsonKey(name: '_status')
+              final Element? statusElement,
+          final CodeableConcept? type,
+          final CodeableConcept? reason,
+          final UnsignedInt? priority,
+          @JsonKey(name: '_priority')
+              final Element? priorityElement,
+          final String? description,
+          @JsonKey(name: '_description')
+              final Element? descriptionElement,
+          final Instant? start,
+          @JsonKey(name: '_start')
+              final Element? startElement,
+          final Instant? end,
+          @JsonKey(name: '_end')
+              final Element? endElement,
+          final PositiveInt? minutesDuration,
+          @JsonKey(name: '_minutesDuration')
+              final Element? minutesDurationElement,
+          final List<Reference>? slot,
+          final String? comment,
+          @JsonKey(name: '_comment')
+              final Element? commentElement,
+          required final List<AppointmentParticipant> participant}) =
+      _$_Appointment;
   _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
@@ -1060,79 +1019,81 @@ abstract class _Appointment extends Appointment {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-  AppointmentStatus get status;
+  AppointmentStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get reason;
+  CodeableConcept? get reason => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get priority;
+  UnsignedInt? get priority => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement;
+  Element? get priorityElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  Instant? get start;
+  Instant? get start => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_start')
-  Element? get startElement;
+  Element? get startElement => throw _privateConstructorUsedError;
   @override
-  Instant? get end;
+  Instant? get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_end')
-  Element? get endElement;
+  Element? get endElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get minutesDuration;
+  PositiveInt? get minutesDuration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minutesDuration')
-  Element? get minutesDurationElement;
+  Element? get minutesDurationElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get slot;
+  List<Reference>? get slot => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
-  List<AppointmentParticipant> get participant;
+  List<AppointmentParticipant> get participant =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AppointmentCopyWith<_Appointment> get copyWith =>
+  _$$_AppointmentCopyWith<_$_Appointment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1140,46 +1101,6 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
     Map<String, dynamic> json) {
   return _AppointmentParticipant.fromJson(json);
 }
-
-/// @nodoc
-class _$AppointmentParticipantTearOff {
-  const _$AppointmentParticipantTearOff();
-
-  _AppointmentParticipant call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? type,
-      Reference? actor,
-      @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          ParticipantRequired? required_,
-      @JsonKey(name: '_required')
-          Element? requiredElement,
-      @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-          required ParticipantStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement}) {
-    return _AppointmentParticipant(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      actor: actor,
-      required_: required_,
-      requiredElement: requiredElement,
-      status: status,
-      statusElement: statusElement,
-    );
-  }
-
-  AppointmentParticipant fromJson(Map<String, Object?> json) {
-    return AppointmentParticipant.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AppointmentParticipant = _$AppointmentParticipantTearOff();
 
 /// @nodoc
 mixin _$AppointmentParticipant {
@@ -1327,11 +1248,11 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AppointmentParticipantCopyWith<$Res>
+abstract class _$$_AppointmentParticipantCopyWith<$Res>
     implements $AppointmentParticipantCopyWith<$Res> {
-  factory _$AppointmentParticipantCopyWith(_AppointmentParticipant value,
-          $Res Function(_AppointmentParticipant) then) =
-      __$AppointmentParticipantCopyWithImpl<$Res>;
+  factory _$$_AppointmentParticipantCopyWith(_$_AppointmentParticipant value,
+          $Res Function(_$_AppointmentParticipant) then) =
+      __$$_AppointmentParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -1358,15 +1279,16 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AppointmentParticipantCopyWithImpl<$Res>
+class __$$_AppointmentParticipantCopyWithImpl<$Res>
     extends _$AppointmentParticipantCopyWithImpl<$Res>
-    implements _$AppointmentParticipantCopyWith<$Res> {
-  __$AppointmentParticipantCopyWithImpl(_AppointmentParticipant _value,
-      $Res Function(_AppointmentParticipant) _then)
-      : super(_value, (v) => _then(v as _AppointmentParticipant));
+    implements _$$_AppointmentParticipantCopyWith<$Res> {
+  __$$_AppointmentParticipantCopyWithImpl(_$_AppointmentParticipant _value,
+      $Res Function(_$_AppointmentParticipant) _then)
+      : super(_value, (v) => _then(v as _$_AppointmentParticipant));
 
   @override
-  _AppointmentParticipant get _value => super._value as _AppointmentParticipant;
+  _$_AppointmentParticipant get _value =>
+      super._value as _$_AppointmentParticipant;
 
   @override
   $Res call({
@@ -1380,21 +1302,21 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
     Object? status = freezed,
     Object? statusElement = freezed,
   }) {
-    return _then(_AppointmentParticipant(
+    return _then(_$_AppointmentParticipant(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
-          ? _value.type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       actor: actor == freezed
@@ -1427,9 +1349,9 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.type,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? type,
       this.actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
           this.required_,
@@ -1439,20 +1361,44 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
           required this.status,
       @JsonKey(name: '_status')
           this.statusElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _type = type,
+        super._();
 
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentParticipantFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _type;
   @override
-  final List<CodeableConcept>? type;
+  List<CodeableConcept>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? actor;
   @override
@@ -1477,13 +1423,13 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AppointmentParticipant &&
+            other is _$_AppointmentParticipant &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
             const DeepCollectionEquality().equals(other.actor, actor) &&
             const DeepCollectionEquality().equals(other.required_, required_) &&
             const DeepCollectionEquality()
@@ -1493,13 +1439,14 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
                 .equals(other.statusElement, statusElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_type),
       const DeepCollectionEquality().hash(actor),
       const DeepCollectionEquality().hash(required_),
       const DeepCollectionEquality().hash(requiredElement),
@@ -1508,8 +1455,8 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   @JsonKey(ignore: true)
   @override
-  _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith =>
-      __$AppointmentParticipantCopyWithImpl<_AppointmentParticipant>(
+  _$$_AppointmentParticipantCopyWith<_$_AppointmentParticipant> get copyWith =>
+      __$$_AppointmentParticipantCopyWithImpl<_$_AppointmentParticipant>(
           this, _$identity);
 
   @override
@@ -1520,130 +1467,58 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
 abstract class _AppointmentParticipant extends AppointmentParticipant {
   factory _AppointmentParticipant(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? type,
-      Reference? actor,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? type,
+      final Reference? actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          ParticipantRequired? required_,
+          final ParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element? requiredElement,
+          final Element? requiredElement,
       @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-          required ParticipantStatus status,
+          required final ParticipantStatus status,
       @JsonKey(name: '_status')
-          Element? statusElement}) = _$_AppointmentParticipant;
+          final Element? statusElement}) = _$_AppointmentParticipant;
   _AppointmentParticipant._() : super._();
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   @override
-  Reference? get actor;
+  Reference? get actor => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-  ParticipantRequired? get required_;
+  ParticipantRequired? get required_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_required')
-  Element? get requiredElement;
+  Element? get requiredElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-  ParticipantStatus get status;
+  ParticipantStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith =>
+  _$$_AppointmentParticipantCopyWith<_$_AppointmentParticipant> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
   return _AppointmentResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$AppointmentResponseTearOff {
-  const _$AppointmentResponseTearOff();
-
-  _AppointmentResponse call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
-          Dstu2ResourceType
-              resourceType = Dstu2ResourceType.AppointmentResponse,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      required Reference appointment,
-      Instant? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
-      Instant? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
-      List<CodeableConcept>? participantType,
-      Reference? actor,
-      @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-          required AppointmentResponseParticipantStatus participantStatus,
-      @JsonKey(name: '_participantStatus')
-          Element? participantStatusElement,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement}) {
-    return _AppointmentResponse(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      appointment: appointment,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-      participantType: participantType,
-      actor: actor,
-      participantStatus: participantStatus,
-      participantStatusElement: participantStatusElement,
-      comment: comment,
-      commentElement: commentElement,
-    );
-  }
-
-  AppointmentResponse fromJson(Map<String, Object?> json) {
-    return AppointmentResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AppointmentResponse = _$AppointmentResponseTearOff();
 
 /// @nodoc
 mixin _$AppointmentResponse {
@@ -1981,11 +1856,11 @@ class _$AppointmentResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AppointmentResponseCopyWith<$Res>
+abstract class _$$_AppointmentResponseCopyWith<$Res>
     implements $AppointmentResponseCopyWith<$Res> {
-  factory _$AppointmentResponseCopyWith(_AppointmentResponse value,
-          $Res Function(_AppointmentResponse) then) =
-      __$AppointmentResponseCopyWithImpl<$Res>;
+  factory _$$_AppointmentResponseCopyWith(_$_AppointmentResponse value,
+          $Res Function(_$_AppointmentResponse) then) =
+      __$$_AppointmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
@@ -2044,15 +1919,15 @@ abstract class _$AppointmentResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AppointmentResponseCopyWithImpl<$Res>
+class __$$_AppointmentResponseCopyWithImpl<$Res>
     extends _$AppointmentResponseCopyWithImpl<$Res>
-    implements _$AppointmentResponseCopyWith<$Res> {
-  __$AppointmentResponseCopyWithImpl(
-      _AppointmentResponse _value, $Res Function(_AppointmentResponse) _then)
-      : super(_value, (v) => _then(v as _AppointmentResponse));
+    implements _$$_AppointmentResponseCopyWith<$Res> {
+  __$$_AppointmentResponseCopyWithImpl(_$_AppointmentResponse _value,
+      $Res Function(_$_AppointmentResponse) _then)
+      : super(_value, (v) => _then(v as _$_AppointmentResponse));
 
   @override
-  _AppointmentResponse get _value => super._value as _AppointmentResponse;
+  _$_AppointmentResponse get _value => super._value as _$_AppointmentResponse;
 
   @override
   $Res call({
@@ -2080,7 +1955,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_AppointmentResponse(
+    return _then(_$_AppointmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2114,19 +1989,19 @@ class __$AppointmentResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       appointment: appointment == freezed
@@ -2150,7 +2025,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
           : endElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       participantType: participantType == freezed
-          ? _value.participantType
+          ? _value._participantType
           : participantType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       actor: actor == freezed
@@ -2192,11 +2067,11 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       required this.appointment,
       this.start,
       @JsonKey(name: '_start')
@@ -2204,7 +2079,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       this.end,
       @JsonKey(name: '_end')
           this.endElement,
-      this.participantType,
+      final List<CodeableConcept>? participantType,
       this.actor,
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
           required this.participantStatus,
@@ -2213,7 +2088,12 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _participantType = participantType,
+        super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentResponseFromJson(json);
@@ -2237,15 +2117,43 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference appointment;
   @override
@@ -2258,8 +2166,15 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
+  final List<CodeableConcept>? _participantType;
   @override
-  final List<CodeableConcept>? participantType;
+  List<CodeableConcept>? get participantType {
+    final value = _participantType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? actor;
   @override
@@ -2285,7 +2200,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AppointmentResponse &&
+            other is _$_AppointmentResponse &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -2298,13 +2213,14 @@ class _$_AppointmentResponse extends _AppointmentResponse {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
                 .equals(other.appointment, appointment) &&
             const DeepCollectionEquality().equals(other.start, start) &&
@@ -2314,7 +2230,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
             const DeepCollectionEquality()
                 .equals(other.endElement, endElement) &&
             const DeepCollectionEquality()
-                .equals(other.participantType, participantType) &&
+                .equals(other._participantType, _participantType) &&
             const DeepCollectionEquality().equals(other.actor, actor) &&
             const DeepCollectionEquality()
                 .equals(other.participantStatus, participantStatus) &&
@@ -2325,6 +2241,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
                 .equals(other.commentElement, commentElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2336,16 +2253,16 @@ class _$_AppointmentResponse extends _AppointmentResponse {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(appointment),
         const DeepCollectionEquality().hash(start),
         const DeepCollectionEquality().hash(startElement),
         const DeepCollectionEquality().hash(end),
         const DeepCollectionEquality().hash(endElement),
-        const DeepCollectionEquality().hash(participantType),
+        const DeepCollectionEquality().hash(_participantType),
         const DeepCollectionEquality().hash(actor),
         const DeepCollectionEquality().hash(participantStatus),
         const DeepCollectionEquality().hash(participantStatusElement),
@@ -2355,8 +2272,8 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @JsonKey(ignore: true)
   @override
-  _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith =>
-      __$AppointmentResponseCopyWithImpl<_AppointmentResponse>(
+  _$$_AppointmentResponseCopyWith<_$_AppointmentResponse> get copyWith =>
+      __$$_AppointmentResponseCopyWithImpl<_$_AppointmentResponse>(
           this, _$identity);
 
   @override
@@ -2368,37 +2285,37 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      required Reference appointment,
-      Instant? start,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      required final Reference appointment,
+      final Instant? start,
       @JsonKey(name: '_start')
-          Element? startElement,
-      Instant? end,
+          final Element? startElement,
+      final Instant? end,
       @JsonKey(name: '_end')
-          Element? endElement,
-      List<CodeableConcept>? participantType,
-      Reference? actor,
+          final Element? endElement,
+      final List<CodeableConcept>? participantType,
+      final Reference? actor,
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-          required AppointmentResponseParticipantStatus participantStatus,
+          required final AppointmentResponseParticipantStatus participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element? participantStatusElement,
-      String? comment,
+          final Element? participantStatusElement,
+      final String? comment,
       @JsonKey(name: '_comment')
-          Element? commentElement}) = _$_AppointmentResponse;
+          final Element? commentElement}) = _$_AppointmentResponse;
   _AppointmentResponse._() : super._();
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
@@ -2406,126 +2323,73 @@ abstract class _AppointmentResponse extends AppointmentResponse {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Reference get appointment;
+  Reference get appointment => throw _privateConstructorUsedError;
   @override
-  Instant? get start;
+  Instant? get start => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_start')
-  Element? get startElement;
+  Element? get startElement => throw _privateConstructorUsedError;
   @override
-  Instant? get end;
+  Instant? get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_end')
-  Element? get endElement;
+  Element? get endElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get participantType;
+  List<CodeableConcept>? get participantType =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get actor;
+  Reference? get actor => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       required: true,
       unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-  AppointmentResponseParticipantStatus get participantStatus;
+  AppointmentResponseParticipantStatus get participantStatus =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_participantStatus')
-  Element? get participantStatusElement;
+  Element? get participantStatusElement => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith =>
+  _$$_AppointmentResponseCopyWith<_$_AppointmentResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
   return _Schedule.fromJson(json);
 }
-
-/// @nodoc
-class _$ScheduleTearOff {
-  const _$ScheduleTearOff();
-
-  _Schedule call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.Schedule,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<CodeableConcept>? type,
-      required Reference actor,
-      Period? planningHorizon,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement}) {
-    return _Schedule(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      actor: actor,
-      planningHorizon: planningHorizon,
-      comment: comment,
-      commentElement: commentElement,
-    );
-  }
-
-  Schedule fromJson(Map<String, Object?> json) {
-    return Schedule.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Schedule = _$ScheduleTearOff();
 
 /// @nodoc
 mixin _$Schedule {
@@ -2771,9 +2635,10 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
-  factory _$ScheduleCopyWith(_Schedule value, $Res Function(_Schedule) then) =
-      __$ScheduleCopyWithImpl<$Res>;
+abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
+  factory _$$_ScheduleCopyWith(
+          _$_Schedule value, $Res Function(_$_Schedule) then) =
+      __$$_ScheduleCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
@@ -2816,13 +2681,14 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
-    implements _$ScheduleCopyWith<$Res> {
-  __$ScheduleCopyWithImpl(_Schedule _value, $Res Function(_Schedule) _then)
-      : super(_value, (v) => _then(v as _Schedule));
+class __$$_ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
+    implements _$$_ScheduleCopyWith<$Res> {
+  __$$_ScheduleCopyWithImpl(
+      _$_Schedule _value, $Res Function(_$_Schedule) _then)
+      : super(_value, (v) => _then(v as _$_Schedule));
 
   @override
-  _Schedule get _value => super._value as _Schedule;
+  _$_Schedule get _value => super._value as _$_Schedule;
 
   @override
   $Res call({
@@ -2844,7 +2710,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_Schedule(
+    return _then(_$_Schedule(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2878,23 +2744,23 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: type == freezed
-          ? _value.type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       actor: actor == freezed
@@ -2932,18 +2798,23 @@ class _$_Schedule extends _Schedule {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.type,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<CodeableConcept>? type,
       required this.actor,
       this.planningHorizon,
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _type = type,
+        super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$$_ScheduleFromJson(json);
@@ -2967,17 +2838,52 @@ class _$_Schedule extends _Schedule {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _type;
   @override
-  final List<CodeableConcept>? type;
+  List<CodeableConcept>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference actor;
   @override
@@ -2997,7 +2903,7 @@ class _$_Schedule extends _Schedule {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Schedule &&
+            other is _$_Schedule &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -3010,14 +2916,15 @@ class _$_Schedule extends _Schedule {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
             const DeepCollectionEquality().equals(other.actor, actor) &&
             const DeepCollectionEquality()
                 .equals(other.planningHorizon, planningHorizon) &&
@@ -3026,6 +2933,7 @@ class _$_Schedule extends _Schedule {
                 .equals(other.commentElement, commentElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3037,11 +2945,11 @@ class _$_Schedule extends _Schedule {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(identifier),
-      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_identifier),
+      const DeepCollectionEquality().hash(_type),
       const DeepCollectionEquality().hash(actor),
       const DeepCollectionEquality().hash(planningHorizon),
       const DeepCollectionEquality().hash(comment),
@@ -3049,8 +2957,8 @@ class _$_Schedule extends _Schedule {
 
   @JsonKey(ignore: true)
   @override
-  _$ScheduleCopyWith<_Schedule> get copyWith =>
-      __$ScheduleCopyWithImpl<_Schedule>(this, _$identity);
+  _$$_ScheduleCopyWith<_$_Schedule> get copyWith =>
+      __$$_ScheduleCopyWithImpl<_$_Schedule>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3061,151 +2969,80 @@ class _$_Schedule extends _Schedule {
 abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<CodeableConcept>? type,
-      required Reference actor,
-      Period? planningHorizon,
-      String? comment,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<CodeableConcept>? type,
+      required final Reference actor,
+      final Period? planningHorizon,
+      final String? comment,
       @JsonKey(name: '_comment')
-          Element? commentElement}) = _$_Schedule;
+          final Element? commentElement}) = _$_Schedule;
   _Schedule._() : super._();
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   @override
-  Reference get actor;
+  Reference get actor => throw _privateConstructorUsedError;
   @override
-  Period? get planningHorizon;
+  Period? get planningHorizon => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ScheduleCopyWith<_Schedule> get copyWith =>
+  _$$_ScheduleCopyWith<_$_Schedule> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Slot _$SlotFromJson(Map<String, dynamic> json) {
   return _Slot.fromJson(json);
 }
-
-/// @nodoc
-class _$SlotTearOff {
-  const _$SlotTearOff();
-
-  _Slot call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.Slot,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? type,
-      required Reference schedule,
-      @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-          required SlotFreeBusyType freeBusyType,
-      required Instant start,
-      @JsonKey(name: '_start')
-          Element? startElement,
-      required Instant end,
-      @JsonKey(name: '_end')
-          Element? endElement,
-      Boolean? overbooked,
-      @JsonKey(name: '_overbooked')
-          Element? overbookedElement,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement}) {
-    return _Slot(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      schedule: schedule,
-      freeBusyType: freeBusyType,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-      overbooked: overbooked,
-      overbookedElement: overbookedElement,
-      comment: comment,
-      commentElement: commentElement,
-    );
-  }
-
-  Slot fromJson(Map<String, Object?> json) {
-    return Slot.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Slot = _$SlotTearOff();
 
 /// @nodoc
 mixin _$Slot {
@@ -3536,9 +3373,9 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
-  factory _$SlotCopyWith(_Slot value, $Res Function(_Slot) then) =
-      __$SlotCopyWithImpl<$Res>;
+abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
+  factory _$$_SlotCopyWith(_$_Slot value, $Res Function(_$_Slot) then) =
+      __$$_SlotCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
@@ -3597,13 +3434,13 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
-    implements _$SlotCopyWith<$Res> {
-  __$SlotCopyWithImpl(_Slot _value, $Res Function(_Slot) _then)
-      : super(_value, (v) => _then(v as _Slot));
+class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
+    implements _$$_SlotCopyWith<$Res> {
+  __$$_SlotCopyWithImpl(_$_Slot _value, $Res Function(_$_Slot) _then)
+      : super(_value, (v) => _then(v as _$_Slot));
 
   @override
-  _Slot get _value => super._value as _Slot;
+  _$_Slot get _value => super._value as _$_Slot;
 
   @override
   $Res call({
@@ -3631,7 +3468,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_Slot(
+    return _then(_$_Slot(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3665,19 +3502,19 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: type == freezed
@@ -3743,11 +3580,11 @@ class _$_Slot extends _Slot {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.type,
       required this.schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
@@ -3764,7 +3601,11 @@ class _$_Slot extends _Slot {
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
 
   factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
 
@@ -3787,15 +3628,43 @@ class _$_Slot extends _Slot {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -3833,7 +3702,7 @@ class _$_Slot extends _Slot {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Slot &&
+            other is _$_Slot &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -3846,13 +3715,14 @@ class _$_Slot extends _Slot {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.schedule, schedule) &&
             const DeepCollectionEquality()
@@ -3872,6 +3742,7 @@ class _$_Slot extends _Slot {
                 .equals(other.commentElement, commentElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3883,10 +3754,10 @@ class _$_Slot extends _Slot {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(schedule),
         const DeepCollectionEquality().hash(freeBusyType),
@@ -3902,8 +3773,8 @@ class _$_Slot extends _Slot {
 
   @JsonKey(ignore: true)
   @override
-  _$SlotCopyWith<_Slot> get copyWith =>
-      __$SlotCopyWithImpl<_Slot>(this, _$identity);
+  _$$_SlotCopyWith<_$_Slot> get copyWith =>
+      __$$_SlotCopyWithImpl<_$_Slot>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3914,97 +3785,98 @@ class _$_Slot extends _Slot {
 abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? type,
-      required Reference schedule,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? type,
+      required final Reference schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-          required SlotFreeBusyType freeBusyType,
-      required Instant start,
+          required final SlotFreeBusyType freeBusyType,
+      required final Instant start,
       @JsonKey(name: '_start')
-          Element? startElement,
-      required Instant end,
+          final Element? startElement,
+      required final Instant end,
       @JsonKey(name: '_end')
-          Element? endElement,
-      Boolean? overbooked,
+          final Element? endElement,
+      final Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element? overbookedElement,
-      String? comment,
+          final Element? overbookedElement,
+      final String? comment,
       @JsonKey(name: '_comment')
-          Element? commentElement}) = _$_Slot;
+          final Element? commentElement}) = _$_Slot;
   _Slot._() : super._();
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Reference get schedule;
+  Reference get schedule => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-  SlotFreeBusyType get freeBusyType;
+  SlotFreeBusyType get freeBusyType => throw _privateConstructorUsedError;
   @override
-  Instant get start;
+  Instant get start => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_start')
-  Element? get startElement;
+  Element? get startElement => throw _privateConstructorUsedError;
   @override
-  Instant get end;
+  Instant get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_end')
-  Element? get endElement;
+  Element? get endElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get overbooked;
+  Boolean? get overbooked => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_overbooked')
-  Element? get overbookedElement;
+  Element? get overbookedElement => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SlotCopyWith<_Slot> get copyWith => throw _privateConstructorUsedError;
+  _$$_SlotCopyWith<_$_Slot> get copyWith => throw _privateConstructorUsedError;
 }

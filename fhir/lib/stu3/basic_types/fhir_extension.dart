@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../stu3.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
 

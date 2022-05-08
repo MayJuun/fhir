@@ -12,93 +12,11 @@ part of 'documents.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CatalogEntry _$CatalogEntryFromJson(Map<String, dynamic> json) {
   return _CatalogEntry.fromJson(json);
 }
-
-/// @nodoc
-class _$CatalogEntryTearOff {
-  const _$CatalogEntryTearOff();
-
-  _CatalogEntry call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-          R4ResourceType resourceType = R4ResourceType.CatalogEntry,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? type,
-      Boolean? orderable,
-      @JsonKey(name: '_orderable')
-          Element? orderableElement,
-      required Reference referencedItem,
-      List<Identifier>? additionalIdentifier,
-      List<CodeableConcept>? classification,
-      @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
-          CatalogEntryStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Period? validityPeriod,
-      FhirDateTime? validTo,
-      @JsonKey(name: '_validTo')
-          Element? validToElement,
-      FhirDateTime? lastUpdated,
-      @JsonKey(name: '_lastUpdated')
-          Element? lastUpdatedElement,
-      List<CodeableConcept>? additionalCharacteristic,
-      List<CodeableConcept>? additionalClassification,
-      List<CatalogEntryRelatedEntry>? relatedEntry}) {
-    return _CatalogEntry(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      orderable: orderable,
-      orderableElement: orderableElement,
-      referencedItem: referencedItem,
-      additionalIdentifier: additionalIdentifier,
-      classification: classification,
-      status: status,
-      statusElement: statusElement,
-      validityPeriod: validityPeriod,
-      validTo: validTo,
-      validToElement: validToElement,
-      lastUpdated: lastUpdated,
-      lastUpdatedElement: lastUpdatedElement,
-      additionalCharacteristic: additionalCharacteristic,
-      additionalClassification: additionalClassification,
-      relatedEntry: relatedEntry,
-    );
-  }
-
-  CatalogEntry fromJson(Map<String, Object?> json) {
-    return CatalogEntry.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CatalogEntry = _$CatalogEntryTearOff();
 
 /// @nodoc
 mixin _$CatalogEntry {
@@ -483,11 +401,11 @@ class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CatalogEntryCopyWith<$Res>
+abstract class _$$_CatalogEntryCopyWith<$Res>
     implements $CatalogEntryCopyWith<$Res> {
-  factory _$CatalogEntryCopyWith(
-          _CatalogEntry value, $Res Function(_CatalogEntry) then) =
-      __$CatalogEntryCopyWithImpl<$Res>;
+  factory _$$_CatalogEntryCopyWith(
+          _$_CatalogEntry value, $Res Function(_$_CatalogEntry) then) =
+      __$$_CatalogEntryCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
@@ -553,14 +471,15 @@ abstract class _$CatalogEntryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
-    implements _$CatalogEntryCopyWith<$Res> {
-  __$CatalogEntryCopyWithImpl(
-      _CatalogEntry _value, $Res Function(_CatalogEntry) _then)
-      : super(_value, (v) => _then(v as _CatalogEntry));
+class __$$_CatalogEntryCopyWithImpl<$Res>
+    extends _$CatalogEntryCopyWithImpl<$Res>
+    implements _$$_CatalogEntryCopyWith<$Res> {
+  __$$_CatalogEntryCopyWithImpl(
+      _$_CatalogEntry _value, $Res Function(_$_CatalogEntry) _then)
+      : super(_value, (v) => _then(v as _$_CatalogEntry));
 
   @override
-  _CatalogEntry get _value => super._value as _CatalogEntry;
+  _$_CatalogEntry get _value => super._value as _$_CatalogEntry;
 
   @override
   $Res call({
@@ -593,7 +512,7 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
     Object? additionalClassification = freezed,
     Object? relatedEntry = freezed,
   }) {
-    return _then(_CatalogEntry(
+    return _then(_$_CatalogEntry(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -627,19 +546,19 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: type == freezed
@@ -659,11 +578,11 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
           : referencedItem // ignore: cast_nullable_to_non_nullable
               as Reference,
       additionalIdentifier: additionalIdentifier == freezed
-          ? _value.additionalIdentifier
+          ? _value._additionalIdentifier
           : additionalIdentifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       classification: classification == freezed
-          ? _value.classification
+          ? _value._classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       status: status == freezed
@@ -695,15 +614,15 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       additionalCharacteristic: additionalCharacteristic == freezed
-          ? _value.additionalCharacteristic
+          ? _value._additionalCharacteristic
           : additionalCharacteristic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       additionalClassification: additionalClassification == freezed
-          ? _value.additionalClassification
+          ? _value._additionalClassification
           : additionalClassification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       relatedEntry: relatedEntry == freezed
-          ? _value.relatedEntry
+          ? _value._relatedEntry
           : relatedEntry // ignore: cast_nullable_to_non_nullable
               as List<CatalogEntryRelatedEntry>?,
     ));
@@ -725,18 +644,18 @@ class _$_CatalogEntry extends _CatalogEntry {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.type,
       this.orderable,
       @JsonKey(name: '_orderable')
           this.orderableElement,
       required this.referencedItem,
-      this.additionalIdentifier,
-      this.classification,
+      final List<Identifier>? additionalIdentifier,
+      final List<CodeableConcept>? classification,
       @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
@@ -748,10 +667,19 @@ class _$_CatalogEntry extends _CatalogEntry {
       this.lastUpdated,
       @JsonKey(name: '_lastUpdated')
           this.lastUpdatedElement,
-      this.additionalCharacteristic,
-      this.additionalClassification,
-      this.relatedEntry})
-      : super._();
+      final List<CodeableConcept>? additionalCharacteristic,
+      final List<CodeableConcept>? additionalClassification,
+      final List<CatalogEntryRelatedEntry>? relatedEntry})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _additionalIdentifier = additionalIdentifier,
+        _classification = classification,
+        _additionalCharacteristic = additionalCharacteristic,
+        _additionalClassification = additionalClassification,
+        _relatedEntry = relatedEntry,
+        super._();
 
   factory _$_CatalogEntry.fromJson(Map<String, dynamic> json) =>
       _$$_CatalogEntryFromJson(json);
@@ -775,15 +703,43 @@ class _$_CatalogEntry extends _CatalogEntry {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -793,10 +749,24 @@ class _$_CatalogEntry extends _CatalogEntry {
   final Element? orderableElement;
   @override
   final Reference referencedItem;
+  final List<Identifier>? _additionalIdentifier;
   @override
-  final List<Identifier>? additionalIdentifier;
+  List<Identifier>? get additionalIdentifier {
+    final value = _additionalIdentifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _classification;
   @override
-  final List<CodeableConcept>? classification;
+  List<CodeableConcept>? get classification {
+    final value = _classification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
   final CatalogEntryStatus? status;
@@ -815,12 +785,32 @@ class _$_CatalogEntry extends _CatalogEntry {
   @override
   @JsonKey(name: '_lastUpdated')
   final Element? lastUpdatedElement;
+  final List<CodeableConcept>? _additionalCharacteristic;
   @override
-  final List<CodeableConcept>? additionalCharacteristic;
+  List<CodeableConcept>? get additionalCharacteristic {
+    final value = _additionalCharacteristic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _additionalClassification;
   @override
-  final List<CodeableConcept>? additionalClassification;
+  List<CodeableConcept>? get additionalClassification {
+    final value = _additionalClassification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CatalogEntryRelatedEntry>? _relatedEntry;
   @override
-  final List<CatalogEntryRelatedEntry>? relatedEntry;
+  List<CatalogEntryRelatedEntry>? get relatedEntry {
+    final value = _relatedEntry;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -831,7 +821,7 @@ class _$_CatalogEntry extends _CatalogEntry {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CatalogEntry &&
+            other is _$_CatalogEntry &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -844,13 +834,14 @@ class _$_CatalogEntry extends _CatalogEntry {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.orderable, orderable) &&
             const DeepCollectionEquality()
@@ -858,9 +849,9 @@ class _$_CatalogEntry extends _CatalogEntry {
             const DeepCollectionEquality()
                 .equals(other.referencedItem, referencedItem) &&
             const DeepCollectionEquality()
-                .equals(other.additionalIdentifier, additionalIdentifier) &&
+                .equals(other._additionalIdentifier, _additionalIdentifier) &&
             const DeepCollectionEquality()
-                .equals(other.classification, classification) &&
+                .equals(other._classification, _classification) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -874,13 +865,14 @@ class _$_CatalogEntry extends _CatalogEntry {
             const DeepCollectionEquality()
                 .equals(other.lastUpdatedElement, lastUpdatedElement) &&
             const DeepCollectionEquality().equals(
-                other.additionalCharacteristic, additionalCharacteristic) &&
+                other._additionalCharacteristic, _additionalCharacteristic) &&
             const DeepCollectionEquality().equals(
-                other.additionalClassification, additionalClassification) &&
+                other._additionalClassification, _additionalClassification) &&
             const DeepCollectionEquality()
-                .equals(other.relatedEntry, relatedEntry));
+                .equals(other._relatedEntry, _relatedEntry));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -892,16 +884,16 @@ class _$_CatalogEntry extends _CatalogEntry {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(orderable),
         const DeepCollectionEquality().hash(orderableElement),
         const DeepCollectionEquality().hash(referencedItem),
-        const DeepCollectionEquality().hash(additionalIdentifier),
-        const DeepCollectionEquality().hash(classification),
+        const DeepCollectionEquality().hash(_additionalIdentifier),
+        const DeepCollectionEquality().hash(_classification),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(validityPeriod),
@@ -909,15 +901,15 @@ class _$_CatalogEntry extends _CatalogEntry {
         const DeepCollectionEquality().hash(validToElement),
         const DeepCollectionEquality().hash(lastUpdated),
         const DeepCollectionEquality().hash(lastUpdatedElement),
-        const DeepCollectionEquality().hash(additionalCharacteristic),
-        const DeepCollectionEquality().hash(additionalClassification),
-        const DeepCollectionEquality().hash(relatedEntry)
+        const DeepCollectionEquality().hash(_additionalCharacteristic),
+        const DeepCollectionEquality().hash(_additionalClassification),
+        const DeepCollectionEquality().hash(_relatedEntry)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$CatalogEntryCopyWith<_CatalogEntry> get copyWith =>
-      __$CatalogEntryCopyWithImpl<_CatalogEntry>(this, _$identity);
+  _$$_CatalogEntryCopyWith<_$_CatalogEntry> get copyWith =>
+      __$$_CatalogEntryCopyWithImpl<_$_CatalogEntry>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -928,42 +920,42 @@ class _$_CatalogEntry extends _CatalogEntry {
 abstract class _CatalogEntry extends CatalogEntry {
   factory _CatalogEntry(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? type,
-      Boolean? orderable,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? type,
+      final Boolean? orderable,
       @JsonKey(name: '_orderable')
-          Element? orderableElement,
-      required Reference referencedItem,
-      List<Identifier>? additionalIdentifier,
-      List<CodeableConcept>? classification,
+          final Element? orderableElement,
+      required final Reference referencedItem,
+      final List<Identifier>? additionalIdentifier,
+      final List<CodeableConcept>? classification,
       @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
-          CatalogEntryStatus? status,
+          final CatalogEntryStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Period? validityPeriod,
-      FhirDateTime? validTo,
+          final Element? statusElement,
+      final Period? validityPeriod,
+      final FhirDateTime? validTo,
       @JsonKey(name: '_validTo')
-          Element? validToElement,
-      FhirDateTime? lastUpdated,
+          final Element? validToElement,
+      final FhirDateTime? lastUpdated,
       @JsonKey(name: '_lastUpdated')
-          Element? lastUpdatedElement,
-      List<CodeableConcept>? additionalCharacteristic,
-      List<CodeableConcept>? additionalClassification,
-      List<CatalogEntryRelatedEntry>? relatedEntry}) = _$_CatalogEntry;
+          final Element? lastUpdatedElement,
+      final List<CodeableConcept>? additionalCharacteristic,
+      final List<CodeableConcept>? additionalClassification,
+      final List<CatalogEntryRelatedEntry>? relatedEntry}) = _$_CatalogEntry;
   _CatalogEntry._() : super._();
 
   factory _CatalogEntry.fromJson(Map<String, dynamic> json) =
@@ -971,72 +963,78 @@ abstract class _CatalogEntry extends CatalogEntry {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Boolean? get orderable;
+  Boolean? get orderable => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_orderable')
-  Element? get orderableElement;
+  Element? get orderableElement => throw _privateConstructorUsedError;
   @override
-  Reference get referencedItem;
+  Reference get referencedItem => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get additionalIdentifier;
+  List<Identifier>? get additionalIdentifier =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get classification;
+  List<CodeableConcept>? get classification =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
-  CatalogEntryStatus? get status;
+  CatalogEntryStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Period? get validityPeriod;
+  Period? get validityPeriod => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get validTo;
+  FhirDateTime? get validTo => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_validTo')
-  Element? get validToElement;
+  Element? get validToElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get lastUpdated;
+  FhirDateTime? get lastUpdated => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastUpdated')
-  Element? get lastUpdatedElement;
+  Element? get lastUpdatedElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get additionalCharacteristic;
+  List<CodeableConcept>? get additionalCharacteristic =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get additionalClassification;
+  List<CodeableConcept>? get additionalClassification =>
+      throw _privateConstructorUsedError;
   @override
-  List<CatalogEntryRelatedEntry>? get relatedEntry;
+  List<CatalogEntryRelatedEntry>? get relatedEntry =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CatalogEntryCopyWith<_CatalogEntry> get copyWith =>
+  _$$_CatalogEntryCopyWith<_$_CatalogEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1044,38 +1042,6 @@ CatalogEntryRelatedEntry _$CatalogEntryRelatedEntryFromJson(
     Map<String, dynamic> json) {
   return _CatalogEntryRelatedEntry.fromJson(json);
 }
-
-/// @nodoc
-class _$CatalogEntryRelatedEntryTearOff {
-  const _$CatalogEntryRelatedEntryTearOff();
-
-  _CatalogEntryRelatedEntry call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
-          CatalogEntryRelatedEntryRelationtype? relationtype,
-      @JsonKey(name: '_relationtype')
-          Element? relationtypeElement,
-      required Reference item}) {
-    return _CatalogEntryRelatedEntry(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      relationtype: relationtype,
-      relationtypeElement: relationtypeElement,
-      item: item,
-    );
-  }
-
-  CatalogEntryRelatedEntry fromJson(Map<String, Object?> json) {
-    return CatalogEntryRelatedEntry.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CatalogEntryRelatedEntry = _$CatalogEntryRelatedEntryTearOff();
 
 /// @nodoc
 mixin _$CatalogEntryRelatedEntry {
@@ -1183,11 +1149,12 @@ class _$CatalogEntryRelatedEntryCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CatalogEntryRelatedEntryCopyWith<$Res>
+abstract class _$$_CatalogEntryRelatedEntryCopyWith<$Res>
     implements $CatalogEntryRelatedEntryCopyWith<$Res> {
-  factory _$CatalogEntryRelatedEntryCopyWith(_CatalogEntryRelatedEntry value,
-          $Res Function(_CatalogEntryRelatedEntry) then) =
-      __$CatalogEntryRelatedEntryCopyWithImpl<$Res>;
+  factory _$$_CatalogEntryRelatedEntryCopyWith(
+          _$_CatalogEntryRelatedEntry value,
+          $Res Function(_$_CatalogEntryRelatedEntry) then) =
+      __$$_CatalogEntryRelatedEntryCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -1207,16 +1174,16 @@ abstract class _$CatalogEntryRelatedEntryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CatalogEntryRelatedEntryCopyWithImpl<$Res>
+class __$$_CatalogEntryRelatedEntryCopyWithImpl<$Res>
     extends _$CatalogEntryRelatedEntryCopyWithImpl<$Res>
-    implements _$CatalogEntryRelatedEntryCopyWith<$Res> {
-  __$CatalogEntryRelatedEntryCopyWithImpl(_CatalogEntryRelatedEntry _value,
-      $Res Function(_CatalogEntryRelatedEntry) _then)
-      : super(_value, (v) => _then(v as _CatalogEntryRelatedEntry));
+    implements _$$_CatalogEntryRelatedEntryCopyWith<$Res> {
+  __$$_CatalogEntryRelatedEntryCopyWithImpl(_$_CatalogEntryRelatedEntry _value,
+      $Res Function(_$_CatalogEntryRelatedEntry) _then)
+      : super(_value, (v) => _then(v as _$_CatalogEntryRelatedEntry));
 
   @override
-  _CatalogEntryRelatedEntry get _value =>
-      super._value as _CatalogEntryRelatedEntry;
+  _$_CatalogEntryRelatedEntry get _value =>
+      super._value as _$_CatalogEntryRelatedEntry;
 
   @override
   $Res call({
@@ -1227,17 +1194,17 @@ class __$CatalogEntryRelatedEntryCopyWithImpl<$Res>
     Object? relationtypeElement = freezed,
     Object? item = freezed,
   }) {
-    return _then(_CatalogEntryRelatedEntry(
+    return _then(_$_CatalogEntryRelatedEntry(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       relationtype: relationtype == freezed
@@ -1262,25 +1229,41 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
   _$_CatalogEntryRelatedEntry(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
           this.relationtype,
       @JsonKey(name: '_relationtype')
           this.relationtypeElement,
       required this.item})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =>
       _$$_CatalogEntryRelatedEntryFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
   final CatalogEntryRelatedEntryRelationtype? relationtype;
@@ -1299,12 +1282,12 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CatalogEntryRelatedEntry &&
+            other is _$_CatalogEntryRelatedEntry &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.relationtype, relationtype) &&
             const DeepCollectionEquality()
@@ -1312,21 +1295,22 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
             const DeepCollectionEquality().equals(other.item, item));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(relationtype),
       const DeepCollectionEquality().hash(relationtypeElement),
       const DeepCollectionEquality().hash(item));
 
   @JsonKey(ignore: true)
   @override
-  _$CatalogEntryRelatedEntryCopyWith<_CatalogEntryRelatedEntry> get copyWith =>
-      __$CatalogEntryRelatedEntryCopyWithImpl<_CatalogEntryRelatedEntry>(
-          this, _$identity);
+  _$$_CatalogEntryRelatedEntryCopyWith<_$_CatalogEntryRelatedEntry>
+      get copyWith => __$$_CatalogEntryRelatedEntryCopyWithImpl<
+          _$_CatalogEntryRelatedEntry>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1336,130 +1320,46 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
 
 abstract class _CatalogEntryRelatedEntry extends CatalogEntryRelatedEntry {
   factory _CatalogEntryRelatedEntry(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
-          CatalogEntryRelatedEntryRelationtype? relationtype,
+          final CatalogEntryRelatedEntryRelationtype? relationtype,
       @JsonKey(name: '_relationtype')
-          Element? relationtypeElement,
-      required Reference item}) = _$_CatalogEntryRelatedEntry;
+          final Element? relationtypeElement,
+      required final Reference item}) = _$_CatalogEntryRelatedEntry;
   _CatalogEntryRelatedEntry._() : super._();
 
   factory _CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =
       _$_CatalogEntryRelatedEntry.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
-  CatalogEntryRelatedEntryRelationtype? get relationtype;
+  CatalogEntryRelatedEntryRelationtype? get relationtype =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_relationtype')
-  Element? get relationtypeElement;
+  Element? get relationtypeElement => throw _privateConstructorUsedError;
   @override
-  Reference get item;
+  Reference get item => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CatalogEntryRelatedEntryCopyWith<_CatalogEntryRelatedEntry> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_CatalogEntryRelatedEntryCopyWith<_$_CatalogEntryRelatedEntry>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 Composition _$CompositionFromJson(Map<String, dynamic> json) {
   return _Composition.fromJson(json);
 }
-
-/// @nodoc
-class _$CompositionTearOff {
-  const _$CompositionTearOff();
-
-  _Composition call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
-          R4ResourceType resourceType = R4ResourceType.Composition,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-          CompositionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required CodeableConcept type,
-      List<CodeableConcept>? category,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      required List<Reference> author,
-      String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      Code? confidentiality,
-      @JsonKey(name: '_confidentiality')
-          Element? confidentialityElement,
-      List<CompositionAttester>? attester,
-      Reference? custodian,
-      List<CompositionRelatesTo>? relatesTo,
-      List<CompositionEvent>? event,
-      List<CompositionSection>? section}) {
-    return _Composition(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      type: type,
-      category: category,
-      subject: subject,
-      encounter: encounter,
-      date: date,
-      dateElement: dateElement,
-      author: author,
-      title: title,
-      titleElement: titleElement,
-      confidentiality: confidentiality,
-      confidentialityElement: confidentialityElement,
-      attester: attester,
-      custodian: custodian,
-      relatesTo: relatesTo,
-      event: event,
-      section: section,
-    );
-  }
-
-  Composition fromJson(Map<String, Object?> json) {
-    return Composition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Composition = _$CompositionTearOff();
 
 /// @nodoc
 mixin _$Composition {
@@ -1878,11 +1778,11 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CompositionCopyWith<$Res>
+abstract class _$$_CompositionCopyWith<$Res>
     implements $CompositionCopyWith<$Res> {
-  factory _$CompositionCopyWith(
-          _Composition value, $Res Function(_Composition) then) =
-      __$CompositionCopyWithImpl<$Res>;
+  factory _$$_CompositionCopyWith(
+          _$_Composition value, $Res Function(_$_Composition) then) =
+      __$$_CompositionCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
@@ -1954,14 +1854,14 @@ abstract class _$CompositionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
-    implements _$CompositionCopyWith<$Res> {
-  __$CompositionCopyWithImpl(
-      _Composition _value, $Res Function(_Composition) _then)
-      : super(_value, (v) => _then(v as _Composition));
+class __$$_CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
+    implements _$$_CompositionCopyWith<$Res> {
+  __$$_CompositionCopyWithImpl(
+      _$_Composition _value, $Res Function(_$_Composition) _then)
+      : super(_value, (v) => _then(v as _$_Composition));
 
   @override
-  _Composition get _value => super._value as _Composition;
+  _$_Composition get _value => super._value as _$_Composition;
 
   @override
   $Res call({
@@ -1996,7 +1896,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
     Object? event = freezed,
     Object? section = freezed,
   }) {
-    return _then(_Composition(
+    return _then(_$_Composition(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2030,15 +1930,15 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -2058,7 +1958,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       category: category == freezed
-          ? _value.category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       subject: subject == freezed
@@ -2078,7 +1978,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       author: author == freezed
-          ? _value.author
+          ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
       title: title == freezed
@@ -2098,7 +1998,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
           : confidentialityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       attester: attester == freezed
-          ? _value.attester
+          ? _value._attester
           : attester // ignore: cast_nullable_to_non_nullable
               as List<CompositionAttester>?,
       custodian: custodian == freezed
@@ -2106,15 +2006,15 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
           : custodian // ignore: cast_nullable_to_non_nullable
               as Reference?,
       relatesTo: relatesTo == freezed
-          ? _value.relatesTo
+          ? _value._relatesTo
           : relatesTo // ignore: cast_nullable_to_non_nullable
               as List<CompositionRelatesTo>?,
       event: event == freezed
-          ? _value.event
+          ? _value._event
           : event // ignore: cast_nullable_to_non_nullable
               as List<CompositionEvent>?,
       section: section == freezed
-          ? _value.section
+          ? _value._section
           : section // ignore: cast_nullable_to_non_nullable
               as List<CompositionSection>?,
     ));
@@ -2136,35 +2036,44 @@ class _$_Composition extends _Composition {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       @JsonKey(unknownEnumValue: CompositionStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.type,
-      this.category,
+      final List<CodeableConcept>? category,
       this.subject,
       this.encounter,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
-      required this.author,
+      required final List<Reference> author,
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
       this.confidentiality,
       @JsonKey(name: '_confidentiality')
           this.confidentialityElement,
-      this.attester,
+      final List<CompositionAttester>? attester,
       this.custodian,
-      this.relatesTo,
-      this.event,
-      this.section})
-      : super._();
+      final List<CompositionRelatesTo>? relatesTo,
+      final List<CompositionEvent>? event,
+      final List<CompositionSection>? section})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _category = category,
+        _author = author,
+        _attester = attester,
+        _relatesTo = relatesTo,
+        _event = event,
+        _section = section,
+        super._();
 
   factory _$_Composition.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionFromJson(json);
@@ -2188,13 +2097,34 @@ class _$_Composition extends _Composition {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -2205,8 +2135,15 @@ class _$_Composition extends _Composition {
   final Element? statusElement;
   @override
   final CodeableConcept type;
+  final List<CodeableConcept>? _category;
   @override
-  final List<CodeableConcept>? category;
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? subject;
   @override
@@ -2216,8 +2153,13 @@ class _$_Composition extends _Composition {
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+  final List<Reference> _author;
   @override
-  final List<Reference> author;
+  List<Reference> get author {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_author);
+  }
+
   @override
   final String? title;
   @override
@@ -2228,16 +2170,43 @@ class _$_Composition extends _Composition {
   @override
   @JsonKey(name: '_confidentiality')
   final Element? confidentialityElement;
+  final List<CompositionAttester>? _attester;
   @override
-  final List<CompositionAttester>? attester;
+  List<CompositionAttester>? get attester {
+    final value = _attester;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? custodian;
+  final List<CompositionRelatesTo>? _relatesTo;
   @override
-  final List<CompositionRelatesTo>? relatesTo;
+  List<CompositionRelatesTo>? get relatesTo {
+    final value = _relatesTo;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CompositionEvent>? _event;
   @override
-  final List<CompositionEvent>? event;
+  List<CompositionEvent>? get event {
+    final value = _event;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CompositionSection>? _section;
   @override
-  final List<CompositionSection>? section;
+  List<CompositionSection>? get section {
+    final value = _section;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -2248,7 +2217,7 @@ class _$_Composition extends _Composition {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Composition &&
+            other is _$_Composition &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -2261,24 +2230,25 @@ class _$_Composition extends _Composition {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality().equals(other.encounter, encounter) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
-            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other._author, _author) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality()
                 .equals(other.titleElement, titleElement) &&
@@ -2286,13 +2256,15 @@ class _$_Composition extends _Composition {
                 .equals(other.confidentiality, confidentiality) &&
             const DeepCollectionEquality()
                 .equals(other.confidentialityElement, confidentialityElement) &&
-            const DeepCollectionEquality().equals(other.attester, attester) &&
+            const DeepCollectionEquality().equals(other._attester, _attester) &&
             const DeepCollectionEquality().equals(other.custodian, custodian) &&
-            const DeepCollectionEquality().equals(other.relatesTo, relatesTo) &&
-            const DeepCollectionEquality().equals(other.event, event) &&
-            const DeepCollectionEquality().equals(other.section, section));
+            const DeepCollectionEquality()
+                .equals(other._relatesTo, _relatesTo) &&
+            const DeepCollectionEquality().equals(other._event, _event) &&
+            const DeepCollectionEquality().equals(other._section, _section));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2304,34 +2276,34 @@ class _$_Composition extends _Composition {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(type),
-        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(_category),
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(encounter),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
-        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(_author),
         const DeepCollectionEquality().hash(title),
         const DeepCollectionEquality().hash(titleElement),
         const DeepCollectionEquality().hash(confidentiality),
         const DeepCollectionEquality().hash(confidentialityElement),
-        const DeepCollectionEquality().hash(attester),
+        const DeepCollectionEquality().hash(_attester),
         const DeepCollectionEquality().hash(custodian),
-        const DeepCollectionEquality().hash(relatesTo),
-        const DeepCollectionEquality().hash(event),
-        const DeepCollectionEquality().hash(section)
+        const DeepCollectionEquality().hash(_relatesTo),
+        const DeepCollectionEquality().hash(_event),
+        const DeepCollectionEquality().hash(_section)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$CompositionCopyWith<_Composition> get copyWith =>
-      __$CompositionCopyWithImpl<_Composition>(this, _$identity);
+  _$$_CompositionCopyWith<_$_Composition> get copyWith =>
+      __$$_CompositionCopyWithImpl<_$_Composition>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2342,44 +2314,44 @@ class _$_Composition extends _Composition {
 abstract class _Composition extends Composition {
   factory _Composition(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
       @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-          CompositionStatus? status,
+          final CompositionStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      required CodeableConcept type,
-      List<CodeableConcept>? category,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? date,
+          final Element? statusElement,
+      required final CodeableConcept type,
+      final List<CodeableConcept>? category,
+      final Reference? subject,
+      final Reference? encounter,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      required List<Reference> author,
-      String? title,
+          final Element? dateElement,
+      required final List<Reference> author,
+      final String? title,
       @JsonKey(name: '_title')
-          Element? titleElement,
-      Code? confidentiality,
+          final Element? titleElement,
+      final Code? confidentiality,
       @JsonKey(name: '_confidentiality')
-          Element? confidentialityElement,
-      List<CompositionAttester>? attester,
-      Reference? custodian,
-      List<CompositionRelatesTo>? relatesTo,
-      List<CompositionEvent>? event,
-      List<CompositionSection>? section}) = _$_Composition;
+          final Element? confidentialityElement,
+      final List<CompositionAttester>? attester,
+      final Reference? custodian,
+      final List<CompositionRelatesTo>? relatesTo,
+      final List<CompositionEvent>? event,
+      final List<CompositionSection>? section}) = _$_Composition;
   _Composition._() : super._();
 
   factory _Composition.fromJson(Map<String, dynamic> json) =
@@ -2387,119 +2359,84 @@ abstract class _Composition extends Composition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Composition)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-  CompositionStatus? get status;
+  CompositionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get category;
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  Reference? get encounter;
+  Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  List<Reference> get author;
+  List<Reference> get author => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get confidentiality;
+  Code? get confidentiality => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_confidentiality')
-  Element? get confidentialityElement;
+  Element? get confidentialityElement => throw _privateConstructorUsedError;
   @override
-  List<CompositionAttester>? get attester;
+  List<CompositionAttester>? get attester => throw _privateConstructorUsedError;
   @override
-  Reference? get custodian;
+  Reference? get custodian => throw _privateConstructorUsedError;
   @override
-  List<CompositionRelatesTo>? get relatesTo;
+  List<CompositionRelatesTo>? get relatesTo =>
+      throw _privateConstructorUsedError;
   @override
-  List<CompositionEvent>? get event;
+  List<CompositionEvent>? get event => throw _privateConstructorUsedError;
   @override
-  List<CompositionSection>? get section;
+  List<CompositionSection>? get section => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CompositionCopyWith<_Composition> get copyWith =>
+  _$$_CompositionCopyWith<_$_Composition> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CompositionAttester _$CompositionAttesterFromJson(Map<String, dynamic> json) {
   return _CompositionAttester.fromJson(json);
 }
-
-/// @nodoc
-class _$CompositionAttesterTearOff {
-  const _$CompositionAttesterTearOff();
-
-  _CompositionAttester call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
-          CompositionAttesterMode? mode,
-      @JsonKey(name: '_mode')
-          Element? modeElement,
-      FhirDateTime? time,
-      @JsonKey(name: '_time')
-          Element? timeElement,
-      Reference? party}) {
-    return _CompositionAttester(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      mode: mode,
-      modeElement: modeElement,
-      time: time,
-      timeElement: timeElement,
-      party: party,
-    );
-  }
-
-  CompositionAttester fromJson(Map<String, Object?> json) {
-    return CompositionAttester.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CompositionAttester = _$CompositionAttesterTearOff();
 
 /// @nodoc
 mixin _$CompositionAttester {
@@ -2638,11 +2575,11 @@ class _$CompositionAttesterCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CompositionAttesterCopyWith<$Res>
+abstract class _$$_CompositionAttesterCopyWith<$Res>
     implements $CompositionAttesterCopyWith<$Res> {
-  factory _$CompositionAttesterCopyWith(_CompositionAttester value,
-          $Res Function(_CompositionAttester) then) =
-      __$CompositionAttesterCopyWithImpl<$Res>;
+  factory _$$_CompositionAttesterCopyWith(_$_CompositionAttester value,
+          $Res Function(_$_CompositionAttester) then) =
+      __$$_CompositionAttesterCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -2667,15 +2604,15 @@ abstract class _$CompositionAttesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CompositionAttesterCopyWithImpl<$Res>
+class __$$_CompositionAttesterCopyWithImpl<$Res>
     extends _$CompositionAttesterCopyWithImpl<$Res>
-    implements _$CompositionAttesterCopyWith<$Res> {
-  __$CompositionAttesterCopyWithImpl(
-      _CompositionAttester _value, $Res Function(_CompositionAttester) _then)
-      : super(_value, (v) => _then(v as _CompositionAttester));
+    implements _$$_CompositionAttesterCopyWith<$Res> {
+  __$$_CompositionAttesterCopyWithImpl(_$_CompositionAttester _value,
+      $Res Function(_$_CompositionAttester) _then)
+      : super(_value, (v) => _then(v as _$_CompositionAttester));
 
   @override
-  _CompositionAttester get _value => super._value as _CompositionAttester;
+  _$_CompositionAttester get _value => super._value as _$_CompositionAttester;
 
   @override
   $Res call({
@@ -2688,17 +2625,17 @@ class __$CompositionAttesterCopyWithImpl<$Res>
     Object? timeElement = freezed,
     Object? party = freezed,
   }) {
-    return _then(_CompositionAttester(
+    return _then(_$_CompositionAttester(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       mode: mode == freezed
@@ -2730,25 +2667,41 @@ class __$CompositionAttesterCopyWithImpl<$Res>
 class _$_CompositionAttester extends _CompositionAttester {
   _$_CompositionAttester(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown) this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.time,
       @JsonKey(name: '_time') this.timeElement,
       this.party})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionAttesterFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
   final CompositionAttesterMode? mode;
@@ -2772,12 +2725,12 @@ class _$_CompositionAttester extends _CompositionAttester {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CompositionAttester &&
+            other is _$_CompositionAttester &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.mode, mode) &&
             const DeepCollectionEquality()
                 .equals(other.modeElement, modeElement) &&
@@ -2787,12 +2740,13 @@ class _$_CompositionAttester extends _CompositionAttester {
             const DeepCollectionEquality().equals(other.party, party));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(mode),
       const DeepCollectionEquality().hash(modeElement),
       const DeepCollectionEquality().hash(time),
@@ -2801,8 +2755,8 @@ class _$_CompositionAttester extends _CompositionAttester {
 
   @JsonKey(ignore: true)
   @override
-  _$CompositionAttesterCopyWith<_CompositionAttester> get copyWith =>
-      __$CompositionAttesterCopyWithImpl<_CompositionAttester>(
+  _$$_CompositionAttesterCopyWith<_$_CompositionAttester> get copyWith =>
+      __$$_CompositionAttesterCopyWithImpl<_$_CompositionAttester>(
           this, _$identity);
 
   @override
@@ -2813,83 +2767,53 @@ class _$_CompositionAttester extends _CompositionAttester {
 
 abstract class _CompositionAttester extends CompositionAttester {
   factory _CompositionAttester(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
-          CompositionAttesterMode? mode,
+          final CompositionAttesterMode? mode,
       @JsonKey(name: '_mode')
-          Element? modeElement,
-      FhirDateTime? time,
+          final Element? modeElement,
+      final FhirDateTime? time,
       @JsonKey(name: '_time')
-          Element? timeElement,
-      Reference? party}) = _$_CompositionAttester;
+          final Element? timeElement,
+      final Reference? party}) = _$_CompositionAttester;
   _CompositionAttester._() : super._();
 
   factory _CompositionAttester.fromJson(Map<String, dynamic> json) =
       _$_CompositionAttester.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
-  CompositionAttesterMode? get mode;
+  CompositionAttesterMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get time;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_time')
-  Element? get timeElement;
+  Element? get timeElement => throw _privateConstructorUsedError;
   @override
-  Reference? get party;
+  Reference? get party => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CompositionAttesterCopyWith<_CompositionAttester> get copyWith =>
+  _$$_CompositionAttesterCopyWith<_$_CompositionAttester> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CompositionRelatesTo _$CompositionRelatesToFromJson(Map<String, dynamic> json) {
   return _CompositionRelatesTo.fromJson(json);
 }
-
-/// @nodoc
-class _$CompositionRelatesToTearOff {
-  const _$CompositionRelatesToTearOff();
-
-  _CompositionRelatesTo call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      Identifier? targetIdentifier,
-      Reference? targetReference}) {
-    return _CompositionRelatesTo(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      codeElement: codeElement,
-      targetIdentifier: targetIdentifier,
-      targetReference: targetReference,
-    );
-  }
-
-  CompositionRelatesTo fromJson(Map<String, Object?> json) {
-    return CompositionRelatesTo.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CompositionRelatesTo = _$CompositionRelatesToTearOff();
 
 /// @nodoc
 mixin _$CompositionRelatesTo {
@@ -3015,11 +2939,11 @@ class _$CompositionRelatesToCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CompositionRelatesToCopyWith<$Res>
+abstract class _$$_CompositionRelatesToCopyWith<$Res>
     implements $CompositionRelatesToCopyWith<$Res> {
-  factory _$CompositionRelatesToCopyWith(_CompositionRelatesTo value,
-          $Res Function(_CompositionRelatesTo) then) =
-      __$CompositionRelatesToCopyWithImpl<$Res>;
+  factory _$$_CompositionRelatesToCopyWith(_$_CompositionRelatesTo value,
+          $Res Function(_$_CompositionRelatesTo) then) =
+      __$$_CompositionRelatesToCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -3039,15 +2963,15 @@ abstract class _$CompositionRelatesToCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CompositionRelatesToCopyWithImpl<$Res>
+class __$$_CompositionRelatesToCopyWithImpl<$Res>
     extends _$CompositionRelatesToCopyWithImpl<$Res>
-    implements _$CompositionRelatesToCopyWith<$Res> {
-  __$CompositionRelatesToCopyWithImpl(
-      _CompositionRelatesTo _value, $Res Function(_CompositionRelatesTo) _then)
-      : super(_value, (v) => _then(v as _CompositionRelatesTo));
+    implements _$$_CompositionRelatesToCopyWith<$Res> {
+  __$$_CompositionRelatesToCopyWithImpl(_$_CompositionRelatesTo _value,
+      $Res Function(_$_CompositionRelatesTo) _then)
+      : super(_value, (v) => _then(v as _$_CompositionRelatesTo));
 
   @override
-  _CompositionRelatesTo get _value => super._value as _CompositionRelatesTo;
+  _$_CompositionRelatesTo get _value => super._value as _$_CompositionRelatesTo;
 
   @override
   $Res call({
@@ -3059,17 +2983,17 @@ class __$CompositionRelatesToCopyWithImpl<$Res>
     Object? targetIdentifier = freezed,
     Object? targetReference = freezed,
   }) {
-    return _then(_CompositionRelatesTo(
+    return _then(_$_CompositionRelatesTo(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -3097,24 +3021,40 @@ class __$CompositionRelatesToCopyWithImpl<$Res>
 class _$_CompositionRelatesTo extends _CompositionRelatesTo {
   _$_CompositionRelatesTo(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.targetIdentifier,
       this.targetReference})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionRelatesToFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? code;
   @override
@@ -3134,12 +3074,12 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CompositionRelatesTo &&
+            other is _$_CompositionRelatesTo &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.codeElement, codeElement) &&
@@ -3149,12 +3089,13 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
                 .equals(other.targetReference, targetReference));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(codeElement),
       const DeepCollectionEquality().hash(targetIdentifier),
@@ -3162,8 +3103,8 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
 
   @JsonKey(ignore: true)
   @override
-  _$CompositionRelatesToCopyWith<_CompositionRelatesTo> get copyWith =>
-      __$CompositionRelatesToCopyWithImpl<_CompositionRelatesTo>(
+  _$$_CompositionRelatesToCopyWith<_$_CompositionRelatesTo> get copyWith =>
+      __$$_CompositionRelatesToCopyWithImpl<_$_CompositionRelatesTo>(
           this, _$identity);
 
   @override
@@ -3174,72 +3115,44 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
 
 abstract class _CompositionRelatesTo extends CompositionRelatesTo {
   factory _CompositionRelatesTo(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      Identifier? targetIdentifier,
-      Reference? targetReference}) = _$_CompositionRelatesTo;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Code? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      final Identifier? targetIdentifier,
+      final Reference? targetReference}) = _$_CompositionRelatesTo;
   _CompositionRelatesTo._() : super._();
 
   factory _CompositionRelatesTo.fromJson(Map<String, dynamic> json) =
       _$_CompositionRelatesTo.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Identifier? get targetIdentifier;
+  Identifier? get targetIdentifier => throw _privateConstructorUsedError;
   @override
-  Reference? get targetReference;
+  Reference? get targetReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CompositionRelatesToCopyWith<_CompositionRelatesTo> get copyWith =>
+  _$$_CompositionRelatesToCopyWith<_$_CompositionRelatesTo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CompositionEvent _$CompositionEventFromJson(Map<String, dynamic> json) {
   return _CompositionEvent.fromJson(json);
 }
-
-/// @nodoc
-class _$CompositionEventTearOff {
-  const _$CompositionEventTearOff();
-
-  _CompositionEvent call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? code,
-      Period? period,
-      List<Reference>? detail}) {
-    return _CompositionEvent(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      period: period,
-      detail: detail,
-    );
-  }
-
-  CompositionEvent fromJson(Map<String, Object?> json) {
-    return CompositionEvent.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CompositionEvent = _$CompositionEventTearOff();
 
 /// @nodoc
 mixin _$CompositionEvent {
@@ -3333,11 +3246,11 @@ class _$CompositionEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CompositionEventCopyWith<$Res>
+abstract class _$$_CompositionEventCopyWith<$Res>
     implements $CompositionEventCopyWith<$Res> {
-  factory _$CompositionEventCopyWith(
-          _CompositionEvent value, $Res Function(_CompositionEvent) then) =
-      __$CompositionEventCopyWithImpl<$Res>;
+  factory _$$_CompositionEventCopyWith(
+          _$_CompositionEvent value, $Res Function(_$_CompositionEvent) then) =
+      __$$_CompositionEventCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -3352,15 +3265,15 @@ abstract class _$CompositionEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CompositionEventCopyWithImpl<$Res>
+class __$$_CompositionEventCopyWithImpl<$Res>
     extends _$CompositionEventCopyWithImpl<$Res>
-    implements _$CompositionEventCopyWith<$Res> {
-  __$CompositionEventCopyWithImpl(
-      _CompositionEvent _value, $Res Function(_CompositionEvent) _then)
-      : super(_value, (v) => _then(v as _CompositionEvent));
+    implements _$$_CompositionEventCopyWith<$Res> {
+  __$$_CompositionEventCopyWithImpl(
+      _$_CompositionEvent _value, $Res Function(_$_CompositionEvent) _then)
+      : super(_value, (v) => _then(v as _$_CompositionEvent));
 
   @override
-  _CompositionEvent get _value => super._value as _CompositionEvent;
+  _$_CompositionEvent get _value => super._value as _$_CompositionEvent;
 
   @override
   $Res call({
@@ -3371,21 +3284,21 @@ class __$CompositionEventCopyWithImpl<$Res>
     Object? period = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_CompositionEvent(
+    return _then(_$_CompositionEvent(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
-          ? _value.code
+          ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       period: period == freezed
@@ -3393,7 +3306,7 @@ class __$CompositionEventCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
       detail: detail == freezed
-          ? _value.detail
+          ? _value._detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -3405,29 +3318,60 @@ class __$CompositionEventCopyWithImpl<$Res>
 class _$_CompositionEvent extends _CompositionEvent {
   _$_CompositionEvent(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.code,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? code,
       this.period,
-      this.detail})
-      : super._();
+      final List<Reference>? detail})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _code = code,
+        _detail = detail,
+        super._();
 
   factory _$_CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionEventFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _code;
   @override
-  final List<CodeableConcept>? code;
+  List<CodeableConcept>? get code {
+    final value = _code;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Period? period;
+  final List<Reference>? _detail;
   @override
-  final List<Reference>? detail;
+  List<Reference>? get detail {
+    final value = _detail;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -3438,31 +3382,32 @@ class _$_CompositionEvent extends _CompositionEvent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CompositionEvent &&
+            other is _$_CompositionEvent &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._code, _code) &&
             const DeepCollectionEquality().equals(other.period, period) &&
-            const DeepCollectionEquality().equals(other.detail, detail));
+            const DeepCollectionEquality().equals(other._detail, _detail));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_code),
       const DeepCollectionEquality().hash(period),
-      const DeepCollectionEquality().hash(detail));
+      const DeepCollectionEquality().hash(_detail));
 
   @JsonKey(ignore: true)
   @override
-  _$CompositionEventCopyWith<_CompositionEvent> get copyWith =>
-      __$CompositionEventCopyWithImpl<_CompositionEvent>(this, _$identity);
+  _$$_CompositionEventCopyWith<_$_CompositionEvent> get copyWith =>
+      __$$_CompositionEventCopyWithImpl<_$_CompositionEvent>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3472,86 +3417,40 @@ class _$_CompositionEvent extends _CompositionEvent {
 
 abstract class _CompositionEvent extends CompositionEvent {
   factory _CompositionEvent(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? code,
-      Period? period,
-      List<Reference>? detail}) = _$_CompositionEvent;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? code,
+      final Period? period,
+      final List<Reference>? detail}) = _$_CompositionEvent;
   _CompositionEvent._() : super._();
 
   factory _CompositionEvent.fromJson(Map<String, dynamic> json) =
       _$_CompositionEvent.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get code;
+  List<CodeableConcept>? get code => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get detail;
+  List<Reference>? get detail => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CompositionEventCopyWith<_CompositionEvent> get copyWith =>
+  _$$_CompositionEventCopyWith<_$_CompositionEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CompositionSection _$CompositionSectionFromJson(Map<String, dynamic> json) {
   return _CompositionSection.fromJson(json);
 }
-
-/// @nodoc
-class _$CompositionSectionTearOff {
-  const _$CompositionSectionTearOff();
-
-  _CompositionSection call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      CodeableConcept? code,
-      List<Reference>? author,
-      Reference? focus,
-      Narrative? text,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
-      CodeableConcept? orderedBy,
-      List<Reference>? entry,
-      CodeableConcept? emptyReason,
-      List<CompositionSection>? section}) {
-    return _CompositionSection(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      title: title,
-      titleElement: titleElement,
-      code: code,
-      author: author,
-      focus: focus,
-      text: text,
-      mode: mode,
-      modeElement: modeElement,
-      orderedBy: orderedBy,
-      entry: entry,
-      emptyReason: emptyReason,
-      section: section,
-    );
-  }
-
-  CompositionSection fromJson(Map<String, Object?> json) {
-    return CompositionSection.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CompositionSection = _$CompositionSectionTearOff();
 
 /// @nodoc
 mixin _$CompositionSection {
@@ -3782,11 +3681,11 @@ class _$CompositionSectionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CompositionSectionCopyWith<$Res>
+abstract class _$$_CompositionSectionCopyWith<$Res>
     implements $CompositionSectionCopyWith<$Res> {
-  factory _$CompositionSectionCopyWith(
-          _CompositionSection value, $Res Function(_CompositionSection) then) =
-      __$CompositionSectionCopyWithImpl<$Res>;
+  factory _$$_CompositionSectionCopyWith(_$_CompositionSection value,
+          $Res Function(_$_CompositionSection) then) =
+      __$$_CompositionSectionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -3822,15 +3721,15 @@ abstract class _$CompositionSectionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CompositionSectionCopyWithImpl<$Res>
+class __$$_CompositionSectionCopyWithImpl<$Res>
     extends _$CompositionSectionCopyWithImpl<$Res>
-    implements _$CompositionSectionCopyWith<$Res> {
-  __$CompositionSectionCopyWithImpl(
-      _CompositionSection _value, $Res Function(_CompositionSection) _then)
-      : super(_value, (v) => _then(v as _CompositionSection));
+    implements _$$_CompositionSectionCopyWith<$Res> {
+  __$$_CompositionSectionCopyWithImpl(
+      _$_CompositionSection _value, $Res Function(_$_CompositionSection) _then)
+      : super(_value, (v) => _then(v as _$_CompositionSection));
 
   @override
-  _CompositionSection get _value => super._value as _CompositionSection;
+  _$_CompositionSection get _value => super._value as _$_CompositionSection;
 
   @override
   $Res call({
@@ -3850,17 +3749,17 @@ class __$CompositionSectionCopyWithImpl<$Res>
     Object? emptyReason = freezed,
     Object? section = freezed,
   }) {
-    return _then(_CompositionSection(
+    return _then(_$_CompositionSection(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       title: title == freezed
@@ -3876,7 +3775,7 @@ class __$CompositionSectionCopyWithImpl<$Res>
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       author: author == freezed
-          ? _value.author
+          ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       focus: focus == freezed
@@ -3900,7 +3799,7 @@ class __$CompositionSectionCopyWithImpl<$Res>
           : orderedBy // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       entry: entry == freezed
-          ? _value.entry
+          ? _value._entry
           : entry // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       emptyReason: emptyReason == freezed
@@ -3908,7 +3807,7 @@ class __$CompositionSectionCopyWithImpl<$Res>
           : emptyReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       section: section == freezed
-          ? _value.section
+          ? _value._section
           : section // ignore: cast_nullable_to_non_nullable
               as List<CompositionSection>?,
     ));
@@ -3920,32 +3819,51 @@ class __$CompositionSectionCopyWithImpl<$Res>
 class _$_CompositionSection extends _CompositionSection {
   _$_CompositionSection(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.title,
       @JsonKey(name: '_title') this.titleElement,
       this.code,
-      this.author,
+      final List<Reference>? author,
       this.focus,
       this.text,
       this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.orderedBy,
-      this.entry,
+      final List<Reference>? entry,
       this.emptyReason,
-      this.section})
-      : super._();
+      final List<CompositionSection>? section})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _author = author,
+        _entry = entry,
+        _section = section,
+        super._();
 
   factory _$_CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionSectionFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? title;
   @override
@@ -3953,8 +3871,15 @@ class _$_CompositionSection extends _CompositionSection {
   final Element? titleElement;
   @override
   final CodeableConcept? code;
+  final List<Reference>? _author;
   @override
-  final List<Reference>? author;
+  List<Reference>? get author {
+    final value = _author;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? focus;
   @override
@@ -3966,12 +3891,25 @@ class _$_CompositionSection extends _CompositionSection {
   final Element? modeElement;
   @override
   final CodeableConcept? orderedBy;
+  final List<Reference>? _entry;
   @override
-  final List<Reference>? entry;
+  List<Reference>? get entry {
+    final value = _entry;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? emptyReason;
+  final List<CompositionSection>? _section;
   @override
-  final List<CompositionSection>? section;
+  List<CompositionSection>? get section {
+    final value = _section;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -3982,52 +3920,54 @@ class _$_CompositionSection extends _CompositionSection {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CompositionSection &&
+            other is _$_CompositionSection &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality()
                 .equals(other.titleElement, titleElement) &&
             const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other._author, _author) &&
             const DeepCollectionEquality().equals(other.focus, focus) &&
             const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.mode, mode) &&
             const DeepCollectionEquality()
                 .equals(other.modeElement, modeElement) &&
             const DeepCollectionEquality().equals(other.orderedBy, orderedBy) &&
-            const DeepCollectionEquality().equals(other.entry, entry) &&
+            const DeepCollectionEquality().equals(other._entry, _entry) &&
             const DeepCollectionEquality()
                 .equals(other.emptyReason, emptyReason) &&
-            const DeepCollectionEquality().equals(other.section, section));
+            const DeepCollectionEquality().equals(other._section, _section));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(title),
       const DeepCollectionEquality().hash(titleElement),
       const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(author),
+      const DeepCollectionEquality().hash(_author),
       const DeepCollectionEquality().hash(focus),
       const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(mode),
       const DeepCollectionEquality().hash(modeElement),
       const DeepCollectionEquality().hash(orderedBy),
-      const DeepCollectionEquality().hash(entry),
+      const DeepCollectionEquality().hash(_entry),
       const DeepCollectionEquality().hash(emptyReason),
-      const DeepCollectionEquality().hash(section));
+      const DeepCollectionEquality().hash(_section));
 
   @JsonKey(ignore: true)
   @override
-  _$CompositionSectionCopyWith<_CompositionSection> get copyWith =>
-      __$CompositionSectionCopyWithImpl<_CompositionSection>(this, _$identity);
+  _$$_CompositionSectionCopyWith<_$_CompositionSection> get copyWith =>
+      __$$_CompositionSectionCopyWithImpl<_$_CompositionSection>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4037,148 +3977,69 @@ class _$_CompositionSection extends _CompositionSection {
 
 abstract class _CompositionSection extends CompositionSection {
   factory _CompositionSection(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      CodeableConcept? code,
-      List<Reference>? author,
-      Reference? focus,
-      Narrative? text,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
-      CodeableConcept? orderedBy,
-      List<Reference>? entry,
-      CodeableConcept? emptyReason,
-      List<CompositionSection>? section}) = _$_CompositionSection;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? title,
+      @JsonKey(name: '_title') final Element? titleElement,
+      final CodeableConcept? code,
+      final List<Reference>? author,
+      final Reference? focus,
+      final Narrative? text,
+      final Code? mode,
+      @JsonKey(name: '_mode') final Element? modeElement,
+      final CodeableConcept? orderedBy,
+      final List<Reference>? entry,
+      final CodeableConcept? emptyReason,
+      final List<CompositionSection>? section}) = _$_CompositionSection;
   _CompositionSection._() : super._();
 
   factory _CompositionSection.fromJson(Map<String, dynamic> json) =
       _$_CompositionSection.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get author;
+  List<Reference>? get author => throw _privateConstructorUsedError;
   @override
-  Reference? get focus;
+  Reference? get focus => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  Code? get mode;
+  Code? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get orderedBy;
+  CodeableConcept? get orderedBy => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get entry;
+  List<Reference>? get entry => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get emptyReason;
+  CodeableConcept? get emptyReason => throw _privateConstructorUsedError;
   @override
-  List<CompositionSection>? get section;
+  List<CompositionSection>? get section => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CompositionSectionCopyWith<_CompositionSection> get copyWith =>
+  _$$_CompositionSectionCopyWith<_$_CompositionSection> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) {
   return _DocumentManifest.fromJson(json);
 }
-
-/// @nodoc
-class _$DocumentManifestTearOff {
-  const _$DocumentManifestTearOff();
-
-  _DocumentManifest call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
-          R4ResourceType resourceType = R4ResourceType.DocumentManifest,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? masterIdentifier,
-      List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-          DocumentManifestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? type,
-      Reference? subject,
-      FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
-      List<Reference>? author,
-      List<Reference>? recipient,
-      FhirUri? source,
-      @JsonKey(name: '_source')
-          Element? sourceElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      required List<Reference> content,
-      List<DocumentManifestRelated>? related}) {
-    return _DocumentManifest(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      masterIdentifier: masterIdentifier,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      type: type,
-      subject: subject,
-      created: created,
-      createdElement: createdElement,
-      author: author,
-      recipient: recipient,
-      source: source,
-      sourceElement: sourceElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      content: content,
-      related: related,
-    );
-  }
-
-  DocumentManifest fromJson(Map<String, Object?> json) {
-    return DocumentManifest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DocumentManifest = _$DocumentManifestTearOff();
 
 /// @nodoc
 mixin _$DocumentManifest {
@@ -4557,11 +4418,11 @@ class _$DocumentManifestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DocumentManifestCopyWith<$Res>
+abstract class _$$_DocumentManifestCopyWith<$Res>
     implements $DocumentManifestCopyWith<$Res> {
-  factory _$DocumentManifestCopyWith(
-          _DocumentManifest value, $Res Function(_DocumentManifest) then) =
-      __$DocumentManifestCopyWithImpl<$Res>;
+  factory _$$_DocumentManifestCopyWith(
+          _$_DocumentManifest value, $Res Function(_$_DocumentManifest) then) =
+      __$$_DocumentManifestCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
@@ -4626,15 +4487,15 @@ abstract class _$DocumentManifestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DocumentManifestCopyWithImpl<$Res>
+class __$$_DocumentManifestCopyWithImpl<$Res>
     extends _$DocumentManifestCopyWithImpl<$Res>
-    implements _$DocumentManifestCopyWith<$Res> {
-  __$DocumentManifestCopyWithImpl(
-      _DocumentManifest _value, $Res Function(_DocumentManifest) _then)
-      : super(_value, (v) => _then(v as _DocumentManifest));
+    implements _$$_DocumentManifestCopyWith<$Res> {
+  __$$_DocumentManifestCopyWithImpl(
+      _$_DocumentManifest _value, $Res Function(_$_DocumentManifest) _then)
+      : super(_value, (v) => _then(v as _$_DocumentManifest));
 
   @override
-  _DocumentManifest get _value => super._value as _DocumentManifest;
+  _$_DocumentManifest get _value => super._value as _$_DocumentManifest;
 
   @override
   $Res call({
@@ -4666,7 +4527,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
     Object? content = freezed,
     Object? related = freezed,
   }) {
-    return _then(_DocumentManifest(
+    return _then(_$_DocumentManifest(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4700,15 +4561,15 @@ class __$DocumentManifestCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       masterIdentifier: masterIdentifier == freezed
@@ -4716,7 +4577,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
           : masterIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: status == freezed
@@ -4744,11 +4605,11 @@ class __$DocumentManifestCopyWithImpl<$Res>
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       author: author == freezed
-          ? _value.author
+          ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       recipient: recipient == freezed
-          ? _value.recipient
+          ? _value._recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       source: source == freezed
@@ -4768,11 +4629,11 @@ class __$DocumentManifestCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       content: content == freezed
-          ? _value.content
+          ? _value._content
           : content // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
       related: related == freezed
-          ? _value.related
+          ? _value._related
           : related // ignore: cast_nullable_to_non_nullable
               as List<DocumentManifestRelated>?,
     ));
@@ -4794,12 +4655,12 @@ class _$_DocumentManifest extends _DocumentManifest {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.masterIdentifier,
-      this.identifier,
+      final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
@@ -4809,17 +4670,25 @@ class _$_DocumentManifest extends _DocumentManifest {
       this.created,
       @JsonKey(name: '_created')
           this.createdElement,
-      this.author,
-      this.recipient,
+      final List<Reference>? author,
+      final List<Reference>? recipient,
       this.source,
       @JsonKey(name: '_source')
           this.sourceElement,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      required this.content,
-      this.related})
-      : super._();
+      required final List<Reference> content,
+      final List<DocumentManifestRelated>? related})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _author = author,
+        _recipient = recipient,
+        _content = content,
+        _related = related,
+        super._();
 
   factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentManifestFromJson(json);
@@ -4843,17 +4712,45 @@ class _$_DocumentManifest extends _DocumentManifest {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? masterIdentifier;
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
   final DocumentManifestStatus? status;
@@ -4869,10 +4766,24 @@ class _$_DocumentManifest extends _DocumentManifest {
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
+  final List<Reference>? _author;
   @override
-  final List<Reference>? author;
+  List<Reference>? get author {
+    final value = _author;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _recipient;
   @override
-  final List<Reference>? recipient;
+  List<Reference>? get recipient {
+    final value = _recipient;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? source;
   @override
@@ -4883,10 +4794,21 @@ class _$_DocumentManifest extends _DocumentManifest {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<Reference> _content;
   @override
-  final List<Reference> content;
+  List<Reference> get content {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_content);
+  }
+
+  final List<DocumentManifestRelated>? _related;
   @override
-  final List<DocumentManifestRelated>? related;
+  List<DocumentManifestRelated>? get related {
+    final value = _related;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -4897,7 +4819,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DocumentManifest &&
+            other is _$_DocumentManifest &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -4910,15 +4832,16 @@ class _$_DocumentManifest extends _DocumentManifest {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.masterIdentifier, masterIdentifier) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -4927,8 +4850,9 @@ class _$_DocumentManifest extends _DocumentManifest {
             const DeepCollectionEquality().equals(other.created, created) &&
             const DeepCollectionEquality()
                 .equals(other.createdElement, createdElement) &&
-            const DeepCollectionEquality().equals(other.author, author) &&
-            const DeepCollectionEquality().equals(other.recipient, recipient) &&
+            const DeepCollectionEquality().equals(other._author, _author) &&
+            const DeepCollectionEquality()
+                .equals(other._recipient, _recipient) &&
             const DeepCollectionEquality().equals(other.source, source) &&
             const DeepCollectionEquality()
                 .equals(other.sourceElement, sourceElement) &&
@@ -4936,10 +4860,11 @@ class _$_DocumentManifest extends _DocumentManifest {
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.content, content) &&
-            const DeepCollectionEquality().equals(other.related, related));
+            const DeepCollectionEquality().equals(other._content, _content) &&
+            const DeepCollectionEquality().equals(other._related, _related));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4951,31 +4876,31 @@ class _$_DocumentManifest extends _DocumentManifest {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(masterIdentifier),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(created),
         const DeepCollectionEquality().hash(createdElement),
-        const DeepCollectionEquality().hash(author),
-        const DeepCollectionEquality().hash(recipient),
+        const DeepCollectionEquality().hash(_author),
+        const DeepCollectionEquality().hash(_recipient),
         const DeepCollectionEquality().hash(source),
         const DeepCollectionEquality().hash(sourceElement),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(content),
-        const DeepCollectionEquality().hash(related)
+        const DeepCollectionEquality().hash(_content),
+        const DeepCollectionEquality().hash(_related)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$DocumentManifestCopyWith<_DocumentManifest> get copyWith =>
-      __$DocumentManifestCopyWithImpl<_DocumentManifest>(this, _$identity);
+  _$$_DocumentManifestCopyWith<_$_DocumentManifest> get copyWith =>
+      __$$_DocumentManifestCopyWithImpl<_$_DocumentManifest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4986,41 +4911,41 @@ class _$_DocumentManifest extends _DocumentManifest {
 abstract class _DocumentManifest extends DocumentManifest {
   factory _DocumentManifest(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? masterIdentifier,
-      List<Identifier>? identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? masterIdentifier,
+      final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-          DocumentManifestStatus? status,
+          final DocumentManifestStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? type,
-      Reference? subject,
-      FhirDateTime? created,
+          final Element? statusElement,
+      final CodeableConcept? type,
+      final Reference? subject,
+      final FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element? createdElement,
-      List<Reference>? author,
-      List<Reference>? recipient,
-      FhirUri? source,
+          final Element? createdElement,
+      final List<Reference>? author,
+      final List<Reference>? recipient,
+      final FhirUri? source,
       @JsonKey(name: '_source')
-          Element? sourceElement,
-      String? description,
+          final Element? sourceElement,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      required List<Reference> content,
-      List<DocumentManifestRelated>? related}) = _$_DocumentManifest;
+          final Element? descriptionElement,
+      required final List<Reference> content,
+      final List<DocumentManifestRelated>? related}) = _$_DocumentManifest;
   _DocumentManifest._() : super._();
 
   factory _DocumentManifest.fromJson(Map<String, dynamic> json) =
@@ -5028,70 +4953,72 @@ abstract class _DocumentManifest extends DocumentManifest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get masterIdentifier;
+  Identifier? get masterIdentifier => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-  DocumentManifestStatus? get status;
+  DocumentManifestStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element? get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get author;
+  List<Reference>? get author => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get recipient;
+  List<Reference>? get recipient => throw _privateConstructorUsedError;
   @override
-  FhirUri? get source;
+  FhirUri? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_source')
-  Element? get sourceElement;
+  Element? get sourceElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<Reference> get content;
+  List<Reference> get content => throw _privateConstructorUsedError;
   @override
-  List<DocumentManifestRelated>? get related;
+  List<DocumentManifestRelated>? get related =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentManifestCopyWith<_DocumentManifest> get copyWith =>
+  _$$_DocumentManifestCopyWith<_$_DocumentManifest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5099,33 +5026,6 @@ DocumentManifestRelated _$DocumentManifestRelatedFromJson(
     Map<String, dynamic> json) {
   return _DocumentManifestRelated.fromJson(json);
 }
-
-/// @nodoc
-class _$DocumentManifestRelatedTearOff {
-  const _$DocumentManifestRelatedTearOff();
-
-  _DocumentManifestRelated call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      Reference? ref}) {
-    return _DocumentManifestRelated(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      ref: ref,
-    );
-  }
-
-  DocumentManifestRelated fromJson(Map<String, Object?> json) {
-    return DocumentManifestRelated.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DocumentManifestRelated = _$DocumentManifestRelatedTearOff();
 
 /// @nodoc
 mixin _$DocumentManifestRelated {
@@ -5224,11 +5124,11 @@ class _$DocumentManifestRelatedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DocumentManifestRelatedCopyWith<$Res>
+abstract class _$$_DocumentManifestRelatedCopyWith<$Res>
     implements $DocumentManifestRelatedCopyWith<$Res> {
-  factory _$DocumentManifestRelatedCopyWith(_DocumentManifestRelated value,
-          $Res Function(_DocumentManifestRelated) then) =
-      __$DocumentManifestRelatedCopyWithImpl<$Res>;
+  factory _$$_DocumentManifestRelatedCopyWith(_$_DocumentManifestRelated value,
+          $Res Function(_$_DocumentManifestRelated) then) =
+      __$$_DocumentManifestRelatedCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -5244,16 +5144,16 @@ abstract class _$DocumentManifestRelatedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DocumentManifestRelatedCopyWithImpl<$Res>
+class __$$_DocumentManifestRelatedCopyWithImpl<$Res>
     extends _$DocumentManifestRelatedCopyWithImpl<$Res>
-    implements _$DocumentManifestRelatedCopyWith<$Res> {
-  __$DocumentManifestRelatedCopyWithImpl(_DocumentManifestRelated _value,
-      $Res Function(_DocumentManifestRelated) _then)
-      : super(_value, (v) => _then(v as _DocumentManifestRelated));
+    implements _$$_DocumentManifestRelatedCopyWith<$Res> {
+  __$$_DocumentManifestRelatedCopyWithImpl(_$_DocumentManifestRelated _value,
+      $Res Function(_$_DocumentManifestRelated) _then)
+      : super(_value, (v) => _then(v as _$_DocumentManifestRelated));
 
   @override
-  _DocumentManifestRelated get _value =>
-      super._value as _DocumentManifestRelated;
+  _$_DocumentManifestRelated get _value =>
+      super._value as _$_DocumentManifestRelated;
 
   @override
   $Res call({
@@ -5263,17 +5163,17 @@ class __$DocumentManifestRelatedCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? ref = freezed,
   }) {
-    return _then(_DocumentManifestRelated(
+    return _then(_$_DocumentManifestRelated(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -5293,22 +5193,38 @@ class __$DocumentManifestRelatedCopyWithImpl<$Res>
 class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   _$_DocumentManifestRelated(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.ref})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentManifestRelatedFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -5323,31 +5239,33 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DocumentManifestRelated &&
+            other is _$_DocumentManifestRelated &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.ref, ref));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(identifier),
       const DeepCollectionEquality().hash(ref));
 
   @JsonKey(ignore: true)
   @override
-  _$DocumentManifestRelatedCopyWith<_DocumentManifestRelated> get copyWith =>
-      __$DocumentManifestRelatedCopyWithImpl<_DocumentManifestRelated>(
-          this, _$identity);
+  _$$_DocumentManifestRelatedCopyWith<_$_DocumentManifestRelated>
+      get copyWith =>
+          __$$_DocumentManifestRelatedCopyWithImpl<_$_DocumentManifestRelated>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5357,124 +5275,37 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
 
 abstract class _DocumentManifestRelated extends DocumentManifestRelated {
   factory _DocumentManifestRelated(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      Reference? ref}) = _$_DocumentManifestRelated;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final Reference? ref}) = _$_DocumentManifestRelated;
   _DocumentManifestRelated._() : super._();
 
   factory _DocumentManifestRelated.fromJson(Map<String, dynamic> json) =
       _$_DocumentManifestRelated.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  Reference? get ref;
+  Reference? get ref => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentManifestRelatedCopyWith<_DocumentManifestRelated> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_DocumentManifestRelatedCopyWith<_$_DocumentManifestRelated>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
   return _DocumentReference.fromJson(json);
 }
-
-/// @nodoc
-class _$DocumentReferenceTearOff {
-  const _$DocumentReferenceTearOff();
-
-  _DocumentReference call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
-          R4ResourceType resourceType = R4ResourceType.DocumentReference,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? masterIdentifier,
-      List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-          DocumentReferenceStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Code? docStatus,
-      @JsonKey(name: '_docStatus')
-          Element? docStatusElement,
-      CodeableConcept? type,
-      List<CodeableConcept>? category,
-      Reference? subject,
-      Instant? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      List<Reference>? author,
-      Reference? authenticator,
-      Reference? custodian,
-      List<DocumentReferenceRelatesTo>? relatesTo,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? securityLabel,
-      required List<DocumentReferenceContent> content,
-      DocumentReferenceContext? context}) {
-    return _DocumentReference(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      masterIdentifier: masterIdentifier,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      docStatus: docStatus,
-      docStatusElement: docStatusElement,
-      type: type,
-      category: category,
-      subject: subject,
-      date: date,
-      dateElement: dateElement,
-      author: author,
-      authenticator: authenticator,
-      custodian: custodian,
-      relatesTo: relatesTo,
-      description: description,
-      descriptionElement: descriptionElement,
-      securityLabel: securityLabel,
-      content: content,
-      context: context,
-    );
-  }
-
-  DocumentReference fromJson(Map<String, Object?> json) {
-    return DocumentReference.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DocumentReference = _$DocumentReferenceTearOff();
 
 /// @nodoc
 mixin _$DocumentReference {
@@ -5919,11 +5750,11 @@ class _$DocumentReferenceCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DocumentReferenceCopyWith<$Res>
+abstract class _$$_DocumentReferenceCopyWith<$Res>
     implements $DocumentReferenceCopyWith<$Res> {
-  factory _$DocumentReferenceCopyWith(
-          _DocumentReference value, $Res Function(_DocumentReference) then) =
-      __$DocumentReferenceCopyWithImpl<$Res>;
+  factory _$$_DocumentReferenceCopyWith(_$_DocumentReference value,
+          $Res Function(_$_DocumentReference) then) =
+      __$$_DocumentReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
@@ -5998,15 +5829,15 @@ abstract class _$DocumentReferenceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DocumentReferenceCopyWithImpl<$Res>
+class __$$_DocumentReferenceCopyWithImpl<$Res>
     extends _$DocumentReferenceCopyWithImpl<$Res>
-    implements _$DocumentReferenceCopyWith<$Res> {
-  __$DocumentReferenceCopyWithImpl(
-      _DocumentReference _value, $Res Function(_DocumentReference) _then)
-      : super(_value, (v) => _then(v as _DocumentReference));
+    implements _$$_DocumentReferenceCopyWith<$Res> {
+  __$$_DocumentReferenceCopyWithImpl(
+      _$_DocumentReference _value, $Res Function(_$_DocumentReference) _then)
+      : super(_value, (v) => _then(v as _$_DocumentReference));
 
   @override
-  _DocumentReference get _value => super._value as _DocumentReference;
+  _$_DocumentReference get _value => super._value as _$_DocumentReference;
 
   @override
   $Res call({
@@ -6042,7 +5873,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
     Object? content = freezed,
     Object? context = freezed,
   }) {
-    return _then(_DocumentReference(
+    return _then(_$_DocumentReference(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -6076,15 +5907,15 @@ class __$DocumentReferenceCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       masterIdentifier: masterIdentifier == freezed
@@ -6092,7 +5923,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
           : masterIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: status == freezed
@@ -6116,7 +5947,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       category: category == freezed
-          ? _value.category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       subject: subject == freezed
@@ -6132,7 +5963,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       author: author == freezed
-          ? _value.author
+          ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       authenticator: authenticator == freezed
@@ -6144,7 +5975,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
           : custodian // ignore: cast_nullable_to_non_nullable
               as Reference?,
       relatesTo: relatesTo == freezed
-          ? _value.relatesTo
+          ? _value._relatesTo
           : relatesTo // ignore: cast_nullable_to_non_nullable
               as List<DocumentReferenceRelatesTo>?,
       description: description == freezed
@@ -6156,11 +5987,11 @@ class __$DocumentReferenceCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       securityLabel: securityLabel == freezed
-          ? _value.securityLabel
+          ? _value._securityLabel
           : securityLabel // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       content: content == freezed
-          ? _value.content
+          ? _value._content
           : content // ignore: cast_nullable_to_non_nullable
               as List<DocumentReferenceContent>,
       context: context == freezed
@@ -6186,12 +6017,12 @@ class _$_DocumentReference extends _DocumentReference {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.masterIdentifier,
-      this.identifier,
+      final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
@@ -6200,22 +6031,31 @@ class _$_DocumentReference extends _DocumentReference {
       @JsonKey(name: '_docStatus')
           this.docStatusElement,
       this.type,
-      this.category,
+      final List<CodeableConcept>? category,
       this.subject,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
-      this.author,
+      final List<Reference>? author,
       this.authenticator,
       this.custodian,
-      this.relatesTo,
+      final List<DocumentReferenceRelatesTo>? relatesTo,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.securityLabel,
-      required this.content,
+      final List<CodeableConcept>? securityLabel,
+      required final List<DocumentReferenceContent> content,
       this.context})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _category = category,
+        _author = author,
+        _relatesTo = relatesTo,
+        _securityLabel = securityLabel,
+        _content = content,
+        super._();
 
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentReferenceFromJson(json);
@@ -6239,17 +6079,45 @@ class _$_DocumentReference extends _DocumentReference {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? masterIdentifier;
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
   final DocumentReferenceStatus? status;
@@ -6263,8 +6131,15 @@ class _$_DocumentReference extends _DocumentReference {
   final Element? docStatusElement;
   @override
   final CodeableConcept? type;
+  final List<CodeableConcept>? _category;
   @override
-  final List<CodeableConcept>? category;
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? subject;
   @override
@@ -6272,23 +6147,49 @@ class _$_DocumentReference extends _DocumentReference {
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+  final List<Reference>? _author;
   @override
-  final List<Reference>? author;
+  List<Reference>? get author {
+    final value = _author;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? authenticator;
   @override
   final Reference? custodian;
+  final List<DocumentReferenceRelatesTo>? _relatesTo;
   @override
-  final List<DocumentReferenceRelatesTo>? relatesTo;
+  List<DocumentReferenceRelatesTo>? get relatesTo {
+    final value = _relatesTo;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<CodeableConcept>? _securityLabel;
   @override
-  final List<CodeableConcept>? securityLabel;
+  List<CodeableConcept>? get securityLabel {
+    final value = _securityLabel;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<DocumentReferenceContent> _content;
   @override
-  final List<DocumentReferenceContent> content;
+  List<DocumentReferenceContent> get content {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_content);
+  }
+
   @override
   final DocumentReferenceContext? context;
 
@@ -6301,7 +6202,7 @@ class _$_DocumentReference extends _DocumentReference {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DocumentReference &&
+            other is _$_DocumentReference &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -6314,15 +6215,16 @@ class _$_DocumentReference extends _DocumentReference {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.masterIdentifier, masterIdentifier) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -6330,26 +6232,28 @@ class _$_DocumentReference extends _DocumentReference {
             const DeepCollectionEquality()
                 .equals(other.docStatusElement, docStatusElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
-            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other._author, _author) &&
             const DeepCollectionEquality()
                 .equals(other.authenticator, authenticator) &&
             const DeepCollectionEquality().equals(other.custodian, custodian) &&
-            const DeepCollectionEquality().equals(other.relatesTo, relatesTo) &&
+            const DeepCollectionEquality()
+                .equals(other._relatesTo, _relatesTo) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.securityLabel, securityLabel) &&
-            const DeepCollectionEquality().equals(other.content, content) &&
+                .equals(other._securityLabel, _securityLabel) &&
+            const DeepCollectionEquality().equals(other._content, _content) &&
             const DeepCollectionEquality().equals(other.context, context));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -6361,35 +6265,36 @@ class _$_DocumentReference extends _DocumentReference {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(masterIdentifier),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(docStatus),
         const DeepCollectionEquality().hash(docStatusElement),
         const DeepCollectionEquality().hash(type),
-        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(_category),
         const DeepCollectionEquality().hash(subject),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
-        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(_author),
         const DeepCollectionEquality().hash(authenticator),
         const DeepCollectionEquality().hash(custodian),
-        const DeepCollectionEquality().hash(relatesTo),
+        const DeepCollectionEquality().hash(_relatesTo),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(securityLabel),
-        const DeepCollectionEquality().hash(content),
+        const DeepCollectionEquality().hash(_securityLabel),
+        const DeepCollectionEquality().hash(_content),
         const DeepCollectionEquality().hash(context)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$DocumentReferenceCopyWith<_DocumentReference> get copyWith =>
-      __$DocumentReferenceCopyWithImpl<_DocumentReference>(this, _$identity);
+  _$$_DocumentReferenceCopyWith<_$_DocumentReference> get copyWith =>
+      __$$_DocumentReferenceCopyWithImpl<_$_DocumentReference>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -6400,45 +6305,45 @@ class _$_DocumentReference extends _DocumentReference {
 abstract class _DocumentReference extends DocumentReference {
   factory _DocumentReference(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R4ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? masterIdentifier,
-      List<Identifier>? identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? masterIdentifier,
+      final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-          DocumentReferenceStatus? status,
+          final DocumentReferenceStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Code? docStatus,
+          final Element? statusElement,
+      final Code? docStatus,
       @JsonKey(name: '_docStatus')
-          Element? docStatusElement,
-      CodeableConcept? type,
-      List<CodeableConcept>? category,
-      Reference? subject,
-      Instant? date,
+          final Element? docStatusElement,
+      final CodeableConcept? type,
+      final List<CodeableConcept>? category,
+      final Reference? subject,
+      final Instant? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      List<Reference>? author,
-      Reference? authenticator,
-      Reference? custodian,
-      List<DocumentReferenceRelatesTo>? relatesTo,
-      String? description,
+          final Element? dateElement,
+      final List<Reference>? author,
+      final Reference? authenticator,
+      final Reference? custodian,
+      final List<DocumentReferenceRelatesTo>? relatesTo,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? securityLabel,
-      required List<DocumentReferenceContent> content,
-      DocumentReferenceContext? context}) = _$_DocumentReference;
+          final Element? descriptionElement,
+      final List<CodeableConcept>? securityLabel,
+      required final List<DocumentReferenceContent> content,
+      final DocumentReferenceContext? context}) = _$_DocumentReference;
   _DocumentReference._() : super._();
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
@@ -6446,78 +6351,82 @@ abstract class _DocumentReference extends DocumentReference {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get masterIdentifier;
+  Identifier? get masterIdentifier => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-  DocumentReferenceStatus? get status;
+  DocumentReferenceStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Code? get docStatus;
+  Code? get docStatus => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_docStatus')
-  Element? get docStatusElement;
+  Element? get docStatusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get category;
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  Instant? get date;
+  Instant? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get author;
+  List<Reference>? get author => throw _privateConstructorUsedError;
   @override
-  Reference? get authenticator;
+  Reference? get authenticator => throw _privateConstructorUsedError;
   @override
-  Reference? get custodian;
+  Reference? get custodian => throw _privateConstructorUsedError;
   @override
-  List<DocumentReferenceRelatesTo>? get relatesTo;
+  List<DocumentReferenceRelatesTo>? get relatesTo =>
+      throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get securityLabel;
+  List<CodeableConcept>? get securityLabel =>
+      throw _privateConstructorUsedError;
   @override
-  List<DocumentReferenceContent> get content;
+  List<DocumentReferenceContent> get content =>
+      throw _privateConstructorUsedError;
   @override
-  DocumentReferenceContext? get context;
+  DocumentReferenceContext? get context => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentReferenceCopyWith<_DocumentReference> get copyWith =>
+  _$$_DocumentReferenceCopyWith<_$_DocumentReference> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6525,38 +6434,6 @@ DocumentReferenceRelatesTo _$DocumentReferenceRelatesToFromJson(
     Map<String, dynamic> json) {
   return _DocumentReferenceRelatesTo.fromJson(json);
 }
-
-/// @nodoc
-class _$DocumentReferenceRelatesToTearOff {
-  const _$DocumentReferenceRelatesToTearOff();
-
-  _DocumentReferenceRelatesTo call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
-          DocumentReferenceRelatesToCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
-      required Reference target}) {
-    return _DocumentReferenceRelatesTo(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      codeElement: codeElement,
-      target: target,
-    );
-  }
-
-  DocumentReferenceRelatesTo fromJson(Map<String, Object?> json) {
-    return DocumentReferenceRelatesTo.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DocumentReferenceRelatesTo = _$DocumentReferenceRelatesToTearOff();
 
 /// @nodoc
 mixin _$DocumentReferenceRelatesTo {
@@ -6664,12 +6541,12 @@ class _$DocumentReferenceRelatesToCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DocumentReferenceRelatesToCopyWith<$Res>
+abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
     implements $DocumentReferenceRelatesToCopyWith<$Res> {
-  factory _$DocumentReferenceRelatesToCopyWith(
-          _DocumentReferenceRelatesTo value,
-          $Res Function(_DocumentReferenceRelatesTo) then) =
-      __$DocumentReferenceRelatesToCopyWithImpl<$Res>;
+  factory _$$_DocumentReferenceRelatesToCopyWith(
+          _$_DocumentReferenceRelatesTo value,
+          $Res Function(_$_DocumentReferenceRelatesTo) then) =
+      __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -6689,16 +6566,17 @@ abstract class _$DocumentReferenceRelatesToCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
+class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
     extends _$DocumentReferenceRelatesToCopyWithImpl<$Res>
-    implements _$DocumentReferenceRelatesToCopyWith<$Res> {
-  __$DocumentReferenceRelatesToCopyWithImpl(_DocumentReferenceRelatesTo _value,
-      $Res Function(_DocumentReferenceRelatesTo) _then)
-      : super(_value, (v) => _then(v as _DocumentReferenceRelatesTo));
+    implements _$$_DocumentReferenceRelatesToCopyWith<$Res> {
+  __$$_DocumentReferenceRelatesToCopyWithImpl(
+      _$_DocumentReferenceRelatesTo _value,
+      $Res Function(_$_DocumentReferenceRelatesTo) _then)
+      : super(_value, (v) => _then(v as _$_DocumentReferenceRelatesTo));
 
   @override
-  _DocumentReferenceRelatesTo get _value =>
-      super._value as _DocumentReferenceRelatesTo;
+  _$_DocumentReferenceRelatesTo get _value =>
+      super._value as _$_DocumentReferenceRelatesTo;
 
   @override
   $Res call({
@@ -6709,17 +6587,17 @@ class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
     Object? codeElement = freezed,
     Object? target = freezed,
   }) {
-    return _then(_DocumentReferenceRelatesTo(
+    return _then(_$_DocumentReferenceRelatesTo(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -6744,25 +6622,41 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   _$_DocumentReferenceRelatesTo(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
           this.code,
       @JsonKey(name: '_code')
           this.codeElement,
       required this.target})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentReferenceRelatesToFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
   final DocumentReferenceRelatesToCode? code;
@@ -6781,33 +6675,34 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DocumentReferenceRelatesTo &&
+            other is _$_DocumentReferenceRelatesTo &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.codeElement, codeElement) &&
             const DeepCollectionEquality().equals(other.target, target));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(codeElement),
       const DeepCollectionEquality().hash(target));
 
   @JsonKey(ignore: true)
   @override
-  _$DocumentReferenceRelatesToCopyWith<_DocumentReferenceRelatesTo>
-      get copyWith => __$DocumentReferenceRelatesToCopyWithImpl<
-          _DocumentReferenceRelatesTo>(this, _$identity);
+  _$$_DocumentReferenceRelatesToCopyWith<_$_DocumentReferenceRelatesTo>
+      get copyWith => __$$_DocumentReferenceRelatesToCopyWithImpl<
+          _$_DocumentReferenceRelatesTo>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -6817,38 +6712,40 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
 
 abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   factory _DocumentReferenceRelatesTo(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
-          DocumentReferenceRelatesToCode? code,
+          final DocumentReferenceRelatesToCode? code,
       @JsonKey(name: '_code')
-          Element? codeElement,
-      required Reference target}) = _$_DocumentReferenceRelatesTo;
+          final Element? codeElement,
+      required final Reference target}) = _$_DocumentReferenceRelatesTo;
   _DocumentReferenceRelatesTo._() : super._();
 
   factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceRelatesTo.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
-  DocumentReferenceRelatesToCode? get code;
+  DocumentReferenceRelatesToCode? get code =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Reference get target;
+  Reference get target => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentReferenceRelatesToCopyWith<_DocumentReferenceRelatesTo>
+  _$$_DocumentReferenceRelatesToCopyWith<_$_DocumentReferenceRelatesTo>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6856,33 +6753,6 @@ DocumentReferenceContent _$DocumentReferenceContentFromJson(
     Map<String, dynamic> json) {
   return _DocumentReferenceContent.fromJson(json);
 }
-
-/// @nodoc
-class _$DocumentReferenceContentTearOff {
-  const _$DocumentReferenceContentTearOff();
-
-  _DocumentReferenceContent call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Attachment attachment,
-      Coding? format}) {
-    return _DocumentReferenceContent(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      attachment: attachment,
-      format: format,
-    );
-  }
-
-  DocumentReferenceContent fromJson(Map<String, Object?> json) {
-    return DocumentReferenceContent.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DocumentReferenceContent = _$DocumentReferenceContentTearOff();
 
 /// @nodoc
 mixin _$DocumentReferenceContent {
@@ -6977,11 +6847,12 @@ class _$DocumentReferenceContentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DocumentReferenceContentCopyWith<$Res>
+abstract class _$$_DocumentReferenceContentCopyWith<$Res>
     implements $DocumentReferenceContentCopyWith<$Res> {
-  factory _$DocumentReferenceContentCopyWith(_DocumentReferenceContent value,
-          $Res Function(_DocumentReferenceContent) then) =
-      __$DocumentReferenceContentCopyWithImpl<$Res>;
+  factory _$$_DocumentReferenceContentCopyWith(
+          _$_DocumentReferenceContent value,
+          $Res Function(_$_DocumentReferenceContent) then) =
+      __$$_DocumentReferenceContentCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -6997,16 +6868,16 @@ abstract class _$DocumentReferenceContentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DocumentReferenceContentCopyWithImpl<$Res>
+class __$$_DocumentReferenceContentCopyWithImpl<$Res>
     extends _$DocumentReferenceContentCopyWithImpl<$Res>
-    implements _$DocumentReferenceContentCopyWith<$Res> {
-  __$DocumentReferenceContentCopyWithImpl(_DocumentReferenceContent _value,
-      $Res Function(_DocumentReferenceContent) _then)
-      : super(_value, (v) => _then(v as _DocumentReferenceContent));
+    implements _$$_DocumentReferenceContentCopyWith<$Res> {
+  __$$_DocumentReferenceContentCopyWithImpl(_$_DocumentReferenceContent _value,
+      $Res Function(_$_DocumentReferenceContent) _then)
+      : super(_value, (v) => _then(v as _$_DocumentReferenceContent));
 
   @override
-  _DocumentReferenceContent get _value =>
-      super._value as _DocumentReferenceContent;
+  _$_DocumentReferenceContent get _value =>
+      super._value as _$_DocumentReferenceContent;
 
   @override
   $Res call({
@@ -7016,17 +6887,17 @@ class __$DocumentReferenceContentCopyWithImpl<$Res>
     Object? attachment = freezed,
     Object? format = freezed,
   }) {
-    return _then(_DocumentReferenceContent(
+    return _then(_$_DocumentReferenceContent(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       attachment: attachment == freezed
@@ -7046,22 +6917,38 @@ class __$DocumentReferenceContentCopyWithImpl<$Res>
 class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   _$_DocumentReferenceContent(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.attachment,
       this.format})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentReferenceContentFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Attachment attachment;
   @override
@@ -7076,31 +6963,32 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DocumentReferenceContent &&
+            other is _$_DocumentReferenceContent &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.attachment, attachment) &&
             const DeepCollectionEquality().equals(other.format, format));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(attachment),
       const DeepCollectionEquality().hash(format));
 
   @JsonKey(ignore: true)
   @override
-  _$DocumentReferenceContentCopyWith<_DocumentReferenceContent> get copyWith =>
-      __$DocumentReferenceContentCopyWithImpl<_DocumentReferenceContent>(
-          this, _$identity);
+  _$$_DocumentReferenceContentCopyWith<_$_DocumentReferenceContent>
+      get copyWith => __$$_DocumentReferenceContentCopyWithImpl<
+          _$_DocumentReferenceContent>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7110,74 +6998,38 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
 
 abstract class _DocumentReferenceContent extends DocumentReferenceContent {
   factory _DocumentReferenceContent(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Attachment attachment,
-      Coding? format}) = _$_DocumentReferenceContent;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Attachment attachment,
+      final Coding? format}) = _$_DocumentReferenceContent;
   _DocumentReferenceContent._() : super._();
 
   factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceContent.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Attachment get attachment;
+  Attachment get attachment => throw _privateConstructorUsedError;
   @override
-  Coding? get format;
+  Coding? get format => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentReferenceContentCopyWith<_DocumentReferenceContent> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_DocumentReferenceContentCopyWith<_$_DocumentReferenceContent>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 DocumentReferenceContext _$DocumentReferenceContextFromJson(
     Map<String, dynamic> json) {
   return _DocumentReferenceContext.fromJson(json);
 }
-
-/// @nodoc
-class _$DocumentReferenceContextTearOff {
-  const _$DocumentReferenceContextTearOff();
-
-  _DocumentReferenceContext call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference>? encounter,
-      List<CodeableConcept>? event,
-      Period? period,
-      CodeableConcept? facilityType,
-      CodeableConcept? practiceSetting,
-      Reference? sourcePatientInfo,
-      List<Reference>? related}) {
-    return _DocumentReferenceContext(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      encounter: encounter,
-      event: event,
-      period: period,
-      facilityType: facilityType,
-      practiceSetting: practiceSetting,
-      sourcePatientInfo: sourcePatientInfo,
-      related: related,
-    );
-  }
-
-  DocumentReferenceContext fromJson(Map<String, Object?> json) {
-    return DocumentReferenceContext.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DocumentReferenceContext = _$DocumentReferenceContextTearOff();
 
 /// @nodoc
 mixin _$DocumentReferenceContext {
@@ -7335,11 +7187,12 @@ class _$DocumentReferenceContextCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DocumentReferenceContextCopyWith<$Res>
+abstract class _$$_DocumentReferenceContextCopyWith<$Res>
     implements $DocumentReferenceContextCopyWith<$Res> {
-  factory _$DocumentReferenceContextCopyWith(_DocumentReferenceContext value,
-          $Res Function(_DocumentReferenceContext) then) =
-      __$DocumentReferenceContextCopyWithImpl<$Res>;
+  factory _$$_DocumentReferenceContextCopyWith(
+          _$_DocumentReferenceContext value,
+          $Res Function(_$_DocumentReferenceContext) then) =
+      __$$_DocumentReferenceContextCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -7364,16 +7217,16 @@ abstract class _$DocumentReferenceContextCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DocumentReferenceContextCopyWithImpl<$Res>
+class __$$_DocumentReferenceContextCopyWithImpl<$Res>
     extends _$DocumentReferenceContextCopyWithImpl<$Res>
-    implements _$DocumentReferenceContextCopyWith<$Res> {
-  __$DocumentReferenceContextCopyWithImpl(_DocumentReferenceContext _value,
-      $Res Function(_DocumentReferenceContext) _then)
-      : super(_value, (v) => _then(v as _DocumentReferenceContext));
+    implements _$$_DocumentReferenceContextCopyWith<$Res> {
+  __$$_DocumentReferenceContextCopyWithImpl(_$_DocumentReferenceContext _value,
+      $Res Function(_$_DocumentReferenceContext) _then)
+      : super(_value, (v) => _then(v as _$_DocumentReferenceContext));
 
   @override
-  _DocumentReferenceContext get _value =>
-      super._value as _DocumentReferenceContext;
+  _$_DocumentReferenceContext get _value =>
+      super._value as _$_DocumentReferenceContext;
 
   @override
   $Res call({
@@ -7388,25 +7241,25 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
     Object? sourcePatientInfo = freezed,
     Object? related = freezed,
   }) {
-    return _then(_DocumentReferenceContext(
+    return _then(_$_DocumentReferenceContext(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       encounter: encounter == freezed
-          ? _value.encounter
+          ? _value._encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       event: event == freezed
-          ? _value.event
+          ? _value._event
           : event // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       period: period == freezed
@@ -7426,7 +7279,7 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
           : sourcePatientInfo // ignore: cast_nullable_to_non_nullable
               as Reference?,
       related: related == freezed
-          ? _value.related
+          ? _value._related
           : related // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -7438,31 +7291,64 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
 class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   _$_DocumentReferenceContext(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.encounter,
-      this.event,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Reference>? encounter,
+      final List<CodeableConcept>? event,
       this.period,
       this.facilityType,
       this.practiceSetting,
       this.sourcePatientInfo,
-      this.related})
-      : super._();
+      final List<Reference>? related})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _encounter = encounter,
+        _event = event,
+        _related = related,
+        super._();
 
   factory _$_DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentReferenceContextFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _encounter;
   @override
-  final List<Reference>? encounter;
+  List<Reference>? get encounter {
+    final value = _encounter;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _event;
   @override
-  final List<CodeableConcept>? event;
+  List<CodeableConcept>? get event {
+    final value = _event;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Period? period;
   @override
@@ -7471,8 +7357,14 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   final CodeableConcept? practiceSetting;
   @override
   final Reference? sourcePatientInfo;
+  final List<Reference>? _related;
   @override
-  final List<Reference>? related;
+  List<Reference>? get related {
+    final value = _related;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -7483,14 +7375,15 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DocumentReferenceContext &&
+            other is _$_DocumentReferenceContext &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.encounter, encounter) &&
-            const DeepCollectionEquality().equals(other.event, event) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._encounter, _encounter) &&
+            const DeepCollectionEquality().equals(other._event, _event) &&
             const DeepCollectionEquality().equals(other.period, period) &&
             const DeepCollectionEquality()
                 .equals(other.facilityType, facilityType) &&
@@ -7498,28 +7391,29 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
                 .equals(other.practiceSetting, practiceSetting) &&
             const DeepCollectionEquality()
                 .equals(other.sourcePatientInfo, sourcePatientInfo) &&
-            const DeepCollectionEquality().equals(other.related, related));
+            const DeepCollectionEquality().equals(other._related, _related));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(encounter),
-      const DeepCollectionEquality().hash(event),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_encounter),
+      const DeepCollectionEquality().hash(_event),
       const DeepCollectionEquality().hash(period),
       const DeepCollectionEquality().hash(facilityType),
       const DeepCollectionEquality().hash(practiceSetting),
       const DeepCollectionEquality().hash(sourcePatientInfo),
-      const DeepCollectionEquality().hash(related));
+      const DeepCollectionEquality().hash(_related));
 
   @JsonKey(ignore: true)
   @override
-  _$DocumentReferenceContextCopyWith<_DocumentReferenceContext> get copyWith =>
-      __$DocumentReferenceContextCopyWithImpl<_DocumentReferenceContext>(
-          this, _$identity);
+  _$$_DocumentReferenceContextCopyWith<_$_DocumentReferenceContext>
+      get copyWith => __$$_DocumentReferenceContextCopyWithImpl<
+          _$_DocumentReferenceContext>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7529,44 +7423,45 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
 
 abstract class _DocumentReferenceContext extends DocumentReferenceContext {
   factory _DocumentReferenceContext(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference>? encounter,
-      List<CodeableConcept>? event,
-      Period? period,
-      CodeableConcept? facilityType,
-      CodeableConcept? practiceSetting,
-      Reference? sourcePatientInfo,
-      List<Reference>? related}) = _$_DocumentReferenceContext;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Reference>? encounter,
+      final List<CodeableConcept>? event,
+      final Period? period,
+      final CodeableConcept? facilityType,
+      final CodeableConcept? practiceSetting,
+      final Reference? sourcePatientInfo,
+      final List<Reference>? related}) = _$_DocumentReferenceContext;
   _DocumentReferenceContext._() : super._();
 
   factory _DocumentReferenceContext.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceContext.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get encounter;
+  List<Reference>? get encounter => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get event;
+  List<CodeableConcept>? get event => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get facilityType;
+  CodeableConcept? get facilityType => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get practiceSetting;
+  CodeableConcept? get practiceSetting => throw _privateConstructorUsedError;
   @override
-  Reference? get sourcePatientInfo;
+  Reference? get sourcePatientInfo => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get related;
+  List<Reference>? get related => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentReferenceContextCopyWith<_DocumentReferenceContext> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_DocumentReferenceContextCopyWith<_$_DocumentReferenceContext>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -11,8 +11,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../dstu2.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'documents_and_lists.enums.dart';
 part 'documents_and_lists.freezed.dart';
 part 'documents_and_lists.g.dart';

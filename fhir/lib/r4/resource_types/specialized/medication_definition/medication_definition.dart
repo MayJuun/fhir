@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
 

@@ -12,76 +12,12 @@ part of 'medication_definition.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AdministrableProductDefinition _$AdministrableProductDefinitionFromJson(
     Map<String, dynamic> json) {
   return _AdministrableProductDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$AdministrableProductDefinitionTearOff {
-  const _$AdministrableProductDefinitionTearOff();
-
-  _AdministrableProductDefinition call(
-      {R5ResourceType resourceType =
-          R5ResourceType.AdministrableProductDefinition,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      List<Reference>? formOf,
-      CodeableConcept? administrableDoseForm,
-      CodeableConcept? unitOfPresentation,
-      List<Reference>? producedFrom,
-      List<CodeableConcept>? ingredient,
-      Reference? device,
-      List<AdministrableProductDefinitionProperty>? property,
-      required List<AdministrableProductDefinitionRouteOfAdministration>
-          routeOfAdministration}) {
-    return _AdministrableProductDefinition(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      formOf: formOf,
-      administrableDoseForm: administrableDoseForm,
-      unitOfPresentation: unitOfPresentation,
-      producedFrom: producedFrom,
-      ingredient: ingredient,
-      device: device,
-      property: property,
-      routeOfAdministration: routeOfAdministration,
-    );
-  }
-
-  AdministrableProductDefinition fromJson(Map<String, Object?> json) {
-    return AdministrableProductDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdministrableProductDefinition =
-    _$AdministrableProductDefinitionTearOff();
 
 /// @nodoc
 mixin _$AdministrableProductDefinition {
@@ -392,12 +328,12 @@ class _$AdministrableProductDefinitionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AdministrableProductDefinitionCopyWith<$Res>
+abstract class _$$_AdministrableProductDefinitionCopyWith<$Res>
     implements $AdministrableProductDefinitionCopyWith<$Res> {
-  factory _$AdministrableProductDefinitionCopyWith(
-          _AdministrableProductDefinition value,
-          $Res Function(_AdministrableProductDefinition) then) =
-      __$AdministrableProductDefinitionCopyWithImpl<$Res>;
+  factory _$$_AdministrableProductDefinitionCopyWith(
+          _$_AdministrableProductDefinition value,
+          $Res Function(_$_AdministrableProductDefinition) then) =
+      __$$_AdministrableProductDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -445,17 +381,17 @@ abstract class _$AdministrableProductDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AdministrableProductDefinitionCopyWithImpl<$Res>
+class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
     extends _$AdministrableProductDefinitionCopyWithImpl<$Res>
-    implements _$AdministrableProductDefinitionCopyWith<$Res> {
-  __$AdministrableProductDefinitionCopyWithImpl(
-      _AdministrableProductDefinition _value,
-      $Res Function(_AdministrableProductDefinition) _then)
-      : super(_value, (v) => _then(v as _AdministrableProductDefinition));
+    implements _$$_AdministrableProductDefinitionCopyWith<$Res> {
+  __$$_AdministrableProductDefinitionCopyWithImpl(
+      _$_AdministrableProductDefinition _value,
+      $Res Function(_$_AdministrableProductDefinition) _then)
+      : super(_value, (v) => _then(v as _$_AdministrableProductDefinition));
 
   @override
-  _AdministrableProductDefinition get _value =>
-      super._value as _AdministrableProductDefinition;
+  _$_AdministrableProductDefinition get _value =>
+      super._value as _$_AdministrableProductDefinition;
 
   @override
   $Res call({
@@ -482,7 +418,7 @@ class __$AdministrableProductDefinitionCopyWithImpl<$Res>
     Object? property = freezed,
     Object? routeOfAdministration = freezed,
   }) {
-    return _then(_AdministrableProductDefinition(
+    return _then(_$_AdministrableProductDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -516,15 +452,15 @@ class __$AdministrableProductDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -540,7 +476,7 @@ class __$AdministrableProductDefinitionCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       formOf: formOf == freezed
-          ? _value.formOf
+          ? _value._formOf
           : formOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       administrableDoseForm: administrableDoseForm == freezed
@@ -552,11 +488,11 @@ class __$AdministrableProductDefinitionCopyWithImpl<$Res>
           : unitOfPresentation // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       producedFrom: producedFrom == freezed
-          ? _value.producedFrom
+          ? _value._producedFrom
           : producedFrom // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       ingredient: ingredient == freezed
-          ? _value.ingredient
+          ? _value._ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       device: device == freezed
@@ -564,11 +500,11 @@ class __$AdministrableProductDefinitionCopyWithImpl<$Res>
           : device // ignore: cast_nullable_to_non_nullable
               as Reference?,
       property: property == freezed
-          ? _value.property
+          ? _value._property
           : property // ignore: cast_nullable_to_non_nullable
               as List<AdministrableProductDefinitionProperty>?,
       routeOfAdministration: routeOfAdministration == freezed
-          ? _value.routeOfAdministration
+          ? _value._routeOfAdministration
           : routeOfAdministration // ignore: cast_nullable_to_non_nullable
               as List<AdministrableProductDefinitionRouteOfAdministration>,
     ));
@@ -588,28 +524,37 @@ class _$_AdministrableProductDefinition
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
-      this.formOf,
+      final List<Reference>? formOf,
       this.administrableDoseForm,
       this.unitOfPresentation,
-      this.producedFrom,
-      this.ingredient,
+      final List<Reference>? producedFrom,
+      final List<CodeableConcept>? ingredient,
       this.device,
-      this.property,
-      required this.routeOfAdministration})
-      : super._();
+      final List<AdministrableProductDefinitionProperty>? property,
+      required final List<AdministrableProductDefinitionRouteOfAdministration>
+          routeOfAdministration})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _formOf = formOf,
+        _producedFrom = producedFrom,
+        _ingredient = ingredient,
+        _property = property,
+        _routeOfAdministration = routeOfAdministration,
+        super._();
 
   factory _$_AdministrableProductDefinition.fromJson(
           Map<String, dynamic> json) =>
       _$$_AdministrableProductDefinitionFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -627,13 +572,34 @@ class _$_AdministrableProductDefinition
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -641,23 +607,56 @@ class _$_AdministrableProductDefinition
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+  final List<Reference>? _formOf;
   @override
-  final List<Reference>? formOf;
+  List<Reference>? get formOf {
+    final value = _formOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? administrableDoseForm;
   @override
   final CodeableConcept? unitOfPresentation;
+  final List<Reference>? _producedFrom;
   @override
-  final List<Reference>? producedFrom;
+  List<Reference>? get producedFrom {
+    final value = _producedFrom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _ingredient;
   @override
-  final List<CodeableConcept>? ingredient;
+  List<CodeableConcept>? get ingredient {
+    final value = _ingredient;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? device;
+  final List<AdministrableProductDefinitionProperty>? _property;
   @override
-  final List<AdministrableProductDefinitionProperty>? property;
-  @override
+  List<AdministrableProductDefinitionProperty>? get property {
+    final value = _property;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<AdministrableProductDefinitionRouteOfAdministration>
-      routeOfAdministration;
+      _routeOfAdministration;
+  @override
+  List<AdministrableProductDefinitionRouteOfAdministration>
+      get routeOfAdministration {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_routeOfAdministration);
+  }
 
   @override
   String toString() {
@@ -668,7 +667,7 @@ class _$_AdministrableProductDefinition
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdministrableProductDefinition &&
+            other is _$_AdministrableProductDefinition &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -681,31 +680,33 @@ class _$_AdministrableProductDefinition
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.formOf, formOf) &&
+            const DeepCollectionEquality().equals(other._formOf, _formOf) &&
             const DeepCollectionEquality()
                 .equals(other.administrableDoseForm, administrableDoseForm) &&
             const DeepCollectionEquality()
                 .equals(other.unitOfPresentation, unitOfPresentation) &&
             const DeepCollectionEquality()
-                .equals(other.producedFrom, producedFrom) &&
+                .equals(other._producedFrom, _producedFrom) &&
             const DeepCollectionEquality()
-                .equals(other.ingredient, ingredient) &&
+                .equals(other._ingredient, _ingredient) &&
             const DeepCollectionEquality().equals(other.device, device) &&
-            const DeepCollectionEquality().equals(other.property, property) &&
+            const DeepCollectionEquality().equals(other._property, _property) &&
             const DeepCollectionEquality()
-                .equals(other.routeOfAdministration, routeOfAdministration));
+                .equals(other._routeOfAdministration, _routeOfAdministration));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -717,27 +718,27 @@ class _$_AdministrableProductDefinition
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(formOf),
+        const DeepCollectionEquality().hash(_formOf),
         const DeepCollectionEquality().hash(administrableDoseForm),
         const DeepCollectionEquality().hash(unitOfPresentation),
-        const DeepCollectionEquality().hash(producedFrom),
-        const DeepCollectionEquality().hash(ingredient),
+        const DeepCollectionEquality().hash(_producedFrom),
+        const DeepCollectionEquality().hash(_ingredient),
         const DeepCollectionEquality().hash(device),
-        const DeepCollectionEquality().hash(property),
-        const DeepCollectionEquality().hash(routeOfAdministration)
+        const DeepCollectionEquality().hash(_property),
+        const DeepCollectionEquality().hash(_routeOfAdministration)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$AdministrableProductDefinitionCopyWith<_AdministrableProductDefinition>
-      get copyWith => __$AdministrableProductDefinitionCopyWithImpl<
-          _AdministrableProductDefinition>(this, _$identity);
+  _$$_AdministrableProductDefinitionCopyWith<_$_AdministrableProductDefinition>
+      get copyWith => __$$_AdministrableProductDefinitionCopyWithImpl<
+          _$_AdministrableProductDefinition>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -748,28 +749,28 @@ class _$_AdministrableProductDefinition
 abstract class _AdministrableProductDefinition
     extends AdministrableProductDefinition {
   factory _AdministrableProductDefinition(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      List<Reference>? formOf,
-      CodeableConcept? administrableDoseForm,
-      CodeableConcept? unitOfPresentation,
-      List<Reference>? producedFrom,
-      List<CodeableConcept>? ingredient,
-      Reference? device,
-      List<AdministrableProductDefinitionProperty>? property,
-      required List<AdministrableProductDefinitionRouteOfAdministration>
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final List<Reference>? formOf,
+      final CodeableConcept? administrableDoseForm,
+      final CodeableConcept? unitOfPresentation,
+      final List<Reference>? producedFrom,
+      final List<CodeableConcept>? ingredient,
+      final Reference? device,
+      final List<AdministrableProductDefinitionProperty>? property,
+      required final List<AdministrableProductDefinitionRouteOfAdministration>
           routeOfAdministration}) = _$_AdministrableProductDefinition;
   _AdministrableProductDefinition._() : super._();
 
@@ -777,57 +778,60 @@ abstract class _AdministrableProductDefinition
       _$_AdministrableProductDefinition.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get formOf;
+  List<Reference>? get formOf => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get administrableDoseForm;
+  CodeableConcept? get administrableDoseForm =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get unitOfPresentation;
+  CodeableConcept? get unitOfPresentation => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get producedFrom;
+  List<Reference>? get producedFrom => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get ingredient;
+  List<CodeableConcept>? get ingredient => throw _privateConstructorUsedError;
   @override
-  Reference? get device;
+  Reference? get device => throw _privateConstructorUsedError;
   @override
-  List<AdministrableProductDefinitionProperty>? get property;
+  List<AdministrableProductDefinitionProperty>? get property =>
+      throw _privateConstructorUsedError;
   @override
   List<AdministrableProductDefinitionRouteOfAdministration>
-      get routeOfAdministration;
+      get routeOfAdministration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AdministrableProductDefinitionCopyWith<_AdministrableProductDefinition>
+  _$$_AdministrableProductDefinitionCopyWith<_$_AdministrableProductDefinition>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -836,48 +840,6 @@ AdministrableProductDefinitionProperty
         Map<String, dynamic> json) {
   return _AdministrableProductDefinitionProperty.fromJson(json);
 }
-
-/// @nodoc
-class _$AdministrableProductDefinitionPropertyTearOff {
-  const _$AdministrableProductDefinitionPropertyTearOff();
-
-  _AdministrableProductDefinitionProperty call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment,
-      CodeableConcept? status}) {
-    return _AdministrableProductDefinitionProperty(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueCodeableConcept: valueCodeableConcept,
-      valueQuantity: valueQuantity,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueAttachment: valueAttachment,
-      status: status,
-    );
-  }
-
-  AdministrableProductDefinitionProperty fromJson(Map<String, Object?> json) {
-    return AdministrableProductDefinitionProperty.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdministrableProductDefinitionProperty =
-    _$AdministrableProductDefinitionPropertyTearOff();
 
 /// @nodoc
 mixin _$AdministrableProductDefinitionProperty {
@@ -1087,12 +1049,12 @@ class _$AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AdministrableProductDefinitionPropertyCopyWith<$Res>
+abstract class _$$_AdministrableProductDefinitionPropertyCopyWith<$Res>
     implements $AdministrableProductDefinitionPropertyCopyWith<$Res> {
-  factory _$AdministrableProductDefinitionPropertyCopyWith(
-          _AdministrableProductDefinitionProperty value,
-          $Res Function(_AdministrableProductDefinitionProperty) then) =
-      __$AdministrableProductDefinitionPropertyCopyWithImpl<$Res>;
+  factory _$$_AdministrableProductDefinitionPropertyCopyWith(
+          _$_AdministrableProductDefinitionProperty value,
+          $Res Function(_$_AdministrableProductDefinitionProperty) then) =
+      __$$_AdministrableProductDefinitionPropertyCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -1125,18 +1087,18 @@ abstract class _$AdministrableProductDefinitionPropertyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
+class __$$_AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
     extends _$AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
-    implements _$AdministrableProductDefinitionPropertyCopyWith<$Res> {
-  __$AdministrableProductDefinitionPropertyCopyWithImpl(
-      _AdministrableProductDefinitionProperty _value,
-      $Res Function(_AdministrableProductDefinitionProperty) _then)
-      : super(
-            _value, (v) => _then(v as _AdministrableProductDefinitionProperty));
+    implements _$$_AdministrableProductDefinitionPropertyCopyWith<$Res> {
+  __$$_AdministrableProductDefinitionPropertyCopyWithImpl(
+      _$_AdministrableProductDefinitionProperty _value,
+      $Res Function(_$_AdministrableProductDefinitionProperty) _then)
+      : super(_value,
+            (v) => _then(v as _$_AdministrableProductDefinitionProperty));
 
   @override
-  _AdministrableProductDefinitionProperty get _value =>
-      super._value as _AdministrableProductDefinitionProperty;
+  _$_AdministrableProductDefinitionProperty get _value =>
+      super._value as _$_AdministrableProductDefinitionProperty;
 
   @override
   $Res call({
@@ -1153,17 +1115,17 @@ class __$AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
     Object? valueAttachment = freezed,
     Object? status = freezed,
   }) {
-    return _then(_AdministrableProductDefinitionProperty(
+    return _then(_$_AdministrableProductDefinitionProperty(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -1212,8 +1174,8 @@ class _$_AdministrableProductDefinitionProperty
     extends _AdministrableProductDefinitionProperty {
   _$_AdministrableProductDefinitionProperty(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueCodeableConcept,
       this.valueQuantity,
@@ -1223,7 +1185,9 @@ class _$_AdministrableProductDefinitionProperty
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueAttachment,
       this.status})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_AdministrableProductDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
@@ -1231,11 +1195,25 @@ class _$_AdministrableProductDefinitionProperty
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -1266,12 +1244,12 @@ class _$_AdministrableProductDefinitionProperty
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdministrableProductDefinitionProperty &&
+            other is _$_AdministrableProductDefinitionProperty &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
@@ -1289,12 +1267,13 @@ class _$_AdministrableProductDefinitionProperty
             const DeepCollectionEquality().equals(other.status, status));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(valueCodeableConcept),
       const DeepCollectionEquality().hash(valueQuantity),
@@ -1307,10 +1286,10 @@ class _$_AdministrableProductDefinitionProperty
 
   @JsonKey(ignore: true)
   @override
-  _$AdministrableProductDefinitionPropertyCopyWith<
-          _AdministrableProductDefinitionProperty>
-      get copyWith => __$AdministrableProductDefinitionPropertyCopyWithImpl<
-          _AdministrableProductDefinitionProperty>(this, _$identity);
+  _$$_AdministrableProductDefinitionPropertyCopyWith<
+          _$_AdministrableProductDefinitionProperty>
+      get copyWith => __$$_AdministrableProductDefinitionPropertyCopyWithImpl<
+          _$_AdministrableProductDefinitionProperty>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1321,18 +1300,19 @@ class _$_AdministrableProductDefinitionProperty
 abstract class _AdministrableProductDefinitionProperty
     extends AdministrableProductDefinitionProperty {
   factory _AdministrableProductDefinitionProperty(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment,
-      CodeableConcept? status}) = _$_AdministrableProductDefinitionProperty;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final CodeableConcept? valueCodeableConcept,
+          final Quantity? valueQuantity,
+          final Date? valueDate,
+          @JsonKey(name: '_valueDate') final Element? valueDateElement,
+          final Boolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final Attachment? valueAttachment,
+          final CodeableConcept? status}) =
+      _$_AdministrableProductDefinitionProperty;
   _AdministrableProductDefinitionProperty._() : super._();
 
   factory _AdministrableProductDefinitionProperty.fromJson(
@@ -1340,36 +1320,38 @@ abstract class _AdministrableProductDefinitionProperty
       _$_AdministrableProductDefinitionProperty.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AdministrableProductDefinitionPropertyCopyWith<
-          _AdministrableProductDefinitionProperty>
+  _$$_AdministrableProductDefinitionPropertyCopyWith<
+          _$_AdministrableProductDefinitionProperty>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1378,45 +1360,6 @@ AdministrableProductDefinitionRouteOfAdministration
         Map<String, dynamic> json) {
   return _AdministrableProductDefinitionRouteOfAdministration.fromJson(json);
 }
-
-/// @nodoc
-class _$AdministrableProductDefinitionRouteOfAdministrationTearOff {
-  const _$AdministrableProductDefinitionRouteOfAdministrationTearOff();
-
-  _AdministrableProductDefinitionRouteOfAdministration call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept code,
-      Quantity? firstDose,
-      Quantity? maxSingleDose,
-      Quantity? maxDosePerDay,
-      Ratio? maxDosePerTreatmentPeriod,
-      Duration? maxTreatmentPeriod,
-      List<AdministrableProductDefinitionTargetSpecies>? targetSpecies}) {
-    return _AdministrableProductDefinitionRouteOfAdministration(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      firstDose: firstDose,
-      maxSingleDose: maxSingleDose,
-      maxDosePerDay: maxDosePerDay,
-      maxDosePerTreatmentPeriod: maxDosePerTreatmentPeriod,
-      maxTreatmentPeriod: maxTreatmentPeriod,
-      targetSpecies: targetSpecies,
-    );
-  }
-
-  AdministrableProductDefinitionRouteOfAdministration fromJson(
-      Map<String, Object?> json) {
-    return AdministrableProductDefinitionRouteOfAdministration.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdministrableProductDefinitionRouteOfAdministration =
-    _$AdministrableProductDefinitionRouteOfAdministrationTearOff();
 
 /// @nodoc
 mixin _$AdministrableProductDefinitionRouteOfAdministration {
@@ -1590,15 +1533,16 @@ class _$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AdministrableProductDefinitionRouteOfAdministrationCopyWith<
+abstract class _$$_AdministrableProductDefinitionRouteOfAdministrationCopyWith<
         $Res>
     implements
         $AdministrableProductDefinitionRouteOfAdministrationCopyWith<$Res> {
-  factory _$AdministrableProductDefinitionRouteOfAdministrationCopyWith(
-          _AdministrableProductDefinitionRouteOfAdministration value,
-          $Res Function(_AdministrableProductDefinitionRouteOfAdministration)
+  factory _$$_AdministrableProductDefinitionRouteOfAdministrationCopyWith(
+          _$_AdministrableProductDefinitionRouteOfAdministration value,
+          $Res Function(_$_AdministrableProductDefinitionRouteOfAdministration)
               then) =
-      __$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>;
+      __$$_AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<
+          $Res>;
   @override
   $Res call(
       {String? id,
@@ -1625,22 +1569,23 @@ abstract class _$AdministrableProductDefinitionRouteOfAdministrationCopyWith<
 }
 
 /// @nodoc
-class __$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
+class __$$_AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
     extends _$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<
         $Res>
     implements
-        _$AdministrableProductDefinitionRouteOfAdministrationCopyWith<$Res> {
-  __$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl(
-      _AdministrableProductDefinitionRouteOfAdministration _value,
-      $Res Function(_AdministrableProductDefinitionRouteOfAdministration) _then)
+        _$$_AdministrableProductDefinitionRouteOfAdministrationCopyWith<$Res> {
+  __$$_AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl(
+      _$_AdministrableProductDefinitionRouteOfAdministration _value,
+      $Res Function(_$_AdministrableProductDefinitionRouteOfAdministration)
+          _then)
       : super(
             _value,
             (v) => _then(
-                v as _AdministrableProductDefinitionRouteOfAdministration));
+                v as _$_AdministrableProductDefinitionRouteOfAdministration));
 
   @override
-  _AdministrableProductDefinitionRouteOfAdministration get _value =>
-      super._value as _AdministrableProductDefinitionRouteOfAdministration;
+  _$_AdministrableProductDefinitionRouteOfAdministration get _value =>
+      super._value as _$_AdministrableProductDefinitionRouteOfAdministration;
 
   @override
   $Res call({
@@ -1655,17 +1600,17 @@ class __$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
     Object? maxTreatmentPeriod = freezed,
     Object? targetSpecies = freezed,
   }) {
-    return _then(_AdministrableProductDefinitionRouteOfAdministration(
+    return _then(_$_AdministrableProductDefinitionRouteOfAdministration(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -1693,7 +1638,7 @@ class __$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
           : maxTreatmentPeriod // ignore: cast_nullable_to_non_nullable
               as Duration?,
       targetSpecies: targetSpecies == freezed
-          ? _value.targetSpecies
+          ? _value._targetSpecies
           : targetSpecies // ignore: cast_nullable_to_non_nullable
               as List<AdministrableProductDefinitionTargetSpecies>?,
     ));
@@ -1706,16 +1651,19 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
     extends _AdministrableProductDefinitionRouteOfAdministration {
   _$_AdministrableProductDefinitionRouteOfAdministration(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.code,
       this.firstDose,
       this.maxSingleDose,
       this.maxDosePerDay,
       this.maxDosePerTreatmentPeriod,
       this.maxTreatmentPeriod,
-      this.targetSpecies})
-      : super._();
+      final List<AdministrableProductDefinitionTargetSpecies>? targetSpecies})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _targetSpecies = targetSpecies,
+        super._();
 
   factory _$_AdministrableProductDefinitionRouteOfAdministration.fromJson(
           Map<String, dynamic> json) =>
@@ -1723,11 +1671,25 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept code;
   @override
@@ -1740,8 +1702,14 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
   final Ratio? maxDosePerTreatmentPeriod;
   @override
   final Duration? maxTreatmentPeriod;
+  final List<AdministrableProductDefinitionTargetSpecies>? _targetSpecies;
   @override
-  final List<AdministrableProductDefinitionTargetSpecies>? targetSpecies;
+  List<AdministrableProductDefinitionTargetSpecies>? get targetSpecies {
+    final value = _targetSpecies;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1752,12 +1720,12 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdministrableProductDefinitionRouteOfAdministration &&
+            other is _$_AdministrableProductDefinitionRouteOfAdministration &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.firstDose, firstDose) &&
             const DeepCollectionEquality()
@@ -1769,30 +1737,31 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
             const DeepCollectionEquality()
                 .equals(other.maxTreatmentPeriod, maxTreatmentPeriod) &&
             const DeepCollectionEquality()
-                .equals(other.targetSpecies, targetSpecies));
+                .equals(other._targetSpecies, _targetSpecies));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(firstDose),
       const DeepCollectionEquality().hash(maxSingleDose),
       const DeepCollectionEquality().hash(maxDosePerDay),
       const DeepCollectionEquality().hash(maxDosePerTreatmentPeriod),
       const DeepCollectionEquality().hash(maxTreatmentPeriod),
-      const DeepCollectionEquality().hash(targetSpecies));
+      const DeepCollectionEquality().hash(_targetSpecies));
 
   @JsonKey(ignore: true)
   @override
-  _$AdministrableProductDefinitionRouteOfAdministrationCopyWith<
-          _AdministrableProductDefinitionRouteOfAdministration>
+  _$$_AdministrableProductDefinitionRouteOfAdministrationCopyWith<
+          _$_AdministrableProductDefinitionRouteOfAdministration>
       get copyWith =>
-          __$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<
-                  _AdministrableProductDefinitionRouteOfAdministration>(
+          __$$_AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<
+                  _$_AdministrableProductDefinitionRouteOfAdministration>(
               this, _$identity);
 
   @override
@@ -1804,16 +1773,17 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
 abstract class _AdministrableProductDefinitionRouteOfAdministration
     extends AdministrableProductDefinitionRouteOfAdministration {
   factory _AdministrableProductDefinitionRouteOfAdministration(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept code,
-          Quantity? firstDose,
-          Quantity? maxSingleDose,
-          Quantity? maxDosePerDay,
-          Ratio? maxDosePerTreatmentPeriod,
-          Duration? maxTreatmentPeriod,
-          List<AdministrableProductDefinitionTargetSpecies>? targetSpecies}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept code,
+          final Quantity? firstDose,
+          final Quantity? maxSingleDose,
+          final Quantity? maxDosePerDay,
+          final Ratio? maxDosePerTreatmentPeriod,
+          final Duration? maxTreatmentPeriod,
+          final List<AdministrableProductDefinitionTargetSpecies>?
+              targetSpecies}) =
       _$_AdministrableProductDefinitionRouteOfAdministration;
   _AdministrableProductDefinitionRouteOfAdministration._() : super._();
 
@@ -1822,30 +1792,32 @@ abstract class _AdministrableProductDefinitionRouteOfAdministration
       _$_AdministrableProductDefinitionRouteOfAdministration.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Quantity? get firstDose;
+  Quantity? get firstDose => throw _privateConstructorUsedError;
   @override
-  Quantity? get maxSingleDose;
+  Quantity? get maxSingleDose => throw _privateConstructorUsedError;
   @override
-  Quantity? get maxDosePerDay;
+  Quantity? get maxDosePerDay => throw _privateConstructorUsedError;
   @override
-  Ratio? get maxDosePerTreatmentPeriod;
+  Ratio? get maxDosePerTreatmentPeriod => throw _privateConstructorUsedError;
   @override
-  Duration? get maxTreatmentPeriod;
+  Duration? get maxTreatmentPeriod => throw _privateConstructorUsedError;
   @override
-  List<AdministrableProductDefinitionTargetSpecies>? get targetSpecies;
+  List<AdministrableProductDefinitionTargetSpecies>? get targetSpecies =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AdministrableProductDefinitionRouteOfAdministrationCopyWith<
-          _AdministrableProductDefinitionRouteOfAdministration>
+  _$$_AdministrableProductDefinitionRouteOfAdministrationCopyWith<
+          _$_AdministrableProductDefinitionRouteOfAdministration>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1854,35 +1826,6 @@ AdministrableProductDefinitionTargetSpecies
         Map<String, dynamic> json) {
   return _AdministrableProductDefinitionTargetSpecies.fromJson(json);
 }
-
-/// @nodoc
-class _$AdministrableProductDefinitionTargetSpeciesTearOff {
-  const _$AdministrableProductDefinitionTargetSpeciesTearOff();
-
-  _AdministrableProductDefinitionTargetSpecies call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept code,
-      List<AdministrableProductDefinitionWithdrawalPeriod>? withdrawalPeriod}) {
-    return _AdministrableProductDefinitionTargetSpecies(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      withdrawalPeriod: withdrawalPeriod,
-    );
-  }
-
-  AdministrableProductDefinitionTargetSpecies fromJson(
-      Map<String, Object?> json) {
-    return AdministrableProductDefinitionTargetSpecies.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdministrableProductDefinitionTargetSpecies =
-    _$AdministrableProductDefinitionTargetSpeciesTearOff();
 
 /// @nodoc
 mixin _$AdministrableProductDefinitionTargetSpecies {
@@ -1969,12 +1912,12 @@ class _$AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AdministrableProductDefinitionTargetSpeciesCopyWith<$Res>
+abstract class _$$_AdministrableProductDefinitionTargetSpeciesCopyWith<$Res>
     implements $AdministrableProductDefinitionTargetSpeciesCopyWith<$Res> {
-  factory _$AdministrableProductDefinitionTargetSpeciesCopyWith(
-          _AdministrableProductDefinitionTargetSpecies value,
-          $Res Function(_AdministrableProductDefinitionTargetSpecies) then) =
-      __$AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>;
+  factory _$$_AdministrableProductDefinitionTargetSpeciesCopyWith(
+          _$_AdministrableProductDefinitionTargetSpecies value,
+          $Res Function(_$_AdministrableProductDefinitionTargetSpecies) then) =
+      __$$_AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -1988,18 +1931,18 @@ abstract class _$AdministrableProductDefinitionTargetSpeciesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>
+class __$$_AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>
     extends _$AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>
-    implements _$AdministrableProductDefinitionTargetSpeciesCopyWith<$Res> {
-  __$AdministrableProductDefinitionTargetSpeciesCopyWithImpl(
-      _AdministrableProductDefinitionTargetSpecies _value,
-      $Res Function(_AdministrableProductDefinitionTargetSpecies) _then)
+    implements _$$_AdministrableProductDefinitionTargetSpeciesCopyWith<$Res> {
+  __$$_AdministrableProductDefinitionTargetSpeciesCopyWithImpl(
+      _$_AdministrableProductDefinitionTargetSpecies _value,
+      $Res Function(_$_AdministrableProductDefinitionTargetSpecies) _then)
       : super(_value,
-            (v) => _then(v as _AdministrableProductDefinitionTargetSpecies));
+            (v) => _then(v as _$_AdministrableProductDefinitionTargetSpecies));
 
   @override
-  _AdministrableProductDefinitionTargetSpecies get _value =>
-      super._value as _AdministrableProductDefinitionTargetSpecies;
+  _$_AdministrableProductDefinitionTargetSpecies get _value =>
+      super._value as _$_AdministrableProductDefinitionTargetSpecies;
 
   @override
   $Res call({
@@ -2009,17 +1952,17 @@ class __$AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>
     Object? code = freezed,
     Object? withdrawalPeriod = freezed,
   }) {
-    return _then(_AdministrableProductDefinitionTargetSpecies(
+    return _then(_$_AdministrableProductDefinitionTargetSpecies(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -2027,7 +1970,7 @@ class __$AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       withdrawalPeriod: withdrawalPeriod == freezed
-          ? _value.withdrawalPeriod
+          ? _value._withdrawalPeriod
           : withdrawalPeriod // ignore: cast_nullable_to_non_nullable
               as List<AdministrableProductDefinitionWithdrawalPeriod>?,
     ));
@@ -2040,11 +1983,15 @@ class _$_AdministrableProductDefinitionTargetSpecies
     extends _AdministrableProductDefinitionTargetSpecies {
   _$_AdministrableProductDefinitionTargetSpecies(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.code,
-      this.withdrawalPeriod})
-      : super._();
+      final List<AdministrableProductDefinitionWithdrawalPeriod>?
+          withdrawalPeriod})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _withdrawalPeriod = withdrawalPeriod,
+        super._();
 
   factory _$_AdministrableProductDefinitionTargetSpecies.fromJson(
           Map<String, dynamic> json) =>
@@ -2052,15 +1999,35 @@ class _$_AdministrableProductDefinitionTargetSpecies
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept code;
+  final List<AdministrableProductDefinitionWithdrawalPeriod>? _withdrawalPeriod;
   @override
-  final List<AdministrableProductDefinitionWithdrawalPeriod>? withdrawalPeriod;
+  List<AdministrableProductDefinitionWithdrawalPeriod>? get withdrawalPeriod {
+    final value = _withdrawalPeriod;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -2071,33 +2038,34 @@ class _$_AdministrableProductDefinitionTargetSpecies
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdministrableProductDefinitionTargetSpecies &&
+            other is _$_AdministrableProductDefinitionTargetSpecies &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
-                .equals(other.withdrawalPeriod, withdrawalPeriod));
+                .equals(other._withdrawalPeriod, _withdrawalPeriod));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(withdrawalPeriod));
+      const DeepCollectionEquality().hash(_withdrawalPeriod));
 
   @JsonKey(ignore: true)
   @override
-  _$AdministrableProductDefinitionTargetSpeciesCopyWith<
-          _AdministrableProductDefinitionTargetSpecies>
+  _$$_AdministrableProductDefinitionTargetSpeciesCopyWith<
+          _$_AdministrableProductDefinitionTargetSpecies>
       get copyWith =>
-          __$AdministrableProductDefinitionTargetSpeciesCopyWithImpl<
-              _AdministrableProductDefinitionTargetSpecies>(this, _$identity);
+          __$$_AdministrableProductDefinitionTargetSpeciesCopyWithImpl<
+              _$_AdministrableProductDefinitionTargetSpecies>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2108,11 +2076,11 @@ class _$_AdministrableProductDefinitionTargetSpecies
 abstract class _AdministrableProductDefinitionTargetSpecies
     extends AdministrableProductDefinitionTargetSpecies {
   factory _AdministrableProductDefinitionTargetSpecies(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept code,
-      List<AdministrableProductDefinitionWithdrawalPeriod>?
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept code,
+      final List<AdministrableProductDefinitionWithdrawalPeriod>?
           withdrawalPeriod}) = _$_AdministrableProductDefinitionTargetSpecies;
   _AdministrableProductDefinitionTargetSpecies._() : super._();
 
@@ -2121,20 +2089,22 @@ abstract class _AdministrableProductDefinitionTargetSpecies
       _$_AdministrableProductDefinitionTargetSpecies.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  List<AdministrableProductDefinitionWithdrawalPeriod>? get withdrawalPeriod;
+  List<AdministrableProductDefinitionWithdrawalPeriod>? get withdrawalPeriod =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AdministrableProductDefinitionTargetSpeciesCopyWith<
-          _AdministrableProductDefinitionTargetSpecies>
+  _$$_AdministrableProductDefinitionTargetSpeciesCopyWith<
+          _$_AdministrableProductDefinitionTargetSpecies>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2143,41 +2113,6 @@ AdministrableProductDefinitionWithdrawalPeriod
         Map<String, dynamic> json) {
   return _AdministrableProductDefinitionWithdrawalPeriod.fromJson(json);
 }
-
-/// @nodoc
-class _$AdministrableProductDefinitionWithdrawalPeriodTearOff {
-  const _$AdministrableProductDefinitionWithdrawalPeriodTearOff();
-
-  _AdministrableProductDefinitionWithdrawalPeriod call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept tissue,
-      required Quantity value,
-      String? supportingInformation,
-      @JsonKey(name: '_supportingInformation')
-          Element? supportingInformationElement}) {
-    return _AdministrableProductDefinitionWithdrawalPeriod(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      tissue: tissue,
-      value: value,
-      supportingInformation: supportingInformation,
-      supportingInformationElement: supportingInformationElement,
-    );
-  }
-
-  AdministrableProductDefinitionWithdrawalPeriod fromJson(
-      Map<String, Object?> json) {
-    return AdministrableProductDefinitionWithdrawalPeriod.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdministrableProductDefinitionWithdrawalPeriod =
-    _$AdministrableProductDefinitionWithdrawalPeriodTearOff();
 
 /// @nodoc
 mixin _$AdministrableProductDefinitionWithdrawalPeriod {
@@ -2302,12 +2237,13 @@ class _$AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AdministrableProductDefinitionWithdrawalPeriodCopyWith<$Res>
+abstract class _$$_AdministrableProductDefinitionWithdrawalPeriodCopyWith<$Res>
     implements $AdministrableProductDefinitionWithdrawalPeriodCopyWith<$Res> {
-  factory _$AdministrableProductDefinitionWithdrawalPeriodCopyWith(
-          _AdministrableProductDefinitionWithdrawalPeriod value,
-          $Res Function(_AdministrableProductDefinitionWithdrawalPeriod) then) =
-      __$AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>;
+  factory _$$_AdministrableProductDefinitionWithdrawalPeriodCopyWith(
+          _$_AdministrableProductDefinitionWithdrawalPeriod value,
+          $Res Function(_$_AdministrableProductDefinitionWithdrawalPeriod)
+              then) =
+      __$$_AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -2329,18 +2265,21 @@ abstract class _$AdministrableProductDefinitionWithdrawalPeriodCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>
+class __$$_AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>
     extends _$AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>
-    implements _$AdministrableProductDefinitionWithdrawalPeriodCopyWith<$Res> {
-  __$AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl(
-      _AdministrableProductDefinitionWithdrawalPeriod _value,
-      $Res Function(_AdministrableProductDefinitionWithdrawalPeriod) _then)
-      : super(_value,
-            (v) => _then(v as _AdministrableProductDefinitionWithdrawalPeriod));
+    implements
+        _$$_AdministrableProductDefinitionWithdrawalPeriodCopyWith<$Res> {
+  __$$_AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl(
+      _$_AdministrableProductDefinitionWithdrawalPeriod _value,
+      $Res Function(_$_AdministrableProductDefinitionWithdrawalPeriod) _then)
+      : super(
+            _value,
+            (v) =>
+                _then(v as _$_AdministrableProductDefinitionWithdrawalPeriod));
 
   @override
-  _AdministrableProductDefinitionWithdrawalPeriod get _value =>
-      super._value as _AdministrableProductDefinitionWithdrawalPeriod;
+  _$_AdministrableProductDefinitionWithdrawalPeriod get _value =>
+      super._value as _$_AdministrableProductDefinitionWithdrawalPeriod;
 
   @override
   $Res call({
@@ -2352,17 +2291,17 @@ class __$AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>
     Object? supportingInformation = freezed,
     Object? supportingInformationElement = freezed,
   }) {
-    return _then(_AdministrableProductDefinitionWithdrawalPeriod(
+    return _then(_$_AdministrableProductDefinitionWithdrawalPeriod(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       tissue: tissue == freezed
@@ -2392,14 +2331,16 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
   _$_AdministrableProductDefinitionWithdrawalPeriod(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.tissue,
       required this.value,
       this.supportingInformation,
       @JsonKey(name: '_supportingInformation')
           this.supportingInformationElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_AdministrableProductDefinitionWithdrawalPeriod.fromJson(
           Map<String, dynamic> json) =>
@@ -2407,11 +2348,25 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept tissue;
   @override
@@ -2431,12 +2386,12 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdministrableProductDefinitionWithdrawalPeriod &&
+            other is _$_AdministrableProductDefinitionWithdrawalPeriod &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.tissue, tissue) &&
             const DeepCollectionEquality().equals(other.value, value) &&
             const DeepCollectionEquality()
@@ -2446,12 +2401,13 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
                 supportingInformationElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(tissue),
       const DeepCollectionEquality().hash(value),
       const DeepCollectionEquality().hash(supportingInformation),
@@ -2459,11 +2415,11 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
 
   @JsonKey(ignore: true)
   @override
-  _$AdministrableProductDefinitionWithdrawalPeriodCopyWith<
-          _AdministrableProductDefinitionWithdrawalPeriod>
+  _$$_AdministrableProductDefinitionWithdrawalPeriodCopyWith<
+          _$_AdministrableProductDefinitionWithdrawalPeriod>
       get copyWith =>
-          __$AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<
-                  _AdministrableProductDefinitionWithdrawalPeriod>(
+          __$$_AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<
+                  _$_AdministrableProductDefinitionWithdrawalPeriod>(
               this, _$identity);
 
   @override
@@ -2475,15 +2431,15 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
 abstract class _AdministrableProductDefinitionWithdrawalPeriod
     extends AdministrableProductDefinitionWithdrawalPeriod {
   factory _AdministrableProductDefinitionWithdrawalPeriod(
-          {String? id,
+          {final String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept tissue,
-          required Quantity value,
-          String? supportingInformation,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept tissue,
+          required final Quantity value,
+          final String? supportingInformation,
           @JsonKey(name: '_supportingInformation')
-              Element? supportingInformationElement}) =
+              final Element? supportingInformationElement}) =
       _$_AdministrableProductDefinitionWithdrawalPeriod;
   _AdministrableProductDefinitionWithdrawalPeriod._() : super._();
 
@@ -2492,98 +2448,33 @@ abstract class _AdministrableProductDefinitionWithdrawalPeriod
       _$_AdministrableProductDefinitionWithdrawalPeriod.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get tissue;
+  CodeableConcept get tissue => throw _privateConstructorUsedError;
   @override
-  Quantity get value;
+  Quantity get value => throw _privateConstructorUsedError;
   @override
-  String? get supportingInformation;
+  String? get supportingInformation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_supportingInformation')
-  Element? get supportingInformationElement;
+  Element? get supportingInformationElement =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AdministrableProductDefinitionWithdrawalPeriodCopyWith<
-          _AdministrableProductDefinitionWithdrawalPeriod>
+  _$$_AdministrableProductDefinitionWithdrawalPeriodCopyWith<
+          _$_AdministrableProductDefinitionWithdrawalPeriod>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 Ingredient _$IngredientFromJson(Map<String, dynamic> json) {
   return _Ingredient.fromJson(json);
 }
-
-/// @nodoc
-class _$IngredientTearOff {
-  const _$IngredientTearOff();
-
-  _Ingredient call(
-      {R5ResourceType resourceType = R5ResourceType.Ingredient,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      Code? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      @JsonKey(name: 'for')
-          List<Reference>? for_,
-      required CodeableConcept role,
-      List<CodeableConcept>? function,
-      CodeableConcept? group,
-      Boolean? allergenicIndicator,
-      @JsonKey(name: '_allergenicIndicator')
-          Element? allergenicIndicatorElement,
-      List<IngredientManufacturer>? manufacturer,
-      required IngredientSubstance substance}) {
-    return _Ingredient(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      for_: for_,
-      role: role,
-      function: function,
-      group: group,
-      allergenicIndicator: allergenicIndicator,
-      allergenicIndicatorElement: allergenicIndicatorElement,
-      manufacturer: manufacturer,
-      substance: substance,
-    );
-  }
-
-  Ingredient fromJson(Map<String, Object?> json) {
-    return Ingredient.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Ingredient = _$IngredientTearOff();
 
 /// @nodoc
 mixin _$Ingredient {
@@ -2900,10 +2791,11 @@ class _$IngredientCopyWithImpl<$Res> implements $IngredientCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$IngredientCopyWith<$Res> implements $IngredientCopyWith<$Res> {
-  factory _$IngredientCopyWith(
-          _Ingredient value, $Res Function(_Ingredient) then) =
-      __$IngredientCopyWithImpl<$Res>;
+abstract class _$$_IngredientCopyWith<$Res>
+    implements $IngredientCopyWith<$Res> {
+  factory _$$_IngredientCopyWith(
+          _$_Ingredient value, $Res Function(_$_Ingredient) then) =
+      __$$_IngredientCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -2958,14 +2850,14 @@ abstract class _$IngredientCopyWith<$Res> implements $IngredientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
-    implements _$IngredientCopyWith<$Res> {
-  __$IngredientCopyWithImpl(
-      _Ingredient _value, $Res Function(_Ingredient) _then)
-      : super(_value, (v) => _then(v as _Ingredient));
+class __$$_IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
+    implements _$$_IngredientCopyWith<$Res> {
+  __$$_IngredientCopyWithImpl(
+      _$_Ingredient _value, $Res Function(_$_Ingredient) _then)
+      : super(_value, (v) => _then(v as _$_Ingredient));
 
   @override
-  _Ingredient get _value => super._value as _Ingredient;
+  _$_Ingredient get _value => super._value as _$_Ingredient;
 
   @override
   $Res call({
@@ -2992,7 +2884,7 @@ class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
     Object? manufacturer = freezed,
     Object? substance = freezed,
   }) {
-    return _then(_Ingredient(
+    return _then(_$_Ingredient(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3026,15 +2918,15 @@ class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -3050,7 +2942,7 @@ class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       for_: for_ == freezed
-          ? _value.for_
+          ? _value._for_
           : for_ // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       role: role == freezed
@@ -3058,7 +2950,7 @@ class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
           : role // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       function: function == freezed
-          ? _value.function
+          ? _value._function
           : function // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       group: group == freezed
@@ -3074,7 +2966,7 @@ class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
           : allergenicIndicatorElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       manufacturer: manufacturer == freezed
-          ? _value.manufacturer
+          ? _value._manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
               as List<IngredientManufacturer>?,
       substance: substance == freezed
@@ -3097,27 +2989,33 @@ class _$_Ingredient extends _Ingredient {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
-      @JsonKey(name: 'for') this.for_,
+      @JsonKey(name: 'for') final List<Reference>? for_,
       required this.role,
-      this.function,
+      final List<CodeableConcept>? function,
       this.group,
       this.allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator') this.allergenicIndicatorElement,
-      this.manufacturer,
+      final List<IngredientManufacturer>? manufacturer,
       required this.substance})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _for_ = for_,
+        _function = function,
+        _manufacturer = manufacturer,
+        super._();
 
   factory _$_Ingredient.fromJson(Map<String, dynamic> json) =>
       _$$_IngredientFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -3135,13 +3033,34 @@ class _$_Ingredient extends _Ingredient {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -3149,13 +3068,27 @@ class _$_Ingredient extends _Ingredient {
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+  final List<Reference>? _for_;
   @override
   @JsonKey(name: 'for')
-  final List<Reference>? for_;
+  List<Reference>? get for_ {
+    final value = _for_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept role;
+  final List<CodeableConcept>? _function;
   @override
-  final List<CodeableConcept>? function;
+  List<CodeableConcept>? get function {
+    final value = _function;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? group;
   @override
@@ -3163,8 +3096,15 @@ class _$_Ingredient extends _Ingredient {
   @override
   @JsonKey(name: '_allergenicIndicator')
   final Element? allergenicIndicatorElement;
+  final List<IngredientManufacturer>? _manufacturer;
   @override
-  final List<IngredientManufacturer>? manufacturer;
+  List<IngredientManufacturer>? get manufacturer {
+    final value = _manufacturer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final IngredientSubstance substance;
 
@@ -3177,7 +3117,7 @@ class _$_Ingredient extends _Ingredient {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Ingredient &&
+            other is _$_Ingredient &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -3190,29 +3130,31 @@ class _$_Ingredient extends _Ingredient {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.for_, for_) &&
+            const DeepCollectionEquality().equals(other._for_, _for_) &&
             const DeepCollectionEquality().equals(other.role, role) &&
-            const DeepCollectionEquality().equals(other.function, function) &&
+            const DeepCollectionEquality().equals(other._function, _function) &&
             const DeepCollectionEquality().equals(other.group, group) &&
             const DeepCollectionEquality()
                 .equals(other.allergenicIndicator, allergenicIndicator) &&
             const DeepCollectionEquality().equals(
                 other.allergenicIndicatorElement, allergenicIndicatorElement) &&
             const DeepCollectionEquality()
-                .equals(other.manufacturer, manufacturer) &&
+                .equals(other._manufacturer, _manufacturer) &&
             const DeepCollectionEquality().equals(other.substance, substance));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3224,26 +3166,26 @@ class _$_Ingredient extends _Ingredient {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(for_),
+        const DeepCollectionEquality().hash(_for_),
         const DeepCollectionEquality().hash(role),
-        const DeepCollectionEquality().hash(function),
+        const DeepCollectionEquality().hash(_function),
         const DeepCollectionEquality().hash(group),
         const DeepCollectionEquality().hash(allergenicIndicator),
         const DeepCollectionEquality().hash(allergenicIndicatorElement),
-        const DeepCollectionEquality().hash(manufacturer),
+        const DeepCollectionEquality().hash(_manufacturer),
         const DeepCollectionEquality().hash(substance)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$IngredientCopyWith<_Ingredient> get copyWith =>
-      __$IngredientCopyWithImpl<_Ingredient>(this, _$identity);
+  _$$_IngredientCopyWith<_$_Ingredient> get copyWith =>
+      __$$_IngredientCopyWithImpl<_$_Ingredient>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3253,92 +3195,94 @@ class _$_Ingredient extends _Ingredient {
 
 abstract class _Ingredient extends Ingredient {
   factory _Ingredient(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      Code? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final Code? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
+          final Element? statusElement,
       @JsonKey(name: 'for')
-          List<Reference>? for_,
-      required CodeableConcept role,
-      List<CodeableConcept>? function,
-      CodeableConcept? group,
-      Boolean? allergenicIndicator,
+          final List<Reference>? for_,
+      required final CodeableConcept role,
+      final List<CodeableConcept>? function,
+      final CodeableConcept? group,
+      final Boolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
-          Element? allergenicIndicatorElement,
-      List<IngredientManufacturer>? manufacturer,
-      required IngredientSubstance substance}) = _$_Ingredient;
+          final Element? allergenicIndicatorElement,
+      final List<IngredientManufacturer>? manufacturer,
+      required final IngredientSubstance substance}) = _$_Ingredient;
   _Ingredient._() : super._();
 
   factory _Ingredient.fromJson(Map<String, dynamic> json) =
       _$_Ingredient.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'for')
-  List<Reference>? get for_;
+  List<Reference>? get for_ => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get role;
+  CodeableConcept get role => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get function;
+  List<CodeableConcept>? get function => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get group;
+  CodeableConcept? get group => throw _privateConstructorUsedError;
   @override
-  Boolean? get allergenicIndicator;
+  Boolean? get allergenicIndicator => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_allergenicIndicator')
-  Element? get allergenicIndicatorElement;
+  Element? get allergenicIndicatorElement => throw _privateConstructorUsedError;
   @override
-  List<IngredientManufacturer>? get manufacturer;
+  List<IngredientManufacturer>? get manufacturer =>
+      throw _privateConstructorUsedError;
   @override
-  IngredientSubstance get substance;
+  IngredientSubstance get substance => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IngredientCopyWith<_Ingredient> get copyWith =>
+  _$$_IngredientCopyWith<_$_Ingredient> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3346,35 +3290,6 @@ IngredientManufacturer _$IngredientManufacturerFromJson(
     Map<String, dynamic> json) {
   return _IngredientManufacturer.fromJson(json);
 }
-
-/// @nodoc
-class _$IngredientManufacturerTearOff {
-  const _$IngredientManufacturerTearOff();
-
-  _IngredientManufacturer call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Code? role,
-      @JsonKey(name: '_role') Element? roleElement,
-      required Reference manufacturer}) {
-    return _IngredientManufacturer(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      role: role,
-      roleElement: roleElement,
-      manufacturer: manufacturer,
-    );
-  }
-
-  IngredientManufacturer fromJson(Map<String, Object?> json) {
-    return IngredientManufacturer.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $IngredientManufacturer = _$IngredientManufacturerTearOff();
 
 /// @nodoc
 mixin _$IngredientManufacturer {
@@ -3477,11 +3392,11 @@ class _$IngredientManufacturerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IngredientManufacturerCopyWith<$Res>
+abstract class _$$_IngredientManufacturerCopyWith<$Res>
     implements $IngredientManufacturerCopyWith<$Res> {
-  factory _$IngredientManufacturerCopyWith(_IngredientManufacturer value,
-          $Res Function(_IngredientManufacturer) then) =
-      __$IngredientManufacturerCopyWithImpl<$Res>;
+  factory _$$_IngredientManufacturerCopyWith(_$_IngredientManufacturer value,
+          $Res Function(_$_IngredientManufacturer) then) =
+      __$$_IngredientManufacturerCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -3498,15 +3413,16 @@ abstract class _$IngredientManufacturerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$IngredientManufacturerCopyWithImpl<$Res>
+class __$$_IngredientManufacturerCopyWithImpl<$Res>
     extends _$IngredientManufacturerCopyWithImpl<$Res>
-    implements _$IngredientManufacturerCopyWith<$Res> {
-  __$IngredientManufacturerCopyWithImpl(_IngredientManufacturer _value,
-      $Res Function(_IngredientManufacturer) _then)
-      : super(_value, (v) => _then(v as _IngredientManufacturer));
+    implements _$$_IngredientManufacturerCopyWith<$Res> {
+  __$$_IngredientManufacturerCopyWithImpl(_$_IngredientManufacturer _value,
+      $Res Function(_$_IngredientManufacturer) _then)
+      : super(_value, (v) => _then(v as _$_IngredientManufacturer));
 
   @override
-  _IngredientManufacturer get _value => super._value as _IngredientManufacturer;
+  _$_IngredientManufacturer get _value =>
+      super._value as _$_IngredientManufacturer;
 
   @override
   $Res call({
@@ -3517,17 +3433,17 @@ class __$IngredientManufacturerCopyWithImpl<$Res>
     Object? roleElement = freezed,
     Object? manufacturer = freezed,
   }) {
-    return _then(_IngredientManufacturer(
+    return _then(_$_IngredientManufacturer(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       role: role == freezed
@@ -3551,23 +3467,39 @@ class __$IngredientManufacturerCopyWithImpl<$Res>
 class _$_IngredientManufacturer extends _IngredientManufacturer {
   _$_IngredientManufacturer(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.role,
       @JsonKey(name: '_role') this.roleElement,
       required this.manufacturer})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_IngredientManufacturer.fromJson(Map<String, dynamic> json) =>
       _$$_IngredientManufacturerFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? role;
   @override
@@ -3585,12 +3517,12 @@ class _$_IngredientManufacturer extends _IngredientManufacturer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IngredientManufacturer &&
+            other is _$_IngredientManufacturer &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.role, role) &&
             const DeepCollectionEquality()
                 .equals(other.roleElement, roleElement) &&
@@ -3598,20 +3530,21 @@ class _$_IngredientManufacturer extends _IngredientManufacturer {
                 .equals(other.manufacturer, manufacturer));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(role),
       const DeepCollectionEquality().hash(roleElement),
       const DeepCollectionEquality().hash(manufacturer));
 
   @JsonKey(ignore: true)
   @override
-  _$IngredientManufacturerCopyWith<_IngredientManufacturer> get copyWith =>
-      __$IngredientManufacturerCopyWithImpl<_IngredientManufacturer>(
+  _$$_IngredientManufacturerCopyWith<_$_IngredientManufacturer> get copyWith =>
+      __$$_IngredientManufacturerCopyWithImpl<_$_IngredientManufacturer>(
           this, _$identity);
 
   @override
@@ -3622,67 +3555,41 @@ class _$_IngredientManufacturer extends _IngredientManufacturer {
 
 abstract class _IngredientManufacturer extends IngredientManufacturer {
   factory _IngredientManufacturer(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Code? role,
-      @JsonKey(name: '_role') Element? roleElement,
-      required Reference manufacturer}) = _$_IngredientManufacturer;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Code? role,
+      @JsonKey(name: '_role') final Element? roleElement,
+      required final Reference manufacturer}) = _$_IngredientManufacturer;
   _IngredientManufacturer._() : super._();
 
   factory _IngredientManufacturer.fromJson(Map<String, dynamic> json) =
       _$_IngredientManufacturer.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get role;
+  Code? get role => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_role')
-  Element? get roleElement;
+  Element? get roleElement => throw _privateConstructorUsedError;
   @override
-  Reference get manufacturer;
+  Reference get manufacturer => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IngredientManufacturerCopyWith<_IngredientManufacturer> get copyWith =>
+  _$$_IngredientManufacturerCopyWith<_$_IngredientManufacturer> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 IngredientSubstance _$IngredientSubstanceFromJson(Map<String, dynamic> json) {
   return _IngredientSubstance.fromJson(json);
 }
-
-/// @nodoc
-class _$IngredientSubstanceTearOff {
-  const _$IngredientSubstanceTearOff();
-
-  _IngredientSubstance call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableReference code,
-      List<IngredientStrength>? strength}) {
-    return _IngredientSubstance(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      strength: strength,
-    );
-  }
-
-  IngredientSubstance fromJson(Map<String, Object?> json) {
-    return IngredientSubstance.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $IngredientSubstance = _$IngredientSubstanceTearOff();
 
 /// @nodoc
 mixin _$IngredientSubstance {
@@ -3765,11 +3672,11 @@ class _$IngredientSubstanceCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IngredientSubstanceCopyWith<$Res>
+abstract class _$$_IngredientSubstanceCopyWith<$Res>
     implements $IngredientSubstanceCopyWith<$Res> {
-  factory _$IngredientSubstanceCopyWith(_IngredientSubstance value,
-          $Res Function(_IngredientSubstance) then) =
-      __$IngredientSubstanceCopyWithImpl<$Res>;
+  factory _$$_IngredientSubstanceCopyWith(_$_IngredientSubstance value,
+          $Res Function(_$_IngredientSubstance) then) =
+      __$$_IngredientSubstanceCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -3783,15 +3690,15 @@ abstract class _$IngredientSubstanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$IngredientSubstanceCopyWithImpl<$Res>
+class __$$_IngredientSubstanceCopyWithImpl<$Res>
     extends _$IngredientSubstanceCopyWithImpl<$Res>
-    implements _$IngredientSubstanceCopyWith<$Res> {
-  __$IngredientSubstanceCopyWithImpl(
-      _IngredientSubstance _value, $Res Function(_IngredientSubstance) _then)
-      : super(_value, (v) => _then(v as _IngredientSubstance));
+    implements _$$_IngredientSubstanceCopyWith<$Res> {
+  __$$_IngredientSubstanceCopyWithImpl(_$_IngredientSubstance _value,
+      $Res Function(_$_IngredientSubstance) _then)
+      : super(_value, (v) => _then(v as _$_IngredientSubstance));
 
   @override
-  _IngredientSubstance get _value => super._value as _IngredientSubstance;
+  _$_IngredientSubstance get _value => super._value as _$_IngredientSubstance;
 
   @override
   $Res call({
@@ -3801,17 +3708,17 @@ class __$IngredientSubstanceCopyWithImpl<$Res>
     Object? code = freezed,
     Object? strength = freezed,
   }) {
-    return _then(_IngredientSubstance(
+    return _then(_$_IngredientSubstance(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -3819,7 +3726,7 @@ class __$IngredientSubstanceCopyWithImpl<$Res>
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableReference,
       strength: strength == freezed
-          ? _value.strength
+          ? _value._strength
           : strength // ignore: cast_nullable_to_non_nullable
               as List<IngredientStrength>?,
     ));
@@ -3831,26 +3738,49 @@ class __$IngredientSubstanceCopyWithImpl<$Res>
 class _$_IngredientSubstance extends _IngredientSubstance {
   _$_IngredientSubstance(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.code,
-      this.strength})
-      : super._();
+      final List<IngredientStrength>? strength})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _strength = strength,
+        super._();
 
   factory _$_IngredientSubstance.fromJson(Map<String, dynamic> json) =>
       _$$_IngredientSubstanceFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableReference code;
+  final List<IngredientStrength>? _strength;
   @override
-  final List<IngredientStrength>? strength;
+  List<IngredientStrength>? get strength {
+    final value = _strength;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -3861,29 +3791,30 @@ class _$_IngredientSubstance extends _IngredientSubstance {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IngredientSubstance &&
+            other is _$_IngredientSubstance &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.strength, strength));
+            const DeepCollectionEquality().equals(other._strength, _strength));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(strength));
+      const DeepCollectionEquality().hash(_strength));
 
   @JsonKey(ignore: true)
   @override
-  _$IngredientSubstanceCopyWith<_IngredientSubstance> get copyWith =>
-      __$IngredientSubstanceCopyWithImpl<_IngredientSubstance>(
+  _$$_IngredientSubstanceCopyWith<_$_IngredientSubstance> get copyWith =>
+      __$$_IngredientSubstanceCopyWithImpl<_$_IngredientSubstance>(
           this, _$identity);
 
   @override
@@ -3894,93 +3825,37 @@ class _$_IngredientSubstance extends _IngredientSubstance {
 
 abstract class _IngredientSubstance extends IngredientSubstance {
   factory _IngredientSubstance(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableReference code,
-      List<IngredientStrength>? strength}) = _$_IngredientSubstance;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableReference code,
+      final List<IngredientStrength>? strength}) = _$_IngredientSubstance;
   _IngredientSubstance._() : super._();
 
   factory _IngredientSubstance.fromJson(Map<String, dynamic> json) =
       _$_IngredientSubstance.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableReference get code;
+  CodeableReference get code => throw _privateConstructorUsedError;
   @override
-  List<IngredientStrength>? get strength;
+  List<IngredientStrength>? get strength => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IngredientSubstanceCopyWith<_IngredientSubstance> get copyWith =>
+  _$$_IngredientSubstanceCopyWith<_$_IngredientSubstance> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 IngredientStrength _$IngredientStrengthFromJson(Map<String, dynamic> json) {
   return _IngredientStrength.fromJson(json);
 }
-
-/// @nodoc
-class _$IngredientStrengthTearOff {
-  const _$IngredientStrengthTearOff();
-
-  _IngredientStrength call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Ratio? presentationRatio,
-      RatioRange? presentationRatioRange,
-      CodeableConcept? presentationCodeableConcept,
-      Quantity? presentationQuantity,
-      String? textPresentation,
-      @JsonKey(name: '_textPresentation') Element? textPresentationElement,
-      Ratio? concentrationRatio,
-      RatioRange? concentrationRatioRange,
-      CodeableConcept? concentrationCodeableConcept,
-      Quantity? concentrationQuantity,
-      String? textConcentration,
-      @JsonKey(name: '_textConcentration') Element? textConcentrationElement,
-      CodeableConcept? basis,
-      String? measurementPoint,
-      @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
-      List<CodeableConcept>? country,
-      List<IngredientReferenceStrength>? referenceStrength}) {
-    return _IngredientStrength(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      presentationRatio: presentationRatio,
-      presentationRatioRange: presentationRatioRange,
-      presentationCodeableConcept: presentationCodeableConcept,
-      presentationQuantity: presentationQuantity,
-      textPresentation: textPresentation,
-      textPresentationElement: textPresentationElement,
-      concentrationRatio: concentrationRatio,
-      concentrationRatioRange: concentrationRatioRange,
-      concentrationCodeableConcept: concentrationCodeableConcept,
-      concentrationQuantity: concentrationQuantity,
-      textConcentration: textConcentration,
-      textConcentrationElement: textConcentrationElement,
-      basis: basis,
-      measurementPoint: measurementPoint,
-      measurementPointElement: measurementPointElement,
-      country: country,
-      referenceStrength: referenceStrength,
-    );
-  }
-
-  IngredientStrength fromJson(Map<String, Object?> json) {
-    return IngredientStrength.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $IngredientStrength = _$IngredientStrengthTearOff();
 
 /// @nodoc
 mixin _$IngredientStrength {
@@ -4312,11 +4187,11 @@ class _$IngredientStrengthCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IngredientStrengthCopyWith<$Res>
+abstract class _$$_IngredientStrengthCopyWith<$Res>
     implements $IngredientStrengthCopyWith<$Res> {
-  factory _$IngredientStrengthCopyWith(
-          _IngredientStrength value, $Res Function(_IngredientStrength) then) =
-      __$IngredientStrengthCopyWithImpl<$Res>;
+  factory _$$_IngredientStrengthCopyWith(_$_IngredientStrength value,
+          $Res Function(_$_IngredientStrength) then) =
+      __$$_IngredientStrengthCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -4367,15 +4242,15 @@ abstract class _$IngredientStrengthCopyWith<$Res>
 }
 
 /// @nodoc
-class __$IngredientStrengthCopyWithImpl<$Res>
+class __$$_IngredientStrengthCopyWithImpl<$Res>
     extends _$IngredientStrengthCopyWithImpl<$Res>
-    implements _$IngredientStrengthCopyWith<$Res> {
-  __$IngredientStrengthCopyWithImpl(
-      _IngredientStrength _value, $Res Function(_IngredientStrength) _then)
-      : super(_value, (v) => _then(v as _IngredientStrength));
+    implements _$$_IngredientStrengthCopyWith<$Res> {
+  __$$_IngredientStrengthCopyWithImpl(
+      _$_IngredientStrength _value, $Res Function(_$_IngredientStrength) _then)
+      : super(_value, (v) => _then(v as _$_IngredientStrength));
 
   @override
-  _IngredientStrength get _value => super._value as _IngredientStrength;
+  _$_IngredientStrength get _value => super._value as _$_IngredientStrength;
 
   @override
   $Res call({
@@ -4400,17 +4275,17 @@ class __$IngredientStrengthCopyWithImpl<$Res>
     Object? country = freezed,
     Object? referenceStrength = freezed,
   }) {
-    return _then(_IngredientStrength(
+    return _then(_$_IngredientStrength(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       presentationRatio: presentationRatio == freezed
@@ -4474,11 +4349,11 @@ class __$IngredientStrengthCopyWithImpl<$Res>
           : measurementPointElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       country: country == freezed
-          ? _value.country
+          ? _value._country
           : country // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       referenceStrength: referenceStrength == freezed
-          ? _value.referenceStrength
+          ? _value._referenceStrength
           : referenceStrength // ignore: cast_nullable_to_non_nullable
               as List<IngredientReferenceStrength>?,
     ));
@@ -4490,8 +4365,8 @@ class __$IngredientStrengthCopyWithImpl<$Res>
 class _$_IngredientStrength extends _IngredientStrength {
   _$_IngredientStrength(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.presentationRatio,
       this.presentationRatioRange,
       this.presentationCodeableConcept,
@@ -4507,20 +4382,38 @@ class _$_IngredientStrength extends _IngredientStrength {
       this.basis,
       this.measurementPoint,
       @JsonKey(name: '_measurementPoint') this.measurementPointElement,
-      this.country,
-      this.referenceStrength})
-      : super._();
+      final List<CodeableConcept>? country,
+      final List<IngredientReferenceStrength>? referenceStrength})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _country = country,
+        _referenceStrength = referenceStrength,
+        super._();
 
   factory _$_IngredientStrength.fromJson(Map<String, dynamic> json) =>
       _$$_IngredientStrengthFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Ratio? presentationRatio;
   @override
@@ -4554,10 +4447,23 @@ class _$_IngredientStrength extends _IngredientStrength {
   @override
   @JsonKey(name: '_measurementPoint')
   final Element? measurementPointElement;
+  final List<CodeableConcept>? _country;
   @override
-  final List<CodeableConcept>? country;
+  List<CodeableConcept>? get country {
+    final value = _country;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<IngredientReferenceStrength>? _referenceStrength;
   @override
-  final List<IngredientReferenceStrength>? referenceStrength;
+  List<IngredientReferenceStrength>? get referenceStrength {
+    final value = _referenceStrength;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -4568,12 +4474,12 @@ class _$_IngredientStrength extends _IngredientStrength {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IngredientStrength &&
+            other is _$_IngredientStrength &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.presentationRatio, presentationRatio) &&
             const DeepCollectionEquality()
@@ -4605,17 +4511,18 @@ class _$_IngredientStrength extends _IngredientStrength {
                 .equals(other.measurementPoint, measurementPoint) &&
             const DeepCollectionEquality().equals(
                 other.measurementPointElement, measurementPointElement) &&
-            const DeepCollectionEquality().equals(other.country, country) &&
+            const DeepCollectionEquality().equals(other._country, _country) &&
             const DeepCollectionEquality()
-                .equals(other.referenceStrength, referenceStrength));
+                .equals(other._referenceStrength, _referenceStrength));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(presentationRatio),
         const DeepCollectionEquality().hash(presentationRatioRange),
         const DeepCollectionEquality().hash(presentationCodeableConcept),
@@ -4631,14 +4538,15 @@ class _$_IngredientStrength extends _IngredientStrength {
         const DeepCollectionEquality().hash(basis),
         const DeepCollectionEquality().hash(measurementPoint),
         const DeepCollectionEquality().hash(measurementPointElement),
-        const DeepCollectionEquality().hash(country),
-        const DeepCollectionEquality().hash(referenceStrength)
+        const DeepCollectionEquality().hash(_country),
+        const DeepCollectionEquality().hash(_referenceStrength)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$IngredientStrengthCopyWith<_IngredientStrength> get copyWith =>
-      __$IngredientStrengthCopyWithImpl<_IngredientStrength>(this, _$identity);
+  _$$_IngredientStrengthCopyWith<_$_IngredientStrength> get copyWith =>
+      __$$_IngredientStrengthCopyWithImpl<_$_IngredientStrength>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4648,79 +4556,87 @@ class _$_IngredientStrength extends _IngredientStrength {
 
 abstract class _IngredientStrength extends IngredientStrength {
   factory _IngredientStrength(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Ratio? presentationRatio,
-      RatioRange? presentationRatioRange,
-      CodeableConcept? presentationCodeableConcept,
-      Quantity? presentationQuantity,
-      String? textPresentation,
-      @JsonKey(name: '_textPresentation') Element? textPresentationElement,
-      Ratio? concentrationRatio,
-      RatioRange? concentrationRatioRange,
-      CodeableConcept? concentrationCodeableConcept,
-      Quantity? concentrationQuantity,
-      String? textConcentration,
-      @JsonKey(name: '_textConcentration') Element? textConcentrationElement,
-      CodeableConcept? basis,
-      String? measurementPoint,
-      @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
-      List<CodeableConcept>? country,
-      List<IngredientReferenceStrength>?
-          referenceStrength}) = _$_IngredientStrength;
+          {final String? id,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Ratio? presentationRatio,
+          final RatioRange? presentationRatioRange,
+          final CodeableConcept? presentationCodeableConcept,
+          final Quantity? presentationQuantity,
+          final String? textPresentation,
+          @JsonKey(name: '_textPresentation')
+              final Element? textPresentationElement,
+          final Ratio? concentrationRatio,
+          final RatioRange? concentrationRatioRange,
+          final CodeableConcept? concentrationCodeableConcept,
+          final Quantity? concentrationQuantity,
+          final String? textConcentration,
+          @JsonKey(name: '_textConcentration')
+              final Element? textConcentrationElement,
+          final CodeableConcept? basis,
+          final String? measurementPoint,
+          @JsonKey(name: '_measurementPoint')
+              final Element? measurementPointElement,
+          final List<CodeableConcept>? country,
+          final List<IngredientReferenceStrength>? referenceStrength}) =
+      _$_IngredientStrength;
   _IngredientStrength._() : super._();
 
   factory _IngredientStrength.fromJson(Map<String, dynamic> json) =
       _$_IngredientStrength.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Ratio? get presentationRatio;
+  Ratio? get presentationRatio => throw _privateConstructorUsedError;
   @override
-  RatioRange? get presentationRatioRange;
+  RatioRange? get presentationRatioRange => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get presentationCodeableConcept;
+  CodeableConcept? get presentationCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity? get presentationQuantity;
+  Quantity? get presentationQuantity => throw _privateConstructorUsedError;
   @override
-  String? get textPresentation;
+  String? get textPresentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_textPresentation')
-  Element? get textPresentationElement;
+  Element? get textPresentationElement => throw _privateConstructorUsedError;
   @override
-  Ratio? get concentrationRatio;
+  Ratio? get concentrationRatio => throw _privateConstructorUsedError;
   @override
-  RatioRange? get concentrationRatioRange;
+  RatioRange? get concentrationRatioRange => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get concentrationCodeableConcept;
+  CodeableConcept? get concentrationCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity? get concentrationQuantity;
+  Quantity? get concentrationQuantity => throw _privateConstructorUsedError;
   @override
-  String? get textConcentration;
+  String? get textConcentration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_textConcentration')
-  Element? get textConcentrationElement;
+  Element? get textConcentrationElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get basis;
+  CodeableConcept? get basis => throw _privateConstructorUsedError;
   @override
-  String? get measurementPoint;
+  String? get measurementPoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_measurementPoint')
-  Element? get measurementPointElement;
+  Element? get measurementPointElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get country;
+  List<CodeableConcept>? get country => throw _privateConstructorUsedError;
   @override
-  List<IngredientReferenceStrength>? get referenceStrength;
+  List<IngredientReferenceStrength>? get referenceStrength =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IngredientStrengthCopyWith<_IngredientStrength> get copyWith =>
+  _$$_IngredientStrengthCopyWith<_$_IngredientStrength> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4728,43 +4644,6 @@ IngredientReferenceStrength _$IngredientReferenceStrengthFromJson(
     Map<String, dynamic> json) {
   return _IngredientReferenceStrength.fromJson(json);
 }
-
-/// @nodoc
-class _$IngredientReferenceStrengthTearOff {
-  const _$IngredientReferenceStrengthTearOff();
-
-  _IngredientReferenceStrength call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? substance,
-      Ratio? strengthRatio,
-      RatioRange? strengthRatioRange,
-      Quantity? strengthQuantity,
-      String? measurementPoint,
-      @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
-      List<CodeableConcept>? country}) {
-    return _IngredientReferenceStrength(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      substance: substance,
-      strengthRatio: strengthRatio,
-      strengthRatioRange: strengthRatioRange,
-      strengthQuantity: strengthQuantity,
-      measurementPoint: measurementPoint,
-      measurementPointElement: measurementPointElement,
-      country: country,
-    );
-  }
-
-  IngredientReferenceStrength fromJson(Map<String, Object?> json) {
-    return IngredientReferenceStrength.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $IngredientReferenceStrength = _$IngredientReferenceStrengthTearOff();
 
 /// @nodoc
 mixin _$IngredientReferenceStrength {
@@ -4936,12 +4815,12 @@ class _$IngredientReferenceStrengthCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IngredientReferenceStrengthCopyWith<$Res>
+abstract class _$$_IngredientReferenceStrengthCopyWith<$Res>
     implements $IngredientReferenceStrengthCopyWith<$Res> {
-  factory _$IngredientReferenceStrengthCopyWith(
-          _IngredientReferenceStrength value,
-          $Res Function(_IngredientReferenceStrength) then) =
-      __$IngredientReferenceStrengthCopyWithImpl<$Res>;
+  factory _$$_IngredientReferenceStrengthCopyWith(
+          _$_IngredientReferenceStrength value,
+          $Res Function(_$_IngredientReferenceStrength) then) =
+      __$$_IngredientReferenceStrengthCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -4968,17 +4847,17 @@ abstract class _$IngredientReferenceStrengthCopyWith<$Res>
 }
 
 /// @nodoc
-class __$IngredientReferenceStrengthCopyWithImpl<$Res>
+class __$$_IngredientReferenceStrengthCopyWithImpl<$Res>
     extends _$IngredientReferenceStrengthCopyWithImpl<$Res>
-    implements _$IngredientReferenceStrengthCopyWith<$Res> {
-  __$IngredientReferenceStrengthCopyWithImpl(
-      _IngredientReferenceStrength _value,
-      $Res Function(_IngredientReferenceStrength) _then)
-      : super(_value, (v) => _then(v as _IngredientReferenceStrength));
+    implements _$$_IngredientReferenceStrengthCopyWith<$Res> {
+  __$$_IngredientReferenceStrengthCopyWithImpl(
+      _$_IngredientReferenceStrength _value,
+      $Res Function(_$_IngredientReferenceStrength) _then)
+      : super(_value, (v) => _then(v as _$_IngredientReferenceStrength));
 
   @override
-  _IngredientReferenceStrength get _value =>
-      super._value as _IngredientReferenceStrength;
+  _$_IngredientReferenceStrength get _value =>
+      super._value as _$_IngredientReferenceStrength;
 
   @override
   $Res call({
@@ -4993,17 +4872,17 @@ class __$IngredientReferenceStrengthCopyWithImpl<$Res>
     Object? measurementPointElement = freezed,
     Object? country = freezed,
   }) {
-    return _then(_IngredientReferenceStrength(
+    return _then(_$_IngredientReferenceStrength(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       substance: substance == freezed
@@ -5031,7 +4910,7 @@ class __$IngredientReferenceStrengthCopyWithImpl<$Res>
           : measurementPointElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       country: country == freezed
-          ? _value.country
+          ? _value._country
           : country // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -5043,27 +4922,44 @@ class __$IngredientReferenceStrengthCopyWithImpl<$Res>
 class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
   _$_IngredientReferenceStrength(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.substance,
       this.strengthRatio,
       this.strengthRatioRange,
       this.strengthQuantity,
       this.measurementPoint,
       @JsonKey(name: '_measurementPoint') this.measurementPointElement,
-      this.country})
-      : super._();
+      final List<CodeableConcept>? country})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _country = country,
+        super._();
 
   factory _$_IngredientReferenceStrength.fromJson(Map<String, dynamic> json) =>
       _$$_IngredientReferenceStrengthFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableReference? substance;
   @override
@@ -5077,8 +4973,14 @@ class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
   @override
   @JsonKey(name: '_measurementPoint')
   final Element? measurementPointElement;
+  final List<CodeableConcept>? _country;
   @override
-  final List<CodeableConcept>? country;
+  List<CodeableConcept>? get country {
+    final value = _country;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -5089,12 +4991,12 @@ class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IngredientReferenceStrength &&
+            other is _$_IngredientReferenceStrength &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.substance, substance) &&
             const DeepCollectionEquality()
                 .equals(other.strengthRatio, strengthRatio) &&
@@ -5106,28 +5008,29 @@ class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
                 .equals(other.measurementPoint, measurementPoint) &&
             const DeepCollectionEquality().equals(
                 other.measurementPointElement, measurementPointElement) &&
-            const DeepCollectionEquality().equals(other.country, country));
+            const DeepCollectionEquality().equals(other._country, _country));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(substance),
       const DeepCollectionEquality().hash(strengthRatio),
       const DeepCollectionEquality().hash(strengthRatioRange),
       const DeepCollectionEquality().hash(strengthQuantity),
       const DeepCollectionEquality().hash(measurementPoint),
       const DeepCollectionEquality().hash(measurementPointElement),
-      const DeepCollectionEquality().hash(country));
+      const DeepCollectionEquality().hash(_country));
 
   @JsonKey(ignore: true)
   @override
-  _$IngredientReferenceStrengthCopyWith<_IngredientReferenceStrength>
-      get copyWith => __$IngredientReferenceStrengthCopyWithImpl<
-          _IngredientReferenceStrength>(this, _$identity);
+  _$$_IngredientReferenceStrengthCopyWith<_$_IngredientReferenceStrength>
+      get copyWith => __$$_IngredientReferenceStrengthCopyWithImpl<
+          _$_IngredientReferenceStrength>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5138,46 +5041,49 @@ class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
 abstract class _IngredientReferenceStrength
     extends IngredientReferenceStrength {
   factory _IngredientReferenceStrength(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? substance,
-      Ratio? strengthRatio,
-      RatioRange? strengthRatioRange,
-      Quantity? strengthQuantity,
-      String? measurementPoint,
-      @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
-      List<CodeableConcept>? country}) = _$_IngredientReferenceStrength;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableReference? substance,
+      final Ratio? strengthRatio,
+      final RatioRange? strengthRatioRange,
+      final Quantity? strengthQuantity,
+      final String? measurementPoint,
+      @JsonKey(name: '_measurementPoint')
+          final Element? measurementPointElement,
+      final List<CodeableConcept>? country}) = _$_IngredientReferenceStrength;
   _IngredientReferenceStrength._() : super._();
 
   factory _IngredientReferenceStrength.fromJson(Map<String, dynamic> json) =
       _$_IngredientReferenceStrength.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableReference? get substance;
+  CodeableReference? get substance => throw _privateConstructorUsedError;
   @override
-  Ratio? get strengthRatio;
+  Ratio? get strengthRatio => throw _privateConstructorUsedError;
   @override
-  RatioRange? get strengthRatioRange;
+  RatioRange? get strengthRatioRange => throw _privateConstructorUsedError;
   @override
-  Quantity? get strengthQuantity;
+  Quantity? get strengthQuantity => throw _privateConstructorUsedError;
   @override
-  String? get measurementPoint;
+  String? get measurementPoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_measurementPoint')
-  Element? get measurementPointElement;
+  Element? get measurementPointElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get country;
+  List<CodeableConcept>? get country => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IngredientReferenceStrengthCopyWith<_IngredientReferenceStrength>
+  _$$_IngredientReferenceStrengthCopyWith<_$_IngredientReferenceStrength>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5185,61 +5091,6 @@ ManufacturedItemDefinition _$ManufacturedItemDefinitionFromJson(
     Map<String, dynamic> json) {
   return _ManufacturedItemDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$ManufacturedItemDefinitionTearOff {
-  const _$ManufacturedItemDefinitionTearOff();
-
-  _ManufacturedItemDefinition call(
-      {R5ResourceType resourceType = R5ResourceType.ManufacturedItemDefinition,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      required CodeableConcept manufacturedDoseForm,
-      CodeableConcept? unitOfPresentation,
-      List<Reference>? manufacturer,
-      List<CodeableConcept>? ingredient,
-      List<ManufacturedItemDefinitionProperty>? property}) {
-    return _ManufacturedItemDefinition(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      manufacturedDoseForm: manufacturedDoseForm,
-      unitOfPresentation: unitOfPresentation,
-      manufacturer: manufacturer,
-      ingredient: ingredient,
-      property: property,
-    );
-  }
-
-  ManufacturedItemDefinition fromJson(Map<String, Object?> json) {
-    return ManufacturedItemDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ManufacturedItemDefinition = _$ManufacturedItemDefinitionTearOff();
 
 /// @nodoc
 mixin _$ManufacturedItemDefinition {
@@ -5497,12 +5348,12 @@ class _$ManufacturedItemDefinitionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ManufacturedItemDefinitionCopyWith<$Res>
+abstract class _$$_ManufacturedItemDefinitionCopyWith<$Res>
     implements $ManufacturedItemDefinitionCopyWith<$Res> {
-  factory _$ManufacturedItemDefinitionCopyWith(
-          _ManufacturedItemDefinition value,
-          $Res Function(_ManufacturedItemDefinition) then) =
-      __$ManufacturedItemDefinitionCopyWithImpl<$Res>;
+  factory _$$_ManufacturedItemDefinitionCopyWith(
+          _$_ManufacturedItemDefinition value,
+          $Res Function(_$_ManufacturedItemDefinition) then) =
+      __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -5542,16 +5393,17 @@ abstract class _$ManufacturedItemDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ManufacturedItemDefinitionCopyWithImpl<$Res>
+class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
     extends _$ManufacturedItemDefinitionCopyWithImpl<$Res>
-    implements _$ManufacturedItemDefinitionCopyWith<$Res> {
-  __$ManufacturedItemDefinitionCopyWithImpl(_ManufacturedItemDefinition _value,
-      $Res Function(_ManufacturedItemDefinition) _then)
-      : super(_value, (v) => _then(v as _ManufacturedItemDefinition));
+    implements _$$_ManufacturedItemDefinitionCopyWith<$Res> {
+  __$$_ManufacturedItemDefinitionCopyWithImpl(
+      _$_ManufacturedItemDefinition _value,
+      $Res Function(_$_ManufacturedItemDefinition) _then)
+      : super(_value, (v) => _then(v as _$_ManufacturedItemDefinition));
 
   @override
-  _ManufacturedItemDefinition get _value =>
-      super._value as _ManufacturedItemDefinition;
+  _$_ManufacturedItemDefinition get _value =>
+      super._value as _$_ManufacturedItemDefinition;
 
   @override
   $Res call({
@@ -5575,7 +5427,7 @@ class __$ManufacturedItemDefinitionCopyWithImpl<$Res>
     Object? ingredient = freezed,
     Object? property = freezed,
   }) {
-    return _then(_ManufacturedItemDefinition(
+    return _then(_$_ManufacturedItemDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5609,19 +5461,19 @@ class __$ManufacturedItemDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: status == freezed
@@ -5641,15 +5493,15 @@ class __$ManufacturedItemDefinitionCopyWithImpl<$Res>
           : unitOfPresentation // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       manufacturer: manufacturer == freezed
-          ? _value.manufacturer
+          ? _value._manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       ingredient: ingredient == freezed
-          ? _value.ingredient
+          ? _value._ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       property: property == freezed
-          ? _value.property
+          ? _value._property
           : property // ignore: cast_nullable_to_non_nullable
               as List<ManufacturedItemDefinitionProperty>?,
     ));
@@ -5668,24 +5520,31 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
       required this.manufacturedDoseForm,
       this.unitOfPresentation,
-      this.manufacturer,
-      this.ingredient,
-      this.property})
-      : super._();
+      final List<Reference>? manufacturer,
+      final List<CodeableConcept>? ingredient,
+      final List<ManufacturedItemDefinitionProperty>? property})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _manufacturer = manufacturer,
+        _ingredient = ingredient,
+        _property = property,
+        super._();
 
   factory _$_ManufacturedItemDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ManufacturedItemDefinitionFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -5703,15 +5562,43 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
@@ -5721,12 +5608,32 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   final CodeableConcept manufacturedDoseForm;
   @override
   final CodeableConcept? unitOfPresentation;
+  final List<Reference>? _manufacturer;
   @override
-  final List<Reference>? manufacturer;
+  List<Reference>? get manufacturer {
+    final value = _manufacturer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _ingredient;
   @override
-  final List<CodeableConcept>? ingredient;
+  List<CodeableConcept>? get ingredient {
+    final value = _ingredient;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ManufacturedItemDefinitionProperty>? _property;
   @override
-  final List<ManufacturedItemDefinitionProperty>? property;
+  List<ManufacturedItemDefinitionProperty>? get property {
+    final value = _property;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -5737,7 +5644,7 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ManufacturedItemDefinition &&
+            other is _$_ManufacturedItemDefinition &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -5750,13 +5657,14 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -5765,12 +5673,13 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
             const DeepCollectionEquality()
                 .equals(other.unitOfPresentation, unitOfPresentation) &&
             const DeepCollectionEquality()
-                .equals(other.manufacturer, manufacturer) &&
+                .equals(other._manufacturer, _manufacturer) &&
             const DeepCollectionEquality()
-                .equals(other.ingredient, ingredient) &&
-            const DeepCollectionEquality().equals(other.property, property));
+                .equals(other._ingredient, _ingredient) &&
+            const DeepCollectionEquality().equals(other._property, _property));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -5782,24 +5691,24 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(manufacturedDoseForm),
         const DeepCollectionEquality().hash(unitOfPresentation),
-        const DeepCollectionEquality().hash(manufacturer),
-        const DeepCollectionEquality().hash(ingredient),
-        const DeepCollectionEquality().hash(property)
+        const DeepCollectionEquality().hash(_manufacturer),
+        const DeepCollectionEquality().hash(_ingredient),
+        const DeepCollectionEquality().hash(_property)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ManufacturedItemDefinitionCopyWith<_ManufacturedItemDefinition>
-      get copyWith => __$ManufacturedItemDefinitionCopyWithImpl<
-          _ManufacturedItemDefinition>(this, _$identity);
+  _$$_ManufacturedItemDefinitionCopyWith<_$_ManufacturedItemDefinition>
+      get copyWith => __$$_ManufacturedItemDefinitionCopyWithImpl<
+          _$_ManufacturedItemDefinition>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5809,25 +5718,25 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
 abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
   factory _ManufacturedItemDefinition(
-          {R5ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language') Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
-          Code? status,
-          @JsonKey(name: '_status') Element? statusElement,
-          required CodeableConcept manufacturedDoseForm,
-          CodeableConcept? unitOfPresentation,
-          List<Reference>? manufacturer,
-          List<CodeableConcept>? ingredient,
-          List<ManufacturedItemDefinitionProperty>? property}) =
+          {final R5ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final Code? status,
+          @JsonKey(name: '_status') final Element? statusElement,
+          required final CodeableConcept manufacturedDoseForm,
+          final CodeableConcept? unitOfPresentation,
+          final List<Reference>? manufacturer,
+          final List<CodeableConcept>? ingredient,
+          final List<ManufacturedItemDefinitionProperty>? property}) =
       _$_ManufacturedItemDefinition;
   _ManufacturedItemDefinition._() : super._();
 
@@ -5835,50 +5744,53 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
       _$_ManufacturedItemDefinition.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get manufacturedDoseForm;
+  CodeableConcept get manufacturedDoseForm =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get unitOfPresentation;
+  CodeableConcept? get unitOfPresentation => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get ingredient;
+  List<CodeableConcept>? get ingredient => throw _privateConstructorUsedError;
   @override
-  List<ManufacturedItemDefinitionProperty>? get property;
+  List<ManufacturedItemDefinitionProperty>? get property =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ManufacturedItemDefinitionCopyWith<_ManufacturedItemDefinition>
+  _$$_ManufacturedItemDefinitionCopyWith<_$_ManufacturedItemDefinition>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5886,46 +5798,6 @@ ManufacturedItemDefinitionProperty _$ManufacturedItemDefinitionPropertyFromJson(
     Map<String, dynamic> json) {
   return _ManufacturedItemDefinitionProperty.fromJson(json);
 }
-
-/// @nodoc
-class _$ManufacturedItemDefinitionPropertyTearOff {
-  const _$ManufacturedItemDefinitionPropertyTearOff();
-
-  _ManufacturedItemDefinitionProperty call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment}) {
-    return _ManufacturedItemDefinitionProperty(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueCodeableConcept: valueCodeableConcept,
-      valueQuantity: valueQuantity,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueAttachment: valueAttachment,
-    );
-  }
-
-  ManufacturedItemDefinitionProperty fromJson(Map<String, Object?> json) {
-    return ManufacturedItemDefinitionProperty.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ManufacturedItemDefinitionProperty =
-    _$ManufacturedItemDefinitionPropertyTearOff();
 
 /// @nodoc
 mixin _$ManufacturedItemDefinitionProperty {
@@ -6116,12 +5988,12 @@ class _$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ManufacturedItemDefinitionPropertyCopyWith<$Res>
+abstract class _$$_ManufacturedItemDefinitionPropertyCopyWith<$Res>
     implements $ManufacturedItemDefinitionPropertyCopyWith<$Res> {
-  factory _$ManufacturedItemDefinitionPropertyCopyWith(
-          _ManufacturedItemDefinitionProperty value,
-          $Res Function(_ManufacturedItemDefinitionProperty) then) =
-      __$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>;
+  factory _$$_ManufacturedItemDefinitionPropertyCopyWith(
+          _$_ManufacturedItemDefinitionProperty value,
+          $Res Function(_$_ManufacturedItemDefinitionProperty) then) =
+      __$$_ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -6151,17 +6023,17 @@ abstract class _$ManufacturedItemDefinitionPropertyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
+class __$$_ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
     extends _$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
-    implements _$ManufacturedItemDefinitionPropertyCopyWith<$Res> {
-  __$ManufacturedItemDefinitionPropertyCopyWithImpl(
-      _ManufacturedItemDefinitionProperty _value,
-      $Res Function(_ManufacturedItemDefinitionProperty) _then)
-      : super(_value, (v) => _then(v as _ManufacturedItemDefinitionProperty));
+    implements _$$_ManufacturedItemDefinitionPropertyCopyWith<$Res> {
+  __$$_ManufacturedItemDefinitionPropertyCopyWithImpl(
+      _$_ManufacturedItemDefinitionProperty _value,
+      $Res Function(_$_ManufacturedItemDefinitionProperty) _then)
+      : super(_value, (v) => _then(v as _$_ManufacturedItemDefinitionProperty));
 
   @override
-  _ManufacturedItemDefinitionProperty get _value =>
-      super._value as _ManufacturedItemDefinitionProperty;
+  _$_ManufacturedItemDefinitionProperty get _value =>
+      super._value as _$_ManufacturedItemDefinitionProperty;
 
   @override
   $Res call({
@@ -6177,17 +6049,17 @@ class __$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
     Object? valueBooleanElement = freezed,
     Object? valueAttachment = freezed,
   }) {
-    return _then(_ManufacturedItemDefinitionProperty(
+    return _then(_$_ManufacturedItemDefinitionProperty(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -6232,8 +6104,8 @@ class _$_ManufacturedItemDefinitionProperty
     extends _ManufacturedItemDefinitionProperty {
   _$_ManufacturedItemDefinitionProperty(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueCodeableConcept,
       this.valueQuantity,
@@ -6242,7 +6114,9 @@ class _$_ManufacturedItemDefinitionProperty
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueAttachment})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ManufacturedItemDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
@@ -6250,11 +6124,25 @@ class _$_ManufacturedItemDefinitionProperty
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -6283,12 +6171,12 @@ class _$_ManufacturedItemDefinitionProperty
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ManufacturedItemDefinitionProperty &&
+            other is _$_ManufacturedItemDefinitionProperty &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
@@ -6305,12 +6193,13 @@ class _$_ManufacturedItemDefinitionProperty
                 .equals(other.valueAttachment, valueAttachment));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(valueCodeableConcept),
       const DeepCollectionEquality().hash(valueQuantity),
@@ -6322,10 +6211,10 @@ class _$_ManufacturedItemDefinitionProperty
 
   @JsonKey(ignore: true)
   @override
-  _$ManufacturedItemDefinitionPropertyCopyWith<
-          _ManufacturedItemDefinitionProperty>
-      get copyWith => __$ManufacturedItemDefinitionPropertyCopyWithImpl<
-          _ManufacturedItemDefinitionProperty>(this, _$identity);
+  _$$_ManufacturedItemDefinitionPropertyCopyWith<
+          _$_ManufacturedItemDefinitionProperty>
+      get copyWith => __$$_ManufacturedItemDefinitionPropertyCopyWithImpl<
+          _$_ManufacturedItemDefinitionProperty>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -6336,17 +6225,18 @@ class _$_ManufacturedItemDefinitionProperty
 abstract class _ManufacturedItemDefinitionProperty
     extends ManufacturedItemDefinitionProperty {
   factory _ManufacturedItemDefinitionProperty(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment}) = _$_ManufacturedItemDefinitionProperty;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final CodeableConcept? valueCodeableConcept,
+          final Quantity? valueQuantity,
+          final Date? valueDate,
+          @JsonKey(name: '_valueDate') final Element? valueDateElement,
+          final Boolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final Attachment? valueAttachment}) =
+      _$_ManufacturedItemDefinitionProperty;
   _ManufacturedItemDefinitionProperty._() : super._();
 
   factory _ManufacturedItemDefinitionProperty.fromJson(
@@ -6354,34 +6244,36 @@ abstract class _ManufacturedItemDefinitionProperty
       _$_ManufacturedItemDefinitionProperty.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ManufacturedItemDefinitionPropertyCopyWith<
-          _ManufacturedItemDefinitionProperty>
+  _$$_ManufacturedItemDefinitionPropertyCopyWith<
+          _$_ManufacturedItemDefinitionProperty>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6389,111 +6281,6 @@ MedicinalProductDefinition _$MedicinalProductDefinitionFromJson(
     Map<String, dynamic> json) {
   return _MedicinalProductDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicinalProductDefinitionTearOff {
-  const _$MedicinalProductDefinitionTearOff();
-
-  _MedicinalProductDefinition call(
-      {R5ResourceType resourceType = R5ResourceType.MedicinalProductDefinition,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? type,
-      CodeableConcept? domain,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      CodeableConcept? status,
-      DateTime? statusDate,
-      @JsonKey(name: '_statusDate') Element? statusDateElement,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      CodeableConcept? combinedPharmaceuticalDoseForm,
-      List<CodeableConcept>? route,
-      Markdown? indication,
-      @JsonKey(name: '_indication') Element? indicationElement,
-      CodeableConcept? legalStatusOfSupply,
-      CodeableConcept? additionalMonitoringIndicator,
-      List<CodeableConcept>? specialMeasures,
-      CodeableConcept? pediatricUseIndicator,
-      List<CodeableConcept>? classification,
-      List<MarketingStatus>? marketingStatus,
-      List<CodeableConcept>? packagedMedicinalProduct,
-      List<Reference>? comprisedOf,
-      List<CodeableConcept>? ingredient,
-      List<CodeableReference>? impurity,
-      List<Reference>? attachedDocument,
-      List<Reference>? masterFile,
-      List<MedicinalProductDefinitionContact>? contact,
-      List<Reference>? clinicalTrial,
-      List<Coding>? code,
-      required List<MedicinalProductDefinitionName> name,
-      List<MedicinalProductDefinitionCrossReference>? crossReference,
-      List<MedicinalProductDefinitionOperation>? operation,
-      List<MedicinalProductDefinitionCharacteristic>? characteristic}) {
-    return _MedicinalProductDefinition(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      domain: domain,
-      version: version,
-      versionElement: versionElement,
-      status: status,
-      statusDate: statusDate,
-      statusDateElement: statusDateElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      combinedPharmaceuticalDoseForm: combinedPharmaceuticalDoseForm,
-      route: route,
-      indication: indication,
-      indicationElement: indicationElement,
-      legalStatusOfSupply: legalStatusOfSupply,
-      additionalMonitoringIndicator: additionalMonitoringIndicator,
-      specialMeasures: specialMeasures,
-      pediatricUseIndicator: pediatricUseIndicator,
-      classification: classification,
-      marketingStatus: marketingStatus,
-      packagedMedicinalProduct: packagedMedicinalProduct,
-      comprisedOf: comprisedOf,
-      ingredient: ingredient,
-      impurity: impurity,
-      attachedDocument: attachedDocument,
-      masterFile: masterFile,
-      contact: contact,
-      clinicalTrial: clinicalTrial,
-      code: code,
-      name: name,
-      crossReference: crossReference,
-      operation: operation,
-      characteristic: characteristic,
-    );
-  }
-
-  MedicinalProductDefinition fromJson(Map<String, Object?> json) {
-    return MedicinalProductDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicinalProductDefinition = _$MedicinalProductDefinitionTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductDefinition {
@@ -7043,12 +6830,12 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicinalProductDefinitionCopyWith<$Res>
+abstract class _$$_MedicinalProductDefinitionCopyWith<$Res>
     implements $MedicinalProductDefinitionCopyWith<$Res> {
-  factory _$MedicinalProductDefinitionCopyWith(
-          _MedicinalProductDefinition value,
-          $Res Function(_MedicinalProductDefinition) then) =
-      __$MedicinalProductDefinitionCopyWithImpl<$Res>;
+  factory _$$_MedicinalProductDefinitionCopyWith(
+          _$_MedicinalProductDefinition value,
+          $Res Function(_$_MedicinalProductDefinition) then) =
+      __$$_MedicinalProductDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -7129,16 +6916,17 @@ abstract class _$MedicinalProductDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicinalProductDefinitionCopyWithImpl<$Res>
+class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
     extends _$MedicinalProductDefinitionCopyWithImpl<$Res>
-    implements _$MedicinalProductDefinitionCopyWith<$Res> {
-  __$MedicinalProductDefinitionCopyWithImpl(_MedicinalProductDefinition _value,
-      $Res Function(_MedicinalProductDefinition) _then)
-      : super(_value, (v) => _then(v as _MedicinalProductDefinition));
+    implements _$$_MedicinalProductDefinitionCopyWith<$Res> {
+  __$$_MedicinalProductDefinitionCopyWithImpl(
+      _$_MedicinalProductDefinition _value,
+      $Res Function(_$_MedicinalProductDefinition) _then)
+      : super(_value, (v) => _then(v as _$_MedicinalProductDefinition));
 
   @override
-  _MedicinalProductDefinition get _value =>
-      super._value as _MedicinalProductDefinition;
+  _$_MedicinalProductDefinition get _value =>
+      super._value as _$_MedicinalProductDefinition;
 
   @override
   $Res call({
@@ -7187,7 +6975,7 @@ class __$MedicinalProductDefinitionCopyWithImpl<$Res>
     Object? operation = freezed,
     Object? characteristic = freezed,
   }) {
-    return _then(_MedicinalProductDefinition(
+    return _then(_$_MedicinalProductDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7221,19 +7009,19 @@ class __$MedicinalProductDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: type == freezed
@@ -7277,7 +7065,7 @@ class __$MedicinalProductDefinitionCopyWithImpl<$Res>
           : combinedPharmaceuticalDoseForm // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       route: route == freezed
-          ? _value.route
+          ? _value._route
           : route // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       indication: indication == freezed
@@ -7297,7 +7085,7 @@ class __$MedicinalProductDefinitionCopyWithImpl<$Res>
           : additionalMonitoringIndicator // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       specialMeasures: specialMeasures == freezed
-          ? _value.specialMeasures
+          ? _value._specialMeasures
           : specialMeasures // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       pediatricUseIndicator: pediatricUseIndicator == freezed
@@ -7305,63 +7093,63 @@ class __$MedicinalProductDefinitionCopyWithImpl<$Res>
           : pediatricUseIndicator // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       classification: classification == freezed
-          ? _value.classification
+          ? _value._classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       marketingStatus: marketingStatus == freezed
-          ? _value.marketingStatus
+          ? _value._marketingStatus
           : marketingStatus // ignore: cast_nullable_to_non_nullable
               as List<MarketingStatus>?,
       packagedMedicinalProduct: packagedMedicinalProduct == freezed
-          ? _value.packagedMedicinalProduct
+          ? _value._packagedMedicinalProduct
           : packagedMedicinalProduct // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       comprisedOf: comprisedOf == freezed
-          ? _value.comprisedOf
+          ? _value._comprisedOf
           : comprisedOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       ingredient: ingredient == freezed
-          ? _value.ingredient
+          ? _value._ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       impurity: impurity == freezed
-          ? _value.impurity
+          ? _value._impurity
           : impurity // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
       attachedDocument: attachedDocument == freezed
-          ? _value.attachedDocument
+          ? _value._attachedDocument
           : attachedDocument // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       masterFile: masterFile == freezed
-          ? _value.masterFile
+          ? _value._masterFile
           : masterFile // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       contact: contact == freezed
-          ? _value.contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductDefinitionContact>?,
       clinicalTrial: clinicalTrial == freezed
-          ? _value.clinicalTrial
+          ? _value._clinicalTrial
           : clinicalTrial // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       code: code == freezed
-          ? _value.code
+          ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       name: name == freezed
-          ? _value.name
+          ? _value._name
           : name // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductDefinitionName>,
       crossReference: crossReference == freezed
-          ? _value.crossReference
+          ? _value._crossReference
           : crossReference // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductDefinitionCrossReference>?,
       operation: operation == freezed
-          ? _value.operation
+          ? _value._operation
           : operation // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductDefinitionOperation>?,
       characteristic: characteristic == freezed
-          ? _value.characteristic
+          ? _value._characteristic
           : characteristic // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductDefinitionCharacteristic>?,
     ));
@@ -7380,10 +7168,10 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.type,
       this.domain,
       this.version,
@@ -7394,35 +7182,56 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.combinedPharmaceuticalDoseForm,
-      this.route,
+      final List<CodeableConcept>? route,
       this.indication,
       @JsonKey(name: '_indication') this.indicationElement,
       this.legalStatusOfSupply,
       this.additionalMonitoringIndicator,
-      this.specialMeasures,
+      final List<CodeableConcept>? specialMeasures,
       this.pediatricUseIndicator,
-      this.classification,
-      this.marketingStatus,
-      this.packagedMedicinalProduct,
-      this.comprisedOf,
-      this.ingredient,
-      this.impurity,
-      this.attachedDocument,
-      this.masterFile,
-      this.contact,
-      this.clinicalTrial,
-      this.code,
-      required this.name,
-      this.crossReference,
-      this.operation,
-      this.characteristic})
-      : super._();
+      final List<CodeableConcept>? classification,
+      final List<MarketingStatus>? marketingStatus,
+      final List<CodeableConcept>? packagedMedicinalProduct,
+      final List<Reference>? comprisedOf,
+      final List<CodeableConcept>? ingredient,
+      final List<CodeableReference>? impurity,
+      final List<Reference>? attachedDocument,
+      final List<Reference>? masterFile,
+      final List<MedicinalProductDefinitionContact>? contact,
+      final List<Reference>? clinicalTrial,
+      final List<Coding>? code,
+      required final List<MedicinalProductDefinitionName> name,
+      final List<MedicinalProductDefinitionCrossReference>? crossReference,
+      final List<MedicinalProductDefinitionOperation>? operation,
+      final List<MedicinalProductDefinitionCharacteristic>? characteristic})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _route = route,
+        _specialMeasures = specialMeasures,
+        _classification = classification,
+        _marketingStatus = marketingStatus,
+        _packagedMedicinalProduct = packagedMedicinalProduct,
+        _comprisedOf = comprisedOf,
+        _ingredient = ingredient,
+        _impurity = impurity,
+        _attachedDocument = attachedDocument,
+        _masterFile = masterFile,
+        _contact = contact,
+        _clinicalTrial = clinicalTrial,
+        _code = code,
+        _name = name,
+        _crossReference = crossReference,
+        _operation = operation,
+        _characteristic = characteristic,
+        super._();
 
   factory _$_MedicinalProductDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_MedicinalProductDefinitionFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -7440,15 +7249,43 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -7472,8 +7309,15 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   final Element? descriptionElement;
   @override
   final CodeableConcept? combinedPharmaceuticalDoseForm;
+  final List<CodeableConcept>? _route;
   @override
-  final List<CodeableConcept>? route;
+  List<CodeableConcept>? get route {
+    final value = _route;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Markdown? indication;
   @override
@@ -7483,40 +7327,149 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   final CodeableConcept? legalStatusOfSupply;
   @override
   final CodeableConcept? additionalMonitoringIndicator;
+  final List<CodeableConcept>? _specialMeasures;
   @override
-  final List<CodeableConcept>? specialMeasures;
+  List<CodeableConcept>? get specialMeasures {
+    final value = _specialMeasures;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? pediatricUseIndicator;
+  final List<CodeableConcept>? _classification;
   @override
-  final List<CodeableConcept>? classification;
+  List<CodeableConcept>? get classification {
+    final value = _classification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MarketingStatus>? _marketingStatus;
   @override
-  final List<MarketingStatus>? marketingStatus;
+  List<MarketingStatus>? get marketingStatus {
+    final value = _marketingStatus;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _packagedMedicinalProduct;
   @override
-  final List<CodeableConcept>? packagedMedicinalProduct;
+  List<CodeableConcept>? get packagedMedicinalProduct {
+    final value = _packagedMedicinalProduct;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _comprisedOf;
   @override
-  final List<Reference>? comprisedOf;
+  List<Reference>? get comprisedOf {
+    final value = _comprisedOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _ingredient;
   @override
-  final List<CodeableConcept>? ingredient;
+  List<CodeableConcept>? get ingredient {
+    final value = _ingredient;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableReference>? _impurity;
   @override
-  final List<CodeableReference>? impurity;
+  List<CodeableReference>? get impurity {
+    final value = _impurity;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _attachedDocument;
   @override
-  final List<Reference>? attachedDocument;
+  List<Reference>? get attachedDocument {
+    final value = _attachedDocument;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _masterFile;
   @override
-  final List<Reference>? masterFile;
+  List<Reference>? get masterFile {
+    final value = _masterFile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicinalProductDefinitionContact>? _contact;
   @override
-  final List<MedicinalProductDefinitionContact>? contact;
+  List<MedicinalProductDefinitionContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _clinicalTrial;
   @override
-  final List<Reference>? clinicalTrial;
+  List<Reference>? get clinicalTrial {
+    final value = _clinicalTrial;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Coding>? _code;
   @override
-  final List<Coding>? code;
+  List<Coding>? get code {
+    final value = _code;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicinalProductDefinitionName> _name;
   @override
-  final List<MedicinalProductDefinitionName> name;
+  List<MedicinalProductDefinitionName> get name {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_name);
+  }
+
+  final List<MedicinalProductDefinitionCrossReference>? _crossReference;
   @override
-  final List<MedicinalProductDefinitionCrossReference>? crossReference;
+  List<MedicinalProductDefinitionCrossReference>? get crossReference {
+    final value = _crossReference;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicinalProductDefinitionOperation>? _operation;
   @override
-  final List<MedicinalProductDefinitionOperation>? operation;
+  List<MedicinalProductDefinitionOperation>? get operation {
+    final value = _operation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicinalProductDefinitionCharacteristic>? _characteristic;
   @override
-  final List<MedicinalProductDefinitionCharacteristic>? characteristic;
+  List<MedicinalProductDefinitionCharacteristic>? get characteristic {
+    final value = _characteristic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -7527,7 +7480,7 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicinalProductDefinition &&
+            other is _$_MedicinalProductDefinition &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -7540,13 +7493,14 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.domain, domain) &&
             const DeepCollectionEquality().equals(other.version, version) &&
@@ -7564,7 +7518,7 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
             const DeepCollectionEquality().equals(
                 other.combinedPharmaceuticalDoseForm,
                 combinedPharmaceuticalDoseForm) &&
-            const DeepCollectionEquality().equals(other.route, route) &&
+            const DeepCollectionEquality().equals(other._route, _route) &&
             const DeepCollectionEquality()
                 .equals(other.indication, indication) &&
             const DeepCollectionEquality()
@@ -7575,36 +7529,38 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
                 other.additionalMonitoringIndicator,
                 additionalMonitoringIndicator) &&
             const DeepCollectionEquality()
-                .equals(other.specialMeasures, specialMeasures) &&
+                .equals(other._specialMeasures, _specialMeasures) &&
             const DeepCollectionEquality()
                 .equals(other.pediatricUseIndicator, pediatricUseIndicator) &&
             const DeepCollectionEquality()
-                .equals(other.classification, classification) &&
+                .equals(other._classification, _classification) &&
             const DeepCollectionEquality()
-                .equals(other.marketingStatus, marketingStatus) &&
+                .equals(other._marketingStatus, _marketingStatus) &&
             const DeepCollectionEquality().equals(
-                other.packagedMedicinalProduct, packagedMedicinalProduct) &&
+                other._packagedMedicinalProduct, _packagedMedicinalProduct) &&
             const DeepCollectionEquality()
-                .equals(other.comprisedOf, comprisedOf) &&
+                .equals(other._comprisedOf, _comprisedOf) &&
             const DeepCollectionEquality()
-                .equals(other.ingredient, ingredient) &&
-            const DeepCollectionEquality().equals(other.impurity, impurity) &&
+                .equals(other._ingredient, _ingredient) &&
+            const DeepCollectionEquality().equals(other._impurity, _impurity) &&
             const DeepCollectionEquality()
-                .equals(other.attachedDocument, attachedDocument) &&
+                .equals(other._attachedDocument, _attachedDocument) &&
             const DeepCollectionEquality()
-                .equals(other.masterFile, masterFile) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
+                .equals(other._masterFile, _masterFile) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
             const DeepCollectionEquality()
-                .equals(other.clinicalTrial, clinicalTrial) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
+                .equals(other._clinicalTrial, _clinicalTrial) &&
+            const DeepCollectionEquality().equals(other._code, _code) &&
+            const DeepCollectionEquality().equals(other._name, _name) &&
             const DeepCollectionEquality()
-                .equals(other.crossReference, crossReference) &&
-            const DeepCollectionEquality().equals(other.operation, operation) &&
+                .equals(other._crossReference, _crossReference) &&
             const DeepCollectionEquality()
-                .equals(other.characteristic, characteristic));
+                .equals(other._operation, _operation) &&
+            const DeepCollectionEquality()
+                .equals(other._characteristic, _characteristic));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -7616,10 +7572,10 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(domain),
         const DeepCollectionEquality().hash(version),
@@ -7630,35 +7586,35 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
         const DeepCollectionEquality().hash(combinedPharmaceuticalDoseForm),
-        const DeepCollectionEquality().hash(route),
+        const DeepCollectionEquality().hash(_route),
         const DeepCollectionEquality().hash(indication),
         const DeepCollectionEquality().hash(indicationElement),
         const DeepCollectionEquality().hash(legalStatusOfSupply),
         const DeepCollectionEquality().hash(additionalMonitoringIndicator),
-        const DeepCollectionEquality().hash(specialMeasures),
+        const DeepCollectionEquality().hash(_specialMeasures),
         const DeepCollectionEquality().hash(pediatricUseIndicator),
-        const DeepCollectionEquality().hash(classification),
-        const DeepCollectionEquality().hash(marketingStatus),
-        const DeepCollectionEquality().hash(packagedMedicinalProduct),
-        const DeepCollectionEquality().hash(comprisedOf),
-        const DeepCollectionEquality().hash(ingredient),
-        const DeepCollectionEquality().hash(impurity),
-        const DeepCollectionEquality().hash(attachedDocument),
-        const DeepCollectionEquality().hash(masterFile),
-        const DeepCollectionEquality().hash(contact),
-        const DeepCollectionEquality().hash(clinicalTrial),
-        const DeepCollectionEquality().hash(code),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(crossReference),
-        const DeepCollectionEquality().hash(operation),
-        const DeepCollectionEquality().hash(characteristic)
+        const DeepCollectionEquality().hash(_classification),
+        const DeepCollectionEquality().hash(_marketingStatus),
+        const DeepCollectionEquality().hash(_packagedMedicinalProduct),
+        const DeepCollectionEquality().hash(_comprisedOf),
+        const DeepCollectionEquality().hash(_ingredient),
+        const DeepCollectionEquality().hash(_impurity),
+        const DeepCollectionEquality().hash(_attachedDocument),
+        const DeepCollectionEquality().hash(_masterFile),
+        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(_clinicalTrial),
+        const DeepCollectionEquality().hash(_code),
+        const DeepCollectionEquality().hash(_name),
+        const DeepCollectionEquality().hash(_crossReference),
+        const DeepCollectionEquality().hash(_operation),
+        const DeepCollectionEquality().hash(_characteristic)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$MedicinalProductDefinitionCopyWith<_MedicinalProductDefinition>
-      get copyWith => __$MedicinalProductDefinitionCopyWithImpl<
-          _MedicinalProductDefinition>(this, _$identity);
+  _$$_MedicinalProductDefinitionCopyWith<_$_MedicinalProductDefinition>
+      get copyWith => __$$_MedicinalProductDefinitionCopyWithImpl<
+          _$_MedicinalProductDefinition>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7668,154 +7624,168 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
 abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
   factory _MedicinalProductDefinition(
-          {R5ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language') Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
-          CodeableConcept? type,
-          CodeableConcept? domain,
-          String? version,
-          @JsonKey(name: '_version') Element? versionElement,
-          CodeableConcept? status,
-          DateTime? statusDate,
-          @JsonKey(name: '_statusDate') Element? statusDateElement,
-          Markdown? description,
-          @JsonKey(name: '_description') Element? descriptionElement,
-          CodeableConcept? combinedPharmaceuticalDoseForm,
-          List<CodeableConcept>? route,
-          Markdown? indication,
-          @JsonKey(name: '_indication') Element? indicationElement,
-          CodeableConcept? legalStatusOfSupply,
-          CodeableConcept? additionalMonitoringIndicator,
-          List<CodeableConcept>? specialMeasures,
-          CodeableConcept? pediatricUseIndicator,
-          List<CodeableConcept>? classification,
-          List<MarketingStatus>? marketingStatus,
-          List<CodeableConcept>? packagedMedicinalProduct,
-          List<Reference>? comprisedOf,
-          List<CodeableConcept>? ingredient,
-          List<CodeableReference>? impurity,
-          List<Reference>? attachedDocument,
-          List<Reference>? masterFile,
-          List<MedicinalProductDefinitionContact>? contact,
-          List<Reference>? clinicalTrial,
-          List<Coding>? code,
-          required List<MedicinalProductDefinitionName> name,
-          List<MedicinalProductDefinitionCrossReference>? crossReference,
-          List<MedicinalProductDefinitionOperation>? operation,
-          List<MedicinalProductDefinitionCharacteristic>? characteristic}) =
-      _$_MedicinalProductDefinition;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? type,
+      final CodeableConcept? domain,
+      final String? version,
+      @JsonKey(name: '_version') final Element? versionElement,
+      final CodeableConcept? status,
+      final DateTime? statusDate,
+      @JsonKey(name: '_statusDate') final Element? statusDateElement,
+      final Markdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final CodeableConcept? combinedPharmaceuticalDoseForm,
+      final List<CodeableConcept>? route,
+      final Markdown? indication,
+      @JsonKey(name: '_indication') final Element? indicationElement,
+      final CodeableConcept? legalStatusOfSupply,
+      final CodeableConcept? additionalMonitoringIndicator,
+      final List<CodeableConcept>? specialMeasures,
+      final CodeableConcept? pediatricUseIndicator,
+      final List<CodeableConcept>? classification,
+      final List<MarketingStatus>? marketingStatus,
+      final List<CodeableConcept>? packagedMedicinalProduct,
+      final List<Reference>? comprisedOf,
+      final List<CodeableConcept>? ingredient,
+      final List<CodeableReference>? impurity,
+      final List<Reference>? attachedDocument,
+      final List<Reference>? masterFile,
+      final List<MedicinalProductDefinitionContact>? contact,
+      final List<Reference>? clinicalTrial,
+      final List<Coding>? code,
+      required final List<MedicinalProductDefinitionName> name,
+      final List<MedicinalProductDefinitionCrossReference>? crossReference,
+      final List<MedicinalProductDefinitionOperation>? operation,
+      final List<MedicinalProductDefinitionCharacteristic>?
+          characteristic}) = _$_MedicinalProductDefinition;
   _MedicinalProductDefinition._() : super._();
 
   factory _MedicinalProductDefinition.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductDefinition.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get domain;
+  CodeableConcept? get domain => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  DateTime? get statusDate;
+  DateTime? get statusDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get combinedPharmaceuticalDoseForm;
+  CodeableConcept? get combinedPharmaceuticalDoseForm =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get route;
+  List<CodeableConcept>? get route => throw _privateConstructorUsedError;
   @override
-  Markdown? get indication;
+  Markdown? get indication => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_indication')
-  Element? get indicationElement;
+  Element? get indicationElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get legalStatusOfSupply;
+  CodeableConcept? get legalStatusOfSupply =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get additionalMonitoringIndicator;
+  CodeableConcept? get additionalMonitoringIndicator =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get specialMeasures;
+  List<CodeableConcept>? get specialMeasures =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get pediatricUseIndicator;
+  CodeableConcept? get pediatricUseIndicator =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get classification;
+  List<CodeableConcept>? get classification =>
+      throw _privateConstructorUsedError;
   @override
-  List<MarketingStatus>? get marketingStatus;
+  List<MarketingStatus>? get marketingStatus =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get packagedMedicinalProduct;
+  List<CodeableConcept>? get packagedMedicinalProduct =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get comprisedOf;
+  List<Reference>? get comprisedOf => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get ingredient;
+  List<CodeableConcept>? get ingredient => throw _privateConstructorUsedError;
   @override
-  List<CodeableReference>? get impurity;
+  List<CodeableReference>? get impurity => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get attachedDocument;
+  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get masterFile;
+  List<Reference>? get masterFile => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductDefinitionContact>? get contact;
+  List<MedicinalProductDefinitionContact>? get contact =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get clinicalTrial;
+  List<Reference>? get clinicalTrial => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get code;
+  List<Coding>? get code => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductDefinitionName> get name;
+  List<MedicinalProductDefinitionName> get name =>
+      throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductDefinitionCrossReference>? get crossReference;
+  List<MedicinalProductDefinitionCrossReference>? get crossReference =>
+      throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductDefinitionOperation>? get operation;
+  List<MedicinalProductDefinitionOperation>? get operation =>
+      throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductDefinitionCharacteristic>? get characteristic;
+  List<MedicinalProductDefinitionCharacteristic>? get characteristic =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductDefinitionCopyWith<_MedicinalProductDefinition>
+  _$$_MedicinalProductDefinitionCopyWith<_$_MedicinalProductDefinition>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -7823,34 +7793,6 @@ MedicinalProductDefinitionContact _$MedicinalProductDefinitionContactFromJson(
     Map<String, dynamic> json) {
   return _MedicinalProductDefinitionContact.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicinalProductDefinitionContactTearOff {
-  const _$MedicinalProductDefinitionContactTearOff();
-
-  _MedicinalProductDefinitionContact call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      required Reference contact}) {
-    return _MedicinalProductDefinitionContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      contact: contact,
-    );
-  }
-
-  MedicinalProductDefinitionContact fromJson(Map<String, Object?> json) {
-    return MedicinalProductDefinitionContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicinalProductDefinitionContact =
-    _$MedicinalProductDefinitionContactTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductDefinitionContact {
@@ -7946,12 +7888,12 @@ class _$MedicinalProductDefinitionContactCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicinalProductDefinitionContactCopyWith<$Res>
+abstract class _$$_MedicinalProductDefinitionContactCopyWith<$Res>
     implements $MedicinalProductDefinitionContactCopyWith<$Res> {
-  factory _$MedicinalProductDefinitionContactCopyWith(
-          _MedicinalProductDefinitionContact value,
-          $Res Function(_MedicinalProductDefinitionContact) then) =
-      __$MedicinalProductDefinitionContactCopyWithImpl<$Res>;
+  factory _$$_MedicinalProductDefinitionContactCopyWith(
+          _$_MedicinalProductDefinitionContact value,
+          $Res Function(_$_MedicinalProductDefinitionContact) then) =
+      __$$_MedicinalProductDefinitionContactCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -7967,17 +7909,17 @@ abstract class _$MedicinalProductDefinitionContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicinalProductDefinitionContactCopyWithImpl<$Res>
+class __$$_MedicinalProductDefinitionContactCopyWithImpl<$Res>
     extends _$MedicinalProductDefinitionContactCopyWithImpl<$Res>
-    implements _$MedicinalProductDefinitionContactCopyWith<$Res> {
-  __$MedicinalProductDefinitionContactCopyWithImpl(
-      _MedicinalProductDefinitionContact _value,
-      $Res Function(_MedicinalProductDefinitionContact) _then)
-      : super(_value, (v) => _then(v as _MedicinalProductDefinitionContact));
+    implements _$$_MedicinalProductDefinitionContactCopyWith<$Res> {
+  __$$_MedicinalProductDefinitionContactCopyWithImpl(
+      _$_MedicinalProductDefinitionContact _value,
+      $Res Function(_$_MedicinalProductDefinitionContact) _then)
+      : super(_value, (v) => _then(v as _$_MedicinalProductDefinitionContact));
 
   @override
-  _MedicinalProductDefinitionContact get _value =>
-      super._value as _MedicinalProductDefinitionContact;
+  _$_MedicinalProductDefinitionContact get _value =>
+      super._value as _$_MedicinalProductDefinitionContact;
 
   @override
   $Res call({
@@ -7987,17 +7929,17 @@ class __$MedicinalProductDefinitionContactCopyWithImpl<$Res>
     Object? type = freezed,
     Object? contact = freezed,
   }) {
-    return _then(_MedicinalProductDefinitionContact(
+    return _then(_$_MedicinalProductDefinitionContact(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -8018,11 +7960,13 @@ class _$_MedicinalProductDefinitionContact
     extends _MedicinalProductDefinitionContact {
   _$_MedicinalProductDefinitionContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       required this.contact})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicinalProductDefinitionContact.fromJson(
           Map<String, dynamic> json) =>
@@ -8030,11 +7974,25 @@ class _$_MedicinalProductDefinitionContact
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -8049,31 +8007,32 @@ class _$_MedicinalProductDefinitionContact
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicinalProductDefinitionContact &&
+            other is _$_MedicinalProductDefinitionContact &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.contact, contact));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(contact));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicinalProductDefinitionContactCopyWith<
-          _MedicinalProductDefinitionContact>
-      get copyWith => __$MedicinalProductDefinitionContactCopyWithImpl<
-          _MedicinalProductDefinitionContact>(this, _$identity);
+  _$$_MedicinalProductDefinitionContactCopyWith<
+          _$_MedicinalProductDefinitionContact>
+      get copyWith => __$$_MedicinalProductDefinitionContactCopyWithImpl<
+          _$_MedicinalProductDefinitionContact>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8084,11 +8043,11 @@ class _$_MedicinalProductDefinitionContact
 abstract class _MedicinalProductDefinitionContact
     extends MedicinalProductDefinitionContact {
   factory _MedicinalProductDefinitionContact(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      required Reference contact}) = _$_MedicinalProductDefinitionContact;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? type,
+      required final Reference contact}) = _$_MedicinalProductDefinitionContact;
   _MedicinalProductDefinitionContact._() : super._();
 
   factory _MedicinalProductDefinitionContact.fromJson(
@@ -8096,20 +8055,21 @@ abstract class _MedicinalProductDefinitionContact
       _$_MedicinalProductDefinitionContact.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Reference get contact;
+  Reference get contact => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductDefinitionContactCopyWith<
-          _MedicinalProductDefinitionContact>
+  _$$_MedicinalProductDefinitionContactCopyWith<
+          _$_MedicinalProductDefinitionContact>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8117,40 +8077,6 @@ MedicinalProductDefinitionName _$MedicinalProductDefinitionNameFromJson(
     Map<String, dynamic> json) {
   return _MedicinalProductDefinitionName.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicinalProductDefinitionNameTearOff {
-  const _$MedicinalProductDefinitionNameTearOff();
-
-  _MedicinalProductDefinitionName call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? productName,
-      @JsonKey(name: '_productName') Element? productNameElement,
-      CodeableConcept? type,
-      List<MedicinalProductDefinitionNamePart>? namePart,
-      List<MedicinalProductDefinitionCountryLanguage>? countryLanguage}) {
-    return _MedicinalProductDefinitionName(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      productName: productName,
-      productNameElement: productNameElement,
-      type: type,
-      namePart: namePart,
-      countryLanguage: countryLanguage,
-    );
-  }
-
-  MedicinalProductDefinitionName fromJson(Map<String, Object?> json) {
-    return MedicinalProductDefinitionName.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicinalProductDefinitionName =
-    _$MedicinalProductDefinitionNameTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductDefinitionName {
@@ -8274,12 +8200,12 @@ class _$MedicinalProductDefinitionNameCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicinalProductDefinitionNameCopyWith<$Res>
+abstract class _$$_MedicinalProductDefinitionNameCopyWith<$Res>
     implements $MedicinalProductDefinitionNameCopyWith<$Res> {
-  factory _$MedicinalProductDefinitionNameCopyWith(
-          _MedicinalProductDefinitionName value,
-          $Res Function(_MedicinalProductDefinitionName) then) =
-      __$MedicinalProductDefinitionNameCopyWithImpl<$Res>;
+  factory _$$_MedicinalProductDefinitionNameCopyWith(
+          _$_MedicinalProductDefinitionName value,
+          $Res Function(_$_MedicinalProductDefinitionName) then) =
+      __$$_MedicinalProductDefinitionNameCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -8298,17 +8224,17 @@ abstract class _$MedicinalProductDefinitionNameCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicinalProductDefinitionNameCopyWithImpl<$Res>
+class __$$_MedicinalProductDefinitionNameCopyWithImpl<$Res>
     extends _$MedicinalProductDefinitionNameCopyWithImpl<$Res>
-    implements _$MedicinalProductDefinitionNameCopyWith<$Res> {
-  __$MedicinalProductDefinitionNameCopyWithImpl(
-      _MedicinalProductDefinitionName _value,
-      $Res Function(_MedicinalProductDefinitionName) _then)
-      : super(_value, (v) => _then(v as _MedicinalProductDefinitionName));
+    implements _$$_MedicinalProductDefinitionNameCopyWith<$Res> {
+  __$$_MedicinalProductDefinitionNameCopyWithImpl(
+      _$_MedicinalProductDefinitionName _value,
+      $Res Function(_$_MedicinalProductDefinitionName) _then)
+      : super(_value, (v) => _then(v as _$_MedicinalProductDefinitionName));
 
   @override
-  _MedicinalProductDefinitionName get _value =>
-      super._value as _MedicinalProductDefinitionName;
+  _$_MedicinalProductDefinitionName get _value =>
+      super._value as _$_MedicinalProductDefinitionName;
 
   @override
   $Res call({
@@ -8321,17 +8247,17 @@ class __$MedicinalProductDefinitionNameCopyWithImpl<$Res>
     Object? namePart = freezed,
     Object? countryLanguage = freezed,
   }) {
-    return _then(_MedicinalProductDefinitionName(
+    return _then(_$_MedicinalProductDefinitionName(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       productName: productName == freezed
@@ -8347,11 +8273,11 @@ class __$MedicinalProductDefinitionNameCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       namePart: namePart == freezed
-          ? _value.namePart
+          ? _value._namePart
           : namePart // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductDefinitionNamePart>?,
       countryLanguage: countryLanguage == freezed
-          ? _value.countryLanguage
+          ? _value._countryLanguage
           : countryLanguage // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductDefinitionCountryLanguage>?,
     ));
@@ -8364,14 +8290,18 @@ class _$_MedicinalProductDefinitionName
     extends _MedicinalProductDefinitionName {
   _$_MedicinalProductDefinitionName(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.productName,
       @JsonKey(name: '_productName') this.productNameElement,
       this.type,
-      this.namePart,
-      this.countryLanguage})
-      : super._();
+      final List<MedicinalProductDefinitionNamePart>? namePart,
+      final List<MedicinalProductDefinitionCountryLanguage>? countryLanguage})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _namePart = namePart,
+        _countryLanguage = countryLanguage,
+        super._();
 
   factory _$_MedicinalProductDefinitionName.fromJson(
           Map<String, dynamic> json) =>
@@ -8379,11 +8309,25 @@ class _$_MedicinalProductDefinitionName
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? productName;
   @override
@@ -8391,10 +8335,23 @@ class _$_MedicinalProductDefinitionName
   final Element? productNameElement;
   @override
   final CodeableConcept? type;
+  final List<MedicinalProductDefinitionNamePart>? _namePart;
   @override
-  final List<MedicinalProductDefinitionNamePart>? namePart;
+  List<MedicinalProductDefinitionNamePart>? get namePart {
+    final value = _namePart;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MedicinalProductDefinitionCountryLanguage>? _countryLanguage;
   @override
-  final List<MedicinalProductDefinitionCountryLanguage>? countryLanguage;
+  List<MedicinalProductDefinitionCountryLanguage>? get countryLanguage {
+    final value = _countryLanguage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -8405,39 +8362,40 @@ class _$_MedicinalProductDefinitionName
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicinalProductDefinitionName &&
+            other is _$_MedicinalProductDefinitionName &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.productName, productName) &&
             const DeepCollectionEquality()
                 .equals(other.productNameElement, productNameElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.namePart, namePart) &&
+            const DeepCollectionEquality().equals(other._namePart, _namePart) &&
             const DeepCollectionEquality()
-                .equals(other.countryLanguage, countryLanguage));
+                .equals(other._countryLanguage, _countryLanguage));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(productName),
       const DeepCollectionEquality().hash(productNameElement),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(namePart),
-      const DeepCollectionEquality().hash(countryLanguage));
+      const DeepCollectionEquality().hash(_namePart),
+      const DeepCollectionEquality().hash(_countryLanguage));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicinalProductDefinitionNameCopyWith<_MedicinalProductDefinitionName>
-      get copyWith => __$MedicinalProductDefinitionNameCopyWithImpl<
-          _MedicinalProductDefinitionName>(this, _$identity);
+  _$$_MedicinalProductDefinitionNameCopyWith<_$_MedicinalProductDefinitionName>
+      get copyWith => __$$_MedicinalProductDefinitionNameCopyWithImpl<
+          _$_MedicinalProductDefinitionName>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8448,41 +8406,44 @@ class _$_MedicinalProductDefinitionName
 abstract class _MedicinalProductDefinitionName
     extends MedicinalProductDefinitionName {
   factory _MedicinalProductDefinitionName(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? productName,
-          @JsonKey(name: '_productName') Element? productNameElement,
-          CodeableConcept? type,
-          List<MedicinalProductDefinitionNamePart>? namePart,
-          List<MedicinalProductDefinitionCountryLanguage>? countryLanguage}) =
-      _$_MedicinalProductDefinitionName;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? productName,
+      @JsonKey(name: '_productName') final Element? productNameElement,
+      final CodeableConcept? type,
+      final List<MedicinalProductDefinitionNamePart>? namePart,
+      final List<MedicinalProductDefinitionCountryLanguage>?
+          countryLanguage}) = _$_MedicinalProductDefinitionName;
   _MedicinalProductDefinitionName._() : super._();
 
   factory _MedicinalProductDefinitionName.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductDefinitionName.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get productName;
+  String? get productName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_productName')
-  Element? get productNameElement;
+  Element? get productNameElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductDefinitionNamePart>? get namePart;
+  List<MedicinalProductDefinitionNamePart>? get namePart =>
+      throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductDefinitionCountryLanguage>? get countryLanguage;
+  List<MedicinalProductDefinitionCountryLanguage>? get countryLanguage =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductDefinitionNameCopyWith<_MedicinalProductDefinitionName>
+  _$$_MedicinalProductDefinitionNameCopyWith<_$_MedicinalProductDefinitionName>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8490,36 +8451,6 @@ MedicinalProductDefinitionNamePart _$MedicinalProductDefinitionNamePartFromJson(
     Map<String, dynamic> json) {
   return _MedicinalProductDefinitionNamePart.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicinalProductDefinitionNamePartTearOff {
-  const _$MedicinalProductDefinitionNamePartTearOff();
-
-  _MedicinalProductDefinitionNamePart call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'part') String? part_,
-      @JsonKey(name: '_part') Element? partElement,
-      required CodeableConcept type}) {
-    return _MedicinalProductDefinitionNamePart(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      part_: part_,
-      partElement: partElement,
-      type: type,
-    );
-  }
-
-  MedicinalProductDefinitionNamePart fromJson(Map<String, Object?> json) {
-    return MedicinalProductDefinitionNamePart.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicinalProductDefinitionNamePart =
-    _$MedicinalProductDefinitionNamePartTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductDefinitionNamePart {
@@ -8625,12 +8556,12 @@ class _$MedicinalProductDefinitionNamePartCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicinalProductDefinitionNamePartCopyWith<$Res>
+abstract class _$$_MedicinalProductDefinitionNamePartCopyWith<$Res>
     implements $MedicinalProductDefinitionNamePartCopyWith<$Res> {
-  factory _$MedicinalProductDefinitionNamePartCopyWith(
-          _MedicinalProductDefinitionNamePart value,
-          $Res Function(_MedicinalProductDefinitionNamePart) then) =
-      __$MedicinalProductDefinitionNamePartCopyWithImpl<$Res>;
+  factory _$$_MedicinalProductDefinitionNamePartCopyWith(
+          _$_MedicinalProductDefinitionNamePart value,
+          $Res Function(_$_MedicinalProductDefinitionNamePart) then) =
+      __$$_MedicinalProductDefinitionNamePartCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -8647,17 +8578,17 @@ abstract class _$MedicinalProductDefinitionNamePartCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicinalProductDefinitionNamePartCopyWithImpl<$Res>
+class __$$_MedicinalProductDefinitionNamePartCopyWithImpl<$Res>
     extends _$MedicinalProductDefinitionNamePartCopyWithImpl<$Res>
-    implements _$MedicinalProductDefinitionNamePartCopyWith<$Res> {
-  __$MedicinalProductDefinitionNamePartCopyWithImpl(
-      _MedicinalProductDefinitionNamePart _value,
-      $Res Function(_MedicinalProductDefinitionNamePart) _then)
-      : super(_value, (v) => _then(v as _MedicinalProductDefinitionNamePart));
+    implements _$$_MedicinalProductDefinitionNamePartCopyWith<$Res> {
+  __$$_MedicinalProductDefinitionNamePartCopyWithImpl(
+      _$_MedicinalProductDefinitionNamePart _value,
+      $Res Function(_$_MedicinalProductDefinitionNamePart) _then)
+      : super(_value, (v) => _then(v as _$_MedicinalProductDefinitionNamePart));
 
   @override
-  _MedicinalProductDefinitionNamePart get _value =>
-      super._value as _MedicinalProductDefinitionNamePart;
+  _$_MedicinalProductDefinitionNamePart get _value =>
+      super._value as _$_MedicinalProductDefinitionNamePart;
 
   @override
   $Res call({
@@ -8668,17 +8599,17 @@ class __$MedicinalProductDefinitionNamePartCopyWithImpl<$Res>
     Object? partElement = freezed,
     Object? type = freezed,
   }) {
-    return _then(_MedicinalProductDefinitionNamePart(
+    return _then(_$_MedicinalProductDefinitionNamePart(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       part_: part_ == freezed
@@ -8703,12 +8634,14 @@ class _$_MedicinalProductDefinitionNamePart
     extends _MedicinalProductDefinitionNamePart {
   _$_MedicinalProductDefinitionNamePart(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'part') this.part_,
       @JsonKey(name: '_part') this.partElement,
       required this.type})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicinalProductDefinitionNamePart.fromJson(
           Map<String, dynamic> json) =>
@@ -8716,11 +8649,25 @@ class _$_MedicinalProductDefinitionNamePart
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'part')
   final String? part_;
@@ -8739,34 +8686,35 @@ class _$_MedicinalProductDefinitionNamePart
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicinalProductDefinitionNamePart &&
+            other is _$_MedicinalProductDefinitionNamePart &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.part_, part_) &&
             const DeepCollectionEquality()
                 .equals(other.partElement, partElement) &&
             const DeepCollectionEquality().equals(other.type, type));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(part_),
       const DeepCollectionEquality().hash(partElement),
       const DeepCollectionEquality().hash(type));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicinalProductDefinitionNamePartCopyWith<
-          _MedicinalProductDefinitionNamePart>
-      get copyWith => __$MedicinalProductDefinitionNamePartCopyWithImpl<
-          _MedicinalProductDefinitionNamePart>(this, _$identity);
+  _$$_MedicinalProductDefinitionNamePartCopyWith<
+          _$_MedicinalProductDefinitionNamePart>
+      get copyWith => __$$_MedicinalProductDefinitionNamePartCopyWithImpl<
+          _$_MedicinalProductDefinitionNamePart>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8777,12 +8725,13 @@ class _$_MedicinalProductDefinitionNamePart
 abstract class _MedicinalProductDefinitionNamePart
     extends MedicinalProductDefinitionNamePart {
   factory _MedicinalProductDefinitionNamePart(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'part') String? part_,
-      @JsonKey(name: '_part') Element? partElement,
-      required CodeableConcept type}) = _$_MedicinalProductDefinitionNamePart;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'part') final String? part_,
+          @JsonKey(name: '_part') final Element? partElement,
+          required final CodeableConcept type}) =
+      _$_MedicinalProductDefinitionNamePart;
   _MedicinalProductDefinitionNamePart._() : super._();
 
   factory _MedicinalProductDefinitionNamePart.fromJson(
@@ -8790,24 +8739,25 @@ abstract class _MedicinalProductDefinitionNamePart
       _$_MedicinalProductDefinitionNamePart.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  String? get part_;
+  String? get part_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_part')
-  Element? get partElement;
+  Element? get partElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductDefinitionNamePartCopyWith<
-          _MedicinalProductDefinitionNamePart>
+  _$$_MedicinalProductDefinitionNamePartCopyWith<
+          _$_MedicinalProductDefinitionNamePart>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8816,37 +8766,6 @@ MedicinalProductDefinitionCountryLanguage
         Map<String, dynamic> json) {
   return _MedicinalProductDefinitionCountryLanguage.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicinalProductDefinitionCountryLanguageTearOff {
-  const _$MedicinalProductDefinitionCountryLanguageTearOff();
-
-  _MedicinalProductDefinitionCountryLanguage call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept country,
-      CodeableConcept? jurisdiction,
-      required CodeableConcept language}) {
-    return _MedicinalProductDefinitionCountryLanguage(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      country: country,
-      jurisdiction: jurisdiction,
-      language: language,
-    );
-  }
-
-  MedicinalProductDefinitionCountryLanguage fromJson(
-      Map<String, Object?> json) {
-    return MedicinalProductDefinitionCountryLanguage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicinalProductDefinitionCountryLanguage =
-    _$MedicinalProductDefinitionCountryLanguageTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductDefinitionCountryLanguage {
@@ -8959,12 +8878,12 @@ class _$MedicinalProductDefinitionCountryLanguageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicinalProductDefinitionCountryLanguageCopyWith<$Res>
+abstract class _$$_MedicinalProductDefinitionCountryLanguageCopyWith<$Res>
     implements $MedicinalProductDefinitionCountryLanguageCopyWith<$Res> {
-  factory _$MedicinalProductDefinitionCountryLanguageCopyWith(
-          _MedicinalProductDefinitionCountryLanguage value,
-          $Res Function(_MedicinalProductDefinitionCountryLanguage) then) =
-      __$MedicinalProductDefinitionCountryLanguageCopyWithImpl<$Res>;
+  factory _$$_MedicinalProductDefinitionCountryLanguageCopyWith(
+          _$_MedicinalProductDefinitionCountryLanguage value,
+          $Res Function(_$_MedicinalProductDefinitionCountryLanguage) then) =
+      __$$_MedicinalProductDefinitionCountryLanguageCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -8983,18 +8902,18 @@ abstract class _$MedicinalProductDefinitionCountryLanguageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicinalProductDefinitionCountryLanguageCopyWithImpl<$Res>
+class __$$_MedicinalProductDefinitionCountryLanguageCopyWithImpl<$Res>
     extends _$MedicinalProductDefinitionCountryLanguageCopyWithImpl<$Res>
-    implements _$MedicinalProductDefinitionCountryLanguageCopyWith<$Res> {
-  __$MedicinalProductDefinitionCountryLanguageCopyWithImpl(
-      _MedicinalProductDefinitionCountryLanguage _value,
-      $Res Function(_MedicinalProductDefinitionCountryLanguage) _then)
+    implements _$$_MedicinalProductDefinitionCountryLanguageCopyWith<$Res> {
+  __$$_MedicinalProductDefinitionCountryLanguageCopyWithImpl(
+      _$_MedicinalProductDefinitionCountryLanguage _value,
+      $Res Function(_$_MedicinalProductDefinitionCountryLanguage) _then)
       : super(_value,
-            (v) => _then(v as _MedicinalProductDefinitionCountryLanguage));
+            (v) => _then(v as _$_MedicinalProductDefinitionCountryLanguage));
 
   @override
-  _MedicinalProductDefinitionCountryLanguage get _value =>
-      super._value as _MedicinalProductDefinitionCountryLanguage;
+  _$_MedicinalProductDefinitionCountryLanguage get _value =>
+      super._value as _$_MedicinalProductDefinitionCountryLanguage;
 
   @override
   $Res call({
@@ -9005,17 +8924,17 @@ class __$MedicinalProductDefinitionCountryLanguageCopyWithImpl<$Res>
     Object? jurisdiction = freezed,
     Object? language = freezed,
   }) {
-    return _then(_MedicinalProductDefinitionCountryLanguage(
+    return _then(_$_MedicinalProductDefinitionCountryLanguage(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       country: country == freezed
@@ -9040,12 +8959,14 @@ class _$_MedicinalProductDefinitionCountryLanguage
     extends _MedicinalProductDefinitionCountryLanguage {
   _$_MedicinalProductDefinitionCountryLanguage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.country,
       this.jurisdiction,
       required this.language})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicinalProductDefinitionCountryLanguage.fromJson(
           Map<String, dynamic> json) =>
@@ -9053,11 +8974,25 @@ class _$_MedicinalProductDefinitionCountryLanguage
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept country;
   @override
@@ -9074,34 +9009,36 @@ class _$_MedicinalProductDefinitionCountryLanguage
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicinalProductDefinitionCountryLanguage &&
+            other is _$_MedicinalProductDefinitionCountryLanguage &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.country, country) &&
             const DeepCollectionEquality()
                 .equals(other.jurisdiction, jurisdiction) &&
             const DeepCollectionEquality().equals(other.language, language));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(country),
       const DeepCollectionEquality().hash(jurisdiction),
       const DeepCollectionEquality().hash(language));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicinalProductDefinitionCountryLanguageCopyWith<
-          _MedicinalProductDefinitionCountryLanguage>
-      get copyWith => __$MedicinalProductDefinitionCountryLanguageCopyWithImpl<
-          _MedicinalProductDefinitionCountryLanguage>(this, _$identity);
+  _$$_MedicinalProductDefinitionCountryLanguageCopyWith<
+          _$_MedicinalProductDefinitionCountryLanguage>
+      get copyWith =>
+          __$$_MedicinalProductDefinitionCountryLanguageCopyWithImpl<
+              _$_MedicinalProductDefinitionCountryLanguage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -9112,12 +9049,12 @@ class _$_MedicinalProductDefinitionCountryLanguage
 abstract class _MedicinalProductDefinitionCountryLanguage
     extends MedicinalProductDefinitionCountryLanguage {
   factory _MedicinalProductDefinitionCountryLanguage(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept country,
-          CodeableConcept? jurisdiction,
-          required CodeableConcept language}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept country,
+          final CodeableConcept? jurisdiction,
+          required final CodeableConcept language}) =
       _$_MedicinalProductDefinitionCountryLanguage;
   _MedicinalProductDefinitionCountryLanguage._() : super._();
 
@@ -9126,22 +9063,23 @@ abstract class _MedicinalProductDefinitionCountryLanguage
       _$_MedicinalProductDefinitionCountryLanguage.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get country;
+  CodeableConcept get country => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get jurisdiction;
+  CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get language;
+  CodeableConcept get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductDefinitionCountryLanguageCopyWith<
-          _MedicinalProductDefinitionCountryLanguage>
+  _$$_MedicinalProductDefinitionCountryLanguageCopyWith<
+          _$_MedicinalProductDefinitionCountryLanguage>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9150,34 +9088,6 @@ MedicinalProductDefinitionCrossReference
         Map<String, dynamic> json) {
   return _MedicinalProductDefinitionCrossReference.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicinalProductDefinitionCrossReferenceTearOff {
-  const _$MedicinalProductDefinitionCrossReferenceTearOff();
-
-  _MedicinalProductDefinitionCrossReference call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableReference product,
-      CodeableConcept? type}) {
-    return _MedicinalProductDefinitionCrossReference(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      product: product,
-      type: type,
-    );
-  }
-
-  MedicinalProductDefinitionCrossReference fromJson(Map<String, Object?> json) {
-    return MedicinalProductDefinitionCrossReference.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicinalProductDefinitionCrossReference =
-    _$MedicinalProductDefinitionCrossReferenceTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductDefinitionCrossReference {
@@ -9275,12 +9185,12 @@ class _$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicinalProductDefinitionCrossReferenceCopyWith<$Res>
+abstract class _$$_MedicinalProductDefinitionCrossReferenceCopyWith<$Res>
     implements $MedicinalProductDefinitionCrossReferenceCopyWith<$Res> {
-  factory _$MedicinalProductDefinitionCrossReferenceCopyWith(
-          _MedicinalProductDefinitionCrossReference value,
-          $Res Function(_MedicinalProductDefinitionCrossReference) then) =
-      __$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>;
+  factory _$$_MedicinalProductDefinitionCrossReferenceCopyWith(
+          _$_MedicinalProductDefinitionCrossReference value,
+          $Res Function(_$_MedicinalProductDefinitionCrossReference) then) =
+      __$$_MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -9296,18 +9206,18 @@ abstract class _$MedicinalProductDefinitionCrossReferenceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
+class __$$_MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
     extends _$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
-    implements _$MedicinalProductDefinitionCrossReferenceCopyWith<$Res> {
-  __$MedicinalProductDefinitionCrossReferenceCopyWithImpl(
-      _MedicinalProductDefinitionCrossReference _value,
-      $Res Function(_MedicinalProductDefinitionCrossReference) _then)
+    implements _$$_MedicinalProductDefinitionCrossReferenceCopyWith<$Res> {
+  __$$_MedicinalProductDefinitionCrossReferenceCopyWithImpl(
+      _$_MedicinalProductDefinitionCrossReference _value,
+      $Res Function(_$_MedicinalProductDefinitionCrossReference) _then)
       : super(_value,
-            (v) => _then(v as _MedicinalProductDefinitionCrossReference));
+            (v) => _then(v as _$_MedicinalProductDefinitionCrossReference));
 
   @override
-  _MedicinalProductDefinitionCrossReference get _value =>
-      super._value as _MedicinalProductDefinitionCrossReference;
+  _$_MedicinalProductDefinitionCrossReference get _value =>
+      super._value as _$_MedicinalProductDefinitionCrossReference;
 
   @override
   $Res call({
@@ -9317,17 +9227,17 @@ class __$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
     Object? product = freezed,
     Object? type = freezed,
   }) {
-    return _then(_MedicinalProductDefinitionCrossReference(
+    return _then(_$_MedicinalProductDefinitionCrossReference(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       product: product == freezed
@@ -9348,11 +9258,13 @@ class _$_MedicinalProductDefinitionCrossReference
     extends _MedicinalProductDefinitionCrossReference {
   _$_MedicinalProductDefinitionCrossReference(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.product,
       this.type})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicinalProductDefinitionCrossReference.fromJson(
           Map<String, dynamic> json) =>
@@ -9360,11 +9272,25 @@ class _$_MedicinalProductDefinitionCrossReference
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableReference product;
   @override
@@ -9379,31 +9305,32 @@ class _$_MedicinalProductDefinitionCrossReference
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicinalProductDefinitionCrossReference &&
+            other is _$_MedicinalProductDefinitionCrossReference &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.product, product) &&
             const DeepCollectionEquality().equals(other.type, type));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(product),
       const DeepCollectionEquality().hash(type));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicinalProductDefinitionCrossReferenceCopyWith<
-          _MedicinalProductDefinitionCrossReference>
-      get copyWith => __$MedicinalProductDefinitionCrossReferenceCopyWithImpl<
-          _MedicinalProductDefinitionCrossReference>(this, _$identity);
+  _$$_MedicinalProductDefinitionCrossReferenceCopyWith<
+          _$_MedicinalProductDefinitionCrossReference>
+      get copyWith => __$$_MedicinalProductDefinitionCrossReferenceCopyWithImpl<
+          _$_MedicinalProductDefinitionCrossReference>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -9414,11 +9341,12 @@ class _$_MedicinalProductDefinitionCrossReference
 abstract class _MedicinalProductDefinitionCrossReference
     extends MedicinalProductDefinitionCrossReference {
   factory _MedicinalProductDefinitionCrossReference(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableReference product,
-      CodeableConcept? type}) = _$_MedicinalProductDefinitionCrossReference;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableReference product,
+          final CodeableConcept? type}) =
+      _$_MedicinalProductDefinitionCrossReference;
   _MedicinalProductDefinitionCrossReference._() : super._();
 
   factory _MedicinalProductDefinitionCrossReference.fromJson(
@@ -9426,20 +9354,21 @@ abstract class _MedicinalProductDefinitionCrossReference
       _$_MedicinalProductDefinitionCrossReference.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableReference get product;
+  CodeableReference get product => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductDefinitionCrossReferenceCopyWith<
-          _MedicinalProductDefinitionCrossReference>
+  _$$_MedicinalProductDefinitionCrossReferenceCopyWith<
+          _$_MedicinalProductDefinitionCrossReference>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9447,38 +9376,6 @@ MedicinalProductDefinitionOperation
     _$MedicinalProductDefinitionOperationFromJson(Map<String, dynamic> json) {
   return _MedicinalProductDefinitionOperation.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicinalProductDefinitionOperationTearOff {
-  const _$MedicinalProductDefinitionOperationTearOff();
-
-  _MedicinalProductDefinitionOperation call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference? type,
-      Period? effectiveDate,
-      List<Reference>? organization,
-      CodeableConcept? confidentialityIndicator}) {
-    return _MedicinalProductDefinitionOperation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      effectiveDate: effectiveDate,
-      organization: organization,
-      confidentialityIndicator: confidentialityIndicator,
-    );
-  }
-
-  MedicinalProductDefinitionOperation fromJson(Map<String, Object?> json) {
-    return MedicinalProductDefinitionOperation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicinalProductDefinitionOperation =
-    _$MedicinalProductDefinitionOperationTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductDefinitionOperation {
@@ -9607,12 +9504,12 @@ class _$MedicinalProductDefinitionOperationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicinalProductDefinitionOperationCopyWith<$Res>
+abstract class _$$_MedicinalProductDefinitionOperationCopyWith<$Res>
     implements $MedicinalProductDefinitionOperationCopyWith<$Res> {
-  factory _$MedicinalProductDefinitionOperationCopyWith(
-          _MedicinalProductDefinitionOperation value,
-          $Res Function(_MedicinalProductDefinitionOperation) then) =
-      __$MedicinalProductDefinitionOperationCopyWithImpl<$Res>;
+  factory _$$_MedicinalProductDefinitionOperationCopyWith(
+          _$_MedicinalProductDefinitionOperation value,
+          $Res Function(_$_MedicinalProductDefinitionOperation) then) =
+      __$$_MedicinalProductDefinitionOperationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -9632,17 +9529,18 @@ abstract class _$MedicinalProductDefinitionOperationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicinalProductDefinitionOperationCopyWithImpl<$Res>
+class __$$_MedicinalProductDefinitionOperationCopyWithImpl<$Res>
     extends _$MedicinalProductDefinitionOperationCopyWithImpl<$Res>
-    implements _$MedicinalProductDefinitionOperationCopyWith<$Res> {
-  __$MedicinalProductDefinitionOperationCopyWithImpl(
-      _MedicinalProductDefinitionOperation _value,
-      $Res Function(_MedicinalProductDefinitionOperation) _then)
-      : super(_value, (v) => _then(v as _MedicinalProductDefinitionOperation));
+    implements _$$_MedicinalProductDefinitionOperationCopyWith<$Res> {
+  __$$_MedicinalProductDefinitionOperationCopyWithImpl(
+      _$_MedicinalProductDefinitionOperation _value,
+      $Res Function(_$_MedicinalProductDefinitionOperation) _then)
+      : super(
+            _value, (v) => _then(v as _$_MedicinalProductDefinitionOperation));
 
   @override
-  _MedicinalProductDefinitionOperation get _value =>
-      super._value as _MedicinalProductDefinitionOperation;
+  _$_MedicinalProductDefinitionOperation get _value =>
+      super._value as _$_MedicinalProductDefinitionOperation;
 
   @override
   $Res call({
@@ -9654,17 +9552,17 @@ class __$MedicinalProductDefinitionOperationCopyWithImpl<$Res>
     Object? organization = freezed,
     Object? confidentialityIndicator = freezed,
   }) {
-    return _then(_MedicinalProductDefinitionOperation(
+    return _then(_$_MedicinalProductDefinitionOperation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -9676,7 +9574,7 @@ class __$MedicinalProductDefinitionOperationCopyWithImpl<$Res>
           : effectiveDate // ignore: cast_nullable_to_non_nullable
               as Period?,
       organization: organization == freezed
-          ? _value.organization
+          ? _value._organization
           : organization // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       confidentialityIndicator: confidentialityIndicator == freezed
@@ -9693,13 +9591,16 @@ class _$_MedicinalProductDefinitionOperation
     extends _MedicinalProductDefinitionOperation {
   _$_MedicinalProductDefinitionOperation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.effectiveDate,
-      this.organization,
+      final List<Reference>? organization,
       this.confidentialityIndicator})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _organization = organization,
+        super._();
 
   factory _$_MedicinalProductDefinitionOperation.fromJson(
           Map<String, dynamic> json) =>
@@ -9707,17 +9608,38 @@ class _$_MedicinalProductDefinitionOperation
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableReference? type;
   @override
   final Period? effectiveDate;
+  final List<Reference>? _organization;
   @override
-  final List<Reference>? organization;
+  List<Reference>? get organization {
+    final value = _organization;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? confidentialityIndicator;
 
@@ -9730,38 +9652,39 @@ class _$_MedicinalProductDefinitionOperation
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicinalProductDefinitionOperation &&
+            other is _$_MedicinalProductDefinitionOperation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.effectiveDate, effectiveDate) &&
             const DeepCollectionEquality()
-                .equals(other.organization, organization) &&
+                .equals(other._organization, _organization) &&
             const DeepCollectionEquality().equals(
                 other.confidentialityIndicator, confidentialityIndicator));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(effectiveDate),
-      const DeepCollectionEquality().hash(organization),
+      const DeepCollectionEquality().hash(_organization),
       const DeepCollectionEquality().hash(confidentialityIndicator));
 
   @JsonKey(ignore: true)
   @override
-  _$MedicinalProductDefinitionOperationCopyWith<
-          _MedicinalProductDefinitionOperation>
-      get copyWith => __$MedicinalProductDefinitionOperationCopyWithImpl<
-          _MedicinalProductDefinitionOperation>(this, _$identity);
+  _$$_MedicinalProductDefinitionOperationCopyWith<
+          _$_MedicinalProductDefinitionOperation>
+      get copyWith => __$$_MedicinalProductDefinitionOperationCopyWithImpl<
+          _$_MedicinalProductDefinitionOperation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -9772,13 +9695,13 @@ class _$_MedicinalProductDefinitionOperation
 abstract class _MedicinalProductDefinitionOperation
     extends MedicinalProductDefinitionOperation {
   factory _MedicinalProductDefinitionOperation(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableReference? type,
-          Period? effectiveDate,
-          List<Reference>? organization,
-          CodeableConcept? confidentialityIndicator}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableReference? type,
+          final Period? effectiveDate,
+          final List<Reference>? organization,
+          final CodeableConcept? confidentialityIndicator}) =
       _$_MedicinalProductDefinitionOperation;
   _MedicinalProductDefinitionOperation._() : super._();
 
@@ -9787,24 +9710,26 @@ abstract class _MedicinalProductDefinitionOperation
       _$_MedicinalProductDefinitionOperation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableReference? get type;
+  CodeableReference? get type => throw _privateConstructorUsedError;
   @override
-  Period? get effectiveDate;
+  Period? get effectiveDate => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get organization;
+  List<Reference>? get organization => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get confidentialityIndicator;
+  CodeableConcept? get confidentialityIndicator =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductDefinitionOperationCopyWith<
-          _MedicinalProductDefinitionOperation>
+  _$$_MedicinalProductDefinitionOperationCopyWith<
+          _$_MedicinalProductDefinitionOperation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9813,54 +9738,6 @@ MedicinalProductDefinitionCharacteristic
         Map<String, dynamic> json) {
   return _MedicinalProductDefinitionCharacteristic.fromJson(json);
 }
-
-/// @nodoc
-class _$MedicinalProductDefinitionCharacteristicTearOff {
-  const _$MedicinalProductDefinitionCharacteristicTearOff();
-
-  _MedicinalProductDefinitionCharacteristic call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Markdown? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Quantity? valueQuantity,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment}) {
-    return _MedicinalProductDefinitionCharacteristic(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueCodeableConcept: valueCodeableConcept,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueQuantity: valueQuantity,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueAttachment: valueAttachment,
-    );
-  }
-
-  MedicinalProductDefinitionCharacteristic fromJson(Map<String, Object?> json) {
-    return MedicinalProductDefinitionCharacteristic.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MedicinalProductDefinitionCharacteristic =
-    _$MedicinalProductDefinitionCharacteristicTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductDefinitionCharacteristic {
@@ -10106,12 +9983,12 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MedicinalProductDefinitionCharacteristicCopyWith<$Res>
+abstract class _$$_MedicinalProductDefinitionCharacteristicCopyWith<$Res>
     implements $MedicinalProductDefinitionCharacteristicCopyWith<$Res> {
-  factory _$MedicinalProductDefinitionCharacteristicCopyWith(
-          _MedicinalProductDefinitionCharacteristic value,
-          $Res Function(_MedicinalProductDefinitionCharacteristic) then) =
-      __$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>;
+  factory _$$_MedicinalProductDefinitionCharacteristicCopyWith(
+          _$_MedicinalProductDefinitionCharacteristic value,
+          $Res Function(_$_MedicinalProductDefinitionCharacteristic) then) =
+      __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -10149,18 +10026,18 @@ abstract class _$MedicinalProductDefinitionCharacteristicCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
+class __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
     extends _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
-    implements _$MedicinalProductDefinitionCharacteristicCopyWith<$Res> {
-  __$MedicinalProductDefinitionCharacteristicCopyWithImpl(
-      _MedicinalProductDefinitionCharacteristic _value,
-      $Res Function(_MedicinalProductDefinitionCharacteristic) _then)
+    implements _$$_MedicinalProductDefinitionCharacteristicCopyWith<$Res> {
+  __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl(
+      _$_MedicinalProductDefinitionCharacteristic _value,
+      $Res Function(_$_MedicinalProductDefinitionCharacteristic) _then)
       : super(_value,
-            (v) => _then(v as _MedicinalProductDefinitionCharacteristic));
+            (v) => _then(v as _$_MedicinalProductDefinitionCharacteristic));
 
   @override
-  _MedicinalProductDefinitionCharacteristic get _value =>
-      super._value as _MedicinalProductDefinitionCharacteristic;
+  _$_MedicinalProductDefinitionCharacteristic get _value =>
+      super._value as _$_MedicinalProductDefinitionCharacteristic;
 
   @override
   $Res call({
@@ -10180,17 +10057,17 @@ class __$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
     Object? valueBooleanElement = freezed,
     Object? valueAttachment = freezed,
   }) {
-    return _then(_MedicinalProductDefinitionCharacteristic(
+    return _then(_$_MedicinalProductDefinitionCharacteristic(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -10251,8 +10128,8 @@ class _$_MedicinalProductDefinitionCharacteristic
     extends _MedicinalProductDefinitionCharacteristic {
   _$_MedicinalProductDefinitionCharacteristic(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueCodeableConcept,
       this.valueString,
@@ -10265,7 +10142,9 @@ class _$_MedicinalProductDefinitionCharacteristic
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueAttachment})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_MedicinalProductDefinitionCharacteristic.fromJson(
           Map<String, dynamic> json) =>
@@ -10273,11 +10152,25 @@ class _$_MedicinalProductDefinitionCharacteristic
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -10316,12 +10209,12 @@ class _$_MedicinalProductDefinitionCharacteristic
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MedicinalProductDefinitionCharacteristic &&
+            other is _$_MedicinalProductDefinitionCharacteristic &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
@@ -10346,12 +10239,13 @@ class _$_MedicinalProductDefinitionCharacteristic
                 .equals(other.valueAttachment, valueAttachment));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(valueCodeableConcept),
       const DeepCollectionEquality().hash(valueString),
@@ -10367,10 +10261,10 @@ class _$_MedicinalProductDefinitionCharacteristic
 
   @JsonKey(ignore: true)
   @override
-  _$MedicinalProductDefinitionCharacteristicCopyWith<
-          _MedicinalProductDefinitionCharacteristic>
-      get copyWith => __$MedicinalProductDefinitionCharacteristicCopyWithImpl<
-          _MedicinalProductDefinitionCharacteristic>(this, _$identity);
+  _$$_MedicinalProductDefinitionCharacteristicCopyWith<
+          _$_MedicinalProductDefinitionCharacteristic>
+      get copyWith => __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<
+          _$_MedicinalProductDefinitionCharacteristic>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -10381,21 +10275,21 @@ class _$_MedicinalProductDefinitionCharacteristic
 abstract class _MedicinalProductDefinitionCharacteristic
     extends MedicinalProductDefinitionCharacteristic {
   factory _MedicinalProductDefinitionCharacteristic(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required CodeableConcept type,
-          CodeableConcept? valueCodeableConcept,
-          Markdown? valueString,
-          @JsonKey(name: '_valueString') Element? valueStringElement,
-          Quantity? valueQuantity,
-          Integer? valueInteger,
-          @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-          Date? valueDate,
-          @JsonKey(name: '_valueDate') Element? valueDateElement,
-          Boolean? valueBoolean,
-          @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-          Attachment? valueAttachment}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final CodeableConcept? valueCodeableConcept,
+          final Markdown? valueString,
+          @JsonKey(name: '_valueString') final Element? valueStringElement,
+          final Quantity? valueQuantity,
+          final Integer? valueInteger,
+          @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
+          final Date? valueDate,
+          @JsonKey(name: '_valueDate') final Element? valueDateElement,
+          final Boolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final Attachment? valueAttachment}) =
       _$_MedicinalProductDefinitionCharacteristic;
   _MedicinalProductDefinitionCharacteristic._() : super._();
 
@@ -10404,44 +10298,46 @@ abstract class _MedicinalProductDefinitionCharacteristic
       _$_MedicinalProductDefinitionCharacteristic.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Markdown? get valueString;
+  Markdown? get valueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Integer? get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductDefinitionCharacteristicCopyWith<
-          _MedicinalProductDefinitionCharacteristic>
+  _$$_MedicinalProductDefinitionCharacteristicCopyWith<
+          _$_MedicinalProductDefinitionCharacteristic>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -10449,90 +10345,6 @@ PackagedProductDefinition _$PackagedProductDefinitionFromJson(
     Map<String, dynamic> json) {
   return _PackagedProductDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$PackagedProductDefinitionTearOff {
-  const _$PackagedProductDefinitionTearOff();
-
-  _PackagedProductDefinition call(
-      {R5ResourceType resourceType = R5ResourceType.PackagedProductDefinition,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      CodeableConcept? type,
-      List<Reference>? packageFor,
-      CodeableConcept? status,
-      DateTime? statusDate,
-      @JsonKey(name: '_statusDate')
-          Element? statusDateElement,
-      List<Quantity>? containedItemQuantity,
-      Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
-      List<MarketingStatus>? marketingStatus,
-      List<CodeableConcept>? characteristic,
-      Boolean? copackagedIndicator,
-      @JsonKey(name: '_copackagedIndicator')
-          Element? copackagedIndicatorElement,
-      List<Reference>? manufacturer,
-      List<Reference>? attachedDocument,
-      PackagedProductDefinitionPackage? package}) {
-    return _PackagedProductDefinition(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      name: name,
-      nameElement: nameElement,
-      type: type,
-      packageFor: packageFor,
-      status: status,
-      statusDate: statusDate,
-      statusDateElement: statusDateElement,
-      containedItemQuantity: containedItemQuantity,
-      description: description,
-      descriptionElement: descriptionElement,
-      legalStatusOfSupply: legalStatusOfSupply,
-      marketingStatus: marketingStatus,
-      characteristic: characteristic,
-      copackagedIndicator: copackagedIndicator,
-      copackagedIndicatorElement: copackagedIndicatorElement,
-      manufacturer: manufacturer,
-      attachedDocument: attachedDocument,
-      package: package,
-    );
-  }
-
-  PackagedProductDefinition fromJson(Map<String, Object?> json) {
-    return PackagedProductDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PackagedProductDefinition = _$PackagedProductDefinitionTearOff();
 
 /// @nodoc
 mixin _$PackagedProductDefinition {
@@ -10933,11 +10745,12 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PackagedProductDefinitionCopyWith<$Res>
+abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
     implements $PackagedProductDefinitionCopyWith<$Res> {
-  factory _$PackagedProductDefinitionCopyWith(_PackagedProductDefinition value,
-          $Res Function(_PackagedProductDefinition) then) =
-      __$PackagedProductDefinitionCopyWithImpl<$Res>;
+  factory _$$_PackagedProductDefinitionCopyWith(
+          _$_PackagedProductDefinition value,
+          $Res Function(_$_PackagedProductDefinition) then) =
+      __$$_PackagedProductDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -11003,16 +10816,17 @@ abstract class _$PackagedProductDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PackagedProductDefinitionCopyWithImpl<$Res>
+class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
     extends _$PackagedProductDefinitionCopyWithImpl<$Res>
-    implements _$PackagedProductDefinitionCopyWith<$Res> {
-  __$PackagedProductDefinitionCopyWithImpl(_PackagedProductDefinition _value,
-      $Res Function(_PackagedProductDefinition) _then)
-      : super(_value, (v) => _then(v as _PackagedProductDefinition));
+    implements _$$_PackagedProductDefinitionCopyWith<$Res> {
+  __$$_PackagedProductDefinitionCopyWithImpl(
+      _$_PackagedProductDefinition _value,
+      $Res Function(_$_PackagedProductDefinition) _then)
+      : super(_value, (v) => _then(v as _$_PackagedProductDefinition));
 
   @override
-  _PackagedProductDefinition get _value =>
-      super._value as _PackagedProductDefinition;
+  _$_PackagedProductDefinition get _value =>
+      super._value as _$_PackagedProductDefinition;
 
   @override
   $Res call({
@@ -11047,7 +10861,7 @@ class __$PackagedProductDefinitionCopyWithImpl<$Res>
     Object? attachedDocument = freezed,
     Object? package = freezed,
   }) {
-    return _then(_PackagedProductDefinition(
+    return _then(_$_PackagedProductDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -11081,19 +10895,19 @@ class __$PackagedProductDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       name: name == freezed
@@ -11109,7 +10923,7 @@ class __$PackagedProductDefinitionCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       packageFor: packageFor == freezed
-          ? _value.packageFor
+          ? _value._packageFor
           : packageFor // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: status == freezed
@@ -11125,7 +10939,7 @@ class __$PackagedProductDefinitionCopyWithImpl<$Res>
           : statusDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       containedItemQuantity: containedItemQuantity == freezed
-          ? _value.containedItemQuantity
+          ? _value._containedItemQuantity
           : containedItemQuantity // ignore: cast_nullable_to_non_nullable
               as List<Quantity>?,
       description: description == freezed
@@ -11137,15 +10951,15 @@ class __$PackagedProductDefinitionCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       legalStatusOfSupply: legalStatusOfSupply == freezed
-          ? _value.legalStatusOfSupply
+          ? _value._legalStatusOfSupply
           : legalStatusOfSupply // ignore: cast_nullable_to_non_nullable
               as List<PackagedProductDefinitionLegalStatusOfSupply>?,
       marketingStatus: marketingStatus == freezed
-          ? _value.marketingStatus
+          ? _value._marketingStatus
           : marketingStatus // ignore: cast_nullable_to_non_nullable
               as List<MarketingStatus>?,
       characteristic: characteristic == freezed
-          ? _value.characteristic
+          ? _value._characteristic
           : characteristic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       copackagedIndicator: copackagedIndicator == freezed
@@ -11157,11 +10971,11 @@ class __$PackagedProductDefinitionCopyWithImpl<$Res>
           : copackagedIndicatorElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       manufacturer: manufacturer == freezed
-          ? _value.manufacturer
+          ? _value._manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       attachedDocument: attachedDocument == freezed
-          ? _value.attachedDocument
+          ? _value._attachedDocument
           : attachedDocument // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       package: package == freezed
@@ -11184,35 +10998,47 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.type,
-      this.packageFor,
+      final List<Reference>? packageFor,
       this.status,
       this.statusDate,
       @JsonKey(name: '_statusDate') this.statusDateElement,
-      this.containedItemQuantity,
+      final List<Quantity>? containedItemQuantity,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      this.legalStatusOfSupply,
-      this.marketingStatus,
-      this.characteristic,
+      final List<PackagedProductDefinitionLegalStatusOfSupply>?
+          legalStatusOfSupply,
+      final List<MarketingStatus>? marketingStatus,
+      final List<CodeableConcept>? characteristic,
       this.copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator') this.copackagedIndicatorElement,
-      this.manufacturer,
-      this.attachedDocument,
+      final List<Reference>? manufacturer,
+      final List<Reference>? attachedDocument,
       this.package})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _packageFor = packageFor,
+        _containedItemQuantity = containedItemQuantity,
+        _legalStatusOfSupply = legalStatusOfSupply,
+        _marketingStatus = marketingStatus,
+        _characteristic = characteristic,
+        _manufacturer = manufacturer,
+        _attachedDocument = attachedDocument,
+        super._();
 
   factory _$_PackagedProductDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_PackagedProductDefinitionFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -11230,15 +11056,43 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
   @override
@@ -11246,8 +11100,15 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   final Element? nameElement;
   @override
   final CodeableConcept? type;
+  final List<Reference>? _packageFor;
   @override
-  final List<Reference>? packageFor;
+  List<Reference>? get packageFor {
+    final value = _packageFor;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? status;
   @override
@@ -11255,28 +11116,71 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   @override
   @JsonKey(name: '_statusDate')
   final Element? statusDateElement;
+  final List<Quantity>? _containedItemQuantity;
   @override
-  final List<Quantity>? containedItemQuantity;
+  List<Quantity>? get containedItemQuantity {
+    final value = _containedItemQuantity;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<PackagedProductDefinitionLegalStatusOfSupply>?
+      _legalStatusOfSupply;
   @override
-  final List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply;
+  List<PackagedProductDefinitionLegalStatusOfSupply>? get legalStatusOfSupply {
+    final value = _legalStatusOfSupply;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<MarketingStatus>? _marketingStatus;
   @override
-  final List<MarketingStatus>? marketingStatus;
+  List<MarketingStatus>? get marketingStatus {
+    final value = _marketingStatus;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _characteristic;
   @override
-  final List<CodeableConcept>? characteristic;
+  List<CodeableConcept>? get characteristic {
+    final value = _characteristic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? copackagedIndicator;
   @override
   @JsonKey(name: '_copackagedIndicator')
   final Element? copackagedIndicatorElement;
+  final List<Reference>? _manufacturer;
   @override
-  final List<Reference>? manufacturer;
+  List<Reference>? get manufacturer {
+    final value = _manufacturer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _attachedDocument;
   @override
-  final List<Reference>? attachedDocument;
+  List<Reference>? get attachedDocument {
+    final value = _attachedDocument;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final PackagedProductDefinitionPackage? package;
 
@@ -11289,7 +11193,7 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PackagedProductDefinition &&
+            other is _$_PackagedProductDefinition &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -11302,47 +11206,49 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
-                .equals(other.packageFor, packageFor) &&
+                .equals(other._packageFor, _packageFor) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusDate, statusDate) &&
             const DeepCollectionEquality()
                 .equals(other.statusDateElement, statusDateElement) &&
             const DeepCollectionEquality()
-                .equals(other.containedItemQuantity, containedItemQuantity) &&
+                .equals(other._containedItemQuantity, _containedItemQuantity) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.legalStatusOfSupply, legalStatusOfSupply) &&
+                .equals(other._legalStatusOfSupply, _legalStatusOfSupply) &&
             const DeepCollectionEquality()
-                .equals(other.marketingStatus, marketingStatus) &&
+                .equals(other._marketingStatus, _marketingStatus) &&
             const DeepCollectionEquality()
-                .equals(other.characteristic, characteristic) &&
+                .equals(other._characteristic, _characteristic) &&
             const DeepCollectionEquality()
                 .equals(other.copackagedIndicator, copackagedIndicator) &&
             const DeepCollectionEquality().equals(
                 other.copackagedIndicatorElement, copackagedIndicatorElement) &&
             const DeepCollectionEquality()
-                .equals(other.manufacturer, manufacturer) &&
+                .equals(other._manufacturer, _manufacturer) &&
             const DeepCollectionEquality()
-                .equals(other.attachedDocument, attachedDocument) &&
+                .equals(other._attachedDocument, _attachedDocument) &&
             const DeepCollectionEquality().equals(other.package, package));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -11354,36 +11260,35 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(name),
         const DeepCollectionEquality().hash(nameElement),
         const DeepCollectionEquality().hash(type),
-        const DeepCollectionEquality().hash(packageFor),
+        const DeepCollectionEquality().hash(_packageFor),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusDate),
         const DeepCollectionEquality().hash(statusDateElement),
-        const DeepCollectionEquality().hash(containedItemQuantity),
+        const DeepCollectionEquality().hash(_containedItemQuantity),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(legalStatusOfSupply),
-        const DeepCollectionEquality().hash(marketingStatus),
-        const DeepCollectionEquality().hash(characteristic),
+        const DeepCollectionEquality().hash(_legalStatusOfSupply),
+        const DeepCollectionEquality().hash(_marketingStatus),
+        const DeepCollectionEquality().hash(_characteristic),
         const DeepCollectionEquality().hash(copackagedIndicator),
         const DeepCollectionEquality().hash(copackagedIndicatorElement),
-        const DeepCollectionEquality().hash(manufacturer),
-        const DeepCollectionEquality().hash(attachedDocument),
+        const DeepCollectionEquality().hash(_manufacturer),
+        const DeepCollectionEquality().hash(_attachedDocument),
         const DeepCollectionEquality().hash(package)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$PackagedProductDefinitionCopyWith<_PackagedProductDefinition>
-      get copyWith =>
-          __$PackagedProductDefinitionCopyWithImpl<_PackagedProductDefinition>(
-              this, _$identity);
+  _$$_PackagedProductDefinitionCopyWith<_$_PackagedProductDefinition>
+      get copyWith => __$$_PackagedProductDefinitionCopyWithImpl<
+          _$_PackagedProductDefinition>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -11393,119 +11298,118 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
 abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   factory _PackagedProductDefinition(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      CodeableConcept? type,
-      List<Reference>? packageFor,
-      CodeableConcept? status,
-      DateTime? statusDate,
-      @JsonKey(name: '_statusDate')
-          Element? statusDateElement,
-      List<Quantity>? containedItemQuantity,
-      Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
-      List<MarketingStatus>? marketingStatus,
-      List<CodeableConcept>? characteristic,
-      Boolean? copackagedIndicator,
-      @JsonKey(name: '_copackagedIndicator')
-          Element? copackagedIndicatorElement,
-      List<Reference>? manufacturer,
-      List<Reference>? attachedDocument,
-      PackagedProductDefinitionPackage?
-          package}) = _$_PackagedProductDefinition;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final CodeableConcept? type,
+      final List<Reference>? packageFor,
+      final CodeableConcept? status,
+      final DateTime? statusDate,
+      @JsonKey(name: '_statusDate') final Element? statusDateElement,
+      final List<Quantity>? containedItemQuantity,
+      final Markdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<PackagedProductDefinitionLegalStatusOfSupply>?
+          legalStatusOfSupply,
+      final List<MarketingStatus>? marketingStatus,
+      final List<CodeableConcept>? characteristic,
+      final Boolean? copackagedIndicator,
+      @JsonKey(name: '_copackagedIndicator') final Element? copackagedIndicatorElement,
+      final List<Reference>? manufacturer,
+      final List<Reference>? attachedDocument,
+      final PackagedProductDefinitionPackage? package}) = _$_PackagedProductDefinition;
   _PackagedProductDefinition._() : super._();
 
   factory _PackagedProductDefinition.fromJson(Map<String, dynamic> json) =
       _$_PackagedProductDefinition.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get packageFor;
+  List<Reference>? get packageFor => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  DateTime? get statusDate;
+  DateTime? get statusDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
   @override
-  List<Quantity>? get containedItemQuantity;
+  List<Quantity>? get containedItemQuantity =>
+      throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<PackagedProductDefinitionLegalStatusOfSupply>? get legalStatusOfSupply;
+  List<PackagedProductDefinitionLegalStatusOfSupply>? get legalStatusOfSupply =>
+      throw _privateConstructorUsedError;
   @override
-  List<MarketingStatus>? get marketingStatus;
+  List<MarketingStatus>? get marketingStatus =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get characteristic;
+  List<CodeableConcept>? get characteristic =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get copackagedIndicator;
+  Boolean? get copackagedIndicator => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copackagedIndicator')
-  Element? get copackagedIndicatorElement;
+  Element? get copackagedIndicatorElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get attachedDocument;
+  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
   @override
-  PackagedProductDefinitionPackage? get package;
+  PackagedProductDefinitionPackage? get package =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PackagedProductDefinitionCopyWith<_PackagedProductDefinition>
+  _$$_PackagedProductDefinitionCopyWith<_$_PackagedProductDefinition>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11514,35 +11418,6 @@ PackagedProductDefinitionLegalStatusOfSupply
         Map<String, dynamic> json) {
   return _PackagedProductDefinitionLegalStatusOfSupply.fromJson(json);
 }
-
-/// @nodoc
-class _$PackagedProductDefinitionLegalStatusOfSupplyTearOff {
-  const _$PackagedProductDefinitionLegalStatusOfSupplyTearOff();
-
-  _PackagedProductDefinitionLegalStatusOfSupply call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? jurisdiction}) {
-    return _PackagedProductDefinitionLegalStatusOfSupply(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      jurisdiction: jurisdiction,
-    );
-  }
-
-  PackagedProductDefinitionLegalStatusOfSupply fromJson(
-      Map<String, Object?> json) {
-    return PackagedProductDefinitionLegalStatusOfSupply.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PackagedProductDefinitionLegalStatusOfSupply =
-    _$PackagedProductDefinitionLegalStatusOfSupplyTearOff();
 
 /// @nodoc
 mixin _$PackagedProductDefinitionLegalStatusOfSupply {
@@ -11644,12 +11519,12 @@ class _$PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PackagedProductDefinitionLegalStatusOfSupplyCopyWith<$Res>
+abstract class _$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWith<$Res>
     implements $PackagedProductDefinitionLegalStatusOfSupplyCopyWith<$Res> {
-  factory _$PackagedProductDefinitionLegalStatusOfSupplyCopyWith(
-          _PackagedProductDefinitionLegalStatusOfSupply value,
-          $Res Function(_PackagedProductDefinitionLegalStatusOfSupply) then) =
-      __$PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<$Res>;
+  factory _$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWith(
+          _$_PackagedProductDefinitionLegalStatusOfSupply value,
+          $Res Function(_$_PackagedProductDefinitionLegalStatusOfSupply) then) =
+      __$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -11665,18 +11540,18 @@ abstract class _$PackagedProductDefinitionLegalStatusOfSupplyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<$Res>
+class __$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<$Res>
     extends _$PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<$Res>
-    implements _$PackagedProductDefinitionLegalStatusOfSupplyCopyWith<$Res> {
-  __$PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl(
-      _PackagedProductDefinitionLegalStatusOfSupply _value,
-      $Res Function(_PackagedProductDefinitionLegalStatusOfSupply) _then)
+    implements _$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWith<$Res> {
+  __$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl(
+      _$_PackagedProductDefinitionLegalStatusOfSupply _value,
+      $Res Function(_$_PackagedProductDefinitionLegalStatusOfSupply) _then)
       : super(_value,
-            (v) => _then(v as _PackagedProductDefinitionLegalStatusOfSupply));
+            (v) => _then(v as _$_PackagedProductDefinitionLegalStatusOfSupply));
 
   @override
-  _PackagedProductDefinitionLegalStatusOfSupply get _value =>
-      super._value as _PackagedProductDefinitionLegalStatusOfSupply;
+  _$_PackagedProductDefinitionLegalStatusOfSupply get _value =>
+      super._value as _$_PackagedProductDefinitionLegalStatusOfSupply;
 
   @override
   $Res call({
@@ -11686,17 +11561,17 @@ class __$PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<$Res>
     Object? code = freezed,
     Object? jurisdiction = freezed,
   }) {
-    return _then(_PackagedProductDefinitionLegalStatusOfSupply(
+    return _then(_$_PackagedProductDefinitionLegalStatusOfSupply(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -11717,11 +11592,13 @@ class _$_PackagedProductDefinitionLegalStatusOfSupply
     extends _PackagedProductDefinitionLegalStatusOfSupply {
   _$_PackagedProductDefinitionLegalStatusOfSupply(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.code,
       this.jurisdiction})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_PackagedProductDefinitionLegalStatusOfSupply.fromJson(
           Map<String, dynamic> json) =>
@@ -11729,11 +11606,25 @@ class _$_PackagedProductDefinitionLegalStatusOfSupply
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? code;
   @override
@@ -11748,33 +11639,35 @@ class _$_PackagedProductDefinitionLegalStatusOfSupply
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PackagedProductDefinitionLegalStatusOfSupply &&
+            other is _$_PackagedProductDefinitionLegalStatusOfSupply &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.jurisdiction, jurisdiction));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(jurisdiction));
 
   @JsonKey(ignore: true)
   @override
-  _$PackagedProductDefinitionLegalStatusOfSupplyCopyWith<
-          _PackagedProductDefinitionLegalStatusOfSupply>
+  _$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWith<
+          _$_PackagedProductDefinitionLegalStatusOfSupply>
       get copyWith =>
-          __$PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<
-              _PackagedProductDefinitionLegalStatusOfSupply>(this, _$identity);
+          __$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWithImpl<
+                  _$_PackagedProductDefinitionLegalStatusOfSupply>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -11785,11 +11678,11 @@ class _$_PackagedProductDefinitionLegalStatusOfSupply
 abstract class _PackagedProductDefinitionLegalStatusOfSupply
     extends PackagedProductDefinitionLegalStatusOfSupply {
   factory _PackagedProductDefinitionLegalStatusOfSupply(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? code,
-          CodeableConcept? jurisdiction}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? code,
+          final CodeableConcept? jurisdiction}) =
       _$_PackagedProductDefinitionLegalStatusOfSupply;
   _PackagedProductDefinitionLegalStatusOfSupply._() : super._();
 
@@ -11798,20 +11691,21 @@ abstract class _PackagedProductDefinitionLegalStatusOfSupply
       _$_PackagedProductDefinitionLegalStatusOfSupply.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get jurisdiction;
+  CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PackagedProductDefinitionLegalStatusOfSupplyCopyWith<
-          _PackagedProductDefinitionLegalStatusOfSupply>
+  _$$_PackagedProductDefinitionLegalStatusOfSupplyCopyWith<
+          _$_PackagedProductDefinitionLegalStatusOfSupply>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11819,52 +11713,6 @@ PackagedProductDefinitionPackage _$PackagedProductDefinitionPackageFromJson(
     Map<String, dynamic> json) {
   return _PackagedProductDefinitionPackage.fromJson(json);
 }
-
-/// @nodoc
-class _$PackagedProductDefinitionPackageTearOff {
-  const _$PackagedProductDefinitionPackageTearOff();
-
-  _PackagedProductDefinitionPackage call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? type,
-      Integer? quantity,
-      @JsonKey(name: '_quantity') Element? quantityElement,
-      List<CodeableConcept>? material,
-      List<CodeableConcept>? alternateMaterial,
-      List<ProductShelfLife>? shelfLifeStorage,
-      List<Reference>? manufacturer,
-      List<PackagedProductDefinitionProperty>? property,
-      List<PackagedProductDefinitionContainedItem>? containedItem,
-      List<PackagedProductDefinitionPackage>? package}) {
-    return _PackagedProductDefinitionPackage(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      quantity: quantity,
-      quantityElement: quantityElement,
-      material: material,
-      alternateMaterial: alternateMaterial,
-      shelfLifeStorage: shelfLifeStorage,
-      manufacturer: manufacturer,
-      property: property,
-      containedItem: containedItem,
-      package: package,
-    );
-  }
-
-  PackagedProductDefinitionPackage fromJson(Map<String, Object?> json) {
-    return PackagedProductDefinitionPackage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PackagedProductDefinitionPackage =
-    _$PackagedProductDefinitionPackageTearOff();
 
 /// @nodoc
 mixin _$PackagedProductDefinitionPackage {
@@ -12033,12 +11881,12 @@ class _$PackagedProductDefinitionPackageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PackagedProductDefinitionPackageCopyWith<$Res>
+abstract class _$$_PackagedProductDefinitionPackageCopyWith<$Res>
     implements $PackagedProductDefinitionPackageCopyWith<$Res> {
-  factory _$PackagedProductDefinitionPackageCopyWith(
-          _PackagedProductDefinitionPackage value,
-          $Res Function(_PackagedProductDefinitionPackage) then) =
-      __$PackagedProductDefinitionPackageCopyWithImpl<$Res>;
+  factory _$$_PackagedProductDefinitionPackageCopyWith(
+          _$_PackagedProductDefinitionPackage value,
+          $Res Function(_$_PackagedProductDefinitionPackage) then) =
+      __$$_PackagedProductDefinitionPackageCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -12063,17 +11911,17 @@ abstract class _$PackagedProductDefinitionPackageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PackagedProductDefinitionPackageCopyWithImpl<$Res>
+class __$$_PackagedProductDefinitionPackageCopyWithImpl<$Res>
     extends _$PackagedProductDefinitionPackageCopyWithImpl<$Res>
-    implements _$PackagedProductDefinitionPackageCopyWith<$Res> {
-  __$PackagedProductDefinitionPackageCopyWithImpl(
-      _PackagedProductDefinitionPackage _value,
-      $Res Function(_PackagedProductDefinitionPackage) _then)
-      : super(_value, (v) => _then(v as _PackagedProductDefinitionPackage));
+    implements _$$_PackagedProductDefinitionPackageCopyWith<$Res> {
+  __$$_PackagedProductDefinitionPackageCopyWithImpl(
+      _$_PackagedProductDefinitionPackage _value,
+      $Res Function(_$_PackagedProductDefinitionPackage) _then)
+      : super(_value, (v) => _then(v as _$_PackagedProductDefinitionPackage));
 
   @override
-  _PackagedProductDefinitionPackage get _value =>
-      super._value as _PackagedProductDefinitionPackage;
+  _$_PackagedProductDefinitionPackage get _value =>
+      super._value as _$_PackagedProductDefinitionPackage;
 
   @override
   $Res call({
@@ -12092,21 +11940,21 @@ class __$PackagedProductDefinitionPackageCopyWithImpl<$Res>
     Object? containedItem = freezed,
     Object? package = freezed,
   }) {
-    return _then(_PackagedProductDefinitionPackage(
+    return _then(_$_PackagedProductDefinitionPackage(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: type == freezed
@@ -12122,31 +11970,31 @@ class __$PackagedProductDefinitionPackageCopyWithImpl<$Res>
           : quantityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       material: material == freezed
-          ? _value.material
+          ? _value._material
           : material // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       alternateMaterial: alternateMaterial == freezed
-          ? _value.alternateMaterial
+          ? _value._alternateMaterial
           : alternateMaterial // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       shelfLifeStorage: shelfLifeStorage == freezed
-          ? _value.shelfLifeStorage
+          ? _value._shelfLifeStorage
           : shelfLifeStorage // ignore: cast_nullable_to_non_nullable
               as List<ProductShelfLife>?,
       manufacturer: manufacturer == freezed
-          ? _value.manufacturer
+          ? _value._manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       property: property == freezed
-          ? _value.property
+          ? _value._property
           : property // ignore: cast_nullable_to_non_nullable
               as List<PackagedProductDefinitionProperty>?,
       containedItem: containedItem == freezed
-          ? _value.containedItem
+          ? _value._containedItem
           : containedItem // ignore: cast_nullable_to_non_nullable
               as List<PackagedProductDefinitionContainedItem>?,
       package: package == freezed
-          ? _value.package
+          ? _value._package
           : package // ignore: cast_nullable_to_non_nullable
               as List<PackagedProductDefinitionPackage>?,
     ));
@@ -12159,20 +12007,30 @@ class _$_PackagedProductDefinitionPackage
     extends _PackagedProductDefinitionPackage {
   _$_PackagedProductDefinitionPackage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.type,
       this.quantity,
       @JsonKey(name: '_quantity') this.quantityElement,
-      this.material,
-      this.alternateMaterial,
-      this.shelfLifeStorage,
-      this.manufacturer,
-      this.property,
-      this.containedItem,
-      this.package})
-      : super._();
+      final List<CodeableConcept>? material,
+      final List<CodeableConcept>? alternateMaterial,
+      final List<ProductShelfLife>? shelfLifeStorage,
+      final List<Reference>? manufacturer,
+      final List<PackagedProductDefinitionProperty>? property,
+      final List<PackagedProductDefinitionContainedItem>? containedItem,
+      final List<PackagedProductDefinitionPackage>? package})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _material = material,
+        _alternateMaterial = alternateMaterial,
+        _shelfLifeStorage = shelfLifeStorage,
+        _manufacturer = manufacturer,
+        _property = property,
+        _containedItem = containedItem,
+        _package = package,
+        super._();
 
   factory _$_PackagedProductDefinitionPackage.fromJson(
           Map<String, dynamic> json) =>
@@ -12180,13 +12038,34 @@ class _$_PackagedProductDefinitionPackage
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -12194,20 +12073,68 @@ class _$_PackagedProductDefinitionPackage
   @override
   @JsonKey(name: '_quantity')
   final Element? quantityElement;
+  final List<CodeableConcept>? _material;
   @override
-  final List<CodeableConcept>? material;
+  List<CodeableConcept>? get material {
+    final value = _material;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _alternateMaterial;
   @override
-  final List<CodeableConcept>? alternateMaterial;
+  List<CodeableConcept>? get alternateMaterial {
+    final value = _alternateMaterial;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ProductShelfLife>? _shelfLifeStorage;
   @override
-  final List<ProductShelfLife>? shelfLifeStorage;
+  List<ProductShelfLife>? get shelfLifeStorage {
+    final value = _shelfLifeStorage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _manufacturer;
   @override
-  final List<Reference>? manufacturer;
+  List<Reference>? get manufacturer {
+    final value = _manufacturer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<PackagedProductDefinitionProperty>? _property;
   @override
-  final List<PackagedProductDefinitionProperty>? property;
+  List<PackagedProductDefinitionProperty>? get property {
+    final value = _property;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<PackagedProductDefinitionContainedItem>? _containedItem;
   @override
-  final List<PackagedProductDefinitionContainedItem>? containedItem;
+  List<PackagedProductDefinitionContainedItem>? get containedItem {
+    final value = _containedItem;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<PackagedProductDefinitionPackage>? _package;
   @override
-  final List<PackagedProductDefinitionPackage>? package;
+  List<PackagedProductDefinitionPackage>? get package {
+    final value = _package;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -12218,54 +12145,56 @@ class _$_PackagedProductDefinitionPackage
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PackagedProductDefinitionPackage &&
+            other is _$_PackagedProductDefinitionPackage &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.quantity, quantity) &&
             const DeepCollectionEquality()
                 .equals(other.quantityElement, quantityElement) &&
-            const DeepCollectionEquality().equals(other.material, material) &&
+            const DeepCollectionEquality().equals(other._material, _material) &&
             const DeepCollectionEquality()
-                .equals(other.alternateMaterial, alternateMaterial) &&
+                .equals(other._alternateMaterial, _alternateMaterial) &&
             const DeepCollectionEquality()
-                .equals(other.shelfLifeStorage, shelfLifeStorage) &&
+                .equals(other._shelfLifeStorage, _shelfLifeStorage) &&
             const DeepCollectionEquality()
-                .equals(other.manufacturer, manufacturer) &&
-            const DeepCollectionEquality().equals(other.property, property) &&
+                .equals(other._manufacturer, _manufacturer) &&
+            const DeepCollectionEquality().equals(other._property, _property) &&
             const DeepCollectionEquality()
-                .equals(other.containedItem, containedItem) &&
-            const DeepCollectionEquality().equals(other.package, package));
+                .equals(other._containedItem, _containedItem) &&
+            const DeepCollectionEquality().equals(other._package, _package));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_identifier),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(quantity),
       const DeepCollectionEquality().hash(quantityElement),
-      const DeepCollectionEquality().hash(material),
-      const DeepCollectionEquality().hash(alternateMaterial),
-      const DeepCollectionEquality().hash(shelfLifeStorage),
-      const DeepCollectionEquality().hash(manufacturer),
-      const DeepCollectionEquality().hash(property),
-      const DeepCollectionEquality().hash(containedItem),
-      const DeepCollectionEquality().hash(package));
+      const DeepCollectionEquality().hash(_material),
+      const DeepCollectionEquality().hash(_alternateMaterial),
+      const DeepCollectionEquality().hash(_shelfLifeStorage),
+      const DeepCollectionEquality().hash(_manufacturer),
+      const DeepCollectionEquality().hash(_property),
+      const DeepCollectionEquality().hash(_containedItem),
+      const DeepCollectionEquality().hash(_package));
 
   @JsonKey(ignore: true)
   @override
-  _$PackagedProductDefinitionPackageCopyWith<_PackagedProductDefinitionPackage>
-      get copyWith => __$PackagedProductDefinitionPackageCopyWithImpl<
-          _PackagedProductDefinitionPackage>(this, _$identity);
+  _$$_PackagedProductDefinitionPackageCopyWith<
+          _$_PackagedProductDefinitionPackage>
+      get copyWith => __$$_PackagedProductDefinitionPackageCopyWithImpl<
+          _$_PackagedProductDefinitionPackage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -12276,20 +12205,20 @@ class _$_PackagedProductDefinitionPackage
 abstract class _PackagedProductDefinitionPackage
     extends PackagedProductDefinitionPackage {
   factory _PackagedProductDefinitionPackage(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
-          CodeableConcept? type,
-          Integer? quantity,
-          @JsonKey(name: '_quantity') Element? quantityElement,
-          List<CodeableConcept>? material,
-          List<CodeableConcept>? alternateMaterial,
-          List<ProductShelfLife>? shelfLifeStorage,
-          List<Reference>? manufacturer,
-          List<PackagedProductDefinitionProperty>? property,
-          List<PackagedProductDefinitionContainedItem>? containedItem,
-          List<PackagedProductDefinitionPackage>? package}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final CodeableConcept? type,
+          final Integer? quantity,
+          @JsonKey(name: '_quantity') final Element? quantityElement,
+          final List<CodeableConcept>? material,
+          final List<CodeableConcept>? alternateMaterial,
+          final List<ProductShelfLife>? shelfLifeStorage,
+          final List<Reference>? manufacturer,
+          final List<PackagedProductDefinitionProperty>? property,
+          final List<PackagedProductDefinitionContainedItem>? containedItem,
+          final List<PackagedProductDefinitionPackage>? package}) =
       _$_PackagedProductDefinitionPackage;
   _PackagedProductDefinitionPackage._() : super._();
 
@@ -12297,38 +12226,45 @@ abstract class _PackagedProductDefinitionPackage
       Map<String, dynamic> json) = _$_PackagedProductDefinitionPackage.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Integer? get quantity;
+  Integer? get quantity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_quantity')
-  Element? get quantityElement;
+  Element? get quantityElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get material;
+  List<CodeableConcept>? get material => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get alternateMaterial;
+  List<CodeableConcept>? get alternateMaterial =>
+      throw _privateConstructorUsedError;
   @override
-  List<ProductShelfLife>? get shelfLifeStorage;
+  List<ProductShelfLife>? get shelfLifeStorage =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
-  List<PackagedProductDefinitionProperty>? get property;
+  List<PackagedProductDefinitionProperty>? get property =>
+      throw _privateConstructorUsedError;
   @override
-  List<PackagedProductDefinitionContainedItem>? get containedItem;
+  List<PackagedProductDefinitionContainedItem>? get containedItem =>
+      throw _privateConstructorUsedError;
   @override
-  List<PackagedProductDefinitionPackage>? get package;
+  List<PackagedProductDefinitionPackage>? get package =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PackagedProductDefinitionPackageCopyWith<_PackagedProductDefinitionPackage>
+  _$$_PackagedProductDefinitionPackageCopyWith<
+          _$_PackagedProductDefinitionPackage>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -12336,46 +12272,6 @@ PackagedProductDefinitionProperty _$PackagedProductDefinitionPropertyFromJson(
     Map<String, dynamic> json) {
   return _PackagedProductDefinitionProperty.fromJson(json);
 }
-
-/// @nodoc
-class _$PackagedProductDefinitionPropertyTearOff {
-  const _$PackagedProductDefinitionPropertyTearOff();
-
-  _PackagedProductDefinitionProperty call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment}) {
-    return _PackagedProductDefinitionProperty(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueCodeableConcept: valueCodeableConcept,
-      valueQuantity: valueQuantity,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueAttachment: valueAttachment,
-    );
-  }
-
-  PackagedProductDefinitionProperty fromJson(Map<String, Object?> json) {
-    return PackagedProductDefinitionProperty.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PackagedProductDefinitionProperty =
-    _$PackagedProductDefinitionPropertyTearOff();
 
 /// @nodoc
 mixin _$PackagedProductDefinitionProperty {
@@ -12565,12 +12461,12 @@ class _$PackagedProductDefinitionPropertyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PackagedProductDefinitionPropertyCopyWith<$Res>
+abstract class _$$_PackagedProductDefinitionPropertyCopyWith<$Res>
     implements $PackagedProductDefinitionPropertyCopyWith<$Res> {
-  factory _$PackagedProductDefinitionPropertyCopyWith(
-          _PackagedProductDefinitionProperty value,
-          $Res Function(_PackagedProductDefinitionProperty) then) =
-      __$PackagedProductDefinitionPropertyCopyWithImpl<$Res>;
+  factory _$$_PackagedProductDefinitionPropertyCopyWith(
+          _$_PackagedProductDefinitionProperty value,
+          $Res Function(_$_PackagedProductDefinitionProperty) then) =
+      __$$_PackagedProductDefinitionPropertyCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -12600,17 +12496,17 @@ abstract class _$PackagedProductDefinitionPropertyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PackagedProductDefinitionPropertyCopyWithImpl<$Res>
+class __$$_PackagedProductDefinitionPropertyCopyWithImpl<$Res>
     extends _$PackagedProductDefinitionPropertyCopyWithImpl<$Res>
-    implements _$PackagedProductDefinitionPropertyCopyWith<$Res> {
-  __$PackagedProductDefinitionPropertyCopyWithImpl(
-      _PackagedProductDefinitionProperty _value,
-      $Res Function(_PackagedProductDefinitionProperty) _then)
-      : super(_value, (v) => _then(v as _PackagedProductDefinitionProperty));
+    implements _$$_PackagedProductDefinitionPropertyCopyWith<$Res> {
+  __$$_PackagedProductDefinitionPropertyCopyWithImpl(
+      _$_PackagedProductDefinitionProperty _value,
+      $Res Function(_$_PackagedProductDefinitionProperty) _then)
+      : super(_value, (v) => _then(v as _$_PackagedProductDefinitionProperty));
 
   @override
-  _PackagedProductDefinitionProperty get _value =>
-      super._value as _PackagedProductDefinitionProperty;
+  _$_PackagedProductDefinitionProperty get _value =>
+      super._value as _$_PackagedProductDefinitionProperty;
 
   @override
   $Res call({
@@ -12626,17 +12522,17 @@ class __$PackagedProductDefinitionPropertyCopyWithImpl<$Res>
     Object? valueBooleanElement = freezed,
     Object? valueAttachment = freezed,
   }) {
-    return _then(_PackagedProductDefinitionProperty(
+    return _then(_$_PackagedProductDefinitionProperty(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -12681,8 +12577,8 @@ class _$_PackagedProductDefinitionProperty
     extends _PackagedProductDefinitionProperty {
   _$_PackagedProductDefinitionProperty(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueCodeableConcept,
       this.valueQuantity,
@@ -12691,7 +12587,9 @@ class _$_PackagedProductDefinitionProperty
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueAttachment})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_PackagedProductDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
@@ -12699,11 +12597,25 @@ class _$_PackagedProductDefinitionProperty
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -12732,12 +12644,12 @@ class _$_PackagedProductDefinitionProperty
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PackagedProductDefinitionProperty &&
+            other is _$_PackagedProductDefinitionProperty &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
@@ -12754,12 +12666,13 @@ class _$_PackagedProductDefinitionProperty
                 .equals(other.valueAttachment, valueAttachment));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(valueCodeableConcept),
       const DeepCollectionEquality().hash(valueQuantity),
@@ -12771,10 +12684,10 @@ class _$_PackagedProductDefinitionProperty
 
   @JsonKey(ignore: true)
   @override
-  _$PackagedProductDefinitionPropertyCopyWith<
-          _PackagedProductDefinitionProperty>
-      get copyWith => __$PackagedProductDefinitionPropertyCopyWithImpl<
-          _PackagedProductDefinitionProperty>(this, _$identity);
+  _$$_PackagedProductDefinitionPropertyCopyWith<
+          _$_PackagedProductDefinitionProperty>
+      get copyWith => __$$_PackagedProductDefinitionPropertyCopyWithImpl<
+          _$_PackagedProductDefinitionProperty>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -12785,17 +12698,18 @@ class _$_PackagedProductDefinitionProperty
 abstract class _PackagedProductDefinitionProperty
     extends PackagedProductDefinitionProperty {
   factory _PackagedProductDefinitionProperty(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment}) = _$_PackagedProductDefinitionProperty;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final CodeableConcept? valueCodeableConcept,
+          final Quantity? valueQuantity,
+          final Date? valueDate,
+          @JsonKey(name: '_valueDate') final Element? valueDateElement,
+          final Boolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final Attachment? valueAttachment}) =
+      _$_PackagedProductDefinitionProperty;
   _PackagedProductDefinitionProperty._() : super._();
 
   factory _PackagedProductDefinitionProperty.fromJson(
@@ -12803,34 +12717,36 @@ abstract class _PackagedProductDefinitionProperty
       _$_PackagedProductDefinitionProperty.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PackagedProductDefinitionPropertyCopyWith<
-          _PackagedProductDefinitionProperty>
+  _$$_PackagedProductDefinitionPropertyCopyWith<
+          _$_PackagedProductDefinitionProperty>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -12839,34 +12755,6 @@ PackagedProductDefinitionContainedItem
         Map<String, dynamic> json) {
   return _PackagedProductDefinitionContainedItem.fromJson(json);
 }
-
-/// @nodoc
-class _$PackagedProductDefinitionContainedItemTearOff {
-  const _$PackagedProductDefinitionContainedItemTearOff();
-
-  _PackagedProductDefinitionContainedItem call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableReference item,
-      Quantity? amount}) {
-    return _PackagedProductDefinitionContainedItem(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      item: item,
-      amount: amount,
-    );
-  }
-
-  PackagedProductDefinitionContainedItem fromJson(Map<String, Object?> json) {
-    return PackagedProductDefinitionContainedItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PackagedProductDefinitionContainedItem =
-    _$PackagedProductDefinitionContainedItemTearOff();
 
 /// @nodoc
 mixin _$PackagedProductDefinitionContainedItem {
@@ -12963,12 +12851,12 @@ class _$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PackagedProductDefinitionContainedItemCopyWith<$Res>
+abstract class _$$_PackagedProductDefinitionContainedItemCopyWith<$Res>
     implements $PackagedProductDefinitionContainedItemCopyWith<$Res> {
-  factory _$PackagedProductDefinitionContainedItemCopyWith(
-          _PackagedProductDefinitionContainedItem value,
-          $Res Function(_PackagedProductDefinitionContainedItem) then) =
-      __$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>;
+  factory _$$_PackagedProductDefinitionContainedItemCopyWith(
+          _$_PackagedProductDefinitionContainedItem value,
+          $Res Function(_$_PackagedProductDefinitionContainedItem) then) =
+      __$$_PackagedProductDefinitionContainedItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -12984,18 +12872,18 @@ abstract class _$PackagedProductDefinitionContainedItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
+class __$$_PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
     extends _$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
-    implements _$PackagedProductDefinitionContainedItemCopyWith<$Res> {
-  __$PackagedProductDefinitionContainedItemCopyWithImpl(
-      _PackagedProductDefinitionContainedItem _value,
-      $Res Function(_PackagedProductDefinitionContainedItem) _then)
-      : super(
-            _value, (v) => _then(v as _PackagedProductDefinitionContainedItem));
+    implements _$$_PackagedProductDefinitionContainedItemCopyWith<$Res> {
+  __$$_PackagedProductDefinitionContainedItemCopyWithImpl(
+      _$_PackagedProductDefinitionContainedItem _value,
+      $Res Function(_$_PackagedProductDefinitionContainedItem) _then)
+      : super(_value,
+            (v) => _then(v as _$_PackagedProductDefinitionContainedItem));
 
   @override
-  _PackagedProductDefinitionContainedItem get _value =>
-      super._value as _PackagedProductDefinitionContainedItem;
+  _$_PackagedProductDefinitionContainedItem get _value =>
+      super._value as _$_PackagedProductDefinitionContainedItem;
 
   @override
   $Res call({
@@ -13005,17 +12893,17 @@ class __$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
     Object? item = freezed,
     Object? amount = freezed,
   }) {
-    return _then(_PackagedProductDefinitionContainedItem(
+    return _then(_$_PackagedProductDefinitionContainedItem(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       item: item == freezed
@@ -13036,11 +12924,13 @@ class _$_PackagedProductDefinitionContainedItem
     extends _PackagedProductDefinitionContainedItem {
   _$_PackagedProductDefinitionContainedItem(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.item,
       this.amount})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_PackagedProductDefinitionContainedItem.fromJson(
           Map<String, dynamic> json) =>
@@ -13048,11 +12938,25 @@ class _$_PackagedProductDefinitionContainedItem
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableReference item;
   @override
@@ -13067,31 +12971,32 @@ class _$_PackagedProductDefinitionContainedItem
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PackagedProductDefinitionContainedItem &&
+            other is _$_PackagedProductDefinitionContainedItem &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.item, item) &&
             const DeepCollectionEquality().equals(other.amount, amount));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(item),
       const DeepCollectionEquality().hash(amount));
 
   @JsonKey(ignore: true)
   @override
-  _$PackagedProductDefinitionContainedItemCopyWith<
-          _PackagedProductDefinitionContainedItem>
-      get copyWith => __$PackagedProductDefinitionContainedItemCopyWithImpl<
-          _PackagedProductDefinitionContainedItem>(this, _$identity);
+  _$$_PackagedProductDefinitionContainedItemCopyWith<
+          _$_PackagedProductDefinitionContainedItem>
+      get copyWith => __$$_PackagedProductDefinitionContainedItemCopyWithImpl<
+          _$_PackagedProductDefinitionContainedItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13102,11 +13007,11 @@ class _$_PackagedProductDefinitionContainedItem
 abstract class _PackagedProductDefinitionContainedItem
     extends PackagedProductDefinitionContainedItem {
   factory _PackagedProductDefinitionContainedItem(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableReference item,
-      Quantity? amount}) = _$_PackagedProductDefinitionContainedItem;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableReference item,
+      final Quantity? amount}) = _$_PackagedProductDefinitionContainedItem;
   _PackagedProductDefinitionContainedItem._() : super._();
 
   factory _PackagedProductDefinitionContainedItem.fromJson(
@@ -13114,20 +13019,21 @@ abstract class _PackagedProductDefinitionContainedItem
       _$_PackagedProductDefinitionContainedItem.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableReference get item;
+  CodeableReference get item => throw _privateConstructorUsedError;
   @override
-  Quantity? get amount;
+  Quantity? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PackagedProductDefinitionContainedItemCopyWith<
-          _PackagedProductDefinitionContainedItem>
+  _$$_PackagedProductDefinitionContainedItemCopyWith<
+          _$_PackagedProductDefinitionContainedItem>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -13135,79 +13041,6 @@ RegulatedAuthorization _$RegulatedAuthorizationFromJson(
     Map<String, dynamic> json) {
   return _RegulatedAuthorization.fromJson(json);
 }
-
-/// @nodoc
-class _$RegulatedAuthorizationTearOff {
-  const _$RegulatedAuthorizationTearOff();
-
-  _RegulatedAuthorization call(
-      {R5ResourceType resourceType = R5ResourceType.RegulatedAuthorization,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? subject,
-      CodeableConcept? type,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<CodeableConcept>? region,
-      CodeableConcept? status,
-      DateTime? statusDate,
-      @JsonKey(name: '_statusDate') Element? statusDateElement,
-      Period? validityPeriod,
-      CodeableReference? indication,
-      CodeableConcept? intendedUse,
-      List<CodeableConcept>? basis,
-      Reference? holder,
-      Reference? regulator,
-      List<Reference>? attachedDocument,
-      @JsonKey(name: 'case') RegulatedAuthorizationCase? case_}) {
-    return _RegulatedAuthorization(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      subject: subject,
-      type: type,
-      description: description,
-      descriptionElement: descriptionElement,
-      region: region,
-      status: status,
-      statusDate: statusDate,
-      statusDateElement: statusDateElement,
-      validityPeriod: validityPeriod,
-      indication: indication,
-      intendedUse: intendedUse,
-      basis: basis,
-      holder: holder,
-      regulator: regulator,
-      attachedDocument: attachedDocument,
-      case_: case_,
-    );
-  }
-
-  RegulatedAuthorization fromJson(Map<String, Object?> json) {
-    return RegulatedAuthorization.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RegulatedAuthorization = _$RegulatedAuthorizationTearOff();
 
 /// @nodoc
 mixin _$RegulatedAuthorization {
@@ -13616,11 +13449,11 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$RegulatedAuthorizationCopyWith<$Res>
+abstract class _$$_RegulatedAuthorizationCopyWith<$Res>
     implements $RegulatedAuthorizationCopyWith<$Res> {
-  factory _$RegulatedAuthorizationCopyWith(_RegulatedAuthorization value,
-          $Res Function(_RegulatedAuthorization) then) =
-      __$RegulatedAuthorizationCopyWithImpl<$Res>;
+  factory _$$_RegulatedAuthorizationCopyWith(_$_RegulatedAuthorization value,
+          $Res Function(_$_RegulatedAuthorization) then) =
+      __$$_RegulatedAuthorizationCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -13683,15 +13516,16 @@ abstract class _$RegulatedAuthorizationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RegulatedAuthorizationCopyWithImpl<$Res>
+class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
     extends _$RegulatedAuthorizationCopyWithImpl<$Res>
-    implements _$RegulatedAuthorizationCopyWith<$Res> {
-  __$RegulatedAuthorizationCopyWithImpl(_RegulatedAuthorization _value,
-      $Res Function(_RegulatedAuthorization) _then)
-      : super(_value, (v) => _then(v as _RegulatedAuthorization));
+    implements _$$_RegulatedAuthorizationCopyWith<$Res> {
+  __$$_RegulatedAuthorizationCopyWithImpl(_$_RegulatedAuthorization _value,
+      $Res Function(_$_RegulatedAuthorization) _then)
+      : super(_value, (v) => _then(v as _$_RegulatedAuthorization));
 
   @override
-  _RegulatedAuthorization get _value => super._value as _RegulatedAuthorization;
+  _$_RegulatedAuthorization get _value =>
+      super._value as _$_RegulatedAuthorization;
 
   @override
   $Res call({
@@ -13724,7 +13558,7 @@ class __$RegulatedAuthorizationCopyWithImpl<$Res>
     Object? attachedDocument = freezed,
     Object? case_ = freezed,
   }) {
-    return _then(_RegulatedAuthorization(
+    return _then(_$_RegulatedAuthorization(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -13758,23 +13592,23 @@ class __$RegulatedAuthorizationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       subject: subject == freezed
-          ? _value.subject
+          ? _value._subject
           : subject // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       type: type == freezed
@@ -13790,7 +13624,7 @@ class __$RegulatedAuthorizationCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       region: region == freezed
-          ? _value.region
+          ? _value._region
           : region // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       status: status == freezed
@@ -13818,7 +13652,7 @@ class __$RegulatedAuthorizationCopyWithImpl<$Res>
           : intendedUse // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       basis: basis == freezed
-          ? _value.basis
+          ? _value._basis
           : basis // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       holder: holder == freezed
@@ -13830,7 +13664,7 @@ class __$RegulatedAuthorizationCopyWithImpl<$Res>
           : regulator // ignore: cast_nullable_to_non_nullable
               as Reference?,
       attachedDocument: attachedDocument == freezed
-          ? _value.attachedDocument
+          ? _value._attachedDocument
           : attachedDocument // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       case_: case_ == freezed
@@ -13853,33 +13687,41 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.subject,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? subject,
       this.type,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      this.region,
+      final List<CodeableConcept>? region,
       this.status,
       this.statusDate,
       @JsonKey(name: '_statusDate') this.statusDateElement,
       this.validityPeriod,
       this.indication,
       this.intendedUse,
-      this.basis,
+      final List<CodeableConcept>? basis,
       this.holder,
       this.regulator,
-      this.attachedDocument,
+      final List<Reference>? attachedDocument,
       @JsonKey(name: 'case') this.case_})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _subject = subject,
+        _region = region,
+        _basis = basis,
+        _attachedDocument = attachedDocument,
+        super._();
 
   factory _$_RegulatedAuthorization.fromJson(Map<String, dynamic> json) =>
       _$$_RegulatedAuthorizationFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -13897,17 +13739,52 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _subject;
   @override
-  final List<Reference>? subject;
+  List<Reference>? get subject {
+    final value = _subject;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -13915,8 +13792,15 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<CodeableConcept>? _region;
   @override
-  final List<CodeableConcept>? region;
+  List<CodeableConcept>? get region {
+    final value = _region;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? status;
   @override
@@ -13930,14 +13814,28 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   final CodeableReference? indication;
   @override
   final CodeableConcept? intendedUse;
+  final List<CodeableConcept>? _basis;
   @override
-  final List<CodeableConcept>? basis;
+  List<CodeableConcept>? get basis {
+    final value = _basis;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? holder;
   @override
   final Reference? regulator;
+  final List<Reference>? _attachedDocument;
   @override
-  final List<Reference>? attachedDocument;
+  List<Reference>? get attachedDocument {
+    final value = _attachedDocument;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'case')
   final RegulatedAuthorizationCase? case_;
@@ -13951,7 +13849,7 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RegulatedAuthorization &&
+            other is _$_RegulatedAuthorization &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -13964,20 +13862,21 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
-            const DeepCollectionEquality().equals(other.subject, subject) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._subject, _subject) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.region, region) &&
+            const DeepCollectionEquality().equals(other._region, _region) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusDate, statusDate) &&
@@ -13989,14 +13888,15 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
                 .equals(other.indication, indication) &&
             const DeepCollectionEquality()
                 .equals(other.intendedUse, intendedUse) &&
-            const DeepCollectionEquality().equals(other.basis, basis) &&
+            const DeepCollectionEquality().equals(other._basis, _basis) &&
             const DeepCollectionEquality().equals(other.holder, holder) &&
             const DeepCollectionEquality().equals(other.regulator, regulator) &&
             const DeepCollectionEquality()
-                .equals(other.attachedDocument, attachedDocument) &&
+                .equals(other._attachedDocument, _attachedDocument) &&
             const DeepCollectionEquality().equals(other.case_, case_));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -14008,32 +13908,32 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(subject),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_subject),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(region),
+        const DeepCollectionEquality().hash(_region),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusDate),
         const DeepCollectionEquality().hash(statusDateElement),
         const DeepCollectionEquality().hash(validityPeriod),
         const DeepCollectionEquality().hash(indication),
         const DeepCollectionEquality().hash(intendedUse),
-        const DeepCollectionEquality().hash(basis),
+        const DeepCollectionEquality().hash(_basis),
         const DeepCollectionEquality().hash(holder),
         const DeepCollectionEquality().hash(regulator),
-        const DeepCollectionEquality().hash(attachedDocument),
+        const DeepCollectionEquality().hash(_attachedDocument),
         const DeepCollectionEquality().hash(case_)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$RegulatedAuthorizationCopyWith<_RegulatedAuthorization> get copyWith =>
-      __$RegulatedAuthorizationCopyWithImpl<_RegulatedAuthorization>(
+  _$$_RegulatedAuthorizationCopyWith<_$_RegulatedAuthorization> get copyWith =>
+      __$$_RegulatedAuthorizationCopyWithImpl<_$_RegulatedAuthorization>(
           this, _$identity);
 
   @override
@@ -14044,34 +13944,34 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
 abstract class _RegulatedAuthorization extends RegulatedAuthorization {
   factory _RegulatedAuthorization(
-          {R5ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language') Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
-          List<Reference>? subject,
-          CodeableConcept? type,
-          Markdown? description,
-          @JsonKey(name: '_description') Element? descriptionElement,
-          List<CodeableConcept>? region,
-          CodeableConcept? status,
-          DateTime? statusDate,
-          @JsonKey(name: '_statusDate') Element? statusDateElement,
-          Period? validityPeriod,
-          CodeableReference? indication,
-          CodeableConcept? intendedUse,
-          List<CodeableConcept>? basis,
-          Reference? holder,
-          Reference? regulator,
-          List<Reference>? attachedDocument,
-          @JsonKey(name: 'case') RegulatedAuthorizationCase? case_}) =
+          {final R5ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final List<Reference>? subject,
+          final CodeableConcept? type,
+          final Markdown? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final List<CodeableConcept>? region,
+          final CodeableConcept? status,
+          final DateTime? statusDate,
+          @JsonKey(name: '_statusDate') final Element? statusDateElement,
+          final Period? validityPeriod,
+          final CodeableReference? indication,
+          final CodeableConcept? intendedUse,
+          final List<CodeableConcept>? basis,
+          final Reference? holder,
+          final Reference? regulator,
+          final List<Reference>? attachedDocument,
+          @JsonKey(name: 'case') final RegulatedAuthorizationCase? case_}) =
       _$_RegulatedAuthorization;
   _RegulatedAuthorization._() : super._();
 
@@ -14079,70 +13979,71 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
       _$_RegulatedAuthorization.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get subject;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get region;
+  List<CodeableConcept>? get region => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  DateTime? get statusDate;
+  DateTime? get statusDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
   @override
-  Period? get validityPeriod;
+  Period? get validityPeriod => throw _privateConstructorUsedError;
   @override
-  CodeableReference? get indication;
+  CodeableReference? get indication => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get intendedUse;
+  CodeableConcept? get intendedUse => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get basis;
+  List<CodeableConcept>? get basis => throw _privateConstructorUsedError;
   @override
-  Reference? get holder;
+  Reference? get holder => throw _privateConstructorUsedError;
   @override
-  Reference? get regulator;
+  Reference? get regulator => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get attachedDocument;
+  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'case')
-  RegulatedAuthorizationCase? get case_;
+  RegulatedAuthorizationCase? get case_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RegulatedAuthorizationCopyWith<_RegulatedAuthorization> get copyWith =>
+  _$$_RegulatedAuthorizationCopyWith<_$_RegulatedAuthorization> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -14150,43 +14051,6 @@ RegulatedAuthorizationCase _$RegulatedAuthorizationCaseFromJson(
     Map<String, dynamic> json) {
   return _RegulatedAuthorizationCase.fromJson(json);
 }
-
-/// @nodoc
-class _$RegulatedAuthorizationCaseTearOff {
-  const _$RegulatedAuthorizationCaseTearOff();
-
-  _RegulatedAuthorizationCase call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      CodeableConcept? type,
-      CodeableConcept? status,
-      Period? datePeriod,
-      DateTime? dateDateTime,
-      @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
-      List<RegulatedAuthorizationCase>? application}) {
-    return _RegulatedAuthorizationCase(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      status: status,
-      datePeriod: datePeriod,
-      dateDateTime: dateDateTime,
-      dateDateTimeElement: dateDateTimeElement,
-      application: application,
-    );
-  }
-
-  RegulatedAuthorizationCase fromJson(Map<String, Object?> json) {
-    return RegulatedAuthorizationCase.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RegulatedAuthorizationCase = _$RegulatedAuthorizationCaseTearOff();
 
 /// @nodoc
 mixin _$RegulatedAuthorizationCase {
@@ -14358,12 +14222,12 @@ class _$RegulatedAuthorizationCaseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$RegulatedAuthorizationCaseCopyWith<$Res>
+abstract class _$$_RegulatedAuthorizationCaseCopyWith<$Res>
     implements $RegulatedAuthorizationCaseCopyWith<$Res> {
-  factory _$RegulatedAuthorizationCaseCopyWith(
-          _RegulatedAuthorizationCase value,
-          $Res Function(_RegulatedAuthorizationCase) then) =
-      __$RegulatedAuthorizationCaseCopyWithImpl<$Res>;
+  factory _$$_RegulatedAuthorizationCaseCopyWith(
+          _$_RegulatedAuthorizationCase value,
+          $Res Function(_$_RegulatedAuthorizationCase) then) =
+      __$$_RegulatedAuthorizationCaseCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -14390,16 +14254,17 @@ abstract class _$RegulatedAuthorizationCaseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RegulatedAuthorizationCaseCopyWithImpl<$Res>
+class __$$_RegulatedAuthorizationCaseCopyWithImpl<$Res>
     extends _$RegulatedAuthorizationCaseCopyWithImpl<$Res>
-    implements _$RegulatedAuthorizationCaseCopyWith<$Res> {
-  __$RegulatedAuthorizationCaseCopyWithImpl(_RegulatedAuthorizationCase _value,
-      $Res Function(_RegulatedAuthorizationCase) _then)
-      : super(_value, (v) => _then(v as _RegulatedAuthorizationCase));
+    implements _$$_RegulatedAuthorizationCaseCopyWith<$Res> {
+  __$$_RegulatedAuthorizationCaseCopyWithImpl(
+      _$_RegulatedAuthorizationCase _value,
+      $Res Function(_$_RegulatedAuthorizationCase) _then)
+      : super(_value, (v) => _then(v as _$_RegulatedAuthorizationCase));
 
   @override
-  _RegulatedAuthorizationCase get _value =>
-      super._value as _RegulatedAuthorizationCase;
+  _$_RegulatedAuthorizationCase get _value =>
+      super._value as _$_RegulatedAuthorizationCase;
 
   @override
   $Res call({
@@ -14414,17 +14279,17 @@ class __$RegulatedAuthorizationCaseCopyWithImpl<$Res>
     Object? dateDateTimeElement = freezed,
     Object? application = freezed,
   }) {
-    return _then(_RegulatedAuthorizationCase(
+    return _then(_$_RegulatedAuthorizationCase(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -14452,7 +14317,7 @@ class __$RegulatedAuthorizationCaseCopyWithImpl<$Res>
           : dateDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       application: application == freezed
-          ? _value.application
+          ? _value._application
           : application // ignore: cast_nullable_to_non_nullable
               as List<RegulatedAuthorizationCase>?,
     ));
@@ -14464,27 +14329,44 @@ class __$RegulatedAuthorizationCaseCopyWithImpl<$Res>
 class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
   _$_RegulatedAuthorizationCase(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.type,
       this.status,
       this.datePeriod,
       this.dateDateTime,
       @JsonKey(name: '_dateDateTime') this.dateDateTimeElement,
-      this.application})
-      : super._();
+      final List<RegulatedAuthorizationCase>? application})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _application = application,
+        super._();
 
   factory _$_RegulatedAuthorizationCase.fromJson(Map<String, dynamic> json) =>
       _$$_RegulatedAuthorizationCaseFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -14498,8 +14380,14 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
   @override
   @JsonKey(name: '_dateDateTime')
   final Element? dateDateTimeElement;
+  final List<RegulatedAuthorizationCase>? _application;
   @override
-  final List<RegulatedAuthorizationCase>? application;
+  List<RegulatedAuthorizationCase>? get application {
+    final value = _application;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -14510,12 +14398,12 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RegulatedAuthorizationCase &&
+            other is _$_RegulatedAuthorizationCase &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.type, type) &&
@@ -14527,28 +14415,29 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
             const DeepCollectionEquality()
                 .equals(other.dateDateTimeElement, dateDateTimeElement) &&
             const DeepCollectionEquality()
-                .equals(other.application, application));
+                .equals(other._application, _application));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(identifier),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(datePeriod),
       const DeepCollectionEquality().hash(dateDateTime),
       const DeepCollectionEquality().hash(dateDateTimeElement),
-      const DeepCollectionEquality().hash(application));
+      const DeepCollectionEquality().hash(_application));
 
   @JsonKey(ignore: true)
   @override
-  _$RegulatedAuthorizationCaseCopyWith<_RegulatedAuthorizationCase>
-      get copyWith => __$RegulatedAuthorizationCaseCopyWithImpl<
-          _RegulatedAuthorizationCase>(this, _$identity);
+  _$$_RegulatedAuthorizationCaseCopyWith<_$_RegulatedAuthorizationCase>
+      get copyWith => __$$_RegulatedAuthorizationCaseCopyWithImpl<
+          _$_RegulatedAuthorizationCase>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -14558,16 +14447,16 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
 
 abstract class _RegulatedAuthorizationCase extends RegulatedAuthorizationCase {
   factory _RegulatedAuthorizationCase(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Identifier? identifier,
-          CodeableConcept? type,
-          CodeableConcept? status,
-          Period? datePeriod,
-          DateTime? dateDateTime,
-          @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
-          List<RegulatedAuthorizationCase>? application}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Identifier? identifier,
+          final CodeableConcept? type,
+          final CodeableConcept? status,
+          final Period? datePeriod,
+          final DateTime? dateDateTime,
+          @JsonKey(name: '_dateDateTime') final Element? dateDateTimeElement,
+          final List<RegulatedAuthorizationCase>? application}) =
       _$_RegulatedAuthorizationCase;
   _RegulatedAuthorizationCase._() : super._();
 
@@ -14575,125 +14464,38 @@ abstract class _RegulatedAuthorizationCase extends RegulatedAuthorizationCase {
       _$_RegulatedAuthorizationCase.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  Period? get datePeriod;
+  Period? get datePeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get dateDateTime;
+  DateTime? get dateDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_dateDateTime')
-  Element? get dateDateTimeElement;
+  Element? get dateDateTimeElement => throw _privateConstructorUsedError;
   @override
-  List<RegulatedAuthorizationCase>? get application;
+  List<RegulatedAuthorizationCase>? get application =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RegulatedAuthorizationCaseCopyWith<_RegulatedAuthorizationCase>
+  _$$_RegulatedAuthorizationCaseCopyWith<_$_RegulatedAuthorizationCase>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceDefinition _$SubstanceDefinitionFromJson(Map<String, dynamic> json) {
   return _SubstanceDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionTearOff {
-  const _$SubstanceDefinitionTearOff();
-
-  _SubstanceDefinition call(
-      {R5ResourceType resourceType = R5ResourceType.SubstanceDefinition,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      CodeableConcept? status,
-      List<CodeableConcept>? classification,
-      CodeableConcept? domain,
-      List<CodeableConcept>? grade,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Reference>? informationSource,
-      List<Annotation>? note,
-      List<Reference>? manufacturer,
-      List<Reference>? supplier,
-      List<SubstanceDefinitionMoiety>? moiety,
-      List<SubstanceDefinitionProperty>? property,
-      Reference? referenceInformation,
-      List<SubstanceDefinitionMolecularWeight>? molecularWeight,
-      SubstanceDefinitionStructure? structure,
-      List<SubstanceDefinitionCode>? code,
-      List<SubstanceDefinitionName>? name,
-      List<SubstanceDefinitionRelationship>? relationship,
-      Reference? nucleicAcid,
-      Reference? polymer,
-      Reference? protein,
-      SubstanceDefinitionSourceMaterial? sourceMaterial}) {
-    return _SubstanceDefinition(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      version: version,
-      versionElement: versionElement,
-      status: status,
-      classification: classification,
-      domain: domain,
-      grade: grade,
-      description: description,
-      descriptionElement: descriptionElement,
-      informationSource: informationSource,
-      note: note,
-      manufacturer: manufacturer,
-      supplier: supplier,
-      moiety: moiety,
-      property: property,
-      referenceInformation: referenceInformation,
-      molecularWeight: molecularWeight,
-      structure: structure,
-      code: code,
-      name: name,
-      relationship: relationship,
-      nucleicAcid: nucleicAcid,
-      polymer: polymer,
-      protein: protein,
-      sourceMaterial: sourceMaterial,
-    );
-  }
-
-  SubstanceDefinition fromJson(Map<String, Object?> json) {
-    return SubstanceDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinition = _$SubstanceDefinitionTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinition {
@@ -15166,11 +14968,11 @@ class _$SubstanceDefinitionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionCopyWith<$Res>
     implements $SubstanceDefinitionCopyWith<$Res> {
-  factory _$SubstanceDefinitionCopyWith(_SubstanceDefinition value,
-          $Res Function(_SubstanceDefinition) then) =
-      __$SubstanceDefinitionCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionCopyWith(_$_SubstanceDefinition value,
+          $Res Function(_$_SubstanceDefinition) then) =
+      __$$_SubstanceDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -15241,15 +15043,15 @@ abstract class _$SubstanceDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionCopyWithImpl<$Res>
     extends _$SubstanceDefinitionCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionCopyWith<$Res> {
-  __$SubstanceDefinitionCopyWithImpl(
-      _SubstanceDefinition _value, $Res Function(_SubstanceDefinition) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinition));
+    implements _$$_SubstanceDefinitionCopyWith<$Res> {
+  __$$_SubstanceDefinitionCopyWithImpl(_$_SubstanceDefinition _value,
+      $Res Function(_$_SubstanceDefinition) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinition));
 
   @override
-  _SubstanceDefinition get _value => super._value as _SubstanceDefinition;
+  _$_SubstanceDefinition get _value => super._value as _$_SubstanceDefinition;
 
   @override
   $Res call({
@@ -15290,7 +15092,7 @@ class __$SubstanceDefinitionCopyWithImpl<$Res>
     Object? protein = freezed,
     Object? sourceMaterial = freezed,
   }) {
-    return _then(_SubstanceDefinition(
+    return _then(_$_SubstanceDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -15324,19 +15126,19 @@ class __$SubstanceDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: version == freezed
@@ -15352,7 +15154,7 @@ class __$SubstanceDefinitionCopyWithImpl<$Res>
           : status // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       classification: classification == freezed
-          ? _value.classification
+          ? _value._classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       domain: domain == freezed
@@ -15360,7 +15162,7 @@ class __$SubstanceDefinitionCopyWithImpl<$Res>
           : domain // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       grade: grade == freezed
-          ? _value.grade
+          ? _value._grade
           : grade // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       description: description == freezed
@@ -15372,27 +15174,27 @@ class __$SubstanceDefinitionCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       informationSource: informationSource == freezed
-          ? _value.informationSource
+          ? _value._informationSource
           : informationSource // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       manufacturer: manufacturer == freezed
-          ? _value.manufacturer
+          ? _value._manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       supplier: supplier == freezed
-          ? _value.supplier
+          ? _value._supplier
           : supplier // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       moiety: moiety == freezed
-          ? _value.moiety
+          ? _value._moiety
           : moiety // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionMoiety>?,
       property: property == freezed
-          ? _value.property
+          ? _value._property
           : property // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionProperty>?,
       referenceInformation: referenceInformation == freezed
@@ -15400,7 +15202,7 @@ class __$SubstanceDefinitionCopyWithImpl<$Res>
           : referenceInformation // ignore: cast_nullable_to_non_nullable
               as Reference?,
       molecularWeight: molecularWeight == freezed
-          ? _value.molecularWeight
+          ? _value._molecularWeight
           : molecularWeight // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionMolecularWeight>?,
       structure: structure == freezed
@@ -15408,15 +15210,15 @@ class __$SubstanceDefinitionCopyWithImpl<$Res>
           : structure // ignore: cast_nullable_to_non_nullable
               as SubstanceDefinitionStructure?,
       code: code == freezed
-          ? _value.code
+          ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionCode>?,
       name: name == freezed
-          ? _value.name
+          ? _value._name
           : name // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionName>?,
       relationship: relationship == freezed
-          ? _value.relationship
+          ? _value._relationship
           : relationship // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionRelationship>?,
       nucleicAcid: nucleicAcid == freezed
@@ -15451,41 +15253,57 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.version,
       @JsonKey(name: '_version') this.versionElement,
       this.status,
-      this.classification,
+      final List<CodeableConcept>? classification,
       this.domain,
-      this.grade,
+      final List<CodeableConcept>? grade,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      this.informationSource,
-      this.note,
-      this.manufacturer,
-      this.supplier,
-      this.moiety,
-      this.property,
+      final List<Reference>? informationSource,
+      final List<Annotation>? note,
+      final List<Reference>? manufacturer,
+      final List<Reference>? supplier,
+      final List<SubstanceDefinitionMoiety>? moiety,
+      final List<SubstanceDefinitionProperty>? property,
       this.referenceInformation,
-      this.molecularWeight,
+      final List<SubstanceDefinitionMolecularWeight>? molecularWeight,
       this.structure,
-      this.code,
-      this.name,
-      this.relationship,
+      final List<SubstanceDefinitionCode>? code,
+      final List<SubstanceDefinitionName>? name,
+      final List<SubstanceDefinitionRelationship>? relationship,
       this.nucleicAcid,
       this.polymer,
       this.protein,
       this.sourceMaterial})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _classification = classification,
+        _grade = grade,
+        _informationSource = informationSource,
+        _note = note,
+        _manufacturer = manufacturer,
+        _supplier = supplier,
+        _moiety = moiety,
+        _property = property,
+        _molecularWeight = molecularWeight,
+        _code = code,
+        _name = name,
+        _relationship = relationship,
+        super._();
 
   factory _$_SubstanceDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceDefinitionFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -15503,15 +15321,43 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? version;
   @override
@@ -15519,41 +15365,125 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   final Element? versionElement;
   @override
   final CodeableConcept? status;
+  final List<CodeableConcept>? _classification;
   @override
-  final List<CodeableConcept>? classification;
+  List<CodeableConcept>? get classification {
+    final value = _classification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? domain;
+  final List<CodeableConcept>? _grade;
   @override
-  final List<CodeableConcept>? grade;
+  List<CodeableConcept>? get grade {
+    final value = _grade;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<Reference>? _informationSource;
   @override
-  final List<Reference>? informationSource;
+  List<Reference>? get informationSource {
+    final value = _informationSource;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _manufacturer;
   @override
-  final List<Reference>? manufacturer;
+  List<Reference>? get manufacturer {
+    final value = _manufacturer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _supplier;
   @override
-  final List<Reference>? supplier;
+  List<Reference>? get supplier {
+    final value = _supplier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceDefinitionMoiety>? _moiety;
   @override
-  final List<SubstanceDefinitionMoiety>? moiety;
+  List<SubstanceDefinitionMoiety>? get moiety {
+    final value = _moiety;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceDefinitionProperty>? _property;
   @override
-  final List<SubstanceDefinitionProperty>? property;
+  List<SubstanceDefinitionProperty>? get property {
+    final value = _property;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? referenceInformation;
+  final List<SubstanceDefinitionMolecularWeight>? _molecularWeight;
   @override
-  final List<SubstanceDefinitionMolecularWeight>? molecularWeight;
+  List<SubstanceDefinitionMolecularWeight>? get molecularWeight {
+    final value = _molecularWeight;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final SubstanceDefinitionStructure? structure;
+  final List<SubstanceDefinitionCode>? _code;
   @override
-  final List<SubstanceDefinitionCode>? code;
+  List<SubstanceDefinitionCode>? get code {
+    final value = _code;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceDefinitionName>? _name;
   @override
-  final List<SubstanceDefinitionName>? name;
+  List<SubstanceDefinitionName>? get name {
+    final value = _name;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceDefinitionRelationship>? _relationship;
   @override
-  final List<SubstanceDefinitionRelationship>? relationship;
+  List<SubstanceDefinitionRelationship>? get relationship {
+    final value = _relationship;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? nucleicAcid;
   @override
@@ -15572,7 +15502,7 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinition &&
+            other is _$_SubstanceDefinition &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -15585,42 +15515,43 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality()
                 .equals(other.versionElement, versionElement) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
-                .equals(other.classification, classification) &&
+                .equals(other._classification, _classification) &&
             const DeepCollectionEquality().equals(other.domain, domain) &&
-            const DeepCollectionEquality().equals(other.grade, grade) &&
+            const DeepCollectionEquality().equals(other._grade, _grade) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.informationSource, informationSource) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
+                .equals(other._informationSource, _informationSource) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality()
-                .equals(other.manufacturer, manufacturer) &&
-            const DeepCollectionEquality().equals(other.supplier, supplier) &&
-            const DeepCollectionEquality().equals(other.moiety, moiety) &&
-            const DeepCollectionEquality().equals(other.property, property) &&
+                .equals(other._manufacturer, _manufacturer) &&
+            const DeepCollectionEquality().equals(other._supplier, _supplier) &&
+            const DeepCollectionEquality().equals(other._moiety, _moiety) &&
+            const DeepCollectionEquality().equals(other._property, _property) &&
             const DeepCollectionEquality()
                 .equals(other.referenceInformation, referenceInformation) &&
             const DeepCollectionEquality()
-                .equals(other.molecularWeight, molecularWeight) &&
+                .equals(other._molecularWeight, _molecularWeight) &&
             const DeepCollectionEquality().equals(other.structure, structure) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other._code, _code) &&
+            const DeepCollectionEquality().equals(other._name, _name) &&
             const DeepCollectionEquality()
-                .equals(other.relationship, relationship) &&
+                .equals(other._relationship, _relationship) &&
             const DeepCollectionEquality()
                 .equals(other.nucleicAcid, nucleicAcid) &&
             const DeepCollectionEquality().equals(other.polymer, polymer) &&
@@ -15629,6 +15560,7 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
                 .equals(other.sourceMaterial, sourceMaterial));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -15640,30 +15572,30 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(version),
         const DeepCollectionEquality().hash(versionElement),
         const DeepCollectionEquality().hash(status),
-        const DeepCollectionEquality().hash(classification),
+        const DeepCollectionEquality().hash(_classification),
         const DeepCollectionEquality().hash(domain),
-        const DeepCollectionEquality().hash(grade),
+        const DeepCollectionEquality().hash(_grade),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(informationSource),
-        const DeepCollectionEquality().hash(note),
-        const DeepCollectionEquality().hash(manufacturer),
-        const DeepCollectionEquality().hash(supplier),
-        const DeepCollectionEquality().hash(moiety),
-        const DeepCollectionEquality().hash(property),
+        const DeepCollectionEquality().hash(_informationSource),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_manufacturer),
+        const DeepCollectionEquality().hash(_supplier),
+        const DeepCollectionEquality().hash(_moiety),
+        const DeepCollectionEquality().hash(_property),
         const DeepCollectionEquality().hash(referenceInformation),
-        const DeepCollectionEquality().hash(molecularWeight),
+        const DeepCollectionEquality().hash(_molecularWeight),
         const DeepCollectionEquality().hash(structure),
-        const DeepCollectionEquality().hash(code),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(relationship),
+        const DeepCollectionEquality().hash(_code),
+        const DeepCollectionEquality().hash(_name),
+        const DeepCollectionEquality().hash(_relationship),
         const DeepCollectionEquality().hash(nucleicAcid),
         const DeepCollectionEquality().hash(polymer),
         const DeepCollectionEquality().hash(protein),
@@ -15672,8 +15604,8 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionCopyWith<_SubstanceDefinition> get copyWith =>
-      __$SubstanceDefinitionCopyWithImpl<_SubstanceDefinition>(
+  _$$_SubstanceDefinitionCopyWith<_$_SubstanceDefinition> get copyWith =>
+      __$$_SubstanceDefinitionCopyWithImpl<_$_SubstanceDefinition>(
           this, _$identity);
 
   @override
@@ -15684,42 +15616,42 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
 abstract class _SubstanceDefinition extends SubstanceDefinition {
   factory _SubstanceDefinition(
-          {R5ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language') Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
-          String? version,
-          @JsonKey(name: '_version') Element? versionElement,
-          CodeableConcept? status,
-          List<CodeableConcept>? classification,
-          CodeableConcept? domain,
-          List<CodeableConcept>? grade,
-          Markdown? description,
-          @JsonKey(name: '_description') Element? descriptionElement,
-          List<Reference>? informationSource,
-          List<Annotation>? note,
-          List<Reference>? manufacturer,
-          List<Reference>? supplier,
-          List<SubstanceDefinitionMoiety>? moiety,
-          List<SubstanceDefinitionProperty>? property,
-          Reference? referenceInformation,
-          List<SubstanceDefinitionMolecularWeight>? molecularWeight,
-          SubstanceDefinitionStructure? structure,
-          List<SubstanceDefinitionCode>? code,
-          List<SubstanceDefinitionName>? name,
-          List<SubstanceDefinitionRelationship>? relationship,
-          Reference? nucleicAcid,
-          Reference? polymer,
-          Reference? protein,
-          SubstanceDefinitionSourceMaterial? sourceMaterial}) =
+          {final R5ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final String? version,
+          @JsonKey(name: '_version') final Element? versionElement,
+          final CodeableConcept? status,
+          final List<CodeableConcept>? classification,
+          final CodeableConcept? domain,
+          final List<CodeableConcept>? grade,
+          final Markdown? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final List<Reference>? informationSource,
+          final List<Annotation>? note,
+          final List<Reference>? manufacturer,
+          final List<Reference>? supplier,
+          final List<SubstanceDefinitionMoiety>? moiety,
+          final List<SubstanceDefinitionProperty>? property,
+          final Reference? referenceInformation,
+          final List<SubstanceDefinitionMolecularWeight>? molecularWeight,
+          final SubstanceDefinitionStructure? structure,
+          final List<SubstanceDefinitionCode>? code,
+          final List<SubstanceDefinitionName>? name,
+          final List<SubstanceDefinitionRelationship>? relationship,
+          final Reference? nucleicAcid,
+          final Reference? polymer,
+          final Reference? protein,
+          final SubstanceDefinitionSourceMaterial? sourceMaterial}) =
       _$_SubstanceDefinition;
   _SubstanceDefinition._() : super._();
 
@@ -15727,85 +15659,93 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
       _$_SubstanceDefinition.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get classification;
+  List<CodeableConcept>? get classification =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get domain;
+  CodeableConcept? get domain => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get grade;
+  List<CodeableConcept>? get grade => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get informationSource;
+  List<Reference>? get informationSource => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get supplier;
+  List<Reference>? get supplier => throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionMoiety>? get moiety;
+  List<SubstanceDefinitionMoiety>? get moiety =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionProperty>? get property;
+  List<SubstanceDefinitionProperty>? get property =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get referenceInformation;
+  Reference? get referenceInformation => throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionMolecularWeight>? get molecularWeight;
+  List<SubstanceDefinitionMolecularWeight>? get molecularWeight =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceDefinitionStructure? get structure;
+  SubstanceDefinitionStructure? get structure =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionCode>? get code;
+  List<SubstanceDefinitionCode>? get code => throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionName>? get name;
+  List<SubstanceDefinitionName>? get name => throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionRelationship>? get relationship;
+  List<SubstanceDefinitionRelationship>? get relationship =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get nucleicAcid;
+  Reference? get nucleicAcid => throw _privateConstructorUsedError;
   @override
-  Reference? get polymer;
+  Reference? get polymer => throw _privateConstructorUsedError;
   @override
-  Reference? get protein;
+  Reference? get protein => throw _privateConstructorUsedError;
   @override
-  SubstanceDefinitionSourceMaterial? get sourceMaterial;
+  SubstanceDefinitionSourceMaterial? get sourceMaterial =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionCopyWith<_SubstanceDefinition> get copyWith =>
+  _$$_SubstanceDefinitionCopyWith<_$_SubstanceDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -15813,53 +15753,6 @@ SubstanceDefinitionMoiety _$SubstanceDefinitionMoietyFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionMoiety.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionMoietyTearOff {
-  const _$SubstanceDefinitionMoietyTearOff();
-
-  _SubstanceDefinitionMoiety call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? role,
-      Identifier? identifier,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? stereochemistry,
-      CodeableConcept? opticalActivity,
-      String? molecularFormula,
-      @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
-      Quantity? amountQuantity,
-      Markdown? amountString,
-      @JsonKey(name: '_amountString') Element? amountStringElement,
-      CodeableConcept? measurementType}) {
-    return _SubstanceDefinitionMoiety(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      role: role,
-      identifier: identifier,
-      name: name,
-      nameElement: nameElement,
-      stereochemistry: stereochemistry,
-      opticalActivity: opticalActivity,
-      molecularFormula: molecularFormula,
-      molecularFormulaElement: molecularFormulaElement,
-      amountQuantity: amountQuantity,
-      amountString: amountString,
-      amountStringElement: amountStringElement,
-      measurementType: measurementType,
-    );
-  }
-
-  SubstanceDefinitionMoiety fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionMoiety.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionMoiety = _$SubstanceDefinitionMoietyTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionMoiety {
@@ -16115,11 +16008,12 @@ class _$SubstanceDefinitionMoietyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionMoietyCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionMoietyCopyWith<$Res>
     implements $SubstanceDefinitionMoietyCopyWith<$Res> {
-  factory _$SubstanceDefinitionMoietyCopyWith(_SubstanceDefinitionMoiety value,
-          $Res Function(_SubstanceDefinitionMoiety) then) =
-      __$SubstanceDefinitionMoietyCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionMoietyCopyWith(
+          _$_SubstanceDefinitionMoiety value,
+          $Res Function(_$_SubstanceDefinitionMoiety) then) =
+      __$$_SubstanceDefinitionMoietyCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -16159,16 +16053,17 @@ abstract class _$SubstanceDefinitionMoietyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionMoietyCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionMoietyCopyWithImpl<$Res>
     extends _$SubstanceDefinitionMoietyCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionMoietyCopyWith<$Res> {
-  __$SubstanceDefinitionMoietyCopyWithImpl(_SubstanceDefinitionMoiety _value,
-      $Res Function(_SubstanceDefinitionMoiety) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionMoiety));
+    implements _$$_SubstanceDefinitionMoietyCopyWith<$Res> {
+  __$$_SubstanceDefinitionMoietyCopyWithImpl(
+      _$_SubstanceDefinitionMoiety _value,
+      $Res Function(_$_SubstanceDefinitionMoiety) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionMoiety));
 
   @override
-  _SubstanceDefinitionMoiety get _value =>
-      super._value as _SubstanceDefinitionMoiety;
+  _$_SubstanceDefinitionMoiety get _value =>
+      super._value as _$_SubstanceDefinitionMoiety;
 
   @override
   $Res call({
@@ -16188,17 +16083,17 @@ class __$SubstanceDefinitionMoietyCopyWithImpl<$Res>
     Object? amountStringElement = freezed,
     Object? measurementType = freezed,
   }) {
-    return _then(_SubstanceDefinitionMoiety(
+    return _then(_$_SubstanceDefinitionMoiety(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       role: role == freezed
@@ -16258,8 +16153,8 @@ class __$SubstanceDefinitionMoietyCopyWithImpl<$Res>
 class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
   _$_SubstanceDefinitionMoiety(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.role,
       this.identifier,
       this.name,
@@ -16272,18 +16167,34 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
       this.amountString,
       @JsonKey(name: '_amountString') this.amountStringElement,
       this.measurementType})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceDefinitionMoiety.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceDefinitionMoietyFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? role;
   @override
@@ -16321,12 +16232,12 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionMoiety &&
+            other is _$_SubstanceDefinitionMoiety &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.role, role) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
@@ -16351,12 +16262,13 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
                 .equals(other.measurementType, measurementType));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(role),
       const DeepCollectionEquality().hash(identifier),
       const DeepCollectionEquality().hash(name),
@@ -16372,10 +16284,9 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionMoietyCopyWith<_SubstanceDefinitionMoiety>
-      get copyWith =>
-          __$SubstanceDefinitionMoietyCopyWithImpl<_SubstanceDefinitionMoiety>(
-              this, _$identity);
+  _$$_SubstanceDefinitionMoietyCopyWith<_$_SubstanceDefinitionMoiety>
+      get copyWith => __$$_SubstanceDefinitionMoietyCopyWithImpl<
+          _$_SubstanceDefinitionMoiety>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -16385,63 +16296,68 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
 
 abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
   factory _SubstanceDefinitionMoiety(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? role,
-      Identifier? identifier,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? stereochemistry,
-      CodeableConcept? opticalActivity,
-      String? molecularFormula,
-      @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
-      Quantity? amountQuantity,
-      Markdown? amountString,
-      @JsonKey(name: '_amountString') Element? amountStringElement,
-      CodeableConcept? measurementType}) = _$_SubstanceDefinitionMoiety;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? role,
+      final Identifier? identifier,
+      final String? name,
+      @JsonKey(name: '_name')
+          final Element? nameElement,
+      final CodeableConcept? stereochemistry,
+      final CodeableConcept? opticalActivity,
+      final String? molecularFormula,
+      @JsonKey(name: '_molecularFormula')
+          final Element? molecularFormulaElement,
+      final Quantity? amountQuantity,
+      final Markdown? amountString,
+      @JsonKey(name: '_amountString')
+          final Element? amountStringElement,
+      final CodeableConcept? measurementType}) = _$_SubstanceDefinitionMoiety;
   _SubstanceDefinitionMoiety._() : super._();
 
   factory _SubstanceDefinitionMoiety.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionMoiety.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get role;
+  CodeableConcept? get role => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get stereochemistry;
+  CodeableConcept? get stereochemistry => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get opticalActivity;
+  CodeableConcept? get opticalActivity => throw _privateConstructorUsedError;
   @override
-  String? get molecularFormula;
+  String? get molecularFormula => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_molecularFormula')
-  Element? get molecularFormulaElement;
+  Element? get molecularFormulaElement => throw _privateConstructorUsedError;
   @override
-  Quantity? get amountQuantity;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
   @override
-  Markdown? get amountString;
+  Markdown? get amountString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get measurementType;
+  CodeableConcept? get measurementType => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionMoietyCopyWith<_SubstanceDefinitionMoiety>
+  _$$_SubstanceDefinitionMoietyCopyWith<_$_SubstanceDefinitionMoiety>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -16449,45 +16365,6 @@ SubstanceDefinitionProperty _$SubstanceDefinitionPropertyFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionProperty.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionPropertyTearOff {
-  const _$SubstanceDefinitionPropertyTearOff();
-
-  _SubstanceDefinitionProperty call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment}) {
-    return _SubstanceDefinitionProperty(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueCodeableConcept: valueCodeableConcept,
-      valueQuantity: valueQuantity,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueAttachment: valueAttachment,
-    );
-  }
-
-  SubstanceDefinitionProperty fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionProperty.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionProperty = _$SubstanceDefinitionPropertyTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionProperty {
@@ -16677,12 +16554,12 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionPropertyCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionPropertyCopyWith<$Res>
     implements $SubstanceDefinitionPropertyCopyWith<$Res> {
-  factory _$SubstanceDefinitionPropertyCopyWith(
-          _SubstanceDefinitionProperty value,
-          $Res Function(_SubstanceDefinitionProperty) then) =
-      __$SubstanceDefinitionPropertyCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionPropertyCopyWith(
+          _$_SubstanceDefinitionProperty value,
+          $Res Function(_$_SubstanceDefinitionProperty) then) =
+      __$$_SubstanceDefinitionPropertyCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -16712,17 +16589,17 @@ abstract class _$SubstanceDefinitionPropertyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionPropertyCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionPropertyCopyWithImpl<$Res>
     extends _$SubstanceDefinitionPropertyCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionPropertyCopyWith<$Res> {
-  __$SubstanceDefinitionPropertyCopyWithImpl(
-      _SubstanceDefinitionProperty _value,
-      $Res Function(_SubstanceDefinitionProperty) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionProperty));
+    implements _$$_SubstanceDefinitionPropertyCopyWith<$Res> {
+  __$$_SubstanceDefinitionPropertyCopyWithImpl(
+      _$_SubstanceDefinitionProperty _value,
+      $Res Function(_$_SubstanceDefinitionProperty) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionProperty));
 
   @override
-  _SubstanceDefinitionProperty get _value =>
-      super._value as _SubstanceDefinitionProperty;
+  _$_SubstanceDefinitionProperty get _value =>
+      super._value as _$_SubstanceDefinitionProperty;
 
   @override
   $Res call({
@@ -16738,17 +16615,17 @@ class __$SubstanceDefinitionPropertyCopyWithImpl<$Res>
     Object? valueBooleanElement = freezed,
     Object? valueAttachment = freezed,
   }) {
-    return _then(_SubstanceDefinitionProperty(
+    return _then(_$_SubstanceDefinitionProperty(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -16792,8 +16669,8 @@ class __$SubstanceDefinitionPropertyCopyWithImpl<$Res>
 class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
   _$_SubstanceDefinitionProperty(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueCodeableConcept,
       this.valueQuantity,
@@ -16802,18 +16679,34 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueAttachment})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceDefinitionProperty.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceDefinitionPropertyFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -16842,12 +16735,12 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionProperty &&
+            other is _$_SubstanceDefinitionProperty &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
@@ -16864,12 +16757,13 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
                 .equals(other.valueAttachment, valueAttachment));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(valueCodeableConcept),
       const DeepCollectionEquality().hash(valueQuantity),
@@ -16881,9 +16775,9 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionPropertyCopyWith<_SubstanceDefinitionProperty>
-      get copyWith => __$SubstanceDefinitionPropertyCopyWithImpl<
-          _SubstanceDefinitionProperty>(this, _$identity);
+  _$$_SubstanceDefinitionPropertyCopyWith<_$_SubstanceDefinitionProperty>
+      get copyWith => __$$_SubstanceDefinitionPropertyCopyWithImpl<
+          _$_SubstanceDefinitionProperty>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -16894,50 +16788,52 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
 abstract class _SubstanceDefinitionProperty
     extends SubstanceDefinitionProperty {
   factory _SubstanceDefinitionProperty(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Attachment? valueAttachment}) = _$_SubstanceDefinitionProperty;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      final CodeableConcept? valueCodeableConcept,
+      final Quantity? valueQuantity,
+      final Date? valueDate,
+      @JsonKey(name: '_valueDate') final Element? valueDateElement,
+      final Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+      final Attachment? valueAttachment}) = _$_SubstanceDefinitionProperty;
   _SubstanceDefinitionProperty._() : super._();
 
   factory _SubstanceDefinitionProperty.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionProperty.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionPropertyCopyWith<_SubstanceDefinitionProperty>
+  _$$_SubstanceDefinitionPropertyCopyWith<_$_SubstanceDefinitionProperty>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -16945,36 +16841,6 @@ SubstanceDefinitionMolecularWeight _$SubstanceDefinitionMolecularWeightFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionMolecularWeight.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionMolecularWeightTearOff {
-  const _$SubstanceDefinitionMolecularWeightTearOff();
-
-  _SubstanceDefinitionMolecularWeight call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? method,
-      CodeableConcept? type,
-      required Quantity amount}) {
-    return _SubstanceDefinitionMolecularWeight(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      method: method,
-      type: type,
-      amount: amount,
-    );
-  }
-
-  SubstanceDefinitionMolecularWeight fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionMolecularWeight.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionMolecularWeight =
-    _$SubstanceDefinitionMolecularWeightTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionMolecularWeight {
@@ -17090,12 +16956,12 @@ class _$SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionMolecularWeightCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionMolecularWeightCopyWith<$Res>
     implements $SubstanceDefinitionMolecularWeightCopyWith<$Res> {
-  factory _$SubstanceDefinitionMolecularWeightCopyWith(
-          _SubstanceDefinitionMolecularWeight value,
-          $Res Function(_SubstanceDefinitionMolecularWeight) then) =
-      __$SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionMolecularWeightCopyWith(
+          _$_SubstanceDefinitionMolecularWeight value,
+          $Res Function(_$_SubstanceDefinitionMolecularWeight) then) =
+      __$$_SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -17114,17 +16980,17 @@ abstract class _$SubstanceDefinitionMolecularWeightCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>
     extends _$SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionMolecularWeightCopyWith<$Res> {
-  __$SubstanceDefinitionMolecularWeightCopyWithImpl(
-      _SubstanceDefinitionMolecularWeight _value,
-      $Res Function(_SubstanceDefinitionMolecularWeight) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionMolecularWeight));
+    implements _$$_SubstanceDefinitionMolecularWeightCopyWith<$Res> {
+  __$$_SubstanceDefinitionMolecularWeightCopyWithImpl(
+      _$_SubstanceDefinitionMolecularWeight _value,
+      $Res Function(_$_SubstanceDefinitionMolecularWeight) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionMolecularWeight));
 
   @override
-  _SubstanceDefinitionMolecularWeight get _value =>
-      super._value as _SubstanceDefinitionMolecularWeight;
+  _$_SubstanceDefinitionMolecularWeight get _value =>
+      super._value as _$_SubstanceDefinitionMolecularWeight;
 
   @override
   $Res call({
@@ -17135,17 +17001,17 @@ class __$SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>
     Object? type = freezed,
     Object? amount = freezed,
   }) {
-    return _then(_SubstanceDefinitionMolecularWeight(
+    return _then(_$_SubstanceDefinitionMolecularWeight(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       method: method == freezed
@@ -17170,12 +17036,14 @@ class _$_SubstanceDefinitionMolecularWeight
     extends _SubstanceDefinitionMolecularWeight {
   _$_SubstanceDefinitionMolecularWeight(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.method,
       this.type,
       required this.amount})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceDefinitionMolecularWeight.fromJson(
           Map<String, dynamic> json) =>
@@ -17183,11 +17051,25 @@ class _$_SubstanceDefinitionMolecularWeight
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? method;
   @override
@@ -17204,33 +17086,34 @@ class _$_SubstanceDefinitionMolecularWeight
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionMolecularWeight &&
+            other is _$_SubstanceDefinitionMolecularWeight &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.method, method) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.amount, amount));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(method),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(amount));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionMolecularWeightCopyWith<
-          _SubstanceDefinitionMolecularWeight>
-      get copyWith => __$SubstanceDefinitionMolecularWeightCopyWithImpl<
-          _SubstanceDefinitionMolecularWeight>(this, _$identity);
+  _$$_SubstanceDefinitionMolecularWeightCopyWith<
+          _$_SubstanceDefinitionMolecularWeight>
+      get copyWith => __$$_SubstanceDefinitionMolecularWeightCopyWithImpl<
+          _$_SubstanceDefinitionMolecularWeight>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -17241,12 +17124,12 @@ class _$_SubstanceDefinitionMolecularWeight
 abstract class _SubstanceDefinitionMolecularWeight
     extends SubstanceDefinitionMolecularWeight {
   factory _SubstanceDefinitionMolecularWeight(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? method,
-      CodeableConcept? type,
-      required Quantity amount}) = _$_SubstanceDefinitionMolecularWeight;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? method,
+      final CodeableConcept? type,
+      required final Quantity amount}) = _$_SubstanceDefinitionMolecularWeight;
   _SubstanceDefinitionMolecularWeight._() : super._();
 
   factory _SubstanceDefinitionMolecularWeight.fromJson(
@@ -17254,22 +17137,23 @@ abstract class _SubstanceDefinitionMolecularWeight
       _$_SubstanceDefinitionMolecularWeight.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get method;
+  CodeableConcept? get method => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Quantity get amount;
+  Quantity get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionMolecularWeightCopyWith<
-          _SubstanceDefinitionMolecularWeight>
+  _$$_SubstanceDefinitionMolecularWeightCopyWith<
+          _$_SubstanceDefinitionMolecularWeight>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -17277,52 +17161,6 @@ SubstanceDefinitionStructure _$SubstanceDefinitionStructureFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionStructure.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionStructureTearOff {
-  const _$SubstanceDefinitionStructureTearOff();
-
-  _SubstanceDefinitionStructure call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? stereochemistry,
-      CodeableConcept? opticalActivity,
-      String? molecularFormula,
-      @JsonKey(name: '_molecularFormula')
-          Element? molecularFormulaElement,
-      String? molecularFormulaByMoiety,
-      @JsonKey(name: '_molecularFormulaByMoiety')
-          Element? molecularFormulaByMoietyElement,
-      SubstanceDefinitionMolecularWeight? molecularWeight,
-      List<CodeableConcept>? technique,
-      List<Reference>? sourceDocument,
-      List<SubstanceDefinitionRepresentation>? representation}) {
-    return _SubstanceDefinitionStructure(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      stereochemistry: stereochemistry,
-      opticalActivity: opticalActivity,
-      molecularFormula: molecularFormula,
-      molecularFormulaElement: molecularFormulaElement,
-      molecularFormulaByMoiety: molecularFormulaByMoiety,
-      molecularFormulaByMoietyElement: molecularFormulaByMoietyElement,
-      molecularWeight: molecularWeight,
-      technique: technique,
-      sourceDocument: sourceDocument,
-      representation: representation,
-    );
-  }
-
-  SubstanceDefinitionStructure fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionStructure.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionStructure = _$SubstanceDefinitionStructureTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionStructure {
@@ -17525,12 +17363,12 @@ class _$SubstanceDefinitionStructureCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionStructureCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionStructureCopyWith<$Res>
     implements $SubstanceDefinitionStructureCopyWith<$Res> {
-  factory _$SubstanceDefinitionStructureCopyWith(
-          _SubstanceDefinitionStructure value,
-          $Res Function(_SubstanceDefinitionStructure) then) =
-      __$SubstanceDefinitionStructureCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionStructureCopyWith(
+          _$_SubstanceDefinitionStructure value,
+          $Res Function(_$_SubstanceDefinitionStructure) then) =
+      __$$_SubstanceDefinitionStructureCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -17563,17 +17401,17 @@ abstract class _$SubstanceDefinitionStructureCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionStructureCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionStructureCopyWithImpl<$Res>
     extends _$SubstanceDefinitionStructureCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionStructureCopyWith<$Res> {
-  __$SubstanceDefinitionStructureCopyWithImpl(
-      _SubstanceDefinitionStructure _value,
-      $Res Function(_SubstanceDefinitionStructure) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionStructure));
+    implements _$$_SubstanceDefinitionStructureCopyWith<$Res> {
+  __$$_SubstanceDefinitionStructureCopyWithImpl(
+      _$_SubstanceDefinitionStructure _value,
+      $Res Function(_$_SubstanceDefinitionStructure) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionStructure));
 
   @override
-  _SubstanceDefinitionStructure get _value =>
-      super._value as _SubstanceDefinitionStructure;
+  _$_SubstanceDefinitionStructure get _value =>
+      super._value as _$_SubstanceDefinitionStructure;
 
   @override
   $Res call({
@@ -17591,17 +17429,17 @@ class __$SubstanceDefinitionStructureCopyWithImpl<$Res>
     Object? sourceDocument = freezed,
     Object? representation = freezed,
   }) {
-    return _then(_SubstanceDefinitionStructure(
+    return _then(_$_SubstanceDefinitionStructure(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       stereochemistry: stereochemistry == freezed
@@ -17634,15 +17472,15 @@ class __$SubstanceDefinitionStructureCopyWithImpl<$Res>
           : molecularWeight // ignore: cast_nullable_to_non_nullable
               as SubstanceDefinitionMolecularWeight?,
       technique: technique == freezed
-          ? _value.technique
+          ? _value._technique
           : technique // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       sourceDocument: sourceDocument == freezed
-          ? _value.sourceDocument
+          ? _value._sourceDocument
           : sourceDocument // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       representation: representation == freezed
-          ? _value.representation
+          ? _value._representation
           : representation // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionRepresentation>?,
     ));
@@ -17655,8 +17493,8 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
   _$_SubstanceDefinitionStructure(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.stereochemistry,
       this.opticalActivity,
       this.molecularFormula,
@@ -17666,21 +17504,40 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
       @JsonKey(name: '_molecularFormulaByMoiety')
           this.molecularFormulaByMoietyElement,
       this.molecularWeight,
-      this.technique,
-      this.sourceDocument,
-      this.representation})
-      : super._();
+      final List<CodeableConcept>? technique,
+      final List<Reference>? sourceDocument,
+      final List<SubstanceDefinitionRepresentation>? representation})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _technique = technique,
+        _sourceDocument = sourceDocument,
+        _representation = representation,
+        super._();
 
   factory _$_SubstanceDefinitionStructure.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceDefinitionStructureFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? stereochemistry;
   @override
@@ -17697,12 +17554,32 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
   final Element? molecularFormulaByMoietyElement;
   @override
   final SubstanceDefinitionMolecularWeight? molecularWeight;
+  final List<CodeableConcept>? _technique;
   @override
-  final List<CodeableConcept>? technique;
+  List<CodeableConcept>? get technique {
+    final value = _technique;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _sourceDocument;
   @override
-  final List<Reference>? sourceDocument;
+  List<Reference>? get sourceDocument {
+    final value = _sourceDocument;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceDefinitionRepresentation>? _representation;
   @override
-  final List<SubstanceDefinitionRepresentation>? representation;
+  List<SubstanceDefinitionRepresentation>? get representation {
+    final value = _representation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -17713,12 +17590,12 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionStructure &&
+            other is _$_SubstanceDefinitionStructure &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.stereochemistry, stereochemistry) &&
             const DeepCollectionEquality()
@@ -17734,19 +17611,21 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
                 molecularFormulaByMoietyElement) &&
             const DeepCollectionEquality()
                 .equals(other.molecularWeight, molecularWeight) &&
-            const DeepCollectionEquality().equals(other.technique, technique) &&
             const DeepCollectionEquality()
-                .equals(other.sourceDocument, sourceDocument) &&
+                .equals(other._technique, _technique) &&
             const DeepCollectionEquality()
-                .equals(other.representation, representation));
+                .equals(other._sourceDocument, _sourceDocument) &&
+            const DeepCollectionEquality()
+                .equals(other._representation, _representation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(stereochemistry),
       const DeepCollectionEquality().hash(opticalActivity),
       const DeepCollectionEquality().hash(molecularFormula),
@@ -17754,15 +17633,15 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
       const DeepCollectionEquality().hash(molecularFormulaByMoiety),
       const DeepCollectionEquality().hash(molecularFormulaByMoietyElement),
       const DeepCollectionEquality().hash(molecularWeight),
-      const DeepCollectionEquality().hash(technique),
-      const DeepCollectionEquality().hash(sourceDocument),
-      const DeepCollectionEquality().hash(representation));
+      const DeepCollectionEquality().hash(_technique),
+      const DeepCollectionEquality().hash(_sourceDocument),
+      const DeepCollectionEquality().hash(_representation));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionStructureCopyWith<_SubstanceDefinitionStructure>
-      get copyWith => __$SubstanceDefinitionStructureCopyWithImpl<
-          _SubstanceDefinitionStructure>(this, _$identity);
+  _$$_SubstanceDefinitionStructureCopyWith<_$_SubstanceDefinitionStructure>
+      get copyWith => __$$_SubstanceDefinitionStructureCopyWithImpl<
+          _$_SubstanceDefinitionStructure>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -17773,22 +17652,22 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
 abstract class _SubstanceDefinitionStructure
     extends SubstanceDefinitionStructure {
   factory _SubstanceDefinitionStructure(
-          {String? id,
+          {final String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? stereochemistry,
-          CodeableConcept? opticalActivity,
-          String? molecularFormula,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? stereochemistry,
+          final CodeableConcept? opticalActivity,
+          final String? molecularFormula,
           @JsonKey(name: '_molecularFormula')
-              Element? molecularFormulaElement,
-          String? molecularFormulaByMoiety,
+              final Element? molecularFormulaElement,
+          final String? molecularFormulaByMoiety,
           @JsonKey(name: '_molecularFormulaByMoiety')
-              Element? molecularFormulaByMoietyElement,
-          SubstanceDefinitionMolecularWeight? molecularWeight,
-          List<CodeableConcept>? technique,
-          List<Reference>? sourceDocument,
-          List<SubstanceDefinitionRepresentation>? representation}) =
+              final Element? molecularFormulaByMoietyElement,
+          final SubstanceDefinitionMolecularWeight? molecularWeight,
+          final List<CodeableConcept>? technique,
+          final List<Reference>? sourceDocument,
+          final List<SubstanceDefinitionRepresentation>? representation}) =
       _$_SubstanceDefinitionStructure;
   _SubstanceDefinitionStructure._() : super._();
 
@@ -17796,37 +17675,41 @@ abstract class _SubstanceDefinitionStructure
       _$_SubstanceDefinitionStructure.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get stereochemistry;
+  CodeableConcept? get stereochemistry => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get opticalActivity;
+  CodeableConcept? get opticalActivity => throw _privateConstructorUsedError;
   @override
-  String? get molecularFormula;
+  String? get molecularFormula => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_molecularFormula')
-  Element? get molecularFormulaElement;
+  Element? get molecularFormulaElement => throw _privateConstructorUsedError;
   @override
-  String? get molecularFormulaByMoiety;
+  String? get molecularFormulaByMoiety => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_molecularFormulaByMoiety')
-  Element? get molecularFormulaByMoietyElement;
+  Element? get molecularFormulaByMoietyElement =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceDefinitionMolecularWeight? get molecularWeight;
+  SubstanceDefinitionMolecularWeight? get molecularWeight =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get technique;
+  List<CodeableConcept>? get technique => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get sourceDocument;
+  List<Reference>? get sourceDocument => throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionRepresentation>? get representation;
+  List<SubstanceDefinitionRepresentation>? get representation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionStructureCopyWith<_SubstanceDefinitionStructure>
+  _$$_SubstanceDefinitionStructureCopyWith<_$_SubstanceDefinitionStructure>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -17834,40 +17717,6 @@ SubstanceDefinitionRepresentation _$SubstanceDefinitionRepresentationFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionRepresentation.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionRepresentationTearOff {
-  const _$SubstanceDefinitionRepresentationTearOff();
-
-  _SubstanceDefinitionRepresentation call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      String? representation,
-      @JsonKey(name: '_representation') Element? representationElement,
-      CodeableConcept? format,
-      Reference? document}) {
-    return _SubstanceDefinitionRepresentation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      representation: representation,
-      representationElement: representationElement,
-      format: format,
-      document: document,
-    );
-  }
-
-  SubstanceDefinitionRepresentation fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionRepresentation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionRepresentation =
-    _$SubstanceDefinitionRepresentationTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionRepresentation {
@@ -18013,12 +17862,12 @@ class _$SubstanceDefinitionRepresentationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionRepresentationCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionRepresentationCopyWith<$Res>
     implements $SubstanceDefinitionRepresentationCopyWith<$Res> {
-  factory _$SubstanceDefinitionRepresentationCopyWith(
-          _SubstanceDefinitionRepresentation value,
-          $Res Function(_SubstanceDefinitionRepresentation) then) =
-      __$SubstanceDefinitionRepresentationCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionRepresentationCopyWith(
+          _$_SubstanceDefinitionRepresentation value,
+          $Res Function(_$_SubstanceDefinitionRepresentation) then) =
+      __$$_SubstanceDefinitionRepresentationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -18041,17 +17890,17 @@ abstract class _$SubstanceDefinitionRepresentationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionRepresentationCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionRepresentationCopyWithImpl<$Res>
     extends _$SubstanceDefinitionRepresentationCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionRepresentationCopyWith<$Res> {
-  __$SubstanceDefinitionRepresentationCopyWithImpl(
-      _SubstanceDefinitionRepresentation _value,
-      $Res Function(_SubstanceDefinitionRepresentation) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionRepresentation));
+    implements _$$_SubstanceDefinitionRepresentationCopyWith<$Res> {
+  __$$_SubstanceDefinitionRepresentationCopyWithImpl(
+      _$_SubstanceDefinitionRepresentation _value,
+      $Res Function(_$_SubstanceDefinitionRepresentation) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionRepresentation));
 
   @override
-  _SubstanceDefinitionRepresentation get _value =>
-      super._value as _SubstanceDefinitionRepresentation;
+  _$_SubstanceDefinitionRepresentation get _value =>
+      super._value as _$_SubstanceDefinitionRepresentation;
 
   @override
   $Res call({
@@ -18064,17 +17913,17 @@ class __$SubstanceDefinitionRepresentationCopyWithImpl<$Res>
     Object? format = freezed,
     Object? document = freezed,
   }) {
-    return _then(_SubstanceDefinitionRepresentation(
+    return _then(_$_SubstanceDefinitionRepresentation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -18107,14 +17956,16 @@ class _$_SubstanceDefinitionRepresentation
     extends _SubstanceDefinitionRepresentation {
   _$_SubstanceDefinitionRepresentation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.representation,
       @JsonKey(name: '_representation') this.representationElement,
       this.format,
       this.document})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceDefinitionRepresentation.fromJson(
           Map<String, dynamic> json) =>
@@ -18122,11 +17973,25 @@ class _$_SubstanceDefinitionRepresentation
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -18148,12 +18013,12 @@ class _$_SubstanceDefinitionRepresentation
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionRepresentation &&
+            other is _$_SubstanceDefinitionRepresentation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.representation, representation) &&
@@ -18163,12 +18028,13 @@ class _$_SubstanceDefinitionRepresentation
             const DeepCollectionEquality().equals(other.document, document));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(representation),
       const DeepCollectionEquality().hash(representationElement),
@@ -18177,10 +18043,10 @@ class _$_SubstanceDefinitionRepresentation
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionRepresentationCopyWith<
-          _SubstanceDefinitionRepresentation>
-      get copyWith => __$SubstanceDefinitionRepresentationCopyWithImpl<
-          _SubstanceDefinitionRepresentation>(this, _$identity);
+  _$$_SubstanceDefinitionRepresentationCopyWith<
+          _$_SubstanceDefinitionRepresentation>
+      get copyWith => __$$_SubstanceDefinitionRepresentationCopyWithImpl<
+          _$_SubstanceDefinitionRepresentation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -18191,14 +18057,14 @@ class _$_SubstanceDefinitionRepresentation
 abstract class _SubstanceDefinitionRepresentation
     extends SubstanceDefinitionRepresentation {
   factory _SubstanceDefinitionRepresentation(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      String? representation,
-      @JsonKey(name: '_representation') Element? representationElement,
-      CodeableConcept? format,
-      Reference? document}) = _$_SubstanceDefinitionRepresentation;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? type,
+      final String? representation,
+      @JsonKey(name: '_representation') final Element? representationElement,
+      final CodeableConcept? format,
+      final Reference? document}) = _$_SubstanceDefinitionRepresentation;
   _SubstanceDefinitionRepresentation._() : super._();
 
   factory _SubstanceDefinitionRepresentation.fromJson(
@@ -18206,27 +18072,28 @@ abstract class _SubstanceDefinitionRepresentation
       _$_SubstanceDefinitionRepresentation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  String? get representation;
+  String? get representation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_representation')
-  Element? get representationElement;
+  Element? get representationElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get format;
+  CodeableConcept? get format => throw _privateConstructorUsedError;
   @override
-  Reference? get document;
+  Reference? get document => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionRepresentationCopyWith<
-          _SubstanceDefinitionRepresentation>
+  _$$_SubstanceDefinitionRepresentationCopyWith<
+          _$_SubstanceDefinitionRepresentation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -18234,41 +18101,6 @@ SubstanceDefinitionCode _$SubstanceDefinitionCodeFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionCode.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionCodeTearOff {
-  const _$SubstanceDefinitionCodeTearOff();
-
-  _SubstanceDefinitionCode call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? status,
-      DateTime? statusDate,
-      @JsonKey(name: '_statusDate') Element? statusDateElement,
-      List<Annotation>? note,
-      List<Reference>? source}) {
-    return _SubstanceDefinitionCode(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      status: status,
-      statusDate: statusDate,
-      statusDateElement: statusDateElement,
-      note: note,
-      source: source,
-    );
-  }
-
-  SubstanceDefinitionCode fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionCode.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionCode = _$SubstanceDefinitionCodeTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionCode {
@@ -18408,11 +18240,11 @@ class _$SubstanceDefinitionCodeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionCodeCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionCodeCopyWith<$Res>
     implements $SubstanceDefinitionCodeCopyWith<$Res> {
-  factory _$SubstanceDefinitionCodeCopyWith(_SubstanceDefinitionCode value,
-          $Res Function(_SubstanceDefinitionCode) then) =
-      __$SubstanceDefinitionCodeCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionCodeCopyWith(_$_SubstanceDefinitionCode value,
+          $Res Function(_$_SubstanceDefinitionCode) then) =
+      __$$_SubstanceDefinitionCodeCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -18434,16 +18266,16 @@ abstract class _$SubstanceDefinitionCodeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionCodeCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionCodeCopyWithImpl<$Res>
     extends _$SubstanceDefinitionCodeCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionCodeCopyWith<$Res> {
-  __$SubstanceDefinitionCodeCopyWithImpl(_SubstanceDefinitionCode _value,
-      $Res Function(_SubstanceDefinitionCode) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionCode));
+    implements _$$_SubstanceDefinitionCodeCopyWith<$Res> {
+  __$$_SubstanceDefinitionCodeCopyWithImpl(_$_SubstanceDefinitionCode _value,
+      $Res Function(_$_SubstanceDefinitionCode) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionCode));
 
   @override
-  _SubstanceDefinitionCode get _value =>
-      super._value as _SubstanceDefinitionCode;
+  _$_SubstanceDefinitionCode get _value =>
+      super._value as _$_SubstanceDefinitionCode;
 
   @override
   $Res call({
@@ -18457,17 +18289,17 @@ class __$SubstanceDefinitionCodeCopyWithImpl<$Res>
     Object? note = freezed,
     Object? source = freezed,
   }) {
-    return _then(_SubstanceDefinitionCode(
+    return _then(_$_SubstanceDefinitionCode(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -18487,11 +18319,11 @@ class __$SubstanceDefinitionCodeCopyWithImpl<$Res>
           : statusDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       source: source == freezed
-          ? _value.source
+          ? _value._source
           : source // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -18503,26 +18335,44 @@ class __$SubstanceDefinitionCodeCopyWithImpl<$Res>
 class _$_SubstanceDefinitionCode extends _SubstanceDefinitionCode {
   _$_SubstanceDefinitionCode(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.code,
       this.status,
       this.statusDate,
       @JsonKey(name: '_statusDate') this.statusDateElement,
-      this.note,
-      this.source})
-      : super._();
+      final List<Annotation>? note,
+      final List<Reference>? source})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _note = note,
+        _source = source,
+        super._();
 
   factory _$_SubstanceDefinitionCode.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceDefinitionCodeFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? code;
   @override
@@ -18532,10 +18382,23 @@ class _$_SubstanceDefinitionCode extends _SubstanceDefinitionCode {
   @override
   @JsonKey(name: '_statusDate')
   final Element? statusDateElement;
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _source;
   @override
-  final List<Reference>? source;
+  List<Reference>? get source {
+    final value = _source;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -18546,40 +18409,42 @@ class _$_SubstanceDefinitionCode extends _SubstanceDefinitionCode {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionCode &&
+            other is _$_SubstanceDefinitionCode &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusDate, statusDate) &&
             const DeepCollectionEquality()
                 .equals(other.statusDateElement, statusDateElement) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
-            const DeepCollectionEquality().equals(other.source, source));
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other._source, _source));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(statusDate),
       const DeepCollectionEquality().hash(statusDateElement),
-      const DeepCollectionEquality().hash(note),
-      const DeepCollectionEquality().hash(source));
+      const DeepCollectionEquality().hash(_note),
+      const DeepCollectionEquality().hash(_source));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionCodeCopyWith<_SubstanceDefinitionCode> get copyWith =>
-      __$SubstanceDefinitionCodeCopyWithImpl<_SubstanceDefinitionCode>(
-          this, _$identity);
+  _$$_SubstanceDefinitionCodeCopyWith<_$_SubstanceDefinitionCode>
+      get copyWith =>
+          __$$_SubstanceDefinitionCodeCopyWithImpl<_$_SubstanceDefinitionCode>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -18589,99 +18454,51 @@ class _$_SubstanceDefinitionCode extends _SubstanceDefinitionCode {
 
 abstract class _SubstanceDefinitionCode extends SubstanceDefinitionCode {
   factory _SubstanceDefinitionCode(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? status,
-      DateTime? statusDate,
-      @JsonKey(name: '_statusDate') Element? statusDateElement,
-      List<Annotation>? note,
-      List<Reference>? source}) = _$_SubstanceDefinitionCode;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? code,
+      final CodeableConcept? status,
+      final DateTime? statusDate,
+      @JsonKey(name: '_statusDate') final Element? statusDateElement,
+      final List<Annotation>? note,
+      final List<Reference>? source}) = _$_SubstanceDefinitionCode;
   _SubstanceDefinitionCode._() : super._();
 
   factory _SubstanceDefinitionCode.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionCode.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  DateTime? get statusDate;
+  DateTime? get statusDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionCodeCopyWith<_SubstanceDefinitionCode> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SubstanceDefinitionCodeCopyWith<_$_SubstanceDefinitionCode>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceDefinitionName _$SubstanceDefinitionNameFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionName.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionNameTearOff {
-  const _$SubstanceDefinitionNameTearOff();
-
-  _SubstanceDefinitionName call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? type,
-      CodeableConcept? status,
-      Boolean? preferred,
-      @JsonKey(name: '_preferred') Element? preferredElement,
-      List<CodeableConcept>? language,
-      List<CodeableConcept>? domain,
-      List<CodeableConcept>? jurisdiction,
-      List<SubstanceDefinitionName>? synonym,
-      List<SubstanceDefinitionName>? translation,
-      List<SubstanceDefinitionOfficial>? official,
-      List<Reference>? source}) {
-    return _SubstanceDefinitionName(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      type: type,
-      status: status,
-      preferred: preferred,
-      preferredElement: preferredElement,
-      language: language,
-      domain: domain,
-      jurisdiction: jurisdiction,
-      synonym: synonym,
-      translation: translation,
-      official: official,
-      source: source,
-    );
-  }
-
-  SubstanceDefinitionName fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionName.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionName = _$SubstanceDefinitionNameTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionName {
@@ -18886,11 +18703,11 @@ class _$SubstanceDefinitionNameCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionNameCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionNameCopyWith<$Res>
     implements $SubstanceDefinitionNameCopyWith<$Res> {
-  factory _$SubstanceDefinitionNameCopyWith(_SubstanceDefinitionName value,
-          $Res Function(_SubstanceDefinitionName) then) =
-      __$SubstanceDefinitionNameCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionNameCopyWith(_$_SubstanceDefinitionName value,
+          $Res Function(_$_SubstanceDefinitionName) then) =
+      __$$_SubstanceDefinitionNameCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -18921,16 +18738,16 @@ abstract class _$SubstanceDefinitionNameCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionNameCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionNameCopyWithImpl<$Res>
     extends _$SubstanceDefinitionNameCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionNameCopyWith<$Res> {
-  __$SubstanceDefinitionNameCopyWithImpl(_SubstanceDefinitionName _value,
-      $Res Function(_SubstanceDefinitionName) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionName));
+    implements _$$_SubstanceDefinitionNameCopyWith<$Res> {
+  __$$_SubstanceDefinitionNameCopyWithImpl(_$_SubstanceDefinitionName _value,
+      $Res Function(_$_SubstanceDefinitionName) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionName));
 
   @override
-  _SubstanceDefinitionName get _value =>
-      super._value as _SubstanceDefinitionName;
+  _$_SubstanceDefinitionName get _value =>
+      super._value as _$_SubstanceDefinitionName;
 
   @override
   $Res call({
@@ -18951,17 +18768,17 @@ class __$SubstanceDefinitionNameCopyWithImpl<$Res>
     Object? official = freezed,
     Object? source = freezed,
   }) {
-    return _then(_SubstanceDefinitionName(
+    return _then(_$_SubstanceDefinitionName(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -18989,31 +18806,31 @@ class __$SubstanceDefinitionNameCopyWithImpl<$Res>
           : preferredElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       language: language == freezed
-          ? _value.language
+          ? _value._language
           : language // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       domain: domain == freezed
-          ? _value.domain
+          ? _value._domain
           : domain // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       jurisdiction: jurisdiction == freezed
-          ? _value.jurisdiction
+          ? _value._jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       synonym: synonym == freezed
-          ? _value.synonym
+          ? _value._synonym
           : synonym // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionName>?,
       translation: translation == freezed
-          ? _value.translation
+          ? _value._translation
           : translation // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionName>?,
       official: official == freezed
-          ? _value.official
+          ? _value._official
           : official // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionOfficial>?,
       source: source == freezed
-          ? _value.source
+          ? _value._source
           : source // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -19025,33 +18842,56 @@ class __$SubstanceDefinitionNameCopyWithImpl<$Res>
 class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
   _$_SubstanceDefinitionName(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.type,
       this.status,
       this.preferred,
       @JsonKey(name: '_preferred') this.preferredElement,
-      this.language,
-      this.domain,
-      this.jurisdiction,
-      this.synonym,
-      this.translation,
-      this.official,
-      this.source})
-      : super._();
+      final List<CodeableConcept>? language,
+      final List<CodeableConcept>? domain,
+      final List<CodeableConcept>? jurisdiction,
+      final List<SubstanceDefinitionName>? synonym,
+      final List<SubstanceDefinitionName>? translation,
+      final List<SubstanceDefinitionOfficial>? official,
+      final List<Reference>? source})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _language = language,
+        _domain = domain,
+        _jurisdiction = jurisdiction,
+        _synonym = synonym,
+        _translation = translation,
+        _official = official,
+        _source = source,
+        super._();
 
   factory _$_SubstanceDefinitionName.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceDefinitionNameFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
   @override
@@ -19066,20 +18906,68 @@ class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
   @override
   @JsonKey(name: '_preferred')
   final Element? preferredElement;
+  final List<CodeableConcept>? _language;
   @override
-  final List<CodeableConcept>? language;
+  List<CodeableConcept>? get language {
+    final value = _language;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _domain;
   @override
-  final List<CodeableConcept>? domain;
+  List<CodeableConcept>? get domain {
+    final value = _domain;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _jurisdiction;
   @override
-  final List<CodeableConcept>? jurisdiction;
+  List<CodeableConcept>? get jurisdiction {
+    final value = _jurisdiction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceDefinitionName>? _synonym;
   @override
-  final List<SubstanceDefinitionName>? synonym;
+  List<SubstanceDefinitionName>? get synonym {
+    final value = _synonym;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceDefinitionName>? _translation;
   @override
-  final List<SubstanceDefinitionName>? translation;
+  List<SubstanceDefinitionName>? get translation {
+    final value = _translation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceDefinitionOfficial>? _official;
   @override
-  final List<SubstanceDefinitionOfficial>? official;
+  List<SubstanceDefinitionOfficial>? get official {
+    final value = _official;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _source;
   @override
-  final List<Reference>? source;
+  List<Reference>? get source {
+    final value = _source;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -19090,12 +18978,12 @@ class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionName &&
+            other is _$_SubstanceDefinitionName &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -19104,42 +18992,44 @@ class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
             const DeepCollectionEquality().equals(other.preferred, preferred) &&
             const DeepCollectionEquality()
                 .equals(other.preferredElement, preferredElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality().equals(other.domain, domain) &&
+            const DeepCollectionEquality().equals(other._language, _language) &&
+            const DeepCollectionEquality().equals(other._domain, _domain) &&
             const DeepCollectionEquality()
-                .equals(other.jurisdiction, jurisdiction) &&
-            const DeepCollectionEquality().equals(other.synonym, synonym) &&
+                .equals(other._jurisdiction, _jurisdiction) &&
+            const DeepCollectionEquality().equals(other._synonym, _synonym) &&
             const DeepCollectionEquality()
-                .equals(other.translation, translation) &&
-            const DeepCollectionEquality().equals(other.official, official) &&
-            const DeepCollectionEquality().equals(other.source, source));
+                .equals(other._translation, _translation) &&
+            const DeepCollectionEquality().equals(other._official, _official) &&
+            const DeepCollectionEquality().equals(other._source, _source));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(nameElement),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(preferred),
       const DeepCollectionEquality().hash(preferredElement),
-      const DeepCollectionEquality().hash(language),
-      const DeepCollectionEquality().hash(domain),
-      const DeepCollectionEquality().hash(jurisdiction),
-      const DeepCollectionEquality().hash(synonym),
-      const DeepCollectionEquality().hash(translation),
-      const DeepCollectionEquality().hash(official),
-      const DeepCollectionEquality().hash(source));
+      const DeepCollectionEquality().hash(_language),
+      const DeepCollectionEquality().hash(_domain),
+      const DeepCollectionEquality().hash(_jurisdiction),
+      const DeepCollectionEquality().hash(_synonym),
+      const DeepCollectionEquality().hash(_translation),
+      const DeepCollectionEquality().hash(_official),
+      const DeepCollectionEquality().hash(_source));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionNameCopyWith<_SubstanceDefinitionName> get copyWith =>
-      __$SubstanceDefinitionNameCopyWithImpl<_SubstanceDefinitionName>(
-          this, _$identity);
+  _$$_SubstanceDefinitionNameCopyWith<_$_SubstanceDefinitionName>
+      get copyWith =>
+          __$$_SubstanceDefinitionNameCopyWithImpl<_$_SubstanceDefinitionName>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -19149,103 +19039,76 @@ class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
 
 abstract class _SubstanceDefinitionName extends SubstanceDefinitionName {
   factory _SubstanceDefinitionName(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? type,
-      CodeableConcept? status,
-      Boolean? preferred,
-      @JsonKey(name: '_preferred') Element? preferredElement,
-      List<CodeableConcept>? language,
-      List<CodeableConcept>? domain,
-      List<CodeableConcept>? jurisdiction,
-      List<SubstanceDefinitionName>? synonym,
-      List<SubstanceDefinitionName>? translation,
-      List<SubstanceDefinitionOfficial>? official,
-      List<Reference>? source}) = _$_SubstanceDefinitionName;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final CodeableConcept? type,
+      final CodeableConcept? status,
+      final Boolean? preferred,
+      @JsonKey(name: '_preferred') final Element? preferredElement,
+      final List<CodeableConcept>? language,
+      final List<CodeableConcept>? domain,
+      final List<CodeableConcept>? jurisdiction,
+      final List<SubstanceDefinitionName>? synonym,
+      final List<SubstanceDefinitionName>? translation,
+      final List<SubstanceDefinitionOfficial>? official,
+      final List<Reference>? source}) = _$_SubstanceDefinitionName;
   _SubstanceDefinitionName._() : super._();
 
   factory _SubstanceDefinitionName.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionName.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  Boolean? get preferred;
+  Boolean? get preferred => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_preferred')
-  Element? get preferredElement;
+  Element? get preferredElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get language;
+  List<CodeableConcept>? get language => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get domain;
+  List<CodeableConcept>? get domain => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionName>? get synonym;
+  List<SubstanceDefinitionName>? get synonym =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionName>? get translation;
+  List<SubstanceDefinitionName>? get translation =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceDefinitionOfficial>? get official;
+  List<SubstanceDefinitionOfficial>? get official =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionNameCopyWith<_SubstanceDefinitionName> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SubstanceDefinitionNameCopyWith<_$_SubstanceDefinitionName>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceDefinitionOfficial _$SubstanceDefinitionOfficialFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionOfficial.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionOfficialTearOff {
-  const _$SubstanceDefinitionOfficialTearOff();
-
-  _SubstanceDefinitionOfficial call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? authority,
-      CodeableConcept? status,
-      DateTime? date,
-      @JsonKey(name: '_date') Element? dateElement}) {
-    return _SubstanceDefinitionOfficial(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      authority: authority,
-      status: status,
-      date: date,
-      dateElement: dateElement,
-    );
-  }
-
-  SubstanceDefinitionOfficial fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionOfficial.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionOfficial = _$SubstanceDefinitionOfficialTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionOfficial {
@@ -19372,12 +19235,12 @@ class _$SubstanceDefinitionOfficialCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionOfficialCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionOfficialCopyWith<$Res>
     implements $SubstanceDefinitionOfficialCopyWith<$Res> {
-  factory _$SubstanceDefinitionOfficialCopyWith(
-          _SubstanceDefinitionOfficial value,
-          $Res Function(_SubstanceDefinitionOfficial) then) =
-      __$SubstanceDefinitionOfficialCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionOfficialCopyWith(
+          _$_SubstanceDefinitionOfficial value,
+          $Res Function(_$_SubstanceDefinitionOfficial) then) =
+      __$$_SubstanceDefinitionOfficialCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -19397,17 +19260,17 @@ abstract class _$SubstanceDefinitionOfficialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionOfficialCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionOfficialCopyWithImpl<$Res>
     extends _$SubstanceDefinitionOfficialCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionOfficialCopyWith<$Res> {
-  __$SubstanceDefinitionOfficialCopyWithImpl(
-      _SubstanceDefinitionOfficial _value,
-      $Res Function(_SubstanceDefinitionOfficial) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionOfficial));
+    implements _$$_SubstanceDefinitionOfficialCopyWith<$Res> {
+  __$$_SubstanceDefinitionOfficialCopyWithImpl(
+      _$_SubstanceDefinitionOfficial _value,
+      $Res Function(_$_SubstanceDefinitionOfficial) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionOfficial));
 
   @override
-  _SubstanceDefinitionOfficial get _value =>
-      super._value as _SubstanceDefinitionOfficial;
+  _$_SubstanceDefinitionOfficial get _value =>
+      super._value as _$_SubstanceDefinitionOfficial;
 
   @override
   $Res call({
@@ -19419,17 +19282,17 @@ class __$SubstanceDefinitionOfficialCopyWithImpl<$Res>
     Object? date = freezed,
     Object? dateElement = freezed,
   }) {
-    return _then(_SubstanceDefinitionOfficial(
+    return _then(_$_SubstanceDefinitionOfficial(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       authority: authority == freezed
@@ -19457,24 +19320,40 @@ class __$SubstanceDefinitionOfficialCopyWithImpl<$Res>
 class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
   _$_SubstanceDefinitionOfficial(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.authority,
       this.status,
       this.date,
       @JsonKey(name: '_date') this.dateElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceDefinitionOfficial.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceDefinitionOfficialFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? authority;
   @override
@@ -19494,12 +19373,12 @@ class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionOfficial &&
+            other is _$_SubstanceDefinitionOfficial &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.authority, authority) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality().equals(other.date, date) &&
@@ -19507,12 +19386,13 @@ class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
                 .equals(other.dateElement, dateElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(authority),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(date),
@@ -19520,9 +19400,9 @@ class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionOfficialCopyWith<_SubstanceDefinitionOfficial>
-      get copyWith => __$SubstanceDefinitionOfficialCopyWithImpl<
-          _SubstanceDefinitionOfficial>(this, _$identity);
+  _$$_SubstanceDefinitionOfficialCopyWith<_$_SubstanceDefinitionOfficial>
+      get copyWith => __$$_SubstanceDefinitionOfficialCopyWithImpl<
+          _$_SubstanceDefinitionOfficial>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -19533,13 +19413,13 @@ class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
 abstract class _SubstanceDefinitionOfficial
     extends SubstanceDefinitionOfficial {
   factory _SubstanceDefinitionOfficial(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? authority,
-          CodeableConcept? status,
-          DateTime? date,
-          @JsonKey(name: '_date') Element? dateElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? authority,
+          final CodeableConcept? status,
+          final DateTime? date,
+          @JsonKey(name: '_date') final Element? dateElement}) =
       _$_SubstanceDefinitionOfficial;
   _SubstanceDefinitionOfficial._() : super._();
 
@@ -19547,24 +19427,25 @@ abstract class _SubstanceDefinitionOfficial
       _$_SubstanceDefinitionOfficial.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get authority;
+  CodeableConcept? get authority => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  DateTime? get date;
+  DateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionOfficialCopyWith<_SubstanceDefinitionOfficial>
+  _$$_SubstanceDefinitionOfficialCopyWith<_$_SubstanceDefinitionOfficial>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -19572,54 +19453,6 @@ SubstanceDefinitionRelationship _$SubstanceDefinitionRelationshipFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionRelationship.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionRelationshipTearOff {
-  const _$SubstanceDefinitionRelationshipTearOff();
-
-  _SubstanceDefinitionRelationship call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference? substanceDefinitionReference,
-      CodeableConcept? substanceDefinitionCodeableConcept,
-      required CodeableConcept type,
-      Boolean? isDefining,
-      @JsonKey(name: '_isDefining') Element? isDefiningElement,
-      Quantity? amountQuantity,
-      Ratio? amountRatio,
-      Markdown? amountString,
-      @JsonKey(name: '_amountString') Element? amountStringElement,
-      Ratio? ratioHighLimitAmount,
-      CodeableConcept? comparator,
-      List<Reference>? source}) {
-    return _SubstanceDefinitionRelationship(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      substanceDefinitionReference: substanceDefinitionReference,
-      substanceDefinitionCodeableConcept: substanceDefinitionCodeableConcept,
-      type: type,
-      isDefining: isDefining,
-      isDefiningElement: isDefiningElement,
-      amountQuantity: amountQuantity,
-      amountRatio: amountRatio,
-      amountString: amountString,
-      amountStringElement: amountStringElement,
-      ratioHighLimitAmount: ratioHighLimitAmount,
-      comparator: comparator,
-      source: source,
-    );
-  }
-
-  SubstanceDefinitionRelationship fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionRelationship.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionRelationship =
-    _$SubstanceDefinitionRelationshipTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionRelationship {
@@ -19876,12 +19709,12 @@ class _$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionRelationshipCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionRelationshipCopyWith<$Res>
     implements $SubstanceDefinitionRelationshipCopyWith<$Res> {
-  factory _$SubstanceDefinitionRelationshipCopyWith(
-          _SubstanceDefinitionRelationship value,
-          $Res Function(_SubstanceDefinitionRelationship) then) =
-      __$SubstanceDefinitionRelationshipCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionRelationshipCopyWith(
+          _$_SubstanceDefinitionRelationship value,
+          $Res Function(_$_SubstanceDefinitionRelationship) then) =
+      __$$_SubstanceDefinitionRelationshipCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -19921,17 +19754,17 @@ abstract class _$SubstanceDefinitionRelationshipCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionRelationshipCopyWithImpl<$Res>
     extends _$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionRelationshipCopyWith<$Res> {
-  __$SubstanceDefinitionRelationshipCopyWithImpl(
-      _SubstanceDefinitionRelationship _value,
-      $Res Function(_SubstanceDefinitionRelationship) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionRelationship));
+    implements _$$_SubstanceDefinitionRelationshipCopyWith<$Res> {
+  __$$_SubstanceDefinitionRelationshipCopyWithImpl(
+      _$_SubstanceDefinitionRelationship _value,
+      $Res Function(_$_SubstanceDefinitionRelationship) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionRelationship));
 
   @override
-  _SubstanceDefinitionRelationship get _value =>
-      super._value as _SubstanceDefinitionRelationship;
+  _$_SubstanceDefinitionRelationship get _value =>
+      super._value as _$_SubstanceDefinitionRelationship;
 
   @override
   $Res call({
@@ -19951,17 +19784,17 @@ class __$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
     Object? comparator = freezed,
     Object? source = freezed,
   }) {
-    return _then(_SubstanceDefinitionRelationship(
+    return _then(_$_SubstanceDefinitionRelationship(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       substanceDefinitionReference: substanceDefinitionReference == freezed
@@ -20010,7 +19843,7 @@ class __$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
           : comparator // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       source: source == freezed
-          ? _value.source
+          ? _value._source
           : source // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -20023,8 +19856,8 @@ class _$_SubstanceDefinitionRelationship
     extends _SubstanceDefinitionRelationship {
   _$_SubstanceDefinitionRelationship(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.substanceDefinitionReference,
       this.substanceDefinitionCodeableConcept,
       required this.type,
@@ -20036,8 +19869,11 @@ class _$_SubstanceDefinitionRelationship
       @JsonKey(name: '_amountString') this.amountStringElement,
       this.ratioHighLimitAmount,
       this.comparator,
-      this.source})
-      : super._();
+      final List<Reference>? source})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _source = source,
+        super._();
 
   factory _$_SubstanceDefinitionRelationship.fromJson(
           Map<String, dynamic> json) =>
@@ -20045,11 +19881,25 @@ class _$_SubstanceDefinitionRelationship
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? substanceDefinitionReference;
   @override
@@ -20074,8 +19924,14 @@ class _$_SubstanceDefinitionRelationship
   final Ratio? ratioHighLimitAmount;
   @override
   final CodeableConcept? comparator;
+  final List<Reference>? _source;
   @override
-  final List<Reference>? source;
+  List<Reference>? get source {
+    final value = _source;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -20086,12 +19942,12 @@ class _$_SubstanceDefinitionRelationship
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionRelationship &&
+            other is _$_SubstanceDefinitionRelationship &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(
                 other.substanceDefinitionReference,
                 substanceDefinitionReference) &&
@@ -20115,15 +19971,16 @@ class _$_SubstanceDefinitionRelationship
                 .equals(other.ratioHighLimitAmount, ratioHighLimitAmount) &&
             const DeepCollectionEquality()
                 .equals(other.comparator, comparator) &&
-            const DeepCollectionEquality().equals(other.source, source));
+            const DeepCollectionEquality().equals(other._source, _source));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(substanceDefinitionReference),
       const DeepCollectionEquality().hash(substanceDefinitionCodeableConcept),
       const DeepCollectionEquality().hash(type),
@@ -20135,13 +19992,14 @@ class _$_SubstanceDefinitionRelationship
       const DeepCollectionEquality().hash(amountStringElement),
       const DeepCollectionEquality().hash(ratioHighLimitAmount),
       const DeepCollectionEquality().hash(comparator),
-      const DeepCollectionEquality().hash(source));
+      const DeepCollectionEquality().hash(_source));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionRelationshipCopyWith<_SubstanceDefinitionRelationship>
-      get copyWith => __$SubstanceDefinitionRelationshipCopyWithImpl<
-          _SubstanceDefinitionRelationship>(this, _$identity);
+  _$$_SubstanceDefinitionRelationshipCopyWith<
+          _$_SubstanceDefinitionRelationship>
+      get copyWith => __$$_SubstanceDefinitionRelationshipCopyWithImpl<
+          _$_SubstanceDefinitionRelationship>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -20152,62 +20010,66 @@ class _$_SubstanceDefinitionRelationship
 abstract class _SubstanceDefinitionRelationship
     extends SubstanceDefinitionRelationship {
   factory _SubstanceDefinitionRelationship(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference? substanceDefinitionReference,
-      CodeableConcept? substanceDefinitionCodeableConcept,
-      required CodeableConcept type,
-      Boolean? isDefining,
-      @JsonKey(name: '_isDefining') Element? isDefiningElement,
-      Quantity? amountQuantity,
-      Ratio? amountRatio,
-      Markdown? amountString,
-      @JsonKey(name: '_amountString') Element? amountStringElement,
-      Ratio? ratioHighLimitAmount,
-      CodeableConcept? comparator,
-      List<Reference>? source}) = _$_SubstanceDefinitionRelationship;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Reference? substanceDefinitionReference,
+      final CodeableConcept? substanceDefinitionCodeableConcept,
+      required final CodeableConcept type,
+      final Boolean? isDefining,
+      @JsonKey(name: '_isDefining') final Element? isDefiningElement,
+      final Quantity? amountQuantity,
+      final Ratio? amountRatio,
+      final Markdown? amountString,
+      @JsonKey(name: '_amountString') final Element? amountStringElement,
+      final Ratio? ratioHighLimitAmount,
+      final CodeableConcept? comparator,
+      final List<Reference>? source}) = _$_SubstanceDefinitionRelationship;
   _SubstanceDefinitionRelationship._() : super._();
 
   factory _SubstanceDefinitionRelationship.fromJson(Map<String, dynamic> json) =
       _$_SubstanceDefinitionRelationship.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get substanceDefinitionReference;
+  Reference? get substanceDefinitionReference =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get substanceDefinitionCodeableConcept;
+  CodeableConcept? get substanceDefinitionCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Boolean? get isDefining;
+  Boolean? get isDefining => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_isDefining')
-  Element? get isDefiningElement;
+  Element? get isDefiningElement => throw _privateConstructorUsedError;
   @override
-  Quantity? get amountQuantity;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
   @override
-  Ratio? get amountRatio;
+  Ratio? get amountRatio => throw _privateConstructorUsedError;
   @override
-  Markdown? get amountString;
+  Markdown? get amountString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
   @override
-  Ratio? get ratioHighLimitAmount;
+  Ratio? get ratioHighLimitAmount => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get comparator;
+  CodeableConcept? get comparator => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionRelationshipCopyWith<_SubstanceDefinitionRelationship>
+  _$$_SubstanceDefinitionRelationshipCopyWith<
+          _$_SubstanceDefinitionRelationship>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -20215,40 +20077,6 @@ SubstanceDefinitionSourceMaterial _$SubstanceDefinitionSourceMaterialFromJson(
     Map<String, dynamic> json) {
   return _SubstanceDefinitionSourceMaterial.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceDefinitionSourceMaterialTearOff {
-  const _$SubstanceDefinitionSourceMaterialTearOff();
-
-  _SubstanceDefinitionSourceMaterial call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      CodeableConcept? genus,
-      CodeableConcept? species,
-      @JsonKey(name: 'part') CodeableConcept? part_,
-      List<CodeableConcept>? countryOfOrigin}) {
-    return _SubstanceDefinitionSourceMaterial(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      genus: genus,
-      species: species,
-      part_: part_,
-      countryOfOrigin: countryOfOrigin,
-    );
-  }
-
-  SubstanceDefinitionSourceMaterial fromJson(Map<String, Object?> json) {
-    return SubstanceDefinitionSourceMaterial.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceDefinitionSourceMaterial =
-    _$SubstanceDefinitionSourceMaterialTearOff();
 
 /// @nodoc
 mixin _$SubstanceDefinitionSourceMaterial {
@@ -20395,12 +20223,12 @@ class _$SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceDefinitionSourceMaterialCopyWith<$Res>
+abstract class _$$_SubstanceDefinitionSourceMaterialCopyWith<$Res>
     implements $SubstanceDefinitionSourceMaterialCopyWith<$Res> {
-  factory _$SubstanceDefinitionSourceMaterialCopyWith(
-          _SubstanceDefinitionSourceMaterial value,
-          $Res Function(_SubstanceDefinitionSourceMaterial) then) =
-      __$SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>;
+  factory _$$_SubstanceDefinitionSourceMaterialCopyWith(
+          _$_SubstanceDefinitionSourceMaterial value,
+          $Res Function(_$_SubstanceDefinitionSourceMaterial) then) =
+      __$$_SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -20423,17 +20251,17 @@ abstract class _$SubstanceDefinitionSourceMaterialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>
+class __$$_SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>
     extends _$SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>
-    implements _$SubstanceDefinitionSourceMaterialCopyWith<$Res> {
-  __$SubstanceDefinitionSourceMaterialCopyWithImpl(
-      _SubstanceDefinitionSourceMaterial _value,
-      $Res Function(_SubstanceDefinitionSourceMaterial) _then)
-      : super(_value, (v) => _then(v as _SubstanceDefinitionSourceMaterial));
+    implements _$$_SubstanceDefinitionSourceMaterialCopyWith<$Res> {
+  __$$_SubstanceDefinitionSourceMaterialCopyWithImpl(
+      _$_SubstanceDefinitionSourceMaterial _value,
+      $Res Function(_$_SubstanceDefinitionSourceMaterial) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceDefinitionSourceMaterial));
 
   @override
-  _SubstanceDefinitionSourceMaterial get _value =>
-      super._value as _SubstanceDefinitionSourceMaterial;
+  _$_SubstanceDefinitionSourceMaterial get _value =>
+      super._value as _$_SubstanceDefinitionSourceMaterial;
 
   @override
   $Res call({
@@ -20446,17 +20274,17 @@ class __$SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>
     Object? part_ = freezed,
     Object? countryOfOrigin = freezed,
   }) {
-    return _then(_SubstanceDefinitionSourceMaterial(
+    return _then(_$_SubstanceDefinitionSourceMaterial(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -20476,7 +20304,7 @@ class __$SubstanceDefinitionSourceMaterialCopyWithImpl<$Res>
           : part_ // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       countryOfOrigin: countryOfOrigin == freezed
-          ? _value.countryOfOrigin
+          ? _value._countryOfOrigin
           : countryOfOrigin // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -20489,14 +20317,17 @@ class _$_SubstanceDefinitionSourceMaterial
     extends _SubstanceDefinitionSourceMaterial {
   _$_SubstanceDefinitionSourceMaterial(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.genus,
       this.species,
       @JsonKey(name: 'part') this.part_,
-      this.countryOfOrigin})
-      : super._();
+      final List<CodeableConcept>? countryOfOrigin})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _countryOfOrigin = countryOfOrigin,
+        super._();
 
   factory _$_SubstanceDefinitionSourceMaterial.fromJson(
           Map<String, dynamic> json) =>
@@ -20504,11 +20335,25 @@ class _$_SubstanceDefinitionSourceMaterial
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -20518,8 +20363,14 @@ class _$_SubstanceDefinitionSourceMaterial
   @override
   @JsonKey(name: 'part')
   final CodeableConcept? part_;
+  final List<CodeableConcept>? _countryOfOrigin;
   @override
-  final List<CodeableConcept>? countryOfOrigin;
+  List<CodeableConcept>? get countryOfOrigin {
+    final value = _countryOfOrigin;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -20530,38 +20381,39 @@ class _$_SubstanceDefinitionSourceMaterial
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceDefinitionSourceMaterial &&
+            other is _$_SubstanceDefinitionSourceMaterial &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.genus, genus) &&
             const DeepCollectionEquality().equals(other.species, species) &&
             const DeepCollectionEquality().equals(other.part_, part_) &&
             const DeepCollectionEquality()
-                .equals(other.countryOfOrigin, countryOfOrigin));
+                .equals(other._countryOfOrigin, _countryOfOrigin));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(genus),
       const DeepCollectionEquality().hash(species),
       const DeepCollectionEquality().hash(part_),
-      const DeepCollectionEquality().hash(countryOfOrigin));
+      const DeepCollectionEquality().hash(_countryOfOrigin));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceDefinitionSourceMaterialCopyWith<
-          _SubstanceDefinitionSourceMaterial>
-      get copyWith => __$SubstanceDefinitionSourceMaterialCopyWithImpl<
-          _SubstanceDefinitionSourceMaterial>(this, _$identity);
+  _$$_SubstanceDefinitionSourceMaterialCopyWith<
+          _$_SubstanceDefinitionSourceMaterial>
+      get copyWith => __$$_SubstanceDefinitionSourceMaterialCopyWithImpl<
+          _$_SubstanceDefinitionSourceMaterial>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -20572,14 +20424,14 @@ class _$_SubstanceDefinitionSourceMaterial
 abstract class _SubstanceDefinitionSourceMaterial
     extends SubstanceDefinitionSourceMaterial {
   factory _SubstanceDefinitionSourceMaterial(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? type,
-          CodeableConcept? genus,
-          CodeableConcept? species,
-          @JsonKey(name: 'part') CodeableConcept? part_,
-          List<CodeableConcept>? countryOfOrigin}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final CodeableConcept? genus,
+          final CodeableConcept? species,
+          @JsonKey(name: 'part') final CodeableConcept? part_,
+          final List<CodeableConcept>? countryOfOrigin}) =
       _$_SubstanceDefinitionSourceMaterial;
   _SubstanceDefinitionSourceMaterial._() : super._();
 
@@ -20588,91 +20440,35 @@ abstract class _SubstanceDefinitionSourceMaterial
       _$_SubstanceDefinitionSourceMaterial.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get genus;
+  CodeableConcept? get genus => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get species;
+  CodeableConcept? get species => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  CodeableConcept? get part_;
+  CodeableConcept? get part_ => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get countryOfOrigin;
+  List<CodeableConcept>? get countryOfOrigin =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceDefinitionSourceMaterialCopyWith<
-          _SubstanceDefinitionSourceMaterial>
+  _$$_SubstanceDefinitionSourceMaterialCopyWith<
+          _$_SubstanceDefinitionSourceMaterial>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceNucleicAcid _$SubstanceNucleicAcidFromJson(Map<String, dynamic> json) {
   return _SubstanceNucleicAcid.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceNucleicAcidTearOff {
-  const _$SubstanceNucleicAcidTearOff();
-
-  _SubstanceNucleicAcid call(
-      {R5ResourceType resourceType = R5ResourceType.SubstanceNucleicAcid,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? sequenceType,
-      Integer? numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits')
-          Element? numberOfSubunitsElement,
-      String? areaOfHybridisation,
-      @JsonKey(name: '_areaOfHybridisation')
-          Element? areaOfHybridisationElement,
-      CodeableConcept? oligoNucleotideType,
-      List<SubstanceNucleicAcidSubunit>? subunit}) {
-    return _SubstanceNucleicAcid(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      sequenceType: sequenceType,
-      numberOfSubunits: numberOfSubunits,
-      numberOfSubunitsElement: numberOfSubunitsElement,
-      areaOfHybridisation: areaOfHybridisation,
-      areaOfHybridisationElement: areaOfHybridisationElement,
-      oligoNucleotideType: oligoNucleotideType,
-      subunit: subunit,
-    );
-  }
-
-  SubstanceNucleicAcid fromJson(Map<String, Object?> json) {
-    return SubstanceNucleicAcid.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceNucleicAcid = _$SubstanceNucleicAcidTearOff();
 
 /// @nodoc
 mixin _$SubstanceNucleicAcid {
@@ -20945,11 +20741,11 @@ class _$SubstanceNucleicAcidCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceNucleicAcidCopyWith<$Res>
+abstract class _$$_SubstanceNucleicAcidCopyWith<$Res>
     implements $SubstanceNucleicAcidCopyWith<$Res> {
-  factory _$SubstanceNucleicAcidCopyWith(_SubstanceNucleicAcid value,
-          $Res Function(_SubstanceNucleicAcid) then) =
-      __$SubstanceNucleicAcidCopyWithImpl<$Res>;
+  factory _$$_SubstanceNucleicAcidCopyWith(_$_SubstanceNucleicAcid value,
+          $Res Function(_$_SubstanceNucleicAcid) then) =
+      __$$_SubstanceNucleicAcidCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -20995,15 +20791,15 @@ abstract class _$SubstanceNucleicAcidCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceNucleicAcidCopyWithImpl<$Res>
+class __$$_SubstanceNucleicAcidCopyWithImpl<$Res>
     extends _$SubstanceNucleicAcidCopyWithImpl<$Res>
-    implements _$SubstanceNucleicAcidCopyWith<$Res> {
-  __$SubstanceNucleicAcidCopyWithImpl(
-      _SubstanceNucleicAcid _value, $Res Function(_SubstanceNucleicAcid) _then)
-      : super(_value, (v) => _then(v as _SubstanceNucleicAcid));
+    implements _$$_SubstanceNucleicAcidCopyWith<$Res> {
+  __$$_SubstanceNucleicAcidCopyWithImpl(_$_SubstanceNucleicAcid _value,
+      $Res Function(_$_SubstanceNucleicAcid) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceNucleicAcid));
 
   @override
-  _SubstanceNucleicAcid get _value => super._value as _SubstanceNucleicAcid;
+  _$_SubstanceNucleicAcid get _value => super._value as _$_SubstanceNucleicAcid;
 
   @override
   $Res call({
@@ -21026,7 +20822,7 @@ class __$SubstanceNucleicAcidCopyWithImpl<$Res>
     Object? oligoNucleotideType = freezed,
     Object? subunit = freezed,
   }) {
-    return _then(_SubstanceNucleicAcid(
+    return _then(_$_SubstanceNucleicAcid(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -21060,15 +20856,15 @@ class __$SubstanceNucleicAcidCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       sequenceType: sequenceType == freezed
@@ -21096,7 +20892,7 @@ class __$SubstanceNucleicAcidCopyWithImpl<$Res>
           : oligoNucleotideType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       subunit: subunit == freezed
-          ? _value.subunit
+          ? _value._subunit
           : subunit // ignore: cast_nullable_to_non_nullable
               as List<SubstanceNucleicAcidSubunit>?,
     ));
@@ -21115,23 +20911,27 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.sequenceType,
       this.numberOfSubunits,
       @JsonKey(name: '_numberOfSubunits') this.numberOfSubunitsElement,
       this.areaOfHybridisation,
       @JsonKey(name: '_areaOfHybridisation') this.areaOfHybridisationElement,
       this.oligoNucleotideType,
-      this.subunit})
-      : super._();
+      final List<SubstanceNucleicAcidSubunit>? subunit})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _subunit = subunit,
+        super._();
 
   factory _$_SubstanceNucleicAcid.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceNucleicAcidFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -21149,13 +20949,34 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? sequenceType;
   @override
@@ -21170,8 +20991,14 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   final Element? areaOfHybridisationElement;
   @override
   final CodeableConcept? oligoNucleotideType;
+  final List<SubstanceNucleicAcidSubunit>? _subunit;
   @override
-  final List<SubstanceNucleicAcidSubunit>? subunit;
+  List<SubstanceNucleicAcidSubunit>? get subunit {
+    final value = _subunit;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -21182,7 +21009,7 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceNucleicAcid &&
+            other is _$_SubstanceNucleicAcid &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -21195,11 +21022,12 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.sequenceType, sequenceType) &&
             const DeepCollectionEquality()
@@ -21212,9 +21040,10 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
                 other.areaOfHybridisationElement, areaOfHybridisationElement) &&
             const DeepCollectionEquality()
                 .equals(other.oligoNucleotideType, oligoNucleotideType) &&
-            const DeepCollectionEquality().equals(other.subunit, subunit));
+            const DeepCollectionEquality().equals(other._subunit, _subunit));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -21226,21 +21055,21 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(sequenceType),
       const DeepCollectionEquality().hash(numberOfSubunits),
       const DeepCollectionEquality().hash(numberOfSubunitsElement),
       const DeepCollectionEquality().hash(areaOfHybridisation),
       const DeepCollectionEquality().hash(areaOfHybridisationElement),
       const DeepCollectionEquality().hash(oligoNucleotideType),
-      const DeepCollectionEquality().hash(subunit));
+      const DeepCollectionEquality().hash(_subunit));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceNucleicAcidCopyWith<_SubstanceNucleicAcid> get copyWith =>
-      __$SubstanceNucleicAcidCopyWithImpl<_SubstanceNucleicAcid>(
+  _$$_SubstanceNucleicAcidCopyWith<_$_SubstanceNucleicAcid> get copyWith =>
+      __$$_SubstanceNucleicAcidCopyWithImpl<_$_SubstanceNucleicAcid>(
           this, _$identity);
 
   @override
@@ -21251,78 +21080,82 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
 
 abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
   factory _SubstanceNucleicAcid(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? sequenceType,
-      Integer? numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits')
-          Element? numberOfSubunitsElement,
-      String? areaOfHybridisation,
-      @JsonKey(name: '_areaOfHybridisation')
-          Element? areaOfHybridisationElement,
-      CodeableConcept? oligoNucleotideType,
-      List<SubstanceNucleicAcidSubunit>? subunit}) = _$_SubstanceNucleicAcid;
+          {final R5ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules')
+              final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language')
+              final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? sequenceType,
+          final Integer? numberOfSubunits,
+          @JsonKey(name: '_numberOfSubunits')
+              final Element? numberOfSubunitsElement,
+          final String? areaOfHybridisation,
+          @JsonKey(name: '_areaOfHybridisation')
+              final Element? areaOfHybridisationElement,
+          final CodeableConcept? oligoNucleotideType,
+          final List<SubstanceNucleicAcidSubunit>? subunit}) =
+      _$_SubstanceNucleicAcid;
   _SubstanceNucleicAcid._() : super._();
 
   factory _SubstanceNucleicAcid.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcid.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sequenceType;
+  CodeableConcept? get sequenceType => throw _privateConstructorUsedError;
   @override
-  Integer? get numberOfSubunits;
+  Integer? get numberOfSubunits => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_numberOfSubunits')
-  Element? get numberOfSubunitsElement;
+  Element? get numberOfSubunitsElement => throw _privateConstructorUsedError;
   @override
-  String? get areaOfHybridisation;
+  String? get areaOfHybridisation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_areaOfHybridisation')
-  Element? get areaOfHybridisationElement;
+  Element? get areaOfHybridisationElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get oligoNucleotideType;
+  CodeableConcept? get oligoNucleotideType =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceNucleicAcidSubunit>? get subunit;
+  List<SubstanceNucleicAcidSubunit>? get subunit =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceNucleicAcidCopyWith<_SubstanceNucleicAcid> get copyWith =>
+  _$$_SubstanceNucleicAcidCopyWith<_$_SubstanceNucleicAcid> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -21330,51 +21163,6 @@ SubstanceNucleicAcidSubunit _$SubstanceNucleicAcidSubunitFromJson(
     Map<String, dynamic> json) {
   return _SubstanceNucleicAcidSubunit.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceNucleicAcidSubunitTearOff {
-  const _$SubstanceNucleicAcidSubunitTearOff();
-
-  _SubstanceNucleicAcidSubunit call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? subunit,
-      @JsonKey(name: '_subunit') Element? subunitElement,
-      String? sequence,
-      @JsonKey(name: '_sequence') Element? sequenceElement,
-      Integer? length,
-      @JsonKey(name: '_length') Element? lengthElement,
-      Attachment? sequenceAttachment,
-      CodeableConcept? fivePrime,
-      CodeableConcept? threePrime,
-      List<SubstanceNucleicAcidLinkage>? linkage,
-      List<SubstanceNucleicAcidSugar>? sugar}) {
-    return _SubstanceNucleicAcidSubunit(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      subunit: subunit,
-      subunitElement: subunitElement,
-      sequence: sequence,
-      sequenceElement: sequenceElement,
-      length: length,
-      lengthElement: lengthElement,
-      sequenceAttachment: sequenceAttachment,
-      fivePrime: fivePrime,
-      threePrime: threePrime,
-      linkage: linkage,
-      sugar: sugar,
-    );
-  }
-
-  SubstanceNucleicAcidSubunit fromJson(Map<String, Object?> json) {
-    return SubstanceNucleicAcidSubunit.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceNucleicAcidSubunit = _$SubstanceNucleicAcidSubunitTearOff();
 
 /// @nodoc
 mixin _$SubstanceNucleicAcidSubunit {
@@ -21590,12 +21378,12 @@ class _$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceNucleicAcidSubunitCopyWith<$Res>
+abstract class _$$_SubstanceNucleicAcidSubunitCopyWith<$Res>
     implements $SubstanceNucleicAcidSubunitCopyWith<$Res> {
-  factory _$SubstanceNucleicAcidSubunitCopyWith(
-          _SubstanceNucleicAcidSubunit value,
-          $Res Function(_SubstanceNucleicAcidSubunit) then) =
-      __$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>;
+  factory _$$_SubstanceNucleicAcidSubunitCopyWith(
+          _$_SubstanceNucleicAcidSubunit value,
+          $Res Function(_$_SubstanceNucleicAcidSubunit) then) =
+      __$$_SubstanceNucleicAcidSubunitCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -21628,17 +21416,17 @@ abstract class _$SubstanceNucleicAcidSubunitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
+class __$$_SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
     extends _$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
-    implements _$SubstanceNucleicAcidSubunitCopyWith<$Res> {
-  __$SubstanceNucleicAcidSubunitCopyWithImpl(
-      _SubstanceNucleicAcidSubunit _value,
-      $Res Function(_SubstanceNucleicAcidSubunit) _then)
-      : super(_value, (v) => _then(v as _SubstanceNucleicAcidSubunit));
+    implements _$$_SubstanceNucleicAcidSubunitCopyWith<$Res> {
+  __$$_SubstanceNucleicAcidSubunitCopyWithImpl(
+      _$_SubstanceNucleicAcidSubunit _value,
+      $Res Function(_$_SubstanceNucleicAcidSubunit) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceNucleicAcidSubunit));
 
   @override
-  _SubstanceNucleicAcidSubunit get _value =>
-      super._value as _SubstanceNucleicAcidSubunit;
+  _$_SubstanceNucleicAcidSubunit get _value =>
+      super._value as _$_SubstanceNucleicAcidSubunit;
 
   @override
   $Res call({
@@ -21657,17 +21445,17 @@ class __$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
     Object? linkage = freezed,
     Object? sugar = freezed,
   }) {
-    return _then(_SubstanceNucleicAcidSubunit(
+    return _then(_$_SubstanceNucleicAcidSubunit(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       subunit: subunit == freezed
@@ -21707,11 +21495,11 @@ class __$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
           : threePrime // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       linkage: linkage == freezed
-          ? _value.linkage
+          ? _value._linkage
           : linkage // ignore: cast_nullable_to_non_nullable
               as List<SubstanceNucleicAcidLinkage>?,
       sugar: sugar == freezed
-          ? _value.sugar
+          ? _value._sugar
           : sugar // ignore: cast_nullable_to_non_nullable
               as List<SubstanceNucleicAcidSugar>?,
     ));
@@ -21723,8 +21511,8 @@ class __$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
 class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
   _$_SubstanceNucleicAcidSubunit(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.subunit,
       @JsonKey(name: '_subunit') this.subunitElement,
       this.sequence,
@@ -21734,20 +21522,38 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
       this.sequenceAttachment,
       this.fivePrime,
       this.threePrime,
-      this.linkage,
-      this.sugar})
-      : super._();
+      final List<SubstanceNucleicAcidLinkage>? linkage,
+      final List<SubstanceNucleicAcidSugar>? sugar})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _linkage = linkage,
+        _sugar = sugar,
+        super._();
 
   factory _$_SubstanceNucleicAcidSubunit.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceNucleicAcidSubunitFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Integer? subunit;
   @override
@@ -21769,10 +21575,23 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
   final CodeableConcept? fivePrime;
   @override
   final CodeableConcept? threePrime;
+  final List<SubstanceNucleicAcidLinkage>? _linkage;
   @override
-  final List<SubstanceNucleicAcidLinkage>? linkage;
+  List<SubstanceNucleicAcidLinkage>? get linkage {
+    final value = _linkage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceNucleicAcidSugar>? _sugar;
   @override
-  final List<SubstanceNucleicAcidSugar>? sugar;
+  List<SubstanceNucleicAcidSugar>? get sugar {
+    final value = _sugar;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -21783,12 +21602,12 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceNucleicAcidSubunit &&
+            other is _$_SubstanceNucleicAcidSubunit &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.subunit, subunit) &&
             const DeepCollectionEquality()
                 .equals(other.subunitElement, subunitElement) &&
@@ -21803,16 +21622,17 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
             const DeepCollectionEquality().equals(other.fivePrime, fivePrime) &&
             const DeepCollectionEquality()
                 .equals(other.threePrime, threePrime) &&
-            const DeepCollectionEquality().equals(other.linkage, linkage) &&
-            const DeepCollectionEquality().equals(other.sugar, sugar));
+            const DeepCollectionEquality().equals(other._linkage, _linkage) &&
+            const DeepCollectionEquality().equals(other._sugar, _sugar));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(subunit),
       const DeepCollectionEquality().hash(subunitElement),
       const DeepCollectionEquality().hash(sequence),
@@ -21822,14 +21642,14 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
       const DeepCollectionEquality().hash(sequenceAttachment),
       const DeepCollectionEquality().hash(fivePrime),
       const DeepCollectionEquality().hash(threePrime),
-      const DeepCollectionEquality().hash(linkage),
-      const DeepCollectionEquality().hash(sugar));
+      const DeepCollectionEquality().hash(_linkage),
+      const DeepCollectionEquality().hash(_sugar));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceNucleicAcidSubunitCopyWith<_SubstanceNucleicAcidSubunit>
-      get copyWith => __$SubstanceNucleicAcidSubunitCopyWithImpl<
-          _SubstanceNucleicAcidSubunit>(this, _$identity);
+  _$$_SubstanceNucleicAcidSubunitCopyWith<_$_SubstanceNucleicAcidSubunit>
+      get copyWith => __$$_SubstanceNucleicAcidSubunitCopyWithImpl<
+          _$_SubstanceNucleicAcidSubunit>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -21840,60 +21660,64 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
 abstract class _SubstanceNucleicAcidSubunit
     extends SubstanceNucleicAcidSubunit {
   factory _SubstanceNucleicAcidSubunit(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? subunit,
-      @JsonKey(name: '_subunit') Element? subunitElement,
-      String? sequence,
-      @JsonKey(name: '_sequence') Element? sequenceElement,
-      Integer? length,
-      @JsonKey(name: '_length') Element? lengthElement,
-      Attachment? sequenceAttachment,
-      CodeableConcept? fivePrime,
-      CodeableConcept? threePrime,
-      List<SubstanceNucleicAcidLinkage>? linkage,
-      List<SubstanceNucleicAcidSugar>? sugar}) = _$_SubstanceNucleicAcidSubunit;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Integer? subunit,
+          @JsonKey(name: '_subunit') final Element? subunitElement,
+          final String? sequence,
+          @JsonKey(name: '_sequence') final Element? sequenceElement,
+          final Integer? length,
+          @JsonKey(name: '_length') final Element? lengthElement,
+          final Attachment? sequenceAttachment,
+          final CodeableConcept? fivePrime,
+          final CodeableConcept? threePrime,
+          final List<SubstanceNucleicAcidLinkage>? linkage,
+          final List<SubstanceNucleicAcidSugar>? sugar}) =
+      _$_SubstanceNucleicAcidSubunit;
   _SubstanceNucleicAcidSubunit._() : super._();
 
   factory _SubstanceNucleicAcidSubunit.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcidSubunit.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Integer? get subunit;
+  Integer? get subunit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_subunit')
-  Element? get subunitElement;
+  Element? get subunitElement => throw _privateConstructorUsedError;
   @override
-  String? get sequence;
+  String? get sequence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sequence')
-  Element? get sequenceElement;
+  Element? get sequenceElement => throw _privateConstructorUsedError;
   @override
-  Integer? get length;
+  Integer? get length => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_length')
-  Element? get lengthElement;
+  Element? get lengthElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get sequenceAttachment;
+  Attachment? get sequenceAttachment => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get fivePrime;
+  CodeableConcept? get fivePrime => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get threePrime;
+  CodeableConcept? get threePrime => throw _privateConstructorUsedError;
   @override
-  List<SubstanceNucleicAcidLinkage>? get linkage;
+  List<SubstanceNucleicAcidLinkage>? get linkage =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceNucleicAcidSugar>? get sugar;
+  List<SubstanceNucleicAcidSugar>? get sugar =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceNucleicAcidSubunitCopyWith<_SubstanceNucleicAcidSubunit>
+  _$$_SubstanceNucleicAcidSubunitCopyWith<_$_SubstanceNucleicAcidSubunit>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -21901,43 +21725,6 @@ SubstanceNucleicAcidLinkage _$SubstanceNucleicAcidLinkageFromJson(
     Map<String, dynamic> json) {
   return _SubstanceNucleicAcidLinkage.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceNucleicAcidLinkageTearOff {
-  const _$SubstanceNucleicAcidLinkageTearOff();
-
-  _SubstanceNucleicAcidLinkage call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? connectivity,
-      @JsonKey(name: '_connectivity') Element? connectivityElement,
-      Identifier? identifier,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? residueSite,
-      @JsonKey(name: '_residueSite') Element? residueSiteElement}) {
-    return _SubstanceNucleicAcidLinkage(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      connectivity: connectivity,
-      connectivityElement: connectivityElement,
-      identifier: identifier,
-      name: name,
-      nameElement: nameElement,
-      residueSite: residueSite,
-      residueSiteElement: residueSiteElement,
-    );
-  }
-
-  SubstanceNucleicAcidLinkage fromJson(Map<String, Object?> json) {
-    return SubstanceNucleicAcidLinkage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceNucleicAcidLinkage = _$SubstanceNucleicAcidLinkageTearOff();
 
 /// @nodoc
 mixin _$SubstanceNucleicAcidLinkage {
@@ -22099,12 +21886,12 @@ class _$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceNucleicAcidLinkageCopyWith<$Res>
+abstract class _$$_SubstanceNucleicAcidLinkageCopyWith<$Res>
     implements $SubstanceNucleicAcidLinkageCopyWith<$Res> {
-  factory _$SubstanceNucleicAcidLinkageCopyWith(
-          _SubstanceNucleicAcidLinkage value,
-          $Res Function(_SubstanceNucleicAcidLinkage) then) =
-      __$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>;
+  factory _$$_SubstanceNucleicAcidLinkageCopyWith(
+          _$_SubstanceNucleicAcidLinkage value,
+          $Res Function(_$_SubstanceNucleicAcidLinkage) then) =
+      __$$_SubstanceNucleicAcidLinkageCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -22129,17 +21916,17 @@ abstract class _$SubstanceNucleicAcidLinkageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
+class __$$_SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
     extends _$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
-    implements _$SubstanceNucleicAcidLinkageCopyWith<$Res> {
-  __$SubstanceNucleicAcidLinkageCopyWithImpl(
-      _SubstanceNucleicAcidLinkage _value,
-      $Res Function(_SubstanceNucleicAcidLinkage) _then)
-      : super(_value, (v) => _then(v as _SubstanceNucleicAcidLinkage));
+    implements _$$_SubstanceNucleicAcidLinkageCopyWith<$Res> {
+  __$$_SubstanceNucleicAcidLinkageCopyWithImpl(
+      _$_SubstanceNucleicAcidLinkage _value,
+      $Res Function(_$_SubstanceNucleicAcidLinkage) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceNucleicAcidLinkage));
 
   @override
-  _SubstanceNucleicAcidLinkage get _value =>
-      super._value as _SubstanceNucleicAcidLinkage;
+  _$_SubstanceNucleicAcidLinkage get _value =>
+      super._value as _$_SubstanceNucleicAcidLinkage;
 
   @override
   $Res call({
@@ -22154,17 +21941,17 @@ class __$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
     Object? residueSite = freezed,
     Object? residueSiteElement = freezed,
   }) {
-    return _then(_SubstanceNucleicAcidLinkage(
+    return _then(_$_SubstanceNucleicAcidLinkage(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       connectivity: connectivity == freezed
@@ -22204,8 +21991,8 @@ class __$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
 class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
   _$_SubstanceNucleicAcidLinkage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.connectivity,
       @JsonKey(name: '_connectivity') this.connectivityElement,
       this.identifier,
@@ -22213,18 +22000,34 @@ class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
       @JsonKey(name: '_name') this.nameElement,
       this.residueSite,
       @JsonKey(name: '_residueSite') this.residueSiteElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceNucleicAcidLinkage.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceNucleicAcidLinkageFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? connectivity;
   @override
@@ -22252,12 +22055,12 @@ class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceNucleicAcidLinkage &&
+            other is _$_SubstanceNucleicAcidLinkage &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.connectivity, connectivity) &&
             const DeepCollectionEquality()
@@ -22273,12 +22076,13 @@ class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
                 .equals(other.residueSiteElement, residueSiteElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(connectivity),
       const DeepCollectionEquality().hash(connectivityElement),
       const DeepCollectionEquality().hash(identifier),
@@ -22289,9 +22093,9 @@ class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceNucleicAcidLinkageCopyWith<_SubstanceNucleicAcidLinkage>
-      get copyWith => __$SubstanceNucleicAcidLinkageCopyWithImpl<
-          _SubstanceNucleicAcidLinkage>(this, _$identity);
+  _$$_SubstanceNucleicAcidLinkageCopyWith<_$_SubstanceNucleicAcidLinkage>
+      get copyWith => __$$_SubstanceNucleicAcidLinkageCopyWithImpl<
+          _$_SubstanceNucleicAcidLinkage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -22302,16 +22106,16 @@ class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
 abstract class _SubstanceNucleicAcidLinkage
     extends SubstanceNucleicAcidLinkage {
   factory _SubstanceNucleicAcidLinkage(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? connectivity,
-          @JsonKey(name: '_connectivity') Element? connectivityElement,
-          Identifier? identifier,
-          String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          String? residueSite,
-          @JsonKey(name: '_residueSite') Element? residueSiteElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? connectivity,
+          @JsonKey(name: '_connectivity') final Element? connectivityElement,
+          final Identifier? identifier,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? residueSite,
+          @JsonKey(name: '_residueSite') final Element? residueSiteElement}) =
       _$_SubstanceNucleicAcidLinkage;
   _SubstanceNucleicAcidLinkage._() : super._();
 
@@ -22319,32 +22123,33 @@ abstract class _SubstanceNucleicAcidLinkage
       _$_SubstanceNucleicAcidLinkage.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get connectivity;
+  String? get connectivity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_connectivity')
-  Element? get connectivityElement;
+  Element? get connectivityElement => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get residueSite;
+  String? get residueSite => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_residueSite')
-  Element? get residueSiteElement;
+  Element? get residueSiteElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceNucleicAcidLinkageCopyWith<_SubstanceNucleicAcidLinkage>
+  _$$_SubstanceNucleicAcidLinkageCopyWith<_$_SubstanceNucleicAcidLinkage>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -22352,39 +22157,6 @@ SubstanceNucleicAcidSugar _$SubstanceNucleicAcidSugarFromJson(
     Map<String, dynamic> json) {
   return _SubstanceNucleicAcidSugar.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceNucleicAcidSugarTearOff {
-  const _$SubstanceNucleicAcidSugarTearOff();
-
-  _SubstanceNucleicAcidSugar call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? residueSite,
-      @JsonKey(name: '_residueSite') Element? residueSiteElement}) {
-    return _SubstanceNucleicAcidSugar(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      name: name,
-      nameElement: nameElement,
-      residueSite: residueSite,
-      residueSiteElement: residueSiteElement,
-    );
-  }
-
-  SubstanceNucleicAcidSugar fromJson(Map<String, Object?> json) {
-    return SubstanceNucleicAcidSugar.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceNucleicAcidSugar = _$SubstanceNucleicAcidSugarTearOff();
 
 /// @nodoc
 mixin _$SubstanceNucleicAcidSugar {
@@ -22518,11 +22290,12 @@ class _$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceNucleicAcidSugarCopyWith<$Res>
+abstract class _$$_SubstanceNucleicAcidSugarCopyWith<$Res>
     implements $SubstanceNucleicAcidSugarCopyWith<$Res> {
-  factory _$SubstanceNucleicAcidSugarCopyWith(_SubstanceNucleicAcidSugar value,
-          $Res Function(_SubstanceNucleicAcidSugar) then) =
-      __$SubstanceNucleicAcidSugarCopyWithImpl<$Res>;
+  factory _$$_SubstanceNucleicAcidSugarCopyWith(
+          _$_SubstanceNucleicAcidSugar value,
+          $Res Function(_$_SubstanceNucleicAcidSugar) then) =
+      __$$_SubstanceNucleicAcidSugarCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -22543,16 +22316,17 @@ abstract class _$SubstanceNucleicAcidSugarCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
+class __$$_SubstanceNucleicAcidSugarCopyWithImpl<$Res>
     extends _$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
-    implements _$SubstanceNucleicAcidSugarCopyWith<$Res> {
-  __$SubstanceNucleicAcidSugarCopyWithImpl(_SubstanceNucleicAcidSugar _value,
-      $Res Function(_SubstanceNucleicAcidSugar) _then)
-      : super(_value, (v) => _then(v as _SubstanceNucleicAcidSugar));
+    implements _$$_SubstanceNucleicAcidSugarCopyWith<$Res> {
+  __$$_SubstanceNucleicAcidSugarCopyWithImpl(
+      _$_SubstanceNucleicAcidSugar _value,
+      $Res Function(_$_SubstanceNucleicAcidSugar) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceNucleicAcidSugar));
 
   @override
-  _SubstanceNucleicAcidSugar get _value =>
-      super._value as _SubstanceNucleicAcidSugar;
+  _$_SubstanceNucleicAcidSugar get _value =>
+      super._value as _$_SubstanceNucleicAcidSugar;
 
   @override
   $Res call({
@@ -22565,17 +22339,17 @@ class __$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
     Object? residueSite = freezed,
     Object? residueSiteElement = freezed,
   }) {
-    return _then(_SubstanceNucleicAcidSugar(
+    return _then(_$_SubstanceNucleicAcidSugar(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -22607,25 +22381,41 @@ class __$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
 class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
   _$_SubstanceNucleicAcidSugar(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.residueSite,
       @JsonKey(name: '_residueSite') this.residueSiteElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceNucleicAcidSugar.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceNucleicAcidSugarFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -22648,12 +22438,12 @@ class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceNucleicAcidSugar &&
+            other is _$_SubstanceNucleicAcidSugar &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.name, name) &&
@@ -22665,12 +22455,13 @@ class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
                 .equals(other.residueSiteElement, residueSiteElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(identifier),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(nameElement),
@@ -22679,10 +22470,9 @@ class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceNucleicAcidSugarCopyWith<_SubstanceNucleicAcidSugar>
-      get copyWith =>
-          __$SubstanceNucleicAcidSugarCopyWithImpl<_SubstanceNucleicAcidSugar>(
-              this, _$identity);
+  _$$_SubstanceNucleicAcidSugarCopyWith<_$_SubstanceNucleicAcidSugar>
+      get copyWith => __$$_SubstanceNucleicAcidSugarCopyWithImpl<
+          _$_SubstanceNucleicAcidSugar>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -22692,14 +22482,14 @@ class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
 
 abstract class _SubstanceNucleicAcidSugar extends SubstanceNucleicAcidSugar {
   factory _SubstanceNucleicAcidSugar(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Identifier? identifier,
-          String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          String? residueSite,
-          @JsonKey(name: '_residueSite') Element? residueSiteElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Identifier? identifier,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? residueSite,
+          @JsonKey(name: '_residueSite') final Element? residueSiteElement}) =
       _$_SubstanceNucleicAcidSugar;
   _SubstanceNucleicAcidSugar._() : super._();
 
@@ -22707,88 +22497,34 @@ abstract class _SubstanceNucleicAcidSugar extends SubstanceNucleicAcidSugar {
       _$_SubstanceNucleicAcidSugar.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get residueSite;
+  String? get residueSite => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_residueSite')
-  Element? get residueSiteElement;
+  Element? get residueSiteElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceNucleicAcidSugarCopyWith<_SubstanceNucleicAcidSugar>
+  _$$_SubstanceNucleicAcidSugarCopyWith<_$_SubstanceNucleicAcidSugar>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstancePolymer _$SubstancePolymerFromJson(Map<String, dynamic> json) {
   return _SubstancePolymer.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstancePolymerTearOff {
-  const _$SubstancePolymerTearOff();
-
-  _SubstancePolymer call(
-      {R5ResourceType resourceType = R5ResourceType.SubstancePolymer,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      @JsonKey(name: 'class') CodeableConcept? class_,
-      CodeableConcept? geometry,
-      List<CodeableConcept>? copolymerConnectivity,
-      String? modification,
-      @JsonKey(name: '_modification') Element? modificationElement,
-      List<SubstancePolymerMonomerSet>? monomerSet,
-      List<SubstancePolymerRepeat>? repeat}) {
-    return _SubstancePolymer(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      class_: class_,
-      geometry: geometry,
-      copolymerConnectivity: copolymerConnectivity,
-      modification: modification,
-      modificationElement: modificationElement,
-      monomerSet: monomerSet,
-      repeat: repeat,
-    );
-  }
-
-  SubstancePolymer fromJson(Map<String, Object?> json) {
-    return SubstancePolymer.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstancePolymer = _$SubstancePolymerTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymer {
@@ -23064,11 +22800,11 @@ class _$SubstancePolymerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstancePolymerCopyWith<$Res>
+abstract class _$$_SubstancePolymerCopyWith<$Res>
     implements $SubstancePolymerCopyWith<$Res> {
-  factory _$SubstancePolymerCopyWith(
-          _SubstancePolymer value, $Res Function(_SubstancePolymer) then) =
-      __$SubstancePolymerCopyWithImpl<$Res>;
+  factory _$$_SubstancePolymerCopyWith(
+          _$_SubstancePolymer value, $Res Function(_$_SubstancePolymer) then) =
+      __$$_SubstancePolymerCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -23110,15 +22846,15 @@ abstract class _$SubstancePolymerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstancePolymerCopyWithImpl<$Res>
+class __$$_SubstancePolymerCopyWithImpl<$Res>
     extends _$SubstancePolymerCopyWithImpl<$Res>
-    implements _$SubstancePolymerCopyWith<$Res> {
-  __$SubstancePolymerCopyWithImpl(
-      _SubstancePolymer _value, $Res Function(_SubstancePolymer) _then)
-      : super(_value, (v) => _then(v as _SubstancePolymer));
+    implements _$$_SubstancePolymerCopyWith<$Res> {
+  __$$_SubstancePolymerCopyWithImpl(
+      _$_SubstancePolymer _value, $Res Function(_$_SubstancePolymer) _then)
+      : super(_value, (v) => _then(v as _$_SubstancePolymer));
 
   @override
-  _SubstancePolymer get _value => super._value as _SubstancePolymer;
+  _$_SubstancePolymer get _value => super._value as _$_SubstancePolymer;
 
   @override
   $Res call({
@@ -23142,7 +22878,7 @@ class __$SubstancePolymerCopyWithImpl<$Res>
     Object? monomerSet = freezed,
     Object? repeat = freezed,
   }) {
-    return _then(_SubstancePolymer(
+    return _then(_$_SubstancePolymer(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -23176,15 +22912,15 @@ class __$SubstancePolymerCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -23200,7 +22936,7 @@ class __$SubstancePolymerCopyWithImpl<$Res>
           : geometry // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       copolymerConnectivity: copolymerConnectivity == freezed
-          ? _value.copolymerConnectivity
+          ? _value._copolymerConnectivity
           : copolymerConnectivity // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       modification: modification == freezed
@@ -23212,11 +22948,11 @@ class __$SubstancePolymerCopyWithImpl<$Res>
           : modificationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       monomerSet: monomerSet == freezed
-          ? _value.monomerSet
+          ? _value._monomerSet
           : monomerSet // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerMonomerSet>?,
       repeat: repeat == freezed
-          ? _value.repeat
+          ? _value._repeat
           : repeat // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerRepeat>?,
     ));
@@ -23235,24 +22971,30 @@ class _$_SubstancePolymer extends _SubstancePolymer {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       @JsonKey(name: 'class') this.class_,
       this.geometry,
-      this.copolymerConnectivity,
+      final List<CodeableConcept>? copolymerConnectivity,
       this.modification,
       @JsonKey(name: '_modification') this.modificationElement,
-      this.monomerSet,
-      this.repeat})
-      : super._();
+      final List<SubstancePolymerMonomerSet>? monomerSet,
+      final List<SubstancePolymerRepeat>? repeat})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _copolymerConnectivity = copolymerConnectivity,
+        _monomerSet = monomerSet,
+        _repeat = repeat,
+        super._();
 
   factory _$_SubstancePolymer.fromJson(Map<String, dynamic> json) =>
       _$$_SubstancePolymerFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -23270,13 +23012,34 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -23284,17 +23047,37 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   final CodeableConcept? class_;
   @override
   final CodeableConcept? geometry;
+  final List<CodeableConcept>? _copolymerConnectivity;
   @override
-  final List<CodeableConcept>? copolymerConnectivity;
+  List<CodeableConcept>? get copolymerConnectivity {
+    final value = _copolymerConnectivity;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? modification;
   @override
   @JsonKey(name: '_modification')
   final Element? modificationElement;
+  final List<SubstancePolymerMonomerSet>? _monomerSet;
   @override
-  final List<SubstancePolymerMonomerSet>? monomerSet;
+  List<SubstancePolymerMonomerSet>? get monomerSet {
+    final value = _monomerSet;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstancePolymerRepeat>? _repeat;
   @override
-  final List<SubstancePolymerRepeat>? repeat;
+  List<SubstancePolymerRepeat>? get repeat {
+    final value = _repeat;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -23305,7 +23088,7 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstancePolymer &&
+            other is _$_SubstancePolymer &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -23318,26 +23101,28 @@ class _$_SubstancePolymer extends _SubstancePolymer {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.class_, class_) &&
             const DeepCollectionEquality().equals(other.geometry, geometry) &&
             const DeepCollectionEquality()
-                .equals(other.copolymerConnectivity, copolymerConnectivity) &&
+                .equals(other._copolymerConnectivity, _copolymerConnectivity) &&
             const DeepCollectionEquality()
                 .equals(other.modification, modification) &&
             const DeepCollectionEquality()
                 .equals(other.modificationElement, modificationElement) &&
             const DeepCollectionEquality()
-                .equals(other.monomerSet, monomerSet) &&
-            const DeepCollectionEquality().equals(other.repeat, repeat));
+                .equals(other._monomerSet, _monomerSet) &&
+            const DeepCollectionEquality().equals(other._repeat, _repeat));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -23349,23 +23134,23 @@ class _$_SubstancePolymer extends _SubstancePolymer {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(identifier),
         const DeepCollectionEquality().hash(class_),
         const DeepCollectionEquality().hash(geometry),
-        const DeepCollectionEquality().hash(copolymerConnectivity),
+        const DeepCollectionEquality().hash(_copolymerConnectivity),
         const DeepCollectionEquality().hash(modification),
         const DeepCollectionEquality().hash(modificationElement),
-        const DeepCollectionEquality().hash(monomerSet),
-        const DeepCollectionEquality().hash(repeat)
+        const DeepCollectionEquality().hash(_monomerSet),
+        const DeepCollectionEquality().hash(_repeat)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$SubstancePolymerCopyWith<_SubstancePolymer> get copyWith =>
-      __$SubstancePolymerCopyWithImpl<_SubstancePolymer>(this, _$identity);
+  _$$_SubstancePolymerCopyWith<_$_SubstancePolymer> get copyWith =>
+      __$$_SubstancePolymerCopyWithImpl<_$_SubstancePolymer>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -23375,76 +23160,80 @@ class _$_SubstancePolymer extends _SubstancePolymer {
 
 abstract class _SubstancePolymer extends SubstancePolymer {
   factory _SubstancePolymer(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      @JsonKey(name: 'class') CodeableConcept? class_,
-      CodeableConcept? geometry,
-      List<CodeableConcept>? copolymerConnectivity,
-      String? modification,
-      @JsonKey(name: '_modification') Element? modificationElement,
-      List<SubstancePolymerMonomerSet>? monomerSet,
-      List<SubstancePolymerRepeat>? repeat}) = _$_SubstancePolymer;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      @JsonKey(name: 'class') final CodeableConcept? class_,
+      final CodeableConcept? geometry,
+      final List<CodeableConcept>? copolymerConnectivity,
+      final String? modification,
+      @JsonKey(name: '_modification') final Element? modificationElement,
+      final List<SubstancePolymerMonomerSet>? monomerSet,
+      final List<SubstancePolymerRepeat>? repeat}) = _$_SubstancePolymer;
   _SubstancePolymer._() : super._();
 
   factory _SubstancePolymer.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymer.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'class')
-  CodeableConcept? get class_;
+  CodeableConcept? get class_ => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get geometry;
+  CodeableConcept? get geometry => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get copolymerConnectivity;
+  List<CodeableConcept>? get copolymerConnectivity =>
+      throw _privateConstructorUsedError;
   @override
-  String? get modification;
+  String? get modification => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_modification')
-  Element? get modificationElement;
+  Element? get modificationElement => throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerMonomerSet>? get monomerSet;
+  List<SubstancePolymerMonomerSet>? get monomerSet =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerRepeat>? get repeat;
+  List<SubstancePolymerRepeat>? get repeat =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerCopyWith<_SubstancePolymer> get copyWith =>
+  _$$_SubstancePolymerCopyWith<_$_SubstancePolymer> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -23452,33 +23241,6 @@ SubstancePolymerMonomerSet _$SubstancePolymerMonomerSetFromJson(
     Map<String, dynamic> json) {
   return _SubstancePolymerMonomerSet.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstancePolymerMonomerSetTearOff {
-  const _$SubstancePolymerMonomerSetTearOff();
-
-  _SubstancePolymerMonomerSet call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? ratioType,
-      List<SubstancePolymerStartingMaterial>? startingMaterial}) {
-    return _SubstancePolymerMonomerSet(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      ratioType: ratioType,
-      startingMaterial: startingMaterial,
-    );
-  }
-
-  SubstancePolymerMonomerSet fromJson(Map<String, Object?> json) {
-    return SubstancePolymerMonomerSet.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstancePolymerMonomerSet = _$SubstancePolymerMonomerSetTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerMonomerSet {
@@ -23566,12 +23328,12 @@ class _$SubstancePolymerMonomerSetCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstancePolymerMonomerSetCopyWith<$Res>
+abstract class _$$_SubstancePolymerMonomerSetCopyWith<$Res>
     implements $SubstancePolymerMonomerSetCopyWith<$Res> {
-  factory _$SubstancePolymerMonomerSetCopyWith(
-          _SubstancePolymerMonomerSet value,
-          $Res Function(_SubstancePolymerMonomerSet) then) =
-      __$SubstancePolymerMonomerSetCopyWithImpl<$Res>;
+  factory _$$_SubstancePolymerMonomerSetCopyWith(
+          _$_SubstancePolymerMonomerSet value,
+          $Res Function(_$_SubstancePolymerMonomerSet) then) =
+      __$$_SubstancePolymerMonomerSetCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -23585,16 +23347,17 @@ abstract class _$SubstancePolymerMonomerSetCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstancePolymerMonomerSetCopyWithImpl<$Res>
+class __$$_SubstancePolymerMonomerSetCopyWithImpl<$Res>
     extends _$SubstancePolymerMonomerSetCopyWithImpl<$Res>
-    implements _$SubstancePolymerMonomerSetCopyWith<$Res> {
-  __$SubstancePolymerMonomerSetCopyWithImpl(_SubstancePolymerMonomerSet _value,
-      $Res Function(_SubstancePolymerMonomerSet) _then)
-      : super(_value, (v) => _then(v as _SubstancePolymerMonomerSet));
+    implements _$$_SubstancePolymerMonomerSetCopyWith<$Res> {
+  __$$_SubstancePolymerMonomerSetCopyWithImpl(
+      _$_SubstancePolymerMonomerSet _value,
+      $Res Function(_$_SubstancePolymerMonomerSet) _then)
+      : super(_value, (v) => _then(v as _$_SubstancePolymerMonomerSet));
 
   @override
-  _SubstancePolymerMonomerSet get _value =>
-      super._value as _SubstancePolymerMonomerSet;
+  _$_SubstancePolymerMonomerSet get _value =>
+      super._value as _$_SubstancePolymerMonomerSet;
 
   @override
   $Res call({
@@ -23604,17 +23367,17 @@ class __$SubstancePolymerMonomerSetCopyWithImpl<$Res>
     Object? ratioType = freezed,
     Object? startingMaterial = freezed,
   }) {
-    return _then(_SubstancePolymerMonomerSet(
+    return _then(_$_SubstancePolymerMonomerSet(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       ratioType: ratioType == freezed
@@ -23622,7 +23385,7 @@ class __$SubstancePolymerMonomerSetCopyWithImpl<$Res>
           : ratioType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       startingMaterial: startingMaterial == freezed
-          ? _value.startingMaterial
+          ? _value._startingMaterial
           : startingMaterial // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerStartingMaterial>?,
     ));
@@ -23634,26 +23397,49 @@ class __$SubstancePolymerMonomerSetCopyWithImpl<$Res>
 class _$_SubstancePolymerMonomerSet extends _SubstancePolymerMonomerSet {
   _$_SubstancePolymerMonomerSet(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.ratioType,
-      this.startingMaterial})
-      : super._();
+      final List<SubstancePolymerStartingMaterial>? startingMaterial})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _startingMaterial = startingMaterial,
+        super._();
 
   factory _$_SubstancePolymerMonomerSet.fromJson(Map<String, dynamic> json) =>
       _$$_SubstancePolymerMonomerSetFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? ratioType;
+  final List<SubstancePolymerStartingMaterial>? _startingMaterial;
   @override
-  final List<SubstancePolymerStartingMaterial>? startingMaterial;
+  List<SubstancePolymerStartingMaterial>? get startingMaterial {
+    final value = _startingMaterial;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -23664,31 +23450,32 @@ class _$_SubstancePolymerMonomerSet extends _SubstancePolymerMonomerSet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstancePolymerMonomerSet &&
+            other is _$_SubstancePolymerMonomerSet &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.ratioType, ratioType) &&
             const DeepCollectionEquality()
-                .equals(other.startingMaterial, startingMaterial));
+                .equals(other._startingMaterial, _startingMaterial));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(ratioType),
-      const DeepCollectionEquality().hash(startingMaterial));
+      const DeepCollectionEquality().hash(_startingMaterial));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstancePolymerMonomerSetCopyWith<_SubstancePolymerMonomerSet>
-      get copyWith => __$SubstancePolymerMonomerSetCopyWithImpl<
-          _SubstancePolymerMonomerSet>(this, _$identity);
+  _$$_SubstancePolymerMonomerSetCopyWith<_$_SubstancePolymerMonomerSet>
+      get copyWith => __$$_SubstancePolymerMonomerSetCopyWithImpl<
+          _$_SubstancePolymerMonomerSet>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -23698,11 +23485,11 @@ class _$_SubstancePolymerMonomerSet extends _SubstancePolymerMonomerSet {
 
 abstract class _SubstancePolymerMonomerSet extends SubstancePolymerMonomerSet {
   factory _SubstancePolymerMonomerSet(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? ratioType,
-          List<SubstancePolymerStartingMaterial>? startingMaterial}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? ratioType,
+          final List<SubstancePolymerStartingMaterial>? startingMaterial}) =
       _$_SubstancePolymerMonomerSet;
   _SubstancePolymerMonomerSet._() : super._();
 
@@ -23710,19 +23497,21 @@ abstract class _SubstancePolymerMonomerSet extends SubstancePolymerMonomerSet {
       _$_SubstancePolymerMonomerSet.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get ratioType;
+  CodeableConcept? get ratioType => throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerStartingMaterial>? get startingMaterial;
+  List<SubstancePolymerStartingMaterial>? get startingMaterial =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerMonomerSetCopyWith<_SubstancePolymerMonomerSet>
+  _$$_SubstancePolymerMonomerSetCopyWith<_$_SubstancePolymerMonomerSet>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -23730,40 +23519,6 @@ SubstancePolymerStartingMaterial _$SubstancePolymerStartingMaterialFromJson(
     Map<String, dynamic> json) {
   return _SubstancePolymerStartingMaterial.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstancePolymerStartingMaterialTearOff {
-  const _$SubstancePolymerStartingMaterialTearOff();
-
-  _SubstancePolymerStartingMaterial call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? category,
-      Boolean? isDefining,
-      @JsonKey(name: '_isDefining') Element? isDefiningElement,
-      Quantity? amount}) {
-    return _SubstancePolymerStartingMaterial(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      category: category,
-      isDefining: isDefining,
-      isDefiningElement: isDefiningElement,
-      amount: amount,
-    );
-  }
-
-  SubstancePolymerStartingMaterial fromJson(Map<String, Object?> json) {
-    return SubstancePolymerStartingMaterial.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstancePolymerStartingMaterial =
-    _$SubstancePolymerStartingMaterialTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerStartingMaterial {
@@ -23909,12 +23664,12 @@ class _$SubstancePolymerStartingMaterialCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstancePolymerStartingMaterialCopyWith<$Res>
+abstract class _$$_SubstancePolymerStartingMaterialCopyWith<$Res>
     implements $SubstancePolymerStartingMaterialCopyWith<$Res> {
-  factory _$SubstancePolymerStartingMaterialCopyWith(
-          _SubstancePolymerStartingMaterial value,
-          $Res Function(_SubstancePolymerStartingMaterial) then) =
-      __$SubstancePolymerStartingMaterialCopyWithImpl<$Res>;
+  factory _$$_SubstancePolymerStartingMaterialCopyWith(
+          _$_SubstancePolymerStartingMaterial value,
+          $Res Function(_$_SubstancePolymerStartingMaterial) then) =
+      __$$_SubstancePolymerStartingMaterialCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -23937,17 +23692,17 @@ abstract class _$SubstancePolymerStartingMaterialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstancePolymerStartingMaterialCopyWithImpl<$Res>
+class __$$_SubstancePolymerStartingMaterialCopyWithImpl<$Res>
     extends _$SubstancePolymerStartingMaterialCopyWithImpl<$Res>
-    implements _$SubstancePolymerStartingMaterialCopyWith<$Res> {
-  __$SubstancePolymerStartingMaterialCopyWithImpl(
-      _SubstancePolymerStartingMaterial _value,
-      $Res Function(_SubstancePolymerStartingMaterial) _then)
-      : super(_value, (v) => _then(v as _SubstancePolymerStartingMaterial));
+    implements _$$_SubstancePolymerStartingMaterialCopyWith<$Res> {
+  __$$_SubstancePolymerStartingMaterialCopyWithImpl(
+      _$_SubstancePolymerStartingMaterial _value,
+      $Res Function(_$_SubstancePolymerStartingMaterial) _then)
+      : super(_value, (v) => _then(v as _$_SubstancePolymerStartingMaterial));
 
   @override
-  _SubstancePolymerStartingMaterial get _value =>
-      super._value as _SubstancePolymerStartingMaterial;
+  _$_SubstancePolymerStartingMaterial get _value =>
+      super._value as _$_SubstancePolymerStartingMaterial;
 
   @override
   $Res call({
@@ -23960,17 +23715,17 @@ class __$SubstancePolymerStartingMaterialCopyWithImpl<$Res>
     Object? isDefiningElement = freezed,
     Object? amount = freezed,
   }) {
-    return _then(_SubstancePolymerStartingMaterial(
+    return _then(_$_SubstancePolymerStartingMaterial(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -24003,14 +23758,16 @@ class _$_SubstancePolymerStartingMaterial
     extends _SubstancePolymerStartingMaterial {
   _$_SubstancePolymerStartingMaterial(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.code,
       this.category,
       this.isDefining,
       @JsonKey(name: '_isDefining') this.isDefiningElement,
       this.amount})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstancePolymerStartingMaterial.fromJson(
           Map<String, dynamic> json) =>
@@ -24018,11 +23775,25 @@ class _$_SubstancePolymerStartingMaterial
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? code;
   @override
@@ -24044,12 +23815,12 @@ class _$_SubstancePolymerStartingMaterial
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstancePolymerStartingMaterial &&
+            other is _$_SubstancePolymerStartingMaterial &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.category, category) &&
             const DeepCollectionEquality()
@@ -24059,12 +23830,13 @@ class _$_SubstancePolymerStartingMaterial
             const DeepCollectionEquality().equals(other.amount, amount));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(category),
       const DeepCollectionEquality().hash(isDefining),
@@ -24073,9 +23845,10 @@ class _$_SubstancePolymerStartingMaterial
 
   @JsonKey(ignore: true)
   @override
-  _$SubstancePolymerStartingMaterialCopyWith<_SubstancePolymerStartingMaterial>
-      get copyWith => __$SubstancePolymerStartingMaterialCopyWithImpl<
-          _SubstancePolymerStartingMaterial>(this, _$identity);
+  _$$_SubstancePolymerStartingMaterialCopyWith<
+          _$_SubstancePolymerStartingMaterial>
+      get copyWith => __$$_SubstancePolymerStartingMaterialCopyWithImpl<
+          _$_SubstancePolymerStartingMaterial>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -24086,40 +23859,42 @@ class _$_SubstancePolymerStartingMaterial
 abstract class _SubstancePolymerStartingMaterial
     extends SubstancePolymerStartingMaterial {
   factory _SubstancePolymerStartingMaterial(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? category,
-      Boolean? isDefining,
-      @JsonKey(name: '_isDefining') Element? isDefiningElement,
-      Quantity? amount}) = _$_SubstancePolymerStartingMaterial;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? code,
+      final CodeableConcept? category,
+      final Boolean? isDefining,
+      @JsonKey(name: '_isDefining') final Element? isDefiningElement,
+      final Quantity? amount}) = _$_SubstancePolymerStartingMaterial;
   _SubstancePolymerStartingMaterial._() : super._();
 
   factory _SubstancePolymerStartingMaterial.fromJson(
       Map<String, dynamic> json) = _$_SubstancePolymerStartingMaterial.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get category;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
   @override
-  Boolean? get isDefining;
+  Boolean? get isDefining => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_isDefining')
-  Element? get isDefiningElement;
+  Element? get isDefiningElement => throw _privateConstructorUsedError;
   @override
-  Quantity? get amount;
+  Quantity? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerStartingMaterialCopyWith<_SubstancePolymerStartingMaterial>
+  _$$_SubstancePolymerStartingMaterialCopyWith<
+          _$_SubstancePolymerStartingMaterial>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -24127,39 +23902,6 @@ SubstancePolymerRepeat _$SubstancePolymerRepeatFromJson(
     Map<String, dynamic> json) {
   return _SubstancePolymerRepeat.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstancePolymerRepeatTearOff {
-  const _$SubstancePolymerRepeatTearOff();
-
-  _SubstancePolymerRepeat call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? averageMolecularFormula,
-      @JsonKey(name: '_averageMolecularFormula')
-          Element? averageMolecularFormulaElement,
-      CodeableConcept? repeatUnitAmountType,
-      List<SubstancePolymerRepeatUnit>? repeatUnit}) {
-    return _SubstancePolymerRepeat(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      averageMolecularFormula: averageMolecularFormula,
-      averageMolecularFormulaElement: averageMolecularFormulaElement,
-      repeatUnitAmountType: repeatUnitAmountType,
-      repeatUnit: repeatUnit,
-    );
-  }
-
-  SubstancePolymerRepeat fromJson(Map<String, Object?> json) {
-    return SubstancePolymerRepeat.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstancePolymerRepeat = _$SubstancePolymerRepeatTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerRepeat {
@@ -24280,11 +24022,11 @@ class _$SubstancePolymerRepeatCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstancePolymerRepeatCopyWith<$Res>
+abstract class _$$_SubstancePolymerRepeatCopyWith<$Res>
     implements $SubstancePolymerRepeatCopyWith<$Res> {
-  factory _$SubstancePolymerRepeatCopyWith(_SubstancePolymerRepeat value,
-          $Res Function(_SubstancePolymerRepeat) then) =
-      __$SubstancePolymerRepeatCopyWithImpl<$Res>;
+  factory _$$_SubstancePolymerRepeatCopyWith(_$_SubstancePolymerRepeat value,
+          $Res Function(_$_SubstancePolymerRepeat) then) =
+      __$$_SubstancePolymerRepeatCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -24304,15 +24046,16 @@ abstract class _$SubstancePolymerRepeatCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstancePolymerRepeatCopyWithImpl<$Res>
+class __$$_SubstancePolymerRepeatCopyWithImpl<$Res>
     extends _$SubstancePolymerRepeatCopyWithImpl<$Res>
-    implements _$SubstancePolymerRepeatCopyWith<$Res> {
-  __$SubstancePolymerRepeatCopyWithImpl(_SubstancePolymerRepeat _value,
-      $Res Function(_SubstancePolymerRepeat) _then)
-      : super(_value, (v) => _then(v as _SubstancePolymerRepeat));
+    implements _$$_SubstancePolymerRepeatCopyWith<$Res> {
+  __$$_SubstancePolymerRepeatCopyWithImpl(_$_SubstancePolymerRepeat _value,
+      $Res Function(_$_SubstancePolymerRepeat) _then)
+      : super(_value, (v) => _then(v as _$_SubstancePolymerRepeat));
 
   @override
-  _SubstancePolymerRepeat get _value => super._value as _SubstancePolymerRepeat;
+  _$_SubstancePolymerRepeat get _value =>
+      super._value as _$_SubstancePolymerRepeat;
 
   @override
   $Res call({
@@ -24324,17 +24067,17 @@ class __$SubstancePolymerRepeatCopyWithImpl<$Res>
     Object? repeatUnitAmountType = freezed,
     Object? repeatUnit = freezed,
   }) {
-    return _then(_SubstancePolymerRepeat(
+    return _then(_$_SubstancePolymerRepeat(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       averageMolecularFormula: averageMolecularFormula == freezed
@@ -24350,7 +24093,7 @@ class __$SubstancePolymerRepeatCopyWithImpl<$Res>
           : repeatUnitAmountType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       repeatUnit: repeatUnit == freezed
-          ? _value.repeatUnit
+          ? _value._repeatUnit
           : repeatUnit // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerRepeatUnit>?,
     ));
@@ -24363,25 +24106,42 @@ class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
   _$_SubstancePolymerRepeat(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.averageMolecularFormula,
       @JsonKey(name: '_averageMolecularFormula')
           this.averageMolecularFormulaElement,
       this.repeatUnitAmountType,
-      this.repeatUnit})
-      : super._();
+      final List<SubstancePolymerRepeatUnit>? repeatUnit})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _repeatUnit = repeatUnit,
+        super._();
 
   factory _$_SubstancePolymerRepeat.fromJson(Map<String, dynamic> json) =>
       _$$_SubstancePolymerRepeatFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? averageMolecularFormula;
   @override
@@ -24389,8 +24149,14 @@ class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
   final Element? averageMolecularFormulaElement;
   @override
   final CodeableConcept? repeatUnitAmountType;
+  final List<SubstancePolymerRepeatUnit>? _repeatUnit;
   @override
-  final List<SubstancePolymerRepeatUnit>? repeatUnit;
+  List<SubstancePolymerRepeatUnit>? get repeatUnit {
+    final value = _repeatUnit;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -24401,12 +24167,12 @@ class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstancePolymerRepeat &&
+            other is _$_SubstancePolymerRepeat &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(
                 other.averageMolecularFormula, averageMolecularFormula) &&
             const DeepCollectionEquality().equals(
@@ -24415,24 +24181,25 @@ class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
             const DeepCollectionEquality()
                 .equals(other.repeatUnitAmountType, repeatUnitAmountType) &&
             const DeepCollectionEquality()
-                .equals(other.repeatUnit, repeatUnit));
+                .equals(other._repeatUnit, _repeatUnit));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(averageMolecularFormula),
       const DeepCollectionEquality().hash(averageMolecularFormulaElement),
       const DeepCollectionEquality().hash(repeatUnitAmountType),
-      const DeepCollectionEquality().hash(repeatUnit));
+      const DeepCollectionEquality().hash(_repeatUnit));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstancePolymerRepeatCopyWith<_SubstancePolymerRepeat> get copyWith =>
-      __$SubstancePolymerRepeatCopyWithImpl<_SubstancePolymerRepeat>(
+  _$$_SubstancePolymerRepeatCopyWith<_$_SubstancePolymerRepeat> get copyWith =>
+      __$$_SubstancePolymerRepeatCopyWithImpl<_$_SubstancePolymerRepeat>(
           this, _$identity);
 
   @override
@@ -24443,15 +24210,15 @@ class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
 
 abstract class _SubstancePolymerRepeat extends SubstancePolymerRepeat {
   factory _SubstancePolymerRepeat(
-          {String? id,
+          {final String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? averageMolecularFormula,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? averageMolecularFormula,
           @JsonKey(name: '_averageMolecularFormula')
-              Element? averageMolecularFormulaElement,
-          CodeableConcept? repeatUnitAmountType,
-          List<SubstancePolymerRepeatUnit>? repeatUnit}) =
+              final Element? averageMolecularFormulaElement,
+          final CodeableConcept? repeatUnitAmountType,
+          final List<SubstancePolymerRepeatUnit>? repeatUnit}) =
       _$_SubstancePolymerRepeat;
   _SubstancePolymerRepeat._() : super._();
 
@@ -24459,24 +24226,28 @@ abstract class _SubstancePolymerRepeat extends SubstancePolymerRepeat {
       _$_SubstancePolymerRepeat.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get averageMolecularFormula;
+  String? get averageMolecularFormula => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_averageMolecularFormula')
-  Element? get averageMolecularFormulaElement;
+  Element? get averageMolecularFormulaElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get repeatUnitAmountType;
+  CodeableConcept? get repeatUnitAmountType =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerRepeatUnit>? get repeatUnit;
+  List<SubstancePolymerRepeatUnit>? get repeatUnit =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerRepeatCopyWith<_SubstancePolymerRepeat> get copyWith =>
+  _$$_SubstancePolymerRepeatCopyWith<_$_SubstancePolymerRepeat> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -24484,44 +24255,6 @@ SubstancePolymerRepeatUnit _$SubstancePolymerRepeatUnitFromJson(
     Map<String, dynamic> json) {
   return _SubstancePolymerRepeatUnit.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstancePolymerRepeatUnitTearOff {
-  const _$SubstancePolymerRepeatUnitTearOff();
-
-  _SubstancePolymerRepeatUnit call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? unit,
-      @JsonKey(name: '_unit') Element? unitElement,
-      CodeableConcept? orientation,
-      Integer? amount,
-      @JsonKey(name: '_amount') Element? amountElement,
-      List<SubstancePolymerDegreeOfPolymerisation>? degreeOfPolymerisation,
-      List<SubstancePolymerStructuralRepresentation>?
-          structuralRepresentation}) {
-    return _SubstancePolymerRepeatUnit(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      unit: unit,
-      unitElement: unitElement,
-      orientation: orientation,
-      amount: amount,
-      amountElement: amountElement,
-      degreeOfPolymerisation: degreeOfPolymerisation,
-      structuralRepresentation: structuralRepresentation,
-    );
-  }
-
-  SubstancePolymerRepeatUnit fromJson(Map<String, Object?> json) {
-    return SubstancePolymerRepeatUnit.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstancePolymerRepeatUnit = _$SubstancePolymerRepeatUnitTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerRepeatUnit {
@@ -24672,12 +24405,12 @@ class _$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstancePolymerRepeatUnitCopyWith<$Res>
+abstract class _$$_SubstancePolymerRepeatUnitCopyWith<$Res>
     implements $SubstancePolymerRepeatUnitCopyWith<$Res> {
-  factory _$SubstancePolymerRepeatUnitCopyWith(
-          _SubstancePolymerRepeatUnit value,
-          $Res Function(_SubstancePolymerRepeatUnit) then) =
-      __$SubstancePolymerRepeatUnitCopyWithImpl<$Res>;
+  factory _$$_SubstancePolymerRepeatUnitCopyWith(
+          _$_SubstancePolymerRepeatUnit value,
+          $Res Function(_$_SubstancePolymerRepeatUnit) then) =
+      __$$_SubstancePolymerRepeatUnitCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -24701,16 +24434,17 @@ abstract class _$SubstancePolymerRepeatUnitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
+class __$$_SubstancePolymerRepeatUnitCopyWithImpl<$Res>
     extends _$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
-    implements _$SubstancePolymerRepeatUnitCopyWith<$Res> {
-  __$SubstancePolymerRepeatUnitCopyWithImpl(_SubstancePolymerRepeatUnit _value,
-      $Res Function(_SubstancePolymerRepeatUnit) _then)
-      : super(_value, (v) => _then(v as _SubstancePolymerRepeatUnit));
+    implements _$$_SubstancePolymerRepeatUnitCopyWith<$Res> {
+  __$$_SubstancePolymerRepeatUnitCopyWithImpl(
+      _$_SubstancePolymerRepeatUnit _value,
+      $Res Function(_$_SubstancePolymerRepeatUnit) _then)
+      : super(_value, (v) => _then(v as _$_SubstancePolymerRepeatUnit));
 
   @override
-  _SubstancePolymerRepeatUnit get _value =>
-      super._value as _SubstancePolymerRepeatUnit;
+  _$_SubstancePolymerRepeatUnit get _value =>
+      super._value as _$_SubstancePolymerRepeatUnit;
 
   @override
   $Res call({
@@ -24725,17 +24459,17 @@ class __$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
     Object? degreeOfPolymerisation = freezed,
     Object? structuralRepresentation = freezed,
   }) {
-    return _then(_SubstancePolymerRepeatUnit(
+    return _then(_$_SubstancePolymerRepeatUnit(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       unit: unit == freezed
@@ -24759,11 +24493,11 @@ class __$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
           : amountElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       degreeOfPolymerisation: degreeOfPolymerisation == freezed
-          ? _value.degreeOfPolymerisation
+          ? _value._degreeOfPolymerisation
           : degreeOfPolymerisation // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerDegreeOfPolymerisation>?,
       structuralRepresentation: structuralRepresentation == freezed
-          ? _value.structuralRepresentation
+          ? _value._structuralRepresentation
           : structuralRepresentation // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerStructuralRepresentation>?,
     ));
@@ -24775,27 +24509,47 @@ class __$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
 class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
   _$_SubstancePolymerRepeatUnit(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.unit,
       @JsonKey(name: '_unit') this.unitElement,
       this.orientation,
       this.amount,
       @JsonKey(name: '_amount') this.amountElement,
-      this.degreeOfPolymerisation,
-      this.structuralRepresentation})
-      : super._();
+      final List<SubstancePolymerDegreeOfPolymerisation>?
+          degreeOfPolymerisation,
+      final List<SubstancePolymerStructuralRepresentation>?
+          structuralRepresentation})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _degreeOfPolymerisation = degreeOfPolymerisation,
+        _structuralRepresentation = structuralRepresentation,
+        super._();
 
   factory _$_SubstancePolymerRepeatUnit.fromJson(Map<String, dynamic> json) =>
       _$$_SubstancePolymerRepeatUnitFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? unit;
   @override
@@ -24808,11 +24562,24 @@ class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
   @override
   @JsonKey(name: '_amount')
   final Element? amountElement;
+  final List<SubstancePolymerDegreeOfPolymerisation>? _degreeOfPolymerisation;
   @override
-  final List<SubstancePolymerDegreeOfPolymerisation>? degreeOfPolymerisation;
-  @override
+  List<SubstancePolymerDegreeOfPolymerisation>? get degreeOfPolymerisation {
+    final value = _degreeOfPolymerisation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<SubstancePolymerStructuralRepresentation>?
-      structuralRepresentation;
+      _structuralRepresentation;
+  @override
+  List<SubstancePolymerStructuralRepresentation>? get structuralRepresentation {
+    final value = _structuralRepresentation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -24823,12 +24590,12 @@ class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstancePolymerRepeatUnit &&
+            other is _$_SubstancePolymerRepeatUnit &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.unit, unit) &&
             const DeepCollectionEquality()
                 .equals(other.unitElement, unitElement) &&
@@ -24837,31 +24604,32 @@ class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
             const DeepCollectionEquality().equals(other.amount, amount) &&
             const DeepCollectionEquality()
                 .equals(other.amountElement, amountElement) &&
-            const DeepCollectionEquality()
-                .equals(other.degreeOfPolymerisation, degreeOfPolymerisation) &&
             const DeepCollectionEquality().equals(
-                other.structuralRepresentation, structuralRepresentation));
+                other._degreeOfPolymerisation, _degreeOfPolymerisation) &&
+            const DeepCollectionEquality().equals(
+                other._structuralRepresentation, _structuralRepresentation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(unit),
       const DeepCollectionEquality().hash(unitElement),
       const DeepCollectionEquality().hash(orientation),
       const DeepCollectionEquality().hash(amount),
       const DeepCollectionEquality().hash(amountElement),
-      const DeepCollectionEquality().hash(degreeOfPolymerisation),
-      const DeepCollectionEquality().hash(structuralRepresentation));
+      const DeepCollectionEquality().hash(_degreeOfPolymerisation),
+      const DeepCollectionEquality().hash(_structuralRepresentation));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstancePolymerRepeatUnitCopyWith<_SubstancePolymerRepeatUnit>
-      get copyWith => __$SubstancePolymerRepeatUnitCopyWithImpl<
-          _SubstancePolymerRepeatUnit>(this, _$identity);
+  _$$_SubstancePolymerRepeatUnitCopyWith<_$_SubstancePolymerRepeatUnit>
+      get copyWith => __$$_SubstancePolymerRepeatUnitCopyWithImpl<
+          _$_SubstancePolymerRepeatUnit>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -24871,16 +24639,17 @@ class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
 
 abstract class _SubstancePolymerRepeatUnit extends SubstancePolymerRepeatUnit {
   factory _SubstancePolymerRepeatUnit(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? unit,
-      @JsonKey(name: '_unit') Element? unitElement,
-      CodeableConcept? orientation,
-      Integer? amount,
-      @JsonKey(name: '_amount') Element? amountElement,
-      List<SubstancePolymerDegreeOfPolymerisation>? degreeOfPolymerisation,
-      List<SubstancePolymerStructuralRepresentation>?
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? unit,
+      @JsonKey(name: '_unit') final Element? unitElement,
+      final CodeableConcept? orientation,
+      final Integer? amount,
+      @JsonKey(name: '_amount') final Element? amountElement,
+      final List<SubstancePolymerDegreeOfPolymerisation>?
+          degreeOfPolymerisation,
+      final List<SubstancePolymerStructuralRepresentation>?
           structuralRepresentation}) = _$_SubstancePolymerRepeatUnit;
   _SubstancePolymerRepeatUnit._() : super._();
 
@@ -24888,31 +24657,34 @@ abstract class _SubstancePolymerRepeatUnit extends SubstancePolymerRepeatUnit {
       _$_SubstancePolymerRepeatUnit.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get unit;
+  String? get unit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_unit')
-  Element? get unitElement;
+  Element? get unitElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get orientation;
+  CodeableConcept? get orientation => throw _privateConstructorUsedError;
   @override
-  Integer? get amount;
+  Integer? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amount')
-  Element? get amountElement;
+  Element? get amountElement => throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerDegreeOfPolymerisation>? get degreeOfPolymerisation;
+  List<SubstancePolymerDegreeOfPolymerisation>? get degreeOfPolymerisation =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerStructuralRepresentation>? get structuralRepresentation;
+  List<SubstancePolymerStructuralRepresentation>?
+      get structuralRepresentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerRepeatUnitCopyWith<_SubstancePolymerRepeatUnit>
+  _$$_SubstancePolymerRepeatUnitCopyWith<_$_SubstancePolymerRepeatUnit>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -24921,44 +24693,6 @@ SubstancePolymerDegreeOfPolymerisation
         Map<String, dynamic> json) {
   return _SubstancePolymerDegreeOfPolymerisation.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstancePolymerDegreeOfPolymerisationTearOff {
-  const _$SubstancePolymerDegreeOfPolymerisationTearOff();
-
-  _SubstancePolymerDegreeOfPolymerisation call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Integer? average,
-      @JsonKey(name: '_average') Element? averageElement,
-      Integer? low,
-      @JsonKey(name: '_low') Element? lowElement,
-      Integer? high,
-      @JsonKey(name: '_high') Element? highElement}) {
-    return _SubstancePolymerDegreeOfPolymerisation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      average: average,
-      averageElement: averageElement,
-      low: low,
-      lowElement: lowElement,
-      high: high,
-      highElement: highElement,
-    );
-  }
-
-  SubstancePolymerDegreeOfPolymerisation fromJson(Map<String, Object?> json) {
-    return SubstancePolymerDegreeOfPolymerisation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstancePolymerDegreeOfPolymerisation =
-    _$SubstancePolymerDegreeOfPolymerisationTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerDegreeOfPolymerisation {
@@ -25121,12 +24855,12 @@ class _$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstancePolymerDegreeOfPolymerisationCopyWith<$Res>
+abstract class _$$_SubstancePolymerDegreeOfPolymerisationCopyWith<$Res>
     implements $SubstancePolymerDegreeOfPolymerisationCopyWith<$Res> {
-  factory _$SubstancePolymerDegreeOfPolymerisationCopyWith(
-          _SubstancePolymerDegreeOfPolymerisation value,
-          $Res Function(_SubstancePolymerDegreeOfPolymerisation) then) =
-      __$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>;
+  factory _$$_SubstancePolymerDegreeOfPolymerisationCopyWith(
+          _$_SubstancePolymerDegreeOfPolymerisation value,
+          $Res Function(_$_SubstancePolymerDegreeOfPolymerisation) then) =
+      __$$_SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -25151,18 +24885,18 @@ abstract class _$SubstancePolymerDegreeOfPolymerisationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
+class __$$_SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
     extends _$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
-    implements _$SubstancePolymerDegreeOfPolymerisationCopyWith<$Res> {
-  __$SubstancePolymerDegreeOfPolymerisationCopyWithImpl(
-      _SubstancePolymerDegreeOfPolymerisation _value,
-      $Res Function(_SubstancePolymerDegreeOfPolymerisation) _then)
-      : super(
-            _value, (v) => _then(v as _SubstancePolymerDegreeOfPolymerisation));
+    implements _$$_SubstancePolymerDegreeOfPolymerisationCopyWith<$Res> {
+  __$$_SubstancePolymerDegreeOfPolymerisationCopyWithImpl(
+      _$_SubstancePolymerDegreeOfPolymerisation _value,
+      $Res Function(_$_SubstancePolymerDegreeOfPolymerisation) _then)
+      : super(_value,
+            (v) => _then(v as _$_SubstancePolymerDegreeOfPolymerisation));
 
   @override
-  _SubstancePolymerDegreeOfPolymerisation get _value =>
-      super._value as _SubstancePolymerDegreeOfPolymerisation;
+  _$_SubstancePolymerDegreeOfPolymerisation get _value =>
+      super._value as _$_SubstancePolymerDegreeOfPolymerisation;
 
   @override
   $Res call({
@@ -25177,17 +24911,17 @@ class __$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
     Object? high = freezed,
     Object? highElement = freezed,
   }) {
-    return _then(_SubstancePolymerDegreeOfPolymerisation(
+    return _then(_$_SubstancePolymerDegreeOfPolymerisation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -25228,8 +24962,8 @@ class _$_SubstancePolymerDegreeOfPolymerisation
     extends _SubstancePolymerDegreeOfPolymerisation {
   _$_SubstancePolymerDegreeOfPolymerisation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.average,
       @JsonKey(name: '_average') this.averageElement,
@@ -25237,7 +24971,9 @@ class _$_SubstancePolymerDegreeOfPolymerisation
       @JsonKey(name: '_low') this.lowElement,
       this.high,
       @JsonKey(name: '_high') this.highElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstancePolymerDegreeOfPolymerisation.fromJson(
           Map<String, dynamic> json) =>
@@ -25245,11 +24981,25 @@ class _$_SubstancePolymerDegreeOfPolymerisation
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -25277,12 +25027,12 @@ class _$_SubstancePolymerDegreeOfPolymerisation
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstancePolymerDegreeOfPolymerisation &&
+            other is _$_SubstancePolymerDegreeOfPolymerisation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.average, average) &&
             const DeepCollectionEquality()
@@ -25295,12 +25045,13 @@ class _$_SubstancePolymerDegreeOfPolymerisation
                 .equals(other.highElement, highElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(average),
       const DeepCollectionEquality().hash(averageElement),
@@ -25311,10 +25062,10 @@ class _$_SubstancePolymerDegreeOfPolymerisation
 
   @JsonKey(ignore: true)
   @override
-  _$SubstancePolymerDegreeOfPolymerisationCopyWith<
-          _SubstancePolymerDegreeOfPolymerisation>
-      get copyWith => __$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<
-          _SubstancePolymerDegreeOfPolymerisation>(this, _$identity);
+  _$$_SubstancePolymerDegreeOfPolymerisationCopyWith<
+          _$_SubstancePolymerDegreeOfPolymerisation>
+      get copyWith => __$$_SubstancePolymerDegreeOfPolymerisationCopyWithImpl<
+          _$_SubstancePolymerDegreeOfPolymerisation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -25325,16 +25076,16 @@ class _$_SubstancePolymerDegreeOfPolymerisation
 abstract class _SubstancePolymerDegreeOfPolymerisation
     extends SubstancePolymerDegreeOfPolymerisation {
   factory _SubstancePolymerDegreeOfPolymerisation(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? type,
-          Integer? average,
-          @JsonKey(name: '_average') Element? averageElement,
-          Integer? low,
-          @JsonKey(name: '_low') Element? lowElement,
-          Integer? high,
-          @JsonKey(name: '_high') Element? highElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final Integer? average,
+          @JsonKey(name: '_average') final Element? averageElement,
+          final Integer? low,
+          @JsonKey(name: '_low') final Element? lowElement,
+          final Integer? high,
+          @JsonKey(name: '_high') final Element? highElement}) =
       _$_SubstancePolymerDegreeOfPolymerisation;
   _SubstancePolymerDegreeOfPolymerisation._() : super._();
 
@@ -25343,33 +25094,34 @@ abstract class _SubstancePolymerDegreeOfPolymerisation
       _$_SubstancePolymerDegreeOfPolymerisation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Integer? get average;
+  Integer? get average => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_average')
-  Element? get averageElement;
+  Element? get averageElement => throw _privateConstructorUsedError;
   @override
-  Integer? get low;
+  Integer? get low => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_low')
-  Element? get lowElement;
+  Element? get lowElement => throw _privateConstructorUsedError;
   @override
-  Integer? get high;
+  Integer? get high => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_high')
-  Element? get highElement;
+  Element? get highElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerDegreeOfPolymerisationCopyWith<
-          _SubstancePolymerDegreeOfPolymerisation>
+  _$$_SubstancePolymerDegreeOfPolymerisationCopyWith<
+          _$_SubstancePolymerDegreeOfPolymerisation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -25378,40 +25130,6 @@ SubstancePolymerStructuralRepresentation
         Map<String, dynamic> json) {
   return _SubstancePolymerStructuralRepresentation.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstancePolymerStructuralRepresentationTearOff {
-  const _$SubstancePolymerStructuralRepresentationTearOff();
-
-  _SubstancePolymerStructuralRepresentation call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      String? representation,
-      @JsonKey(name: '_representation') Element? representationElement,
-      CodeableConcept? format,
-      Attachment? attachment}) {
-    return _SubstancePolymerStructuralRepresentation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      representation: representation,
-      representationElement: representationElement,
-      format: format,
-      attachment: attachment,
-    );
-  }
-
-  SubstancePolymerStructuralRepresentation fromJson(Map<String, Object?> json) {
-    return SubstancePolymerStructuralRepresentation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstancePolymerStructuralRepresentation =
-    _$SubstancePolymerStructuralRepresentationTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerStructuralRepresentation {
@@ -25559,12 +25277,12 @@ class _$SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstancePolymerStructuralRepresentationCopyWith<$Res>
+abstract class _$$_SubstancePolymerStructuralRepresentationCopyWith<$Res>
     implements $SubstancePolymerStructuralRepresentationCopyWith<$Res> {
-  factory _$SubstancePolymerStructuralRepresentationCopyWith(
-          _SubstancePolymerStructuralRepresentation value,
-          $Res Function(_SubstancePolymerStructuralRepresentation) then) =
-      __$SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>;
+  factory _$$_SubstancePolymerStructuralRepresentationCopyWith(
+          _$_SubstancePolymerStructuralRepresentation value,
+          $Res Function(_$_SubstancePolymerStructuralRepresentation) then) =
+      __$$_SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -25587,18 +25305,18 @@ abstract class _$SubstancePolymerStructuralRepresentationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
+class __$$_SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
     extends _$SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
-    implements _$SubstancePolymerStructuralRepresentationCopyWith<$Res> {
-  __$SubstancePolymerStructuralRepresentationCopyWithImpl(
-      _SubstancePolymerStructuralRepresentation _value,
-      $Res Function(_SubstancePolymerStructuralRepresentation) _then)
+    implements _$$_SubstancePolymerStructuralRepresentationCopyWith<$Res> {
+  __$$_SubstancePolymerStructuralRepresentationCopyWithImpl(
+      _$_SubstancePolymerStructuralRepresentation _value,
+      $Res Function(_$_SubstancePolymerStructuralRepresentation) _then)
       : super(_value,
-            (v) => _then(v as _SubstancePolymerStructuralRepresentation));
+            (v) => _then(v as _$_SubstancePolymerStructuralRepresentation));
 
   @override
-  _SubstancePolymerStructuralRepresentation get _value =>
-      super._value as _SubstancePolymerStructuralRepresentation;
+  _$_SubstancePolymerStructuralRepresentation get _value =>
+      super._value as _$_SubstancePolymerStructuralRepresentation;
 
   @override
   $Res call({
@@ -25611,17 +25329,17 @@ class __$SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
     Object? format = freezed,
     Object? attachment = freezed,
   }) {
-    return _then(_SubstancePolymerStructuralRepresentation(
+    return _then(_$_SubstancePolymerStructuralRepresentation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -25654,14 +25372,16 @@ class _$_SubstancePolymerStructuralRepresentation
     extends _SubstancePolymerStructuralRepresentation {
   _$_SubstancePolymerStructuralRepresentation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.representation,
       @JsonKey(name: '_representation') this.representationElement,
       this.format,
       this.attachment})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstancePolymerStructuralRepresentation.fromJson(
           Map<String, dynamic> json) =>
@@ -25669,11 +25389,25 @@ class _$_SubstancePolymerStructuralRepresentation
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -25695,12 +25429,12 @@ class _$_SubstancePolymerStructuralRepresentation
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstancePolymerStructuralRepresentation &&
+            other is _$_SubstancePolymerStructuralRepresentation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.representation, representation) &&
@@ -25711,12 +25445,13 @@ class _$_SubstancePolymerStructuralRepresentation
                 .equals(other.attachment, attachment));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(representation),
       const DeepCollectionEquality().hash(representationElement),
@@ -25725,10 +25460,10 @@ class _$_SubstancePolymerStructuralRepresentation
 
   @JsonKey(ignore: true)
   @override
-  _$SubstancePolymerStructuralRepresentationCopyWith<
-          _SubstancePolymerStructuralRepresentation>
-      get copyWith => __$SubstancePolymerStructuralRepresentationCopyWithImpl<
-          _SubstancePolymerStructuralRepresentation>(this, _$identity);
+  _$$_SubstancePolymerStructuralRepresentationCopyWith<
+          _$_SubstancePolymerStructuralRepresentation>
+      get copyWith => __$$_SubstancePolymerStructuralRepresentationCopyWithImpl<
+          _$_SubstancePolymerStructuralRepresentation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -25739,14 +25474,15 @@ class _$_SubstancePolymerStructuralRepresentation
 abstract class _SubstancePolymerStructuralRepresentation
     extends SubstancePolymerStructuralRepresentation {
   factory _SubstancePolymerStructuralRepresentation(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      String? representation,
-      @JsonKey(name: '_representation') Element? representationElement,
-      CodeableConcept? format,
-      Attachment? attachment}) = _$_SubstancePolymerStructuralRepresentation;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? type,
+      final String? representation,
+      @JsonKey(name: '_representation') final Element? representationElement,
+      final CodeableConcept? format,
+      final Attachment?
+          attachment}) = _$_SubstancePolymerStructuralRepresentation;
   _SubstancePolymerStructuralRepresentation._() : super._();
 
   factory _SubstancePolymerStructuralRepresentation.fromJson(
@@ -25754,89 +25490,34 @@ abstract class _SubstancePolymerStructuralRepresentation
       _$_SubstancePolymerStructuralRepresentation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  String? get representation;
+  String? get representation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_representation')
-  Element? get representationElement;
+  Element? get representationElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get format;
+  CodeableConcept? get format => throw _privateConstructorUsedError;
   @override
-  Attachment? get attachment;
+  Attachment? get attachment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerStructuralRepresentationCopyWith<
-          _SubstancePolymerStructuralRepresentation>
+  _$$_SubstancePolymerStructuralRepresentationCopyWith<
+          _$_SubstancePolymerStructuralRepresentation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceProtein _$SubstanceProteinFromJson(Map<String, dynamic> json) {
   return _SubstanceProtein.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceProteinTearOff {
-  const _$SubstanceProteinTearOff();
-
-  _SubstanceProtein call(
-      {R5ResourceType resourceType = R5ResourceType.SubstanceProtein,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? sequenceType,
-      Integer? numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits')
-          Element? numberOfSubunitsElement,
-      List<String>? disulfideLinkage,
-      @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
-      List<SubstanceProteinSubunit>? subunit}) {
-    return _SubstanceProtein(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      sequenceType: sequenceType,
-      numberOfSubunits: numberOfSubunits,
-      numberOfSubunitsElement: numberOfSubunitsElement,
-      disulfideLinkage: disulfideLinkage,
-      disulfideLinkageElement: disulfideLinkageElement,
-      subunit: subunit,
-    );
-  }
-
-  SubstanceProtein fromJson(Map<String, Object?> json) {
-    return SubstanceProtein.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceProtein = _$SubstanceProteinTearOff();
 
 /// @nodoc
 mixin _$SubstanceProtein {
@@ -26078,11 +25759,11 @@ class _$SubstanceProteinCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceProteinCopyWith<$Res>
+abstract class _$$_SubstanceProteinCopyWith<$Res>
     implements $SubstanceProteinCopyWith<$Res> {
-  factory _$SubstanceProteinCopyWith(
-          _SubstanceProtein value, $Res Function(_SubstanceProtein) then) =
-      __$SubstanceProteinCopyWithImpl<$Res>;
+  factory _$$_SubstanceProteinCopyWith(
+          _$_SubstanceProtein value, $Res Function(_$_SubstanceProtein) then) =
+      __$$_SubstanceProteinCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -26123,15 +25804,15 @@ abstract class _$SubstanceProteinCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceProteinCopyWithImpl<$Res>
+class __$$_SubstanceProteinCopyWithImpl<$Res>
     extends _$SubstanceProteinCopyWithImpl<$Res>
-    implements _$SubstanceProteinCopyWith<$Res> {
-  __$SubstanceProteinCopyWithImpl(
-      _SubstanceProtein _value, $Res Function(_SubstanceProtein) _then)
-      : super(_value, (v) => _then(v as _SubstanceProtein));
+    implements _$$_SubstanceProteinCopyWith<$Res> {
+  __$$_SubstanceProteinCopyWithImpl(
+      _$_SubstanceProtein _value, $Res Function(_$_SubstanceProtein) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceProtein));
 
   @override
-  _SubstanceProtein get _value => super._value as _SubstanceProtein;
+  _$_SubstanceProtein get _value => super._value as _$_SubstanceProtein;
 
   @override
   $Res call({
@@ -26153,7 +25834,7 @@ class __$SubstanceProteinCopyWithImpl<$Res>
     Object? disulfideLinkageElement = freezed,
     Object? subunit = freezed,
   }) {
-    return _then(_SubstanceProtein(
+    return _then(_$_SubstanceProtein(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -26187,15 +25868,15 @@ class __$SubstanceProteinCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       sequenceType: sequenceType == freezed
@@ -26211,15 +25892,15 @@ class __$SubstanceProteinCopyWithImpl<$Res>
           : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       disulfideLinkage: disulfideLinkage == freezed
-          ? _value.disulfideLinkage
+          ? _value._disulfideLinkage
           : disulfideLinkage // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       disulfideLinkageElement: disulfideLinkageElement == freezed
-          ? _value.disulfideLinkageElement
+          ? _value._disulfideLinkageElement
           : disulfideLinkageElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       subunit: subunit == freezed
-          ? _value.subunit
+          ? _value._subunit
           : subunit // ignore: cast_nullable_to_non_nullable
               as List<SubstanceProteinSubunit>?,
     ));
@@ -26234,26 +25915,37 @@ class _$_SubstanceProtein extends _SubstanceProtein {
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.sequenceType,
       this.numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') this.numberOfSubunitsElement,
-      this.disulfideLinkage,
-      @JsonKey(name: '_disulfideLinkage') this.disulfideLinkageElement,
-      this.subunit})
-      : super._();
+      @JsonKey(name: '_numberOfSubunits')
+          this.numberOfSubunitsElement,
+      final List<String>? disulfideLinkage,
+      @JsonKey(name: '_disulfideLinkage')
+          final List<Element>? disulfideLinkageElement,
+      final List<SubstanceProteinSubunit>? subunit})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _disulfideLinkage = disulfideLinkage,
+        _disulfideLinkageElement = disulfideLinkageElement,
+        _subunit = subunit,
+        super._();
 
   factory _$_SubstanceProtein.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceProteinFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -26271,13 +25963,34 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? sequenceType;
   @override
@@ -26285,13 +25998,33 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   @override
   @JsonKey(name: '_numberOfSubunits')
   final Element? numberOfSubunitsElement;
+  final List<String>? _disulfideLinkage;
   @override
-  final List<String>? disulfideLinkage;
+  List<String>? get disulfideLinkage {
+    final value = _disulfideLinkage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _disulfideLinkageElement;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  final List<Element>? disulfideLinkageElement;
+  List<Element>? get disulfideLinkageElement {
+    final value = _disulfideLinkageElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceProteinSubunit>? _subunit;
   @override
-  final List<SubstanceProteinSubunit>? subunit;
+  List<SubstanceProteinSubunit>? get subunit {
+    final value = _subunit;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -26302,7 +26035,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceProtein &&
+            other is _$_SubstanceProtein &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -26315,11 +26048,12 @@ class _$_SubstanceProtein extends _SubstanceProtein {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.sequenceType, sequenceType) &&
             const DeepCollectionEquality()
@@ -26327,12 +26061,13 @@ class _$_SubstanceProtein extends _SubstanceProtein {
             const DeepCollectionEquality().equals(
                 other.numberOfSubunitsElement, numberOfSubunitsElement) &&
             const DeepCollectionEquality()
-                .equals(other.disulfideLinkage, disulfideLinkage) &&
+                .equals(other._disulfideLinkage, _disulfideLinkage) &&
             const DeepCollectionEquality().equals(
-                other.disulfideLinkageElement, disulfideLinkageElement) &&
-            const DeepCollectionEquality().equals(other.subunit, subunit));
+                other._disulfideLinkageElement, _disulfideLinkageElement) &&
+            const DeepCollectionEquality().equals(other._subunit, _subunit));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -26344,20 +26079,20 @@ class _$_SubstanceProtein extends _SubstanceProtein {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(sequenceType),
       const DeepCollectionEquality().hash(numberOfSubunits),
       const DeepCollectionEquality().hash(numberOfSubunitsElement),
-      const DeepCollectionEquality().hash(disulfideLinkage),
-      const DeepCollectionEquality().hash(disulfideLinkageElement),
-      const DeepCollectionEquality().hash(subunit));
+      const DeepCollectionEquality().hash(_disulfideLinkage),
+      const DeepCollectionEquality().hash(_disulfideLinkageElement),
+      const DeepCollectionEquality().hash(_subunit));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceProteinCopyWith<_SubstanceProtein> get copyWith =>
-      __$SubstanceProteinCopyWithImpl<_SubstanceProtein>(this, _$identity);
+  _$$_SubstanceProteinCopyWith<_$_SubstanceProtein> get copyWith =>
+      __$$_SubstanceProteinCopyWithImpl<_$_SubstanceProtein>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -26367,75 +26102,78 @@ class _$_SubstanceProtein extends _SubstanceProtein {
 
 abstract class _SubstanceProtein extends SubstanceProtein {
   factory _SubstanceProtein(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? sequenceType,
-      Integer? numberOfSubunits,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? sequenceType,
+      final Integer? numberOfSubunits,
       @JsonKey(name: '_numberOfSubunits')
-          Element? numberOfSubunitsElement,
-      List<String>? disulfideLinkage,
+          final Element? numberOfSubunitsElement,
+      final List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
-      List<SubstanceProteinSubunit>? subunit}) = _$_SubstanceProtein;
+          final List<Element>? disulfideLinkageElement,
+      final List<SubstanceProteinSubunit>? subunit}) = _$_SubstanceProtein;
   _SubstanceProtein._() : super._();
 
   factory _SubstanceProtein.fromJson(Map<String, dynamic> json) =
       _$_SubstanceProtein.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sequenceType;
+  CodeableConcept? get sequenceType => throw _privateConstructorUsedError;
   @override
-  Integer? get numberOfSubunits;
+  Integer? get numberOfSubunits => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_numberOfSubunits')
-  Element? get numberOfSubunitsElement;
+  Element? get numberOfSubunitsElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get disulfideLinkage;
+  List<String>? get disulfideLinkage => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  List<Element>? get disulfideLinkageElement;
+  List<Element>? get disulfideLinkageElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceProteinSubunit>? get subunit;
+  List<SubstanceProteinSubunit>? get subunit =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceProteinCopyWith<_SubstanceProtein> get copyWith =>
+  _$$_SubstanceProteinCopyWith<_$_SubstanceProtein> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -26443,61 +26181,6 @@ SubstanceProteinSubunit _$SubstanceProteinSubunitFromJson(
     Map<String, dynamic> json) {
   return _SubstanceProteinSubunit.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceProteinSubunitTearOff {
-  const _$SubstanceProteinSubunitTearOff();
-
-  _SubstanceProteinSubunit call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? subunit,
-      @JsonKey(name: '_subunit')
-          Element? subunitElement,
-      String? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
-      Integer? length,
-      @JsonKey(name: '_length')
-          Element? lengthElement,
-      Attachment? sequenceAttachment,
-      Identifier? nTerminalModificationId,
-      String? nTerminalModification,
-      @JsonKey(name: '_nTerminalModification')
-          Element? nTerminalModificationElement,
-      Identifier? cTerminalModificationId,
-      String? cTerminalModification,
-      @JsonKey(name: '_cTerminalModification')
-          Element? cTerminalModificationElement}) {
-    return _SubstanceProteinSubunit(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      subunit: subunit,
-      subunitElement: subunitElement,
-      sequence: sequence,
-      sequenceElement: sequenceElement,
-      length: length,
-      lengthElement: lengthElement,
-      sequenceAttachment: sequenceAttachment,
-      nTerminalModificationId: nTerminalModificationId,
-      nTerminalModification: nTerminalModification,
-      nTerminalModificationElement: nTerminalModificationElement,
-      cTerminalModificationId: cTerminalModificationId,
-      cTerminalModification: cTerminalModification,
-      cTerminalModificationElement: cTerminalModificationElement,
-    );
-  }
-
-  SubstanceProteinSubunit fromJson(Map<String, Object?> json) {
-    return SubstanceProteinSubunit.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceProteinSubunit = _$SubstanceProteinSubunitTearOff();
 
 /// @nodoc
 mixin _$SubstanceProteinSubunit {
@@ -26760,11 +26443,11 @@ class _$SubstanceProteinSubunitCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceProteinSubunitCopyWith<$Res>
+abstract class _$$_SubstanceProteinSubunitCopyWith<$Res>
     implements $SubstanceProteinSubunitCopyWith<$Res> {
-  factory _$SubstanceProteinSubunitCopyWith(_SubstanceProteinSubunit value,
-          $Res Function(_SubstanceProteinSubunit) then) =
-      __$SubstanceProteinSubunitCopyWithImpl<$Res>;
+  factory _$$_SubstanceProteinSubunitCopyWith(_$_SubstanceProteinSubunit value,
+          $Res Function(_$_SubstanceProteinSubunit) then) =
+      __$$_SubstanceProteinSubunitCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -26809,16 +26492,16 @@ abstract class _$SubstanceProteinSubunitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceProteinSubunitCopyWithImpl<$Res>
+class __$$_SubstanceProteinSubunitCopyWithImpl<$Res>
     extends _$SubstanceProteinSubunitCopyWithImpl<$Res>
-    implements _$SubstanceProteinSubunitCopyWith<$Res> {
-  __$SubstanceProteinSubunitCopyWithImpl(_SubstanceProteinSubunit _value,
-      $Res Function(_SubstanceProteinSubunit) _then)
-      : super(_value, (v) => _then(v as _SubstanceProteinSubunit));
+    implements _$$_SubstanceProteinSubunitCopyWith<$Res> {
+  __$$_SubstanceProteinSubunitCopyWithImpl(_$_SubstanceProteinSubunit _value,
+      $Res Function(_$_SubstanceProteinSubunit) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceProteinSubunit));
 
   @override
-  _SubstanceProteinSubunit get _value =>
-      super._value as _SubstanceProteinSubunit;
+  _$_SubstanceProteinSubunit get _value =>
+      super._value as _$_SubstanceProteinSubunit;
 
   @override
   $Res call({
@@ -26839,17 +26522,17 @@ class __$SubstanceProteinSubunitCopyWithImpl<$Res>
     Object? cTerminalModification = freezed,
     Object? cTerminalModificationElement = freezed,
   }) {
-    return _then(_SubstanceProteinSubunit(
+    return _then(_$_SubstanceProteinSubunit(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       subunit: subunit == freezed
@@ -26914,8 +26597,8 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
   _$_SubstanceProteinSubunit(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.subunit,
       @JsonKey(name: '_subunit')
           this.subunitElement,
@@ -26934,18 +26617,34 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
       this.cTerminalModification,
       @JsonKey(name: '_cTerminalModification')
           this.cTerminalModificationElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceProteinSubunit.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceProteinSubunitFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Integer? subunit;
   @override
@@ -26987,12 +26686,12 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceProteinSubunit &&
+            other is _$_SubstanceProteinSubunit &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.subunit, subunit) &&
             const DeepCollectionEquality()
                 .equals(other.subunitElement, subunitElement) &&
@@ -27020,12 +26719,13 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
                 cTerminalModificationElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(subunit),
       const DeepCollectionEquality().hash(subunitElement),
       const DeepCollectionEquality().hash(sequence),
@@ -27042,9 +26742,10 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceProteinSubunitCopyWith<_SubstanceProteinSubunit> get copyWith =>
-      __$SubstanceProteinSubunitCopyWithImpl<_SubstanceProteinSubunit>(
-          this, _$identity);
+  _$$_SubstanceProteinSubunitCopyWith<_$_SubstanceProteinSubunit>
+      get copyWith =>
+          __$$_SubstanceProteinSubunitCopyWithImpl<_$_SubstanceProteinSubunit>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -27054,131 +26755,85 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
 
 abstract class _SubstanceProteinSubunit extends SubstanceProteinSubunit {
   factory _SubstanceProteinSubunit(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Integer? subunit,
-      @JsonKey(name: '_subunit')
-          Element? subunitElement,
-      String? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
-      Integer? length,
-      @JsonKey(name: '_length')
-          Element? lengthElement,
-      Attachment? sequenceAttachment,
-      Identifier? nTerminalModificationId,
-      String? nTerminalModification,
-      @JsonKey(name: '_nTerminalModification')
-          Element? nTerminalModificationElement,
-      Identifier? cTerminalModificationId,
-      String? cTerminalModification,
-      @JsonKey(name: '_cTerminalModification')
-          Element? cTerminalModificationElement}) = _$_SubstanceProteinSubunit;
+          {final String? id,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Integer? subunit,
+          @JsonKey(name: '_subunit')
+              final Element? subunitElement,
+          final String? sequence,
+          @JsonKey(name: '_sequence')
+              final Element? sequenceElement,
+          final Integer? length,
+          @JsonKey(name: '_length')
+              final Element? lengthElement,
+          final Attachment? sequenceAttachment,
+          final Identifier? nTerminalModificationId,
+          final String? nTerminalModification,
+          @JsonKey(name: '_nTerminalModification')
+              final Element? nTerminalModificationElement,
+          final Identifier? cTerminalModificationId,
+          final String? cTerminalModification,
+          @JsonKey(name: '_cTerminalModification')
+              final Element? cTerminalModificationElement}) =
+      _$_SubstanceProteinSubunit;
   _SubstanceProteinSubunit._() : super._();
 
   factory _SubstanceProteinSubunit.fromJson(Map<String, dynamic> json) =
       _$_SubstanceProteinSubunit.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Integer? get subunit;
+  Integer? get subunit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_subunit')
-  Element? get subunitElement;
+  Element? get subunitElement => throw _privateConstructorUsedError;
   @override
-  String? get sequence;
+  String? get sequence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sequence')
-  Element? get sequenceElement;
+  Element? get sequenceElement => throw _privateConstructorUsedError;
   @override
-  Integer? get length;
+  Integer? get length => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_length')
-  Element? get lengthElement;
+  Element? get lengthElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get sequenceAttachment;
+  Attachment? get sequenceAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get nTerminalModificationId;
+  Identifier? get nTerminalModificationId => throw _privateConstructorUsedError;
   @override
-  String? get nTerminalModification;
+  String? get nTerminalModification => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_nTerminalModification')
-  Element? get nTerminalModificationElement;
+  Element? get nTerminalModificationElement =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get cTerminalModificationId;
+  Identifier? get cTerminalModificationId => throw _privateConstructorUsedError;
   @override
-  String? get cTerminalModification;
+  String? get cTerminalModification => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_cTerminalModification')
-  Element? get cTerminalModificationElement;
+  Element? get cTerminalModificationElement =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceProteinSubunitCopyWith<_SubstanceProteinSubunit> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SubstanceProteinSubunitCopyWith<_$_SubstanceProteinSubunit>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceReferenceInformation _$SubstanceReferenceInformationFromJson(
     Map<String, dynamic> json) {
   return _SubstanceReferenceInformation.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceReferenceInformationTearOff {
-  const _$SubstanceReferenceInformationTearOff();
-
-  _SubstanceReferenceInformation call(
-      {R5ResourceType resourceType =
-          R5ResourceType.SubstanceReferenceInformation,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement,
-      List<SubstanceReferenceInformationGene>? gene,
-      List<SubstanceReferenceInformationGeneElement>? geneElement,
-      List<SubstanceReferenceInformationTarget>? target}) {
-    return _SubstanceReferenceInformation(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      comment: comment,
-      commentElement: commentElement,
-      gene: gene,
-      geneElement: geneElement,
-      target: target,
-    );
-  }
-
-  SubstanceReferenceInformation fromJson(Map<String, Object?> json) {
-    return SubstanceReferenceInformation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceReferenceInformation = _$SubstanceReferenceInformationTearOff();
 
 /// @nodoc
 mixin _$SubstanceReferenceInformation {
@@ -27397,12 +27052,12 @@ class _$SubstanceReferenceInformationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceReferenceInformationCopyWith<$Res>
+abstract class _$$_SubstanceReferenceInformationCopyWith<$Res>
     implements $SubstanceReferenceInformationCopyWith<$Res> {
-  factory _$SubstanceReferenceInformationCopyWith(
-          _SubstanceReferenceInformation value,
-          $Res Function(_SubstanceReferenceInformation) then) =
-      __$SubstanceReferenceInformationCopyWithImpl<$Res>;
+  factory _$$_SubstanceReferenceInformationCopyWith(
+          _$_SubstanceReferenceInformation value,
+          $Res Function(_$_SubstanceReferenceInformation) then) =
+      __$$_SubstanceReferenceInformationCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -27435,17 +27090,17 @@ abstract class _$SubstanceReferenceInformationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceReferenceInformationCopyWithImpl<$Res>
+class __$$_SubstanceReferenceInformationCopyWithImpl<$Res>
     extends _$SubstanceReferenceInformationCopyWithImpl<$Res>
-    implements _$SubstanceReferenceInformationCopyWith<$Res> {
-  __$SubstanceReferenceInformationCopyWithImpl(
-      _SubstanceReferenceInformation _value,
-      $Res Function(_SubstanceReferenceInformation) _then)
-      : super(_value, (v) => _then(v as _SubstanceReferenceInformation));
+    implements _$$_SubstanceReferenceInformationCopyWith<$Res> {
+  __$$_SubstanceReferenceInformationCopyWithImpl(
+      _$_SubstanceReferenceInformation _value,
+      $Res Function(_$_SubstanceReferenceInformation) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceReferenceInformation));
 
   @override
-  _SubstanceReferenceInformation get _value =>
-      super._value as _SubstanceReferenceInformation;
+  _$_SubstanceReferenceInformation get _value =>
+      super._value as _$_SubstanceReferenceInformation;
 
   @override
   $Res call({
@@ -27466,7 +27121,7 @@ class __$SubstanceReferenceInformationCopyWithImpl<$Res>
     Object? geneElement = freezed,
     Object? target = freezed,
   }) {
-    return _then(_SubstanceReferenceInformation(
+    return _then(_$_SubstanceReferenceInformation(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -27500,15 +27155,15 @@ class __$SubstanceReferenceInformationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       comment: comment == freezed
@@ -27520,15 +27175,15 @@ class __$SubstanceReferenceInformationCopyWithImpl<$Res>
           : commentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       gene: gene == freezed
-          ? _value.gene
+          ? _value._gene
           : gene // ignore: cast_nullable_to_non_nullable
               as List<SubstanceReferenceInformationGene>?,
       geneElement: geneElement == freezed
-          ? _value.geneElement
+          ? _value._geneElement
           : geneElement // ignore: cast_nullable_to_non_nullable
               as List<SubstanceReferenceInformationGeneElement>?,
       target: target == freezed
-          ? _value.target
+          ? _value._target
           : target // ignore: cast_nullable_to_non_nullable
               as List<SubstanceReferenceInformationTarget>?,
     ));
@@ -27547,22 +27202,28 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.comment,
       @JsonKey(name: '_comment') this.commentElement,
-      this.gene,
-      this.geneElement,
-      this.target})
-      : super._();
+      final List<SubstanceReferenceInformationGene>? gene,
+      final List<SubstanceReferenceInformationGeneElement>? geneElement,
+      final List<SubstanceReferenceInformationTarget>? target})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _gene = gene,
+        _geneElement = geneElement,
+        _target = target,
+        super._();
 
   factory _$_SubstanceReferenceInformation.fromJson(
           Map<String, dynamic> json) =>
       _$$_SubstanceReferenceInformationFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -27580,24 +27241,65 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? comment;
   @override
   @JsonKey(name: '_comment')
   final Element? commentElement;
+  final List<SubstanceReferenceInformationGene>? _gene;
   @override
-  final List<SubstanceReferenceInformationGene>? gene;
+  List<SubstanceReferenceInformationGene>? get gene {
+    final value = _gene;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceReferenceInformationGeneElement>? _geneElement;
   @override
-  final List<SubstanceReferenceInformationGeneElement>? geneElement;
+  List<SubstanceReferenceInformationGeneElement>? get geneElement {
+    final value = _geneElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SubstanceReferenceInformationTarget>? _target;
   @override
-  final List<SubstanceReferenceInformationTarget>? target;
+  List<SubstanceReferenceInformationTarget>? get target {
+    final value = _target;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -27608,7 +27310,7 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceReferenceInformation &&
+            other is _$_SubstanceReferenceInformation &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -27621,20 +27323,22 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.comment, comment) &&
             const DeepCollectionEquality()
                 .equals(other.commentElement, commentElement) &&
-            const DeepCollectionEquality().equals(other.gene, gene) &&
+            const DeepCollectionEquality().equals(other._gene, _gene) &&
             const DeepCollectionEquality()
-                .equals(other.geneElement, geneElement) &&
-            const DeepCollectionEquality().equals(other.target, target));
+                .equals(other._geneElement, _geneElement) &&
+            const DeepCollectionEquality().equals(other._target, _target));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -27646,20 +27350,20 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(contained),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(comment),
       const DeepCollectionEquality().hash(commentElement),
-      const DeepCollectionEquality().hash(gene),
-      const DeepCollectionEquality().hash(geneElement),
-      const DeepCollectionEquality().hash(target));
+      const DeepCollectionEquality().hash(_gene),
+      const DeepCollectionEquality().hash(_geneElement),
+      const DeepCollectionEquality().hash(_target));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceReferenceInformationCopyWith<_SubstanceReferenceInformation>
-      get copyWith => __$SubstanceReferenceInformationCopyWithImpl<
-          _SubstanceReferenceInformation>(this, _$identity);
+  _$$_SubstanceReferenceInformationCopyWith<_$_SubstanceReferenceInformation>
+      get copyWith => __$$_SubstanceReferenceInformationCopyWithImpl<
+          _$_SubstanceReferenceInformation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -27670,22 +27374,22 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
 abstract class _SubstanceReferenceInformation
     extends SubstanceReferenceInformation {
   factory _SubstanceReferenceInformation(
-          {R5ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language') Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? comment,
-          @JsonKey(name: '_comment') Element? commentElement,
-          List<SubstanceReferenceInformationGene>? gene,
-          List<SubstanceReferenceInformationGeneElement>? geneElement,
-          List<SubstanceReferenceInformationTarget>? target}) =
+          {final R5ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? comment,
+          @JsonKey(name: '_comment') final Element? commentElement,
+          final List<SubstanceReferenceInformationGene>? gene,
+          final List<SubstanceReferenceInformationGeneElement>? geneElement,
+          final List<SubstanceReferenceInformationTarget>? target}) =
       _$_SubstanceReferenceInformation;
   _SubstanceReferenceInformation._() : super._();
 
@@ -27693,44 +27397,48 @@ abstract class _SubstanceReferenceInformation
       _$_SubstanceReferenceInformation.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
-  List<SubstanceReferenceInformationGene>? get gene;
+  List<SubstanceReferenceInformationGene>? get gene =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceReferenceInformationGeneElement>? get geneElement;
+  List<SubstanceReferenceInformationGeneElement>? get geneElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceReferenceInformationTarget>? get target;
+  List<SubstanceReferenceInformationTarget>? get target =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceReferenceInformationCopyWith<_SubstanceReferenceInformation>
+  _$$_SubstanceReferenceInformationCopyWith<_$_SubstanceReferenceInformation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -27738,36 +27446,6 @@ SubstanceReferenceInformationGene _$SubstanceReferenceInformationGeneFromJson(
     Map<String, dynamic> json) {
   return _SubstanceReferenceInformationGene.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceReferenceInformationGeneTearOff {
-  const _$SubstanceReferenceInformationGeneTearOff();
-
-  _SubstanceReferenceInformationGene call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? geneSequenceOrigin,
-      CodeableConcept? gene,
-      List<Reference>? source}) {
-    return _SubstanceReferenceInformationGene(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      geneSequenceOrigin: geneSequenceOrigin,
-      gene: gene,
-      source: source,
-    );
-  }
-
-  SubstanceReferenceInformationGene fromJson(Map<String, Object?> json) {
-    return SubstanceReferenceInformationGene.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceReferenceInformationGene =
-    _$SubstanceReferenceInformationGeneTearOff();
 
 /// @nodoc
 mixin _$SubstanceReferenceInformationGene {
@@ -27874,12 +27552,12 @@ class _$SubstanceReferenceInformationGeneCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceReferenceInformationGeneCopyWith<$Res>
+abstract class _$$_SubstanceReferenceInformationGeneCopyWith<$Res>
     implements $SubstanceReferenceInformationGeneCopyWith<$Res> {
-  factory _$SubstanceReferenceInformationGeneCopyWith(
-          _SubstanceReferenceInformationGene value,
-          $Res Function(_SubstanceReferenceInformationGene) then) =
-      __$SubstanceReferenceInformationGeneCopyWithImpl<$Res>;
+  factory _$$_SubstanceReferenceInformationGeneCopyWith(
+          _$_SubstanceReferenceInformationGene value,
+          $Res Function(_$_SubstanceReferenceInformationGene) then) =
+      __$$_SubstanceReferenceInformationGeneCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -27896,17 +27574,17 @@ abstract class _$SubstanceReferenceInformationGeneCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceReferenceInformationGeneCopyWithImpl<$Res>
+class __$$_SubstanceReferenceInformationGeneCopyWithImpl<$Res>
     extends _$SubstanceReferenceInformationGeneCopyWithImpl<$Res>
-    implements _$SubstanceReferenceInformationGeneCopyWith<$Res> {
-  __$SubstanceReferenceInformationGeneCopyWithImpl(
-      _SubstanceReferenceInformationGene _value,
-      $Res Function(_SubstanceReferenceInformationGene) _then)
-      : super(_value, (v) => _then(v as _SubstanceReferenceInformationGene));
+    implements _$$_SubstanceReferenceInformationGeneCopyWith<$Res> {
+  __$$_SubstanceReferenceInformationGeneCopyWithImpl(
+      _$_SubstanceReferenceInformationGene _value,
+      $Res Function(_$_SubstanceReferenceInformationGene) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceReferenceInformationGene));
 
   @override
-  _SubstanceReferenceInformationGene get _value =>
-      super._value as _SubstanceReferenceInformationGene;
+  _$_SubstanceReferenceInformationGene get _value =>
+      super._value as _$_SubstanceReferenceInformationGene;
 
   @override
   $Res call({
@@ -27917,17 +27595,17 @@ class __$SubstanceReferenceInformationGeneCopyWithImpl<$Res>
     Object? gene = freezed,
     Object? source = freezed,
   }) {
-    return _then(_SubstanceReferenceInformationGene(
+    return _then(_$_SubstanceReferenceInformationGene(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       geneSequenceOrigin: geneSequenceOrigin == freezed
@@ -27939,7 +27617,7 @@ class __$SubstanceReferenceInformationGeneCopyWithImpl<$Res>
           : gene // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       source: source == freezed
-          ? _value.source
+          ? _value._source
           : source // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -27952,12 +27630,15 @@ class _$_SubstanceReferenceInformationGene
     extends _SubstanceReferenceInformationGene {
   _$_SubstanceReferenceInformationGene(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.geneSequenceOrigin,
       this.gene,
-      this.source})
-      : super._();
+      final List<Reference>? source})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _source = source,
+        super._();
 
   factory _$_SubstanceReferenceInformationGene.fromJson(
           Map<String, dynamic> json) =>
@@ -27965,17 +27646,37 @@ class _$_SubstanceReferenceInformationGene
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? geneSequenceOrigin;
   @override
   final CodeableConcept? gene;
+  final List<Reference>? _source;
   @override
-  final List<Reference>? source;
+  List<Reference>? get source {
+    final value = _source;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -27986,34 +27687,35 @@ class _$_SubstanceReferenceInformationGene
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceReferenceInformationGene &&
+            other is _$_SubstanceReferenceInformationGene &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.geneSequenceOrigin, geneSequenceOrigin) &&
             const DeepCollectionEquality().equals(other.gene, gene) &&
-            const DeepCollectionEquality().equals(other.source, source));
+            const DeepCollectionEquality().equals(other._source, _source));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(geneSequenceOrigin),
       const DeepCollectionEquality().hash(gene),
-      const DeepCollectionEquality().hash(source));
+      const DeepCollectionEquality().hash(_source));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceReferenceInformationGeneCopyWith<
-          _SubstanceReferenceInformationGene>
-      get copyWith => __$SubstanceReferenceInformationGeneCopyWithImpl<
-          _SubstanceReferenceInformationGene>(this, _$identity);
+  _$$_SubstanceReferenceInformationGeneCopyWith<
+          _$_SubstanceReferenceInformationGene>
+      get copyWith => __$$_SubstanceReferenceInformationGeneCopyWithImpl<
+          _$_SubstanceReferenceInformationGene>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -28024,12 +27726,12 @@ class _$_SubstanceReferenceInformationGene
 abstract class _SubstanceReferenceInformationGene
     extends SubstanceReferenceInformationGene {
   factory _SubstanceReferenceInformationGene(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? geneSequenceOrigin,
-      CodeableConcept? gene,
-      List<Reference>? source}) = _$_SubstanceReferenceInformationGene;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? geneSequenceOrigin,
+      final CodeableConcept? gene,
+      final List<Reference>? source}) = _$_SubstanceReferenceInformationGene;
   _SubstanceReferenceInformationGene._() : super._();
 
   factory _SubstanceReferenceInformationGene.fromJson(
@@ -28037,22 +27739,23 @@ abstract class _SubstanceReferenceInformationGene
       _$_SubstanceReferenceInformationGene.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get geneSequenceOrigin;
+  CodeableConcept? get geneSequenceOrigin => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get gene;
+  CodeableConcept? get gene => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceReferenceInformationGeneCopyWith<
-          _SubstanceReferenceInformationGene>
+  _$$_SubstanceReferenceInformationGeneCopyWith<
+          _$_SubstanceReferenceInformationGene>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -28061,36 +27764,6 @@ SubstanceReferenceInformationGeneElement
         Map<String, dynamic> json) {
   return _SubstanceReferenceInformationGeneElement.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceReferenceInformationGeneElementTearOff {
-  const _$SubstanceReferenceInformationGeneElementTearOff();
-
-  _SubstanceReferenceInformationGeneElement call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Identifier? element,
-      List<Reference>? source}) {
-    return _SubstanceReferenceInformationGeneElement(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      element: element,
-      source: source,
-    );
-  }
-
-  SubstanceReferenceInformationGeneElement fromJson(Map<String, Object?> json) {
-    return SubstanceReferenceInformationGeneElement.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceReferenceInformationGeneElement =
-    _$SubstanceReferenceInformationGeneElementTearOff();
 
 /// @nodoc
 mixin _$SubstanceReferenceInformationGeneElement {
@@ -28199,12 +27872,12 @@ class _$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceReferenceInformationGeneElementCopyWith<$Res>
+abstract class _$$_SubstanceReferenceInformationGeneElementCopyWith<$Res>
     implements $SubstanceReferenceInformationGeneElementCopyWith<$Res> {
-  factory _$SubstanceReferenceInformationGeneElementCopyWith(
-          _SubstanceReferenceInformationGeneElement value,
-          $Res Function(_SubstanceReferenceInformationGeneElement) then) =
-      __$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>;
+  factory _$$_SubstanceReferenceInformationGeneElementCopyWith(
+          _$_SubstanceReferenceInformationGeneElement value,
+          $Res Function(_$_SubstanceReferenceInformationGeneElement) then) =
+      __$$_SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -28221,18 +27894,18 @@ abstract class _$SubstanceReferenceInformationGeneElementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
+class __$$_SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
     extends _$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
-    implements _$SubstanceReferenceInformationGeneElementCopyWith<$Res> {
-  __$SubstanceReferenceInformationGeneElementCopyWithImpl(
-      _SubstanceReferenceInformationGeneElement _value,
-      $Res Function(_SubstanceReferenceInformationGeneElement) _then)
+    implements _$$_SubstanceReferenceInformationGeneElementCopyWith<$Res> {
+  __$$_SubstanceReferenceInformationGeneElementCopyWithImpl(
+      _$_SubstanceReferenceInformationGeneElement _value,
+      $Res Function(_$_SubstanceReferenceInformationGeneElement) _then)
       : super(_value,
-            (v) => _then(v as _SubstanceReferenceInformationGeneElement));
+            (v) => _then(v as _$_SubstanceReferenceInformationGeneElement));
 
   @override
-  _SubstanceReferenceInformationGeneElement get _value =>
-      super._value as _SubstanceReferenceInformationGeneElement;
+  _$_SubstanceReferenceInformationGeneElement get _value =>
+      super._value as _$_SubstanceReferenceInformationGeneElement;
 
   @override
   $Res call({
@@ -28243,17 +27916,17 @@ class __$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
     Object? element = freezed,
     Object? source = freezed,
   }) {
-    return _then(_SubstanceReferenceInformationGeneElement(
+    return _then(_$_SubstanceReferenceInformationGeneElement(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -28265,7 +27938,7 @@ class __$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
           : element // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       source: source == freezed
-          ? _value.source
+          ? _value._source
           : source // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -28278,12 +27951,15 @@ class _$_SubstanceReferenceInformationGeneElement
     extends _SubstanceReferenceInformationGeneElement {
   _$_SubstanceReferenceInformationGeneElement(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.element,
-      this.source})
-      : super._();
+      final List<Reference>? source})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _source = source,
+        super._();
 
   factory _$_SubstanceReferenceInformationGeneElement.fromJson(
           Map<String, dynamic> json) =>
@@ -28291,17 +27967,37 @@ class _$_SubstanceReferenceInformationGeneElement
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
   final Identifier? element;
+  final List<Reference>? _source;
   @override
-  final List<Reference>? source;
+  List<Reference>? get source {
+    final value = _source;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -28312,33 +28008,34 @@ class _$_SubstanceReferenceInformationGeneElement
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceReferenceInformationGeneElement &&
+            other is _$_SubstanceReferenceInformationGeneElement &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.element, element) &&
-            const DeepCollectionEquality().equals(other.source, source));
+            const DeepCollectionEquality().equals(other._source, _source));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(element),
-      const DeepCollectionEquality().hash(source));
+      const DeepCollectionEquality().hash(_source));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceReferenceInformationGeneElementCopyWith<
-          _SubstanceReferenceInformationGeneElement>
-      get copyWith => __$SubstanceReferenceInformationGeneElementCopyWithImpl<
-          _SubstanceReferenceInformationGeneElement>(this, _$identity);
+  _$$_SubstanceReferenceInformationGeneElementCopyWith<
+          _$_SubstanceReferenceInformationGeneElement>
+      get copyWith => __$$_SubstanceReferenceInformationGeneElementCopyWithImpl<
+          _$_SubstanceReferenceInformationGeneElement>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -28349,12 +28046,13 @@ class _$_SubstanceReferenceInformationGeneElement
 abstract class _SubstanceReferenceInformationGeneElement
     extends SubstanceReferenceInformationGeneElement {
   factory _SubstanceReferenceInformationGeneElement(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Identifier? element,
-      List<Reference>? source}) = _$_SubstanceReferenceInformationGeneElement;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final Identifier? element,
+          final List<Reference>? source}) =
+      _$_SubstanceReferenceInformationGeneElement;
   _SubstanceReferenceInformationGeneElement._() : super._();
 
   factory _SubstanceReferenceInformationGeneElement.fromJson(
@@ -28362,22 +28060,23 @@ abstract class _SubstanceReferenceInformationGeneElement
       _$_SubstanceReferenceInformationGeneElement.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Identifier? get element;
+  Identifier? get element => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceReferenceInformationGeneElementCopyWith<
-          _SubstanceReferenceInformationGeneElement>
+  _$$_SubstanceReferenceInformationGeneElementCopyWith<
+          _$_SubstanceReferenceInformationGeneElement>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -28385,52 +28084,6 @@ SubstanceReferenceInformationTarget
     _$SubstanceReferenceInformationTargetFromJson(Map<String, dynamic> json) {
   return _SubstanceReferenceInformationTarget.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceReferenceInformationTargetTearOff {
-  const _$SubstanceReferenceInformationTargetTearOff();
-
-  _SubstanceReferenceInformationTarget call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? target,
-      CodeableConcept? type,
-      CodeableConcept? interaction,
-      CodeableConcept? organism,
-      CodeableConcept? organismType,
-      Quantity? amountQuantity,
-      Range? amountRange,
-      Markdown? amountString,
-      @JsonKey(name: '_amountString') Element? amountStringElement,
-      CodeableConcept? amountType,
-      List<Reference>? source}) {
-    return _SubstanceReferenceInformationTarget(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      target: target,
-      type: type,
-      interaction: interaction,
-      organism: organism,
-      organismType: organismType,
-      amountQuantity: amountQuantity,
-      amountRange: amountRange,
-      amountString: amountString,
-      amountStringElement: amountStringElement,
-      amountType: amountType,
-      source: source,
-    );
-  }
-
-  SubstanceReferenceInformationTarget fromJson(Map<String, Object?> json) {
-    return SubstanceReferenceInformationTarget.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceReferenceInformationTarget =
-    _$SubstanceReferenceInformationTargetTearOff();
 
 /// @nodoc
 mixin _$SubstanceReferenceInformationTarget {
@@ -28679,12 +28332,12 @@ class _$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceReferenceInformationTargetCopyWith<$Res>
+abstract class _$$_SubstanceReferenceInformationTargetCopyWith<$Res>
     implements $SubstanceReferenceInformationTargetCopyWith<$Res> {
-  factory _$SubstanceReferenceInformationTargetCopyWith(
-          _SubstanceReferenceInformationTarget value,
-          $Res Function(_SubstanceReferenceInformationTarget) then) =
-      __$SubstanceReferenceInformationTargetCopyWithImpl<$Res>;
+  factory _$$_SubstanceReferenceInformationTargetCopyWith(
+          _$_SubstanceReferenceInformationTarget value,
+          $Res Function(_$_SubstanceReferenceInformationTarget) then) =
+      __$$_SubstanceReferenceInformationTargetCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -28723,17 +28376,18 @@ abstract class _$SubstanceReferenceInformationTargetCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
+class __$$_SubstanceReferenceInformationTargetCopyWithImpl<$Res>
     extends _$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
-    implements _$SubstanceReferenceInformationTargetCopyWith<$Res> {
-  __$SubstanceReferenceInformationTargetCopyWithImpl(
-      _SubstanceReferenceInformationTarget _value,
-      $Res Function(_SubstanceReferenceInformationTarget) _then)
-      : super(_value, (v) => _then(v as _SubstanceReferenceInformationTarget));
+    implements _$$_SubstanceReferenceInformationTargetCopyWith<$Res> {
+  __$$_SubstanceReferenceInformationTargetCopyWithImpl(
+      _$_SubstanceReferenceInformationTarget _value,
+      $Res Function(_$_SubstanceReferenceInformationTarget) _then)
+      : super(
+            _value, (v) => _then(v as _$_SubstanceReferenceInformationTarget));
 
   @override
-  _SubstanceReferenceInformationTarget get _value =>
-      super._value as _SubstanceReferenceInformationTarget;
+  _$_SubstanceReferenceInformationTarget get _value =>
+      super._value as _$_SubstanceReferenceInformationTarget;
 
   @override
   $Res call({
@@ -28752,17 +28406,17 @@ class __$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
     Object? amountType = freezed,
     Object? source = freezed,
   }) {
-    return _then(_SubstanceReferenceInformationTarget(
+    return _then(_$_SubstanceReferenceInformationTarget(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       target: target == freezed
@@ -28806,7 +28460,7 @@ class __$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
           : amountType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       source: source == freezed
-          ? _value.source
+          ? _value._source
           : source // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -28819,8 +28473,8 @@ class _$_SubstanceReferenceInformationTarget
     extends _SubstanceReferenceInformationTarget {
   _$_SubstanceReferenceInformationTarget(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.target,
       this.type,
       this.interaction,
@@ -28831,8 +28485,11 @@ class _$_SubstanceReferenceInformationTarget
       this.amountString,
       @JsonKey(name: '_amountString') this.amountStringElement,
       this.amountType,
-      this.source})
-      : super._();
+      final List<Reference>? source})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _source = source,
+        super._();
 
   factory _$_SubstanceReferenceInformationTarget.fromJson(
           Map<String, dynamic> json) =>
@@ -28840,11 +28497,25 @@ class _$_SubstanceReferenceInformationTarget
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? target;
   @override
@@ -28866,8 +28537,14 @@ class _$_SubstanceReferenceInformationTarget
   final Element? amountStringElement;
   @override
   final CodeableConcept? amountType;
+  final List<Reference>? _source;
   @override
-  final List<Reference>? source;
+  List<Reference>? get source {
+    final value = _source;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -28878,12 +28555,12 @@ class _$_SubstanceReferenceInformationTarget
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceReferenceInformationTarget &&
+            other is _$_SubstanceReferenceInformationTarget &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.target, target) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
@@ -28901,15 +28578,16 @@ class _$_SubstanceReferenceInformationTarget
                 .equals(other.amountStringElement, amountStringElement) &&
             const DeepCollectionEquality()
                 .equals(other.amountType, amountType) &&
-            const DeepCollectionEquality().equals(other.source, source));
+            const DeepCollectionEquality().equals(other._source, _source));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(target),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(interaction),
@@ -28920,14 +28598,14 @@ class _$_SubstanceReferenceInformationTarget
       const DeepCollectionEquality().hash(amountString),
       const DeepCollectionEquality().hash(amountStringElement),
       const DeepCollectionEquality().hash(amountType),
-      const DeepCollectionEquality().hash(source));
+      const DeepCollectionEquality().hash(_source));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceReferenceInformationTargetCopyWith<
-          _SubstanceReferenceInformationTarget>
-      get copyWith => __$SubstanceReferenceInformationTargetCopyWithImpl<
-          _SubstanceReferenceInformationTarget>(this, _$identity);
+  _$$_SubstanceReferenceInformationTargetCopyWith<
+          _$_SubstanceReferenceInformationTarget>
+      get copyWith => __$$_SubstanceReferenceInformationTargetCopyWithImpl<
+          _$_SubstanceReferenceInformationTarget>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -28938,20 +28616,20 @@ class _$_SubstanceReferenceInformationTarget
 abstract class _SubstanceReferenceInformationTarget
     extends SubstanceReferenceInformationTarget {
   factory _SubstanceReferenceInformationTarget(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? target,
-      CodeableConcept? type,
-      CodeableConcept? interaction,
-      CodeableConcept? organism,
-      CodeableConcept? organismType,
-      Quantity? amountQuantity,
-      Range? amountRange,
-      Markdown? amountString,
-      @JsonKey(name: '_amountString') Element? amountStringElement,
-      CodeableConcept? amountType,
-      List<Reference>? source}) = _$_SubstanceReferenceInformationTarget;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? target,
+      final CodeableConcept? type,
+      final CodeableConcept? interaction,
+      final CodeableConcept? organism,
+      final CodeableConcept? organismType,
+      final Quantity? amountQuantity,
+      final Range? amountRange,
+      final Markdown? amountString,
+      @JsonKey(name: '_amountString') final Element? amountStringElement,
+      final CodeableConcept? amountType,
+      final List<Reference>? source}) = _$_SubstanceReferenceInformationTarget;
   _SubstanceReferenceInformationTarget._() : super._();
 
   factory _SubstanceReferenceInformationTarget.fromJson(
@@ -28959,39 +28637,40 @@ abstract class _SubstanceReferenceInformationTarget
       _$_SubstanceReferenceInformationTarget.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get target;
+  Identifier? get target => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get interaction;
+  CodeableConcept? get interaction => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get organism;
+  CodeableConcept? get organism => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get organismType;
+  CodeableConcept? get organismType => throw _privateConstructorUsedError;
   @override
-  Quantity? get amountQuantity;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get amountRange;
+  Range? get amountRange => throw _privateConstructorUsedError;
   @override
-  Markdown? get amountString;
+  Markdown? get amountString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get amountType;
+  CodeableConcept? get amountType => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceReferenceInformationTargetCopyWith<
-          _SubstanceReferenceInformationTarget>
+  _$$_SubstanceReferenceInformationTargetCopyWith<
+          _$_SubstanceReferenceInformationTarget>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -28999,83 +28678,6 @@ SubstanceSourceMaterial _$SubstanceSourceMaterialFromJson(
     Map<String, dynamic> json) {
   return _SubstanceSourceMaterial.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceSourceMaterialTearOff {
-  const _$SubstanceSourceMaterialTearOff();
-
-  _SubstanceSourceMaterial call(
-      {R5ResourceType resourceType = R5ResourceType.SubstanceSourceMaterial,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? sourceMaterialClass,
-      CodeableConcept? sourceMaterialType,
-      CodeableConcept? sourceMaterialState,
-      Identifier? organismId,
-      String? organismName,
-      @JsonKey(name: '_organismName')
-          Element? organismNameElement,
-      List<Identifier>? parentSubstanceId,
-      List<String>? parentSubstanceName,
-      @JsonKey(name: '_parentSubstanceName')
-          List<Element>? parentSubstanceNameElement,
-      List<CodeableConcept>? countryOfOrigin,
-      List<String>? geographicalLocation,
-      @JsonKey(name: '_geographicalLocation')
-          List<Element>? geographicalLocationElement,
-      CodeableConcept? developmentStage,
-      List<SubstanceSourceMaterialFractionDescription>? fractionDescription,
-      SubstanceSourceMaterialOrganism? organism,
-      List<SubstanceSourceMaterialPartDescription>? partDescription}) {
-    return _SubstanceSourceMaterial(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      sourceMaterialClass: sourceMaterialClass,
-      sourceMaterialType: sourceMaterialType,
-      sourceMaterialState: sourceMaterialState,
-      organismId: organismId,
-      organismName: organismName,
-      organismNameElement: organismNameElement,
-      parentSubstanceId: parentSubstanceId,
-      parentSubstanceName: parentSubstanceName,
-      parentSubstanceNameElement: parentSubstanceNameElement,
-      countryOfOrigin: countryOfOrigin,
-      geographicalLocation: geographicalLocation,
-      geographicalLocationElement: geographicalLocationElement,
-      developmentStage: developmentStage,
-      fractionDescription: fractionDescription,
-      organism: organism,
-      partDescription: partDescription,
-    );
-  }
-
-  SubstanceSourceMaterial fromJson(Map<String, Object?> json) {
-    return SubstanceSourceMaterial.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceSourceMaterial = _$SubstanceSourceMaterialTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterial {
@@ -29456,11 +29058,11 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceSourceMaterialCopyWith<$Res>
+abstract class _$$_SubstanceSourceMaterialCopyWith<$Res>
     implements $SubstanceSourceMaterialCopyWith<$Res> {
-  factory _$SubstanceSourceMaterialCopyWith(_SubstanceSourceMaterial value,
-          $Res Function(_SubstanceSourceMaterial) then) =
-      __$SubstanceSourceMaterialCopyWithImpl<$Res>;
+  factory _$$_SubstanceSourceMaterialCopyWith(_$_SubstanceSourceMaterial value,
+          $Res Function(_$_SubstanceSourceMaterial) then) =
+      __$$_SubstanceSourceMaterialCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -29522,16 +29124,16 @@ abstract class _$SubstanceSourceMaterialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceSourceMaterialCopyWithImpl<$Res>
+class __$$_SubstanceSourceMaterialCopyWithImpl<$Res>
     extends _$SubstanceSourceMaterialCopyWithImpl<$Res>
-    implements _$SubstanceSourceMaterialCopyWith<$Res> {
-  __$SubstanceSourceMaterialCopyWithImpl(_SubstanceSourceMaterial _value,
-      $Res Function(_SubstanceSourceMaterial) _then)
-      : super(_value, (v) => _then(v as _SubstanceSourceMaterial));
+    implements _$$_SubstanceSourceMaterialCopyWith<$Res> {
+  __$$_SubstanceSourceMaterialCopyWithImpl(_$_SubstanceSourceMaterial _value,
+      $Res Function(_$_SubstanceSourceMaterial) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceSourceMaterial));
 
   @override
-  _SubstanceSourceMaterial get _value =>
-      super._value as _SubstanceSourceMaterial;
+  _$_SubstanceSourceMaterial get _value =>
+      super._value as _$_SubstanceSourceMaterial;
 
   @override
   $Res call({
@@ -29563,7 +29165,7 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
     Object? organism = freezed,
     Object? partDescription = freezed,
   }) {
-    return _then(_SubstanceSourceMaterial(
+    return _then(_$_SubstanceSourceMaterial(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -29597,15 +29199,15 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       sourceMaterialClass: sourceMaterialClass == freezed
@@ -29633,27 +29235,27 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
           : organismNameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       parentSubstanceId: parentSubstanceId == freezed
-          ? _value.parentSubstanceId
+          ? _value._parentSubstanceId
           : parentSubstanceId // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       parentSubstanceName: parentSubstanceName == freezed
-          ? _value.parentSubstanceName
+          ? _value._parentSubstanceName
           : parentSubstanceName // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       parentSubstanceNameElement: parentSubstanceNameElement == freezed
-          ? _value.parentSubstanceNameElement
+          ? _value._parentSubstanceNameElement
           : parentSubstanceNameElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       countryOfOrigin: countryOfOrigin == freezed
-          ? _value.countryOfOrigin
+          ? _value._countryOfOrigin
           : countryOfOrigin // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       geographicalLocation: geographicalLocation == freezed
-          ? _value.geographicalLocation
+          ? _value._geographicalLocation
           : geographicalLocation // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       geographicalLocationElement: geographicalLocationElement == freezed
-          ? _value.geographicalLocationElement
+          ? _value._geographicalLocationElement
           : geographicalLocationElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       developmentStage: developmentStage == freezed
@@ -29661,7 +29263,7 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
           : developmentStage // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       fractionDescription: fractionDescription == freezed
-          ? _value.fractionDescription
+          ? _value._fractionDescription
           : fractionDescription // ignore: cast_nullable_to_non_nullable
               as List<SubstanceSourceMaterialFractionDescription>?,
       organism: organism == freezed
@@ -29669,7 +29271,7 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
           : organism // ignore: cast_nullable_to_non_nullable
               as SubstanceSourceMaterialOrganism?,
       partDescription: partDescription == freezed
-          ? _value.partDescription
+          ? _value._partDescription
           : partDescription // ignore: cast_nullable_to_non_nullable
               as List<SubstanceSourceMaterialPartDescription>?,
     ));
@@ -29684,36 +29286,54 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.sourceMaterialClass,
       this.sourceMaterialType,
       this.sourceMaterialState,
       this.organismId,
       this.organismName,
-      @JsonKey(name: '_organismName') this.organismNameElement,
-      this.parentSubstanceId,
-      this.parentSubstanceName,
-      @JsonKey(name: '_parentSubstanceName') this.parentSubstanceNameElement,
-      this.countryOfOrigin,
-      this.geographicalLocation,
-      @JsonKey(name: '_geographicalLocation') this.geographicalLocationElement,
+      @JsonKey(name: '_organismName')
+          this.organismNameElement,
+      final List<Identifier>? parentSubstanceId,
+      final List<String>? parentSubstanceName,
+      @JsonKey(name: '_parentSubstanceName')
+          final List<Element>? parentSubstanceNameElement,
+      final List<CodeableConcept>? countryOfOrigin,
+      final List<String>? geographicalLocation,
+      @JsonKey(name: '_geographicalLocation')
+          final List<Element>? geographicalLocationElement,
       this.developmentStage,
-      this.fractionDescription,
+      final List<SubstanceSourceMaterialFractionDescription>?
+          fractionDescription,
       this.organism,
-      this.partDescription})
-      : super._();
+      final List<SubstanceSourceMaterialPartDescription>? partDescription})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _parentSubstanceId = parentSubstanceId,
+        _parentSubstanceName = parentSubstanceName,
+        _parentSubstanceNameElement = parentSubstanceNameElement,
+        _countryOfOrigin = countryOfOrigin,
+        _geographicalLocation = geographicalLocation,
+        _geographicalLocationElement = geographicalLocationElement,
+        _fractionDescription = fractionDescription,
+        _partDescription = partDescription,
+        super._();
 
   factory _$_SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceSourceMaterialFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -29731,13 +29351,34 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? sourceMaterialClass;
   @override
@@ -29751,28 +29392,83 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   @override
   @JsonKey(name: '_organismName')
   final Element? organismNameElement;
+  final List<Identifier>? _parentSubstanceId;
   @override
-  final List<Identifier>? parentSubstanceId;
+  List<Identifier>? get parentSubstanceId {
+    final value = _parentSubstanceId;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _parentSubstanceName;
   @override
-  final List<String>? parentSubstanceName;
+  List<String>? get parentSubstanceName {
+    final value = _parentSubstanceName;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _parentSubstanceNameElement;
   @override
   @JsonKey(name: '_parentSubstanceName')
-  final List<Element>? parentSubstanceNameElement;
+  List<Element>? get parentSubstanceNameElement {
+    final value = _parentSubstanceNameElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _countryOfOrigin;
   @override
-  final List<CodeableConcept>? countryOfOrigin;
+  List<CodeableConcept>? get countryOfOrigin {
+    final value = _countryOfOrigin;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _geographicalLocation;
   @override
-  final List<String>? geographicalLocation;
+  List<String>? get geographicalLocation {
+    final value = _geographicalLocation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _geographicalLocationElement;
   @override
   @JsonKey(name: '_geographicalLocation')
-  final List<Element>? geographicalLocationElement;
+  List<Element>? get geographicalLocationElement {
+    final value = _geographicalLocationElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? developmentStage;
+  final List<SubstanceSourceMaterialFractionDescription>? _fractionDescription;
   @override
-  final List<SubstanceSourceMaterialFractionDescription>? fractionDescription;
+  List<SubstanceSourceMaterialFractionDescription>? get fractionDescription {
+    final value = _fractionDescription;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final SubstanceSourceMaterialOrganism? organism;
+  final List<SubstanceSourceMaterialPartDescription>? _partDescription;
   @override
-  final List<SubstanceSourceMaterialPartDescription>? partDescription;
+  List<SubstanceSourceMaterialPartDescription>? get partDescription {
+    final value = _partDescription;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -29783,7 +29479,7 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceSourceMaterial &&
+            other is _$_SubstanceSourceMaterial &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -29796,11 +29492,12 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.sourceMaterialClass, sourceMaterialClass) &&
             const DeepCollectionEquality()
@@ -29814,27 +29511,29 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
             const DeepCollectionEquality()
                 .equals(other.organismNameElement, organismNameElement) &&
             const DeepCollectionEquality()
-                .equals(other.parentSubstanceId, parentSubstanceId) &&
+                .equals(other._parentSubstanceId, _parentSubstanceId) &&
             const DeepCollectionEquality()
-                .equals(other.parentSubstanceName, parentSubstanceName) &&
+                .equals(other._parentSubstanceName, _parentSubstanceName) &&
             const DeepCollectionEquality().equals(
-                other.parentSubstanceNameElement, parentSubstanceNameElement) &&
+                other._parentSubstanceNameElement,
+                _parentSubstanceNameElement) &&
             const DeepCollectionEquality()
-                .equals(other.countryOfOrigin, countryOfOrigin) &&
+                .equals(other._countryOfOrigin, _countryOfOrigin) &&
             const DeepCollectionEquality()
-                .equals(other.geographicalLocation, geographicalLocation) &&
+                .equals(other._geographicalLocation, _geographicalLocation) &&
             const DeepCollectionEquality().equals(
-                other.geographicalLocationElement,
-                geographicalLocationElement) &&
+                other._geographicalLocationElement,
+                _geographicalLocationElement) &&
             const DeepCollectionEquality()
                 .equals(other.developmentStage, developmentStage) &&
             const DeepCollectionEquality()
-                .equals(other.fractionDescription, fractionDescription) &&
+                .equals(other._fractionDescription, _fractionDescription) &&
             const DeepCollectionEquality().equals(other.organism, organism) &&
             const DeepCollectionEquality()
-                .equals(other.partDescription, partDescription));
+                .equals(other._partDescription, _partDescription));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -29846,32 +29545,33 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(sourceMaterialClass),
         const DeepCollectionEquality().hash(sourceMaterialType),
         const DeepCollectionEquality().hash(sourceMaterialState),
         const DeepCollectionEquality().hash(organismId),
         const DeepCollectionEquality().hash(organismName),
         const DeepCollectionEquality().hash(organismNameElement),
-        const DeepCollectionEquality().hash(parentSubstanceId),
-        const DeepCollectionEquality().hash(parentSubstanceName),
-        const DeepCollectionEquality().hash(parentSubstanceNameElement),
-        const DeepCollectionEquality().hash(countryOfOrigin),
-        const DeepCollectionEquality().hash(geographicalLocation),
-        const DeepCollectionEquality().hash(geographicalLocationElement),
+        const DeepCollectionEquality().hash(_parentSubstanceId),
+        const DeepCollectionEquality().hash(_parentSubstanceName),
+        const DeepCollectionEquality().hash(_parentSubstanceNameElement),
+        const DeepCollectionEquality().hash(_countryOfOrigin),
+        const DeepCollectionEquality().hash(_geographicalLocation),
+        const DeepCollectionEquality().hash(_geographicalLocationElement),
         const DeepCollectionEquality().hash(developmentStage),
-        const DeepCollectionEquality().hash(fractionDescription),
+        const DeepCollectionEquality().hash(_fractionDescription),
         const DeepCollectionEquality().hash(organism),
-        const DeepCollectionEquality().hash(partDescription)
+        const DeepCollectionEquality().hash(_partDescription)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceSourceMaterialCopyWith<_SubstanceSourceMaterial> get copyWith =>
-      __$SubstanceSourceMaterialCopyWithImpl<_SubstanceSourceMaterial>(
-          this, _$identity);
+  _$$_SubstanceSourceMaterialCopyWith<_$_SubstanceSourceMaterial>
+      get copyWith =>
+          __$$_SubstanceSourceMaterialCopyWithImpl<_$_SubstanceSourceMaterial>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -29881,109 +29581,119 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
 
 abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
   factory _SubstanceSourceMaterial(
-          {R5ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language')
-              Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? sourceMaterialClass,
-          CodeableConcept? sourceMaterialType,
-          CodeableConcept? sourceMaterialState,
-          Identifier? organismId,
-          String? organismName,
-          @JsonKey(name: '_organismName')
-              Element? organismNameElement,
-          List<Identifier>? parentSubstanceId,
-          List<String>? parentSubstanceName,
-          @JsonKey(name: '_parentSubstanceName')
-              List<Element>? parentSubstanceNameElement,
-          List<CodeableConcept>? countryOfOrigin,
-          List<String>? geographicalLocation,
-          @JsonKey(name: '_geographicalLocation')
-              List<Element>? geographicalLocationElement,
-          CodeableConcept? developmentStage,
-          List<SubstanceSourceMaterialFractionDescription>? fractionDescription,
-          SubstanceSourceMaterialOrganism? organism,
-          List<SubstanceSourceMaterialPartDescription>? partDescription}) =
-      _$_SubstanceSourceMaterial;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? sourceMaterialClass,
+      final CodeableConcept? sourceMaterialType,
+      final CodeableConcept? sourceMaterialState,
+      final Identifier? organismId,
+      final String? organismName,
+      @JsonKey(name: '_organismName')
+          final Element? organismNameElement,
+      final List<Identifier>? parentSubstanceId,
+      final List<String>? parentSubstanceName,
+      @JsonKey(name: '_parentSubstanceName')
+          final List<Element>? parentSubstanceNameElement,
+      final List<CodeableConcept>? countryOfOrigin,
+      final List<String>? geographicalLocation,
+      @JsonKey(name: '_geographicalLocation')
+          final List<Element>? geographicalLocationElement,
+      final CodeableConcept? developmentStage,
+      final List<SubstanceSourceMaterialFractionDescription>?
+          fractionDescription,
+      final SubstanceSourceMaterialOrganism? organism,
+      final List<SubstanceSourceMaterialPartDescription>?
+          partDescription}) = _$_SubstanceSourceMaterial;
   _SubstanceSourceMaterial._() : super._();
 
   factory _SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterial.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sourceMaterialClass;
+  CodeableConcept? get sourceMaterialClass =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sourceMaterialType;
+  CodeableConcept? get sourceMaterialType => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sourceMaterialState;
+  CodeableConcept? get sourceMaterialState =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get organismId;
+  Identifier? get organismId => throw _privateConstructorUsedError;
   @override
-  String? get organismName;
+  String? get organismName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_organismName')
-  Element? get organismNameElement;
+  Element? get organismNameElement => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get parentSubstanceId;
+  List<Identifier>? get parentSubstanceId => throw _privateConstructorUsedError;
   @override
-  List<String>? get parentSubstanceName;
+  List<String>? get parentSubstanceName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_parentSubstanceName')
-  List<Element>? get parentSubstanceNameElement;
+  List<Element>? get parentSubstanceNameElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get countryOfOrigin;
+  List<CodeableConcept>? get countryOfOrigin =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get geographicalLocation;
+  List<String>? get geographicalLocation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_geographicalLocation')
-  List<Element>? get geographicalLocationElement;
+  List<Element>? get geographicalLocationElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get developmentStage;
+  CodeableConcept? get developmentStage => throw _privateConstructorUsedError;
   @override
-  List<SubstanceSourceMaterialFractionDescription>? get fractionDescription;
+  List<SubstanceSourceMaterialFractionDescription>? get fractionDescription =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceSourceMaterialOrganism? get organism;
+  SubstanceSourceMaterialOrganism? get organism =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSourceMaterialPartDescription>? get partDescription;
+  List<SubstanceSourceMaterialPartDescription>? get partDescription =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSourceMaterialCopyWith<_SubstanceSourceMaterial> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SubstanceSourceMaterialCopyWith<_$_SubstanceSourceMaterial>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSourceMaterialFractionDescription
@@ -29991,37 +29701,6 @@ SubstanceSourceMaterialFractionDescription
         Map<String, dynamic> json) {
   return _SubstanceSourceMaterialFractionDescription.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceSourceMaterialFractionDescriptionTearOff {
-  const _$SubstanceSourceMaterialFractionDescriptionTearOff();
-
-  _SubstanceSourceMaterialFractionDescription call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? fraction,
-      @JsonKey(name: '_fraction') Element? fractionElement,
-      CodeableConcept? materialType}) {
-    return _SubstanceSourceMaterialFractionDescription(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fraction: fraction,
-      fractionElement: fractionElement,
-      materialType: materialType,
-    );
-  }
-
-  SubstanceSourceMaterialFractionDescription fromJson(
-      Map<String, Object?> json) {
-    return SubstanceSourceMaterialFractionDescription.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceSourceMaterialFractionDescription =
-    _$SubstanceSourceMaterialFractionDescriptionTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialFractionDescription {
@@ -30131,12 +29810,12 @@ class _$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceSourceMaterialFractionDescriptionCopyWith<$Res>
+abstract class _$$_SubstanceSourceMaterialFractionDescriptionCopyWith<$Res>
     implements $SubstanceSourceMaterialFractionDescriptionCopyWith<$Res> {
-  factory _$SubstanceSourceMaterialFractionDescriptionCopyWith(
-          _SubstanceSourceMaterialFractionDescription value,
-          $Res Function(_SubstanceSourceMaterialFractionDescription) then) =
-      __$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>;
+  factory _$$_SubstanceSourceMaterialFractionDescriptionCopyWith(
+          _$_SubstanceSourceMaterialFractionDescription value,
+          $Res Function(_$_SubstanceSourceMaterialFractionDescription) then) =
+      __$$_SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -30153,18 +29832,18 @@ abstract class _$SubstanceSourceMaterialFractionDescriptionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
+class __$$_SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
     extends _$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
-    implements _$SubstanceSourceMaterialFractionDescriptionCopyWith<$Res> {
-  __$SubstanceSourceMaterialFractionDescriptionCopyWithImpl(
-      _SubstanceSourceMaterialFractionDescription _value,
-      $Res Function(_SubstanceSourceMaterialFractionDescription) _then)
+    implements _$$_SubstanceSourceMaterialFractionDescriptionCopyWith<$Res> {
+  __$$_SubstanceSourceMaterialFractionDescriptionCopyWithImpl(
+      _$_SubstanceSourceMaterialFractionDescription _value,
+      $Res Function(_$_SubstanceSourceMaterialFractionDescription) _then)
       : super(_value,
-            (v) => _then(v as _SubstanceSourceMaterialFractionDescription));
+            (v) => _then(v as _$_SubstanceSourceMaterialFractionDescription));
 
   @override
-  _SubstanceSourceMaterialFractionDescription get _value =>
-      super._value as _SubstanceSourceMaterialFractionDescription;
+  _$_SubstanceSourceMaterialFractionDescription get _value =>
+      super._value as _$_SubstanceSourceMaterialFractionDescription;
 
   @override
   $Res call({
@@ -30175,17 +29854,17 @@ class __$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
     Object? fractionElement = freezed,
     Object? materialType = freezed,
   }) {
-    return _then(_SubstanceSourceMaterialFractionDescription(
+    return _then(_$_SubstanceSourceMaterialFractionDescription(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fraction: fraction == freezed
@@ -30210,12 +29889,14 @@ class _$_SubstanceSourceMaterialFractionDescription
     extends _SubstanceSourceMaterialFractionDescription {
   _$_SubstanceSourceMaterialFractionDescription(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.fraction,
       @JsonKey(name: '_fraction') this.fractionElement,
       this.materialType})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceSourceMaterialFractionDescription.fromJson(
           Map<String, dynamic> json) =>
@@ -30223,11 +29904,25 @@ class _$_SubstanceSourceMaterialFractionDescription
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? fraction;
   @override
@@ -30245,12 +29940,12 @@ class _$_SubstanceSourceMaterialFractionDescription
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceSourceMaterialFractionDescription &&
+            other is _$_SubstanceSourceMaterialFractionDescription &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.fraction, fraction) &&
             const DeepCollectionEquality()
                 .equals(other.fractionElement, fractionElement) &&
@@ -30258,22 +29953,24 @@ class _$_SubstanceSourceMaterialFractionDescription
                 .equals(other.materialType, materialType));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(fraction),
       const DeepCollectionEquality().hash(fractionElement),
       const DeepCollectionEquality().hash(materialType));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceSourceMaterialFractionDescriptionCopyWith<
-          _SubstanceSourceMaterialFractionDescription>
-      get copyWith => __$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<
-          _SubstanceSourceMaterialFractionDescription>(this, _$identity);
+  _$$_SubstanceSourceMaterialFractionDescriptionCopyWith<
+          _$_SubstanceSourceMaterialFractionDescription>
+      get copyWith =>
+          __$$_SubstanceSourceMaterialFractionDescriptionCopyWithImpl<
+              _$_SubstanceSourceMaterialFractionDescription>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -30284,12 +29981,12 @@ class _$_SubstanceSourceMaterialFractionDescription
 abstract class _SubstanceSourceMaterialFractionDescription
     extends SubstanceSourceMaterialFractionDescription {
   factory _SubstanceSourceMaterialFractionDescription(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? fraction,
-          @JsonKey(name: '_fraction') Element? fractionElement,
-          CodeableConcept? materialType}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? fraction,
+          @JsonKey(name: '_fraction') final Element? fractionElement,
+          final CodeableConcept? materialType}) =
       _$_SubstanceSourceMaterialFractionDescription;
   _SubstanceSourceMaterialFractionDescription._() : super._();
 
@@ -30298,23 +29995,24 @@ abstract class _SubstanceSourceMaterialFractionDescription
       _$_SubstanceSourceMaterialFractionDescription.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get fraction;
+  String? get fraction => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fraction')
-  Element? get fractionElement;
+  Element? get fractionElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get materialType;
+  CodeableConcept? get materialType => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSourceMaterialFractionDescriptionCopyWith<
-          _SubstanceSourceMaterialFractionDescription>
+  _$$_SubstanceSourceMaterialFractionDescriptionCopyWith<
+          _$_SubstanceSourceMaterialFractionDescription>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -30322,50 +30020,6 @@ SubstanceSourceMaterialOrganism _$SubstanceSourceMaterialOrganismFromJson(
     Map<String, dynamic> json) {
   return _SubstanceSourceMaterialOrganism.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceSourceMaterialOrganismTearOff {
-  const _$SubstanceSourceMaterialOrganismTearOff();
-
-  _SubstanceSourceMaterialOrganism call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? family,
-      CodeableConcept? genus,
-      CodeableConcept? species,
-      CodeableConcept? intraspecificType,
-      String? intraspecificDescription,
-      @JsonKey(name: '_intraspecificDescription')
-          Element? intraspecificDescriptionElement,
-      List<SubstanceSourceMaterialAuthor>? author,
-      SubstanceSourceMaterialHybrid? hybrid,
-      SubstanceSourceMaterialOrganismGeneral? organismGeneral}) {
-    return _SubstanceSourceMaterialOrganism(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      family: family,
-      genus: genus,
-      species: species,
-      intraspecificType: intraspecificType,
-      intraspecificDescription: intraspecificDescription,
-      intraspecificDescriptionElement: intraspecificDescriptionElement,
-      author: author,
-      hybrid: hybrid,
-      organismGeneral: organismGeneral,
-    );
-  }
-
-  SubstanceSourceMaterialOrganism fromJson(Map<String, Object?> json) {
-    return SubstanceSourceMaterialOrganism.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceSourceMaterialOrganism =
-    _$SubstanceSourceMaterialOrganismTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialOrganism {
@@ -30585,12 +30239,12 @@ class _$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceSourceMaterialOrganismCopyWith<$Res>
+abstract class _$$_SubstanceSourceMaterialOrganismCopyWith<$Res>
     implements $SubstanceSourceMaterialOrganismCopyWith<$Res> {
-  factory _$SubstanceSourceMaterialOrganismCopyWith(
-          _SubstanceSourceMaterialOrganism value,
-          $Res Function(_SubstanceSourceMaterialOrganism) then) =
-      __$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>;
+  factory _$$_SubstanceSourceMaterialOrganismCopyWith(
+          _$_SubstanceSourceMaterialOrganism value,
+          $Res Function(_$_SubstanceSourceMaterialOrganism) then) =
+      __$$_SubstanceSourceMaterialOrganismCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -30625,17 +30279,17 @@ abstract class _$SubstanceSourceMaterialOrganismCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
+class __$$_SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
     extends _$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
-    implements _$SubstanceSourceMaterialOrganismCopyWith<$Res> {
-  __$SubstanceSourceMaterialOrganismCopyWithImpl(
-      _SubstanceSourceMaterialOrganism _value,
-      $Res Function(_SubstanceSourceMaterialOrganism) _then)
-      : super(_value, (v) => _then(v as _SubstanceSourceMaterialOrganism));
+    implements _$$_SubstanceSourceMaterialOrganismCopyWith<$Res> {
+  __$$_SubstanceSourceMaterialOrganismCopyWithImpl(
+      _$_SubstanceSourceMaterialOrganism _value,
+      $Res Function(_$_SubstanceSourceMaterialOrganism) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceSourceMaterialOrganism));
 
   @override
-  _SubstanceSourceMaterialOrganism get _value =>
-      super._value as _SubstanceSourceMaterialOrganism;
+  _$_SubstanceSourceMaterialOrganism get _value =>
+      super._value as _$_SubstanceSourceMaterialOrganism;
 
   @override
   $Res call({
@@ -30652,17 +30306,17 @@ class __$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
     Object? hybrid = freezed,
     Object? organismGeneral = freezed,
   }) {
-    return _then(_SubstanceSourceMaterialOrganism(
+    return _then(_$_SubstanceSourceMaterialOrganism(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       family: family == freezed
@@ -30691,7 +30345,7 @@ class __$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
           : intraspecificDescriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       author: author == freezed
-          ? _value.author
+          ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
               as List<SubstanceSourceMaterialAuthor>?,
       hybrid: hybrid == freezed
@@ -30713,8 +30367,8 @@ class _$_SubstanceSourceMaterialOrganism
   _$_SubstanceSourceMaterialOrganism(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.family,
       this.genus,
       this.species,
@@ -30722,10 +30376,13 @@ class _$_SubstanceSourceMaterialOrganism
       this.intraspecificDescription,
       @JsonKey(name: '_intraspecificDescription')
           this.intraspecificDescriptionElement,
-      this.author,
+      final List<SubstanceSourceMaterialAuthor>? author,
       this.hybrid,
       this.organismGeneral})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _author = author,
+        super._();
 
   factory _$_SubstanceSourceMaterialOrganism.fromJson(
           Map<String, dynamic> json) =>
@@ -30733,11 +30390,25 @@ class _$_SubstanceSourceMaterialOrganism
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? family;
   @override
@@ -30751,8 +30422,15 @@ class _$_SubstanceSourceMaterialOrganism
   @override
   @JsonKey(name: '_intraspecificDescription')
   final Element? intraspecificDescriptionElement;
+  final List<SubstanceSourceMaterialAuthor>? _author;
   @override
-  final List<SubstanceSourceMaterialAuthor>? author;
+  List<SubstanceSourceMaterialAuthor>? get author {
+    final value = _author;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final SubstanceSourceMaterialHybrid? hybrid;
   @override
@@ -30767,12 +30445,12 @@ class _$_SubstanceSourceMaterialOrganism
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceSourceMaterialOrganism &&
+            other is _$_SubstanceSourceMaterialOrganism &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.family, family) &&
             const DeepCollectionEquality().equals(other.genus, genus) &&
             const DeepCollectionEquality().equals(other.species, species) &&
@@ -30783,33 +30461,35 @@ class _$_SubstanceSourceMaterialOrganism
             const DeepCollectionEquality().equals(
                 other.intraspecificDescriptionElement,
                 intraspecificDescriptionElement) &&
-            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other._author, _author) &&
             const DeepCollectionEquality().equals(other.hybrid, hybrid) &&
             const DeepCollectionEquality()
                 .equals(other.organismGeneral, organismGeneral));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(family),
       const DeepCollectionEquality().hash(genus),
       const DeepCollectionEquality().hash(species),
       const DeepCollectionEquality().hash(intraspecificType),
       const DeepCollectionEquality().hash(intraspecificDescription),
       const DeepCollectionEquality().hash(intraspecificDescriptionElement),
-      const DeepCollectionEquality().hash(author),
+      const DeepCollectionEquality().hash(_author),
       const DeepCollectionEquality().hash(hybrid),
       const DeepCollectionEquality().hash(organismGeneral));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceSourceMaterialOrganismCopyWith<_SubstanceSourceMaterialOrganism>
-      get copyWith => __$SubstanceSourceMaterialOrganismCopyWithImpl<
-          _SubstanceSourceMaterialOrganism>(this, _$identity);
+  _$$_SubstanceSourceMaterialOrganismCopyWith<
+          _$_SubstanceSourceMaterialOrganism>
+      get copyWith => __$$_SubstanceSourceMaterialOrganismCopyWithImpl<
+          _$_SubstanceSourceMaterialOrganism>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -30820,20 +30500,20 @@ class _$_SubstanceSourceMaterialOrganism
 abstract class _SubstanceSourceMaterialOrganism
     extends SubstanceSourceMaterialOrganism {
   factory _SubstanceSourceMaterialOrganism(
-          {String? id,
+          {final String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? family,
-          CodeableConcept? genus,
-          CodeableConcept? species,
-          CodeableConcept? intraspecificType,
-          String? intraspecificDescription,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? family,
+          final CodeableConcept? genus,
+          final CodeableConcept? species,
+          final CodeableConcept? intraspecificType,
+          final String? intraspecificDescription,
           @JsonKey(name: '_intraspecificDescription')
-              Element? intraspecificDescriptionElement,
-          List<SubstanceSourceMaterialAuthor>? author,
-          SubstanceSourceMaterialHybrid? hybrid,
-          SubstanceSourceMaterialOrganismGeneral? organismGeneral}) =
+              final Element? intraspecificDescriptionElement,
+          final List<SubstanceSourceMaterialAuthor>? author,
+          final SubstanceSourceMaterialHybrid? hybrid,
+          final SubstanceSourceMaterialOrganismGeneral? organismGeneral}) =
       _$_SubstanceSourceMaterialOrganism;
   _SubstanceSourceMaterialOrganism._() : super._();
 
@@ -30841,34 +30521,40 @@ abstract class _SubstanceSourceMaterialOrganism
       _$_SubstanceSourceMaterialOrganism.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get family;
+  CodeableConcept? get family => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get genus;
+  CodeableConcept? get genus => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get species;
+  CodeableConcept? get species => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get intraspecificType;
+  CodeableConcept? get intraspecificType => throw _privateConstructorUsedError;
   @override
-  String? get intraspecificDescription;
+  String? get intraspecificDescription => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_intraspecificDescription')
-  Element? get intraspecificDescriptionElement;
+  Element? get intraspecificDescriptionElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSourceMaterialAuthor>? get author;
+  List<SubstanceSourceMaterialAuthor>? get author =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceSourceMaterialHybrid? get hybrid;
+  SubstanceSourceMaterialHybrid? get hybrid =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceSourceMaterialOrganismGeneral? get organismGeneral;
+  SubstanceSourceMaterialOrganismGeneral? get organismGeneral =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSourceMaterialOrganismCopyWith<_SubstanceSourceMaterialOrganism>
+  _$$_SubstanceSourceMaterialOrganismCopyWith<
+          _$_SubstanceSourceMaterialOrganism>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -30876,35 +30562,6 @@ SubstanceSourceMaterialAuthor _$SubstanceSourceMaterialAuthorFromJson(
     Map<String, dynamic> json) {
   return _SubstanceSourceMaterialAuthor.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceSourceMaterialAuthorTearOff {
-  const _$SubstanceSourceMaterialAuthorTearOff();
-
-  _SubstanceSourceMaterialAuthor call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? authorType,
-      String? authorDescription,
-      @JsonKey(name: '_authorDescription') Element? authorDescriptionElement}) {
-    return _SubstanceSourceMaterialAuthor(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      authorType: authorType,
-      authorDescription: authorDescription,
-      authorDescriptionElement: authorDescriptionElement,
-    );
-  }
-
-  SubstanceSourceMaterialAuthor fromJson(Map<String, Object?> json) {
-    return SubstanceSourceMaterialAuthor.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceSourceMaterialAuthor = _$SubstanceSourceMaterialAuthorTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialAuthor {
@@ -31012,12 +30669,12 @@ class _$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceSourceMaterialAuthorCopyWith<$Res>
+abstract class _$$_SubstanceSourceMaterialAuthorCopyWith<$Res>
     implements $SubstanceSourceMaterialAuthorCopyWith<$Res> {
-  factory _$SubstanceSourceMaterialAuthorCopyWith(
-          _SubstanceSourceMaterialAuthor value,
-          $Res Function(_SubstanceSourceMaterialAuthor) then) =
-      __$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>;
+  factory _$$_SubstanceSourceMaterialAuthorCopyWith(
+          _$_SubstanceSourceMaterialAuthor value,
+          $Res Function(_$_SubstanceSourceMaterialAuthor) then) =
+      __$$_SubstanceSourceMaterialAuthorCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -31034,17 +30691,17 @@ abstract class _$SubstanceSourceMaterialAuthorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
+class __$$_SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
     extends _$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
-    implements _$SubstanceSourceMaterialAuthorCopyWith<$Res> {
-  __$SubstanceSourceMaterialAuthorCopyWithImpl(
-      _SubstanceSourceMaterialAuthor _value,
-      $Res Function(_SubstanceSourceMaterialAuthor) _then)
-      : super(_value, (v) => _then(v as _SubstanceSourceMaterialAuthor));
+    implements _$$_SubstanceSourceMaterialAuthorCopyWith<$Res> {
+  __$$_SubstanceSourceMaterialAuthorCopyWithImpl(
+      _$_SubstanceSourceMaterialAuthor _value,
+      $Res Function(_$_SubstanceSourceMaterialAuthor) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceSourceMaterialAuthor));
 
   @override
-  _SubstanceSourceMaterialAuthor get _value =>
-      super._value as _SubstanceSourceMaterialAuthor;
+  _$_SubstanceSourceMaterialAuthor get _value =>
+      super._value as _$_SubstanceSourceMaterialAuthor;
 
   @override
   $Res call({
@@ -31055,17 +30712,17 @@ class __$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
     Object? authorDescription = freezed,
     Object? authorDescriptionElement = freezed,
   }) {
-    return _then(_SubstanceSourceMaterialAuthor(
+    return _then(_$_SubstanceSourceMaterialAuthor(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       authorType: authorType == freezed
@@ -31089,12 +30746,14 @@ class __$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
 class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
   _$_SubstanceSourceMaterialAuthor(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.authorType,
       this.authorDescription,
       @JsonKey(name: '_authorDescription') this.authorDescriptionElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceSourceMaterialAuthor.fromJson(
           Map<String, dynamic> json) =>
@@ -31102,11 +30761,25 @@ class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? authorType;
   @override
@@ -31124,12 +30797,12 @@ class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceSourceMaterialAuthor &&
+            other is _$_SubstanceSourceMaterialAuthor &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.authorType, authorType) &&
             const DeepCollectionEquality()
@@ -31138,21 +30811,22 @@ class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
                 other.authorDescriptionElement, authorDescriptionElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(authorType),
       const DeepCollectionEquality().hash(authorDescription),
       const DeepCollectionEquality().hash(authorDescriptionElement));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceSourceMaterialAuthorCopyWith<_SubstanceSourceMaterialAuthor>
-      get copyWith => __$SubstanceSourceMaterialAuthorCopyWithImpl<
-          _SubstanceSourceMaterialAuthor>(this, _$identity);
+  _$$_SubstanceSourceMaterialAuthorCopyWith<_$_SubstanceSourceMaterialAuthor>
+      get copyWith => __$$_SubstanceSourceMaterialAuthorCopyWithImpl<
+          _$_SubstanceSourceMaterialAuthor>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -31163,14 +30837,14 @@ class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
 abstract class _SubstanceSourceMaterialAuthor
     extends SubstanceSourceMaterialAuthor {
   factory _SubstanceSourceMaterialAuthor(
-          {String? id,
+          {final String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? authorType,
-          String? authorDescription,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? authorType,
+          final String? authorDescription,
           @JsonKey(name: '_authorDescription')
-              Element? authorDescriptionElement}) =
+              final Element? authorDescriptionElement}) =
       _$_SubstanceSourceMaterialAuthor;
   _SubstanceSourceMaterialAuthor._() : super._();
 
@@ -31178,22 +30852,23 @@ abstract class _SubstanceSourceMaterialAuthor
       _$_SubstanceSourceMaterialAuthor.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get authorType;
+  CodeableConcept? get authorType => throw _privateConstructorUsedError;
   @override
-  String? get authorDescription;
+  String? get authorDescription => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authorDescription')
-  Element? get authorDescriptionElement;
+  Element? get authorDescriptionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSourceMaterialAuthorCopyWith<_SubstanceSourceMaterialAuthor>
+  _$$_SubstanceSourceMaterialAuthorCopyWith<_$_SubstanceSourceMaterialAuthor>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -31201,52 +30876,6 @@ SubstanceSourceMaterialHybrid _$SubstanceSourceMaterialHybridFromJson(
     Map<String, dynamic> json) {
   return _SubstanceSourceMaterialHybrid.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceSourceMaterialHybridTearOff {
-  const _$SubstanceSourceMaterialHybridTearOff();
-
-  _SubstanceSourceMaterialHybrid call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? maternalOrganismId,
-      @JsonKey(name: '_maternalOrganismId')
-          Element? maternalOrganismIdElement,
-      String? maternalOrganismName,
-      @JsonKey(name: '_maternalOrganismName')
-          Element? maternalOrganismNameElement,
-      String? paternalOrganismId,
-      @JsonKey(name: '_paternalOrganismId')
-          Element? paternalOrganismIdElement,
-      String? paternalOrganismName,
-      @JsonKey(name: '_paternalOrganismName')
-          Element? paternalOrganismNameElement,
-      CodeableConcept? hybridType}) {
-    return _SubstanceSourceMaterialHybrid(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      maternalOrganismId: maternalOrganismId,
-      maternalOrganismIdElement: maternalOrganismIdElement,
-      maternalOrganismName: maternalOrganismName,
-      maternalOrganismNameElement: maternalOrganismNameElement,
-      paternalOrganismId: paternalOrganismId,
-      paternalOrganismIdElement: paternalOrganismIdElement,
-      paternalOrganismName: paternalOrganismName,
-      paternalOrganismNameElement: paternalOrganismNameElement,
-      hybridType: hybridType,
-    );
-  }
-
-  SubstanceSourceMaterialHybrid fromJson(Map<String, Object?> json) {
-    return SubstanceSourceMaterialHybrid.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceSourceMaterialHybrid = _$SubstanceSourceMaterialHybridTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialHybrid {
@@ -31442,12 +31071,12 @@ class _$SubstanceSourceMaterialHybridCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceSourceMaterialHybridCopyWith<$Res>
+abstract class _$$_SubstanceSourceMaterialHybridCopyWith<$Res>
     implements $SubstanceSourceMaterialHybridCopyWith<$Res> {
-  factory _$SubstanceSourceMaterialHybridCopyWith(
-          _SubstanceSourceMaterialHybrid value,
-          $Res Function(_SubstanceSourceMaterialHybrid) then) =
-      __$SubstanceSourceMaterialHybridCopyWithImpl<$Res>;
+  factory _$$_SubstanceSourceMaterialHybridCopyWith(
+          _$_SubstanceSourceMaterialHybrid value,
+          $Res Function(_$_SubstanceSourceMaterialHybrid) then) =
+      __$$_SubstanceSourceMaterialHybridCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -31481,17 +31110,17 @@ abstract class _$SubstanceSourceMaterialHybridCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceSourceMaterialHybridCopyWithImpl<$Res>
+class __$$_SubstanceSourceMaterialHybridCopyWithImpl<$Res>
     extends _$SubstanceSourceMaterialHybridCopyWithImpl<$Res>
-    implements _$SubstanceSourceMaterialHybridCopyWith<$Res> {
-  __$SubstanceSourceMaterialHybridCopyWithImpl(
-      _SubstanceSourceMaterialHybrid _value,
-      $Res Function(_SubstanceSourceMaterialHybrid) _then)
-      : super(_value, (v) => _then(v as _SubstanceSourceMaterialHybrid));
+    implements _$$_SubstanceSourceMaterialHybridCopyWith<$Res> {
+  __$$_SubstanceSourceMaterialHybridCopyWithImpl(
+      _$_SubstanceSourceMaterialHybrid _value,
+      $Res Function(_$_SubstanceSourceMaterialHybrid) _then)
+      : super(_value, (v) => _then(v as _$_SubstanceSourceMaterialHybrid));
 
   @override
-  _SubstanceSourceMaterialHybrid get _value =>
-      super._value as _SubstanceSourceMaterialHybrid;
+  _$_SubstanceSourceMaterialHybrid get _value =>
+      super._value as _$_SubstanceSourceMaterialHybrid;
 
   @override
   $Res call({
@@ -31508,17 +31137,17 @@ class __$SubstanceSourceMaterialHybridCopyWithImpl<$Res>
     Object? paternalOrganismNameElement = freezed,
     Object? hybridType = freezed,
   }) {
-    return _then(_SubstanceSourceMaterialHybrid(
+    return _then(_$_SubstanceSourceMaterialHybrid(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       maternalOrganismId: maternalOrganismId == freezed
@@ -31566,8 +31195,8 @@ class __$SubstanceSourceMaterialHybridCopyWithImpl<$Res>
 class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
   _$_SubstanceSourceMaterialHybrid(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.maternalOrganismId,
       @JsonKey(name: '_maternalOrganismId') this.maternalOrganismIdElement,
       this.maternalOrganismName,
@@ -31577,7 +31206,9 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
       this.paternalOrganismName,
       @JsonKey(name: '_paternalOrganismName') this.paternalOrganismNameElement,
       this.hybridType})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceSourceMaterialHybrid.fromJson(
           Map<String, dynamic> json) =>
@@ -31585,11 +31216,25 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? maternalOrganismId;
   @override
@@ -31622,12 +31267,12 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceSourceMaterialHybrid &&
+            other is _$_SubstanceSourceMaterialHybrid &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.maternalOrganismId, maternalOrganismId) &&
             const DeepCollectionEquality().equals(
@@ -31650,12 +31295,13 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
                 .equals(other.hybridType, hybridType));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(maternalOrganismId),
       const DeepCollectionEquality().hash(maternalOrganismIdElement),
       const DeepCollectionEquality().hash(maternalOrganismName),
@@ -31668,9 +31314,9 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceSourceMaterialHybridCopyWith<_SubstanceSourceMaterialHybrid>
-      get copyWith => __$SubstanceSourceMaterialHybridCopyWithImpl<
-          _SubstanceSourceMaterialHybrid>(this, _$identity);
+  _$$_SubstanceSourceMaterialHybridCopyWith<_$_SubstanceSourceMaterialHybrid>
+      get copyWith => __$$_SubstanceSourceMaterialHybridCopyWithImpl<
+          _$_SubstanceSourceMaterialHybrid>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -31681,60 +31327,63 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
 abstract class _SubstanceSourceMaterialHybrid
     extends SubstanceSourceMaterialHybrid {
   factory _SubstanceSourceMaterialHybrid(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? maternalOrganismId,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? maternalOrganismId,
       @JsonKey(name: '_maternalOrganismId')
-          Element? maternalOrganismIdElement,
-      String? maternalOrganismName,
+          final Element? maternalOrganismIdElement,
+      final String? maternalOrganismName,
       @JsonKey(name: '_maternalOrganismName')
-          Element? maternalOrganismNameElement,
-      String? paternalOrganismId,
+          final Element? maternalOrganismNameElement,
+      final String? paternalOrganismId,
       @JsonKey(name: '_paternalOrganismId')
-          Element? paternalOrganismIdElement,
-      String? paternalOrganismName,
+          final Element? paternalOrganismIdElement,
+      final String? paternalOrganismName,
       @JsonKey(name: '_paternalOrganismName')
-          Element? paternalOrganismNameElement,
-      CodeableConcept? hybridType}) = _$_SubstanceSourceMaterialHybrid;
+          final Element? paternalOrganismNameElement,
+      final CodeableConcept? hybridType}) = _$_SubstanceSourceMaterialHybrid;
   _SubstanceSourceMaterialHybrid._() : super._();
 
   factory _SubstanceSourceMaterialHybrid.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialHybrid.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get maternalOrganismId;
+  String? get maternalOrganismId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maternalOrganismId')
-  Element? get maternalOrganismIdElement;
+  Element? get maternalOrganismIdElement => throw _privateConstructorUsedError;
   @override
-  String? get maternalOrganismName;
+  String? get maternalOrganismName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maternalOrganismName')
-  Element? get maternalOrganismNameElement;
+  Element? get maternalOrganismNameElement =>
+      throw _privateConstructorUsedError;
   @override
-  String? get paternalOrganismId;
+  String? get paternalOrganismId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_paternalOrganismId')
-  Element? get paternalOrganismIdElement;
+  Element? get paternalOrganismIdElement => throw _privateConstructorUsedError;
   @override
-  String? get paternalOrganismName;
+  String? get paternalOrganismName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_paternalOrganismName')
-  Element? get paternalOrganismNameElement;
+  Element? get paternalOrganismNameElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get hybridType;
+  CodeableConcept? get hybridType => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSourceMaterialHybridCopyWith<_SubstanceSourceMaterialHybrid>
+  _$$_SubstanceSourceMaterialHybridCopyWith<_$_SubstanceSourceMaterialHybrid>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -31743,38 +31392,6 @@ SubstanceSourceMaterialOrganismGeneral
         Map<String, dynamic> json) {
   return _SubstanceSourceMaterialOrganismGeneral.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceSourceMaterialOrganismGeneralTearOff {
-  const _$SubstanceSourceMaterialOrganismGeneralTearOff();
-
-  _SubstanceSourceMaterialOrganismGeneral call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? kingdom,
-      CodeableConcept? phylum,
-      @JsonKey(name: 'class') CodeableConcept? class_,
-      CodeableConcept? order}) {
-    return _SubstanceSourceMaterialOrganismGeneral(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      kingdom: kingdom,
-      phylum: phylum,
-      class_: class_,
-      order: order,
-    );
-  }
-
-  SubstanceSourceMaterialOrganismGeneral fromJson(Map<String, Object?> json) {
-    return SubstanceSourceMaterialOrganismGeneral.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceSourceMaterialOrganismGeneral =
-    _$SubstanceSourceMaterialOrganismGeneralTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialOrganismGeneral {
@@ -31914,12 +31531,12 @@ class _$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceSourceMaterialOrganismGeneralCopyWith<$Res>
+abstract class _$$_SubstanceSourceMaterialOrganismGeneralCopyWith<$Res>
     implements $SubstanceSourceMaterialOrganismGeneralCopyWith<$Res> {
-  factory _$SubstanceSourceMaterialOrganismGeneralCopyWith(
-          _SubstanceSourceMaterialOrganismGeneral value,
-          $Res Function(_SubstanceSourceMaterialOrganismGeneral) then) =
-      __$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>;
+  factory _$$_SubstanceSourceMaterialOrganismGeneralCopyWith(
+          _$_SubstanceSourceMaterialOrganismGeneral value,
+          $Res Function(_$_SubstanceSourceMaterialOrganismGeneral) then) =
+      __$$_SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -31941,18 +31558,18 @@ abstract class _$SubstanceSourceMaterialOrganismGeneralCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
+class __$$_SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
     extends _$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
-    implements _$SubstanceSourceMaterialOrganismGeneralCopyWith<$Res> {
-  __$SubstanceSourceMaterialOrganismGeneralCopyWithImpl(
-      _SubstanceSourceMaterialOrganismGeneral _value,
-      $Res Function(_SubstanceSourceMaterialOrganismGeneral) _then)
-      : super(
-            _value, (v) => _then(v as _SubstanceSourceMaterialOrganismGeneral));
+    implements _$$_SubstanceSourceMaterialOrganismGeneralCopyWith<$Res> {
+  __$$_SubstanceSourceMaterialOrganismGeneralCopyWithImpl(
+      _$_SubstanceSourceMaterialOrganismGeneral _value,
+      $Res Function(_$_SubstanceSourceMaterialOrganismGeneral) _then)
+      : super(_value,
+            (v) => _then(v as _$_SubstanceSourceMaterialOrganismGeneral));
 
   @override
-  _SubstanceSourceMaterialOrganismGeneral get _value =>
-      super._value as _SubstanceSourceMaterialOrganismGeneral;
+  _$_SubstanceSourceMaterialOrganismGeneral get _value =>
+      super._value as _$_SubstanceSourceMaterialOrganismGeneral;
 
   @override
   $Res call({
@@ -31964,17 +31581,17 @@ class __$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
     Object? class_ = freezed,
     Object? order = freezed,
   }) {
-    return _then(_SubstanceSourceMaterialOrganismGeneral(
+    return _then(_$_SubstanceSourceMaterialOrganismGeneral(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       kingdom: kingdom == freezed
@@ -32003,13 +31620,15 @@ class _$_SubstanceSourceMaterialOrganismGeneral
     extends _SubstanceSourceMaterialOrganismGeneral {
   _$_SubstanceSourceMaterialOrganismGeneral(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.kingdom,
       this.phylum,
       @JsonKey(name: 'class') this.class_,
       this.order})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceSourceMaterialOrganismGeneral.fromJson(
           Map<String, dynamic> json) =>
@@ -32017,11 +31636,25 @@ class _$_SubstanceSourceMaterialOrganismGeneral
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? kingdom;
   @override
@@ -32041,24 +31674,25 @@ class _$_SubstanceSourceMaterialOrganismGeneral
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceSourceMaterialOrganismGeneral &&
+            other is _$_SubstanceSourceMaterialOrganismGeneral &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.kingdom, kingdom) &&
             const DeepCollectionEquality().equals(other.phylum, phylum) &&
             const DeepCollectionEquality().equals(other.class_, class_) &&
             const DeepCollectionEquality().equals(other.order, order));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(kingdom),
       const DeepCollectionEquality().hash(phylum),
       const DeepCollectionEquality().hash(class_),
@@ -32066,10 +31700,10 @@ class _$_SubstanceSourceMaterialOrganismGeneral
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceSourceMaterialOrganismGeneralCopyWith<
-          _SubstanceSourceMaterialOrganismGeneral>
-      get copyWith => __$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<
-          _SubstanceSourceMaterialOrganismGeneral>(this, _$identity);
+  _$$_SubstanceSourceMaterialOrganismGeneralCopyWith<
+          _$_SubstanceSourceMaterialOrganismGeneral>
+      get copyWith => __$$_SubstanceSourceMaterialOrganismGeneralCopyWithImpl<
+          _$_SubstanceSourceMaterialOrganismGeneral>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -32080,13 +31714,14 @@ class _$_SubstanceSourceMaterialOrganismGeneral
 abstract class _SubstanceSourceMaterialOrganismGeneral
     extends SubstanceSourceMaterialOrganismGeneral {
   factory _SubstanceSourceMaterialOrganismGeneral(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? kingdom,
-      CodeableConcept? phylum,
-      @JsonKey(name: 'class') CodeableConcept? class_,
-      CodeableConcept? order}) = _$_SubstanceSourceMaterialOrganismGeneral;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? kingdom,
+          final CodeableConcept? phylum,
+          @JsonKey(name: 'class') final CodeableConcept? class_,
+          final CodeableConcept? order}) =
+      _$_SubstanceSourceMaterialOrganismGeneral;
   _SubstanceSourceMaterialOrganismGeneral._() : super._();
 
   factory _SubstanceSourceMaterialOrganismGeneral.fromJson(
@@ -32094,25 +31729,26 @@ abstract class _SubstanceSourceMaterialOrganismGeneral
       _$_SubstanceSourceMaterialOrganismGeneral.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get kingdom;
+  CodeableConcept? get kingdom => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get phylum;
+  CodeableConcept? get phylum => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'class')
-  CodeableConcept? get class_;
+  CodeableConcept? get class_ => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get order;
+  CodeableConcept? get order => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSourceMaterialOrganismGeneralCopyWith<
-          _SubstanceSourceMaterialOrganismGeneral>
+  _$$_SubstanceSourceMaterialOrganismGeneralCopyWith<
+          _$_SubstanceSourceMaterialOrganismGeneral>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -32121,34 +31757,6 @@ SubstanceSourceMaterialPartDescription
         Map<String, dynamic> json) {
   return _SubstanceSourceMaterialPartDescription.fromJson(json);
 }
-
-/// @nodoc
-class _$SubstanceSourceMaterialPartDescriptionTearOff {
-  const _$SubstanceSourceMaterialPartDescriptionTearOff();
-
-  _SubstanceSourceMaterialPartDescription call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'part') CodeableConcept? part_,
-      CodeableConcept? partLocation}) {
-    return _SubstanceSourceMaterialPartDescription(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      part_: part_,
-      partLocation: partLocation,
-    );
-  }
-
-  SubstanceSourceMaterialPartDescription fromJson(Map<String, Object?> json) {
-    return SubstanceSourceMaterialPartDescription.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SubstanceSourceMaterialPartDescription =
-    _$SubstanceSourceMaterialPartDescriptionTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialPartDescription {
@@ -32250,12 +31858,12 @@ class _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SubstanceSourceMaterialPartDescriptionCopyWith<$Res>
+abstract class _$$_SubstanceSourceMaterialPartDescriptionCopyWith<$Res>
     implements $SubstanceSourceMaterialPartDescriptionCopyWith<$Res> {
-  factory _$SubstanceSourceMaterialPartDescriptionCopyWith(
-          _SubstanceSourceMaterialPartDescription value,
-          $Res Function(_SubstanceSourceMaterialPartDescription) then) =
-      __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>;
+  factory _$$_SubstanceSourceMaterialPartDescriptionCopyWith(
+          _$_SubstanceSourceMaterialPartDescription value,
+          $Res Function(_$_SubstanceSourceMaterialPartDescription) then) =
+      __$$_SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -32271,18 +31879,18 @@ abstract class _$SubstanceSourceMaterialPartDescriptionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
+class __$$_SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
     extends _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
-    implements _$SubstanceSourceMaterialPartDescriptionCopyWith<$Res> {
-  __$SubstanceSourceMaterialPartDescriptionCopyWithImpl(
-      _SubstanceSourceMaterialPartDescription _value,
-      $Res Function(_SubstanceSourceMaterialPartDescription) _then)
-      : super(
-            _value, (v) => _then(v as _SubstanceSourceMaterialPartDescription));
+    implements _$$_SubstanceSourceMaterialPartDescriptionCopyWith<$Res> {
+  __$$_SubstanceSourceMaterialPartDescriptionCopyWithImpl(
+      _$_SubstanceSourceMaterialPartDescription _value,
+      $Res Function(_$_SubstanceSourceMaterialPartDescription) _then)
+      : super(_value,
+            (v) => _then(v as _$_SubstanceSourceMaterialPartDescription));
 
   @override
-  _SubstanceSourceMaterialPartDescription get _value =>
-      super._value as _SubstanceSourceMaterialPartDescription;
+  _$_SubstanceSourceMaterialPartDescription get _value =>
+      super._value as _$_SubstanceSourceMaterialPartDescription;
 
   @override
   $Res call({
@@ -32292,17 +31900,17 @@ class __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
     Object? part_ = freezed,
     Object? partLocation = freezed,
   }) {
-    return _then(_SubstanceSourceMaterialPartDescription(
+    return _then(_$_SubstanceSourceMaterialPartDescription(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       part_: part_ == freezed
@@ -32323,11 +31931,13 @@ class _$_SubstanceSourceMaterialPartDescription
     extends _SubstanceSourceMaterialPartDescription {
   _$_SubstanceSourceMaterialPartDescription(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'part') this.part_,
       this.partLocation})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_SubstanceSourceMaterialPartDescription.fromJson(
           Map<String, dynamic> json) =>
@@ -32335,11 +31945,25 @@ class _$_SubstanceSourceMaterialPartDescription
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'part')
   final CodeableConcept? part_;
@@ -32355,32 +31979,33 @@ class _$_SubstanceSourceMaterialPartDescription
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SubstanceSourceMaterialPartDescription &&
+            other is _$_SubstanceSourceMaterialPartDescription &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.part_, part_) &&
             const DeepCollectionEquality()
                 .equals(other.partLocation, partLocation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(part_),
       const DeepCollectionEquality().hash(partLocation));
 
   @JsonKey(ignore: true)
   @override
-  _$SubstanceSourceMaterialPartDescriptionCopyWith<
-          _SubstanceSourceMaterialPartDescription>
-      get copyWith => __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<
-          _SubstanceSourceMaterialPartDescription>(this, _$identity);
+  _$$_SubstanceSourceMaterialPartDescriptionCopyWith<
+          _$_SubstanceSourceMaterialPartDescription>
+      get copyWith => __$$_SubstanceSourceMaterialPartDescriptionCopyWithImpl<
+          _$_SubstanceSourceMaterialPartDescription>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -32391,11 +32016,11 @@ class _$_SubstanceSourceMaterialPartDescription
 abstract class _SubstanceSourceMaterialPartDescription
     extends SubstanceSourceMaterialPartDescription {
   factory _SubstanceSourceMaterialPartDescription(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'part') CodeableConcept? part_,
-          CodeableConcept? partLocation}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'part') final CodeableConcept? part_,
+          final CodeableConcept? partLocation}) =
       _$_SubstanceSourceMaterialPartDescription;
   _SubstanceSourceMaterialPartDescription._() : super._();
 
@@ -32404,20 +32029,21 @@ abstract class _SubstanceSourceMaterialPartDescription
       _$_SubstanceSourceMaterialPartDescription.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  CodeableConcept? get part_;
+  CodeableConcept? get part_ => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get partLocation;
+  CodeableConcept? get partLocation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSourceMaterialPartDescriptionCopyWith<
-          _SubstanceSourceMaterialPartDescription>
+  _$$_SubstanceSourceMaterialPartDescriptionCopyWith<
+          _$_SubstanceSourceMaterialPartDescription>
       get copyWith => throw _privateConstructorUsedError;
 }

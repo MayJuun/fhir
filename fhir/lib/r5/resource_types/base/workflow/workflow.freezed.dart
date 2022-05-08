@@ -12,110 +12,11 @@ part of 'workflow.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
   return _Appointment.fromJson(json);
 }
-
-/// @nodoc
-class _$AppointmentTearOff {
-  const _$AppointmentTearOff();
-
-  _Appointment call(
-      {R5ResourceType resourceType = R5ResourceType.Appointment,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      CodeableConcept? cancellationReason,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      CodeableConcept? appointmentType,
-      List<CodeableReference>? reason,
-      CodeableConcept? priority,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Reference>? replaces,
-      List<Reference>? supportingInformation,
-      Instant? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Instant? end,
-      @JsonKey(name: '_end') Element? endElement,
-      PositiveInt? minutesDuration,
-      @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
-      List<Reference>? slot,
-      List<Reference>? account,
-      DateTime? created,
-      @JsonKey(name: '_created') Element? createdElement,
-      List<Annotation>? note,
-      List<CodeableReference>? patientInstruction,
-      List<Reference>? basedOn,
-      Reference? subject,
-      required List<AppointmentParticipant> participant,
-      List<Period>? requestedPeriod}) {
-    return _Appointment(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      cancellationReason: cancellationReason,
-      serviceCategory: serviceCategory,
-      serviceType: serviceType,
-      specialty: specialty,
-      appointmentType: appointmentType,
-      reason: reason,
-      priority: priority,
-      description: description,
-      descriptionElement: descriptionElement,
-      replaces: replaces,
-      supportingInformation: supportingInformation,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-      minutesDuration: minutesDuration,
-      minutesDurationElement: minutesDurationElement,
-      slot: slot,
-      account: account,
-      created: created,
-      createdElement: createdElement,
-      note: note,
-      patientInstruction: patientInstruction,
-      basedOn: basedOn,
-      subject: subject,
-      participant: participant,
-      requestedPeriod: requestedPeriod,
-    );
-  }
-
-  Appointment fromJson(Map<String, Object?> json) {
-    return Appointment.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Appointment = _$AppointmentTearOff();
 
 /// @nodoc
 mixin _$Appointment {
@@ -621,11 +522,11 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AppointmentCopyWith<$Res>
+abstract class _$$_AppointmentCopyWith<$Res>
     implements $AppointmentCopyWith<$Res> {
-  factory _$AppointmentCopyWith(
-          _Appointment value, $Res Function(_Appointment) then) =
-      __$AppointmentCopyWithImpl<$Res>;
+  factory _$$_AppointmentCopyWith(
+          _$_Appointment value, $Res Function(_$_Appointment) then) =
+      __$$_AppointmentCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -701,14 +602,14 @@ abstract class _$AppointmentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
-    implements _$AppointmentCopyWith<$Res> {
-  __$AppointmentCopyWithImpl(
-      _Appointment _value, $Res Function(_Appointment) _then)
-      : super(_value, (v) => _then(v as _Appointment));
+class __$$_AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
+    implements _$$_AppointmentCopyWith<$Res> {
+  __$$_AppointmentCopyWithImpl(
+      _$_Appointment _value, $Res Function(_$_Appointment) _then)
+      : super(_value, (v) => _then(v as _$_Appointment));
 
   @override
-  _Appointment get _value => super._value as _Appointment;
+  _$_Appointment get _value => super._value as _$_Appointment;
 
   @override
   $Res call({
@@ -754,7 +655,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     Object? participant = freezed,
     Object? requestedPeriod = freezed,
   }) {
-    return _then(_Appointment(
+    return _then(_$_Appointment(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -788,19 +689,19 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: status == freezed
@@ -816,15 +717,15 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : cancellationReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       serviceCategory: serviceCategory == freezed
-          ? _value.serviceCategory
+          ? _value._serviceCategory
           : serviceCategory // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       serviceType: serviceType == freezed
-          ? _value.serviceType
+          ? _value._serviceType
           : serviceType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       specialty: specialty == freezed
-          ? _value.specialty
+          ? _value._specialty
           : specialty // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       appointmentType: appointmentType == freezed
@@ -832,7 +733,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : appointmentType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       reason: reason == freezed
-          ? _value.reason
+          ? _value._reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
       priority: priority == freezed
@@ -848,11 +749,11 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       replaces: replaces == freezed
-          ? _value.replaces
+          ? _value._replaces
           : replaces // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       supportingInformation: supportingInformation == freezed
-          ? _value.supportingInformation
+          ? _value._supportingInformation
           : supportingInformation // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       start: start == freezed
@@ -880,11 +781,11 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : minutesDurationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       slot: slot == freezed
-          ? _value.slot
+          ? _value._slot
           : slot // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       account: account == freezed
-          ? _value.account
+          ? _value._account
           : account // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       created: created == freezed
@@ -896,15 +797,15 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       patientInstruction: patientInstruction == freezed
-          ? _value.patientInstruction
+          ? _value._patientInstruction
           : patientInstruction // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       subject: subject == freezed
@@ -912,11 +813,11 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
       participant: participant == freezed
-          ? _value.participant
+          ? _value._participant
           : participant // ignore: cast_nullable_to_non_nullable
               as List<AppointmentParticipant>,
       requestedPeriod: requestedPeriod == freezed
-          ? _value.requestedPeriod
+          ? _value._requestedPeriod
           : requestedPeriod // ignore: cast_nullable_to_non_nullable
               as List<Period>?,
     ));
@@ -935,46 +836,63 @@ class _$_Appointment extends _Appointment {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
       this.cancellationReason,
-      this.serviceCategory,
-      this.serviceType,
-      this.specialty,
+      final List<CodeableConcept>? serviceCategory,
+      final List<CodeableConcept>? serviceType,
+      final List<CodeableConcept>? specialty,
       this.appointmentType,
-      this.reason,
+      final List<CodeableReference>? reason,
       this.priority,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      this.replaces,
-      this.supportingInformation,
+      final List<Reference>? replaces,
+      final List<Reference>? supportingInformation,
       this.start,
       @JsonKey(name: '_start') this.startElement,
       this.end,
       @JsonKey(name: '_end') this.endElement,
       this.minutesDuration,
       @JsonKey(name: '_minutesDuration') this.minutesDurationElement,
-      this.slot,
-      this.account,
+      final List<Reference>? slot,
+      final List<Reference>? account,
       this.created,
       @JsonKey(name: '_created') this.createdElement,
-      this.note,
-      this.patientInstruction,
-      this.basedOn,
+      final List<Annotation>? note,
+      final List<CodeableReference>? patientInstruction,
+      final List<Reference>? basedOn,
       this.subject,
-      required this.participant,
-      this.requestedPeriod})
-      : super._();
+      required final List<AppointmentParticipant> participant,
+      final List<Period>? requestedPeriod})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _serviceCategory = serviceCategory,
+        _serviceType = serviceType,
+        _specialty = specialty,
+        _reason = reason,
+        _replaces = replaces,
+        _supportingInformation = supportingInformation,
+        _slot = slot,
+        _account = account,
+        _note = note,
+        _patientInstruction = patientInstruction,
+        _basedOn = basedOn,
+        _participant = participant,
+        _requestedPeriod = requestedPeriod,
+        super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -992,15 +910,43 @@ class _$_Appointment extends _Appointment {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
@@ -1008,16 +954,44 @@ class _$_Appointment extends _Appointment {
   final Element? statusElement;
   @override
   final CodeableConcept? cancellationReason;
+  final List<CodeableConcept>? _serviceCategory;
   @override
-  final List<CodeableConcept>? serviceCategory;
+  List<CodeableConcept>? get serviceCategory {
+    final value = _serviceCategory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _serviceType;
   @override
-  final List<CodeableConcept>? serviceType;
+  List<CodeableConcept>? get serviceType {
+    final value = _serviceType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _specialty;
   @override
-  final List<CodeableConcept>? specialty;
+  List<CodeableConcept>? get specialty {
+    final value = _specialty;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? appointmentType;
+  final List<CodeableReference>? _reason;
   @override
-  final List<CodeableReference>? reason;
+  List<CodeableReference>? get reason {
+    final value = _reason;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? priority;
   @override
@@ -1025,10 +999,24 @@ class _$_Appointment extends _Appointment {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<Reference>? _replaces;
   @override
-  final List<Reference>? replaces;
+  List<Reference>? get replaces {
+    final value = _replaces;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _supportingInformation;
   @override
-  final List<Reference>? supportingInformation;
+  List<Reference>? get supportingInformation {
+    final value = _supportingInformation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Instant? start;
   @override
@@ -1044,27 +1032,73 @@ class _$_Appointment extends _Appointment {
   @override
   @JsonKey(name: '_minutesDuration')
   final Element? minutesDurationElement;
+  final List<Reference>? _slot;
   @override
-  final List<Reference>? slot;
+  List<Reference>? get slot {
+    final value = _slot;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _account;
   @override
-  final List<Reference>? account;
+  List<Reference>? get account {
+    final value = _account;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final DateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableReference>? _patientInstruction;
   @override
-  final List<CodeableReference>? patientInstruction;
+  List<CodeableReference>? get patientInstruction {
+    final value = _patientInstruction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _basedOn;
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? subject;
+  final List<AppointmentParticipant> _participant;
   @override
-  final List<AppointmentParticipant> participant;
+  List<AppointmentParticipant> get participant {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_participant);
+  }
+
+  final List<Period>? _requestedPeriod;
   @override
-  final List<Period>? requestedPeriod;
+  List<Period>? get requestedPeriod {
+    final value = _requestedPeriod;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1075,7 +1109,7 @@ class _$_Appointment extends _Appointment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Appointment &&
+            other is _$_Appointment &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1088,34 +1122,36 @@ class _$_Appointment extends _Appointment {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality()
                 .equals(other.cancellationReason, cancellationReason) &&
             const DeepCollectionEquality()
-                .equals(other.serviceCategory, serviceCategory) &&
+                .equals(other._serviceCategory, _serviceCategory) &&
             const DeepCollectionEquality()
-                .equals(other.serviceType, serviceType) &&
-            const DeepCollectionEquality().equals(other.specialty, specialty) &&
+                .equals(other._serviceType, _serviceType) &&
+            const DeepCollectionEquality()
+                .equals(other._specialty, _specialty) &&
             const DeepCollectionEquality()
                 .equals(other.appointmentType, appointmentType) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality().equals(other._reason, _reason) &&
             const DeepCollectionEquality().equals(other.priority, priority) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.replaces, replaces) &&
+            const DeepCollectionEquality().equals(other._replaces, _replaces) &&
             const DeepCollectionEquality()
-                .equals(other.supportingInformation, supportingInformation) &&
+                .equals(other._supportingInformation, _supportingInformation) &&
             const DeepCollectionEquality().equals(other.start, start) &&
             const DeepCollectionEquality()
                 .equals(other.startElement, startElement) &&
@@ -1126,22 +1162,23 @@ class _$_Appointment extends _Appointment {
                 .equals(other.minutesDuration, minutesDuration) &&
             const DeepCollectionEquality()
                 .equals(other.minutesDurationElement, minutesDurationElement) &&
-            const DeepCollectionEquality().equals(other.slot, slot) &&
-            const DeepCollectionEquality().equals(other.account, account) &&
+            const DeepCollectionEquality().equals(other._slot, _slot) &&
+            const DeepCollectionEquality().equals(other._account, _account) &&
             const DeepCollectionEquality().equals(other.created, created) &&
             const DeepCollectionEquality()
                 .equals(other.createdElement, createdElement) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality()
-                .equals(other.patientInstruction, patientInstruction) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+                .equals(other._patientInstruction, _patientInstruction) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality()
-                .equals(other.participant, participant) &&
+                .equals(other._participant, _participant) &&
             const DeepCollectionEquality()
-                .equals(other.requestedPeriod, requestedPeriod));
+                .equals(other._requestedPeriod, _requestedPeriod));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1153,45 +1190,45 @@ class _$_Appointment extends _Appointment {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(cancellationReason),
-        const DeepCollectionEquality().hash(serviceCategory),
-        const DeepCollectionEquality().hash(serviceType),
-        const DeepCollectionEquality().hash(specialty),
+        const DeepCollectionEquality().hash(_serviceCategory),
+        const DeepCollectionEquality().hash(_serviceType),
+        const DeepCollectionEquality().hash(_specialty),
         const DeepCollectionEquality().hash(appointmentType),
-        const DeepCollectionEquality().hash(reason),
+        const DeepCollectionEquality().hash(_reason),
         const DeepCollectionEquality().hash(priority),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(replaces),
-        const DeepCollectionEquality().hash(supportingInformation),
+        const DeepCollectionEquality().hash(_replaces),
+        const DeepCollectionEquality().hash(_supportingInformation),
         const DeepCollectionEquality().hash(start),
         const DeepCollectionEquality().hash(startElement),
         const DeepCollectionEquality().hash(end),
         const DeepCollectionEquality().hash(endElement),
         const DeepCollectionEquality().hash(minutesDuration),
         const DeepCollectionEquality().hash(minutesDurationElement),
-        const DeepCollectionEquality().hash(slot),
-        const DeepCollectionEquality().hash(account),
+        const DeepCollectionEquality().hash(_slot),
+        const DeepCollectionEquality().hash(_account),
         const DeepCollectionEquality().hash(created),
         const DeepCollectionEquality().hash(createdElement),
-        const DeepCollectionEquality().hash(note),
-        const DeepCollectionEquality().hash(patientInstruction),
-        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_patientInstruction),
+        const DeepCollectionEquality().hash(_basedOn),
         const DeepCollectionEquality().hash(subject),
-        const DeepCollectionEquality().hash(participant),
-        const DeepCollectionEquality().hash(requestedPeriod)
+        const DeepCollectionEquality().hash(_participant),
+        const DeepCollectionEquality().hash(_requestedPeriod)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$AppointmentCopyWith<_Appointment> get copyWith =>
-      __$AppointmentCopyWithImpl<_Appointment>(this, _$identity);
+  _$$_AppointmentCopyWith<_$_Appointment> get copyWith =>
+      __$$_AppointmentCopyWithImpl<_$_Appointment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1201,146 +1238,151 @@ class _$_Appointment extends _Appointment {
 
 abstract class _Appointment extends Appointment {
   factory _Appointment(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      CodeableConcept? cancellationReason,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      CodeableConcept? appointmentType,
-      List<CodeableReference>? reason,
-      CodeableConcept? priority,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Reference>? replaces,
-      List<Reference>? supportingInformation,
-      Instant? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Instant? end,
-      @JsonKey(name: '_end') Element? endElement,
-      PositiveInt? minutesDuration,
-      @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
-      List<Reference>? slot,
-      List<Reference>? account,
-      DateTime? created,
-      @JsonKey(name: '_created') Element? createdElement,
-      List<Annotation>? note,
-      List<CodeableReference>? patientInstruction,
-      List<Reference>? basedOn,
-      Reference? subject,
-      required List<AppointmentParticipant> participant,
-      List<Period>? requestedPeriod}) = _$_Appointment;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final CodeableConcept? cancellationReason,
+      final List<CodeableConcept>? serviceCategory,
+      final List<CodeableConcept>? serviceType,
+      final List<CodeableConcept>? specialty,
+      final CodeableConcept? appointmentType,
+      final List<CodeableReference>? reason,
+      final CodeableConcept? priority,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<Reference>? replaces,
+      final List<Reference>? supportingInformation,
+      final Instant? start,
+      @JsonKey(name: '_start') final Element? startElement,
+      final Instant? end,
+      @JsonKey(name: '_end') final Element? endElement,
+      final PositiveInt? minutesDuration,
+      @JsonKey(name: '_minutesDuration') final Element? minutesDurationElement,
+      final List<Reference>? slot,
+      final List<Reference>? account,
+      final DateTime? created,
+      @JsonKey(name: '_created') final Element? createdElement,
+      final List<Annotation>? note,
+      final List<CodeableReference>? patientInstruction,
+      final List<Reference>? basedOn,
+      final Reference? subject,
+      required final List<AppointmentParticipant> participant,
+      final List<Period>? requestedPeriod}) = _$_Appointment;
   _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get cancellationReason;
+  CodeableConcept? get cancellationReason => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get serviceCategory;
+  List<CodeableConcept>? get serviceCategory =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get serviceType;
+  List<CodeableConcept>? get serviceType => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get specialty;
+  List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get appointmentType;
+  CodeableConcept? get appointmentType => throw _privateConstructorUsedError;
   @override
-  List<CodeableReference>? get reason;
+  List<CodeableReference>? get reason => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get priority;
+  CodeableConcept? get priority => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get replaces;
+  List<Reference>? get replaces => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get supportingInformation;
+  List<Reference>? get supportingInformation =>
+      throw _privateConstructorUsedError;
   @override
-  Instant? get start;
+  Instant? get start => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_start')
-  Element? get startElement;
+  Element? get startElement => throw _privateConstructorUsedError;
   @override
-  Instant? get end;
+  Instant? get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_end')
-  Element? get endElement;
+  Element? get endElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get minutesDuration;
+  PositiveInt? get minutesDuration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minutesDuration')
-  Element? get minutesDurationElement;
+  Element? get minutesDurationElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get slot;
+  List<Reference>? get slot => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get account;
+  List<Reference>? get account => throw _privateConstructorUsedError;
   @override
-  DateTime? get created;
+  DateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element? get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  List<CodeableReference>? get patientInstruction;
+  List<CodeableReference>? get patientInstruction =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get basedOn;
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  List<AppointmentParticipant> get participant;
+  List<AppointmentParticipant> get participant =>
+      throw _privateConstructorUsedError;
   @override
-  List<Period>? get requestedPeriod;
+  List<Period>? get requestedPeriod => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AppointmentCopyWith<_Appointment> get copyWith =>
+  _$$_AppointmentCopyWith<_$_Appointment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1348,43 +1390,6 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
     Map<String, dynamic> json) {
   return _AppointmentParticipant.fromJson(json);
 }
-
-/// @nodoc
-class _$AppointmentParticipantTearOff {
-  const _$AppointmentParticipantTearOff();
-
-  _AppointmentParticipant call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? type,
-      Period? period,
-      Reference? actor,
-      @JsonKey(name: 'required') Boolean? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement}) {
-    return _AppointmentParticipant(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      period: period,
-      actor: actor,
-      required_: required_,
-      requiredElement: requiredElement,
-      status: status,
-      statusElement: statusElement,
-    );
-  }
-
-  AppointmentParticipant fromJson(Map<String, Object?> json) {
-    return AppointmentParticipant.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AppointmentParticipant = _$AppointmentParticipantTearOff();
 
 /// @nodoc
 mixin _$AppointmentParticipant {
@@ -1545,11 +1550,11 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AppointmentParticipantCopyWith<$Res>
+abstract class _$$_AppointmentParticipantCopyWith<$Res>
     implements $AppointmentParticipantCopyWith<$Res> {
-  factory _$AppointmentParticipantCopyWith(_AppointmentParticipant value,
-          $Res Function(_AppointmentParticipant) then) =
-      __$AppointmentParticipantCopyWithImpl<$Res>;
+  factory _$$_AppointmentParticipantCopyWith(_$_AppointmentParticipant value,
+          $Res Function(_$_AppointmentParticipant) then) =
+      __$$_AppointmentParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -1574,15 +1579,16 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AppointmentParticipantCopyWithImpl<$Res>
+class __$$_AppointmentParticipantCopyWithImpl<$Res>
     extends _$AppointmentParticipantCopyWithImpl<$Res>
-    implements _$AppointmentParticipantCopyWith<$Res> {
-  __$AppointmentParticipantCopyWithImpl(_AppointmentParticipant _value,
-      $Res Function(_AppointmentParticipant) _then)
-      : super(_value, (v) => _then(v as _AppointmentParticipant));
+    implements _$$_AppointmentParticipantCopyWith<$Res> {
+  __$$_AppointmentParticipantCopyWithImpl(_$_AppointmentParticipant _value,
+      $Res Function(_$_AppointmentParticipant) _then)
+      : super(_value, (v) => _then(v as _$_AppointmentParticipant));
 
   @override
-  _AppointmentParticipant get _value => super._value as _AppointmentParticipant;
+  _$_AppointmentParticipant get _value =>
+      super._value as _$_AppointmentParticipant;
 
   @override
   $Res call({
@@ -1597,21 +1603,21 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
     Object? status = freezed,
     Object? statusElement = freezed,
   }) {
-    return _then(_AppointmentParticipant(
+    return _then(_$_AppointmentParticipant(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
-          ? _value.type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       period: period == freezed
@@ -1647,29 +1653,53 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.type,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? type,
       this.period,
       this.actor,
       @JsonKey(name: 'required') this.required_,
       @JsonKey(name: '_required') this.requiredElement,
       this.status,
       @JsonKey(name: '_status') this.statusElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _type = type,
+        super._();
 
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentParticipantFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _type;
   @override
-  final List<CodeableConcept>? type;
+  List<CodeableConcept>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Period? period;
   @override
@@ -1695,13 +1725,13 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AppointmentParticipant &&
+            other is _$_AppointmentParticipant &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
             const DeepCollectionEquality().equals(other.period, period) &&
             const DeepCollectionEquality().equals(other.actor, actor) &&
             const DeepCollectionEquality().equals(other.required_, required_) &&
@@ -1712,13 +1742,14 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
                 .equals(other.statusElement, statusElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_type),
       const DeepCollectionEquality().hash(period),
       const DeepCollectionEquality().hash(actor),
       const DeepCollectionEquality().hash(required_),
@@ -1728,8 +1759,8 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   @JsonKey(ignore: true)
   @override
-  _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith =>
-      __$AppointmentParticipantCopyWithImpl<_AppointmentParticipant>(
+  _$$_AppointmentParticipantCopyWith<_$_AppointmentParticipant> get copyWith =>
+      __$$_AppointmentParticipantCopyWithImpl<_$_AppointmentParticipant>(
           this, _$identity);
 
   @override
@@ -1740,16 +1771,16 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
 abstract class _AppointmentParticipant extends AppointmentParticipant {
   factory _AppointmentParticipant(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<CodeableConcept>? type,
-          Period? period,
-          Reference? actor,
-          @JsonKey(name: 'required') Boolean? required_,
-          @JsonKey(name: '_required') Element? requiredElement,
-          Code? status,
-          @JsonKey(name: '_status') Element? statusElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<CodeableConcept>? type,
+          final Period? period,
+          final Reference? actor,
+          @JsonKey(name: 'required') final Boolean? required_,
+          @JsonKey(name: '_required') final Element? requiredElement,
+          final Code? status,
+          @JsonKey(name: '_status') final Element? statusElement}) =
       _$_AppointmentParticipant;
   _AppointmentParticipant._() : super._();
 
@@ -1757,101 +1788,39 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
       _$_AppointmentParticipant.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  Reference? get actor;
+  Reference? get actor => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'required')
-  Boolean? get required_;
+  Boolean? get required_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_required')
-  Element? get requiredElement;
+  Element? get requiredElement => throw _privateConstructorUsedError;
   @override
-  Code? get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith =>
+  _$$_AppointmentParticipantCopyWith<_$_AppointmentParticipant> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
   return _AppointmentResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$AppointmentResponseTearOff {
-  const _$AppointmentResponseTearOff();
-
-  _AppointmentResponse call(
-      {R5ResourceType resourceType = R5ResourceType.AppointmentResponse,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      required Reference appointment,
-      Instant? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Instant? end,
-      @JsonKey(name: '_end') Element? endElement,
-      List<CodeableConcept>? participantType,
-      Reference? actor,
-      Code? participantStatus,
-      @JsonKey(name: '_participantStatus') Element? participantStatusElement,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement}) {
-    return _AppointmentResponse(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      appointment: appointment,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-      participantType: participantType,
-      actor: actor,
-      participantStatus: participantStatus,
-      participantStatusElement: participantStatusElement,
-      comment: comment,
-      commentElement: commentElement,
-    );
-  }
-
-  AppointmentResponse fromJson(Map<String, Object?> json) {
-    return AppointmentResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AppointmentResponse = _$AppointmentResponseTearOff();
 
 /// @nodoc
 mixin _$AppointmentResponse {
@@ -2175,11 +2144,11 @@ class _$AppointmentResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AppointmentResponseCopyWith<$Res>
+abstract class _$$_AppointmentResponseCopyWith<$Res>
     implements $AppointmentResponseCopyWith<$Res> {
-  factory _$AppointmentResponseCopyWith(_AppointmentResponse value,
-          $Res Function(_AppointmentResponse) then) =
-      __$AppointmentResponseCopyWithImpl<$Res>;
+  factory _$$_AppointmentResponseCopyWith(_$_AppointmentResponse value,
+          $Res Function(_$_AppointmentResponse) then) =
+      __$$_AppointmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -2229,15 +2198,15 @@ abstract class _$AppointmentResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AppointmentResponseCopyWithImpl<$Res>
+class __$$_AppointmentResponseCopyWithImpl<$Res>
     extends _$AppointmentResponseCopyWithImpl<$Res>
-    implements _$AppointmentResponseCopyWith<$Res> {
-  __$AppointmentResponseCopyWithImpl(
-      _AppointmentResponse _value, $Res Function(_AppointmentResponse) _then)
-      : super(_value, (v) => _then(v as _AppointmentResponse));
+    implements _$$_AppointmentResponseCopyWith<$Res> {
+  __$$_AppointmentResponseCopyWithImpl(_$_AppointmentResponse _value,
+      $Res Function(_$_AppointmentResponse) _then)
+      : super(_value, (v) => _then(v as _$_AppointmentResponse));
 
   @override
-  _AppointmentResponse get _value => super._value as _AppointmentResponse;
+  _$_AppointmentResponse get _value => super._value as _$_AppointmentResponse;
 
   @override
   $Res call({
@@ -2265,7 +2234,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_AppointmentResponse(
+    return _then(_$_AppointmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2299,19 +2268,19 @@ class __$AppointmentResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       appointment: appointment == freezed
@@ -2335,7 +2304,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
           : endElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       participantType: participantType == freezed
-          ? _value.participantType
+          ? _value._participantType
           : participantType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       actor: actor == freezed
@@ -2374,28 +2343,33 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       required this.appointment,
       this.start,
       @JsonKey(name: '_start') this.startElement,
       this.end,
       @JsonKey(name: '_end') this.endElement,
-      this.participantType,
+      final List<CodeableConcept>? participantType,
       this.actor,
       this.participantStatus,
       @JsonKey(name: '_participantStatus') this.participantStatusElement,
       this.comment,
       @JsonKey(name: '_comment') this.commentElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _participantType = participantType,
+        super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentResponseFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -2413,15 +2387,43 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference appointment;
   @override
@@ -2434,8 +2436,15 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
+  final List<CodeableConcept>? _participantType;
   @override
-  final List<CodeableConcept>? participantType;
+  List<CodeableConcept>? get participantType {
+    final value = _participantType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? actor;
   @override
@@ -2458,7 +2467,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AppointmentResponse &&
+            other is _$_AppointmentResponse &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -2471,13 +2480,14 @@ class _$_AppointmentResponse extends _AppointmentResponse {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
                 .equals(other.appointment, appointment) &&
             const DeepCollectionEquality().equals(other.start, start) &&
@@ -2487,7 +2497,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
             const DeepCollectionEquality()
                 .equals(other.endElement, endElement) &&
             const DeepCollectionEquality()
-                .equals(other.participantType, participantType) &&
+                .equals(other._participantType, _participantType) &&
             const DeepCollectionEquality().equals(other.actor, actor) &&
             const DeepCollectionEquality()
                 .equals(other.participantStatus, participantStatus) &&
@@ -2498,6 +2508,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
                 .equals(other.commentElement, commentElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2509,16 +2520,16 @@ class _$_AppointmentResponse extends _AppointmentResponse {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(appointment),
         const DeepCollectionEquality().hash(start),
         const DeepCollectionEquality().hash(startElement),
         const DeepCollectionEquality().hash(end),
         const DeepCollectionEquality().hash(endElement),
-        const DeepCollectionEquality().hash(participantType),
+        const DeepCollectionEquality().hash(_participantType),
         const DeepCollectionEquality().hash(actor),
         const DeepCollectionEquality().hash(participantStatus),
         const DeepCollectionEquality().hash(participantStatusElement),
@@ -2528,8 +2539,8 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @JsonKey(ignore: true)
   @override
-  _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith =>
-      __$AppointmentResponseCopyWithImpl<_AppointmentResponse>(
+  _$$_AppointmentResponseCopyWith<_$_AppointmentResponse> get copyWith =>
+      __$$_AppointmentResponseCopyWithImpl<_$_AppointmentResponse>(
           this, _$identity);
 
   @override
@@ -2540,162 +2551,105 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
 abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      required Reference appointment,
-      Instant? start,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      required final Reference appointment,
+      final Instant? start,
       @JsonKey(name: '_start')
-          Element? startElement,
-      Instant? end,
+          final Element? startElement,
+      final Instant? end,
       @JsonKey(name: '_end')
-          Element? endElement,
-      List<CodeableConcept>? participantType,
-      Reference? actor,
-      Code? participantStatus,
+          final Element? endElement,
+      final List<CodeableConcept>? participantType,
+      final Reference? actor,
+      final Code? participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element? participantStatusElement,
-      String? comment,
+          final Element? participantStatusElement,
+      final String? comment,
       @JsonKey(name: '_comment')
-          Element? commentElement}) = _$_AppointmentResponse;
+          final Element? commentElement}) = _$_AppointmentResponse;
   _AppointmentResponse._() : super._();
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Reference get appointment;
+  Reference get appointment => throw _privateConstructorUsedError;
   @override
-  Instant? get start;
+  Instant? get start => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_start')
-  Element? get startElement;
+  Element? get startElement => throw _privateConstructorUsedError;
   @override
-  Instant? get end;
+  Instant? get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_end')
-  Element? get endElement;
+  Element? get endElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get participantType;
+  List<CodeableConcept>? get participantType =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get actor;
+  Reference? get actor => throw _privateConstructorUsedError;
   @override
-  Code? get participantStatus;
+  Code? get participantStatus => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_participantStatus')
-  Element? get participantStatusElement;
+  Element? get participantStatusElement => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith =>
+  _$$_AppointmentResponseCopyWith<_$_AppointmentResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
   return _Schedule.fromJson(json);
 }
-
-/// @nodoc
-class _$ScheduleTearOff {
-  const _$ScheduleTearOff();
-
-  _Schedule call(
-      {R5ResourceType resourceType = R5ResourceType.Schedule,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Boolean? active,
-      @JsonKey(name: '_active') Element? activeElement,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      required List<Reference> actor,
-      Period? planningHorizon,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement}) {
-    return _Schedule(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      active: active,
-      activeElement: activeElement,
-      serviceCategory: serviceCategory,
-      serviceType: serviceType,
-      specialty: specialty,
-      actor: actor,
-      planningHorizon: planningHorizon,
-      comment: comment,
-      commentElement: commentElement,
-    );
-  }
-
-  Schedule fromJson(Map<String, Object?> json) {
-    return Schedule.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Schedule = _$ScheduleTearOff();
 
 /// @nodoc
 mixin _$Schedule {
@@ -2969,9 +2923,10 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
-  factory _$ScheduleCopyWith(_Schedule value, $Res Function(_Schedule) then) =
-      __$ScheduleCopyWithImpl<$Res>;
+abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
+  factory _$$_ScheduleCopyWith(
+          _$_Schedule value, $Res Function(_$_Schedule) then) =
+      __$$_ScheduleCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -3013,13 +2968,14 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
-    implements _$ScheduleCopyWith<$Res> {
-  __$ScheduleCopyWithImpl(_Schedule _value, $Res Function(_Schedule) _then)
-      : super(_value, (v) => _then(v as _Schedule));
+class __$$_ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
+    implements _$$_ScheduleCopyWith<$Res> {
+  __$$_ScheduleCopyWithImpl(
+      _$_Schedule _value, $Res Function(_$_Schedule) _then)
+      : super(_value, (v) => _then(v as _$_Schedule));
 
   @override
-  _Schedule get _value => super._value as _Schedule;
+  _$_Schedule get _value => super._value as _$_Schedule;
 
   @override
   $Res call({
@@ -3045,7 +3001,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_Schedule(
+    return _then(_$_Schedule(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3079,19 +3035,19 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       active: active == freezed
@@ -3103,19 +3059,19 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
           : activeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       serviceCategory: serviceCategory == freezed
-          ? _value.serviceCategory
+          ? _value._serviceCategory
           : serviceCategory // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       serviceType: serviceType == freezed
-          ? _value.serviceType
+          ? _value._serviceType
           : serviceType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       specialty: specialty == freezed
-          ? _value.specialty
+          ? _value._specialty
           : specialty // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       actor: actor == freezed
-          ? _value.actor
+          ? _value._actor
           : actor // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
       planningHorizon: planningHorizon == freezed
@@ -3146,26 +3102,34 @@ class _$_Schedule extends _Schedule {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.active,
       @JsonKey(name: '_active') this.activeElement,
-      this.serviceCategory,
-      this.serviceType,
-      this.specialty,
-      required this.actor,
+      final List<CodeableConcept>? serviceCategory,
+      final List<CodeableConcept>? serviceType,
+      final List<CodeableConcept>? specialty,
+      required final List<Reference> actor,
       this.planningHorizon,
       this.comment,
       @JsonKey(name: '_comment') this.commentElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _serviceCategory = serviceCategory,
+        _serviceType = serviceType,
+        _specialty = specialty,
+        _actor = actor,
+        super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$$_ScheduleFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -3183,28 +3147,82 @@ class _$_Schedule extends _Schedule {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? active;
   @override
   @JsonKey(name: '_active')
   final Element? activeElement;
+  final List<CodeableConcept>? _serviceCategory;
   @override
-  final List<CodeableConcept>? serviceCategory;
+  List<CodeableConcept>? get serviceCategory {
+    final value = _serviceCategory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _serviceType;
   @override
-  final List<CodeableConcept>? serviceType;
+  List<CodeableConcept>? get serviceType {
+    final value = _serviceType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _specialty;
   @override
-  final List<CodeableConcept>? specialty;
+  List<CodeableConcept>? get specialty {
+    final value = _specialty;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference> _actor;
   @override
-  final List<Reference> actor;
+  List<Reference> get actor {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_actor);
+  }
+
   @override
   final Period? planningHorizon;
   @override
@@ -3222,7 +3240,7 @@ class _$_Schedule extends _Schedule {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Schedule &&
+            other is _$_Schedule &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -3235,22 +3253,24 @@ class _$_Schedule extends _Schedule {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality().equals(other.active, active) &&
             const DeepCollectionEquality()
                 .equals(other.activeElement, activeElement) &&
             const DeepCollectionEquality()
-                .equals(other.serviceCategory, serviceCategory) &&
+                .equals(other._serviceCategory, _serviceCategory) &&
             const DeepCollectionEquality()
-                .equals(other.serviceType, serviceType) &&
-            const DeepCollectionEquality().equals(other.specialty, specialty) &&
-            const DeepCollectionEquality().equals(other.actor, actor) &&
+                .equals(other._serviceType, _serviceType) &&
+            const DeepCollectionEquality()
+                .equals(other._specialty, _specialty) &&
+            const DeepCollectionEquality().equals(other._actor, _actor) &&
             const DeepCollectionEquality()
                 .equals(other.planningHorizon, planningHorizon) &&
             const DeepCollectionEquality().equals(other.comment, comment) &&
@@ -3258,6 +3278,7 @@ class _$_Schedule extends _Schedule {
                 .equals(other.commentElement, commentElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3269,16 +3290,16 @@ class _$_Schedule extends _Schedule {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(active),
         const DeepCollectionEquality().hash(activeElement),
-        const DeepCollectionEquality().hash(serviceCategory),
-        const DeepCollectionEquality().hash(serviceType),
-        const DeepCollectionEquality().hash(specialty),
-        const DeepCollectionEquality().hash(actor),
+        const DeepCollectionEquality().hash(_serviceCategory),
+        const DeepCollectionEquality().hash(_serviceType),
+        const DeepCollectionEquality().hash(_specialty),
+        const DeepCollectionEquality().hash(_actor),
         const DeepCollectionEquality().hash(planningHorizon),
         const DeepCollectionEquality().hash(comment),
         const DeepCollectionEquality().hash(commentElement)
@@ -3286,8 +3307,8 @@ class _$_Schedule extends _Schedule {
 
   @JsonKey(ignore: true)
   @override
-  _$ScheduleCopyWith<_Schedule> get copyWith =>
-      __$ScheduleCopyWithImpl<_Schedule>(this, _$identity);
+  _$$_ScheduleCopyWith<_$_Schedule> get copyWith =>
+      __$$_ScheduleCopyWithImpl<_$_Schedule>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3297,158 +3318,89 @@ class _$_Schedule extends _Schedule {
 
 abstract class _Schedule extends Schedule {
   factory _Schedule(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Boolean? active,
-      @JsonKey(name: '_active') Element? activeElement,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      required List<Reference> actor,
-      Period? planningHorizon,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement}) = _$_Schedule;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Boolean? active,
+      @JsonKey(name: '_active') final Element? activeElement,
+      final List<CodeableConcept>? serviceCategory,
+      final List<CodeableConcept>? serviceType,
+      final List<CodeableConcept>? specialty,
+      required final List<Reference> actor,
+      final Period? planningHorizon,
+      final String? comment,
+      @JsonKey(name: '_comment') final Element? commentElement}) = _$_Schedule;
   _Schedule._() : super._();
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Boolean? get active;
+  Boolean? get active => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_active')
-  Element? get activeElement;
+  Element? get activeElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get serviceCategory;
+  List<CodeableConcept>? get serviceCategory =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get serviceType;
+  List<CodeableConcept>? get serviceType => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get specialty;
+  List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
   @override
-  List<Reference> get actor;
+  List<Reference> get actor => throw _privateConstructorUsedError;
   @override
-  Period? get planningHorizon;
+  Period? get planningHorizon => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ScheduleCopyWith<_Schedule> get copyWith =>
+  _$$_ScheduleCopyWith<_$_Schedule> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Slot _$SlotFromJson(Map<String, dynamic> json) {
   return _Slot.fromJson(json);
 }
-
-/// @nodoc
-class _$SlotTearOff {
-  const _$SlotTearOff();
-
-  _Slot call(
-      {R5ResourceType resourceType = R5ResourceType.Slot,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      List<CodeableConcept>? appointmentType,
-      required Reference schedule,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      Instant? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Instant? end,
-      @JsonKey(name: '_end') Element? endElement,
-      Boolean? overbooked,
-      @JsonKey(name: '_overbooked') Element? overbookedElement,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement}) {
-    return _Slot(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      serviceCategory: serviceCategory,
-      serviceType: serviceType,
-      specialty: specialty,
-      appointmentType: appointmentType,
-      schedule: schedule,
-      status: status,
-      statusElement: statusElement,
-      start: start,
-      startElement: startElement,
-      end: end,
-      endElement: endElement,
-      overbooked: overbooked,
-      overbookedElement: overbookedElement,
-      comment: comment,
-      commentElement: commentElement,
-    );
-  }
-
-  Slot fromJson(Map<String, Object?> json) {
-    return Slot.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Slot = _$SlotTearOff();
 
 /// @nodoc
 mixin _$Slot {
@@ -3799,9 +3751,9 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
-  factory _$SlotCopyWith(_Slot value, $Res Function(_Slot) then) =
-      __$SlotCopyWithImpl<$Res>;
+abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
+  factory _$$_SlotCopyWith(_$_Slot value, $Res Function(_$_Slot) then) =
+      __$$_SlotCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -3855,13 +3807,13 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
-    implements _$SlotCopyWith<$Res> {
-  __$SlotCopyWithImpl(_Slot _value, $Res Function(_Slot) _then)
-      : super(_value, (v) => _then(v as _Slot));
+class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
+    implements _$$_SlotCopyWith<$Res> {
+  __$$_SlotCopyWithImpl(_$_Slot _value, $Res Function(_$_Slot) _then)
+      : super(_value, (v) => _then(v as _$_Slot));
 
   @override
-  _Slot get _value => super._value as _Slot;
+  _$_Slot get _value => super._value as _$_Slot;
 
   @override
   $Res call({
@@ -3893,7 +3845,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_Slot(
+    return _then(_$_Slot(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3927,35 +3879,35 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       serviceCategory: serviceCategory == freezed
-          ? _value.serviceCategory
+          ? _value._serviceCategory
           : serviceCategory // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       serviceType: serviceType == freezed
-          ? _value.serviceType
+          ? _value._serviceType
           : serviceType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       specialty: specialty == freezed
-          ? _value.specialty
+          ? _value._specialty
           : specialty // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       appointmentType: appointmentType == freezed
-          ? _value.appointmentType
+          ? _value._appointmentType
           : appointmentType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       schedule: schedule == freezed
@@ -4018,14 +3970,14 @@ class _$_Slot extends _Slot {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
-      this.serviceCategory,
-      this.serviceType,
-      this.specialty,
-      this.appointmentType,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<CodeableConcept>? serviceCategory,
+      final List<CodeableConcept>? serviceType,
+      final List<CodeableConcept>? specialty,
+      final List<CodeableConcept>? appointmentType,
       required this.schedule,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
@@ -4037,12 +3989,20 @@ class _$_Slot extends _Slot {
       @JsonKey(name: '_overbooked') this.overbookedElement,
       this.comment,
       @JsonKey(name: '_comment') this.commentElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _serviceCategory = serviceCategory,
+        _serviceType = serviceType,
+        _specialty = specialty,
+        _appointmentType = appointmentType,
+        super._();
 
   factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -4060,23 +4020,79 @@ class _$_Slot extends _Slot {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _serviceCategory;
   @override
-  final List<CodeableConcept>? serviceCategory;
+  List<CodeableConcept>? get serviceCategory {
+    final value = _serviceCategory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _serviceType;
   @override
-  final List<CodeableConcept>? serviceType;
+  List<CodeableConcept>? get serviceType {
+    final value = _serviceType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _specialty;
   @override
-  final List<CodeableConcept>? specialty;
+  List<CodeableConcept>? get specialty {
+    final value = _specialty;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _appointmentType;
   @override
-  final List<CodeableConcept>? appointmentType;
+  List<CodeableConcept>? get appointmentType {
+    final value = _appointmentType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference schedule;
   @override
@@ -4114,7 +4130,7 @@ class _$_Slot extends _Slot {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Slot &&
+            other is _$_Slot &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -4127,20 +4143,22 @@ class _$_Slot extends _Slot {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.serviceCategory, serviceCategory) &&
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
-                .equals(other.serviceType, serviceType) &&
-            const DeepCollectionEquality().equals(other.specialty, specialty) &&
+                .equals(other._serviceCategory, _serviceCategory) &&
             const DeepCollectionEquality()
-                .equals(other.appointmentType, appointmentType) &&
+                .equals(other._serviceType, _serviceType) &&
+            const DeepCollectionEquality()
+                .equals(other._specialty, _specialty) &&
+            const DeepCollectionEquality()
+                .equals(other._appointmentType, _appointmentType) &&
             const DeepCollectionEquality().equals(other.schedule, schedule) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
@@ -4160,6 +4178,7 @@ class _$_Slot extends _Slot {
                 .equals(other.commentElement, commentElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4171,14 +4190,14 @@ class _$_Slot extends _Slot {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
-        const DeepCollectionEquality().hash(serviceCategory),
-        const DeepCollectionEquality().hash(serviceType),
-        const DeepCollectionEquality().hash(specialty),
-        const DeepCollectionEquality().hash(appointmentType),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_serviceCategory),
+        const DeepCollectionEquality().hash(_serviceType),
+        const DeepCollectionEquality().hash(_specialty),
+        const DeepCollectionEquality().hash(_appointmentType),
         const DeepCollectionEquality().hash(schedule),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
@@ -4194,8 +4213,8 @@ class _$_Slot extends _Slot {
 
   @JsonKey(ignore: true)
   @override
-  _$SlotCopyWith<_Slot> get copyWith =>
-      __$SlotCopyWithImpl<_Slot>(this, _$identity);
+  _$$_SlotCopyWith<_$_Slot> get copyWith =>
+      __$$_SlotCopyWithImpl<_$_Slot>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4205,222 +4224,110 @@ class _$_Slot extends _Slot {
 
 abstract class _Slot extends Slot {
   factory _Slot(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      List<CodeableConcept>? appointmentType,
-      required Reference schedule,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      Instant? start,
-      @JsonKey(name: '_start') Element? startElement,
-      Instant? end,
-      @JsonKey(name: '_end') Element? endElement,
-      Boolean? overbooked,
-      @JsonKey(name: '_overbooked') Element? overbookedElement,
-      String? comment,
-      @JsonKey(name: '_comment') Element? commentElement}) = _$_Slot;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<CodeableConcept>? serviceCategory,
+      final List<CodeableConcept>? serviceType,
+      final List<CodeableConcept>? specialty,
+      final List<CodeableConcept>? appointmentType,
+      required final Reference schedule,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final Instant? start,
+      @JsonKey(name: '_start') final Element? startElement,
+      final Instant? end,
+      @JsonKey(name: '_end') final Element? endElement,
+      final Boolean? overbooked,
+      @JsonKey(name: '_overbooked') final Element? overbookedElement,
+      final String? comment,
+      @JsonKey(name: '_comment') final Element? commentElement}) = _$_Slot;
   _Slot._() : super._();
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get serviceCategory;
+  List<CodeableConcept>? get serviceCategory =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get serviceType;
+  List<CodeableConcept>? get serviceType => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get specialty;
+  List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get appointmentType;
+  List<CodeableConcept>? get appointmentType =>
+      throw _privateConstructorUsedError;
   @override
-  Reference get schedule;
+  Reference get schedule => throw _privateConstructorUsedError;
   @override
-  Code? get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Instant? get start;
+  Instant? get start => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_start')
-  Element? get startElement;
+  Element? get startElement => throw _privateConstructorUsedError;
   @override
-  Instant? get end;
+  Instant? get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_end')
-  Element? get endElement;
+  Element? get endElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get overbooked;
+  Boolean? get overbooked => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_overbooked')
-  Element? get overbookedElement;
+  Element? get overbookedElement => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SlotCopyWith<_Slot> get copyWith => throw _privateConstructorUsedError;
+  _$$_SlotCopyWith<_$_Slot> get copyWith => throw _privateConstructorUsedError;
 }
 
 Task _$TaskFromJson(Map<String, dynamic> json) {
   return _Task.fromJson(json);
 }
-
-/// @nodoc
-class _$TaskTearOff {
-  const _$TaskTearOff();
-
-  _Task call(
-      {R5ResourceType resourceType = R5ResourceType.Task,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
-      FhirUri? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Identifier? groupIdentifier,
-      List<Reference>? partOf,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      CodeableConcept? statusReason,
-      CodeableConcept? businessStatus,
-      Code? intent,
-      @JsonKey(name: '_intent') Element? intentElement,
-      Code? priority,
-      @JsonKey(name: '_priority') Element? priorityElement,
-      CodeableConcept? code,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Reference? focus,
-      @JsonKey(name: 'for') Reference? for_,
-      Reference? encounter,
-      Period? executionPeriod,
-      DateTime? authoredOn,
-      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
-      DateTime? lastModified,
-      @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-      Reference? requester,
-      List<CodeableConcept>? performerType,
-      Reference? owner,
-      Reference? location,
-      CodeableConcept? reasonCode,
-      Reference? reasonReference,
-      List<Reference>? insurance,
-      List<Annotation>? note,
-      List<Reference>? relevantHistory,
-      TaskRestriction? restriction,
-      List<TaskInput>? input,
-      List<TaskOutput>? output}) {
-    return _Task(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      instantiatesCanonical: instantiatesCanonical,
-      instantiatesUri: instantiatesUri,
-      instantiatesUriElement: instantiatesUriElement,
-      basedOn: basedOn,
-      groupIdentifier: groupIdentifier,
-      partOf: partOf,
-      status: status,
-      statusElement: statusElement,
-      statusReason: statusReason,
-      businessStatus: businessStatus,
-      intent: intent,
-      intentElement: intentElement,
-      priority: priority,
-      priorityElement: priorityElement,
-      code: code,
-      description: description,
-      descriptionElement: descriptionElement,
-      focus: focus,
-      for_: for_,
-      encounter: encounter,
-      executionPeriod: executionPeriod,
-      authoredOn: authoredOn,
-      authoredOnElement: authoredOnElement,
-      lastModified: lastModified,
-      lastModifiedElement: lastModifiedElement,
-      requester: requester,
-      performerType: performerType,
-      owner: owner,
-      location: location,
-      reasonCode: reasonCode,
-      reasonReference: reasonReference,
-      insurance: insurance,
-      note: note,
-      relevantHistory: relevantHistory,
-      restriction: restriction,
-      input: input,
-      output: output,
-    );
-  }
-
-  Task fromJson(Map<String, Object?> json) {
-    return Task.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Task = _$TaskTearOff();
 
 /// @nodoc
 mixin _$Task {
@@ -5111,9 +5018,9 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
-  factory _$TaskCopyWith(_Task value, $Res Function(_Task) then) =
-      __$TaskCopyWithImpl<$Res>;
+abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
+  factory _$$_TaskCopyWith(_$_Task value, $Res Function(_$_Task) then) =
+      __$$_TaskCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -5219,13 +5126,13 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
-    implements _$TaskCopyWith<$Res> {
-  __$TaskCopyWithImpl(_Task _value, $Res Function(_Task) _then)
-      : super(_value, (v) => _then(v as _Task));
+class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
+    implements _$$_TaskCopyWith<$Res> {
+  __$$_TaskCopyWithImpl(_$_Task _value, $Res Function(_$_Task) _then)
+      : super(_value, (v) => _then(v as _$_Task));
 
   @override
-  _Task get _value => super._value as _Task;
+  _$_Task get _value => super._value as _$_Task;
 
   @override
   $Res call({
@@ -5279,7 +5186,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
     Object? input = freezed,
     Object? output = freezed,
   }) {
-    return _then(_Task(
+    return _then(_$_Task(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5313,19 +5220,19 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
-          ? _value.identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       instantiatesCanonical: instantiatesCanonical == freezed
@@ -5341,7 +5248,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       basedOn: basedOn == freezed
-          ? _value.basedOn
+          ? _value._basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       groupIdentifier: groupIdentifier == freezed
@@ -5349,7 +5256,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
           : groupIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       partOf: partOf == freezed
-          ? _value.partOf
+          ? _value._partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: status == freezed
@@ -5433,7 +5340,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
           : requester // ignore: cast_nullable_to_non_nullable
               as Reference?,
       performerType: performerType == freezed
-          ? _value.performerType
+          ? _value._performerType
           : performerType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       owner: owner == freezed
@@ -5453,15 +5360,15 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       insurance: insurance == freezed
-          ? _value.insurance
+          ? _value._insurance
           : insurance // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       relevantHistory: relevantHistory == freezed
-          ? _value.relevantHistory
+          ? _value._relevantHistory
           : relevantHistory // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       restriction: restriction == freezed
@@ -5469,11 +5376,11 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
           : restriction // ignore: cast_nullable_to_non_nullable
               as TaskRestriction?,
       input: input == freezed
-          ? _value.input
+          ? _value._input
           : input // ignore: cast_nullable_to_non_nullable
               as List<TaskInput>?,
       output: output == freezed
-          ? _value.output
+          ? _value._output
           : output // ignore: cast_nullable_to_non_nullable
               as List<TaskOutput>?,
     ));
@@ -5492,16 +5399,16 @@ class _$_Task extends _Task {
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.identifier,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       this.instantiatesCanonical,
       this.instantiatesUri,
       @JsonKey(name: '_instantiatesUri') this.instantiatesUriElement,
-      this.basedOn,
+      final List<Reference>? basedOn,
       this.groupIdentifier,
-      this.partOf,
+      final List<Reference>? partOf,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
       this.statusReason,
@@ -5522,23 +5429,35 @@ class _$_Task extends _Task {
       this.lastModified,
       @JsonKey(name: '_lastModified') this.lastModifiedElement,
       this.requester,
-      this.performerType,
+      final List<CodeableConcept>? performerType,
       this.owner,
       this.location,
       this.reasonCode,
       this.reasonReference,
-      this.insurance,
-      this.note,
-      this.relevantHistory,
+      final List<Reference>? insurance,
+      final List<Annotation>? note,
+      final List<Reference>? relevantHistory,
       this.restriction,
-      this.input,
-      this.output})
-      : super._();
+      final List<TaskInput>? input,
+      final List<TaskOutput>? output})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _basedOn = basedOn,
+        _partOf = partOf,
+        _performerType = performerType,
+        _insurance = insurance,
+        _note = note,
+        _relevantHistory = relevantHistory,
+        _input = input,
+        _output = output,
+        super._();
 
   factory _$_Task.fromJson(Map<String, dynamic> json) => _$$_TaskFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -5556,15 +5475,43 @@ class _$_Task extends _Task {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Canonical? instantiatesCanonical;
   @override
@@ -5572,12 +5519,26 @@ class _$_Task extends _Task {
   @override
   @JsonKey(name: '_instantiatesUri')
   final Element? instantiatesUriElement;
+  final List<Reference>? _basedOn;
   @override
-  final List<Reference>? basedOn;
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? groupIdentifier;
+  final List<Reference>? _partOf;
   @override
-  final List<Reference>? partOf;
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
@@ -5625,8 +5586,15 @@ class _$_Task extends _Task {
   final Element? lastModifiedElement;
   @override
   final Reference? requester;
+  final List<CodeableConcept>? _performerType;
   @override
-  final List<CodeableConcept>? performerType;
+  List<CodeableConcept>? get performerType {
+    final value = _performerType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? owner;
   @override
@@ -5635,18 +5603,52 @@ class _$_Task extends _Task {
   final CodeableConcept? reasonCode;
   @override
   final Reference? reasonReference;
+  final List<Reference>? _insurance;
   @override
-  final List<Reference>? insurance;
+  List<Reference>? get insurance {
+    final value = _insurance;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _relevantHistory;
   @override
-  final List<Reference>? relevantHistory;
+  List<Reference>? get relevantHistory {
+    final value = _relevantHistory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TaskRestriction? restriction;
+  final List<TaskInput>? _input;
   @override
-  final List<TaskInput>? input;
+  List<TaskInput>? get input {
+    final value = _input;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TaskOutput>? _output;
   @override
-  final List<TaskOutput>? output;
+  List<TaskOutput>? get output {
+    final value = _output;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -5657,7 +5659,7 @@ class _$_Task extends _Task {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Task &&
+            other is _$_Task &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -5670,23 +5672,24 @@ class _$_Task extends _Task {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.identifier, identifier) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
                 .equals(other.instantiatesCanonical, instantiatesCanonical) &&
             const DeepCollectionEquality()
                 .equals(other.instantiatesUri, instantiatesUri) &&
             const DeepCollectionEquality()
                 .equals(other.instantiatesUriElement, instantiatesUriElement) &&
-            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
             const DeepCollectionEquality()
                 .equals(other.groupIdentifier, groupIdentifier) &&
-            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -5720,23 +5723,25 @@ class _$_Task extends _Task {
                 .equals(other.lastModifiedElement, lastModifiedElement) &&
             const DeepCollectionEquality().equals(other.requester, requester) &&
             const DeepCollectionEquality()
-                .equals(other.performerType, performerType) &&
+                .equals(other._performerType, _performerType) &&
             const DeepCollectionEquality().equals(other.owner, owner) &&
             const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality()
                 .equals(other.reasonCode, reasonCode) &&
             const DeepCollectionEquality()
                 .equals(other.reasonReference, reasonReference) &&
-            const DeepCollectionEquality().equals(other.insurance, insurance) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other.relevantHistory, relevantHistory) &&
+                .equals(other._insurance, _insurance) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality()
+                .equals(other._relevantHistory, _relevantHistory) &&
             const DeepCollectionEquality()
                 .equals(other.restriction, restriction) &&
-            const DeepCollectionEquality().equals(other.input, input) &&
-            const DeepCollectionEquality().equals(other.output, output));
+            const DeepCollectionEquality().equals(other._input, _input) &&
+            const DeepCollectionEquality().equals(other._output, _output));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -5748,16 +5753,16 @@ class _$_Task extends _Task {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(instantiatesCanonical),
         const DeepCollectionEquality().hash(instantiatesUri),
         const DeepCollectionEquality().hash(instantiatesUriElement),
-        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(_basedOn),
         const DeepCollectionEquality().hash(groupIdentifier),
-        const DeepCollectionEquality().hash(partOf),
+        const DeepCollectionEquality().hash(_partOf),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(statusReason),
@@ -5778,23 +5783,23 @@ class _$_Task extends _Task {
         const DeepCollectionEquality().hash(lastModified),
         const DeepCollectionEquality().hash(lastModifiedElement),
         const DeepCollectionEquality().hash(requester),
-        const DeepCollectionEquality().hash(performerType),
+        const DeepCollectionEquality().hash(_performerType),
         const DeepCollectionEquality().hash(owner),
         const DeepCollectionEquality().hash(location),
         const DeepCollectionEquality().hash(reasonCode),
         const DeepCollectionEquality().hash(reasonReference),
-        const DeepCollectionEquality().hash(insurance),
-        const DeepCollectionEquality().hash(note),
-        const DeepCollectionEquality().hash(relevantHistory),
+        const DeepCollectionEquality().hash(_insurance),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_relevantHistory),
         const DeepCollectionEquality().hash(restriction),
-        const DeepCollectionEquality().hash(input),
-        const DeepCollectionEquality().hash(output)
+        const DeepCollectionEquality().hash(_input),
+        const DeepCollectionEquality().hash(_output)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$TaskCopyWith<_Task> get copyWith =>
-      __$TaskCopyWithImpl<_Task>(this, _$identity);
+  _$$_TaskCopyWith<_$_Task> get copyWith =>
+      __$$_TaskCopyWithImpl<_$_Task>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5804,207 +5809,178 @@ class _$_Task extends _Task {
 
 abstract class _Task extends Task {
   factory _Task(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
-      FhirUri? instantiatesUri,
-      @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Identifier? groupIdentifier,
-      List<Reference>? partOf,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      CodeableConcept? statusReason,
-      CodeableConcept? businessStatus,
-      Code? intent,
-      @JsonKey(name: '_intent') Element? intentElement,
-      Code? priority,
-      @JsonKey(name: '_priority') Element? priorityElement,
-      CodeableConcept? code,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Reference? focus,
-      @JsonKey(name: 'for') Reference? for_,
-      Reference? encounter,
-      Period? executionPeriod,
-      DateTime? authoredOn,
-      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
-      DateTime? lastModified,
-      @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-      Reference? requester,
-      List<CodeableConcept>? performerType,
-      Reference? owner,
-      Reference? location,
-      CodeableConcept? reasonCode,
-      Reference? reasonReference,
-      List<Reference>? insurance,
-      List<Annotation>? note,
-      List<Reference>? relevantHistory,
-      TaskRestriction? restriction,
-      List<TaskInput>? input,
-      List<TaskOutput>? output}) = _$_Task;
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Canonical? instantiatesCanonical,
+      final FhirUri? instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') final Element? instantiatesUriElement,
+      final List<Reference>? basedOn,
+      final Identifier? groupIdentifier,
+      final List<Reference>? partOf,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final CodeableConcept? statusReason,
+      final CodeableConcept? businessStatus,
+      final Code? intent,
+      @JsonKey(name: '_intent') final Element? intentElement,
+      final Code? priority,
+      @JsonKey(name: '_priority') final Element? priorityElement,
+      final CodeableConcept? code,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final Reference? focus,
+      @JsonKey(name: 'for') final Reference? for_,
+      final Reference? encounter,
+      final Period? executionPeriod,
+      final DateTime? authoredOn,
+      @JsonKey(name: '_authoredOn') final Element? authoredOnElement,
+      final DateTime? lastModified,
+      @JsonKey(name: '_lastModified') final Element? lastModifiedElement,
+      final Reference? requester,
+      final List<CodeableConcept>? performerType,
+      final Reference? owner,
+      final Reference? location,
+      final CodeableConcept? reasonCode,
+      final Reference? reasonReference,
+      final List<Reference>? insurance,
+      final List<Annotation>? note,
+      final List<Reference>? relevantHistory,
+      final TaskRestriction? restriction,
+      final List<TaskInput>? input,
+      final List<TaskOutput>? output}) = _$_Task;
   _Task._() : super._();
 
   factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Canonical? get instantiatesCanonical;
+  Canonical? get instantiatesCanonical => throw _privateConstructorUsedError;
   @override
-  FhirUri? get instantiatesUri;
+  FhirUri? get instantiatesUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element? get instantiatesUriElement;
+  Element? get instantiatesUriElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get basedOn;
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override
-  Identifier? get groupIdentifier;
+  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get partOf;
+  List<Reference>? get partOf => throw _privateConstructorUsedError;
   @override
-  Code? get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get statusReason;
+  CodeableConcept? get statusReason => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get businessStatus;
+  CodeableConcept? get businessStatus => throw _privateConstructorUsedError;
   @override
-  Code? get intent;
+  Code? get intent => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_intent')
-  Element? get intentElement;
+  Element? get intentElement => throw _privateConstructorUsedError;
   @override
-  Code? get priority;
+  Code? get priority => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement;
+  Element? get priorityElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  Reference? get focus;
+  Reference? get focus => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'for')
-  Reference? get for_;
+  Reference? get for_ => throw _privateConstructorUsedError;
   @override
-  Reference? get encounter;
+  Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  Period? get executionPeriod;
+  Period? get executionPeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get authoredOn;
+  DateTime? get authoredOn => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authoredOn')
-  Element? get authoredOnElement;
+  Element? get authoredOnElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get lastModified;
+  DateTime? get lastModified => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastModified')
-  Element? get lastModifiedElement;
+  Element? get lastModifiedElement => throw _privateConstructorUsedError;
   @override
-  Reference? get requester;
+  Reference? get requester => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get performerType;
+  List<CodeableConcept>? get performerType =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get owner;
+  Reference? get owner => throw _privateConstructorUsedError;
   @override
-  Reference? get location;
+  Reference? get location => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get reasonCode;
+  CodeableConcept? get reasonCode => throw _privateConstructorUsedError;
   @override
-  Reference? get reasonReference;
+  Reference? get reasonReference => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get insurance;
+  List<Reference>? get insurance => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get relevantHistory;
+  List<Reference>? get relevantHistory => throw _privateConstructorUsedError;
   @override
-  TaskRestriction? get restriction;
+  TaskRestriction? get restriction => throw _privateConstructorUsedError;
   @override
-  List<TaskInput>? get input;
+  List<TaskInput>? get input => throw _privateConstructorUsedError;
   @override
-  List<TaskOutput>? get output;
+  List<TaskOutput>? get output => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TaskCopyWith<_Task> get copyWith => throw _privateConstructorUsedError;
+  _$$_TaskCopyWith<_$_Task> get copyWith => throw _privateConstructorUsedError;
 }
 
 TaskRestriction _$TaskRestrictionFromJson(Map<String, dynamic> json) {
   return _TaskRestriction.fromJson(json);
 }
-
-/// @nodoc
-class _$TaskRestrictionTearOff {
-  const _$TaskRestrictionTearOff();
-
-  _TaskRestriction call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      PositiveInt? repetitions,
-      @JsonKey(name: '_repetitions') Element? repetitionsElement,
-      Period? period,
-      List<Reference>? recipient}) {
-    return _TaskRestriction(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      repetitions: repetitions,
-      repetitionsElement: repetitionsElement,
-      period: period,
-      recipient: recipient,
-    );
-  }
-
-  TaskRestriction fromJson(Map<String, Object?> json) {
-    return TaskRestriction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TaskRestriction = _$TaskRestrictionTearOff();
 
 /// @nodoc
 mixin _$TaskRestriction {
@@ -6118,11 +6094,11 @@ class _$TaskRestrictionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TaskRestrictionCopyWith<$Res>
+abstract class _$$_TaskRestrictionCopyWith<$Res>
     implements $TaskRestrictionCopyWith<$Res> {
-  factory _$TaskRestrictionCopyWith(
-          _TaskRestriction value, $Res Function(_TaskRestriction) then) =
-      __$TaskRestrictionCopyWithImpl<$Res>;
+  factory _$$_TaskRestrictionCopyWith(
+          _$_TaskRestriction value, $Res Function(_$_TaskRestriction) then) =
+      __$$_TaskRestrictionCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -6140,15 +6116,15 @@ abstract class _$TaskRestrictionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TaskRestrictionCopyWithImpl<$Res>
+class __$$_TaskRestrictionCopyWithImpl<$Res>
     extends _$TaskRestrictionCopyWithImpl<$Res>
-    implements _$TaskRestrictionCopyWith<$Res> {
-  __$TaskRestrictionCopyWithImpl(
-      _TaskRestriction _value, $Res Function(_TaskRestriction) _then)
-      : super(_value, (v) => _then(v as _TaskRestriction));
+    implements _$$_TaskRestrictionCopyWith<$Res> {
+  __$$_TaskRestrictionCopyWithImpl(
+      _$_TaskRestriction _value, $Res Function(_$_TaskRestriction) _then)
+      : super(_value, (v) => _then(v as _$_TaskRestriction));
 
   @override
-  _TaskRestriction get _value => super._value as _TaskRestriction;
+  _$_TaskRestriction get _value => super._value as _$_TaskRestriction;
 
   @override
   $Res call({
@@ -6160,17 +6136,17 @@ class __$TaskRestrictionCopyWithImpl<$Res>
     Object? period = freezed,
     Object? recipient = freezed,
   }) {
-    return _then(_TaskRestriction(
+    return _then(_$_TaskRestriction(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       repetitions: repetitions == freezed
@@ -6186,7 +6162,7 @@ class __$TaskRestrictionCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
       recipient: recipient == freezed
-          ? _value.recipient
+          ? _value._recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -6198,24 +6174,41 @@ class __$TaskRestrictionCopyWithImpl<$Res>
 class _$_TaskRestriction extends _TaskRestriction {
   _$_TaskRestriction(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.repetitions,
       @JsonKey(name: '_repetitions') this.repetitionsElement,
       this.period,
-      this.recipient})
-      : super._();
+      final List<Reference>? recipient})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _recipient = recipient,
+        super._();
 
   factory _$_TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$$_TaskRestrictionFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final PositiveInt? repetitions;
   @override
@@ -6223,8 +6216,14 @@ class _$_TaskRestriction extends _TaskRestriction {
   final Element? repetitionsElement;
   @override
   final Period? period;
+  final List<Reference>? _recipient;
   @override
-  final List<Reference>? recipient;
+  List<Reference>? get recipient {
+    final value = _recipient;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -6235,35 +6234,37 @@ class _$_TaskRestriction extends _TaskRestriction {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TaskRestriction &&
+            other is _$_TaskRestriction &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.repetitions, repetitions) &&
             const DeepCollectionEquality()
                 .equals(other.repetitionsElement, repetitionsElement) &&
             const DeepCollectionEquality().equals(other.period, period) &&
-            const DeepCollectionEquality().equals(other.recipient, recipient));
+            const DeepCollectionEquality()
+                .equals(other._recipient, _recipient));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(repetitions),
       const DeepCollectionEquality().hash(repetitionsElement),
       const DeepCollectionEquality().hash(period),
-      const DeepCollectionEquality().hash(recipient));
+      const DeepCollectionEquality().hash(_recipient));
 
   @JsonKey(ignore: true)
   @override
-  _$TaskRestrictionCopyWith<_TaskRestriction> get copyWith =>
-      __$TaskRestrictionCopyWithImpl<_TaskRestriction>(this, _$identity);
+  _$$_TaskRestrictionCopyWith<_$_TaskRestriction> get copyWith =>
+      __$$_TaskRestrictionCopyWithImpl<_$_TaskRestriction>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -6273,214 +6274,44 @@ class _$_TaskRestriction extends _TaskRestriction {
 
 abstract class _TaskRestriction extends TaskRestriction {
   factory _TaskRestriction(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      PositiveInt? repetitions,
-      @JsonKey(name: '_repetitions') Element? repetitionsElement,
-      Period? period,
-      List<Reference>? recipient}) = _$_TaskRestriction;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final PositiveInt? repetitions,
+      @JsonKey(name: '_repetitions') final Element? repetitionsElement,
+      final Period? period,
+      final List<Reference>? recipient}) = _$_TaskRestriction;
   _TaskRestriction._() : super._();
 
   factory _TaskRestriction.fromJson(Map<String, dynamic> json) =
       _$_TaskRestriction.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  PositiveInt? get repetitions;
+  PositiveInt? get repetitions => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_repetitions')
-  Element? get repetitionsElement;
+  Element? get repetitionsElement => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get recipient;
+  List<Reference>? get recipient => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TaskRestrictionCopyWith<_TaskRestriction> get copyWith =>
+  _$$_TaskRestrictionCopyWith<_$_TaskRestriction> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TaskInput _$TaskInputFromJson(Map<String, dynamic> json) {
   return _TaskInput.fromJson(json);
 }
-
-/// @nodoc
-class _$TaskInputTearOff {
-  const _$TaskInputTearOff();
-
-  _TaskInput call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
-      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      Markdown? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      FhirUrl? valueUrl,
-      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
-      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Address? valueAddress,
-      Age? valueAge,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      CodeableConcept? valueCodeableConcept,
-      CodeableReference? valueCodeableReference,
-      Coding? valueCoding,
-      ContactPoint? valueContactPoint,
-      Count? valueCount,
-      Distance? valueDistance,
-      Duration? valueDuration,
-      HumanName? valueHumanName,
-      Identifier? valueIdentifier,
-      Money? valueMoney,
-      Period? valuePeriod,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Ratio? valueRatio,
-      RatioRange? valueRatioRange,
-      Reference? valueReference,
-      SampledData? valueSampledData,
-      Signature? valueSignature,
-      Timing? valueTiming,
-      ContactDetail? valueContactDetail,
-      Contributor? valueContributor,
-      DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
-      ParameterDefinition? valueParameterDefinition,
-      RelatedArtifact? valueRelatedArtifact,
-      TriggerDefinition? valueTriggerDefinition,
-      UsageContext? valueUsageContext,
-      Dosage? valueDosage,
-      Meta? valueMeta}) {
-    return _TaskInput(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueBase64Binary: valueBase64Binary,
-      valueBase64BinaryElement: valueBase64BinaryElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueCanonical: valueCanonical,
-      valueCanonicalElement: valueCanonicalElement,
-      valueCode: valueCode,
-      valueCodeElement: valueCodeElement,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valueDecimal: valueDecimal,
-      valueDecimalElement: valueDecimalElement,
-      valueId: valueId,
-      valueIdElement: valueIdElement,
-      valueInstant: valueInstant,
-      valueInstantElement: valueInstantElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueInteger64: valueInteger64,
-      valueInteger64Element: valueInteger64Element,
-      valueMarkdown: valueMarkdown,
-      valueMarkdownElement: valueMarkdownElement,
-      valueOid: valueOid,
-      valueOidElement: valueOidElement,
-      valuePositiveInt: valuePositiveInt,
-      valuePositiveIntElement: valuePositiveIntElement,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueTime: valueTime,
-      valueTimeElement: valueTimeElement,
-      valueUnsignedInt: valueUnsignedInt,
-      valueUnsignedIntElement: valueUnsignedIntElement,
-      valueUri: valueUri,
-      valueUriElement: valueUriElement,
-      valueUrl: valueUrl,
-      valueUrlElement: valueUrlElement,
-      valueUuid: valueUuid,
-      valueUuidElement: valueUuidElement,
-      valueAddress: valueAddress,
-      valueAge: valueAge,
-      valueAnnotation: valueAnnotation,
-      valueAttachment: valueAttachment,
-      valueCodeableConcept: valueCodeableConcept,
-      valueCodeableReference: valueCodeableReference,
-      valueCoding: valueCoding,
-      valueContactPoint: valueContactPoint,
-      valueCount: valueCount,
-      valueDistance: valueDistance,
-      valueDuration: valueDuration,
-      valueHumanName: valueHumanName,
-      valueIdentifier: valueIdentifier,
-      valueMoney: valueMoney,
-      valuePeriod: valuePeriod,
-      valueQuantity: valueQuantity,
-      valueRange: valueRange,
-      valueRatio: valueRatio,
-      valueRatioRange: valueRatioRange,
-      valueReference: valueReference,
-      valueSampledData: valueSampledData,
-      valueSignature: valueSignature,
-      valueTiming: valueTiming,
-      valueContactDetail: valueContactDetail,
-      valueContributor: valueContributor,
-      valueDataRequirement: valueDataRequirement,
-      valueExpression: valueExpression,
-      valueParameterDefinition: valueParameterDefinition,
-      valueRelatedArtifact: valueRelatedArtifact,
-      valueTriggerDefinition: valueTriggerDefinition,
-      valueUsageContext: valueUsageContext,
-      valueDosage: valueDosage,
-      valueMeta: valueMeta,
-    );
-  }
-
-  TaskInput fromJson(Map<String, Object?> json) {
-    return TaskInput.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TaskInput = _$TaskInputTearOff();
 
 /// @nodoc
 mixin _$TaskInput {
@@ -7721,10 +7552,10 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
-  factory _$TaskInputCopyWith(
-          _TaskInput value, $Res Function(_TaskInput) then) =
-      __$TaskInputCopyWithImpl<$Res>;
+abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
+  factory _$$_TaskInputCopyWith(
+          _$_TaskInput value, $Res Function(_$_TaskInput) then) =
+      __$$_TaskInputCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -7914,13 +7745,14 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
-    implements _$TaskInputCopyWith<$Res> {
-  __$TaskInputCopyWithImpl(_TaskInput _value, $Res Function(_TaskInput) _then)
-      : super(_value, (v) => _then(v as _TaskInput));
+class __$$_TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
+    implements _$$_TaskInputCopyWith<$Res> {
+  __$$_TaskInputCopyWithImpl(
+      _$_TaskInput _value, $Res Function(_$_TaskInput) _then)
+      : super(_value, (v) => _then(v as _$_TaskInput));
 
   @override
-  _TaskInput get _value => super._value as _TaskInput;
+  _$_TaskInput get _value => super._value as _$_TaskInput;
 
   @override
   $Res call({
@@ -8002,17 +7834,17 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
     Object? valueDosage = freezed,
     Object? valueMeta = freezed,
   }) {
-    return _then(_TaskInput(
+    return _then(_$_TaskInput(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -8320,8 +8152,8 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
 class _$_TaskInput extends _TaskInput {
   _$_TaskInput(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
@@ -8396,18 +8228,34 @@ class _$_TaskInput extends _TaskInput {
       this.valueUsageContext,
       this.valueDosage,
       this.valueMeta})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_TaskInput.fromJson(Map<String, dynamic> json) =>
       _$$_TaskInputFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -8586,12 +8434,12 @@ class _$_TaskInput extends _TaskInput {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TaskInput &&
+            other is _$_TaskInput &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueBase64Binary, valueBase64Binary) &&
@@ -8709,12 +8557,13 @@ class _$_TaskInput extends _TaskInput {
             const DeepCollectionEquality().equals(other.valueMeta, valueMeta));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(valueBase64Binary),
         const DeepCollectionEquality().hash(valueBase64BinaryElement),
@@ -8793,8 +8642,8 @@ class _$_TaskInput extends _TaskInput {
 
   @JsonKey(ignore: true)
   @override
-  _$TaskInputCopyWith<_TaskInput> get copyWith =>
-      __$TaskInputCopyWithImpl<_TaskInput>(this, _$identity);
+  _$$_TaskInputCopyWith<_$_TaskInput> get copyWith =>
+      __$$_TaskInputCopyWithImpl<_$_TaskInput>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8804,443 +8653,300 @@ class _$_TaskInput extends _TaskInput {
 
 abstract class _TaskInput extends TaskInput {
   factory _TaskInput(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
-      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      Markdown? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      FhirUrl? valueUrl,
-      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
-      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Address? valueAddress,
-      Age? valueAge,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      CodeableConcept? valueCodeableConcept,
-      CodeableReference? valueCodeableReference,
-      Coding? valueCoding,
-      ContactPoint? valueContactPoint,
-      Count? valueCount,
-      Distance? valueDistance,
-      Duration? valueDuration,
-      HumanName? valueHumanName,
-      Identifier? valueIdentifier,
-      Money? valueMoney,
-      Period? valuePeriod,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Ratio? valueRatio,
-      RatioRange? valueRatioRange,
-      Reference? valueReference,
-      SampledData? valueSampledData,
-      Signature? valueSignature,
-      Timing? valueTiming,
-      ContactDetail? valueContactDetail,
-      Contributor? valueContributor,
-      DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
-      ParameterDefinition? valueParameterDefinition,
-      RelatedArtifact? valueRelatedArtifact,
-      TriggerDefinition? valueTriggerDefinition,
-      UsageContext? valueUsageContext,
-      Dosage? valueDosage,
-      Meta? valueMeta}) = _$_TaskInput;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      final Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary')
+          final Element? valueBase64BinaryElement,
+      final Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          final Element? valueBooleanElement,
+      final Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical')
+          final Element? valueCanonicalElement,
+      final Code? valueCode,
+      @JsonKey(name: '_valueCode')
+          final Element? valueCodeElement,
+      final Date? valueDate,
+      @JsonKey(name: '_valueDate')
+          final Element? valueDateElement,
+      final DateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime')
+          final Element? valueDateTimeElement,
+      final Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal')
+          final Element? valueDecimalElement,
+      final Id? valueId,
+      @JsonKey(name: '_valueId')
+          final Element? valueIdElement,
+      final Instant? valueInstant,
+      @JsonKey(name: '_valueInstant')
+          final Element? valueInstantElement,
+      final Integer? valueInteger,
+      @JsonKey(name: '_valueInteger')
+          final Element? valueIntegerElement,
+      final Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64')
+          final Element? valueInteger64Element,
+      final Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown')
+          final Element? valueMarkdownElement,
+      final Oid? valueOid,
+      @JsonKey(name: '_valueOid')
+          final Element? valueOidElement,
+      final PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt')
+          final Element? valuePositiveIntElement,
+      final Markdown? valueString,
+      @JsonKey(name: '_valueString')
+          final Element? valueStringElement,
+      final Time? valueTime,
+      @JsonKey(name: '_valueTime')
+          final Element? valueTimeElement,
+      final UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt')
+          final Element? valueUnsignedIntElement,
+      final FhirUri? valueUri,
+      @JsonKey(name: '_valueUri')
+          final Element? valueUriElement,
+      final FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl')
+          final Element? valueUrlElement,
+      final Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid')
+          final Element? valueUuidElement,
+      final Address? valueAddress,
+      final Age? valueAge,
+      final Annotation? valueAnnotation,
+      final Attachment? valueAttachment,
+      final CodeableConcept? valueCodeableConcept,
+      final CodeableReference? valueCodeableReference,
+      final Coding? valueCoding,
+      final ContactPoint? valueContactPoint,
+      final Count? valueCount,
+      final Distance? valueDistance,
+      final Duration? valueDuration,
+      final HumanName? valueHumanName,
+      final Identifier? valueIdentifier,
+      final Money? valueMoney,
+      final Period? valuePeriod,
+      final Quantity? valueQuantity,
+      final Range? valueRange,
+      final Ratio? valueRatio,
+      final RatioRange? valueRatioRange,
+      final Reference? valueReference,
+      final SampledData? valueSampledData,
+      final Signature? valueSignature,
+      final Timing? valueTiming,
+      final ContactDetail? valueContactDetail,
+      final Contributor? valueContributor,
+      final DataRequirement? valueDataRequirement,
+      final Expression? valueExpression,
+      final ParameterDefinition? valueParameterDefinition,
+      final RelatedArtifact? valueRelatedArtifact,
+      final TriggerDefinition? valueTriggerDefinition,
+      final UsageContext? valueUsageContext,
+      final Dosage? valueDosage,
+      final Meta? valueMeta}) = _$_TaskInput;
   _TaskInput._() : super._();
 
   factory _TaskInput.fromJson(Map<String, dynamic> json) =
       _$_TaskInput.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get valueBase64Binary;
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  Element? get valueBase64BinaryElement;
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get valueCanonical;
+  Canonical? get valueCanonical => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueCanonical')
-  Element? get valueCanonicalElement;
+  Element? get valueCanonicalElement => throw _privateConstructorUsedError;
   @override
-  Code? get valueCode;
+  Code? get valueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueCode')
-  Element? get valueCodeElement;
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime;
+  DateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element? get valueDateTimeElement;
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valueDecimal;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
   @override
-  Id? get valueId;
+  Id? get valueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueId')
-  Element? get valueIdElement;
+  Element? get valueIdElement => throw _privateConstructorUsedError;
   @override
-  Instant? get valueInstant;
+  Instant? get valueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInstant')
-  Element? get valueInstantElement;
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
   @override
-  Integer? get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Integer64? get valueInteger64;
+  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger64')
-  Element? get valueInteger64Element;
+  Element? get valueInteger64Element => throw _privateConstructorUsedError;
   @override
-  Markdown? get valueMarkdown;
+  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueMarkdown')
-  Element? get valueMarkdownElement;
+  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Oid? get valueOid;
+  Oid? get valueOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueOid')
-  Element? get valueOidElement;
+  Element? get valueOidElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get valuePositiveInt;
+  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  Element? get valuePositiveIntElement;
+  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get valueString;
+  Markdown? get valueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   @override
-  Time? get valueTime;
+  Time? get valueTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueTime')
-  Element? get valueTimeElement;
+  Element? get valueTimeElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get valueUnsignedInt;
+  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  Element? get valueUnsignedIntElement;
+  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get valueUri;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUri')
-  Element? get valueUriElement;
+  Element? get valueUriElement => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get valueUrl;
+  FhirUrl? get valueUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUrl')
-  Element? get valueUrlElement;
+  Element? get valueUrlElement => throw _privateConstructorUsedError;
   @override
-  Uuid? get valueUuid;
+  Uuid? get valueUuid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUuid')
-  Element? get valueUuidElement;
+  Element? get valueUuidElement => throw _privateConstructorUsedError;
   @override
-  Address? get valueAddress;
+  Address? get valueAddress => throw _privateConstructorUsedError;
   @override
-  Age? get valueAge;
+  Age? get valueAge => throw _privateConstructorUsedError;
   @override
-  Annotation? get valueAnnotation;
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableReference? get valueCodeableReference;
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get valueCoding;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get valueContactPoint;
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   @override
-  Count? get valueCount;
+  Count? get valueCount => throw _privateConstructorUsedError;
   @override
-  Distance? get valueDistance;
+  Distance? get valueDistance => throw _privateConstructorUsedError;
   @override
-  Duration? get valueDuration;
+  Duration? get valueDuration => throw _privateConstructorUsedError;
   @override
-  HumanName? get valueHumanName;
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override
-  Identifier? get valueIdentifier;
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   @override
-  Money? get valueMoney;
+  Money? get valueMoney => throw _privateConstructorUsedError;
   @override
-  Period? get valuePeriod;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get valueRange;
+  Range? get valueRange => throw _privateConstructorUsedError;
   @override
-  Ratio? get valueRatio;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
   @override
-  RatioRange? get valueRatioRange;
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
   @override
-  Reference? get valueReference;
+  Reference? get valueReference => throw _privateConstructorUsedError;
   @override
-  SampledData? get valueSampledData;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
   @override
-  Signature? get valueSignature;
+  Signature? get valueSignature => throw _privateConstructorUsedError;
   @override
-  Timing? get valueTiming;
+  Timing? get valueTiming => throw _privateConstructorUsedError;
   @override
-  ContactDetail? get valueContactDetail;
+  ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
   @override
-  Contributor? get valueContributor;
+  Contributor? get valueContributor => throw _privateConstructorUsedError;
   @override
-  DataRequirement? get valueDataRequirement;
+  DataRequirement? get valueDataRequirement =>
+      throw _privateConstructorUsedError;
   @override
-  Expression? get valueExpression;
+  Expression? get valueExpression => throw _privateConstructorUsedError;
   @override
-  ParameterDefinition? get valueParameterDefinition;
+  ParameterDefinition? get valueParameterDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  RelatedArtifact? get valueRelatedArtifact;
+  RelatedArtifact? get valueRelatedArtifact =>
+      throw _privateConstructorUsedError;
   @override
-  TriggerDefinition? get valueTriggerDefinition;
+  TriggerDefinition? get valueTriggerDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  UsageContext? get valueUsageContext;
+  UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
   @override
-  Dosage? get valueDosage;
+  Dosage? get valueDosage => throw _privateConstructorUsedError;
   @override
-  Meta? get valueMeta;
+  Meta? get valueMeta => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TaskInputCopyWith<_TaskInput> get copyWith =>
+  _$$_TaskInputCopyWith<_$_TaskInput> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TaskOutput _$TaskOutputFromJson(Map<String, dynamic> json) {
   return _TaskOutput.fromJson(json);
 }
-
-/// @nodoc
-class _$TaskOutputTearOff {
-  const _$TaskOutputTearOff();
-
-  _TaskOutput call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
-      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      Markdown? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      FhirUrl? valueUrl,
-      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
-      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Address? valueAddress,
-      Age? valueAge,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      CodeableConcept? valueCodeableConcept,
-      CodeableReference? valueCodeableReference,
-      Coding? valueCoding,
-      ContactPoint? valueContactPoint,
-      Count? valueCount,
-      Distance? valueDistance,
-      Duration? valueDuration,
-      HumanName? valueHumanName,
-      Identifier? valueIdentifier,
-      Money? valueMoney,
-      Period? valuePeriod,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Ratio? valueRatio,
-      RatioRange? valueRatioRange,
-      Reference? valueReference,
-      SampledData? valueSampledData,
-      Signature? valueSignature,
-      Timing? valueTiming,
-      ContactDetail? valueContactDetail,
-      Contributor? valueContributor,
-      DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
-      ParameterDefinition? valueParameterDefinition,
-      RelatedArtifact? valueRelatedArtifact,
-      TriggerDefinition? valueTriggerDefinition,
-      UsageContext? valueUsageContext,
-      Dosage? valueDosage,
-      Meta? valueMeta}) {
-    return _TaskOutput(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      valueBase64Binary: valueBase64Binary,
-      valueBase64BinaryElement: valueBase64BinaryElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueCanonical: valueCanonical,
-      valueCanonicalElement: valueCanonicalElement,
-      valueCode: valueCode,
-      valueCodeElement: valueCodeElement,
-      valueDate: valueDate,
-      valueDateElement: valueDateElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valueDecimal: valueDecimal,
-      valueDecimalElement: valueDecimalElement,
-      valueId: valueId,
-      valueIdElement: valueIdElement,
-      valueInstant: valueInstant,
-      valueInstantElement: valueInstantElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueInteger64: valueInteger64,
-      valueInteger64Element: valueInteger64Element,
-      valueMarkdown: valueMarkdown,
-      valueMarkdownElement: valueMarkdownElement,
-      valueOid: valueOid,
-      valueOidElement: valueOidElement,
-      valuePositiveInt: valuePositiveInt,
-      valuePositiveIntElement: valuePositiveIntElement,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueTime: valueTime,
-      valueTimeElement: valueTimeElement,
-      valueUnsignedInt: valueUnsignedInt,
-      valueUnsignedIntElement: valueUnsignedIntElement,
-      valueUri: valueUri,
-      valueUriElement: valueUriElement,
-      valueUrl: valueUrl,
-      valueUrlElement: valueUrlElement,
-      valueUuid: valueUuid,
-      valueUuidElement: valueUuidElement,
-      valueAddress: valueAddress,
-      valueAge: valueAge,
-      valueAnnotation: valueAnnotation,
-      valueAttachment: valueAttachment,
-      valueCodeableConcept: valueCodeableConcept,
-      valueCodeableReference: valueCodeableReference,
-      valueCoding: valueCoding,
-      valueContactPoint: valueContactPoint,
-      valueCount: valueCount,
-      valueDistance: valueDistance,
-      valueDuration: valueDuration,
-      valueHumanName: valueHumanName,
-      valueIdentifier: valueIdentifier,
-      valueMoney: valueMoney,
-      valuePeriod: valuePeriod,
-      valueQuantity: valueQuantity,
-      valueRange: valueRange,
-      valueRatio: valueRatio,
-      valueRatioRange: valueRatioRange,
-      valueReference: valueReference,
-      valueSampledData: valueSampledData,
-      valueSignature: valueSignature,
-      valueTiming: valueTiming,
-      valueContactDetail: valueContactDetail,
-      valueContributor: valueContributor,
-      valueDataRequirement: valueDataRequirement,
-      valueExpression: valueExpression,
-      valueParameterDefinition: valueParameterDefinition,
-      valueRelatedArtifact: valueRelatedArtifact,
-      valueTriggerDefinition: valueTriggerDefinition,
-      valueUsageContext: valueUsageContext,
-      valueDosage: valueDosage,
-      valueMeta: valueMeta,
-    );
-  }
-
-  TaskOutput fromJson(Map<String, Object?> json) {
-    return TaskOutput.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TaskOutput = _$TaskOutputTearOff();
 
 /// @nodoc
 mixin _$TaskOutput {
@@ -10482,10 +10188,11 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
-  factory _$TaskOutputCopyWith(
-          _TaskOutput value, $Res Function(_TaskOutput) then) =
-      __$TaskOutputCopyWithImpl<$Res>;
+abstract class _$$_TaskOutputCopyWith<$Res>
+    implements $TaskOutputCopyWith<$Res> {
+  factory _$$_TaskOutputCopyWith(
+          _$_TaskOutput value, $Res Function(_$_TaskOutput) then) =
+      __$$_TaskOutputCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -10675,14 +10382,14 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
-    implements _$TaskOutputCopyWith<$Res> {
-  __$TaskOutputCopyWithImpl(
-      _TaskOutput _value, $Res Function(_TaskOutput) _then)
-      : super(_value, (v) => _then(v as _TaskOutput));
+class __$$_TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
+    implements _$$_TaskOutputCopyWith<$Res> {
+  __$$_TaskOutputCopyWithImpl(
+      _$_TaskOutput _value, $Res Function(_$_TaskOutput) _then)
+      : super(_value, (v) => _then(v as _$_TaskOutput));
 
   @override
-  _TaskOutput get _value => super._value as _TaskOutput;
+  _$_TaskOutput get _value => super._value as _$_TaskOutput;
 
   @override
   $Res call({
@@ -10764,17 +10471,17 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
     Object? valueDosage = freezed,
     Object? valueMeta = freezed,
   }) {
-    return _then(_TaskOutput(
+    return _then(_$_TaskOutput(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -11082,8 +10789,8 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
 class _$_TaskOutput extends _TaskOutput {
   _$_TaskOutput(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
@@ -11158,18 +10865,34 @@ class _$_TaskOutput extends _TaskOutput {
       this.valueUsageContext,
       this.valueDosage,
       this.valueMeta})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$$_TaskOutputFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -11348,12 +11071,12 @@ class _$_TaskOutput extends _TaskOutput {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TaskOutput &&
+            other is _$_TaskOutput &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.valueBase64Binary, valueBase64Binary) &&
@@ -11471,12 +11194,13 @@ class _$_TaskOutput extends _TaskOutput {
             const DeepCollectionEquality().equals(other.valueMeta, valueMeta));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(valueBase64Binary),
         const DeepCollectionEquality().hash(valueBase64BinaryElement),
@@ -11555,8 +11279,8 @@ class _$_TaskOutput extends _TaskOutput {
 
   @JsonKey(ignore: true)
   @override
-  _$TaskOutputCopyWith<_TaskOutput> get copyWith =>
-      __$TaskOutputCopyWithImpl<_TaskOutput>(this, _$identity);
+  _$$_TaskOutputCopyWith<_$_TaskOutput> get copyWith =>
+      __$$_TaskOutputCopyWithImpl<_$_TaskOutput>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -11566,349 +11290,300 @@ class _$_TaskOutput extends _TaskOutput {
 
 abstract class _TaskOutput extends TaskOutput {
   factory _TaskOutput(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      Base64Binary? valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
-      @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement,
-      Instant? valueInstant,
-      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Integer64? valueInteger64,
-      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
-      Markdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Oid? valueOid,
-      @JsonKey(name: '_valueOid') Element? valueOidElement,
-      PositiveInt? valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-      Markdown? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Time? valueTime,
-      @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      UnsignedInt? valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      FhirUrl? valueUrl,
-      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Uuid? valueUuid,
-      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Address? valueAddress,
-      Age? valueAge,
-      Annotation? valueAnnotation,
-      Attachment? valueAttachment,
-      CodeableConcept? valueCodeableConcept,
-      CodeableReference? valueCodeableReference,
-      Coding? valueCoding,
-      ContactPoint? valueContactPoint,
-      Count? valueCount,
-      Distance? valueDistance,
-      Duration? valueDuration,
-      HumanName? valueHumanName,
-      Identifier? valueIdentifier,
-      Money? valueMoney,
-      Period? valuePeriod,
-      Quantity? valueQuantity,
-      Range? valueRange,
-      Ratio? valueRatio,
-      RatioRange? valueRatioRange,
-      Reference? valueReference,
-      SampledData? valueSampledData,
-      Signature? valueSignature,
-      Timing? valueTiming,
-      ContactDetail? valueContactDetail,
-      Contributor? valueContributor,
-      DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
-      ParameterDefinition? valueParameterDefinition,
-      RelatedArtifact? valueRelatedArtifact,
-      TriggerDefinition? valueTriggerDefinition,
-      UsageContext? valueUsageContext,
-      Dosage? valueDosage,
-      Meta? valueMeta}) = _$_TaskOutput;
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      final Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary')
+          final Element? valueBase64BinaryElement,
+      final Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          final Element? valueBooleanElement,
+      final Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical')
+          final Element? valueCanonicalElement,
+      final Code? valueCode,
+      @JsonKey(name: '_valueCode')
+          final Element? valueCodeElement,
+      final Date? valueDate,
+      @JsonKey(name: '_valueDate')
+          final Element? valueDateElement,
+      final DateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime')
+          final Element? valueDateTimeElement,
+      final Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal')
+          final Element? valueDecimalElement,
+      final Id? valueId,
+      @JsonKey(name: '_valueId')
+          final Element? valueIdElement,
+      final Instant? valueInstant,
+      @JsonKey(name: '_valueInstant')
+          final Element? valueInstantElement,
+      final Integer? valueInteger,
+      @JsonKey(name: '_valueInteger')
+          final Element? valueIntegerElement,
+      final Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64')
+          final Element? valueInteger64Element,
+      final Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown')
+          final Element? valueMarkdownElement,
+      final Oid? valueOid,
+      @JsonKey(name: '_valueOid')
+          final Element? valueOidElement,
+      final PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt')
+          final Element? valuePositiveIntElement,
+      final Markdown? valueString,
+      @JsonKey(name: '_valueString')
+          final Element? valueStringElement,
+      final Time? valueTime,
+      @JsonKey(name: '_valueTime')
+          final Element? valueTimeElement,
+      final UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt')
+          final Element? valueUnsignedIntElement,
+      final FhirUri? valueUri,
+      @JsonKey(name: '_valueUri')
+          final Element? valueUriElement,
+      final FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl')
+          final Element? valueUrlElement,
+      final Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid')
+          final Element? valueUuidElement,
+      final Address? valueAddress,
+      final Age? valueAge,
+      final Annotation? valueAnnotation,
+      final Attachment? valueAttachment,
+      final CodeableConcept? valueCodeableConcept,
+      final CodeableReference? valueCodeableReference,
+      final Coding? valueCoding,
+      final ContactPoint? valueContactPoint,
+      final Count? valueCount,
+      final Distance? valueDistance,
+      final Duration? valueDuration,
+      final HumanName? valueHumanName,
+      final Identifier? valueIdentifier,
+      final Money? valueMoney,
+      final Period? valuePeriod,
+      final Quantity? valueQuantity,
+      final Range? valueRange,
+      final Ratio? valueRatio,
+      final RatioRange? valueRatioRange,
+      final Reference? valueReference,
+      final SampledData? valueSampledData,
+      final Signature? valueSignature,
+      final Timing? valueTiming,
+      final ContactDetail? valueContactDetail,
+      final Contributor? valueContributor,
+      final DataRequirement? valueDataRequirement,
+      final Expression? valueExpression,
+      final ParameterDefinition? valueParameterDefinition,
+      final RelatedArtifact? valueRelatedArtifact,
+      final TriggerDefinition? valueTriggerDefinition,
+      final UsageContext? valueUsageContext,
+      final Dosage? valueDosage,
+      final Meta? valueMeta}) = _$_TaskOutput;
   _TaskOutput._() : super._();
 
   factory _TaskOutput.fromJson(Map<String, dynamic> json) =
       _$_TaskOutput.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get valueBase64Binary;
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  Element? get valueBase64BinaryElement;
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get valueCanonical;
+  Canonical? get valueCanonical => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueCanonical')
-  Element? get valueCanonicalElement;
+  Element? get valueCanonicalElement => throw _privateConstructorUsedError;
   @override
-  Code? get valueCode;
+  Code? get valueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueCode')
-  Element? get valueCodeElement;
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
   @override
-  Date? get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime;
+  DateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element? get valueDateTimeElement;
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valueDecimal;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
   @override
-  Id? get valueId;
+  Id? get valueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueId')
-  Element? get valueIdElement;
+  Element? get valueIdElement => throw _privateConstructorUsedError;
   @override
-  Instant? get valueInstant;
+  Instant? get valueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInstant')
-  Element? get valueInstantElement;
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
   @override
-  Integer? get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Integer64? get valueInteger64;
+  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger64')
-  Element? get valueInteger64Element;
+  Element? get valueInteger64Element => throw _privateConstructorUsedError;
   @override
-  Markdown? get valueMarkdown;
+  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueMarkdown')
-  Element? get valueMarkdownElement;
+  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Oid? get valueOid;
+  Oid? get valueOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueOid')
-  Element? get valueOidElement;
+  Element? get valueOidElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get valuePositiveInt;
+  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  Element? get valuePositiveIntElement;
+  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get valueString;
+  Markdown? get valueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   @override
-  Time? get valueTime;
+  Time? get valueTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueTime')
-  Element? get valueTimeElement;
+  Element? get valueTimeElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get valueUnsignedInt;
+  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  Element? get valueUnsignedIntElement;
+  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get valueUri;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUri')
-  Element? get valueUriElement;
+  Element? get valueUriElement => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get valueUrl;
+  FhirUrl? get valueUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUrl')
-  Element? get valueUrlElement;
+  Element? get valueUrlElement => throw _privateConstructorUsedError;
   @override
-  Uuid? get valueUuid;
+  Uuid? get valueUuid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUuid')
-  Element? get valueUuidElement;
+  Element? get valueUuidElement => throw _privateConstructorUsedError;
   @override
-  Address? get valueAddress;
+  Address? get valueAddress => throw _privateConstructorUsedError;
   @override
-  Age? get valueAge;
+  Age? get valueAge => throw _privateConstructorUsedError;
   @override
-  Annotation? get valueAnnotation;
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableReference? get valueCodeableReference;
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get valueCoding;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get valueContactPoint;
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   @override
-  Count? get valueCount;
+  Count? get valueCount => throw _privateConstructorUsedError;
   @override
-  Distance? get valueDistance;
+  Distance? get valueDistance => throw _privateConstructorUsedError;
   @override
-  Duration? get valueDuration;
+  Duration? get valueDuration => throw _privateConstructorUsedError;
   @override
-  HumanName? get valueHumanName;
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override
-  Identifier? get valueIdentifier;
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   @override
-  Money? get valueMoney;
+  Money? get valueMoney => throw _privateConstructorUsedError;
   @override
-  Period? get valuePeriod;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get valueRange;
+  Range? get valueRange => throw _privateConstructorUsedError;
   @override
-  Ratio? get valueRatio;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
   @override
-  RatioRange? get valueRatioRange;
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
   @override
-  Reference? get valueReference;
+  Reference? get valueReference => throw _privateConstructorUsedError;
   @override
-  SampledData? get valueSampledData;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
   @override
-  Signature? get valueSignature;
+  Signature? get valueSignature => throw _privateConstructorUsedError;
   @override
-  Timing? get valueTiming;
+  Timing? get valueTiming => throw _privateConstructorUsedError;
   @override
-  ContactDetail? get valueContactDetail;
+  ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
   @override
-  Contributor? get valueContributor;
+  Contributor? get valueContributor => throw _privateConstructorUsedError;
   @override
-  DataRequirement? get valueDataRequirement;
+  DataRequirement? get valueDataRequirement =>
+      throw _privateConstructorUsedError;
   @override
-  Expression? get valueExpression;
+  Expression? get valueExpression => throw _privateConstructorUsedError;
   @override
-  ParameterDefinition? get valueParameterDefinition;
+  ParameterDefinition? get valueParameterDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  RelatedArtifact? get valueRelatedArtifact;
+  RelatedArtifact? get valueRelatedArtifact =>
+      throw _privateConstructorUsedError;
   @override
-  TriggerDefinition? get valueTriggerDefinition;
+  TriggerDefinition? get valueTriggerDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  UsageContext? get valueUsageContext;
+  UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
   @override
-  Dosage? get valueDosage;
+  Dosage? get valueDosage => throw _privateConstructorUsedError;
   @override
-  Meta? get valueMeta;
+  Meta? get valueMeta => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TaskOutputCopyWith<_TaskOutput> get copyWith =>
+  _$$_TaskOutputCopyWith<_$_TaskOutput> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 VerificationResult _$VerificationResultFromJson(Map<String, dynamic> json) {
   return _VerificationResult.fromJson(json);
 }
-
-/// @nodoc
-class _$VerificationResultTearOff {
-  const _$VerificationResultTearOff();
-
-  _VerificationResult call(
-      {R5ResourceType resourceType = R5ResourceType.VerificationResult,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference>? target,
-      List<String>? targetLocation,
-      @JsonKey(name: '_targetLocation') List<Element>? targetLocationElement,
-      CodeableConcept? need,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      DateTime? statusDate,
-      @JsonKey(name: '_statusDate') Element? statusDateElement,
-      CodeableConcept? validationType,
-      List<CodeableConcept>? validationProcess,
-      Timing? frequency,
-      DateTime? lastPerformed,
-      @JsonKey(name: '_lastPerformed') Element? lastPerformedElement,
-      Date? nextScheduled,
-      @JsonKey(name: '_nextScheduled') Element? nextScheduledElement,
-      CodeableConcept? failureAction,
-      List<VerificationResultPrimarySource>? primarySource,
-      VerificationResultAttestation? attestation,
-      List<VerificationResultValidator>? validator}) {
-    return _VerificationResult(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      target: target,
-      targetLocation: targetLocation,
-      targetLocationElement: targetLocationElement,
-      need: need,
-      status: status,
-      statusElement: statusElement,
-      statusDate: statusDate,
-      statusDateElement: statusDateElement,
-      validationType: validationType,
-      validationProcess: validationProcess,
-      frequency: frequency,
-      lastPerformed: lastPerformed,
-      lastPerformedElement: lastPerformedElement,
-      nextScheduled: nextScheduled,
-      nextScheduledElement: nextScheduledElement,
-      failureAction: failureAction,
-      primarySource: primarySource,
-      attestation: attestation,
-      validator: validator,
-    );
-  }
-
-  VerificationResult fromJson(Map<String, Object?> json) {
-    return VerificationResult.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $VerificationResult = _$VerificationResultTearOff();
 
 /// @nodoc
 mixin _$VerificationResult {
@@ -12327,11 +12002,11 @@ class _$VerificationResultCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$VerificationResultCopyWith<$Res>
+abstract class _$$_VerificationResultCopyWith<$Res>
     implements $VerificationResultCopyWith<$Res> {
-  factory _$VerificationResultCopyWith(
-          _VerificationResult value, $Res Function(_VerificationResult) then) =
-      __$VerificationResultCopyWithImpl<$Res>;
+  factory _$$_VerificationResultCopyWith(_$_VerificationResult value,
+          $Res Function(_$_VerificationResult) then) =
+      __$$_VerificationResultCopyWithImpl<$Res>;
   @override
   $Res call(
       {R5ResourceType resourceType,
@@ -12394,15 +12069,15 @@ abstract class _$VerificationResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$VerificationResultCopyWithImpl<$Res>
+class __$$_VerificationResultCopyWithImpl<$Res>
     extends _$VerificationResultCopyWithImpl<$Res>
-    implements _$VerificationResultCopyWith<$Res> {
-  __$VerificationResultCopyWithImpl(
-      _VerificationResult _value, $Res Function(_VerificationResult) _then)
-      : super(_value, (v) => _then(v as _VerificationResult));
+    implements _$$_VerificationResultCopyWith<$Res> {
+  __$$_VerificationResultCopyWithImpl(
+      _$_VerificationResult _value, $Res Function(_$_VerificationResult) _then)
+      : super(_value, (v) => _then(v as _$_VerificationResult));
 
   @override
-  _VerificationResult get _value => super._value as _VerificationResult;
+  _$_VerificationResult get _value => super._value as _$_VerificationResult;
 
   @override
   $Res call({
@@ -12437,7 +12112,7 @@ class __$VerificationResultCopyWithImpl<$Res>
     Object? attestation = freezed,
     Object? validator = freezed,
   }) {
-    return _then(_VerificationResult(
+    return _then(_$_VerificationResult(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -12471,27 +12146,27 @@ class __$VerificationResultCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       target: target == freezed
-          ? _value.target
+          ? _value._target
           : target // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       targetLocation: targetLocation == freezed
-          ? _value.targetLocation
+          ? _value._targetLocation
           : targetLocation // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       targetLocationElement: targetLocationElement == freezed
-          ? _value.targetLocationElement
+          ? _value._targetLocationElement
           : targetLocationElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       need: need == freezed
@@ -12519,7 +12194,7 @@ class __$VerificationResultCopyWithImpl<$Res>
           : validationType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       validationProcess: validationProcess == freezed
-          ? _value.validationProcess
+          ? _value._validationProcess
           : validationProcess // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       frequency: frequency == freezed
@@ -12547,7 +12222,7 @@ class __$VerificationResultCopyWithImpl<$Res>
           : failureAction // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       primarySource: primarySource == freezed
-          ? _value.primarySource
+          ? _value._primarySource
           : primarySource // ignore: cast_nullable_to_non_nullable
               as List<VerificationResultPrimarySource>?,
       attestation: attestation == freezed
@@ -12555,7 +12230,7 @@ class __$VerificationResultCopyWithImpl<$Res>
           : attestation // ignore: cast_nullable_to_non_nullable
               as VerificationResultAttestation?,
       validator: validator == freezed
-          ? _value.validator
+          ? _value._validator
           : validator // ignore: cast_nullable_to_non_nullable
               as List<VerificationResultValidator>?,
     ));
@@ -12570,39 +12245,56 @@ class _$_VerificationResult extends _VerificationResult {
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
-      this.contained,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.target,
-      this.targetLocation,
-      @JsonKey(name: '_targetLocation') this.targetLocationElement,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Reference>? target,
+      final List<String>? targetLocation,
+      @JsonKey(name: '_targetLocation')
+          final List<Element>? targetLocationElement,
       this.need,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.statusDate,
-      @JsonKey(name: '_statusDate') this.statusDateElement,
+      @JsonKey(name: '_statusDate')
+          this.statusDateElement,
       this.validationType,
-      this.validationProcess,
+      final List<CodeableConcept>? validationProcess,
       this.frequency,
       this.lastPerformed,
-      @JsonKey(name: '_lastPerformed') this.lastPerformedElement,
+      @JsonKey(name: '_lastPerformed')
+          this.lastPerformedElement,
       this.nextScheduled,
-      @JsonKey(name: '_nextScheduled') this.nextScheduledElement,
+      @JsonKey(name: '_nextScheduled')
+          this.nextScheduledElement,
       this.failureAction,
-      this.primarySource,
+      final List<VerificationResultPrimarySource>? primarySource,
       this.attestation,
-      this.validator})
-      : super._();
+      final List<VerificationResultValidator>? validator})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _target = target,
+        _targetLocation = targetLocation,
+        _targetLocationElement = targetLocationElement,
+        _validationProcess = validationProcess,
+        _primarySource = primarySource,
+        _validator = validator,
+        super._();
 
   factory _$_VerificationResult.fromJson(Map<String, dynamic> json) =>
       _$$_VerificationResultFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -12620,20 +12312,62 @@ class _$_VerificationResult extends _VerificationResult {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _target;
   @override
-  final List<Reference>? target;
+  List<Reference>? get target {
+    final value = _target;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _targetLocation;
   @override
-  final List<String>? targetLocation;
+  List<String>? get targetLocation {
+    final value = _targetLocation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _targetLocationElement;
   @override
   @JsonKey(name: '_targetLocation')
-  final List<Element>? targetLocationElement;
+  List<Element>? get targetLocationElement {
+    final value = _targetLocationElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? need;
   @override
@@ -12648,8 +12382,15 @@ class _$_VerificationResult extends _VerificationResult {
   final Element? statusDateElement;
   @override
   final CodeableConcept? validationType;
+  final List<CodeableConcept>? _validationProcess;
   @override
-  final List<CodeableConcept>? validationProcess;
+  List<CodeableConcept>? get validationProcess {
+    final value = _validationProcess;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Timing? frequency;
   @override
@@ -12664,12 +12405,25 @@ class _$_VerificationResult extends _VerificationResult {
   final Element? nextScheduledElement;
   @override
   final CodeableConcept? failureAction;
+  final List<VerificationResultPrimarySource>? _primarySource;
   @override
-  final List<VerificationResultPrimarySource>? primarySource;
+  List<VerificationResultPrimarySource>? get primarySource {
+    final value = _primarySource;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final VerificationResultAttestation? attestation;
+  final List<VerificationResultValidator>? _validator;
   @override
-  final List<VerificationResultValidator>? validator;
+  List<VerificationResultValidator>? get validator {
+    final value = _validator;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -12680,7 +12434,7 @@ class _$_VerificationResult extends _VerificationResult {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _VerificationResult &&
+            other is _$_VerificationResult &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -12693,16 +12447,17 @@ class _$_VerificationResult extends _VerificationResult {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.target, target) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.targetLocation, targetLocation) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._target, _target) &&
             const DeepCollectionEquality()
-                .equals(other.targetLocationElement, targetLocationElement) &&
+                .equals(other._targetLocation, _targetLocation) &&
+            const DeepCollectionEquality()
+                .equals(other._targetLocationElement, _targetLocationElement) &&
             const DeepCollectionEquality().equals(other.need, need) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
@@ -12714,7 +12469,7 @@ class _$_VerificationResult extends _VerificationResult {
             const DeepCollectionEquality()
                 .equals(other.validationType, validationType) &&
             const DeepCollectionEquality()
-                .equals(other.validationProcess, validationProcess) &&
+                .equals(other._validationProcess, _validationProcess) &&
             const DeepCollectionEquality().equals(other.frequency, frequency) &&
             const DeepCollectionEquality()
                 .equals(other.lastPerformed, lastPerformed) &&
@@ -12727,12 +12482,14 @@ class _$_VerificationResult extends _VerificationResult {
             const DeepCollectionEquality()
                 .equals(other.failureAction, failureAction) &&
             const DeepCollectionEquality()
-                .equals(other.primarySource, primarySource) &&
+                .equals(other._primarySource, _primarySource) &&
             const DeepCollectionEquality()
                 .equals(other.attestation, attestation) &&
-            const DeepCollectionEquality().equals(other.validator, validator));
+            const DeepCollectionEquality()
+                .equals(other._validator, _validator));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -12744,34 +12501,35 @@ class _$_VerificationResult extends _VerificationResult {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
-        const DeepCollectionEquality().hash(target),
-        const DeepCollectionEquality().hash(targetLocation),
-        const DeepCollectionEquality().hash(targetLocationElement),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_target),
+        const DeepCollectionEquality().hash(_targetLocation),
+        const DeepCollectionEquality().hash(_targetLocationElement),
         const DeepCollectionEquality().hash(need),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(statusDate),
         const DeepCollectionEquality().hash(statusDateElement),
         const DeepCollectionEquality().hash(validationType),
-        const DeepCollectionEquality().hash(validationProcess),
+        const DeepCollectionEquality().hash(_validationProcess),
         const DeepCollectionEquality().hash(frequency),
         const DeepCollectionEquality().hash(lastPerformed),
         const DeepCollectionEquality().hash(lastPerformedElement),
         const DeepCollectionEquality().hash(nextScheduled),
         const DeepCollectionEquality().hash(nextScheduledElement),
         const DeepCollectionEquality().hash(failureAction),
-        const DeepCollectionEquality().hash(primarySource),
+        const DeepCollectionEquality().hash(_primarySource),
         const DeepCollectionEquality().hash(attestation),
-        const DeepCollectionEquality().hash(validator)
+        const DeepCollectionEquality().hash(_validator)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$VerificationResultCopyWith<_VerificationResult> get copyWith =>
-      __$VerificationResultCopyWithImpl<_VerificationResult>(this, _$identity);
+  _$$_VerificationResultCopyWith<_$_VerificationResult> get copyWith =>
+      __$$_VerificationResultCopyWithImpl<_$_VerificationResult>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -12781,112 +12539,127 @@ class _$_VerificationResult extends _VerificationResult {
 
 abstract class _VerificationResult extends VerificationResult {
   factory _VerificationResult(
-      {R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference>? target,
-      List<String>? targetLocation,
-      @JsonKey(name: '_targetLocation') List<Element>? targetLocationElement,
-      CodeableConcept? need,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      DateTime? statusDate,
-      @JsonKey(name: '_statusDate') Element? statusDateElement,
-      CodeableConcept? validationType,
-      List<CodeableConcept>? validationProcess,
-      Timing? frequency,
-      DateTime? lastPerformed,
-      @JsonKey(name: '_lastPerformed') Element? lastPerformedElement,
-      Date? nextScheduled,
-      @JsonKey(name: '_nextScheduled') Element? nextScheduledElement,
-      CodeableConcept? failureAction,
-      List<VerificationResultPrimarySource>? primarySource,
-      VerificationResultAttestation? attestation,
-      List<VerificationResultValidator>? validator}) = _$_VerificationResult;
+          {final R5ResourceType resourceType,
+          final Id? id,
+          final Meta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules')
+              final Element? implicitRulesElement,
+          final Code? language,
+          @JsonKey(name: '_language')
+              final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Reference>? target,
+          final List<String>? targetLocation,
+          @JsonKey(name: '_targetLocation')
+              final List<Element>? targetLocationElement,
+          final CodeableConcept? need,
+          final Code? status,
+          @JsonKey(name: '_status')
+              final Element? statusElement,
+          final DateTime? statusDate,
+          @JsonKey(name: '_statusDate')
+              final Element? statusDateElement,
+          final CodeableConcept? validationType,
+          final List<CodeableConcept>? validationProcess,
+          final Timing? frequency,
+          final DateTime? lastPerformed,
+          @JsonKey(name: '_lastPerformed')
+              final Element? lastPerformedElement,
+          final Date? nextScheduled,
+          @JsonKey(name: '_nextScheduled')
+              final Element? nextScheduledElement,
+          final CodeableConcept? failureAction,
+          final List<VerificationResultPrimarySource>? primarySource,
+          final VerificationResultAttestation? attestation,
+          final List<VerificationResultValidator>? validator}) =
+      _$_VerificationResult;
   _VerificationResult._() : super._();
 
   factory _VerificationResult.fromJson(Map<String, dynamic> json) =
       _$_VerificationResult.fromJson;
 
   @override
-  R5ResourceType get resourceType;
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get target;
+  List<Reference>? get target => throw _privateConstructorUsedError;
   @override
-  List<String>? get targetLocation;
+  List<String>? get targetLocation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_targetLocation')
-  List<Element>? get targetLocationElement;
+  List<Element>? get targetLocationElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get need;
+  CodeableConcept? get need => throw _privateConstructorUsedError;
   @override
-  Code? get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get statusDate;
+  DateTime? get statusDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get validationType;
+  CodeableConcept? get validationType => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get validationProcess;
+  List<CodeableConcept>? get validationProcess =>
+      throw _privateConstructorUsedError;
   @override
-  Timing? get frequency;
+  Timing? get frequency => throw _privateConstructorUsedError;
   @override
-  DateTime? get lastPerformed;
+  DateTime? get lastPerformed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastPerformed')
-  Element? get lastPerformedElement;
+  Element? get lastPerformedElement => throw _privateConstructorUsedError;
   @override
-  Date? get nextScheduled;
+  Date? get nextScheduled => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_nextScheduled')
-  Element? get nextScheduledElement;
+  Element? get nextScheduledElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get failureAction;
+  CodeableConcept? get failureAction => throw _privateConstructorUsedError;
   @override
-  List<VerificationResultPrimarySource>? get primarySource;
+  List<VerificationResultPrimarySource>? get primarySource =>
+      throw _privateConstructorUsedError;
   @override
-  VerificationResultAttestation? get attestation;
+  VerificationResultAttestation? get attestation =>
+      throw _privateConstructorUsedError;
   @override
-  List<VerificationResultValidator>? get validator;
+  List<VerificationResultValidator>? get validator =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$VerificationResultCopyWith<_VerificationResult> get copyWith =>
+  _$$_VerificationResultCopyWith<_$_VerificationResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -12894,46 +12667,6 @@ VerificationResultPrimarySource _$VerificationResultPrimarySourceFromJson(
     Map<String, dynamic> json) {
   return _VerificationResultPrimarySource.fromJson(json);
 }
-
-/// @nodoc
-class _$VerificationResultPrimarySourceTearOff {
-  const _$VerificationResultPrimarySourceTearOff();
-
-  _VerificationResultPrimarySource call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference? who,
-      List<CodeableConcept>? type,
-      List<CodeableConcept>? communicationMethod,
-      CodeableConcept? validationStatus,
-      DateTime? validationDate,
-      @JsonKey(name: '_validationDate') Element? validationDateElement,
-      CodeableConcept? canPushUpdates,
-      List<CodeableConcept>? pushTypeAvailable}) {
-    return _VerificationResultPrimarySource(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      who: who,
-      type: type,
-      communicationMethod: communicationMethod,
-      validationStatus: validationStatus,
-      validationDate: validationDate,
-      validationDateElement: validationDateElement,
-      canPushUpdates: canPushUpdates,
-      pushTypeAvailable: pushTypeAvailable,
-    );
-  }
-
-  VerificationResultPrimarySource fromJson(Map<String, Object?> json) {
-    return VerificationResultPrimarySource.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $VerificationResultPrimarySource =
-    _$VerificationResultPrimarySourceTearOff();
 
 /// @nodoc
 mixin _$VerificationResultPrimarySource {
@@ -13102,12 +12835,12 @@ class _$VerificationResultPrimarySourceCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$VerificationResultPrimarySourceCopyWith<$Res>
+abstract class _$$_VerificationResultPrimarySourceCopyWith<$Res>
     implements $VerificationResultPrimarySourceCopyWith<$Res> {
-  factory _$VerificationResultPrimarySourceCopyWith(
-          _VerificationResultPrimarySource value,
-          $Res Function(_VerificationResultPrimarySource) then) =
-      __$VerificationResultPrimarySourceCopyWithImpl<$Res>;
+  factory _$$_VerificationResultPrimarySourceCopyWith(
+          _$_VerificationResultPrimarySource value,
+          $Res Function(_$_VerificationResultPrimarySource) then) =
+      __$$_VerificationResultPrimarySourceCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -13133,17 +12866,17 @@ abstract class _$VerificationResultPrimarySourceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$VerificationResultPrimarySourceCopyWithImpl<$Res>
+class __$$_VerificationResultPrimarySourceCopyWithImpl<$Res>
     extends _$VerificationResultPrimarySourceCopyWithImpl<$Res>
-    implements _$VerificationResultPrimarySourceCopyWith<$Res> {
-  __$VerificationResultPrimarySourceCopyWithImpl(
-      _VerificationResultPrimarySource _value,
-      $Res Function(_VerificationResultPrimarySource) _then)
-      : super(_value, (v) => _then(v as _VerificationResultPrimarySource));
+    implements _$$_VerificationResultPrimarySourceCopyWith<$Res> {
+  __$$_VerificationResultPrimarySourceCopyWithImpl(
+      _$_VerificationResultPrimarySource _value,
+      $Res Function(_$_VerificationResultPrimarySource) _then)
+      : super(_value, (v) => _then(v as _$_VerificationResultPrimarySource));
 
   @override
-  _VerificationResultPrimarySource get _value =>
-      super._value as _VerificationResultPrimarySource;
+  _$_VerificationResultPrimarySource get _value =>
+      super._value as _$_VerificationResultPrimarySource;
 
   @override
   $Res call({
@@ -13159,17 +12892,17 @@ class __$VerificationResultPrimarySourceCopyWithImpl<$Res>
     Object? canPushUpdates = freezed,
     Object? pushTypeAvailable = freezed,
   }) {
-    return _then(_VerificationResultPrimarySource(
+    return _then(_$_VerificationResultPrimarySource(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       who: who == freezed
@@ -13177,11 +12910,11 @@ class __$VerificationResultPrimarySourceCopyWithImpl<$Res>
           : who // ignore: cast_nullable_to_non_nullable
               as Reference?,
       type: type == freezed
-          ? _value.type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       communicationMethod: communicationMethod == freezed
-          ? _value.communicationMethod
+          ? _value._communicationMethod
           : communicationMethod // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       validationStatus: validationStatus == freezed
@@ -13201,7 +12934,7 @@ class __$VerificationResultPrimarySourceCopyWithImpl<$Res>
           : canPushUpdates // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       pushTypeAvailable: pushTypeAvailable == freezed
-          ? _value.pushTypeAvailable
+          ? _value._pushTypeAvailable
           : pushTypeAvailable // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -13214,17 +12947,22 @@ class _$_VerificationResultPrimarySource
     extends _VerificationResultPrimarySource {
   _$_VerificationResultPrimarySource(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.who,
-      this.type,
-      this.communicationMethod,
+      final List<CodeableConcept>? type,
+      final List<CodeableConcept>? communicationMethod,
       this.validationStatus,
       this.validationDate,
       @JsonKey(name: '_validationDate') this.validationDateElement,
       this.canPushUpdates,
-      this.pushTypeAvailable})
-      : super._();
+      final List<CodeableConcept>? pushTypeAvailable})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _type = type,
+        _communicationMethod = communicationMethod,
+        _pushTypeAvailable = pushTypeAvailable,
+        super._();
 
   factory _$_VerificationResultPrimarySource.fromJson(
           Map<String, dynamic> json) =>
@@ -13232,17 +12970,45 @@ class _$_VerificationResultPrimarySource
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? who;
+  final List<CodeableConcept>? _type;
   @override
-  final List<CodeableConcept>? type;
+  List<CodeableConcept>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _communicationMethod;
   @override
-  final List<CodeableConcept>? communicationMethod;
+  List<CodeableConcept>? get communicationMethod {
+    final value = _communicationMethod;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? validationStatus;
   @override
@@ -13252,8 +13018,14 @@ class _$_VerificationResultPrimarySource
   final Element? validationDateElement;
   @override
   final CodeableConcept? canPushUpdates;
+  final List<CodeableConcept>? _pushTypeAvailable;
   @override
-  final List<CodeableConcept>? pushTypeAvailable;
+  List<CodeableConcept>? get pushTypeAvailable {
+    final value = _pushTypeAvailable;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -13264,16 +13036,16 @@ class _$_VerificationResultPrimarySource
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _VerificationResultPrimarySource &&
+            other is _$_VerificationResultPrimarySource &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.who, who) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
             const DeepCollectionEquality()
-                .equals(other.communicationMethod, communicationMethod) &&
+                .equals(other._communicationMethod, _communicationMethod) &&
             const DeepCollectionEquality()
                 .equals(other.validationStatus, validationStatus) &&
             const DeepCollectionEquality()
@@ -13283,29 +13055,31 @@ class _$_VerificationResultPrimarySource
             const DeepCollectionEquality()
                 .equals(other.canPushUpdates, canPushUpdates) &&
             const DeepCollectionEquality()
-                .equals(other.pushTypeAvailable, pushTypeAvailable));
+                .equals(other._pushTypeAvailable, _pushTypeAvailable));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(who),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(communicationMethod),
+      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(_communicationMethod),
       const DeepCollectionEquality().hash(validationStatus),
       const DeepCollectionEquality().hash(validationDate),
       const DeepCollectionEquality().hash(validationDateElement),
       const DeepCollectionEquality().hash(canPushUpdates),
-      const DeepCollectionEquality().hash(pushTypeAvailable));
+      const DeepCollectionEquality().hash(_pushTypeAvailable));
 
   @JsonKey(ignore: true)
   @override
-  _$VerificationResultPrimarySourceCopyWith<_VerificationResultPrimarySource>
-      get copyWith => __$VerificationResultPrimarySourceCopyWithImpl<
-          _VerificationResultPrimarySource>(this, _$identity);
+  _$$_VerificationResultPrimarySourceCopyWith<
+          _$_VerificationResultPrimarySource>
+      get copyWith => __$$_VerificationResultPrimarySourceCopyWithImpl<
+          _$_VerificationResultPrimarySource>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13316,50 +13090,54 @@ class _$_VerificationResultPrimarySource
 abstract class _VerificationResultPrimarySource
     extends VerificationResultPrimarySource {
   factory _VerificationResultPrimarySource(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Reference? who,
-          List<CodeableConcept>? type,
-          List<CodeableConcept>? communicationMethod,
-          CodeableConcept? validationStatus,
-          DateTime? validationDate,
-          @JsonKey(name: '_validationDate') Element? validationDateElement,
-          CodeableConcept? canPushUpdates,
-          List<CodeableConcept>? pushTypeAvailable}) =
-      _$_VerificationResultPrimarySource;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Reference? who,
+      final List<CodeableConcept>? type,
+      final List<CodeableConcept>? communicationMethod,
+      final CodeableConcept? validationStatus,
+      final DateTime? validationDate,
+      @JsonKey(name: '_validationDate') final Element? validationDateElement,
+      final CodeableConcept? canPushUpdates,
+      final List<CodeableConcept>?
+          pushTypeAvailable}) = _$_VerificationResultPrimarySource;
   _VerificationResultPrimarySource._() : super._();
 
   factory _VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultPrimarySource.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get who;
+  Reference? get who => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get communicationMethod;
+  List<CodeableConcept>? get communicationMethod =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get validationStatus;
+  CodeableConcept? get validationStatus => throw _privateConstructorUsedError;
   @override
-  DateTime? get validationDate;
+  DateTime? get validationDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_validationDate')
-  Element? get validationDateElement;
+  Element? get validationDateElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get canPushUpdates;
+  CodeableConcept? get canPushUpdates => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get pushTypeAvailable;
+  List<CodeableConcept>? get pushTypeAvailable =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$VerificationResultPrimarySourceCopyWith<_VerificationResultPrimarySource>
+  _$$_VerificationResultPrimarySourceCopyWith<
+          _$_VerificationResultPrimarySource>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -13367,55 +13145,6 @@ VerificationResultAttestation _$VerificationResultAttestationFromJson(
     Map<String, dynamic> json) {
   return _VerificationResultAttestation.fromJson(json);
 }
-
-/// @nodoc
-class _$VerificationResultAttestationTearOff {
-  const _$VerificationResultAttestationTearOff();
-
-  _VerificationResultAttestation call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference? who,
-      Reference? onBehalfOf,
-      CodeableConcept? communicationMethod,
-      Date? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      String? sourceIdentityCertificate,
-      @JsonKey(name: '_sourceIdentityCertificate')
-          Element? sourceIdentityCertificateElement,
-      String? proxyIdentityCertificate,
-      @JsonKey(name: '_proxyIdentityCertificate')
-          Element? proxyIdentityCertificateElement,
-      Signature? proxySignature,
-      Signature? sourceSignature}) {
-    return _VerificationResultAttestation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      who: who,
-      onBehalfOf: onBehalfOf,
-      communicationMethod: communicationMethod,
-      date: date,
-      dateElement: dateElement,
-      sourceIdentityCertificate: sourceIdentityCertificate,
-      sourceIdentityCertificateElement: sourceIdentityCertificateElement,
-      proxyIdentityCertificate: proxyIdentityCertificate,
-      proxyIdentityCertificateElement: proxyIdentityCertificateElement,
-      proxySignature: proxySignature,
-      sourceSignature: sourceSignature,
-    );
-  }
-
-  VerificationResultAttestation fromJson(Map<String, Object?> json) {
-    return VerificationResultAttestation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $VerificationResultAttestation = _$VerificationResultAttestationTearOff();
 
 /// @nodoc
 mixin _$VerificationResultAttestation {
@@ -13664,12 +13393,12 @@ class _$VerificationResultAttestationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$VerificationResultAttestationCopyWith<$Res>
+abstract class _$$_VerificationResultAttestationCopyWith<$Res>
     implements $VerificationResultAttestationCopyWith<$Res> {
-  factory _$VerificationResultAttestationCopyWith(
-          _VerificationResultAttestation value,
-          $Res Function(_VerificationResultAttestation) then) =
-      __$VerificationResultAttestationCopyWithImpl<$Res>;
+  factory _$$_VerificationResultAttestationCopyWith(
+          _$_VerificationResultAttestation value,
+          $Res Function(_$_VerificationResultAttestation) then) =
+      __$$_VerificationResultAttestationCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -13710,17 +13439,17 @@ abstract class _$VerificationResultAttestationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$VerificationResultAttestationCopyWithImpl<$Res>
+class __$$_VerificationResultAttestationCopyWithImpl<$Res>
     extends _$VerificationResultAttestationCopyWithImpl<$Res>
-    implements _$VerificationResultAttestationCopyWith<$Res> {
-  __$VerificationResultAttestationCopyWithImpl(
-      _VerificationResultAttestation _value,
-      $Res Function(_VerificationResultAttestation) _then)
-      : super(_value, (v) => _then(v as _VerificationResultAttestation));
+    implements _$$_VerificationResultAttestationCopyWith<$Res> {
+  __$$_VerificationResultAttestationCopyWithImpl(
+      _$_VerificationResultAttestation _value,
+      $Res Function(_$_VerificationResultAttestation) _then)
+      : super(_value, (v) => _then(v as _$_VerificationResultAttestation));
 
   @override
-  _VerificationResultAttestation get _value =>
-      super._value as _VerificationResultAttestation;
+  _$_VerificationResultAttestation get _value =>
+      super._value as _$_VerificationResultAttestation;
 
   @override
   $Res call({
@@ -13739,17 +13468,17 @@ class __$VerificationResultAttestationCopyWithImpl<$Res>
     Object? proxySignature = freezed,
     Object? sourceSignature = freezed,
   }) {
-    return _then(_VerificationResultAttestation(
+    return _then(_$_VerificationResultAttestation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       who: who == freezed
@@ -13808,8 +13537,8 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
   _$_VerificationResultAttestation(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.who,
       this.onBehalfOf,
       this.communicationMethod,
@@ -13824,7 +13553,9 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
           this.proxyIdentityCertificateElement,
       this.proxySignature,
       this.sourceSignature})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_VerificationResultAttestation.fromJson(
           Map<String, dynamic> json) =>
@@ -13832,11 +13563,25 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? who;
   @override
@@ -13872,12 +13617,12 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _VerificationResultAttestation &&
+            other is _$_VerificationResultAttestation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.who, who) &&
             const DeepCollectionEquality()
                 .equals(other.onBehalfOf, onBehalfOf) &&
@@ -13902,12 +13647,13 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
                 .equals(other.sourceSignature, sourceSignature));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(who),
       const DeepCollectionEquality().hash(onBehalfOf),
       const DeepCollectionEquality().hash(communicationMethod),
@@ -13922,9 +13668,9 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
 
   @JsonKey(ignore: true)
   @override
-  _$VerificationResultAttestationCopyWith<_VerificationResultAttestation>
-      get copyWith => __$VerificationResultAttestationCopyWithImpl<
-          _VerificationResultAttestation>(this, _$identity);
+  _$$_VerificationResultAttestationCopyWith<_$_VerificationResultAttestation>
+      get copyWith => __$$_VerificationResultAttestationCopyWithImpl<
+          _$_VerificationResultAttestation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13935,64 +13681,68 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
 abstract class _VerificationResultAttestation
     extends VerificationResultAttestation {
   factory _VerificationResultAttestation(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference? who,
-      Reference? onBehalfOf,
-      CodeableConcept? communicationMethod,
-      Date? date,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Reference? who,
+      final Reference? onBehalfOf,
+      final CodeableConcept? communicationMethod,
+      final Date? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      String? sourceIdentityCertificate,
+          final Element? dateElement,
+      final String? sourceIdentityCertificate,
       @JsonKey(name: '_sourceIdentityCertificate')
-          Element? sourceIdentityCertificateElement,
-      String? proxyIdentityCertificate,
+          final Element? sourceIdentityCertificateElement,
+      final String? proxyIdentityCertificate,
       @JsonKey(name: '_proxyIdentityCertificate')
-          Element? proxyIdentityCertificateElement,
-      Signature? proxySignature,
-      Signature? sourceSignature}) = _$_VerificationResultAttestation;
+          final Element? proxyIdentityCertificateElement,
+      final Signature? proxySignature,
+      final Signature? sourceSignature}) = _$_VerificationResultAttestation;
   _VerificationResultAttestation._() : super._();
 
   factory _VerificationResultAttestation.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultAttestation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get who;
+  Reference? get who => throw _privateConstructorUsedError;
   @override
-  Reference? get onBehalfOf;
+  Reference? get onBehalfOf => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get communicationMethod;
+  CodeableConcept? get communicationMethod =>
+      throw _privateConstructorUsedError;
   @override
-  Date? get date;
+  Date? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get sourceIdentityCertificate;
+  String? get sourceIdentityCertificate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sourceIdentityCertificate')
-  Element? get sourceIdentityCertificateElement;
+  Element? get sourceIdentityCertificateElement =>
+      throw _privateConstructorUsedError;
   @override
-  String? get proxyIdentityCertificate;
+  String? get proxyIdentityCertificate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_proxyIdentityCertificate')
-  Element? get proxyIdentityCertificateElement;
+  Element? get proxyIdentityCertificateElement =>
+      throw _privateConstructorUsedError;
   @override
-  Signature? get proxySignature;
+  Signature? get proxySignature => throw _privateConstructorUsedError;
   @override
-  Signature? get sourceSignature;
+  Signature? get sourceSignature => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$VerificationResultAttestationCopyWith<_VerificationResultAttestation>
+  _$$_VerificationResultAttestationCopyWith<_$_VerificationResultAttestation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -14000,39 +13750,6 @@ VerificationResultValidator _$VerificationResultValidatorFromJson(
     Map<String, dynamic> json) {
   return _VerificationResultValidator.fromJson(json);
 }
-
-/// @nodoc
-class _$VerificationResultValidatorTearOff {
-  const _$VerificationResultValidatorTearOff();
-
-  _VerificationResultValidator call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Reference organization,
-      String? identityCertificate,
-      @JsonKey(name: '_identityCertificate')
-          Element? identityCertificateElement,
-      Signature? attestationSignature}) {
-    return _VerificationResultValidator(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      organization: organization,
-      identityCertificate: identityCertificate,
-      identityCertificateElement: identityCertificateElement,
-      attestationSignature: attestationSignature,
-    );
-  }
-
-  VerificationResultValidator fromJson(Map<String, Object?> json) {
-    return VerificationResultValidator.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $VerificationResultValidator = _$VerificationResultValidatorTearOff();
 
 /// @nodoc
 mixin _$VerificationResultValidator {
@@ -14157,12 +13874,12 @@ class _$VerificationResultValidatorCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$VerificationResultValidatorCopyWith<$Res>
+abstract class _$$_VerificationResultValidatorCopyWith<$Res>
     implements $VerificationResultValidatorCopyWith<$Res> {
-  factory _$VerificationResultValidatorCopyWith(
-          _VerificationResultValidator value,
-          $Res Function(_VerificationResultValidator) then) =
-      __$VerificationResultValidatorCopyWithImpl<$Res>;
+  factory _$$_VerificationResultValidatorCopyWith(
+          _$_VerificationResultValidator value,
+          $Res Function(_$_VerificationResultValidator) then) =
+      __$$_VerificationResultValidatorCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -14184,17 +13901,17 @@ abstract class _$VerificationResultValidatorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$VerificationResultValidatorCopyWithImpl<$Res>
+class __$$_VerificationResultValidatorCopyWithImpl<$Res>
     extends _$VerificationResultValidatorCopyWithImpl<$Res>
-    implements _$VerificationResultValidatorCopyWith<$Res> {
-  __$VerificationResultValidatorCopyWithImpl(
-      _VerificationResultValidator _value,
-      $Res Function(_VerificationResultValidator) _then)
-      : super(_value, (v) => _then(v as _VerificationResultValidator));
+    implements _$$_VerificationResultValidatorCopyWith<$Res> {
+  __$$_VerificationResultValidatorCopyWithImpl(
+      _$_VerificationResultValidator _value,
+      $Res Function(_$_VerificationResultValidator) _then)
+      : super(_value, (v) => _then(v as _$_VerificationResultValidator));
 
   @override
-  _VerificationResultValidator get _value =>
-      super._value as _VerificationResultValidator;
+  _$_VerificationResultValidator get _value =>
+      super._value as _$_VerificationResultValidator;
 
   @override
   $Res call({
@@ -14206,17 +13923,17 @@ class __$VerificationResultValidatorCopyWithImpl<$Res>
     Object? identityCertificateElement = freezed,
     Object? attestationSignature = freezed,
   }) {
-    return _then(_VerificationResultValidator(
+    return _then(_$_VerificationResultValidator(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       organization: organization == freezed
@@ -14244,24 +13961,40 @@ class __$VerificationResultValidatorCopyWithImpl<$Res>
 class _$_VerificationResultValidator extends _VerificationResultValidator {
   _$_VerificationResultValidator(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.organization,
       this.identityCertificate,
       @JsonKey(name: '_identityCertificate') this.identityCertificateElement,
       this.attestationSignature})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
       _$$_VerificationResultValidatorFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference organization;
   @override
@@ -14281,12 +14014,12 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _VerificationResultValidator &&
+            other is _$_VerificationResultValidator &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.organization, organization) &&
             const DeepCollectionEquality()
@@ -14297,12 +14030,13 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
                 .equals(other.attestationSignature, attestationSignature));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(organization),
       const DeepCollectionEquality().hash(identityCertificate),
       const DeepCollectionEquality().hash(identityCertificateElement),
@@ -14310,9 +14044,9 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
 
   @JsonKey(ignore: true)
   @override
-  _$VerificationResultValidatorCopyWith<_VerificationResultValidator>
-      get copyWith => __$VerificationResultValidatorCopyWithImpl<
-          _VerificationResultValidator>(this, _$identity);
+  _$$_VerificationResultValidatorCopyWith<_$_VerificationResultValidator>
+      get copyWith => __$$_VerificationResultValidatorCopyWithImpl<
+          _$_VerificationResultValidator>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -14323,38 +14057,39 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
 abstract class _VerificationResultValidator
     extends VerificationResultValidator {
   factory _VerificationResultValidator(
-      {String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Reference organization,
-      String? identityCertificate,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Reference organization,
+      final String? identityCertificate,
       @JsonKey(name: '_identityCertificate')
-          Element? identityCertificateElement,
-      Signature? attestationSignature}) = _$_VerificationResultValidator;
+          final Element? identityCertificateElement,
+      final Signature? attestationSignature}) = _$_VerificationResultValidator;
   _VerificationResultValidator._() : super._();
 
   factory _VerificationResultValidator.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultValidator.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference get organization;
+  Reference get organization => throw _privateConstructorUsedError;
   @override
-  String? get identityCertificate;
+  String? get identityCertificate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_identityCertificate')
-  Element? get identityCertificateElement;
+  Element? get identityCertificateElement => throw _privateConstructorUsedError;
   @override
-  Signature? get attestationSignature;
+  Signature? get attestationSignature => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$VerificationResultValidatorCopyWith<_VerificationResultValidator>
+  _$$_VerificationResultValidatorCopyWith<_$_VerificationResultValidator>
       get copyWith => throw _privateConstructorUsedError;
 }

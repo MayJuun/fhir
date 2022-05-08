@@ -12,129 +12,11 @@ part of 'terminology.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
   return _ValueSet.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetTearOff {
-  const _$ValueSetTearOff();
-
-  _ValueSet call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.ValueSet,
-      Id? id,
-      @JsonKey(name: '_id')
-          Element? idElement,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      Identifier? identifier,
-      String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          required ValueSetStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ValueSetContact>? contact,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      Date? lockedDate,
-      @JsonKey(name: '_lockedDate')
-          Element? lockedDateElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      Boolean? immutable,
-      @JsonKey(name: '_immutable')
-          Element? immutableElement,
-      String? requirements,
-      String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      Boolean? extensible,
-      ValueSetCodeSystem? codeSystem,
-      ValueSetCompose? compose,
-      ValueSetExpansion? expansion}) {
-    return _ValueSet(
-      resourceType: resourceType,
-      id: id,
-      idElement: idElement,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      identifier: identifier,
-      version: version,
-      versionElement: versionElement,
-      name: name,
-      nameElement: nameElement,
-      status: status,
-      statusElement: statusElement,
-      experimental: experimental,
-      experimentalElement: experimentalElement,
-      publisher: publisher,
-      publisherElement: publisherElement,
-      contact: contact,
-      date: date,
-      dateElement: dateElement,
-      lockedDate: lockedDate,
-      lockedDateElement: lockedDateElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      useContext: useContext,
-      immutable: immutable,
-      immutableElement: immutableElement,
-      requirements: requirements,
-      copyright: copyright,
-      copyrightElement: copyrightElement,
-      extensible: extensible,
-      codeSystem: codeSystem,
-      compose: compose,
-      expansion: expansion,
-    );
-  }
-
-  ValueSet fromJson(Map<String, Object?> json) {
-    return ValueSet.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSet = _$ValueSetTearOff();
 
 /// @nodoc
 mixin _$ValueSet {
@@ -739,9 +621,10 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
-  factory _$ValueSetCopyWith(_ValueSet value, $Res Function(_ValueSet) then) =
-      __$ValueSetCopyWithImpl<$Res>;
+abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
+  factory _$$_ValueSetCopyWith(
+          _$_ValueSet value, $Res Function(_$_ValueSet) then) =
+      __$$_ValueSetCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
@@ -847,13 +730,14 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
-    implements _$ValueSetCopyWith<$Res> {
-  __$ValueSetCopyWithImpl(_ValueSet _value, $Res Function(_ValueSet) _then)
-      : super(_value, (v) => _then(v as _ValueSet));
+class __$$_ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
+    implements _$$_ValueSetCopyWith<$Res> {
+  __$$_ValueSetCopyWithImpl(
+      _$_ValueSet _value, $Res Function(_$_ValueSet) _then)
+      : super(_value, (v) => _then(v as _$_ValueSet));
 
   @override
-  _ValueSet get _value => super._value as _ValueSet;
+  _$_ValueSet get _value => super._value as _$_ValueSet;
 
   @override
   $Res call({
@@ -900,7 +784,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
     Object? compose = freezed,
     Object? expansion = freezed,
   }) {
-    return _then(_ValueSet(
+    return _then(_$_ValueSet(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -938,15 +822,15 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: url == freezed
@@ -1002,7 +886,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: contact == freezed
-          ? _value.contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ValueSetContact>?,
       date: date == freezed
@@ -1030,7 +914,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       useContext: useContext == freezed
-          ? _value.useContext
+          ? _value._useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       immutable: immutable == freezed
@@ -1090,10 +974,10 @@ class _$_ValueSet extends _ValueSet {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
@@ -1114,7 +998,7 @@ class _$_ValueSet extends _ValueSet {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      this.contact,
+      final List<ValueSetContact>? contact,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
@@ -1124,7 +1008,7 @@ class _$_ValueSet extends _ValueSet {
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.useContext,
+      final List<CodeableConcept>? useContext,
       this.immutable,
       @JsonKey(name: '_immutable')
           this.immutableElement,
@@ -1136,7 +1020,12 @@ class _$_ValueSet extends _ValueSet {
       this.codeSystem,
       this.compose,
       this.expansion})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _useContext = useContext,
+        super._();
 
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetFromJson(json);
@@ -1163,13 +1052,34 @@ class _$_ValueSet extends _ValueSet {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? url;
   @override
@@ -1203,8 +1113,15 @@ class _$_ValueSet extends _ValueSet {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+  final List<ValueSetContact>? _contact;
   @override
-  final List<ValueSetContact>? contact;
+  List<ValueSetContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? date;
   @override
@@ -1220,8 +1137,15 @@ class _$_ValueSet extends _ValueSet {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<CodeableConcept>? _useContext;
   @override
-  final List<CodeableConcept>? useContext;
+  List<CodeableConcept>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? immutable;
   @override
@@ -1252,7 +1176,7 @@ class _$_ValueSet extends _ValueSet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSet &&
+            other is _$_ValueSet &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1266,11 +1190,12 @@ class _$_ValueSet extends _ValueSet {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement) &&
@@ -1292,7 +1217,7 @@ class _$_ValueSet extends _ValueSet {
             const DeepCollectionEquality().equals(other.publisher, publisher) &&
             const DeepCollectionEquality()
                 .equals(other.publisherElement, publisherElement) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
@@ -1305,7 +1230,7 @@ class _$_ValueSet extends _ValueSet {
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.useContext, useContext) &&
+                .equals(other._useContext, _useContext) &&
             const DeepCollectionEquality().equals(other.immutable, immutable) &&
             const DeepCollectionEquality()
                 .equals(other.immutableElement, immutableElement) &&
@@ -1322,6 +1247,7 @@ class _$_ValueSet extends _ValueSet {
             const DeepCollectionEquality().equals(other.expansion, expansion));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1334,9 +1260,9 @@ class _$_ValueSet extends _ValueSet {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(url),
         const DeepCollectionEquality().hash(urlElement),
         const DeepCollectionEquality().hash(identifier),
@@ -1350,14 +1276,14 @@ class _$_ValueSet extends _ValueSet {
         const DeepCollectionEquality().hash(experimentalElement),
         const DeepCollectionEquality().hash(publisher),
         const DeepCollectionEquality().hash(publisherElement),
-        const DeepCollectionEquality().hash(contact),
+        const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
         const DeepCollectionEquality().hash(lockedDate),
         const DeepCollectionEquality().hash(lockedDateElement),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(_useContext),
         const DeepCollectionEquality().hash(immutable),
         const DeepCollectionEquality().hash(immutableElement),
         const DeepCollectionEquality().hash(requirements),
@@ -1371,8 +1297,8 @@ class _$_ValueSet extends _ValueSet {
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetCopyWith<_ValueSet> get copyWith =>
-      __$ValueSetCopyWithImpl<_ValueSet>(this, _$identity);
+  _$$_ValueSetCopyWith<_$_ValueSet> get copyWith =>
+      __$$_ValueSetCopyWithImpl<_$_ValueSet>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1383,207 +1309,179 @@ class _$_ValueSet extends _ValueSet {
 abstract class _ValueSet extends ValueSet {
   factory _ValueSet(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
-          Dstu2ResourceType resourceType,
-      Id? id,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
       @JsonKey(name: '_id')
-          Element? idElement,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Element? idElement,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
       @JsonKey(name: '_url')
-          Element? urlElement,
-      Identifier? identifier,
-      String? version,
+          final Element? urlElement,
+      final Identifier? identifier,
+      final String? version,
       @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
+          final Element? versionElement,
+      final String? name,
       @JsonKey(name: '_name')
-          Element? nameElement,
+          final Element? nameElement,
       @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          required ValueSetStatus status,
+          required final ValueSetStatus status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? experimental,
+          final Element? statusElement,
+      final Boolean? experimental,
       @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      String? publisher,
+          final Element? experimentalElement,
+      final String? publisher,
       @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ValueSetContact>? contact,
-      FhirDateTime? date,
+          final Element? publisherElement,
+      final List<ValueSetContact>? contact,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      Date? lockedDate,
+          final Element? dateElement,
+      final Date? lockedDate,
       @JsonKey(name: '_lockedDate')
-          Element? lockedDateElement,
-      String? description,
+          final Element? lockedDateElement,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      Boolean? immutable,
+          final Element? descriptionElement,
+      final List<CodeableConcept>? useContext,
+      final Boolean? immutable,
       @JsonKey(name: '_immutable')
-          Element? immutableElement,
-      String? requirements,
-      String? copyright,
+          final Element? immutableElement,
+      final String? requirements,
+      final String? copyright,
       @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      Boolean? extensible,
-      ValueSetCodeSystem? codeSystem,
-      ValueSetCompose? compose,
-      ValueSetExpansion? expansion}) = _$_ValueSet;
+          final Element? copyrightElement,
+      final Boolean? extensible,
+      final ValueSetCodeSystem? codeSystem,
+      final ValueSetCompose? compose,
+      final ValueSetExpansion? expansion}) = _$_ValueSet;
   _ValueSet._() : super._();
 
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_id')
-  Element? get idElement;
+  Element? get idElement => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-  ValueSetStatus get status;
+  ValueSetStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ValueSetContact>? get contact;
+  List<ValueSetContact>? get contact => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  Date? get lockedDate;
+  Date? get lockedDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lockedDate')
-  Element? get lockedDateElement;
+  Element? get lockedDateElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get useContext;
+  List<CodeableConcept>? get useContext => throw _privateConstructorUsedError;
   @override
-  Boolean? get immutable;
+  Boolean? get immutable => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_immutable')
-  Element? get immutableElement;
+  Element? get immutableElement => throw _privateConstructorUsedError;
   @override
-  String? get requirements;
+  String? get requirements => throw _privateConstructorUsedError;
   @override
-  String? get copyright;
+  String? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get extensible;
+  Boolean? get extensible => throw _privateConstructorUsedError;
   @override
-  ValueSetCodeSystem? get codeSystem;
+  ValueSetCodeSystem? get codeSystem => throw _privateConstructorUsedError;
   @override
-  ValueSetCompose? get compose;
+  ValueSetCompose? get compose => throw _privateConstructorUsedError;
   @override
-  ValueSetExpansion? get expansion;
+  ValueSetExpansion? get expansion => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetCopyWith<_ValueSet> get copyWith =>
+  _$$_ValueSetCopyWith<_$_ValueSet> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ValueSetContact _$ValueSetContactFromJson(Map<String, dynamic> json) {
   return _ValueSetContact.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetContactTearOff {
-  const _$ValueSetContactTearOff();
-
-  _ValueSetContact call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      String? name,
-      List<ContactPoint>? telecom}) {
-    return _ValueSetContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      name: name,
-      telecom: telecom,
-    );
-  }
-
-  ValueSetContact fromJson(Map<String, Object?> json) {
-    return ValueSetContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetContact = _$ValueSetContactTearOff();
 
 /// @nodoc
 mixin _$ValueSetContact {
@@ -1665,11 +1563,11 @@ class _$ValueSetContactCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetContactCopyWith<$Res>
+abstract class _$$_ValueSetContactCopyWith<$Res>
     implements $ValueSetContactCopyWith<$Res> {
-  factory _$ValueSetContactCopyWith(
-          _ValueSetContact value, $Res Function(_ValueSetContact) then) =
-      __$ValueSetContactCopyWithImpl<$Res>;
+  factory _$$_ValueSetContactCopyWith(
+          _$_ValueSetContact value, $Res Function(_$_ValueSetContact) then) =
+      __$$_ValueSetContactCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -1681,15 +1579,15 @@ abstract class _$ValueSetContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetContactCopyWithImpl<$Res>
+class __$$_ValueSetContactCopyWithImpl<$Res>
     extends _$ValueSetContactCopyWithImpl<$Res>
-    implements _$ValueSetContactCopyWith<$Res> {
-  __$ValueSetContactCopyWithImpl(
-      _ValueSetContact _value, $Res Function(_ValueSetContact) _then)
-      : super(_value, (v) => _then(v as _ValueSetContact));
+    implements _$$_ValueSetContactCopyWith<$Res> {
+  __$$_ValueSetContactCopyWithImpl(
+      _$_ValueSetContact _value, $Res Function(_$_ValueSetContact) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetContact));
 
   @override
-  _ValueSetContact get _value => super._value as _ValueSetContact;
+  _$_ValueSetContact get _value => super._value as _$_ValueSetContact;
 
   @override
   $Res call({
@@ -1700,21 +1598,21 @@ class __$ValueSetContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_ValueSetContact(
+    return _then(_$_ValueSetContact(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       name: name == freezed
@@ -1722,7 +1620,7 @@ class __$ValueSetContactCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       telecom: telecom == freezed
-          ? _value.telecom
+          ? _value._telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -1734,30 +1632,61 @@ class __$ValueSetContactCopyWithImpl<$Res>
 class _$_ValueSetContact extends _ValueSetContact {
   _$_ValueSetContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.name,
-      this.telecom})
-      : super._();
+      final List<ContactPoint>? telecom})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _telecom = telecom,
+        super._();
 
   factory _$_ValueSetContact.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetContactFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
+  final List<ContactPoint>? _telecom;
   @override
-  final List<ContactPoint>? telecom;
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1768,32 +1697,33 @@ class _$_ValueSetContact extends _ValueSetContact {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetContact &&
+            other is _$_ValueSetContact &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.telecom, telecom));
+            const DeepCollectionEquality().equals(other._telecom, _telecom));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(telecom));
+      const DeepCollectionEquality().hash(_telecom));
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetContactCopyWith<_ValueSetContact> get copyWith =>
-      __$ValueSetContactCopyWithImpl<_ValueSetContact>(this, _$identity);
+  _$$_ValueSetContactCopyWith<_$_ValueSetContact> get copyWith =>
+      __$$_ValueSetContactCopyWithImpl<_$_ValueSetContact>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1803,79 +1733,41 @@ class _$_ValueSetContact extends _ValueSetContact {
 
 abstract class _ValueSetContact extends ValueSetContact {
   factory _ValueSetContact(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      String? name,
-      List<ContactPoint>? telecom}) = _$_ValueSetContact;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      final String? name,
+      final List<ContactPoint>? telecom}) = _$_ValueSetContact;
   _ValueSetContact._() : super._();
 
   factory _ValueSetContact.fromJson(Map<String, dynamic> json) =
       _$_ValueSetContact.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetContactCopyWith<_ValueSetContact> get copyWith =>
+  _$$_ValueSetContactCopyWith<_$_ValueSetContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ValueSetCodeSystem _$ValueSetCodeSystemFromJson(Map<String, dynamic> json) {
   return _ValueSetCodeSystem.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetCodeSystemTearOff {
-  const _$ValueSetCodeSystemTearOff();
-
-  _ValueSetCodeSystem call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required FhirUri system,
-      @JsonKey(name: '_system') Element? systemElement,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      Boolean? caseSensitive,
-      @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
-      required List<ValueSetCodeSystemConcept> concept}) {
-    return _ValueSetCodeSystem(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      system: system,
-      systemElement: systemElement,
-      version: version,
-      versionElement: versionElement,
-      caseSensitive: caseSensitive,
-      caseSensitiveElement: caseSensitiveElement,
-      concept: concept,
-    );
-  }
-
-  ValueSetCodeSystem fromJson(Map<String, Object?> json) {
-    return ValueSetCodeSystem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetCodeSystem = _$ValueSetCodeSystemTearOff();
 
 /// @nodoc
 mixin _$ValueSetCodeSystem {
@@ -2033,11 +1925,11 @@ class _$ValueSetCodeSystemCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetCodeSystemCopyWith<$Res>
+abstract class _$$_ValueSetCodeSystemCopyWith<$Res>
     implements $ValueSetCodeSystemCopyWith<$Res> {
-  factory _$ValueSetCodeSystemCopyWith(
-          _ValueSetCodeSystem value, $Res Function(_ValueSetCodeSystem) then) =
-      __$ValueSetCodeSystemCopyWithImpl<$Res>;
+  factory _$$_ValueSetCodeSystemCopyWith(_$_ValueSetCodeSystem value,
+          $Res Function(_$_ValueSetCodeSystem) then) =
+      __$$_ValueSetCodeSystemCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -2061,15 +1953,15 @@ abstract class _$ValueSetCodeSystemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetCodeSystemCopyWithImpl<$Res>
+class __$$_ValueSetCodeSystemCopyWithImpl<$Res>
     extends _$ValueSetCodeSystemCopyWithImpl<$Res>
-    implements _$ValueSetCodeSystemCopyWith<$Res> {
-  __$ValueSetCodeSystemCopyWithImpl(
-      _ValueSetCodeSystem _value, $Res Function(_ValueSetCodeSystem) _then)
-      : super(_value, (v) => _then(v as _ValueSetCodeSystem));
+    implements _$$_ValueSetCodeSystemCopyWith<$Res> {
+  __$$_ValueSetCodeSystemCopyWithImpl(
+      _$_ValueSetCodeSystem _value, $Res Function(_$_ValueSetCodeSystem) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetCodeSystem));
 
   @override
-  _ValueSetCodeSystem get _value => super._value as _ValueSetCodeSystem;
+  _$_ValueSetCodeSystem get _value => super._value as _$_ValueSetCodeSystem;
 
   @override
   $Res call({
@@ -2085,21 +1977,21 @@ class __$ValueSetCodeSystemCopyWithImpl<$Res>
     Object? caseSensitiveElement = freezed,
     Object? concept = freezed,
   }) {
-    return _then(_ValueSetCodeSystem(
+    return _then(_$_ValueSetCodeSystem(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       system: system == freezed
@@ -2127,7 +2019,7 @@ class __$ValueSetCodeSystemCopyWithImpl<$Res>
           : caseSensitiveElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       concept: concept == freezed
-          ? _value.concept
+          ? _value._concept
           : concept // ignore: cast_nullable_to_non_nullable
               as List<ValueSetCodeSystemConcept>,
     ));
@@ -2139,31 +2031,56 @@ class __$ValueSetCodeSystemCopyWithImpl<$Res>
 class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
   _$_ValueSetCodeSystem(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.system,
       @JsonKey(name: '_system') this.systemElement,
       this.version,
       @JsonKey(name: '_version') this.versionElement,
       this.caseSensitive,
       @JsonKey(name: '_caseSensitive') this.caseSensitiveElement,
-      required this.concept})
-      : super._();
+      required final List<ValueSetCodeSystemConcept> concept})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _concept = concept,
+        super._();
 
   factory _$_ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetCodeSystemFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri system;
   @override
@@ -2179,8 +2096,12 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
   @override
   @JsonKey(name: '_caseSensitive')
   final Element? caseSensitiveElement;
+  final List<ValueSetCodeSystemConcept> _concept;
   @override
-  final List<ValueSetCodeSystemConcept> concept;
+  List<ValueSetCodeSystemConcept> get concept {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_concept);
+  }
 
   @override
   String toString() {
@@ -2191,14 +2112,14 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetCodeSystem &&
+            other is _$_ValueSetCodeSystem &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.system, system) &&
             const DeepCollectionEquality()
                 .equals(other.systemElement, systemElement) &&
@@ -2209,28 +2130,30 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
                 .equals(other.caseSensitive, caseSensitive) &&
             const DeepCollectionEquality()
                 .equals(other.caseSensitiveElement, caseSensitiveElement) &&
-            const DeepCollectionEquality().equals(other.concept, concept));
+            const DeepCollectionEquality().equals(other._concept, _concept));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(system),
       const DeepCollectionEquality().hash(systemElement),
       const DeepCollectionEquality().hash(version),
       const DeepCollectionEquality().hash(versionElement),
       const DeepCollectionEquality().hash(caseSensitive),
       const DeepCollectionEquality().hash(caseSensitiveElement),
-      const DeepCollectionEquality().hash(concept));
+      const DeepCollectionEquality().hash(_concept));
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetCodeSystemCopyWith<_ValueSetCodeSystem> get copyWith =>
-      __$ValueSetCodeSystemCopyWithImpl<_ValueSetCodeSystem>(this, _$identity);
+  _$$_ValueSetCodeSystemCopyWith<_$_ValueSetCodeSystem> get copyWith =>
+      __$$_ValueSetCodeSystemCopyWithImpl<_$_ValueSetCodeSystem>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2240,17 +2163,17 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
 
 abstract class _ValueSetCodeSystem extends ValueSetCodeSystem {
   factory _ValueSetCodeSystem(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-          required FhirUri system,
-          @JsonKey(name: '_system') Element? systemElement,
-          String? version,
-          @JsonKey(name: '_version') Element? versionElement,
-          Boolean? caseSensitive,
-          @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
-          required List<ValueSetCodeSystemConcept> concept}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          required final FhirUri system,
+          @JsonKey(name: '_system') final Element? systemElement,
+          final String? version,
+          @JsonKey(name: '_version') final Element? versionElement,
+          final Boolean? caseSensitive,
+          @JsonKey(name: '_caseSensitive') final Element? caseSensitiveElement,
+          required final List<ValueSetCodeSystemConcept> concept}) =
       _$_ValueSetCodeSystem;
   _ValueSetCodeSystem._() : super._();
 
@@ -2258,35 +2181,37 @@ abstract class _ValueSetCodeSystem extends ValueSetCodeSystem {
       _$_ValueSetCodeSystem.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  FhirUri get system;
+  FhirUri get system => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_system')
-  Element? get systemElement;
+  Element? get systemElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get caseSensitive;
+  Boolean? get caseSensitive => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_caseSensitive')
-  Element? get caseSensitiveElement;
+  Element? get caseSensitiveElement => throw _privateConstructorUsedError;
   @override
-  List<ValueSetCodeSystemConcept> get concept;
+  List<ValueSetCodeSystemConcept> get concept =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetCodeSystemCopyWith<_ValueSetCodeSystem> get copyWith =>
+  _$$_ValueSetCodeSystemCopyWith<_$_ValueSetCodeSystem> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2294,47 +2219,6 @@ ValueSetCodeSystemConcept _$ValueSetCodeSystemConceptFromJson(
     Map<String, dynamic> json) {
   return _ValueSetCodeSystemConcept.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetCodeSystemConceptTearOff {
-  const _$ValueSetCodeSystemConceptTearOff();
-
-  _ValueSetCodeSystemConcept call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required Code code,
-      @JsonKey(name: '_code') Element? codeElement,
-      @JsonKey(name: 'abstract') Boolean? abstract_,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement,
-      String? definition,
-      List<ValueSetConceptDesignation>? designation,
-      List<ValueSetCodeSystemConcept>? concept}) {
-    return _ValueSetCodeSystemConcept(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      code: code,
-      codeElement: codeElement,
-      abstract_: abstract_,
-      display: display,
-      displayElement: displayElement,
-      definition: definition,
-      designation: designation,
-      concept: concept,
-    );
-  }
-
-  ValueSetCodeSystemConcept fromJson(Map<String, Object?> json) {
-    return ValueSetCodeSystemConcept.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetCodeSystemConcept = _$ValueSetCodeSystemConceptTearOff();
 
 /// @nodoc
 mixin _$ValueSetCodeSystemConcept {
@@ -2488,11 +2372,12 @@ class _$ValueSetCodeSystemConceptCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetCodeSystemConceptCopyWith<$Res>
+abstract class _$$_ValueSetCodeSystemConceptCopyWith<$Res>
     implements $ValueSetCodeSystemConceptCopyWith<$Res> {
-  factory _$ValueSetCodeSystemConceptCopyWith(_ValueSetCodeSystemConcept value,
-          $Res Function(_ValueSetCodeSystemConcept) then) =
-      __$ValueSetCodeSystemConceptCopyWithImpl<$Res>;
+  factory _$$_ValueSetCodeSystemConceptCopyWith(
+          _$_ValueSetCodeSystemConcept value,
+          $Res Function(_$_ValueSetCodeSystemConcept) then) =
+      __$$_ValueSetCodeSystemConceptCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -2515,16 +2400,17 @@ abstract class _$ValueSetCodeSystemConceptCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetCodeSystemConceptCopyWithImpl<$Res>
+class __$$_ValueSetCodeSystemConceptCopyWithImpl<$Res>
     extends _$ValueSetCodeSystemConceptCopyWithImpl<$Res>
-    implements _$ValueSetCodeSystemConceptCopyWith<$Res> {
-  __$ValueSetCodeSystemConceptCopyWithImpl(_ValueSetCodeSystemConcept _value,
-      $Res Function(_ValueSetCodeSystemConcept) _then)
-      : super(_value, (v) => _then(v as _ValueSetCodeSystemConcept));
+    implements _$$_ValueSetCodeSystemConceptCopyWith<$Res> {
+  __$$_ValueSetCodeSystemConceptCopyWithImpl(
+      _$_ValueSetCodeSystemConcept _value,
+      $Res Function(_$_ValueSetCodeSystemConcept) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetCodeSystemConcept));
 
   @override
-  _ValueSetCodeSystemConcept get _value =>
-      super._value as _ValueSetCodeSystemConcept;
+  _$_ValueSetCodeSystemConcept get _value =>
+      super._value as _$_ValueSetCodeSystemConcept;
 
   @override
   $Res call({
@@ -2541,21 +2427,21 @@ class __$ValueSetCodeSystemConceptCopyWithImpl<$Res>
     Object? designation = freezed,
     Object? concept = freezed,
   }) {
-    return _then(_ValueSetCodeSystemConcept(
+    return _then(_$_ValueSetCodeSystemConcept(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       code: code == freezed
@@ -2583,11 +2469,11 @@ class __$ValueSetCodeSystemConceptCopyWithImpl<$Res>
           : definition // ignore: cast_nullable_to_non_nullable
               as String?,
       designation: designation == freezed
-          ? _value.designation
+          ? _value._designation
           : designation // ignore: cast_nullable_to_non_nullable
               as List<ValueSetConceptDesignation>?,
       concept: concept == freezed
-          ? _value.concept
+          ? _value._concept
           : concept // ignore: cast_nullable_to_non_nullable
               as List<ValueSetCodeSystemConcept>?,
     ));
@@ -2599,32 +2485,58 @@ class __$ValueSetCodeSystemConceptCopyWithImpl<$Res>
 class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
   _$_ValueSetCodeSystemConcept(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.code,
       @JsonKey(name: '_code') this.codeElement,
       @JsonKey(name: 'abstract') this.abstract_,
       this.display,
       @JsonKey(name: '_display') this.displayElement,
       this.definition,
-      this.designation,
-      this.concept})
-      : super._();
+      final List<ValueSetConceptDesignation>? designation,
+      final List<ValueSetCodeSystemConcept>? concept})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _designation = designation,
+        _concept = concept,
+        super._();
 
   factory _$_ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetCodeSystemConceptFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code code;
   @override
@@ -2640,10 +2552,23 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
   final Element? displayElement;
   @override
   final String? definition;
+  final List<ValueSetConceptDesignation>? _designation;
   @override
-  final List<ValueSetConceptDesignation>? designation;
+  List<ValueSetConceptDesignation>? get designation {
+    final value = _designation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ValueSetCodeSystemConcept>? _concept;
   @override
-  final List<ValueSetCodeSystemConcept>? concept;
+  List<ValueSetCodeSystemConcept>? get concept {
+    final value = _concept;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -2654,14 +2579,14 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetCodeSystemConcept &&
+            other is _$_ValueSetCodeSystemConcept &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.codeElement, codeElement) &&
@@ -2672,32 +2597,32 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
             const DeepCollectionEquality()
                 .equals(other.definition, definition) &&
             const DeepCollectionEquality()
-                .equals(other.designation, designation) &&
-            const DeepCollectionEquality().equals(other.concept, concept));
+                .equals(other._designation, _designation) &&
+            const DeepCollectionEquality().equals(other._concept, _concept));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(codeElement),
       const DeepCollectionEquality().hash(abstract_),
       const DeepCollectionEquality().hash(display),
       const DeepCollectionEquality().hash(displayElement),
       const DeepCollectionEquality().hash(definition),
-      const DeepCollectionEquality().hash(designation),
-      const DeepCollectionEquality().hash(concept));
+      const DeepCollectionEquality().hash(_designation),
+      const DeepCollectionEquality().hash(_concept));
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetCodeSystemConceptCopyWith<_ValueSetCodeSystemConcept>
-      get copyWith =>
-          __$ValueSetCodeSystemConceptCopyWithImpl<_ValueSetCodeSystemConcept>(
-              this, _$identity);
+  _$$_ValueSetCodeSystemConceptCopyWith<_$_ValueSetCodeSystemConcept>
+      get copyWith => __$$_ValueSetCodeSystemConceptCopyWithImpl<
+          _$_ValueSetCodeSystemConcept>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2707,55 +2632,59 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
 
 abstract class _ValueSetCodeSystemConcept extends ValueSetCodeSystemConcept {
   factory _ValueSetCodeSystemConcept(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required Code code,
-      @JsonKey(name: '_code') Element? codeElement,
-      @JsonKey(name: 'abstract') Boolean? abstract_,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement,
-      String? definition,
-      List<ValueSetConceptDesignation>? designation,
-      List<ValueSetCodeSystemConcept>? concept}) = _$_ValueSetCodeSystemConcept;
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          required final Code code,
+          @JsonKey(name: '_code') final Element? codeElement,
+          @JsonKey(name: 'abstract') final Boolean? abstract_,
+          final String? display,
+          @JsonKey(name: '_display') final Element? displayElement,
+          final String? definition,
+          final List<ValueSetConceptDesignation>? designation,
+          final List<ValueSetCodeSystemConcept>? concept}) =
+      _$_ValueSetCodeSystemConcept;
   _ValueSetCodeSystemConcept._() : super._();
 
   factory _ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCodeSystemConcept.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  Code get code;
+  Code get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_;
+  Boolean? get abstract_ => throw _privateConstructorUsedError;
   @override
-  String? get display;
+  String? get display => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement;
+  Element? get displayElement => throw _privateConstructorUsedError;
   @override
-  String? get definition;
+  String? get definition => throw _privateConstructorUsedError;
   @override
-  List<ValueSetConceptDesignation>? get designation;
+  List<ValueSetConceptDesignation>? get designation =>
+      throw _privateConstructorUsedError;
   @override
-  List<ValueSetCodeSystemConcept>? get concept;
+  List<ValueSetCodeSystemConcept>? get concept =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetCodeSystemConceptCopyWith<_ValueSetCodeSystemConcept>
+  _$$_ValueSetCodeSystemConceptCopyWith<_$_ValueSetCodeSystemConcept>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2763,39 +2692,6 @@ ValueSetConceptDesignation _$ValueSetConceptDesignationFromJson(
     Map<String, dynamic> json) {
   return _ValueSetConceptDesignation.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetConceptDesignationTearOff {
-  const _$ValueSetConceptDesignationTearOff();
-
-  _ValueSetConceptDesignation call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Coding? use,
-      required String value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _ValueSetConceptDesignation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      language: language,
-      languageElement: languageElement,
-      use: use,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  ValueSetConceptDesignation fromJson(Map<String, Object?> json) {
-    return ValueSetConceptDesignation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetConceptDesignation = _$ValueSetConceptDesignationTearOff();
 
 /// @nodoc
 mixin _$ValueSetConceptDesignation {
@@ -2929,12 +2825,12 @@ class _$ValueSetConceptDesignationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetConceptDesignationCopyWith<$Res>
+abstract class _$$_ValueSetConceptDesignationCopyWith<$Res>
     implements $ValueSetConceptDesignationCopyWith<$Res> {
-  factory _$ValueSetConceptDesignationCopyWith(
-          _ValueSetConceptDesignation value,
-          $Res Function(_ValueSetConceptDesignation) then) =
-      __$ValueSetConceptDesignationCopyWithImpl<$Res>;
+  factory _$$_ValueSetConceptDesignationCopyWith(
+          _$_ValueSetConceptDesignation value,
+          $Res Function(_$_ValueSetConceptDesignation) then) =
+      __$$_ValueSetConceptDesignationCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -2955,16 +2851,17 @@ abstract class _$ValueSetConceptDesignationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetConceptDesignationCopyWithImpl<$Res>
+class __$$_ValueSetConceptDesignationCopyWithImpl<$Res>
     extends _$ValueSetConceptDesignationCopyWithImpl<$Res>
-    implements _$ValueSetConceptDesignationCopyWith<$Res> {
-  __$ValueSetConceptDesignationCopyWithImpl(_ValueSetConceptDesignation _value,
-      $Res Function(_ValueSetConceptDesignation) _then)
-      : super(_value, (v) => _then(v as _ValueSetConceptDesignation));
+    implements _$$_ValueSetConceptDesignationCopyWith<$Res> {
+  __$$_ValueSetConceptDesignationCopyWithImpl(
+      _$_ValueSetConceptDesignation _value,
+      $Res Function(_$_ValueSetConceptDesignation) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetConceptDesignation));
 
   @override
-  _ValueSetConceptDesignation get _value =>
-      super._value as _ValueSetConceptDesignation;
+  _$_ValueSetConceptDesignation get _value =>
+      super._value as _$_ValueSetConceptDesignation;
 
   @override
   $Res call({
@@ -2977,17 +2874,17 @@ class __$ValueSetConceptDesignationCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_ValueSetConceptDesignation(
+    return _then(_$_ValueSetConceptDesignation(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       language: language == freezed
@@ -3019,25 +2916,41 @@ class __$ValueSetConceptDesignationCopyWithImpl<$Res>
 class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
   _$_ValueSetConceptDesignation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       this.use,
       required this.value,
       @JsonKey(name: '_value') this.valueElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetConceptDesignationFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? language;
   @override
@@ -3060,12 +2973,12 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetConceptDesignation &&
+            other is _$_ValueSetConceptDesignation &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.language, language) &&
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
@@ -3075,12 +2988,13 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(language),
       const DeepCollectionEquality().hash(languageElement),
       const DeepCollectionEquality().hash(use),
@@ -3089,9 +3003,9 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetConceptDesignationCopyWith<_ValueSetConceptDesignation>
-      get copyWith => __$ValueSetConceptDesignationCopyWithImpl<
-          _ValueSetConceptDesignation>(this, _$identity);
+  _$$_ValueSetConceptDesignationCopyWith<_$_ValueSetConceptDesignation>
+      get copyWith => __$$_ValueSetConceptDesignationCopyWithImpl<
+          _$_ValueSetConceptDesignation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3101,14 +3015,14 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
 
 abstract class _ValueSetConceptDesignation extends ValueSetConceptDesignation {
   factory _ValueSetConceptDesignation(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? language,
-          @JsonKey(name: '_language') Element? languageElement,
-          Coding? use,
-          required String value,
-          @JsonKey(name: '_value') Element? valueElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Code? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Coding? use,
+          required final String value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ValueSetConceptDesignation;
   _ValueSetConceptDesignation._() : super._();
 
@@ -3116,64 +3030,34 @@ abstract class _ValueSetConceptDesignation extends ValueSetConceptDesignation {
       _$_ValueSetConceptDesignation.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Coding? get use;
+  Coding? get use => throw _privateConstructorUsedError;
   @override
-  String get value;
+  String get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetConceptDesignationCopyWith<_ValueSetConceptDesignation>
+  _$$_ValueSetConceptDesignationCopyWith<_$_ValueSetConceptDesignation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 ValueSetCompose _$ValueSetComposeFromJson(Map<String, dynamic> json) {
   return _ValueSetCompose.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetComposeTearOff {
-  const _$ValueSetComposeTearOff();
-
-  _ValueSetCompose call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      @JsonKey(name: 'import') List<FhirUri>? import_,
-      List<ValueSetComposeInclude>? include,
-      List<ValueSetComposeInclude>? exclude}) {
-    return _ValueSetCompose(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      import_: import_,
-      include: include,
-      exclude: exclude,
-    );
-  }
-
-  ValueSetCompose fromJson(Map<String, Object?> json) {
-    return ValueSetCompose.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetCompose = _$ValueSetComposeTearOff();
 
 /// @nodoc
 mixin _$ValueSetCompose {
@@ -3265,11 +3149,11 @@ class _$ValueSetComposeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetComposeCopyWith<$Res>
+abstract class _$$_ValueSetComposeCopyWith<$Res>
     implements $ValueSetComposeCopyWith<$Res> {
-  factory _$ValueSetComposeCopyWith(
-          _ValueSetCompose value, $Res Function(_ValueSetCompose) then) =
-      __$ValueSetComposeCopyWithImpl<$Res>;
+  factory _$$_ValueSetComposeCopyWith(
+          _$_ValueSetCompose value, $Res Function(_$_ValueSetCompose) then) =
+      __$$_ValueSetComposeCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -3282,15 +3166,15 @@ abstract class _$ValueSetComposeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetComposeCopyWithImpl<$Res>
+class __$$_ValueSetComposeCopyWithImpl<$Res>
     extends _$ValueSetComposeCopyWithImpl<$Res>
-    implements _$ValueSetComposeCopyWith<$Res> {
-  __$ValueSetComposeCopyWithImpl(
-      _ValueSetCompose _value, $Res Function(_ValueSetCompose) _then)
-      : super(_value, (v) => _then(v as _ValueSetCompose));
+    implements _$$_ValueSetComposeCopyWith<$Res> {
+  __$$_ValueSetComposeCopyWithImpl(
+      _$_ValueSetCompose _value, $Res Function(_$_ValueSetCompose) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetCompose));
 
   @override
-  _ValueSetCompose get _value => super._value as _ValueSetCompose;
+  _$_ValueSetCompose get _value => super._value as _$_ValueSetCompose;
 
   @override
   $Res call({
@@ -3302,33 +3186,33 @@ class __$ValueSetComposeCopyWithImpl<$Res>
     Object? include = freezed,
     Object? exclude = freezed,
   }) {
-    return _then(_ValueSetCompose(
+    return _then(_$_ValueSetCompose(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       import_: import_ == freezed
-          ? _value.import_
+          ? _value._import_
           : import_ // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       include: include == freezed
-          ? _value.include
+          ? _value._include
           : include // ignore: cast_nullable_to_non_nullable
               as List<ValueSetComposeInclude>?,
       exclude: exclude == freezed
-          ? _value.exclude
+          ? _value._exclude
           : exclude // ignore: cast_nullable_to_non_nullable
               as List<ValueSetComposeInclude>?,
     ));
@@ -3340,34 +3224,81 @@ class __$ValueSetComposeCopyWithImpl<$Res>
 class _$_ValueSetCompose extends _ValueSetCompose {
   _$_ValueSetCompose(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
-      @JsonKey(name: 'import') this.import_,
-      this.include,
-      this.exclude})
-      : super._();
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      @JsonKey(name: 'import') final List<FhirUri>? import_,
+      final List<ValueSetComposeInclude>? include,
+      final List<ValueSetComposeInclude>? exclude})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _import_ = import_,
+        _include = include,
+        _exclude = exclude,
+        super._();
 
   factory _$_ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetComposeFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirUri>? _import_;
   @override
   @JsonKey(name: 'import')
-  final List<FhirUri>? import_;
+  List<FhirUri>? get import_ {
+    final value = _import_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ValueSetComposeInclude>? _include;
   @override
-  final List<ValueSetComposeInclude>? include;
+  List<ValueSetComposeInclude>? get include {
+    final value = _include;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ValueSetComposeInclude>? _exclude;
   @override
-  final List<ValueSetComposeInclude>? exclude;
+  List<ValueSetComposeInclude>? get exclude {
+    final value = _exclude;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -3378,34 +3309,35 @@ class _$_ValueSetCompose extends _ValueSetCompose {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetCompose &&
+            other is _$_ValueSetCompose &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
-            const DeepCollectionEquality().equals(other.import_, import_) &&
-            const DeepCollectionEquality().equals(other.include, include) &&
-            const DeepCollectionEquality().equals(other.exclude, exclude));
+                .equals(other._fhirComments, _fhirComments) &&
+            const DeepCollectionEquality().equals(other._import_, _import_) &&
+            const DeepCollectionEquality().equals(other._include, _include) &&
+            const DeepCollectionEquality().equals(other._exclude, _exclude));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
-      const DeepCollectionEquality().hash(import_),
-      const DeepCollectionEquality().hash(include),
-      const DeepCollectionEquality().hash(exclude));
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
+      const DeepCollectionEquality().hash(_import_),
+      const DeepCollectionEquality().hash(_include),
+      const DeepCollectionEquality().hash(_exclude));
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith =>
-      __$ValueSetComposeCopyWithImpl<_ValueSetCompose>(this, _$identity);
+  _$$_ValueSetComposeCopyWith<_$_ValueSetCompose> get copyWith =>
+      __$$_ValueSetComposeCopyWithImpl<_$_ValueSetCompose>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3415,38 +3347,41 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
 abstract class _ValueSetCompose extends ValueSetCompose {
   factory _ValueSetCompose(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      @JsonKey(name: 'import') List<FhirUri>? import_,
-      List<ValueSetComposeInclude>? include,
-      List<ValueSetComposeInclude>? exclude}) = _$_ValueSetCompose;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      @JsonKey(name: 'import') final List<FhirUri>? import_,
+      final List<ValueSetComposeInclude>? include,
+      final List<ValueSetComposeInclude>? exclude}) = _$_ValueSetCompose;
   _ValueSetCompose._() : super._();
 
   factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCompose.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'import')
-  List<FhirUri>? get import_;
+  List<FhirUri>? get import_ => throw _privateConstructorUsedError;
   @override
-  List<ValueSetComposeInclude>? get include;
+  List<ValueSetComposeInclude>? get include =>
+      throw _privateConstructorUsedError;
   @override
-  List<ValueSetComposeInclude>? get exclude;
+  List<ValueSetComposeInclude>? get exclude =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith =>
+  _$$_ValueSetComposeCopyWith<_$_ValueSetCompose> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3454,43 +3389,6 @@ ValueSetComposeInclude _$ValueSetComposeIncludeFromJson(
     Map<String, dynamic> json) {
   return _ValueSetComposeInclude.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetComposeIncludeTearOff {
-  const _$ValueSetComposeIncludeTearOff();
-
-  _ValueSetComposeInclude call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required FhirUri system,
-      @JsonKey(name: '_system') Element? systemElement,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      List<ValueSetIncludeConcept>? concept,
-      List<ValueSetIncludeFilter>? filter}) {
-    return _ValueSetComposeInclude(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      system: system,
-      systemElement: systemElement,
-      version: version,
-      versionElement: versionElement,
-      concept: concept,
-      filter: filter,
-    );
-  }
-
-  ValueSetComposeInclude fromJson(Map<String, Object?> json) {
-    return ValueSetComposeInclude.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetComposeInclude = _$ValueSetComposeIncludeTearOff();
 
 /// @nodoc
 mixin _$ValueSetComposeInclude {
@@ -3628,11 +3526,11 @@ class _$ValueSetComposeIncludeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetComposeIncludeCopyWith<$Res>
+abstract class _$$_ValueSetComposeIncludeCopyWith<$Res>
     implements $ValueSetComposeIncludeCopyWith<$Res> {
-  factory _$ValueSetComposeIncludeCopyWith(_ValueSetComposeInclude value,
-          $Res Function(_ValueSetComposeInclude) then) =
-      __$ValueSetComposeIncludeCopyWithImpl<$Res>;
+  factory _$$_ValueSetComposeIncludeCopyWith(_$_ValueSetComposeInclude value,
+          $Res Function(_$_ValueSetComposeInclude) then) =
+      __$$_ValueSetComposeIncludeCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -3653,15 +3551,16 @@ abstract class _$ValueSetComposeIncludeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetComposeIncludeCopyWithImpl<$Res>
+class __$$_ValueSetComposeIncludeCopyWithImpl<$Res>
     extends _$ValueSetComposeIncludeCopyWithImpl<$Res>
-    implements _$ValueSetComposeIncludeCopyWith<$Res> {
-  __$ValueSetComposeIncludeCopyWithImpl(_ValueSetComposeInclude _value,
-      $Res Function(_ValueSetComposeInclude) _then)
-      : super(_value, (v) => _then(v as _ValueSetComposeInclude));
+    implements _$$_ValueSetComposeIncludeCopyWith<$Res> {
+  __$$_ValueSetComposeIncludeCopyWithImpl(_$_ValueSetComposeInclude _value,
+      $Res Function(_$_ValueSetComposeInclude) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetComposeInclude));
 
   @override
-  _ValueSetComposeInclude get _value => super._value as _ValueSetComposeInclude;
+  _$_ValueSetComposeInclude get _value =>
+      super._value as _$_ValueSetComposeInclude;
 
   @override
   $Res call({
@@ -3676,21 +3575,21 @@ class __$ValueSetComposeIncludeCopyWithImpl<$Res>
     Object? concept = freezed,
     Object? filter = freezed,
   }) {
-    return _then(_ValueSetComposeInclude(
+    return _then(_$_ValueSetComposeInclude(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       system: system == freezed
@@ -3710,11 +3609,11 @@ class __$ValueSetComposeIncludeCopyWithImpl<$Res>
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       concept: concept == freezed
-          ? _value.concept
+          ? _value._concept
           : concept // ignore: cast_nullable_to_non_nullable
               as List<ValueSetIncludeConcept>?,
       filter: filter == freezed
-          ? _value.filter
+          ? _value._filter
           : filter // ignore: cast_nullable_to_non_nullable
               as List<ValueSetIncludeFilter>?,
     ));
@@ -3726,30 +3625,56 @@ class __$ValueSetComposeIncludeCopyWithImpl<$Res>
 class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
   _$_ValueSetComposeInclude(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.system,
       @JsonKey(name: '_system') this.systemElement,
       this.version,
       @JsonKey(name: '_version') this.versionElement,
-      this.concept,
-      this.filter})
-      : super._();
+      final List<ValueSetIncludeConcept>? concept,
+      final List<ValueSetIncludeFilter>? filter})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _concept = concept,
+        _filter = filter,
+        super._();
 
   factory _$_ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetComposeIncludeFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri system;
   @override
@@ -3760,10 +3685,23 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
   @override
   @JsonKey(name: '_version')
   final Element? versionElement;
+  final List<ValueSetIncludeConcept>? _concept;
   @override
-  final List<ValueSetIncludeConcept>? concept;
+  List<ValueSetIncludeConcept>? get concept {
+    final value = _concept;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ValueSetIncludeFilter>? _filter;
   @override
-  final List<ValueSetIncludeFilter>? filter;
+  List<ValueSetIncludeFilter>? get filter {
+    final value = _filter;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -3774,42 +3712,43 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetComposeInclude &&
+            other is _$_ValueSetComposeInclude &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.system, system) &&
             const DeepCollectionEquality()
                 .equals(other.systemElement, systemElement) &&
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality()
                 .equals(other.versionElement, versionElement) &&
-            const DeepCollectionEquality().equals(other.concept, concept) &&
-            const DeepCollectionEquality().equals(other.filter, filter));
+            const DeepCollectionEquality().equals(other._concept, _concept) &&
+            const DeepCollectionEquality().equals(other._filter, _filter));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(system),
       const DeepCollectionEquality().hash(systemElement),
       const DeepCollectionEquality().hash(version),
       const DeepCollectionEquality().hash(versionElement),
-      const DeepCollectionEquality().hash(concept),
-      const DeepCollectionEquality().hash(filter));
+      const DeepCollectionEquality().hash(_concept),
+      const DeepCollectionEquality().hash(_filter));
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetComposeIncludeCopyWith<_ValueSetComposeInclude> get copyWith =>
-      __$ValueSetComposeIncludeCopyWithImpl<_ValueSetComposeInclude>(
+  _$$_ValueSetComposeIncludeCopyWith<_$_ValueSetComposeInclude> get copyWith =>
+      __$$_ValueSetComposeIncludeCopyWithImpl<_$_ValueSetComposeInclude>(
           this, _$identity);
 
   @override
@@ -3820,48 +3759,50 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
 
 abstract class _ValueSetComposeInclude extends ValueSetComposeInclude {
   factory _ValueSetComposeInclude(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required FhirUri system,
-      @JsonKey(name: '_system') Element? systemElement,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      List<ValueSetIncludeConcept>? concept,
-      List<ValueSetIncludeFilter>? filter}) = _$_ValueSetComposeInclude;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      required final FhirUri system,
+      @JsonKey(name: '_system') final Element? systemElement,
+      final String? version,
+      @JsonKey(name: '_version') final Element? versionElement,
+      final List<ValueSetIncludeConcept>? concept,
+      final List<ValueSetIncludeFilter>? filter}) = _$_ValueSetComposeInclude;
   _ValueSetComposeInclude._() : super._();
 
   factory _ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =
       _$_ValueSetComposeInclude.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  FhirUri get system;
+  FhirUri get system => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_system')
-  Element? get systemElement;
+  Element? get systemElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  List<ValueSetIncludeConcept>? get concept;
+  List<ValueSetIncludeConcept>? get concept =>
+      throw _privateConstructorUsedError;
   @override
-  List<ValueSetIncludeFilter>? get filter;
+  List<ValueSetIncludeFilter>? get filter => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetComposeIncludeCopyWith<_ValueSetComposeInclude> get copyWith =>
+  _$$_ValueSetComposeIncludeCopyWith<_$_ValueSetComposeInclude> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3869,41 +3810,6 @@ ValueSetIncludeConcept _$ValueSetIncludeConceptFromJson(
     Map<String, dynamic> json) {
   return _ValueSetIncludeConcept.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetIncludeConceptTearOff {
-  const _$ValueSetIncludeConceptTearOff();
-
-  _ValueSetIncludeConcept call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required Code code,
-      @JsonKey(name: '_code') Element? codeElement,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement,
-      List<ValueSetConceptDesignation>? designation}) {
-    return _ValueSetIncludeConcept(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      code: code,
-      codeElement: codeElement,
-      display: display,
-      displayElement: displayElement,
-      designation: designation,
-    );
-  }
-
-  ValueSetIncludeConcept fromJson(Map<String, Object?> json) {
-    return ValueSetIncludeConcept.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetIncludeConcept = _$ValueSetIncludeConceptTearOff();
 
 /// @nodoc
 mixin _$ValueSetIncludeConcept {
@@ -4034,11 +3940,11 @@ class _$ValueSetIncludeConceptCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetIncludeConceptCopyWith<$Res>
+abstract class _$$_ValueSetIncludeConceptCopyWith<$Res>
     implements $ValueSetIncludeConceptCopyWith<$Res> {
-  factory _$ValueSetIncludeConceptCopyWith(_ValueSetIncludeConcept value,
-          $Res Function(_ValueSetIncludeConcept) then) =
-      __$ValueSetIncludeConceptCopyWithImpl<$Res>;
+  factory _$$_ValueSetIncludeConceptCopyWith(_$_ValueSetIncludeConcept value,
+          $Res Function(_$_ValueSetIncludeConcept) then) =
+      __$$_ValueSetIncludeConceptCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -4058,15 +3964,16 @@ abstract class _$ValueSetIncludeConceptCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetIncludeConceptCopyWithImpl<$Res>
+class __$$_ValueSetIncludeConceptCopyWithImpl<$Res>
     extends _$ValueSetIncludeConceptCopyWithImpl<$Res>
-    implements _$ValueSetIncludeConceptCopyWith<$Res> {
-  __$ValueSetIncludeConceptCopyWithImpl(_ValueSetIncludeConcept _value,
-      $Res Function(_ValueSetIncludeConcept) _then)
-      : super(_value, (v) => _then(v as _ValueSetIncludeConcept));
+    implements _$$_ValueSetIncludeConceptCopyWith<$Res> {
+  __$$_ValueSetIncludeConceptCopyWithImpl(_$_ValueSetIncludeConcept _value,
+      $Res Function(_$_ValueSetIncludeConcept) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetIncludeConcept));
 
   @override
-  _ValueSetIncludeConcept get _value => super._value as _ValueSetIncludeConcept;
+  _$_ValueSetIncludeConcept get _value =>
+      super._value as _$_ValueSetIncludeConcept;
 
   @override
   $Res call({
@@ -4080,21 +3987,21 @@ class __$ValueSetIncludeConceptCopyWithImpl<$Res>
     Object? displayElement = freezed,
     Object? designation = freezed,
   }) {
-    return _then(_ValueSetIncludeConcept(
+    return _then(_$_ValueSetIncludeConcept(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       code: code == freezed
@@ -4114,7 +4021,7 @@ class __$ValueSetIncludeConceptCopyWithImpl<$Res>
           : displayElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       designation: designation == freezed
-          ? _value.designation
+          ? _value._designation
           : designation // ignore: cast_nullable_to_non_nullable
               as List<ValueSetConceptDesignation>?,
     ));
@@ -4126,29 +4033,54 @@ class __$ValueSetIncludeConceptCopyWithImpl<$Res>
 class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
   _$_ValueSetIncludeConcept(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.display,
       @JsonKey(name: '_display') this.displayElement,
-      this.designation})
-      : super._();
+      final List<ValueSetConceptDesignation>? designation})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _designation = designation,
+        super._();
 
   factory _$_ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetIncludeConceptFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code code;
   @override
@@ -4159,8 +4091,14 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
   @override
   @JsonKey(name: '_display')
   final Element? displayElement;
+  final List<ValueSetConceptDesignation>? _designation;
   @override
-  final List<ValueSetConceptDesignation>? designation;
+  List<ValueSetConceptDesignation>? get designation {
+    final value = _designation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -4171,14 +4109,14 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetIncludeConcept &&
+            other is _$_ValueSetIncludeConcept &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.codeElement, codeElement) &&
@@ -4186,26 +4124,27 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
             const DeepCollectionEquality()
                 .equals(other.displayElement, displayElement) &&
             const DeepCollectionEquality()
-                .equals(other.designation, designation));
+                .equals(other._designation, _designation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(codeElement),
       const DeepCollectionEquality().hash(display),
       const DeepCollectionEquality().hash(displayElement),
-      const DeepCollectionEquality().hash(designation));
+      const DeepCollectionEquality().hash(_designation));
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetIncludeConceptCopyWith<_ValueSetIncludeConcept> get copyWith =>
-      __$ValueSetIncludeConceptCopyWithImpl<_ValueSetIncludeConcept>(
+  _$$_ValueSetIncludeConceptCopyWith<_$_ValueSetIncludeConcept> get copyWith =>
+      __$$_ValueSetIncludeConceptCopyWithImpl<_$_ValueSetIncludeConcept>(
           this, _$identity);
 
   @override
@@ -4216,15 +4155,15 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
 
 abstract class _ValueSetIncludeConcept extends ValueSetIncludeConcept {
   factory _ValueSetIncludeConcept(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-          required Code code,
-          @JsonKey(name: '_code') Element? codeElement,
-          String? display,
-          @JsonKey(name: '_display') Element? displayElement,
-          List<ValueSetConceptDesignation>? designation}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          required final Code code,
+          @JsonKey(name: '_code') final Element? codeElement,
+          final String? display,
+          @JsonKey(name: '_display') final Element? displayElement,
+          final List<ValueSetConceptDesignation>? designation}) =
       _$_ValueSetIncludeConcept;
   _ValueSetIncludeConcept._() : super._();
 
@@ -4232,30 +4171,32 @@ abstract class _ValueSetIncludeConcept extends ValueSetIncludeConcept {
       _$_ValueSetIncludeConcept.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  Code get code;
+  Code get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  String? get display;
+  String? get display => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement;
+  Element? get displayElement => throw _privateConstructorUsedError;
   @override
-  List<ValueSetConceptDesignation>? get designation;
+  List<ValueSetConceptDesignation>? get designation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetIncludeConceptCopyWith<_ValueSetIncludeConcept> get copyWith =>
+  _$$_ValueSetIncludeConceptCopyWith<_$_ValueSetIncludeConcept> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4263,43 +4204,6 @@ ValueSetIncludeFilter _$ValueSetIncludeFilterFromJson(
     Map<String, dynamic> json) {
   return _ValueSetIncludeFilter.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetIncludeFilterTearOff {
-  const _$ValueSetIncludeFilterTearOff();
-
-  _ValueSetIncludeFilter call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required Code property,
-      @JsonKey(name: '_property') Element? propertyElement,
-      @JsonKey(unknownEnumValue: FilterOp.unknown) required FilterOp op,
-      @JsonKey(name: '_op') Element? opElement,
-      required Code value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _ValueSetIncludeFilter(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      property: property,
-      propertyElement: propertyElement,
-      op: op,
-      opElement: opElement,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  ValueSetIncludeFilter fromJson(Map<String, Object?> json) {
-    return ValueSetIncludeFilter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetIncludeFilter = _$ValueSetIncludeFilterTearOff();
 
 /// @nodoc
 mixin _$ValueSetIncludeFilter {
@@ -4450,11 +4354,11 @@ class _$ValueSetIncludeFilterCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetIncludeFilterCopyWith<$Res>
+abstract class _$$_ValueSetIncludeFilterCopyWith<$Res>
     implements $ValueSetIncludeFilterCopyWith<$Res> {
-  factory _$ValueSetIncludeFilterCopyWith(_ValueSetIncludeFilter value,
-          $Res Function(_ValueSetIncludeFilter) then) =
-      __$ValueSetIncludeFilterCopyWithImpl<$Res>;
+  factory _$$_ValueSetIncludeFilterCopyWith(_$_ValueSetIncludeFilter value,
+          $Res Function(_$_ValueSetIncludeFilter) then) =
+      __$$_ValueSetIncludeFilterCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -4477,15 +4381,16 @@ abstract class _$ValueSetIncludeFilterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetIncludeFilterCopyWithImpl<$Res>
+class __$$_ValueSetIncludeFilterCopyWithImpl<$Res>
     extends _$ValueSetIncludeFilterCopyWithImpl<$Res>
-    implements _$ValueSetIncludeFilterCopyWith<$Res> {
-  __$ValueSetIncludeFilterCopyWithImpl(_ValueSetIncludeFilter _value,
-      $Res Function(_ValueSetIncludeFilter) _then)
-      : super(_value, (v) => _then(v as _ValueSetIncludeFilter));
+    implements _$$_ValueSetIncludeFilterCopyWith<$Res> {
+  __$$_ValueSetIncludeFilterCopyWithImpl(_$_ValueSetIncludeFilter _value,
+      $Res Function(_$_ValueSetIncludeFilter) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetIncludeFilter));
 
   @override
-  _ValueSetIncludeFilter get _value => super._value as _ValueSetIncludeFilter;
+  _$_ValueSetIncludeFilter get _value =>
+      super._value as _$_ValueSetIncludeFilter;
 
   @override
   $Res call({
@@ -4500,21 +4405,21 @@ class __$ValueSetIncludeFilterCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_ValueSetIncludeFilter(
+    return _then(_$_ValueSetIncludeFilter(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       property: property == freezed
@@ -4550,30 +4455,54 @@ class __$ValueSetIncludeFilterCopyWithImpl<$Res>
 class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
   _$_ValueSetIncludeFilter(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.property,
       @JsonKey(name: '_property') this.propertyElement,
       @JsonKey(unknownEnumValue: FilterOp.unknown) required this.op,
       @JsonKey(name: '_op') this.opElement,
       required this.value,
       @JsonKey(name: '_value') this.valueElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetIncludeFilterFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code property;
   @override
@@ -4600,14 +4529,14 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetIncludeFilter &&
+            other is _$_ValueSetIncludeFilter &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.property, property) &&
             const DeepCollectionEquality()
                 .equals(other.propertyElement, propertyElement) &&
@@ -4618,13 +4547,14 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(property),
       const DeepCollectionEquality().hash(propertyElement),
       const DeepCollectionEquality().hash(op),
@@ -4634,8 +4564,8 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetIncludeFilterCopyWith<_ValueSetIncludeFilter> get copyWith =>
-      __$ValueSetIncludeFilterCopyWithImpl<_ValueSetIncludeFilter>(
+  _$$_ValueSetIncludeFilterCopyWith<_$_ValueSetIncludeFilter> get copyWith =>
+      __$$_ValueSetIncludeFilterCopyWithImpl<_$_ValueSetIncludeFilter>(
           this, _$identity);
 
   @override
@@ -4646,102 +4576,63 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
 
 abstract class _ValueSetIncludeFilter extends ValueSetIncludeFilter {
   factory _ValueSetIncludeFilter(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-          required Code property,
-          @JsonKey(name: '_property') Element? propertyElement,
-          @JsonKey(unknownEnumValue: FilterOp.unknown) required FilterOp op,
-          @JsonKey(name: '_op') Element? opElement,
-          required Code value,
-          @JsonKey(name: '_value') Element? valueElement}) =
-      _$_ValueSetIncludeFilter;
+      {final Id? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          final List<String>? fhirComments,
+      required final Code property,
+      @JsonKey(name: '_property')
+          final Element? propertyElement,
+      @JsonKey(unknownEnumValue: FilterOp.unknown)
+          required final FilterOp op,
+      @JsonKey(name: '_op')
+          final Element? opElement,
+      required final Code value,
+      @JsonKey(name: '_value')
+          final Element? valueElement}) = _$_ValueSetIncludeFilter;
   _ValueSetIncludeFilter._() : super._();
 
   factory _ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =
       _$_ValueSetIncludeFilter.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  Code get property;
+  Code get property => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_property')
-  Element? get propertyElement;
+  Element? get propertyElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: FilterOp.unknown)
-  FilterOp get op;
+  FilterOp get op => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_op')
-  Element? get opElement;
+  Element? get opElement => throw _privateConstructorUsedError;
   @override
-  Code get value;
+  Code get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetIncludeFilterCopyWith<_ValueSetIncludeFilter> get copyWith =>
+  _$$_ValueSetIncludeFilterCopyWith<_$_ValueSetIncludeFilter> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ValueSetExpansion _$ValueSetExpansionFromJson(Map<String, dynamic> json) {
   return _ValueSetExpansion.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetExpansionTearOff {
-  const _$ValueSetExpansionTearOff();
-
-  _ValueSetExpansion call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required FhirUri identifier,
-      @JsonKey(name: '_identifier') Element? identifierElement,
-      required FhirDateTime timestamp,
-      @JsonKey(name: '_timestamp') Element? timestampElement,
-      Integer? total,
-      @JsonKey(name: '_total') Element? totalElement,
-      Integer? offset,
-      @JsonKey(name: '_offset') Element? offsetElement,
-      List<ValueSetExpansionParameter>? parameter,
-      List<ValueSetExpansionContains>? contains}) {
-    return _ValueSetExpansion(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      identifier: identifier,
-      identifierElement: identifierElement,
-      timestamp: timestamp,
-      timestampElement: timestampElement,
-      total: total,
-      totalElement: totalElement,
-      offset: offset,
-      offsetElement: offsetElement,
-      parameter: parameter,
-      contains: contains,
-    );
-  }
-
-  ValueSetExpansion fromJson(Map<String, Object?> json) {
-    return ValueSetExpansion.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetExpansion = _$ValueSetExpansionTearOff();
 
 /// @nodoc
 mixin _$ValueSetExpansion {
@@ -4934,11 +4825,11 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetExpansionCopyWith<$Res>
+abstract class _$$_ValueSetExpansionCopyWith<$Res>
     implements $ValueSetExpansionCopyWith<$Res> {
-  factory _$ValueSetExpansionCopyWith(
-          _ValueSetExpansion value, $Res Function(_ValueSetExpansion) then) =
-      __$ValueSetExpansionCopyWithImpl<$Res>;
+  factory _$$_ValueSetExpansionCopyWith(_$_ValueSetExpansion value,
+          $Res Function(_$_ValueSetExpansion) then) =
+      __$$_ValueSetExpansionCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -4967,15 +4858,15 @@ abstract class _$ValueSetExpansionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetExpansionCopyWithImpl<$Res>
+class __$$_ValueSetExpansionCopyWithImpl<$Res>
     extends _$ValueSetExpansionCopyWithImpl<$Res>
-    implements _$ValueSetExpansionCopyWith<$Res> {
-  __$ValueSetExpansionCopyWithImpl(
-      _ValueSetExpansion _value, $Res Function(_ValueSetExpansion) _then)
-      : super(_value, (v) => _then(v as _ValueSetExpansion));
+    implements _$$_ValueSetExpansionCopyWith<$Res> {
+  __$$_ValueSetExpansionCopyWithImpl(
+      _$_ValueSetExpansion _value, $Res Function(_$_ValueSetExpansion) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetExpansion));
 
   @override
-  _ValueSetExpansion get _value => super._value as _ValueSetExpansion;
+  _$_ValueSetExpansion get _value => super._value as _$_ValueSetExpansion;
 
   @override
   $Res call({
@@ -4994,21 +4885,21 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
     Object? parameter = freezed,
     Object? contains = freezed,
   }) {
-    return _then(_ValueSetExpansion(
+    return _then(_$_ValueSetExpansion(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       identifier: identifier == freezed
@@ -5044,11 +4935,11 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
           : offsetElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       parameter: parameter == freezed
-          ? _value.parameter
+          ? _value._parameter
           : parameter // ignore: cast_nullable_to_non_nullable
               as List<ValueSetExpansionParameter>?,
       contains: contains == freezed
-          ? _value.contains
+          ? _value._contains
           : contains // ignore: cast_nullable_to_non_nullable
               as List<ValueSetExpansionContains>?,
     ));
@@ -5060,9 +4951,9 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
 class _$_ValueSetExpansion extends _ValueSetExpansion {
   _$_ValueSetExpansion(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.identifier,
       @JsonKey(name: '_identifier') this.identifierElement,
       required this.timestamp,
@@ -5071,23 +4962,49 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
       @JsonKey(name: '_total') this.totalElement,
       this.offset,
       @JsonKey(name: '_offset') this.offsetElement,
-      this.parameter,
-      this.contains})
-      : super._();
+      final List<ValueSetExpansionParameter>? parameter,
+      final List<ValueSetExpansionContains>? contains})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _parameter = parameter,
+        _contains = contains,
+        super._();
 
   factory _$_ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetExpansionFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri identifier;
   @override
@@ -5108,10 +5025,23 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
   @override
   @JsonKey(name: '_offset')
   final Element? offsetElement;
+  final List<ValueSetExpansionParameter>? _parameter;
   @override
-  final List<ValueSetExpansionParameter>? parameter;
+  List<ValueSetExpansionParameter>? get parameter {
+    final value = _parameter;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ValueSetExpansionContains>? _contains;
   @override
-  final List<ValueSetExpansionContains>? contains;
+  List<ValueSetExpansionContains>? get contains {
+    final value = _contains;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -5122,14 +5052,14 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetExpansion &&
+            other is _$_ValueSetExpansion &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality()
@@ -5143,17 +5073,19 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
             const DeepCollectionEquality().equals(other.offset, offset) &&
             const DeepCollectionEquality()
                 .equals(other.offsetElement, offsetElement) &&
-            const DeepCollectionEquality().equals(other.parameter, parameter) &&
-            const DeepCollectionEquality().equals(other.contains, contains));
+            const DeepCollectionEquality()
+                .equals(other._parameter, _parameter) &&
+            const DeepCollectionEquality().equals(other._contains, _contains));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(identifier),
       const DeepCollectionEquality().hash(identifierElement),
       const DeepCollectionEquality().hash(timestamp),
@@ -5162,13 +5094,14 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
       const DeepCollectionEquality().hash(totalElement),
       const DeepCollectionEquality().hash(offset),
       const DeepCollectionEquality().hash(offsetElement),
-      const DeepCollectionEquality().hash(parameter),
-      const DeepCollectionEquality().hash(contains));
+      const DeepCollectionEquality().hash(_parameter),
+      const DeepCollectionEquality().hash(_contains));
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith =>
-      __$ValueSetExpansionCopyWithImpl<_ValueSetExpansion>(this, _$identity);
+  _$$_ValueSetExpansionCopyWith<_$_ValueSetExpansion> get copyWith =>
+      __$$_ValueSetExpansionCopyWithImpl<_$_ValueSetExpansion>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5178,62 +5111,65 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 
 abstract class _ValueSetExpansion extends ValueSetExpansion {
   factory _ValueSetExpansion(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required FhirUri identifier,
-      @JsonKey(name: '_identifier') Element? identifierElement,
-      required FhirDateTime timestamp,
-      @JsonKey(name: '_timestamp') Element? timestampElement,
-      Integer? total,
-      @JsonKey(name: '_total') Element? totalElement,
-      Integer? offset,
-      @JsonKey(name: '_offset') Element? offsetElement,
-      List<ValueSetExpansionParameter>? parameter,
-      List<ValueSetExpansionContains>? contains}) = _$_ValueSetExpansion;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      required final FhirUri identifier,
+      @JsonKey(name: '_identifier') final Element? identifierElement,
+      required final FhirDateTime timestamp,
+      @JsonKey(name: '_timestamp') final Element? timestampElement,
+      final Integer? total,
+      @JsonKey(name: '_total') final Element? totalElement,
+      final Integer? offset,
+      @JsonKey(name: '_offset') final Element? offsetElement,
+      final List<ValueSetExpansionParameter>? parameter,
+      final List<ValueSetExpansionContains>? contains}) = _$_ValueSetExpansion;
   _ValueSetExpansion._() : super._();
 
   factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansion.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  FhirUri get identifier;
+  FhirUri get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_identifier')
-  Element? get identifierElement;
+  Element? get identifierElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get timestamp;
+  FhirDateTime get timestamp => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_timestamp')
-  Element? get timestampElement;
+  Element? get timestampElement => throw _privateConstructorUsedError;
   @override
-  Integer? get total;
+  Integer? get total => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_total')
-  Element? get totalElement;
+  Element? get totalElement => throw _privateConstructorUsedError;
   @override
-  Integer? get offset;
+  Integer? get offset => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_offset')
-  Element? get offsetElement;
+  Element? get offsetElement => throw _privateConstructorUsedError;
   @override
-  List<ValueSetExpansionParameter>? get parameter;
+  List<ValueSetExpansionParameter>? get parameter =>
+      throw _privateConstructorUsedError;
   @override
-  List<ValueSetExpansionContains>? get contains;
+  List<ValueSetExpansionContains>? get contains =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith =>
+  _$$_ValueSetExpansionCopyWith<_$_ValueSetExpansion> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5241,59 +5177,6 @@ ValueSetExpansionParameter _$ValueSetExpansionParameterFromJson(
     Map<String, dynamic> json) {
   return _ValueSetExpansionParameter.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetExpansionParameterTearOff {
-  const _$ValueSetExpansionParameterTearOff();
-
-  _ValueSetExpansionParameter call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required String name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      FhirUri? valueUri,
-      @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Code? valueCode,
-      @JsonKey(name: '_valueCode') Element? valueCodeElement}) {
-    return _ValueSetExpansionParameter(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      name: name,
-      nameElement: nameElement,
-      valueString: valueString,
-      valueStringElement: valueStringElement,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueInteger: valueInteger,
-      valueIntegerElement: valueIntegerElement,
-      valueDecimal: valueDecimal,
-      valueDecimalElement: valueDecimalElement,
-      valueUri: valueUri,
-      valueUriElement: valueUriElement,
-      valueCode: valueCode,
-      valueCodeElement: valueCodeElement,
-    );
-  }
-
-  ValueSetExpansionParameter fromJson(Map<String, Object?> json) {
-    return ValueSetExpansionParameter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetExpansionParameter = _$ValueSetExpansionParameterTearOff();
 
 /// @nodoc
 mixin _$ValueSetExpansionParameter {
@@ -5551,12 +5434,12 @@ class _$ValueSetExpansionParameterCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetExpansionParameterCopyWith<$Res>
+abstract class _$$_ValueSetExpansionParameterCopyWith<$Res>
     implements $ValueSetExpansionParameterCopyWith<$Res> {
-  factory _$ValueSetExpansionParameterCopyWith(
-          _ValueSetExpansionParameter value,
-          $Res Function(_ValueSetExpansionParameter) then) =
-      __$ValueSetExpansionParameterCopyWithImpl<$Res>;
+  factory _$$_ValueSetExpansionParameterCopyWith(
+          _$_ValueSetExpansionParameter value,
+          $Res Function(_$_ValueSetExpansionParameter) then) =
+      __$$_ValueSetExpansionParameterCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -5595,16 +5478,17 @@ abstract class _$ValueSetExpansionParameterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetExpansionParameterCopyWithImpl<$Res>
+class __$$_ValueSetExpansionParameterCopyWithImpl<$Res>
     extends _$ValueSetExpansionParameterCopyWithImpl<$Res>
-    implements _$ValueSetExpansionParameterCopyWith<$Res> {
-  __$ValueSetExpansionParameterCopyWithImpl(_ValueSetExpansionParameter _value,
-      $Res Function(_ValueSetExpansionParameter) _then)
-      : super(_value, (v) => _then(v as _ValueSetExpansionParameter));
+    implements _$$_ValueSetExpansionParameterCopyWith<$Res> {
+  __$$_ValueSetExpansionParameterCopyWithImpl(
+      _$_ValueSetExpansionParameter _value,
+      $Res Function(_$_ValueSetExpansionParameter) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetExpansionParameter));
 
   @override
-  _ValueSetExpansionParameter get _value =>
-      super._value as _ValueSetExpansionParameter;
+  _$_ValueSetExpansionParameter get _value =>
+      super._value as _$_ValueSetExpansionParameter;
 
   @override
   $Res call({
@@ -5627,21 +5511,21 @@ class __$ValueSetExpansionParameterCopyWithImpl<$Res>
     Object? valueCode = freezed,
     Object? valueCodeElement = freezed,
   }) {
-    return _then(_ValueSetExpansionParameter(
+    return _then(_$_ValueSetExpansionParameter(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       name: name == freezed
@@ -5709,9 +5593,9 @@ class __$ValueSetExpansionParameterCopyWithImpl<$Res>
 class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
   _$_ValueSetExpansionParameter(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.valueString,
@@ -5726,21 +5610,45 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
       @JsonKey(name: '_valueUri') this.valueUriElement,
       this.valueCode,
       @JsonKey(name: '_valueCode') this.valueCodeElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetExpansionParameterFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String name;
   @override
@@ -5786,14 +5694,14 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetExpansionParameter &&
+            other is _$_ValueSetExpansionParameter &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -5821,13 +5729,14 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
                 .equals(other.valueCodeElement, valueCodeElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(nameElement),
       const DeepCollectionEquality().hash(valueString),
@@ -5845,9 +5754,9 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetExpansionParameterCopyWith<_ValueSetExpansionParameter>
-      get copyWith => __$ValueSetExpansionParameterCopyWithImpl<
-          _ValueSetExpansionParameter>(this, _$identity);
+  _$$_ValueSetExpansionParameterCopyWith<_$_ValueSetExpansionParameter>
+      get copyWith => __$$_ValueSetExpansionParameterCopyWithImpl<
+          _$_ValueSetExpansionParameter>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5857,24 +5766,24 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
 
 abstract class _ValueSetExpansionParameter extends ValueSetExpansionParameter {
   factory _ValueSetExpansionParameter(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-          required String name,
-          @JsonKey(name: '_name') Element? nameElement,
-          String? valueString,
-          @JsonKey(name: '_valueString') Element? valueStringElement,
-          Boolean? valueBoolean,
-          @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-          Integer? valueInteger,
-          @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-          Decimal? valueDecimal,
-          @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-          FhirUri? valueUri,
-          @JsonKey(name: '_valueUri') Element? valueUriElement,
-          Code? valueCode,
-          @JsonKey(name: '_valueCode') Element? valueCodeElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          required final String name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? valueString,
+          @JsonKey(name: '_valueString') final Element? valueStringElement,
+          final Boolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final Integer? valueInteger,
+          @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
+          final Decimal? valueDecimal,
+          @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
+          final FhirUri? valueUri,
+          @JsonKey(name: '_valueUri') final Element? valueUriElement,
+          final Code? valueCode,
+          @JsonKey(name: '_valueCode') final Element? valueCodeElement}) =
       _$_ValueSetExpansionParameter;
   _ValueSetExpansionParameter._() : super._();
 
@@ -5882,53 +5791,54 @@ abstract class _ValueSetExpansionParameter extends ValueSetExpansionParameter {
       _$_ValueSetExpansionParameter.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get valueString;
+  String? get valueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valueDecimal;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get valueUri;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUri')
-  Element? get valueUriElement;
+  Element? get valueUriElement => throw _privateConstructorUsedError;
   @override
-  Code? get valueCode;
+  Code? get valueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueCode')
-  Element? get valueCodeElement;
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetExpansionParameterCopyWith<_ValueSetExpansionParameter>
+  _$$_ValueSetExpansionParameterCopyWith<_$_ValueSetExpansionParameter>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5936,53 +5846,6 @@ ValueSetExpansionContains _$ValueSetExpansionContainsFromJson(
     Map<String, dynamic> json) {
   return _ValueSetExpansionContains.fromJson(json);
 }
-
-/// @nodoc
-class _$ValueSetExpansionContainsTearOff {
-  const _$ValueSetExpansionContainsTearOff();
-
-  _ValueSetExpansionContains call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      FhirUri? system,
-      @JsonKey(name: '_system') Element? systemElement,
-      @JsonKey(name: 'abstract') Boolean? abstract_,
-      @JsonKey(name: '_abstract') Element? abstractElement,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement,
-      List<ValueSetExpansionContains>? contains}) {
-    return _ValueSetExpansionContains(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      system: system,
-      systemElement: systemElement,
-      abstract_: abstract_,
-      abstractElement: abstractElement,
-      version: version,
-      versionElement: versionElement,
-      code: code,
-      codeElement: codeElement,
-      display: display,
-      displayElement: displayElement,
-      contains: contains,
-    );
-  }
-
-  ValueSetExpansionContains fromJson(Map<String, Object?> json) {
-    return ValueSetExpansionContains.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ValueSetExpansionContains = _$ValueSetExpansionContainsTearOff();
 
 /// @nodoc
 mixin _$ValueSetExpansionContains {
@@ -6195,11 +6058,12 @@ class _$ValueSetExpansionContainsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ValueSetExpansionContainsCopyWith<$Res>
+abstract class _$$_ValueSetExpansionContainsCopyWith<$Res>
     implements $ValueSetExpansionContainsCopyWith<$Res> {
-  factory _$ValueSetExpansionContainsCopyWith(_ValueSetExpansionContains value,
-          $Res Function(_ValueSetExpansionContains) then) =
-      __$ValueSetExpansionContainsCopyWithImpl<$Res>;
+  factory _$$_ValueSetExpansionContainsCopyWith(
+          _$_ValueSetExpansionContains value,
+          $Res Function(_$_ValueSetExpansionContains) then) =
+      __$$_ValueSetExpansionContainsCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -6231,16 +6095,17 @@ abstract class _$ValueSetExpansionContainsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ValueSetExpansionContainsCopyWithImpl<$Res>
+class __$$_ValueSetExpansionContainsCopyWithImpl<$Res>
     extends _$ValueSetExpansionContainsCopyWithImpl<$Res>
-    implements _$ValueSetExpansionContainsCopyWith<$Res> {
-  __$ValueSetExpansionContainsCopyWithImpl(_ValueSetExpansionContains _value,
-      $Res Function(_ValueSetExpansionContains) _then)
-      : super(_value, (v) => _then(v as _ValueSetExpansionContains));
+    implements _$$_ValueSetExpansionContainsCopyWith<$Res> {
+  __$$_ValueSetExpansionContainsCopyWithImpl(
+      _$_ValueSetExpansionContains _value,
+      $Res Function(_$_ValueSetExpansionContains) _then)
+      : super(_value, (v) => _then(v as _$_ValueSetExpansionContains));
 
   @override
-  _ValueSetExpansionContains get _value =>
-      super._value as _ValueSetExpansionContains;
+  _$_ValueSetExpansionContains get _value =>
+      super._value as _$_ValueSetExpansionContains;
 
   @override
   $Res call({
@@ -6260,21 +6125,21 @@ class __$ValueSetExpansionContainsCopyWithImpl<$Res>
     Object? displayElement = freezed,
     Object? contains = freezed,
   }) {
-    return _then(_ValueSetExpansionContains(
+    return _then(_$_ValueSetExpansionContains(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       system: system == freezed
@@ -6318,7 +6183,7 @@ class __$ValueSetExpansionContainsCopyWithImpl<$Res>
           : displayElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contains: contains == freezed
-          ? _value.contains
+          ? _value._contains
           : contains // ignore: cast_nullable_to_non_nullable
               as List<ValueSetExpansionContains>?,
     ));
@@ -6330,9 +6195,9 @@ class __$ValueSetExpansionContainsCopyWithImpl<$Res>
 class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
   _$_ValueSetExpansionContains(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.system,
       @JsonKey(name: '_system') this.systemElement,
       @JsonKey(name: 'abstract') this.abstract_,
@@ -6343,22 +6208,47 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
       @JsonKey(name: '_code') this.codeElement,
       this.display,
       @JsonKey(name: '_display') this.displayElement,
-      this.contains})
-      : super._();
+      final List<ValueSetExpansionContains>? contains})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _contains = contains,
+        super._();
 
   factory _$_ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
       _$$_ValueSetExpansionContainsFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? system;
   @override
@@ -6385,8 +6275,14 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
   @override
   @JsonKey(name: '_display')
   final Element? displayElement;
+  final List<ValueSetExpansionContains>? _contains;
   @override
-  final List<ValueSetExpansionContains>? contains;
+  List<ValueSetExpansionContains>? get contains {
+    final value = _contains;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -6397,14 +6293,14 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ValueSetExpansionContains &&
+            other is _$_ValueSetExpansionContains &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.system, system) &&
             const DeepCollectionEquality()
                 .equals(other.systemElement, systemElement) &&
@@ -6420,16 +6316,17 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
             const DeepCollectionEquality().equals(other.display, display) &&
             const DeepCollectionEquality()
                 .equals(other.displayElement, displayElement) &&
-            const DeepCollectionEquality().equals(other.contains, contains));
+            const DeepCollectionEquality().equals(other._contains, _contains));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(system),
       const DeepCollectionEquality().hash(systemElement),
       const DeepCollectionEquality().hash(abstract_),
@@ -6440,14 +6337,13 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
       const DeepCollectionEquality().hash(codeElement),
       const DeepCollectionEquality().hash(display),
       const DeepCollectionEquality().hash(displayElement),
-      const DeepCollectionEquality().hash(contains));
+      const DeepCollectionEquality().hash(_contains));
 
   @JsonKey(ignore: true)
   @override
-  _$ValueSetExpansionContainsCopyWith<_ValueSetExpansionContains>
-      get copyWith =>
-          __$ValueSetExpansionContainsCopyWithImpl<_ValueSetExpansionContains>(
-              this, _$identity);
+  _$$_ValueSetExpansionContainsCopyWith<_$_ValueSetExpansionContains>
+      get copyWith => __$$_ValueSetExpansionContainsCopyWithImpl<
+          _$_ValueSetExpansionContains>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -6457,21 +6353,21 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
 
 abstract class _ValueSetExpansionContains extends ValueSetExpansionContains {
   factory _ValueSetExpansionContains(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-          FhirUri? system,
-          @JsonKey(name: '_system') Element? systemElement,
-          @JsonKey(name: 'abstract') Boolean? abstract_,
-          @JsonKey(name: '_abstract') Element? abstractElement,
-          String? version,
-          @JsonKey(name: '_version') Element? versionElement,
-          Code? code,
-          @JsonKey(name: '_code') Element? codeElement,
-          String? display,
-          @JsonKey(name: '_display') Element? displayElement,
-          List<ValueSetExpansionContains>? contains}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          final FhirUri? system,
+          @JsonKey(name: '_system') final Element? systemElement,
+          @JsonKey(name: 'abstract') final Boolean? abstract_,
+          @JsonKey(name: '_abstract') final Element? abstractElement,
+          final String? version,
+          @JsonKey(name: '_version') final Element? versionElement,
+          final Code? code,
+          @JsonKey(name: '_code') final Element? codeElement,
+          final String? display,
+          @JsonKey(name: '_display') final Element? displayElement,
+          final List<ValueSetExpansionContains>? contains}) =
       _$_ValueSetExpansionContains;
   _ValueSetExpansionContains._() : super._();
 
@@ -6479,165 +6375,54 @@ abstract class _ValueSetExpansionContains extends ValueSetExpansionContains {
       _$_ValueSetExpansionContains.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  FhirUri? get system;
+  FhirUri? get system => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_system')
-  Element? get systemElement;
+  Element? get systemElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_;
+  Boolean? get abstract_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_abstract')
-  Element? get abstractElement;
+  Element? get abstractElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  String? get display;
+  String? get display => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement;
+  Element? get displayElement => throw _privateConstructorUsedError;
   @override
-  List<ValueSetExpansionContains>? get contains;
+  List<ValueSetExpansionContains>? get contains =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ValueSetExpansionContainsCopyWith<_ValueSetExpansionContains>
+  _$$_ValueSetExpansionContainsCopyWith<_$_ValueSetExpansionContains>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
   return _ConceptMap.fromJson(json);
 }
-
-/// @nodoc
-class _$ConceptMapTearOff {
-  const _$ConceptMapTearOff();
-
-  _ConceptMap call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.ConceptMap,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      Identifier? identifier,
-      String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          required ConceptMapStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ConceptMapContact>? contact,
-      FhirDateTime? date,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      String? requirements,
-      String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      FhirUri? sourceUri,
-      @JsonKey(name: '_sourceUri')
-          Element? sourceUriElement,
-      Reference? sourceReference,
-      FhirUri? targetUri,
-      @JsonKey(name: '_targetUri')
-          Element? targetUriElement,
-      Reference? targetReference,
-      List<ConceptMapElement>? element,
-      @JsonKey(name: '_date')
-          Element? dateElement}) {
-    return _ConceptMap(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      identifier: identifier,
-      version: version,
-      versionElement: versionElement,
-      name: name,
-      nameElement: nameElement,
-      status: status,
-      statusElement: statusElement,
-      experimental: experimental,
-      experimentalElement: experimentalElement,
-      publisher: publisher,
-      publisherElement: publisherElement,
-      contact: contact,
-      date: date,
-      description: description,
-      descriptionElement: descriptionElement,
-      useContext: useContext,
-      requirements: requirements,
-      copyright: copyright,
-      copyrightElement: copyrightElement,
-      sourceUri: sourceUri,
-      sourceUriElement: sourceUriElement,
-      sourceReference: sourceReference,
-      targetUri: targetUri,
-      targetUriElement: targetUriElement,
-      targetReference: targetReference,
-      element: element,
-      dateElement: dateElement,
-    );
-  }
-
-  ConceptMap fromJson(Map<String, Object?> json) {
-    return ConceptMap.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConceptMap = _$ConceptMapTearOff();
 
 /// @nodoc
 mixin _$ConceptMap {
@@ -7203,10 +6988,11 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
-  factory _$ConceptMapCopyWith(
-          _ConceptMap value, $Res Function(_ConceptMap) then) =
-      __$ConceptMapCopyWithImpl<$Res>;
+abstract class _$$_ConceptMapCopyWith<$Res>
+    implements $ConceptMapCopyWith<$Res> {
+  factory _$$_ConceptMapCopyWith(
+          _$_ConceptMap value, $Res Function(_$_ConceptMap) then) =
+      __$$_ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
@@ -7305,14 +7091,14 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
-    implements _$ConceptMapCopyWith<$Res> {
-  __$ConceptMapCopyWithImpl(
-      _ConceptMap _value, $Res Function(_ConceptMap) _then)
-      : super(_value, (v) => _then(v as _ConceptMap));
+class __$$_ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
+    implements _$$_ConceptMapCopyWith<$Res> {
+  __$$_ConceptMapCopyWithImpl(
+      _$_ConceptMap _value, $Res Function(_$_ConceptMap) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMap));
 
   @override
-  _ConceptMap get _value => super._value as _ConceptMap;
+  _$_ConceptMap get _value => super._value as _$_ConceptMap;
 
   @override
   $Res call({
@@ -7357,7 +7143,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
     Object? element = freezed,
     Object? dateElement = freezed,
   }) {
-    return _then(_ConceptMap(
+    return _then(_$_ConceptMap(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7391,15 +7177,15 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: url == freezed
@@ -7455,7 +7241,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: contact == freezed
-          ? _value.contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ConceptMapContact>?,
       date: date == freezed
@@ -7471,7 +7257,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       useContext: useContext == freezed
-          ? _value.useContext
+          ? _value._useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       requirements: requirements == freezed
@@ -7511,7 +7297,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
           : targetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       element: element == freezed
-          ? _value.element
+          ? _value._element
           : element // ignore: cast_nullable_to_non_nullable
               as List<ConceptMapElement>?,
       dateElement: dateElement == freezed
@@ -7537,10 +7323,10 @@ class _$_ConceptMap extends _ConceptMap {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
@@ -7561,12 +7347,12 @@ class _$_ConceptMap extends _ConceptMap {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      this.contact,
+      final List<ConceptMapContact>? contact,
       this.date,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.useContext,
+      final List<CodeableConcept>? useContext,
       this.requirements,
       this.copyright,
       @JsonKey(name: '_copyright')
@@ -7579,10 +7365,16 @@ class _$_ConceptMap extends _ConceptMap {
       @JsonKey(name: '_targetUri')
           this.targetUriElement,
       this.targetReference,
-      this.element,
+      final List<ConceptMapElement>? element,
       @JsonKey(name: '_date')
           this.dateElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _useContext = useContext,
+        _element = element,
+        super._();
 
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$$_ConceptMapFromJson(json);
@@ -7606,13 +7398,34 @@ class _$_ConceptMap extends _ConceptMap {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? url;
   @override
@@ -7646,8 +7459,15 @@ class _$_ConceptMap extends _ConceptMap {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+  final List<ConceptMapContact>? _contact;
   @override
-  final List<ConceptMapContact>? contact;
+  List<ConceptMapContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? date;
   @override
@@ -7655,8 +7475,15 @@ class _$_ConceptMap extends _ConceptMap {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<CodeableConcept>? _useContext;
   @override
-  final List<CodeableConcept>? useContext;
+  List<CodeableConcept>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? requirements;
   @override
@@ -7678,8 +7505,15 @@ class _$_ConceptMap extends _ConceptMap {
   final Element? targetUriElement;
   @override
   final Reference? targetReference;
+  final List<ConceptMapElement>? _element;
   @override
-  final List<ConceptMapElement>? element;
+  List<ConceptMapElement>? get element {
+    final value = _element;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -7693,7 +7527,7 @@ class _$_ConceptMap extends _ConceptMap {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ConceptMap &&
+            other is _$_ConceptMap &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -7706,11 +7540,12 @@ class _$_ConceptMap extends _ConceptMap {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement) &&
@@ -7732,14 +7567,14 @@ class _$_ConceptMap extends _ConceptMap {
             const DeepCollectionEquality().equals(other.publisher, publisher) &&
             const DeepCollectionEquality()
                 .equals(other.publisherElement, publisherElement) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.useContext, useContext) &&
+                .equals(other._useContext, _useContext) &&
             const DeepCollectionEquality()
                 .equals(other.requirements, requirements) &&
             const DeepCollectionEquality().equals(other.copyright, copyright) &&
@@ -7755,11 +7590,12 @@ class _$_ConceptMap extends _ConceptMap {
                 .equals(other.targetUriElement, targetUriElement) &&
             const DeepCollectionEquality()
                 .equals(other.targetReference, targetReference) &&
-            const DeepCollectionEquality().equals(other.element, element) &&
+            const DeepCollectionEquality().equals(other._element, _element) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -7771,9 +7607,9 @@ class _$_ConceptMap extends _ConceptMap {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(url),
         const DeepCollectionEquality().hash(urlElement),
         const DeepCollectionEquality().hash(identifier),
@@ -7787,11 +7623,11 @@ class _$_ConceptMap extends _ConceptMap {
         const DeepCollectionEquality().hash(experimentalElement),
         const DeepCollectionEquality().hash(publisher),
         const DeepCollectionEquality().hash(publisherElement),
-        const DeepCollectionEquality().hash(contact),
+        const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(_useContext),
         const DeepCollectionEquality().hash(requirements),
         const DeepCollectionEquality().hash(copyright),
         const DeepCollectionEquality().hash(copyrightElement),
@@ -7801,14 +7637,14 @@ class _$_ConceptMap extends _ConceptMap {
         const DeepCollectionEquality().hash(targetUri),
         const DeepCollectionEquality().hash(targetUriElement),
         const DeepCollectionEquality().hash(targetReference),
-        const DeepCollectionEquality().hash(element),
+        const DeepCollectionEquality().hash(_element),
         const DeepCollectionEquality().hash(dateElement)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ConceptMapCopyWith<_ConceptMap> get copyWith =>
-      __$ConceptMapCopyWithImpl<_ConceptMap>(this, _$identity);
+  _$$_ConceptMapCopyWith<_$_ConceptMap> get copyWith =>
+      __$$_ConceptMapCopyWithImpl<_$_ConceptMap>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7819,61 +7655,61 @@ class _$_ConceptMap extends _ConceptMap {
 abstract class _ConceptMap extends ConceptMap {
   factory _ConceptMap(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
       @JsonKey(name: '_url')
-          Element? urlElement,
-      Identifier? identifier,
-      String? version,
+          final Element? urlElement,
+      final Identifier? identifier,
+      final String? version,
       @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
+          final Element? versionElement,
+      final String? name,
       @JsonKey(name: '_name')
-          Element? nameElement,
+          final Element? nameElement,
       @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          required ConceptMapStatus status,
+          required final ConceptMapStatus status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? experimental,
+          final Element? statusElement,
+      final Boolean? experimental,
       @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      String? publisher,
+          final Element? experimentalElement,
+      final String? publisher,
       @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ConceptMapContact>? contact,
-      FhirDateTime? date,
-      String? description,
+          final Element? publisherElement,
+      final List<ConceptMapContact>? contact,
+      final FhirDateTime? date,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      String? requirements,
-      String? copyright,
+          final Element? descriptionElement,
+      final List<CodeableConcept>? useContext,
+      final String? requirements,
+      final String? copyright,
       @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      FhirUri? sourceUri,
+          final Element? copyrightElement,
+      final FhirUri? sourceUri,
       @JsonKey(name: '_sourceUri')
-          Element? sourceUriElement,
-      Reference? sourceReference,
-      FhirUri? targetUri,
+          final Element? sourceUriElement,
+      final Reference? sourceReference,
+      final FhirUri? targetUri,
       @JsonKey(name: '_targetUri')
-          Element? targetUriElement,
-      Reference? targetReference,
-      List<ConceptMapElement>? element,
+          final Element? targetUriElement,
+      final Reference? targetReference,
+      final List<ConceptMapElement>? element,
       @JsonKey(name: '_date')
-          Element? dateElement}) = _$_ConceptMap;
+          final Element? dateElement}) = _$_ConceptMap;
   _ConceptMap._() : super._();
 
   factory _ConceptMap.fromJson(Map<String, dynamic> json) =
@@ -7881,136 +7717,110 @@ abstract class _ConceptMap extends ConceptMap {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-  ConceptMapStatus get status;
+  ConceptMapStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ConceptMapContact>? get contact;
+  List<ConceptMapContact>? get contact => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get useContext;
+  List<CodeableConcept>? get useContext => throw _privateConstructorUsedError;
   @override
-  String? get requirements;
+  String? get requirements => throw _privateConstructorUsedError;
   @override
-  String? get copyright;
+  String? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get sourceUri;
+  FhirUri? get sourceUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sourceUri')
-  Element? get sourceUriElement;
+  Element? get sourceUriElement => throw _privateConstructorUsedError;
   @override
-  Reference? get sourceReference;
+  Reference? get sourceReference => throw _privateConstructorUsedError;
   @override
-  FhirUri? get targetUri;
+  FhirUri? get targetUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_targetUri')
-  Element? get targetUriElement;
+  Element? get targetUriElement => throw _privateConstructorUsedError;
   @override
-  Reference? get targetReference;
+  Reference? get targetReference => throw _privateConstructorUsedError;
   @override
-  List<ConceptMapElement>? get element;
+  List<ConceptMapElement>? get element => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConceptMapCopyWith<_ConceptMap> get copyWith =>
+  _$$_ConceptMapCopyWith<_$_ConceptMap> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ConceptMapContact _$ConceptMapContactFromJson(Map<String, dynamic> json) {
   return _ConceptMapContact.fromJson(json);
 }
-
-/// @nodoc
-class _$ConceptMapContactTearOff {
-  const _$ConceptMapContactTearOff();
-
-  _ConceptMapContact call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) {
-    return _ConceptMapContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      telecom: telecom,
-    );
-  }
-
-  ConceptMapContact fromJson(Map<String, Object?> json) {
-    return ConceptMapContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConceptMapContact = _$ConceptMapContactTearOff();
 
 /// @nodoc
 mixin _$ConceptMapContact {
@@ -8084,11 +7894,11 @@ class _$ConceptMapContactCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ConceptMapContactCopyWith<$Res>
+abstract class _$$_ConceptMapContactCopyWith<$Res>
     implements $ConceptMapContactCopyWith<$Res> {
-  factory _$ConceptMapContactCopyWith(
-          _ConceptMapContact value, $Res Function(_ConceptMapContact) then) =
-      __$ConceptMapContactCopyWithImpl<$Res>;
+  factory _$$_ConceptMapContactCopyWith(_$_ConceptMapContact value,
+          $Res Function(_$_ConceptMapContact) then) =
+      __$$_ConceptMapContactCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -8099,15 +7909,15 @@ abstract class _$ConceptMapContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConceptMapContactCopyWithImpl<$Res>
+class __$$_ConceptMapContactCopyWithImpl<$Res>
     extends _$ConceptMapContactCopyWithImpl<$Res>
-    implements _$ConceptMapContactCopyWith<$Res> {
-  __$ConceptMapContactCopyWithImpl(
-      _ConceptMapContact _value, $Res Function(_ConceptMapContact) _then)
-      : super(_value, (v) => _then(v as _ConceptMapContact));
+    implements _$$_ConceptMapContactCopyWith<$Res> {
+  __$$_ConceptMapContactCopyWithImpl(
+      _$_ConceptMapContact _value, $Res Function(_$_ConceptMapContact) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMapContact));
 
   @override
-  _ConceptMapContact get _value => super._value as _ConceptMapContact;
+  _$_ConceptMapContact get _value => super._value as _$_ConceptMapContact;
 
   @override
   $Res call({
@@ -8117,17 +7927,17 @@ class __$ConceptMapContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_ConceptMapContact(
+    return _then(_$_ConceptMapContact(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -8135,7 +7945,7 @@ class __$ConceptMapContactCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       telecom: telecom == freezed
-          ? _value.telecom
+          ? _value._telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -8147,26 +7957,49 @@ class __$ConceptMapContactCopyWithImpl<$Res>
 class _$_ConceptMapContact extends _ConceptMapContact {
   _$_ConceptMapContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
-      this.telecom})
-      : super._();
+      final List<ContactPoint>? telecom})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _telecom = telecom,
+        super._();
 
   factory _$_ConceptMapContact.fromJson(Map<String, dynamic> json) =>
       _$$_ConceptMapContactFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
+  final List<ContactPoint>? _telecom;
   @override
-  final List<ContactPoint>? telecom;
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -8177,29 +8010,31 @@ class _$_ConceptMapContact extends _ConceptMapContact {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ConceptMapContact &&
+            other is _$_ConceptMapContact &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.telecom, telecom));
+            const DeepCollectionEquality().equals(other._telecom, _telecom));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(telecom));
+      const DeepCollectionEquality().hash(_telecom));
 
   @JsonKey(ignore: true)
   @override
-  _$ConceptMapContactCopyWith<_ConceptMapContact> get copyWith =>
-      __$ConceptMapContactCopyWithImpl<_ConceptMapContact>(this, _$identity);
+  _$$_ConceptMapContactCopyWith<_$_ConceptMapContact> get copyWith =>
+      __$$_ConceptMapContactCopyWithImpl<_$_ConceptMapContact>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8209,67 +8044,37 @@ class _$_ConceptMapContact extends _ConceptMapContact {
 
 abstract class _ConceptMapContact extends ConceptMapContact {
   factory _ConceptMapContact(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) = _$_ConceptMapContact;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      final List<ContactPoint>? telecom}) = _$_ConceptMapContact;
   _ConceptMapContact._() : super._();
 
   factory _ConceptMapContact.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapContact.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConceptMapContactCopyWith<_ConceptMapContact> get copyWith =>
+  _$$_ConceptMapContactCopyWith<_$_ConceptMapContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ConceptMapElement _$ConceptMapElementFromJson(Map<String, dynamic> json) {
   return _ConceptMapElement.fromJson(json);
 }
-
-/// @nodoc
-class _$ConceptMapElementTearOff {
-  const _$ConceptMapElementTearOff();
-
-  _ConceptMapElement call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? codeSystem,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      List<ConceptMapElementTarget>? target}) {
-    return _ConceptMapElement(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      codeSystem: codeSystem,
-      code: code,
-      codeElement: codeElement,
-      target: target,
-    );
-  }
-
-  ConceptMapElement fromJson(Map<String, Object?> json) {
-    return ConceptMapElement.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConceptMapElement = _$ConceptMapElementTearOff();
 
 /// @nodoc
 mixin _$ConceptMapElement {
@@ -8372,11 +8177,11 @@ class _$ConceptMapElementCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ConceptMapElementCopyWith<$Res>
+abstract class _$$_ConceptMapElementCopyWith<$Res>
     implements $ConceptMapElementCopyWith<$Res> {
-  factory _$ConceptMapElementCopyWith(
-          _ConceptMapElement value, $Res Function(_ConceptMapElement) then) =
-      __$ConceptMapElementCopyWithImpl<$Res>;
+  factory _$$_ConceptMapElementCopyWith(_$_ConceptMapElement value,
+          $Res Function(_$_ConceptMapElement) then) =
+      __$$_ConceptMapElementCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -8392,15 +8197,15 @@ abstract class _$ConceptMapElementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConceptMapElementCopyWithImpl<$Res>
+class __$$_ConceptMapElementCopyWithImpl<$Res>
     extends _$ConceptMapElementCopyWithImpl<$Res>
-    implements _$ConceptMapElementCopyWith<$Res> {
-  __$ConceptMapElementCopyWithImpl(
-      _ConceptMapElement _value, $Res Function(_ConceptMapElement) _then)
-      : super(_value, (v) => _then(v as _ConceptMapElement));
+    implements _$$_ConceptMapElementCopyWith<$Res> {
+  __$$_ConceptMapElementCopyWithImpl(
+      _$_ConceptMapElement _value, $Res Function(_$_ConceptMapElement) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMapElement));
 
   @override
-  _ConceptMapElement get _value => super._value as _ConceptMapElement;
+  _$_ConceptMapElement get _value => super._value as _$_ConceptMapElement;
 
   @override
   $Res call({
@@ -8412,17 +8217,17 @@ class __$ConceptMapElementCopyWithImpl<$Res>
     Object? codeElement = freezed,
     Object? target = freezed,
   }) {
-    return _then(_ConceptMapElement(
+    return _then(_$_ConceptMapElement(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       codeSystem: codeSystem == freezed
@@ -8438,7 +8243,7 @@ class __$ConceptMapElementCopyWithImpl<$Res>
           : codeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       target: target == freezed
-          ? _value.target
+          ? _value._target
           : target // ignore: cast_nullable_to_non_nullable
               as List<ConceptMapElementTarget>?,
     ));
@@ -8450,24 +8255,41 @@ class __$ConceptMapElementCopyWithImpl<$Res>
 class _$_ConceptMapElement extends _ConceptMapElement {
   _$_ConceptMapElement(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.codeSystem,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
-      this.target})
-      : super._();
+      final List<ConceptMapElementTarget>? target})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _target = target,
+        super._();
 
   factory _$_ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$$_ConceptMapElementFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? codeSystem;
   @override
@@ -8475,8 +8297,14 @@ class _$_ConceptMapElement extends _ConceptMapElement {
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
+  final List<ConceptMapElementTarget>? _target;
   @override
-  final List<ConceptMapElementTarget>? target;
+  List<ConceptMapElementTarget>? get target {
+    final value = _target;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -8487,35 +8315,37 @@ class _$_ConceptMapElement extends _ConceptMapElement {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ConceptMapElement &&
+            other is _$_ConceptMapElement &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.codeSystem, codeSystem) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.codeElement, codeElement) &&
-            const DeepCollectionEquality().equals(other.target, target));
+            const DeepCollectionEquality().equals(other._target, _target));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(codeSystem),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(codeElement),
-      const DeepCollectionEquality().hash(target));
+      const DeepCollectionEquality().hash(_target));
 
   @JsonKey(ignore: true)
   @override
-  _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith =>
-      __$ConceptMapElementCopyWithImpl<_ConceptMapElement>(this, _$identity);
+  _$$_ConceptMapElementCopyWith<_$_ConceptMapElement> get copyWith =>
+      __$$_ConceptMapElementCopyWithImpl<_$_ConceptMapElement>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8525,37 +8355,39 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 
 abstract class _ConceptMapElement extends ConceptMapElement {
   factory _ConceptMapElement(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? codeSystem,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      List<ConceptMapElementTarget>? target}) = _$_ConceptMapElement;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? codeSystem,
+      final Code? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      final List<ConceptMapElementTarget>? target}) = _$_ConceptMapElement;
   _ConceptMapElement._() : super._();
 
   factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElement.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get codeSystem;
+  FhirUri? get codeSystem => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  List<ConceptMapElementTarget>? get target;
+  List<ConceptMapElementTarget>? get target =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith =>
+  _$$_ConceptMapElementCopyWith<_$_ConceptMapElement> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -8563,52 +8395,6 @@ ConceptMapElementTarget _$ConceptMapElementTargetFromJson(
     Map<String, dynamic> json) {
   return _ConceptMapElementTarget.fromJson(json);
 }
-
-/// @nodoc
-class _$ConceptMapElementTargetTearOff {
-  const _$ConceptMapElementTargetTearOff();
-
-  _ConceptMapElementTarget call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? codeSystem,
-      Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
-      @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-          required TargetEquivalence equivalence,
-      @JsonKey(name: '_equivalence')
-          Element? equivalenceElement,
-      String? comments,
-      @JsonKey(name: '_comments')
-          Element? commentsElement,
-      List<ConceptMapTargetDependsOn>? dependsOn,
-      List<ConceptMapTargetDependsOn>? product}) {
-    return _ConceptMapElementTarget(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      codeSystem: codeSystem,
-      code: code,
-      codeElement: codeElement,
-      equivalence: equivalence,
-      equivalenceElement: equivalenceElement,
-      comments: comments,
-      commentsElement: commentsElement,
-      dependsOn: dependsOn,
-      product: product,
-    );
-  }
-
-  ConceptMapElementTarget fromJson(Map<String, Object?> json) {
-    return ConceptMapElementTarget.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConceptMapElementTarget = _$ConceptMapElementTargetTearOff();
 
 /// @nodoc
 mixin _$ConceptMapElementTarget {
@@ -8779,11 +8565,11 @@ class _$ConceptMapElementTargetCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ConceptMapElementTargetCopyWith<$Res>
+abstract class _$$_ConceptMapElementTargetCopyWith<$Res>
     implements $ConceptMapElementTargetCopyWith<$Res> {
-  factory _$ConceptMapElementTargetCopyWith(_ConceptMapElementTarget value,
-          $Res Function(_ConceptMapElementTarget) then) =
-      __$ConceptMapElementTargetCopyWithImpl<$Res>;
+  factory _$$_ConceptMapElementTargetCopyWith(_$_ConceptMapElementTarget value,
+          $Res Function(_$_ConceptMapElementTarget) then) =
+      __$$_ConceptMapElementTargetCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -8813,16 +8599,16 @@ abstract class _$ConceptMapElementTargetCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConceptMapElementTargetCopyWithImpl<$Res>
+class __$$_ConceptMapElementTargetCopyWithImpl<$Res>
     extends _$ConceptMapElementTargetCopyWithImpl<$Res>
-    implements _$ConceptMapElementTargetCopyWith<$Res> {
-  __$ConceptMapElementTargetCopyWithImpl(_ConceptMapElementTarget _value,
-      $Res Function(_ConceptMapElementTarget) _then)
-      : super(_value, (v) => _then(v as _ConceptMapElementTarget));
+    implements _$$_ConceptMapElementTargetCopyWith<$Res> {
+  __$$_ConceptMapElementTargetCopyWithImpl(_$_ConceptMapElementTarget _value,
+      $Res Function(_$_ConceptMapElementTarget) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMapElementTarget));
 
   @override
-  _ConceptMapElementTarget get _value =>
-      super._value as _ConceptMapElementTarget;
+  _$_ConceptMapElementTarget get _value =>
+      super._value as _$_ConceptMapElementTarget;
 
   @override
   $Res call({
@@ -8839,17 +8625,17 @@ class __$ConceptMapElementTargetCopyWithImpl<$Res>
     Object? dependsOn = freezed,
     Object? product = freezed,
   }) {
-    return _then(_ConceptMapElementTarget(
+    return _then(_$_ConceptMapElementTarget(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       codeSystem: codeSystem == freezed
@@ -8881,11 +8667,11 @@ class __$ConceptMapElementTargetCopyWithImpl<$Res>
           : commentsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       dependsOn: dependsOn == freezed
-          ? _value.dependsOn
+          ? _value._dependsOn
           : dependsOn // ignore: cast_nullable_to_non_nullable
               as List<ConceptMapTargetDependsOn>?,
       product: product == freezed
-          ? _value.product
+          ? _value._product
           : product // ignore: cast_nullable_to_non_nullable
               as List<ConceptMapTargetDependsOn>?,
     ));
@@ -8898,8 +8684,8 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
   _$_ConceptMapElementTarget(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.codeSystem,
       this.code,
       @JsonKey(name: '_code')
@@ -8911,20 +8697,38 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
       this.comments,
       @JsonKey(name: '_comments')
           this.commentsElement,
-      this.dependsOn,
-      this.product})
-      : super._();
+      final List<ConceptMapTargetDependsOn>? dependsOn,
+      final List<ConceptMapTargetDependsOn>? product})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _dependsOn = dependsOn,
+        _product = product,
+        super._();
 
   factory _$_ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
       _$$_ConceptMapElementTargetFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? codeSystem;
   @override
@@ -8943,10 +8747,23 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
   @override
   @JsonKey(name: '_comments')
   final Element? commentsElement;
+  final List<ConceptMapTargetDependsOn>? _dependsOn;
   @override
-  final List<ConceptMapTargetDependsOn>? dependsOn;
+  List<ConceptMapTargetDependsOn>? get dependsOn {
+    final value = _dependsOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConceptMapTargetDependsOn>? _product;
   @override
-  final List<ConceptMapTargetDependsOn>? product;
+  List<ConceptMapTargetDependsOn>? get product {
+    final value = _product;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -8957,12 +8774,12 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ConceptMapElementTarget &&
+            other is _$_ConceptMapElementTarget &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.codeSystem, codeSystem) &&
             const DeepCollectionEquality().equals(other.code, code) &&
@@ -8975,16 +8792,18 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
             const DeepCollectionEquality().equals(other.comments, comments) &&
             const DeepCollectionEquality()
                 .equals(other.commentsElement, commentsElement) &&
-            const DeepCollectionEquality().equals(other.dependsOn, dependsOn) &&
-            const DeepCollectionEquality().equals(other.product, product));
+            const DeepCollectionEquality()
+                .equals(other._dependsOn, _dependsOn) &&
+            const DeepCollectionEquality().equals(other._product, _product));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(codeSystem),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(codeElement),
@@ -8992,14 +8811,15 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
       const DeepCollectionEquality().hash(equivalenceElement),
       const DeepCollectionEquality().hash(comments),
       const DeepCollectionEquality().hash(commentsElement),
-      const DeepCollectionEquality().hash(dependsOn),
-      const DeepCollectionEquality().hash(product));
+      const DeepCollectionEquality().hash(_dependsOn),
+      const DeepCollectionEquality().hash(_product));
 
   @JsonKey(ignore: true)
   @override
-  _$ConceptMapElementTargetCopyWith<_ConceptMapElementTarget> get copyWith =>
-      __$ConceptMapElementTargetCopyWithImpl<_ConceptMapElementTarget>(
-          this, _$identity);
+  _$$_ConceptMapElementTargetCopyWith<_$_ConceptMapElementTarget>
+      get copyWith =>
+          __$$_ConceptMapElementTargetCopyWithImpl<_$_ConceptMapElementTarget>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -9009,96 +8829,71 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
 
 abstract class _ConceptMapElementTarget extends ConceptMapElementTarget {
   factory _ConceptMapElementTarget(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? codeSystem,
-      Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
-      @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-          required TargetEquivalence equivalence,
-      @JsonKey(name: '_equivalence')
-          Element? equivalenceElement,
-      String? comments,
-      @JsonKey(name: '_comments')
-          Element? commentsElement,
-      List<ConceptMapTargetDependsOn>? dependsOn,
-      List<ConceptMapTargetDependsOn>? product}) = _$_ConceptMapElementTarget;
+          {final Id? id,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final FhirUri? codeSystem,
+          final Code? code,
+          @JsonKey(name: '_code')
+              final Element? codeElement,
+          @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
+              required final TargetEquivalence equivalence,
+          @JsonKey(name: '_equivalence')
+              final Element? equivalenceElement,
+          final String? comments,
+          @JsonKey(name: '_comments')
+              final Element? commentsElement,
+          final List<ConceptMapTargetDependsOn>? dependsOn,
+          final List<ConceptMapTargetDependsOn>? product}) =
+      _$_ConceptMapElementTarget;
   _ConceptMapElementTarget._() : super._();
 
   factory _ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElementTarget.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get codeSystem;
+  FhirUri? get codeSystem => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-  TargetEquivalence get equivalence;
+  TargetEquivalence get equivalence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_equivalence')
-  Element? get equivalenceElement;
+  Element? get equivalenceElement => throw _privateConstructorUsedError;
   @override
-  String? get comments;
+  String? get comments => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comments')
-  Element? get commentsElement;
+  Element? get commentsElement => throw _privateConstructorUsedError;
   @override
-  List<ConceptMapTargetDependsOn>? get dependsOn;
+  List<ConceptMapTargetDependsOn>? get dependsOn =>
+      throw _privateConstructorUsedError;
   @override
-  List<ConceptMapTargetDependsOn>? get product;
+  List<ConceptMapTargetDependsOn>? get product =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConceptMapElementTargetCopyWith<_ConceptMapElementTarget> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ConceptMapElementTargetCopyWith<_$_ConceptMapElementTarget>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConceptMapTargetDependsOn _$ConceptMapTargetDependsOnFromJson(
     Map<String, dynamic> json) {
   return _ConceptMapTargetDependsOn.fromJson(json);
 }
-
-/// @nodoc
-class _$ConceptMapTargetDependsOnTearOff {
-  const _$ConceptMapTargetDependsOnTearOff();
-
-  _ConceptMapTargetDependsOn call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri element,
-      required FhirUri codeSystem,
-      required String code}) {
-    return _ConceptMapTargetDependsOn(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      element: element,
-      codeSystem: codeSystem,
-      code: code,
-    );
-  }
-
-  ConceptMapTargetDependsOn fromJson(Map<String, Object?> json) {
-    return ConceptMapTargetDependsOn.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConceptMapTargetDependsOn = _$ConceptMapTargetDependsOnTearOff();
 
 /// @nodoc
 mixin _$ConceptMapTargetDependsOn {
@@ -9179,11 +8974,12 @@ class _$ConceptMapTargetDependsOnCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ConceptMapTargetDependsOnCopyWith<$Res>
+abstract class _$$_ConceptMapTargetDependsOnCopyWith<$Res>
     implements $ConceptMapTargetDependsOnCopyWith<$Res> {
-  factory _$ConceptMapTargetDependsOnCopyWith(_ConceptMapTargetDependsOn value,
-          $Res Function(_ConceptMapTargetDependsOn) then) =
-      __$ConceptMapTargetDependsOnCopyWithImpl<$Res>;
+  factory _$$_ConceptMapTargetDependsOnCopyWith(
+          _$_ConceptMapTargetDependsOn value,
+          $Res Function(_$_ConceptMapTargetDependsOn) then) =
+      __$$_ConceptMapTargetDependsOnCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -9195,16 +8991,17 @@ abstract class _$ConceptMapTargetDependsOnCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConceptMapTargetDependsOnCopyWithImpl<$Res>
+class __$$_ConceptMapTargetDependsOnCopyWithImpl<$Res>
     extends _$ConceptMapTargetDependsOnCopyWithImpl<$Res>
-    implements _$ConceptMapTargetDependsOnCopyWith<$Res> {
-  __$ConceptMapTargetDependsOnCopyWithImpl(_ConceptMapTargetDependsOn _value,
-      $Res Function(_ConceptMapTargetDependsOn) _then)
-      : super(_value, (v) => _then(v as _ConceptMapTargetDependsOn));
+    implements _$$_ConceptMapTargetDependsOnCopyWith<$Res> {
+  __$$_ConceptMapTargetDependsOnCopyWithImpl(
+      _$_ConceptMapTargetDependsOn _value,
+      $Res Function(_$_ConceptMapTargetDependsOn) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMapTargetDependsOn));
 
   @override
-  _ConceptMapTargetDependsOn get _value =>
-      super._value as _ConceptMapTargetDependsOn;
+  _$_ConceptMapTargetDependsOn get _value =>
+      super._value as _$_ConceptMapTargetDependsOn;
 
   @override
   $Res call({
@@ -9215,17 +9012,17 @@ class __$ConceptMapTargetDependsOnCopyWithImpl<$Res>
     Object? codeSystem = freezed,
     Object? code = freezed,
   }) {
-    return _then(_ConceptMapTargetDependsOn(
+    return _then(_$_ConceptMapTargetDependsOn(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       element: element == freezed
@@ -9249,23 +9046,39 @@ class __$ConceptMapTargetDependsOnCopyWithImpl<$Res>
 class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
   _$_ConceptMapTargetDependsOn(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.element,
       required this.codeSystem,
       required this.code})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =>
       _$$_ConceptMapTargetDependsOnFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri element;
   @override
@@ -9282,34 +9095,34 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ConceptMapTargetDependsOn &&
+            other is _$_ConceptMapTargetDependsOn &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.element, element) &&
             const DeepCollectionEquality()
                 .equals(other.codeSystem, codeSystem) &&
             const DeepCollectionEquality().equals(other.code, code));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(element),
       const DeepCollectionEquality().hash(codeSystem),
       const DeepCollectionEquality().hash(code));
 
   @JsonKey(ignore: true)
   @override
-  _$ConceptMapTargetDependsOnCopyWith<_ConceptMapTargetDependsOn>
-      get copyWith =>
-          __$ConceptMapTargetDependsOnCopyWithImpl<_ConceptMapTargetDependsOn>(
-              this, _$identity);
+  _$$_ConceptMapTargetDependsOnCopyWith<_$_ConceptMapTargetDependsOn>
+      get copyWith => __$$_ConceptMapTargetDependsOnCopyWithImpl<
+          _$_ConceptMapTargetDependsOn>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -9319,134 +9132,40 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
 
 abstract class _ConceptMapTargetDependsOn extends ConceptMapTargetDependsOn {
   factory _ConceptMapTargetDependsOn(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri element,
-      required FhirUri codeSystem,
-      required String code}) = _$_ConceptMapTargetDependsOn;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final FhirUri element,
+      required final FhirUri codeSystem,
+      required final String code}) = _$_ConceptMapTargetDependsOn;
   _ConceptMapTargetDependsOn._() : super._();
 
   factory _ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapTargetDependsOn.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri get element;
+  FhirUri get element => throw _privateConstructorUsedError;
   @override
-  FhirUri get codeSystem;
+  FhirUri get codeSystem => throw _privateConstructorUsedError;
   @override
-  String get code;
+  String get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConceptMapTargetDependsOnCopyWith<_ConceptMapTargetDependsOn>
+  _$$_ConceptMapTargetDependsOnCopyWith<_$_ConceptMapTargetDependsOn>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
   return _NamingSystem.fromJson(json);
 }
-
-/// @nodoc
-class _$NamingSystemTearOff {
-  const _$NamingSystemTearOff();
-
-  _NamingSystem call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.NamingSystem,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          required NamingSystemStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-          required NamingSystemKind kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
-      String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<NamingSystemContact>? contact,
-      String? responsible,
-      @JsonKey(name: '_responsible')
-          Element? responsibleElement,
-      required FhirDateTime date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      CodeableConcept? type,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      String? usage,
-      @JsonKey(name: '_usage')
-          Element? usageElement,
-      required List<NamingSystemUniqueId> uniqueId,
-      Reference? replacedBy}) {
-    return _NamingSystem(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      status: status,
-      statusElement: statusElement,
-      kind: kind,
-      kindElement: kindElement,
-      publisher: publisher,
-      publisherElement: publisherElement,
-      contact: contact,
-      responsible: responsible,
-      responsibleElement: responsibleElement,
-      date: date,
-      dateElement: dateElement,
-      type: type,
-      description: description,
-      descriptionElement: descriptionElement,
-      useContext: useContext,
-      usage: usage,
-      usageElement: usageElement,
-      uniqueId: uniqueId,
-      replacedBy: replacedBy,
-    );
-  }
-
-  NamingSystem fromJson(Map<String, Object?> json) {
-    return NamingSystem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $NamingSystem = _$NamingSystemTearOff();
 
 /// @nodoc
 mixin _$NamingSystem {
@@ -9904,11 +9623,11 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$NamingSystemCopyWith<$Res>
+abstract class _$$_NamingSystemCopyWith<$Res>
     implements $NamingSystemCopyWith<$Res> {
-  factory _$NamingSystemCopyWith(
-          _NamingSystem value, $Res Function(_NamingSystem) then) =
-      __$NamingSystemCopyWithImpl<$Res>;
+  factory _$$_NamingSystemCopyWith(
+          _$_NamingSystem value, $Res Function(_$_NamingSystem) then) =
+      __$$_NamingSystemCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
@@ -9989,14 +9708,15 @@ abstract class _$NamingSystemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
-    implements _$NamingSystemCopyWith<$Res> {
-  __$NamingSystemCopyWithImpl(
-      _NamingSystem _value, $Res Function(_NamingSystem) _then)
-      : super(_value, (v) => _then(v as _NamingSystem));
+class __$$_NamingSystemCopyWithImpl<$Res>
+    extends _$NamingSystemCopyWithImpl<$Res>
+    implements _$$_NamingSystemCopyWith<$Res> {
+  __$$_NamingSystemCopyWithImpl(
+      _$_NamingSystem _value, $Res Function(_$_NamingSystem) _then)
+      : super(_value, (v) => _then(v as _$_NamingSystem));
 
   @override
-  _NamingSystem get _value => super._value as _NamingSystem;
+  _$_NamingSystem get _value => super._value as _$_NamingSystem;
 
   @override
   $Res call({
@@ -10033,7 +9753,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
     Object? uniqueId = freezed,
     Object? replacedBy = freezed,
   }) {
-    return _then(_NamingSystem(
+    return _then(_$_NamingSystem(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -10067,15 +9787,15 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -10111,7 +9831,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: contact == freezed
-          ? _value.contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<NamingSystemContact>?,
       responsible: responsible == freezed
@@ -10143,7 +9863,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       useContext: useContext == freezed
-          ? _value.useContext
+          ? _value._useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       usage: usage == freezed
@@ -10155,7 +9875,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           : usageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       uniqueId: uniqueId == freezed
-          ? _value.uniqueId
+          ? _value._uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
               as List<NamingSystemUniqueId>,
       replacedBy: replacedBy == freezed
@@ -10181,10 +9901,10 @@ class _$_NamingSystem extends _NamingSystem {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.name,
       @JsonKey(name: '_name')
           this.nameElement,
@@ -10199,7 +9919,7 @@ class _$_NamingSystem extends _NamingSystem {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      this.contact,
+      final List<NamingSystemContact>? contact,
       this.responsible,
       @JsonKey(name: '_responsible')
           this.responsibleElement,
@@ -10210,13 +9930,19 @@ class _$_NamingSystem extends _NamingSystem {
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.useContext,
+      final List<CodeableConcept>? useContext,
       this.usage,
       @JsonKey(name: '_usage')
           this.usageElement,
-      required this.uniqueId,
+      required final List<NamingSystemUniqueId> uniqueId,
       this.replacedBy})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _useContext = useContext,
+        _uniqueId = uniqueId,
+        super._();
 
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$$_NamingSystemFromJson(json);
@@ -10240,13 +9966,34 @@ class _$_NamingSystem extends _NamingSystem {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String name;
   @override
@@ -10269,8 +10016,15 @@ class _$_NamingSystem extends _NamingSystem {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+  final List<NamingSystemContact>? _contact;
   @override
-  final List<NamingSystemContact>? contact;
+  List<NamingSystemContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? responsible;
   @override
@@ -10288,15 +10042,27 @@ class _$_NamingSystem extends _NamingSystem {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<CodeableConcept>? _useContext;
   @override
-  final List<CodeableConcept>? useContext;
+  List<CodeableConcept>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? usage;
   @override
   @JsonKey(name: '_usage')
   final Element? usageElement;
+  final List<NamingSystemUniqueId> _uniqueId;
   @override
-  final List<NamingSystemUniqueId> uniqueId;
+  List<NamingSystemUniqueId> get uniqueId {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_uniqueId);
+  }
+
   @override
   final Reference? replacedBy;
 
@@ -10309,7 +10075,7 @@ class _$_NamingSystem extends _NamingSystem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _NamingSystem &&
+            other is _$_NamingSystem &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -10322,11 +10088,12 @@ class _$_NamingSystem extends _NamingSystem {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -10339,7 +10106,7 @@ class _$_NamingSystem extends _NamingSystem {
             const DeepCollectionEquality().equals(other.publisher, publisher) &&
             const DeepCollectionEquality()
                 .equals(other.publisherElement, publisherElement) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
             const DeepCollectionEquality()
                 .equals(other.responsible, responsible) &&
             const DeepCollectionEquality()
@@ -10353,15 +10120,16 @@ class _$_NamingSystem extends _NamingSystem {
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.useContext, useContext) &&
+                .equals(other._useContext, _useContext) &&
             const DeepCollectionEquality().equals(other.usage, usage) &&
             const DeepCollectionEquality()
                 .equals(other.usageElement, usageElement) &&
-            const DeepCollectionEquality().equals(other.uniqueId, uniqueId) &&
+            const DeepCollectionEquality().equals(other._uniqueId, _uniqueId) &&
             const DeepCollectionEquality()
                 .equals(other.replacedBy, replacedBy));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -10373,9 +10141,9 @@ class _$_NamingSystem extends _NamingSystem {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(name),
         const DeepCollectionEquality().hash(nameElement),
         const DeepCollectionEquality().hash(status),
@@ -10384,7 +10152,7 @@ class _$_NamingSystem extends _NamingSystem {
         const DeepCollectionEquality().hash(kindElement),
         const DeepCollectionEquality().hash(publisher),
         const DeepCollectionEquality().hash(publisherElement),
-        const DeepCollectionEquality().hash(contact),
+        const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(responsible),
         const DeepCollectionEquality().hash(responsibleElement),
         const DeepCollectionEquality().hash(date),
@@ -10392,17 +10160,17 @@ class _$_NamingSystem extends _NamingSystem {
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(_useContext),
         const DeepCollectionEquality().hash(usage),
         const DeepCollectionEquality().hash(usageElement),
-        const DeepCollectionEquality().hash(uniqueId),
+        const DeepCollectionEquality().hash(_uniqueId),
         const DeepCollectionEquality().hash(replacedBy)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$NamingSystemCopyWith<_NamingSystem> get copyWith =>
-      __$NamingSystemCopyWithImpl<_NamingSystem>(this, _$identity);
+  _$$_NamingSystemCopyWith<_$_NamingSystem> get copyWith =>
+      __$$_NamingSystemCopyWithImpl<_$_NamingSystem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -10413,51 +10181,51 @@ class _$_NamingSystem extends _NamingSystem {
 abstract class _NamingSystem extends NamingSystem {
   factory _NamingSystem(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required String name,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final String name,
       @JsonKey(name: '_name')
-          Element? nameElement,
+          final Element? nameElement,
       @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          required NamingSystemStatus status,
+          required final NamingSystemStatus status,
       @JsonKey(name: '_status')
-          Element? statusElement,
+          final Element? statusElement,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-          required NamingSystemKind kind,
+          required final NamingSystemKind kind,
       @JsonKey(name: '_kind')
-          Element? kindElement,
-      String? publisher,
+          final Element? kindElement,
+      final String? publisher,
       @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<NamingSystemContact>? contact,
-      String? responsible,
+          final Element? publisherElement,
+      final List<NamingSystemContact>? contact,
+      final String? responsible,
       @JsonKey(name: '_responsible')
-          Element? responsibleElement,
-      required FhirDateTime date,
+          final Element? responsibleElement,
+      required final FhirDateTime date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      CodeableConcept? type,
-      String? description,
+          final Element? dateElement,
+      final CodeableConcept? type,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<CodeableConcept>? useContext,
-      String? usage,
+          final Element? descriptionElement,
+      final List<CodeableConcept>? useContext,
+      final String? usage,
       @JsonKey(name: '_usage')
-          Element? usageElement,
-      required List<NamingSystemUniqueId> uniqueId,
-      Reference? replacedBy}) = _$_NamingSystem;
+          final Element? usageElement,
+      required final List<NamingSystemUniqueId> uniqueId,
+      final Reference? replacedBy}) = _$_NamingSystem;
   _NamingSystem._() : super._();
 
   factory _NamingSystem.fromJson(Map<String, dynamic> json) =
@@ -10465,118 +10233,92 @@ abstract class _NamingSystem extends NamingSystem {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-  NamingSystemStatus get status;
+  NamingSystemStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-  NamingSystemKind get kind;
+  NamingSystemKind get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
-  Element? get kindElement;
+  Element? get kindElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<NamingSystemContact>? get contact;
+  List<NamingSystemContact>? get contact => throw _privateConstructorUsedError;
   @override
-  String? get responsible;
+  String? get responsible => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_responsible')
-  Element? get responsibleElement;
+  Element? get responsibleElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get date;
+  FhirDateTime get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get useContext;
+  List<CodeableConcept>? get useContext => throw _privateConstructorUsedError;
   @override
-  String? get usage;
+  String? get usage => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_usage')
-  Element? get usageElement;
+  Element? get usageElement => throw _privateConstructorUsedError;
   @override
-  List<NamingSystemUniqueId> get uniqueId;
+  List<NamingSystemUniqueId> get uniqueId => throw _privateConstructorUsedError;
   @override
-  Reference? get replacedBy;
+  Reference? get replacedBy => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$NamingSystemCopyWith<_NamingSystem> get copyWith =>
+  _$$_NamingSystemCopyWith<_$_NamingSystem> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 NamingSystemContact _$NamingSystemContactFromJson(Map<String, dynamic> json) {
   return _NamingSystemContact.fromJson(json);
 }
-
-/// @nodoc
-class _$NamingSystemContactTearOff {
-  const _$NamingSystemContactTearOff();
-
-  _NamingSystemContact call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) {
-    return _NamingSystemContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      telecom: telecom,
-    );
-  }
-
-  NamingSystemContact fromJson(Map<String, Object?> json) {
-    return NamingSystemContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $NamingSystemContact = _$NamingSystemContactTearOff();
 
 /// @nodoc
 mixin _$NamingSystemContact {
@@ -10650,11 +10392,11 @@ class _$NamingSystemContactCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$NamingSystemContactCopyWith<$Res>
+abstract class _$$_NamingSystemContactCopyWith<$Res>
     implements $NamingSystemContactCopyWith<$Res> {
-  factory _$NamingSystemContactCopyWith(_NamingSystemContact value,
-          $Res Function(_NamingSystemContact) then) =
-      __$NamingSystemContactCopyWithImpl<$Res>;
+  factory _$$_NamingSystemContactCopyWith(_$_NamingSystemContact value,
+          $Res Function(_$_NamingSystemContact) then) =
+      __$$_NamingSystemContactCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -10665,15 +10407,15 @@ abstract class _$NamingSystemContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$NamingSystemContactCopyWithImpl<$Res>
+class __$$_NamingSystemContactCopyWithImpl<$Res>
     extends _$NamingSystemContactCopyWithImpl<$Res>
-    implements _$NamingSystemContactCopyWith<$Res> {
-  __$NamingSystemContactCopyWithImpl(
-      _NamingSystemContact _value, $Res Function(_NamingSystemContact) _then)
-      : super(_value, (v) => _then(v as _NamingSystemContact));
+    implements _$$_NamingSystemContactCopyWith<$Res> {
+  __$$_NamingSystemContactCopyWithImpl(_$_NamingSystemContact _value,
+      $Res Function(_$_NamingSystemContact) _then)
+      : super(_value, (v) => _then(v as _$_NamingSystemContact));
 
   @override
-  _NamingSystemContact get _value => super._value as _NamingSystemContact;
+  _$_NamingSystemContact get _value => super._value as _$_NamingSystemContact;
 
   @override
   $Res call({
@@ -10683,17 +10425,17 @@ class __$NamingSystemContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_NamingSystemContact(
+    return _then(_$_NamingSystemContact(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: name == freezed
@@ -10701,7 +10443,7 @@ class __$NamingSystemContactCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       telecom: telecom == freezed
-          ? _value.telecom
+          ? _value._telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -10713,26 +10455,49 @@ class __$NamingSystemContactCopyWithImpl<$Res>
 class _$_NamingSystemContact extends _NamingSystemContact {
   _$_NamingSystemContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
-      this.telecom})
-      : super._();
+      final List<ContactPoint>? telecom})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _telecom = telecom,
+        super._();
 
   factory _$_NamingSystemContact.fromJson(Map<String, dynamic> json) =>
       _$$_NamingSystemContactFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
+  final List<ContactPoint>? _telecom;
   @override
-  final List<ContactPoint>? telecom;
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -10743,29 +10508,30 @@ class _$_NamingSystemContact extends _NamingSystemContact {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _NamingSystemContact &&
+            other is _$_NamingSystemContact &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.telecom, telecom));
+            const DeepCollectionEquality().equals(other._telecom, _telecom));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(telecom));
+      const DeepCollectionEquality().hash(_telecom));
 
   @JsonKey(ignore: true)
   @override
-  _$NamingSystemContactCopyWith<_NamingSystemContact> get copyWith =>
-      __$NamingSystemContactCopyWithImpl<_NamingSystemContact>(
+  _$$_NamingSystemContactCopyWith<_$_NamingSystemContact> get copyWith =>
+      __$$_NamingSystemContactCopyWithImpl<_$_NamingSystemContact>(
           this, _$identity);
 
   @override
@@ -10776,78 +10542,37 @@ class _$_NamingSystemContact extends _NamingSystemContact {
 
 abstract class _NamingSystemContact extends NamingSystemContact {
   factory _NamingSystemContact(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) = _$_NamingSystemContact;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      final List<ContactPoint>? telecom}) = _$_NamingSystemContact;
   _NamingSystemContact._() : super._();
 
   factory _NamingSystemContact.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemContact.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$NamingSystemContactCopyWith<_NamingSystemContact> get copyWith =>
+  _$$_NamingSystemContactCopyWith<_$_NamingSystemContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 NamingSystemUniqueId _$NamingSystemUniqueIdFromJson(Map<String, dynamic> json) {
   return _NamingSystemUniqueId.fromJson(json);
 }
-
-/// @nodoc
-class _$NamingSystemUniqueIdTearOff {
-  const _$NamingSystemUniqueIdTearOff();
-
-  _NamingSystemUniqueId call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: UniqueIdType.unknown)
-          required UniqueIdType type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      required String value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
-      Boolean? preferred,
-      @JsonKey(name: '_preferred')
-          Element? preferredElement,
-      Period? period}) {
-    return _NamingSystemUniqueId(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      typeElement: typeElement,
-      value: value,
-      valueElement: valueElement,
-      preferred: preferred,
-      preferredElement: preferredElement,
-      period: period,
-    );
-  }
-
-  NamingSystemUniqueId fromJson(Map<String, Object?> json) {
-    return NamingSystemUniqueId.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $NamingSystemUniqueId = _$NamingSystemUniqueIdTearOff();
 
 /// @nodoc
 mixin _$NamingSystemUniqueId {
@@ -11009,11 +10734,11 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$NamingSystemUniqueIdCopyWith<$Res>
+abstract class _$$_NamingSystemUniqueIdCopyWith<$Res>
     implements $NamingSystemUniqueIdCopyWith<$Res> {
-  factory _$NamingSystemUniqueIdCopyWith(_NamingSystemUniqueId value,
-          $Res Function(_NamingSystemUniqueId) then) =
-      __$NamingSystemUniqueIdCopyWithImpl<$Res>;
+  factory _$$_NamingSystemUniqueIdCopyWith(_$_NamingSystemUniqueId value,
+          $Res Function(_$_NamingSystemUniqueId) then) =
+      __$$_NamingSystemUniqueIdCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -11038,15 +10763,15 @@ abstract class _$NamingSystemUniqueIdCopyWith<$Res>
 }
 
 /// @nodoc
-class __$NamingSystemUniqueIdCopyWithImpl<$Res>
+class __$$_NamingSystemUniqueIdCopyWithImpl<$Res>
     extends _$NamingSystemUniqueIdCopyWithImpl<$Res>
-    implements _$NamingSystemUniqueIdCopyWith<$Res> {
-  __$NamingSystemUniqueIdCopyWithImpl(
-      _NamingSystemUniqueId _value, $Res Function(_NamingSystemUniqueId) _then)
-      : super(_value, (v) => _then(v as _NamingSystemUniqueId));
+    implements _$$_NamingSystemUniqueIdCopyWith<$Res> {
+  __$$_NamingSystemUniqueIdCopyWithImpl(_$_NamingSystemUniqueId _value,
+      $Res Function(_$_NamingSystemUniqueId) _then)
+      : super(_value, (v) => _then(v as _$_NamingSystemUniqueId));
 
   @override
-  _NamingSystemUniqueId get _value => super._value as _NamingSystemUniqueId;
+  _$_NamingSystemUniqueId get _value => super._value as _$_NamingSystemUniqueId;
 
   @override
   $Res call({
@@ -11061,17 +10786,17 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
     Object? preferredElement = freezed,
     Object? period = freezed,
   }) {
-    return _then(_NamingSystemUniqueId(
+    return _then(_$_NamingSystemUniqueId(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: type == freezed
@@ -11111,8 +10836,8 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
 class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
   _$_NamingSystemUniqueId(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: UniqueIdType.unknown) required this.type,
       @JsonKey(name: '_type') this.typeElement,
       required this.value,
@@ -11120,18 +10845,34 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
       this.preferred,
       @JsonKey(name: '_preferred') this.preferredElement,
       this.period})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$$_NamingSystemUniqueIdFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: UniqueIdType.unknown)
   final UniqueIdType type;
@@ -11160,12 +10901,12 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _NamingSystemUniqueId &&
+            other is _$_NamingSystemUniqueId &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -11178,12 +10919,13 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
             const DeepCollectionEquality().equals(other.period, period));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(typeElement),
       const DeepCollectionEquality().hash(value),
@@ -11194,8 +10936,8 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
   @JsonKey(ignore: true)
   @override
-  _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith =>
-      __$NamingSystemUniqueIdCopyWithImpl<_NamingSystemUniqueId>(
+  _$$_NamingSystemUniqueIdCopyWith<_$_NamingSystemUniqueId> get copyWith =>
+      __$$_NamingSystemUniqueIdCopyWithImpl<_$_NamingSystemUniqueId>(
           this, _$identity);
 
   @override
@@ -11206,53 +10948,54 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
 abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   factory _NamingSystemUniqueId(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: UniqueIdType.unknown)
-          required UniqueIdType type,
+          required final UniqueIdType type,
       @JsonKey(name: '_type')
-          Element? typeElement,
-      required String value,
+          final Element? typeElement,
+      required final String value,
       @JsonKey(name: '_value')
-          Element? valueElement,
-      Boolean? preferred,
+          final Element? valueElement,
+      final Boolean? preferred,
       @JsonKey(name: '_preferred')
-          Element? preferredElement,
-      Period? period}) = _$_NamingSystemUniqueId;
+          final Element? preferredElement,
+      final Period? period}) = _$_NamingSystemUniqueId;
   _NamingSystemUniqueId._() : super._();
 
   factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemUniqueId.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: UniqueIdType.unknown)
-  UniqueIdType get type;
+  UniqueIdType get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String get value;
+  String get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get preferred;
+  Boolean? get preferred => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_preferred')
-  Element? get preferredElement;
+  Element? get preferredElement => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith =>
+  _$$_NamingSystemUniqueIdCopyWith<_$_NamingSystemUniqueId> get copyWith =>
       throw _privateConstructorUsedError;
 }

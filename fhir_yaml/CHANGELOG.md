@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [0.7.0]
+
+* Not updating anything, just keeping versions in sync with rest of packages
+
 ## [0.6.2]
 
 * Updated dependencies

@@ -78,7 +78,8 @@ final functionLexer = unionFunctionLexer |
     excludeLexer |
     traceLexer |
     aggregateLexer |
-    iifLexer;
+    iifLexer |
+    deprecatedLexer;
 
 /// Lexer for all types of white space
 final wsLexer = whiteSpaceLexer | lineCommentLexer | multiLineCommentLexer;

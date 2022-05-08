@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../r5.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'backbone_type.freezed.dart';
 part 'backbone_type.g.dart';
 

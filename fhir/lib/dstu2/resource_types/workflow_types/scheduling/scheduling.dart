@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../dstu2.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'scheduling.enums.dart';
 part 'scheduling.freezed.dart';
 part 'scheduling.g.dart';

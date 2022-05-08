@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../dstu2.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'patient_management.enums.dart';
 part 'patient_management.freezed.dart';
 part 'patient_management.g.dart';
