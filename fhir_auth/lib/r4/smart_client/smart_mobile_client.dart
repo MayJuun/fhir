@@ -16,6 +16,7 @@ import 'smart_client.dart';
 /// the star of our show, who you've all come to see, the Smart object who
 /// will provide the client for interacting with the FHIR server
 class SmartMobileClient extends SmartClient {
+  SmartMobileClient._():super(clientId: clientId);
   SmartMobileClient({
     required this.redirectUri,
     required this.clientId,

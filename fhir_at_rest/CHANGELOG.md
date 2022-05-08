@@ -1,5 +1,10 @@
 # fhir_at_rest
 
+## [0.7.0]
+
+* updated dependencies (including Freezed 2.0)
+* Updated to fhir 0.7.0
+
 ## [0.6.3]
 
 * updated dependencies

@@ -10,9 +10,9 @@ import '../../../r4.dart';
 import 'smart_mobile_client.dart'; // dart:io implementation
 import 'smart_web_client.dart'; // universal_html implementation
 
-abstract class SmartClient extends FhirClient {
+class SmartClient extends FhirClient {
   // Return the correct implementation
-  static SmartClient getSmartClient({
+  factory SmartClient({
     /// registerd redirectUri, see Web and Mobile client for specific details
     /// about setting this up
     required FhirUri redirectUri,
@@ -63,13 +63,13 @@ abstract class SmartClient extends FhirClient {
     }
   }
 
-  /// SMART on FHIR launches, primarily form an EHR, allow the passing of context
+  /// SMART on FHIR launches, primarily from an EHR, allow the passing of context
   /// information (either for a patient or an encounter), this allows easy access
   /// to the resource ID for the context
-  String? get patientId;
+  String? get patientId => null;
 
-  /// SMART on FHIR launches, primarily form an EHR, allow the passing of context
+  /// SMART on FHIR launches, primarily from an EHR, allow the passing of context
   /// information (either for a patient or an encounter), this allows easy access
   /// to the resource ID for the context
-  String? get encounterId;
+  String? get encounterId => null;
 }

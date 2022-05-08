@@ -13,6 +13,11 @@ Future<List<String>> r5Validation() async {
     if (!DeepCollectionEquality()
         .equals(jsonDecode(contents), resource.toJson())) {
       string.add(file.path);
+      var fileString = await File('./test/wrong.txt').readAsString();
+      fileString += '***************************************************';
+      fileString += '\n${jsonDecode(contents)}\n\n${resource.toJson()}';
+      fileString += '\n***************************************************';
+      await File('./test/wrong.txt').writeAsString(fileString);
     }
   }
   return string;
