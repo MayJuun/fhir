@@ -10,10 +10,14 @@ class FpNotParser extends FhirPathParser {
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
-    final input = SingletonEvaluation.toBool(results,
-        name: 'input for .not()', operation: 'not()', collection: results);
+    print('results $results');
+    print(passed);
 
-    return input != null ? [!input] : [];
+    // final input = SingletonEvaluation.toBool(results,
+    //     name: 'input for .not()', operation: 'not()', collection: results);
+    // print(input);
+    return [];
+    // return input != null ? [!input] : [];
   }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL

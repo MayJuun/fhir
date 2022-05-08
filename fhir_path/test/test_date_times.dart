@@ -16,12 +16,12 @@ void testDateTimes() {
           walkFhirPath(
               context: response.toJson(),
               pathExpression: "authored + 6 months"),
-          ['2015-06-11T04:44:16.000-04:00']);
+          ['2015-06-11T04:44:16.000Z']);
       expect(
           walkFhirPath(
               context: response.toJson(),
               pathExpression: "authored - 6 months"),
-          ['2014-06-11T04:44:16.000-04:00']);
+          ['2014-06-11T04:44:16.000Z']);
       expect(
           walkFhirPath(
               context: response.toJson(),
