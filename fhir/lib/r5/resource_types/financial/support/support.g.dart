@@ -152,10 +152,13 @@ Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -166,20 +169,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -190,6 +193,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -214,11 +218,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -226,6 +232,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -235,12 +242,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -254,6 +255,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -267,6 +269,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -487,7 +490,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
           : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : DateTime.parse(json['created'] as String),
+          : FhirDateTime.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -552,7 +555,7 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
@@ -844,7 +847,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : DateTime.parse(json['created'] as String),
+          : FhirDateTime.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -914,7 +917,7 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
   val['request'] = instance.request.toJson();
@@ -1240,7 +1243,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : DateTime.parse(json['created'] as String),
+          : FhirDateTime.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1287,7 +1290,7 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
@@ -1349,7 +1352,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
           : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : DateTime.parse(json['created'] as String),
+          : FhirDateTime.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1395,7 +1398,7 @@ Map<String, dynamic> _$$_EnrollmentResponseToJson(
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('requestProvider', instance.requestProvider?.toJson());

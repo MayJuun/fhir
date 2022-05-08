@@ -44,7 +44,7 @@ mixin _$AuditEvent {
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
   Period? get occurredPeriod => throw _privateConstructorUsedError;
-  DateTime? get occurredDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurredDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurredDateTime')
   Element? get occurredDateTimeElement => throw _privateConstructorUsedError;
   Instant? get recorded => throw _privateConstructorUsedError;
@@ -90,7 +90,7 @@ abstract class $AuditEventCopyWith<$Res> {
       Code? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       Period? occurredPeriod,
-      DateTime? occurredDateTime,
+      FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
       Instant? recorded,
       @JsonKey(name: '_recorded') Element? recordedElement,
@@ -236,7 +236,7 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
       occurredDateTime: occurredDateTime == freezed
           ? _value.occurredDateTime
           : occurredDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurredDateTimeElement: occurredDateTimeElement == freezed
           ? _value.occurredDateTimeElement
           : occurredDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -457,7 +457,7 @@ abstract class _$$_AuditEventCopyWith<$Res>
       Code? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       Period? occurredPeriod,
-      DateTime? occurredDateTime,
+      FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
       Instant? recorded,
       @JsonKey(name: '_recorded') Element? recordedElement,
@@ -619,7 +619,7 @@ class __$$_AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
       occurredDateTime: occurredDateTime == freezed
           ? _value.occurredDateTime
           : occurredDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurredDateTimeElement: occurredDateTimeElement == freezed
           ? _value.occurredDateTimeElement
           : occurredDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -786,7 +786,7 @@ class _$_AuditEvent extends _AuditEvent {
   @override
   final Period? occurredPeriod;
   @override
-  final DateTime? occurredDateTime;
+  final FhirDateTime? occurredDateTime;
   @override
   @JsonKey(name: '_occurredDateTime')
   final Element? occurredDateTimeElement;
@@ -965,7 +965,7 @@ abstract class _AuditEvent extends AuditEvent {
       @JsonKey(name: '_severity')
           final Element? severityElement,
       final Period? occurredPeriod,
-      final DateTime? occurredDateTime,
+      final FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
           final Element? occurredDateTimeElement,
       final Instant? recorded,
@@ -1027,7 +1027,7 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   Period? get occurredPeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get occurredDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurredDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurredDateTime')
   Element? get occurredDateTimeElement => throw _privateConstructorUsedError;
@@ -1343,7 +1343,7 @@ mixin _$AuditEventAgent {
   @JsonKey(name: '_requestor')
   Element? get requestorElement => throw _privateConstructorUsedError;
   Reference? get location => throw _privateConstructorUsedError;
-  List<Uri>? get policy => throw _privateConstructorUsedError;
+  List<FhirUri>? get policy => throw _privateConstructorUsedError;
   @JsonKey(name: '_policy')
   List<Element>? get policyElement => throw _privateConstructorUsedError;
   Reference? get networkReference => throw _privateConstructorUsedError;
@@ -1377,7 +1377,7 @@ abstract class $AuditEventAgentCopyWith<$Res> {
       Boolean? requestor,
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
-      List<Uri>? policy,
+      List<FhirUri>? policy,
       @JsonKey(name: '_policy') List<Element>? policyElement,
       Reference? networkReference,
       FhirUri? networkUri,
@@ -1464,7 +1464,7 @@ class _$AuditEventAgentCopyWithImpl<$Res>
       policy: policy == freezed
           ? _value.policy
           : policy // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
           : policyElement // ignore: cast_nullable_to_non_nullable
@@ -1587,7 +1587,7 @@ abstract class _$$_AuditEventAgentCopyWith<$Res>
       Boolean? requestor,
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
-      List<Uri>? policy,
+      List<FhirUri>? policy,
       @JsonKey(name: '_policy') List<Element>? policyElement,
       Reference? networkReference,
       FhirUri? networkUri,
@@ -1683,7 +1683,7 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
       policy: policy == freezed
           ? _value._policy
           : policy // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value._policyElement
           : policyElement // ignore: cast_nullable_to_non_nullable
@@ -1729,7 +1729,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
       this.requestor,
       @JsonKey(name: '_requestor') this.requestorElement,
       this.location,
-      final List<Uri>? policy,
+      final List<FhirUri>? policy,
       @JsonKey(name: '_policy') final List<Element>? policyElement,
       this.networkReference,
       this.networkUri,
@@ -1789,9 +1789,9 @@ class _$_AuditEventAgent extends _AuditEventAgent {
   final Element? requestorElement;
   @override
   final Reference? location;
-  final List<Uri>? _policy;
+  final List<FhirUri>? _policy;
   @override
-  List<Uri>? get policy {
+  List<FhirUri>? get policy {
     final value = _policy;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -1912,7 +1912,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
       final Boolean? requestor,
       @JsonKey(name: '_requestor') final Element? requestorElement,
       final Reference? location,
-      final List<Uri>? policy,
+      final List<FhirUri>? policy,
       @JsonKey(name: '_policy') final List<Element>? policyElement,
       final Reference? networkReference,
       final FhirUri? networkUri,
@@ -1947,7 +1947,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
   @override
   Reference? get location => throw _privateConstructorUsedError;
   @override
-  List<Uri>? get policy => throw _privateConstructorUsedError;
+  List<FhirUri>? get policy => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_policy')
   List<Element>? get policyElement => throw _privateConstructorUsedError;
@@ -2726,7 +2726,7 @@ mixin _$AuditEventDetail {
   Time? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Period? get valuePeriod => throw _privateConstructorUsedError;
@@ -2762,7 +2762,7 @@ abstract class $AuditEventDetailCopyWith<$Res> {
       Ratio? valueRatio,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Period? valuePeriod,
       Base64Binary? valueBase64Binary,
@@ -2883,7 +2883,7 @@ class _$AuditEventDetailCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3057,7 +3057,7 @@ abstract class _$$_AuditEventDetailCopyWith<$Res>
       Ratio? valueRatio,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Period? valuePeriod,
       Base64Binary? valueBase64Binary,
@@ -3192,7 +3192,7 @@ class __$$_AuditEventDetailCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3297,7 +3297,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -3421,7 +3421,7 @@ abstract class _AuditEventDetail extends AuditEventDetail {
       final Time? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
       final Period? valuePeriod,
@@ -3473,7 +3473,7 @@ abstract class _AuditEventDetail extends AuditEventDetail {
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -3517,7 +3517,7 @@ mixin _$Consent {
   Element? get statusElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
-  DateTime? get dateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get dateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_dateTime')
   Element? get dateTimeElement => throw _privateConstructorUsedError;
   List<Reference>? get grantor => throw _privateConstructorUsedError;
@@ -3560,7 +3560,7 @@ abstract class $ConsentCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       Reference? subject,
-      DateTime? dateTime,
+      FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime') Element? dateTimeElement,
       List<Reference>? grantor,
       List<Reference>? grantee,
@@ -3693,7 +3693,7 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
       dateTime: dateTime == freezed
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateTimeElement: dateTimeElement == freezed
           ? _value.dateTimeElement
           : dateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3868,7 +3868,7 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       Reference? subject,
-      DateTime? dateTime,
+      FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime') Element? dateTimeElement,
       List<Reference>? grantor,
       List<Reference>? grantee,
@@ -4011,7 +4011,7 @@ class __$$_ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
       dateTime: dateTime == freezed
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateTimeElement: dateTimeElement == freezed
           ? _value.dateTimeElement
           : dateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4189,7 +4189,7 @@ class _$_Consent extends _Consent {
   @override
   final Reference? subject;
   @override
-  final DateTime? dateTime;
+  final FhirDateTime? dateTime;
   @override
   @JsonKey(name: '_dateTime')
   final Element? dateTimeElement;
@@ -4401,7 +4401,7 @@ abstract class _Consent extends Consent {
       @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       final Reference? subject,
-      final DateTime? dateTime,
+      final FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime') final Element? dateTimeElement,
       final List<Reference>? grantor,
       final List<Reference>? grantee,
@@ -4456,7 +4456,7 @@ abstract class _Consent extends Consent {
   @override
   Reference? get subject => throw _privateConstructorUsedError;
   @override
-  DateTime? get dateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get dateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_dateTime')
   Element? get dateTimeElement => throw _privateConstructorUsedError;
@@ -4810,7 +4810,8 @@ mixin _$ConsentVerification {
   CodeableConcept? get verificationType => throw _privateConstructorUsedError;
   Reference? get verifiedBy => throw _privateConstructorUsedError;
   Reference? get verifiedWith => throw _privateConstructorUsedError;
-  List<DateTime>? get verificationDate => throw _privateConstructorUsedError;
+  List<FhirDateTime>? get verificationDate =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_verificationDate')
   List<Element>? get verificationDateElement =>
       throw _privateConstructorUsedError;
@@ -4837,7 +4838,7 @@ abstract class $ConsentVerificationCopyWith<$Res> {
       CodeableConcept? verificationType,
       Reference? verifiedBy,
       Reference? verifiedWith,
-      List<DateTime>? verificationDate,
+      List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
           List<Element>? verificationDateElement});
 
@@ -4905,7 +4906,7 @@ class _$ConsentVerificationCopyWithImpl<$Res>
       verificationDate: verificationDate == freezed
           ? _value.verificationDate
           : verificationDate // ignore: cast_nullable_to_non_nullable
-              as List<DateTime>?,
+              as List<FhirDateTime>?,
       verificationDateElement: verificationDateElement == freezed
           ? _value.verificationDateElement
           : verificationDateElement // ignore: cast_nullable_to_non_nullable
@@ -4976,7 +4977,7 @@ abstract class _$$_ConsentVerificationCopyWith<$Res>
       CodeableConcept? verificationType,
       Reference? verifiedBy,
       Reference? verifiedWith,
-      List<DateTime>? verificationDate,
+      List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
           List<Element>? verificationDateElement});
 
@@ -5050,7 +5051,7 @@ class __$$_ConsentVerificationCopyWithImpl<$Res>
       verificationDate: verificationDate == freezed
           ? _value._verificationDate
           : verificationDate // ignore: cast_nullable_to_non_nullable
-              as List<DateTime>?,
+              as List<FhirDateTime>?,
       verificationDateElement: verificationDateElement == freezed
           ? _value._verificationDateElement
           : verificationDateElement // ignore: cast_nullable_to_non_nullable
@@ -5073,7 +5074,7 @@ class _$_ConsentVerification extends _ConsentVerification {
       this.verificationType,
       this.verifiedBy,
       this.verifiedWith,
-      final List<DateTime>? verificationDate,
+      final List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
           final List<Element>? verificationDateElement})
       : _extension_ = extension_,
@@ -5117,9 +5118,9 @@ class _$_ConsentVerification extends _ConsentVerification {
   final Reference? verifiedBy;
   @override
   final Reference? verifiedWith;
-  final List<DateTime>? _verificationDate;
+  final List<FhirDateTime>? _verificationDate;
   @override
-  List<DateTime>? get verificationDate {
+  List<FhirDateTime>? get verificationDate {
     final value = _verificationDate;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -5205,7 +5206,7 @@ abstract class _ConsentVerification extends ConsentVerification {
           final CodeableConcept? verificationType,
           final Reference? verifiedBy,
           final Reference? verifiedWith,
-          final List<DateTime>? verificationDate,
+          final List<FhirDateTime>? verificationDate,
           @JsonKey(name: '_verificationDate')
               final List<Element>? verificationDateElement}) =
       _$_ConsentVerification;
@@ -5234,7 +5235,8 @@ abstract class _ConsentVerification extends ConsentVerification {
   @override
   Reference? get verifiedWith => throw _privateConstructorUsedError;
   @override
-  List<DateTime>? get verificationDate => throw _privateConstructorUsedError;
+  List<FhirDateTime>? get verificationDate =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_verificationDate')
   List<Element>? get verificationDateElement =>
@@ -6450,7 +6452,7 @@ mixin _$Permission {
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get intent => throw _privateConstructorUsedError;
   Reference? get asserter => throw _privateConstructorUsedError;
-  List<DateTime>? get assertionDate => throw _privateConstructorUsedError;
+  List<FhirDateTime>? get assertionDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_assertionDate')
   List<Element>? get assertionDateElement => throw _privateConstructorUsedError;
   Period? get validity => throw _privateConstructorUsedError;
@@ -6490,7 +6492,7 @@ abstract class $PermissionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? intent,
       Reference? asserter,
-      List<DateTime>? assertionDate,
+      List<FhirDateTime>? assertionDate,
       @JsonKey(name: '_assertionDate') List<Element>? assertionDateElement,
       Period? validity,
       List<CodeableConcept>? purpose,
@@ -6608,7 +6610,7 @@ class _$PermissionCopyWithImpl<$Res> implements $PermissionCopyWith<$Res> {
       assertionDate: assertionDate == freezed
           ? _value.assertionDate
           : assertionDate // ignore: cast_nullable_to_non_nullable
-              as List<DateTime>?,
+              as List<FhirDateTime>?,
       assertionDateElement: assertionDateElement == freezed
           ? _value.assertionDateElement
           : assertionDateElement // ignore: cast_nullable_to_non_nullable
@@ -6764,7 +6766,7 @@ abstract class _$$_PermissionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? intent,
       Reference? asserter,
-      List<DateTime>? assertionDate,
+      List<FhirDateTime>? assertionDate,
       @JsonKey(name: '_assertionDate') List<Element>? assertionDateElement,
       Period? validity,
       List<CodeableConcept>? purpose,
@@ -6893,7 +6895,7 @@ class __$$_PermissionCopyWithImpl<$Res> extends _$PermissionCopyWithImpl<$Res>
       assertionDate: assertionDate == freezed
           ? _value._assertionDate
           : assertionDate // ignore: cast_nullable_to_non_nullable
-              as List<DateTime>?,
+              as List<FhirDateTime>?,
       assertionDateElement: assertionDateElement == freezed
           ? _value._assertionDateElement
           : assertionDateElement // ignore: cast_nullable_to_non_nullable
@@ -6949,7 +6951,7 @@ class _$_Permission extends _Permission {
           this.statusElement,
       this.intent,
       this.asserter,
-      final List<DateTime>? assertionDate,
+      final List<FhirDateTime>? assertionDate,
       @JsonKey(name: '_assertionDate')
           final List<Element>? assertionDateElement,
       this.validity,
@@ -7028,9 +7030,9 @@ class _$_Permission extends _Permission {
   final CodeableConcept? intent;
   @override
   final Reference? asserter;
-  final List<DateTime>? _assertionDate;
+  final List<FhirDateTime>? _assertionDate;
   @override
-  List<DateTime>? get assertionDate {
+  List<FhirDateTime>? get assertionDate {
     final value = _assertionDate;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -7197,7 +7199,7 @@ abstract class _Permission extends Permission {
           final Element? statusElement,
       final CodeableConcept? intent,
       final Reference? asserter,
-      final List<DateTime>? assertionDate,
+      final List<FhirDateTime>? assertionDate,
       @JsonKey(name: '_assertionDate')
           final List<Element>? assertionDateElement,
       final Period? validity,
@@ -7247,7 +7249,7 @@ abstract class _Permission extends Permission {
   @override
   Reference? get asserter => throw _privateConstructorUsedError;
   @override
-  List<DateTime>? get assertionDate => throw _privateConstructorUsedError;
+  List<FhirDateTime>? get assertionDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_assertionDate')
   List<Element>? get assertionDateElement => throw _privateConstructorUsedError;
@@ -7861,13 +7863,13 @@ mixin _$Provenance {
       throw _privateConstructorUsedError;
   List<Reference> get target => throw _privateConstructorUsedError;
   Period? get occurredPeriod => throw _privateConstructorUsedError;
-  DateTime? get occurredDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurredDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurredDateTime')
   Element? get occurredDateTimeElement => throw _privateConstructorUsedError;
   Instant? get recorded => throw _privateConstructorUsedError;
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;
-  List<Uri>? get policy => throw _privateConstructorUsedError;
+  List<FhirUri>? get policy => throw _privateConstructorUsedError;
   @JsonKey(name: '_policy')
   List<Element>? get policyElement => throw _privateConstructorUsedError;
   Reference? get location => throw _privateConstructorUsedError;
@@ -7906,11 +7908,11 @@ abstract class $ProvenanceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? occurredPeriod,
-      DateTime? occurredDateTime,
+      FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
       Instant? recorded,
       @JsonKey(name: '_recorded') Element? recordedElement,
-      List<Uri>? policy,
+      List<FhirUri>? policy,
       @JsonKey(name: '_policy') List<Element>? policyElement,
       Reference? location,
       List<CodeableReference>? authorization,
@@ -8030,7 +8032,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       occurredDateTime: occurredDateTime == freezed
           ? _value.occurredDateTime
           : occurredDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurredDateTimeElement: occurredDateTimeElement == freezed
           ? _value.occurredDateTimeElement
           : occurredDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8046,7 +8048,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       policy: policy == freezed
           ? _value.policy
           : policy // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
           : policyElement // ignore: cast_nullable_to_non_nullable
@@ -8233,11 +8235,11 @@ abstract class _$$_ProvenanceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? occurredPeriod,
-      DateTime? occurredDateTime,
+      FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
       Instant? recorded,
       @JsonKey(name: '_recorded') Element? recordedElement,
-      List<Uri>? policy,
+      List<FhirUri>? policy,
       @JsonKey(name: '_policy') List<Element>? policyElement,
       Reference? location,
       List<CodeableReference>? authorization,
@@ -8370,7 +8372,7 @@ class __$$_ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
       occurredDateTime: occurredDateTime == freezed
           ? _value.occurredDateTime
           : occurredDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurredDateTimeElement: occurredDateTimeElement == freezed
           ? _value.occurredDateTimeElement
           : occurredDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8386,7 +8388,7 @@ class __$$_ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
       policy: policy == freezed
           ? _value._policy
           : policy // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value._policyElement
           : policyElement // ignore: cast_nullable_to_non_nullable
@@ -8452,7 +8454,7 @@ class _$_Provenance extends _Provenance {
       @JsonKey(name: '_occurredDateTime') this.occurredDateTimeElement,
       this.recorded,
       @JsonKey(name: '_recorded') this.recordedElement,
-      final List<Uri>? policy,
+      final List<FhirUri>? policy,
       @JsonKey(name: '_policy') final List<Element>? policyElement,
       this.location,
       final List<CodeableReference>? authorization,
@@ -8536,7 +8538,7 @@ class _$_Provenance extends _Provenance {
   @override
   final Period? occurredPeriod;
   @override
-  final DateTime? occurredDateTime;
+  final FhirDateTime? occurredDateTime;
   @override
   @JsonKey(name: '_occurredDateTime')
   final Element? occurredDateTimeElement;
@@ -8545,9 +8547,9 @@ class _$_Provenance extends _Provenance {
   @override
   @JsonKey(name: '_recorded')
   final Element? recordedElement;
-  final List<Uri>? _policy;
+  final List<FhirUri>? _policy;
   @override
-  List<Uri>? get policy {
+  List<FhirUri>? get policy {
     final value = _policy;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -8732,13 +8734,13 @@ abstract class _Provenance extends Provenance {
       final List<FhirExtension>? modifierExtension,
       required final List<Reference> target,
       final Period? occurredPeriod,
-      final DateTime? occurredDateTime,
+      final FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
           final Element? occurredDateTimeElement,
       final Instant? recorded,
       @JsonKey(name: '_recorded')
           final Element? recordedElement,
-      final List<Uri>? policy,
+      final List<FhirUri>? policy,
       @JsonKey(name: '_policy')
           final List<Element>? policyElement,
       final Reference? location,
@@ -8786,7 +8788,7 @@ abstract class _Provenance extends Provenance {
   @override
   Period? get occurredPeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get occurredDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurredDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurredDateTime')
   Element? get occurredDateTimeElement => throw _privateConstructorUsedError;
@@ -8796,7 +8798,7 @@ abstract class _Provenance extends Provenance {
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;
   @override
-  List<Uri>? get policy => throw _privateConstructorUsedError;
+  List<FhirUri>? get policy => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_policy')
   List<Element>? get policyElement => throw _privateConstructorUsedError;

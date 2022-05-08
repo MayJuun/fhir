@@ -46,7 +46,7 @@ mixin _$Claim {
   Element? get useElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
   Period? get billablePeriod => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get enterer => throw _privateConstructorUsedError;
@@ -100,7 +100,7 @@ abstract class $ClaimCopyWith<$Res> {
       @JsonKey(name: '_use') Element? useElement,
       Reference patient,
       Period? billablePeriod,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? insurer,
@@ -283,7 +283,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -631,7 +631,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       @JsonKey(name: '_use') Element? useElement,
       Reference patient,
       Period? billablePeriod,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? insurer,
@@ -838,7 +838,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -1059,7 +1059,7 @@ class _$_Claim extends _Claim {
   @override
   final Period? billablePeriod;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -1301,7 +1301,7 @@ abstract class _Claim extends Claim {
       @JsonKey(name: '_use') final Element? useElement,
       required final Reference patient,
       final Period? billablePeriod,
-      final DateTime? created,
+      final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       final Reference? enterer,
       final Reference? insurer,
@@ -1373,7 +1373,7 @@ abstract class _Claim extends Claim {
   @override
   Period? get billablePeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -3584,7 +3584,7 @@ mixin _$ClaimProcedure {
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   CodeableConcept? get procedureCodeableConcept =>
@@ -3610,7 +3610,7 @@ abstract class $ClaimProcedureCopyWith<$Res> {
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       List<CodeableConcept>? type,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference,
@@ -3673,7 +3673,7 @@ class _$ClaimProcedureCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -3753,7 +3753,7 @@ abstract class _$$_ClaimProcedureCopyWith<$Res>
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       List<CodeableConcept>? type,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference,
@@ -3822,7 +3822,7 @@ class __$$_ClaimProcedureCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -3903,7 +3903,7 @@ class _$_ClaimProcedure extends _ClaimProcedure {
   }
 
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -3984,7 +3984,7 @@ abstract class _ClaimProcedure extends ClaimProcedure {
       final PositiveInt? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final List<CodeableConcept>? type,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final CodeableConcept? procedureCodeableConcept,
       final Reference? procedureReference,
@@ -4010,7 +4010,7 @@ abstract class _ClaimProcedure extends ClaimProcedure {
   @override
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -7514,7 +7514,7 @@ mixin _$ClaimResponse {
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference get insurer => throw _privateConstructorUsedError;
@@ -7579,7 +7579,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       Code? use,
       @JsonKey(name: '_use') Element? useElement,
       Reference patient,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference insurer,
       Reference? requestor,
@@ -7765,7 +7765,7 @@ class _$ClaimResponseCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -8123,7 +8123,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       Code? use,
       @JsonKey(name: '_use') Element? useElement,
       Reference patient,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference insurer,
       Reference? requestor,
@@ -8333,7 +8333,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -8572,7 +8572,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   @override
   final Reference patient;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -8841,7 +8841,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       final Code? use,
       @JsonKey(name: '_use') final Element? useElement,
       required final Reference patient,
-      final DateTime? created,
+      final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       required final Reference insurer,
       final Reference? requestor,
@@ -8916,7 +8916,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @override
   Reference get patient => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -14753,7 +14753,7 @@ mixin _$Invoice {
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
   Reference? get recipient => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   List<InvoiceParticipant>? get participant =>
@@ -14799,7 +14799,7 @@ abstract class $InvoiceCopyWith<$Res> {
       CodeableConcept? type,
       Reference? subject,
       Reference? recipient,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       List<InvoiceParticipant>? participant,
       Reference? issuer,
@@ -14951,7 +14951,7 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -15191,7 +15191,7 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       CodeableConcept? type,
       Reference? subject,
       Reference? recipient,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       List<InvoiceParticipant>? participant,
       Reference? issuer,
@@ -15359,7 +15359,7 @@ class __$$_InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -15529,7 +15529,7 @@ class _$_Invoice extends _Invoice {
   @override
   final Reference? recipient;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -15711,7 +15711,7 @@ abstract class _Invoice extends Invoice {
       final CodeableConcept? type,
       final Reference? subject,
       final Reference? recipient,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final List<InvoiceParticipant>? participant,
       final Reference? issuer,
@@ -15772,7 +15772,7 @@ abstract class _Invoice extends Invoice {
   @override
   Reference? get recipient => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;

@@ -38,7 +38,7 @@ mixin _$Communication {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
-  List<Uri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
@@ -58,10 +58,10 @@ mixin _$Communication {
   CodeableConcept? get topic => throw _privateConstructorUsedError;
   List<Reference>? get about => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get sent => throw _privateConstructorUsedError;
+  FhirDateTime? get sent => throw _privateConstructorUsedError;
   @JsonKey(name: '_sent')
   Element? get sentElement => throw _privateConstructorUsedError;
-  DateTime? get received => throw _privateConstructorUsedError;
+  FhirDateTime? get received => throw _privateConstructorUsedError;
   @JsonKey(name: '_received')
   Element? get receivedElement => throw _privateConstructorUsedError;
   List<Reference>? get recipient => throw _privateConstructorUsedError;
@@ -95,7 +95,7 @@ abstract class $CommunicationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
-      List<Uri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
@@ -111,9 +111,9 @@ abstract class $CommunicationCopyWith<$Res> {
       CodeableConcept? topic,
       List<Reference>? about,
       Reference? encounter,
-      DateTime? sent,
+      FhirDateTime? sent,
       @JsonKey(name: '_sent') Element? sentElement,
-      DateTime? received,
+      FhirDateTime? received,
       @JsonKey(name: '_received') Element? receivedElement,
       List<Reference>? recipient,
       Reference? sender,
@@ -242,7 +242,7 @@ class _$CommunicationCopyWithImpl<$Res>
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
@@ -306,7 +306,7 @@ class _$CommunicationCopyWithImpl<$Res>
       sent: sent == freezed
           ? _value.sent
           : sent // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       sentElement: sentElement == freezed
           ? _value.sentElement
           : sentElement // ignore: cast_nullable_to_non_nullable
@@ -314,7 +314,7 @@ class _$CommunicationCopyWithImpl<$Res>
       received: received == freezed
           ? _value.received
           : received // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       receivedElement: receivedElement == freezed
           ? _value.receivedElement
           : receivedElement // ignore: cast_nullable_to_non_nullable
@@ -507,7 +507,7 @@ abstract class _$$_CommunicationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
-      List<Uri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
@@ -523,9 +523,9 @@ abstract class _$$_CommunicationCopyWith<$Res>
       CodeableConcept? topic,
       List<Reference>? about,
       Reference? encounter,
-      DateTime? sent,
+      FhirDateTime? sent,
       @JsonKey(name: '_sent') Element? sentElement,
-      DateTime? received,
+      FhirDateTime? received,
       @JsonKey(name: '_received') Element? receivedElement,
       List<Reference>? recipient,
       Reference? sender,
@@ -669,7 +669,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
       instantiatesUri: instantiatesUri == freezed
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value._instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
@@ -733,7 +733,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
       sent: sent == freezed
           ? _value.sent
           : sent // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       sentElement: sentElement == freezed
           ? _value.sentElement
           : sentElement // ignore: cast_nullable_to_non_nullable
@@ -741,7 +741,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
       received: received == freezed
           ? _value.received
           : received // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       receivedElement: receivedElement == freezed
           ? _value.receivedElement
           : receivedElement // ignore: cast_nullable_to_non_nullable
@@ -790,7 +790,7 @@ class _$_Communication extends _Communication {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Canonical>? instantiatesCanonical,
-      final List<Uri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
@@ -907,9 +907,9 @@ class _$_Communication extends _Communication {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _instantiatesUri;
+  final List<FhirUri>? _instantiatesUri;
   @override
-  List<Uri>? get instantiatesUri {
+  List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -999,12 +999,12 @@ class _$_Communication extends _Communication {
   @override
   final Reference? encounter;
   @override
-  final DateTime? sent;
+  final FhirDateTime? sent;
   @override
   @JsonKey(name: '_sent')
   final Element? sentElement;
   @override
-  final DateTime? received;
+  final FhirDateTime? received;
   @override
   @JsonKey(name: '_received')
   final Element? receivedElement;
@@ -1187,7 +1187,7 @@ abstract class _Communication extends Communication {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Canonical>? instantiatesCanonical,
-      final List<Uri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
@@ -1206,10 +1206,10 @@ abstract class _Communication extends Communication {
       final CodeableConcept? topic,
       final List<Reference>? about,
       final Reference? encounter,
-      final DateTime? sent,
+      final FhirDateTime? sent,
       @JsonKey(name: '_sent')
           final Element? sentElement,
-      final DateTime? received,
+      final FhirDateTime? received,
       @JsonKey(name: '_received')
           final Element? receivedElement,
       final List<Reference>? recipient,
@@ -1254,7 +1254,7 @@ abstract class _Communication extends Communication {
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @override
-  List<Uri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
@@ -1290,12 +1290,12 @@ abstract class _Communication extends Communication {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get sent => throw _privateConstructorUsedError;
+  FhirDateTime? get sent => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sent')
   Element? get sentElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get received => throw _privateConstructorUsedError;
+  FhirDateTime? get received => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_received')
   Element? get receivedElement => throw _privateConstructorUsedError;
@@ -1678,11 +1678,11 @@ mixin _$CommunicationRequest {
   Reference? get encounter => throw _privateConstructorUsedError;
   List<CommunicationRequestPayload>? get payload =>
       throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
-  DateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
   Reference? get requester => throw _privateConstructorUsedError;
@@ -1734,10 +1734,10 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       List<Reference>? about,
       Reference? encounter,
       List<CommunicationRequestPayload>? payload,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
-      DateTime? authoredOn,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? requester,
       List<Reference>? recipient,
@@ -1939,7 +1939,7 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -1951,7 +1951,7 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
@@ -2194,10 +2194,10 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       List<Reference>? about,
       Reference? encounter,
       List<CommunicationRequestPayload>? payload,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
-      DateTime? authoredOn,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? requester,
       List<Reference>? recipient,
@@ -2417,7 +2417,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2429,7 +2429,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
@@ -2660,14 +2660,14 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   }
 
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
   @override
   final Period? occurrencePeriod;
   @override
-  final DateTime? authoredOn;
+  final FhirDateTime? authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
   final Element? authoredOnElement;
@@ -2880,11 +2880,11 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final List<Reference>? about,
       final Reference? encounter,
       final List<CommunicationRequestPayload>? payload,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
-      final DateTime? authoredOn,
+      final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
           final Element? authoredOnElement,
       final Reference? requester,
@@ -2967,14 +2967,14 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   List<CommunicationRequestPayload>? get payload =>
       throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   @override
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
@@ -3344,7 +3344,7 @@ mixin _$DeviceRequest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
-  List<Uri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
@@ -3371,12 +3371,12 @@ mixin _$DeviceRequest {
       throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
-  DateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
   Reference? get requester => throw _privateConstructorUsedError;
@@ -3413,7 +3413,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
-      List<Uri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
@@ -3432,11 +3432,11 @@ abstract class $DeviceRequestCopyWith<$Res> {
       List<DeviceRequestParameter>? parameter,
       Reference subject,
       Reference? encounter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
-      DateTime? authoredOn,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? requester,
       CodeableConcept? performerType,
@@ -3583,7 +3583,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
@@ -3659,7 +3659,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3675,7 +3675,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
@@ -3949,7 +3949,7 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
-      List<Uri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
@@ -3968,11 +3968,11 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
       List<DeviceRequestParameter>? parameter,
       Reference subject,
       Reference? encounter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
-      DateTime? authoredOn,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? requester,
       CodeableConcept? performerType,
@@ -4141,7 +4141,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       instantiatesUri: instantiatesUri == freezed
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value._instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
@@ -4217,7 +4217,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4233,7 +4233,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
@@ -4294,7 +4294,7 @@ class _$_DeviceRequest extends _DeviceRequest {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Canonical>? instantiatesCanonical,
-      final List<Uri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
@@ -4420,9 +4420,9 @@ class _$_DeviceRequest extends _DeviceRequest {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _instantiatesUri;
+  final List<FhirUri>? _instantiatesUri;
   @override
-  List<Uri>? get instantiatesUri {
+  List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -4500,7 +4500,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   @override
   final Reference? encounter;
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
@@ -4509,7 +4509,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   @override
   final Timing? occurrenceTiming;
   @override
-  final DateTime? authoredOn;
+  final FhirDateTime? authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
   final Element? authoredOnElement;
@@ -4733,7 +4733,7 @@ abstract class _DeviceRequest extends DeviceRequest {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Canonical>? instantiatesCanonical,
-      final List<Uri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
@@ -4758,12 +4758,12 @@ abstract class _DeviceRequest extends DeviceRequest {
       final List<DeviceRequestParameter>? parameter,
       required final Reference subject,
       final Reference? encounter,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
       final Timing? occurrenceTiming,
-      final DateTime? authoredOn,
+      final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
           final Element? authoredOnElement,
       final Reference? requester,
@@ -4811,7 +4811,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @override
-  List<Uri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
@@ -4857,7 +4857,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -4866,7 +4866,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @override
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
   @override
-  DateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
@@ -5309,6 +5309,1496 @@ abstract class _DeviceRequestParameter extends DeviceRequestParameter {
       throw _privateConstructorUsedError;
 }
 
+DeviceDispense _$DeviceDispenseFromJson(Map<String, dynamic> json) {
+  return _DeviceDispense.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DeviceDispense {
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  CodeableReference? get statusReason => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  CodeableReference get device => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
+  Reference? get encounter => throw _privateConstructorUsedError;
+  List<Reference>? get supportingInformation =>
+      throw _privateConstructorUsedError;
+  List<DeviceDispensePerformer>? get performer =>
+      throw _privateConstructorUsedError;
+  Reference? get location => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Quantity? get quantity => throw _privateConstructorUsedError;
+  FhirDateTime? get preparedDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_preparedDate')
+  Element? get preparedDateElement => throw _privateConstructorUsedError;
+  FhirDateTime? get whenHandedOver => throw _privateConstructorUsedError;
+  @JsonKey(name: '_whenHandedOver')
+  Element? get whenHandedOverElement => throw _privateConstructorUsedError;
+  Reference? get destination => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  String? get usageInstruction => throw _privateConstructorUsedError;
+  @JsonKey(name: '_usageInstruction')
+  Element? get usageInstructionElement => throw _privateConstructorUsedError;
+  List<Reference>? get eventHistory => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDispenseCopyWith<DeviceDispense> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDispenseCopyWith<$Res> {
+  factory $DeviceDispenseCopyWith(
+          DeviceDispense value, $Res Function(DeviceDispense) then) =
+      _$DeviceDispenseCopyWithImpl<$Res>;
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Reference>? basedOn,
+      List<Reference>? partOf,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      CodeableReference? statusReason,
+      List<CodeableConcept>? category,
+      CodeableReference device,
+      Reference subject,
+      Reference? encounter,
+      List<Reference>? supportingInformation,
+      List<DeviceDispensePerformer>? performer,
+      Reference? location,
+      CodeableConcept? type,
+      Quantity? quantity,
+      FhirDateTime? preparedDate,
+      @JsonKey(name: '_preparedDate') Element? preparedDateElement,
+      FhirDateTime? whenHandedOver,
+      @JsonKey(name: '_whenHandedOver') Element? whenHandedOverElement,
+      Reference? destination,
+      List<Annotation>? note,
+      String? usageInstruction,
+      @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
+      List<Reference>? eventHistory});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $CodeableReferenceCopyWith<$Res>? get statusReason;
+  $CodeableReferenceCopyWith<$Res> get device;
+  $ReferenceCopyWith<$Res> get subject;
+  $ReferenceCopyWith<$Res>? get encounter;
+  $ReferenceCopyWith<$Res>? get location;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $QuantityCopyWith<$Res>? get quantity;
+  $ElementCopyWith<$Res>? get preparedDateElement;
+  $ElementCopyWith<$Res>? get whenHandedOverElement;
+  $ReferenceCopyWith<$Res>? get destination;
+  $ElementCopyWith<$Res>? get usageInstructionElement;
+}
+
+/// @nodoc
+class _$DeviceDispenseCopyWithImpl<$Res>
+    implements $DeviceDispenseCopyWith<$Res> {
+  _$DeviceDispenseCopyWithImpl(this._value, this._then);
+
+  final DeviceDispense _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDispense) _then;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? basedOn = freezed,
+    Object? partOf = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? statusReason = freezed,
+    Object? category = freezed,
+    Object? device = freezed,
+    Object? subject = freezed,
+    Object? encounter = freezed,
+    Object? supportingInformation = freezed,
+    Object? performer = freezed,
+    Object? location = freezed,
+    Object? type = freezed,
+    Object? quantity = freezed,
+    Object? preparedDate = freezed,
+    Object? preparedDateElement = freezed,
+    Object? whenHandedOver = freezed,
+    Object? whenHandedOverElement = freezed,
+    Object? destination = freezed,
+    Object? note = freezed,
+    Object? usageInstruction = freezed,
+    Object? usageInstructionElement = freezed,
+    Object? eventHistory = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      basedOn: basedOn == freezed
+          ? _value.basedOn
+          : basedOn // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      partOf: partOf == freezed
+          ? _value.partOf
+          : partOf // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      statusReason: statusReason == freezed
+          ? _value.statusReason
+          : statusReason // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      supportingInformation: supportingInformation == freezed
+          ? _value.supportingInformation
+          : supportingInformation // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      performer: performer == freezed
+          ? _value.performer
+          : performer // ignore: cast_nullable_to_non_nullable
+              as List<DeviceDispensePerformer>?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      preparedDate: preparedDate == freezed
+          ? _value.preparedDate
+          : preparedDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      preparedDateElement: preparedDateElement == freezed
+          ? _value.preparedDateElement
+          : preparedDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      whenHandedOver: whenHandedOver == freezed
+          ? _value.whenHandedOver
+          : whenHandedOver // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      whenHandedOverElement: whenHandedOverElement == freezed
+          ? _value.whenHandedOverElement
+          : whenHandedOverElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      destination: destination == freezed
+          ? _value.destination
+          : destination // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      usageInstruction: usageInstruction == freezed
+          ? _value.usageInstruction
+          : usageInstruction // ignore: cast_nullable_to_non_nullable
+              as String?,
+      usageInstructionElement: usageInstructionElement == freezed
+          ? _value.usageInstructionElement
+          : usageInstructionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      eventHistory: eventHistory == freezed
+          ? _value.eventHistory
+          : eventHistory // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res>? get statusReason {
+    if (_value.statusReason == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.statusReason!, (value) {
+      return _then(_value.copyWith(statusReason: value));
+    });
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res> get device {
+    return $CodeableReferenceCopyWith<$Res>(_value.device, (value) {
+      return _then(_value.copyWith(device: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get encounter {
+    if (_value.encounter == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.encounter!, (value) {
+      return _then(_value.copyWith(encounter: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get location {
+    if (_value.location == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.location!, (value) {
+      return _then(_value.copyWith(location: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get preparedDateElement {
+    if (_value.preparedDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.preparedDateElement!, (value) {
+      return _then(_value.copyWith(preparedDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get whenHandedOverElement {
+    if (_value.whenHandedOverElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.whenHandedOverElement!, (value) {
+      return _then(_value.copyWith(whenHandedOverElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get destination {
+    if (_value.destination == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.destination!, (value) {
+      return _then(_value.copyWith(destination: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get usageInstructionElement {
+    if (_value.usageInstructionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.usageInstructionElement!, (value) {
+      return _then(_value.copyWith(usageInstructionElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_DeviceDispenseCopyWith<$Res>
+    implements $DeviceDispenseCopyWith<$Res> {
+  factory _$$_DeviceDispenseCopyWith(
+          _$_DeviceDispense value, $Res Function(_$_DeviceDispense) then) =
+      __$$_DeviceDispenseCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Reference>? basedOn,
+      List<Reference>? partOf,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      CodeableReference? statusReason,
+      List<CodeableConcept>? category,
+      CodeableReference device,
+      Reference subject,
+      Reference? encounter,
+      List<Reference>? supportingInformation,
+      List<DeviceDispensePerformer>? performer,
+      Reference? location,
+      CodeableConcept? type,
+      Quantity? quantity,
+      FhirDateTime? preparedDate,
+      @JsonKey(name: '_preparedDate') Element? preparedDateElement,
+      FhirDateTime? whenHandedOver,
+      @JsonKey(name: '_whenHandedOver') Element? whenHandedOverElement,
+      Reference? destination,
+      List<Annotation>? note,
+      String? usageInstruction,
+      @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
+      List<Reference>? eventHistory});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $CodeableReferenceCopyWith<$Res>? get statusReason;
+  @override
+  $CodeableReferenceCopyWith<$Res> get device;
+  @override
+  $ReferenceCopyWith<$Res> get subject;
+  @override
+  $ReferenceCopyWith<$Res>? get encounter;
+  @override
+  $ReferenceCopyWith<$Res>? get location;
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $QuantityCopyWith<$Res>? get quantity;
+  @override
+  $ElementCopyWith<$Res>? get preparedDateElement;
+  @override
+  $ElementCopyWith<$Res>? get whenHandedOverElement;
+  @override
+  $ReferenceCopyWith<$Res>? get destination;
+  @override
+  $ElementCopyWith<$Res>? get usageInstructionElement;
+}
+
+/// @nodoc
+class __$$_DeviceDispenseCopyWithImpl<$Res>
+    extends _$DeviceDispenseCopyWithImpl<$Res>
+    implements _$$_DeviceDispenseCopyWith<$Res> {
+  __$$_DeviceDispenseCopyWithImpl(
+      _$_DeviceDispense _value, $Res Function(_$_DeviceDispense) _then)
+      : super(_value, (v) => _then(v as _$_DeviceDispense));
+
+  @override
+  _$_DeviceDispense get _value => super._value as _$_DeviceDispense;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? basedOn = freezed,
+    Object? partOf = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? statusReason = freezed,
+    Object? category = freezed,
+    Object? device = freezed,
+    Object? subject = freezed,
+    Object? encounter = freezed,
+    Object? supportingInformation = freezed,
+    Object? performer = freezed,
+    Object? location = freezed,
+    Object? type = freezed,
+    Object? quantity = freezed,
+    Object? preparedDate = freezed,
+    Object? preparedDateElement = freezed,
+    Object? whenHandedOver = freezed,
+    Object? whenHandedOverElement = freezed,
+    Object? destination = freezed,
+    Object? note = freezed,
+    Object? usageInstruction = freezed,
+    Object? usageInstructionElement = freezed,
+    Object? eventHistory = freezed,
+  }) {
+    return _then(_$_DeviceDispense(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      basedOn: basedOn == freezed
+          ? _value._basedOn
+          : basedOn // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      partOf: partOf == freezed
+          ? _value._partOf
+          : partOf // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      statusReason: statusReason == freezed
+          ? _value.statusReason
+          : statusReason // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      category: category == freezed
+          ? _value._category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      supportingInformation: supportingInformation == freezed
+          ? _value._supportingInformation
+          : supportingInformation // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      performer: performer == freezed
+          ? _value._performer
+          : performer // ignore: cast_nullable_to_non_nullable
+              as List<DeviceDispensePerformer>?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      preparedDate: preparedDate == freezed
+          ? _value.preparedDate
+          : preparedDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      preparedDateElement: preparedDateElement == freezed
+          ? _value.preparedDateElement
+          : preparedDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      whenHandedOver: whenHandedOver == freezed
+          ? _value.whenHandedOver
+          : whenHandedOver // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      whenHandedOverElement: whenHandedOverElement == freezed
+          ? _value.whenHandedOverElement
+          : whenHandedOverElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      destination: destination == freezed
+          ? _value.destination
+          : destination // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      note: note == freezed
+          ? _value._note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      usageInstruction: usageInstruction == freezed
+          ? _value.usageInstruction
+          : usageInstruction // ignore: cast_nullable_to_non_nullable
+              as String?,
+      usageInstructionElement: usageInstructionElement == freezed
+          ? _value.usageInstructionElement
+          : usageInstructionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      eventHistory: eventHistory == freezed
+          ? _value._eventHistory
+          : eventHistory // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDispense extends _DeviceDispense {
+  _$_DeviceDispense(
+      {this.resourceType = R5ResourceType.DeviceDispense,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.statusReason,
+      final List<CodeableConcept>? category,
+      required this.device,
+      required this.subject,
+      this.encounter,
+      final List<Reference>? supportingInformation,
+      final List<DeviceDispensePerformer>? performer,
+      this.location,
+      this.type,
+      this.quantity,
+      this.preparedDate,
+      @JsonKey(name: '_preparedDate') this.preparedDateElement,
+      this.whenHandedOver,
+      @JsonKey(name: '_whenHandedOver') this.whenHandedOverElement,
+      this.destination,
+      final List<Annotation>? note,
+      this.usageInstruction,
+      @JsonKey(name: '_usageInstruction') this.usageInstructionElement,
+      final List<Reference>? eventHistory})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _basedOn = basedOn,
+        _partOf = partOf,
+        _category = category,
+        _supportingInformation = supportingInformation,
+        _performer = performer,
+        _note = note,
+        _eventHistory = eventHistory,
+        super._();
+
+  factory _$_DeviceDispense.fromJson(Map<String, dynamic> json) =>
+      _$$_DeviceDispenseFromJson(json);
+
+  @override
+  @JsonKey()
+  final R5ResourceType resourceType;
+  @override
+  final Id? id;
+  @override
+  final Meta? meta;
+  @override
+  final FhirUri? implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
+  final Code? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+  @override
+  final Narrative? text;
+  final List<Resource>? _contained;
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _basedOn;
+  @override
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _partOf;
+  @override
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? status;
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+  @override
+  final CodeableReference? statusReason;
+  final List<CodeableConcept>? _category;
+  @override
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableReference device;
+  @override
+  final Reference subject;
+  @override
+  final Reference? encounter;
+  final List<Reference>? _supportingInformation;
+  @override
+  List<Reference>? get supportingInformation {
+    final value = _supportingInformation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<DeviceDispensePerformer>? _performer;
+  @override
+  List<DeviceDispensePerformer>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference? location;
+  @override
+  final CodeableConcept? type;
+  @override
+  final Quantity? quantity;
+  @override
+  final FhirDateTime? preparedDate;
+  @override
+  @JsonKey(name: '_preparedDate')
+  final Element? preparedDateElement;
+  @override
+  final FhirDateTime? whenHandedOver;
+  @override
+  @JsonKey(name: '_whenHandedOver')
+  final Element? whenHandedOverElement;
+  @override
+  final Reference? destination;
+  final List<Annotation>? _note;
+  @override
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? usageInstruction;
+  @override
+  @JsonKey(name: '_usageInstruction')
+  final Element? usageInstructionElement;
+  final List<Reference>? _eventHistory;
+  @override
+  List<Reference>? get eventHistory {
+    final value = _eventHistory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'DeviceDispense(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, device: $device, subject: $subject, encounter: $encounter, supportingInformation: $supportingInformation, performer: $performer, location: $location, type: $type, quantity: $quantity, preparedDate: $preparedDate, preparedDateElement: $preparedDateElement, whenHandedOver: $whenHandedOver, whenHandedOverElement: $whenHandedOverElement, destination: $destination, note: $note, usageInstruction: $usageInstruction, usageInstructionElement: $usageInstructionElement, eventHistory: $eventHistory)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceDispense &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality()
+                .equals(other.statusReason, statusReason) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
+            const DeepCollectionEquality().equals(other.device, device) &&
+            const DeepCollectionEquality().equals(other.subject, subject) &&
+            const DeepCollectionEquality().equals(other.encounter, encounter) &&
+            const DeepCollectionEquality()
+                .equals(other._supportingInformation, _supportingInformation) &&
+            const DeepCollectionEquality()
+                .equals(other._performer, _performer) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality()
+                .equals(other.preparedDate, preparedDate) &&
+            const DeepCollectionEquality()
+                .equals(other.preparedDateElement, preparedDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.whenHandedOver, whenHandedOver) &&
+            const DeepCollectionEquality()
+                .equals(other.whenHandedOverElement, whenHandedOverElement) &&
+            const DeepCollectionEquality()
+                .equals(other.destination, destination) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality()
+                .equals(other.usageInstruction, usageInstruction) &&
+            const DeepCollectionEquality().equals(
+                other.usageInstructionElement, usageInstructionElement) &&
+            const DeepCollectionEquality()
+                .equals(other._eventHistory, _eventHistory));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(_partOf),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(statusReason),
+        const DeepCollectionEquality().hash(_category),
+        const DeepCollectionEquality().hash(device),
+        const DeepCollectionEquality().hash(subject),
+        const DeepCollectionEquality().hash(encounter),
+        const DeepCollectionEquality().hash(_supportingInformation),
+        const DeepCollectionEquality().hash(_performer),
+        const DeepCollectionEquality().hash(location),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(quantity),
+        const DeepCollectionEquality().hash(preparedDate),
+        const DeepCollectionEquality().hash(preparedDateElement),
+        const DeepCollectionEquality().hash(whenHandedOver),
+        const DeepCollectionEquality().hash(whenHandedOverElement),
+        const DeepCollectionEquality().hash(destination),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(usageInstruction),
+        const DeepCollectionEquality().hash(usageInstructionElement),
+        const DeepCollectionEquality().hash(_eventHistory)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_DeviceDispenseCopyWith<_$_DeviceDispense> get copyWith =>
+      __$$_DeviceDispenseCopyWithImpl<_$_DeviceDispense>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDispenseToJson(this);
+  }
+}
+
+abstract class _DeviceDispense extends DeviceDispense {
+  factory _DeviceDispense(
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final Code? status,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      final CodeableReference? statusReason,
+      final List<CodeableConcept>? category,
+      required final CodeableReference device,
+      required final Reference subject,
+      final Reference? encounter,
+      final List<Reference>? supportingInformation,
+      final List<DeviceDispensePerformer>? performer,
+      final Reference? location,
+      final CodeableConcept? type,
+      final Quantity? quantity,
+      final FhirDateTime? preparedDate,
+      @JsonKey(name: '_preparedDate')
+          final Element? preparedDateElement,
+      final FhirDateTime? whenHandedOver,
+      @JsonKey(name: '_whenHandedOver')
+          final Element? whenHandedOverElement,
+      final Reference? destination,
+      final List<Annotation>? note,
+      final String? usageInstruction,
+      @JsonKey(name: '_usageInstruction')
+          final Element? usageInstructionElement,
+      final List<Reference>? eventHistory}) = _$_DeviceDispense;
+  _DeviceDispense._() : super._();
+
+  factory _DeviceDispense.fromJson(Map<String, dynamic> json) =
+      _$_DeviceDispense.fromJson;
+
+  @override
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @override
+  Id? get id => throw _privateConstructorUsedError;
+  @override
+  Meta? get meta => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @override
+  Code? get language => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  @override
+  Narrative? get text => throw _privateConstructorUsedError;
+  @override
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  @override
+  Code? get status => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  @override
+  CodeableReference? get statusReason => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  @override
+  CodeableReference get device => throw _privateConstructorUsedError;
+  @override
+  Reference get subject => throw _privateConstructorUsedError;
+  @override
+  Reference? get encounter => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get supportingInformation =>
+      throw _privateConstructorUsedError;
+  @override
+  List<DeviceDispensePerformer>? get performer =>
+      throw _privateConstructorUsedError;
+  @override
+  Reference? get location => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  Quantity? get quantity => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get preparedDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_preparedDate')
+  Element? get preparedDateElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get whenHandedOver => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_whenHandedOver')
+  Element? get whenHandedOverElement => throw _privateConstructorUsedError;
+  @override
+  Reference? get destination => throw _privateConstructorUsedError;
+  @override
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  @override
+  String? get usageInstruction => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_usageInstruction')
+  Element? get usageInstructionElement => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get eventHistory => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_DeviceDispenseCopyWith<_$_DeviceDispense> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+DeviceDispensePerformer _$DeviceDispensePerformerFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceDispensePerformer.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DeviceDispensePerformer {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get function => throw _privateConstructorUsedError;
+  Reference get actor => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceDispensePerformerCopyWith<DeviceDispensePerformer> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceDispensePerformerCopyWith<$Res> {
+  factory $DeviceDispensePerformerCopyWith(DeviceDispensePerformer value,
+          $Res Function(DeviceDispensePerformer) then) =
+      _$DeviceDispensePerformerCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      Reference actor});
+
+  $CodeableConceptCopyWith<$Res>? get function;
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+/// @nodoc
+class _$DeviceDispensePerformerCopyWithImpl<$Res>
+    implements $DeviceDispensePerformerCopyWith<$Res> {
+  _$DeviceDispensePerformerCopyWithImpl(this._value, this._then);
+
+  final DeviceDispensePerformer _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDispensePerformer) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? function = freezed,
+    Object? actor = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get function {
+    if (_value.function == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.function!, (value) {
+      return _then(_value.copyWith(function: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get actor {
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_DeviceDispensePerformerCopyWith<$Res>
+    implements $DeviceDispensePerformerCopyWith<$Res> {
+  factory _$$_DeviceDispensePerformerCopyWith(_$_DeviceDispensePerformer value,
+          $Res Function(_$_DeviceDispensePerformer) then) =
+      __$$_DeviceDispensePerformerCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      Reference actor});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get function;
+  @override
+  $ReferenceCopyWith<$Res> get actor;
+}
+
+/// @nodoc
+class __$$_DeviceDispensePerformerCopyWithImpl<$Res>
+    extends _$DeviceDispensePerformerCopyWithImpl<$Res>
+    implements _$$_DeviceDispensePerformerCopyWith<$Res> {
+  __$$_DeviceDispensePerformerCopyWithImpl(_$_DeviceDispensePerformer _value,
+      $Res Function(_$_DeviceDispensePerformer) _then)
+      : super(_value, (v) => _then(v as _$_DeviceDispensePerformer));
+
+  @override
+  _$_DeviceDispensePerformer get _value =>
+      super._value as _$_DeviceDispensePerformer;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? function = freezed,
+    Object? actor = freezed,
+  }) {
+    return _then(_$_DeviceDispensePerformer(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DeviceDispensePerformer extends _DeviceDispensePerformer {
+  _$_DeviceDispensePerformer(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.function,
+      required this.actor})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_DeviceDispensePerformer.fromJson(Map<String, dynamic> json) =>
+      _$$_DeviceDispensePerformerFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? function;
+  @override
+  final Reference actor;
+
+  @override
+  String toString() {
+    return 'DeviceDispensePerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function: $function, actor: $actor)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceDispensePerformer &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.function, function) &&
+            const DeepCollectionEquality().equals(other.actor, actor));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(function),
+      const DeepCollectionEquality().hash(actor));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_DeviceDispensePerformerCopyWith<_$_DeviceDispensePerformer>
+      get copyWith =>
+          __$$_DeviceDispensePerformerCopyWithImpl<_$_DeviceDispensePerformer>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_DeviceDispensePerformerToJson(this);
+  }
+}
+
+abstract class _DeviceDispensePerformer extends DeviceDispensePerformer {
+  factory _DeviceDispensePerformer(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? function,
+      required final Reference actor}) = _$_DeviceDispensePerformer;
+  _DeviceDispensePerformer._() : super._();
+
+  factory _DeviceDispensePerformer.fromJson(Map<String, dynamic> json) =
+      _$_DeviceDispensePerformer.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get function => throw _privateConstructorUsedError;
+  @override
+  Reference get actor => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_DeviceDispensePerformerCopyWith<_$_DeviceDispensePerformer>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 DeviceUsage _$DeviceUsageFromJson(Map<String, dynamic> json) {
   return _DeviceUsage.fromJson(json);
 }
@@ -5341,10 +6831,10 @@ mixin _$DeviceUsage {
   Reference? get context => throw _privateConstructorUsedError;
   Timing? get timingTiming => throw _privateConstructorUsedError;
   Period? get timingPeriod => throw _privateConstructorUsedError;
-  DateTime? get timingDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get timingDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_timingDateTime')
   Element? get timingDateTimeElement => throw _privateConstructorUsedError;
-  DateTime? get dateAsserted => throw _privateConstructorUsedError;
+  FhirDateTime? get dateAsserted => throw _privateConstructorUsedError;
   @JsonKey(name: '_dateAsserted')
   Element? get dateAssertedElement => throw _privateConstructorUsedError;
   CodeableConcept? get usageStatus => throw _privateConstructorUsedError;
@@ -5388,9 +6878,9 @@ abstract class $DeviceUsageCopyWith<$Res> {
       Reference? context,
       Timing? timingTiming,
       Period? timingPeriod,
-      DateTime? timingDateTime,
+      FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
-      DateTime? dateAsserted,
+      FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
       CodeableConcept? usageStatus,
       List<CodeableConcept>? usageReason,
@@ -5548,7 +7038,7 @@ class _$DeviceUsageCopyWithImpl<$Res> implements $DeviceUsageCopyWith<$Res> {
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -5556,7 +7046,7 @@ class _$DeviceUsageCopyWithImpl<$Res> implements $DeviceUsageCopyWith<$Res> {
       dateAsserted: dateAsserted == freezed
           ? _value.dateAsserted
           : dateAsserted // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateAssertedElement: dateAssertedElement == freezed
           ? _value.dateAssertedElement
           : dateAssertedElement // ignore: cast_nullable_to_non_nullable
@@ -5779,9 +7269,9 @@ abstract class _$$_DeviceUsageCopyWith<$Res>
       Reference? context,
       Timing? timingTiming,
       Period? timingPeriod,
-      DateTime? timingDateTime,
+      FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
-      DateTime? dateAsserted,
+      FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
       CodeableConcept? usageStatus,
       List<CodeableConcept>? usageReason,
@@ -5956,7 +7446,7 @@ class __$$_DeviceUsageCopyWithImpl<$Res> extends _$DeviceUsageCopyWithImpl<$Res>
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -5964,7 +7454,7 @@ class __$$_DeviceUsageCopyWithImpl<$Res> extends _$DeviceUsageCopyWithImpl<$Res>
       dateAsserted: dateAsserted == freezed
           ? _value.dateAsserted
           : dateAsserted // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateAssertedElement: dateAssertedElement == freezed
           ? _value.dateAssertedElement
           : dateAssertedElement // ignore: cast_nullable_to_non_nullable
@@ -6149,12 +7639,12 @@ class _$_DeviceUsage extends _DeviceUsage {
   @override
   final Period? timingPeriod;
   @override
-  final DateTime? timingDateTime;
+  final FhirDateTime? timingDateTime;
   @override
   @JsonKey(name: '_timingDateTime')
   final Element? timingDateTimeElement;
   @override
-  final DateTime? dateAsserted;
+  final FhirDateTime? dateAsserted;
   @override
   @JsonKey(name: '_dateAsserted')
   final Element? dateAssertedElement;
@@ -6328,9 +7818,9 @@ abstract class _DeviceUsage extends DeviceUsage {
       final Reference? context,
       final Timing? timingTiming,
       final Period? timingPeriod,
-      final DateTime? timingDateTime,
+      final FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') final Element? timingDateTimeElement,
-      final DateTime? dateAsserted,
+      final FhirDateTime? dateAsserted,
       @JsonKey(name: '_dateAsserted') final Element? dateAssertedElement,
       final CodeableConcept? usageStatus,
       final List<CodeableConcept>? usageReason,
@@ -6392,12 +7882,12 @@ abstract class _DeviceUsage extends DeviceUsage {
   @override
   Period? get timingPeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get timingDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get timingDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_timingDateTime')
   Element? get timingDateTimeElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get dateAsserted => throw _privateConstructorUsedError;
+  FhirDateTime? get dateAsserted => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_dateAsserted')
   Element? get dateAssertedElement => throw _privateConstructorUsedError;
@@ -6457,7 +7947,7 @@ mixin _$GuidanceResponse {
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Reference? get performer => throw _privateConstructorUsedError;
@@ -6503,7 +7993,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? encounter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Reference? performer,
       List<CodeableReference>? reason,
@@ -6665,7 +8155,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6898,7 +8388,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? encounter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Reference? performer,
       List<CodeableReference>? reason,
@@ -7077,7 +8567,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7242,7 +8732,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   final Reference? encounter;
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
@@ -7428,7 +8918,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
           final Element? statusElement,
       final Reference? subject,
       final Reference? encounter,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Reference? performer,
@@ -7496,7 +8986,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -7552,7 +9042,7 @@ mixin _$InventoryReport {
   CodeableConcept? get operationType => throw _privateConstructorUsedError;
   CodeableConcept? get operationTypeReason =>
       throw _privateConstructorUsedError;
-  DateTime? get reportedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get reportedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_reportedDateTime')
   Element? get reportedDateTimeElement => throw _privateConstructorUsedError;
   Reference? get reporter => throw _privateConstructorUsedError;
@@ -7591,7 +9081,7 @@ abstract class $InventoryReportCopyWith<$Res> {
       @JsonKey(name: '_countType') Element? countTypeElement,
       CodeableConcept? operationType,
       CodeableConcept? operationTypeReason,
-      DateTime? reportedDateTime,
+      FhirDateTime? reportedDateTime,
       @JsonKey(name: '_reportedDateTime') Element? reportedDateTimeElement,
       Reference? reporter,
       Period? reportingPeriod,
@@ -7724,7 +9214,7 @@ class _$InventoryReportCopyWithImpl<$Res>
       reportedDateTime: reportedDateTime == freezed
           ? _value.reportedDateTime
           : reportedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       reportedDateTimeElement: reportedDateTimeElement == freezed
           ? _value.reportedDateTimeElement
           : reportedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7907,7 +9397,7 @@ abstract class _$$_InventoryReportCopyWith<$Res>
       @JsonKey(name: '_countType') Element? countTypeElement,
       CodeableConcept? operationType,
       CodeableConcept? operationTypeReason,
-      DateTime? reportedDateTime,
+      FhirDateTime? reportedDateTime,
       @JsonKey(name: '_reportedDateTime') Element? reportedDateTimeElement,
       Reference? reporter,
       Period? reportingPeriod,
@@ -8054,7 +9544,7 @@ class __$$_InventoryReportCopyWithImpl<$Res>
       reportedDateTime: reportedDateTime == freezed
           ? _value.reportedDateTime
           : reportedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       reportedDateTimeElement: reportedDateTimeElement == freezed
           ? _value.reportedDateTimeElement
           : reportedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8188,7 +9678,7 @@ class _$_InventoryReport extends _InventoryReport {
   @override
   final CodeableConcept? operationTypeReason;
   @override
-  final DateTime? reportedDateTime;
+  final FhirDateTime? reportedDateTime;
   @override
   @JsonKey(name: '_reportedDateTime')
   final Element? reportedDateTimeElement;
@@ -8326,7 +9816,7 @@ abstract class _InventoryReport extends InventoryReport {
           final Element? countTypeElement,
       final CodeableConcept? operationType,
       final CodeableConcept? operationTypeReason,
-      final DateTime? reportedDateTime,
+      final FhirDateTime? reportedDateTime,
       @JsonKey(name: '_reportedDateTime')
           final Element? reportedDateTimeElement,
       final Reference? reporter,
@@ -8382,7 +9872,7 @@ abstract class _InventoryReport extends InventoryReport {
   CodeableConcept? get operationTypeReason =>
       throw _privateConstructorUsedError;
   @override
-  DateTime? get reportedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get reportedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_reportedDateTime')
   Element? get reportedDateTimeElement => throw _privateConstructorUsedError;
@@ -8415,7 +9905,7 @@ mixin _$InventoryReportInventoryListing {
       throw _privateConstructorUsedError;
   Reference? get location => throw _privateConstructorUsedError;
   CodeableConcept? get itemStatus => throw _privateConstructorUsedError;
-  DateTime? get countingDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get countingDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_countingDateTime')
   Element? get countingDateTimeElement => throw _privateConstructorUsedError;
   List<InventoryReportItems>? get items => throw _privateConstructorUsedError;
@@ -8438,7 +9928,7 @@ abstract class $InventoryReportInventoryListingCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference? location,
       CodeableConcept? itemStatus,
-      DateTime? countingDateTime,
+      FhirDateTime? countingDateTime,
       @JsonKey(name: '_countingDateTime') Element? countingDateTimeElement,
       List<InventoryReportItems>? items});
 
@@ -8491,7 +9981,7 @@ class _$InventoryReportInventoryListingCopyWithImpl<$Res>
       countingDateTime: countingDateTime == freezed
           ? _value.countingDateTime
           : countingDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       countingDateTimeElement: countingDateTimeElement == freezed
           ? _value.countingDateTimeElement
           : countingDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8551,7 +10041,7 @@ abstract class _$$_InventoryReportInventoryListingCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference? location,
       CodeableConcept? itemStatus,
-      DateTime? countingDateTime,
+      FhirDateTime? countingDateTime,
       @JsonKey(name: '_countingDateTime') Element? countingDateTimeElement,
       List<InventoryReportItems>? items});
 
@@ -8611,7 +10101,7 @@ class __$$_InventoryReportInventoryListingCopyWithImpl<$Res>
       countingDateTime: countingDateTime == freezed
           ? _value.countingDateTime
           : countingDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       countingDateTimeElement: countingDateTimeElement == freezed
           ? _value.countingDateTimeElement
           : countingDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8672,7 +10162,7 @@ class _$_InventoryReportInventoryListing
   @override
   final CodeableConcept? itemStatus;
   @override
-  final DateTime? countingDateTime;
+  final FhirDateTime? countingDateTime;
   @override
   @JsonKey(name: '_countingDateTime')
   final Element? countingDateTimeElement;
@@ -8745,7 +10235,7 @@ abstract class _InventoryReportInventoryListing
           final List<FhirExtension>? modifierExtension,
           final Reference? location,
           final CodeableConcept? itemStatus,
-          final DateTime? countingDateTime,
+          final FhirDateTime? countingDateTime,
           @JsonKey(name: '_countingDateTime')
               final Element? countingDateTimeElement,
           final List<InventoryReportItems>? items}) =
@@ -8768,7 +10258,7 @@ abstract class _InventoryReportInventoryListing
   @override
   CodeableConcept? get itemStatus => throw _privateConstructorUsedError;
   @override
-  DateTime? get countingDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get countingDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_countingDateTime')
   Element? get countingDateTimeElement => throw _privateConstructorUsedError;
@@ -8801,10 +10291,10 @@ mixin _$InventoryReportItems {
   String? get serial => throw _privateConstructorUsedError;
   @JsonKey(name: '_serial')
   Element? get serialElement => throw _privateConstructorUsedError;
-  DateTime? get expiry => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
   @JsonKey(name: '_expiry')
   Element? get expiryElement => throw _privateConstructorUsedError;
-  DateTime? get manufacturingDate => throw _privateConstructorUsedError;
+  FhirDateTime? get manufacturingDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_manufacturingDate')
   Element? get manufacturingDateElement => throw _privateConstructorUsedError;
 
@@ -8830,9 +10320,9 @@ abstract class $InventoryReportItemsCopyWith<$Res> {
       @JsonKey(name: '_lot') Element? lotElement,
       String? serial,
       @JsonKey(name: '_serial') Element? serialElement,
-      DateTime? expiry,
+      FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
-      DateTime? manufacturingDate,
+      FhirDateTime? manufacturingDate,
       @JsonKey(name: '_manufacturingDate') Element? manufacturingDateElement});
 
   $CodeableConceptCopyWith<$Res>? get category;
@@ -8914,7 +10404,7 @@ class _$InventoryReportItemsCopyWithImpl<$Res>
       expiry: expiry == freezed
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expiryElement: expiryElement == freezed
           ? _value.expiryElement
           : expiryElement // ignore: cast_nullable_to_non_nullable
@@ -8922,7 +10412,7 @@ class _$InventoryReportItemsCopyWithImpl<$Res>
       manufacturingDate: manufacturingDate == freezed
           ? _value.manufacturingDate
           : manufacturingDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       manufacturingDateElement: manufacturingDateElement == freezed
           ? _value.manufacturingDateElement
           : manufacturingDateElement // ignore: cast_nullable_to_non_nullable
@@ -9018,9 +10508,9 @@ abstract class _$$_InventoryReportItemsCopyWith<$Res>
       @JsonKey(name: '_lot') Element? lotElement,
       String? serial,
       @JsonKey(name: '_serial') Element? serialElement,
-      DateTime? expiry,
+      FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
-      DateTime? manufacturingDate,
+      FhirDateTime? manufacturingDate,
       @JsonKey(name: '_manufacturingDate') Element? manufacturingDateElement});
 
   @override
@@ -9111,7 +10601,7 @@ class __$$_InventoryReportItemsCopyWithImpl<$Res>
       expiry: expiry == freezed
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expiryElement: expiryElement == freezed
           ? _value.expiryElement
           : expiryElement // ignore: cast_nullable_to_non_nullable
@@ -9119,7 +10609,7 @@ class __$$_InventoryReportItemsCopyWithImpl<$Res>
       manufacturingDate: manufacturingDate == freezed
           ? _value.manufacturingDate
           : manufacturingDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       manufacturingDateElement: manufacturingDateElement == freezed
           ? _value.manufacturingDateElement
           : manufacturingDateElement // ignore: cast_nullable_to_non_nullable
@@ -9191,12 +10681,12 @@ class _$_InventoryReportItems extends _InventoryReportItems {
   @JsonKey(name: '_serial')
   final Element? serialElement;
   @override
-  final DateTime? expiry;
+  final FhirDateTime? expiry;
   @override
   @JsonKey(name: '_expiry')
   final Element? expiryElement;
   @override
-  final DateTime? manufacturingDate;
+  final FhirDateTime? manufacturingDate;
   @override
   @JsonKey(name: '_manufacturingDate')
   final Element? manufacturingDateElement;
@@ -9280,10 +10770,10 @@ abstract class _InventoryReportItems extends InventoryReportItems {
       final String? serial,
       @JsonKey(name: '_serial')
           final Element? serialElement,
-      final DateTime? expiry,
+      final FhirDateTime? expiry,
       @JsonKey(name: '_expiry')
           final Element? expiryElement,
-      final DateTime? manufacturingDate,
+      final FhirDateTime? manufacturingDate,
       @JsonKey(name: '_manufacturingDate')
           final Element? manufacturingDateElement}) = _$_InventoryReportItems;
   _InventoryReportItems._() : super._();
@@ -9316,12 +10806,12 @@ abstract class _InventoryReportItems extends InventoryReportItems {
   @JsonKey(name: '_serial')
   Element? get serialElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get expiry => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expiry')
   Element? get expiryElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get manufacturingDate => throw _privateConstructorUsedError;
+  FhirDateTime? get manufacturingDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_manufacturingDate')
   Element? get manufacturingDateElement => throw _privateConstructorUsedError;
@@ -9362,7 +10852,7 @@ mixin _$SupplyDelivery {
   CodeableConcept? get type => throw _privateConstructorUsedError;
   SupplyDeliverySuppliedItem? get suppliedItem =>
       throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
@@ -9402,7 +10892,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       Reference? patient,
       CodeableConcept? type,
       SupplyDeliverySuppliedItem? suppliedItem,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
@@ -9543,7 +11033,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9743,7 +11233,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
       Reference? patient,
       CodeableConcept? type,
       SupplyDeliverySuppliedItem? suppliedItem,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
@@ -9899,7 +11389,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10056,7 +11546,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   @override
   final SupplyDeliverySuppliedItem? suppliedItem;
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
@@ -10198,7 +11688,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final Reference? patient,
       final CodeableConcept? type,
       final SupplyDeliverySuppliedItem? suppliedItem,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
@@ -10256,7 +11746,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   SupplyDeliverySuppliedItem? get suppliedItem =>
       throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -10630,12 +12120,12 @@ mixin _$SupplyRequest {
   Quantity get quantity => throw _privateConstructorUsedError;
   List<SupplyRequestParameter>? get parameter =>
       throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
-  DateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
   Reference? get requester => throw _privateConstructorUsedError;
@@ -10677,11 +12167,11 @@ abstract class $SupplyRequestCopyWith<$Res> {
       CodeableReference item,
       Quantity quantity,
       List<SupplyRequestParameter>? parameter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
-      DateTime? authoredOn,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? requester,
       List<Reference>? supplier,
@@ -10839,7 +12329,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10855,7 +12345,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
@@ -11081,11 +12571,11 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
       CodeableReference item,
       Quantity quantity,
       List<SupplyRequestParameter>? parameter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
-      DateTime? authoredOn,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? requester,
       List<Reference>? supplier,
@@ -11261,7 +12751,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11277,7 +12767,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
@@ -11446,7 +12936,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   }
 
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
@@ -11455,7 +12945,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   @override
   final Timing? occurrenceTiming;
   @override
-  final DateTime? authoredOn;
+  final FhirDateTime? authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
   final Element? authoredOnElement;
@@ -11623,12 +13113,12 @@ abstract class _SupplyRequest extends SupplyRequest {
       required final CodeableReference item,
       required final Quantity quantity,
       final List<SupplyRequestParameter>? parameter,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
       final Timing? occurrenceTiming,
-      final DateTime? authoredOn,
+      final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
           final Element? authoredOnElement,
       final Reference? requester,
@@ -11691,7 +13181,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   List<SupplyRequestParameter>? get parameter =>
       throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -11700,7 +13190,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
   @override
-  DateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;

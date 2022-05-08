@@ -1083,7 +1083,7 @@ mixin _$ElementDefinition {
   Date? get minValueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueDate')
   Element? get minValueDateElement => throw _privateConstructorUsedError;
-  DateTime? get minValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get minValueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueDateTime')
   Element? get minValueDateTimeElement => throw _privateConstructorUsedError;
   Time? get minValueTime => throw _privateConstructorUsedError;
@@ -1150,7 +1150,7 @@ mixin _$ElementDefinition {
   Date? get maxValueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueDate')
   Element? get maxValueDateElement => throw _privateConstructorUsedError;
-  DateTime? get maxValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get maxValueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueDateTime')
   Element? get maxValueDateTimeElement => throw _privateConstructorUsedError;
   Time? get maxValueTime => throw _privateConstructorUsedError;
@@ -1546,7 +1546,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
-      DateTime? minValueDateTime,
+      FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
           Element? minValueDateTimeElement,
       Time? minValueTime,
@@ -1611,7 +1611,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Date? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           Element? maxValueDateElement,
-      DateTime? maxValueDateTime,
+      FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
           Element? maxValueDateTimeElement,
       Time? maxValueTime,
@@ -3195,7 +3195,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       minValueDateTime: minValueDateTime == freezed
           ? _value.minValueDateTime
           : minValueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       minValueDateTimeElement: minValueDateTimeElement == freezed
           ? _value.minValueDateTimeElement
           : minValueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3391,7 +3391,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       maxValueDateTime: maxValueDateTime == freezed
           ? _value.maxValueDateTime
           : maxValueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       maxValueDateTimeElement: maxValueDateTimeElement == freezed
           ? _value.maxValueDateTimeElement
           : maxValueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6280,7 +6280,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
-      DateTime? minValueDateTime,
+      FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
           Element? minValueDateTimeElement,
       Time? minValueTime,
@@ -6345,7 +6345,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Date? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           Element? maxValueDateElement,
-      DateTime? maxValueDateTime,
+      FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
           Element? maxValueDateTimeElement,
       Time? maxValueTime,
@@ -8146,7 +8146,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueDateTime: minValueDateTime == freezed
           ? _value.minValueDateTime
           : minValueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       minValueDateTimeElement: minValueDateTimeElement == freezed
           ? _value.minValueDateTimeElement
           : minValueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8342,7 +8342,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueDateTime: maxValueDateTime == freezed
           ? _value.maxValueDateTime
           : maxValueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       maxValueDateTimeElement: maxValueDateTimeElement == freezed
           ? _value.maxValueDateTimeElement
           : maxValueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9585,7 +9585,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueDate')
   final Element? minValueDateElement;
   @override
-  final DateTime? minValueDateTime;
+  final FhirDateTime? minValueDateTime;
   @override
   @JsonKey(name: '_minValueDateTime')
   final Element? minValueDateTimeElement;
@@ -9699,7 +9699,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueDate')
   final Element? maxValueDateElement;
   @override
-  final DateTime? maxValueDateTime;
+  final FhirDateTime? maxValueDateTime;
   @override
   @JsonKey(name: '_maxValueDateTime')
   final Element? maxValueDateTimeElement;
@@ -10885,7 +10885,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           final Element? minValueDateElement,
-      final DateTime? minValueDateTime,
+      final FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
           final Element? minValueDateTimeElement,
       final Time? minValueTime,
@@ -10950,7 +10950,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Date? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           final Element? maxValueDateElement,
-      final DateTime? maxValueDateTime,
+      final FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
           final Element? maxValueDateTimeElement,
       final Time? maxValueTime,
@@ -11590,7 +11590,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_minValueDate')
   Element? get minValueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get minValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get minValueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueDateTime')
   Element? get minValueDateTimeElement => throw _privateConstructorUsedError;
@@ -11706,7 +11706,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_maxValueDate')
   Element? get maxValueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get maxValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get maxValueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueDateTime')
   Element? get maxValueDateTimeElement => throw _privateConstructorUsedError;

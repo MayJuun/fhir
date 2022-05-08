@@ -1428,7 +1428,7 @@ mixin _$DiagnosticReport {
   CodeableConcept get code => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -1481,7 +1481,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       CodeableConcept code,
       Reference? subject,
       Reference? encounter,
-      DateTime? effectiveDateTime,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
       Period? effectivePeriod,
       Instant? issued,
@@ -1642,7 +1642,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
           : effectiveDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -1877,7 +1877,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       CodeableConcept code,
       Reference? subject,
       Reference? encounter,
-      DateTime? effectiveDateTime,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
       Period? effectivePeriod,
       Instant? issued,
@@ -2053,7 +2053,7 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
           : effectiveDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2268,7 +2268,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @override
   final Reference? encounter;
   @override
-  final DateTime? effectiveDateTime;
+  final FhirDateTime? effectiveDateTime;
   @override
   @JsonKey(name: '_effectiveDateTime')
   final Element? effectiveDateTimeElement;
@@ -2514,7 +2514,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       required final CodeableConcept code,
       final Reference? subject,
       final Reference? encounter,
-      final DateTime? effectiveDateTime,
+      final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           final Element? effectiveDateTimeElement,
       final Period? effectivePeriod,
@@ -2583,7 +2583,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
@@ -2926,6 +2926,2315 @@ abstract class _DiagnosticReportMedia extends DiagnosticReportMedia {
       throw _privateConstructorUsedError;
 }
 
+ImagingSelection _$ImagingSelectionFromJson(Map<String, dynamic> json) {
+  return _ImagingSelection.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ImagingSelection {
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Reference? get subject => throw _privateConstructorUsedError;
+  Instant? get issued => throw _privateConstructorUsedError;
+  @JsonKey(name: '_issued')
+  Element? get issuedElement => throw _privateConstructorUsedError;
+  List<ImagingSelectionPerformer>? get performer =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Oid? get studyUid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_studyUid')
+  Element? get studyUidElement => throw _privateConstructorUsedError;
+  List<Reference>? get derivedFrom => throw _privateConstructorUsedError;
+  List<Reference>? get endpoint => throw _privateConstructorUsedError;
+  Oid? get seriesUid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_seriesUid')
+  Element? get seriesUidElement => throw _privateConstructorUsedError;
+  Oid? get frameOfReferenceUid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_frameOfReferenceUid')
+  Element? get frameOfReferenceUidElement => throw _privateConstructorUsedError;
+  CodeableReference? get bodySite => throw _privateConstructorUsedError;
+  List<ImagingSelectionInstance>? get instance =>
+      throw _privateConstructorUsedError;
+  ImagingSelectionImageRegion? get imageRegion =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ImagingSelectionCopyWith<ImagingSelection> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ImagingSelectionCopyWith<$Res> {
+  factory $ImagingSelectionCopyWith(
+          ImagingSelection value, $Res Function(ImagingSelection) then) =
+      _$ImagingSelectionCopyWithImpl<$Res>;
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference? subject,
+      Instant? issued,
+      @JsonKey(name: '_issued')
+          Element? issuedElement,
+      List<ImagingSelectionPerformer>? performer,
+      List<Reference>? basedOn,
+      List<CodeableConcept>? category,
+      CodeableConcept code,
+      Oid? studyUid,
+      @JsonKey(name: '_studyUid')
+          Element? studyUidElement,
+      List<Reference>? derivedFrom,
+      List<Reference>? endpoint,
+      Oid? seriesUid,
+      @JsonKey(name: '_seriesUid')
+          Element? seriesUidElement,
+      Oid? frameOfReferenceUid,
+      @JsonKey(name: '_frameOfReferenceUid')
+          Element? frameOfReferenceUidElement,
+      CodeableReference? bodySite,
+      List<ImagingSelectionInstance>? instance,
+      ImagingSelectionImageRegion? imageRegion});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ReferenceCopyWith<$Res>? get subject;
+  $ElementCopyWith<$Res>? get issuedElement;
+  $CodeableConceptCopyWith<$Res> get code;
+  $ElementCopyWith<$Res>? get studyUidElement;
+  $ElementCopyWith<$Res>? get seriesUidElement;
+  $ElementCopyWith<$Res>? get frameOfReferenceUidElement;
+  $CodeableReferenceCopyWith<$Res>? get bodySite;
+  $ImagingSelectionImageRegionCopyWith<$Res>? get imageRegion;
+}
+
+/// @nodoc
+class _$ImagingSelectionCopyWithImpl<$Res>
+    implements $ImagingSelectionCopyWith<$Res> {
+  _$ImagingSelectionCopyWithImpl(this._value, this._then);
+
+  final ImagingSelection _value;
+  // ignore: unused_field
+  final $Res Function(ImagingSelection) _then;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? subject = freezed,
+    Object? issued = freezed,
+    Object? issuedElement = freezed,
+    Object? performer = freezed,
+    Object? basedOn = freezed,
+    Object? category = freezed,
+    Object? code = freezed,
+    Object? studyUid = freezed,
+    Object? studyUidElement = freezed,
+    Object? derivedFrom = freezed,
+    Object? endpoint = freezed,
+    Object? seriesUid = freezed,
+    Object? seriesUidElement = freezed,
+    Object? frameOfReferenceUid = freezed,
+    Object? frameOfReferenceUidElement = freezed,
+    Object? bodySite = freezed,
+    Object? instance = freezed,
+    Object? imageRegion = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      issued: issued == freezed
+          ? _value.issued
+          : issued // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      issuedElement: issuedElement == freezed
+          ? _value.issuedElement
+          : issuedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      performer: performer == freezed
+          ? _value.performer
+          : performer // ignore: cast_nullable_to_non_nullable
+              as List<ImagingSelectionPerformer>?,
+      basedOn: basedOn == freezed
+          ? _value.basedOn
+          : basedOn // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      studyUid: studyUid == freezed
+          ? _value.studyUid
+          : studyUid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      studyUidElement: studyUidElement == freezed
+          ? _value.studyUidElement
+          : studyUidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      derivedFrom: derivedFrom == freezed
+          ? _value.derivedFrom
+          : derivedFrom // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      seriesUid: seriesUid == freezed
+          ? _value.seriesUid
+          : seriesUid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      seriesUidElement: seriesUidElement == freezed
+          ? _value.seriesUidElement
+          : seriesUidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      frameOfReferenceUid: frameOfReferenceUid == freezed
+          ? _value.frameOfReferenceUid
+          : frameOfReferenceUid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      frameOfReferenceUidElement: frameOfReferenceUidElement == freezed
+          ? _value.frameOfReferenceUidElement
+          : frameOfReferenceUidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      bodySite: bodySite == freezed
+          ? _value.bodySite
+          : bodySite // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      instance: instance == freezed
+          ? _value.instance
+          : instance // ignore: cast_nullable_to_non_nullable
+              as List<ImagingSelectionInstance>?,
+      imageRegion: imageRegion == freezed
+          ? _value.imageRegion
+          : imageRegion // ignore: cast_nullable_to_non_nullable
+              as ImagingSelectionImageRegion?,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get issuedElement {
+    if (_value.issuedElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.issuedElement!, (value) {
+      return _then(_value.copyWith(issuedElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get studyUidElement {
+    if (_value.studyUidElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.studyUidElement!, (value) {
+      return _then(_value.copyWith(studyUidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get seriesUidElement {
+    if (_value.seriesUidElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.seriesUidElement!, (value) {
+      return _then(_value.copyWith(seriesUidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get frameOfReferenceUidElement {
+    if (_value.frameOfReferenceUidElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.frameOfReferenceUidElement!, (value) {
+      return _then(_value.copyWith(frameOfReferenceUidElement: value));
+    });
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res>? get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.bodySite!, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
+  }
+
+  @override
+  $ImagingSelectionImageRegionCopyWith<$Res>? get imageRegion {
+    if (_value.imageRegion == null) {
+      return null;
+    }
+
+    return $ImagingSelectionImageRegionCopyWith<$Res>(_value.imageRegion!,
+        (value) {
+      return _then(_value.copyWith(imageRegion: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ImagingSelectionCopyWith<$Res>
+    implements $ImagingSelectionCopyWith<$Res> {
+  factory _$$_ImagingSelectionCopyWith(
+          _$_ImagingSelection value, $Res Function(_$_ImagingSelection) then) =
+      __$$_ImagingSelectionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference? subject,
+      Instant? issued,
+      @JsonKey(name: '_issued')
+          Element? issuedElement,
+      List<ImagingSelectionPerformer>? performer,
+      List<Reference>? basedOn,
+      List<CodeableConcept>? category,
+      CodeableConcept code,
+      Oid? studyUid,
+      @JsonKey(name: '_studyUid')
+          Element? studyUidElement,
+      List<Reference>? derivedFrom,
+      List<Reference>? endpoint,
+      Oid? seriesUid,
+      @JsonKey(name: '_seriesUid')
+          Element? seriesUidElement,
+      Oid? frameOfReferenceUid,
+      @JsonKey(name: '_frameOfReferenceUid')
+          Element? frameOfReferenceUidElement,
+      CodeableReference? bodySite,
+      List<ImagingSelectionInstance>? instance,
+      ImagingSelectionImageRegion? imageRegion});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ReferenceCopyWith<$Res>? get subject;
+  @override
+  $ElementCopyWith<$Res>? get issuedElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $ElementCopyWith<$Res>? get studyUidElement;
+  @override
+  $ElementCopyWith<$Res>? get seriesUidElement;
+  @override
+  $ElementCopyWith<$Res>? get frameOfReferenceUidElement;
+  @override
+  $CodeableReferenceCopyWith<$Res>? get bodySite;
+  @override
+  $ImagingSelectionImageRegionCopyWith<$Res>? get imageRegion;
+}
+
+/// @nodoc
+class __$$_ImagingSelectionCopyWithImpl<$Res>
+    extends _$ImagingSelectionCopyWithImpl<$Res>
+    implements _$$_ImagingSelectionCopyWith<$Res> {
+  __$$_ImagingSelectionCopyWithImpl(
+      _$_ImagingSelection _value, $Res Function(_$_ImagingSelection) _then)
+      : super(_value, (v) => _then(v as _$_ImagingSelection));
+
+  @override
+  _$_ImagingSelection get _value => super._value as _$_ImagingSelection;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? subject = freezed,
+    Object? issued = freezed,
+    Object? issuedElement = freezed,
+    Object? performer = freezed,
+    Object? basedOn = freezed,
+    Object? category = freezed,
+    Object? code = freezed,
+    Object? studyUid = freezed,
+    Object? studyUidElement = freezed,
+    Object? derivedFrom = freezed,
+    Object? endpoint = freezed,
+    Object? seriesUid = freezed,
+    Object? seriesUidElement = freezed,
+    Object? frameOfReferenceUid = freezed,
+    Object? frameOfReferenceUidElement = freezed,
+    Object? bodySite = freezed,
+    Object? instance = freezed,
+    Object? imageRegion = freezed,
+  }) {
+    return _then(_$_ImagingSelection(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      issued: issued == freezed
+          ? _value.issued
+          : issued // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      issuedElement: issuedElement == freezed
+          ? _value.issuedElement
+          : issuedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      performer: performer == freezed
+          ? _value._performer
+          : performer // ignore: cast_nullable_to_non_nullable
+              as List<ImagingSelectionPerformer>?,
+      basedOn: basedOn == freezed
+          ? _value._basedOn
+          : basedOn // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      category: category == freezed
+          ? _value._category
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      studyUid: studyUid == freezed
+          ? _value.studyUid
+          : studyUid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      studyUidElement: studyUidElement == freezed
+          ? _value.studyUidElement
+          : studyUidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      derivedFrom: derivedFrom == freezed
+          ? _value._derivedFrom
+          : derivedFrom // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      endpoint: endpoint == freezed
+          ? _value._endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      seriesUid: seriesUid == freezed
+          ? _value.seriesUid
+          : seriesUid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      seriesUidElement: seriesUidElement == freezed
+          ? _value.seriesUidElement
+          : seriesUidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      frameOfReferenceUid: frameOfReferenceUid == freezed
+          ? _value.frameOfReferenceUid
+          : frameOfReferenceUid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      frameOfReferenceUidElement: frameOfReferenceUidElement == freezed
+          ? _value.frameOfReferenceUidElement
+          : frameOfReferenceUidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      bodySite: bodySite == freezed
+          ? _value.bodySite
+          : bodySite // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      instance: instance == freezed
+          ? _value._instance
+          : instance // ignore: cast_nullable_to_non_nullable
+              as List<ImagingSelectionInstance>?,
+      imageRegion: imageRegion == freezed
+          ? _value.imageRegion
+          : imageRegion // ignore: cast_nullable_to_non_nullable
+              as ImagingSelectionImageRegion?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ImagingSelection extends _ImagingSelection {
+  _$_ImagingSelection(
+      {this.resourceType = R5ResourceType.ImagingSelection,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.subject,
+      this.issued,
+      @JsonKey(name: '_issued') this.issuedElement,
+      final List<ImagingSelectionPerformer>? performer,
+      final List<Reference>? basedOn,
+      final List<CodeableConcept>? category,
+      required this.code,
+      this.studyUid,
+      @JsonKey(name: '_studyUid') this.studyUidElement,
+      final List<Reference>? derivedFrom,
+      final List<Reference>? endpoint,
+      this.seriesUid,
+      @JsonKey(name: '_seriesUid') this.seriesUidElement,
+      this.frameOfReferenceUid,
+      @JsonKey(name: '_frameOfReferenceUid') this.frameOfReferenceUidElement,
+      this.bodySite,
+      final List<ImagingSelectionInstance>? instance,
+      this.imageRegion})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _performer = performer,
+        _basedOn = basedOn,
+        _category = category,
+        _derivedFrom = derivedFrom,
+        _endpoint = endpoint,
+        _instance = instance,
+        super._();
+
+  factory _$_ImagingSelection.fromJson(Map<String, dynamic> json) =>
+      _$$_ImagingSelectionFromJson(json);
+
+  @override
+  @JsonKey()
+  final R5ResourceType resourceType;
+  @override
+  final Id? id;
+  @override
+  final Meta? meta;
+  @override
+  final FhirUri? implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
+  final Code? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+  @override
+  final Narrative? text;
+  final List<Resource>? _contained;
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference? subject;
+  @override
+  final Instant? issued;
+  @override
+  @JsonKey(name: '_issued')
+  final Element? issuedElement;
+  final List<ImagingSelectionPerformer>? _performer;
+  @override
+  List<ImagingSelectionPerformer>? get performer {
+    final value = _performer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _basedOn;
+  @override
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _category;
+  @override
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept code;
+  @override
+  final Oid? studyUid;
+  @override
+  @JsonKey(name: '_studyUid')
+  final Element? studyUidElement;
+  final List<Reference>? _derivedFrom;
+  @override
+  List<Reference>? get derivedFrom {
+    final value = _derivedFrom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _endpoint;
+  @override
+  List<Reference>? get endpoint {
+    final value = _endpoint;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Oid? seriesUid;
+  @override
+  @JsonKey(name: '_seriesUid')
+  final Element? seriesUidElement;
+  @override
+  final Oid? frameOfReferenceUid;
+  @override
+  @JsonKey(name: '_frameOfReferenceUid')
+  final Element? frameOfReferenceUidElement;
+  @override
+  final CodeableReference? bodySite;
+  final List<ImagingSelectionInstance>? _instance;
+  @override
+  List<ImagingSelectionInstance>? get instance {
+    final value = _instance;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final ImagingSelectionImageRegion? imageRegion;
+
+  @override
+  String toString() {
+    return 'ImagingSelection(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, issued: $issued, issuedElement: $issuedElement, performer: $performer, basedOn: $basedOn, category: $category, code: $code, studyUid: $studyUid, studyUidElement: $studyUidElement, derivedFrom: $derivedFrom, endpoint: $endpoint, seriesUid: $seriesUid, seriesUidElement: $seriesUidElement, frameOfReferenceUid: $frameOfReferenceUid, frameOfReferenceUidElement: $frameOfReferenceUidElement, bodySite: $bodySite, instance: $instance, imageRegion: $imageRegion)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ImagingSelection &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other.subject, subject) &&
+            const DeepCollectionEquality().equals(other.issued, issued) &&
+            const DeepCollectionEquality()
+                .equals(other.issuedElement, issuedElement) &&
+            const DeepCollectionEquality()
+                .equals(other._performer, _performer) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.studyUid, studyUid) &&
+            const DeepCollectionEquality()
+                .equals(other.studyUidElement, studyUidElement) &&
+            const DeepCollectionEquality()
+                .equals(other._derivedFrom, _derivedFrom) &&
+            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
+            const DeepCollectionEquality().equals(other.seriesUid, seriesUid) &&
+            const DeepCollectionEquality()
+                .equals(other.seriesUidElement, seriesUidElement) &&
+            const DeepCollectionEquality()
+                .equals(other.frameOfReferenceUid, frameOfReferenceUid) &&
+            const DeepCollectionEquality().equals(
+                other.frameOfReferenceUidElement, frameOfReferenceUidElement) &&
+            const DeepCollectionEquality().equals(other.bodySite, bodySite) &&
+            const DeepCollectionEquality().equals(other._instance, _instance) &&
+            const DeepCollectionEquality()
+                .equals(other.imageRegion, imageRegion));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(subject),
+        const DeepCollectionEquality().hash(issued),
+        const DeepCollectionEquality().hash(issuedElement),
+        const DeepCollectionEquality().hash(_performer),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(_category),
+        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(studyUid),
+        const DeepCollectionEquality().hash(studyUidElement),
+        const DeepCollectionEquality().hash(_derivedFrom),
+        const DeepCollectionEquality().hash(_endpoint),
+        const DeepCollectionEquality().hash(seriesUid),
+        const DeepCollectionEquality().hash(seriesUidElement),
+        const DeepCollectionEquality().hash(frameOfReferenceUid),
+        const DeepCollectionEquality().hash(frameOfReferenceUidElement),
+        const DeepCollectionEquality().hash(bodySite),
+        const DeepCollectionEquality().hash(_instance),
+        const DeepCollectionEquality().hash(imageRegion)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ImagingSelectionCopyWith<_$_ImagingSelection> get copyWith =>
+      __$$_ImagingSelectionCopyWithImpl<_$_ImagingSelection>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ImagingSelectionToJson(this);
+  }
+}
+
+abstract class _ImagingSelection extends ImagingSelection {
+  factory _ImagingSelection(
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Reference? subject,
+      final Instant? issued,
+      @JsonKey(name: '_issued')
+          final Element? issuedElement,
+      final List<ImagingSelectionPerformer>? performer,
+      final List<Reference>? basedOn,
+      final List<CodeableConcept>? category,
+      required final CodeableConcept code,
+      final Oid? studyUid,
+      @JsonKey(name: '_studyUid')
+          final Element? studyUidElement,
+      final List<Reference>? derivedFrom,
+      final List<Reference>? endpoint,
+      final Oid? seriesUid,
+      @JsonKey(name: '_seriesUid')
+          final Element? seriesUidElement,
+      final Oid? frameOfReferenceUid,
+      @JsonKey(name: '_frameOfReferenceUid')
+          final Element? frameOfReferenceUidElement,
+      final CodeableReference? bodySite,
+      final List<ImagingSelectionInstance>? instance,
+      final ImagingSelectionImageRegion? imageRegion}) = _$_ImagingSelection;
+  _ImagingSelection._() : super._();
+
+  factory _ImagingSelection.fromJson(Map<String, dynamic> json) =
+      _$_ImagingSelection.fromJson;
+
+  @override
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @override
+  Id? get id => throw _privateConstructorUsedError;
+  @override
+  Meta? get meta => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @override
+  Code? get language => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  @override
+  Narrative? get text => throw _privateConstructorUsedError;
+  @override
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  Reference? get subject => throw _privateConstructorUsedError;
+  @override
+  Instant? get issued => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_issued')
+  Element? get issuedElement => throw _privateConstructorUsedError;
+  @override
+  List<ImagingSelectionPerformer>? get performer =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  @override
+  Oid? get studyUid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_studyUid')
+  Element? get studyUidElement => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get derivedFrom => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get endpoint => throw _privateConstructorUsedError;
+  @override
+  Oid? get seriesUid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_seriesUid')
+  Element? get seriesUidElement => throw _privateConstructorUsedError;
+  @override
+  Oid? get frameOfReferenceUid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_frameOfReferenceUid')
+  Element? get frameOfReferenceUidElement => throw _privateConstructorUsedError;
+  @override
+  CodeableReference? get bodySite => throw _privateConstructorUsedError;
+  @override
+  List<ImagingSelectionInstance>? get instance =>
+      throw _privateConstructorUsedError;
+  @override
+  ImagingSelectionImageRegion? get imageRegion =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ImagingSelectionCopyWith<_$_ImagingSelection> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ImagingSelectionPerformer _$ImagingSelectionPerformerFromJson(
+    Map<String, dynamic> json) {
+  return _ImagingSelectionPerformer.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ImagingSelectionPerformer {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get function => throw _privateConstructorUsedError;
+  Reference? get actor => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ImagingSelectionPerformerCopyWith<ImagingSelectionPerformer> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ImagingSelectionPerformerCopyWith<$Res> {
+  factory $ImagingSelectionPerformerCopyWith(ImagingSelectionPerformer value,
+          $Res Function(ImagingSelectionPerformer) then) =
+      _$ImagingSelectionPerformerCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      Reference? actor});
+
+  $CodeableConceptCopyWith<$Res>? get function;
+  $ReferenceCopyWith<$Res>? get actor;
+}
+
+/// @nodoc
+class _$ImagingSelectionPerformerCopyWithImpl<$Res>
+    implements $ImagingSelectionPerformerCopyWith<$Res> {
+  _$ImagingSelectionPerformerCopyWithImpl(this._value, this._then);
+
+  final ImagingSelectionPerformer _value;
+  // ignore: unused_field
+  final $Res Function(ImagingSelectionPerformer) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? function = freezed,
+    Object? actor = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get function {
+    if (_value.function == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.function!, (value) {
+      return _then(_value.copyWith(function: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get actor {
+    if (_value.actor == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.actor!, (value) {
+      return _then(_value.copyWith(actor: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ImagingSelectionPerformerCopyWith<$Res>
+    implements $ImagingSelectionPerformerCopyWith<$Res> {
+  factory _$$_ImagingSelectionPerformerCopyWith(
+          _$_ImagingSelectionPerformer value,
+          $Res Function(_$_ImagingSelectionPerformer) then) =
+      __$$_ImagingSelectionPerformerCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? function,
+      Reference? actor});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get function;
+  @override
+  $ReferenceCopyWith<$Res>? get actor;
+}
+
+/// @nodoc
+class __$$_ImagingSelectionPerformerCopyWithImpl<$Res>
+    extends _$ImagingSelectionPerformerCopyWithImpl<$Res>
+    implements _$$_ImagingSelectionPerformerCopyWith<$Res> {
+  __$$_ImagingSelectionPerformerCopyWithImpl(
+      _$_ImagingSelectionPerformer _value,
+      $Res Function(_$_ImagingSelectionPerformer) _then)
+      : super(_value, (v) => _then(v as _$_ImagingSelectionPerformer));
+
+  @override
+  _$_ImagingSelectionPerformer get _value =>
+      super._value as _$_ImagingSelectionPerformer;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? function = freezed,
+    Object? actor = freezed,
+  }) {
+    return _then(_$_ImagingSelectionPerformer(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ImagingSelectionPerformer extends _ImagingSelectionPerformer {
+  _$_ImagingSelectionPerformer(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.function,
+      this.actor})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_ImagingSelectionPerformer.fromJson(Map<String, dynamic> json) =>
+      _$$_ImagingSelectionPerformerFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? function;
+  @override
+  final Reference? actor;
+
+  @override
+  String toString() {
+    return 'ImagingSelectionPerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, function: $function, actor: $actor)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ImagingSelectionPerformer &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.function, function) &&
+            const DeepCollectionEquality().equals(other.actor, actor));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(function),
+      const DeepCollectionEquality().hash(actor));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ImagingSelectionPerformerCopyWith<_$_ImagingSelectionPerformer>
+      get copyWith => __$$_ImagingSelectionPerformerCopyWithImpl<
+          _$_ImagingSelectionPerformer>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ImagingSelectionPerformerToJson(this);
+  }
+}
+
+abstract class _ImagingSelectionPerformer extends ImagingSelectionPerformer {
+  factory _ImagingSelectionPerformer(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? function,
+      final Reference? actor}) = _$_ImagingSelectionPerformer;
+  _ImagingSelectionPerformer._() : super._();
+
+  factory _ImagingSelectionPerformer.fromJson(Map<String, dynamic> json) =
+      _$_ImagingSelectionPerformer.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get function => throw _privateConstructorUsedError;
+  @override
+  Reference? get actor => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ImagingSelectionPerformerCopyWith<_$_ImagingSelectionPerformer>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+ImagingSelectionInstance _$ImagingSelectionInstanceFromJson(
+    Map<String, dynamic> json) {
+  return _ImagingSelectionInstance.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ImagingSelectionInstance {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Oid? get uid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_uid')
+  Element? get uidElement => throw _privateConstructorUsedError;
+  Coding? get sopClass => throw _privateConstructorUsedError;
+  String? get frameList => throw _privateConstructorUsedError;
+  @JsonKey(name: '_frameList')
+  Element? get frameListElement => throw _privateConstructorUsedError;
+  List<Oid>? get observationUid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_observationUid')
+  List<Element>? get observationUidElement =>
+      throw _privateConstructorUsedError;
+  String? get segmentList => throw _privateConstructorUsedError;
+  @JsonKey(name: '_segmentList')
+  Element? get segmentListElement => throw _privateConstructorUsedError;
+  String? get roiList => throw _privateConstructorUsedError;
+  @JsonKey(name: '_roiList')
+  Element? get roiListElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ImagingSelectionInstanceCopyWith<ImagingSelectionInstance> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ImagingSelectionInstanceCopyWith<$Res> {
+  factory $ImagingSelectionInstanceCopyWith(ImagingSelectionInstance value,
+          $Res Function(ImagingSelectionInstance) then) =
+      _$ImagingSelectionInstanceCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Oid? uid,
+      @JsonKey(name: '_uid') Element? uidElement,
+      Coding? sopClass,
+      String? frameList,
+      @JsonKey(name: '_frameList') Element? frameListElement,
+      List<Oid>? observationUid,
+      @JsonKey(name: '_observationUid') List<Element>? observationUidElement,
+      String? segmentList,
+      @JsonKey(name: '_segmentList') Element? segmentListElement,
+      String? roiList,
+      @JsonKey(name: '_roiList') Element? roiListElement});
+
+  $ElementCopyWith<$Res>? get uidElement;
+  $CodingCopyWith<$Res>? get sopClass;
+  $ElementCopyWith<$Res>? get frameListElement;
+  $ElementCopyWith<$Res>? get segmentListElement;
+  $ElementCopyWith<$Res>? get roiListElement;
+}
+
+/// @nodoc
+class _$ImagingSelectionInstanceCopyWithImpl<$Res>
+    implements $ImagingSelectionInstanceCopyWith<$Res> {
+  _$ImagingSelectionInstanceCopyWithImpl(this._value, this._then);
+
+  final ImagingSelectionInstance _value;
+  // ignore: unused_field
+  final $Res Function(ImagingSelectionInstance) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? uid = freezed,
+    Object? uidElement = freezed,
+    Object? sopClass = freezed,
+    Object? frameList = freezed,
+    Object? frameListElement = freezed,
+    Object? observationUid = freezed,
+    Object? observationUidElement = freezed,
+    Object? segmentList = freezed,
+    Object? segmentListElement = freezed,
+    Object? roiList = freezed,
+    Object? roiListElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      uid: uid == freezed
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      uidElement: uidElement == freezed
+          ? _value.uidElement
+          : uidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sopClass: sopClass == freezed
+          ? _value.sopClass
+          : sopClass // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      frameList: frameList == freezed
+          ? _value.frameList
+          : frameList // ignore: cast_nullable_to_non_nullable
+              as String?,
+      frameListElement: frameListElement == freezed
+          ? _value.frameListElement
+          : frameListElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      observationUid: observationUid == freezed
+          ? _value.observationUid
+          : observationUid // ignore: cast_nullable_to_non_nullable
+              as List<Oid>?,
+      observationUidElement: observationUidElement == freezed
+          ? _value.observationUidElement
+          : observationUidElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      segmentList: segmentList == freezed
+          ? _value.segmentList
+          : segmentList // ignore: cast_nullable_to_non_nullable
+              as String?,
+      segmentListElement: segmentListElement == freezed
+          ? _value.segmentListElement
+          : segmentListElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      roiList: roiList == freezed
+          ? _value.roiList
+          : roiList // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roiListElement: roiListElement == freezed
+          ? _value.roiListElement
+          : roiListElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get uidElement {
+    if (_value.uidElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.uidElement!, (value) {
+      return _then(_value.copyWith(uidElement: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res>? get sopClass {
+    if (_value.sopClass == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.sopClass!, (value) {
+      return _then(_value.copyWith(sopClass: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get frameListElement {
+    if (_value.frameListElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.frameListElement!, (value) {
+      return _then(_value.copyWith(frameListElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get segmentListElement {
+    if (_value.segmentListElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.segmentListElement!, (value) {
+      return _then(_value.copyWith(segmentListElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get roiListElement {
+    if (_value.roiListElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.roiListElement!, (value) {
+      return _then(_value.copyWith(roiListElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ImagingSelectionInstanceCopyWith<$Res>
+    implements $ImagingSelectionInstanceCopyWith<$Res> {
+  factory _$$_ImagingSelectionInstanceCopyWith(
+          _$_ImagingSelectionInstance value,
+          $Res Function(_$_ImagingSelectionInstance) then) =
+      __$$_ImagingSelectionInstanceCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Oid? uid,
+      @JsonKey(name: '_uid') Element? uidElement,
+      Coding? sopClass,
+      String? frameList,
+      @JsonKey(name: '_frameList') Element? frameListElement,
+      List<Oid>? observationUid,
+      @JsonKey(name: '_observationUid') List<Element>? observationUidElement,
+      String? segmentList,
+      @JsonKey(name: '_segmentList') Element? segmentListElement,
+      String? roiList,
+      @JsonKey(name: '_roiList') Element? roiListElement});
+
+  @override
+  $ElementCopyWith<$Res>? get uidElement;
+  @override
+  $CodingCopyWith<$Res>? get sopClass;
+  @override
+  $ElementCopyWith<$Res>? get frameListElement;
+  @override
+  $ElementCopyWith<$Res>? get segmentListElement;
+  @override
+  $ElementCopyWith<$Res>? get roiListElement;
+}
+
+/// @nodoc
+class __$$_ImagingSelectionInstanceCopyWithImpl<$Res>
+    extends _$ImagingSelectionInstanceCopyWithImpl<$Res>
+    implements _$$_ImagingSelectionInstanceCopyWith<$Res> {
+  __$$_ImagingSelectionInstanceCopyWithImpl(_$_ImagingSelectionInstance _value,
+      $Res Function(_$_ImagingSelectionInstance) _then)
+      : super(_value, (v) => _then(v as _$_ImagingSelectionInstance));
+
+  @override
+  _$_ImagingSelectionInstance get _value =>
+      super._value as _$_ImagingSelectionInstance;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? uid = freezed,
+    Object? uidElement = freezed,
+    Object? sopClass = freezed,
+    Object? frameList = freezed,
+    Object? frameListElement = freezed,
+    Object? observationUid = freezed,
+    Object? observationUidElement = freezed,
+    Object? segmentList = freezed,
+    Object? segmentListElement = freezed,
+    Object? roiList = freezed,
+    Object? roiListElement = freezed,
+  }) {
+    return _then(_$_ImagingSelectionInstance(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      uid: uid == freezed
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      uidElement: uidElement == freezed
+          ? _value.uidElement
+          : uidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sopClass: sopClass == freezed
+          ? _value.sopClass
+          : sopClass // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      frameList: frameList == freezed
+          ? _value.frameList
+          : frameList // ignore: cast_nullable_to_non_nullable
+              as String?,
+      frameListElement: frameListElement == freezed
+          ? _value.frameListElement
+          : frameListElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      observationUid: observationUid == freezed
+          ? _value._observationUid
+          : observationUid // ignore: cast_nullable_to_non_nullable
+              as List<Oid>?,
+      observationUidElement: observationUidElement == freezed
+          ? _value._observationUidElement
+          : observationUidElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      segmentList: segmentList == freezed
+          ? _value.segmentList
+          : segmentList // ignore: cast_nullable_to_non_nullable
+              as String?,
+      segmentListElement: segmentListElement == freezed
+          ? _value.segmentListElement
+          : segmentListElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      roiList: roiList == freezed
+          ? _value.roiList
+          : roiList // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roiListElement: roiListElement == freezed
+          ? _value.roiListElement
+          : roiListElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ImagingSelectionInstance extends _ImagingSelectionInstance {
+  _$_ImagingSelectionInstance(
+      {this.id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.uid,
+      @JsonKey(name: '_uid')
+          this.uidElement,
+      this.sopClass,
+      this.frameList,
+      @JsonKey(name: '_frameList')
+          this.frameListElement,
+      final List<Oid>? observationUid,
+      @JsonKey(name: '_observationUid')
+          final List<Element>? observationUidElement,
+      this.segmentList,
+      @JsonKey(name: '_segmentList')
+          this.segmentListElement,
+      this.roiList,
+      @JsonKey(name: '_roiList')
+          this.roiListElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _observationUid = observationUid,
+        _observationUidElement = observationUidElement,
+        super._();
+
+  factory _$_ImagingSelectionInstance.fromJson(Map<String, dynamic> json) =>
+      _$$_ImagingSelectionInstanceFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Oid? uid;
+  @override
+  @JsonKey(name: '_uid')
+  final Element? uidElement;
+  @override
+  final Coding? sopClass;
+  @override
+  final String? frameList;
+  @override
+  @JsonKey(name: '_frameList')
+  final Element? frameListElement;
+  final List<Oid>? _observationUid;
+  @override
+  List<Oid>? get observationUid {
+    final value = _observationUid;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _observationUidElement;
+  @override
+  @JsonKey(name: '_observationUid')
+  List<Element>? get observationUidElement {
+    final value = _observationUidElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? segmentList;
+  @override
+  @JsonKey(name: '_segmentList')
+  final Element? segmentListElement;
+  @override
+  final String? roiList;
+  @override
+  @JsonKey(name: '_roiList')
+  final Element? roiListElement;
+
+  @override
+  String toString() {
+    return 'ImagingSelectionInstance(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, uid: $uid, uidElement: $uidElement, sopClass: $sopClass, frameList: $frameList, frameListElement: $frameListElement, observationUid: $observationUid, observationUidElement: $observationUidElement, segmentList: $segmentList, segmentListElement: $segmentListElement, roiList: $roiList, roiListElement: $roiListElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ImagingSelectionInstance &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.uid, uid) &&
+            const DeepCollectionEquality()
+                .equals(other.uidElement, uidElement) &&
+            const DeepCollectionEquality().equals(other.sopClass, sopClass) &&
+            const DeepCollectionEquality().equals(other.frameList, frameList) &&
+            const DeepCollectionEquality()
+                .equals(other.frameListElement, frameListElement) &&
+            const DeepCollectionEquality()
+                .equals(other._observationUid, _observationUid) &&
+            const DeepCollectionEquality()
+                .equals(other._observationUidElement, _observationUidElement) &&
+            const DeepCollectionEquality()
+                .equals(other.segmentList, segmentList) &&
+            const DeepCollectionEquality()
+                .equals(other.segmentListElement, segmentListElement) &&
+            const DeepCollectionEquality().equals(other.roiList, roiList) &&
+            const DeepCollectionEquality()
+                .equals(other.roiListElement, roiListElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(uid),
+      const DeepCollectionEquality().hash(uidElement),
+      const DeepCollectionEquality().hash(sopClass),
+      const DeepCollectionEquality().hash(frameList),
+      const DeepCollectionEquality().hash(frameListElement),
+      const DeepCollectionEquality().hash(_observationUid),
+      const DeepCollectionEquality().hash(_observationUidElement),
+      const DeepCollectionEquality().hash(segmentList),
+      const DeepCollectionEquality().hash(segmentListElement),
+      const DeepCollectionEquality().hash(roiList),
+      const DeepCollectionEquality().hash(roiListElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ImagingSelectionInstanceCopyWith<_$_ImagingSelectionInstance>
+      get copyWith => __$$_ImagingSelectionInstanceCopyWithImpl<
+          _$_ImagingSelectionInstance>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ImagingSelectionInstanceToJson(this);
+  }
+}
+
+abstract class _ImagingSelectionInstance extends ImagingSelectionInstance {
+  factory _ImagingSelectionInstance(
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Oid? uid,
+      @JsonKey(name: '_uid')
+          final Element? uidElement,
+      final Coding? sopClass,
+      final String? frameList,
+      @JsonKey(name: '_frameList')
+          final Element? frameListElement,
+      final List<Oid>? observationUid,
+      @JsonKey(name: '_observationUid')
+          final List<Element>? observationUidElement,
+      final String? segmentList,
+      @JsonKey(name: '_segmentList')
+          final Element? segmentListElement,
+      final String? roiList,
+      @JsonKey(name: '_roiList')
+          final Element? roiListElement}) = _$_ImagingSelectionInstance;
+  _ImagingSelectionInstance._() : super._();
+
+  factory _ImagingSelectionInstance.fromJson(Map<String, dynamic> json) =
+      _$_ImagingSelectionInstance.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Oid? get uid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_uid')
+  Element? get uidElement => throw _privateConstructorUsedError;
+  @override
+  Coding? get sopClass => throw _privateConstructorUsedError;
+  @override
+  String? get frameList => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_frameList')
+  Element? get frameListElement => throw _privateConstructorUsedError;
+  @override
+  List<Oid>? get observationUid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_observationUid')
+  List<Element>? get observationUidElement =>
+      throw _privateConstructorUsedError;
+  @override
+  String? get segmentList => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_segmentList')
+  Element? get segmentListElement => throw _privateConstructorUsedError;
+  @override
+  String? get roiList => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_roiList')
+  Element? get roiListElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ImagingSelectionInstanceCopyWith<_$_ImagingSelectionInstance>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+ImagingSelectionImageRegion _$ImagingSelectionImageRegionFromJson(
+    Map<String, dynamic> json) {
+  return _ImagingSelectionImageRegion.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ImagingSelectionImageRegion {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get regionType => throw _privateConstructorUsedError;
+  @JsonKey(name: '_regionType')
+  Element? get regionTypeElement => throw _privateConstructorUsedError;
+  Code? get coordinateType => throw _privateConstructorUsedError;
+  @JsonKey(name: '_coordinateType')
+  Element? get coordinateTypeElement => throw _privateConstructorUsedError;
+  List<Decimal>? get coordinate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_coordinate')
+  List<Element>? get coordinateElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ImagingSelectionImageRegionCopyWith<ImagingSelectionImageRegion>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ImagingSelectionImageRegionCopyWith<$Res> {
+  factory $ImagingSelectionImageRegionCopyWith(
+          ImagingSelectionImageRegion value,
+          $Res Function(ImagingSelectionImageRegion) then) =
+      _$ImagingSelectionImageRegionCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? regionType,
+      @JsonKey(name: '_regionType') Element? regionTypeElement,
+      Code? coordinateType,
+      @JsonKey(name: '_coordinateType') Element? coordinateTypeElement,
+      List<Decimal>? coordinate,
+      @JsonKey(name: '_coordinate') List<Element>? coordinateElement});
+
+  $ElementCopyWith<$Res>? get regionTypeElement;
+  $ElementCopyWith<$Res>? get coordinateTypeElement;
+}
+
+/// @nodoc
+class _$ImagingSelectionImageRegionCopyWithImpl<$Res>
+    implements $ImagingSelectionImageRegionCopyWith<$Res> {
+  _$ImagingSelectionImageRegionCopyWithImpl(this._value, this._then);
+
+  final ImagingSelectionImageRegion _value;
+  // ignore: unused_field
+  final $Res Function(ImagingSelectionImageRegion) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? regionType = freezed,
+    Object? regionTypeElement = freezed,
+    Object? coordinateType = freezed,
+    Object? coordinateTypeElement = freezed,
+    Object? coordinate = freezed,
+    Object? coordinateElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      regionType: regionType == freezed
+          ? _value.regionType
+          : regionType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      regionTypeElement: regionTypeElement == freezed
+          ? _value.regionTypeElement
+          : regionTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      coordinateType: coordinateType == freezed
+          ? _value.coordinateType
+          : coordinateType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      coordinateTypeElement: coordinateTypeElement == freezed
+          ? _value.coordinateTypeElement
+          : coordinateTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      coordinate: coordinate == freezed
+          ? _value.coordinate
+          : coordinate // ignore: cast_nullable_to_non_nullable
+              as List<Decimal>?,
+      coordinateElement: coordinateElement == freezed
+          ? _value.coordinateElement
+          : coordinateElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get regionTypeElement {
+    if (_value.regionTypeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.regionTypeElement!, (value) {
+      return _then(_value.copyWith(regionTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get coordinateTypeElement {
+    if (_value.coordinateTypeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.coordinateTypeElement!, (value) {
+      return _then(_value.copyWith(coordinateTypeElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ImagingSelectionImageRegionCopyWith<$Res>
+    implements $ImagingSelectionImageRegionCopyWith<$Res> {
+  factory _$$_ImagingSelectionImageRegionCopyWith(
+          _$_ImagingSelectionImageRegion value,
+          $Res Function(_$_ImagingSelectionImageRegion) then) =
+      __$$_ImagingSelectionImageRegionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? regionType,
+      @JsonKey(name: '_regionType') Element? regionTypeElement,
+      Code? coordinateType,
+      @JsonKey(name: '_coordinateType') Element? coordinateTypeElement,
+      List<Decimal>? coordinate,
+      @JsonKey(name: '_coordinate') List<Element>? coordinateElement});
+
+  @override
+  $ElementCopyWith<$Res>? get regionTypeElement;
+  @override
+  $ElementCopyWith<$Res>? get coordinateTypeElement;
+}
+
+/// @nodoc
+class __$$_ImagingSelectionImageRegionCopyWithImpl<$Res>
+    extends _$ImagingSelectionImageRegionCopyWithImpl<$Res>
+    implements _$$_ImagingSelectionImageRegionCopyWith<$Res> {
+  __$$_ImagingSelectionImageRegionCopyWithImpl(
+      _$_ImagingSelectionImageRegion _value,
+      $Res Function(_$_ImagingSelectionImageRegion) _then)
+      : super(_value, (v) => _then(v as _$_ImagingSelectionImageRegion));
+
+  @override
+  _$_ImagingSelectionImageRegion get _value =>
+      super._value as _$_ImagingSelectionImageRegion;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? regionType = freezed,
+    Object? regionTypeElement = freezed,
+    Object? coordinateType = freezed,
+    Object? coordinateTypeElement = freezed,
+    Object? coordinate = freezed,
+    Object? coordinateElement = freezed,
+  }) {
+    return _then(_$_ImagingSelectionImageRegion(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      regionType: regionType == freezed
+          ? _value.regionType
+          : regionType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      regionTypeElement: regionTypeElement == freezed
+          ? _value.regionTypeElement
+          : regionTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      coordinateType: coordinateType == freezed
+          ? _value.coordinateType
+          : coordinateType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      coordinateTypeElement: coordinateTypeElement == freezed
+          ? _value.coordinateTypeElement
+          : coordinateTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      coordinate: coordinate == freezed
+          ? _value._coordinate
+          : coordinate // ignore: cast_nullable_to_non_nullable
+              as List<Decimal>?,
+      coordinateElement: coordinateElement == freezed
+          ? _value._coordinateElement
+          : coordinateElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ImagingSelectionImageRegion extends _ImagingSelectionImageRegion {
+  _$_ImagingSelectionImageRegion(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.regionType,
+      @JsonKey(name: '_regionType') this.regionTypeElement,
+      this.coordinateType,
+      @JsonKey(name: '_coordinateType') this.coordinateTypeElement,
+      final List<Decimal>? coordinate,
+      @JsonKey(name: '_coordinate') final List<Element>? coordinateElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _coordinate = coordinate,
+        _coordinateElement = coordinateElement,
+        super._();
+
+  factory _$_ImagingSelectionImageRegion.fromJson(Map<String, dynamic> json) =>
+      _$$_ImagingSelectionImageRegionFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? regionType;
+  @override
+  @JsonKey(name: '_regionType')
+  final Element? regionTypeElement;
+  @override
+  final Code? coordinateType;
+  @override
+  @JsonKey(name: '_coordinateType')
+  final Element? coordinateTypeElement;
+  final List<Decimal>? _coordinate;
+  @override
+  List<Decimal>? get coordinate {
+    final value = _coordinate;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _coordinateElement;
+  @override
+  @JsonKey(name: '_coordinate')
+  List<Element>? get coordinateElement {
+    final value = _coordinateElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'ImagingSelectionImageRegion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, regionType: $regionType, regionTypeElement: $regionTypeElement, coordinateType: $coordinateType, coordinateTypeElement: $coordinateTypeElement, coordinate: $coordinate, coordinateElement: $coordinateElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ImagingSelectionImageRegion &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.regionType, regionType) &&
+            const DeepCollectionEquality()
+                .equals(other.regionTypeElement, regionTypeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.coordinateType, coordinateType) &&
+            const DeepCollectionEquality()
+                .equals(other.coordinateTypeElement, coordinateTypeElement) &&
+            const DeepCollectionEquality()
+                .equals(other._coordinate, _coordinate) &&
+            const DeepCollectionEquality()
+                .equals(other._coordinateElement, _coordinateElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(regionType),
+      const DeepCollectionEquality().hash(regionTypeElement),
+      const DeepCollectionEquality().hash(coordinateType),
+      const DeepCollectionEquality().hash(coordinateTypeElement),
+      const DeepCollectionEquality().hash(_coordinate),
+      const DeepCollectionEquality().hash(_coordinateElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ImagingSelectionImageRegionCopyWith<_$_ImagingSelectionImageRegion>
+      get copyWith => __$$_ImagingSelectionImageRegionCopyWithImpl<
+          _$_ImagingSelectionImageRegion>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ImagingSelectionImageRegionToJson(this);
+  }
+}
+
+abstract class _ImagingSelectionImageRegion
+    extends ImagingSelectionImageRegion {
+  factory _ImagingSelectionImageRegion(
+          {final String? id,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Code? regionType,
+          @JsonKey(name: '_regionType')
+              final Element? regionTypeElement,
+          final Code? coordinateType,
+          @JsonKey(name: '_coordinateType')
+              final Element? coordinateTypeElement,
+          final List<Decimal>? coordinate,
+          @JsonKey(name: '_coordinate')
+              final List<Element>? coordinateElement}) =
+      _$_ImagingSelectionImageRegion;
+  _ImagingSelectionImageRegion._() : super._();
+
+  factory _ImagingSelectionImageRegion.fromJson(Map<String, dynamic> json) =
+      _$_ImagingSelectionImageRegion.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Code? get regionType => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_regionType')
+  Element? get regionTypeElement => throw _privateConstructorUsedError;
+  @override
+  Code? get coordinateType => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_coordinateType')
+  Element? get coordinateTypeElement => throw _privateConstructorUsedError;
+  @override
+  List<Decimal>? get coordinate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_coordinate')
+  List<Element>? get coordinateElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ImagingSelectionImageRegionCopyWith<_$_ImagingSelectionImageRegion>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) {
   return _ImagingStudy.fromJson(json);
 }
@@ -2954,7 +5263,7 @@ mixin _$ImagingStudy {
   List<CodeableConcept>? get modality => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get started => throw _privateConstructorUsedError;
+  FhirDateTime? get started => throw _privateConstructorUsedError;
   @JsonKey(name: '_started')
   Element? get startedElement => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
@@ -3005,7 +5314,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       List<CodeableConcept>? modality,
       Reference subject,
       Reference? encounter,
-      DateTime? started,
+      FhirDateTime? started,
       @JsonKey(name: '_started') Element? startedElement,
       List<Reference>? basedOn,
       Reference? referrer,
@@ -3155,7 +5464,7 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
       started: started == freezed
           ? _value.started
           : started // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       startedElement: startedElement == freezed
           ? _value.startedElement
           : startedElement // ignore: cast_nullable_to_non_nullable
@@ -3388,7 +5697,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       List<CodeableConcept>? modality,
       Reference subject,
       Reference? encounter,
-      DateTime? started,
+      FhirDateTime? started,
       @JsonKey(name: '_started') Element? startedElement,
       List<Reference>? basedOn,
       Reference? referrer,
@@ -3554,7 +5863,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       started: started == freezed
           ? _value.started
           : started // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       startedElement: startedElement == freezed
           ? _value.startedElement
           : startedElement // ignore: cast_nullable_to_non_nullable
@@ -3753,7 +6062,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   final Reference? encounter;
   @override
-  final DateTime? started;
+  final FhirDateTime? started;
   @override
   @JsonKey(name: '_started')
   final Element? startedElement;
@@ -3977,7 +6286,7 @@ abstract class _ImagingStudy extends ImagingStudy {
       final List<CodeableConcept>? modality,
       required final Reference subject,
       final Reference? encounter,
-      final DateTime? started,
+      final FhirDateTime? started,
       @JsonKey(name: '_started')
           final Element? startedElement,
       final List<Reference>? basedOn,
@@ -4043,7 +6352,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get started => throw _privateConstructorUsedError;
+  FhirDateTime? get started => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_started')
   Element? get startedElement => throw _privateConstructorUsedError;
@@ -4114,7 +6423,7 @@ mixin _$ImagingStudySeries {
   CodeableReference? get bodySite => throw _privateConstructorUsedError;
   CodeableConcept? get laterality => throw _privateConstructorUsedError;
   List<Reference>? get specimen => throw _privateConstructorUsedError;
-  DateTime? get started => throw _privateConstructorUsedError;
+  FhirDateTime? get started => throw _privateConstructorUsedError;
   @JsonKey(name: '_started')
   Element? get startedElement => throw _privateConstructorUsedError;
   List<ImagingStudyPerformer>? get performer =>
@@ -4150,7 +6459,7 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       CodeableReference? bodySite,
       CodeableConcept? laterality,
       List<Reference>? specimen,
-      DateTime? started,
+      FhirDateTime? started,
       @JsonKey(name: '_started') Element? startedElement,
       List<ImagingStudyPerformer>? performer,
       List<ImagingStudyInstance>? instance});
@@ -4265,7 +6574,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res>
       started: started == freezed
           ? _value.started
           : started // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       startedElement: startedElement == freezed
           ? _value.startedElement
           : startedElement // ignore: cast_nullable_to_non_nullable
@@ -4390,7 +6699,7 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
       CodeableReference? bodySite,
       CodeableConcept? laterality,
       List<Reference>? specimen,
-      DateTime? started,
+      FhirDateTime? started,
       @JsonKey(name: '_started') Element? startedElement,
       List<ImagingStudyPerformer>? performer,
       List<ImagingStudyInstance>? instance});
@@ -4515,7 +6824,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       started: started == freezed
           ? _value.started
           : started // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       startedElement: startedElement == freezed
           ? _value.startedElement
           : startedElement // ignore: cast_nullable_to_non_nullable
@@ -4633,7 +6942,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
   }
 
   @override
-  final DateTime? started;
+  final FhirDateTime? started;
   @override
   @JsonKey(name: '_started')
   final Element? startedElement;
@@ -4759,7 +7068,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
       final CodeableReference? bodySite,
       final CodeableConcept? laterality,
       final List<Reference>? specimen,
-      final DateTime? started,
+      final FhirDateTime? started,
       @JsonKey(name: '_started')
           final Element? startedElement,
       final List<ImagingStudyPerformer>? performer,
@@ -4808,7 +7117,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
   List<Reference>? get specimen => throw _privateConstructorUsedError;
   @override
-  DateTime? get started => throw _privateConstructorUsedError;
+  FhirDateTime? get started => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_started')
   Element? get startedElement => throw _privateConstructorUsedError;
@@ -7913,7 +10222,7 @@ mixin _$Observation {
   Reference? get subject => throw _privateConstructorUsedError;
   List<Reference>? get focus => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -7943,7 +10252,7 @@ mixin _$Observation {
   Time? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Period? get valuePeriod => throw _privateConstructorUsedError;
@@ -8006,7 +10315,7 @@ abstract class $ObservationCopyWith<$Res> {
       Reference? subject,
       List<Reference>? focus,
       Reference? encounter,
-      DateTime? effectiveDateTime,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element? effectiveDateTimeElement,
       Period? effectivePeriod,
@@ -8035,7 +10344,7 @@ abstract class $ObservationCopyWith<$Res> {
       Time? valueTime,
       @JsonKey(name: '_valueTime')
           Element? valueTimeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element? valueDateTimeElement,
       Period? valuePeriod,
@@ -8266,7 +10575,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
           : effectiveDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8354,7 +10663,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8818,7 +11127,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       Reference? subject,
       List<Reference>? focus,
       Reference? encounter,
-      DateTime? effectiveDateTime,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           Element? effectiveDateTimeElement,
       Period? effectivePeriod,
@@ -8847,7 +11156,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       Time? valueTime,
       @JsonKey(name: '_valueTime')
           Element? valueTimeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element? valueDateTimeElement,
       Period? valuePeriod,
@@ -9113,7 +11422,7 @@ class __$$_ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
           : effectiveDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9201,7 +11510,7 @@ class __$$_ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9487,7 +11796,7 @@ class _$_Observation extends _Observation {
   @override
   final Reference? encounter;
   @override
-  final DateTime? effectiveDateTime;
+  final FhirDateTime? effectiveDateTime;
   @override
   @JsonKey(name: '_effectiveDateTime')
   final Element? effectiveDateTimeElement;
@@ -9545,7 +11854,7 @@ class _$_Observation extends _Observation {
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -9850,7 +12159,7 @@ abstract class _Observation extends Observation {
       final Reference? subject,
       final List<Reference>? focus,
       final Reference? encounter,
-      final DateTime? effectiveDateTime,
+      final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           final Element? effectiveDateTimeElement,
       final Period? effectivePeriod,
@@ -9879,7 +12188,7 @@ abstract class _Observation extends Observation {
       final Time? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
       final Period? valuePeriod,
@@ -9960,7 +12269,7 @@ abstract class _Observation extends Observation {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
@@ -10012,7 +12321,7 @@ abstract class _Observation extends Observation {
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -10923,7 +13232,7 @@ mixin _$ObservationComponent {
   Time? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Period? get valuePeriod => throw _privateConstructorUsedError;
@@ -10963,7 +13272,7 @@ abstract class $ObservationComponentCopyWith<$Res> {
       SampledData? valueSampledData,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Period? valuePeriod,
       Attachment? valueAttachment,
@@ -11095,7 +13404,7 @@ class _$ObservationComponentCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11300,7 +13609,7 @@ abstract class _$$_ObservationComponentCopyWith<$Res>
       SampledData? valueSampledData,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Period? valuePeriod,
       Attachment? valueAttachment,
@@ -11448,7 +13757,7 @@ class __$$_ObservationComponentCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11568,7 +13877,7 @@ class _$_ObservationComponent extends _ObservationComponent {
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -11714,7 +14023,7 @@ abstract class _ObservationComponent extends ObservationComponent {
           final SampledData? valueSampledData,
           final Time? valueTime,
           @JsonKey(name: '_valueTime') final Element? valueTimeElement,
-          final DateTime? valueDateTime,
+          final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
           final Period? valuePeriod,
           final Attachment? valueAttachment,
@@ -11769,7 +14078,7 @@ abstract class _ObservationComponent extends ObservationComponent {
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -11822,7 +14131,7 @@ mixin _$QuestionnaireResponse {
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get authored => throw _privateConstructorUsedError;
+  FhirDateTime? get authored => throw _privateConstructorUsedError;
   @JsonKey(name: '_authored')
   Element? get authoredElement => throw _privateConstructorUsedError;
   Reference? get author => throw _privateConstructorUsedError;
@@ -11861,7 +14170,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? encounter,
-      DateTime? authored,
+      FhirDateTime? authored,
       @JsonKey(name: '_authored') Element? authoredElement,
       Reference? author,
       Reference? source,
@@ -11995,7 +14304,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       authored: authored == freezed
           ? _value.authored
           : authored // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredElement: authoredElement == freezed
           ? _value.authoredElement
           : authoredElement // ignore: cast_nullable_to_non_nullable
@@ -12153,7 +14462,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? encounter,
-      DateTime? authored,
+      FhirDateTime? authored,
       @JsonKey(name: '_authored') Element? authoredElement,
       Reference? author,
       Reference? source,
@@ -12300,7 +14609,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
       authored: authored == freezed
           ? _value.authored
           : authored // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredElement: authoredElement == freezed
           ? _value.authoredElement
           : authoredElement // ignore: cast_nullable_to_non_nullable
@@ -12447,7 +14756,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @override
   final Reference? encounter;
   @override
-  final DateTime? authored;
+  final FhirDateTime? authored;
   @override
   @JsonKey(name: '_authored')
   final Element? authoredElement;
@@ -12574,7 +14883,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       @JsonKey(name: '_status') final Element? statusElement,
       final Reference? subject,
       final Reference? encounter,
-      final DateTime? authored,
+      final FhirDateTime? authored,
       @JsonKey(name: '_authored') final Element? authoredElement,
       final Reference? author,
       final Reference? source,
@@ -12628,7 +14937,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get authored => throw _privateConstructorUsedError;
+  FhirDateTime? get authored => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authored')
   Element? get authoredElement => throw _privateConstructorUsedError;
@@ -13123,7 +15432,7 @@ mixin _$QuestionnaireResponseAnswer {
   Date? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Time? get valueTime => throw _privateConstructorUsedError;
@@ -13166,7 +15475,7 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -13278,7 +15587,7 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -13483,7 +15792,7 @@ abstract class _$$_QuestionnaireResponseAnswerCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -13611,7 +15920,7 @@ class __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -13742,7 +16051,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -13889,7 +16198,7 @@ abstract class _QuestionnaireResponseAnswer
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
           final Date? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
-          final DateTime? valueDateTime,
+          final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
           final Time? valueTime,
           @JsonKey(name: '_valueTime') final Element? valueTimeElement,
@@ -13937,7 +16246,7 @@ abstract class _QuestionnaireResponseAnswer
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -14001,7 +16310,7 @@ mixin _$Specimen {
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
-  DateTime? get receivedTime => throw _privateConstructorUsedError;
+  FhirDateTime? get receivedTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_receivedTime')
   Element? get receivedTimeElement => throw _privateConstructorUsedError;
   List<Reference>? get parent => throw _privateConstructorUsedError;
@@ -14042,7 +16351,7 @@ abstract class $SpecimenCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
-      DateTime? receivedTime,
+      FhirDateTime? receivedTime,
       @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
       List<Reference>? parent,
       List<Reference>? request,
@@ -14175,7 +16484,7 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
       receivedTime: receivedTime == freezed
           ? _value.receivedTime
           : receivedTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       receivedTimeElement: receivedTimeElement == freezed
           ? _value.receivedTimeElement
           : receivedTimeElement // ignore: cast_nullable_to_non_nullable
@@ -14350,7 +16659,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
-      DateTime? receivedTime,
+      FhirDateTime? receivedTime,
       @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
       List<Reference>? parent,
       List<Reference>? request,
@@ -14495,7 +16804,7 @@ class __$$_SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
       receivedTime: receivedTime == freezed
           ? _value.receivedTime
           : receivedTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       receivedTimeElement: receivedTimeElement == freezed
           ? _value.receivedTimeElement
           : receivedTimeElement // ignore: cast_nullable_to_non_nullable
@@ -14651,7 +16960,7 @@ class _$_Specimen extends _Specimen {
   @override
   final Reference? subject;
   @override
-  final DateTime? receivedTime;
+  final FhirDateTime? receivedTime;
   @override
   @JsonKey(name: '_receivedTime')
   final Element? receivedTimeElement;
@@ -14838,7 +17147,7 @@ abstract class _Specimen extends Specimen {
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final Reference? subject,
-      final DateTime? receivedTime,
+      final FhirDateTime? receivedTime,
       @JsonKey(name: '_receivedTime') final Element? receivedTimeElement,
       final List<Reference>? parent,
       final List<Reference>? request,
@@ -14892,7 +17201,7 @@ abstract class _Specimen extends Specimen {
   @override
   Reference? get subject => throw _privateConstructorUsedError;
   @override
-  DateTime? get receivedTime => throw _privateConstructorUsedError;
+  FhirDateTime? get receivedTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_receivedTime')
   Element? get receivedTimeElement => throw _privateConstructorUsedError;
@@ -15230,7 +17539,7 @@ mixin _$SpecimenCollection {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Reference? get collector => throw _privateConstructorUsedError;
-  DateTime? get collectedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get collectedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_collectedDateTime')
   Element? get collectedDateTimeElement => throw _privateConstructorUsedError;
   Period? get collectedPeriod => throw _privateConstructorUsedError;
@@ -15260,7 +17569,7 @@ abstract class $SpecimenCollectionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference? collector,
-      DateTime? collectedDateTime,
+      FhirDateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
       Period? collectedPeriod,
       FhirDuration? duration,
@@ -15332,7 +17641,7 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
       collectedDateTime: collectedDateTime == freezed
           ? _value.collectedDateTime
           : collectedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -15511,7 +17820,7 @@ abstract class _$$_SpecimenCollectionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference? collector,
-      DateTime? collectedDateTime,
+      FhirDateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
       Period? collectedPeriod,
       FhirDuration? duration,
@@ -15596,7 +17905,7 @@ class __$$_SpecimenCollectionCopyWithImpl<$Res>
       collectedDateTime: collectedDateTime == freezed
           ? _value.collectedDateTime
           : collectedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -15691,7 +18000,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
   @override
   final Reference? collector;
   @override
-  final DateTime? collectedDateTime;
+  final FhirDateTime? collectedDateTime;
   @override
   @JsonKey(name: '_collectedDateTime')
   final Element? collectedDateTimeElement;
@@ -15788,7 +18097,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Reference? collector,
-      final DateTime? collectedDateTime,
+      final FhirDateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime')
           final Element? collectedDateTimeElement,
       final Period? collectedPeriod,
@@ -15816,7 +18125,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
   @override
   Reference? get collector => throw _privateConstructorUsedError;
   @override
-  DateTime? get collectedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get collectedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_collectedDateTime')
   Element? get collectedDateTimeElement => throw _privateConstructorUsedError;
@@ -15861,7 +18170,7 @@ mixin _$SpecimenProcessing {
   Element? get descriptionElement => throw _privateConstructorUsedError;
   CodeableConcept? get method => throw _privateConstructorUsedError;
   List<Reference>? get additive => throw _privateConstructorUsedError;
-  DateTime? get timeDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get timeDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_timeDateTime')
   Element? get timeDateTimeElement => throw _privateConstructorUsedError;
   Period? get timePeriod => throw _privateConstructorUsedError;
@@ -15885,7 +18194,7 @@ abstract class $SpecimenProcessingCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? method,
       List<Reference>? additive,
-      DateTime? timeDateTime,
+      FhirDateTime? timeDateTime,
       @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
       Period? timePeriod});
 
@@ -15949,7 +18258,7 @@ class _$SpecimenProcessingCopyWithImpl<$Res>
       timeDateTime: timeDateTime == freezed
           ? _value.timeDateTime
           : timeDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -16021,7 +18330,7 @@ abstract class _$$_SpecimenProcessingCopyWith<$Res>
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? method,
       List<Reference>? additive,
-      DateTime? timeDateTime,
+      FhirDateTime? timeDateTime,
       @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
       Period? timePeriod});
 
@@ -16091,7 +18400,7 @@ class __$$_SpecimenProcessingCopyWithImpl<$Res>
       timeDateTime: timeDateTime == freezed
           ? _value.timeDateTime
           : timeDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timeDateTimeElement: timeDateTimeElement == freezed
           ? _value.timeDateTimeElement
           : timeDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -16164,7 +18473,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
   }
 
   @override
-  final DateTime? timeDateTime;
+  final FhirDateTime? timeDateTime;
   @override
   @JsonKey(name: '_timeDateTime')
   final Element? timeDateTimeElement;
@@ -16236,7 +18545,7 @@ abstract class _SpecimenProcessing extends SpecimenProcessing {
       @JsonKey(name: '_description') final Element? descriptionElement,
       final CodeableConcept? method,
       final List<Reference>? additive,
-      final DateTime? timeDateTime,
+      final FhirDateTime? timeDateTime,
       @JsonKey(name: '_timeDateTime') final Element? timeDateTimeElement,
       final Period? timePeriod}) = _$_SpecimenProcessing;
   _SpecimenProcessing._() : super._();
@@ -16262,7 +18571,7 @@ abstract class _SpecimenProcessing extends SpecimenProcessing {
   @override
   List<Reference>? get additive => throw _privateConstructorUsedError;
   @override
-  DateTime? get timeDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get timeDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_timeDateTime')
   Element? get timeDateTimeElement => throw _privateConstructorUsedError;

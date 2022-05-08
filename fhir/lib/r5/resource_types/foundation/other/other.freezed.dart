@@ -38,7 +38,7 @@ mixin _$Basic {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   CodeableConcept get code => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get author => throw _privateConstructorUsedError;
@@ -67,7 +67,7 @@ abstract class $BasicCopyWith<$Res> {
       List<Identifier>? identifier,
       CodeableConcept code,
       Reference? subject,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? author});
 
@@ -169,7 +169,7 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -286,7 +286,7 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       List<Identifier>? identifier,
       CodeableConcept code,
       Reference? subject,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? author});
 
@@ -397,7 +397,7 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -501,7 +501,7 @@ class _$_Basic extends _Basic {
   @override
   final Reference? subject;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -595,7 +595,7 @@ abstract class _Basic extends Basic {
       final List<Identifier>? identifier,
       required final CodeableConcept code,
       final Reference? subject,
-      final DateTime? created,
+      final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       final Reference? author}) = _$_Basic;
   _Basic._() : super._();
@@ -635,7 +635,7 @@ abstract class _Basic extends Basic {
   @override
   Reference? get subject => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -8208,7 +8208,7 @@ mixin _$ParametersParameter {
   Date? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Decimal? get valueDecimal => throw _privateConstructorUsedError;
@@ -8323,7 +8323,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -8601,7 +8601,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9485,7 +9485,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -9819,7 +9819,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10224,7 +10224,7 @@ class _$_ParametersParameter extends _ParametersParameter {
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -10633,7 +10633,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final Date? valueDate,
       @JsonKey(name: '_valueDate')
           final Element? valueDateElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
       final Decimal? valueDecimal,
@@ -10758,7 +10758,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -13866,7 +13866,7 @@ mixin _$SubscriptionTopic {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -13937,7 +13937,7 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -14140,7 +14140,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -14463,7 +14463,7 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -14686,7 +14686,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -14934,7 +14934,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -15225,7 +15225,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -15313,7 +15313,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;

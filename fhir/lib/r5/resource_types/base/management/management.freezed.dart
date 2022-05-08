@@ -56,10 +56,10 @@ mixin _$Encounter {
       throw _privateConstructorUsedError;
   List<Reference>? get appointment => throw _privateConstructorUsedError;
   Period? get actualPeriod => throw _privateConstructorUsedError;
-  DateTime? get plannedStartDate => throw _privateConstructorUsedError;
+  FhirDateTime? get plannedStartDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_plannedStartDate')
   Element? get plannedStartDateElement => throw _privateConstructorUsedError;
-  DateTime? get plannedEndDate => throw _privateConstructorUsedError;
+  FhirDateTime? get plannedEndDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_plannedEndDate')
   Element? get plannedEndDateElement => throw _privateConstructorUsedError;
   FhirDuration? get length => throw _privateConstructorUsedError;
@@ -110,9 +110,9 @@ abstract class $EncounterCopyWith<$Res> {
       List<EncounterParticipant>? participant,
       List<Reference>? appointment,
       Period? actualPeriod,
-      DateTime? plannedStartDate,
+      FhirDateTime? plannedStartDate,
       @JsonKey(name: '_plannedStartDate') Element? plannedStartDateElement,
-      DateTime? plannedEndDate,
+      FhirDateTime? plannedEndDate,
       @JsonKey(name: '_plannedEndDate') Element? plannedEndDateElement,
       FhirDuration? length,
       List<CodeableReference>? reason,
@@ -304,7 +304,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       plannedStartDate: plannedStartDate == freezed
           ? _value.plannedStartDate
           : plannedStartDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       plannedStartDateElement: plannedStartDateElement == freezed
           ? _value.plannedStartDateElement
           : plannedStartDateElement // ignore: cast_nullable_to_non_nullable
@@ -312,7 +312,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       plannedEndDate: plannedEndDate == freezed
           ? _value.plannedEndDate
           : plannedEndDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       plannedEndDateElement: plannedEndDateElement == freezed
           ? _value.plannedEndDateElement
           : plannedEndDateElement // ignore: cast_nullable_to_non_nullable
@@ -571,9 +571,9 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       List<EncounterParticipant>? participant,
       List<Reference>? appointment,
       Period? actualPeriod,
-      DateTime? plannedStartDate,
+      FhirDateTime? plannedStartDate,
       @JsonKey(name: '_plannedStartDate') Element? plannedStartDateElement,
-      DateTime? plannedEndDate,
+      FhirDateTime? plannedEndDate,
       @JsonKey(name: '_plannedEndDate') Element? plannedEndDateElement,
       FhirDuration? length,
       List<CodeableReference>? reason,
@@ -784,7 +784,7 @@ class __$$_EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
       plannedStartDate: plannedStartDate == freezed
           ? _value.plannedStartDate
           : plannedStartDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       plannedStartDateElement: plannedStartDateElement == freezed
           ? _value.plannedStartDateElement
           : plannedStartDateElement // ignore: cast_nullable_to_non_nullable
@@ -792,7 +792,7 @@ class __$$_EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
       plannedEndDate: plannedEndDate == freezed
           ? _value.plannedEndDate
           : plannedEndDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       plannedEndDateElement: plannedEndDateElement == freezed
           ? _value.plannedEndDateElement
           : plannedEndDateElement // ignore: cast_nullable_to_non_nullable
@@ -1034,12 +1034,12 @@ class _$_Encounter extends _Encounter {
   @override
   final Period? actualPeriod;
   @override
-  final DateTime? plannedStartDate;
+  final FhirDateTime? plannedStartDate;
   @override
   @JsonKey(name: '_plannedStartDate')
   final Element? plannedStartDateElement;
   @override
-  final DateTime? plannedEndDate;
+  final FhirDateTime? plannedEndDate;
   @override
   @JsonKey(name: '_plannedEndDate')
   final Element? plannedEndDateElement;
@@ -1253,10 +1253,10 @@ abstract class _Encounter extends Encounter {
       final List<EncounterParticipant>? participant,
       final List<Reference>? appointment,
       final Period? actualPeriod,
-      final DateTime? plannedStartDate,
+      final FhirDateTime? plannedStartDate,
       @JsonKey(name: '_plannedStartDate')
           final Element? plannedStartDateElement,
-      final DateTime? plannedEndDate,
+      final FhirDateTime? plannedEndDate,
       @JsonKey(name: '_plannedEndDate')
           final Element? plannedEndDateElement,
       final FhirDuration? length,
@@ -1336,12 +1336,12 @@ abstract class _Encounter extends Encounter {
   @override
   Period? get actualPeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get plannedStartDate => throw _privateConstructorUsedError;
+  FhirDateTime? get plannedStartDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_plannedStartDate')
   Element? get plannedStartDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get plannedEndDate => throw _privateConstructorUsedError;
+  FhirDateTime? get plannedEndDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_plannedEndDate')
   Element? get plannedEndDateElement => throw _privateConstructorUsedError;
@@ -5740,7 +5740,7 @@ mixin _$Library {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -5822,7 +5822,7 @@ abstract class $LibraryCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -6051,7 +6051,7 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -6469,7 +6469,7 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -6722,7 +6722,7 @@ class __$$_LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -7029,7 +7029,7 @@ class _$_Library extends _Library {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -7395,7 +7395,7 @@ abstract class _Library extends Library {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -7492,7 +7492,7 @@ abstract class _Library extends Library {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -8575,7 +8575,7 @@ mixin _$ListEntry {
   Boolean? get deleted => throw _privateConstructorUsedError;
   @JsonKey(name: '_deleted')
   Element? get deletedElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference get item => throw _privateConstructorUsedError;
@@ -8597,7 +8597,7 @@ abstract class $ListEntryCopyWith<$Res> {
       CodeableConcept? flag,
       Boolean? deleted,
       @JsonKey(name: '_deleted') Element? deletedElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference item});
 
@@ -8655,7 +8655,7 @@ class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -8721,7 +8721,7 @@ abstract class _$$_ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
       CodeableConcept? flag,
       Boolean? deleted,
       @JsonKey(name: '_deleted') Element? deletedElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference item});
 
@@ -8785,7 +8785,7 @@ class __$$_ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -8847,7 +8847,7 @@ class _$_ListEntry extends _ListEntry {
   @JsonKey(name: '_deleted')
   final Element? deletedElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -8912,7 +8912,7 @@ abstract class _ListEntry extends ListEntry {
       final CodeableConcept? flag,
       final Boolean? deleted,
       @JsonKey(name: '_deleted') final Element? deletedElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       required final Reference item}) = _$_ListEntry;
   _ListEntry._() : super._();
@@ -8936,7 +8936,7 @@ abstract class _ListEntry extends ListEntry {
   @JsonKey(name: '_deleted')
   Element? get deletedElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;

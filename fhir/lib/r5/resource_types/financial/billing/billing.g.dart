@@ -58,7 +58,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
           : Period.fromJson(json['billablePeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : DateTime.parse(json['created'] as String),
+          : FhirDateTime.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -154,7 +154,7 @@ Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
   writeNotNull('_use', instance.useElement?.toJson());
   val['patient'] = instance.patient.toJson();
   writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
@@ -184,10 +184,13 @@ Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -198,20 +201,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -222,6 +225,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -246,11 +250,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -258,6 +264,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -267,12 +274,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -286,6 +287,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -299,6 +301,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -632,8 +635,7 @@ _$_ClaimProcedure _$$_ClaimProcedureFromJson(Map<String, dynamic> json) =>
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -667,7 +669,7 @@ Map<String, dynamic> _$$_ClaimProcedureToJson(_$_ClaimProcedure instance) {
   writeNotNull('sequence', instance.sequence?.toJson());
   writeNotNull('_sequence', instance.sequenceElement?.toJson());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull(
       'procedureCodeableConcept', instance.procedureCodeableConcept?.toJson());
@@ -1165,7 +1167,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : DateTime.parse(json['created'] as String),
+          : FhirDateTime.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1270,7 +1272,7 @@ Map<String, dynamic> _$$_ClaimResponseToJson(_$_ClaimResponse instance) {
   writeNotNull('use', instance.use?.toJson());
   writeNotNull('_use', instance.useElement?.toJson());
   val['patient'] = instance.patient.toJson();
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   val['insurer'] = instance.insurer.toJson();
   writeNotNull('requestor', instance.requestor?.toJson());
@@ -2122,8 +2124,7 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
       recipient: json['recipient'] == null
           ? null
           : Reference.fromJson(json['recipient'] as Map<String, dynamic>),
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2193,7 +2194,7 @@ Map<String, dynamic> _$$_InvoiceToJson(_$_Invoice instance) {
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('recipient', instance.recipient?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull(
       'participant', instance.participant?.map((e) => e.toJson()).toList());

@@ -54,7 +54,7 @@ mixin _$CodeSystem {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -132,7 +132,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -351,7 +351,7 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -735,7 +735,7 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -977,7 +977,7 @@ class __$$_CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1258,7 +1258,7 @@ class _$_CodeSystem extends _CodeSystem {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -1576,7 +1576,7 @@ abstract class _CodeSystem extends CodeSystem {
       final Boolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final String? publisher,
@@ -1681,7 +1681,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -3529,7 +3529,7 @@ mixin _$CodeSystemProperty1 {
   Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Decimal? get valueDecimal => throw _privateConstructorUsedError;
@@ -3562,7 +3562,7 @@ abstract class $CodeSystemProperty1CopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
@@ -3667,7 +3667,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3794,7 +3794,7 @@ abstract class _$$_CodeSystemProperty1CopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
@@ -3909,7 +3909,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4004,7 +4004,7 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -4110,7 +4110,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
           final Boolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
-          final DateTime? valueDateTime,
+          final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
           final Decimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement}) =
@@ -4156,7 +4156,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -4211,7 +4211,7 @@ mixin _$ConceptMap {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -4279,7 +4279,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -4480,7 +4480,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -4810,7 +4810,7 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -5032,7 +5032,7 @@ class __$$_ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -5271,7 +5271,7 @@ class _$_ConceptMap extends _ConceptMap {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -5527,7 +5527,7 @@ abstract class _ConceptMap extends ConceptMap {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -5613,7 +5613,7 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -7720,6 +7720,4335 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
       throw _privateConstructorUsedError;
 }
 
+ConceptMap2 _$ConceptMap2FromJson(Map<String, dynamic> json) {
+  return _ConceptMap2.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ConceptMap2 {
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  @JsonKey(name: '_version')
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: '_name')
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
+  @JsonKey(name: '_publisher')
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  Date? get approvalDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  FhirUri? get sourceUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_sourceUri')
+  Element? get sourceUriElement => throw _privateConstructorUsedError;
+  Canonical? get sourceCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_sourceCanonical')
+  Element? get sourceCanonicalElement => throw _privateConstructorUsedError;
+  FhirUri? get targetUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_targetUri')
+  Element? get targetUriElement => throw _privateConstructorUsedError;
+  Canonical? get targetCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_targetCanonical')
+  Element? get targetCanonicalElement => throw _privateConstructorUsedError;
+  List<ConceptMap2Group>? get group => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConceptMap2CopyWith<ConceptMap2> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConceptMap2CopyWith<$Res> {
+  factory $ConceptMap2CopyWith(
+          ConceptMap2 value, $Res Function(ConceptMap2) then) =
+      _$ConceptMap2CopyWithImpl<$Res>;
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher') Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose') Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      FhirUri? sourceUri,
+      @JsonKey(name: '_sourceUri') Element? sourceUriElement,
+      Canonical? sourceCanonical,
+      @JsonKey(name: '_sourceCanonical') Element? sourceCanonicalElement,
+      FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') Element? targetUriElement,
+      Canonical? targetCanonical,
+      @JsonKey(name: '_targetCanonical') Element? targetCanonicalElement,
+      List<ConceptMap2Group>? group});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get urlElement;
+  $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get nameElement;
+  $ElementCopyWith<$Res>? get titleElement;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get experimentalElement;
+  $ElementCopyWith<$Res>? get dateElement;
+  $ElementCopyWith<$Res>? get publisherElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get purposeElement;
+  $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
+  $PeriodCopyWith<$Res>? get effectivePeriod;
+  $ElementCopyWith<$Res>? get sourceUriElement;
+  $ElementCopyWith<$Res>? get sourceCanonicalElement;
+  $ElementCopyWith<$Res>? get targetUriElement;
+  $ElementCopyWith<$Res>? get targetCanonicalElement;
+}
+
+/// @nodoc
+class _$ConceptMap2CopyWithImpl<$Res> implements $ConceptMap2CopyWith<$Res> {
+  _$ConceptMap2CopyWithImpl(this._value, this._then);
+
+  final ConceptMap2 _value;
+  // ignore: unused_field
+  final $Res Function(ConceptMap2) _then;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? identifier = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherElement = freezed,
+    Object? contact = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? useContext = freezed,
+    Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
+    Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
+    Object? sourceUri = freezed,
+    Object? sourceUriElement = freezed,
+    Object? sourceCanonical = freezed,
+    Object? sourceCanonicalElement = freezed,
+    Object? targetUri = freezed,
+    Object? targetUriElement = freezed,
+    Object? targetCanonical = freezed,
+    Object? targetCanonicalElement = freezed,
+    Object? group = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: experimental == freezed
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: useContext == freezed
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      jurisdiction: jurisdiction == freezed
+          ? _value.jurisdiction
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      approvalDate: approvalDate == freezed
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: lastReviewDate == freezed
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      editor: editor == freezed
+          ? _value.editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: reviewer == freezed
+          ? _value.reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: endorser == freezed
+          ? _value.endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      sourceUri: sourceUri == freezed
+          ? _value.sourceUri
+          : sourceUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      sourceUriElement: sourceUriElement == freezed
+          ? _value.sourceUriElement
+          : sourceUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceCanonical: sourceCanonical == freezed
+          ? _value.sourceCanonical
+          : sourceCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      sourceCanonicalElement: sourceCanonicalElement == freezed
+          ? _value.sourceCanonicalElement
+          : sourceCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      targetUri: targetUri == freezed
+          ? _value.targetUri
+          : targetUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      targetUriElement: targetUriElement == freezed
+          ? _value.targetUriElement
+          : targetUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      targetCanonical: targetCanonical == freezed
+          ? _value.targetCanonical
+          : targetCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      targetCanonicalElement: targetCanonicalElement == freezed
+          ? _value.targetCanonicalElement
+          : targetCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      group: group == freezed
+          ? _value.group
+          : group // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2Group>?,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.experimentalElement!, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publisherElement!, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.purposeElement!, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.approvalDateElement!, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement!, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod!, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get sourceUriElement {
+    if (_value.sourceUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.sourceUriElement!, (value) {
+      return _then(_value.copyWith(sourceUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get sourceCanonicalElement {
+    if (_value.sourceCanonicalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.sourceCanonicalElement!, (value) {
+      return _then(_value.copyWith(sourceCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get targetUriElement {
+    if (_value.targetUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.targetUriElement!, (value) {
+      return _then(_value.copyWith(targetUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get targetCanonicalElement {
+    if (_value.targetCanonicalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.targetCanonicalElement!, (value) {
+      return _then(_value.copyWith(targetCanonicalElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ConceptMap2CopyWith<$Res>
+    implements $ConceptMap2CopyWith<$Res> {
+  factory _$$_ConceptMap2CopyWith(
+          _$_ConceptMap2 value, $Res Function(_$_ConceptMap2) then) =
+      __$$_ConceptMap2CopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher') Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose') Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      FhirUri? sourceUri,
+      @JsonKey(name: '_sourceUri') Element? sourceUriElement,
+      Canonical? sourceCanonical,
+      @JsonKey(name: '_sourceCanonical') Element? sourceCanonicalElement,
+      FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') Element? targetUriElement,
+      Canonical? targetCanonical,
+      @JsonKey(name: '_targetCanonical') Element? targetCanonicalElement,
+      List<ConceptMap2Group>? group});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get urlElement;
+  @override
+  $ElementCopyWith<$Res>? get versionElement;
+  @override
+  $ElementCopyWith<$Res>? get nameElement;
+  @override
+  $ElementCopyWith<$Res>? get titleElement;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $ElementCopyWith<$Res>? get experimentalElement;
+  @override
+  $ElementCopyWith<$Res>? get dateElement;
+  @override
+  $ElementCopyWith<$Res>? get publisherElement;
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ElementCopyWith<$Res>? get purposeElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
+  @override
+  $PeriodCopyWith<$Res>? get effectivePeriod;
+  @override
+  $ElementCopyWith<$Res>? get sourceUriElement;
+  @override
+  $ElementCopyWith<$Res>? get sourceCanonicalElement;
+  @override
+  $ElementCopyWith<$Res>? get targetUriElement;
+  @override
+  $ElementCopyWith<$Res>? get targetCanonicalElement;
+}
+
+/// @nodoc
+class __$$_ConceptMap2CopyWithImpl<$Res> extends _$ConceptMap2CopyWithImpl<$Res>
+    implements _$$_ConceptMap2CopyWith<$Res> {
+  __$$_ConceptMap2CopyWithImpl(
+      _$_ConceptMap2 _value, $Res Function(_$_ConceptMap2) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMap2));
+
+  @override
+  _$_ConceptMap2 get _value => super._value as _$_ConceptMap2;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? identifier = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherElement = freezed,
+    Object? contact = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? useContext = freezed,
+    Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
+    Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
+    Object? sourceUri = freezed,
+    Object? sourceUriElement = freezed,
+    Object? sourceCanonical = freezed,
+    Object? sourceCanonicalElement = freezed,
+    Object? targetUri = freezed,
+    Object? targetUriElement = freezed,
+    Object? targetCanonical = freezed,
+    Object? targetCanonicalElement = freezed,
+    Object? group = freezed,
+  }) {
+    return _then(_$_ConceptMap2(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: experimental == freezed
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value._contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: useContext == freezed
+          ? _value._useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      jurisdiction: jurisdiction == freezed
+          ? _value._jurisdiction
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      approvalDate: approvalDate == freezed
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: lastReviewDate == freezed
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      topic: topic == freezed
+          ? _value._topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value._author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      editor: editor == freezed
+          ? _value._editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: reviewer == freezed
+          ? _value._reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: endorser == freezed
+          ? _value._endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value._relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      sourceUri: sourceUri == freezed
+          ? _value.sourceUri
+          : sourceUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      sourceUriElement: sourceUriElement == freezed
+          ? _value.sourceUriElement
+          : sourceUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceCanonical: sourceCanonical == freezed
+          ? _value.sourceCanonical
+          : sourceCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      sourceCanonicalElement: sourceCanonicalElement == freezed
+          ? _value.sourceCanonicalElement
+          : sourceCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      targetUri: targetUri == freezed
+          ? _value.targetUri
+          : targetUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      targetUriElement: targetUriElement == freezed
+          ? _value.targetUriElement
+          : targetUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      targetCanonical: targetCanonical == freezed
+          ? _value.targetCanonical
+          : targetCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      targetCanonicalElement: targetCanonicalElement == freezed
+          ? _value.targetCanonicalElement
+          : targetCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      group: group == freezed
+          ? _value._group
+          : group // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2Group>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ConceptMap2 extends _ConceptMap2 {
+  _$_ConceptMap2(
+      {this.resourceType = R5ResourceType.ConceptMap2,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.url,
+      @JsonKey(name: '_url') this.urlElement,
+      final List<Identifier>? identifier,
+      this.version,
+      @JsonKey(name: '_version') this.versionElement,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      this.title,
+      @JsonKey(name: '_title') this.titleElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
+      this.date,
+      @JsonKey(name: '_date') this.dateElement,
+      this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
+      final List<ContactDetail>? contact,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
+      this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
+      this.approvalDate,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      this.effectivePeriod,
+      final List<CodeableConcept>? topic,
+      final List<ContactDetail>? author,
+      final List<ContactDetail>? editor,
+      final List<ContactDetail>? reviewer,
+      final List<ContactDetail>? endorser,
+      final List<RelatedArtifact>? relatedArtifact,
+      this.sourceUri,
+      @JsonKey(name: '_sourceUri') this.sourceUriElement,
+      this.sourceCanonical,
+      @JsonKey(name: '_sourceCanonical') this.sourceCanonicalElement,
+      this.targetUri,
+      @JsonKey(name: '_targetUri') this.targetUriElement,
+      this.targetCanonical,
+      @JsonKey(name: '_targetCanonical') this.targetCanonicalElement,
+      final List<ConceptMap2Group>? group})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _contact = contact,
+        _useContext = useContext,
+        _jurisdiction = jurisdiction,
+        _topic = topic,
+        _author = author,
+        _editor = editor,
+        _reviewer = reviewer,
+        _endorser = endorser,
+        _relatedArtifact = relatedArtifact,
+        _group = group,
+        super._();
+
+  factory _$_ConceptMap2.fromJson(Map<String, dynamic> json) =>
+      _$$_ConceptMap2FromJson(json);
+
+  @override
+  @JsonKey()
+  final R5ResourceType resourceType;
+  @override
+  final Id? id;
+  @override
+  final Meta? meta;
+  @override
+  final FhirUri? implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
+  final Code? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+  @override
+  final Narrative? text;
+  final List<Resource>? _contained;
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirUri? url;
+  @override
+  @JsonKey(name: '_url')
+  final Element? urlElement;
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? version;
+  @override
+  @JsonKey(name: '_version')
+  final Element? versionElement;
+  @override
+  final String? name;
+  @override
+  @JsonKey(name: '_name')
+  final Element? nameElement;
+  @override
+  final String? title;
+  @override
+  @JsonKey(name: '_title')
+  final Element? titleElement;
+  @override
+  final Code? status;
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+  @override
+  final Boolean? experimental;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element? experimentalElement;
+  @override
+  final FhirDateTime? date;
+  @override
+  @JsonKey(name: '_date')
+  final Element? dateElement;
+  @override
+  final String? publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element? publisherElement;
+  final List<ContactDetail>? _contact;
+  @override
+  List<ContactDetail>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Markdown? description;
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+  final List<UsageContext>? _useContext;
+  @override
+  List<UsageContext>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _jurisdiction;
+  @override
+  List<CodeableConcept>? get jurisdiction {
+    final value = _jurisdiction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Markdown? purpose;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element? purposeElement;
+  @override
+  final Markdown? copyright;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element? copyrightElement;
+  @override
+  final Date? approvalDate;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element? approvalDateElement;
+  @override
+  final Date? lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element? lastReviewDateElement;
+  @override
+  final Period? effectivePeriod;
+  final List<CodeableConcept>? _topic;
+  @override
+  List<CodeableConcept>? get topic {
+    final value = _topic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactDetail>? _author;
+  @override
+  List<ContactDetail>? get author {
+    final value = _author;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactDetail>? _editor;
+  @override
+  List<ContactDetail>? get editor {
+    final value = _editor;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactDetail>? _reviewer;
+  @override
+  List<ContactDetail>? get reviewer {
+    final value = _reviewer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactDetail>? _endorser;
+  @override
+  List<ContactDetail>? get endorser {
+    final value = _endorser;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<RelatedArtifact>? _relatedArtifact;
+  @override
+  List<RelatedArtifact>? get relatedArtifact {
+    final value = _relatedArtifact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirUri? sourceUri;
+  @override
+  @JsonKey(name: '_sourceUri')
+  final Element? sourceUriElement;
+  @override
+  final Canonical? sourceCanonical;
+  @override
+  @JsonKey(name: '_sourceCanonical')
+  final Element? sourceCanonicalElement;
+  @override
+  final FhirUri? targetUri;
+  @override
+  @JsonKey(name: '_targetUri')
+  final Element? targetUriElement;
+  @override
+  final Canonical? targetCanonical;
+  @override
+  @JsonKey(name: '_targetCanonical')
+  final Element? targetCanonicalElement;
+  final List<ConceptMap2Group>? _group;
+  @override
+  List<ConceptMap2Group>? get group {
+    final value = _group;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'ConceptMap2(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, sourceUri: $sourceUri, sourceUriElement: $sourceUriElement, sourceCanonical: $sourceCanonical, sourceCanonicalElement: $sourceCanonicalElement, targetUri: $targetUri, targetUriElement: $targetUriElement, targetCanonical: $targetCanonical, targetCanonicalElement: $targetCanonicalElement, group: $group)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ConceptMap2 &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.urlElement, urlElement) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other.version, version) &&
+            const DeepCollectionEquality()
+                .equals(other.versionElement, versionElement) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.nameElement, nameElement) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.titleElement, titleElement) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality()
+                .equals(other.experimental, experimental) &&
+            const DeepCollectionEquality()
+                .equals(other.experimentalElement, experimentalElement) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.dateElement, dateElement) &&
+            const DeepCollectionEquality().equals(other.publisher, publisher) &&
+            const DeepCollectionEquality()
+                .equals(other.publisherElement, publisherElement) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality()
+                .equals(other._useContext, _useContext) &&
+            const DeepCollectionEquality()
+                .equals(other._jurisdiction, _jurisdiction) &&
+            const DeepCollectionEquality().equals(other.purpose, purpose) &&
+            const DeepCollectionEquality()
+                .equals(other.purposeElement, purposeElement) &&
+            const DeepCollectionEquality().equals(other.copyright, copyright) &&
+            const DeepCollectionEquality()
+                .equals(other.copyrightElement, copyrightElement) &&
+            const DeepCollectionEquality()
+                .equals(other.approvalDate, approvalDate) &&
+            const DeepCollectionEquality()
+                .equals(other.approvalDateElement, approvalDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.lastReviewDate, lastReviewDate) &&
+            const DeepCollectionEquality()
+                .equals(other.lastReviewDateElement, lastReviewDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.effectivePeriod, effectivePeriod) &&
+            const DeepCollectionEquality().equals(other._topic, _topic) &&
+            const DeepCollectionEquality().equals(other._author, _author) &&
+            const DeepCollectionEquality().equals(other._editor, _editor) &&
+            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
+            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality()
+                .equals(other._relatedArtifact, _relatedArtifact) &&
+            const DeepCollectionEquality().equals(other.sourceUri, sourceUri) &&
+            const DeepCollectionEquality()
+                .equals(other.sourceUriElement, sourceUriElement) &&
+            const DeepCollectionEquality()
+                .equals(other.sourceCanonical, sourceCanonical) &&
+            const DeepCollectionEquality()
+                .equals(other.sourceCanonicalElement, sourceCanonicalElement) &&
+            const DeepCollectionEquality().equals(other.targetUri, targetUri) &&
+            const DeepCollectionEquality()
+                .equals(other.targetUriElement, targetUriElement) &&
+            const DeepCollectionEquality()
+                .equals(other.targetCanonical, targetCanonical) &&
+            const DeepCollectionEquality()
+                .equals(other.targetCanonicalElement, targetCanonicalElement) &&
+            const DeepCollectionEquality().equals(other._group, _group));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(url),
+        const DeepCollectionEquality().hash(urlElement),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(version),
+        const DeepCollectionEquality().hash(versionElement),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(nameElement),
+        const DeepCollectionEquality().hash(title),
+        const DeepCollectionEquality().hash(titleElement),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(experimental),
+        const DeepCollectionEquality().hash(experimentalElement),
+        const DeepCollectionEquality().hash(date),
+        const DeepCollectionEquality().hash(dateElement),
+        const DeepCollectionEquality().hash(publisher),
+        const DeepCollectionEquality().hash(publisherElement),
+        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(descriptionElement),
+        const DeepCollectionEquality().hash(_useContext),
+        const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(purpose),
+        const DeepCollectionEquality().hash(purposeElement),
+        const DeepCollectionEquality().hash(copyright),
+        const DeepCollectionEquality().hash(copyrightElement),
+        const DeepCollectionEquality().hash(approvalDate),
+        const DeepCollectionEquality().hash(approvalDateElement),
+        const DeepCollectionEquality().hash(lastReviewDate),
+        const DeepCollectionEquality().hash(lastReviewDateElement),
+        const DeepCollectionEquality().hash(effectivePeriod),
+        const DeepCollectionEquality().hash(_topic),
+        const DeepCollectionEquality().hash(_author),
+        const DeepCollectionEquality().hash(_editor),
+        const DeepCollectionEquality().hash(_reviewer),
+        const DeepCollectionEquality().hash(_endorser),
+        const DeepCollectionEquality().hash(_relatedArtifact),
+        const DeepCollectionEquality().hash(sourceUri),
+        const DeepCollectionEquality().hash(sourceUriElement),
+        const DeepCollectionEquality().hash(sourceCanonical),
+        const DeepCollectionEquality().hash(sourceCanonicalElement),
+        const DeepCollectionEquality().hash(targetUri),
+        const DeepCollectionEquality().hash(targetUriElement),
+        const DeepCollectionEquality().hash(targetCanonical),
+        const DeepCollectionEquality().hash(targetCanonicalElement),
+        const DeepCollectionEquality().hash(_group)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ConceptMap2CopyWith<_$_ConceptMap2> get copyWith =>
+      __$$_ConceptMap2CopyWithImpl<_$_ConceptMap2>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConceptMap2ToJson(this);
+  }
+}
+
+abstract class _ConceptMap2 extends ConceptMap2 {
+  factory _ConceptMap2(
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
+      @JsonKey(name: '_url') final Element? urlElement,
+      final List<Identifier>? identifier,
+      final String? version,
+      @JsonKey(name: '_version') final Element? versionElement,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? title,
+      @JsonKey(name: '_title') final Element? titleElement,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final Boolean? experimental,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date') final Element? dateElement,
+      final String? publisher,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
+      final List<ContactDetail>? contact,
+      final Markdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final Markdown? purpose,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
+      final Markdown? copyright,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
+      final Date? approvalDate,
+      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
+      final Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
+      final Period? effectivePeriod,
+      final List<CodeableConcept>? topic,
+      final List<ContactDetail>? author,
+      final List<ContactDetail>? editor,
+      final List<ContactDetail>? reviewer,
+      final List<ContactDetail>? endorser,
+      final List<RelatedArtifact>? relatedArtifact,
+      final FhirUri? sourceUri,
+      @JsonKey(name: '_sourceUri') final Element? sourceUriElement,
+      final Canonical? sourceCanonical,
+      @JsonKey(name: '_sourceCanonical') final Element? sourceCanonicalElement,
+      final FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') final Element? targetUriElement,
+      final Canonical? targetCanonical,
+      @JsonKey(name: '_targetCanonical') final Element? targetCanonicalElement,
+      final List<ConceptMap2Group>? group}) = _$_ConceptMap2;
+  _ConceptMap2._() : super._();
+
+  factory _ConceptMap2.fromJson(Map<String, dynamic> json) =
+      _$_ConceptMap2.fromJson;
+
+  @override
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @override
+  Id? get id => throw _privateConstructorUsedError;
+  @override
+  Meta? get meta => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @override
+  Code? get language => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  @override
+  Narrative? get text => throw _privateConstructorUsedError;
+  @override
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirUri? get url => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  String? get version => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_version')
+  Element? get versionElement => throw _privateConstructorUsedError;
+  @override
+  String? get name => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_name')
+  Element? get nameElement => throw _privateConstructorUsedError;
+  @override
+  String? get title => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  @override
+  Code? get status => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  @override
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  @override
+  String? get publisher => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_publisher')
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  @override
+  Markdown? get description => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  @override
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  @override
+  Markdown? get purpose => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  @override
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  @override
+  Date? get approvalDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  @override
+  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  @override
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @override
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirUri? get sourceUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_sourceUri')
+  Element? get sourceUriElement => throw _privateConstructorUsedError;
+  @override
+  Canonical? get sourceCanonical => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_sourceCanonical')
+  Element? get sourceCanonicalElement => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get targetUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_targetUri')
+  Element? get targetUriElement => throw _privateConstructorUsedError;
+  @override
+  Canonical? get targetCanonical => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_targetCanonical')
+  Element? get targetCanonicalElement => throw _privateConstructorUsedError;
+  @override
+  List<ConceptMap2Group>? get group => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ConceptMap2CopyWith<_$_ConceptMap2> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ConceptMap2Group _$ConceptMap2GroupFromJson(Map<String, dynamic> json) {
+  return _ConceptMap2Group.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ConceptMap2Group {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Canonical? get source => throw _privateConstructorUsedError;
+  Canonical? get target => throw _privateConstructorUsedError;
+  List<ConceptMap2Element> get element => throw _privateConstructorUsedError;
+  ConceptMap2Unmapped? get unmapped => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConceptMap2GroupCopyWith<ConceptMap2Group> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConceptMap2GroupCopyWith<$Res> {
+  factory $ConceptMap2GroupCopyWith(
+          ConceptMap2Group value, $Res Function(ConceptMap2Group) then) =
+      _$ConceptMap2GroupCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Canonical? source,
+      Canonical? target,
+      List<ConceptMap2Element> element,
+      ConceptMap2Unmapped? unmapped});
+
+  $ConceptMap2UnmappedCopyWith<$Res>? get unmapped;
+}
+
+/// @nodoc
+class _$ConceptMap2GroupCopyWithImpl<$Res>
+    implements $ConceptMap2GroupCopyWith<$Res> {
+  _$ConceptMap2GroupCopyWithImpl(this._value, this._then);
+
+  final ConceptMap2Group _value;
+  // ignore: unused_field
+  final $Res Function(ConceptMap2Group) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? source = freezed,
+    Object? target = freezed,
+    Object? element = freezed,
+    Object? unmapped = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      element: element == freezed
+          ? _value.element
+          : element // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2Element>,
+      unmapped: unmapped == freezed
+          ? _value.unmapped
+          : unmapped // ignore: cast_nullable_to_non_nullable
+              as ConceptMap2Unmapped?,
+    ));
+  }
+
+  @override
+  $ConceptMap2UnmappedCopyWith<$Res>? get unmapped {
+    if (_value.unmapped == null) {
+      return null;
+    }
+
+    return $ConceptMap2UnmappedCopyWith<$Res>(_value.unmapped!, (value) {
+      return _then(_value.copyWith(unmapped: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ConceptMap2GroupCopyWith<$Res>
+    implements $ConceptMap2GroupCopyWith<$Res> {
+  factory _$$_ConceptMap2GroupCopyWith(
+          _$_ConceptMap2Group value, $Res Function(_$_ConceptMap2Group) then) =
+      __$$_ConceptMap2GroupCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Canonical? source,
+      Canonical? target,
+      List<ConceptMap2Element> element,
+      ConceptMap2Unmapped? unmapped});
+
+  @override
+  $ConceptMap2UnmappedCopyWith<$Res>? get unmapped;
+}
+
+/// @nodoc
+class __$$_ConceptMap2GroupCopyWithImpl<$Res>
+    extends _$ConceptMap2GroupCopyWithImpl<$Res>
+    implements _$$_ConceptMap2GroupCopyWith<$Res> {
+  __$$_ConceptMap2GroupCopyWithImpl(
+      _$_ConceptMap2Group _value, $Res Function(_$_ConceptMap2Group) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMap2Group));
+
+  @override
+  _$_ConceptMap2Group get _value => super._value as _$_ConceptMap2Group;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? source = freezed,
+    Object? target = freezed,
+    Object? element = freezed,
+    Object? unmapped = freezed,
+  }) {
+    return _then(_$_ConceptMap2Group(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      element: element == freezed
+          ? _value._element
+          : element // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2Element>,
+      unmapped: unmapped == freezed
+          ? _value.unmapped
+          : unmapped // ignore: cast_nullable_to_non_nullable
+              as ConceptMap2Unmapped?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ConceptMap2Group extends _ConceptMap2Group {
+  _$_ConceptMap2Group(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.source,
+      this.target,
+      required final List<ConceptMap2Element> element,
+      this.unmapped})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _element = element,
+        super._();
+
+  factory _$_ConceptMap2Group.fromJson(Map<String, dynamic> json) =>
+      _$$_ConceptMap2GroupFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Canonical? source;
+  @override
+  final Canonical? target;
+  final List<ConceptMap2Element> _element;
+  @override
+  List<ConceptMap2Element> get element {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_element);
+  }
+
+  @override
+  final ConceptMap2Unmapped? unmapped;
+
+  @override
+  String toString() {
+    return 'ConceptMap2Group(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, source: $source, target: $target, element: $element, unmapped: $unmapped)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ConceptMap2Group &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.source, source) &&
+            const DeepCollectionEquality().equals(other.target, target) &&
+            const DeepCollectionEquality().equals(other._element, _element) &&
+            const DeepCollectionEquality().equals(other.unmapped, unmapped));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(source),
+      const DeepCollectionEquality().hash(target),
+      const DeepCollectionEquality().hash(_element),
+      const DeepCollectionEquality().hash(unmapped));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ConceptMap2GroupCopyWith<_$_ConceptMap2Group> get copyWith =>
+      __$$_ConceptMap2GroupCopyWithImpl<_$_ConceptMap2Group>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConceptMap2GroupToJson(this);
+  }
+}
+
+abstract class _ConceptMap2Group extends ConceptMap2Group {
+  factory _ConceptMap2Group(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Canonical? source,
+      final Canonical? target,
+      required final List<ConceptMap2Element> element,
+      final ConceptMap2Unmapped? unmapped}) = _$_ConceptMap2Group;
+  _ConceptMap2Group._() : super._();
+
+  factory _ConceptMap2Group.fromJson(Map<String, dynamic> json) =
+      _$_ConceptMap2Group.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Canonical? get source => throw _privateConstructorUsedError;
+  @override
+  Canonical? get target => throw _privateConstructorUsedError;
+  @override
+  List<ConceptMap2Element> get element => throw _privateConstructorUsedError;
+  @override
+  ConceptMap2Unmapped? get unmapped => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ConceptMap2GroupCopyWith<_$_ConceptMap2Group> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ConceptMap2Element _$ConceptMap2ElementFromJson(Map<String, dynamic> json) {
+  return _ConceptMap2Element.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ConceptMap2Element {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(name: '_code')
+  Element? get codeElement => throw _privateConstructorUsedError;
+  String? get display => throw _privateConstructorUsedError;
+  @JsonKey(name: '_display')
+  Element? get displayElement => throw _privateConstructorUsedError;
+  Canonical? get valueSet => throw _privateConstructorUsedError;
+  Boolean? get noMap => throw _privateConstructorUsedError;
+  @JsonKey(name: '_noMap')
+  Element? get noMapElement => throw _privateConstructorUsedError;
+  List<ConceptMap2Target>? get target => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConceptMap2ElementCopyWith<ConceptMap2Element> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConceptMap2ElementCopyWith<$Res> {
+  factory $ConceptMap2ElementCopyWith(
+          ConceptMap2Element value, $Res Function(ConceptMap2Element) then) =
+      _$ConceptMap2ElementCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? code,
+      @JsonKey(name: '_code') Element? codeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      Canonical? valueSet,
+      Boolean? noMap,
+      @JsonKey(name: '_noMap') Element? noMapElement,
+      List<ConceptMap2Target>? target});
+
+  $ElementCopyWith<$Res>? get codeElement;
+  $ElementCopyWith<$Res>? get displayElement;
+  $ElementCopyWith<$Res>? get noMapElement;
+}
+
+/// @nodoc
+class _$ConceptMap2ElementCopyWithImpl<$Res>
+    implements $ConceptMap2ElementCopyWith<$Res> {
+  _$ConceptMap2ElementCopyWithImpl(this._value, this._then);
+
+  final ConceptMap2Element _value;
+  // ignore: unused_field
+  final $Res Function(ConceptMap2Element) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? valueSet = freezed,
+    Object? noMap = freezed,
+    Object? noMapElement = freezed,
+    Object? target = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueSet: valueSet == freezed
+          ? _value.valueSet
+          : valueSet // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      noMap: noMap == freezed
+          ? _value.noMap
+          : noMap // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      noMapElement: noMapElement == freezed
+          ? _value.noMapElement
+          : noMapElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2Target>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.codeElement!, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.displayElement!, (value) {
+      return _then(_value.copyWith(displayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get noMapElement {
+    if (_value.noMapElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.noMapElement!, (value) {
+      return _then(_value.copyWith(noMapElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ConceptMap2ElementCopyWith<$Res>
+    implements $ConceptMap2ElementCopyWith<$Res> {
+  factory _$$_ConceptMap2ElementCopyWith(_$_ConceptMap2Element value,
+          $Res Function(_$_ConceptMap2Element) then) =
+      __$$_ConceptMap2ElementCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? code,
+      @JsonKey(name: '_code') Element? codeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      Canonical? valueSet,
+      Boolean? noMap,
+      @JsonKey(name: '_noMap') Element? noMapElement,
+      List<ConceptMap2Target>? target});
+
+  @override
+  $ElementCopyWith<$Res>? get codeElement;
+  @override
+  $ElementCopyWith<$Res>? get displayElement;
+  @override
+  $ElementCopyWith<$Res>? get noMapElement;
+}
+
+/// @nodoc
+class __$$_ConceptMap2ElementCopyWithImpl<$Res>
+    extends _$ConceptMap2ElementCopyWithImpl<$Res>
+    implements _$$_ConceptMap2ElementCopyWith<$Res> {
+  __$$_ConceptMap2ElementCopyWithImpl(
+      _$_ConceptMap2Element _value, $Res Function(_$_ConceptMap2Element) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMap2Element));
+
+  @override
+  _$_ConceptMap2Element get _value => super._value as _$_ConceptMap2Element;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? valueSet = freezed,
+    Object? noMap = freezed,
+    Object? noMapElement = freezed,
+    Object? target = freezed,
+  }) {
+    return _then(_$_ConceptMap2Element(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueSet: valueSet == freezed
+          ? _value.valueSet
+          : valueSet // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      noMap: noMap == freezed
+          ? _value.noMap
+          : noMap // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      noMapElement: noMapElement == freezed
+          ? _value.noMapElement
+          : noMapElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      target: target == freezed
+          ? _value._target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2Target>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ConceptMap2Element extends _ConceptMap2Element {
+  _$_ConceptMap2Element(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.code,
+      @JsonKey(name: '_code') this.codeElement,
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.valueSet,
+      this.noMap,
+      @JsonKey(name: '_noMap') this.noMapElement,
+      final List<ConceptMap2Target>? target})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _target = target,
+        super._();
+
+  factory _$_ConceptMap2Element.fromJson(Map<String, dynamic> json) =>
+      _$$_ConceptMap2ElementFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? code;
+  @override
+  @JsonKey(name: '_code')
+  final Element? codeElement;
+  @override
+  final String? display;
+  @override
+  @JsonKey(name: '_display')
+  final Element? displayElement;
+  @override
+  final Canonical? valueSet;
+  @override
+  final Boolean? noMap;
+  @override
+  @JsonKey(name: '_noMap')
+  final Element? noMapElement;
+  final List<ConceptMap2Target>? _target;
+  @override
+  List<ConceptMap2Target>? get target {
+    final value = _target;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'ConceptMap2Element(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, valueSet: $valueSet, noMap: $noMap, noMapElement: $noMapElement, target: $target)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ConceptMap2Element &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality()
+                .equals(other.codeElement, codeElement) &&
+            const DeepCollectionEquality().equals(other.display, display) &&
+            const DeepCollectionEquality()
+                .equals(other.displayElement, displayElement) &&
+            const DeepCollectionEquality().equals(other.valueSet, valueSet) &&
+            const DeepCollectionEquality().equals(other.noMap, noMap) &&
+            const DeepCollectionEquality()
+                .equals(other.noMapElement, noMapElement) &&
+            const DeepCollectionEquality().equals(other._target, _target));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(codeElement),
+      const DeepCollectionEquality().hash(display),
+      const DeepCollectionEquality().hash(displayElement),
+      const DeepCollectionEquality().hash(valueSet),
+      const DeepCollectionEquality().hash(noMap),
+      const DeepCollectionEquality().hash(noMapElement),
+      const DeepCollectionEquality().hash(_target));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ConceptMap2ElementCopyWith<_$_ConceptMap2Element> get copyWith =>
+      __$$_ConceptMap2ElementCopyWithImpl<_$_ConceptMap2Element>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConceptMap2ElementToJson(this);
+  }
+}
+
+abstract class _ConceptMap2Element extends ConceptMap2Element {
+  factory _ConceptMap2Element(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Code? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      final String? display,
+      @JsonKey(name: '_display') final Element? displayElement,
+      final Canonical? valueSet,
+      final Boolean? noMap,
+      @JsonKey(name: '_noMap') final Element? noMapElement,
+      final List<ConceptMap2Target>? target}) = _$_ConceptMap2Element;
+  _ConceptMap2Element._() : super._();
+
+  factory _ConceptMap2Element.fromJson(Map<String, dynamic> json) =
+      _$_ConceptMap2Element.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Code? get code => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_code')
+  Element? get codeElement => throw _privateConstructorUsedError;
+  @override
+  String? get display => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_display')
+  Element? get displayElement => throw _privateConstructorUsedError;
+  @override
+  Canonical? get valueSet => throw _privateConstructorUsedError;
+  @override
+  Boolean? get noMap => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_noMap')
+  Element? get noMapElement => throw _privateConstructorUsedError;
+  @override
+  List<ConceptMap2Target>? get target => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ConceptMap2ElementCopyWith<_$_ConceptMap2Element> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ConceptMap2Target _$ConceptMap2TargetFromJson(Map<String, dynamic> json) {
+  return _ConceptMap2Target.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ConceptMap2Target {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(name: '_code')
+  Element? get codeElement => throw _privateConstructorUsedError;
+  String? get display => throw _privateConstructorUsedError;
+  @JsonKey(name: '_display')
+  Element? get displayElement => throw _privateConstructorUsedError;
+  Canonical? get valueSet => throw _privateConstructorUsedError;
+  Code? get relationship => throw _privateConstructorUsedError;
+  @JsonKey(name: '_relationship')
+  Element? get relationshipElement => throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
+  @JsonKey(name: '_comment')
+  Element? get commentElement => throw _privateConstructorUsedError;
+  List<ConceptMap2DependsOn>? get dependsOn =>
+      throw _privateConstructorUsedError;
+  List<ConceptMap2DependsOn>? get product => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConceptMap2TargetCopyWith<ConceptMap2Target> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConceptMap2TargetCopyWith<$Res> {
+  factory $ConceptMap2TargetCopyWith(
+          ConceptMap2Target value, $Res Function(ConceptMap2Target) then) =
+      _$ConceptMap2TargetCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? code,
+      @JsonKey(name: '_code') Element? codeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      Canonical? valueSet,
+      Code? relationship,
+      @JsonKey(name: '_relationship') Element? relationshipElement,
+      String? comment,
+      @JsonKey(name: '_comment') Element? commentElement,
+      List<ConceptMap2DependsOn>? dependsOn,
+      List<ConceptMap2DependsOn>? product});
+
+  $ElementCopyWith<$Res>? get codeElement;
+  $ElementCopyWith<$Res>? get displayElement;
+  $ElementCopyWith<$Res>? get relationshipElement;
+  $ElementCopyWith<$Res>? get commentElement;
+}
+
+/// @nodoc
+class _$ConceptMap2TargetCopyWithImpl<$Res>
+    implements $ConceptMap2TargetCopyWith<$Res> {
+  _$ConceptMap2TargetCopyWithImpl(this._value, this._then);
+
+  final ConceptMap2Target _value;
+  // ignore: unused_field
+  final $Res Function(ConceptMap2Target) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? valueSet = freezed,
+    Object? relationship = freezed,
+    Object? relationshipElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
+    Object? dependsOn = freezed,
+    Object? product = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueSet: valueSet == freezed
+          ? _value.valueSet
+          : valueSet // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      relationship: relationship == freezed
+          ? _value.relationship
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      relationshipElement: relationshipElement == freezed
+          ? _value.relationshipElement
+          : relationshipElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      dependsOn: dependsOn == freezed
+          ? _value.dependsOn
+          : dependsOn // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2DependsOn>?,
+      product: product == freezed
+          ? _value.product
+          : product // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2DependsOn>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.codeElement!, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.displayElement!, (value) {
+      return _then(_value.copyWith(displayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get relationshipElement {
+    if (_value.relationshipElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.relationshipElement!, (value) {
+      return _then(_value.copyWith(relationshipElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get commentElement {
+    if (_value.commentElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
+      return _then(_value.copyWith(commentElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ConceptMap2TargetCopyWith<$Res>
+    implements $ConceptMap2TargetCopyWith<$Res> {
+  factory _$$_ConceptMap2TargetCopyWith(_$_ConceptMap2Target value,
+          $Res Function(_$_ConceptMap2Target) then) =
+      __$$_ConceptMap2TargetCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? code,
+      @JsonKey(name: '_code') Element? codeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      Canonical? valueSet,
+      Code? relationship,
+      @JsonKey(name: '_relationship') Element? relationshipElement,
+      String? comment,
+      @JsonKey(name: '_comment') Element? commentElement,
+      List<ConceptMap2DependsOn>? dependsOn,
+      List<ConceptMap2DependsOn>? product});
+
+  @override
+  $ElementCopyWith<$Res>? get codeElement;
+  @override
+  $ElementCopyWith<$Res>? get displayElement;
+  @override
+  $ElementCopyWith<$Res>? get relationshipElement;
+  @override
+  $ElementCopyWith<$Res>? get commentElement;
+}
+
+/// @nodoc
+class __$$_ConceptMap2TargetCopyWithImpl<$Res>
+    extends _$ConceptMap2TargetCopyWithImpl<$Res>
+    implements _$$_ConceptMap2TargetCopyWith<$Res> {
+  __$$_ConceptMap2TargetCopyWithImpl(
+      _$_ConceptMap2Target _value, $Res Function(_$_ConceptMap2Target) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMap2Target));
+
+  @override
+  _$_ConceptMap2Target get _value => super._value as _$_ConceptMap2Target;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? valueSet = freezed,
+    Object? relationship = freezed,
+    Object? relationshipElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
+    Object? dependsOn = freezed,
+    Object? product = freezed,
+  }) {
+    return _then(_$_ConceptMap2Target(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueSet: valueSet == freezed
+          ? _value.valueSet
+          : valueSet // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      relationship: relationship == freezed
+          ? _value.relationship
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      relationshipElement: relationshipElement == freezed
+          ? _value.relationshipElement
+          : relationshipElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      dependsOn: dependsOn == freezed
+          ? _value._dependsOn
+          : dependsOn // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2DependsOn>?,
+      product: product == freezed
+          ? _value._product
+          : product // ignore: cast_nullable_to_non_nullable
+              as List<ConceptMap2DependsOn>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ConceptMap2Target extends _ConceptMap2Target {
+  _$_ConceptMap2Target(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.code,
+      @JsonKey(name: '_code') this.codeElement,
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.valueSet,
+      this.relationship,
+      @JsonKey(name: '_relationship') this.relationshipElement,
+      this.comment,
+      @JsonKey(name: '_comment') this.commentElement,
+      final List<ConceptMap2DependsOn>? dependsOn,
+      final List<ConceptMap2DependsOn>? product})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _dependsOn = dependsOn,
+        _product = product,
+        super._();
+
+  factory _$_ConceptMap2Target.fromJson(Map<String, dynamic> json) =>
+      _$$_ConceptMap2TargetFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? code;
+  @override
+  @JsonKey(name: '_code')
+  final Element? codeElement;
+  @override
+  final String? display;
+  @override
+  @JsonKey(name: '_display')
+  final Element? displayElement;
+  @override
+  final Canonical? valueSet;
+  @override
+  final Code? relationship;
+  @override
+  @JsonKey(name: '_relationship')
+  final Element? relationshipElement;
+  @override
+  final String? comment;
+  @override
+  @JsonKey(name: '_comment')
+  final Element? commentElement;
+  final List<ConceptMap2DependsOn>? _dependsOn;
+  @override
+  List<ConceptMap2DependsOn>? get dependsOn {
+    final value = _dependsOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConceptMap2DependsOn>? _product;
+  @override
+  List<ConceptMap2DependsOn>? get product {
+    final value = _product;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'ConceptMap2Target(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, valueSet: $valueSet, relationship: $relationship, relationshipElement: $relationshipElement, comment: $comment, commentElement: $commentElement, dependsOn: $dependsOn, product: $product)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ConceptMap2Target &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality()
+                .equals(other.codeElement, codeElement) &&
+            const DeepCollectionEquality().equals(other.display, display) &&
+            const DeepCollectionEquality()
+                .equals(other.displayElement, displayElement) &&
+            const DeepCollectionEquality().equals(other.valueSet, valueSet) &&
+            const DeepCollectionEquality()
+                .equals(other.relationship, relationship) &&
+            const DeepCollectionEquality()
+                .equals(other.relationshipElement, relationshipElement) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality()
+                .equals(other.commentElement, commentElement) &&
+            const DeepCollectionEquality()
+                .equals(other._dependsOn, _dependsOn) &&
+            const DeepCollectionEquality().equals(other._product, _product));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(codeElement),
+      const DeepCollectionEquality().hash(display),
+      const DeepCollectionEquality().hash(displayElement),
+      const DeepCollectionEquality().hash(valueSet),
+      const DeepCollectionEquality().hash(relationship),
+      const DeepCollectionEquality().hash(relationshipElement),
+      const DeepCollectionEquality().hash(comment),
+      const DeepCollectionEquality().hash(commentElement),
+      const DeepCollectionEquality().hash(_dependsOn),
+      const DeepCollectionEquality().hash(_product));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ConceptMap2TargetCopyWith<_$_ConceptMap2Target> get copyWith =>
+      __$$_ConceptMap2TargetCopyWithImpl<_$_ConceptMap2Target>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConceptMap2TargetToJson(this);
+  }
+}
+
+abstract class _ConceptMap2Target extends ConceptMap2Target {
+  factory _ConceptMap2Target(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Code? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      final String? display,
+      @JsonKey(name: '_display') final Element? displayElement,
+      final Canonical? valueSet,
+      final Code? relationship,
+      @JsonKey(name: '_relationship') final Element? relationshipElement,
+      final String? comment,
+      @JsonKey(name: '_comment') final Element? commentElement,
+      final List<ConceptMap2DependsOn>? dependsOn,
+      final List<ConceptMap2DependsOn>? product}) = _$_ConceptMap2Target;
+  _ConceptMap2Target._() : super._();
+
+  factory _ConceptMap2Target.fromJson(Map<String, dynamic> json) =
+      _$_ConceptMap2Target.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Code? get code => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_code')
+  Element? get codeElement => throw _privateConstructorUsedError;
+  @override
+  String? get display => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_display')
+  Element? get displayElement => throw _privateConstructorUsedError;
+  @override
+  Canonical? get valueSet => throw _privateConstructorUsedError;
+  @override
+  Code? get relationship => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_relationship')
+  Element? get relationshipElement => throw _privateConstructorUsedError;
+  @override
+  String? get comment => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_comment')
+  Element? get commentElement => throw _privateConstructorUsedError;
+  @override
+  List<ConceptMap2DependsOn>? get dependsOn =>
+      throw _privateConstructorUsedError;
+  @override
+  List<ConceptMap2DependsOn>? get product => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ConceptMap2TargetCopyWith<_$_ConceptMap2Target> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ConceptMap2DependsOn _$ConceptMap2DependsOnFromJson(Map<String, dynamic> json) {
+  return _ConceptMap2DependsOn.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ConceptMap2DependsOn {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get property => throw _privateConstructorUsedError;
+  @JsonKey(name: '_property')
+  Element? get propertyElement => throw _privateConstructorUsedError;
+  Code? get valueCode => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueCode')
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
+  String? get valueString => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueInteger')
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueDateTime')
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueDecimal')
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUri')
+  Element? get valueUriElement => throw _privateConstructorUsedError;
+  Id? get valueId => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueId')
+  Element? get valueIdElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConceptMap2DependsOnCopyWith<ConceptMap2DependsOn> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConceptMap2DependsOnCopyWith<$Res> {
+  factory $ConceptMap2DependsOnCopyWith(ConceptMap2DependsOn value,
+          $Res Function(ConceptMap2DependsOn) then) =
+      _$ConceptMap2DependsOnCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? property,
+      @JsonKey(name: '_property') Element? propertyElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Coding? valueCoding,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement});
+
+  $ElementCopyWith<$Res>? get propertyElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  $CodingCopyWith<$Res>? get valueCoding;
+  $ElementCopyWith<$Res>? get valueStringElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
+  $ElementCopyWith<$Res>? get valueIdElement;
+}
+
+/// @nodoc
+class _$ConceptMap2DependsOnCopyWithImpl<$Res>
+    implements $ConceptMap2DependsOnCopyWith<$Res> {
+  _$ConceptMap2DependsOnCopyWithImpl(this._value, this._then);
+
+  final ConceptMap2DependsOn _value;
+  // ignore: unused_field
+  final $Res Function(ConceptMap2DependsOn) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? property = freezed,
+    Object? propertyElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueCoding = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      property: property == freezed
+          ? _value.property
+          : property // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      propertyElement: propertyElement == freezed
+          ? _value.propertyElement
+          : propertyElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueId: valueId == freezed
+          ? _value.valueId
+          : valueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get propertyElement {
+    if (_value.propertyElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.propertyElement!, (value) {
+      return _then(_value.copyWith(propertyElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueCodeElement {
+    if (_value.valueCodeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueCodeElement!, (value) {
+      return _then(_value.copyWith(valueCodeElement: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res>? get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.valueCoding!, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement!, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUriElement!, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueIdElement {
+    if (_value.valueIdElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueIdElement!, (value) {
+      return _then(_value.copyWith(valueIdElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ConceptMap2DependsOnCopyWith<$Res>
+    implements $ConceptMap2DependsOnCopyWith<$Res> {
+  factory _$$_ConceptMap2DependsOnCopyWith(_$_ConceptMap2DependsOn value,
+          $Res Function(_$_ConceptMap2DependsOn) then) =
+      __$$_ConceptMap2DependsOnCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? property,
+      @JsonKey(name: '_property') Element? propertyElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Coding? valueCoding,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement});
+
+  @override
+  $ElementCopyWith<$Res>? get propertyElement;
+  @override
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  @override
+  $CodingCopyWith<$Res>? get valueCoding;
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement;
+  @override
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUriElement;
+  @override
+  $ElementCopyWith<$Res>? get valueIdElement;
+}
+
+/// @nodoc
+class __$$_ConceptMap2DependsOnCopyWithImpl<$Res>
+    extends _$ConceptMap2DependsOnCopyWithImpl<$Res>
+    implements _$$_ConceptMap2DependsOnCopyWith<$Res> {
+  __$$_ConceptMap2DependsOnCopyWithImpl(_$_ConceptMap2DependsOn _value,
+      $Res Function(_$_ConceptMap2DependsOn) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMap2DependsOn));
+
+  @override
+  _$_ConceptMap2DependsOn get _value => super._value as _$_ConceptMap2DependsOn;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? property = freezed,
+    Object? propertyElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueCoding = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+  }) {
+    return _then(_$_ConceptMap2DependsOn(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      property: property == freezed
+          ? _value.property
+          : property // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      propertyElement: propertyElement == freezed
+          ? _value.propertyElement
+          : propertyElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueId: valueId == freezed
+          ? _value.valueId
+          : valueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ConceptMap2DependsOn extends _ConceptMap2DependsOn {
+  _$_ConceptMap2DependsOn(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.property,
+      @JsonKey(name: '_property') this.propertyElement,
+      this.valueCode,
+      @JsonKey(name: '_valueCode') this.valueCodeElement,
+      this.valueCoding,
+      this.valueString,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueInteger,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueDateTime,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueDecimal,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueUri,
+      @JsonKey(name: '_valueUri') this.valueUriElement,
+      this.valueId,
+      @JsonKey(name: '_valueId') this.valueIdElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_ConceptMap2DependsOn.fromJson(Map<String, dynamic> json) =>
+      _$$_ConceptMap2DependsOnFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirUri? property;
+  @override
+  @JsonKey(name: '_property')
+  final Element? propertyElement;
+  @override
+  final Code? valueCode;
+  @override
+  @JsonKey(name: '_valueCode')
+  final Element? valueCodeElement;
+  @override
+  final Coding? valueCoding;
+  @override
+  final String? valueString;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element? valueStringElement;
+  @override
+  final Integer? valueInteger;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element? valueIntegerElement;
+  @override
+  final Boolean? valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element? valueBooleanElement;
+  @override
+  final FhirDateTime? valueDateTime;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element? valueDateTimeElement;
+  @override
+  final Decimal? valueDecimal;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element? valueDecimalElement;
+  @override
+  final FhirUri? valueUri;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element? valueUriElement;
+  @override
+  final Id? valueId;
+  @override
+  @JsonKey(name: '_valueId')
+  final Element? valueIdElement;
+
+  @override
+  String toString() {
+    return 'ConceptMap2DependsOn(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, property: $property, propertyElement: $propertyElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueCoding: $valueCoding, valueString: $valueString, valueStringElement: $valueStringElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueId: $valueId, valueIdElement: $valueIdElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ConceptMap2DependsOn &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.property, property) &&
+            const DeepCollectionEquality()
+                .equals(other.propertyElement, propertyElement) &&
+            const DeepCollectionEquality().equals(other.valueCode, valueCode) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeElement, valueCodeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCoding, valueCoding) &&
+            const DeepCollectionEquality()
+                .equals(other.valueString, valueString) &&
+            const DeepCollectionEquality()
+                .equals(other.valueStringElement, valueStringElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInteger, valueInteger) &&
+            const DeepCollectionEquality()
+                .equals(other.valueIntegerElement, valueIntegerElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBoolean, valueBoolean) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBooleanElement, valueBooleanElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDateTime, valueDateTime) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDateTimeElement, valueDateTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDecimal, valueDecimal) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDecimalElement, valueDecimalElement) &&
+            const DeepCollectionEquality().equals(other.valueUri, valueUri) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUriElement, valueUriElement) &&
+            const DeepCollectionEquality().equals(other.valueId, valueId) &&
+            const DeepCollectionEquality()
+                .equals(other.valueIdElement, valueIdElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(property),
+        const DeepCollectionEquality().hash(propertyElement),
+        const DeepCollectionEquality().hash(valueCode),
+        const DeepCollectionEquality().hash(valueCodeElement),
+        const DeepCollectionEquality().hash(valueCoding),
+        const DeepCollectionEquality().hash(valueString),
+        const DeepCollectionEquality().hash(valueStringElement),
+        const DeepCollectionEquality().hash(valueInteger),
+        const DeepCollectionEquality().hash(valueIntegerElement),
+        const DeepCollectionEquality().hash(valueBoolean),
+        const DeepCollectionEquality().hash(valueBooleanElement),
+        const DeepCollectionEquality().hash(valueDateTime),
+        const DeepCollectionEquality().hash(valueDateTimeElement),
+        const DeepCollectionEquality().hash(valueDecimal),
+        const DeepCollectionEquality().hash(valueDecimalElement),
+        const DeepCollectionEquality().hash(valueUri),
+        const DeepCollectionEquality().hash(valueUriElement),
+        const DeepCollectionEquality().hash(valueId),
+        const DeepCollectionEquality().hash(valueIdElement)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ConceptMap2DependsOnCopyWith<_$_ConceptMap2DependsOn> get copyWith =>
+      __$$_ConceptMap2DependsOnCopyWithImpl<_$_ConceptMap2DependsOn>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConceptMap2DependsOnToJson(this);
+  }
+}
+
+abstract class _ConceptMap2DependsOn extends ConceptMap2DependsOn {
+  factory _ConceptMap2DependsOn(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final FhirUri? property,
+          @JsonKey(name: '_property') final Element? propertyElement,
+          final Code? valueCode,
+          @JsonKey(name: '_valueCode') final Element? valueCodeElement,
+          final Coding? valueCoding,
+          final String? valueString,
+          @JsonKey(name: '_valueString') final Element? valueStringElement,
+          final Integer? valueInteger,
+          @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
+          final Boolean? valueBoolean,
+          @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+          final FhirDateTime? valueDateTime,
+          @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
+          final Decimal? valueDecimal,
+          @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
+          final FhirUri? valueUri,
+          @JsonKey(name: '_valueUri') final Element? valueUriElement,
+          final Id? valueId,
+          @JsonKey(name: '_valueId') final Element? valueIdElement}) =
+      _$_ConceptMap2DependsOn;
+  _ConceptMap2DependsOn._() : super._();
+
+  factory _ConceptMap2DependsOn.fromJson(Map<String, dynamic> json) =
+      _$_ConceptMap2DependsOn.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirUri? get property => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_property')
+  Element? get propertyElement => throw _privateConstructorUsedError;
+  @override
+  Code? get valueCode => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueCode')
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
+  @override
+  Coding? get valueCoding => throw _privateConstructorUsedError;
+  @override
+  String? get valueString => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+  @override
+  Integer? get valueInteger => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueInteger')
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  @override
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  @override
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element? get valueUriElement => throw _privateConstructorUsedError;
+  @override
+  Id? get valueId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueId')
+  Element? get valueIdElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ConceptMap2DependsOnCopyWith<_$_ConceptMap2DependsOn> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ConceptMap2Unmapped _$ConceptMap2UnmappedFromJson(Map<String, dynamic> json) {
+  return _ConceptMap2Unmapped.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ConceptMap2Unmapped {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(name: '_mode')
+  Element? get modeElement => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(name: '_code')
+  Element? get codeElement => throw _privateConstructorUsedError;
+  String? get display => throw _privateConstructorUsedError;
+  @JsonKey(name: '_display')
+  Element? get displayElement => throw _privateConstructorUsedError;
+  Canonical? get valueSet => throw _privateConstructorUsedError;
+  Canonical? get url => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConceptMap2UnmappedCopyWith<ConceptMap2Unmapped> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConceptMap2UnmappedCopyWith<$Res> {
+  factory $ConceptMap2UnmappedCopyWith(
+          ConceptMap2Unmapped value, $Res Function(ConceptMap2Unmapped) then) =
+      _$ConceptMap2UnmappedCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
+      Code? code,
+      @JsonKey(name: '_code') Element? codeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      Canonical? valueSet,
+      Canonical? url});
+
+  $ElementCopyWith<$Res>? get modeElement;
+  $ElementCopyWith<$Res>? get codeElement;
+  $ElementCopyWith<$Res>? get displayElement;
+}
+
+/// @nodoc
+class _$ConceptMap2UnmappedCopyWithImpl<$Res>
+    implements $ConceptMap2UnmappedCopyWith<$Res> {
+  _$ConceptMap2UnmappedCopyWithImpl(this._value, this._then);
+
+  final ConceptMap2Unmapped _value;
+  // ignore: unused_field
+  final $Res Function(ConceptMap2Unmapped) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? mode = freezed,
+    Object? modeElement = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? valueSet = freezed,
+    Object? url = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueSet: valueSet == freezed
+          ? _value.valueSet
+          : valueSet // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get modeElement {
+    if (_value.modeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.modeElement!, (value) {
+      return _then(_value.copyWith(modeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.codeElement!, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.displayElement!, (value) {
+      return _then(_value.copyWith(displayElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ConceptMap2UnmappedCopyWith<$Res>
+    implements $ConceptMap2UnmappedCopyWith<$Res> {
+  factory _$$_ConceptMap2UnmappedCopyWith(_$_ConceptMap2Unmapped value,
+          $Res Function(_$_ConceptMap2Unmapped) then) =
+      __$$_ConceptMap2UnmappedCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
+      Code? code,
+      @JsonKey(name: '_code') Element? codeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      Canonical? valueSet,
+      Canonical? url});
+
+  @override
+  $ElementCopyWith<$Res>? get modeElement;
+  @override
+  $ElementCopyWith<$Res>? get codeElement;
+  @override
+  $ElementCopyWith<$Res>? get displayElement;
+}
+
+/// @nodoc
+class __$$_ConceptMap2UnmappedCopyWithImpl<$Res>
+    extends _$ConceptMap2UnmappedCopyWithImpl<$Res>
+    implements _$$_ConceptMap2UnmappedCopyWith<$Res> {
+  __$$_ConceptMap2UnmappedCopyWithImpl(_$_ConceptMap2Unmapped _value,
+      $Res Function(_$_ConceptMap2Unmapped) _then)
+      : super(_value, (v) => _then(v as _$_ConceptMap2Unmapped));
+
+  @override
+  _$_ConceptMap2Unmapped get _value => super._value as _$_ConceptMap2Unmapped;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? mode = freezed,
+    Object? modeElement = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? valueSet = freezed,
+    Object? url = freezed,
+  }) {
+    return _then(_$_ConceptMap2Unmapped(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as String?,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueSet: valueSet == freezed
+          ? _value.valueSet
+          : valueSet // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ConceptMap2Unmapped extends _ConceptMap2Unmapped {
+  _$_ConceptMap2Unmapped(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.mode,
+      @JsonKey(name: '_mode') this.modeElement,
+      this.code,
+      @JsonKey(name: '_code') this.codeElement,
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.valueSet,
+      this.url})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_ConceptMap2Unmapped.fromJson(Map<String, dynamic> json) =>
+      _$$_ConceptMap2UnmappedFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? mode;
+  @override
+  @JsonKey(name: '_mode')
+  final Element? modeElement;
+  @override
+  final Code? code;
+  @override
+  @JsonKey(name: '_code')
+  final Element? codeElement;
+  @override
+  final String? display;
+  @override
+  @JsonKey(name: '_display')
+  final Element? displayElement;
+  @override
+  final Canonical? valueSet;
+  @override
+  final Canonical? url;
+
+  @override
+  String toString() {
+    return 'ConceptMap2Unmapped(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, mode: $mode, modeElement: $modeElement, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, valueSet: $valueSet, url: $url)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ConceptMap2Unmapped &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.mode, mode) &&
+            const DeepCollectionEquality()
+                .equals(other.modeElement, modeElement) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality()
+                .equals(other.codeElement, codeElement) &&
+            const DeepCollectionEquality().equals(other.display, display) &&
+            const DeepCollectionEquality()
+                .equals(other.displayElement, displayElement) &&
+            const DeepCollectionEquality().equals(other.valueSet, valueSet) &&
+            const DeepCollectionEquality().equals(other.url, url));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(mode),
+      const DeepCollectionEquality().hash(modeElement),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(codeElement),
+      const DeepCollectionEquality().hash(display),
+      const DeepCollectionEquality().hash(displayElement),
+      const DeepCollectionEquality().hash(valueSet),
+      const DeepCollectionEquality().hash(url));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ConceptMap2UnmappedCopyWith<_$_ConceptMap2Unmapped> get copyWith =>
+      __$$_ConceptMap2UnmappedCopyWithImpl<_$_ConceptMap2Unmapped>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConceptMap2UnmappedToJson(this);
+  }
+}
+
+abstract class _ConceptMap2Unmapped extends ConceptMap2Unmapped {
+  factory _ConceptMap2Unmapped(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Code? mode,
+      @JsonKey(name: '_mode') final Element? modeElement,
+      final Code? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      final String? display,
+      @JsonKey(name: '_display') final Element? displayElement,
+      final Canonical? valueSet,
+      final Canonical? url}) = _$_ConceptMap2Unmapped;
+  _ConceptMap2Unmapped._() : super._();
+
+  factory _ConceptMap2Unmapped.fromJson(Map<String, dynamic> json) =
+      _$_ConceptMap2Unmapped.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Code? get mode => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_mode')
+  Element? get modeElement => throw _privateConstructorUsedError;
+  @override
+  Code? get code => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_code')
+  Element? get codeElement => throw _privateConstructorUsedError;
+  @override
+  String? get display => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_display')
+  Element? get displayElement => throw _privateConstructorUsedError;
+  @override
+  Canonical? get valueSet => throw _privateConstructorUsedError;
+  @override
+  Canonical? get url => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ConceptMap2UnmappedCopyWith<_$_ConceptMap2Unmapped> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
   return _NamingSystem.fromJson(json);
 }
@@ -7760,7 +12089,7 @@ mixin _$NamingSystem {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -7840,7 +12169,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -8064,7 +12393,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -8467,7 +12796,7 @@ abstract class _$$_NamingSystemCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -8716,7 +13045,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -9011,7 +13340,7 @@ class _$_NamingSystem extends _NamingSystem {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -9352,7 +13681,7 @@ abstract class _NamingSystem extends NamingSystem {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -9448,7 +13777,7 @@ abstract class _NamingSystem extends NamingSystem {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -10118,7 +14447,7 @@ mixin _$TerminologyCapabilities {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -10196,7 +14525,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -10411,7 +14740,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -10818,7 +15147,7 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -11060,7 +15389,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -11319,7 +15648,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -11596,7 +15925,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
           @JsonKey(name: '_status') final Element? statusElement,
           final Boolean? experimental,
           @JsonKey(name: '_experimental') final Element? experimentalElement,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date') final Element? dateElement,
           final String? publisher,
           @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -11687,7 +16016,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -15372,7 +19701,7 @@ mixin _$ValueSet {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -15432,7 +19761,7 @@ abstract class $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -15625,7 +19954,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -15938,7 +20267,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -16152,7 +20481,7 @@ class __$$_ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -16370,7 +20699,7 @@ class _$_ValueSet extends _ValueSet {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -16596,7 +20925,7 @@ abstract class _ValueSet extends ValueSet {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -16677,7 +21006,7 @@ abstract class _ValueSet extends ValueSet {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -18763,7 +23092,7 @@ mixin _$ValueSetExpansion {
   FhirUri? get identifier => throw _privateConstructorUsedError;
   @JsonKey(name: '_identifier')
   Element? get identifierElement => throw _privateConstructorUsedError;
-  DateTime? get timestamp => throw _privateConstructorUsedError;
+  FhirDateTime? get timestamp => throw _privateConstructorUsedError;
   @JsonKey(name: '_timestamp')
   Element? get timestampElement => throw _privateConstructorUsedError;
   Integer? get total => throw _privateConstructorUsedError;
@@ -18793,7 +23122,7 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirUri? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
-      DateTime? timestamp,
+      FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
       Integer? total,
       @JsonKey(name: '_total') Element? totalElement,
@@ -18859,7 +23188,7 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
       timestamp: timestamp == freezed
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timestampElement: timestampElement == freezed
           ? _value.timestampElement
           : timestampElement // ignore: cast_nullable_to_non_nullable
@@ -18953,7 +23282,7 @@ abstract class _$$_ValueSetExpansionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirUri? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
-      DateTime? timestamp,
+      FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
       Integer? total,
       @JsonKey(name: '_total') Element? totalElement,
@@ -19025,7 +23354,7 @@ class __$$_ValueSetExpansionCopyWithImpl<$Res>
       timestamp: timestamp == freezed
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timestampElement: timestampElement == freezed
           ? _value.timestampElement
           : timestampElement // ignore: cast_nullable_to_non_nullable
@@ -19117,7 +23446,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
   @JsonKey(name: '_identifier')
   final Element? identifierElement;
   @override
-  final DateTime? timestamp;
+  final FhirDateTime? timestamp;
   @override
   @JsonKey(name: '_timestamp')
   final Element? timestampElement;
@@ -19230,7 +23559,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
       final List<FhirExtension>? modifierExtension,
       final FhirUri? identifier,
       @JsonKey(name: '_identifier') final Element? identifierElement,
-      final DateTime? timestamp,
+      final FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') final Element? timestampElement,
       final Integer? total,
       @JsonKey(name: '_total') final Element? totalElement,
@@ -19258,7 +23587,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
   @JsonKey(name: '_identifier')
   Element? get identifierElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get timestamp => throw _privateConstructorUsedError;
+  FhirDateTime? get timestamp => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_timestamp')
   Element? get timestampElement => throw _privateConstructorUsedError;
@@ -19316,7 +23645,7 @@ mixin _$ValueSetParameter {
   Code? get valueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
@@ -19349,7 +23678,7 @@ abstract class $ValueSetParameterCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       Code? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -19465,7 +23794,7 @@ class _$ValueSetParameterCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -19587,7 +23916,7 @@ abstract class _$$_ValueSetParameterCopyWith<$Res>
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       Code? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
 
   @override
@@ -19713,7 +24042,7 @@ class __$$_ValueSetParameterCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -19809,7 +24138,7 @@ class _$_ValueSetParameter extends _ValueSetParameter {
   @JsonKey(name: '_valueCode')
   final Element? valueCodeElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -19924,7 +24253,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
       final Code? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement}) = _$_ValueSetParameter;
   _ValueSetParameter._() : super._();
@@ -19976,7 +24305,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -20997,7 +25326,7 @@ mixin _$ValueSetProperty1 {
   Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Decimal? get valueDecimal => throw _privateConstructorUsedError;
@@ -21030,7 +25359,7 @@ abstract class $ValueSetProperty1CopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
@@ -21135,7 +25464,7 @@ class _$ValueSetProperty1CopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -21262,7 +25591,7 @@ abstract class _$$_ValueSetProperty1CopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement});
@@ -21377,7 +25706,7 @@ class __$$_ValueSetProperty1CopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -21472,7 +25801,7 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -21578,7 +25907,7 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
           final Boolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
-          final DateTime? valueDateTime,
+          final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
           final Decimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement}) =
@@ -21624,7 +25953,7 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;

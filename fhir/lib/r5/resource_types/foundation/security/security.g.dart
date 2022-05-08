@@ -56,7 +56,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['occurredPeriod'] as Map<String, dynamic>),
       occurredDateTime: json['occurredDateTime'] == null
           ? null
-          : DateTime.parse(json['occurredDateTime'] as String),
+          : FhirDateTime.fromJson(json['occurredDateTime']),
       occurredDateTimeElement: json['_occurredDateTime'] == null
           ? null
           : Element.fromJson(json['_occurredDateTime'] as Map<String, dynamic>),
@@ -120,8 +120,7 @@ Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
   writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('_severity', instance.severityElement?.toJson());
   writeNotNull('occurredPeriod', instance.occurredPeriod?.toJson());
-  writeNotNull(
-      'occurredDateTime', instance.occurredDateTime?.toIso8601String());
+  writeNotNull('occurredDateTime', instance.occurredDateTime?.toJson());
   writeNotNull('_occurredDateTime', instance.occurredDateTimeElement?.toJson());
   writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
@@ -140,10 +139,13 @@ Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -154,20 +156,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -178,6 +180,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -202,11 +205,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -214,6 +219,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -223,12 +229,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -242,6 +242,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -255,6 +256,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -351,7 +353,7 @@ _$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(json['location'] as Map<String, dynamic>),
       policy: (json['policy'] as List<dynamic>?)
-          ?.map((e) => Uri.parse(e as String))
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       policyElement: (json['_policy'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -397,7 +399,7 @@ Map<String, dynamic> _$$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
   writeNotNull('requestor', instance.requestor?.toJson());
   writeNotNull('_requestor', instance.requestorElement?.toJson());
   writeNotNull('location', instance.location?.toJson());
-  writeNotNull('policy', instance.policy?.map((e) => e.toString()).toList());
+  writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
   writeNotNull(
       '_policy', instance.policyElement?.map((e) => e.toJson()).toList());
   writeNotNull('networkReference', instance.networkReference?.toJson());
@@ -552,7 +554,7 @@ _$_AuditEventDetail _$$_AuditEventDetailFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : DateTime.parse(json['valueDateTime'] as String),
+          : FhirDateTime.fromJson(json['valueDateTime']),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -595,7 +597,7 @@ Map<String, dynamic> _$$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
   writeNotNull('valueRatio', instance.valueRatio?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
   writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
@@ -650,7 +652,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
       dateTime: json['dateTime'] == null
           ? null
-          : DateTime.parse(json['dateTime'] as String),
+          : FhirDateTime.fromJson(json['dateTime']),
       dateTimeElement: json['_dateTime'] == null
           ? null
           : Element.fromJson(json['_dateTime'] as Map<String, dynamic>),
@@ -721,7 +723,7 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('dateTime', instance.dateTime?.toIso8601String());
+  writeNotNull('dateTime', instance.dateTime?.toJson());
   writeNotNull('_dateTime', instance.dateTimeElement?.toJson());
   writeNotNull('grantor', instance.grantor?.map((e) => e.toJson()).toList());
   writeNotNull('grantee', instance.grantee?.map((e) => e.toJson()).toList());
@@ -809,7 +811,7 @@ _$_ConsentVerification _$$_ConsentVerificationFromJson(
           ? null
           : Reference.fromJson(json['verifiedWith'] as Map<String, dynamic>),
       verificationDate: (json['verificationDate'] as List<dynamic>?)
-          ?.map((e) => DateTime.parse(e as String))
+          ?.map((e) => FhirDateTime.fromJson(e))
           .toList(),
       verificationDateElement: (json['_verificationDate'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -837,7 +839,7 @@ Map<String, dynamic> _$$_ConsentVerificationToJson(
   writeNotNull('verifiedBy', instance.verifiedBy?.toJson());
   writeNotNull('verifiedWith', instance.verifiedWith?.toJson());
   writeNotNull('verificationDate',
-      instance.verificationDate?.map((e) => e.toIso8601String()).toList());
+      instance.verificationDate?.map((e) => e.toJson()).toList());
   writeNotNull('_verificationDate',
       instance.verificationDateElement?.map((e) => e.toJson()).toList());
   return val;
@@ -1038,7 +1040,7 @@ _$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(json['asserter'] as Map<String, dynamic>),
       assertionDate: (json['assertionDate'] as List<dynamic>?)
-          ?.map((e) => DateTime.parse(e as String))
+          ?.map((e) => FhirDateTime.fromJson(e))
           .toList(),
       assertionDateElement: (json['_assertionDate'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1093,8 +1095,8 @@ Map<String, dynamic> _$$_PermissionToJson(_$_Permission instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('intent', instance.intent?.toJson());
   writeNotNull('asserter', instance.asserter?.toJson());
-  writeNotNull('assertionDate',
-      instance.assertionDate?.map((e) => e.toIso8601String()).toList());
+  writeNotNull(
+      'assertionDate', instance.assertionDate?.map((e) => e.toJson()).toList());
   writeNotNull('_assertionDate',
       instance.assertionDateElement?.map((e) => e.toJson()).toList());
   writeNotNull('validity', instance.validity?.toJson());
@@ -1231,7 +1233,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['occurredPeriod'] as Map<String, dynamic>),
       occurredDateTime: json['occurredDateTime'] == null
           ? null
-          : DateTime.parse(json['occurredDateTime'] as String),
+          : FhirDateTime.fromJson(json['occurredDateTime']),
       occurredDateTimeElement: json['_occurredDateTime'] == null
           ? null
           : Element.fromJson(json['_occurredDateTime'] as Map<String, dynamic>),
@@ -1241,7 +1243,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
       policy: (json['policy'] as List<dynamic>?)
-          ?.map((e) => Uri.parse(e as String))
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       policyElement: (json['_policy'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1301,12 +1303,11 @@ Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['target'] = instance.target.map((e) => e.toJson()).toList();
   writeNotNull('occurredPeriod', instance.occurredPeriod?.toJson());
-  writeNotNull(
-      'occurredDateTime', instance.occurredDateTime?.toIso8601String());
+  writeNotNull('occurredDateTime', instance.occurredDateTime?.toJson());
   writeNotNull('_occurredDateTime', instance.occurredDateTimeElement?.toJson());
   writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
-  writeNotNull('policy', instance.policy?.map((e) => e.toString()).toList());
+  writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
   writeNotNull(
       '_policy', instance.policyElement?.map((e) => e.toJson()).toList());
   writeNotNull('location', instance.location?.toJson());

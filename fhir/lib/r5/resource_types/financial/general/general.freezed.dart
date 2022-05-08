@@ -1586,7 +1586,7 @@ mixin _$ChargeItem {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<Uri>? get definitionUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get definitionUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_definitionUri')
   List<Element>? get definitionUriElement => throw _privateConstructorUsedError;
   List<Canonical>? get definitionCanonical =>
@@ -1598,7 +1598,7 @@ mixin _$ChargeItem {
   CodeableConcept get code => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get context => throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
@@ -1618,7 +1618,7 @@ mixin _$ChargeItem {
   @JsonKey(name: '_overrideReason')
   Element? get overrideReasonElement => throw _privateConstructorUsedError;
   Reference? get enterer => throw _privateConstructorUsedError;
-  DateTime? get enteredDate => throw _privateConstructorUsedError;
+  FhirDateTime? get enteredDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_enteredDate')
   Element? get enteredDateElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get reason => throw _privateConstructorUsedError;
@@ -1653,7 +1653,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Uri>? definitionUri,
+      List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri') List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
       Code? status,
@@ -1662,7 +1662,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference? context,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
@@ -1678,7 +1678,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       String? overrideReason,
       @JsonKey(name: '_overrideReason') Element? overrideReasonElement,
       Reference? enterer,
-      DateTime? enteredDate,
+      FhirDateTime? enteredDate,
       @JsonKey(name: '_enteredDate') Element? enteredDateElement,
       List<CodeableConcept>? reason,
       List<Reference>? service,
@@ -1817,7 +1817,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
       definitionUri: definitionUri == freezed
           ? _value.definitionUri
           : definitionUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       definitionUriElement: definitionUriElement == freezed
           ? _value.definitionUriElement
           : definitionUriElement // ignore: cast_nullable_to_non_nullable
@@ -1853,7 +1853,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -1917,7 +1917,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
       enteredDate: enteredDate == freezed
           ? _value.enteredDate
           : enteredDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       enteredDateElement: enteredDateElement == freezed
           ? _value.enteredDateElement
           : enteredDateElement // ignore: cast_nullable_to_non_nullable
@@ -2182,7 +2182,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List<Uri>? definitionUri,
+      List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri') List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
       Code? status,
@@ -2191,7 +2191,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       CodeableConcept code,
       Reference subject,
       Reference? context,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
@@ -2207,7 +2207,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       String? overrideReason,
       @JsonKey(name: '_overrideReason') Element? overrideReasonElement,
       Reference? enterer,
-      DateTime? enteredDate,
+      FhirDateTime? enteredDate,
       @JsonKey(name: '_enteredDate') Element? enteredDateElement,
       List<CodeableConcept>? reason,
       List<Reference>? service,
@@ -2368,7 +2368,7 @@ class __$$_ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
       definitionUri: definitionUri == freezed
           ? _value._definitionUri
           : definitionUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       definitionUriElement: definitionUriElement == freezed
           ? _value._definitionUriElement
           : definitionUriElement // ignore: cast_nullable_to_non_nullable
@@ -2404,7 +2404,7 @@ class __$$_ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2468,7 +2468,7 @@ class __$$_ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
       enteredDate: enteredDate == freezed
           ? _value.enteredDate
           : enteredDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       enteredDateElement: enteredDateElement == freezed
           ? _value.enteredDateElement
           : enteredDateElement // ignore: cast_nullable_to_non_nullable
@@ -2520,7 +2520,7 @@ class _$_ChargeItem extends _ChargeItem {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Uri>? definitionUri,
+      final List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
           final List<Element>? definitionUriElement,
       final List<Canonical>? definitionCanonical,
@@ -2636,9 +2636,9 @@ class _$_ChargeItem extends _ChargeItem {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _definitionUri;
+  final List<FhirUri>? _definitionUri;
   @override
-  List<Uri>? get definitionUri {
+  List<FhirUri>? get definitionUri {
     final value = _definitionUri;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -2685,7 +2685,7 @@ class _$_ChargeItem extends _ChargeItem {
   @override
   final Reference? context;
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
@@ -2734,7 +2734,7 @@ class _$_ChargeItem extends _ChargeItem {
   @override
   final Reference? enterer;
   @override
-  final DateTime? enteredDate;
+  final FhirDateTime? enteredDate;
   @override
   @JsonKey(name: '_enteredDate')
   final Element? enteredDateElement;
@@ -2956,7 +2956,7 @@ abstract class _ChargeItem extends ChargeItem {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List<Uri>? definitionUri,
+      final List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
           final List<Element>? definitionUriElement,
       final List<Canonical>? definitionCanonical,
@@ -2967,7 +2967,7 @@ abstract class _ChargeItem extends ChargeItem {
       required final CodeableConcept code,
       required final Reference subject,
       final Reference? context,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
@@ -2986,7 +2986,7 @@ abstract class _ChargeItem extends ChargeItem {
       @JsonKey(name: '_overrideReason')
           final Element? overrideReasonElement,
       final Reference? enterer,
-      final DateTime? enteredDate,
+      final FhirDateTime? enteredDate,
       @JsonKey(name: '_enteredDate')
           final Element? enteredDateElement,
       final List<CodeableConcept>? reason,
@@ -3029,7 +3029,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List<Uri>? get definitionUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get definitionUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_definitionUri')
   List<Element>? get definitionUriElement => throw _privateConstructorUsedError;
@@ -3050,7 +3050,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   Reference? get context => throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -3086,7 +3086,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   Reference? get enterer => throw _privateConstructorUsedError;
   @override
-  DateTime? get enteredDate => throw _privateConstructorUsedError;
+  FhirDateTime? get enteredDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_enteredDate')
   Element? get enteredDateElement => throw _privateConstructorUsedError;
@@ -3422,7 +3422,7 @@ mixin _$ChargeItemDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -3454,7 +3454,7 @@ mixin _$ChargeItemDefinition {
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
-  List<Uri>? get derivedFromUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get derivedFromUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_derivedFromUri')
   List<Element>? get derivedFromUriElement =>
       throw _privateConstructorUsedError;
@@ -3503,7 +3503,7 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -3527,7 +3527,7 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      List<Uri>? derivedFromUri,
+      List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
       List<Canonical>? partOf,
       List<Canonical>? replaces,
@@ -3725,7 +3725,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -3821,7 +3821,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
       derivedFromUri: derivedFromUri == freezed
           ? _value.derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
           : derivedFromUriElement // ignore: cast_nullable_to_non_nullable
@@ -4095,7 +4095,7 @@ abstract class _$$_ChargeItemDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -4119,7 +4119,7 @@ abstract class _$$_ChargeItemDefinitionCopyWith<$Res>
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      List<Uri>? derivedFromUri,
+      List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
       List<Canonical>? partOf,
       List<Canonical>? replaces,
@@ -4338,7 +4338,7 @@ class __$$_ChargeItemDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -4434,7 +4434,7 @@ class __$$_ChargeItemDefinitionCopyWithImpl<$Res>
       derivedFromUri: derivedFromUri == freezed
           ? _value._derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value._derivedFromUriElement
           : derivedFromUriElement // ignore: cast_nullable_to_non_nullable
@@ -4535,7 +4535,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final List<Uri>? derivedFromUri,
+      final List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           final List<Element>? derivedFromUriElement,
       final List<Canonical>? partOf,
@@ -4656,7 +4656,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -4773,9 +4773,9 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _derivedFromUri;
+  final List<FhirUri>? _derivedFromUri;
   @override
-  List<Uri>? get derivedFromUri {
+  List<FhirUri>? get derivedFromUri {
     final value = _derivedFromUri;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -5049,7 +5049,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           final Boolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
           final String? publisher,
@@ -5080,7 +5080,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           final List<ContactDetail>? reviewer,
           final List<ContactDetail>? endorser,
           final List<RelatedArtifact>? relatedArtifact,
-          final List<Uri>? derivedFromUri,
+          final List<FhirUri>? derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
               final List<Element>? derivedFromUriElement,
           final List<Canonical>? partOf,
@@ -5154,7 +5154,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -5210,7 +5210,7 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
   @override
-  List<Uri>? get derivedFromUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get derivedFromUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_derivedFromUri')
   List<Element>? get derivedFromUriElement =>
@@ -6362,7 +6362,7 @@ mixin _$Contract {
   @JsonKey(name: '_instantiatesUri')
   Element? get instantiatesUriElement => throw _privateConstructorUsedError;
   CodeableConcept? get contentDerivative => throw _privateConstructorUsedError;
-  DateTime? get issued => throw _privateConstructorUsedError;
+  FhirDateTime? get issued => throw _privateConstructorUsedError;
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
   Period? get applies => throw _privateConstructorUsedError;
@@ -6437,7 +6437,7 @@ abstract class $ContractCopyWith<$Res> {
       FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
       CodeableConcept? contentDerivative,
-      DateTime? issued,
+      FhirDateTime? issued,
       @JsonKey(name: '_issued') Element? issuedElement,
       Period? applies,
       CodeableConcept? expirationType,
@@ -6659,7 +6659,7 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
       issued: issued == freezed
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -7095,7 +7095,7 @@ abstract class _$$_ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
       CodeableConcept? contentDerivative,
-      DateTime? issued,
+      FhirDateTime? issued,
       @JsonKey(name: '_issued') Element? issuedElement,
       Period? applies,
       CodeableConcept? expirationType,
@@ -7344,7 +7344,7 @@ class __$$_ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
       issued: issued == freezed
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -7638,7 +7638,7 @@ class _$_Contract extends _Contract {
   @override
   final CodeableConcept? contentDerivative;
   @override
-  final DateTime? issued;
+  final FhirDateTime? issued;
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
@@ -7999,7 +7999,7 @@ abstract class _Contract extends Contract {
       final FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') final Element? instantiatesUriElement,
       final CodeableConcept? contentDerivative,
-      final DateTime? issued,
+      final FhirDateTime? issued,
       @JsonKey(name: '_issued') final Element? issuedElement,
       final Period? applies,
       final CodeableConcept? expirationType,
@@ -8090,7 +8090,7 @@ abstract class _Contract extends Contract {
   @override
   CodeableConcept? get contentDerivative => throw _privateConstructorUsedError;
   @override
-  DateTime? get issued => throw _privateConstructorUsedError;
+  FhirDateTime? get issued => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
@@ -8182,7 +8182,7 @@ mixin _$ContractContentDefinition {
   CodeableConcept get type => throw _privateConstructorUsedError;
   CodeableConcept? get subType => throw _privateConstructorUsedError;
   Reference? get publisher => throw _privateConstructorUsedError;
-  DateTime? get publicationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get publicationDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_publicationDate')
   Element? get publicationDateElement => throw _privateConstructorUsedError;
   Code? get publicationStatus => throw _privateConstructorUsedError;
@@ -8210,7 +8210,7 @@ abstract class $ContractContentDefinitionCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? subType,
       Reference? publisher,
-      DateTime? publicationDate,
+      FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate') Element? publicationDateElement,
       Code? publicationStatus,
       @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
@@ -8277,7 +8277,7 @@ class _$ContractContentDefinitionCopyWithImpl<$Res>
       publicationDate: publicationDate == freezed
           ? _value.publicationDate
           : publicationDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       publicationDateElement: publicationDateElement == freezed
           ? _value.publicationDateElement
           : publicationDateElement // ignore: cast_nullable_to_non_nullable
@@ -8379,7 +8379,7 @@ abstract class _$$_ContractContentDefinitionCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? subType,
       Reference? publisher,
-      DateTime? publicationDate,
+      FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate') Element? publicationDateElement,
       Code? publicationStatus,
       @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
@@ -8456,7 +8456,7 @@ class __$$_ContractContentDefinitionCopyWithImpl<$Res>
       publicationDate: publicationDate == freezed
           ? _value.publicationDate
           : publicationDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       publicationDateElement: publicationDateElement == freezed
           ? _value.publicationDateElement
           : publicationDateElement // ignore: cast_nullable_to_non_nullable
@@ -8532,7 +8532,7 @@ class _$_ContractContentDefinition extends _ContractContentDefinition {
   @override
   final Reference? publisher;
   @override
-  final DateTime? publicationDate;
+  final FhirDateTime? publicationDate;
   @override
   @JsonKey(name: '_publicationDate')
   final Element? publicationDateElement;
@@ -8616,7 +8616,7 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
       required final CodeableConcept type,
       final CodeableConcept? subType,
       final Reference? publisher,
-      final DateTime? publicationDate,
+      final FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate')
           final Element? publicationDateElement,
       final Code? publicationStatus,
@@ -8645,7 +8645,7 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
   @override
   Reference? get publisher => throw _privateConstructorUsedError;
   @override
-  DateTime? get publicationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get publicationDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publicationDate')
   Element? get publicationDateElement => throw _privateConstructorUsedError;
@@ -8677,7 +8677,7 @@ mixin _$ContractTerm {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
-  DateTime? get issued => throw _privateConstructorUsedError;
+  FhirDateTime? get issued => throw _privateConstructorUsedError;
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
   Period? get applies => throw _privateConstructorUsedError;
@@ -8712,7 +8712,7 @@ abstract class $ContractTermCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      DateTime? issued,
+      FhirDateTime? issued,
       @JsonKey(name: '_issued') Element? issuedElement,
       Period? applies,
       CodeableConcept? topicCodeableConcept,
@@ -8787,7 +8787,7 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
       issued: issued == freezed
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -8952,7 +8952,7 @@ abstract class _$$_ContractTermCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      DateTime? issued,
+      FhirDateTime? issued,
       @JsonKey(name: '_issued') Element? issuedElement,
       Period? applies,
       CodeableConcept? topicCodeableConcept,
@@ -9039,7 +9039,7 @@ class __$$_ContractTermCopyWithImpl<$Res>
       issued: issued == freezed
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -9153,7 +9153,7 @@ class _$_ContractTerm extends _ContractTerm {
   @override
   final Identifier? identifier;
   @override
-  final DateTime? issued;
+  final FhirDateTime? issued;
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
@@ -9288,7 +9288,7 @@ abstract class _ContractTerm extends ContractTerm {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
-      final DateTime? issued,
+      final FhirDateTime? issued,
       @JsonKey(name: '_issued') final Element? issuedElement,
       final Period? applies,
       final CodeableConcept? topicCodeableConcept,
@@ -9318,7 +9318,7 @@ abstract class _ContractTerm extends ContractTerm {
   @override
   Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  DateTime? get issued => throw _privateConstructorUsedError;
+  FhirDateTime? get issued => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
@@ -10637,7 +10637,7 @@ mixin _$ContractAnswer {
   Date? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Time? get valueTime => throw _privateConstructorUsedError;
@@ -10677,7 +10677,7 @@ abstract class $ContractAnswerCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -10787,7 +10787,7 @@ class _$ContractAnswerCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10987,7 +10987,7 @@ abstract class _$$_ContractAnswerCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -11111,7 +11111,7 @@ class __$$_ContractAnswerCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11236,7 +11236,7 @@ class _$_ContractAnswer extends _ContractAnswer {
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -11371,7 +11371,7 @@ abstract class _ContractAnswer extends ContractAnswer {
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final Date? valueDate,
       @JsonKey(name: '_valueDate') final Element? valueDateElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final Time? valueTime,
       @JsonKey(name: '_valueTime') final Element? valueTimeElement,
@@ -11417,7 +11417,7 @@ abstract class _ContractAnswer extends ContractAnswer {
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -12609,7 +12609,7 @@ mixin _$ContractValuedItem {
       throw _privateConstructorUsedError;
   Reference? get entityReference => throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
-  DateTime? get effectiveTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_effectiveTime')
   Element? get effectiveTimeElement => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
@@ -12624,7 +12624,7 @@ mixin _$ContractValuedItem {
   String? get payment => throw _privateConstructorUsedError;
   @JsonKey(name: '_payment')
   Element? get paymentElement => throw _privateConstructorUsedError;
-  DateTime? get paymentDate => throw _privateConstructorUsedError;
+  FhirDateTime? get paymentDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_paymentDate')
   Element? get paymentDateElement => throw _privateConstructorUsedError;
   Reference? get responsible => throw _privateConstructorUsedError;
@@ -12657,7 +12657,7 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       CodeableConcept? entityCodeableConcept,
       Reference? entityReference,
       Identifier? identifier,
-      DateTime? effectiveTime,
+      FhirDateTime? effectiveTime,
       @JsonKey(name: '_effectiveTime')
           Element? effectiveTimeElement,
       Quantity? quantity,
@@ -12672,7 +12672,7 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       String? payment,
       @JsonKey(name: '_payment')
           Element? paymentElement,
-      DateTime? paymentDate,
+      FhirDateTime? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? responsible,
@@ -12764,7 +12764,7 @@ class _$ContractValuedItemCopyWithImpl<$Res>
       effectiveTime: effectiveTime == freezed
           ? _value.effectiveTime
           : effectiveTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       effectiveTimeElement: effectiveTimeElement == freezed
           ? _value.effectiveTimeElement
           : effectiveTimeElement // ignore: cast_nullable_to_non_nullable
@@ -12808,7 +12808,7 @@ class _$ContractValuedItemCopyWithImpl<$Res>
       paymentDate: paymentDate == freezed
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       paymentDateElement: paymentDateElement == freezed
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
@@ -13000,7 +13000,7 @@ abstract class _$$_ContractValuedItemCopyWith<$Res>
       CodeableConcept? entityCodeableConcept,
       Reference? entityReference,
       Identifier? identifier,
-      DateTime? effectiveTime,
+      FhirDateTime? effectiveTime,
       @JsonKey(name: '_effectiveTime')
           Element? effectiveTimeElement,
       Quantity? quantity,
@@ -13015,7 +13015,7 @@ abstract class _$$_ContractValuedItemCopyWith<$Res>
       String? payment,
       @JsonKey(name: '_payment')
           Element? paymentElement,
-      DateTime? paymentDate,
+      FhirDateTime? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? responsible,
@@ -13122,7 +13122,7 @@ class __$$_ContractValuedItemCopyWithImpl<$Res>
       effectiveTime: effectiveTime == freezed
           ? _value.effectiveTime
           : effectiveTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       effectiveTimeElement: effectiveTimeElement == freezed
           ? _value.effectiveTimeElement
           : effectiveTimeElement // ignore: cast_nullable_to_non_nullable
@@ -13166,7 +13166,7 @@ class __$$_ContractValuedItemCopyWithImpl<$Res>
       paymentDate: paymentDate == freezed
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       paymentDateElement: paymentDateElement == freezed
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
@@ -13275,7 +13275,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
   @override
   final Identifier? identifier;
   @override
-  final DateTime? effectiveTime;
+  final FhirDateTime? effectiveTime;
   @override
   @JsonKey(name: '_effectiveTime')
   final Element? effectiveTimeElement;
@@ -13301,7 +13301,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
   @JsonKey(name: '_payment')
   final Element? paymentElement;
   @override
-  final DateTime? paymentDate;
+  final FhirDateTime? paymentDate;
   @override
   @JsonKey(name: '_paymentDate')
   final Element? paymentDateElement;
@@ -13453,7 +13453,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
           final CodeableConcept? entityCodeableConcept,
           final Reference? entityReference,
           final Identifier? identifier,
-          final DateTime? effectiveTime,
+          final FhirDateTime? effectiveTime,
           @JsonKey(name: '_effectiveTime')
               final Element? effectiveTimeElement,
           final Quantity? quantity,
@@ -13468,7 +13468,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
           final String? payment,
           @JsonKey(name: '_payment')
               final Element? paymentElement,
-          final DateTime? paymentDate,
+          final FhirDateTime? paymentDate,
           @JsonKey(name: '_paymentDate')
               final Element? paymentDateElement,
           final Reference? responsible,
@@ -13501,7 +13501,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   @override
   Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  DateTime? get effectiveTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_effectiveTime')
   Element? get effectiveTimeElement => throw _privateConstructorUsedError;
@@ -13527,7 +13527,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   @JsonKey(name: '_payment')
   Element? get paymentElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get paymentDate => throw _privateConstructorUsedError;
+  FhirDateTime? get paymentDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_paymentDate')
   Element? get paymentDateElement => throw _privateConstructorUsedError;
@@ -13578,7 +13578,7 @@ mixin _$ContractAction {
   List<String>? get contextLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_contextLinkId')
   List<Element>? get contextLinkIdElement => throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
@@ -13637,7 +13637,7 @@ abstract class $ContractActionCopyWith<$Res> {
       List<String>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
           List<Element>? contextLinkIdElement,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
@@ -13777,7 +13777,7 @@ class _$ContractActionCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -13974,7 +13974,7 @@ abstract class _$$_ContractActionCopyWith<$Res>
       List<String>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
           List<Element>? contextLinkIdElement,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
@@ -14126,7 +14126,7 @@ class __$$_ContractActionCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -14350,7 +14350,7 @@ class _$_ContractAction extends _ContractAction {
   }
 
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
@@ -14610,7 +14610,7 @@ abstract class _ContractAction extends ContractAction {
       final List<String>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
           final List<Element>? contextLinkIdElement,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
@@ -14672,7 +14672,7 @@ abstract class _ContractAction extends ContractAction {
   @JsonKey(name: '_contextLinkId')
   List<Element>? get contextLinkIdElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -16152,7 +16152,7 @@ mixin _$ExplanationOfBenefit {
   Element? get useElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
   Period? get billablePeriod => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get enterer => throw _privateConstructorUsedError;
@@ -16246,7 +16246,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       @JsonKey(name: '_use') Element? useElement,
       Reference patient,
       Period? billablePeriod,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference insurer,
@@ -16479,7 +16479,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -17010,7 +17010,7 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
       @JsonKey(name: '_use') Element? useElement,
       Reference patient,
       Period? billablePeriod,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference insurer,
@@ -17277,7 +17277,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -17606,7 +17606,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @override
   final Period? billablePeriod;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -18002,7 +18002,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           @JsonKey(name: '_use') final Element? useElement,
           required final Reference patient,
           final Period? billablePeriod,
-          final DateTime? created,
+          final FhirDateTime? created,
           @JsonKey(name: '_created') final Element? createdElement,
           final Reference? enterer,
           required final Reference insurer,
@@ -18096,7 +18096,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
   Period? get billablePeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -20412,7 +20412,7 @@ mixin _$ExplanationOfBenefitProcedure {
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   CodeableConcept? get procedureCodeableConcept =>
@@ -20439,7 +20439,7 @@ abstract class $ExplanationOfBenefitProcedureCopyWith<$Res> {
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       List<CodeableConcept>? type,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference,
@@ -20502,7 +20502,7 @@ class _$ExplanationOfBenefitProcedureCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -20583,7 +20583,7 @@ abstract class _$$_ExplanationOfBenefitProcedureCopyWith<$Res>
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       List<CodeableConcept>? type,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference,
@@ -20654,7 +20654,7 @@ class __$$_ExplanationOfBenefitProcedureCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -20736,7 +20736,7 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
   }
 
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -20819,7 +20819,7 @@ abstract class _ExplanationOfBenefitProcedure
       final PositiveInt? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final List<CodeableConcept>? type,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final CodeableConcept? procedureCodeableConcept,
       final Reference? procedureReference,
@@ -20845,7 +20845,7 @@ abstract class _ExplanationOfBenefitProcedure
   @override
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;

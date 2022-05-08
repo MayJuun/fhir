@@ -2168,7 +2168,7 @@ mixin _$CoverageEligibilityRequest {
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement => throw _privateConstructorUsedError;
   Period? get servicedPeriod => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get enterer => throw _privateConstructorUsedError;
@@ -2215,7 +2215,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       Date? servicedDate,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? provider,
@@ -2371,7 +2371,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -2584,7 +2584,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
       Date? servicedDate,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? provider,
@@ -2758,7 +2758,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -2935,7 +2935,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   @override
   final Period? servicedPeriod;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -3103,7 +3103,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           final Date? servicedDate,
           @JsonKey(name: '_servicedDate') final Element? servicedDateElement,
           final Period? servicedPeriod,
-          final DateTime? created,
+          final FhirDateTime? created,
           @JsonKey(name: '_created') final Element? createdElement,
           final Reference? enterer,
           final Reference? provider,
@@ -3168,7 +3168,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   @override
   Period? get servicedPeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -4874,7 +4874,7 @@ mixin _$CoverageEligibilityResponse {
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement => throw _privateConstructorUsedError;
   Period? get servicedPeriod => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get requestor => throw _privateConstructorUsedError;
@@ -4928,7 +4928,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       Date? servicedDate,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? requestor,
       Reference request,
@@ -5091,7 +5091,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -5341,7 +5341,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       Date? servicedDate,
       @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? requestor,
       Reference request,
@@ -5524,7 +5524,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -5722,7 +5722,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @override
   final Period? servicedPeriod;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -5908,7 +5908,7 @@ abstract class _CoverageEligibilityResponse
           final Date? servicedDate,
           @JsonKey(name: '_servicedDate') final Element? servicedDateElement,
           final Period? servicedPeriod,
-          final DateTime? created,
+          final FhirDateTime? created,
           @JsonKey(name: '_created') final Element? createdElement,
           final Reference? requestor,
           required final Reference request,
@@ -5976,7 +5976,7 @@ abstract class _CoverageEligibilityResponse
   @override
   Period? get servicedPeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -8090,7 +8090,7 @@ mixin _$EnrollmentRequest {
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get insurer => throw _privateConstructorUsedError;
@@ -8124,7 +8124,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? insurer,
       Reference? provider,
@@ -8235,7 +8235,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -8392,7 +8392,7 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
       List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? insurer,
       Reference? provider,
@@ -8515,7 +8515,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -8635,7 +8635,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -8744,7 +8744,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final List<Identifier>? identifier,
       final Code? status,
       @JsonKey(name: '_status') final Element? statusElement,
-      final DateTime? created,
+      final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       final Reference? insurer,
       final Reference? provider,
@@ -8789,7 +8789,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -8839,7 +8839,7 @@ mixin _$EnrollmentResponse {
   String? get disposition => throw _privateConstructorUsedError;
   @JsonKey(name: '_disposition')
   Element? get dispositionElement => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get organization => throw _privateConstructorUsedError;
@@ -8876,7 +8876,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
       @JsonKey(name: '_disposition') Element? dispositionElement,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? organization,
       Reference? requestProvider});
@@ -9009,7 +9009,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -9174,7 +9174,7 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
       @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
       @JsonKey(name: '_disposition') Element? dispositionElement,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? organization,
       Reference? requestProvider});
@@ -9320,7 +9320,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -9447,7 +9447,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @JsonKey(name: '_disposition')
   final Element? dispositionElement;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -9568,7 +9568,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       @JsonKey(name: '_outcome') final Element? outcomeElement,
       final String? disposition,
       @JsonKey(name: '_disposition') final Element? dispositionElement,
-      final DateTime? created,
+      final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       final Reference? organization,
       final Reference? requestProvider}) = _$_EnrollmentResponse;
@@ -9623,7 +9623,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @JsonKey(name: '_disposition')
   Element? get dispositionElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;

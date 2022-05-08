@@ -5,6 +5,8 @@ enum R5ResourceType {
   Account,
   @JsonValue('ActivityDefinition')
   ActivityDefinition,
+  @JsonValue('AdministrableProductDefinition')
+  AdministrableProductDefinition,
   @JsonValue('AdverseEvent')
   AdverseEvent,
   @JsonValue('AllergyIntolerance')
@@ -13,6 +15,8 @@ enum R5ResourceType {
   Appointment,
   @JsonValue('AppointmentResponse')
   AppointmentResponse,
+  @JsonValue('ArtifactAssessment')
+  ArtifactAssessment,
   @JsonValue('AuditEvent')
   AuditEvent,
   @JsonValue('Basic')
@@ -33,8 +37,6 @@ enum R5ResourceType {
   CarePlan,
   @JsonValue('CareTeam')
   CareTeam,
-  @JsonValue('CatalogEntry')
-  CatalogEntry,
   @JsonValue('ChargeItem')
   ChargeItem,
   @JsonValue('ChargeItemDefinition')
@@ -47,8 +49,8 @@ enum R5ResourceType {
   ClaimResponse,
   @JsonValue('ClinicalImpression')
   ClinicalImpression,
-  @JsonValue('ClinicalUseIssue')
-  ClinicalUseIssue,
+  @JsonValue('ClinicalUseDefinition')
+  ClinicalUseDefinition,
   @JsonValue('CodeSystem')
   CodeSystem,
   @JsonValue('Communication')
@@ -61,6 +63,8 @@ enum R5ResourceType {
   Composition,
   @JsonValue('ConceptMap')
   ConceptMap,
+  @JsonValue('ConceptMap2')
+  ConceptMap2,
   @JsonValue('Condition')
   Condition,
   @JsonValue('ConditionDefinition')
@@ -81,6 +85,8 @@ enum R5ResourceType {
   Device,
   @JsonValue('DeviceDefinition')
   DeviceDefinition,
+  @JsonValue('DeviceDispense')
+  DeviceDispense,
   @JsonValue('DeviceMetric')
   DeviceMetric,
   @JsonValue('DeviceRequest')
@@ -129,6 +135,8 @@ enum R5ResourceType {
   GuidanceResponse,
   @JsonValue('HealthcareService')
   HealthcareService,
+  @JsonValue('ImagingSelection')
+  ImagingSelection,
   @JsonValue('ImagingStudy')
   ImagingStudy,
   @JsonValue('Immunization')
@@ -139,6 +147,8 @@ enum R5ResourceType {
   ImmunizationRecommendation,
   @JsonValue('ImplementationGuide')
   ImplementationGuide,
+  @JsonValue('Ingredient')
+  Ingredient,
   @JsonValue('InsurancePlan')
   InsurancePlan,
   @JsonValue('InventoryReport')
@@ -153,6 +163,8 @@ enum R5ResourceType {
   List_,
   @JsonValue('Location')
   Location,
+  @JsonValue('ManufacturedItemDefinition')
+  ManufacturedItemDefinition,
   @JsonValue('Measure')
   Measure,
   @JsonValue('MeasureReport')
@@ -171,16 +183,6 @@ enum R5ResourceType {
   MedicationUsage,
   @JsonValue('MedicinalProductDefinition')
   MedicinalProductDefinition,
-  @JsonValue('RegulatedAuthorization')
-  RegulatedAuthorization,
-  @JsonValue('Ingredient')
-  Ingredient,
-  @JsonValue('ManufacturedItemDefinition')
-  ManufacturedItemDefinition,
-  @JsonValue('PackagedProductDefinition')
-  PackagedProductDefinition,
-  @JsonValue('AdministrableProductDefinition')
-  AdministrableProductDefinition,
   @JsonValue('MessageDefinition')
   MessageDefinition,
   @JsonValue('MessageHeader')
@@ -207,6 +209,8 @@ enum R5ResourceType {
   Organization,
   @JsonValue('OrganizationAffiliation')
   OrganizationAffiliation,
+  @JsonValue('PackagedProductDefinition')
+  PackagedProductDefinition,
   @JsonValue('Parameters')
   Parameters,
   @JsonValue('Patient')
@@ -233,6 +237,8 @@ enum R5ResourceType {
   Questionnaire,
   @JsonValue('QuestionnaireResponse')
   QuestionnaireResponse,
+  @JsonValue('RegulatedAuthorization')
+  RegulatedAuthorization,
   @JsonValue('RelatedPerson')
   RelatedPerson,
   @JsonValue('RequestGroup')
@@ -291,7 +297,6 @@ enum R5ResourceType {
   TestReport,
   @JsonValue('TestScript')
   TestScript,
-
   @JsonValue('Transport')
   Transport,
   @JsonValue('ValueSet')

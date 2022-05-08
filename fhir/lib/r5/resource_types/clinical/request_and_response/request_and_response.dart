@@ -111,7 +111,7 @@ class Communication with Resource, _$Communication {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
-    List<Uri>? instantiatesUri,
+    List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     List<Reference>? partOf,
@@ -127,9 +127,9 @@ class Communication with Resource, _$Communication {
     CodeableConcept? topic,
     List<Reference>? about,
     Reference? encounter,
-    DateTime? sent,
+    FhirDateTime? sent,
     @JsonKey(name: '_sent') Element? sentElement,
-    DateTime? received,
+    FhirDateTime? received,
     @JsonKey(name: '_received') Element? receivedElement,
     List<Reference>? recipient,
     Reference? sender,
@@ -349,10 +349,10 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     List<Reference>? about,
     Reference? encounter,
     List<CommunicationRequestPayload>? payload,
-    DateTime? occurrenceDateTime,
+    FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Period? occurrencePeriod,
-    DateTime? authoredOn,
+    FhirDateTime? authoredOn,
     @JsonKey(name: '_authoredOn') Element? authoredOnElement,
     Reference? requester,
     List<Reference>? recipient,
@@ -567,7 +567,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
-    List<Uri>? instantiatesUri,
+    List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     List<Reference>? priorRequest,
@@ -586,11 +586,11 @@ class DeviceRequest with Resource, _$DeviceRequest {
     List<DeviceRequestParameter>? parameter,
     required Reference subject,
     Reference? encounter,
-    DateTime? occurrenceDateTime,
+    FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Period? occurrencePeriod,
     Timing? occurrenceTiming,
-    DateTime? authoredOn,
+    FhirDateTime? authoredOn,
     @JsonKey(name: '_authoredOn') Element? authoredOnElement,
     Reference? requester,
     CodeableConcept? performerType,
@@ -704,6 +704,208 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
 }
 
 @freezed
+class DeviceDispense with Resource, _$DeviceDispense {
+  DeviceDispense._();
+
+  /// [DeviceDispense]: A record of dispensation of a device.
+
+  ///
+  /// [resourceType]: This is a DeviceDispense resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Business identifier for this dispensation.;
+  ///
+  /// [basedOn]: The order or request that this dispense is fulfilling.;
+  ///
+  /// [partOf]: The bigger event that this dispense is a part of.;
+  ///
+  /// [status]: A code specifying the state of the set of dispense events.;
+  ///
+  /// [statusElement] (_status): Extensions for status;
+  ///
+  /// [statusReason]: Indicates the reason why a dispense was or was not performed.;
+  ///
+  /// [category]: Indicates the type of device dispense.;
+  ///
+  /// [device]: Identifies the device being dispensed. This is either a link to a resource representing the details of the device or a simple attribute carrying a code that identifies the device from a known list of devices.;
+  ///
+  /// [subject]: A link to a resource representing the person to whom the device is intended.;
+  ///
+  /// [encounter]: The encounter that establishes the context for this event.;
+  ///
+  /// [supportingInformation]: Additional information that supports the device being dispensed.;
+  ///
+  /// [performer]: Indicates who or what performed the event.;
+  ///
+  /// [location]: The principal physical location where the dispense was performed.;
+  ///
+  /// [type]: Indicates the type of dispensing event that is performed.;
+  ///
+  /// [quantity]: The number of devices that have been dispensed.;
+  ///
+  /// [preparedDate]: The time when the dispensed product was packaged and reviewed.;
+  ///
+  /// [preparedDateElement] (_preparedDate): Extensions for preparedDate;
+  ///
+  /// [whenHandedOver]: The time the dispensed product was made available to the patient or their representative.;
+  ///
+  /// [whenHandedOverElement] (_whenHandedOver): Extensions for whenHandedOver;
+  ///
+  /// [destination]: Identification of the facility/location where the device was /should be shipped to, as part of the dispense process.;
+  ///
+  /// [note]: Extra information about the dispense that could not be conveyed in the other attributes.;
+  ///
+  /// [usageInstruction]: The full representation of the instructions.;
+  ///
+  /// [usageInstructionElement] (_usageInstruction): Extensions for usageInstruction;
+  ///
+  /// [eventHistory]: A summary of the events of interest that have occurred, such as when the dispense was verified.;
+  factory DeviceDispense({
+    @Default(R5ResourceType.DeviceDispense) R5ResourceType resourceType,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Reference>? basedOn,
+    List<Reference>? partOf,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableReference? statusReason,
+    List<CodeableConcept>? category,
+    required CodeableReference device,
+    required Reference subject,
+    Reference? encounter,
+    List<Reference>? supportingInformation,
+    List<DeviceDispensePerformer>? performer,
+    Reference? location,
+    CodeableConcept? type,
+    Quantity? quantity,
+    FhirDateTime? preparedDate,
+    @JsonKey(name: '_preparedDate') Element? preparedDateElement,
+    FhirDateTime? whenHandedOver,
+    @JsonKey(name: '_whenHandedOver') Element? whenHandedOverElement,
+    Reference? destination,
+    List<Annotation>? note,
+    String? usageInstruction,
+    @JsonKey(name: '_usageInstruction') Element? usageInstructionElement,
+    List<Reference>? eventHistory,
+  }) = _DeviceDispense;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDispense.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDispense.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDispense.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDispense cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDispense.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDispenseFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDispense], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDispense.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDispenseFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class DeviceDispensePerformer with _$DeviceDispensePerformer {
+  DeviceDispensePerformer._();
+
+  /// [DeviceDispensePerformer]: A record of dispensation of a device.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [function]: Distinguishes the type of performer in the dispense.  For example, date enterer, packager, final checker.;
+  ///
+  /// [actor]: The device, practitioner, etc. who performed the action.  It should be assumed that the actor is the dispenser of the device.;
+  factory DeviceDispensePerformer({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? function,
+    required Reference actor,
+  }) = _DeviceDispensePerformer;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDispensePerformer.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDispensePerformer.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceDispensePerformer.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceDispensePerformer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDispensePerformer.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDispensePerformerFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDispensePerformer], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDispensePerformer.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDispensePerformerFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
 class DeviceUsage with Resource, _$DeviceUsage {
   DeviceUsage._();
 
@@ -797,9 +999,9 @@ class DeviceUsage with Resource, _$DeviceUsage {
     Reference? context,
     Timing? timingTiming,
     Period? timingPeriod,
-    DateTime? timingDateTime,
+    FhirDateTime? timingDateTime,
     @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
-    DateTime? dateAsserted,
+    FhirDateTime? dateAsserted,
     @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
     CodeableConcept? usageStatus,
     List<CodeableConcept>? usageReason,
@@ -935,7 +1137,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,
-    DateTime? occurrenceDateTime,
+    FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Reference? performer,
     List<CodeableReference>? reason,
@@ -1053,7 +1255,7 @@ class InventoryReport with Resource, _$InventoryReport {
     @JsonKey(name: '_countType') Element? countTypeElement,
     CodeableConcept? operationType,
     CodeableConcept? operationTypeReason,
-    DateTime? reportedDateTime,
+    FhirDateTime? reportedDateTime,
     @JsonKey(name: '_reportedDateTime') Element? reportedDateTimeElement,
     Reference? reporter,
     Period? reportingPeriod,
@@ -1123,7 +1325,7 @@ class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
     List<FhirExtension>? modifierExtension,
     Reference? location,
     CodeableConcept? itemStatus,
-    DateTime? countingDateTime,
+    FhirDateTime? countingDateTime,
     @JsonKey(name: '_countingDateTime') Element? countingDateTimeElement,
     List<InventoryReportItems>? items,
   }) = _InventoryReportInventoryListing;
@@ -1207,9 +1409,9 @@ class InventoryReportItems with _$InventoryReportItems {
     @JsonKey(name: '_lot') Element? lotElement,
     String? serial,
     @JsonKey(name: '_serial') Element? serialElement,
-    DateTime? expiry,
+    FhirDateTime? expiry,
     @JsonKey(name: '_expiry') Element? expiryElement,
-    DateTime? manufacturingDate,
+    FhirDateTime? manufacturingDate,
     @JsonKey(name: '_manufacturingDate') Element? manufacturingDateElement,
   }) = _InventoryReportItems;
 
@@ -1324,7 +1526,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     Reference? patient,
     CodeableConcept? type,
     SupplyDeliverySuppliedItem? suppliedItem,
-    DateTime? occurrenceDateTime,
+    FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Period? occurrencePeriod,
     Timing? occurrenceTiming,
@@ -1519,11 +1721,11 @@ class SupplyRequest with Resource, _$SupplyRequest {
     required CodeableReference item,
     required Quantity quantity,
     List<SupplyRequestParameter>? parameter,
-    DateTime? occurrenceDateTime,
+    FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Period? occurrencePeriod,
     Timing? occurrenceTiming,
-    DateTime? authoredOn,
+    FhirDateTime? authoredOn,
     @JsonKey(name: '_authoredOn') Element? authoredOnElement,
     Reference? requester,
     List<Reference>? supplier,

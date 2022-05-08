@@ -1887,7 +1887,7 @@ mixin _$Patient {
   Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
-  DateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedDateTime')
   Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
@@ -1948,7 +1948,7 @@ abstract class $PatientCopyWith<$Res> {
       Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
-      DateTime? deceasedDateTime,
+      FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           Element? deceasedDateTimeElement,
       List<Address>? address,
@@ -2120,7 +2120,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
           : deceasedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       deceasedDateTimeElement: deceasedDateTimeElement == freezed
           ? _value.deceasedDateTimeElement
           : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2356,7 +2356,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
-      DateTime? deceasedDateTime,
+      FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           Element? deceasedDateTimeElement,
       List<Address>? address,
@@ -2542,7 +2542,7 @@ class __$$_PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
           : deceasedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       deceasedDateTimeElement: deceasedDateTimeElement == freezed
           ? _value.deceasedDateTimeElement
           : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2751,7 +2751,7 @@ class _$_Patient extends _Patient {
   @JsonKey(name: '_deceasedBoolean')
   final Element? deceasedBooleanElement;
   @override
-  final DateTime? deceasedDateTime;
+  final FhirDateTime? deceasedDateTime;
   @override
   @JsonKey(name: '_deceasedDateTime')
   final Element? deceasedDateTimeElement;
@@ -2980,7 +2980,7 @@ abstract class _Patient extends Patient {
       final Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           final Element? deceasedBooleanElement,
-      final DateTime? deceasedDateTime,
+      final FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           final Element? deceasedDateTimeElement,
       final List<Address>? address,
@@ -3054,7 +3054,7 @@ abstract class _Patient extends Patient {
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_deceasedDateTime')
   Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
@@ -4190,7 +4190,7 @@ mixin _$Person {
   Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
-  DateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedDateTime')
   Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
@@ -4233,7 +4233,7 @@ abstract class $PersonCopyWith<$Res> {
       @JsonKey(name: '_birthDate') Element? birthDateElement,
       Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
-      DateTime? deceasedDateTime,
+      FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
       List<Address>? address,
       CodeableConcept? maritalStatus,
@@ -4388,7 +4388,7 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
           : deceasedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       deceasedDateTimeElement: deceasedDateTimeElement == freezed
           ? _value.deceasedDateTimeElement
           : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4570,7 +4570,7 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       @JsonKey(name: '_birthDate') Element? birthDateElement,
       Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
-      DateTime? deceasedDateTime,
+      FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
       List<Address>? address,
       CodeableConcept? maritalStatus,
@@ -4737,7 +4737,7 @@ class __$$_PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
           : deceasedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       deceasedDateTimeElement: deceasedDateTimeElement == freezed
           ? _value.deceasedDateTimeElement
           : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4914,7 +4914,7 @@ class _$_Person extends _Person {
   @JsonKey(name: '_deceasedBoolean')
   final Element? deceasedBooleanElement;
   @override
-  final DateTime? deceasedDateTime;
+  final FhirDateTime? deceasedDateTime;
   @override
   @JsonKey(name: '_deceasedDateTime')
   final Element? deceasedDateTimeElement;
@@ -5096,7 +5096,7 @@ abstract class _Person extends Person {
       final Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           final Element? deceasedBooleanElement,
-      final DateTime? deceasedDateTime,
+      final FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           final Element? deceasedDateTimeElement,
       final List<Address>? address,
@@ -5162,7 +5162,7 @@ abstract class _Person extends Person {
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_deceasedDateTime')
   Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
@@ -5810,7 +5810,7 @@ mixin _$Practitioner {
   Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
-  DateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedDateTime')
   Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
@@ -5856,7 +5856,7 @@ abstract class $PractitionerCopyWith<$Res> {
       List<ContactPoint>? telecom,
       Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
-      DateTime? deceasedDateTime,
+      FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
       List<Address>? address,
       Code? gender,
@@ -5993,7 +5993,7 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
           : deceasedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       deceasedDateTimeElement: deceasedDateTimeElement == freezed
           ? _value.deceasedDateTimeElement
           : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6159,7 +6159,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
       List<ContactPoint>? telecom,
       Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
-      DateTime? deceasedDateTime,
+      FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
       List<Address>? address,
       Code? gender,
@@ -6308,7 +6308,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
           : deceasedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       deceasedDateTimeElement: deceasedDateTimeElement == freezed
           ? _value.deceasedDateTimeElement
           : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6481,7 +6481,7 @@ class _$_Practitioner extends _Practitioner {
   @JsonKey(name: '_deceasedBoolean')
   final Element? deceasedBooleanElement;
   @override
-  final DateTime? deceasedDateTime;
+  final FhirDateTime? deceasedDateTime;
   @override
   @JsonKey(name: '_deceasedDateTime')
   final Element? deceasedDateTimeElement;
@@ -6658,7 +6658,7 @@ abstract class _Practitioner extends Practitioner {
       final Boolean? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           final Element? deceasedBooleanElement,
-      final DateTime? deceasedDateTime,
+      final FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           final Element? deceasedDateTimeElement,
       final List<Address>? address,
@@ -6719,7 +6719,7 @@ abstract class _Practitioner extends Practitioner {
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_deceasedDateTime')
   Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;

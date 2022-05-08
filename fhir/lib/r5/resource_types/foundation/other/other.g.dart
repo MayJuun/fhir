@@ -46,7 +46,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : DateTime.parse(json['created'] as String),
+          : FhirDateTime.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -83,7 +83,7 @@ Map<String, dynamic> _$$_BasicToJson(_$_Basic instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('author', instance.author?.toJson());
   return val;
@@ -92,10 +92,13 @@ Map<String, dynamic> _$$_BasicToJson(_$_Basic instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -106,20 +109,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -130,6 +133,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -154,11 +158,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -166,6 +172,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -175,12 +182,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -194,6 +195,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -207,6 +209,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -1297,7 +1300,7 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : DateTime.parse(json['valueDateTime'] as String),
+          : FhirDateTime.fromJson(json['valueDateTime']),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -1530,7 +1533,7 @@ Map<String, dynamic> _$$_ParametersParameterToJson(
   writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
@@ -2032,8 +2035,7 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2142,7 +2144,7 @@ Map<String, dynamic> _$$_SubscriptionTopicToJson(
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('_publisher', instance.publisherElement?.toJson());

@@ -47,7 +47,7 @@ mixin _$BiologicallyDerivedProduct {
   @JsonKey(name: '_division')
   Element? get divisionElement => throw _privateConstructorUsedError;
   Coding? get productStatus => throw _privateConstructorUsedError;
-  DateTime? get expirationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement => throw _privateConstructorUsedError;
   BiologicallyDerivedProductCollection? get collection =>
@@ -89,7 +89,7 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       String? division,
       @JsonKey(name: '_division') Element? divisionElement,
       Coding? productStatus,
-      DateTime? expirationDate,
+      FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate') Element? expirationDateElement,
       BiologicallyDerivedProductCollection? collection,
       Range? storageTempRequirements,
@@ -235,7 +235,7 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expirationDateElement: expirationDateElement == freezed
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -419,7 +419,7 @@ abstract class _$$_BiologicallyDerivedProductCopyWith<$Res>
       String? division,
       @JsonKey(name: '_division') Element? divisionElement,
       Coding? productStatus,
-      DateTime? expirationDate,
+      FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate') Element? expirationDateElement,
       BiologicallyDerivedProductCollection? collection,
       Range? storageTempRequirements,
@@ -581,7 +581,7 @@ class __$$_BiologicallyDerivedProductCopyWithImpl<$Res>
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expirationDateElement: expirationDateElement == freezed
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -742,7 +742,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   @override
   final Coding? productStatus;
   @override
-  final DateTime? expirationDate;
+  final FhirDateTime? expirationDate;
   @override
   @JsonKey(name: '_expirationDate')
   final Element? expirationDateElement;
@@ -882,7 +882,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
       final String? division,
       @JsonKey(name: '_division') final Element? divisionElement,
       final Coding? productStatus,
-      final DateTime? expirationDate,
+      final FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate') final Element? expirationDateElement,
       final BiologicallyDerivedProductCollection? collection,
       final Range? storageTempRequirements,
@@ -941,7 +941,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @override
   Coding? get productStatus => throw _privateConstructorUsedError;
   @override
-  DateTime? get expirationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement => throw _privateConstructorUsedError;
@@ -973,7 +973,7 @@ mixin _$BiologicallyDerivedProductCollection {
       throw _privateConstructorUsedError;
   Reference? get collector => throw _privateConstructorUsedError;
   Reference? get source => throw _privateConstructorUsedError;
-  DateTime? get collectedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get collectedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_collectedDateTime')
   Element? get collectedDateTimeElement => throw _privateConstructorUsedError;
   Period? get collectedPeriod => throw _privateConstructorUsedError;
@@ -997,7 +997,7 @@ abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference? collector,
       Reference? source,
-      DateTime? collectedDateTime,
+      FhirDateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
       Period? collectedPeriod});
 
@@ -1051,7 +1051,7 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
       collectedDateTime: collectedDateTime == freezed
           ? _value.collectedDateTime
           : collectedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -1122,7 +1122,7 @@ abstract class _$$_BiologicallyDerivedProductCollectionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference? collector,
       Reference? source,
-      DateTime? collectedDateTime,
+      FhirDateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
       Period? collectedPeriod});
 
@@ -1185,7 +1185,7 @@ class __$$_BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
       collectedDateTime: collectedDateTime == freezed
           ? _value.collectedDateTime
           : collectedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       collectedDateTimeElement: collectedDateTimeElement == freezed
           ? _value.collectedDateTimeElement
           : collectedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -1245,7 +1245,7 @@ class _$_BiologicallyDerivedProductCollection
   @override
   final Reference? source;
   @override
-  final DateTime? collectedDateTime;
+  final FhirDateTime? collectedDateTime;
   @override
   @JsonKey(name: '_collectedDateTime')
   final Element? collectedDateTimeElement;
@@ -1312,7 +1312,7 @@ abstract class _BiologicallyDerivedProductCollection
       final List<FhirExtension>? modifierExtension,
       final Reference? collector,
       final Reference? source,
-      final DateTime? collectedDateTime,
+      final FhirDateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime')
           final Element? collectedDateTimeElement,
       final Period? collectedPeriod}) = _$_BiologicallyDerivedProductCollection;
@@ -1335,7 +1335,7 @@ abstract class _BiologicallyDerivedProductCollection
   @override
   Reference? get source => throw _privateConstructorUsedError;
   @override
-  DateTime? get collectedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get collectedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_collectedDateTime')
   Element? get collectedDateTimeElement => throw _privateConstructorUsedError;
@@ -2036,10 +2036,10 @@ mixin _$Device {
   String? get manufacturer => throw _privateConstructorUsedError;
   @JsonKey(name: '_manufacturer')
   Element? get manufacturerElement => throw _privateConstructorUsedError;
-  DateTime? get manufactureDate => throw _privateConstructorUsedError;
+  FhirDateTime? get manufactureDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_manufactureDate')
   Element? get manufactureDateElement => throw _privateConstructorUsedError;
-  DateTime? get expirationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement => throw _privateConstructorUsedError;
   String? get lotNumber => throw _privateConstructorUsedError;
@@ -2109,9 +2109,9 @@ abstract class $DeviceCopyWith<$Res> {
       Identifier? biologicalSource,
       String? manufacturer,
       @JsonKey(name: '_manufacturer') Element? manufacturerElement,
-      DateTime? manufactureDate,
+      FhirDateTime? manufactureDate,
       @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
-      DateTime? expirationDate,
+      FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate') Element? expirationDateElement,
       String? lotNumber,
       @JsonKey(name: '_lotNumber') Element? lotNumberElement,
@@ -2317,7 +2317,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       manufactureDate: manufactureDate == freezed
           ? _value.manufactureDate
           : manufactureDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       manufactureDateElement: manufactureDateElement == freezed
           ? _value.manufactureDateElement
           : manufactureDateElement // ignore: cast_nullable_to_non_nullable
@@ -2325,7 +2325,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expirationDateElement: expirationDateElement == freezed
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -2686,9 +2686,9 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Identifier? biologicalSource,
       String? manufacturer,
       @JsonKey(name: '_manufacturer') Element? manufacturerElement,
-      DateTime? manufactureDate,
+      FhirDateTime? manufactureDate,
       @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
-      DateTime? expirationDate,
+      FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate') Element? expirationDateElement,
       String? lotNumber,
       @JsonKey(name: '_lotNumber') Element? lotNumberElement,
@@ -2915,7 +2915,7 @@ class __$$_DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       manufactureDate: manufactureDate == freezed
           ? _value.manufactureDate
           : manufactureDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       manufactureDateElement: manufactureDateElement == freezed
           ? _value.manufactureDateElement
           : manufactureDateElement // ignore: cast_nullable_to_non_nullable
@@ -2923,7 +2923,7 @@ class __$$_DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expirationDateElement: expirationDateElement == freezed
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -3209,12 +3209,12 @@ class _$_Device extends _Device {
   @JsonKey(name: '_manufacturer')
   final Element? manufacturerElement;
   @override
-  final DateTime? manufactureDate;
+  final FhirDateTime? manufactureDate;
   @override
   @JsonKey(name: '_manufactureDate')
   final Element? manufactureDateElement;
   @override
-  final DateTime? expirationDate;
+  final FhirDateTime? expirationDate;
   @override
   @JsonKey(name: '_expirationDate')
   final Element? expirationDateElement;
@@ -3550,9 +3550,9 @@ abstract class _Device extends Device {
       final Identifier? biologicalSource,
       final String? manufacturer,
       @JsonKey(name: '_manufacturer') final Element? manufacturerElement,
-      final DateTime? manufactureDate,
+      final FhirDateTime? manufactureDate,
       @JsonKey(name: '_manufactureDate') final Element? manufactureDateElement,
-      final DateTime? expirationDate,
+      final FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate') final Element? expirationDateElement,
       final String? lotNumber,
       @JsonKey(name: '_lotNumber') final Element? lotNumberElement,
@@ -3636,12 +3636,12 @@ abstract class _Device extends Device {
   @JsonKey(name: '_manufacturer')
   Element? get manufacturerElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get manufactureDate => throw _privateConstructorUsedError;
+  FhirDateTime? get manufactureDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_manufactureDate')
   Element? get manufactureDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get expirationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expirationDate')
   Element? get expirationDateElement => throw _privateConstructorUsedError;
@@ -5307,7 +5307,7 @@ mixin _$DeviceVersion {
       throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Identifier? get component => throw _privateConstructorUsedError;
-  DateTime? get installDate => throw _privateConstructorUsedError;
+  FhirDateTime? get installDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_installDate')
   Element? get installDateElement => throw _privateConstructorUsedError;
   String? get value => throw _privateConstructorUsedError;
@@ -5331,7 +5331,7 @@ abstract class $DeviceVersionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
       Identifier? component,
-      DateTime? installDate,
+      FhirDateTime? installDate,
       @JsonKey(name: '_installDate') Element? installDateElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -5387,7 +5387,7 @@ class _$DeviceVersionCopyWithImpl<$Res>
       installDate: installDate == freezed
           ? _value.installDate
           : installDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       installDateElement: installDateElement == freezed
           ? _value.installDateElement
           : installDateElement // ignore: cast_nullable_to_non_nullable
@@ -5461,7 +5461,7 @@ abstract class _$$_DeviceVersionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
       Identifier? component,
-      DateTime? installDate,
+      FhirDateTime? installDate,
       @JsonKey(name: '_installDate') Element? installDateElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -5523,7 +5523,7 @@ class __$$_DeviceVersionCopyWithImpl<$Res>
       installDate: installDate == freezed
           ? _value.installDate
           : installDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       installDateElement: installDateElement == freezed
           ? _value.installDateElement
           : installDateElement // ignore: cast_nullable_to_non_nullable
@@ -5586,7 +5586,7 @@ class _$_DeviceVersion extends _DeviceVersion {
   @override
   final Identifier? component;
   @override
-  final DateTime? installDate;
+  final FhirDateTime? installDate;
   @override
   @JsonKey(name: '_installDate')
   final Element? installDateElement;
@@ -5654,7 +5654,7 @@ abstract class _DeviceVersion extends DeviceVersion {
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? type,
       final Identifier? component,
-      final DateTime? installDate,
+      final FhirDateTime? installDate,
       @JsonKey(name: '_installDate') final Element? installDateElement,
       final String? value,
       @JsonKey(name: '_value') final Element? valueElement}) = _$_DeviceVersion;
@@ -5676,7 +5676,7 @@ abstract class _DeviceVersion extends DeviceVersion {
   @override
   Identifier? get component => throw _privateConstructorUsedError;
   @override
-  DateTime? get installDate => throw _privateConstructorUsedError;
+  FhirDateTime? get installDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_installDate')
   Element? get installDateElement => throw _privateConstructorUsedError;
@@ -10019,10 +10019,10 @@ mixin _$NutritionProductInstance {
   String? get lotNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement => throw _privateConstructorUsedError;
-  DateTime? get expiry => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
   @JsonKey(name: '_expiry')
   Element? get expiryElement => throw _privateConstructorUsedError;
-  DateTime? get useBy => throw _privateConstructorUsedError;
+  FhirDateTime? get useBy => throw _privateConstructorUsedError;
   @JsonKey(name: '_useBy')
   Element? get useByElement => throw _privateConstructorUsedError;
   Identifier? get biologicalSource => throw _privateConstructorUsedError;
@@ -10048,9 +10048,9 @@ abstract class $NutritionProductInstanceCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? lotNumber,
       @JsonKey(name: '_lotNumber') Element? lotNumberElement,
-      DateTime? expiry,
+      FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
-      DateTime? useBy,
+      FhirDateTime? useBy,
       @JsonKey(name: '_useBy') Element? useByElement,
       Identifier? biologicalSource});
 
@@ -10128,7 +10128,7 @@ class _$NutritionProductInstanceCopyWithImpl<$Res>
       expiry: expiry == freezed
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expiryElement: expiryElement == freezed
           ? _value.expiryElement
           : expiryElement // ignore: cast_nullable_to_non_nullable
@@ -10136,7 +10136,7 @@ class _$NutritionProductInstanceCopyWithImpl<$Res>
       useBy: useBy == freezed
           ? _value.useBy
           : useBy // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       useByElement: useByElement == freezed
           ? _value.useByElement
           : useByElement // ignore: cast_nullable_to_non_nullable
@@ -10233,9 +10233,9 @@ abstract class _$$_NutritionProductInstanceCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? lotNumber,
       @JsonKey(name: '_lotNumber') Element? lotNumberElement,
-      DateTime? expiry,
+      FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
-      DateTime? useBy,
+      FhirDateTime? useBy,
       @JsonKey(name: '_useBy') Element? useByElement,
       Identifier? biologicalSource});
 
@@ -10322,7 +10322,7 @@ class __$$_NutritionProductInstanceCopyWithImpl<$Res>
       expiry: expiry == freezed
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expiryElement: expiryElement == freezed
           ? _value.expiryElement
           : expiryElement // ignore: cast_nullable_to_non_nullable
@@ -10330,7 +10330,7 @@ class __$$_NutritionProductInstanceCopyWithImpl<$Res>
       useBy: useBy == freezed
           ? _value.useBy
           : useBy // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       useByElement: useByElement == freezed
           ? _value.useByElement
           : useByElement // ignore: cast_nullable_to_non_nullable
@@ -10412,12 +10412,12 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
   @JsonKey(name: '_lotNumber')
   final Element? lotNumberElement;
   @override
-  final DateTime? expiry;
+  final FhirDateTime? expiry;
   @override
   @JsonKey(name: '_expiry')
   final Element? expiryElement;
   @override
-  final DateTime? useBy;
+  final FhirDateTime? useBy;
   @override
   @JsonKey(name: '_useBy')
   final Element? useByElement;
@@ -10500,9 +10500,9 @@ abstract class _NutritionProductInstance extends NutritionProductInstance {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? lotNumber,
       @JsonKey(name: '_lotNumber') final Element? lotNumberElement,
-      final DateTime? expiry,
+      final FhirDateTime? expiry,
       @JsonKey(name: '_expiry') final Element? expiryElement,
-      final DateTime? useBy,
+      final FhirDateTime? useBy,
       @JsonKey(name: '_useBy') final Element? useByElement,
       final Identifier? biologicalSource}) = _$_NutritionProductInstance;
   _NutritionProductInstance._() : super._();
@@ -10533,12 +10533,12 @@ abstract class _NutritionProductInstance extends NutritionProductInstance {
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get expiry => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expiry')
   Element? get expiryElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get useBy => throw _privateConstructorUsedError;
+  FhirDateTime? get useBy => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_useBy')
   Element? get useByElement => throw _privateConstructorUsedError;
@@ -10583,7 +10583,7 @@ mixin _$Substance {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  DateTime? get expiry => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
   @JsonKey(name: '_expiry')
   Element? get expiryElement => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
@@ -10621,7 +10621,7 @@ abstract class $SubstanceCopyWith<$Res> {
       CodeableReference code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      DateTime? expiry,
+      FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
       Quantity? quantity,
       List<SubstanceIngredient>? ingredient});
@@ -10757,7 +10757,7 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
       expiry: expiry == freezed
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expiryElement: expiryElement == freezed
           ? _value.expiryElement
           : expiryElement // ignore: cast_nullable_to_non_nullable
@@ -10907,7 +10907,7 @@ abstract class _$$_SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       CodeableReference code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      DateTime? expiry,
+      FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
       Quantity? quantity,
       List<SubstanceIngredient>? ingredient});
@@ -11055,7 +11055,7 @@ class __$$_SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
       expiry: expiry == freezed
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       expiryElement: expiryElement == freezed
           ? _value.expiryElement
           : expiryElement // ignore: cast_nullable_to_non_nullable
@@ -11194,7 +11194,7 @@ class _$_Substance extends _Substance {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final DateTime? expiry;
+  final FhirDateTime? expiry;
   @override
   @JsonKey(name: '_expiry')
   final Element? expiryElement;
@@ -11322,7 +11322,7 @@ abstract class _Substance extends Substance {
       required final CodeableReference code,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final DateTime? expiry,
+      final FhirDateTime? expiry,
       @JsonKey(name: '_expiry') final Element? expiryElement,
       final Quantity? quantity,
       final List<SubstanceIngredient>? ingredient}) = _$_Substance;
@@ -11379,7 +11379,7 @@ abstract class _Substance extends Substance {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get expiry => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expiry')
   Element? get expiryElement => throw _privateConstructorUsedError;

@@ -70,7 +70,7 @@ _$_BiologicallyDerivedProduct _$$_BiologicallyDerivedProductFromJson(
           : Coding.fromJson(json['productStatus'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : DateTime.parse(json['expirationDate'] as String),
+          : FhirDateTime.fromJson(json['expirationDate']),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -125,7 +125,7 @@ Map<String, dynamic> _$$_BiologicallyDerivedProductToJson(
   writeNotNull('division', instance.division);
   writeNotNull('_division', instance.divisionElement?.toJson());
   writeNotNull('productStatus', instance.productStatus?.toJson());
-  writeNotNull('expirationDate', instance.expirationDate?.toIso8601String());
+  writeNotNull('expirationDate', instance.expirationDate?.toJson());
   writeNotNull('_expirationDate', instance.expirationDateElement?.toJson());
   writeNotNull('collection', instance.collection?.toJson());
   writeNotNull(
@@ -137,10 +137,13 @@ Map<String, dynamic> _$$_BiologicallyDerivedProductToJson(
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -151,20 +154,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -175,6 +178,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -199,11 +203,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -211,6 +217,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -220,12 +227,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -239,6 +240,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -252,6 +254,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -306,7 +309,7 @@ _$_BiologicallyDerivedProductCollection
               : Reference.fromJson(json['source'] as Map<String, dynamic>),
           collectedDateTime: json['collectedDateTime'] == null
               ? null
-              : DateTime.parse(json['collectedDateTime'] as String),
+              : FhirDateTime.fromJson(json['collectedDateTime']),
           collectedDateTimeElement: json['_collectedDateTime'] == null
               ? null
               : Element.fromJson(
@@ -334,8 +337,7 @@ Map<String, dynamic> _$$_BiologicallyDerivedProductCollectionToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('collector', instance.collector?.toJson());
   writeNotNull('source', instance.source?.toJson());
-  writeNotNull(
-      'collectedDateTime', instance.collectedDateTime?.toIso8601String());
+  writeNotNull('collectedDateTime', instance.collectedDateTime?.toJson());
   writeNotNull(
       '_collectedDateTime', instance.collectedDateTimeElement?.toJson());
   writeNotNull('collectedPeriod', instance.collectedPeriod?.toJson());
@@ -487,13 +489,13 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
           : Element.fromJson(json['_manufacturer'] as Map<String, dynamic>),
       manufactureDate: json['manufactureDate'] == null
           ? null
-          : DateTime.parse(json['manufactureDate'] as String),
+          : FhirDateTime.fromJson(json['manufactureDate']),
       manufactureDateElement: json['_manufactureDate'] == null
           ? null
           : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : DateTime.parse(json['expirationDate'] as String),
+          : FhirDateTime.fromJson(json['expirationDate']),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -607,9 +609,9 @@ Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   writeNotNull('biologicalSource', instance.biologicalSource?.toJson());
   writeNotNull('manufacturer', instance.manufacturer);
   writeNotNull('_manufacturer', instance.manufacturerElement?.toJson());
-  writeNotNull('manufactureDate', instance.manufactureDate?.toIso8601String());
+  writeNotNull('manufactureDate', instance.manufactureDate?.toJson());
   writeNotNull('_manufactureDate', instance.manufactureDateElement?.toJson());
-  writeNotNull('expirationDate', instance.expirationDate?.toIso8601String());
+  writeNotNull('expirationDate', instance.expirationDate?.toJson());
   writeNotNull('_expirationDate', instance.expirationDateElement?.toJson());
   writeNotNull('lotNumber', instance.lotNumber);
   writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
@@ -862,7 +864,7 @@ _$_DeviceVersion _$$_DeviceVersionFromJson(Map<String, dynamic> json) =>
           : Identifier.fromJson(json['component'] as Map<String, dynamic>),
       installDate: json['installDate'] == null
           ? null
-          : DateTime.parse(json['installDate'] as String),
+          : FhirDateTime.fromJson(json['installDate']),
       installDateElement: json['_installDate'] == null
           ? null
           : Element.fromJson(json['_installDate'] as Map<String, dynamic>),
@@ -888,7 +890,7 @@ Map<String, dynamic> _$$_DeviceVersionToJson(_$_DeviceVersion instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('component', instance.component?.toJson());
-  writeNotNull('installDate', instance.installDate?.toIso8601String());
+  writeNotNull('installDate', instance.installDate?.toJson());
   writeNotNull('_installDate', instance.installDateElement?.toJson());
   writeNotNull('value', instance.value);
   writeNotNull('_value', instance.valueElement?.toJson());
@@ -1485,15 +1487,13 @@ _$_NutritionProductInstance _$$_NutritionProductInstanceFromJson(
       lotNumberElement: json['_lotNumber'] == null
           ? null
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
-      expiry: json['expiry'] == null
-          ? null
-          : DateTime.parse(json['expiry'] as String),
+      expiry:
+          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
       expiryElement: json['_expiry'] == null
           ? null
           : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
-      useBy: json['useBy'] == null
-          ? null
-          : DateTime.parse(json['useBy'] as String),
+      useBy:
+          json['useBy'] == null ? null : FhirDateTime.fromJson(json['useBy']),
       useByElement: json['_useBy'] == null
           ? null
           : Element.fromJson(json['_useBy'] as Map<String, dynamic>),
@@ -1525,9 +1525,9 @@ Map<String, dynamic> _$$_NutritionProductInstanceToJson(
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('lotNumber', instance.lotNumber);
   writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
-  writeNotNull('expiry', instance.expiry?.toIso8601String());
+  writeNotNull('expiry', instance.expiry?.toJson());
   writeNotNull('_expiry', instance.expiryElement?.toJson());
-  writeNotNull('useBy', instance.useBy?.toIso8601String());
+  writeNotNull('useBy', instance.useBy?.toJson());
   writeNotNull('_useBy', instance.useByElement?.toJson());
   writeNotNull('biologicalSource', instance.biologicalSource?.toJson());
   return val;
@@ -1584,9 +1584,8 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      expiry: json['expiry'] == null
-          ? null
-          : DateTime.parse(json['expiry'] as String),
+      expiry:
+          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
       expiryElement: json['_expiry'] == null
           ? null
           : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
@@ -1632,7 +1631,7 @@ Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
   val['code'] = instance.code.toJson();
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('expiry', instance.expiry?.toIso8601String());
+  writeNotNull('expiry', instance.expiry?.toJson());
   writeNotNull('_expiry', instance.expiryElement?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull(

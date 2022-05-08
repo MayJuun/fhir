@@ -54,7 +54,7 @@ mixin _$Measure {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -176,7 +176,7 @@ abstract class $MeasureCopyWith<$Res> {
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -473,7 +473,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1098,7 +1098,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -1429,7 +1429,7 @@ class __$$_MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1868,7 +1868,7 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -2363,7 +2363,7 @@ abstract class _Measure extends Measure {
       final Boolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final String? publisher,
@@ -2498,7 +2498,7 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -4726,7 +4726,7 @@ mixin _$MeasureReport {
   Element? get dataUpdateTypeElement => throw _privateConstructorUsedError;
   Canonical get measure => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference? get reporter => throw _privateConstructorUsedError;
@@ -4770,7 +4770,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       @JsonKey(name: '_dataUpdateType') Element? dataUpdateTypeElement,
       Canonical measure,
       Reference? subject,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? reporter,
       Reference? reportingVendor,
@@ -4921,7 +4921,7 @@ class _$MeasureReportCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -5136,7 +5136,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
       @JsonKey(name: '_dataUpdateType') Element? dataUpdateTypeElement,
       Canonical measure,
       Reference? subject,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? reporter,
       Reference? reportingVendor,
@@ -5303,7 +5303,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -5460,7 +5460,7 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final Reference? subject;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -5617,7 +5617,7 @@ abstract class _MeasureReport extends MeasureReport {
       @JsonKey(name: '_dataUpdateType') final Element? dataUpdateTypeElement,
       required final Canonical measure,
       final Reference? subject,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final Reference? reporter,
       final Reference? reportingVendor,
@@ -5679,7 +5679,7 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   Reference? get subject => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -5719,7 +5719,7 @@ mixin _$MeasureReportGroup {
   List<MeasureReportPopulation>? get population =>
       throw _privateConstructorUsedError;
   Quantity? get measureScoreQuantity => throw _privateConstructorUsedError;
-  DateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_measureScoreDateTime')
   Element? get measureScoreDateTimeElement =>
       throw _privateConstructorUsedError;
@@ -5750,7 +5750,7 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
       CodeableConcept? code,
       List<MeasureReportPopulation>? population,
       Quantity? measureScoreQuantity,
-      DateTime? measureScoreDateTime,
+      FhirDateTime? measureScoreDateTime,
       @JsonKey(name: '_measureScoreDateTime')
           Element? measureScoreDateTimeElement,
       CodeableConcept? measureScoreCodeableConcept,
@@ -5821,7 +5821,7 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
       measureScoreDateTime: measureScoreDateTime == freezed
           ? _value.measureScoreDateTime
           : measureScoreDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       measureScoreDateTimeElement: measureScoreDateTimeElement == freezed
           ? _value.measureScoreDateTimeElement
           : measureScoreDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -5943,7 +5943,7 @@ abstract class _$$_MeasureReportGroupCopyWith<$Res>
       CodeableConcept? code,
       List<MeasureReportPopulation>? population,
       Quantity? measureScoreQuantity,
-      DateTime? measureScoreDateTime,
+      FhirDateTime? measureScoreDateTime,
       @JsonKey(name: '_measureScoreDateTime')
           Element? measureScoreDateTimeElement,
       CodeableConcept? measureScoreCodeableConcept,
@@ -6023,7 +6023,7 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
       measureScoreDateTime: measureScoreDateTime == freezed
           ? _value.measureScoreDateTime
           : measureScoreDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       measureScoreDateTimeElement: measureScoreDateTimeElement == freezed
           ? _value.measureScoreDateTimeElement
           : measureScoreDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6113,7 +6113,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   @override
   final Quantity? measureScoreQuantity;
   @override
-  final DateTime? measureScoreDateTime;
+  final FhirDateTime? measureScoreDateTime;
   @override
   @JsonKey(name: '_measureScoreDateTime')
   final Element? measureScoreDateTimeElement;
@@ -6211,7 +6211,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
       final CodeableConcept? code,
       final List<MeasureReportPopulation>? population,
       final Quantity? measureScoreQuantity,
-      final DateTime? measureScoreDateTime,
+      final FhirDateTime? measureScoreDateTime,
       @JsonKey(name: '_measureScoreDateTime')
           final Element? measureScoreDateTimeElement,
       final CodeableConcept? measureScoreCodeableConcept,
@@ -6240,7 +6240,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   @override
   Quantity? get measureScoreQuantity => throw _privateConstructorUsedError;
   @override
-  DateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_measureScoreDateTime')
   Element? get measureScoreDateTimeElement =>
@@ -6893,7 +6893,7 @@ mixin _$MeasureReportStratum {
   List<MeasureReportPopulation1>? get population =>
       throw _privateConstructorUsedError;
   Quantity? get measureScoreQuantity => throw _privateConstructorUsedError;
-  DateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_measureScoreDateTime')
   Element? get measureScoreDateTimeElement =>
       throw _privateConstructorUsedError;
@@ -6929,7 +6929,7 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
       List<MeasureReportComponent>? component,
       List<MeasureReportPopulation1>? population,
       Quantity? measureScoreQuantity,
-      DateTime? measureScoreDateTime,
+      FhirDateTime? measureScoreDateTime,
       @JsonKey(name: '_measureScoreDateTime')
           Element? measureScoreDateTimeElement,
       CodeableConcept? measureScoreCodeableConcept,
@@ -7032,7 +7032,7 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
       measureScoreDateTime: measureScoreDateTime == freezed
           ? _value.measureScoreDateTime
           : measureScoreDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       measureScoreDateTimeElement: measureScoreDateTimeElement == freezed
           ? _value.measureScoreDateTimeElement
           : measureScoreDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7202,7 +7202,7 @@ abstract class _$$_MeasureReportStratumCopyWith<$Res>
       List<MeasureReportComponent>? component,
       List<MeasureReportPopulation1>? population,
       Quantity? measureScoreQuantity,
-      DateTime? measureScoreDateTime,
+      FhirDateTime? measureScoreDateTime,
       @JsonKey(name: '_measureScoreDateTime')
           Element? measureScoreDateTimeElement,
       CodeableConcept? measureScoreCodeableConcept,
@@ -7318,7 +7318,7 @@ class __$$_MeasureReportStratumCopyWithImpl<$Res>
       measureScoreDateTime: measureScoreDateTime == freezed
           ? _value.measureScoreDateTime
           : measureScoreDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       measureScoreDateTimeElement: measureScoreDateTimeElement == freezed
           ? _value.measureScoreDateTimeElement
           : measureScoreDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7429,7 +7429,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   @override
   final Quantity? measureScoreQuantity;
   @override
-  final DateTime? measureScoreDateTime;
+  final FhirDateTime? measureScoreDateTime;
   @override
   @JsonKey(name: '_measureScoreDateTime')
   final Element? measureScoreDateTimeElement;
@@ -7542,7 +7542,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
       final List<MeasureReportComponent>? component,
       final List<MeasureReportPopulation1>? population,
       final Quantity? measureScoreQuantity,
-      final DateTime? measureScoreDateTime,
+      final FhirDateTime? measureScoreDateTime,
       @JsonKey(name: '_measureScoreDateTime')
           final Element? measureScoreDateTimeElement,
       final CodeableConcept? measureScoreCodeableConcept,
@@ -7585,7 +7585,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   @override
   Quantity? get measureScoreQuantity => throw _privateConstructorUsedError;
   @override
-  DateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_measureScoreDateTime')
   Element? get measureScoreDateTimeElement =>
@@ -8432,7 +8432,7 @@ mixin _$TestReport {
   String? get tester => throw _privateConstructorUsedError;
   @JsonKey(name: '_tester')
   Element? get testerElement => throw _privateConstructorUsedError;
-  DateTime? get issued => throw _privateConstructorUsedError;
+  FhirDateTime? get issued => throw _privateConstructorUsedError;
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
   List<TestReportParticipant>? get participant =>
@@ -8476,7 +8476,7 @@ abstract class $TestReportCopyWith<$Res> {
       @JsonKey(name: '_score') Element? scoreElement,
       String? tester,
       @JsonKey(name: '_tester') Element? testerElement,
-      DateTime? issued,
+      FhirDateTime? issued,
       @JsonKey(name: '_issued') Element? issuedElement,
       List<TestReportParticipant>? participant,
       TestReportSetup? setup,
@@ -8634,7 +8634,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       issued: issued == freezed
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -8833,7 +8833,7 @@ abstract class _$$_TestReportCopyWith<$Res>
       @JsonKey(name: '_score') Element? scoreElement,
       String? tester,
       @JsonKey(name: '_tester') Element? testerElement,
-      DateTime? issued,
+      FhirDateTime? issued,
       @JsonKey(name: '_issued') Element? issuedElement,
       List<TestReportParticipant>? participant,
       TestReportSetup? setup,
@@ -9006,7 +9006,7 @@ class __$$_TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       issued: issued == freezed
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       issuedElement: issuedElement == freezed
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -9151,7 +9151,7 @@ class _$_TestReport extends _TestReport {
   @JsonKey(name: '_tester')
   final Element? testerElement;
   @override
-  final DateTime? issued;
+  final FhirDateTime? issued;
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
@@ -9306,7 +9306,7 @@ abstract class _TestReport extends TestReport {
       @JsonKey(name: '_score') final Element? scoreElement,
       final String? tester,
       @JsonKey(name: '_tester') final Element? testerElement,
-      final DateTime? issued,
+      final FhirDateTime? issued,
       @JsonKey(name: '_issued') final Element? issuedElement,
       final List<TestReportParticipant>? participant,
       final TestReportSetup? setup,
@@ -9373,7 +9373,7 @@ abstract class _TestReport extends TestReport {
   @JsonKey(name: '_tester')
   Element? get testerElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get issued => throw _privateConstructorUsedError;
+  FhirDateTime? get issued => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
@@ -12210,7 +12210,7 @@ mixin _$TestScript {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -12276,7 +12276,7 @@ abstract class $TestScriptCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -12478,7 +12478,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -12801,7 +12801,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -13023,7 +13023,7 @@ class __$$_TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -13273,7 +13273,7 @@ class _$_TestScript extends _TestScript {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -13567,7 +13567,7 @@ abstract class _TestScript extends TestScript {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -13654,7 +13654,7 @@ abstract class _TestScript extends TestScript {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -14927,7 +14927,7 @@ mixin _$TestScriptCapability {
   Integer? get destination => throw _privateConstructorUsedError;
   @JsonKey(name: '_destination')
   Element? get destinationElement => throw _privateConstructorUsedError;
-  List<Uri>? get link => throw _privateConstructorUsedError;
+  List<FhirUri>? get link => throw _privateConstructorUsedError;
   @JsonKey(name: '_link')
   List<Element>? get linkElement => throw _privateConstructorUsedError;
   Canonical get capabilities => throw _privateConstructorUsedError;
@@ -14957,7 +14957,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       @JsonKey(name: '_origin') List<Element>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<Uri>? link,
+      List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element>? linkElement,
       Canonical capabilities});
 
@@ -15051,7 +15051,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       link: link == freezed
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
           : linkElement // ignore: cast_nullable_to_non_nullable
@@ -15129,7 +15129,7 @@ abstract class _$$_TestScriptCapabilityCopyWith<$Res>
       @JsonKey(name: '_origin') List<Element>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<Uri>? link,
+      List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element>? linkElement,
       Canonical capabilities});
 
@@ -15229,7 +15229,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       link: link == freezed
           ? _value._link
           : link // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       linkElement: linkElement == freezed
           ? _value._linkElement
           : linkElement // ignore: cast_nullable_to_non_nullable
@@ -15259,7 +15259,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
       @JsonKey(name: '_origin') final List<Element>? originElement,
       this.destination,
       @JsonKey(name: '_destination') this.destinationElement,
-      final List<Uri>? link,
+      final List<FhirUri>? link,
       @JsonKey(name: '_link') final List<Element>? linkElement,
       required this.capabilities})
       : _extension_ = extension_,
@@ -15334,9 +15334,9 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   @override
   @JsonKey(name: '_destination')
   final Element? destinationElement;
-  final List<Uri>? _link;
+  final List<FhirUri>? _link;
   @override
-  List<Uri>? get link {
+  List<FhirUri>? get link {
     final value = _link;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -15443,7 +15443,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       @JsonKey(name: '_origin') final List<Element>? originElement,
       final Integer? destination,
       @JsonKey(name: '_destination') final Element? destinationElement,
-      final List<Uri>? link,
+      final List<FhirUri>? link,
       @JsonKey(name: '_link') final List<Element>? linkElement,
       required final Canonical capabilities}) = _$_TestScriptCapability;
   _TestScriptCapability._() : super._();
@@ -15486,7 +15486,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @JsonKey(name: '_destination')
   Element? get destinationElement => throw _privateConstructorUsedError;
   @override
-  List<Uri>? get link => throw _privateConstructorUsedError;
+  List<FhirUri>? get link => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_link')
   List<Element>? get linkElement => throw _privateConstructorUsedError;

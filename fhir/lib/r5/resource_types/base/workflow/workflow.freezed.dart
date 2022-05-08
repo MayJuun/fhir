@@ -64,7 +64,7 @@ mixin _$Appointment {
   Element? get minutesDurationElement => throw _privateConstructorUsedError;
   List<Reference>? get slot => throw _privateConstructorUsedError;
   List<Reference>? get account => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
@@ -121,7 +121,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
       List<Reference>? slot,
       List<Reference>? account,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       List<Annotation>? note,
       List<CodeableReference>? patientInstruction,
@@ -334,7 +334,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -562,7 +562,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
       List<Reference>? slot,
       List<Reference>? account,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       List<Annotation>? note,
       List<CodeableReference>? patientInstruction,
@@ -791,7 +791,7 @@ class __$$_AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -1051,7 +1051,7 @@ class _$_Appointment extends _Appointment {
   }
 
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -1271,7 +1271,7 @@ abstract class _Appointment extends Appointment {
       @JsonKey(name: '_minutesDuration') final Element? minutesDurationElement,
       final List<Reference>? slot,
       final List<Reference>? account,
-      final DateTime? created,
+      final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       final List<Annotation>? note,
       final List<CodeableReference>? patientInstruction,
@@ -1362,7 +1362,7 @@ abstract class _Appointment extends Appointment {
   @override
   List<Reference>? get account => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -4374,10 +4374,10 @@ mixin _$Task {
   Reference? get for_ => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
   Period? get executionPeriod => throw _privateConstructorUsedError;
-  DateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
-  DateTime? get lastModified => throw _privateConstructorUsedError;
+  FhirDateTime? get lastModified => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastModified')
   Element? get lastModifiedElement => throw _privateConstructorUsedError;
   Reference? get requester => throw _privateConstructorUsedError;
@@ -4437,9 +4437,9 @@ abstract class $TaskCopyWith<$Res> {
       @JsonKey(name: 'for') Reference? for_,
       Reference? encounter,
       Period? executionPeriod,
-      DateTime? authoredOn,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') Element? authoredOnElement,
-      DateTime? lastModified,
+      FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified') Element? lastModifiedElement,
       Reference? requester,
       List<CodeableConcept>? performerType,
@@ -4677,7 +4677,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
@@ -4685,7 +4685,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       lastModified: lastModified == freezed
           ? _value.lastModified
           : lastModified // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       lastModifiedElement: lastModifiedElement == freezed
           ? _value.lastModifiedElement
           : lastModifiedElement // ignore: cast_nullable_to_non_nullable
@@ -5056,9 +5056,9 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       @JsonKey(name: 'for') Reference? for_,
       Reference? encounter,
       Period? executionPeriod,
-      DateTime? authoredOn,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') Element? authoredOnElement,
-      DateTime? lastModified,
+      FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified') Element? lastModifiedElement,
       Reference? requester,
       List<CodeableConcept>? performerType,
@@ -5322,7 +5322,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
@@ -5330,7 +5330,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       lastModified: lastModified == freezed
           ? _value.lastModified
           : lastModified // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       lastModifiedElement: lastModifiedElement == freezed
           ? _value.lastModifiedElement
           : lastModifiedElement // ignore: cast_nullable_to_non_nullable
@@ -5575,12 +5575,12 @@ class _$_Task extends _Task {
   @override
   final Period? executionPeriod;
   @override
-  final DateTime? authoredOn;
+  final FhirDateTime? authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
   final Element? authoredOnElement;
   @override
-  final DateTime? lastModified;
+  final FhirDateTime? lastModified;
   @override
   @JsonKey(name: '_lastModified')
   final Element? lastModifiedElement;
@@ -5842,9 +5842,9 @@ abstract class _Task extends Task {
       @JsonKey(name: 'for') final Reference? for_,
       final Reference? encounter,
       final Period? executionPeriod,
-      final DateTime? authoredOn,
+      final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn') final Element? authoredOnElement,
-      final DateTime? lastModified,
+      final FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified') final Element? lastModifiedElement,
       final Reference? requester,
       final List<CodeableConcept>? performerType,
@@ -5939,12 +5939,12 @@ abstract class _Task extends Task {
   @override
   Period? get executionPeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authoredOn')
   Element? get authoredOnElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get lastModified => throw _privateConstructorUsedError;
+  FhirDateTime? get lastModified => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastModified')
   Element? get lastModifiedElement => throw _privateConstructorUsedError;
@@ -6336,7 +6336,7 @@ mixin _$TaskInput {
   Date? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Decimal? get valueDecimal => throw _privateConstructorUsedError;
@@ -6446,7 +6446,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -6714,7 +6714,7 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7584,7 +7584,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -7908,7 +7908,7 @@ class __$$_TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8298,7 +8298,7 @@ class _$_TaskInput extends _TaskInput {
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -8687,7 +8687,7 @@ abstract class _TaskInput extends TaskInput {
       final Date? valueDate,
       @JsonKey(name: '_valueDate')
           final Element? valueDateElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
       final Decimal? valueDecimal,
@@ -8806,7 +8806,7 @@ abstract class _TaskInput extends TaskInput {
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -8985,7 +8985,7 @@ mixin _$TaskOutput {
   Date? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Decimal? get valueDecimal => throw _privateConstructorUsedError;
@@ -9096,7 +9096,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -9364,7 +9364,7 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10235,7 +10235,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -10559,7 +10559,7 @@ class __$$_TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10949,7 +10949,7 @@ class _$_TaskOutput extends _TaskOutput {
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -11338,7 +11338,7 @@ abstract class _TaskOutput extends TaskOutput {
       final Date? valueDate,
       @JsonKey(name: '_valueDate')
           final Element? valueDateElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
       final Decimal? valueDecimal,
@@ -11457,7 +11457,7 @@ abstract class _TaskOutput extends TaskOutput {
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -19025,14 +19025,14 @@ mixin _$VerificationResult {
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  DateTime? get statusDate => throw _privateConstructorUsedError;
+  FhirDateTime? get statusDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_statusDate')
   Element? get statusDateElement => throw _privateConstructorUsedError;
   CodeableConcept? get validationType => throw _privateConstructorUsedError;
   List<CodeableConcept>? get validationProcess =>
       throw _privateConstructorUsedError;
   Timing? get frequency => throw _privateConstructorUsedError;
-  DateTime? get lastPerformed => throw _privateConstructorUsedError;
+  FhirDateTime? get lastPerformed => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastPerformed')
   Element? get lastPerformedElement => throw _privateConstructorUsedError;
   Date? get nextScheduled => throw _privateConstructorUsedError;
@@ -19075,12 +19075,12 @@ abstract class $VerificationResultCopyWith<$Res> {
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
-      DateTime? statusDate,
+      FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate') Element? statusDateElement,
       CodeableConcept? validationType,
       List<CodeableConcept>? validationProcess,
       Timing? frequency,
-      DateTime? lastPerformed,
+      FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed') Element? lastPerformedElement,
       Date? nextScheduled,
       @JsonKey(name: '_nextScheduled') Element? nextScheduledElement,
@@ -19218,7 +19218,7 @@ class _$VerificationResultCopyWithImpl<$Res>
       statusDate: statusDate == freezed
           ? _value.statusDate
           : statusDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       statusDateElement: statusDateElement == freezed
           ? _value.statusDateElement
           : statusDateElement // ignore: cast_nullable_to_non_nullable
@@ -19238,7 +19238,7 @@ class _$VerificationResultCopyWithImpl<$Res>
       lastPerformed: lastPerformed == freezed
           ? _value.lastPerformed
           : lastPerformed // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       lastPerformedElement: lastPerformedElement == freezed
           ? _value.lastPerformedElement
           : lastPerformedElement // ignore: cast_nullable_to_non_nullable
@@ -19440,12 +19440,12 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
-      DateTime? statusDate,
+      FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate') Element? statusDateElement,
       CodeableConcept? validationType,
       List<CodeableConcept>? validationProcess,
       Timing? frequency,
-      DateTime? lastPerformed,
+      FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed') Element? lastPerformedElement,
       Date? nextScheduled,
       @JsonKey(name: '_nextScheduled') Element? nextScheduledElement,
@@ -19598,7 +19598,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       statusDate: statusDate == freezed
           ? _value.statusDate
           : statusDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       statusDateElement: statusDateElement == freezed
           ? _value.statusDateElement
           : statusDateElement // ignore: cast_nullable_to_non_nullable
@@ -19618,7 +19618,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       lastPerformed: lastPerformed == freezed
           ? _value.lastPerformed
           : lastPerformed // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       lastPerformedElement: lastPerformedElement == freezed
           ? _value.lastPerformedElement
           : lastPerformedElement // ignore: cast_nullable_to_non_nullable
@@ -19790,7 +19790,7 @@ class _$_VerificationResult extends _VerificationResult {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final DateTime? statusDate;
+  final FhirDateTime? statusDate;
   @override
   @JsonKey(name: '_statusDate')
   final Element? statusDateElement;
@@ -19808,7 +19808,7 @@ class _$_VerificationResult extends _VerificationResult {
   @override
   final Timing? frequency;
   @override
-  final DateTime? lastPerformed;
+  final FhirDateTime? lastPerformed;
   @override
   @JsonKey(name: '_lastPerformed')
   final Element? lastPerformedElement;
@@ -19975,13 +19975,13 @@ abstract class _VerificationResult extends VerificationResult {
           final Code? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
-          final DateTime? statusDate,
+          final FhirDateTime? statusDate,
           @JsonKey(name: '_statusDate')
               final Element? statusDateElement,
           final CodeableConcept? validationType,
           final List<CodeableConcept>? validationProcess,
           final Timing? frequency,
-          final DateTime? lastPerformed,
+          final FhirDateTime? lastPerformed,
           @JsonKey(name: '_lastPerformed')
               final Element? lastPerformedElement,
           final Date? nextScheduled,
@@ -20039,7 +20039,7 @@ abstract class _VerificationResult extends VerificationResult {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get statusDate => throw _privateConstructorUsedError;
+  FhirDateTime? get statusDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_statusDate')
   Element? get statusDateElement => throw _privateConstructorUsedError;
@@ -20051,7 +20051,7 @@ abstract class _VerificationResult extends VerificationResult {
   @override
   Timing? get frequency => throw _privateConstructorUsedError;
   @override
-  DateTime? get lastPerformed => throw _privateConstructorUsedError;
+  FhirDateTime? get lastPerformed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastPerformed')
   Element? get lastPerformedElement => throw _privateConstructorUsedError;
@@ -20094,7 +20094,7 @@ mixin _$VerificationResultPrimarySource {
   List<CodeableConcept>? get communicationMethod =>
       throw _privateConstructorUsedError;
   CodeableConcept? get validationStatus => throw _privateConstructorUsedError;
-  DateTime? get validationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get validationDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_validationDate')
   Element? get validationDateElement => throw _privateConstructorUsedError;
   CodeableConcept? get canPushUpdates => throw _privateConstructorUsedError;
@@ -20121,7 +20121,7 @@ abstract class $VerificationResultPrimarySourceCopyWith<$Res> {
       List<CodeableConcept>? type,
       List<CodeableConcept>? communicationMethod,
       CodeableConcept? validationStatus,
-      DateTime? validationDate,
+      FhirDateTime? validationDate,
       @JsonKey(name: '_validationDate') Element? validationDateElement,
       CodeableConcept? canPushUpdates,
       List<CodeableConcept>? pushTypeAvailable});
@@ -20187,7 +20187,7 @@ class _$VerificationResultPrimarySourceCopyWithImpl<$Res>
       validationDate: validationDate == freezed
           ? _value.validationDate
           : validationDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       validationDateElement: validationDateElement == freezed
           ? _value.validationDateElement
           : validationDateElement // ignore: cast_nullable_to_non_nullable
@@ -20264,7 +20264,7 @@ abstract class _$$_VerificationResultPrimarySourceCopyWith<$Res>
       List<CodeableConcept>? type,
       List<CodeableConcept>? communicationMethod,
       CodeableConcept? validationStatus,
-      DateTime? validationDate,
+      FhirDateTime? validationDate,
       @JsonKey(name: '_validationDate') Element? validationDateElement,
       CodeableConcept? canPushUpdates,
       List<CodeableConcept>? pushTypeAvailable});
@@ -20338,7 +20338,7 @@ class __$$_VerificationResultPrimarySourceCopyWithImpl<$Res>
       validationDate: validationDate == freezed
           ? _value.validationDate
           : validationDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       validationDateElement: validationDateElement == freezed
           ? _value.validationDateElement
           : validationDateElement // ignore: cast_nullable_to_non_nullable
@@ -20426,7 +20426,7 @@ class _$_VerificationResultPrimarySource
   @override
   final CodeableConcept? validationStatus;
   @override
-  final DateTime? validationDate;
+  final FhirDateTime? validationDate;
   @override
   @JsonKey(name: '_validationDate')
   final Element? validationDateElement;
@@ -20511,7 +20511,7 @@ abstract class _VerificationResultPrimarySource
       final List<CodeableConcept>? type,
       final List<CodeableConcept>? communicationMethod,
       final CodeableConcept? validationStatus,
-      final DateTime? validationDate,
+      final FhirDateTime? validationDate,
       @JsonKey(name: '_validationDate') final Element? validationDateElement,
       final CodeableConcept? canPushUpdates,
       final List<CodeableConcept>?
@@ -20539,7 +20539,7 @@ abstract class _VerificationResultPrimarySource
   @override
   CodeableConcept? get validationStatus => throw _privateConstructorUsedError;
   @override
-  DateTime? get validationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get validationDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_validationDate')
   Element? get validationDateElement => throw _privateConstructorUsedError;

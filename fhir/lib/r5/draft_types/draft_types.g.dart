@@ -130,7 +130,7 @@ _$_MarketingStatus _$$_MarketingStatusFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['dateRange'] as Map<String, dynamic>),
       restoreDate: json['restoreDate'] == null
           ? null
-          : DateTime.parse(json['restoreDate'] as String),
+          : FhirDateTime.fromJson(json['restoreDate']),
       restoreDateElement: json['_restoreDate'] == null
           ? null
           : Element.fromJson(json['_restoreDate'] as Map<String, dynamic>),
@@ -154,7 +154,7 @@ Map<String, dynamic> _$$_MarketingStatusToJson(_$_MarketingStatus instance) {
   writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
   val['status'] = instance.status.toJson();
   writeNotNull('dateRange', instance.dateRange?.toJson());
-  writeNotNull('restoreDate', instance.restoreDate?.toIso8601String());
+  writeNotNull('restoreDate', instance.restoreDate?.toJson());
   writeNotNull('_restoreDate', instance.restoreDateElement?.toJson());
   return val;
 }

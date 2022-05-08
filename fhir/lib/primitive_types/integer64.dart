@@ -8,8 +8,6 @@ import 'package:yaml/yaml.dart';
 class Integer64 {
   const Integer64._(this.valueString, this.valueNumber, this.isValid);
 
-  // static final BigInt bit64 = BigInt.parse('9223372036854775808');
-
   factory Integer64(dynamic inValue) {
     if (inValue is int) {
       return Integer64._(inValue.toString(), BigInt.from(inValue), true);

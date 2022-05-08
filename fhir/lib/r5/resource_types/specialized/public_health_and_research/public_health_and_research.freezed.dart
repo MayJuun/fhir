@@ -53,7 +53,7 @@ mixin _$ResearchStudy {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Code? get status => throw _privateConstructorUsedError;
@@ -134,7 +134,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
@@ -356,7 +356,7 @@ class _$ResearchStudyCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -727,7 +727,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
@@ -970,7 +970,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1302,7 +1302,7 @@ class _$_ResearchStudy extends _ResearchStudy {
   }
 
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -1694,7 +1694,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<Reference>? protocol,
       final List<Reference>? partOf,
       final List<RelatedArtifact>? relatedArtifact,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final Code? status,
@@ -1793,7 +1793,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -6367,10 +6367,10 @@ mixin _$ResearchSubjectProgress {
   CodeableConcept? get subjectState => throw _privateConstructorUsedError;
   CodeableConcept? get milestone => throw _privateConstructorUsedError;
   CodeableConcept? get reason => throw _privateConstructorUsedError;
-  DateTime? get startDate => throw _privateConstructorUsedError;
+  FhirDateTime? get startDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_startDate')
   Element? get startDateElement => throw _privateConstructorUsedError;
-  DateTime? get endDate => throw _privateConstructorUsedError;
+  FhirDateTime? get endDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_endDate')
   Element? get endDateElement => throw _privateConstructorUsedError;
 
@@ -6393,9 +6393,9 @@ abstract class $ResearchSubjectProgressCopyWith<$Res> {
       CodeableConcept? subjectState,
       CodeableConcept? milestone,
       CodeableConcept? reason,
-      DateTime? startDate,
+      FhirDateTime? startDate,
       @JsonKey(name: '_startDate') Element? startDateElement,
-      DateTime? endDate,
+      FhirDateTime? endDate,
       @JsonKey(name: '_endDate') Element? endDateElement});
 
   $CodeableConceptCopyWith<$Res>? get type;
@@ -6461,7 +6461,7 @@ class _$ResearchSubjectProgressCopyWithImpl<$Res>
       startDate: startDate == freezed
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       startDateElement: startDateElement == freezed
           ? _value.startDateElement
           : startDateElement // ignore: cast_nullable_to_non_nullable
@@ -6469,7 +6469,7 @@ class _$ResearchSubjectProgressCopyWithImpl<$Res>
       endDate: endDate == freezed
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       endDateElement: endDateElement == freezed
           ? _value.endDateElement
           : endDateElement // ignore: cast_nullable_to_non_nullable
@@ -6559,9 +6559,9 @@ abstract class _$$_ResearchSubjectProgressCopyWith<$Res>
       CodeableConcept? subjectState,
       CodeableConcept? milestone,
       CodeableConcept? reason,
-      DateTime? startDate,
+      FhirDateTime? startDate,
       @JsonKey(name: '_startDate') Element? startDateElement,
-      DateTime? endDate,
+      FhirDateTime? endDate,
       @JsonKey(name: '_endDate') Element? endDateElement});
 
   @override
@@ -6636,7 +6636,7 @@ class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
       startDate: startDate == freezed
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       startDateElement: startDateElement == freezed
           ? _value.startDateElement
           : startDateElement // ignore: cast_nullable_to_non_nullable
@@ -6644,7 +6644,7 @@ class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
       endDate: endDate == freezed
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       endDateElement: endDateElement == freezed
           ? _value.endDateElement
           : endDateElement // ignore: cast_nullable_to_non_nullable
@@ -6705,12 +6705,12 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   @override
   final CodeableConcept? reason;
   @override
-  final DateTime? startDate;
+  final FhirDateTime? startDate;
   @override
   @JsonKey(name: '_startDate')
   final Element? startDateElement;
   @override
-  final DateTime? endDate;
+  final FhirDateTime? endDate;
   @override
   @JsonKey(name: '_endDate')
   final Element? endDateElement;
@@ -6781,9 +6781,9 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
           final CodeableConcept? subjectState,
           final CodeableConcept? milestone,
           final CodeableConcept? reason,
-          final DateTime? startDate,
+          final FhirDateTime? startDate,
           @JsonKey(name: '_startDate') final Element? startDateElement,
-          final DateTime? endDate,
+          final FhirDateTime? endDate,
           @JsonKey(name: '_endDate') final Element? endDateElement}) =
       _$_ResearchSubjectProgress;
   _ResearchSubjectProgress._() : super._();
@@ -6808,12 +6808,12 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
   @override
   CodeableConcept? get reason => throw _privateConstructorUsedError;
   @override
-  DateTime? get startDate => throw _privateConstructorUsedError;
+  FhirDateTime? get startDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_startDate')
   Element? get startDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get endDate => throw _privateConstructorUsedError;
+  FhirDateTime? get endDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_endDate')
   Element? get endDateElement => throw _privateConstructorUsedError;

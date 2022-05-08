@@ -54,7 +54,7 @@ mixin _$CapabilityStatement {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -134,7 +134,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -350,7 +350,7 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -710,7 +710,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -947,7 +947,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1230,7 +1230,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -1582,7 +1582,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -1676,7 +1676,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -1771,7 +1771,7 @@ mixin _$CapabilityStatementSoftware {
   String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
-  DateTime? get releaseDate => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_releaseDate')
   Element? get releaseDateElement => throw _privateConstructorUsedError;
 
@@ -1795,7 +1795,7 @@ abstract class $CapabilityStatementSoftwareCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      DateTime? releaseDate,
+      FhirDateTime? releaseDate,
       @JsonKey(name: '_releaseDate') Element? releaseDateElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -1856,7 +1856,7 @@ class _$CapabilityStatementSoftwareCopyWithImpl<$Res>
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       releaseDateElement: releaseDateElement == freezed
           ? _value.releaseDateElement
           : releaseDateElement // ignore: cast_nullable_to_non_nullable
@@ -1914,7 +1914,7 @@ abstract class _$$_CapabilityStatementSoftwareCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      DateTime? releaseDate,
+      FhirDateTime? releaseDate,
       @JsonKey(name: '_releaseDate') Element? releaseDateElement});
 
   @override
@@ -1982,7 +1982,7 @@ class __$$_CapabilityStatementSoftwareCopyWithImpl<$Res>
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       releaseDateElement: releaseDateElement == freezed
           ? _value.releaseDateElement
           : releaseDateElement // ignore: cast_nullable_to_non_nullable
@@ -2043,7 +2043,7 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
-  final DateTime? releaseDate;
+  final FhirDateTime? releaseDate;
   @override
   @JsonKey(name: '_releaseDate')
   final Element? releaseDateElement;
@@ -2111,7 +2111,7 @@ abstract class _CapabilityStatementSoftware
           @JsonKey(name: '_name') final Element? nameElement,
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement,
-          final DateTime? releaseDate,
+          final FhirDateTime? releaseDate,
           @JsonKey(name: '_releaseDate') final Element? releaseDateElement}) =
       _$_CapabilityStatementSoftware;
   _CapabilityStatementSoftware._() : super._();
@@ -2138,7 +2138,7 @@ abstract class _CapabilityStatementSoftware
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get releaseDate => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_releaseDate')
   Element? get releaseDateElement => throw _privateConstructorUsedError;
@@ -7431,7 +7431,7 @@ mixin _$CapabilityStatement2 {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -7508,7 +7508,7 @@ abstract class $CapabilityStatement2CopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -7720,7 +7720,7 @@ class _$CapabilityStatement2CopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -8072,7 +8072,7 @@ abstract class _$$_CapabilityStatement2CopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -8305,7 +8305,7 @@ class __$$_CapabilityStatement2CopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -8576,7 +8576,7 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -8905,7 +8905,7 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -8996,7 +8996,7 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -9086,7 +9086,7 @@ mixin _$CapabilityStatement2Software {
   String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
-  DateTime? get releaseDate => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_releaseDate')
   Element? get releaseDateElement => throw _privateConstructorUsedError;
 
@@ -9110,7 +9110,7 @@ abstract class $CapabilityStatement2SoftwareCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      DateTime? releaseDate,
+      FhirDateTime? releaseDate,
       @JsonKey(name: '_releaseDate') Element? releaseDateElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -9171,7 +9171,7 @@ class _$CapabilityStatement2SoftwareCopyWithImpl<$Res>
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       releaseDateElement: releaseDateElement == freezed
           ? _value.releaseDateElement
           : releaseDateElement // ignore: cast_nullable_to_non_nullable
@@ -9229,7 +9229,7 @@ abstract class _$$_CapabilityStatement2SoftwareCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      DateTime? releaseDate,
+      FhirDateTime? releaseDate,
       @JsonKey(name: '_releaseDate') Element? releaseDateElement});
 
   @override
@@ -9297,7 +9297,7 @@ class __$$_CapabilityStatement2SoftwareCopyWithImpl<$Res>
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       releaseDateElement: releaseDateElement == freezed
           ? _value.releaseDateElement
           : releaseDateElement // ignore: cast_nullable_to_non_nullable
@@ -9358,7 +9358,7 @@ class _$_CapabilityStatement2Software extends _CapabilityStatement2Software {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
-  final DateTime? releaseDate;
+  final FhirDateTime? releaseDate;
   @override
   @JsonKey(name: '_releaseDate')
   final Element? releaseDateElement;
@@ -9426,7 +9426,7 @@ abstract class _CapabilityStatement2Software
           @JsonKey(name: '_name') final Element? nameElement,
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement,
-          final DateTime? releaseDate,
+          final FhirDateTime? releaseDate,
           @JsonKey(name: '_releaseDate') final Element? releaseDateElement}) =
       _$_CapabilityStatement2Software;
   _CapabilityStatement2Software._() : super._();
@@ -9453,7 +9453,7 @@ abstract class _CapabilityStatement2Software
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get releaseDate => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_releaseDate')
   Element? get releaseDateElement => throw _privateConstructorUsedError;
@@ -12820,7 +12820,7 @@ mixin _$CompartmentDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -12883,7 +12883,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -13075,7 +13075,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -13367,7 +13367,7 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -13579,7 +13579,7 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -13798,7 +13798,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -14033,7 +14033,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
           @JsonKey(name: '_status') final Element? statusElement,
           final Boolean? experimental,
           @JsonKey(name: '_experimental') final Element? experimentalElement,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date') final Element? dateElement,
           final String? publisher,
           @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -14116,7 +14116,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -14607,7 +14607,7 @@ mixin _$ExampleScenario {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -14668,7 +14668,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -14856,7 +14856,7 @@ class _$ExampleScenarioCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -15122,7 +15122,7 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -15327,7 +15327,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -15544,7 +15544,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -15791,7 +15791,7 @@ abstract class _ExampleScenario extends ExampleScenario {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -15872,7 +15872,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -19569,7 +19569,7 @@ mixin _$GraphDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -19629,7 +19629,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -19818,7 +19818,7 @@ class _$GraphDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -20095,7 +20095,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -20302,7 +20302,7 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -20516,7 +20516,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -20744,7 +20744,7 @@ abstract class _GraphDefinition extends GraphDefinition {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -20825,7 +20825,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -22370,7 +22370,7 @@ mixin _$ImplementationGuide {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -22442,7 +22442,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -22646,7 +22646,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -22982,7 +22982,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -23207,7 +23207,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -23454,7 +23454,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -23736,7 +23736,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -23823,7 +23823,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -28364,7 +28364,7 @@ mixin _$MessageDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -28436,7 +28436,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -28646,7 +28646,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -28992,7 +28992,7 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -29223,7 +29223,7 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -29485,7 +29485,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -29788,7 +29788,7 @@ abstract class _MessageDefinition extends MessageDefinition {
       final Boolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final String? publisher,
@@ -29886,7 +29886,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -30702,7 +30702,7 @@ mixin _$OperationDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -30788,7 +30788,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -31017,7 +31017,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -31428,7 +31428,7 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -31681,7 +31681,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -31983,7 +31983,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -32319,7 +32319,7 @@ abstract class _OperationDefinition extends OperationDefinition {
           @JsonKey(name: '_status') final Element? statusElement,
           final Boolean? experimental,
           @JsonKey(name: '_experimental') final Element? experimentalElement,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date') final Element? dateElement,
           final String? publisher,
           @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -32418,7 +32418,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -34295,7 +34295,7 @@ mixin _$SearchParameter {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -34389,7 +34389,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -34628,7 +34628,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -35059,7 +35059,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -35322,7 +35322,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -35656,7 +35656,7 @@ class _$_SearchParameter extends _SearchParameter {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -36071,7 +36071,7 @@ abstract class _SearchParameter extends SearchParameter {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -36174,7 +36174,7 @@ abstract class _SearchParameter extends SearchParameter {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -36609,7 +36609,7 @@ mixin _$StructureDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -36703,7 +36703,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -36938,7 +36938,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -37348,7 +37348,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? publisher,
@@ -37607,7 +37607,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -37916,7 +37916,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -38255,7 +38255,7 @@ abstract class _StructureDefinition extends StructureDefinition {
           final Boolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
           final String? publisher,
@@ -38363,7 +38363,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -39752,7 +39752,7 @@ mixin _$StructureMap {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -39812,7 +39812,7 @@ abstract class $StructureMapCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -39997,7 +39997,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -40259,7 +40259,7 @@ abstract class _$$_StructureMapCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -40462,7 +40462,7 @@ class __$$_StructureMapCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -40673,7 +40673,7 @@ class _$_StructureMap extends _StructureMap {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -40909,7 +40909,7 @@ abstract class _StructureMap extends StructureMap {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -40989,7 +40989,7 @@ abstract class _StructureMap extends StructureMap {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -44359,7 +44359,7 @@ mixin _$StructureMapParameter {
   Time? get valueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
@@ -44392,7 +44392,7 @@ abstract class $StructureMapParameterCopyWith<$Res> {
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
 
   $ElementCopyWith<$Res>? get valueIdElement;
@@ -44508,7 +44508,7 @@ class _$StructureMapParameterCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -44630,7 +44630,7 @@ abstract class _$$_StructureMapParameterCopyWith<$Res>
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
 
   @override
@@ -44757,7 +44757,7 @@ class __$$_StructureMapParameterCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -44853,7 +44853,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -44968,7 +44968,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
       final Time? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement}) = _$_StructureMapParameter;
   _StructureMapParameter._() : super._();
@@ -45020,7 +45020,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
   @JsonKey(name: '_valueTime')
   Element? get valueTimeElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;

@@ -158,7 +158,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     List<Reference>? protocol,
     List<Reference>? partOf,
     List<RelatedArtifact>? relatedArtifact,
-    DateTime? date,
+    FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -1031,9 +1031,9 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
     CodeableConcept? subjectState,
     CodeableConcept? milestone,
     CodeableConcept? reason,
-    DateTime? startDate,
+    FhirDateTime? startDate,
     @JsonKey(name: '_startDate') Element? startDateElement,
-    DateTime? endDate,
+    FhirDateTime? endDate,
     @JsonKey(name: '_endDate') Element? endDateElement,
   }) = _ResearchSubjectProgress;
 

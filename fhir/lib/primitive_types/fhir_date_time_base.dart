@@ -26,17 +26,13 @@ abstract class FhirDateTimeBase {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is! FhirDateTimeBase
-          ? o is String && isValid && FhirDateTime(o).isValid
-              ? o.length == toString().length && value == FhirDateTime(o).value
-              : false
-          : isValid && o.isValid
+      : o is FhirDateTimeBase
+          ? isValid == o.isValid
               ? o.toString().length == toString().length && value == o.value
-              : throw Exception(
-                  'Two values were passed to the date time "==" comparison operator, '
-                  'they were not both valid FhirDateTimeBase types\n'
-                  'Argument 1: $value (${value.runtimeType})\n'
-                  'Argument 2: $o (${o.runtimeType})');
+              : false
+          : o is String && (isValid == FhirDateTime(o).isValid)
+              ? o.length == toString().length && value == FhirDateTime(o).value
+              : false;
 
   /// ToDo: may need to fix for precision
   bool operator >(Object o) => identical(this, o)

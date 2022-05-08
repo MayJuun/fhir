@@ -49,7 +49,7 @@ mixin _$Composition {
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
@@ -104,7 +104,7 @@ abstract class $CompositionCopyWith<$Res> {
       List<CodeableConcept>? category,
       Reference? subject,
       Reference? encounter,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       List<UsageContext>? useContext,
       List<Reference> author,
@@ -280,7 +280,7 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -547,7 +547,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       List<CodeableConcept>? category,
       Reference? subject,
       Reference? encounter,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       List<UsageContext>? useContext,
       List<Reference> author,
@@ -741,7 +741,7 @@ class __$$_CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -944,7 +944,7 @@ class _$_Composition extends _Composition {
   @override
   final Reference? encounter;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -1173,7 +1173,7 @@ abstract class _Composition extends Composition {
       final List<CodeableConcept>? category,
       final Reference? subject,
       final Reference? encounter,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final List<UsageContext>? useContext,
       required final List<Reference> author,
@@ -1246,7 +1246,7 @@ abstract class _Composition extends Composition {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -1299,7 +1299,7 @@ mixin _$CompositionAttester {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept get mode => throw _privateConstructorUsedError;
-  DateTime? get time => throw _privateConstructorUsedError;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
   Reference? get party => throw _privateConstructorUsedError;
@@ -1320,7 +1320,7 @@ abstract class $CompositionAttesterCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept mode,
-      DateTime? time,
+      FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party});
 
@@ -1368,7 +1368,7 @@ class _$CompositionAttesterCopyWithImpl<$Res>
       time: time == freezed
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timeElement: timeElement == freezed
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -1422,7 +1422,7 @@ abstract class _$$_CompositionAttesterCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept mode,
-      DateTime? time,
+      FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party});
 
@@ -1475,7 +1475,7 @@ class __$$_CompositionAttesterCopyWithImpl<$Res>
       time: time == freezed
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timeElement: timeElement == freezed
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -1530,7 +1530,7 @@ class _$_CompositionAttester extends _CompositionAttester {
   @override
   final CodeableConcept mode;
   @override
-  final DateTime? time;
+  final FhirDateTime? time;
   @override
   @JsonKey(name: '_time')
   final Element? timeElement;
@@ -1589,7 +1589,7 @@ abstract class _CompositionAttester extends CompositionAttester {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept mode,
-      final DateTime? time,
+      final FhirDateTime? time,
       @JsonKey(name: '_time') final Element? timeElement,
       final Reference? party}) = _$_CompositionAttester;
   _CompositionAttester._() : super._();
@@ -1608,7 +1608,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   @override
   CodeableConcept get mode => throw _privateConstructorUsedError;
   @override
-  DateTime? get time => throw _privateConstructorUsedError;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
@@ -2535,7 +2535,7 @@ mixin _$DocumentManifest {
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   List<Reference>? get author => throw _privateConstructorUsedError;
@@ -2579,7 +2579,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       List<Reference>? author,
       List<Reference>? recipient,
@@ -2714,7 +2714,7 @@ class _$DocumentManifestCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -2901,7 +2901,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       List<Reference>? author,
       List<Reference>? recipient,
@@ -3049,7 +3049,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -3202,7 +3202,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   @override
   final Reference? subject;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -3367,7 +3367,7 @@ abstract class _DocumentManifest extends DocumentManifest {
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final Reference? subject,
-      final DateTime? created,
+      final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       final List<Reference>? author,
       final List<Reference>? recipient,
@@ -3422,7 +3422,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
   Reference? get subject => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -5015,7 +5015,7 @@ mixin _$DocumentReferenceAttester {
   Code? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
-  DateTime? get time => throw _privateConstructorUsedError;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
   Reference? get party => throw _privateConstructorUsedError;
@@ -5037,7 +5037,7 @@ abstract class $DocumentReferenceAttesterCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Code? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      DateTime? time,
+      FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party});
 
@@ -5090,7 +5090,7 @@ class _$DocumentReferenceAttesterCopyWithImpl<$Res>
       time: time == freezed
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timeElement: timeElement == freezed
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -5150,7 +5150,7 @@ abstract class _$$_DocumentReferenceAttesterCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Code? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      DateTime? time,
+      FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party});
 
@@ -5210,7 +5210,7 @@ class __$$_DocumentReferenceAttesterCopyWithImpl<$Res>
       time: time == freezed
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timeElement: timeElement == freezed
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -5269,7 +5269,7 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
   @JsonKey(name: '_mode')
   final Element? modeElement;
   @override
-  final DateTime? time;
+  final FhirDateTime? time;
   @override
   @JsonKey(name: '_time')
   final Element? timeElement;
@@ -5332,7 +5332,7 @@ abstract class _DocumentReferenceAttester extends DocumentReferenceAttester {
       final List<FhirExtension>? modifierExtension,
       final Code? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
-      final DateTime? time,
+      final FhirDateTime? time,
       @JsonKey(name: '_time') final Element? timeElement,
       final Reference? party}) = _$_DocumentReferenceAttester;
   _DocumentReferenceAttester._() : super._();
@@ -5354,7 +5354,7 @@ abstract class _DocumentReferenceAttester extends DocumentReferenceAttester {
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get time => throw _privateConstructorUsedError;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;

@@ -14,6 +14,1769 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+ArtifactAssessment _$ArtifactAssessmentFromJson(Map<String, dynamic> json) {
+  return _ArtifactAssessment.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ArtifactAssessment {
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Reference? get citeAsReference => throw _privateConstructorUsedError;
+  Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+  @JsonKey(name: '_citeAsMarkdown')
+  Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  FhirDateTime? get approvalDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  FhirDateTime? get lastReviewDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  Reference? get artifactReference => throw _privateConstructorUsedError;
+  Canonical? get artifactCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_artifactCanonical')
+  Element? get artifactCanonicalElement => throw _privateConstructorUsedError;
+  FhirUri? get artifactUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_artifactUri')
+  Element? get artifactUriElement => throw _privateConstructorUsedError;
+  List<ArtifactAssessmentContent>? get content =>
+      throw _privateConstructorUsedError;
+  Code? get workflowStatus => throw _privateConstructorUsedError;
+  @JsonKey(name: '_workflowStatus')
+  Element? get workflowStatusElement => throw _privateConstructorUsedError;
+  Code? get disposition => throw _privateConstructorUsedError;
+  @JsonKey(name: '_disposition')
+  Element? get dispositionElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ArtifactAssessmentCopyWith<ArtifactAssessment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ArtifactAssessmentCopyWith<$Res> {
+  factory $ArtifactAssessmentCopyWith(
+          ArtifactAssessment value, $Res Function(ArtifactAssessment) then) =
+      _$ArtifactAssessmentCopyWithImpl<$Res>;
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference? citeAsReference,
+      Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
+      FhirDateTime? approvalDate,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      FhirDateTime? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      Reference? artifactReference,
+      Canonical? artifactCanonical,
+      @JsonKey(name: '_artifactCanonical') Element? artifactCanonicalElement,
+      FhirUri? artifactUri,
+      @JsonKey(name: '_artifactUri') Element? artifactUriElement,
+      List<ArtifactAssessmentContent>? content,
+      Code? workflowStatus,
+      @JsonKey(name: '_workflowStatus') Element? workflowStatusElement,
+      Code? disposition,
+      @JsonKey(name: '_disposition') Element? dispositionElement});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ReferenceCopyWith<$Res>? get citeAsReference;
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement;
+  $ElementCopyWith<$Res>? get dateElement;
+  $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
+  $ReferenceCopyWith<$Res>? get artifactReference;
+  $ElementCopyWith<$Res>? get artifactCanonicalElement;
+  $ElementCopyWith<$Res>? get artifactUriElement;
+  $ElementCopyWith<$Res>? get workflowStatusElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
+}
+
+/// @nodoc
+class _$ArtifactAssessmentCopyWithImpl<$Res>
+    implements $ArtifactAssessmentCopyWith<$Res> {
+  _$ArtifactAssessmentCopyWithImpl(this._value, this._then);
+
+  final ArtifactAssessment _value;
+  // ignore: unused_field
+  final $Res Function(ArtifactAssessment) _then;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? citeAsReference = freezed,
+    Object? citeAsMarkdown = freezed,
+    Object? citeAsMarkdownElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
+    Object? artifactReference = freezed,
+    Object? artifactCanonical = freezed,
+    Object? artifactCanonicalElement = freezed,
+    Object? artifactUri = freezed,
+    Object? artifactUriElement = freezed,
+    Object? content = freezed,
+    Object? workflowStatus = freezed,
+    Object? workflowStatusElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      citeAsReference: citeAsReference == freezed
+          ? _value.citeAsReference
+          : citeAsReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      citeAsMarkdown: citeAsMarkdown == freezed
+          ? _value.citeAsMarkdown
+          : citeAsMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      citeAsMarkdownElement: citeAsMarkdownElement == freezed
+          ? _value.citeAsMarkdownElement
+          : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      approvalDate: approvalDate == freezed
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: lastReviewDate == freezed
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      artifactReference: artifactReference == freezed
+          ? _value.artifactReference
+          : artifactReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      artifactCanonical: artifactCanonical == freezed
+          ? _value.artifactCanonical
+          : artifactCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      artifactCanonicalElement: artifactCanonicalElement == freezed
+          ? _value.artifactCanonicalElement
+          : artifactCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      artifactUri: artifactUri == freezed
+          ? _value.artifactUri
+          : artifactUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      artifactUriElement: artifactUriElement == freezed
+          ? _value.artifactUriElement
+          : artifactUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<ArtifactAssessmentContent>?,
+      workflowStatus: workflowStatus == freezed
+          ? _value.workflowStatus
+          : workflowStatus // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      workflowStatusElement: workflowStatusElement == freezed
+          ? _value.workflowStatusElement
+          : workflowStatusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get citeAsReference {
+    if (_value.citeAsReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.citeAsReference!, (value) {
+      return _then(_value.copyWith(citeAsReference: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement {
+    if (_value.citeAsMarkdownElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.citeAsMarkdownElement!, (value) {
+      return _then(_value.copyWith(citeAsMarkdownElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.approvalDateElement!, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement!, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get artifactReference {
+    if (_value.artifactReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.artifactReference!, (value) {
+      return _then(_value.copyWith(artifactReference: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get artifactCanonicalElement {
+    if (_value.artifactCanonicalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.artifactCanonicalElement!, (value) {
+      return _then(_value.copyWith(artifactCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get artifactUriElement {
+    if (_value.artifactUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.artifactUriElement!, (value) {
+      return _then(_value.copyWith(artifactUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get workflowStatusElement {
+    if (_value.workflowStatusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.workflowStatusElement!, (value) {
+      return _then(_value.copyWith(workflowStatusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get dispositionElement {
+    if (_value.dispositionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dispositionElement!, (value) {
+      return _then(_value.copyWith(dispositionElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ArtifactAssessmentCopyWith<$Res>
+    implements $ArtifactAssessmentCopyWith<$Res> {
+  factory _$$_ArtifactAssessmentCopyWith(_$_ArtifactAssessment value,
+          $Res Function(_$_ArtifactAssessment) then) =
+      __$$_ArtifactAssessmentCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference? citeAsReference,
+      Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
+      FhirDateTime? approvalDate,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      FhirDateTime? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      Reference? artifactReference,
+      Canonical? artifactCanonical,
+      @JsonKey(name: '_artifactCanonical') Element? artifactCanonicalElement,
+      FhirUri? artifactUri,
+      @JsonKey(name: '_artifactUri') Element? artifactUriElement,
+      List<ArtifactAssessmentContent>? content,
+      Code? workflowStatus,
+      @JsonKey(name: '_workflowStatus') Element? workflowStatusElement,
+      Code? disposition,
+      @JsonKey(name: '_disposition') Element? dispositionElement});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ReferenceCopyWith<$Res>? get citeAsReference;
+  @override
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement;
+  @override
+  $ElementCopyWith<$Res>? get dateElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
+  @override
+  $ReferenceCopyWith<$Res>? get artifactReference;
+  @override
+  $ElementCopyWith<$Res>? get artifactCanonicalElement;
+  @override
+  $ElementCopyWith<$Res>? get artifactUriElement;
+  @override
+  $ElementCopyWith<$Res>? get workflowStatusElement;
+  @override
+  $ElementCopyWith<$Res>? get dispositionElement;
+}
+
+/// @nodoc
+class __$$_ArtifactAssessmentCopyWithImpl<$Res>
+    extends _$ArtifactAssessmentCopyWithImpl<$Res>
+    implements _$$_ArtifactAssessmentCopyWith<$Res> {
+  __$$_ArtifactAssessmentCopyWithImpl(
+      _$_ArtifactAssessment _value, $Res Function(_$_ArtifactAssessment) _then)
+      : super(_value, (v) => _then(v as _$_ArtifactAssessment));
+
+  @override
+  _$_ArtifactAssessment get _value => super._value as _$_ArtifactAssessment;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? citeAsReference = freezed,
+    Object? citeAsMarkdown = freezed,
+    Object? citeAsMarkdownElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
+    Object? artifactReference = freezed,
+    Object? artifactCanonical = freezed,
+    Object? artifactCanonicalElement = freezed,
+    Object? artifactUri = freezed,
+    Object? artifactUriElement = freezed,
+    Object? content = freezed,
+    Object? workflowStatus = freezed,
+    Object? workflowStatusElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+  }) {
+    return _then(_$_ArtifactAssessment(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      citeAsReference: citeAsReference == freezed
+          ? _value.citeAsReference
+          : citeAsReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      citeAsMarkdown: citeAsMarkdown == freezed
+          ? _value.citeAsMarkdown
+          : citeAsMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      citeAsMarkdownElement: citeAsMarkdownElement == freezed
+          ? _value.citeAsMarkdownElement
+          : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      approvalDate: approvalDate == freezed
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: lastReviewDate == freezed
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      artifactReference: artifactReference == freezed
+          ? _value.artifactReference
+          : artifactReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      artifactCanonical: artifactCanonical == freezed
+          ? _value.artifactCanonical
+          : artifactCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      artifactCanonicalElement: artifactCanonicalElement == freezed
+          ? _value.artifactCanonicalElement
+          : artifactCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      artifactUri: artifactUri == freezed
+          ? _value.artifactUri
+          : artifactUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      artifactUriElement: artifactUriElement == freezed
+          ? _value.artifactUriElement
+          : artifactUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      content: content == freezed
+          ? _value._content
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<ArtifactAssessmentContent>?,
+      workflowStatus: workflowStatus == freezed
+          ? _value.workflowStatus
+          : workflowStatus // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      workflowStatusElement: workflowStatusElement == freezed
+          ? _value.workflowStatusElement
+          : workflowStatusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ArtifactAssessment extends _ArtifactAssessment {
+  _$_ArtifactAssessment(
+      {this.resourceType = R5ResourceType.ArtifactAssessment,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.citeAsReference,
+      this.citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown') this.citeAsMarkdownElement,
+      this.date,
+      @JsonKey(name: '_date') this.dateElement,
+      this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
+      this.approvalDate,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      this.artifactReference,
+      this.artifactCanonical,
+      @JsonKey(name: '_artifactCanonical') this.artifactCanonicalElement,
+      this.artifactUri,
+      @JsonKey(name: '_artifactUri') this.artifactUriElement,
+      final List<ArtifactAssessmentContent>? content,
+      this.workflowStatus,
+      @JsonKey(name: '_workflowStatus') this.workflowStatusElement,
+      this.disposition,
+      @JsonKey(name: '_disposition') this.dispositionElement})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _content = content,
+        super._();
+
+  factory _$_ArtifactAssessment.fromJson(Map<String, dynamic> json) =>
+      _$$_ArtifactAssessmentFromJson(json);
+
+  @override
+  @JsonKey()
+  final R5ResourceType resourceType;
+  @override
+  final Id? id;
+  @override
+  final Meta? meta;
+  @override
+  final FhirUri? implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
+  final Code? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+  @override
+  final Narrative? text;
+  final List<Resource>? _contained;
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference? citeAsReference;
+  @override
+  final Markdown? citeAsMarkdown;
+  @override
+  @JsonKey(name: '_citeAsMarkdown')
+  final Element? citeAsMarkdownElement;
+  @override
+  final FhirDateTime? date;
+  @override
+  @JsonKey(name: '_date')
+  final Element? dateElement;
+  @override
+  final Markdown? copyright;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element? copyrightElement;
+  @override
+  final FhirDateTime? approvalDate;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element? approvalDateElement;
+  @override
+  final FhirDateTime? lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element? lastReviewDateElement;
+  @override
+  final Reference? artifactReference;
+  @override
+  final Canonical? artifactCanonical;
+  @override
+  @JsonKey(name: '_artifactCanonical')
+  final Element? artifactCanonicalElement;
+  @override
+  final FhirUri? artifactUri;
+  @override
+  @JsonKey(name: '_artifactUri')
+  final Element? artifactUriElement;
+  final List<ArtifactAssessmentContent>? _content;
+  @override
+  List<ArtifactAssessmentContent>? get content {
+    final value = _content;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? workflowStatus;
+  @override
+  @JsonKey(name: '_workflowStatus')
+  final Element? workflowStatusElement;
+  @override
+  final Code? disposition;
+  @override
+  @JsonKey(name: '_disposition')
+  final Element? dispositionElement;
+
+  @override
+  String toString() {
+    return 'ArtifactAssessment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, date: $date, dateElement: $dateElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, artifactReference: $artifactReference, artifactCanonical: $artifactCanonical, artifactCanonicalElement: $artifactCanonicalElement, artifactUri: $artifactUri, artifactUriElement: $artifactUriElement, content: $content, workflowStatus: $workflowStatus, workflowStatusElement: $workflowStatusElement, disposition: $disposition, dispositionElement: $dispositionElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ArtifactAssessment &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality()
+                .equals(other.citeAsReference, citeAsReference) &&
+            const DeepCollectionEquality()
+                .equals(other.citeAsMarkdown, citeAsMarkdown) &&
+            const DeepCollectionEquality()
+                .equals(other.citeAsMarkdownElement, citeAsMarkdownElement) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.dateElement, dateElement) &&
+            const DeepCollectionEquality().equals(other.copyright, copyright) &&
+            const DeepCollectionEquality()
+                .equals(other.copyrightElement, copyrightElement) &&
+            const DeepCollectionEquality()
+                .equals(other.approvalDate, approvalDate) &&
+            const DeepCollectionEquality()
+                .equals(other.approvalDateElement, approvalDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.lastReviewDate, lastReviewDate) &&
+            const DeepCollectionEquality()
+                .equals(other.lastReviewDateElement, lastReviewDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.artifactReference, artifactReference) &&
+            const DeepCollectionEquality()
+                .equals(other.artifactCanonical, artifactCanonical) &&
+            const DeepCollectionEquality().equals(
+                other.artifactCanonicalElement, artifactCanonicalElement) &&
+            const DeepCollectionEquality()
+                .equals(other.artifactUri, artifactUri) &&
+            const DeepCollectionEquality()
+                .equals(other.artifactUriElement, artifactUriElement) &&
+            const DeepCollectionEquality().equals(other._content, _content) &&
+            const DeepCollectionEquality()
+                .equals(other.workflowStatus, workflowStatus) &&
+            const DeepCollectionEquality()
+                .equals(other.workflowStatusElement, workflowStatusElement) &&
+            const DeepCollectionEquality()
+                .equals(other.disposition, disposition) &&
+            const DeepCollectionEquality()
+                .equals(other.dispositionElement, dispositionElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(citeAsReference),
+        const DeepCollectionEquality().hash(citeAsMarkdown),
+        const DeepCollectionEquality().hash(citeAsMarkdownElement),
+        const DeepCollectionEquality().hash(date),
+        const DeepCollectionEquality().hash(dateElement),
+        const DeepCollectionEquality().hash(copyright),
+        const DeepCollectionEquality().hash(copyrightElement),
+        const DeepCollectionEquality().hash(approvalDate),
+        const DeepCollectionEquality().hash(approvalDateElement),
+        const DeepCollectionEquality().hash(lastReviewDate),
+        const DeepCollectionEquality().hash(lastReviewDateElement),
+        const DeepCollectionEquality().hash(artifactReference),
+        const DeepCollectionEquality().hash(artifactCanonical),
+        const DeepCollectionEquality().hash(artifactCanonicalElement),
+        const DeepCollectionEquality().hash(artifactUri),
+        const DeepCollectionEquality().hash(artifactUriElement),
+        const DeepCollectionEquality().hash(_content),
+        const DeepCollectionEquality().hash(workflowStatus),
+        const DeepCollectionEquality().hash(workflowStatusElement),
+        const DeepCollectionEquality().hash(disposition),
+        const DeepCollectionEquality().hash(dispositionElement)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ArtifactAssessmentCopyWith<_$_ArtifactAssessment> get copyWith =>
+      __$$_ArtifactAssessmentCopyWithImpl<_$_ArtifactAssessment>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ArtifactAssessmentToJson(this);
+  }
+}
+
+abstract class _ArtifactAssessment extends ArtifactAssessment {
+  factory _ArtifactAssessment(
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Reference? citeAsReference,
+      final Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          final Element? citeAsMarkdownElement,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date')
+          final Element? dateElement,
+      final Markdown? copyright,
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement,
+      final FhirDateTime? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          final Element? approvalDateElement,
+      final FhirDateTime? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          final Element? lastReviewDateElement,
+      final Reference? artifactReference,
+      final Canonical? artifactCanonical,
+      @JsonKey(name: '_artifactCanonical')
+          final Element? artifactCanonicalElement,
+      final FhirUri? artifactUri,
+      @JsonKey(name: '_artifactUri')
+          final Element? artifactUriElement,
+      final List<ArtifactAssessmentContent>? content,
+      final Code? workflowStatus,
+      @JsonKey(name: '_workflowStatus')
+          final Element? workflowStatusElement,
+      final Code? disposition,
+      @JsonKey(name: '_disposition')
+          final Element? dispositionElement}) = _$_ArtifactAssessment;
+  _ArtifactAssessment._() : super._();
+
+  factory _ArtifactAssessment.fromJson(Map<String, dynamic> json) =
+      _$_ArtifactAssessment.fromJson;
+
+  @override
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @override
+  Id? get id => throw _privateConstructorUsedError;
+  @override
+  Meta? get meta => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @override
+  Code? get language => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  @override
+  Narrative? get text => throw _privateConstructorUsedError;
+  @override
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  Reference? get citeAsReference => throw _privateConstructorUsedError;
+  @override
+  Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_citeAsMarkdown')
+  Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  @override
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get approvalDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get lastReviewDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  @override
+  Reference? get artifactReference => throw _privateConstructorUsedError;
+  @override
+  Canonical? get artifactCanonical => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_artifactCanonical')
+  Element? get artifactCanonicalElement => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get artifactUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_artifactUri')
+  Element? get artifactUriElement => throw _privateConstructorUsedError;
+  @override
+  List<ArtifactAssessmentContent>? get content =>
+      throw _privateConstructorUsedError;
+  @override
+  Code? get workflowStatus => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_workflowStatus')
+  Element? get workflowStatusElement => throw _privateConstructorUsedError;
+  @override
+  Code? get disposition => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_disposition')
+  Element? get dispositionElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ArtifactAssessmentCopyWith<_$_ArtifactAssessment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ArtifactAssessmentContent _$ArtifactAssessmentContentFromJson(
+    Map<String, dynamic> json) {
+  return _ArtifactAssessmentContent.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ArtifactAssessmentContent {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get informationType => throw _privateConstructorUsedError;
+  @JsonKey(name: '_informationType')
+  Element? get informationTypeElement => throw _privateConstructorUsedError;
+  Markdown? get summary => throw _privateConstructorUsedError;
+  @JsonKey(name: '_summary')
+  Element? get summaryElement => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+  Reference? get author => throw _privateConstructorUsedError;
+  List<FhirUri>? get path => throw _privateConstructorUsedError;
+  @JsonKey(name: '_path')
+  List<Element>? get pathElement => throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  Boolean? get freeToShare => throw _privateConstructorUsedError;
+  @JsonKey(name: '_freeToShare')
+  Element? get freeToShareElement => throw _privateConstructorUsedError;
+  List<ArtifactAssessmentContent>? get component =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ArtifactAssessmentContentCopyWith<ArtifactAssessmentContent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ArtifactAssessmentContentCopyWith<$Res> {
+  factory $ArtifactAssessmentContentCopyWith(ArtifactAssessmentContent value,
+          $Res Function(ArtifactAssessmentContent) then) =
+      _$ArtifactAssessmentContentCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? informationType,
+      @JsonKey(name: '_informationType') Element? informationTypeElement,
+      Markdown? summary,
+      @JsonKey(name: '_summary') Element? summaryElement,
+      CodeableConcept? type,
+      List<CodeableConcept>? classifier,
+      Reference? author,
+      List<FhirUri>? path,
+      @JsonKey(name: '_path') List<Element>? pathElement,
+      List<RelatedArtifact>? relatedArtifact,
+      Boolean? freeToShare,
+      @JsonKey(name: '_freeToShare') Element? freeToShareElement,
+      List<ArtifactAssessmentContent>? component});
+
+  $ElementCopyWith<$Res>? get informationTypeElement;
+  $ElementCopyWith<$Res>? get summaryElement;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $ReferenceCopyWith<$Res>? get author;
+  $ElementCopyWith<$Res>? get freeToShareElement;
+}
+
+/// @nodoc
+class _$ArtifactAssessmentContentCopyWithImpl<$Res>
+    implements $ArtifactAssessmentContentCopyWith<$Res> {
+  _$ArtifactAssessmentContentCopyWithImpl(this._value, this._then);
+
+  final ArtifactAssessmentContent _value;
+  // ignore: unused_field
+  final $Res Function(ArtifactAssessmentContent) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? informationType = freezed,
+    Object? informationTypeElement = freezed,
+    Object? summary = freezed,
+    Object? summaryElement = freezed,
+    Object? type = freezed,
+    Object? classifier = freezed,
+    Object? author = freezed,
+    Object? path = freezed,
+    Object? pathElement = freezed,
+    Object? relatedArtifact = freezed,
+    Object? freeToShare = freezed,
+    Object? freeToShareElement = freezed,
+    Object? component = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      informationType: informationType == freezed
+          ? _value.informationType
+          : informationType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      informationTypeElement: informationTypeElement == freezed
+          ? _value.informationTypeElement
+          : informationTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      summaryElement: summaryElement == freezed
+          ? _value.summaryElement
+          : summaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      classifier: classifier == freezed
+          ? _value.classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      path: path == freezed
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as List<FhirUri>?,
+      pathElement: pathElement == freezed
+          ? _value.pathElement
+          : pathElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      freeToShare: freeToShare == freezed
+          ? _value.freeToShare
+          : freeToShare // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      freeToShareElement: freeToShareElement == freezed
+          ? _value.freeToShareElement
+          : freeToShareElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      component: component == freezed
+          ? _value.component
+          : component // ignore: cast_nullable_to_non_nullable
+              as List<ArtifactAssessmentContent>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get informationTypeElement {
+    if (_value.informationTypeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.informationTypeElement!, (value) {
+      return _then(_value.copyWith(informationTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get summaryElement {
+    if (_value.summaryElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.summaryElement!, (value) {
+      return _then(_value.copyWith(summaryElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get author {
+    if (_value.author == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.author!, (value) {
+      return _then(_value.copyWith(author: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get freeToShareElement {
+    if (_value.freeToShareElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.freeToShareElement!, (value) {
+      return _then(_value.copyWith(freeToShareElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ArtifactAssessmentContentCopyWith<$Res>
+    implements $ArtifactAssessmentContentCopyWith<$Res> {
+  factory _$$_ArtifactAssessmentContentCopyWith(
+          _$_ArtifactAssessmentContent value,
+          $Res Function(_$_ArtifactAssessmentContent) then) =
+      __$$_ArtifactAssessmentContentCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? informationType,
+      @JsonKey(name: '_informationType') Element? informationTypeElement,
+      Markdown? summary,
+      @JsonKey(name: '_summary') Element? summaryElement,
+      CodeableConcept? type,
+      List<CodeableConcept>? classifier,
+      Reference? author,
+      List<FhirUri>? path,
+      @JsonKey(name: '_path') List<Element>? pathElement,
+      List<RelatedArtifact>? relatedArtifact,
+      Boolean? freeToShare,
+      @JsonKey(name: '_freeToShare') Element? freeToShareElement,
+      List<ArtifactAssessmentContent>? component});
+
+  @override
+  $ElementCopyWith<$Res>? get informationTypeElement;
+  @override
+  $ElementCopyWith<$Res>? get summaryElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $ReferenceCopyWith<$Res>? get author;
+  @override
+  $ElementCopyWith<$Res>? get freeToShareElement;
+}
+
+/// @nodoc
+class __$$_ArtifactAssessmentContentCopyWithImpl<$Res>
+    extends _$ArtifactAssessmentContentCopyWithImpl<$Res>
+    implements _$$_ArtifactAssessmentContentCopyWith<$Res> {
+  __$$_ArtifactAssessmentContentCopyWithImpl(
+      _$_ArtifactAssessmentContent _value,
+      $Res Function(_$_ArtifactAssessmentContent) _then)
+      : super(_value, (v) => _then(v as _$_ArtifactAssessmentContent));
+
+  @override
+  _$_ArtifactAssessmentContent get _value =>
+      super._value as _$_ArtifactAssessmentContent;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? informationType = freezed,
+    Object? informationTypeElement = freezed,
+    Object? summary = freezed,
+    Object? summaryElement = freezed,
+    Object? type = freezed,
+    Object? classifier = freezed,
+    Object? author = freezed,
+    Object? path = freezed,
+    Object? pathElement = freezed,
+    Object? relatedArtifact = freezed,
+    Object? freeToShare = freezed,
+    Object? freeToShareElement = freezed,
+    Object? component = freezed,
+  }) {
+    return _then(_$_ArtifactAssessmentContent(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      informationType: informationType == freezed
+          ? _value.informationType
+          : informationType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      informationTypeElement: informationTypeElement == freezed
+          ? _value.informationTypeElement
+          : informationTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      summaryElement: summaryElement == freezed
+          ? _value.summaryElement
+          : summaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      classifier: classifier == freezed
+          ? _value._classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      path: path == freezed
+          ? _value._path
+          : path // ignore: cast_nullable_to_non_nullable
+              as List<FhirUri>?,
+      pathElement: pathElement == freezed
+          ? _value._pathElement
+          : pathElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value._relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      freeToShare: freeToShare == freezed
+          ? _value.freeToShare
+          : freeToShare // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      freeToShareElement: freeToShareElement == freezed
+          ? _value.freeToShareElement
+          : freeToShareElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      component: component == freezed
+          ? _value._component
+          : component // ignore: cast_nullable_to_non_nullable
+              as List<ArtifactAssessmentContent>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
+  _$_ArtifactAssessmentContent(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.informationType,
+      @JsonKey(name: '_informationType') this.informationTypeElement,
+      this.summary,
+      @JsonKey(name: '_summary') this.summaryElement,
+      this.type,
+      final List<CodeableConcept>? classifier,
+      this.author,
+      final List<FhirUri>? path,
+      @JsonKey(name: '_path') final List<Element>? pathElement,
+      final List<RelatedArtifact>? relatedArtifact,
+      this.freeToShare,
+      @JsonKey(name: '_freeToShare') this.freeToShareElement,
+      final List<ArtifactAssessmentContent>? component})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _classifier = classifier,
+        _path = path,
+        _pathElement = pathElement,
+        _relatedArtifact = relatedArtifact,
+        _component = component,
+        super._();
+
+  factory _$_ArtifactAssessmentContent.fromJson(Map<String, dynamic> json) =>
+      _$$_ArtifactAssessmentContentFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? informationType;
+  @override
+  @JsonKey(name: '_informationType')
+  final Element? informationTypeElement;
+  @override
+  final Markdown? summary;
+  @override
+  @JsonKey(name: '_summary')
+  final Element? summaryElement;
+  @override
+  final CodeableConcept? type;
+  final List<CodeableConcept>? _classifier;
+  @override
+  List<CodeableConcept>? get classifier {
+    final value = _classifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference? author;
+  final List<FhirUri>? _path;
+  @override
+  List<FhirUri>? get path {
+    final value = _path;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element>? _pathElement;
+  @override
+  @JsonKey(name: '_path')
+  List<Element>? get pathElement {
+    final value = _pathElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<RelatedArtifact>? _relatedArtifact;
+  @override
+  List<RelatedArtifact>? get relatedArtifact {
+    final value = _relatedArtifact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Boolean? freeToShare;
+  @override
+  @JsonKey(name: '_freeToShare')
+  final Element? freeToShareElement;
+  final List<ArtifactAssessmentContent>? _component;
+  @override
+  List<ArtifactAssessmentContent>? get component {
+    final value = _component;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'ArtifactAssessmentContent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, informationType: $informationType, informationTypeElement: $informationTypeElement, summary: $summary, summaryElement: $summaryElement, type: $type, classifier: $classifier, author: $author, path: $path, pathElement: $pathElement, relatedArtifact: $relatedArtifact, freeToShare: $freeToShare, freeToShareElement: $freeToShareElement, component: $component)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ArtifactAssessmentContent &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.informationType, informationType) &&
+            const DeepCollectionEquality()
+                .equals(other.informationTypeElement, informationTypeElement) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality()
+                .equals(other.summaryElement, summaryElement) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other._classifier, _classifier) &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other._path, _path) &&
+            const DeepCollectionEquality()
+                .equals(other._pathElement, _pathElement) &&
+            const DeepCollectionEquality()
+                .equals(other._relatedArtifact, _relatedArtifact) &&
+            const DeepCollectionEquality()
+                .equals(other.freeToShare, freeToShare) &&
+            const DeepCollectionEquality()
+                .equals(other.freeToShareElement, freeToShareElement) &&
+            const DeepCollectionEquality()
+                .equals(other._component, _component));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(informationType),
+      const DeepCollectionEquality().hash(informationTypeElement),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(summaryElement),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(_classifier),
+      const DeepCollectionEquality().hash(author),
+      const DeepCollectionEquality().hash(_path),
+      const DeepCollectionEquality().hash(_pathElement),
+      const DeepCollectionEquality().hash(_relatedArtifact),
+      const DeepCollectionEquality().hash(freeToShare),
+      const DeepCollectionEquality().hash(freeToShareElement),
+      const DeepCollectionEquality().hash(_component));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ArtifactAssessmentContentCopyWith<_$_ArtifactAssessmentContent>
+      get copyWith => __$$_ArtifactAssessmentContentCopyWithImpl<
+          _$_ArtifactAssessmentContent>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ArtifactAssessmentContentToJson(this);
+  }
+}
+
+abstract class _ArtifactAssessmentContent extends ArtifactAssessmentContent {
+  factory _ArtifactAssessmentContent(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Code? informationType,
+      @JsonKey(name: '_informationType') final Element? informationTypeElement,
+      final Markdown? summary,
+      @JsonKey(name: '_summary') final Element? summaryElement,
+      final CodeableConcept? type,
+      final List<CodeableConcept>? classifier,
+      final Reference? author,
+      final List<FhirUri>? path,
+      @JsonKey(name: '_path') final List<Element>? pathElement,
+      final List<RelatedArtifact>? relatedArtifact,
+      final Boolean? freeToShare,
+      @JsonKey(name: '_freeToShare') final Element? freeToShareElement,
+      final List<ArtifactAssessmentContent>?
+          component}) = _$_ArtifactAssessmentContent;
+  _ArtifactAssessmentContent._() : super._();
+
+  factory _ArtifactAssessmentContent.fromJson(Map<String, dynamic> json) =
+      _$_ArtifactAssessmentContent.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Code? get informationType => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_informationType')
+  Element? get informationTypeElement => throw _privateConstructorUsedError;
+  @override
+  Markdown? get summary => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_summary')
+  Element? get summaryElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+  @override
+  Reference? get author => throw _privateConstructorUsedError;
+  @override
+  List<FhirUri>? get path => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_path')
+  List<Element>? get pathElement => throw _privateConstructorUsedError;
+  @override
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  @override
+  Boolean? get freeToShare => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_freeToShare')
+  Element? get freeToShareElement => throw _privateConstructorUsedError;
+  @override
+  List<ArtifactAssessmentContent>? get component =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ArtifactAssessmentContentCopyWith<_$_ArtifactAssessmentContent>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 Citation _$CitationFromJson(Map<String, dynamic> json) {
   return _Citation.fromJson(json);
 }
@@ -54,7 +1817,7 @@ mixin _$Citation {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -131,7 +1894,7 @@ abstract class $CitationCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -348,7 +2111,7 @@ class _$CitationCopyWithImpl<$Res> implements $CitationCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -709,7 +2472,7 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -947,7 +2710,7 @@ class __$$_CitationCopyWithImpl<$Res> extends _$CitationCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1236,7 +2999,7 @@ class _$_Citation extends _Citation {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -1597,7 +3360,7 @@ abstract class _Citation extends Citation {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -1690,7 +3453,7 @@ abstract class _Citation extends Citation {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -2683,7 +4446,7 @@ mixin _$CitationCitedArtifact {
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
-  DateTime? get dateAccessed => throw _privateConstructorUsedError;
+  FhirDateTime? get dateAccessed => throw _privateConstructorUsedError;
   @JsonKey(name: '_dateAccessed')
   Element? get dateAccessedElement => throw _privateConstructorUsedError;
   CitationVersion? get version => throw _privateConstructorUsedError;
@@ -2723,7 +4486,7 @@ abstract class $CitationCitedArtifactCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Identifier>? relatedIdentifier,
-      DateTime? dateAccessed,
+      FhirDateTime? dateAccessed,
       @JsonKey(name: '_dateAccessed') Element? dateAccessedElement,
       CitationVersion? version,
       List<CodeableConcept>? currentState,
@@ -2799,7 +4562,7 @@ class _$CitationCitedArtifactCopyWithImpl<$Res>
       dateAccessed: dateAccessed == freezed
           ? _value.dateAccessed
           : dateAccessed // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateAccessedElement: dateAccessedElement == freezed
           ? _value.dateAccessedElement
           : dateAccessedElement // ignore: cast_nullable_to_non_nullable
@@ -2914,7 +4677,7 @@ abstract class _$$_CitationCitedArtifactCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Identifier>? relatedIdentifier,
-      DateTime? dateAccessed,
+      FhirDateTime? dateAccessed,
       @JsonKey(name: '_dateAccessed') Element? dateAccessedElement,
       CitationVersion? version,
       List<CodeableConcept>? currentState,
@@ -2997,7 +4760,7 @@ class __$$_CitationCitedArtifactCopyWithImpl<$Res>
       dateAccessed: dateAccessed == freezed
           ? _value.dateAccessed
           : dateAccessed // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateAccessedElement: dateAccessedElement == freezed
           ? _value.dateAccessedElement
           : dateAccessedElement // ignore: cast_nullable_to_non_nullable
@@ -3135,7 +4898,7 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
   }
 
   @override
-  final DateTime? dateAccessed;
+  final FhirDateTime? dateAccessed;
   @override
   @JsonKey(name: '_dateAccessed')
   final Element? dateAccessedElement;
@@ -3317,7 +5080,7 @@ abstract class _CitationCitedArtifact extends CitationCitedArtifact {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Identifier>? relatedIdentifier,
-      final DateTime? dateAccessed,
+      final FhirDateTime? dateAccessed,
       @JsonKey(name: '_dateAccessed') final Element? dateAccessedElement,
       final CitationVersion? version,
       final List<CodeableConcept>? currentState,
@@ -3349,7 +5112,7 @@ abstract class _CitationCitedArtifact extends CitationCitedArtifact {
   @override
   List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
   @override
-  DateTime? get dateAccessed => throw _privateConstructorUsedError;
+  FhirDateTime? get dateAccessed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_dateAccessed')
   Element? get dateAccessedElement => throw _privateConstructorUsedError;
@@ -5707,10 +7470,10 @@ mixin _$CitationPublicationForm {
   CitationPublishedIn? get publishedIn => throw _privateConstructorUsedError;
   CitationPeriodicRelease? get periodicRelease =>
       throw _privateConstructorUsedError;
-  DateTime? get articleDate => throw _privateConstructorUsedError;
+  FhirDateTime? get articleDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_articleDate')
   Element? get articleDateElement => throw _privateConstructorUsedError;
-  DateTime? get lastRevisionDate => throw _privateConstructorUsedError;
+  FhirDateTime? get lastRevisionDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastRevisionDate')
   Element? get lastRevisionDateElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get language => throw _privateConstructorUsedError;
@@ -5750,9 +7513,9 @@ abstract class $CitationPublicationFormCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CitationPublishedIn? publishedIn,
       CitationPeriodicRelease? periodicRelease,
-      DateTime? articleDate,
+      FhirDateTime? articleDate,
       @JsonKey(name: '_articleDate') Element? articleDateElement,
-      DateTime? lastRevisionDate,
+      FhirDateTime? lastRevisionDate,
       @JsonKey(name: '_lastRevisionDate') Element? lastRevisionDateElement,
       List<CodeableConcept>? language,
       String? accessionNumber,
@@ -5838,7 +7601,7 @@ class _$CitationPublicationFormCopyWithImpl<$Res>
       articleDate: articleDate == freezed
           ? _value.articleDate
           : articleDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       articleDateElement: articleDateElement == freezed
           ? _value.articleDateElement
           : articleDateElement // ignore: cast_nullable_to_non_nullable
@@ -5846,7 +7609,7 @@ class _$CitationPublicationFormCopyWithImpl<$Res>
       lastRevisionDate: lastRevisionDate == freezed
           ? _value.lastRevisionDate
           : lastRevisionDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       lastRevisionDateElement: lastRevisionDateElement == freezed
           ? _value.lastRevisionDateElement
           : lastRevisionDateElement // ignore: cast_nullable_to_non_nullable
@@ -6031,9 +7794,9 @@ abstract class _$$_CitationPublicationFormCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CitationPublishedIn? publishedIn,
       CitationPeriodicRelease? periodicRelease,
-      DateTime? articleDate,
+      FhirDateTime? articleDate,
       @JsonKey(name: '_articleDate') Element? articleDateElement,
-      DateTime? lastRevisionDate,
+      FhirDateTime? lastRevisionDate,
       @JsonKey(name: '_lastRevisionDate') Element? lastRevisionDateElement,
       List<CodeableConcept>? language,
       String? accessionNumber,
@@ -6132,7 +7895,7 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
       articleDate: articleDate == freezed
           ? _value.articleDate
           : articleDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       articleDateElement: articleDateElement == freezed
           ? _value.articleDateElement
           : articleDateElement // ignore: cast_nullable_to_non_nullable
@@ -6140,7 +7903,7 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
       lastRevisionDate: lastRevisionDate == freezed
           ? _value.lastRevisionDate
           : lastRevisionDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       lastRevisionDateElement: lastRevisionDateElement == freezed
           ? _value.lastRevisionDateElement
           : lastRevisionDateElement // ignore: cast_nullable_to_non_nullable
@@ -6261,12 +8024,12 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
   @override
   final CitationPeriodicRelease? periodicRelease;
   @override
-  final DateTime? articleDate;
+  final FhirDateTime? articleDate;
   @override
   @JsonKey(name: '_articleDate')
   final Element? articleDateElement;
   @override
-  final DateTime? lastRevisionDate;
+  final FhirDateTime? lastRevisionDate;
   @override
   @JsonKey(name: '_lastRevisionDate')
   final Element? lastRevisionDateElement;
@@ -6409,10 +8172,10 @@ abstract class _CitationPublicationForm extends CitationPublicationForm {
       final List<FhirExtension>? modifierExtension,
       final CitationPublishedIn? publishedIn,
       final CitationPeriodicRelease? periodicRelease,
-      final DateTime? articleDate,
+      final FhirDateTime? articleDate,
       @JsonKey(name: '_articleDate')
           final Element? articleDateElement,
-      final DateTime? lastRevisionDate,
+      final FhirDateTime? lastRevisionDate,
       @JsonKey(name: '_lastRevisionDate')
           final Element? lastRevisionDateElement,
       final List<CodeableConcept>? language,
@@ -6453,12 +8216,12 @@ abstract class _CitationPublicationForm extends CitationPublicationForm {
   CitationPeriodicRelease? get periodicRelease =>
       throw _privateConstructorUsedError;
   @override
-  DateTime? get articleDate => throw _privateConstructorUsedError;
+  FhirDateTime? get articleDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_articleDate')
   Element? get articleDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get lastRevisionDate => throw _privateConstructorUsedError;
+  FhirDateTime? get lastRevisionDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastRevisionDate')
   Element? get lastRevisionDateElement => throw _privateConstructorUsedError;
@@ -9788,7 +11551,7 @@ mixin _$CitationContributionInstance {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
-  DateTime? get time => throw _privateConstructorUsedError;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
 
@@ -9809,7 +11572,7 @@ abstract class $CitationContributionInstanceCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      DateTime? time,
+      FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement});
 
   $CodeableConceptCopyWith<$Res> get type;
@@ -9854,7 +11617,7 @@ class _$CitationContributionInstanceCopyWithImpl<$Res>
       time: time == freezed
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timeElement: timeElement == freezed
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -9894,7 +11657,7 @@ abstract class _$$_CitationContributionInstanceCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      DateTime? time,
+      FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement});
 
   @override
@@ -9945,7 +11708,7 @@ class __$$_CitationContributionInstanceCopyWithImpl<$Res>
       time: time == freezed
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       timeElement: timeElement == freezed
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -9995,7 +11758,7 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
   @override
   final CodeableConcept type;
   @override
-  final DateTime? time;
+  final FhirDateTime? time;
   @override
   @JsonKey(name: '_time')
   final Element? timeElement;
@@ -10051,7 +11814,7 @@ abstract class _CitationContributionInstance
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept type,
-          final DateTime? time,
+          final FhirDateTime? time,
           @JsonKey(name: '_time') final Element? timeElement}) =
       _$_CitationContributionInstance;
   _CitationContributionInstance._() : super._();
@@ -10070,7 +11833,7 @@ abstract class _CitationContributionInstance
   @override
   CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  DateTime? get time => throw _privateConstructorUsedError;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
@@ -10120,7 +11883,7 @@ mixin _$Evidence {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -10202,7 +11965,7 @@ abstract class $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -10433,7 +12196,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -10858,7 +12621,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -11114,7 +12877,7 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -11427,7 +13190,7 @@ class _$_Evidence extends _Evidence {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -11804,7 +13567,7 @@ abstract class _Evidence extends Evidence {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -11902,7 +13665,7 @@ abstract class _Evidence extends Evidence {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -15291,7 +17054,7 @@ mixin _$EvidenceReport {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -15372,7 +17135,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -15599,7 +17362,7 @@ class _$EvidenceReportCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -16002,7 +17765,7 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -16253,7 +18016,7 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -16556,7 +18319,7 @@ class _$_EvidenceReport extends _EvidenceReport {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -16923,7 +18686,7 @@ abstract class _EvidenceReport extends EvidenceReport {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -17020,7 +18783,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -19312,7 +21075,7 @@ mixin _$EvidenceVariable {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -19398,7 +21161,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -19629,7 +21392,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -20044,7 +21807,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -20299,7 +22062,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -20611,7 +22374,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -20983,7 +22746,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -21082,7 +22845,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -23516,7 +25279,7 @@ mixin _$EvidenceVariableTimeFromEvent {
   CodeableConcept? get eventCodeableConcept =>
       throw _privateConstructorUsedError;
   Reference? get eventReference => throw _privateConstructorUsedError;
-  DateTime? get eventDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get eventDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_eventDateTime')
   Element? get eventDateTimeElement => throw _privateConstructorUsedError;
   Id? get eventId => throw _privateConstructorUsedError;
@@ -23546,7 +25309,7 @@ abstract class $EvidenceVariableTimeFromEventCopyWith<$Res> {
       List<Annotation>? note,
       CodeableConcept? eventCodeableConcept,
       Reference? eventReference,
-      DateTime? eventDateTime,
+      FhirDateTime? eventDateTime,
       @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
       Id? eventId,
       @JsonKey(name: '_eventId') Element? eventIdElement,
@@ -23624,7 +25387,7 @@ class _$EvidenceVariableTimeFromEventCopyWithImpl<$Res>
       eventDateTime: eventDateTime == freezed
           ? _value.eventDateTime
           : eventDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       eventDateTimeElement: eventDateTimeElement == freezed
           ? _value.eventDateTimeElement
           : eventDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -23744,7 +25507,7 @@ abstract class _$$_EvidenceVariableTimeFromEventCopyWith<$Res>
       List<Annotation>? note,
       CodeableConcept? eventCodeableConcept,
       Reference? eventReference,
-      DateTime? eventDateTime,
+      FhirDateTime? eventDateTime,
       @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
       Id? eventId,
       @JsonKey(name: '_eventId') Element? eventIdElement,
@@ -23833,7 +25596,7 @@ class __$$_EvidenceVariableTimeFromEventCopyWithImpl<$Res>
       eventDateTime: eventDateTime == freezed
           ? _value.eventDateTime
           : eventDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       eventDateTimeElement: eventDateTimeElement == freezed
           ? _value.eventDateTimeElement
           : eventDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -23925,7 +25688,7 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
   @override
   final Reference? eventReference;
   @override
-  final DateTime? eventDateTime;
+  final FhirDateTime? eventDateTime;
   @override
   @JsonKey(name: '_eventDateTime')
   final Element? eventDateTimeElement;
@@ -24016,7 +25779,7 @@ abstract class _EvidenceVariableTimeFromEvent
       final List<Annotation>? note,
       final CodeableConcept? eventCodeableConcept,
       final Reference? eventReference,
-      final DateTime? eventDateTime,
+      final FhirDateTime? eventDateTime,
       @JsonKey(name: '_eventDateTime') final Element? eventDateTimeElement,
       final Id? eventId,
       @JsonKey(name: '_eventId') final Element? eventIdElement,
@@ -24048,7 +25811,7 @@ abstract class _EvidenceVariableTimeFromEvent
   @override
   Reference? get eventReference => throw _privateConstructorUsedError;
   @override
-  DateTime? get eventDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get eventDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_eventDateTime')
   Element? get eventDateTimeElement => throw _privateConstructorUsedError;

@@ -54,7 +54,7 @@ mixin _$ActivityDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -173,7 +173,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -466,7 +466,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1133,7 +1133,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -1464,7 +1464,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1901,7 +1901,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -2427,7 +2427,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final Boolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
           final String? publisher,
@@ -2566,7 +2566,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -3440,7 +3440,7 @@ mixin _$ConditionDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -3488,7 +3488,7 @@ mixin _$ConditionDefinition {
   Boolean? get hasStage => throw _privateConstructorUsedError;
   @JsonKey(name: '_hasStage')
   Element? get hasStageElement => throw _privateConstructorUsedError;
-  List<Uri>? get definition => throw _privateConstructorUsedError;
+  List<FhirUri>? get definition => throw _privateConstructorUsedError;
   @JsonKey(name: '_definition')
   List<Element>? get definitionElement => throw _privateConstructorUsedError;
   List<ConditionDefinitionObservation>? get observation =>
@@ -3538,7 +3538,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -3574,7 +3574,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
       @JsonKey(name: '_hasBodySite') Element? hasBodySiteElement,
       Boolean? hasStage,
       @JsonKey(name: '_hasStage') Element? hasStageElement,
-      List<Uri>? definition,
+      List<FhirUri>? definition,
       @JsonKey(name: '_definition') List<Element>? definitionElement,
       List<ConditionDefinitionObservation>? observation,
       List<ConditionDefinitionMedication>? medication,
@@ -3791,7 +3791,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -3935,7 +3935,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res>
       definition: definition == freezed
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
@@ -4282,7 +4282,7 @@ abstract class _$$_ConditionDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -4318,7 +4318,7 @@ abstract class _$$_ConditionDefinitionCopyWith<$Res>
       @JsonKey(name: '_hasBodySite') Element? hasBodySiteElement,
       Boolean? hasStage,
       @JsonKey(name: '_hasStage') Element? hasStageElement,
-      List<Uri>? definition,
+      List<FhirUri>? definition,
       @JsonKey(name: '_definition') List<Element>? definitionElement,
       List<ConditionDefinitionObservation>? observation,
       List<ConditionDefinitionMedication>? medication,
@@ -4563,7 +4563,7 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -4707,7 +4707,7 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       definition: definition == freezed
           ? _value._definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       definitionElement: definitionElement == freezed
           ? _value._definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
@@ -4804,7 +4804,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
       @JsonKey(name: '_hasBodySite') this.hasBodySiteElement,
       this.hasStage,
       @JsonKey(name: '_hasStage') this.hasStageElement,
-      final List<Uri>? definition,
+      final List<FhirUri>? definition,
       @JsonKey(name: '_definition') final List<Element>? definitionElement,
       final List<ConditionDefinitionObservation>? observation,
       final List<ConditionDefinitionMedication>? medication,
@@ -4925,7 +4925,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -5070,9 +5070,9 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   @override
   @JsonKey(name: '_hasStage')
   final Element? hasStageElement;
-  final List<Uri>? _definition;
+  final List<FhirUri>? _definition;
   @override
-  List<Uri>? get definition {
+  List<FhirUri>? get definition {
     final value = _definition;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -5376,7 +5376,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -5412,7 +5412,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
       @JsonKey(name: '_hasBodySite') final Element? hasBodySiteElement,
       final Boolean? hasStage,
       @JsonKey(name: '_hasStage') final Element? hasStageElement,
-      final List<Uri>? definition,
+      final List<FhirUri>? definition,
       @JsonKey(name: '_definition') final List<Element>? definitionElement,
       final List<ConditionDefinitionObservation>? observation,
       final List<ConditionDefinitionMedication>? medication,
@@ -5484,7 +5484,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -5568,7 +5568,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
   @JsonKey(name: '_hasStage')
   Element? get hasStageElement => throw _privateConstructorUsedError;
   @override
-  List<Uri>? get definition => throw _privateConstructorUsedError;
+  List<FhirUri>? get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_definition')
   List<Element>? get definitionElement => throw _privateConstructorUsedError;
@@ -14600,7 +14600,7 @@ mixin _$EventDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -14679,7 +14679,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -14902,7 +14902,7 @@ class _$EventDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -15302,7 +15302,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -15549,7 +15549,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -15839,7 +15839,7 @@ class _$_EventDefinition extends _EventDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -16175,7 +16175,7 @@ abstract class _EventDefinition extends EventDefinition {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -16270,7 +16270,7 @@ abstract class _EventDefinition extends EventDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -16389,7 +16389,7 @@ mixin _$ObservationDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference? get publisher => throw _privateConstructorUsedError;
@@ -16414,7 +16414,7 @@ mixin _$ObservationDefinition {
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   List<Canonical>? get derivedFromCanonical =>
       throw _privateConstructorUsedError;
-  List<Uri>? get derivedFromUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get derivedFromUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_derivedFromUri')
   List<Element>? get derivedFromUriElement =>
       throw _privateConstructorUsedError;
@@ -16490,7 +16490,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? publisher,
@@ -16514,7 +16514,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
           Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<Canonical>? derivedFromCanonical,
-      List<Uri>? derivedFromUri,
+      List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           List<Element>? derivedFromUriElement,
       List<CodeableConcept>? subject,
@@ -16742,7 +16742,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -16814,7 +16814,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
       derivedFromUri: derivedFromUri == freezed
           ? _value.derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
           : derivedFromUriElement // ignore: cast_nullable_to_non_nullable
@@ -17221,7 +17221,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? publisher,
@@ -17245,7 +17245,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
           Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<Canonical>? derivedFromCanonical,
-      List<Uri>? derivedFromUri,
+      List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           List<Element>? derivedFromUriElement,
       List<CodeableConcept>? subject,
@@ -17502,7 +17502,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -17574,7 +17574,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       derivedFromUri: derivedFromUri == freezed
           ? _value._derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value._derivedFromUriElement
           : derivedFromUriElement // ignore: cast_nullable_to_non_nullable
@@ -17716,7 +17716,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
           this.lastReviewDateElement,
       this.effectivePeriod,
       final List<Canonical>? derivedFromCanonical,
-      final List<Uri>? derivedFromUri,
+      final List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           final List<Element>? derivedFromUriElement,
       final List<CodeableConcept>? subject,
@@ -17843,7 +17843,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -17912,9 +17912,9 @@ class _$_ObservationDefinition extends _ObservationDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _derivedFromUri;
+  final List<FhirUri>? _derivedFromUri;
   @override
-  List<Uri>? get derivedFromUri {
+  List<FhirUri>? get derivedFromUri {
     final value = _derivedFromUri;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -18264,7 +18264,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
           final Boolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
           final Reference? publisher,
@@ -18288,7 +18288,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
               final Element? lastReviewDateElement,
           final Period? effectivePeriod,
           final List<Canonical>? derivedFromCanonical,
-          final List<Uri>? derivedFromUri,
+          final List<FhirUri>? derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
               final List<Element>? derivedFromUriElement,
           final List<CodeableConcept>? subject,
@@ -18377,7 +18377,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -18420,7 +18420,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   List<Canonical>? get derivedFromCanonical =>
       throw _privateConstructorUsedError;
   @override
-  List<Uri>? get derivedFromUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get derivedFromUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_derivedFromUri')
   List<Element>? get derivedFromUriElement =>
@@ -19988,7 +19988,7 @@ mixin _$PlanDefinition {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -20075,7 +20075,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -20312,7 +20312,7 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -20758,7 +20758,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -21021,7 +21021,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -21344,7 +21344,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -21740,7 +21740,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       final Boolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final String? publisher,
@@ -21852,7 +21852,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -27720,7 +27720,7 @@ mixin _$Questionnaire {
   Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
@@ -27795,7 +27795,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -28010,7 +28010,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -28357,7 +28357,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
       @JsonKey(name: '_publisher') Element? publisherElement,
@@ -28592,7 +28592,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -28876,7 +28876,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -29232,7 +29232,7 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
@@ -29325,7 +29325,7 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -30549,7 +30549,7 @@ mixin _$QuestionnaireEnableWhen {
   Date? get answerDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_answerDate')
   Element? get answerDateElement => throw _privateConstructorUsedError;
-  DateTime? get answerDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get answerDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_answerDateTime')
   Element? get answerDateTimeElement => throw _privateConstructorUsedError;
   Time? get answerTime => throw _privateConstructorUsedError;
@@ -30589,7 +30589,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
       Date? answerDate,
       @JsonKey(name: '_answerDate') Element? answerDateElement,
-      DateTime? answerDateTime,
+      FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
       Time? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
@@ -30713,7 +30713,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerDateTime: answerDateTime == freezed
           ? _value.answerDateTime
           : answerDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       answerDateTimeElement: answerDateTimeElement == freezed
           ? _value.answerDateTimeElement
           : answerDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -30905,7 +30905,7 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
       @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
       Date? answerDate,
       @JsonKey(name: '_answerDate') Element? answerDateElement,
-      DateTime? answerDateTime,
+      FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
       Time? answerTime,
       @JsonKey(name: '_answerTime') Element? answerTimeElement,
@@ -31044,7 +31044,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerDateTime: answerDateTime == freezed
           ? _value.answerDateTime
           : answerDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       answerDateTimeElement: answerDateTimeElement == freezed
           ? _value.answerDateTimeElement
           : answerDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -31169,7 +31169,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   @JsonKey(name: '_answerDate')
   final Element? answerDateElement;
   @override
-  final DateTime? answerDateTime;
+  final FhirDateTime? answerDateTime;
   @override
   @JsonKey(name: '_answerDateTime')
   final Element? answerDateTimeElement;
@@ -31307,7 +31307,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
       @JsonKey(name: '_answerInteger') final Element? answerIntegerElement,
       final Date? answerDate,
       @JsonKey(name: '_answerDate') final Element? answerDateElement,
-      final DateTime? answerDateTime,
+      final FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') final Element? answerDateTimeElement,
       final Time? answerTime,
       @JsonKey(name: '_answerTime') final Element? answerTimeElement,
@@ -31361,7 +31361,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   @JsonKey(name: '_answerDate')
   Element? get answerDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get answerDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get answerDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_answerDateTime')
   Element? get answerDateTimeElement => throw _privateConstructorUsedError;
@@ -32003,7 +32003,7 @@ mixin _$QuestionnaireInitial {
   Date? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   Time? get valueTime => throw _privateConstructorUsedError;
@@ -32043,7 +32043,7 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -32153,7 +32153,7 @@ class _$QuestionnaireInitialCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -32353,7 +32353,7 @@ abstract class _$$_QuestionnaireInitialCopyWith<$Res>
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      DateTime? valueDateTime,
+      FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -32477,7 +32477,7 @@ class __$$_QuestionnaireInitialCopyWithImpl<$Res>
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -32602,7 +32602,7 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
   @override
-  final DateTime? valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
@@ -32738,7 +32738,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final Date? valueDate,
       @JsonKey(name: '_valueDate') final Element? valueDateElement,
-      final DateTime? valueDateTime,
+      final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final Time? valueTime,
       @JsonKey(name: '_valueTime') final Element? valueTimeElement,
@@ -32784,7 +32784,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
@@ -32850,7 +32850,7 @@ mixin _$SpecimenDefinition {
   Element? get titleElement => throw _privateConstructorUsedError;
   List<Canonical>? get derivedFromCanonical =>
       throw _privateConstructorUsedError;
-  List<Uri>? get derivedFromUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get derivedFromUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_derivedFromUri')
   List<Element>? get derivedFromUriElement =>
       throw _privateConstructorUsedError;
@@ -32863,7 +32863,7 @@ mixin _$SpecimenDefinition {
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
   Reference? get subjectReference => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference? get publisher => throw _privateConstructorUsedError;
@@ -32927,7 +32927,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       List<Canonical>? derivedFromCanonical,
-      List<Uri>? derivedFromUri,
+      List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
@@ -32935,7 +32935,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       @JsonKey(name: '_experimental') Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? publisher,
       List<ContactDetail>? contact,
@@ -33125,7 +33125,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
       derivedFromUri: derivedFromUri == freezed
           ? _value.derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
           : derivedFromUriElement // ignore: cast_nullable_to_non_nullable
@@ -33157,7 +33157,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -33520,7 +33520,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       List<Canonical>? derivedFromCanonical,
-      List<Uri>? derivedFromUri,
+      List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
@@ -33528,7 +33528,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
       @JsonKey(name: '_experimental') Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? publisher,
       List<ContactDetail>? contact,
@@ -33742,7 +33742,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       derivedFromUri: derivedFromUri == freezed
           ? _value._derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value._derivedFromUriElement
           : derivedFromUriElement // ignore: cast_nullable_to_non_nullable
@@ -33774,7 +33774,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -33896,7 +33896,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
       @JsonKey(name: '_title')
           this.titleElement,
       final List<Canonical>? derivedFromCanonical,
-      final List<Uri>? derivedFromUri,
+      final List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           final List<Element>? derivedFromUriElement,
       this.status,
@@ -34027,9 +34027,9 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _derivedFromUri;
+  final List<FhirUri>? _derivedFromUri;
   @override
-  List<Uri>? get derivedFromUri {
+  List<FhirUri>? get derivedFromUri {
     final value = _derivedFromUri;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -34061,7 +34061,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   @override
   final Reference? subjectReference;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -34349,7 +34349,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
           @JsonKey(name: '_title')
               final Element? titleElement,
           final List<Canonical>? derivedFromCanonical,
-          final List<Uri>? derivedFromUri,
+          final List<FhirUri>? derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
               final List<Element>? derivedFromUriElement,
           final Code? status,
@@ -34360,7 +34360,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
               final Element? experimentalElement,
           final CodeableConcept? subjectCodeableConcept,
           final Reference? subjectReference,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
           final Reference? publisher,
@@ -34443,7 +34443,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   List<Canonical>? get derivedFromCanonical =>
       throw _privateConstructorUsedError;
   @override
-  List<Uri>? get derivedFromUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get derivedFromUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_derivedFromUri')
   List<Element>? get derivedFromUriElement =>
@@ -34464,7 +34464,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   @override
   Reference? get subjectReference => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;

@@ -338,7 +338,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     required CodeableConcept code,
     Reference? subject,
     Reference? encounter,
-    DateTime? effectiveDateTime,
+    FhirDateTime? effectiveDateTime,
     @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
     Period? effectivePeriod,
     Instant? issued,
@@ -450,6 +450,340 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
 }
 
 @freezed
+class ImagingSelection with Resource, _$ImagingSelection {
+  ImagingSelection._();
+
+  /// [ImagingSelection]: A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
+  ///
+  /// [resourceType]: This is a ImagingSelection resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: A unique identifier assigned to this imaging selection.;
+  ///
+  /// [subject]: The patient, or group of patients, location, device, organization, procedure or practitioner this imaging selection is about and into whose or what record the imaging selection is placed.;
+  ///
+  /// [issued]: The date and time this imaging selection was created.;
+  ///
+  /// [issuedElement] (_issued): Extensions for issued;
+  ///
+  /// [performer]: Author – human or machine.;
+  ///
+  /// [basedOn]: A list of the diagnostic requests that resulted in this imaging selection being performed.;
+  ///
+  /// [category]: Classifies the imaging selection.;
+  ///
+  /// [code]: Describes the imaging selection.;
+  ///
+  /// [studyUid]: The Study Instance UID for the DICOM Study from which the images were selected.;
+  ///
+  /// [studyUidElement] (_studyUid): Extensions for studyUid;
+  ///
+  /// [derivedFrom]: The imaging study from which the imaging selection is made.;
+  ///
+  /// [endpoint]: The network service providing retrieval access to the selected images, frames, etc. See implementation notes for information about using DICOM endpoints.;
+  ///
+  /// [seriesUid]: The Series Instance UID for the DICOM Series from which the images were selected.;
+  ///
+  /// [seriesUidElement] (_seriesUid): Extensions for seriesUid;
+  ///
+  /// [frameOfReferenceUid]: The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.;
+  ///
+  /// [frameOfReferenceUidElement] (_frameOfReferenceUid): Extensions for frameOfReferenceUid;
+  ///
+  /// [bodySite]: The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings.;
+  ///
+  /// [instance]: Each imaging selection includes one or more selected DICOM SOP instances.;
+  ///
+  /// [imageRegion]: Each imaging selection might includes one or more image regions. Image regions are specified by a region type and a set of 2D or 3D coordinates.;
+  factory ImagingSelection({
+    @Default(R5ResourceType.ImagingSelection) R5ResourceType resourceType,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Reference? subject,
+    Instant? issued,
+    @JsonKey(name: '_issued') Element? issuedElement,
+    List<ImagingSelectionPerformer>? performer,
+    List<Reference>? basedOn,
+    List<CodeableConcept>? category,
+    required CodeableConcept code,
+    Oid? studyUid,
+    @JsonKey(name: '_studyUid') Element? studyUidElement,
+    List<Reference>? derivedFrom,
+    List<Reference>? endpoint,
+    Oid? seriesUid,
+    @JsonKey(name: '_seriesUid') Element? seriesUidElement,
+    Oid? frameOfReferenceUid,
+    @JsonKey(name: '_frameOfReferenceUid') Element? frameOfReferenceUidElement,
+    CodeableReference? bodySite,
+    List<ImagingSelectionInstance>? instance,
+    ImagingSelectionImageRegion? imageRegion,
+  }) = _ImagingSelection;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ImagingSelection.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingSelection.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? ImagingSelection.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ImagingSelection cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ImagingSelection.fromJson(Map<String, dynamic> json) =>
+      _$ImagingSelectionFromJson(json);
+
+  /// Acts like a constructor, returns a [ImagingSelection], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ImagingSelection.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ImagingSelectionFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
+  ImagingSelectionPerformer._();
+
+  /// [ImagingSelectionPerformer]: A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [function]: Distinguishes the type of involvement of the performer.;
+  ///
+  /// [actor]: Author – human or machine.;
+  factory ImagingSelectionPerformer({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? function,
+    Reference? actor,
+  }) = _ImagingSelectionPerformer;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ImagingSelectionPerformer.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingSelectionPerformer.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? ImagingSelectionPerformer.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ImagingSelectionPerformer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ImagingSelectionPerformer.fromJson(Map<String, dynamic> json) =>
+      _$ImagingSelectionPerformerFromJson(json);
+
+  /// Acts like a constructor, returns a [ImagingSelectionPerformer], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ImagingSelectionPerformer.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ImagingSelectionPerformerFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class ImagingSelectionInstance with _$ImagingSelectionInstance {
+  ImagingSelectionInstance._();
+
+  /// [ImagingSelectionInstance]: A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [uid]: The SOP Instance UID for the selected DICOM instance.;
+  ///
+  /// [uidElement] (_uid): Extensions for uid;
+  ///
+  /// [sopClass]: The SOP Class UID for the selected DICOM instance.;
+  ///
+  /// [frameList]: The set of frames within a multi-frame SOP Instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate frame numbers.       If this is absent, all frames within the referenced SOP Instance are included in the selection.;
+  ///
+  /// [frameListElement] (_frameList): Extensions for frameList;
+  ///
+  /// [observationUid]: The unique identifier for the observation Content Item (and its subsidiary Content Items, if any) that are included in the imaging selection.;
+  ///
+  /// [observationUidElement] (_observationUid): Extensions for observationUid;
+  ///
+  /// [segmentList]: The set of segments within a segmentation SOP Instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate segment numbers.       If this is absent, all segments within the referenced segmentation SOP Instance are included in the selection.;
+  ///
+  /// [segmentListElement] (_segmentList): Extensions for segmentList;
+  ///
+  /// [roiList]: The set of regions of interest (ROI) within a radiotherapy structure set instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate ROI numbers.       If this is absent, all ROIs within the referenced radiotherapy structure set SOP Instance are included in the selection.;
+  ///
+  /// [roiListElement] (_roiList): Extensions for roiList;
+  factory ImagingSelectionInstance({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Oid? uid,
+    @JsonKey(name: '_uid') Element? uidElement,
+    Coding? sopClass,
+    String? frameList,
+    @JsonKey(name: '_frameList') Element? frameListElement,
+    List<Oid>? observationUid,
+    @JsonKey(name: '_observationUid') List<Element>? observationUidElement,
+    String? segmentList,
+    @JsonKey(name: '_segmentList') Element? segmentListElement,
+    String? roiList,
+    @JsonKey(name: '_roiList') Element? roiListElement,
+  }) = _ImagingSelectionInstance;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ImagingSelectionInstance.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingSelectionInstance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? ImagingSelectionInstance.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ImagingSelectionInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ImagingSelectionInstance.fromJson(Map<String, dynamic> json) =>
+      _$ImagingSelectionInstanceFromJson(json);
+
+  /// Acts like a constructor, returns a [ImagingSelectionInstance], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ImagingSelectionInstance.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ImagingSelectionInstanceFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
+  ImagingSelectionImageRegion._();
+
+  /// [ImagingSelectionImageRegion]: A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [regionType]: Specifies the type of image region.;
+  ///
+  /// [regionTypeElement] (_regionType): Extensions for regionType;
+  ///
+  /// [coordinateType]: Specifies the type of coordinate system that define the image region.;
+  ///
+  /// [coordinateTypeElement] (_coordinateType): Extensions for coordinateType;
+  ///
+  /// [coordinate]: The coordinates describing the image region.       If coordinateType is 2D this specifies sequence of (x,y) coordinates in the coordinate system of the image specified by the instance.uid element that contains this image region.       If coordinateType is 3D this specifies sequence of (x,y,z) coordinates in the coordinate system specified by the frameOfReferenceUid element.;
+  ///
+  /// [coordinateElement] (_coordinate): Extensions for coordinate;
+  factory ImagingSelectionImageRegion({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? regionType,
+    @JsonKey(name: '_regionType') Element? regionTypeElement,
+    Code? coordinateType,
+    @JsonKey(name: '_coordinateType') Element? coordinateTypeElement,
+    List<Decimal>? coordinate,
+    @JsonKey(name: '_coordinate') List<Element>? coordinateElement,
+  }) = _ImagingSelectionImageRegion;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ImagingSelectionImageRegion.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingSelectionImageRegion.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? ImagingSelectionImageRegion.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ImagingSelectionImageRegion cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ImagingSelectionImageRegion.fromJson(Map<String, dynamic> json) =>
+      _$ImagingSelectionImageRegionFromJson(json);
+
+  /// Acts like a constructor, returns a [ImagingSelectionImageRegion], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ImagingSelectionImageRegion.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ImagingSelectionImageRegionFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
 class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
 
@@ -543,7 +877,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     List<CodeableConcept>? modality,
     required Reference subject,
     Reference? encounter,
-    DateTime? started,
+    FhirDateTime? started,
     @JsonKey(name: '_started') Element? startedElement,
     List<Reference>? basedOn,
     Reference? referrer,
@@ -659,7 +993,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     CodeableReference? bodySite,
     CodeableConcept? laterality,
     List<Reference>? specimen,
-    DateTime? started,
+    FhirDateTime? started,
     @JsonKey(name: '_started') Element? startedElement,
     List<ImagingStudyPerformer>? performer,
     List<ImagingStudyInstance>? instance,
@@ -1329,7 +1663,7 @@ class Observation with Resource, _$Observation {
     Reference? subject,
     List<Reference>? focus,
     Reference? encounter,
-    DateTime? effectiveDateTime,
+    FhirDateTime? effectiveDateTime,
     @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
     Period? effectivePeriod,
     Timing? effectiveTiming,
@@ -1351,7 +1685,7 @@ class Observation with Resource, _$Observation {
     SampledData? valueSampledData,
     Time? valueTime,
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    DateTime? valueDateTime,
+    FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
     Period? valuePeriod,
     Attachment? valueAttachment,
@@ -1614,7 +1948,7 @@ class ObservationComponent with _$ObservationComponent {
     SampledData? valueSampledData,
     Time? valueTime,
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    DateTime? valueDateTime,
+    FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
     Period? valuePeriod,
     Attachment? valueAttachment,
@@ -1730,7 +2064,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,
-    DateTime? authored,
+    FhirDateTime? authored,
     @JsonKey(name: '_authored') Element? authoredElement,
     Reference? author,
     Reference? source,
@@ -1912,7 +2246,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
     Date? valueDate,
     @JsonKey(name: '_valueDate') Element? valueDateElement,
-    DateTime? valueDateTime,
+    FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
     Time? valueTime,
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -2038,7 +2372,7 @@ class Specimen with Resource, _$Specimen {
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     Reference? subject,
-    DateTime? receivedTime,
+    FhirDateTime? receivedTime,
     @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
     List<Reference>? parent,
     List<Reference>? request,
@@ -2183,7 +2517,7 @@ class SpecimenCollection with _$SpecimenCollection {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? collector,
-    DateTime? collectedDateTime,
+    FhirDateTime? collectedDateTime,
     @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
     Period? collectedPeriod,
     FhirDuration? duration,
@@ -2263,7 +2597,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeableConcept? method,
     List<Reference>? additive,
-    DateTime? timeDateTime,
+    FhirDateTime? timeDateTime,
     @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
     Period? timePeriod,
   }) = _SpecimenProcessing;

@@ -41,7 +41,7 @@ mixin _$PaymentNotice {
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get request => throw _privateConstructorUsedError;
   Reference? get response => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get provider => throw _privateConstructorUsedError;
@@ -82,7 +82,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       @JsonKey(name: '_status') Element? statusElement,
       Reference? request,
       Reference? response,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? provider,
       Reference payment,
@@ -216,7 +216,7 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -434,7 +434,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
       @JsonKey(name: '_status') Element? statusElement,
       Reference? request,
       Reference? response,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? provider,
       Reference payment,
@@ -585,7 +585,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -731,7 +731,7 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   final Reference? response;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -865,7 +865,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       @JsonKey(name: '_status') final Element? statusElement,
       final Reference? request,
       final Reference? response,
-      final DateTime? created,
+      final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       final Reference? provider,
       required final Reference payment,
@@ -918,7 +918,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   Reference? get response => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
@@ -972,7 +972,7 @@ mixin _$PaymentReconciliation {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get paymentIssuer => throw _privateConstructorUsedError;
@@ -1022,7 +1022,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period? period,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? paymentIssuer,
       Reference? request,
@@ -1164,7 +1164,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -1424,7 +1424,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period? period,
-      DateTime? created,
+      FhirDateTime? created,
       @JsonKey(name: '_created') Element? createdElement,
       Reference? paymentIssuer,
       Reference? request,
@@ -1585,7 +1585,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
       created: created == freezed
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -1760,7 +1760,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   final Period? period;
   @override
-  final DateTime? created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -1937,7 +1937,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final Code? status,
           @JsonKey(name: '_status') final Element? statusElement,
           final Period? period,
-          final DateTime? created,
+          final FhirDateTime? created,
           @JsonKey(name: '_created') final Element? createdElement,
           final Reference? paymentIssuer,
           final Reference? request,
@@ -1995,7 +1995,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   Period? get period => throw _privateConstructorUsedError;
   @override
-  DateTime? get created => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;

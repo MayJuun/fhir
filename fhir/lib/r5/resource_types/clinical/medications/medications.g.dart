@@ -45,7 +45,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => Uri.parse(e as String))
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -82,7 +82,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : DateTime.parse(json['occurrenceDateTime'] as String),
+          : FhirDateTime.fromJson(json['occurrenceDateTime']),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -95,7 +95,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_occurrenceString'] as Map<String, dynamic>),
       recorded: json['recorded'] == null
           ? null
-          : DateTime.parse(json['recorded'] as String),
+          : FhirDateTime.fromJson(json['recorded']),
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
@@ -189,7 +189,7 @@ Map<String, dynamic> _$$_ImmunizationToJson(_$_Immunization instance) {
   writeNotNull('instantiatesCanonical',
       instance.instantiatesCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesUri',
-      instance.instantiatesUri?.map((e) => e.toString()).toList());
+      instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
       instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
@@ -204,13 +204,12 @@ Map<String, dynamic> _$$_ImmunizationToJson(_$_Immunization instance) {
   writeNotNull('_expirationDate', instance.expirationDateElement?.toJson());
   val['patient'] = instance.patient.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull(
-      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrenceString', instance.occurrenceString?.toJson());
   writeNotNull('_occurrenceString', instance.occurrenceStringElement?.toJson());
-  writeNotNull('recorded', instance.recorded?.toIso8601String());
+  writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
   writeNotNull('primarySource', instance.primarySource?.toJson());
   writeNotNull('_primarySource', instance.primarySourceElement?.toJson());
@@ -241,10 +240,13 @@ Map<String, dynamic> _$$_ImmunizationToJson(_$_Immunization instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -255,20 +257,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -279,6 +281,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -303,11 +306,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -315,6 +320,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -324,12 +330,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -343,6 +343,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -356,6 +357,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -449,13 +451,13 @@ _$_ImmunizationEducation _$$_ImmunizationEducationFromJson(
           : Element.fromJson(json['_reference'] as Map<String, dynamic>),
       publicationDate: json['publicationDate'] == null
           ? null
-          : DateTime.parse(json['publicationDate'] as String),
+          : FhirDateTime.fromJson(json['publicationDate']),
       publicationDateElement: json['_publicationDate'] == null
           ? null
           : Element.fromJson(json['_publicationDate'] as Map<String, dynamic>),
       presentationDate: json['presentationDate'] == null
           ? null
-          : DateTime.parse(json['presentationDate'] as String),
+          : FhirDateTime.fromJson(json['presentationDate']),
       presentationDateElement: json['_presentationDate'] == null
           ? null
           : Element.fromJson(json['_presentationDate'] as Map<String, dynamic>),
@@ -480,10 +482,9 @@ Map<String, dynamic> _$$_ImmunizationEducationToJson(
   writeNotNull('_documentType', instance.documentTypeElement?.toJson());
   writeNotNull('reference', instance.reference?.toJson());
   writeNotNull('_reference', instance.referenceElement?.toJson());
-  writeNotNull('publicationDate', instance.publicationDate?.toIso8601String());
+  writeNotNull('publicationDate', instance.publicationDate?.toJson());
   writeNotNull('_publicationDate', instance.publicationDateElement?.toJson());
-  writeNotNull(
-      'presentationDate', instance.presentationDate?.toIso8601String());
+  writeNotNull('presentationDate', instance.presentationDate?.toJson());
   writeNotNull('_presentationDate', instance.presentationDateElement?.toJson());
   return val;
 }
@@ -498,8 +499,7 @@ _$_ImmunizationReaction _$$_ImmunizationReactionFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -529,7 +529,7 @@ Map<String, dynamic> _$$_ImmunizationReactionToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('manifestation', instance.manifestation?.toJson());
   writeNotNull('reported', instance.reported?.toJson());
@@ -635,8 +635,7 @@ _$_ImmunizationEvaluation _$$_ImmunizationEvaluationFromJson(
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -700,7 +699,7 @@ Map<String, dynamic> _$$_ImmunizationEvaluationToJson(
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   val['patient'] = instance.patient.toJson();
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('authority', instance.authority?.toJson());
   val['targetDisease'] = instance.targetDisease.toJson();
@@ -759,14 +758,13 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => Uri.parse(e as String))
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -809,11 +807,11 @@ Map<String, dynamic> _$$_ImmunizationRecommendationToJson(
   writeNotNull('instantiatesCanonical',
       instance.instantiatesCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesUri',
-      instance.instantiatesUri?.map((e) => e.toString()).toList());
+      instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
       instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
   val['patient'] = instance.patient.toJson();
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('authority', instance.authority?.toJson());
   val['recommendation'] =
@@ -932,7 +930,7 @@ _$_ImmunizationRecommendationDateCriterion
           code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
           value: json['value'] == null
               ? null
-              : DateTime.parse(json['value'] as String),
+              : FhirDateTime.fromJson(json['value']),
           valueElement: json['_value'] == null
               ? null
               : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -954,7 +952,7 @@ Map<String, dynamic> _$$_ImmunizationRecommendationDateCriterionToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
-  writeNotNull('value', instance.value?.toIso8601String());
+  writeNotNull('value', instance.value?.toJson());
   writeNotNull('_value', instance.valueElement?.toJson());
   return val;
 }
@@ -1126,7 +1124,7 @@ _$_MedicationBatch _$$_MedicationBatchFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : DateTime.parse(json['expirationDate'] as String),
+          : FhirDateTime.fromJson(json['expirationDate']),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -1148,7 +1146,7 @@ Map<String, dynamic> _$$_MedicationBatchToJson(_$_MedicationBatch instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('lotNumber', instance.lotNumber);
   writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
-  writeNotNull('expirationDate', instance.expirationDate?.toIso8601String());
+  writeNotNull('expirationDate', instance.expirationDate?.toJson());
   writeNotNull('_expirationDate', instance.expirationDateElement?.toJson());
   return val;
 }
@@ -1193,7 +1191,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => Uri.parse(e as String))
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1225,7 +1223,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
           .toList(),
       occurenceDateTime: json['occurenceDateTime'] == null
           ? null
-          : DateTime.parse(json['occurenceDateTime'] as String),
+          : FhirDateTime.fromJson(json['occurenceDateTime']),
       occurenceDateTimeElement: json['_occurenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1235,7 +1233,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
           : Period.fromJson(json['occurencePeriod'] as Map<String, dynamic>),
       recorded: json['recorded'] == null
           ? null
-          : DateTime.parse(json['recorded'] as String),
+          : FhirDateTime.fromJson(json['recorded']),
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
@@ -1303,7 +1301,7 @@ Map<String, dynamic> _$$_MedicationAdministrationToJson(
   writeNotNull('instantiatesCanonical',
       instance.instantiatesCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesUri',
-      instance.instantiatesUri?.map((e) => e.toString()).toList());
+      instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
       instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
@@ -1318,12 +1316,11 @@ Map<String, dynamic> _$$_MedicationAdministrationToJson(
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('supportingInformation',
       instance.supportingInformation?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'occurenceDateTime', instance.occurenceDateTime?.toIso8601String());
+  writeNotNull('occurenceDateTime', instance.occurenceDateTime?.toJson());
   writeNotNull(
       '_occurenceDateTime', instance.occurenceDateTimeElement?.toJson());
   writeNotNull('occurencePeriod', instance.occurencePeriod?.toJson());
-  writeNotNull('recorded', instance.recorded?.toIso8601String());
+  writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
   writeNotNull('isSubPotent', instance.isSubPotent?.toJson());
   writeNotNull('_isSubPotent', instance.isSubPotentElement?.toJson());
@@ -1490,7 +1487,7 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
               json['notPerformedReason'] as Map<String, dynamic>),
       statusChanged: json['statusChanged'] == null
           ? null
-          : DateTime.parse(json['statusChanged'] as String),
+          : FhirDateTime.fromJson(json['statusChanged']),
       statusChangedElement: json['_statusChanged'] == null
           ? null
           : Element.fromJson(json['_statusChanged'] as Map<String, dynamic>),
@@ -1528,19 +1525,19 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
           : Quantity.fromJson(json['daysSupply'] as Map<String, dynamic>),
       recorded: json['recorded'] == null
           ? null
-          : DateTime.parse(json['recorded'] as String),
+          : FhirDateTime.fromJson(json['recorded']),
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
       whenPrepared: json['whenPrepared'] == null
           ? null
-          : DateTime.parse(json['whenPrepared'] as String),
+          : FhirDateTime.fromJson(json['whenPrepared']),
       whenPreparedElement: json['_whenPrepared'] == null
           ? null
           : Element.fromJson(json['_whenPrepared'] as Map<String, dynamic>),
       whenHandedOver: json['whenHandedOver'] == null
           ? null
-          : DateTime.parse(json['whenHandedOver'] as String),
+          : FhirDateTime.fromJson(json['whenHandedOver']),
       whenHandedOverElement: json['_whenHandedOver'] == null
           ? null
           : Element.fromJson(json['_whenHandedOver'] as Map<String, dynamic>),
@@ -1603,7 +1600,7 @@ Map<String, dynamic> _$$_MedicationDispenseToJson(
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('notPerformedReason', instance.notPerformedReason?.toJson());
-  writeNotNull('statusChanged', instance.statusChanged?.toIso8601String());
+  writeNotNull('statusChanged', instance.statusChanged?.toJson());
   writeNotNull('_statusChanged', instance.statusChangedElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['medication'] = instance.medication.toJson();
@@ -1619,11 +1616,11 @@ Map<String, dynamic> _$$_MedicationDispenseToJson(
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('daysSupply', instance.daysSupply?.toJson());
-  writeNotNull('recorded', instance.recorded?.toIso8601String());
+  writeNotNull('recorded', instance.recorded?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
-  writeNotNull('whenPrepared', instance.whenPrepared?.toIso8601String());
+  writeNotNull('whenPrepared', instance.whenPrepared?.toJson());
   writeNotNull('_whenPrepared', instance.whenPreparedElement?.toJson());
-  writeNotNull('whenHandedOver', instance.whenHandedOver?.toIso8601String());
+  writeNotNull('whenHandedOver', instance.whenHandedOver?.toJson());
   writeNotNull('_whenHandedOver', instance.whenHandedOverElement?.toJson());
   writeNotNull('destination', instance.destination?.toJson());
   writeNotNull('receiver', instance.receiver?.map((e) => e.toJson()).toList());
@@ -2776,7 +2773,7 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => Uri.parse(e as String))
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -2802,7 +2799,7 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
               json['statusReason'] as Map<String, dynamic>),
       statusChanged: json['statusChanged'] == null
           ? null
-          : DateTime.parse(json['statusChanged'] as String),
+          : FhirDateTime.fromJson(json['statusChanged']),
       statusChangedElement: json['_statusChanged'] == null
           ? null
           : Element.fromJson(json['_statusChanged'] as Map<String, dynamic>),
@@ -2838,7 +2835,7 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
           .toList(),
       authoredOn: json['authoredOn'] == null
           ? null
-          : DateTime.parse(json['authoredOn'] as String),
+          : FhirDateTime.fromJson(json['authoredOn']),
       authoredOnElement: json['_authoredOn'] == null
           ? null
           : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
@@ -2920,7 +2917,7 @@ Map<String, dynamic> _$$_MedicationRequestToJson(
   writeNotNull('instantiatesCanonical',
       instance.instantiatesCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesUri',
-      instance.instantiatesUri?.map((e) => e.toString()).toList());
+      instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
       instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
@@ -2929,7 +2926,7 @@ Map<String, dynamic> _$$_MedicationRequestToJson(
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('statusReason', instance.statusReason?.toJson());
-  writeNotNull('statusChanged', instance.statusChanged?.toIso8601String());
+  writeNotNull('statusChanged', instance.statusChanged?.toJson());
   writeNotNull('_statusChanged', instance.statusChangedElement?.toJson());
   writeNotNull('intent', instance.intent?.toJson());
   writeNotNull('_intent', instance.intentElement?.toJson());
@@ -2945,7 +2942,7 @@ Map<String, dynamic> _$$_MedicationRequestToJson(
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('supportingInformation',
       instance.supportingInformation?.map((e) => e.toJson()).toList());
-  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
+  writeNotNull('authoredOn', instance.authoredOn?.toJson());
   writeNotNull('_authoredOn', instance.authoredOnElement?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull('reported', instance.reported?.toJson());
@@ -3231,7 +3228,7 @@ _$_MedicationUsage _$$_MedicationUsageFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       effectiveDateTime: json['effectiveDateTime'] == null
           ? null
-          : DateTime.parse(json['effectiveDateTime'] as String),
+          : FhirDateTime.fromJson(json['effectiveDateTime']),
       effectiveDateTimeElement: json['_effectiveDateTime'] == null
           ? null
           : Element.fromJson(
@@ -3241,7 +3238,7 @@ _$_MedicationUsage _$$_MedicationUsageFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
       dateAsserted: json['dateAsserted'] == null
           ? null
-          : DateTime.parse(json['dateAsserted'] as String),
+          : FhirDateTime.fromJson(json['dateAsserted']),
       dateAssertedElement: json['_dateAsserted'] == null
           ? null
           : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),
@@ -3304,12 +3301,11 @@ Map<String, dynamic> _$$_MedicationUsageToJson(_$_MedicationUsage instance) {
   val['medication'] = instance.medication.toJson();
   val['subject'] = instance.subject.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull(
-      'effectiveDateTime', instance.effectiveDateTime?.toIso8601String());
+  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
   writeNotNull(
       '_effectiveDateTime', instance.effectiveDateTimeElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull('dateAsserted', instance.dateAsserted?.toIso8601String());
+  writeNotNull('dateAsserted', instance.dateAsserted?.toJson());
   writeNotNull('_dateAsserted', instance.dateAssertedElement?.toJson());
   writeNotNull('informationSource',
       instance.informationSource?.map((e) => e.toJson()).toList());

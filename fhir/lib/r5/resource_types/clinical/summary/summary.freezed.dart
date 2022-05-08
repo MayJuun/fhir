@@ -46,15 +46,15 @@ mixin _$AdverseEvent {
   CodeableConcept? get code => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
-  DateTime? get detected => throw _privateConstructorUsedError;
+  FhirDateTime? get detected => throw _privateConstructorUsedError;
   @JsonKey(name: '_detected')
   Element? get detectedElement => throw _privateConstructorUsedError;
-  DateTime? get recordedDate => throw _privateConstructorUsedError;
+  FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
   List<Reference>? get resultingCondition => throw _privateConstructorUsedError;
@@ -117,15 +117,15 @@ abstract class $AdverseEventCopyWith<$Res> {
       CodeableConcept? code,
       Reference subject,
       Reference? encounter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
-      DateTime? detected,
+      FhirDateTime? detected,
       @JsonKey(name: '_detected')
           Element? detectedElement,
-      DateTime? recordedDate,
+      FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate')
           Element? recordedDateElement,
       List<Reference>? resultingCondition,
@@ -301,7 +301,7 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -317,7 +317,7 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
       detected: detected == freezed
           ? _value.detected
           : detected // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       detectedElement: detectedElement == freezed
           ? _value.detectedElement
           : detectedElement // ignore: cast_nullable_to_non_nullable
@@ -325,7 +325,7 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
       recordedDate: recordedDate == freezed
           ? _value.recordedDate
           : recordedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       recordedDateElement: recordedDateElement == freezed
           ? _value.recordedDateElement
           : recordedDateElement // ignore: cast_nullable_to_non_nullable
@@ -618,15 +618,15 @@ abstract class _$$_AdverseEventCopyWith<$Res>
       CodeableConcept? code,
       Reference subject,
       Reference? encounter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
-      DateTime? detected,
+      FhirDateTime? detected,
       @JsonKey(name: '_detected')
           Element? detectedElement,
-      DateTime? recordedDate,
+      FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate')
           Element? recordedDateElement,
       List<Reference>? resultingCondition,
@@ -823,7 +823,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -839,7 +839,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
       detected: detected == freezed
           ? _value.detected
           : detected // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       detectedElement: detectedElement == freezed
           ? _value.detectedElement
           : detectedElement // ignore: cast_nullable_to_non_nullable
@@ -847,7 +847,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
       recordedDate: recordedDate == freezed
           ? _value.recordedDate
           : recordedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       recordedDateElement: recordedDateElement == freezed
           ? _value.recordedDateElement
           : recordedDateElement // ignore: cast_nullable_to_non_nullable
@@ -1068,7 +1068,7 @@ class _$_AdverseEvent extends _AdverseEvent {
   @override
   final Reference? encounter;
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
@@ -1077,12 +1077,12 @@ class _$_AdverseEvent extends _AdverseEvent {
   @override
   final Timing? occurrenceTiming;
   @override
-  final DateTime? detected;
+  final FhirDateTime? detected;
   @override
   @JsonKey(name: '_detected')
   final Element? detectedElement;
   @override
-  final DateTime? recordedDate;
+  final FhirDateTime? recordedDate;
   @override
   @JsonKey(name: '_recordedDate')
   final Element? recordedDateElement;
@@ -1346,15 +1346,15 @@ abstract class _AdverseEvent extends AdverseEvent {
       final CodeableConcept? code,
       required final Reference subject,
       final Reference? encounter,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
       final Timing? occurrenceTiming,
-      final DateTime? detected,
+      final FhirDateTime? detected,
       @JsonKey(name: '_detected')
           final Element? detectedElement,
-      final DateTime? recordedDate,
+      final FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate')
           final Element? recordedDateElement,
       final List<Reference>? resultingCondition,
@@ -1424,7 +1424,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -1433,12 +1433,12 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
   @override
-  DateTime? get detected => throw _privateConstructorUsedError;
+  FhirDateTime? get detected => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_detected')
   Element? get detectedElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get recordedDate => throw _privateConstructorUsedError;
+  FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
@@ -3585,7 +3585,7 @@ mixin _$AllergyIntolerance {
   CodeableConcept? get code => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get onsetDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_onsetDateTime')
   Element? get onsetDateTimeElement => throw _privateConstructorUsedError;
   Age? get onsetAge => throw _privateConstructorUsedError;
@@ -3594,12 +3594,12 @@ mixin _$AllergyIntolerance {
   Markdown? get onsetString => throw _privateConstructorUsedError;
   @JsonKey(name: '_onsetString')
   Element? get onsetStringElement => throw _privateConstructorUsedError;
-  DateTime? get recordedDate => throw _privateConstructorUsedError;
+  FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
   List<AllergyIntoleranceParticipant>? get participant =>
       throw _privateConstructorUsedError;
-  DateTime? get lastOccurrence => throw _privateConstructorUsedError;
+  FhirDateTime? get lastOccurrence => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastOccurrence')
   Element? get lastOccurrenceElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
@@ -3641,17 +3641,17 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       CodeableConcept? code,
       Reference patient,
       Reference? encounter,
-      DateTime? onsetDateTime,
+      FhirDateTime? onsetDateTime,
       @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
       Age? onsetAge,
       Period? onsetPeriod,
       Range? onsetRange,
       Markdown? onsetString,
       @JsonKey(name: '_onsetString') Element? onsetStringElement,
-      DateTime? recordedDate,
+      FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate') Element? recordedDateElement,
       List<AllergyIntoleranceParticipant>? participant,
-      DateTime? lastOccurrence,
+      FhirDateTime? lastOccurrence,
       @JsonKey(name: '_lastOccurrence') Element? lastOccurrenceElement,
       List<Annotation>? note,
       List<AllergyIntoleranceReaction>? reaction});
@@ -3821,7 +3821,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
           : onsetDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       onsetDateTimeElement: onsetDateTimeElement == freezed
           ? _value.onsetDateTimeElement
           : onsetDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3849,7 +3849,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       recordedDate: recordedDate == freezed
           ? _value.recordedDate
           : recordedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       recordedDateElement: recordedDateElement == freezed
           ? _value.recordedDateElement
           : recordedDateElement // ignore: cast_nullable_to_non_nullable
@@ -3861,7 +3861,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       lastOccurrence: lastOccurrence == freezed
           ? _value.lastOccurrence
           : lastOccurrence // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       lastOccurrenceElement: lastOccurrenceElement == freezed
           ? _value.lastOccurrenceElement
           : lastOccurrenceElement // ignore: cast_nullable_to_non_nullable
@@ -4103,17 +4103,17 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       CodeableConcept? code,
       Reference patient,
       Reference? encounter,
-      DateTime? onsetDateTime,
+      FhirDateTime? onsetDateTime,
       @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
       Age? onsetAge,
       Period? onsetPeriod,
       Range? onsetRange,
       Markdown? onsetString,
       @JsonKey(name: '_onsetString') Element? onsetStringElement,
-      DateTime? recordedDate,
+      FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate') Element? recordedDateElement,
       List<AllergyIntoleranceParticipant>? participant,
-      DateTime? lastOccurrence,
+      FhirDateTime? lastOccurrence,
       @JsonKey(name: '_lastOccurrence') Element? lastOccurrenceElement,
       List<Annotation>? note,
       List<AllergyIntoleranceReaction>? reaction});
@@ -4303,7 +4303,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
           : onsetDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       onsetDateTimeElement: onsetDateTimeElement == freezed
           ? _value.onsetDateTimeElement
           : onsetDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4331,7 +4331,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       recordedDate: recordedDate == freezed
           ? _value.recordedDate
           : recordedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       recordedDateElement: recordedDateElement == freezed
           ? _value.recordedDateElement
           : recordedDateElement // ignore: cast_nullable_to_non_nullable
@@ -4343,7 +4343,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       lastOccurrence: lastOccurrence == freezed
           ? _value.lastOccurrence
           : lastOccurrence // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       lastOccurrenceElement: lastOccurrenceElement == freezed
           ? _value.lastOccurrenceElement
           : lastOccurrenceElement // ignore: cast_nullable_to_non_nullable
@@ -4511,7 +4511,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @override
   final Reference? encounter;
   @override
-  final DateTime? onsetDateTime;
+  final FhirDateTime? onsetDateTime;
   @override
   @JsonKey(name: '_onsetDateTime')
   final Element? onsetDateTimeElement;
@@ -4527,7 +4527,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @JsonKey(name: '_onsetString')
   final Element? onsetStringElement;
   @override
-  final DateTime? recordedDate;
+  final FhirDateTime? recordedDate;
   @override
   @JsonKey(name: '_recordedDate')
   final Element? recordedDateElement;
@@ -4541,7 +4541,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   }
 
   @override
-  final DateTime? lastOccurrence;
+  final FhirDateTime? lastOccurrence;
   @override
   @JsonKey(name: '_lastOccurrence')
   final Element? lastOccurrenceElement;
@@ -4717,17 +4717,17 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       final CodeableConcept? code,
       required final Reference patient,
       final Reference? encounter,
-      final DateTime? onsetDateTime,
+      final FhirDateTime? onsetDateTime,
       @JsonKey(name: '_onsetDateTime') final Element? onsetDateTimeElement,
       final Age? onsetAge,
       final Period? onsetPeriod,
       final Range? onsetRange,
       final Markdown? onsetString,
       @JsonKey(name: '_onsetString') final Element? onsetStringElement,
-      final DateTime? recordedDate,
+      final FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate') final Element? recordedDateElement,
       final List<AllergyIntoleranceParticipant>? participant,
-      final DateTime? lastOccurrence,
+      final FhirDateTime? lastOccurrence,
       @JsonKey(name: '_lastOccurrence') final Element? lastOccurrenceElement,
       final List<Annotation>? note,
       final List<AllergyIntoleranceReaction>?
@@ -4791,7 +4791,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get onsetDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_onsetDateTime')
   Element? get onsetDateTimeElement => throw _privateConstructorUsedError;
@@ -4807,7 +4807,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @JsonKey(name: '_onsetString')
   Element? get onsetStringElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get recordedDate => throw _privateConstructorUsedError;
+  FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
@@ -4815,7 +4815,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   List<AllergyIntoleranceParticipant>? get participant =>
       throw _privateConstructorUsedError;
   @override
-  DateTime? get lastOccurrence => throw _privateConstructorUsedError;
+  FhirDateTime? get lastOccurrence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastOccurrence')
   Element? get lastOccurrenceElement => throw _privateConstructorUsedError;
@@ -5128,7 +5128,7 @@ mixin _$AllergyIntoleranceReaction {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  DateTime? get onset => throw _privateConstructorUsedError;
+  FhirDateTime? get onset => throw _privateConstructorUsedError;
   @JsonKey(name: '_onset')
   Element? get onsetElement => throw _privateConstructorUsedError;
   Code? get severity => throw _privateConstructorUsedError;
@@ -5156,7 +5156,7 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       List<CodeableReference> manifestation,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      DateTime? onset,
+      FhirDateTime? onset,
       @JsonKey(name: '_onset') Element? onsetElement,
       Code? severity,
       @JsonKey(name: '_severity') Element? severityElement,
@@ -5227,7 +5227,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
       onset: onset == freezed
           ? _value.onset
           : onset // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       onsetElement: onsetElement == freezed
           ? _value.onsetElement
           : onsetElement // ignore: cast_nullable_to_non_nullable
@@ -5323,7 +5323,7 @@ abstract class _$$_AllergyIntoleranceReactionCopyWith<$Res>
       List<CodeableReference> manifestation,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      DateTime? onset,
+      FhirDateTime? onset,
       @JsonKey(name: '_onset') Element? onsetElement,
       Code? severity,
       @JsonKey(name: '_severity') Element? severityElement,
@@ -5403,7 +5403,7 @@ class __$$_AllergyIntoleranceReactionCopyWithImpl<$Res>
       onset: onset == freezed
           ? _value.onset
           : onset // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       onsetElement: onsetElement == freezed
           ? _value.onsetElement
           : onsetElement // ignore: cast_nullable_to_non_nullable
@@ -5490,7 +5490,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final DateTime? onset;
+  final FhirDateTime? onset;
   @override
   @JsonKey(name: '_onset')
   final Element? onsetElement;
@@ -5582,7 +5582,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
       required final List<CodeableReference> manifestation,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final DateTime? onset,
+      final FhirDateTime? onset,
       @JsonKey(name: '_onset') final Element? onsetElement,
       final Code? severity,
       @JsonKey(name: '_severity') final Element? severityElement,
@@ -5612,7 +5612,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get onset => throw _privateConstructorUsedError;
+  FhirDateTime? get onset => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_onset')
   Element? get onsetElement => throw _privateConstructorUsedError;
@@ -5662,17 +5662,17 @@ mixin _$ClinicalImpression {
   Element? get descriptionElement => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference? get performer => throw _privateConstructorUsedError;
   Reference? get previous => throw _privateConstructorUsedError;
   List<Reference>? get problem => throw _privateConstructorUsedError;
-  List<Uri>? get protocol => throw _privateConstructorUsedError;
+  List<FhirUri>? get protocol => throw _privateConstructorUsedError;
   @JsonKey(name: '_protocol')
   List<Element>? get protocolElement => throw _privateConstructorUsedError;
   String? get summary => throw _privateConstructorUsedError;
@@ -5717,15 +5717,15 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       Reference subject,
       Reference? encounter,
-      DateTime? effectiveDateTime,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
       Period? effectivePeriod,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? performer,
       Reference? previous,
       List<Reference>? problem,
-      List<Uri>? protocol,
+      List<FhirUri>? protocol,
       @JsonKey(name: '_protocol') List<Element>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary') Element? summaryElement,
@@ -5880,7 +5880,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
           : effectiveDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -5892,7 +5892,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -5912,7 +5912,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       protocol: protocol == freezed
           ? _value.protocol
           : protocol // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
           : protocolElement // ignore: cast_nullable_to_non_nullable
@@ -6137,15 +6137,15 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
       @JsonKey(name: '_description') Element? descriptionElement,
       Reference subject,
       Reference? encounter,
-      DateTime? effectiveDateTime,
+      FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
       Period? effectivePeriod,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? performer,
       Reference? previous,
       List<Reference>? problem,
-      List<Uri>? protocol,
+      List<FhirUri>? protocol,
       @JsonKey(name: '_protocol') List<Element>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary') Element? summaryElement,
@@ -6317,7 +6317,7 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
           : effectiveDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       effectiveDateTimeElement: effectiveDateTimeElement == freezed
           ? _value.effectiveDateTimeElement
           : effectiveDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6329,7 +6329,7 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -6349,7 +6349,7 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
       protocol: protocol == freezed
           ? _value._protocol
           : protocol // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       protocolElement: protocolElement == freezed
           ? _value._protocolElement
           : protocolElement // ignore: cast_nullable_to_non_nullable
@@ -6417,7 +6417,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
       this.performer,
       this.previous,
       final List<Reference>? problem,
-      final List<Uri>? protocol,
+      final List<FhirUri>? protocol,
       @JsonKey(name: '_protocol') final List<Element>? protocolElement,
       this.summary,
       @JsonKey(name: '_summary') this.summaryElement,
@@ -6516,14 +6516,14 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   @override
   final Reference? encounter;
   @override
-  final DateTime? effectiveDateTime;
+  final FhirDateTime? effectiveDateTime;
   @override
   @JsonKey(name: '_effectiveDateTime')
   final Element? effectiveDateTimeElement;
   @override
   final Period? effectivePeriod;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -6540,9 +6540,9 @@ class _$_ClinicalImpression extends _ClinicalImpression {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _protocol;
+  final List<FhirUri>? _protocol;
   @override
-  List<Uri>? get protocol {
+  List<FhirUri>? get protocol {
     final value = _protocol;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -6758,17 +6758,17 @@ abstract class _ClinicalImpression extends ClinicalImpression {
           final Element? descriptionElement,
       required final Reference subject,
       final Reference? encounter,
-      final DateTime? effectiveDateTime,
+      final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
           final Element? effectiveDateTimeElement,
       final Period? effectivePeriod,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final Reference? performer,
       final Reference? previous,
       final List<Reference>? problem,
-      final List<Uri>? protocol,
+      final List<FhirUri>? protocol,
       @JsonKey(name: '_protocol')
           final List<Element>? protocolElement,
       final String? summary,
@@ -6829,14 +6829,14 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
   @override
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -6847,7 +6847,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   @override
   List<Reference>? get problem => throw _privateConstructorUsedError;
   @override
-  List<Uri>? get protocol => throw _privateConstructorUsedError;
+  List<FhirUri>? get protocol => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_protocol')
   List<Element>? get protocolElement => throw _privateConstructorUsedError;
@@ -7211,7 +7211,7 @@ mixin _$Condition {
   List<CodeableConcept>? get bodySite => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get onsetDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_onsetDateTime')
   Element? get onsetDateTimeElement => throw _privateConstructorUsedError;
   Age? get onsetAge => throw _privateConstructorUsedError;
@@ -7220,7 +7220,7 @@ mixin _$Condition {
   Markdown? get onsetString => throw _privateConstructorUsedError;
   @JsonKey(name: '_onsetString')
   Element? get onsetStringElement => throw _privateConstructorUsedError;
-  DateTime? get abatementDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get abatementDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_abatementDateTime')
   Element? get abatementDateTimeElement => throw _privateConstructorUsedError;
   Age? get abatementAge => throw _privateConstructorUsedError;
@@ -7229,7 +7229,7 @@ mixin _$Condition {
   Markdown? get abatementString => throw _privateConstructorUsedError;
   @JsonKey(name: '_abatementString')
   Element? get abatementStringElement => throw _privateConstructorUsedError;
-  DateTime? get recordedDate => throw _privateConstructorUsedError;
+  FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
   List<ConditionParticipant>? get participant =>
@@ -7269,21 +7269,21 @@ abstract class $ConditionCopyWith<$Res> {
       List<CodeableConcept>? bodySite,
       Reference subject,
       Reference? encounter,
-      DateTime? onsetDateTime,
+      FhirDateTime? onsetDateTime,
       @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
       Age? onsetAge,
       Period? onsetPeriod,
       Range? onsetRange,
       Markdown? onsetString,
       @JsonKey(name: '_onsetString') Element? onsetStringElement,
-      DateTime? abatementDateTime,
+      FhirDateTime? abatementDateTime,
       @JsonKey(name: '_abatementDateTime') Element? abatementDateTimeElement,
       Age? abatementAge,
       Period? abatementPeriod,
       Range? abatementRange,
       Markdown? abatementString,
       @JsonKey(name: '_abatementString') Element? abatementStringElement,
-      DateTime? recordedDate,
+      FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate') Element? recordedDateElement,
       List<ConditionParticipant>? participant,
       List<ConditionStage>? stage,
@@ -7448,7 +7448,7 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
           : onsetDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       onsetDateTimeElement: onsetDateTimeElement == freezed
           ? _value.onsetDateTimeElement
           : onsetDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7476,7 +7476,7 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       abatementDateTime: abatementDateTime == freezed
           ? _value.abatementDateTime
           : abatementDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       abatementDateTimeElement: abatementDateTimeElement == freezed
           ? _value.abatementDateTimeElement
           : abatementDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7504,7 +7504,7 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       recordedDate: recordedDate == freezed
           ? _value.recordedDate
           : recordedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       recordedDateElement: recordedDateElement == freezed
           ? _value.recordedDateElement
           : recordedDateElement // ignore: cast_nullable_to_non_nullable
@@ -7779,21 +7779,21 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       List<CodeableConcept>? bodySite,
       Reference subject,
       Reference? encounter,
-      DateTime? onsetDateTime,
+      FhirDateTime? onsetDateTime,
       @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
       Age? onsetAge,
       Period? onsetPeriod,
       Range? onsetRange,
       Markdown? onsetString,
       @JsonKey(name: '_onsetString') Element? onsetStringElement,
-      DateTime? abatementDateTime,
+      FhirDateTime? abatementDateTime,
       @JsonKey(name: '_abatementDateTime') Element? abatementDateTimeElement,
       Age? abatementAge,
       Period? abatementPeriod,
       Range? abatementRange,
       Markdown? abatementString,
       @JsonKey(name: '_abatementString') Element? abatementStringElement,
-      DateTime? recordedDate,
+      FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate') Element? recordedDateElement,
       List<ConditionParticipant>? participant,
       List<ConditionStage>? stage,
@@ -7981,7 +7981,7 @@ class __$$_ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
           : onsetDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       onsetDateTimeElement: onsetDateTimeElement == freezed
           ? _value.onsetDateTimeElement
           : onsetDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8009,7 +8009,7 @@ class __$$_ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       abatementDateTime: abatementDateTime == freezed
           ? _value.abatementDateTime
           : abatementDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       abatementDateTimeElement: abatementDateTimeElement == freezed
           ? _value.abatementDateTimeElement
           : abatementDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8037,7 +8037,7 @@ class __$$_ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       recordedDate: recordedDate == freezed
           ? _value.recordedDate
           : recordedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       recordedDateElement: recordedDateElement == freezed
           ? _value.recordedDateElement
           : recordedDateElement // ignore: cast_nullable_to_non_nullable
@@ -8208,7 +8208,7 @@ class _$_Condition extends _Condition {
   @override
   final Reference? encounter;
   @override
-  final DateTime? onsetDateTime;
+  final FhirDateTime? onsetDateTime;
   @override
   @JsonKey(name: '_onsetDateTime')
   final Element? onsetDateTimeElement;
@@ -8224,7 +8224,7 @@ class _$_Condition extends _Condition {
   @JsonKey(name: '_onsetString')
   final Element? onsetStringElement;
   @override
-  final DateTime? abatementDateTime;
+  final FhirDateTime? abatementDateTime;
   @override
   @JsonKey(name: '_abatementDateTime')
   final Element? abatementDateTimeElement;
@@ -8240,7 +8240,7 @@ class _$_Condition extends _Condition {
   @JsonKey(name: '_abatementString')
   final Element? abatementStringElement;
   @override
-  final DateTime? recordedDate;
+  final FhirDateTime? recordedDate;
   @override
   @JsonKey(name: '_recordedDate')
   final Element? recordedDateElement;
@@ -8440,7 +8440,7 @@ abstract class _Condition extends Condition {
       final List<CodeableConcept>? bodySite,
       required final Reference subject,
       final Reference? encounter,
-      final DateTime? onsetDateTime,
+      final FhirDateTime? onsetDateTime,
       @JsonKey(name: '_onsetDateTime')
           final Element? onsetDateTimeElement,
       final Age? onsetAge,
@@ -8449,7 +8449,7 @@ abstract class _Condition extends Condition {
       final Markdown? onsetString,
       @JsonKey(name: '_onsetString')
           final Element? onsetStringElement,
-      final DateTime? abatementDateTime,
+      final FhirDateTime? abatementDateTime,
       @JsonKey(name: '_abatementDateTime')
           final Element? abatementDateTimeElement,
       final Age? abatementAge,
@@ -8458,7 +8458,7 @@ abstract class _Condition extends Condition {
       final Markdown? abatementString,
       @JsonKey(name: '_abatementString')
           final Element? abatementStringElement,
-      final DateTime? recordedDate,
+      final FhirDateTime? recordedDate,
       @JsonKey(name: '_recordedDate')
           final Element? recordedDateElement,
       final List<ConditionParticipant>? participant,
@@ -8515,7 +8515,7 @@ abstract class _Condition extends Condition {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get onsetDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_onsetDateTime')
   Element? get onsetDateTimeElement => throw _privateConstructorUsedError;
@@ -8531,7 +8531,7 @@ abstract class _Condition extends Condition {
   @JsonKey(name: '_onsetString')
   Element? get onsetStringElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get abatementDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get abatementDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_abatementDateTime')
   Element? get abatementDateTimeElement => throw _privateConstructorUsedError;
@@ -8547,7 +8547,7 @@ abstract class _Condition extends Condition {
   @JsonKey(name: '_abatementString')
   Element? get abatementStringElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get recordedDate => throw _privateConstructorUsedError;
+  FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
@@ -9175,7 +9175,7 @@ mixin _$DetectedIssue {
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
   Reference? get patient => throw _privateConstructorUsedError;
-  DateTime? get identifiedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get identifiedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_identifiedDateTime')
   Element? get identifiedDateTimeElement => throw _privateConstructorUsedError;
   Period? get identifiedPeriod => throw _privateConstructorUsedError;
@@ -9222,7 +9222,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
       Code? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       Reference? patient,
-      DateTime? identifiedDateTime,
+      FhirDateTime? identifiedDateTime,
       @JsonKey(name: '_identifiedDateTime') Element? identifiedDateTimeElement,
       Period? identifiedPeriod,
       Reference? author,
@@ -9366,7 +9366,7 @@ class _$DetectedIssueCopyWithImpl<$Res>
       identifiedDateTime: identifiedDateTime == freezed
           ? _value.identifiedDateTime
           : identifiedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       identifiedDateTimeElement: identifiedDateTimeElement == freezed
           ? _value.identifiedDateTimeElement
           : identifiedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9580,7 +9580,7 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
       Code? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       Reference? patient,
-      DateTime? identifiedDateTime,
+      FhirDateTime? identifiedDateTime,
       @JsonKey(name: '_identifiedDateTime') Element? identifiedDateTimeElement,
       Period? identifiedPeriod,
       Reference? author,
@@ -9739,7 +9739,7 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
       identifiedDateTime: identifiedDateTime == freezed
           ? _value.identifiedDateTime
           : identifiedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       identifiedDateTimeElement: identifiedDateTimeElement == freezed
           ? _value.identifiedDateTimeElement
           : identifiedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9900,7 +9900,7 @@ class _$_DetectedIssue extends _DetectedIssue {
   @override
   final Reference? patient;
   @override
-  final DateTime? identifiedDateTime;
+  final FhirDateTime? identifiedDateTime;
   @override
   @JsonKey(name: '_identifiedDateTime')
   final Element? identifiedDateTimeElement;
@@ -10074,7 +10074,7 @@ abstract class _DetectedIssue extends DetectedIssue {
       @JsonKey(name: '_severity')
           final Element? severityElement,
       final Reference? patient,
-      final DateTime? identifiedDateTime,
+      final FhirDateTime? identifiedDateTime,
       @JsonKey(name: '_identifiedDateTime')
           final Element? identifiedDateTimeElement,
       final Period? identifiedPeriod,
@@ -10136,7 +10136,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
   Reference? get patient => throw _privateConstructorUsedError;
   @override
-  DateTime? get identifiedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get identifiedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_identifiedDateTime')
   Element? get identifiedDateTimeElement => throw _privateConstructorUsedError;
@@ -10445,7 +10445,7 @@ mixin _$DetectedIssueMitigation {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept get action => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference? get author => throw _privateConstructorUsedError;
@@ -10466,7 +10466,7 @@ abstract class $DetectedIssueMitigationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept action,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? author});
 
@@ -10514,7 +10514,7 @@ class _$DetectedIssueMitigationCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -10568,7 +10568,7 @@ abstract class _$$_DetectedIssueMitigationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept action,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? author});
 
@@ -10622,7 +10622,7 @@ class __$$_DetectedIssueMitigationCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -10677,7 +10677,7 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
   @override
   final CodeableConcept action;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -10737,7 +10737,7 @@ abstract class _DetectedIssueMitigation extends DetectedIssueMitigation {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept action,
-      final DateTime? date,
+      final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final Reference? author}) = _$_DetectedIssueMitigation;
   _DetectedIssueMitigation._() : super._();
@@ -10756,7 +10756,7 @@ abstract class _DetectedIssueMitigation extends DetectedIssueMitigation {
   @override
   CodeableConcept get action => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -10792,7 +10792,7 @@ mixin _$FamilyMemberHistory {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
-  List<Uri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
@@ -10801,7 +10801,7 @@ mixin _$FamilyMemberHistory {
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
@@ -10867,13 +10867,13 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
-      List<Uri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? dataAbsentReason,
       Reference patient,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -11044,7 +11044,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
@@ -11068,7 +11068,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -11451,13 +11451,13 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
-      List<Uri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? dataAbsentReason,
       Reference patient,
-      DateTime? date,
+      FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -11653,7 +11653,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       instantiatesUri: instantiatesUri == freezed
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value._instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
@@ -11677,7 +11677,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -11814,7 +11814,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Canonical>? instantiatesCanonical,
-      final List<Uri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
       this.status,
@@ -11941,9 +11941,9 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _instantiatesUri;
+  final List<FhirUri>? _instantiatesUri;
   @override
-  List<Uri>? get instantiatesUri {
+  List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -11970,7 +11970,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   @override
   final Reference patient;
   @override
-  final DateTime? date;
+  final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -12241,7 +12241,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
           final List<Canonical>? instantiatesCanonical,
-          final List<Uri>? instantiatesUri,
+          final List<FhirUri>? instantiatesUri,
           @JsonKey(name: '_instantiatesUri')
               final List<Element>? instantiatesUriElement,
           final Code? status,
@@ -12249,7 +12249,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
               final Element? statusElement,
           final CodeableConcept? dataAbsentReason,
           required final Reference patient,
-          final DateTime? date,
+          final FhirDateTime? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
           final String? name,
@@ -12325,7 +12325,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @override
-  List<Uri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
@@ -12340,7 +12340,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   Reference get patient => throw _privateConstructorUsedError;
   @override
-  DateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -12976,7 +12976,7 @@ mixin _$FamilyMemberHistoryProcedure {
   Markdown? get performedString => throw _privateConstructorUsedError;
   @JsonKey(name: '_performedString')
   Element? get performedStringElement => throw _privateConstructorUsedError;
-  DateTime? get performedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get performedDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_performedDateTime')
   Element? get performedDateTimeElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
@@ -13006,7 +13006,7 @@ abstract class $FamilyMemberHistoryProcedureCopyWith<$Res> {
       Period? performedPeriod,
       Markdown? performedString,
       @JsonKey(name: '_performedString') Element? performedStringElement,
-      DateTime? performedDateTime,
+      FhirDateTime? performedDateTime,
       @JsonKey(name: '_performedDateTime') Element? performedDateTimeElement,
       List<Annotation>? note});
 
@@ -13099,7 +13099,7 @@ class _$FamilyMemberHistoryProcedureCopyWithImpl<$Res>
       performedDateTime: performedDateTime == freezed
           ? _value.performedDateTime
           : performedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       performedDateTimeElement: performedDateTimeElement == freezed
           ? _value.performedDateTimeElement
           : performedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -13217,7 +13217,7 @@ abstract class _$$_FamilyMemberHistoryProcedureCopyWith<$Res>
       Period? performedPeriod,
       Markdown? performedString,
       @JsonKey(name: '_performedString') Element? performedStringElement,
-      DateTime? performedDateTime,
+      FhirDateTime? performedDateTime,
       @JsonKey(name: '_performedDateTime') Element? performedDateTimeElement,
       List<Annotation>? note});
 
@@ -13322,7 +13322,7 @@ class __$$_FamilyMemberHistoryProcedureCopyWithImpl<$Res>
       performedDateTime: performedDateTime == freezed
           ? _value.performedDateTime
           : performedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       performedDateTimeElement: performedDateTimeElement == freezed
           ? _value.performedDateTimeElement
           : performedDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -13404,7 +13404,7 @@ class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
   @JsonKey(name: '_performedString')
   final Element? performedStringElement;
   @override
-  final DateTime? performedDateTime;
+  final FhirDateTime? performedDateTime;
   @override
   @JsonKey(name: '_performedDateTime')
   final Element? performedDateTimeElement;
@@ -13505,7 +13505,7 @@ abstract class _FamilyMemberHistoryProcedure
       final Markdown? performedString,
       @JsonKey(name: '_performedString')
           final Element? performedStringElement,
-      final DateTime? performedDateTime,
+      final FhirDateTime? performedDateTime,
       @JsonKey(name: '_performedDateTime')
           final Element? performedDateTimeElement,
       final List<Annotation>? note}) = _$_FamilyMemberHistoryProcedure;
@@ -13543,7 +13543,7 @@ abstract class _FamilyMemberHistoryProcedure
   @JsonKey(name: '_performedString')
   Element? get performedStringElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get performedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get performedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_performedDateTime')
   Element? get performedDateTimeElement => throw _privateConstructorUsedError;
@@ -13579,7 +13579,7 @@ mixin _$Procedure {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
-  List<Uri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
@@ -13593,7 +13593,7 @@ mixin _$Procedure {
   CodeableConcept? get code => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
   Reference? get encounter => throw _privateConstructorUsedError;
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
@@ -13603,7 +13603,7 @@ mixin _$Procedure {
   Age? get occurrenceAge => throw _privateConstructorUsedError;
   Range? get occurrenceRange => throw _privateConstructorUsedError;
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
-  DateTime? get recorded => throw _privateConstructorUsedError;
+  FhirDateTime? get recorded => throw _privateConstructorUsedError;
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;
   Reference? get recorder => throw _privateConstructorUsedError;
@@ -13650,7 +13650,7 @@ abstract class $ProcedureCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
-      List<Uri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
@@ -13661,7 +13661,7 @@ abstract class $ProcedureCopyWith<$Res> {
       CodeableConcept? code,
       Reference subject,
       Reference? encounter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Markdown? occurrenceString,
@@ -13669,7 +13669,7 @@ abstract class $ProcedureCopyWith<$Res> {
       Age? occurrenceAge,
       Range? occurrenceRange,
       Timing? occurrenceTiming,
-      DateTime? recorded,
+      FhirDateTime? recorded,
       @JsonKey(name: '_recorded') Element? recordedElement,
       Reference? recorder,
       Boolean? reportedBoolean,
@@ -13830,7 +13830,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
@@ -13874,7 +13874,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -13906,7 +13906,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
       recorded: recorded == freezed
           ? _value.recorded
           : recorded // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       recordedElement: recordedElement == freezed
           ? _value.recordedElement
           : recordedElement // ignore: cast_nullable_to_non_nullable
@@ -14230,7 +14230,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Canonical>? instantiatesCanonical,
-      List<Uri>? instantiatesUri,
+      List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
@@ -14241,7 +14241,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       CodeableConcept? code,
       Reference subject,
       Reference? encounter,
-      DateTime? occurrenceDateTime,
+      FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Markdown? occurrenceString,
@@ -14249,7 +14249,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       Age? occurrenceAge,
       Range? occurrenceRange,
       Timing? occurrenceTiming,
-      DateTime? recorded,
+      FhirDateTime? recorded,
       @JsonKey(name: '_recorded') Element? recordedElement,
       Reference? recorder,
       Boolean? reportedBoolean,
@@ -14433,7 +14433,7 @@ class __$$_ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
       instantiatesUri: instantiatesUri == freezed
           ? _value._instantiatesUri
           : instantiatesUri // ignore: cast_nullable_to_non_nullable
-              as List<Uri>?,
+              as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value._instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
@@ -14477,7 +14477,7 @@ class __$$_ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -14509,7 +14509,7 @@ class __$$_ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
       recorded: recorded == freezed
           ? _value.recorded
           : recorded // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       recordedElement: recordedElement == freezed
           ? _value.recordedElement
           : recordedElement // ignore: cast_nullable_to_non_nullable
@@ -14606,7 +14606,7 @@ class _$_Procedure extends _Procedure {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Canonical>? instantiatesCanonical,
-      final List<Uri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
@@ -14741,9 +14741,9 @@ class _$_Procedure extends _Procedure {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Uri>? _instantiatesUri;
+  final List<FhirUri>? _instantiatesUri;
   @override
-  List<Uri>? get instantiatesUri {
+  List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -14801,7 +14801,7 @@ class _$_Procedure extends _Procedure {
   @override
   final Reference? encounter;
   @override
-  final DateTime? occurrenceDateTime;
+  final FhirDateTime? occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   final Element? occurrenceDateTimeElement;
@@ -14819,7 +14819,7 @@ class _$_Procedure extends _Procedure {
   @override
   final Timing? occurrenceTiming;
   @override
-  final DateTime? recorded;
+  final FhirDateTime? recorded;
   @override
   @JsonKey(name: '_recorded')
   final Element? recordedElement;
@@ -15114,7 +15114,7 @@ abstract class _Procedure extends Procedure {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Canonical>? instantiatesCanonical,
-      final List<Uri>? instantiatesUri,
+      final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           final List<Element>? instantiatesUriElement,
       final List<Reference>? basedOn,
@@ -15127,7 +15127,7 @@ abstract class _Procedure extends Procedure {
       final CodeableConcept? code,
       required final Reference subject,
       final Reference? encounter,
-      final DateTime? occurrenceDateTime,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
@@ -15137,7 +15137,7 @@ abstract class _Procedure extends Procedure {
       final Age? occurrenceAge,
       final Range? occurrenceRange,
       final Timing? occurrenceTiming,
-      final DateTime? recorded,
+      final FhirDateTime? recorded,
       @JsonKey(name: '_recorded')
           final Element? recordedElement,
       final Reference? recorder,
@@ -15195,7 +15195,7 @@ abstract class _Procedure extends Procedure {
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
   @override
-  List<Uri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
@@ -15220,7 +15220,7 @@ abstract class _Procedure extends Procedure {
   @override
   Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  DateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -15238,7 +15238,7 @@ abstract class _Procedure extends Procedure {
   @override
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
   @override
-  DateTime? get recorded => throw _privateConstructorUsedError;
+  FhirDateTime? get recorded => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;

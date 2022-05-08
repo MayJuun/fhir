@@ -178,7 +178,7 @@ class MarketingStatus with _$MarketingStatus {
     CodeableConcept? jurisdiction,
     required CodeableConcept status,
     Period? dateRange,
-    DateTime? restoreDate,
+    FhirDateTime? restoreDate,
     @JsonKey(name: '_restoreDate') Element? restoreDateElement,
   }) = _MarketingStatus;
 

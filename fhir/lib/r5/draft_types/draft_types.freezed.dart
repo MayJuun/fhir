@@ -784,7 +784,7 @@ mixin _$MarketingStatus {
   CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
   CodeableConcept get status => throw _privateConstructorUsedError;
   Period? get dateRange => throw _privateConstructorUsedError;
-  DateTime? get restoreDate => throw _privateConstructorUsedError;
+  FhirDateTime? get restoreDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_restoreDate')
   Element? get restoreDateElement => throw _privateConstructorUsedError;
 
@@ -807,7 +807,7 @@ abstract class $MarketingStatusCopyWith<$Res> {
       CodeableConcept? jurisdiction,
       CodeableConcept status,
       Period? dateRange,
-      DateTime? restoreDate,
+      FhirDateTime? restoreDate,
       @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
   $CodeableConceptCopyWith<$Res>? get country;
@@ -870,7 +870,7 @@ class _$MarketingStatusCopyWithImpl<$Res>
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
           : restoreDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       restoreDateElement: restoreDateElement == freezed
           ? _value.restoreDateElement
           : restoreDateElement // ignore: cast_nullable_to_non_nullable
@@ -945,7 +945,7 @@ abstract class _$$_MarketingStatusCopyWith<$Res>
       CodeableConcept? jurisdiction,
       CodeableConcept status,
       Period? dateRange,
-      DateTime? restoreDate,
+      FhirDateTime? restoreDate,
       @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
   @override
@@ -1015,7 +1015,7 @@ class __$$_MarketingStatusCopyWithImpl<$Res>
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
           : restoreDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       restoreDateElement: restoreDateElement == freezed
           ? _value.restoreDateElement
           : restoreDateElement // ignore: cast_nullable_to_non_nullable
@@ -1074,7 +1074,7 @@ class _$_MarketingStatus extends _MarketingStatus {
   @override
   final Period? dateRange;
   @override
-  final DateTime? restoreDate;
+  final FhirDateTime? restoreDate;
   @override
   @JsonKey(name: '_restoreDate')
   final Element? restoreDateElement;
@@ -1139,7 +1139,7 @@ abstract class _MarketingStatus extends MarketingStatus {
           final CodeableConcept? jurisdiction,
           required final CodeableConcept status,
           final Period? dateRange,
-          final DateTime? restoreDate,
+          final FhirDateTime? restoreDate,
           @JsonKey(name: '_restoreDate') final Element? restoreDateElement}) =
       _$_MarketingStatus;
   _MarketingStatus._() : super._();
@@ -1164,7 +1164,7 @@ abstract class _MarketingStatus extends MarketingStatus {
   @override
   Period? get dateRange => throw _privateConstructorUsedError;
   @override
-  DateTime? get restoreDate => throw _privateConstructorUsedError;
+  FhirDateTime? get restoreDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_restoreDate')
   Element? get restoreDateElement => throw _privateConstructorUsedError;

@@ -100,7 +100,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           .toList(),
       created: json['created'] == null
           ? null
-          : DateTime.parse(json['created'] as String),
+          : FhirDateTime.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -176,7 +176,7 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('_minutesDuration', instance.minutesDurationElement?.toJson());
   writeNotNull('slot', instance.slot?.map((e) => e.toJson()).toList());
   writeNotNull('account', instance.account?.map((e) => e.toJson()).toList());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('patientInstruction',
@@ -192,10 +192,13 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
   R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R5ResourceType.Appointment: 'Appointment',
   R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.ArtifactAssessment: 'ArtifactAssessment',
   R5ResourceType.AuditEvent: 'AuditEvent',
   R5ResourceType.Basic: 'Basic',
   R5ResourceType.Binary: 'Binary',
@@ -206,20 +209,20 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
-  R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
   R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
-  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R5ResourceType.CodeSystem: 'CodeSystem',
   R5ResourceType.Communication: 'Communication',
   R5ResourceType.CommunicationRequest: 'CommunicationRequest',
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -230,6 +233,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DetectedIssue: 'DetectedIssue',
   R5ResourceType.Device: 'Device',
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceDispense: 'DeviceDispense',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
   R5ResourceType.DeviceUsage: 'DeviceUsage',
@@ -254,11 +258,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Group: 'Group',
   R5ResourceType.GuidanceResponse: 'GuidanceResponse',
   R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingSelection: 'ImagingSelection',
   R5ResourceType.ImagingStudy: 'ImagingStudy',
   R5ResourceType.Immunization: 'Immunization',
   R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.Ingredient: 'Ingredient',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
   R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
@@ -266,6 +272,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Linkage: 'Linkage',
   R5ResourceType.List_: 'List',
   R5ResourceType.Location: 'Location',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
   R5ResourceType.MeasureReport: 'MeasureReport',
   R5ResourceType.Medication: 'Medication',
@@ -275,12 +282,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.MedicationRequest: 'MedicationRequest',
   R5ResourceType.MedicationUsage: 'MedicationUsage',
   R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
-  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
-  R5ResourceType.Ingredient: 'Ingredient',
-  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
-  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
-  R5ResourceType.AdministrableProductDefinition:
-      'AdministrableProductDefinition',
   R5ResourceType.MessageDefinition: 'MessageDefinition',
   R5ResourceType.MessageHeader: 'MessageHeader',
   R5ResourceType.MolecularSequence: 'MolecularSequence',
@@ -294,6 +295,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.OperationOutcome: 'OperationOutcome',
   R5ResourceType.Organization: 'Organization',
   R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R5ResourceType.Parameters: 'Parameters',
   R5ResourceType.Patient: 'Patient',
   R5ResourceType.PaymentNotice: 'PaymentNotice',
@@ -307,6 +309,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Provenance: 'Provenance',
   R5ResourceType.Questionnaire: 'Questionnaire',
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
   R5ResourceType.RequestGroup: 'RequestGroup',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
@@ -819,13 +822,13 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
           : Period.fromJson(json['executionPeriod'] as Map<String, dynamic>),
       authoredOn: json['authoredOn'] == null
           ? null
-          : DateTime.parse(json['authoredOn'] as String),
+          : FhirDateTime.fromJson(json['authoredOn']),
       authoredOnElement: json['_authoredOn'] == null
           ? null
           : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
       lastModified: json['lastModified'] == null
           ? null
-          : DateTime.parse(json['lastModified'] as String),
+          : FhirDateTime.fromJson(json['lastModified']),
       lastModifiedElement: json['_lastModified'] == null
           ? null
           : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
@@ -917,9 +920,9 @@ Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
   writeNotNull('for', instance.for_?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('executionPeriod', instance.executionPeriod?.toJson());
-  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
+  writeNotNull('authoredOn', instance.authoredOn?.toJson());
   writeNotNull('_authoredOn', instance.authoredOnElement?.toJson());
-  writeNotNull('lastModified', instance.lastModified?.toIso8601String());
+  writeNotNull('lastModified', instance.lastModified?.toJson());
   writeNotNull('_lastModified', instance.lastModifiedElement?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull(
@@ -1024,7 +1027,7 @@ _$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : DateTime.parse(json['valueDateTime'] as String),
+          : FhirDateTime.fromJson(json['valueDateTime']),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -1249,7 +1252,7 @@ Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
   writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
@@ -1359,7 +1362,7 @@ _$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : DateTime.parse(json['valueDateTime'] as String),
+          : FhirDateTime.fromJson(json['valueDateTime']),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -1584,7 +1587,7 @@ Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
   writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
@@ -2645,7 +2648,7 @@ _$_VerificationResult _$$_VerificationResultFromJson(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       statusDate: json['statusDate'] == null
           ? null
-          : DateTime.parse(json['statusDate'] as String),
+          : FhirDateTime.fromJson(json['statusDate']),
       statusDateElement: json['_statusDate'] == null
           ? null
           : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -2661,7 +2664,7 @@ _$_VerificationResult _$$_VerificationResultFromJson(
           : Timing.fromJson(json['frequency'] as Map<String, dynamic>),
       lastPerformed: json['lastPerformed'] == null
           ? null
-          : DateTime.parse(json['lastPerformed'] as String),
+          : FhirDateTime.fromJson(json['lastPerformed']),
       lastPerformedElement: json['_lastPerformed'] == null
           ? null
           : Element.fromJson(json['_lastPerformed'] as Map<String, dynamic>),
@@ -2721,13 +2724,13 @@ Map<String, dynamic> _$$_VerificationResultToJson(
   writeNotNull('need', instance.need?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('statusDate', instance.statusDate?.toIso8601String());
+  writeNotNull('statusDate', instance.statusDate?.toJson());
   writeNotNull('_statusDate', instance.statusDateElement?.toJson());
   writeNotNull('validationType', instance.validationType?.toJson());
   writeNotNull('validationProcess',
       instance.validationProcess?.map((e) => e.toJson()).toList());
   writeNotNull('frequency', instance.frequency?.toJson());
-  writeNotNull('lastPerformed', instance.lastPerformed?.toIso8601String());
+  writeNotNull('lastPerformed', instance.lastPerformed?.toJson());
   writeNotNull('_lastPerformed', instance.lastPerformedElement?.toJson());
   writeNotNull('nextScheduled', instance.nextScheduled?.toJson());
   writeNotNull('_nextScheduled', instance.nextScheduledElement?.toJson());
@@ -2765,7 +2768,7 @@ _$_VerificationResultPrimarySource _$$_VerificationResultPrimarySourceFromJson(
               json['validationStatus'] as Map<String, dynamic>),
       validationDate: json['validationDate'] == null
           ? null
-          : DateTime.parse(json['validationDate'] as String),
+          : FhirDateTime.fromJson(json['validationDate']),
       validationDateElement: json['_validationDate'] == null
           ? null
           : Element.fromJson(json['_validationDate'] as Map<String, dynamic>),
@@ -2798,7 +2801,7 @@ Map<String, dynamic> _$$_VerificationResultPrimarySourceToJson(
   writeNotNull('communicationMethod',
       instance.communicationMethod?.map((e) => e.toJson()).toList());
   writeNotNull('validationStatus', instance.validationStatus?.toJson());
-  writeNotNull('validationDate', instance.validationDate?.toIso8601String());
+  writeNotNull('validationDate', instance.validationDate?.toJson());
   writeNotNull('_validationDate', instance.validationDateElement?.toJson());
   writeNotNull('canPushUpdates', instance.canPushUpdates?.toJson());
   writeNotNull('pushTypeAvailable',
