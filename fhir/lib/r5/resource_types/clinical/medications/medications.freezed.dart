@@ -12040,6 +12040,8 @@ mixin _$MedicationKnowledge {
       throw _privateConstructorUsedError;
   List<MedicationKnowledgeRegulatory>? get regulatory =>
       throw _privateConstructorUsedError;
+  MedicationKnowledgeDefinitional? get definitional =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -12086,7 +12088,8 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       List<MedicationKnowledgePackaging>? packaging,
       List<Reference>? clinicalUseIssue,
       List<MedicationKnowledgeStorageGuideline>? storageGuideline,
-      List<MedicationKnowledgeRegulatory>? regulatory});
+      List<MedicationKnowledgeRegulatory>? regulatory,
+      MedicationKnowledgeDefinitional? definitional});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -12096,6 +12099,7 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
   $ElementCopyWith<$Res>? get statusElement;
   $ReferenceCopyWith<$Res>? get author;
   $ElementCopyWith<$Res>? get preparationInstructionElement;
+  $MedicationKnowledgeDefinitionalCopyWith<$Res>? get definitional;
 }
 
 /// @nodoc
@@ -12142,6 +12146,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
     Object? clinicalUseIssue = freezed,
     Object? storageGuideline = freezed,
     Object? regulatory = freezed,
+    Object? definitional = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -12276,6 +12281,10 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
           ? _value.regulatory
           : regulatory // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeRegulatory>?,
+      definitional: definitional == freezed
+          ? _value.definitional
+          : definitional // ignore: cast_nullable_to_non_nullable
+              as MedicationKnowledgeDefinitional?,
     ));
   }
 
@@ -12367,6 +12376,18 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
       return _then(_value.copyWith(preparationInstructionElement: value));
     });
   }
+
+  @override
+  $MedicationKnowledgeDefinitionalCopyWith<$Res>? get definitional {
+    if (_value.definitional == null) {
+      return null;
+    }
+
+    return $MedicationKnowledgeDefinitionalCopyWith<$Res>(_value.definitional!,
+        (value) {
+      return _then(_value.copyWith(definitional: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -12410,7 +12431,8 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
       List<MedicationKnowledgePackaging>? packaging,
       List<Reference>? clinicalUseIssue,
       List<MedicationKnowledgeStorageGuideline>? storageGuideline,
-      List<MedicationKnowledgeRegulatory>? regulatory});
+      List<MedicationKnowledgeRegulatory>? regulatory,
+      MedicationKnowledgeDefinitional? definitional});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -12428,6 +12450,8 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
   $ReferenceCopyWith<$Res>? get author;
   @override
   $ElementCopyWith<$Res>? get preparationInstructionElement;
+  @override
+  $MedicationKnowledgeDefinitionalCopyWith<$Res>? get definitional;
 }
 
 /// @nodoc
@@ -12476,6 +12500,7 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
     Object? clinicalUseIssue = freezed,
     Object? storageGuideline = freezed,
     Object? regulatory = freezed,
+    Object? definitional = freezed,
   }) {
     return _then(_$_MedicationKnowledge(
       resourceType: resourceType == freezed
@@ -12610,6 +12635,10 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
           ? _value._regulatory
           : regulatory // ignore: cast_nullable_to_non_nullable
               as List<MedicationKnowledgeRegulatory>?,
+      definitional: definitional == freezed
+          ? _value.definitional
+          : definitional // ignore: cast_nullable_to_non_nullable
+              as MedicationKnowledgeDefinitional?,
     ));
   }
 }
@@ -12651,7 +12680,8 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
       final List<MedicationKnowledgePackaging>? packaging,
       final List<Reference>? clinicalUseIssue,
       final List<MedicationKnowledgeStorageGuideline>? storageGuideline,
-      final List<MedicationKnowledgeRegulatory>? regulatory})
+      final List<MedicationKnowledgeRegulatory>? regulatory,
+      this.definitional})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -12886,8 +12916,11 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   }
 
   @override
+  final MedicationKnowledgeDefinitional? definitional;
+
+  @override
   String toString() {
-    return 'MedicationKnowledge(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, status: $status, statusElement: $statusElement, author: $author, intendedJurisdiction: $intendedJurisdiction, name: $name, nameElement: $nameElement, relatedMedicationKnowledge: $relatedMedicationKnowledge, associatedMedication: $associatedMedication, productType: $productType, monograph: $monograph, preparationInstruction: $preparationInstruction, preparationInstructionElement: $preparationInstructionElement, cost: $cost, monitoringProgram: $monitoringProgram, indicationGuideline: $indicationGuideline, medicineClassification: $medicineClassification, packaging: $packaging, clinicalUseIssue: $clinicalUseIssue, storageGuideline: $storageGuideline, regulatory: $regulatory)';
+    return 'MedicationKnowledge(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, status: $status, statusElement: $statusElement, author: $author, intendedJurisdiction: $intendedJurisdiction, name: $name, nameElement: $nameElement, relatedMedicationKnowledge: $relatedMedicationKnowledge, associatedMedication: $associatedMedication, productType: $productType, monograph: $monograph, preparationInstruction: $preparationInstruction, preparationInstructionElement: $preparationInstructionElement, cost: $cost, monitoringProgram: $monitoringProgram, indicationGuideline: $indicationGuideline, medicineClassification: $medicineClassification, packaging: $packaging, clinicalUseIssue: $clinicalUseIssue, storageGuideline: $storageGuideline, regulatory: $regulatory, definitional: $definitional)';
   }
 
   @override
@@ -12953,7 +12986,9 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
             const DeepCollectionEquality()
                 .equals(other._storageGuideline, _storageGuideline) &&
             const DeepCollectionEquality()
-                .equals(other._regulatory, _regulatory));
+                .equals(other._regulatory, _regulatory) &&
+            const DeepCollectionEquality()
+                .equals(other.definitional, definitional));
   }
 
   @JsonKey(ignore: true)
@@ -12992,7 +13027,8 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
         const DeepCollectionEquality().hash(_packaging),
         const DeepCollectionEquality().hash(_clinicalUseIssue),
         const DeepCollectionEquality().hash(_storageGuideline),
-        const DeepCollectionEquality().hash(_regulatory)
+        const DeepCollectionEquality().hash(_regulatory),
+        const DeepCollectionEquality().hash(definitional)
       ]);
 
   @JsonKey(ignore: true)
@@ -13042,7 +13078,8 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
       final List<MedicationKnowledgePackaging>? packaging,
       final List<Reference>? clinicalUseIssue,
       final List<MedicationKnowledgeStorageGuideline>? storageGuideline,
-      final List<MedicationKnowledgeRegulatory>? regulatory}) = _$_MedicationKnowledge;
+      final List<MedicationKnowledgeRegulatory>? regulatory,
+      final MedicationKnowledgeDefinitional? definitional}) = _$_MedicationKnowledge;
   _MedicationKnowledge._() : super._();
 
   factory _MedicationKnowledge.fromJson(Map<String, dynamic> json) =
@@ -13131,6 +13168,9 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
       throw _privateConstructorUsedError;
   @override
   List<MedicationKnowledgeRegulatory>? get regulatory =>
+      throw _privateConstructorUsedError;
+  @override
+  MedicationKnowledgeDefinitional? get definitional =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

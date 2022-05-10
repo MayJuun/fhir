@@ -3276,6 +3276,7 @@ mixin _$RelatedArtifact {
   RelatedArtifactType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
   String? get label => throw _privateConstructorUsedError;
   @JsonKey(name: '_label')
   Element? get labelElement => throw _privateConstructorUsedError;
@@ -3285,11 +3286,9 @@ mixin _$RelatedArtifact {
   Markdown? get citation => throw _privateConstructorUsedError;
   @JsonKey(name: '_citation')
   Element? get citationElement => throw _privateConstructorUsedError;
-  FhirUrl? get url => throw _privateConstructorUsedError;
-  @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
   Attachment? get document => throw _privateConstructorUsedError;
   Canonical? get resource => throw _privateConstructorUsedError;
+  Reference? get resourceReference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3307,23 +3306,23 @@ abstract class $RelatedArtifactCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       RelatedArtifactType? type,
       @JsonKey(name: '_type') Element? typeElement,
+      List<CodeableConcept>? classifier,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
       Markdown? citation,
       @JsonKey(name: '_citation') Element? citationElement,
-      FhirUrl? url,
-      @JsonKey(name: '_url') Element? urlElement,
       Attachment? document,
-      Canonical? resource});
+      Canonical? resource,
+      Reference? resourceReference});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get labelElement;
   $ElementCopyWith<$Res>? get displayElement;
   $ElementCopyWith<$Res>? get citationElement;
-  $ElementCopyWith<$Res>? get urlElement;
   $AttachmentCopyWith<$Res>? get document;
+  $ReferenceCopyWith<$Res>? get resourceReference;
 }
 
 /// @nodoc
@@ -3341,16 +3340,16 @@ class _$RelatedArtifactCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? type = freezed,
     Object? typeElement = freezed,
+    Object? classifier = freezed,
     Object? label = freezed,
     Object? labelElement = freezed,
     Object? display = freezed,
     Object? displayElement = freezed,
     Object? citation = freezed,
     Object? citationElement = freezed,
-    Object? url = freezed,
-    Object? urlElement = freezed,
     Object? document = freezed,
     Object? resource = freezed,
+    Object? resourceReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -3369,6 +3368,10 @@ class _$RelatedArtifactCopyWithImpl<$Res>
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      classifier: classifier == freezed
+          ? _value.classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       label: label == freezed
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -3393,14 +3396,6 @@ class _$RelatedArtifactCopyWithImpl<$Res>
           ? _value.citationElement
           : citationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as FhirUrl?,
-      urlElement: urlElement == freezed
-          ? _value.urlElement
-          : urlElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       document: document == freezed
           ? _value.document
           : document // ignore: cast_nullable_to_non_nullable
@@ -3409,6 +3404,10 @@ class _$RelatedArtifactCopyWithImpl<$Res>
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Canonical?,
+      resourceReference: resourceReference == freezed
+          ? _value.resourceReference
+          : resourceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -3457,17 +3456,6 @@ class _$RelatedArtifactCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res>? get urlElement {
-    if (_value.urlElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
-      return _then(_value.copyWith(urlElement: value));
-    });
-  }
-
-  @override
   $AttachmentCopyWith<$Res>? get document {
     if (_value.document == null) {
       return null;
@@ -3475,6 +3463,17 @@ class _$RelatedArtifactCopyWithImpl<$Res>
 
     return $AttachmentCopyWith<$Res>(_value.document!, (value) {
       return _then(_value.copyWith(document: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get resourceReference {
+    if (_value.resourceReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.resourceReference!, (value) {
+      return _then(_value.copyWith(resourceReference: value));
     });
   }
 }
@@ -3491,16 +3490,16 @@ abstract class _$$_RelatedArtifactCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       RelatedArtifactType? type,
       @JsonKey(name: '_type') Element? typeElement,
+      List<CodeableConcept>? classifier,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
       Markdown? citation,
       @JsonKey(name: '_citation') Element? citationElement,
-      FhirUrl? url,
-      @JsonKey(name: '_url') Element? urlElement,
       Attachment? document,
-      Canonical? resource});
+      Canonical? resource,
+      Reference? resourceReference});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -3511,9 +3510,9 @@ abstract class _$$_RelatedArtifactCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get citationElement;
   @override
-  $ElementCopyWith<$Res>? get urlElement;
-  @override
   $AttachmentCopyWith<$Res>? get document;
+  @override
+  $ReferenceCopyWith<$Res>? get resourceReference;
 }
 
 /// @nodoc
@@ -3533,16 +3532,16 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? type = freezed,
     Object? typeElement = freezed,
+    Object? classifier = freezed,
     Object? label = freezed,
     Object? labelElement = freezed,
     Object? display = freezed,
     Object? displayElement = freezed,
     Object? citation = freezed,
     Object? citationElement = freezed,
-    Object? url = freezed,
-    Object? urlElement = freezed,
     Object? document = freezed,
     Object? resource = freezed,
+    Object? resourceReference = freezed,
   }) {
     return _then(_$_RelatedArtifact(
       id: id == freezed
@@ -3561,6 +3560,10 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      classifier: classifier == freezed
+          ? _value._classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       label: label == freezed
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -3585,14 +3588,6 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
           ? _value.citationElement
           : citationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as FhirUrl?,
-      urlElement: urlElement == freezed
-          ? _value.urlElement
-          : urlElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       document: document == freezed
           ? _value.document
           : document // ignore: cast_nullable_to_non_nullable
@@ -3601,6 +3596,10 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Canonical?,
+      resourceReference: resourceReference == freezed
+          ? _value.resourceReference
+          : resourceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -3613,17 +3612,18 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.type,
       @JsonKey(name: '_type') this.typeElement,
+      final List<CodeableConcept>? classifier,
       this.label,
       @JsonKey(name: '_label') this.labelElement,
       this.display,
       @JsonKey(name: '_display') this.displayElement,
       this.citation,
       @JsonKey(name: '_citation') this.citationElement,
-      this.url,
-      @JsonKey(name: '_url') this.urlElement,
       this.document,
-      this.resource})
+      this.resource,
+      this.resourceReference})
       : _extension_ = extension_,
+        _classifier = classifier,
         super._();
 
   factory _$_RelatedArtifact.fromJson(Map<String, dynamic> json) =>
@@ -3646,6 +3646,15 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
+  final List<CodeableConcept>? _classifier;
+  @override
+  List<CodeableConcept>? get classifier {
+    final value = _classifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? label;
   @override
@@ -3662,18 +3671,15 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   @JsonKey(name: '_citation')
   final Element? citationElement;
   @override
-  final FhirUrl? url;
-  @override
-  @JsonKey(name: '_url')
-  final Element? urlElement;
-  @override
   final Attachment? document;
   @override
   final Canonical? resource;
+  @override
+  final Reference? resourceReference;
 
   @override
   String toString() {
-    return 'RelatedArtifact(id: $id, extension_: $extension_, type: $type, typeElement: $typeElement, label: $label, labelElement: $labelElement, display: $display, displayElement: $displayElement, citation: $citation, citationElement: $citationElement, url: $url, urlElement: $urlElement, document: $document, resource: $resource)';
+    return 'RelatedArtifact(id: $id, extension_: $extension_, type: $type, typeElement: $typeElement, classifier: $classifier, label: $label, labelElement: $labelElement, display: $display, displayElement: $displayElement, citation: $citation, citationElement: $citationElement, document: $document, resource: $resource, resourceReference: $resourceReference)';
   }
 
   @override
@@ -3687,6 +3693,8 @@ class _$_RelatedArtifact extends _RelatedArtifact {
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
+            const DeepCollectionEquality()
+                .equals(other._classifier, _classifier) &&
             const DeepCollectionEquality().equals(other.label, label) &&
             const DeepCollectionEquality()
                 .equals(other.labelElement, labelElement) &&
@@ -3696,11 +3704,10 @@ class _$_RelatedArtifact extends _RelatedArtifact {
             const DeepCollectionEquality().equals(other.citation, citation) &&
             const DeepCollectionEquality()
                 .equals(other.citationElement, citationElement) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.urlElement, urlElement) &&
             const DeepCollectionEquality().equals(other.document, document) &&
-            const DeepCollectionEquality().equals(other.resource, resource));
+            const DeepCollectionEquality().equals(other.resource, resource) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceReference, resourceReference));
   }
 
   @JsonKey(ignore: true)
@@ -3711,16 +3718,16 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(typeElement),
+      const DeepCollectionEquality().hash(_classifier),
       const DeepCollectionEquality().hash(label),
       const DeepCollectionEquality().hash(labelElement),
       const DeepCollectionEquality().hash(display),
       const DeepCollectionEquality().hash(displayElement),
       const DeepCollectionEquality().hash(citation),
       const DeepCollectionEquality().hash(citationElement),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(urlElement),
       const DeepCollectionEquality().hash(document),
-      const DeepCollectionEquality().hash(resource));
+      const DeepCollectionEquality().hash(resource),
+      const DeepCollectionEquality().hash(resourceReference));
 
   @JsonKey(ignore: true)
   @override
@@ -3739,16 +3746,16 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final RelatedArtifactType? type,
       @JsonKey(name: '_type') final Element? typeElement,
+      final List<CodeableConcept>? classifier,
       final String? label,
       @JsonKey(name: '_label') final Element? labelElement,
       final String? display,
       @JsonKey(name: '_display') final Element? displayElement,
       final Markdown? citation,
       @JsonKey(name: '_citation') final Element? citationElement,
-      final FhirUrl? url,
-      @JsonKey(name: '_url') final Element? urlElement,
       final Attachment? document,
-      final Canonical? resource}) = _$_RelatedArtifact;
+      final Canonical? resource,
+      final Reference? resourceReference}) = _$_RelatedArtifact;
   _RelatedArtifact._() : super._();
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
@@ -3765,6 +3772,8 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   @override
+  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+  @override
   String? get label => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_label')
@@ -3780,14 +3789,11 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   @JsonKey(name: '_citation')
   Element? get citationElement => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get url => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
-  @override
   Attachment? get document => throw _privateConstructorUsedError;
   @override
   Canonical? get resource => throw _privateConstructorUsedError;
+  @override
+  Reference? get resourceReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_RelatedArtifactCopyWith<_$_RelatedArtifact> get copyWith =>

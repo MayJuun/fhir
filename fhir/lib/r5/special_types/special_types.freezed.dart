@@ -4897,11 +4897,10 @@ mixin _$Dosage {
   @JsonKey(name: '_patientInstruction')
   Element? get patientInstructionElement => throw _privateConstructorUsedError;
   Timing? get timing => throw _privateConstructorUsedError;
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  Boolean? get asNeeded => throw _privateConstructorUsedError;
   @JsonKey(name: '_asNeededBoolean')
-  Element? get asNeededBooleanElement => throw _privateConstructorUsedError;
-  CodeableConcept? get asNeededCodeableConcept =>
-      throw _privateConstructorUsedError;
+  Element? get asNeededElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get asNeededFor => throw _privateConstructorUsedError;
   CodeableConcept? get site => throw _privateConstructorUsedError;
   CodeableConcept? get route => throw _privateConstructorUsedError;
   CodeableConcept? get method => throw _privateConstructorUsedError;
@@ -4932,9 +4931,9 @@ abstract class $DosageCopyWith<$Res> {
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
-      Boolean? asNeededBoolean,
-      @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
-      CodeableConcept? asNeededCodeableConcept,
+      Boolean? asNeeded,
+      @JsonKey(name: '_asNeededBoolean') Element? asNeededElement,
+      List<CodeableConcept>? asNeededFor,
       CodeableConcept? site,
       CodeableConcept? route,
       CodeableConcept? method,
@@ -4947,8 +4946,7 @@ abstract class $DosageCopyWith<$Res> {
   $ElementCopyWith<$Res>? get textElement;
   $ElementCopyWith<$Res>? get patientInstructionElement;
   $TimingCopyWith<$Res>? get timing;
-  $ElementCopyWith<$Res>? get asNeededBooleanElement;
-  $CodeableConceptCopyWith<$Res>? get asNeededCodeableConcept;
+  $ElementCopyWith<$Res>? get asNeededElement;
   $CodeableConceptCopyWith<$Res>? get site;
   $CodeableConceptCopyWith<$Res>? get route;
   $CodeableConceptCopyWith<$Res>? get method;
@@ -4978,9 +4976,9 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
     Object? patientInstruction = freezed,
     Object? patientInstructionElement = freezed,
     Object? timing = freezed,
-    Object? asNeededBoolean = freezed,
-    Object? asNeededBooleanElement = freezed,
-    Object? asNeededCodeableConcept = freezed,
+    Object? asNeeded = freezed,
+    Object? asNeededElement = freezed,
+    Object? asNeededFor = freezed,
     Object? site = freezed,
     Object? route = freezed,
     Object? method = freezed,
@@ -5034,18 +5032,18 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
           ? _value.timing
           : timing // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      asNeededBoolean: asNeededBoolean == freezed
-          ? _value.asNeededBoolean
-          : asNeededBoolean // ignore: cast_nullable_to_non_nullable
+      asNeeded: asNeeded == freezed
+          ? _value.asNeeded
+          : asNeeded // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      asNeededBooleanElement: asNeededBooleanElement == freezed
-          ? _value.asNeededBooleanElement
-          : asNeededBooleanElement // ignore: cast_nullable_to_non_nullable
+      asNeededElement: asNeededElement == freezed
+          ? _value.asNeededElement
+          : asNeededElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      asNeededCodeableConcept: asNeededCodeableConcept == freezed
-          ? _value.asNeededCodeableConcept
-          : asNeededCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+      asNeededFor: asNeededFor == freezed
+          ? _value.asNeededFor
+          : asNeededFor // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       site: site == freezed
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
@@ -5122,25 +5120,13 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res>? get asNeededBooleanElement {
-    if (_value.asNeededBooleanElement == null) {
+  $ElementCopyWith<$Res>? get asNeededElement {
+    if (_value.asNeededElement == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.asNeededBooleanElement!, (value) {
-      return _then(_value.copyWith(asNeededBooleanElement: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get asNeededCodeableConcept {
-    if (_value.asNeededCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.asNeededCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(asNeededCodeableConcept: value));
+    return $ElementCopyWith<$Res>(_value.asNeededElement!, (value) {
+      return _then(_value.copyWith(asNeededElement: value));
     });
   }
 
@@ -5228,9 +5214,9 @@ abstract class _$$_DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
-      Boolean? asNeededBoolean,
-      @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
-      CodeableConcept? asNeededCodeableConcept,
+      Boolean? asNeeded,
+      @JsonKey(name: '_asNeededBoolean') Element? asNeededElement,
+      List<CodeableConcept>? asNeededFor,
       CodeableConcept? site,
       CodeableConcept? route,
       CodeableConcept? method,
@@ -5248,9 +5234,7 @@ abstract class _$$_DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
   @override
   $TimingCopyWith<$Res>? get timing;
   @override
-  $ElementCopyWith<$Res>? get asNeededBooleanElement;
-  @override
-  $CodeableConceptCopyWith<$Res>? get asNeededCodeableConcept;
+  $ElementCopyWith<$Res>? get asNeededElement;
   @override
   $CodeableConceptCopyWith<$Res>? get site;
   @override
@@ -5287,9 +5271,9 @@ class __$$_DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
     Object? patientInstruction = freezed,
     Object? patientInstructionElement = freezed,
     Object? timing = freezed,
-    Object? asNeededBoolean = freezed,
-    Object? asNeededBooleanElement = freezed,
-    Object? asNeededCodeableConcept = freezed,
+    Object? asNeeded = freezed,
+    Object? asNeededElement = freezed,
+    Object? asNeededFor = freezed,
     Object? site = freezed,
     Object? route = freezed,
     Object? method = freezed,
@@ -5343,18 +5327,18 @@ class __$$_DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
           ? _value.timing
           : timing // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      asNeededBoolean: asNeededBoolean == freezed
-          ? _value.asNeededBoolean
-          : asNeededBoolean // ignore: cast_nullable_to_non_nullable
+      asNeeded: asNeeded == freezed
+          ? _value.asNeeded
+          : asNeeded // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      asNeededBooleanElement: asNeededBooleanElement == freezed
-          ? _value.asNeededBooleanElement
-          : asNeededBooleanElement // ignore: cast_nullable_to_non_nullable
+      asNeededElement: asNeededElement == freezed
+          ? _value.asNeededElement
+          : asNeededElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      asNeededCodeableConcept: asNeededCodeableConcept == freezed
-          ? _value.asNeededCodeableConcept
-          : asNeededCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+      asNeededFor: asNeededFor == freezed
+          ? _value._asNeededFor
+          : asNeededFor // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       site: site == freezed
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
@@ -5402,9 +5386,9 @@ class _$_Dosage extends _Dosage {
       this.patientInstruction,
       @JsonKey(name: '_patientInstruction') this.patientInstructionElement,
       this.timing,
-      this.asNeededBoolean,
-      @JsonKey(name: '_asNeededBoolean') this.asNeededBooleanElement,
-      this.asNeededCodeableConcept,
+      this.asNeeded,
+      @JsonKey(name: '_asNeededBoolean') this.asNeededElement,
+      final List<CodeableConcept>? asNeededFor,
       this.site,
       this.route,
       this.method,
@@ -5415,6 +5399,7 @@ class _$_Dosage extends _Dosage {
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _additionalInstruction = additionalInstruction,
+        _asNeededFor = asNeededFor,
         _doseAndRate = doseAndRate,
         super._();
 
@@ -5469,12 +5454,19 @@ class _$_Dosage extends _Dosage {
   @override
   final Timing? timing;
   @override
-  final Boolean? asNeededBoolean;
+  final Boolean? asNeeded;
   @override
   @JsonKey(name: '_asNeededBoolean')
-  final Element? asNeededBooleanElement;
+  final Element? asNeededElement;
+  final List<CodeableConcept>? _asNeededFor;
   @override
-  final CodeableConcept? asNeededCodeableConcept;
+  List<CodeableConcept>? get asNeededFor {
+    final value = _asNeededFor;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? site;
   @override
@@ -5499,7 +5491,7 @@ class _$_Dosage extends _Dosage {
 
   @override
   String toString() {
-    return 'Dosage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, sequenceElement: $sequenceElement, text: $text, textElement: $textElement, additionalInstruction: $additionalInstruction, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, timing: $timing, asNeededBoolean: $asNeededBoolean, asNeededBooleanElement: $asNeededBooleanElement, asNeededCodeableConcept: $asNeededCodeableConcept, site: $site, route: $route, method: $method, doseAndRate: $doseAndRate, maxDosePerPeriod: $maxDosePerPeriod, maxDosePerAdministration: $maxDosePerAdministration, maxDosePerLifetime: $maxDosePerLifetime)';
+    return 'Dosage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, sequenceElement: $sequenceElement, text: $text, textElement: $textElement, additionalInstruction: $additionalInstruction, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, timing: $timing, asNeeded: $asNeeded, asNeededElement: $asNeededElement, asNeededFor: $asNeededFor, site: $site, route: $route, method: $method, doseAndRate: $doseAndRate, maxDosePerPeriod: $maxDosePerPeriod, maxDosePerAdministration: $maxDosePerAdministration, maxDosePerLifetime: $maxDosePerLifetime)';
   }
 
   @override
@@ -5525,12 +5517,11 @@ class _$_Dosage extends _Dosage {
             const DeepCollectionEquality().equals(
                 other.patientInstructionElement, patientInstructionElement) &&
             const DeepCollectionEquality().equals(other.timing, timing) &&
+            const DeepCollectionEquality().equals(other.asNeeded, asNeeded) &&
             const DeepCollectionEquality()
-                .equals(other.asNeededBoolean, asNeededBoolean) &&
+                .equals(other.asNeededElement, asNeededElement) &&
             const DeepCollectionEquality()
-                .equals(other.asNeededBooleanElement, asNeededBooleanElement) &&
-            const DeepCollectionEquality().equals(
-                other.asNeededCodeableConcept, asNeededCodeableConcept) &&
+                .equals(other._asNeededFor, _asNeededFor) &&
             const DeepCollectionEquality().equals(other.site, site) &&
             const DeepCollectionEquality().equals(other.route, route) &&
             const DeepCollectionEquality().equals(other.method, method) &&
@@ -5559,9 +5550,9 @@ class _$_Dosage extends _Dosage {
         const DeepCollectionEquality().hash(patientInstruction),
         const DeepCollectionEquality().hash(patientInstructionElement),
         const DeepCollectionEquality().hash(timing),
-        const DeepCollectionEquality().hash(asNeededBoolean),
-        const DeepCollectionEquality().hash(asNeededBooleanElement),
-        const DeepCollectionEquality().hash(asNeededCodeableConcept),
+        const DeepCollectionEquality().hash(asNeeded),
+        const DeepCollectionEquality().hash(asNeededElement),
+        const DeepCollectionEquality().hash(_asNeededFor),
         const DeepCollectionEquality().hash(site),
         const DeepCollectionEquality().hash(route),
         const DeepCollectionEquality().hash(method),
@@ -5599,10 +5590,10 @@ abstract class _Dosage extends Dosage {
       @JsonKey(name: '_patientInstruction')
           final Element? patientInstructionElement,
       final Timing? timing,
-      final Boolean? asNeededBoolean,
+      final Boolean? asNeeded,
       @JsonKey(name: '_asNeededBoolean')
-          final Element? asNeededBooleanElement,
-      final CodeableConcept? asNeededCodeableConcept,
+          final Element? asNeededElement,
+      final List<CodeableConcept>? asNeededFor,
       final CodeableConcept? site,
       final CodeableConcept? route,
       final CodeableConcept? method,
@@ -5643,13 +5634,12 @@ abstract class _Dosage extends Dosage {
   @override
   Timing? get timing => throw _privateConstructorUsedError;
   @override
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  Boolean? get asNeeded => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_asNeededBoolean')
-  Element? get asNeededBooleanElement => throw _privateConstructorUsedError;
+  Element? get asNeededElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get asNeededCodeableConcept =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get asNeededFor => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get site => throw _privateConstructorUsedError;
   @override

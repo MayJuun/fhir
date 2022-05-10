@@ -1829,6 +1829,10 @@ _$_MedicationKnowledge _$$_MedicationKnowledgeFromJson(
           ?.map((e) =>
               MedicationKnowledgeRegulatory.fromJson(e as Map<String, dynamic>))
           .toList(),
+      definitional: json['definitional'] == null
+          ? null
+          : MedicationKnowledgeDefinitional.fromJson(
+              json['definitional'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MedicationKnowledgeToJson(
@@ -1893,6 +1897,7 @@ Map<String, dynamic> _$$_MedicationKnowledgeToJson(
       instance.storageGuideline?.map((e) => e.toJson()).toList());
   writeNotNull(
       'regulatory', instance.regulatory?.map((e) => e.toJson()).toList());
+  writeNotNull('definitional', instance.definitional?.toJson());
   return val;
 }
 

@@ -42,8 +42,8 @@ class Integer64 {
 
   @override
   String toString() => valueString;
-  dynamic toJson() => valueNumber;
-  dynamic toYaml() => valueNumber;
+  String toJson() => valueString;
+  String toYaml() => valueString;
 
   @override
   bool operator ==(Object other) => identical(this, other)

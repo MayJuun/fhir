@@ -393,16 +393,16 @@ class RelatedArtifact with _$RelatedArtifact {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     RelatedArtifactType? type,
     @JsonKey(name: '_type') Element? typeElement,
+    List<CodeableConcept>? classifier,
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     Markdown? citation,
     @JsonKey(name: '_citation') Element? citationElement,
-    FhirUrl? url,
-    @JsonKey(name: '_url') Element? urlElement,
     Attachment? document,
     Canonical? resource,
+    Reference? resourceReference,
   }) = _RelatedArtifact;
 
   /// Produces a Yaml formatted String version of the object

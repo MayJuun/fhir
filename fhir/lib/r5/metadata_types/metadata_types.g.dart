@@ -441,6 +441,9 @@ _$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
+      classifier: (json['classifier'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
       label: json['label'] as String?,
       labelElement: json['_label'] == null
           ? null
@@ -454,16 +457,16 @@ _$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
       citationElement: json['_citation'] == null
           ? null
           : Element.fromJson(json['_citation'] as Map<String, dynamic>),
-      url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
-      urlElement: json['_url'] == null
-          ? null
-          : Element.fromJson(json['_url'] as Map<String, dynamic>),
       document: json['document'] == null
           ? null
           : Attachment.fromJson(json['document'] as Map<String, dynamic>),
       resource: json['resource'] == null
           ? null
           : Canonical.fromJson(json['resource']),
+      resourceReference: json['resourceReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['resourceReference'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
@@ -480,16 +483,17 @@ Map<String, dynamic> _$$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull(
+      'classifier', instance.classifier?.map((e) => e.toJson()).toList());
   writeNotNull('label', instance.label);
   writeNotNull('_label', instance.labelElement?.toJson());
   writeNotNull('display', instance.display);
   writeNotNull('_display', instance.displayElement?.toJson());
   writeNotNull('citation', instance.citation?.toJson());
   writeNotNull('_citation', instance.citationElement?.toJson());
-  writeNotNull('url', instance.url?.toJson());
-  writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('document', instance.document?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('resourceReference', instance.resourceReference?.toJson());
   return val;
 }
 

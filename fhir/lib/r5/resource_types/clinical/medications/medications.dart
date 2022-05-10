@@ -1833,7 +1833,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     List<Reference>? clinicalUseIssue,
     List<MedicationKnowledgeStorageGuideline>? storageGuideline,
     List<MedicationKnowledgeRegulatory>? regulatory,
-    // MedicationKnowledgeDefinitional? definitional,
+    MedicationKnowledgeDefinitional? definitional,
   }) = _MedicationKnowledge;
 
   /// Produces a Yaml formatted String version of the object

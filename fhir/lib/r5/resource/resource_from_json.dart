@@ -242,7 +242,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     case 'Linkage':
       return Linkage.fromJson(json);
 
-    case 'List_':
+    case 'List':
       return List_.fromJson(json);
 
     case 'Location':

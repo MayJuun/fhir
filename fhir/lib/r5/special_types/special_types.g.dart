@@ -675,16 +675,14 @@ _$_Dosage _$$_DosageFromJson(Map<String, dynamic> json) => _$_Dosage(
       timing: json['timing'] == null
           ? null
           : Timing.fromJson(json['timing'] as Map<String, dynamic>),
-      asNeededBoolean: json['asNeededBoolean'] == null
-          ? null
-          : Boolean.fromJson(json['asNeededBoolean']),
-      asNeededBooleanElement: json['_asNeededBoolean'] == null
+      asNeeded:
+          json['asNeeded'] == null ? null : Boolean.fromJson(json['asNeeded']),
+      asNeededElement: json['_asNeededBoolean'] == null
           ? null
           : Element.fromJson(json['_asNeededBoolean'] as Map<String, dynamic>),
-      asNeededCodeableConcept: json['asNeededCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['asNeededCodeableConcept'] as Map<String, dynamic>),
+      asNeededFor: (json['asNeededFor'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
       site: json['site'] == null
           ? null
           : CodeableConcept.fromJson(json['site'] as Map<String, dynamic>),
@@ -734,10 +732,10 @@ Map<String, dynamic> _$$_DosageToJson(_$_Dosage instance) {
   writeNotNull(
       '_patientInstruction', instance.patientInstructionElement?.toJson());
   writeNotNull('timing', instance.timing?.toJson());
-  writeNotNull('asNeededBoolean', instance.asNeededBoolean?.toJson());
-  writeNotNull('_asNeededBoolean', instance.asNeededBooleanElement?.toJson());
+  writeNotNull('asNeeded', instance.asNeeded?.toJson());
+  writeNotNull('_asNeededBoolean', instance.asNeededElement?.toJson());
   writeNotNull(
-      'asNeededCodeableConcept', instance.asNeededCodeableConcept?.toJson());
+      'asNeededFor', instance.asNeededFor?.map((e) => e.toJson()).toList());
   writeNotNull('site', instance.site?.toJson());
   writeNotNull('route', instance.route?.toJson());
   writeNotNull('method', instance.method?.toJson());
