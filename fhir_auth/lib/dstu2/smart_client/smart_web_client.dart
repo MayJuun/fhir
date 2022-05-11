@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names, overridden_fields
+
 // Dart imports:
 import 'dart:convert';
 

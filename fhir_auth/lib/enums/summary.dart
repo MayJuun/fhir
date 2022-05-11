@@ -7,7 +7,7 @@ enum Summary {
   none,
 }
 
-const SummaryEnumMap = {
+const summaryEnumMap = {
   Summary.true_: 'true',
   Summary.false_: 'false',
   Summary.text: 'text',

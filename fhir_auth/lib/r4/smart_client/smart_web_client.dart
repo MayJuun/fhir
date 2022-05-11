@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names, overridden_fields
+
 // Dart imports:
 import 'dart:convert';
 
@@ -260,8 +262,7 @@ class SmartWebClient extends SmartClient {
         ?.extension_
         ?.firstWhereOrNull((_) => true)
         ?.extension_
-        ?.firstWhereOrNull(
-            (ext) => (ext.url == null ? null : ext.url.toString()) == type)
+        ?.firstWhereOrNull((ext) => (ext.url?.toString()) == type)
         ?.valueUri;
   }
 

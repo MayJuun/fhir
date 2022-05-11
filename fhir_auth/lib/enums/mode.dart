@@ -4,7 +4,7 @@ enum Mode {
   terminology,
 }
 
-const ModeEnumMap = {
+const modeEnumMap = {
   Mode.full: 'full',
   Mode.normative: 'normative',
   Mode.terminology: 'terminology',

@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields
+
 // Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:google_sign_in/google_sign_in.dart';

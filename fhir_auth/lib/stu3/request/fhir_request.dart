@@ -702,7 +702,7 @@ class FhirRequest with _$FhirRequest {
           thisRequest: uri,
           client: client,
           headers: headers,
-          resource: resource == null ? null : resource.toJson());
+          resource: resource?.toJson());
       return result;
     } catch (e) {
       return _operationOutcome('Failed to complete a $requestType request, ',
