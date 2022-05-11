@@ -2,14 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "expansion-processing-rule",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp/\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eall-codes\u003ca name\u003d\"expansion-processing-rule-all-codes\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAll Codes\u003c/td\u003e\u003ctd\u003eThe expansion (when in UI mode) includes all codes *and* any defined groups (in extensions).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eungrouped\u003ca name\u003d\"expansion-processing-rule-ungrouped\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eGroups + Ungrouped codes\u003c/td\u003e\u003ctd\u003eThe expanion (when in UI mode) lists the groups, and then any codes that have not been included in a group.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003egroups-only\u003ca name\u003d\"expansion-processing-rule-groups-only\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eGroups Only\u003c/td\u003e\u003ctd\u003eThe expansion (when in UI mode) only includes the defined groups.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system http://hl7.org/fhir/expansion-processing-rule defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eall-codes\u003ca name\u003d\"expansion-processing-rule-all-codes\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAll Codes\u003c/td\u003e\u003ctd\u003ehe expansion (e.g. when in UI mode) includes all codes; those included in a group and those not included in a group, as well as the codes for the groups themselves (e.g. a parent node in a hierarchical code system).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eungrouped\u003ca name\u003d\"expansion-processing-rule-ungrouped\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eGroups + Ungrouped codes\u003c/td\u003e\u003ctd\u003eThe expansion (e.g. when in UI mode) includes the codes for the groups, and any codes that are not included in a group.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003egroups-only\u003ca name\u003d\"expansion-processing-rule-groups-only\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eGroups Only\u003c/td\u003e\u003ctd\u003eThe expansion (e.g. when in UI mode) only includes the codes for the groups.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -27,21 +27,22 @@
   "version": "4.6.0",
   "name": "ExpansionProcessingRule",
   "caseSensitive": true,
+  "content": "complete",
   "concept": [
     {
       "code": "all-codes",
       "display": "All Codes",
-      "definition": "The expansion (when in UI mode) includes all codes *and* any defined groups (in extensions)."
+      "definition": "he expansion (e.g. when in UI mode) includes all codes; those included in a group and those not included in a group, as well as the codes for the groups themselves (e.g. a parent node in a hierarchical code system)."
     },
     {
       "code": "ungrouped",
       "display": "Groups + Ungrouped codes",
-      "definition": "The expanion (when in UI mode) lists the groups, and then any codes that have not been included in a group."
+      "definition": "The expansion (e.g. when in UI mode) includes the codes for the groups, and any codes that are not included in a group."
     },
     {
       "code": "groups-only",
       "display": "Groups Only",
-      "definition": "The expansion (when in UI mode) only includes the defined groups."
+      "definition": "The expansion (e.g. when in UI mode) only includes the codes for the groups."
     }
   ]
 }

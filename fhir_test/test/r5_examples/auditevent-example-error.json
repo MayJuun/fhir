@@ -20,29 +20,39 @@
       ]
     }
   ],
-  "type": {
-    "system": "http://terminology.hl7.org/CodeSystem/audit-event-type",
-    "code": "rest",
-    "display": "Restful Operation"
-  },
-  "subtype": [
+  "category": [
     {
-      "system": "http://hl7.org/fhir/restful-interaction",
-      "code": "create",
-      "display": "create"
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type",
+          "code": "rest",
+          "display": "Restful Operation"
+        }
+      ]
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/restful-interaction",
+        "code": "create",
+        "display": "create"
+      }
+    ]
+  },
   "action": "C",
   "recorded": "2017-09-07T23:42:24Z",
   "outcome": {
-    "coding": [
+    "code": {
+      "system": "http://hl7.org/fhir/issue-severity",
+      "code": "error",
+      "display": "Error"
+    },
+    "detail": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/audit-event-outcome",
-        "code": "8",
-        "display": "Serious Failure"
+        "text": "Invalid request to create an Operation resource on the Patient endpoint."
       }
-    ],
-    "text": "Invalid request to create an Operation resource on the Patient endpoint."
+    ]
   },
   "agent": [
     {
@@ -58,13 +68,23 @@
       "who": {
         "identifier": {
           "value": "95"
-        }
+        },
+        "display": "Grahame Grieve"
       },
-      "altId": "601847123",
-      "name": "Grahame Grieve",
       "requestor": true
     },
     {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/auditevent-AlternativeUserID",
+          "valueIdentifier": {
+            "type": {
+              "text": "process ID"
+            },
+            "value": "6580"
+          }
+        }
+      ],
       "type": {
         "coding": [
           {
@@ -80,53 +100,35 @@
           "value": "2.16.840.1.113883.4.2"
         }
       },
-      "altId": "6580",
       "requestor": false,
-      "network": {
-        "address": "Workstation1.ehr.familyclinic.com",
-        "type": "1"
-      }
+      "networkString": "Workstation1.ehr.familyclinic.com"
     }
   ],
   "source": {
-    "site": "Cloud",
     "observer": {
       "identifier": {
         "value": "hl7connect.healthintersections.com.au"
-      }
+      },
+      "display": "Cloud"
     },
     "type": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/security-source-type",
-        "code": "3",
-        "display": "Web Server"
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/security-source-type",
+            "code": "3",
+            "display": "Web Server"
+          }
+        ]
       }
     ]
   },
   "entity": [
     {
-      "type": {
-        "system": "http://terminology.hl7.org/CodeSystem/audit-entity-type",
-        "code": "2",
-        "display": "System Object"
-      },
-      "detail": [
-        {
-          "type": "requested transaction",
-          "valueString": "http POST ..... "
-        }
-      ]
-    },
-    {
       "what": {
-        "reference": "#o1"
-      },
-      "type": {
-        "system": "http://hl7.org/fhir/resource-types",
-        "code": "OperationOutcome",
-        "display": "OperationOutcome"
-      },
-      "name": "transaction failed"
+        "reference": "#o1",
+        "display": "transaction failed"
+      }
     }
   ],
   "meta": {

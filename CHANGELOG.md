@@ -47,3 +47,5 @@
 * First release
 * Allows the creation of a FhirClient using standard SMART on FHIR functionality
 * Also allows Google Sign-in if users desire to use Google Healthcare API
+
+          

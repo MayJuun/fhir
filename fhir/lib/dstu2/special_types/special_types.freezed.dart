@@ -12,48 +12,11 @@ part of 'special_types.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Meta _$MetaFromJson(Map<String, dynamic> json) {
   return _Meta.fromJson(json);
 }
-
-/// @nodoc
-class _$MetaTearOff {
-  const _$MetaTearOff();
-
-  _Meta call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id? versionId,
-      @JsonKey(name: '_versionId') Element? versionIdElement,
-      Instant? lastUpdated,
-      @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      List<FhirUri>? profile,
-      List<Coding>? security,
-      List<Coding>? tag}) {
-    return _Meta(
-      id: id,
-      extension_: extension_,
-      fhirComments: fhirComments,
-      versionId: versionId,
-      versionIdElement: versionIdElement,
-      lastUpdated: lastUpdated,
-      lastUpdatedElement: lastUpdatedElement,
-      profile: profile,
-      security: security,
-      tag: tag,
-    );
-  }
-
-  Meta fromJson(Map<String, Object?> json) {
-    return Meta.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Meta = _$MetaTearOff();
 
 /// @nodoc
 mixin _$Meta {
@@ -186,9 +149,9 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
-  factory _$MetaCopyWith(_Meta value, $Res Function(_Meta) then) =
-      __$MetaCopyWithImpl<$Res>;
+abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
+  factory _$$_MetaCopyWith(_$_Meta value, $Res Function(_$_Meta) then) =
+      __$$_MetaCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -209,13 +172,13 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
-    implements _$MetaCopyWith<$Res> {
-  __$MetaCopyWithImpl(_Meta _value, $Res Function(_Meta) _then)
-      : super(_value, (v) => _then(v as _Meta));
+class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
+    implements _$$_MetaCopyWith<$Res> {
+  __$$_MetaCopyWithImpl(_$_Meta _value, $Res Function(_$_Meta) _then)
+      : super(_value, (v) => _then(v as _$_Meta));
 
   @override
-  _Meta get _value => super._value as _Meta;
+  _$_Meta get _value => super._value as _$_Meta;
 
   @override
   $Res call({
@@ -230,17 +193,17 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
     Object? security = freezed,
     Object? tag = freezed,
   }) {
-    return _then(_Meta(
+    return _then(_$_Meta(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       versionId: versionId == freezed
@@ -260,15 +223,15 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       profile: profile == freezed
-          ? _value.profile
+          ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       security: security == freezed
-          ? _value.security
+          ? _value._security
           : security // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       tag: tag == freezed
-          ? _value.tag
+          ? _value._tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
     ));
@@ -280,27 +243,46 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
 class _$_Meta extends _Meta {
   _$_Meta(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.versionId,
       @JsonKey(name: '_versionId') this.versionIdElement,
       this.lastUpdated,
       @JsonKey(name: '_lastUpdated') this.lastUpdatedElement,
-      this.profile,
-      this.security,
-      this.tag})
-      : super._();
+      final List<FhirUri>? profile,
+      final List<Coding>? security,
+      final List<Coding>? tag})
+      : _extension_ = extension_,
+        _fhirComments = fhirComments,
+        _profile = profile,
+        _security = security,
+        _tag = tag,
+        super._();
 
   factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Id? versionId;
   @override
@@ -311,12 +293,32 @@ class _$_Meta extends _Meta {
   @override
   @JsonKey(name: '_lastUpdated')
   final Element? lastUpdatedElement;
+  final List<FhirUri>? _profile;
   @override
-  final List<FhirUri>? profile;
+  List<FhirUri>? get profile {
+    final value = _profile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Coding>? _security;
   @override
-  final List<Coding>? security;
+  List<Coding>? get security {
+    final value = _security;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Coding>? _tag;
   @override
-  final List<Coding>? tag;
+  List<Coding>? get tag {
+    final value = _tag;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -327,12 +329,12 @@ class _$_Meta extends _Meta {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Meta &&
+            other is _$_Meta &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.versionId, versionId) &&
             const DeepCollectionEquality()
                 .equals(other.versionIdElement, versionIdElement) &&
@@ -340,29 +342,30 @@ class _$_Meta extends _Meta {
                 .equals(other.lastUpdated, lastUpdated) &&
             const DeepCollectionEquality()
                 .equals(other.lastUpdatedElement, lastUpdatedElement) &&
-            const DeepCollectionEquality().equals(other.profile, profile) &&
-            const DeepCollectionEquality().equals(other.security, security) &&
-            const DeepCollectionEquality().equals(other.tag, tag));
+            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other._security, _security) &&
+            const DeepCollectionEquality().equals(other._tag, _tag));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(versionId),
       const DeepCollectionEquality().hash(versionIdElement),
       const DeepCollectionEquality().hash(lastUpdated),
       const DeepCollectionEquality().hash(lastUpdatedElement),
-      const DeepCollectionEquality().hash(profile),
-      const DeepCollectionEquality().hash(security),
-      const DeepCollectionEquality().hash(tag));
+      const DeepCollectionEquality().hash(_profile),
+      const DeepCollectionEquality().hash(_security),
+      const DeepCollectionEquality().hash(_tag));
 
   @JsonKey(ignore: true)
   @override
-  _$MetaCopyWith<_Meta> get copyWith =>
-      __$MetaCopyWithImpl<_Meta>(this, _$identity);
+  _$$_MetaCopyWith<_$_Meta> get copyWith =>
+      __$$_MetaCopyWithImpl<_$_Meta>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -372,83 +375,52 @@ class _$_Meta extends _Meta {
 
 abstract class _Meta extends Meta {
   factory _Meta(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id? versionId,
-      @JsonKey(name: '_versionId') Element? versionIdElement,
-      Instant? lastUpdated,
-      @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      List<FhirUri>? profile,
-      List<Coding>? security,
-      List<Coding>? tag}) = _$_Meta;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      final Id? versionId,
+      @JsonKey(name: '_versionId') final Element? versionIdElement,
+      final Instant? lastUpdated,
+      @JsonKey(name: '_lastUpdated') final Element? lastUpdatedElement,
+      final List<FhirUri>? profile,
+      final List<Coding>? security,
+      final List<Coding>? tag}) = _$_Meta;
   _Meta._() : super._();
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  Id? get versionId;
+  Id? get versionId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_versionId')
-  Element? get versionIdElement;
+  Element? get versionIdElement => throw _privateConstructorUsedError;
   @override
-  Instant? get lastUpdated;
+  Instant? get lastUpdated => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastUpdated')
-  Element? get lastUpdatedElement;
+  Element? get lastUpdatedElement => throw _privateConstructorUsedError;
   @override
-  List<FhirUri>? get profile;
+  List<FhirUri>? get profile => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get security;
+  List<Coding>? get security => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get tag;
+  List<Coding>? get tag => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MetaCopyWith<_Meta> get copyWith => throw _privateConstructorUsedError;
+  _$$_MetaCopyWith<_$_Meta> get copyWith => throw _privateConstructorUsedError;
 }
 
 Reference _$ReferenceFromJson(Map<String, dynamic> json) {
   return _Reference.fromJson(json);
 }
-
-/// @nodoc
-class _$ReferenceTearOff {
-  const _$ReferenceTearOff();
-
-  _Reference call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      String? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement}) {
-    return _Reference(
-      id: id,
-      extension_: extension_,
-      fhirComments: fhirComments,
-      reference: reference,
-      referenceElement: referenceElement,
-      display: display,
-      displayElement: displayElement,
-    );
-  }
-
-  Reference fromJson(Map<String, Object?> json) {
-    return Reference.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Reference = _$ReferenceTearOff();
 
 /// @nodoc
 mixin _$Reference {
@@ -561,10 +533,10 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
-  factory _$ReferenceCopyWith(
-          _Reference value, $Res Function(_Reference) then) =
-      __$ReferenceCopyWithImpl<$Res>;
+abstract class _$$_ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
+  factory _$$_ReferenceCopyWith(
+          _$_Reference value, $Res Function(_$_Reference) then) =
+      __$$_ReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -582,13 +554,14 @@ abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
-    implements _$ReferenceCopyWith<$Res> {
-  __$ReferenceCopyWithImpl(_Reference _value, $Res Function(_Reference) _then)
-      : super(_value, (v) => _then(v as _Reference));
+class __$$_ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
+    implements _$$_ReferenceCopyWith<$Res> {
+  __$$_ReferenceCopyWithImpl(
+      _$_Reference _value, $Res Function(_$_Reference) _then)
+      : super(_value, (v) => _then(v as _$_Reference));
 
   @override
-  _Reference get _value => super._value as _Reference;
+  _$_Reference get _value => super._value as _$_Reference;
 
   @override
   $Res call({
@@ -600,17 +573,17 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
     Object? display = freezed,
     Object? displayElement = freezed,
   }) {
-    return _then(_Reference(
+    return _then(_$_Reference(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       reference: reference == freezed
@@ -638,25 +611,41 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
 class _$_Reference extends _Reference {
   _$_Reference(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.reference,
       @JsonKey(name: '_reference') this.referenceElement,
       this.display,
       @JsonKey(name: '_display') this.displayElement})
-      : super._();
+      : _extension_ = extension_,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_Reference.fromJson(Map<String, dynamic> json) =>
       _$$_ReferenceFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? reference;
   @override
@@ -677,12 +666,12 @@ class _$_Reference extends _Reference {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Reference &&
+            other is _$_Reference &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.reference, reference) &&
             const DeepCollectionEquality()
                 .equals(other.referenceElement, referenceElement) &&
@@ -691,12 +680,13 @@ class _$_Reference extends _Reference {
                 .equals(other.displayElement, displayElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(reference),
       const DeepCollectionEquality().hash(referenceElement),
       const DeepCollectionEquality().hash(display),
@@ -704,8 +694,8 @@ class _$_Reference extends _Reference {
 
   @JsonKey(ignore: true)
   @override
-  _$ReferenceCopyWith<_Reference> get copyWith =>
-      __$ReferenceCopyWithImpl<_Reference>(this, _$identity);
+  _$$_ReferenceCopyWith<_$_Reference> get copyWith =>
+      __$$_ReferenceCopyWithImpl<_$_Reference>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -715,841 +705,45 @@ class _$_Reference extends _Reference {
 
 abstract class _Reference extends Reference {
   factory _Reference(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      String? reference,
-      @JsonKey(name: '_reference') Element? referenceElement,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement}) = _$_Reference;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      final String? reference,
+      @JsonKey(name: '_reference') final Element? referenceElement,
+      final String? display,
+      @JsonKey(name: '_display') final Element? displayElement}) = _$_Reference;
   _Reference._() : super._();
 
   factory _Reference.fromJson(Map<String, dynamic> json) =
       _$_Reference.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  String? get reference;
+  String? get reference => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_reference')
-  Element? get referenceElement;
+  Element? get referenceElement => throw _privateConstructorUsedError;
   @override
-  String? get display;
+  String? get display => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement;
+  Element? get displayElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ReferenceCopyWith<_Reference> get copyWith =>
+  _$$_ReferenceCopyWith<_$_Reference> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
   return _ElementDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$ElementDefinitionTearOff {
-  const _$ElementDefinitionTearOff();
-
-  _ElementDefinition call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      required String path,
-      List<Code>? representation,
-      @JsonKey(name: '_representation')
-          Element? representationElement,
-      String? name,
-      String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
-      List<Coding>? code,
-      ElementDefinitionSlicing? slicing,
-      String? short,
-      @JsonKey(name: '_short')
-          Element? shortElement,
-      Markdown? definition,
-      @JsonKey(name: '_definition')
-          Element? definitionElement,
-      Markdown? comments,
-      @JsonKey(name: '_comments')
-          Element? commentElement,
-      Markdown? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      List<String>? alias,
-      @JsonKey(name: '_alias')
-          Element? aliasElement,
-      Integer? min,
-      @JsonKey(name: '_min')
-          Element? minElement,
-      String? max,
-      @JsonKey(name: '_max')
-          Element? maxElement,
-      ElementDefinitionBase? base,
-      List<ElementDefinitionType>? type,
-      String? nameReference,
-      Boolean? defaultValueBoolean,
-      @JsonKey(name: '_defaultValueBoolean')
-          Element? defaultValueBooleanElement,
-      Integer? defaultValueInteger,
-      @JsonKey(name: '_defaultValueInteger')
-          Element? defaultValueIntegerElement,
-      Decimal? defaultValueDecimal,
-      @JsonKey(name: '_defaultValueDecimal')
-          Element? defaultValueDecimalElement,
-      Base64Binary? defaultValueBase64Binary,
-      @JsonKey(name: '_defaultValueBase64Binary')
-          Element? defaultValueBase64BinaryElement,
-      Instant? defaultValueInstant,
-      @JsonKey(name: '_defaultValueInstant')
-          Element? defaultValueInstantElement,
-      String? defaultValueString,
-      @JsonKey(name: '_defaultValueString')
-          Element? defaultValueStringElement,
-      FhirUri? defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          Element? defaultValueUriElement,
-      Date? defaultValueDate,
-      @JsonKey(name: '_defaultValueDate')
-          Element? defaultValueDateElement,
-      FhirDateTime? defaultValueDateTime,
-      @JsonKey(name: '_defaultValueDateTime')
-          Element? defaultValueDateTimeElement,
-      Time? defaultValueTime,
-      @JsonKey(name: '_defaultValueTime')
-          Element? defaultValueTimeElement,
-      Code? defaultValueCode,
-      @JsonKey(name: '_defaultValueCode')
-          Element? defaultValueCodeElement,
-      Oid? defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          Element? defaultValueOidElement,
-      Id? defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          Element? defaultValueIdElement,
-      UnsignedInt? defaultValueUnsignedInt,
-      @JsonKey(name: '_defaultValueUnsignedInt')
-          Element? defaultValueUnsignedIntElement,
-      PositiveInt? defaultValuePositiveInt,
-      @JsonKey(name: '_defaultValuePositiveInt')
-          Element? defaultValuePositiveIntElement,
-      Markdown? defaultValueMarkdown,
-      @JsonKey(name: '_defaultValueMarkDown')
-          Element? defaultValueMarkDownElement,
-      Annotation? defaultValueAnnotation,
-      Attachment? defaultValueAttachment,
-      Identifier? defaultValueIdentifier,
-      CodeableConcept? defaultValueCodeableConcept,
-      Coding? defaultValueCoding,
-      Quantity? defaultValueQuantity,
-      Range? defaultValueRange,
-      Period? defaultValuePeriod,
-      Ratio? defaultValueRatio,
-      SampledData? defaultValueSampledData,
-      Signature? defaultValueSignature,
-      HumanName? defaultValueHumanName,
-      Address? defaultValueAddress,
-      ContactPoint? defaultValueContactPoint,
-      Timing? defaultValueTiming,
-      Reference? defaultValueReference,
-      Meta? defaultValueMeta,
-      Markdown? meaningWhenMissing,
-      @JsonKey(name: '_meaningWhenMissing')
-          Element? meaningWhenMissingElement,
-      Boolean? fixedBoolean,
-      @JsonKey(name: '_fixedBoolean')
-          Element? fixedBooleanElement,
-      Integer? fixedInteger,
-      @JsonKey(name: '_fixedInteger')
-          Element? fixedIntegerElement,
-      Decimal? fixedDecimal,
-      @JsonKey(name: '_fixedDecimal')
-          Element? fixedDecimalElement,
-      Base64Binary? fixedBase64Binary,
-      @JsonKey(name: '_fixedBase64Binary')
-          Element? fixedBase64BinaryElement,
-      Instant? fixedInstant,
-      @JsonKey(name: '_fixedInstant')
-          Element? fixedInstantElement,
-      String? fixedString,
-      @JsonKey(name: '_fixedString')
-          Element? fixedStringElement,
-      FhirUri? fixedUri,
-      @JsonKey(name: '_fixedUri')
-          Element? fixedUriElement,
-      Date? fixedDate,
-      @JsonKey(name: '_fixedDate')
-          Element? fixedDateElement,
-      FhirDateTime? fixedDateTime,
-      @JsonKey(name: '_fixedDateTime')
-          Element? fixedDateTimeElement,
-      Code? fixedCode,
-      @JsonKey(name: '_fixedCode')
-          Element? fixedCodeElement,
-      Oid? fixedOid,
-      @JsonKey(name: '_fixedOid')
-          Element? fixedOidElement,
-      Id? fixedId,
-      @JsonKey(name: '_fixedId')
-          Element? fixedIdElement,
-      UnsignedInt? fixedUnsignedInt,
-      @JsonKey(name: '_fixedUnsignedInt')
-          Element? fixedUnsignedIntElement,
-      PositiveInt? fixedPositiveInt,
-      @JsonKey(name: '_fixedPositiveInt')
-          Element? fixedPositiveIntElement,
-      Markdown? fixedMarkdown,
-      @JsonKey(name: '_fixedMarkdown')
-          Element? fixedMarkdownElement,
-      Annotation? fixedAnnotation,
-      Attachment? fixedAttachment,
-      Identifier? fixedIdentifier,
-      CodeableConcept? fixedCodeableConcept,
-      Coding? fixedCoding,
-      Quantity? fixedQuantity,
-      Range? fixedRange,
-      Period? fixedPeriod,
-      Ratio? fixedRatio,
-      SampledData? fixedSampledData,
-      Signature? fixedSignature,
-      HumanName? fixedHumanName,
-      Address? fixedAddress,
-      ContactPoint? fixedContactPoint,
-      Timing? fixedTiming,
-      Reference? fixedReference,
-      Meta? fixedMeta,
-      Boolean? patternBoolean,
-      @JsonKey(name: '_patternBoolean')
-          Element? patternBooleanElement,
-      Integer? patternInteger,
-      @JsonKey(name: '_patternInteger')
-          Element? patternIntegerElement,
-      Decimal? patternDecimal,
-      @JsonKey(name: '_patternDecimal')
-          Element? patternDecimalElement,
-      Base64Binary? patternBase64Binary,
-      @JsonKey(name: '_patternBase64Binary')
-          Element? patternBase64BinaryElement,
-      Instant? patternInstant,
-      @JsonKey(name: '_patternInstant')
-          Element? patternInstantElement,
-      String? patternString,
-      @JsonKey(name: '_patternString')
-          Element? patternStringElement,
-      FhirUri? patternUri,
-      @JsonKey(name: '_patternUri')
-          Element? patternUriElement,
-      Date? patternDate,
-      @JsonKey(name: '_patternDate')
-          Element? patternDateElement,
-      FhirDateTime? patternDateTime,
-      @JsonKey(name: '_patternDateTime')
-          Element? patternDateTimeElement,
-      Time? patternTime,
-      @JsonKey(name: '_patternTime')
-          Element? patternTimeElement,
-      Code? patternCode,
-      @JsonKey(name: '_patternCode')
-          Element? patternCodeElement,
-      Oid? patternOid,
-      @JsonKey(name: '_patternOid')
-          Element? patternOidElement,
-      Id? patternId,
-      @JsonKey(name: '_patternId')
-          Element? patternIdElement,
-      UnsignedInt? patternUnsignedInt,
-      @JsonKey(name: '_patternUnsignedInt')
-          Element? patternUnsignedIntElement,
-      PositiveInt? patternPositiveInt,
-      @JsonKey(name: '_patternPositiveInt')
-          Element? patternPositiveIntElement,
-      Markdown? patternMarkdown,
-      @JsonKey(name: '_patternMarkdown')
-          Element? patternMarkdownElement,
-      Annotation? patternAnnotation,
-      Attachment? patternAttachment,
-      Identifier? patternIdentifier,
-      CodeableConcept? patternCodeableConcept,
-      Coding? patternCoding,
-      Quantity? patternQuantity,
-      Range? patternRange,
-      Period? patternPeriod,
-      Ratio? patternRatio,
-      SampledData? patternSampledData,
-      Signature? patternSignature,
-      HumanName? patternHumanName,
-      Address? patternAddress,
-      ContactPoint? patternContactPoint,
-      Timing? patternTiming,
-      Reference? patternReference,
-      Meta? patternMeta,
-      Boolean? exampleBoolean,
-      @JsonKey(name: '_exampleBoolean')
-          Element? exampleBooleanElement,
-      Integer? exampleInteger,
-      @JsonKey(name: '_exampleInteger')
-          Element? exampleIntegerElement,
-      Decimal? exampleDecimal,
-      @JsonKey(name: '_exampleDecimal')
-          Element? exampleDecimalElement,
-      Base64Binary? exampleBase64Binary,
-      @JsonKey(name: '_exampleBase64Binary')
-          Element? exampleBase64BinaryElement,
-      Instant? exampleInstant,
-      @JsonKey(name: '_exampleInstant')
-          Element? exampleInstantElement,
-      String? exampleString,
-      @JsonKey(name: '_exampleString')
-          Element? exampleStringElement,
-      FhirUri? exampleUri,
-      @JsonKey(name: '_exampleUri')
-          Element? exampleUriElement,
-      Date? exampleDate,
-      @JsonKey(name: '_exampleDate')
-          Element? exampleDateElement,
-      FhirDateTime? exampleDateTime,
-      @JsonKey(name: '_exampleDateTime')
-          Element? exampleDateTimeElement,
-      Time? exampleTime,
-      @JsonKey(name: '_exampleTime')
-          Element? exampleTimeElement,
-      Code? exampleCode,
-      @JsonKey(name: '_exampleCode')
-          Element? exampleCodeElement,
-      Oid? exampleOid,
-      @JsonKey(name: '_exampleOid')
-          Element? exampleOidElement,
-      Id? exampleId,
-      @JsonKey(name: '_exampleId')
-          Element? exampleIdElement,
-      UnsignedInt? exampleUnsignedInt,
-      @JsonKey(name: '_exampleUnsignedInt')
-          Element? exampleUnsignedIntElement,
-      PositiveInt? examplePositiveInt,
-      @JsonKey(name: '_examplePositiveInt')
-          Element? examplePositiveIntElement,
-      Markdown? exampleMarkdown,
-      @JsonKey(name: '_exampleMarkdown')
-          Element? exampleMarkdownElement,
-      Annotation? exampleAnnotation,
-      Attachment? exampleAttachment,
-      Identifier? exampleIdentifier,
-      CodeableConcept? exampleCodeableConcept,
-      Coding? exampleCoding,
-      Quantity? exampleQuantity,
-      Range? exampleRange,
-      Period? examplePeriod,
-      Ratio? exampleRatio,
-      SampledData? exampleSampleData,
-      Signature? exampleSignature,
-      HumanName? exampleHumanName,
-      Address? exampleAddress,
-      ContactPoint? exampleContactPoint,
-      Timing? exampleTiming,
-      Reference? exampleReference,
-      Meta? exampleMeta,
-      Boolean? minValueBoolean,
-      @JsonKey(name: '_minValueBoolean')
-          Element? minValueBooleanElement,
-      Integer? minValueInteger,
-      @JsonKey(name: '_minValueInteger')
-          Element? minValueIntegerElement,
-      Decimal? minValueDecimal,
-      @JsonKey(name: '_minValueDecimal')
-          Element? minValueDecimalElement,
-      Base64Binary? minValueBase64Binary,
-      @JsonKey(name: '_minValueBase64Binary')
-          Element? minValueBase64BinaryElement,
-      Instant? minValueInstant,
-      @JsonKey(name: '_minValueInstant')
-          Element? minValueInstantElement,
-      String? minValueString,
-      @JsonKey(name: '_minValueString')
-          Element? minValueStringElement,
-      FhirUri? minValueUri,
-      @JsonKey(name: '_minValueUri')
-          Element? minValueUriElement,
-      Date? minValueDate,
-      @JsonKey(name: '_minValueDate')
-          Element? minValueDateElement,
-      DateTime? minValueDateTime,
-      @JsonKey(name: '_minValueDateTime')
-          Element? minValueDateTimeElement,
-      Time? minValueTime,
-      @JsonKey(name: '_minValueTime')
-          Element? minValueTimeElement,
-      Code? minValueCode,
-      @JsonKey(name: '_minValueCode')
-          Element? minValueCodeElement,
-      Oid? minValueOid,
-      @JsonKey(name: '_minValueOid')
-          Element? minValueOidElement,
-      Id? minValueId,
-      @JsonKey(name: '_minValueId')
-          Element? minValueIdElement,
-      UnsignedInt? minValueUnsignedInt,
-      @JsonKey(name: '_minValueUnsignedInt')
-          Element? minValueUnsignedIntElement,
-      PositiveInt? minValuePositiveInt,
-      @JsonKey(name: '_minValuePositiveInt')
-          Element? minValuePositiveIntElement,
-      Markdown? minValueMarkdown,
-      @JsonKey(name: '_minValueMarkdown')
-          Element? minValueMarkdownElement,
-      Annotation? minValueAnnotation,
-      Attachment? minValueAttachment,
-      Identifier? minValueIdentifier,
-      CodeableConcept? minValueCodeableConcept,
-      Coding? minValueCoding,
-      Quantity? minValueQuantity,
-      Range? minValueRange,
-      Period? minValuePeriod,
-      Ratio? minValueRatio,
-      SampledData? minValueSampledData,
-      Signature? minValueSignature,
-      HumanName? minValueHumanName,
-      Address? minValueAddress,
-      ContactPoint? minValueContactPoint,
-      Timing? minValueTiming,
-      Reference? minValueReference,
-      Meta? minValueMeta,
-      Boolean? maxValueBoolean,
-      @JsonKey(name: '_maxValueBoolean')
-          Element? maxValueBooleanElement,
-      Integer? maxValueInteger,
-      @JsonKey(name: '_maxValueInteger')
-          Element? maxValueIntegerElement,
-      Decimal? maxValueDecimal,
-      @JsonKey(name: '_maxValueDecimal')
-          Element? maxValueDecimalElement,
-      Base64Binary? maxValueBase64Binary,
-      @JsonKey(name: '_maxValueBase64Binary')
-          Element? maxValueBase64BinaryElement,
-      Instant? maxValueInstant,
-      @JsonKey(name: '_maxValueInstant')
-          Element? maxValueInstantElement,
-      String? maxValueString,
-      @JsonKey(name: '_maxValueString')
-          Element? maxValueStringElement,
-      FhirUri? maxValueUri,
-      @JsonKey(name: '_maxValueUri')
-          Element? maxValueUriElement,
-      Date? maxValueDate,
-      @JsonKey(name: '_maxValueDate')
-          Element? maxValueDateElement,
-      DateTime? maxValueDateTime,
-      @JsonKey(name: '_maxValueDateTime')
-          Element? maxValueDateTimeElement,
-      Time? maxValueTime,
-      @JsonKey(name: '_maxValueTime')
-          Element? maxValueTimeElement,
-      Code? maxValueCode,
-      @JsonKey(name: '_maxValueCode')
-          Element? maxValueCodeElement,
-      Oid? maxValueOid,
-      @JsonKey(name: '_maxValueOid')
-          Element? maxValueOidElement,
-      Id? maxValueId,
-      @JsonKey(name: '_maxValueId')
-          Element? maxValueIdElement,
-      UnsignedInt? maxValueUnsignedInt,
-      @JsonKey(name: '_maxValueUnsignedInt')
-          Element? maxValueUnsignedIntElement,
-      PositiveInt? maxValuePositiveInt,
-      @JsonKey(name: '_maxValuePositiveInt')
-          Element? maxValuePositiveIntElement,
-      Markdown? maxValueMarkdown,
-      @JsonKey(name: '_maxValueMarkdown')
-          Element? maxValueMarkdownElement,
-      Annotation? maxValueAnnotation,
-      Attachment? maxValueAttachment,
-      Identifier? maxValueIdentifier,
-      CodeableConcept? maxValueCodeableConcept,
-      Coding? maxValueCoding,
-      Quantity? maxValueQuantity,
-      Range? maxValueRange,
-      Period? maxValuePeriod,
-      Ratio? maxValueRatio,
-      SampledData? maxValueSampledData,
-      Signature? maxValueSignature,
-      HumanName? maxValueHumanName,
-      Address? maxValueAddress,
-      ContactPoint? maxValueContactPoint,
-      Timing? maxValueTiming,
-      Reference? maxValueReference,
-      Meta? maxValueMeta,
-      Integer? maxLength,
-      @JsonKey(name: '_maxLength')
-          Element? maxLengthElement,
-      List<Id>? condition,
-      @JsonKey(name: '_condition')
-          Element? conditionElement,
-      List<ElementDefinitionConstraint>? constraint,
-      Boolean? mustSupport,
-      @JsonKey(name: '_mustSupport')
-          Element? mustSupportElement,
-      Boolean? isModifier,
-      @JsonKey(name: '_isModifier')
-          Element? isModifierElement,
-      Boolean? isSummary,
-      @JsonKey(name: '_isSummary')
-          Element? isSummaryElement,
-      ElementDefinitionBinding? binding,
-      List<ElementDefinitionMapping>? mapping}) {
-    return _ElementDefinition(
-      id: id,
-      extension_: extension_,
-      path: path,
-      representation: representation,
-      representationElement: representationElement,
-      name: name,
-      label: label,
-      labelElement: labelElement,
-      code: code,
-      slicing: slicing,
-      short: short,
-      shortElement: shortElement,
-      definition: definition,
-      definitionElement: definitionElement,
-      comments: comments,
-      commentElement: commentElement,
-      requirements: requirements,
-      requirementsElement: requirementsElement,
-      alias: alias,
-      aliasElement: aliasElement,
-      min: min,
-      minElement: minElement,
-      max: max,
-      maxElement: maxElement,
-      base: base,
-      type: type,
-      nameReference: nameReference,
-      defaultValueBoolean: defaultValueBoolean,
-      defaultValueBooleanElement: defaultValueBooleanElement,
-      defaultValueInteger: defaultValueInteger,
-      defaultValueIntegerElement: defaultValueIntegerElement,
-      defaultValueDecimal: defaultValueDecimal,
-      defaultValueDecimalElement: defaultValueDecimalElement,
-      defaultValueBase64Binary: defaultValueBase64Binary,
-      defaultValueBase64BinaryElement: defaultValueBase64BinaryElement,
-      defaultValueInstant: defaultValueInstant,
-      defaultValueInstantElement: defaultValueInstantElement,
-      defaultValueString: defaultValueString,
-      defaultValueStringElement: defaultValueStringElement,
-      defaultValueUri: defaultValueUri,
-      defaultValueUriElement: defaultValueUriElement,
-      defaultValueDate: defaultValueDate,
-      defaultValueDateElement: defaultValueDateElement,
-      defaultValueDateTime: defaultValueDateTime,
-      defaultValueDateTimeElement: defaultValueDateTimeElement,
-      defaultValueTime: defaultValueTime,
-      defaultValueTimeElement: defaultValueTimeElement,
-      defaultValueCode: defaultValueCode,
-      defaultValueCodeElement: defaultValueCodeElement,
-      defaultValueOid: defaultValueOid,
-      defaultValueOidElement: defaultValueOidElement,
-      defaultValueId: defaultValueId,
-      defaultValueIdElement: defaultValueIdElement,
-      defaultValueUnsignedInt: defaultValueUnsignedInt,
-      defaultValueUnsignedIntElement: defaultValueUnsignedIntElement,
-      defaultValuePositiveInt: defaultValuePositiveInt,
-      defaultValuePositiveIntElement: defaultValuePositiveIntElement,
-      defaultValueMarkdown: defaultValueMarkdown,
-      defaultValueMarkDownElement: defaultValueMarkDownElement,
-      defaultValueAnnotation: defaultValueAnnotation,
-      defaultValueAttachment: defaultValueAttachment,
-      defaultValueIdentifier: defaultValueIdentifier,
-      defaultValueCodeableConcept: defaultValueCodeableConcept,
-      defaultValueCoding: defaultValueCoding,
-      defaultValueQuantity: defaultValueQuantity,
-      defaultValueRange: defaultValueRange,
-      defaultValuePeriod: defaultValuePeriod,
-      defaultValueRatio: defaultValueRatio,
-      defaultValueSampledData: defaultValueSampledData,
-      defaultValueSignature: defaultValueSignature,
-      defaultValueHumanName: defaultValueHumanName,
-      defaultValueAddress: defaultValueAddress,
-      defaultValueContactPoint: defaultValueContactPoint,
-      defaultValueTiming: defaultValueTiming,
-      defaultValueReference: defaultValueReference,
-      defaultValueMeta: defaultValueMeta,
-      meaningWhenMissing: meaningWhenMissing,
-      meaningWhenMissingElement: meaningWhenMissingElement,
-      fixedBoolean: fixedBoolean,
-      fixedBooleanElement: fixedBooleanElement,
-      fixedInteger: fixedInteger,
-      fixedIntegerElement: fixedIntegerElement,
-      fixedDecimal: fixedDecimal,
-      fixedDecimalElement: fixedDecimalElement,
-      fixedBase64Binary: fixedBase64Binary,
-      fixedBase64BinaryElement: fixedBase64BinaryElement,
-      fixedInstant: fixedInstant,
-      fixedInstantElement: fixedInstantElement,
-      fixedString: fixedString,
-      fixedStringElement: fixedStringElement,
-      fixedUri: fixedUri,
-      fixedUriElement: fixedUriElement,
-      fixedDate: fixedDate,
-      fixedDateElement: fixedDateElement,
-      fixedDateTime: fixedDateTime,
-      fixedDateTimeElement: fixedDateTimeElement,
-      fixedCode: fixedCode,
-      fixedCodeElement: fixedCodeElement,
-      fixedOid: fixedOid,
-      fixedOidElement: fixedOidElement,
-      fixedId: fixedId,
-      fixedIdElement: fixedIdElement,
-      fixedUnsignedInt: fixedUnsignedInt,
-      fixedUnsignedIntElement: fixedUnsignedIntElement,
-      fixedPositiveInt: fixedPositiveInt,
-      fixedPositiveIntElement: fixedPositiveIntElement,
-      fixedMarkdown: fixedMarkdown,
-      fixedMarkdownElement: fixedMarkdownElement,
-      fixedAnnotation: fixedAnnotation,
-      fixedAttachment: fixedAttachment,
-      fixedIdentifier: fixedIdentifier,
-      fixedCodeableConcept: fixedCodeableConcept,
-      fixedCoding: fixedCoding,
-      fixedQuantity: fixedQuantity,
-      fixedRange: fixedRange,
-      fixedPeriod: fixedPeriod,
-      fixedRatio: fixedRatio,
-      fixedSampledData: fixedSampledData,
-      fixedSignature: fixedSignature,
-      fixedHumanName: fixedHumanName,
-      fixedAddress: fixedAddress,
-      fixedContactPoint: fixedContactPoint,
-      fixedTiming: fixedTiming,
-      fixedReference: fixedReference,
-      fixedMeta: fixedMeta,
-      patternBoolean: patternBoolean,
-      patternBooleanElement: patternBooleanElement,
-      patternInteger: patternInteger,
-      patternIntegerElement: patternIntegerElement,
-      patternDecimal: patternDecimal,
-      patternDecimalElement: patternDecimalElement,
-      patternBase64Binary: patternBase64Binary,
-      patternBase64BinaryElement: patternBase64BinaryElement,
-      patternInstant: patternInstant,
-      patternInstantElement: patternInstantElement,
-      patternString: patternString,
-      patternStringElement: patternStringElement,
-      patternUri: patternUri,
-      patternUriElement: patternUriElement,
-      patternDate: patternDate,
-      patternDateElement: patternDateElement,
-      patternDateTime: patternDateTime,
-      patternDateTimeElement: patternDateTimeElement,
-      patternTime: patternTime,
-      patternTimeElement: patternTimeElement,
-      patternCode: patternCode,
-      patternCodeElement: patternCodeElement,
-      patternOid: patternOid,
-      patternOidElement: patternOidElement,
-      patternId: patternId,
-      patternIdElement: patternIdElement,
-      patternUnsignedInt: patternUnsignedInt,
-      patternUnsignedIntElement: patternUnsignedIntElement,
-      patternPositiveInt: patternPositiveInt,
-      patternPositiveIntElement: patternPositiveIntElement,
-      patternMarkdown: patternMarkdown,
-      patternMarkdownElement: patternMarkdownElement,
-      patternAnnotation: patternAnnotation,
-      patternAttachment: patternAttachment,
-      patternIdentifier: patternIdentifier,
-      patternCodeableConcept: patternCodeableConcept,
-      patternCoding: patternCoding,
-      patternQuantity: patternQuantity,
-      patternRange: patternRange,
-      patternPeriod: patternPeriod,
-      patternRatio: patternRatio,
-      patternSampledData: patternSampledData,
-      patternSignature: patternSignature,
-      patternHumanName: patternHumanName,
-      patternAddress: patternAddress,
-      patternContactPoint: patternContactPoint,
-      patternTiming: patternTiming,
-      patternReference: patternReference,
-      patternMeta: patternMeta,
-      exampleBoolean: exampleBoolean,
-      exampleBooleanElement: exampleBooleanElement,
-      exampleInteger: exampleInteger,
-      exampleIntegerElement: exampleIntegerElement,
-      exampleDecimal: exampleDecimal,
-      exampleDecimalElement: exampleDecimalElement,
-      exampleBase64Binary: exampleBase64Binary,
-      exampleBase64BinaryElement: exampleBase64BinaryElement,
-      exampleInstant: exampleInstant,
-      exampleInstantElement: exampleInstantElement,
-      exampleString: exampleString,
-      exampleStringElement: exampleStringElement,
-      exampleUri: exampleUri,
-      exampleUriElement: exampleUriElement,
-      exampleDate: exampleDate,
-      exampleDateElement: exampleDateElement,
-      exampleDateTime: exampleDateTime,
-      exampleDateTimeElement: exampleDateTimeElement,
-      exampleTime: exampleTime,
-      exampleTimeElement: exampleTimeElement,
-      exampleCode: exampleCode,
-      exampleCodeElement: exampleCodeElement,
-      exampleOid: exampleOid,
-      exampleOidElement: exampleOidElement,
-      exampleId: exampleId,
-      exampleIdElement: exampleIdElement,
-      exampleUnsignedInt: exampleUnsignedInt,
-      exampleUnsignedIntElement: exampleUnsignedIntElement,
-      examplePositiveInt: examplePositiveInt,
-      examplePositiveIntElement: examplePositiveIntElement,
-      exampleMarkdown: exampleMarkdown,
-      exampleMarkdownElement: exampleMarkdownElement,
-      exampleAnnotation: exampleAnnotation,
-      exampleAttachment: exampleAttachment,
-      exampleIdentifier: exampleIdentifier,
-      exampleCodeableConcept: exampleCodeableConcept,
-      exampleCoding: exampleCoding,
-      exampleQuantity: exampleQuantity,
-      exampleRange: exampleRange,
-      examplePeriod: examplePeriod,
-      exampleRatio: exampleRatio,
-      exampleSampleData: exampleSampleData,
-      exampleSignature: exampleSignature,
-      exampleHumanName: exampleHumanName,
-      exampleAddress: exampleAddress,
-      exampleContactPoint: exampleContactPoint,
-      exampleTiming: exampleTiming,
-      exampleReference: exampleReference,
-      exampleMeta: exampleMeta,
-      minValueBoolean: minValueBoolean,
-      minValueBooleanElement: minValueBooleanElement,
-      minValueInteger: minValueInteger,
-      minValueIntegerElement: minValueIntegerElement,
-      minValueDecimal: minValueDecimal,
-      minValueDecimalElement: minValueDecimalElement,
-      minValueBase64Binary: minValueBase64Binary,
-      minValueBase64BinaryElement: minValueBase64BinaryElement,
-      minValueInstant: minValueInstant,
-      minValueInstantElement: minValueInstantElement,
-      minValueString: minValueString,
-      minValueStringElement: minValueStringElement,
-      minValueUri: minValueUri,
-      minValueUriElement: minValueUriElement,
-      minValueDate: minValueDate,
-      minValueDateElement: minValueDateElement,
-      minValueDateTime: minValueDateTime,
-      minValueDateTimeElement: minValueDateTimeElement,
-      minValueTime: minValueTime,
-      minValueTimeElement: minValueTimeElement,
-      minValueCode: minValueCode,
-      minValueCodeElement: minValueCodeElement,
-      minValueOid: minValueOid,
-      minValueOidElement: minValueOidElement,
-      minValueId: minValueId,
-      minValueIdElement: minValueIdElement,
-      minValueUnsignedInt: minValueUnsignedInt,
-      minValueUnsignedIntElement: minValueUnsignedIntElement,
-      minValuePositiveInt: minValuePositiveInt,
-      minValuePositiveIntElement: minValuePositiveIntElement,
-      minValueMarkdown: minValueMarkdown,
-      minValueMarkdownElement: minValueMarkdownElement,
-      minValueAnnotation: minValueAnnotation,
-      minValueAttachment: minValueAttachment,
-      minValueIdentifier: minValueIdentifier,
-      minValueCodeableConcept: minValueCodeableConcept,
-      minValueCoding: minValueCoding,
-      minValueQuantity: minValueQuantity,
-      minValueRange: minValueRange,
-      minValuePeriod: minValuePeriod,
-      minValueRatio: minValueRatio,
-      minValueSampledData: minValueSampledData,
-      minValueSignature: minValueSignature,
-      minValueHumanName: minValueHumanName,
-      minValueAddress: minValueAddress,
-      minValueContactPoint: minValueContactPoint,
-      minValueTiming: minValueTiming,
-      minValueReference: minValueReference,
-      minValueMeta: minValueMeta,
-      maxValueBoolean: maxValueBoolean,
-      maxValueBooleanElement: maxValueBooleanElement,
-      maxValueInteger: maxValueInteger,
-      maxValueIntegerElement: maxValueIntegerElement,
-      maxValueDecimal: maxValueDecimal,
-      maxValueDecimalElement: maxValueDecimalElement,
-      maxValueBase64Binary: maxValueBase64Binary,
-      maxValueBase64BinaryElement: maxValueBase64BinaryElement,
-      maxValueInstant: maxValueInstant,
-      maxValueInstantElement: maxValueInstantElement,
-      maxValueString: maxValueString,
-      maxValueStringElement: maxValueStringElement,
-      maxValueUri: maxValueUri,
-      maxValueUriElement: maxValueUriElement,
-      maxValueDate: maxValueDate,
-      maxValueDateElement: maxValueDateElement,
-      maxValueDateTime: maxValueDateTime,
-      maxValueDateTimeElement: maxValueDateTimeElement,
-      maxValueTime: maxValueTime,
-      maxValueTimeElement: maxValueTimeElement,
-      maxValueCode: maxValueCode,
-      maxValueCodeElement: maxValueCodeElement,
-      maxValueOid: maxValueOid,
-      maxValueOidElement: maxValueOidElement,
-      maxValueId: maxValueId,
-      maxValueIdElement: maxValueIdElement,
-      maxValueUnsignedInt: maxValueUnsignedInt,
-      maxValueUnsignedIntElement: maxValueUnsignedIntElement,
-      maxValuePositiveInt: maxValuePositiveInt,
-      maxValuePositiveIntElement: maxValuePositiveIntElement,
-      maxValueMarkdown: maxValueMarkdown,
-      maxValueMarkdownElement: maxValueMarkdownElement,
-      maxValueAnnotation: maxValueAnnotation,
-      maxValueAttachment: maxValueAttachment,
-      maxValueIdentifier: maxValueIdentifier,
-      maxValueCodeableConcept: maxValueCodeableConcept,
-      maxValueCoding: maxValueCoding,
-      maxValueQuantity: maxValueQuantity,
-      maxValueRange: maxValueRange,
-      maxValuePeriod: maxValuePeriod,
-      maxValueRatio: maxValueRatio,
-      maxValueSampledData: maxValueSampledData,
-      maxValueSignature: maxValueSignature,
-      maxValueHumanName: maxValueHumanName,
-      maxValueAddress: maxValueAddress,
-      maxValueContactPoint: maxValueContactPoint,
-      maxValueTiming: maxValueTiming,
-      maxValueReference: maxValueReference,
-      maxValueMeta: maxValueMeta,
-      maxLength: maxLength,
-      maxLengthElement: maxLengthElement,
-      condition: condition,
-      conditionElement: conditionElement,
-      constraint: constraint,
-      mustSupport: mustSupport,
-      mustSupportElement: mustSupportElement,
-      isModifier: isModifier,
-      isModifierElement: isModifierElement,
-      isSummary: isSummary,
-      isSummaryElement: isSummaryElement,
-      binding: binding,
-      mapping: mapping,
-    );
-  }
-
-  ElementDefinition fromJson(Map<String, Object?> json) {
-    return ElementDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinition = _$ElementDefinitionTearOff();
 
 /// @nodoc
 mixin _$ElementDefinition {
@@ -1889,7 +1083,7 @@ mixin _$ElementDefinition {
   Date? get minValueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueDate')
   Element? get minValueDateElement => throw _privateConstructorUsedError;
-  DateTime? get minValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get minValueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_minValueDateTime')
   Element? get minValueDateTimeElement => throw _privateConstructorUsedError;
   Time? get minValueTime => throw _privateConstructorUsedError;
@@ -1956,7 +1150,7 @@ mixin _$ElementDefinition {
   Date? get maxValueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueDate')
   Element? get maxValueDateElement => throw _privateConstructorUsedError;
-  DateTime? get maxValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get maxValueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_maxValueDateTime')
   Element? get maxValueDateTimeElement => throw _privateConstructorUsedError;
   Time? get maxValueTime => throw _privateConstructorUsedError;
@@ -2352,7 +1546,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
-      DateTime? minValueDateTime,
+      FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
           Element? minValueDateTimeElement,
       Time? minValueTime,
@@ -2417,7 +1611,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Date? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           Element? maxValueDateElement,
-      DateTime? maxValueDateTime,
+      FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
           Element? maxValueDateTimeElement,
       Time? maxValueTime,
@@ -4001,7 +3195,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       minValueDateTime: minValueDateTime == freezed
           ? _value.minValueDateTime
           : minValueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       minValueDateTimeElement: minValueDateTimeElement == freezed
           ? _value.minValueDateTimeElement
           : minValueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4197,7 +3391,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       maxValueDateTime: maxValueDateTime == freezed
           ? _value.maxValueDateTime
           : maxValueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       maxValueDateTimeElement: maxValueDateTimeElement == freezed
           ? _value.maxValueDateTimeElement
           : maxValueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6758,11 +5952,11 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionCopyWith<$Res>
+abstract class _$$_ElementDefinitionCopyWith<$Res>
     implements $ElementDefinitionCopyWith<$Res> {
-  factory _$ElementDefinitionCopyWith(
-          _ElementDefinition value, $Res Function(_ElementDefinition) then) =
-      __$ElementDefinitionCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionCopyWith(_$_ElementDefinition value,
+          $Res Function(_$_ElementDefinition) then) =
+      __$$_ElementDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -7086,7 +6280,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
-      DateTime? minValueDateTime,
+      FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
           Element? minValueDateTimeElement,
       Time? minValueTime,
@@ -7151,7 +6345,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Date? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           Element? maxValueDateElement,
-      DateTime? maxValueDateTime,
+      FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
           Element? maxValueDateTimeElement,
       Time? maxValueTime,
@@ -7644,15 +6838,15 @@ abstract class _$ElementDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionCopyWithImpl<$Res>
+class __$$_ElementDefinitionCopyWithImpl<$Res>
     extends _$ElementDefinitionCopyWithImpl<$Res>
-    implements _$ElementDefinitionCopyWith<$Res> {
-  __$ElementDefinitionCopyWithImpl(
-      _ElementDefinition _value, $Res Function(_ElementDefinition) _then)
-      : super(_value, (v) => _then(v as _ElementDefinition));
+    implements _$$_ElementDefinitionCopyWith<$Res> {
+  __$$_ElementDefinitionCopyWithImpl(
+      _$_ElementDefinition _value, $Res Function(_$_ElementDefinition) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinition));
 
   @override
-  _ElementDefinition get _value => super._value as _ElementDefinition;
+  _$_ElementDefinition get _value => super._value as _$_ElementDefinition;
 
   @override
   $Res call({
@@ -7991,13 +7185,13 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object? binding = freezed,
     Object? mapping = freezed,
   }) {
-    return _then(_ElementDefinition(
+    return _then(_$_ElementDefinition(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       path: path == freezed
@@ -8005,7 +7199,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : path // ignore: cast_nullable_to_non_nullable
               as String,
       representation: representation == freezed
-          ? _value.representation
+          ? _value._representation
           : representation // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
       representationElement: representationElement == freezed
@@ -8025,7 +7219,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : labelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       code: code == freezed
-          ? _value.code
+          ? _value._code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       slicing: slicing == freezed
@@ -8065,7 +7259,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       alias: alias == freezed
-          ? _value.alias
+          ? _value._alias
           : alias // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       aliasElement: aliasElement == freezed
@@ -8093,7 +7287,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : base // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBase?,
       type: type == freezed
-          ? _value.type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionType>?,
       nameReference: nameReference == freezed
@@ -8952,7 +8146,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       minValueDateTime: minValueDateTime == freezed
           ? _value.minValueDateTime
           : minValueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       minValueDateTimeElement: minValueDateTimeElement == freezed
           ? _value.minValueDateTimeElement
           : minValueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9148,7 +8342,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       maxValueDateTime: maxValueDateTime == freezed
           ? _value.maxValueDateTime
           : maxValueDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as FhirDateTime?,
       maxValueDateTimeElement: maxValueDateTimeElement == freezed
           ? _value.maxValueDateTimeElement
           : maxValueDateTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9286,7 +8480,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       condition: condition == freezed
-          ? _value.condition
+          ? _value._condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
       conditionElement: conditionElement == freezed
@@ -9294,7 +8488,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : conditionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       constraint: constraint == freezed
-          ? _value.constraint
+          ? _value._constraint
           : constraint // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionConstraint>?,
       mustSupport: mustSupport == freezed
@@ -9326,7 +8520,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : binding // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBinding?,
       mapping: mapping == freezed
-          ? _value.mapping
+          ? _value._mapping
           : mapping // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionMapping>?,
     ));
@@ -9339,16 +8533,16 @@ class _$_ElementDefinition extends _ElementDefinition {
   _$_ElementDefinition(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
+          final List<FhirExtension>? extension_,
       required this.path,
-      this.representation,
+      final List<Code>? representation,
       @JsonKey(name: '_representation')
           this.representationElement,
       this.name,
       this.label,
       @JsonKey(name: '_label')
           this.labelElement,
-      this.code,
+      final List<Coding>? code,
       this.slicing,
       this.short,
       @JsonKey(name: '_short')
@@ -9362,7 +8556,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.requirements,
       @JsonKey(name: '_requirements')
           this.requirementsElement,
-      this.alias,
+      final List<String>? alias,
       @JsonKey(name: '_alias')
           this.aliasElement,
       this.min,
@@ -9372,7 +8566,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       @JsonKey(name: '_max')
           this.maxElement,
       this.base,
-      this.type,
+      final List<ElementDefinitionType>? type,
       this.nameReference,
       this.defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
@@ -9767,10 +8961,10 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.maxLength,
       @JsonKey(name: '_maxLength')
           this.maxLengthElement,
-      this.condition,
+      final List<Id>? condition,
       @JsonKey(name: '_condition')
           this.conditionElement,
-      this.constraint,
+      final List<ElementDefinitionConstraint>? constraint,
       this.mustSupport,
       @JsonKey(name: '_mustSupport')
           this.mustSupportElement,
@@ -9781,21 +8975,43 @@ class _$_ElementDefinition extends _ElementDefinition {
       @JsonKey(name: '_isSummary')
           this.isSummaryElement,
       this.binding,
-      this.mapping})
-      : super._();
+      final List<ElementDefinitionMapping>? mapping})
+      : _extension_ = extension_,
+        _representation = representation,
+        _code = code,
+        _alias = alias,
+        _type = type,
+        _condition = condition,
+        _constraint = constraint,
+        _mapping = mapping,
+        super._();
 
   factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String path;
+  final List<Code>? _representation;
   @override
-  final List<Code>? representation;
+  List<Code>? get representation {
+    final value = _representation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: '_representation')
   final Element? representationElement;
@@ -9806,8 +9022,15 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   @JsonKey(name: '_label')
   final Element? labelElement;
+  final List<Coding>? _code;
   @override
-  final List<Coding>? code;
+  List<Coding>? get code {
+    final value = _code;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final ElementDefinitionSlicing? slicing;
   @override
@@ -9830,8 +9053,15 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   @JsonKey(name: '_requirements')
   final Element? requirementsElement;
+  final List<String>? _alias;
   @override
-  final List<String>? alias;
+  List<String>? get alias {
+    final value = _alias;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: '_alias')
   final Element? aliasElement;
@@ -9847,8 +9077,15 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Element? maxElement;
   @override
   final ElementDefinitionBase? base;
+  final List<ElementDefinitionType>? _type;
   @override
-  final List<ElementDefinitionType>? type;
+  List<ElementDefinitionType>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? nameReference;
   @override
@@ -10348,7 +9585,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueDate')
   final Element? minValueDateElement;
   @override
-  final DateTime? minValueDateTime;
+  final FhirDateTime? minValueDateTime;
   @override
   @JsonKey(name: '_minValueDateTime')
   final Element? minValueDateTimeElement;
@@ -10462,7 +9699,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueDate')
   final Element? maxValueDateElement;
   @override
-  final DateTime? maxValueDateTime;
+  final FhirDateTime? maxValueDateTime;
   @override
   @JsonKey(name: '_maxValueDateTime')
   final Element? maxValueDateTimeElement;
@@ -10540,13 +9777,27 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   @JsonKey(name: '_maxLength')
   final Element? maxLengthElement;
+  final List<Id>? _condition;
   @override
-  final List<Id>? condition;
+  List<Id>? get condition {
+    final value = _condition;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: '_condition')
   final Element? conditionElement;
+  final List<ElementDefinitionConstraint>? _constraint;
   @override
-  final List<ElementDefinitionConstraint>? constraint;
+  List<ElementDefinitionConstraint>? get constraint {
+    final value = _constraint;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? mustSupport;
   @override
@@ -10564,8 +9815,14 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Element? isSummaryElement;
   @override
   final ElementDefinitionBinding? binding;
+  final List<ElementDefinitionMapping>? _mapping;
   @override
-  final List<ElementDefinitionMapping>? mapping;
+  List<ElementDefinitionMapping>? get mapping {
+    final value = _mapping;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -10576,20 +9833,20 @@ class _$_ElementDefinition extends _ElementDefinition {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinition &&
+            other is _$_ElementDefinition &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.path, path) &&
             const DeepCollectionEquality()
-                .equals(other.representation, representation) &&
+                .equals(other._representation, _representation) &&
             const DeepCollectionEquality()
                 .equals(other.representationElement, representationElement) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.label, label) &&
             const DeepCollectionEquality()
                 .equals(other.labelElement, labelElement) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other._code, _code) &&
             const DeepCollectionEquality().equals(other.slicing, slicing) &&
             const DeepCollectionEquality().equals(other.short, short) &&
             const DeepCollectionEquality()
@@ -10605,7 +9862,7 @@ class _$_ElementDefinition extends _ElementDefinition {
                 .equals(other.requirements, requirements) &&
             const DeepCollectionEquality()
                 .equals(other.requirementsElement, requirementsElement) &&
-            const DeepCollectionEquality().equals(other.alias, alias) &&
+            const DeepCollectionEquality().equals(other._alias, _alias) &&
             const DeepCollectionEquality()
                 .equals(other.aliasElement, aliasElement) &&
             const DeepCollectionEquality().equals(other.min, min) &&
@@ -10615,7 +9872,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality()
                 .equals(other.maxElement, maxElement) &&
             const DeepCollectionEquality().equals(other.base, base) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
             const DeepCollectionEquality()
                 .equals(other.nameReference, nameReference) &&
             const DeepCollectionEquality()
@@ -10940,9 +10197,9 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.maxValueMeta, maxValueMeta) &&
             const DeepCollectionEquality().equals(other.maxLength, maxLength) &&
             const DeepCollectionEquality().equals(other.maxLengthElement, maxLengthElement) &&
-            const DeepCollectionEquality().equals(other.condition, condition) &&
+            const DeepCollectionEquality().equals(other._condition, _condition) &&
             const DeepCollectionEquality().equals(other.conditionElement, conditionElement) &&
-            const DeepCollectionEquality().equals(other.constraint, constraint) &&
+            const DeepCollectionEquality().equals(other._constraint, _constraint) &&
             const DeepCollectionEquality().equals(other.mustSupport, mustSupport) &&
             const DeepCollectionEquality().equals(other.mustSupportElement, mustSupportElement) &&
             const DeepCollectionEquality().equals(other.isModifier, isModifier) &&
@@ -10950,21 +10207,22 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.isSummary, isSummary) &&
             const DeepCollectionEquality().equals(other.isSummaryElement, isSummaryElement) &&
             const DeepCollectionEquality().equals(other.binding, binding) &&
-            const DeepCollectionEquality().equals(other.mapping, mapping));
+            const DeepCollectionEquality().equals(other._mapping, _mapping));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(path),
-        const DeepCollectionEquality().hash(representation),
+        const DeepCollectionEquality().hash(_representation),
         const DeepCollectionEquality().hash(representationElement),
         const DeepCollectionEquality().hash(name),
         const DeepCollectionEquality().hash(label),
         const DeepCollectionEquality().hash(labelElement),
-        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(_code),
         const DeepCollectionEquality().hash(slicing),
         const DeepCollectionEquality().hash(short),
         const DeepCollectionEquality().hash(shortElement),
@@ -10974,14 +10232,14 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(commentElement),
         const DeepCollectionEquality().hash(requirements),
         const DeepCollectionEquality().hash(requirementsElement),
-        const DeepCollectionEquality().hash(alias),
+        const DeepCollectionEquality().hash(_alias),
         const DeepCollectionEquality().hash(aliasElement),
         const DeepCollectionEquality().hash(min),
         const DeepCollectionEquality().hash(minElement),
         const DeepCollectionEquality().hash(max),
         const DeepCollectionEquality().hash(maxElement),
         const DeepCollectionEquality().hash(base),
-        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(_type),
         const DeepCollectionEquality().hash(nameReference),
         const DeepCollectionEquality().hash(defaultValueBoolean),
         const DeepCollectionEquality().hash(defaultValueBooleanElement),
@@ -11279,9 +10537,9 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(maxValueMeta),
         const DeepCollectionEquality().hash(maxLength),
         const DeepCollectionEquality().hash(maxLengthElement),
-        const DeepCollectionEquality().hash(condition),
+        const DeepCollectionEquality().hash(_condition),
         const DeepCollectionEquality().hash(conditionElement),
-        const DeepCollectionEquality().hash(constraint),
+        const DeepCollectionEquality().hash(_constraint),
         const DeepCollectionEquality().hash(mustSupport),
         const DeepCollectionEquality().hash(mustSupportElement),
         const DeepCollectionEquality().hash(isModifier),
@@ -11289,13 +10547,14 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(isSummary),
         const DeepCollectionEquality().hash(isSummaryElement),
         const DeepCollectionEquality().hash(binding),
-        const DeepCollectionEquality().hash(mapping)
+        const DeepCollectionEquality().hash(_mapping)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith =>
-      __$ElementDefinitionCopyWithImpl<_ElementDefinition>(this, _$identity);
+  _$$_ElementDefinitionCopyWith<_$_ElementDefinition> get copyWith =>
+      __$$_ElementDefinitionCopyWithImpl<_$_ElementDefinition>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -11305,1277 +10564,1264 @@ class _$_ElementDefinition extends _ElementDefinition {
 
 abstract class _ElementDefinition extends ElementDefinition {
   factory _ElementDefinition(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      required String path,
-      List<Code>? representation,
+          final List<FhirExtension>? extension_,
+      required final String path,
+      final List<Code>? representation,
       @JsonKey(name: '_representation')
-          Element? representationElement,
-      String? name,
-      String? label,
+          final Element? representationElement,
+      final String? name,
+      final String? label,
       @JsonKey(name: '_label')
-          Element? labelElement,
-      List<Coding>? code,
-      ElementDefinitionSlicing? slicing,
-      String? short,
+          final Element? labelElement,
+      final List<Coding>? code,
+      final ElementDefinitionSlicing? slicing,
+      final String? short,
       @JsonKey(name: '_short')
-          Element? shortElement,
-      Markdown? definition,
+          final Element? shortElement,
+      final Markdown? definition,
       @JsonKey(name: '_definition')
-          Element? definitionElement,
-      Markdown? comments,
+          final Element? definitionElement,
+      final Markdown? comments,
       @JsonKey(name: '_comments')
-          Element? commentElement,
-      Markdown? requirements,
+          final Element? commentElement,
+      final Markdown? requirements,
       @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      List<String>? alias,
+          final Element? requirementsElement,
+      final List<String>? alias,
       @JsonKey(name: '_alias')
-          Element? aliasElement,
-      Integer? min,
+          final Element? aliasElement,
+      final Integer? min,
       @JsonKey(name: '_min')
-          Element? minElement,
-      String? max,
+          final Element? minElement,
+      final String? max,
       @JsonKey(name: '_max')
-          Element? maxElement,
-      ElementDefinitionBase? base,
-      List<ElementDefinitionType>? type,
-      String? nameReference,
-      Boolean? defaultValueBoolean,
+          final Element? maxElement,
+      final ElementDefinitionBase? base,
+      final List<ElementDefinitionType>? type,
+      final String? nameReference,
+      final Boolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
-          Element? defaultValueBooleanElement,
-      Integer? defaultValueInteger,
+          final Element? defaultValueBooleanElement,
+      final Integer? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
-          Element? defaultValueIntegerElement,
-      Decimal? defaultValueDecimal,
+          final Element? defaultValueIntegerElement,
+      final Decimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
-          Element? defaultValueDecimalElement,
-      Base64Binary? defaultValueBase64Binary,
+          final Element? defaultValueDecimalElement,
+      final Base64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          Element? defaultValueBase64BinaryElement,
-      Instant? defaultValueInstant,
+          final Element? defaultValueBase64BinaryElement,
+      final Instant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
-          Element? defaultValueInstantElement,
-      String? defaultValueString,
+          final Element? defaultValueInstantElement,
+      final String? defaultValueString,
       @JsonKey(name: '_defaultValueString')
-          Element? defaultValueStringElement,
-      FhirUri? defaultValueUri,
+          final Element? defaultValueStringElement,
+      final FhirUri? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
-          Element? defaultValueUriElement,
-      Date? defaultValueDate,
+          final Element? defaultValueUriElement,
+      final Date? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
-          Element? defaultValueDateElement,
-      FhirDateTime? defaultValueDateTime,
+          final Element? defaultValueDateElement,
+      final FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
-          Element? defaultValueDateTimeElement,
-      Time? defaultValueTime,
+          final Element? defaultValueDateTimeElement,
+      final Time? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
-          Element? defaultValueTimeElement,
-      Code? defaultValueCode,
+          final Element? defaultValueTimeElement,
+      final Code? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
-          Element? defaultValueCodeElement,
-      Oid? defaultValueOid,
+          final Element? defaultValueCodeElement,
+      final Oid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
-          Element? defaultValueOidElement,
-      Id? defaultValueId,
+          final Element? defaultValueOidElement,
+      final Id? defaultValueId,
       @JsonKey(name: '_defaultValueId')
-          Element? defaultValueIdElement,
-      UnsignedInt? defaultValueUnsignedInt,
+          final Element? defaultValueIdElement,
+      final UnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          Element? defaultValueUnsignedIntElement,
-      PositiveInt? defaultValuePositiveInt,
+          final Element? defaultValueUnsignedIntElement,
+      final PositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          Element? defaultValuePositiveIntElement,
-      Markdown? defaultValueMarkdown,
+          final Element? defaultValuePositiveIntElement,
+      final Markdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkDown')
-          Element? defaultValueMarkDownElement,
-      Annotation? defaultValueAnnotation,
-      Attachment? defaultValueAttachment,
-      Identifier? defaultValueIdentifier,
-      CodeableConcept? defaultValueCodeableConcept,
-      Coding? defaultValueCoding,
-      Quantity? defaultValueQuantity,
-      Range? defaultValueRange,
-      Period? defaultValuePeriod,
-      Ratio? defaultValueRatio,
-      SampledData? defaultValueSampledData,
-      Signature? defaultValueSignature,
-      HumanName? defaultValueHumanName,
-      Address? defaultValueAddress,
-      ContactPoint? defaultValueContactPoint,
-      Timing? defaultValueTiming,
-      Reference? defaultValueReference,
-      Meta? defaultValueMeta,
-      Markdown? meaningWhenMissing,
+          final Element? defaultValueMarkDownElement,
+      final Annotation? defaultValueAnnotation,
+      final Attachment? defaultValueAttachment,
+      final Identifier? defaultValueIdentifier,
+      final CodeableConcept? defaultValueCodeableConcept,
+      final Coding? defaultValueCoding,
+      final Quantity? defaultValueQuantity,
+      final Range? defaultValueRange,
+      final Period? defaultValuePeriod,
+      final Ratio? defaultValueRatio,
+      final SampledData? defaultValueSampledData,
+      final Signature? defaultValueSignature,
+      final HumanName? defaultValueHumanName,
+      final Address? defaultValueAddress,
+      final ContactPoint? defaultValueContactPoint,
+      final Timing? defaultValueTiming,
+      final Reference? defaultValueReference,
+      final Meta? defaultValueMeta,
+      final Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
-          Element? meaningWhenMissingElement,
-      Boolean? fixedBoolean,
+          final Element? meaningWhenMissingElement,
+      final Boolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
-          Element? fixedBooleanElement,
-      Integer? fixedInteger,
+          final Element? fixedBooleanElement,
+      final Integer? fixedInteger,
       @JsonKey(name: '_fixedInteger')
-          Element? fixedIntegerElement,
-      Decimal? fixedDecimal,
+          final Element? fixedIntegerElement,
+      final Decimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
-          Element? fixedDecimalElement,
-      Base64Binary? fixedBase64Binary,
+          final Element? fixedDecimalElement,
+      final Base64Binary? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
-          Element? fixedBase64BinaryElement,
-      Instant? fixedInstant,
+          final Element? fixedBase64BinaryElement,
+      final Instant? fixedInstant,
       @JsonKey(name: '_fixedInstant')
-          Element? fixedInstantElement,
-      String? fixedString,
+          final Element? fixedInstantElement,
+      final String? fixedString,
       @JsonKey(name: '_fixedString')
-          Element? fixedStringElement,
-      FhirUri? fixedUri,
+          final Element? fixedStringElement,
+      final FhirUri? fixedUri,
       @JsonKey(name: '_fixedUri')
-          Element? fixedUriElement,
-      Date? fixedDate,
+          final Element? fixedUriElement,
+      final Date? fixedDate,
       @JsonKey(name: '_fixedDate')
-          Element? fixedDateElement,
-      FhirDateTime? fixedDateTime,
+          final Element? fixedDateElement,
+      final FhirDateTime? fixedDateTime,
       @JsonKey(name: '_fixedDateTime')
-          Element? fixedDateTimeElement,
-      Code? fixedCode,
+          final Element? fixedDateTimeElement,
+      final Code? fixedCode,
       @JsonKey(name: '_fixedCode')
-          Element? fixedCodeElement,
-      Oid? fixedOid,
+          final Element? fixedCodeElement,
+      final Oid? fixedOid,
       @JsonKey(name: '_fixedOid')
-          Element? fixedOidElement,
-      Id? fixedId,
+          final Element? fixedOidElement,
+      final Id? fixedId,
       @JsonKey(name: '_fixedId')
-          Element? fixedIdElement,
-      UnsignedInt? fixedUnsignedInt,
+          final Element? fixedIdElement,
+      final UnsignedInt? fixedUnsignedInt,
       @JsonKey(name: '_fixedUnsignedInt')
-          Element? fixedUnsignedIntElement,
-      PositiveInt? fixedPositiveInt,
+          final Element? fixedUnsignedIntElement,
+      final PositiveInt? fixedPositiveInt,
       @JsonKey(name: '_fixedPositiveInt')
-          Element? fixedPositiveIntElement,
-      Markdown? fixedMarkdown,
+          final Element? fixedPositiveIntElement,
+      final Markdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
-          Element? fixedMarkdownElement,
-      Annotation? fixedAnnotation,
-      Attachment? fixedAttachment,
-      Identifier? fixedIdentifier,
-      CodeableConcept? fixedCodeableConcept,
-      Coding? fixedCoding,
-      Quantity? fixedQuantity,
-      Range? fixedRange,
-      Period? fixedPeriod,
-      Ratio? fixedRatio,
-      SampledData? fixedSampledData,
-      Signature? fixedSignature,
-      HumanName? fixedHumanName,
-      Address? fixedAddress,
-      ContactPoint? fixedContactPoint,
-      Timing? fixedTiming,
-      Reference? fixedReference,
-      Meta? fixedMeta,
-      Boolean? patternBoolean,
+          final Element? fixedMarkdownElement,
+      final Annotation? fixedAnnotation,
+      final Attachment? fixedAttachment,
+      final Identifier? fixedIdentifier,
+      final CodeableConcept? fixedCodeableConcept,
+      final Coding? fixedCoding,
+      final Quantity? fixedQuantity,
+      final Range? fixedRange,
+      final Period? fixedPeriod,
+      final Ratio? fixedRatio,
+      final SampledData? fixedSampledData,
+      final Signature? fixedSignature,
+      final HumanName? fixedHumanName,
+      final Address? fixedAddress,
+      final ContactPoint? fixedContactPoint,
+      final Timing? fixedTiming,
+      final Reference? fixedReference,
+      final Meta? fixedMeta,
+      final Boolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
-          Element? patternBooleanElement,
-      Integer? patternInteger,
+          final Element? patternBooleanElement,
+      final Integer? patternInteger,
       @JsonKey(name: '_patternInteger')
-          Element? patternIntegerElement,
-      Decimal? patternDecimal,
+          final Element? patternIntegerElement,
+      final Decimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
-          Element? patternDecimalElement,
-      Base64Binary? patternBase64Binary,
+          final Element? patternDecimalElement,
+      final Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
-          Element? patternBase64BinaryElement,
-      Instant? patternInstant,
+          final Element? patternBase64BinaryElement,
+      final Instant? patternInstant,
       @JsonKey(name: '_patternInstant')
-          Element? patternInstantElement,
-      String? patternString,
+          final Element? patternInstantElement,
+      final String? patternString,
       @JsonKey(name: '_patternString')
-          Element? patternStringElement,
-      FhirUri? patternUri,
+          final Element? patternStringElement,
+      final FhirUri? patternUri,
       @JsonKey(name: '_patternUri')
-          Element? patternUriElement,
-      Date? patternDate,
+          final Element? patternUriElement,
+      final Date? patternDate,
       @JsonKey(name: '_patternDate')
-          Element? patternDateElement,
-      FhirDateTime? patternDateTime,
+          final Element? patternDateElement,
+      final FhirDateTime? patternDateTime,
       @JsonKey(name: '_patternDateTime')
-          Element? patternDateTimeElement,
-      Time? patternTime,
+          final Element? patternDateTimeElement,
+      final Time? patternTime,
       @JsonKey(name: '_patternTime')
-          Element? patternTimeElement,
-      Code? patternCode,
+          final Element? patternTimeElement,
+      final Code? patternCode,
       @JsonKey(name: '_patternCode')
-          Element? patternCodeElement,
-      Oid? patternOid,
+          final Element? patternCodeElement,
+      final Oid? patternOid,
       @JsonKey(name: '_patternOid')
-          Element? patternOidElement,
-      Id? patternId,
+          final Element? patternOidElement,
+      final Id? patternId,
       @JsonKey(name: '_patternId')
-          Element? patternIdElement,
-      UnsignedInt? patternUnsignedInt,
+          final Element? patternIdElement,
+      final UnsignedInt? patternUnsignedInt,
       @JsonKey(name: '_patternUnsignedInt')
-          Element? patternUnsignedIntElement,
-      PositiveInt? patternPositiveInt,
+          final Element? patternUnsignedIntElement,
+      final PositiveInt? patternPositiveInt,
       @JsonKey(name: '_patternPositiveInt')
-          Element? patternPositiveIntElement,
-      Markdown? patternMarkdown,
+          final Element? patternPositiveIntElement,
+      final Markdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
-          Element? patternMarkdownElement,
-      Annotation? patternAnnotation,
-      Attachment? patternAttachment,
-      Identifier? patternIdentifier,
-      CodeableConcept? patternCodeableConcept,
-      Coding? patternCoding,
-      Quantity? patternQuantity,
-      Range? patternRange,
-      Period? patternPeriod,
-      Ratio? patternRatio,
-      SampledData? patternSampledData,
-      Signature? patternSignature,
-      HumanName? patternHumanName,
-      Address? patternAddress,
-      ContactPoint? patternContactPoint,
-      Timing? patternTiming,
-      Reference? patternReference,
-      Meta? patternMeta,
-      Boolean? exampleBoolean,
+          final Element? patternMarkdownElement,
+      final Annotation? patternAnnotation,
+      final Attachment? patternAttachment,
+      final Identifier? patternIdentifier,
+      final CodeableConcept? patternCodeableConcept,
+      final Coding? patternCoding,
+      final Quantity? patternQuantity,
+      final Range? patternRange,
+      final Period? patternPeriod,
+      final Ratio? patternRatio,
+      final SampledData? patternSampledData,
+      final Signature? patternSignature,
+      final HumanName? patternHumanName,
+      final Address? patternAddress,
+      final ContactPoint? patternContactPoint,
+      final Timing? patternTiming,
+      final Reference? patternReference,
+      final Meta? patternMeta,
+      final Boolean? exampleBoolean,
       @JsonKey(name: '_exampleBoolean')
-          Element? exampleBooleanElement,
-      Integer? exampleInteger,
+          final Element? exampleBooleanElement,
+      final Integer? exampleInteger,
       @JsonKey(name: '_exampleInteger')
-          Element? exampleIntegerElement,
-      Decimal? exampleDecimal,
+          final Element? exampleIntegerElement,
+      final Decimal? exampleDecimal,
       @JsonKey(name: '_exampleDecimal')
-          Element? exampleDecimalElement,
-      Base64Binary? exampleBase64Binary,
+          final Element? exampleDecimalElement,
+      final Base64Binary? exampleBase64Binary,
       @JsonKey(name: '_exampleBase64Binary')
-          Element? exampleBase64BinaryElement,
-      Instant? exampleInstant,
+          final Element? exampleBase64BinaryElement,
+      final Instant? exampleInstant,
       @JsonKey(name: '_exampleInstant')
-          Element? exampleInstantElement,
-      String? exampleString,
+          final Element? exampleInstantElement,
+      final String? exampleString,
       @JsonKey(name: '_exampleString')
-          Element? exampleStringElement,
-      FhirUri? exampleUri,
+          final Element? exampleStringElement,
+      final FhirUri? exampleUri,
       @JsonKey(name: '_exampleUri')
-          Element? exampleUriElement,
-      Date? exampleDate,
+          final Element? exampleUriElement,
+      final Date? exampleDate,
       @JsonKey(name: '_exampleDate')
-          Element? exampleDateElement,
-      FhirDateTime? exampleDateTime,
+          final Element? exampleDateElement,
+      final FhirDateTime? exampleDateTime,
       @JsonKey(name: '_exampleDateTime')
-          Element? exampleDateTimeElement,
-      Time? exampleTime,
+          final Element? exampleDateTimeElement,
+      final Time? exampleTime,
       @JsonKey(name: '_exampleTime')
-          Element? exampleTimeElement,
-      Code? exampleCode,
+          final Element? exampleTimeElement,
+      final Code? exampleCode,
       @JsonKey(name: '_exampleCode')
-          Element? exampleCodeElement,
-      Oid? exampleOid,
+          final Element? exampleCodeElement,
+      final Oid? exampleOid,
       @JsonKey(name: '_exampleOid')
-          Element? exampleOidElement,
-      Id? exampleId,
+          final Element? exampleOidElement,
+      final Id? exampleId,
       @JsonKey(name: '_exampleId')
-          Element? exampleIdElement,
-      UnsignedInt? exampleUnsignedInt,
+          final Element? exampleIdElement,
+      final UnsignedInt? exampleUnsignedInt,
       @JsonKey(name: '_exampleUnsignedInt')
-          Element? exampleUnsignedIntElement,
-      PositiveInt? examplePositiveInt,
+          final Element? exampleUnsignedIntElement,
+      final PositiveInt? examplePositiveInt,
       @JsonKey(name: '_examplePositiveInt')
-          Element? examplePositiveIntElement,
-      Markdown? exampleMarkdown,
+          final Element? examplePositiveIntElement,
+      final Markdown? exampleMarkdown,
       @JsonKey(name: '_exampleMarkdown')
-          Element? exampleMarkdownElement,
-      Annotation? exampleAnnotation,
-      Attachment? exampleAttachment,
-      Identifier? exampleIdentifier,
-      CodeableConcept? exampleCodeableConcept,
-      Coding? exampleCoding,
-      Quantity? exampleQuantity,
-      Range? exampleRange,
-      Period? examplePeriod,
-      Ratio? exampleRatio,
-      SampledData? exampleSampleData,
-      Signature? exampleSignature,
-      HumanName? exampleHumanName,
-      Address? exampleAddress,
-      ContactPoint? exampleContactPoint,
-      Timing? exampleTiming,
-      Reference? exampleReference,
-      Meta? exampleMeta,
-      Boolean? minValueBoolean,
+          final Element? exampleMarkdownElement,
+      final Annotation? exampleAnnotation,
+      final Attachment? exampleAttachment,
+      final Identifier? exampleIdentifier,
+      final CodeableConcept? exampleCodeableConcept,
+      final Coding? exampleCoding,
+      final Quantity? exampleQuantity,
+      final Range? exampleRange,
+      final Period? examplePeriod,
+      final Ratio? exampleRatio,
+      final SampledData? exampleSampleData,
+      final Signature? exampleSignature,
+      final HumanName? exampleHumanName,
+      final Address? exampleAddress,
+      final ContactPoint? exampleContactPoint,
+      final Timing? exampleTiming,
+      final Reference? exampleReference,
+      final Meta? exampleMeta,
+      final Boolean? minValueBoolean,
       @JsonKey(name: '_minValueBoolean')
-          Element? minValueBooleanElement,
-      Integer? minValueInteger,
+          final Element? minValueBooleanElement,
+      final Integer? minValueInteger,
       @JsonKey(name: '_minValueInteger')
-          Element? minValueIntegerElement,
-      Decimal? minValueDecimal,
+          final Element? minValueIntegerElement,
+      final Decimal? minValueDecimal,
       @JsonKey(name: '_minValueDecimal')
-          Element? minValueDecimalElement,
-      Base64Binary? minValueBase64Binary,
+          final Element? minValueDecimalElement,
+      final Base64Binary? minValueBase64Binary,
       @JsonKey(name: '_minValueBase64Binary')
-          Element? minValueBase64BinaryElement,
-      Instant? minValueInstant,
+          final Element? minValueBase64BinaryElement,
+      final Instant? minValueInstant,
       @JsonKey(name: '_minValueInstant')
-          Element? minValueInstantElement,
-      String? minValueString,
+          final Element? minValueInstantElement,
+      final String? minValueString,
       @JsonKey(name: '_minValueString')
-          Element? minValueStringElement,
-      FhirUri? minValueUri,
+          final Element? minValueStringElement,
+      final FhirUri? minValueUri,
       @JsonKey(name: '_minValueUri')
-          Element? minValueUriElement,
-      Date? minValueDate,
+          final Element? minValueUriElement,
+      final Date? minValueDate,
       @JsonKey(name: '_minValueDate')
-          Element? minValueDateElement,
-      DateTime? minValueDateTime,
+          final Element? minValueDateElement,
+      final FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
-          Element? minValueDateTimeElement,
-      Time? minValueTime,
+          final Element? minValueDateTimeElement,
+      final Time? minValueTime,
       @JsonKey(name: '_minValueTime')
-          Element? minValueTimeElement,
-      Code? minValueCode,
+          final Element? minValueTimeElement,
+      final Code? minValueCode,
       @JsonKey(name: '_minValueCode')
-          Element? minValueCodeElement,
-      Oid? minValueOid,
+          final Element? minValueCodeElement,
+      final Oid? minValueOid,
       @JsonKey(name: '_minValueOid')
-          Element? minValueOidElement,
-      Id? minValueId,
+          final Element? minValueOidElement,
+      final Id? minValueId,
       @JsonKey(name: '_minValueId')
-          Element? minValueIdElement,
-      UnsignedInt? minValueUnsignedInt,
+          final Element? minValueIdElement,
+      final UnsignedInt? minValueUnsignedInt,
       @JsonKey(name: '_minValueUnsignedInt')
-          Element? minValueUnsignedIntElement,
-      PositiveInt? minValuePositiveInt,
+          final Element? minValueUnsignedIntElement,
+      final PositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
-          Element? minValuePositiveIntElement,
-      Markdown? minValueMarkdown,
+          final Element? minValuePositiveIntElement,
+      final Markdown? minValueMarkdown,
       @JsonKey(name: '_minValueMarkdown')
-          Element? minValueMarkdownElement,
-      Annotation? minValueAnnotation,
-      Attachment? minValueAttachment,
-      Identifier? minValueIdentifier,
-      CodeableConcept? minValueCodeableConcept,
-      Coding? minValueCoding,
-      Quantity? minValueQuantity,
-      Range? minValueRange,
-      Period? minValuePeriod,
-      Ratio? minValueRatio,
-      SampledData? minValueSampledData,
-      Signature? minValueSignature,
-      HumanName? minValueHumanName,
-      Address? minValueAddress,
-      ContactPoint? minValueContactPoint,
-      Timing? minValueTiming,
-      Reference? minValueReference,
-      Meta? minValueMeta,
-      Boolean? maxValueBoolean,
+          final Element? minValueMarkdownElement,
+      final Annotation? minValueAnnotation,
+      final Attachment? minValueAttachment,
+      final Identifier? minValueIdentifier,
+      final CodeableConcept? minValueCodeableConcept,
+      final Coding? minValueCoding,
+      final Quantity? minValueQuantity,
+      final Range? minValueRange,
+      final Period? minValuePeriod,
+      final Ratio? minValueRatio,
+      final SampledData? minValueSampledData,
+      final Signature? minValueSignature,
+      final HumanName? minValueHumanName,
+      final Address? minValueAddress,
+      final ContactPoint? minValueContactPoint,
+      final Timing? minValueTiming,
+      final Reference? minValueReference,
+      final Meta? minValueMeta,
+      final Boolean? maxValueBoolean,
       @JsonKey(name: '_maxValueBoolean')
-          Element? maxValueBooleanElement,
-      Integer? maxValueInteger,
+          final Element? maxValueBooleanElement,
+      final Integer? maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
-          Element? maxValueIntegerElement,
-      Decimal? maxValueDecimal,
+          final Element? maxValueIntegerElement,
+      final Decimal? maxValueDecimal,
       @JsonKey(name: '_maxValueDecimal')
-          Element? maxValueDecimalElement,
-      Base64Binary? maxValueBase64Binary,
+          final Element? maxValueDecimalElement,
+      final Base64Binary? maxValueBase64Binary,
       @JsonKey(name: '_maxValueBase64Binary')
-          Element? maxValueBase64BinaryElement,
-      Instant? maxValueInstant,
+          final Element? maxValueBase64BinaryElement,
+      final Instant? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
-          Element? maxValueInstantElement,
-      String? maxValueString,
+          final Element? maxValueInstantElement,
+      final String? maxValueString,
       @JsonKey(name: '_maxValueString')
-          Element? maxValueStringElement,
-      FhirUri? maxValueUri,
+          final Element? maxValueStringElement,
+      final FhirUri? maxValueUri,
       @JsonKey(name: '_maxValueUri')
-          Element? maxValueUriElement,
-      Date? maxValueDate,
+          final Element? maxValueUriElement,
+      final Date? maxValueDate,
       @JsonKey(name: '_maxValueDate')
-          Element? maxValueDateElement,
-      DateTime? maxValueDateTime,
+          final Element? maxValueDateElement,
+      final FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
-          Element? maxValueDateTimeElement,
-      Time? maxValueTime,
+          final Element? maxValueDateTimeElement,
+      final Time? maxValueTime,
       @JsonKey(name: '_maxValueTime')
-          Element? maxValueTimeElement,
-      Code? maxValueCode,
+          final Element? maxValueTimeElement,
+      final Code? maxValueCode,
       @JsonKey(name: '_maxValueCode')
-          Element? maxValueCodeElement,
-      Oid? maxValueOid,
+          final Element? maxValueCodeElement,
+      final Oid? maxValueOid,
       @JsonKey(name: '_maxValueOid')
-          Element? maxValueOidElement,
-      Id? maxValueId,
+          final Element? maxValueOidElement,
+      final Id? maxValueId,
       @JsonKey(name: '_maxValueId')
-          Element? maxValueIdElement,
-      UnsignedInt? maxValueUnsignedInt,
+          final Element? maxValueIdElement,
+      final UnsignedInt? maxValueUnsignedInt,
       @JsonKey(name: '_maxValueUnsignedInt')
-          Element? maxValueUnsignedIntElement,
-      PositiveInt? maxValuePositiveInt,
+          final Element? maxValueUnsignedIntElement,
+      final PositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
-          Element? maxValuePositiveIntElement,
-      Markdown? maxValueMarkdown,
+          final Element? maxValuePositiveIntElement,
+      final Markdown? maxValueMarkdown,
       @JsonKey(name: '_maxValueMarkdown')
-          Element? maxValueMarkdownElement,
-      Annotation? maxValueAnnotation,
-      Attachment? maxValueAttachment,
-      Identifier? maxValueIdentifier,
-      CodeableConcept? maxValueCodeableConcept,
-      Coding? maxValueCoding,
-      Quantity? maxValueQuantity,
-      Range? maxValueRange,
-      Period? maxValuePeriod,
-      Ratio? maxValueRatio,
-      SampledData? maxValueSampledData,
-      Signature? maxValueSignature,
-      HumanName? maxValueHumanName,
-      Address? maxValueAddress,
-      ContactPoint? maxValueContactPoint,
-      Timing? maxValueTiming,
-      Reference? maxValueReference,
-      Meta? maxValueMeta,
-      Integer? maxLength,
+          final Element? maxValueMarkdownElement,
+      final Annotation? maxValueAnnotation,
+      final Attachment? maxValueAttachment,
+      final Identifier? maxValueIdentifier,
+      final CodeableConcept? maxValueCodeableConcept,
+      final Coding? maxValueCoding,
+      final Quantity? maxValueQuantity,
+      final Range? maxValueRange,
+      final Period? maxValuePeriod,
+      final Ratio? maxValueRatio,
+      final SampledData? maxValueSampledData,
+      final Signature? maxValueSignature,
+      final HumanName? maxValueHumanName,
+      final Address? maxValueAddress,
+      final ContactPoint? maxValueContactPoint,
+      final Timing? maxValueTiming,
+      final Reference? maxValueReference,
+      final Meta? maxValueMeta,
+      final Integer? maxLength,
       @JsonKey(name: '_maxLength')
-          Element? maxLengthElement,
-      List<Id>? condition,
+          final Element? maxLengthElement,
+      final List<Id>? condition,
       @JsonKey(name: '_condition')
-          Element? conditionElement,
-      List<ElementDefinitionConstraint>? constraint,
-      Boolean? mustSupport,
+          final Element? conditionElement,
+      final List<ElementDefinitionConstraint>? constraint,
+      final Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
-          Element? mustSupportElement,
-      Boolean? isModifier,
+          final Element? mustSupportElement,
+      final Boolean? isModifier,
       @JsonKey(name: '_isModifier')
-          Element? isModifierElement,
-      Boolean? isSummary,
+          final Element? isModifierElement,
+      final Boolean? isSummary,
       @JsonKey(name: '_isSummary')
-          Element? isSummaryElement,
-      ElementDefinitionBinding? binding,
-      List<ElementDefinitionMapping>? mapping}) = _$_ElementDefinition;
+          final Element? isSummaryElement,
+      final ElementDefinitionBinding? binding,
+      final List<ElementDefinitionMapping>? mapping}) = _$_ElementDefinition;
   _ElementDefinition._() : super._();
 
   factory _ElementDefinition.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinition.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  String get path;
+  String get path => throw _privateConstructorUsedError;
   @override
-  List<Code>? get representation;
+  List<Code>? get representation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_representation')
-  Element? get representationElement;
+  Element? get representationElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  String? get label;
+  String? get label => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_label')
-  Element? get labelElement;
+  Element? get labelElement => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get code;
+  List<Coding>? get code => throw _privateConstructorUsedError;
   @override
-  ElementDefinitionSlicing? get slicing;
+  ElementDefinitionSlicing? get slicing => throw _privateConstructorUsedError;
   @override
-  String? get short;
+  String? get short => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_short')
-  Element? get shortElement;
+  Element? get shortElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get definition;
+  Markdown? get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_definition')
-  Element? get definitionElement;
+  Element? get definitionElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get comments;
+  Markdown? get comments => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comments')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get requirements;
+  Markdown? get requirements => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement;
+  Element? get requirementsElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get alias;
+  List<String>? get alias => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_alias')
-  Element? get aliasElement;
+  Element? get aliasElement => throw _privateConstructorUsedError;
   @override
-  Integer? get min;
+  Integer? get min => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement;
+  Element? get minElement => throw _privateConstructorUsedError;
   @override
-  String? get max;
+  String? get max => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement;
+  Element? get maxElement => throw _privateConstructorUsedError;
   @override
-  ElementDefinitionBase? get base;
+  ElementDefinitionBase? get base => throw _privateConstructorUsedError;
   @override
-  List<ElementDefinitionType>? get type;
+  List<ElementDefinitionType>? get type => throw _privateConstructorUsedError;
   @override
-  String? get nameReference;
+  String? get nameReference => throw _privateConstructorUsedError;
   @override
-  Boolean? get defaultValueBoolean;
+  Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueBoolean')
-  Element? get defaultValueBooleanElement;
+  Element? get defaultValueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get defaultValueInteger;
+  Integer? get defaultValueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueInteger')
-  Element? get defaultValueIntegerElement;
+  Element? get defaultValueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get defaultValueDecimal;
+  Decimal? get defaultValueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueDecimal')
-  Element? get defaultValueDecimalElement;
+  Element? get defaultValueDecimalElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get defaultValueBase64Binary;
+  Base64Binary? get defaultValueBase64Binary =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
-  Element? get defaultValueBase64BinaryElement;
+  Element? get defaultValueBase64BinaryElement =>
+      throw _privateConstructorUsedError;
   @override
-  Instant? get defaultValueInstant;
+  Instant? get defaultValueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueInstant')
-  Element? get defaultValueInstantElement;
+  Element? get defaultValueInstantElement => throw _privateConstructorUsedError;
   @override
-  String? get defaultValueString;
+  String? get defaultValueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueString')
-  Element? get defaultValueStringElement;
+  Element? get defaultValueStringElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get defaultValueUri;
+  FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueUri')
-  Element? get defaultValueUriElement;
+  Element? get defaultValueUriElement => throw _privateConstructorUsedError;
   @override
-  Date? get defaultValueDate;
+  Date? get defaultValueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueDate')
-  Element? get defaultValueDateElement;
+  Element? get defaultValueDateElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get defaultValueDateTime;
+  FhirDateTime? get defaultValueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueDateTime')
-  Element? get defaultValueDateTimeElement;
+  Element? get defaultValueDateTimeElement =>
+      throw _privateConstructorUsedError;
   @override
-  Time? get defaultValueTime;
+  Time? get defaultValueTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueTime')
-  Element? get defaultValueTimeElement;
+  Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
   @override
-  Code? get defaultValueCode;
+  Code? get defaultValueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueCode')
-  Element? get defaultValueCodeElement;
+  Element? get defaultValueCodeElement => throw _privateConstructorUsedError;
   @override
-  Oid? get defaultValueOid;
+  Oid? get defaultValueOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueOid')
-  Element? get defaultValueOidElement;
+  Element? get defaultValueOidElement => throw _privateConstructorUsedError;
   @override
-  Id? get defaultValueId;
+  Id? get defaultValueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueId')
-  Element? get defaultValueIdElement;
+  Element? get defaultValueIdElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get defaultValueUnsignedInt;
+  UnsignedInt? get defaultValueUnsignedInt =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
-  Element? get defaultValueUnsignedIntElement;
+  Element? get defaultValueUnsignedIntElement =>
+      throw _privateConstructorUsedError;
   @override
-  PositiveInt? get defaultValuePositiveInt;
+  PositiveInt? get defaultValuePositiveInt =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
-  Element? get defaultValuePositiveIntElement;
+  Element? get defaultValuePositiveIntElement =>
+      throw _privateConstructorUsedError;
   @override
-  Markdown? get defaultValueMarkdown;
+  Markdown? get defaultValueMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueMarkDown')
-  Element? get defaultValueMarkDownElement;
+  Element? get defaultValueMarkDownElement =>
+      throw _privateConstructorUsedError;
   @override
-  Annotation? get defaultValueAnnotation;
+  Annotation? get defaultValueAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get defaultValueAttachment;
+  Attachment? get defaultValueAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get defaultValueIdentifier;
+  Identifier? get defaultValueIdentifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get defaultValueCodeableConcept;
+  CodeableConcept? get defaultValueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get defaultValueCoding;
+  Coding? get defaultValueCoding => throw _privateConstructorUsedError;
   @override
-  Quantity? get defaultValueQuantity;
+  Quantity? get defaultValueQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get defaultValueRange;
+  Range? get defaultValueRange => throw _privateConstructorUsedError;
   @override
-  Period? get defaultValuePeriod;
+  Period? get defaultValuePeriod => throw _privateConstructorUsedError;
   @override
-  Ratio? get defaultValueRatio;
+  Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get defaultValueSampledData;
+  SampledData? get defaultValueSampledData =>
+      throw _privateConstructorUsedError;
   @override
-  Signature? get defaultValueSignature;
+  Signature? get defaultValueSignature => throw _privateConstructorUsedError;
   @override
-  HumanName? get defaultValueHumanName;
+  HumanName? get defaultValueHumanName => throw _privateConstructorUsedError;
   @override
-  Address? get defaultValueAddress;
+  Address? get defaultValueAddress => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get defaultValueContactPoint;
+  ContactPoint? get defaultValueContactPoint =>
+      throw _privateConstructorUsedError;
   @override
-  Timing? get defaultValueTiming;
+  Timing? get defaultValueTiming => throw _privateConstructorUsedError;
   @override
-  Reference? get defaultValueReference;
+  Reference? get defaultValueReference => throw _privateConstructorUsedError;
   @override
-  Meta? get defaultValueMeta;
+  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
   @override
-  Markdown? get meaningWhenMissing;
+  Markdown? get meaningWhenMissing => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_meaningWhenMissing')
-  Element? get meaningWhenMissingElement;
+  Element? get meaningWhenMissingElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get fixedBoolean;
+  Boolean? get fixedBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedBoolean')
-  Element? get fixedBooleanElement;
+  Element? get fixedBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get fixedInteger;
+  Integer? get fixedInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedInteger')
-  Element? get fixedIntegerElement;
+  Element? get fixedIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get fixedDecimal;
+  Decimal? get fixedDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedDecimal')
-  Element? get fixedDecimalElement;
+  Element? get fixedDecimalElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get fixedBase64Binary;
+  Base64Binary? get fixedBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedBase64Binary')
-  Element? get fixedBase64BinaryElement;
+  Element? get fixedBase64BinaryElement => throw _privateConstructorUsedError;
   @override
-  Instant? get fixedInstant;
+  Instant? get fixedInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedInstant')
-  Element? get fixedInstantElement;
+  Element? get fixedInstantElement => throw _privateConstructorUsedError;
   @override
-  String? get fixedString;
+  String? get fixedString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedString')
-  Element? get fixedStringElement;
+  Element? get fixedStringElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get fixedUri;
+  FhirUri? get fixedUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedUri')
-  Element? get fixedUriElement;
+  Element? get fixedUriElement => throw _privateConstructorUsedError;
   @override
-  Date? get fixedDate;
+  Date? get fixedDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedDate')
-  Element? get fixedDateElement;
+  Element? get fixedDateElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get fixedDateTime;
+  FhirDateTime? get fixedDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedDateTime')
-  Element? get fixedDateTimeElement;
+  Element? get fixedDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Code? get fixedCode;
+  Code? get fixedCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedCode')
-  Element? get fixedCodeElement;
+  Element? get fixedCodeElement => throw _privateConstructorUsedError;
   @override
-  Oid? get fixedOid;
+  Oid? get fixedOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedOid')
-  Element? get fixedOidElement;
+  Element? get fixedOidElement => throw _privateConstructorUsedError;
   @override
-  Id? get fixedId;
+  Id? get fixedId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedId')
-  Element? get fixedIdElement;
+  Element? get fixedIdElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get fixedUnsignedInt;
+  UnsignedInt? get fixedUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedUnsignedInt')
-  Element? get fixedUnsignedIntElement;
+  Element? get fixedUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get fixedPositiveInt;
+  PositiveInt? get fixedPositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedPositiveInt')
-  Element? get fixedPositiveIntElement;
+  Element? get fixedPositiveIntElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get fixedMarkdown;
+  Markdown? get fixedMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fixedMarkdown')
-  Element? get fixedMarkdownElement;
+  Element? get fixedMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Annotation? get fixedAnnotation;
+  Annotation? get fixedAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get fixedAttachment;
+  Attachment? get fixedAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get fixedIdentifier;
+  Identifier? get fixedIdentifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get fixedCodeableConcept;
+  CodeableConcept? get fixedCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get fixedCoding;
+  Coding? get fixedCoding => throw _privateConstructorUsedError;
   @override
-  Quantity? get fixedQuantity;
+  Quantity? get fixedQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get fixedRange;
+  Range? get fixedRange => throw _privateConstructorUsedError;
   @override
-  Period? get fixedPeriod;
+  Period? get fixedPeriod => throw _privateConstructorUsedError;
   @override
-  Ratio? get fixedRatio;
+  Ratio? get fixedRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get fixedSampledData;
+  SampledData? get fixedSampledData => throw _privateConstructorUsedError;
   @override
-  Signature? get fixedSignature;
+  Signature? get fixedSignature => throw _privateConstructorUsedError;
   @override
-  HumanName? get fixedHumanName;
+  HumanName? get fixedHumanName => throw _privateConstructorUsedError;
   @override
-  Address? get fixedAddress;
+  Address? get fixedAddress => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get fixedContactPoint;
+  ContactPoint? get fixedContactPoint => throw _privateConstructorUsedError;
   @override
-  Timing? get fixedTiming;
+  Timing? get fixedTiming => throw _privateConstructorUsedError;
   @override
-  Reference? get fixedReference;
+  Reference? get fixedReference => throw _privateConstructorUsedError;
   @override
-  Meta? get fixedMeta;
+  Meta? get fixedMeta => throw _privateConstructorUsedError;
   @override
-  Boolean? get patternBoolean;
+  Boolean? get patternBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternBoolean')
-  Element? get patternBooleanElement;
+  Element? get patternBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get patternInteger;
+  Integer? get patternInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternInteger')
-  Element? get patternIntegerElement;
+  Element? get patternIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get patternDecimal;
+  Decimal? get patternDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternDecimal')
-  Element? get patternDecimalElement;
+  Element? get patternDecimalElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get patternBase64Binary;
+  Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternBase64Binary')
-  Element? get patternBase64BinaryElement;
+  Element? get patternBase64BinaryElement => throw _privateConstructorUsedError;
   @override
-  Instant? get patternInstant;
+  Instant? get patternInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternInstant')
-  Element? get patternInstantElement;
+  Element? get patternInstantElement => throw _privateConstructorUsedError;
   @override
-  String? get patternString;
+  String? get patternString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternString')
-  Element? get patternStringElement;
+  Element? get patternStringElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get patternUri;
+  FhirUri? get patternUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternUri')
-  Element? get patternUriElement;
+  Element? get patternUriElement => throw _privateConstructorUsedError;
   @override
-  Date? get patternDate;
+  Date? get patternDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternDate')
-  Element? get patternDateElement;
+  Element? get patternDateElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get patternDateTime;
+  FhirDateTime? get patternDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternDateTime')
-  Element? get patternDateTimeElement;
+  Element? get patternDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Time? get patternTime;
+  Time? get patternTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternTime')
-  Element? get patternTimeElement;
+  Element? get patternTimeElement => throw _privateConstructorUsedError;
   @override
-  Code? get patternCode;
+  Code? get patternCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternCode')
-  Element? get patternCodeElement;
+  Element? get patternCodeElement => throw _privateConstructorUsedError;
   @override
-  Oid? get patternOid;
+  Oid? get patternOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternOid')
-  Element? get patternOidElement;
+  Element? get patternOidElement => throw _privateConstructorUsedError;
   @override
-  Id? get patternId;
+  Id? get patternId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternId')
-  Element? get patternIdElement;
+  Element? get patternIdElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get patternUnsignedInt;
+  UnsignedInt? get patternUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternUnsignedInt')
-  Element? get patternUnsignedIntElement;
+  Element? get patternUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get patternPositiveInt;
+  PositiveInt? get patternPositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternPositiveInt')
-  Element? get patternPositiveIntElement;
+  Element? get patternPositiveIntElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get patternMarkdown;
+  Markdown? get patternMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patternMarkdown')
-  Element? get patternMarkdownElement;
+  Element? get patternMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Annotation? get patternAnnotation;
+  Annotation? get patternAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get patternAttachment;
+  Attachment? get patternAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get patternIdentifier;
+  Identifier? get patternIdentifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get patternCodeableConcept;
+  CodeableConcept? get patternCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get patternCoding;
+  Coding? get patternCoding => throw _privateConstructorUsedError;
   @override
-  Quantity? get patternQuantity;
+  Quantity? get patternQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get patternRange;
+  Range? get patternRange => throw _privateConstructorUsedError;
   @override
-  Period? get patternPeriod;
+  Period? get patternPeriod => throw _privateConstructorUsedError;
   @override
-  Ratio? get patternRatio;
+  Ratio? get patternRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get patternSampledData;
+  SampledData? get patternSampledData => throw _privateConstructorUsedError;
   @override
-  Signature? get patternSignature;
+  Signature? get patternSignature => throw _privateConstructorUsedError;
   @override
-  HumanName? get patternHumanName;
+  HumanName? get patternHumanName => throw _privateConstructorUsedError;
   @override
-  Address? get patternAddress;
+  Address? get patternAddress => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get patternContactPoint;
+  ContactPoint? get patternContactPoint => throw _privateConstructorUsedError;
   @override
-  Timing? get patternTiming;
+  Timing? get patternTiming => throw _privateConstructorUsedError;
   @override
-  Reference? get patternReference;
+  Reference? get patternReference => throw _privateConstructorUsedError;
   @override
-  Meta? get patternMeta;
+  Meta? get patternMeta => throw _privateConstructorUsedError;
   @override
-  Boolean? get exampleBoolean;
+  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleBoolean')
-  Element? get exampleBooleanElement;
+  Element? get exampleBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get exampleInteger;
+  Integer? get exampleInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleInteger')
-  Element? get exampleIntegerElement;
+  Element? get exampleIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get exampleDecimal;
+  Decimal? get exampleDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleDecimal')
-  Element? get exampleDecimalElement;
+  Element? get exampleDecimalElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get exampleBase64Binary;
+  Base64Binary? get exampleBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleBase64Binary')
-  Element? get exampleBase64BinaryElement;
+  Element? get exampleBase64BinaryElement => throw _privateConstructorUsedError;
   @override
-  Instant? get exampleInstant;
+  Instant? get exampleInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleInstant')
-  Element? get exampleInstantElement;
+  Element? get exampleInstantElement => throw _privateConstructorUsedError;
   @override
-  String? get exampleString;
+  String? get exampleString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleString')
-  Element? get exampleStringElement;
+  Element? get exampleStringElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get exampleUri;
+  FhirUri? get exampleUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleUri')
-  Element? get exampleUriElement;
+  Element? get exampleUriElement => throw _privateConstructorUsedError;
   @override
-  Date? get exampleDate;
+  Date? get exampleDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleDate')
-  Element? get exampleDateElement;
+  Element? get exampleDateElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get exampleDateTime;
+  FhirDateTime? get exampleDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleDateTime')
-  Element? get exampleDateTimeElement;
+  Element? get exampleDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Time? get exampleTime;
+  Time? get exampleTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleTime')
-  Element? get exampleTimeElement;
+  Element? get exampleTimeElement => throw _privateConstructorUsedError;
   @override
-  Code? get exampleCode;
+  Code? get exampleCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleCode')
-  Element? get exampleCodeElement;
+  Element? get exampleCodeElement => throw _privateConstructorUsedError;
   @override
-  Oid? get exampleOid;
+  Oid? get exampleOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleOid')
-  Element? get exampleOidElement;
+  Element? get exampleOidElement => throw _privateConstructorUsedError;
   @override
-  Id? get exampleId;
+  Id? get exampleId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleId')
-  Element? get exampleIdElement;
+  Element? get exampleIdElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get exampleUnsignedInt;
+  UnsignedInt? get exampleUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleUnsignedInt')
-  Element? get exampleUnsignedIntElement;
+  Element? get exampleUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get examplePositiveInt;
+  PositiveInt? get examplePositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_examplePositiveInt')
-  Element? get examplePositiveIntElement;
+  Element? get examplePositiveIntElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get exampleMarkdown;
+  Markdown? get exampleMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleMarkdown')
-  Element? get exampleMarkdownElement;
+  Element? get exampleMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Annotation? get exampleAnnotation;
+  Annotation? get exampleAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get exampleAttachment;
+  Attachment? get exampleAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get exampleIdentifier;
+  Identifier? get exampleIdentifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get exampleCodeableConcept;
+  CodeableConcept? get exampleCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get exampleCoding;
+  Coding? get exampleCoding => throw _privateConstructorUsedError;
   @override
-  Quantity? get exampleQuantity;
+  Quantity? get exampleQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get exampleRange;
+  Range? get exampleRange => throw _privateConstructorUsedError;
   @override
-  Period? get examplePeriod;
+  Period? get examplePeriod => throw _privateConstructorUsedError;
   @override
-  Ratio? get exampleRatio;
+  Ratio? get exampleRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get exampleSampleData;
+  SampledData? get exampleSampleData => throw _privateConstructorUsedError;
   @override
-  Signature? get exampleSignature;
+  Signature? get exampleSignature => throw _privateConstructorUsedError;
   @override
-  HumanName? get exampleHumanName;
+  HumanName? get exampleHumanName => throw _privateConstructorUsedError;
   @override
-  Address? get exampleAddress;
+  Address? get exampleAddress => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get exampleContactPoint;
+  ContactPoint? get exampleContactPoint => throw _privateConstructorUsedError;
   @override
-  Timing? get exampleTiming;
+  Timing? get exampleTiming => throw _privateConstructorUsedError;
   @override
-  Reference? get exampleReference;
+  Reference? get exampleReference => throw _privateConstructorUsedError;
   @override
-  Meta? get exampleMeta;
+  Meta? get exampleMeta => throw _privateConstructorUsedError;
   @override
-  Boolean? get minValueBoolean;
+  Boolean? get minValueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueBoolean')
-  Element? get minValueBooleanElement;
+  Element? get minValueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get minValueInteger;
+  Integer? get minValueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueInteger')
-  Element? get minValueIntegerElement;
+  Element? get minValueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get minValueDecimal;
+  Decimal? get minValueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueDecimal')
-  Element? get minValueDecimalElement;
+  Element? get minValueDecimalElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get minValueBase64Binary;
+  Base64Binary? get minValueBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueBase64Binary')
-  Element? get minValueBase64BinaryElement;
+  Element? get minValueBase64BinaryElement =>
+      throw _privateConstructorUsedError;
   @override
-  Instant? get minValueInstant;
+  Instant? get minValueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueInstant')
-  Element? get minValueInstantElement;
+  Element? get minValueInstantElement => throw _privateConstructorUsedError;
   @override
-  String? get minValueString;
+  String? get minValueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueString')
-  Element? get minValueStringElement;
+  Element? get minValueStringElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get minValueUri;
+  FhirUri? get minValueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueUri')
-  Element? get minValueUriElement;
+  Element? get minValueUriElement => throw _privateConstructorUsedError;
   @override
-  Date? get minValueDate;
+  Date? get minValueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueDate')
-  Element? get minValueDateElement;
+  Element? get minValueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get minValueDateTime;
+  FhirDateTime? get minValueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueDateTime')
-  Element? get minValueDateTimeElement;
+  Element? get minValueDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Time? get minValueTime;
+  Time? get minValueTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueTime')
-  Element? get minValueTimeElement;
+  Element? get minValueTimeElement => throw _privateConstructorUsedError;
   @override
-  Code? get minValueCode;
+  Code? get minValueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueCode')
-  Element? get minValueCodeElement;
+  Element? get minValueCodeElement => throw _privateConstructorUsedError;
   @override
-  Oid? get minValueOid;
+  Oid? get minValueOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueOid')
-  Element? get minValueOidElement;
+  Element? get minValueOidElement => throw _privateConstructorUsedError;
   @override
-  Id? get minValueId;
+  Id? get minValueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueId')
-  Element? get minValueIdElement;
+  Element? get minValueIdElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get minValueUnsignedInt;
+  UnsignedInt? get minValueUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueUnsignedInt')
-  Element? get minValueUnsignedIntElement;
+  Element? get minValueUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get minValuePositiveInt;
+  PositiveInt? get minValuePositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValuePositiveInt')
-  Element? get minValuePositiveIntElement;
+  Element? get minValuePositiveIntElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get minValueMarkdown;
+  Markdown? get minValueMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minValueMarkdown')
-  Element? get minValueMarkdownElement;
+  Element? get minValueMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Annotation? get minValueAnnotation;
+  Annotation? get minValueAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get minValueAttachment;
+  Attachment? get minValueAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get minValueIdentifier;
+  Identifier? get minValueIdentifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get minValueCodeableConcept;
+  CodeableConcept? get minValueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get minValueCoding;
+  Coding? get minValueCoding => throw _privateConstructorUsedError;
   @override
-  Quantity? get minValueQuantity;
+  Quantity? get minValueQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get minValueRange;
+  Range? get minValueRange => throw _privateConstructorUsedError;
   @override
-  Period? get minValuePeriod;
+  Period? get minValuePeriod => throw _privateConstructorUsedError;
   @override
-  Ratio? get minValueRatio;
+  Ratio? get minValueRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get minValueSampledData;
+  SampledData? get minValueSampledData => throw _privateConstructorUsedError;
   @override
-  Signature? get minValueSignature;
+  Signature? get minValueSignature => throw _privateConstructorUsedError;
   @override
-  HumanName? get minValueHumanName;
+  HumanName? get minValueHumanName => throw _privateConstructorUsedError;
   @override
-  Address? get minValueAddress;
+  Address? get minValueAddress => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get minValueContactPoint;
+  ContactPoint? get minValueContactPoint => throw _privateConstructorUsedError;
   @override
-  Timing? get minValueTiming;
+  Timing? get minValueTiming => throw _privateConstructorUsedError;
   @override
-  Reference? get minValueReference;
+  Reference? get minValueReference => throw _privateConstructorUsedError;
   @override
-  Meta? get minValueMeta;
+  Meta? get minValueMeta => throw _privateConstructorUsedError;
   @override
-  Boolean? get maxValueBoolean;
+  Boolean? get maxValueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueBoolean')
-  Element? get maxValueBooleanElement;
+  Element? get maxValueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get maxValueInteger;
+  Integer? get maxValueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueInteger')
-  Element? get maxValueIntegerElement;
+  Element? get maxValueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get maxValueDecimal;
+  Decimal? get maxValueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueDecimal')
-  Element? get maxValueDecimalElement;
+  Element? get maxValueDecimalElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get maxValueBase64Binary;
+  Base64Binary? get maxValueBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueBase64Binary')
-  Element? get maxValueBase64BinaryElement;
+  Element? get maxValueBase64BinaryElement =>
+      throw _privateConstructorUsedError;
   @override
-  Instant? get maxValueInstant;
+  Instant? get maxValueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueInstant')
-  Element? get maxValueInstantElement;
+  Element? get maxValueInstantElement => throw _privateConstructorUsedError;
   @override
-  String? get maxValueString;
+  String? get maxValueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueString')
-  Element? get maxValueStringElement;
+  Element? get maxValueStringElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get maxValueUri;
+  FhirUri? get maxValueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueUri')
-  Element? get maxValueUriElement;
+  Element? get maxValueUriElement => throw _privateConstructorUsedError;
   @override
-  Date? get maxValueDate;
+  Date? get maxValueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueDate')
-  Element? get maxValueDateElement;
+  Element? get maxValueDateElement => throw _privateConstructorUsedError;
   @override
-  DateTime? get maxValueDateTime;
+  FhirDateTime? get maxValueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueDateTime')
-  Element? get maxValueDateTimeElement;
+  Element? get maxValueDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Time? get maxValueTime;
+  Time? get maxValueTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueTime')
-  Element? get maxValueTimeElement;
+  Element? get maxValueTimeElement => throw _privateConstructorUsedError;
   @override
-  Code? get maxValueCode;
+  Code? get maxValueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueCode')
-  Element? get maxValueCodeElement;
+  Element? get maxValueCodeElement => throw _privateConstructorUsedError;
   @override
-  Oid? get maxValueOid;
+  Oid? get maxValueOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueOid')
-  Element? get maxValueOidElement;
+  Element? get maxValueOidElement => throw _privateConstructorUsedError;
   @override
-  Id? get maxValueId;
+  Id? get maxValueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueId')
-  Element? get maxValueIdElement;
+  Element? get maxValueIdElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get maxValueUnsignedInt;
+  UnsignedInt? get maxValueUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueUnsignedInt')
-  Element? get maxValueUnsignedIntElement;
+  Element? get maxValueUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get maxValuePositiveInt;
+  PositiveInt? get maxValuePositiveInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValuePositiveInt')
-  Element? get maxValuePositiveIntElement;
+  Element? get maxValuePositiveIntElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get maxValueMarkdown;
+  Markdown? get maxValueMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxValueMarkdown')
-  Element? get maxValueMarkdownElement;
+  Element? get maxValueMarkdownElement => throw _privateConstructorUsedError;
   @override
-  Annotation? get maxValueAnnotation;
+  Annotation? get maxValueAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get maxValueAttachment;
+  Attachment? get maxValueAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get maxValueIdentifier;
+  Identifier? get maxValueIdentifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get maxValueCodeableConcept;
+  CodeableConcept? get maxValueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get maxValueCoding;
+  Coding? get maxValueCoding => throw _privateConstructorUsedError;
   @override
-  Quantity? get maxValueQuantity;
+  Quantity? get maxValueQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get maxValueRange;
+  Range? get maxValueRange => throw _privateConstructorUsedError;
   @override
-  Period? get maxValuePeriod;
+  Period? get maxValuePeriod => throw _privateConstructorUsedError;
   @override
-  Ratio? get maxValueRatio;
+  Ratio? get maxValueRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get maxValueSampledData;
+  SampledData? get maxValueSampledData => throw _privateConstructorUsedError;
   @override
-  Signature? get maxValueSignature;
+  Signature? get maxValueSignature => throw _privateConstructorUsedError;
   @override
-  HumanName? get maxValueHumanName;
+  HumanName? get maxValueHumanName => throw _privateConstructorUsedError;
   @override
-  Address? get maxValueAddress;
+  Address? get maxValueAddress => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get maxValueContactPoint;
+  ContactPoint? get maxValueContactPoint => throw _privateConstructorUsedError;
   @override
-  Timing? get maxValueTiming;
+  Timing? get maxValueTiming => throw _privateConstructorUsedError;
   @override
-  Reference? get maxValueReference;
+  Reference? get maxValueReference => throw _privateConstructorUsedError;
   @override
-  Meta? get maxValueMeta;
+  Meta? get maxValueMeta => throw _privateConstructorUsedError;
   @override
-  Integer? get maxLength;
+  Integer? get maxLength => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maxLength')
-  Element? get maxLengthElement;
+  Element? get maxLengthElement => throw _privateConstructorUsedError;
   @override
-  List<Id>? get condition;
+  List<Id>? get condition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_condition')
-  Element? get conditionElement;
+  Element? get conditionElement => throw _privateConstructorUsedError;
   @override
-  List<ElementDefinitionConstraint>? get constraint;
+  List<ElementDefinitionConstraint>? get constraint =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get mustSupport;
+  Boolean? get mustSupport => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mustSupport')
-  Element? get mustSupportElement;
+  Element? get mustSupportElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get isModifier;
+  Boolean? get isModifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_isModifier')
-  Element? get isModifierElement;
+  Element? get isModifierElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get isSummary;
+  Boolean? get isSummary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_isSummary')
-  Element? get isSummaryElement;
+  Element? get isSummaryElement => throw _privateConstructorUsedError;
   @override
-  ElementDefinitionBinding? get binding;
+  ElementDefinitionBinding? get binding => throw _privateConstructorUsedError;
   @override
-  List<ElementDefinitionMapping>? get mapping;
+  List<ElementDefinitionMapping>? get mapping =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith =>
+  _$$_ElementDefinitionCopyWith<_$_ElementDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
   return _Narrative.fromJson(json);
 }
-
-/// @nodoc
-class _$NarrativeTearOff {
-  const _$NarrativeTearOff();
-
-  _Narrative call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          required NarrativeStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required String div}) {
-    return _Narrative(
-      id: id,
-      extension_: extension_,
-      fhirComments: fhirComments,
-      status: status,
-      statusElement: statusElement,
-      div: div,
-    );
-  }
-
-  Narrative fromJson(Map<String, Object?> json) {
-    return Narrative.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Narrative = _$NarrativeTearOff();
 
 /// @nodoc
 mixin _$Narrative {
@@ -12673,10 +11919,10 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
-  factory _$NarrativeCopyWith(
-          _Narrative value, $Res Function(_Narrative) then) =
-      __$NarrativeCopyWithImpl<$Res>;
+abstract class _$$_NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
+  factory _$$_NarrativeCopyWith(
+          _$_Narrative value, $Res Function(_$_Narrative) then) =
+      __$$_NarrativeCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -12695,13 +11941,14 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
-    implements _$NarrativeCopyWith<$Res> {
-  __$NarrativeCopyWithImpl(_Narrative _value, $Res Function(_Narrative) _then)
-      : super(_value, (v) => _then(v as _Narrative));
+class __$$_NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
+    implements _$$_NarrativeCopyWith<$Res> {
+  __$$_NarrativeCopyWithImpl(
+      _$_Narrative _value, $Res Function(_$_Narrative) _then)
+      : super(_value, (v) => _then(v as _$_Narrative));
 
   @override
-  _Narrative get _value => super._value as _Narrative;
+  _$_Narrative get _value => super._value as _$_Narrative;
 
   @override
   $Res call({
@@ -12712,17 +11959,17 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
     Object? statusElement = freezed,
     Object? div = freezed,
   }) {
-    return _then(_Narrative(
+    return _then(_$_Narrative(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       status: status == freezed
@@ -12746,24 +11993,40 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
 class _$_Narrative extends _Narrative {
   _$_Narrative(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown) required this.status,
       @JsonKey(name: '_status') this.statusElement,
       required this.div})
-      : super._();
+      : _extension_ = extension_,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
       _$$_NarrativeFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   final NarrativeStatus status;
@@ -12782,32 +12045,33 @@ class _$_Narrative extends _Narrative {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Narrative &&
+            other is _$_Narrative &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.div, div));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(statusElement),
       const DeepCollectionEquality().hash(div));
 
   @JsonKey(ignore: true)
   @override
-  _$NarrativeCopyWith<_Narrative> get copyWith =>
-      __$NarrativeCopyWithImpl<_Narrative>(this, _$identity);
+  _$$_NarrativeCopyWith<_$_Narrative> get copyWith =>
+      __$$_NarrativeCopyWithImpl<_$_Narrative>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -12817,40 +12081,40 @@ class _$_Narrative extends _Narrative {
 
 abstract class _Narrative extends Narrative {
   factory _Narrative(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+          final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+          final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          required NarrativeStatus status,
+          required final NarrativeStatus status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      required String div}) = _$_Narrative;
+          final Element? statusElement,
+      required final String div}) = _$_Narrative;
   _Narrative._() : super._();
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
       _$_Narrative.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-  NarrativeStatus get status;
+  NarrativeStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  String get div;
+  String get div => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$NarrativeCopyWith<_Narrative> get copyWith =>
+  _$$_NarrativeCopyWith<_$_Narrative> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -12858,46 +12122,6 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
     Map<String, dynamic> json) {
   return _ElementDefinitionSlicing.fromJson(json);
 }
-
-/// @nodoc
-class _$ElementDefinitionSlicingTearOff {
-  const _$ElementDefinitionSlicingTearOff();
-
-  _ElementDefinitionSlicing call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<String>? discriminator,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Boolean? ordered,
-      @JsonKey(name: '_ordered')
-          Element? orderedElement,
-      @JsonKey(unknownEnumValue: SlicingRules.unknown)
-          required SlicingRules rules,
-      @JsonKey(name: '_rules')
-          Element? rulesElement}) {
-    return _ElementDefinitionSlicing(
-      id: id,
-      extension_: extension_,
-      discriminator: discriminator,
-      description: description,
-      descriptionElement: descriptionElement,
-      ordered: ordered,
-      orderedElement: orderedElement,
-      rules: rules,
-      rulesElement: rulesElement,
-    );
-  }
-
-  ElementDefinitionSlicing fromJson(Map<String, Object?> json) {
-    return ElementDefinitionSlicing.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionSlicing = _$ElementDefinitionSlicingTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionSlicing {
@@ -13039,11 +12263,12 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionSlicingCopyWith<$Res>
+abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
     implements $ElementDefinitionSlicingCopyWith<$Res> {
-  factory _$ElementDefinitionSlicingCopyWith(_ElementDefinitionSlicing value,
-          $Res Function(_ElementDefinitionSlicing) then) =
-      __$ElementDefinitionSlicingCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionSlicingCopyWith(
+          _$_ElementDefinitionSlicing value,
+          $Res Function(_$_ElementDefinitionSlicing) then) =
+      __$$_ElementDefinitionSlicingCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -13065,16 +12290,16 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionSlicingCopyWithImpl<$Res>
+class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
     extends _$ElementDefinitionSlicingCopyWithImpl<$Res>
-    implements _$ElementDefinitionSlicingCopyWith<$Res> {
-  __$ElementDefinitionSlicingCopyWithImpl(_ElementDefinitionSlicing _value,
-      $Res Function(_ElementDefinitionSlicing) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionSlicing));
+    implements _$$_ElementDefinitionSlicingCopyWith<$Res> {
+  __$$_ElementDefinitionSlicingCopyWithImpl(_$_ElementDefinitionSlicing _value,
+      $Res Function(_$_ElementDefinitionSlicing) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionSlicing));
 
   @override
-  _ElementDefinitionSlicing get _value =>
-      super._value as _ElementDefinitionSlicing;
+  _$_ElementDefinitionSlicing get _value =>
+      super._value as _$_ElementDefinitionSlicing;
 
   @override
   $Res call({
@@ -13088,17 +12313,17 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
     Object? rules = freezed,
     Object? rulesElement = freezed,
   }) {
-    return _then(_ElementDefinitionSlicing(
+    return _then(_$_ElementDefinitionSlicing(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       discriminator: discriminator == freezed
-          ? _value.discriminator
+          ? _value._discriminator
           : discriminator // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       description: description == freezed
@@ -13134,26 +12359,42 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
 class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   _$_ElementDefinitionSlicing(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.discriminator,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<String>? discriminator,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.ordered,
       @JsonKey(name: '_ordered') this.orderedElement,
       @JsonKey(unknownEnumValue: SlicingRules.unknown) required this.rules,
       @JsonKey(name: '_rules') this.rulesElement})
-      : super._();
+      : _extension_ = extension_,
+        _discriminator = discriminator,
+        super._();
 
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionSlicingFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _discriminator;
   @override
-  final List<String>? discriminator;
+  List<String>? get discriminator {
+    final value = _discriminator;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? description;
   @override
@@ -13180,12 +12421,12 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionSlicing &&
+            other is _$_ElementDefinitionSlicing &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.discriminator, discriminator) &&
+                .equals(other._discriminator, _discriminator) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
@@ -13198,12 +12439,13 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
                 .equals(other.rulesElement, rulesElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(discriminator),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_discriminator),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(descriptionElement),
       const DeepCollectionEquality().hash(ordered),
@@ -13213,9 +12455,9 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith =>
-      __$ElementDefinitionSlicingCopyWithImpl<_ElementDefinitionSlicing>(
-          this, _$identity);
+  _$$_ElementDefinitionSlicingCopyWith<_$_ElementDefinitionSlicing>
+      get copyWith => __$$_ElementDefinitionSlicingCopyWithImpl<
+          _$_ElementDefinitionSlicing>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13225,91 +12467,58 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
 abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   factory _ElementDefinitionSlicing(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<String>? discriminator,
-      String? description,
+          final List<FhirExtension>? extension_,
+      final List<String>? discriminator,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Boolean? ordered,
+          final Element? descriptionElement,
+      final Boolean? ordered,
       @JsonKey(name: '_ordered')
-          Element? orderedElement,
+          final Element? orderedElement,
       @JsonKey(unknownEnumValue: SlicingRules.unknown)
-          required SlicingRules rules,
+          required final SlicingRules rules,
       @JsonKey(name: '_rules')
-          Element? rulesElement}) = _$_ElementDefinitionSlicing;
+          final Element? rulesElement}) = _$_ElementDefinitionSlicing;
   _ElementDefinitionSlicing._() : super._();
 
   factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionSlicing.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<String>? get discriminator;
+  List<String>? get discriminator => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get ordered;
+  Boolean? get ordered => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ordered')
-  Element? get orderedElement;
+  Element? get orderedElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SlicingRules.unknown)
-  SlicingRules get rules;
+  SlicingRules get rules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_rules')
-  Element? get rulesElement;
+  Element? get rulesElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElementDefinitionSlicingCopyWith<_$_ElementDefinitionSlicing>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ElementDefinitionBase _$ElementDefinitionBaseFromJson(
     Map<String, dynamic> json) {
   return _ElementDefinitionBase.fromJson(json);
 }
-
-/// @nodoc
-class _$ElementDefinitionBaseTearOff {
-  const _$ElementDefinitionBaseTearOff();
-
-  _ElementDefinitionBase call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      required String path,
-      @JsonKey(name: '_path') Element? pathElement,
-      required Integer min,
-      @JsonKey(name: '_min') Element? minElement,
-      required String max,
-      @JsonKey(name: '_max') Element? maxElement}) {
-    return _ElementDefinitionBase(
-      id: id,
-      extension_: extension_,
-      path: path,
-      pathElement: pathElement,
-      min: min,
-      minElement: minElement,
-      max: max,
-      maxElement: maxElement,
-    );
-  }
-
-  ElementDefinitionBase fromJson(Map<String, Object?> json) {
-    return ElementDefinitionBase.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionBase = _$ElementDefinitionBaseTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionBase {
@@ -13443,11 +12652,11 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionBaseCopyWith<$Res>
+abstract class _$$_ElementDefinitionBaseCopyWith<$Res>
     implements $ElementDefinitionBaseCopyWith<$Res> {
-  factory _$ElementDefinitionBaseCopyWith(_ElementDefinitionBase value,
-          $Res Function(_ElementDefinitionBase) then) =
-      __$ElementDefinitionBaseCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionBaseCopyWith(_$_ElementDefinitionBase value,
+          $Res Function(_$_ElementDefinitionBase) then) =
+      __$$_ElementDefinitionBaseCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -13468,15 +12677,16 @@ abstract class _$ElementDefinitionBaseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionBaseCopyWithImpl<$Res>
+class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
     extends _$ElementDefinitionBaseCopyWithImpl<$Res>
-    implements _$ElementDefinitionBaseCopyWith<$Res> {
-  __$ElementDefinitionBaseCopyWithImpl(_ElementDefinitionBase _value,
-      $Res Function(_ElementDefinitionBase) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionBase));
+    implements _$$_ElementDefinitionBaseCopyWith<$Res> {
+  __$$_ElementDefinitionBaseCopyWithImpl(_$_ElementDefinitionBase _value,
+      $Res Function(_$_ElementDefinitionBase) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionBase));
 
   @override
-  _ElementDefinitionBase get _value => super._value as _ElementDefinitionBase;
+  _$_ElementDefinitionBase get _value =>
+      super._value as _$_ElementDefinitionBase;
 
   @override
   $Res call({
@@ -13489,13 +12699,13 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
     Object? max = freezed,
     Object? maxElement = freezed,
   }) {
-    return _then(_ElementDefinitionBase(
+    return _then(_$_ElementDefinitionBase(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       path: path == freezed
@@ -13531,23 +12741,31 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
 class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   _$_ElementDefinitionBase(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       required this.path,
       @JsonKey(name: '_path') this.pathElement,
       required this.min,
       @JsonKey(name: '_min') this.minElement,
       required this.max,
       @JsonKey(name: '_max') this.maxElement})
-      : super._();
+      : _extension_ = extension_,
+        super._();
 
   factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionBaseFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String path;
   @override
@@ -13573,10 +12791,10 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionBase &&
+            other is _$_ElementDefinitionBase &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.path, path) &&
             const DeepCollectionEquality()
                 .equals(other.pathElement, pathElement) &&
@@ -13588,11 +12806,12 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
                 .equals(other.maxElement, maxElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(path),
       const DeepCollectionEquality().hash(pathElement),
       const DeepCollectionEquality().hash(min),
@@ -13602,8 +12821,8 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionBaseCopyWith<_ElementDefinitionBase> get copyWith =>
-      __$ElementDefinitionBaseCopyWithImpl<_ElementDefinitionBase>(
+  _$$_ElementDefinitionBaseCopyWith<_$_ElementDefinitionBase> get copyWith =>
+      __$$_ElementDefinitionBaseCopyWithImpl<_$_ElementDefinitionBase>(
           this, _$identity);
 
   @override
@@ -13614,42 +12833,43 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 
 abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   factory _ElementDefinitionBase(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      required String path,
-      @JsonKey(name: '_path') Element? pathElement,
-      required Integer min,
-      @JsonKey(name: '_min') Element? minElement,
-      required String max,
-      @JsonKey(name: '_max') Element? maxElement}) = _$_ElementDefinitionBase;
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          required final String path,
+          @JsonKey(name: '_path') final Element? pathElement,
+          required final Integer min,
+          @JsonKey(name: '_min') final Element? minElement,
+          required final String max,
+          @JsonKey(name: '_max') final Element? maxElement}) =
+      _$_ElementDefinitionBase;
   _ElementDefinitionBase._() : super._();
 
   factory _ElementDefinitionBase.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBase.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  String get path;
+  String get path => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement;
+  Element? get pathElement => throw _privateConstructorUsedError;
   @override
-  Integer get min;
+  Integer get min => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement;
+  Element? get minElement => throw _privateConstructorUsedError;
   @override
-  String get max;
+  String get max => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement;
+  Element? get maxElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionBaseCopyWith<_ElementDefinitionBase> get copyWith =>
+  _$$_ElementDefinitionBaseCopyWith<_$_ElementDefinitionBase> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -13657,39 +12877,6 @@ ElementDefinitionType _$ElementDefinitionTypeFromJson(
     Map<String, dynamic> json) {
   return _ElementDefinitionType.fromJson(json);
 }
-
-/// @nodoc
-class _$ElementDefinitionTypeTearOff {
-  const _$ElementDefinitionTypeTearOff();
-
-  _ElementDefinitionType call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? code,
-      @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
-      List<FhirUri>? profile,
-      List<TypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation') Element? aggregationElement,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirElement}) {
-    return _ElementDefinitionType(
-      id: id,
-      extension_: extension_,
-      code: code,
-      codeExtension: codeExtension,
-      profile: profile,
-      aggregation: aggregation,
-      aggregationElement: aggregationElement,
-      fhirElement: fhirElement,
-    );
-  }
-
-  ElementDefinitionType fromJson(Map<String, Object?> json) {
-    return ElementDefinitionType.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionType = _$ElementDefinitionTypeTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionType {
@@ -13811,11 +12998,11 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionTypeCopyWith<$Res>
+abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
     implements $ElementDefinitionTypeCopyWith<$Res> {
-  factory _$ElementDefinitionTypeCopyWith(_ElementDefinitionType value,
-          $Res Function(_ElementDefinitionType) then) =
-      __$ElementDefinitionTypeCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionTypeCopyWith(_$_ElementDefinitionType value,
+          $Res Function(_$_ElementDefinitionType) then) =
+      __$$_ElementDefinitionTypeCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -13834,15 +13021,16 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionTypeCopyWithImpl<$Res>
+class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
     extends _$ElementDefinitionTypeCopyWithImpl<$Res>
-    implements _$ElementDefinitionTypeCopyWith<$Res> {
-  __$ElementDefinitionTypeCopyWithImpl(_ElementDefinitionType _value,
-      $Res Function(_ElementDefinitionType) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionType));
+    implements _$$_ElementDefinitionTypeCopyWith<$Res> {
+  __$$_ElementDefinitionTypeCopyWithImpl(_$_ElementDefinitionType _value,
+      $Res Function(_$_ElementDefinitionType) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionType));
 
   @override
-  _ElementDefinitionType get _value => super._value as _ElementDefinitionType;
+  _$_ElementDefinitionType get _value =>
+      super._value as _$_ElementDefinitionType;
 
   @override
   $Res call({
@@ -13855,13 +13043,13 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
     Object? aggregationElement = freezed,
     Object? fhirElement = freezed,
   }) {
-    return _then(_ElementDefinitionType(
+    return _then(_$_ElementDefinitionType(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: code == freezed
@@ -13873,11 +13061,11 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           : codeExtension // ignore: cast_nullable_to_non_nullable
               as TypeCodeExtension?,
       profile: profile == freezed
-          ? _value.profile
+          ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       aggregation: aggregation == freezed
-          ? _value.aggregation
+          ? _value._aggregation
           : aggregation // ignore: cast_nullable_to_non_nullable
               as List<TypeAggregation>?,
       aggregationElement: aggregationElement == freezed
@@ -13885,7 +13073,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           : aggregationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       fhirElement: fhirElement == freezed
-          ? _value.fhirElement
+          ? _value._fhirElement
           : fhirElement // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ));
@@ -13897,38 +13085,69 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
 class _$_ElementDefinitionType extends _ElementDefinitionType {
   _$_ElementDefinitionType(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.code,
       @JsonKey(name: '_code') this.codeExtension,
-      this.profile,
-      this.aggregation,
+      final List<FhirUri>? profile,
+      final List<TypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation') this.aggregationElement,
-      @JsonKey(name: 'fhir_comments') this.fhirElement})
-      : super._();
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirElement})
+      : _extension_ = extension_,
+        _profile = profile,
+        _aggregation = aggregation,
+        _fhirElement = fhirElement,
+        super._();
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionTypeFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? code;
   @override
   @JsonKey(name: '_code')
   final TypeCodeExtension? codeExtension;
+  final List<FhirUri>? _profile;
   @override
-  final List<FhirUri>? profile;
+  List<FhirUri>? get profile {
+    final value = _profile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TypeAggregation>? _aggregation;
   @override
-  final List<TypeAggregation>? aggregation;
+  List<TypeAggregation>? get aggregation {
+    final value = _aggregation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: '_aggregation')
   final Element? aggregationElement;
+  final List<String>? _fhirElement;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirElement;
+  List<String>? get fhirElement {
+    final value = _fhirElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -13939,38 +13158,39 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionType &&
+            other is _$_ElementDefinitionType &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.codeExtension, codeExtension) &&
-            const DeepCollectionEquality().equals(other.profile, profile) &&
+            const DeepCollectionEquality().equals(other._profile, _profile) &&
             const DeepCollectionEquality()
-                .equals(other.aggregation, aggregation) &&
+                .equals(other._aggregation, _aggregation) &&
             const DeepCollectionEquality()
                 .equals(other.aggregationElement, aggregationElement) &&
             const DeepCollectionEquality()
-                .equals(other.fhirElement, fhirElement));
+                .equals(other._fhirElement, _fhirElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(codeExtension),
-      const DeepCollectionEquality().hash(profile),
-      const DeepCollectionEquality().hash(aggregation),
+      const DeepCollectionEquality().hash(_profile),
+      const DeepCollectionEquality().hash(_aggregation),
       const DeepCollectionEquality().hash(aggregationElement),
-      const DeepCollectionEquality().hash(fhirElement));
+      const DeepCollectionEquality().hash(_fhirElement));
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith =>
-      __$ElementDefinitionTypeCopyWithImpl<_ElementDefinitionType>(
+  _$$_ElementDefinitionTypeCopyWith<_$_ElementDefinitionType> get copyWith =>
+      __$$_ElementDefinitionTypeCopyWithImpl<_$_ElementDefinitionType>(
           this, _$identity);
 
   @override
@@ -13981,14 +13201,14 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
 abstract class _ElementDefinitionType extends ElementDefinitionType {
   factory _ElementDefinitionType(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          Code? code,
-          @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
-          List<FhirUri>? profile,
-          List<TypeAggregation>? aggregation,
-          @JsonKey(name: '_aggregation') Element? aggregationElement,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final Code? code,
+          @JsonKey(name: '_code') final TypeCodeExtension? codeExtension,
+          final List<FhirUri>? profile,
+          final List<TypeAggregation>? aggregation,
+          @JsonKey(name: '_aggregation') final Element? aggregationElement,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirElement}) =
       _$_ElementDefinitionType;
   _ElementDefinitionType._() : super._();
 
@@ -13996,53 +13216,34 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       _$_ElementDefinitionType.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  TypeCodeExtension? get codeExtension;
+  TypeCodeExtension? get codeExtension => throw _privateConstructorUsedError;
   @override
-  List<FhirUri>? get profile;
+  List<FhirUri>? get profile => throw _privateConstructorUsedError;
   @override
-  List<TypeAggregation>? get aggregation;
+  List<TypeAggregation>? get aggregation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_aggregation')
-  Element? get aggregationElement;
+  Element? get aggregationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirElement;
+  List<String>? get fhirElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith =>
+  _$$_ElementDefinitionTypeCopyWith<_$_ElementDefinitionType> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TypeCodeExtension _$TypeCodeExtensionFromJson(Map<String, dynamic> json) {
   return _TypeCodeExtension.fromJson(json);
 }
-
-/// @nodoc
-class _$TypeCodeExtensionTearOff {
-  const _$TypeCodeExtensionTearOff();
-
-  _TypeCodeExtension call(
-      {@JsonKey(name: 'extension') List<FhirExtension>? extension_}) {
-    return _TypeCodeExtension(
-      extension_: extension_,
-    );
-  }
-
-  TypeCodeExtension fromJson(Map<String, Object?> json) {
-    return TypeCodeExtension.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TypeCodeExtension = _$TypeCodeExtensionTearOff();
 
 /// @nodoc
 mixin _$TypeCodeExtension {
@@ -14086,33 +13287,33 @@ class _$TypeCodeExtensionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TypeCodeExtensionCopyWith<$Res>
+abstract class _$$_TypeCodeExtensionCopyWith<$Res>
     implements $TypeCodeExtensionCopyWith<$Res> {
-  factory _$TypeCodeExtensionCopyWith(
-          _TypeCodeExtension value, $Res Function(_TypeCodeExtension) then) =
-      __$TypeCodeExtensionCopyWithImpl<$Res>;
+  factory _$$_TypeCodeExtensionCopyWith(_$_TypeCodeExtension value,
+          $Res Function(_$_TypeCodeExtension) then) =
+      __$$_TypeCodeExtensionCopyWithImpl<$Res>;
   @override
   $Res call({@JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
-class __$TypeCodeExtensionCopyWithImpl<$Res>
+class __$$_TypeCodeExtensionCopyWithImpl<$Res>
     extends _$TypeCodeExtensionCopyWithImpl<$Res>
-    implements _$TypeCodeExtensionCopyWith<$Res> {
-  __$TypeCodeExtensionCopyWithImpl(
-      _TypeCodeExtension _value, $Res Function(_TypeCodeExtension) _then)
-      : super(_value, (v) => _then(v as _TypeCodeExtension));
+    implements _$$_TypeCodeExtensionCopyWith<$Res> {
+  __$$_TypeCodeExtensionCopyWithImpl(
+      _$_TypeCodeExtension _value, $Res Function(_$_TypeCodeExtension) _then)
+      : super(_value, (v) => _then(v as _$_TypeCodeExtension));
 
   @override
-  _TypeCodeExtension get _value => super._value as _TypeCodeExtension;
+  _$_TypeCodeExtension get _value => super._value as _$_TypeCodeExtension;
 
   @override
   $Res call({
     Object? extension_ = freezed,
   }) {
-    return _then(_TypeCodeExtension(
+    return _then(_$_TypeCodeExtension(
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
     ));
@@ -14122,15 +13323,23 @@ class __$TypeCodeExtensionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TypeCodeExtension extends _TypeCodeExtension {
-  _$_TypeCodeExtension({@JsonKey(name: 'extension') this.extension_})
-      : super._();
+  _$_TypeCodeExtension(
+      {@JsonKey(name: 'extension') final List<FhirExtension>? extension_})
+      : _extension_ = extension_,
+        super._();
 
   factory _$_TypeCodeExtension.fromJson(Map<String, dynamic> json) =>
       _$$_TypeCodeExtensionFromJson(json);
 
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -14141,19 +13350,21 @@ class _$_TypeCodeExtension extends _TypeCodeExtension {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TypeCodeExtension &&
+            other is _$_TypeCodeExtension &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_));
+                .equals(other._extension_, _extension_));
   }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(extension_));
 
   @JsonKey(ignore: true)
   @override
-  _$TypeCodeExtensionCopyWith<_TypeCodeExtension> get copyWith =>
-      __$TypeCodeExtensionCopyWithImpl<_TypeCodeExtension>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_extension_));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TypeCodeExtensionCopyWith<_$_TypeCodeExtension> get copyWith =>
+      __$$_TypeCodeExtensionCopyWithImpl<_$_TypeCodeExtension>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -14163,7 +13374,7 @@ class _$_TypeCodeExtension extends _TypeCodeExtension {
 
 abstract class _TypeCodeExtension extends TypeCodeExtension {
   factory _TypeCodeExtension(
-          {@JsonKey(name: 'extension') List<FhirExtension>? extension_}) =
+          {@JsonKey(name: 'extension') final List<FhirExtension>? extension_}) =
       _$_TypeCodeExtension;
   _TypeCodeExtension._() : super._();
 
@@ -14172,10 +13383,10 @@ abstract class _TypeCodeExtension extends TypeCodeExtension {
 
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TypeCodeExtensionCopyWith<_TypeCodeExtension> get copyWith =>
+  _$$_TypeCodeExtensionCopyWith<_$_TypeCodeExtension> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -14183,54 +13394,6 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
     Map<String, dynamic> json) {
   return _ElementDefinitionConstraint.fromJson(json);
 }
-
-/// @nodoc
-class _$ElementDefinitionConstraintTearOff {
-  const _$ElementDefinitionConstraintTearOff();
-
-  _ElementDefinitionConstraint call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      required Id key,
-      @JsonKey(name: '_key')
-          Element? keyElement,
-      String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
-          required ConstraintSeverity severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
-      required String human,
-      @JsonKey(name: '_human')
-          Element? humanElement,
-      required String xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement}) {
-    return _ElementDefinitionConstraint(
-      id: id,
-      extension_: extension_,
-      key: key,
-      keyElement: keyElement,
-      requirements: requirements,
-      requirementsElement: requirementsElement,
-      severity: severity,
-      severityElement: severityElement,
-      human: human,
-      humanElement: humanElement,
-      xpath: xpath,
-      xpathElement: xpathElement,
-    );
-  }
-
-  ElementDefinitionConstraint fromJson(Map<String, Object?> json) {
-    return ElementDefinitionConstraint.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionConstraint = _$ElementDefinitionConstraintTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionConstraint {
@@ -14427,12 +13590,12 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionConstraintCopyWith<$Res>
+abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
     implements $ElementDefinitionConstraintCopyWith<$Res> {
-  factory _$ElementDefinitionConstraintCopyWith(
-          _ElementDefinitionConstraint value,
-          $Res Function(_ElementDefinitionConstraint) then) =
-      __$ElementDefinitionConstraintCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionConstraintCopyWith(
+          _$_ElementDefinitionConstraint value,
+          $Res Function(_$_ElementDefinitionConstraint) then) =
+      __$$_ElementDefinitionConstraintCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -14468,17 +13631,17 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionConstraintCopyWithImpl<$Res>
+class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
     extends _$ElementDefinitionConstraintCopyWithImpl<$Res>
-    implements _$ElementDefinitionConstraintCopyWith<$Res> {
-  __$ElementDefinitionConstraintCopyWithImpl(
-      _ElementDefinitionConstraint _value,
-      $Res Function(_ElementDefinitionConstraint) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionConstraint));
+    implements _$$_ElementDefinitionConstraintCopyWith<$Res> {
+  __$$_ElementDefinitionConstraintCopyWithImpl(
+      _$_ElementDefinitionConstraint _value,
+      $Res Function(_$_ElementDefinitionConstraint) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionConstraint));
 
   @override
-  _ElementDefinitionConstraint get _value =>
-      super._value as _ElementDefinitionConstraint;
+  _$_ElementDefinitionConstraint get _value =>
+      super._value as _$_ElementDefinitionConstraint;
 
   @override
   $Res call({
@@ -14495,13 +13658,13 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
     Object? xpath = freezed,
     Object? xpathElement = freezed,
   }) {
-    return _then(_ElementDefinitionConstraint(
+    return _then(_$_ElementDefinitionConstraint(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       key: key == freezed
@@ -14554,7 +13717,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   _$_ElementDefinitionConstraint(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
+          final List<FhirExtension>? extension_,
       required this.key,
       @JsonKey(name: '_key')
           this.keyElement,
@@ -14571,16 +13734,24 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
       required this.xpath,
       @JsonKey(name: '_xpath')
           this.xpathElement})
-      : super._();
+      : _extension_ = extension_,
+        super._();
 
   factory _$_ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionConstraintFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Id key;
   @override
@@ -14617,10 +13788,10 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionConstraint &&
+            other is _$_ElementDefinitionConstraint &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.key, key) &&
             const DeepCollectionEquality()
                 .equals(other.keyElement, keyElement) &&
@@ -14639,11 +13810,12 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
                 .equals(other.xpathElement, xpathElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(key),
       const DeepCollectionEquality().hash(keyElement),
       const DeepCollectionEquality().hash(requirements),
@@ -14657,9 +13829,9 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionConstraintCopyWith<_ElementDefinitionConstraint>
-      get copyWith => __$ElementDefinitionConstraintCopyWithImpl<
-          _ElementDefinitionConstraint>(this, _$identity);
+  _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
+      get copyWith => __$$_ElementDefinitionConstraintCopyWithImpl<
+          _$_ElementDefinitionConstraint>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -14670,64 +13842,64 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 abstract class _ElementDefinitionConstraint
     extends ElementDefinitionConstraint {
   factory _ElementDefinitionConstraint(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      required Id key,
+          final List<FhirExtension>? extension_,
+      required final Id key,
       @JsonKey(name: '_key')
-          Element? keyElement,
-      String? requirements,
+          final Element? keyElement,
+      final String? requirements,
       @JsonKey(name: '_requirements')
-          Element? requirementsElement,
+          final Element? requirementsElement,
       @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
-          required ConstraintSeverity severity,
+          required final ConstraintSeverity severity,
       @JsonKey(name: '_severity')
-          Element? severityElement,
-      required String human,
+          final Element? severityElement,
+      required final String human,
       @JsonKey(name: '_human')
-          Element? humanElement,
-      required String xpath,
+          final Element? humanElement,
+      required final String xpath,
       @JsonKey(name: '_xpath')
-          Element? xpathElement}) = _$_ElementDefinitionConstraint;
+          final Element? xpathElement}) = _$_ElementDefinitionConstraint;
   _ElementDefinitionConstraint._() : super._();
 
   factory _ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionConstraint.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Id get key;
+  Id get key => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_key')
-  Element? get keyElement;
+  Element? get keyElement => throw _privateConstructorUsedError;
   @override
-  String? get requirements;
+  String? get requirements => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement;
+  Element? get requirementsElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
-  ConstraintSeverity get severity;
+  ConstraintSeverity get severity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_severity')
-  Element? get severityElement;
+  Element? get severityElement => throw _privateConstructorUsedError;
   @override
-  String get human;
+  String get human => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_human')
-  Element? get humanElement;
+  Element? get humanElement => throw _privateConstructorUsedError;
   @override
-  String get xpath;
+  String get xpath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_xpath')
-  Element? get xpathElement;
+  Element? get xpathElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionConstraintCopyWith<_ElementDefinitionConstraint>
+  _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -14735,43 +13907,6 @@ ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
     Map<String, dynamic> json) {
   return _ElementDefinitionBinding.fromJson(json);
 }
-
-/// @nodoc
-class _$ElementDefinitionBindingTearOff {
-  const _$ElementDefinitionBindingTearOff();
-
-  _ElementDefinitionBinding call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          required ElementDefinitionBindingStrength strength,
-      @JsonKey(name: '_strength')
-          Element? strengthElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      FhirUri? valueSetUri,
-      Reference? valueSetReference}) {
-    return _ElementDefinitionBinding(
-      id: id,
-      extension_: extension_,
-      strength: strength,
-      strengthElement: strengthElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      valueSetUri: valueSetUri,
-      valueSetReference: valueSetReference,
-    );
-  }
-
-  ElementDefinitionBinding fromJson(Map<String, Object?> json) {
-    return ElementDefinitionBinding.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionBinding = _$ElementDefinitionBindingTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionBinding {
@@ -14912,11 +14047,12 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionBindingCopyWith<$Res>
+abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
     implements $ElementDefinitionBindingCopyWith<$Res> {
-  factory _$ElementDefinitionBindingCopyWith(_ElementDefinitionBinding value,
-          $Res Function(_ElementDefinitionBinding) then) =
-      __$ElementDefinitionBindingCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionBindingCopyWith(
+          _$_ElementDefinitionBinding value,
+          $Res Function(_$_ElementDefinitionBinding) then) =
+      __$$_ElementDefinitionBindingCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -14941,16 +14077,16 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionBindingCopyWithImpl<$Res>
+class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
     extends _$ElementDefinitionBindingCopyWithImpl<$Res>
-    implements _$ElementDefinitionBindingCopyWith<$Res> {
-  __$ElementDefinitionBindingCopyWithImpl(_ElementDefinitionBinding _value,
-      $Res Function(_ElementDefinitionBinding) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionBinding));
+    implements _$$_ElementDefinitionBindingCopyWith<$Res> {
+  __$$_ElementDefinitionBindingCopyWithImpl(_$_ElementDefinitionBinding _value,
+      $Res Function(_$_ElementDefinitionBinding) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionBinding));
 
   @override
-  _ElementDefinitionBinding get _value =>
-      super._value as _ElementDefinitionBinding;
+  _$_ElementDefinitionBinding get _value =>
+      super._value as _$_ElementDefinitionBinding;
 
   @override
   $Res call({
@@ -14963,13 +14099,13 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
     Object? valueSetUri = freezed,
     Object? valueSetReference = freezed,
   }) {
-    return _then(_ElementDefinitionBinding(
+    return _then(_$_ElementDefinitionBinding(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       strength: strength == freezed
@@ -15006,7 +14142,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   _$_ElementDefinitionBinding(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
+          final List<FhirExtension>? extension_,
       @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
           required this.strength,
       @JsonKey(name: '_strength')
@@ -15016,16 +14152,24 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
           this.descriptionElement,
       this.valueSetUri,
       this.valueSetReference})
-      : super._();
+      : _extension_ = extension_,
+        super._();
 
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionBindingFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(
       required: true,
@@ -15053,10 +14197,10 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionBinding &&
+            other is _$_ElementDefinitionBinding &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality().equals(other.strength, strength) &&
             const DeepCollectionEquality()
                 .equals(other.strengthElement, strengthElement) &&
@@ -15070,11 +14214,12 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
                 .equals(other.valueSetReference, valueSetReference));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(strength),
       const DeepCollectionEquality().hash(strengthElement),
       const DeepCollectionEquality().hash(description),
@@ -15084,9 +14229,9 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith =>
-      __$ElementDefinitionBindingCopyWithImpl<_ElementDefinitionBinding>(
-          this, _$identity);
+  _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
+      get copyWith => __$$_ElementDefinitionBindingCopyWithImpl<
+          _$_ElementDefinitionBinding>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -15096,90 +14241,56 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
 abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   factory _ElementDefinitionBinding(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+          final List<FhirExtension>? extension_,
       @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          required ElementDefinitionBindingStrength strength,
+          required final ElementDefinitionBindingStrength strength,
       @JsonKey(name: '_strength')
-          Element? strengthElement,
-      String? description,
+          final Element? strengthElement,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      FhirUri? valueSetUri,
-      Reference? valueSetReference}) = _$_ElementDefinitionBinding;
+          final Element? descriptionElement,
+      final FhirUri? valueSetUri,
+      final Reference? valueSetReference}) = _$_ElementDefinitionBinding;
   _ElementDefinitionBinding._() : super._();
 
   factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBinding.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       required: true,
       unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-  ElementDefinitionBindingStrength get strength;
+  ElementDefinitionBindingStrength get strength =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_strength')
-  Element? get strengthElement;
+  Element? get strengthElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get valueSetUri;
+  FhirUri? get valueSetUri => throw _privateConstructorUsedError;
   @override
-  Reference? get valueSetReference;
+  Reference? get valueSetReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
     Map<String, dynamic> json) {
   return _ElementDefinitionMapping.fromJson(json);
 }
-
-/// @nodoc
-class _$ElementDefinitionMappingTearOff {
-  const _$ElementDefinitionMappingTearOff();
-
-  _ElementDefinitionMapping call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required Id identity,
-      @JsonKey(name: '_identity') Element? identityElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      required String map,
-      @JsonKey(name: '_map') Element? mapElement}) {
-    return _ElementDefinitionMapping(
-      id: id,
-      extension_: extension_,
-      fhirComments: fhirComments,
-      identity: identity,
-      identityElement: identityElement,
-      language: language,
-      languageElement: languageElement,
-      map: map,
-      mapElement: mapElement,
-    );
-  }
-
-  ElementDefinitionMapping fromJson(Map<String, Object?> json) {
-    return ElementDefinitionMapping.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ElementDefinitionMapping = _$ElementDefinitionMappingTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionMapping {
@@ -15321,11 +14432,12 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ElementDefinitionMappingCopyWith<$Res>
+abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
     implements $ElementDefinitionMappingCopyWith<$Res> {
-  factory _$ElementDefinitionMappingCopyWith(_ElementDefinitionMapping value,
-          $Res Function(_ElementDefinitionMapping) then) =
-      __$ElementDefinitionMappingCopyWithImpl<$Res>;
+  factory _$$_ElementDefinitionMappingCopyWith(
+          _$_ElementDefinitionMapping value,
+          $Res Function(_$_ElementDefinitionMapping) then) =
+      __$$_ElementDefinitionMappingCopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? id,
@@ -15347,16 +14459,16 @@ abstract class _$ElementDefinitionMappingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ElementDefinitionMappingCopyWithImpl<$Res>
+class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
     extends _$ElementDefinitionMappingCopyWithImpl<$Res>
-    implements _$ElementDefinitionMappingCopyWith<$Res> {
-  __$ElementDefinitionMappingCopyWithImpl(_ElementDefinitionMapping _value,
-      $Res Function(_ElementDefinitionMapping) _then)
-      : super(_value, (v) => _then(v as _ElementDefinitionMapping));
+    implements _$$_ElementDefinitionMappingCopyWith<$Res> {
+  __$$_ElementDefinitionMappingCopyWithImpl(_$_ElementDefinitionMapping _value,
+      $Res Function(_$_ElementDefinitionMapping) _then)
+      : super(_value, (v) => _then(v as _$_ElementDefinitionMapping));
 
   @override
-  _ElementDefinitionMapping get _value =>
-      super._value as _ElementDefinitionMapping;
+  _$_ElementDefinitionMapping get _value =>
+      super._value as _$_ElementDefinitionMapping;
 
   @override
   $Res call({
@@ -15370,17 +14482,17 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
     Object? map = freezed,
     Object? mapElement = freezed,
   }) {
-    return _then(_ElementDefinitionMapping(
+    return _then(_$_ElementDefinitionMapping(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       identity: identity == freezed
@@ -15416,27 +14528,43 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
 class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   _$_ElementDefinitionMapping(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.identity,
       @JsonKey(name: '_identity') this.identityElement,
       this.language,
       @JsonKey(name: '_language') this.languageElement,
       required this.map,
       @JsonKey(name: '_map') this.mapElement})
-      : super._();
+      : _extension_ = extension_,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionMappingFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Id identity;
   @override
@@ -15462,12 +14590,12 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ElementDefinitionMapping &&
+            other is _$_ElementDefinitionMapping &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other.fhirComments, fhirComments) &&
+                .equals(other._fhirComments, _fhirComments) &&
             const DeepCollectionEquality().equals(other.identity, identity) &&
             const DeepCollectionEquality()
                 .equals(other.identityElement, identityElement) &&
@@ -15479,12 +14607,13 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
                 .equals(other.mapElement, mapElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_fhirComments),
       const DeepCollectionEquality().hash(identity),
       const DeepCollectionEquality().hash(identityElement),
       const DeepCollectionEquality().hash(language),
@@ -15494,9 +14623,9 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
   @JsonKey(ignore: true)
   @override
-  _$ElementDefinitionMappingCopyWith<_ElementDefinitionMapping> get copyWith =>
-      __$ElementDefinitionMappingCopyWithImpl<_ElementDefinitionMapping>(
-          this, _$identity);
+  _$$_ElementDefinitionMappingCopyWith<_$_ElementDefinitionMapping>
+      get copyWith => __$$_ElementDefinitionMappingCopyWithImpl<
+          _$_ElementDefinitionMapping>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -15506,15 +14635,15 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
 abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   factory _ElementDefinitionMapping(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-          required Id identity,
-          @JsonKey(name: '_identity') Element? identityElement,
-          Code? language,
-          @JsonKey(name: '_language') Element? languageElement,
-          required String map,
-          @JsonKey(name: '_map') Element? mapElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          required final Id identity,
+          @JsonKey(name: '_identity') final Element? identityElement,
+          final Code? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          required final String map,
+          @JsonKey(name: '_map') final Element? mapElement}) =
       _$_ElementDefinitionMapping;
   _ElementDefinitionMapping._() : super._();
 
@@ -15522,30 +14651,30 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
       _$_ElementDefinitionMapping.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  Id get identity;
+  Id get identity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_identity')
-  Element? get identityElement;
+  Element? get identityElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  String get map;
+  String get map => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_map')
-  Element? get mapElement;
+  Element? get mapElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementDefinitionMappingCopyWith<_ElementDefinitionMapping> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElementDefinitionMappingCopyWith<_$_ElementDefinitionMapping>
+      get copyWith => throw _privateConstructorUsedError;
 }

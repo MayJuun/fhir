@@ -74,7 +74,7 @@
             "key": "cnl-0",
             "severity": "warning",
             "human": "Name should be usable as an identifier for the module by machine processing applications such as code generation",
-            "expression": "name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
+            "expression": "name.exists() implies name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
             "xpath": "not(exists(f:name/@value)) or matches(f:name/@value, \u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
           },
@@ -82,7 +82,7 @@
             "key": "csd-1",
             "severity": "error",
             "human": "Within a code system definition, all the codes SHALL be unique",
-            "expression": "concept.code.combine($this.descendants().concept.code).isDistinct()",
+            "expression": "concept.exists() implies concept.code.combine(%resource.concept.descendants().concept.code).isDistinct()",
             "xpath": "count(distinct-values(descendant::f:concept/f:code/@value))\u003dcount(descendant::f:concept)",
             "source": "http://hl7.org/fhir/StructureDefinition/CodeSystem"
           }
@@ -123,7 +123,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -230,10 +230,6 @@
         "isSummary": false,
         "binding": {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
-              "valueString": "A human language."
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/all-languages"
@@ -641,7 +637,7 @@
         "id": "CodeSystem.status",
         "path": "CodeSystem.status",
         "short": "draft | active | retired | unknown",
-        "definition": "The date (and optionally time) when the code system resource was created or revised.",
+        "definition": "The status of this code system. Enables tracking the life-cycle of the content.",
         "comment": "Allows filtering of code systems that are appropriate for use versus not.",
         "min": 1,
         "max": "1",
@@ -1145,8 +1141,8 @@
         "id": "CodeSystem.valueSet",
         "path": "CodeSystem.valueSet",
         "short": "Canonical reference to the value set with entire code system",
-        "definition": "Canonical reference to the value set that contains the entire code system.",
-        "comment": "The definition of the value set SHALL include all codes from this code system and only codes from this code system, and it SHALL be immutable.",
+        "definition": "Canonical reference to the value set that contains all codes in the code system independent of code status.",
+        "comment": "The definition of the value set SHALL include all codes from this code system, independent of concept status, and only codes from this code system. It SHALL be immutable, and operations SHOULD support validation of any allowed code compositions.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1330,6 +1326,12 @@
       },
       {
         "id": "CodeSystem.supplements",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
         "path": "CodeSystem.supplements",
         "short": "Canonical URL of Code System this adds designations and properties to",
         "definition": "The canonical URL of the code system that this code system supplement is adding designations and properties to.",
@@ -1447,7 +1449,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -1761,7 +1763,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2076,7 +2078,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2344,7 +2346,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2494,10 +2496,6 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
-              "valueString": "A human language."
-            },
-            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/all-languages"
             },
@@ -2646,7 +2644,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"

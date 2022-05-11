@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "description": "The episode(s) of care that establishes the context for this {{title}}.",
+  "description": "Identifies the episode(s) of care that this resource is relevant to.  Establishes the EpisodeOfCare as a \u0027grouper\u0027 of resources that are relevant to that episode.",
   "fhirVersion": "4.6.0",
   "mapping": [
     {
@@ -42,35 +42,15 @@
   "context": [
     {
       "type": "element",
-      "expression": "Observation"
-    },
-    {
-      "type": "element",
-      "expression": "DiagnosticReport"
-    },
-    {
-      "type": "element",
-      "expression": "DocumentReference"
-    },
-    {
-      "type": "element",
-      "expression": "DeviceRequest"
-    },
-    {
-      "type": "element",
-      "expression": "ServiceRequest"
-    },
-    {
-      "type": "element",
-      "expression": "NutritionOrder"
-    },
-    {
-      "type": "element",
-      "expression": "DeviceUsage"
-    },
-    {
-      "type": "element",
       "expression": "AdverseEvent"
+    },
+    {
+      "type": "element",
+      "expression": "Appointment"
+    },
+    {
+      "type": "element",
+      "expression": "Basic"
     },
     {
       "type": "element",
@@ -90,7 +70,119 @@
     },
     {
       "type": "element",
+      "expression": "Composition"
+    },
+    {
+      "type": "element",
       "expression": "Condition"
+    },
+    {
+      "type": "element",
+      "expression": "Consent"
+    },
+    {
+      "type": "element",
+      "expression": "DetectedIssue"
+    },
+    {
+      "type": "element",
+      "expression": "DeviceRequest"
+    },
+    {
+      "type": "element",
+      "expression": "DeviceUsage"
+    },
+    {
+      "type": "element",
+      "expression": "DiagnosticReport"
+    },
+    {
+      "type": "element",
+      "expression": "DocumentReference"
+    },
+    {
+      "type": "element",
+      "expression": "Encounter"
+    },
+    {
+      "type": "element",
+      "expression": "EnrollmentRequest"
+    },
+    {
+      "type": "element",
+      "expression": "EnrollmentResponse"
+    },
+    {
+      "type": "element",
+      "expression": "FamilyMemberHistory"
+    },
+    {
+      "type": "element",
+      "expression": "Flag"
+    },
+    {
+      "type": "element",
+      "expression": "Goal"
+    },
+    {
+      "type": "element",
+      "expression": "ImagingStudy"
+    },
+    {
+      "type": "element",
+      "expression": "Immunization"
+    },
+    {
+      "type": "element",
+      "expression": "ImmunizationEvaluation"
+    },
+    {
+      "type": "element",
+      "expression": "ImmunizationRecommendation"
+    },
+    {
+      "type": "element",
+      "expression": "Invoice"
+    },
+    {
+      "type": "element",
+      "expression": "List"
+    },
+    {
+      "type": "element",
+      "expression": "MeasureReport"
+    },
+    {
+      "type": "element",
+      "expression": "MedicationAdministration"
+    },
+    {
+      "type": "element",
+      "expression": "MedicationDispense"
+    },
+    {
+      "type": "element",
+      "expression": "MedicationRequest"
+    },
+    {
+      "type": "element",
+      "expression": "MedicationUsage"
+    },
+    {
+      "type": "element",
+      "expression": "MolecularSequence"
+    },
+    {
+      "type": "element",
+      "expression": "NutritionIntake"
+    },
+    {
+      "type": "element",
+      "expression": "NutritionOrder"
+    },
+    {
+      "type": "element",
+      "expression": "Observation"
     },
     {
       "type": "element",
@@ -99,6 +191,34 @@
     {
       "type": "element",
       "expression": "QuestionnaireResponse"
+    },
+    {
+      "type": "element",
+      "expression": "RequestGroup"
+    },
+    {
+      "type": "element",
+      "expression": "ResearchSubject"
+    },
+    {
+      "type": "element",
+      "expression": "RiskAssessment"
+    },
+    {
+      "type": "element",
+      "expression": "SupplyDelivery"
+    },
+    {
+      "type": "element",
+      "expression": "SupplyRequest"
+    },
+    {
+      "type": "element",
+      "expression": "VisionPrescription"
+    },
+    {
+      "type": "element",
+      "expression": "ServiceRequest"
     }
   ],
   "type": "Extension",
@@ -110,7 +230,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Associated Encounter episode of care",
-        "definition": "The episode(s) of care that establishes the context for this {{title}}.",
+        "definition": "Identifies the episode(s) of care that this resource is relevant to.  Establishes the EpisodeOfCare as a \u0027grouper\u0027 of resources that are relevant to that episode.",
         "min": 0,
         "max": "*",
         "base": {
@@ -164,7 +284,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -248,7 +368,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "uri"
+                "valueUrl": "uri"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -311,7 +431,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Associated Encounter episode of care",
-        "definition": "The episode(s) of care that establishes the context for this {{title}}.",
+        "definition": "Identifies the episode(s) of care that this resource is relevant to.  Establishes the EpisodeOfCare as a \u0027grouper\u0027 of resources that are relevant to that episode.",
         "min": 0,
         "max": "*",
         "mapping": [

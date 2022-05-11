@@ -11,7 +11,7 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../dstu2.dart';
 
-// import 'package:flutter/foundation.dart';
+//
 
 part 'resource.g.dart';
 part 'resource_from_json.dart';

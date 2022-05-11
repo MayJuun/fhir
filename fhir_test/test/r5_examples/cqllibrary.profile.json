@@ -75,7 +75,7 @@
             "key": "cnl-0",
             "severity": "warning",
             "human": "Name should be usable as an identifier for the module by machine processing applications such as code generation",
-            "expression": "name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
+            "expression": "name.exists() implies name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
             "xpath": "not(exists(f:name/@value)) or matches(f:name/@value, \u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/Library"
           }
@@ -116,7 +116,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -223,10 +223,6 @@
         "isSummary": false,
         "binding": {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
-              "valueString": "A human language."
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/all-languages"
@@ -1953,7 +1949,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2030,8 +2026,9 @@
       {
         "id": "Library.relatedArtifact:dependency.type",
         "path": "Library.relatedArtifact.type",
-        "short": "documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of",
+        "short": "documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of | part-of | amends | amended-with | appends | appended-with | cites | cited-by | comments-on | comment-in | contains | contained-in | corrects | correction-in | replaces | replaced-with | retracts | retracted-by | signs | similar-to | supports | supported-with | transforms | transformed-into | transformed-with",
         "definition": "The type of relationship to the related artifact.",
+        "comment": "The presence of both sides of a relationship type (e.g. successor and predecessor) is required to support use cases where one side of a relationship is not represented in FHIR. However, this feature SHALL NOT be used to create bi-directional resource links in FHIR instances.",
         "min": 1,
         "max": "1",
         "base": {
@@ -2061,7 +2058,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "The type of relationship to the related artifact."
             },
             {
@@ -2071,6 +2068,50 @@
           ],
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/related-artifact-type|4.6.0"
+        }
+      },
+      {
+        "id": "Library.relatedArtifact:dependency.classifier",
+        "path": "Library.relatedArtifact.classifier",
+        "short": "Additional classifiers",
+        "definition": "Provides additional classifiers of the related artifact.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "RelatedArtifact.classifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
+              "valueString": "Additional classifiers for the related artifact."
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "RelatedArtifactClassifier"
+            }
+          ],
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/citation-artifact-classifier"
         }
       },
       {
@@ -2165,37 +2206,6 @@
         "isSummary": true
       },
       {
-        "id": "Library.relatedArtifact:dependency.url",
-        "path": "Library.relatedArtifact.url",
-        "short": "Where the artifact can be accessed",
-        "definition": "A url for the artifact that can be followed to access the actual content.",
-        "comment": "If a document or resource element is present, this element SHALL NOT be provided (use the url or reference in the Attachment or resource reference).",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "RelatedArtifact.url",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "url"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true
-      },
-      {
         "id": "Library.relatedArtifact:dependency.document",
         "path": "Library.relatedArtifact.document",
         "short": "What document is being referenced",
@@ -2228,8 +2238,8 @@
       {
         "id": "Library.relatedArtifact:dependency.resource",
         "path": "Library.relatedArtifact.resource",
-        "short": "What resource is being referenced",
-        "definition": "The related resource, such as a library, value set, profile, or other knowledge resource.",
+        "short": "What artifact is being referenced",
+        "definition": "The related artifact, such as a library, value set, profile, or other knowledge resource.",
         "comment": "If the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource.",
         "min": 1,
         "max": "1",
@@ -2259,6 +2269,40 @@
           }
         ],
         "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Library.relatedArtifact:dependency.resourceReference",
+        "path": "Library.relatedArtifact.resourceReference",
+        "short": "What artifact, if not a conformance resource",
+        "definition": "The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource.",
+        "comment": "If both resource and resourceReference are present, they SHOULD be consistent and reference the same resource. Although relatedArtifact is intended to support references to definitional resources, there are cases where non-definitional resources can be definitional (such as Location where the kind is mode). Related artifacts SHOULD be used to reference definitional resources, and profiles SHOULD be used to make that explicit for particular use cases.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "RelatedArtifact.resourceReference",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
         "isModifier": false,
         "isSummary": true
       },
@@ -2402,7 +2446,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2516,7 +2560,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "The mime type of an attachment. Any valid mime type is allowed."
             },
             {
@@ -2582,7 +2626,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "A human language."
             },
             {
@@ -3131,7 +3175,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -3246,7 +3290,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "The mime type of an attachment. Any valid mime type is allowed."
             },
             {
@@ -3312,7 +3356,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "A human language."
             },
             {

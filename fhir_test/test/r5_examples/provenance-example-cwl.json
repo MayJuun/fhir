@@ -14,11 +14,9 @@
     "start": "2016-11-30"
   },
   "recorded": "2016-12-01T08:12:14+10:00",
-  "reason": [
-    {
-      "text": "profiling Short Tandem Repeats (STRs) from high throughput sequencing data."
-    }
-  ],
+  "activity": {
+    "text": "profiling Short Tandem Repeats (STRs) from high throughput sequencing data."
+  },
   "agent": [
     {
       "type": {

@@ -13,7 +13,6 @@
     }
   ],
   "actual": true,
-  "characteristicCombination": "intersection",
   "characteristic": [
     {
       "description": "intracranial hemorrhage within 7 days",
@@ -26,23 +25,34 @@
           }
         ]
       },
-      "timeFromStart": {
-        "description": "within 7 days",
-        "range": {
-          "low": {
-            "value": 0,
-            "unit": "day",
-            "system": "http://unitsofmeasure.org",
-            "code": "d"
+      "timeFromEvent": [
+        {
+          "description": "within 7 days",
+          "eventCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/evidence-variable-event",
+                "code": "study-start",
+                "display": "Study Start"
+              }
+            ]
           },
-          "high": {
-            "value": 7,
-            "unit": "day",
-            "system": "http://unitsofmeasure.org",
-            "code": "d"
+          "range": {
+            "low": {
+              "value": 0,
+              "unit": "day",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            },
+            "high": {
+              "value": 7,
+              "unit": "day",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
           }
         }
-      }
+      ]
     },
     {
       "description": "death within 7 days",
@@ -55,23 +65,25 @@
           }
         ]
       },
-      "timeFromStart": {
-        "description": "within 7 days",
-        "range": {
-          "low": {
-            "value": 0,
-            "unit": "day",
-            "system": "http://unitsofmeasure.org",
-            "code": "d"
-          },
-          "high": {
-            "value": 7,
-            "unit": "day",
-            "system": "http://unitsofmeasure.org",
-            "code": "d"
+      "timeFromEvent": [
+        {
+          "description": "within 7 days",
+          "range": {
+            "low": {
+              "value": 0,
+              "unit": "day",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            },
+            "high": {
+              "value": 7,
+              "unit": "day",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
           }
         }
-      }
+      ]
     }
   ],
   "handling": "dichotomous",

@@ -9,6 +9,11 @@
     {
       "resourceType": "PackagedProductDefinition",
       "id": "package",
+      "packageFor": [
+        {
+          "reference": "#"
+        }
+      ],
       "package": {
         "package": [
           {
@@ -39,16 +44,16 @@
                     },
                     "containedItem": [
                       {
-                        "item": [
-                          {
-                            "reference": {
-                              "reference": "#powderItem"
-                            }
+                        "item": {
+                          "reference": {
+                            "reference": "#powderItem"
                           }
-                        ],
-                        "amountQuantity": {
+                        },
+                        "amount": {
                           "value": 5,
-                          "unit": "g"
+                          "unit": "g",
+                          "system": "http://unitsofmeasure.org",
+                          "code": "g"
                         }
                       }
                     ]
@@ -63,16 +68,16 @@
                     },
                     "containedItem": [
                       {
-                        "item": [
-                          {
-                            "reference": {
-                              "reference": "#solventItem"
-                            }
+                        "item": {
+                          "reference": {
+                            "reference": "#solventItem"
                           }
-                        ],
-                        "amountQuantity": {
+                        },
+                        "amount": {
                           "value": 20,
-                          "unit": "ml"
+                          "unit": "ml",
+                          "system": "http://unitsofmeasure.org",
+                          "code": "mL"
                         }
                       }
                     ]
@@ -89,14 +94,12 @@
                 },
                 "containedItem": [
                   {
-                    "item": [
-                      {
-                        "reference": {
-                          "reference": "#syringeDevice"
-                        }
+                    "item": {
+                      "reference": {
+                        "reference": "#syringeDevice"
                       }
-                    ],
-                    "amountQuantity": {
+                    },
+                    "amount": {
                       "value": 1
                     }
                   }
@@ -110,6 +113,7 @@
     {
       "resourceType": "ManufacturedItemDefinition",
       "id": "solventItem",
+      "status": "active",
       "manufacturedDoseForm": {
         "coding": [
           {
@@ -117,18 +121,12 @@
             "code": "solvent for powder for injection"
           }
         ]
-      },
-      "ingredient": [
-        {
-          "reference": {
-            "reference": "#ingredientSolvent"
-          }
-        }
-      ]
+      }
     },
     {
       "resourceType": "ManufacturedItemDefinition",
       "id": "powderItem",
+      "status": "active",
       "manufacturedDoseForm": {
         "coding": [
           {
@@ -136,77 +134,28 @@
             "code": "powder for solution for injection"
           }
         ]
-      },
-      "ingredient": [
-        {
-          "reference": {
-            "reference": "#ingredientPowder"
-          }
-        }
-      ]
+      }
     },
     {
       "resourceType": "DeviceDefinition",
       "id": "syringeDevice",
-      "type": [
+      "classification": [
         {
-          "text": "syringe"
+          "type": {
+            "text": "syringe"
+          }
         }
       ]
     },
     {
-      "resourceType": "Ingredient",
-      "id": "ingredientPowder",
-      "role": {
-        "coding": [
-          {
-            "system": "http://example.org.uk/fhir/ingredientRole",
-            "code": "active"
-          }
-        ]
-      },
-      "substance": {
-        "code": {
-          "concept": {
-            "coding": [
-              {
-                "system": "http://example.org.uk/fhir/ingredients",
-                "code": "12345",
-                "display": "Wonderdrug BP"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "resourceType": "Ingredient",
-      "id": "ingredientSolvent",
-      "role": {
-        "coding": [
-          {
-            "system": "http://example.org.uk/fhir/ingredientRole",
-            "code": "active"
-          }
-        ]
-      },
-      "substance": {
-        "code": {
-          "concept": {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "444883009",
-                "display": "Distilled water"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
       "resourceType": "AdministrableProductDefinition",
       "id": "administrable-form",
+      "status": "active",
+      "formOf": [
+        {
+          "reference": "#"
+        }
+      ],
       "administrableDoseForm": {
         "coding": [
           {
@@ -253,20 +202,6 @@
   "name": [
     {
       "productName": "Wonderdrug liquid 20ml (integral syringe)"
-    }
-  ],
-  "package": [
-    {
-      "package": {
-        "reference": "#package"
-      }
-    }
-  ],
-  "administrableProduct": [
-    {
-      "product": {
-        "reference": "#administrable-form"
-      }
     }
   ],
   "meta": {

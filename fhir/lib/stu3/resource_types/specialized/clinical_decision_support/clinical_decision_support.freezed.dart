@@ -12,93 +12,11 @@ part of 'clinical_decision_support.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
   return _GuidanceResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$GuidanceResponseTearOff {
-  const _$GuidanceResponseTearOff();
-
-  _GuidanceResponse call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-          Stu3ResourceType resourceType = Stu3ResourceType.GuidanceResponse,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Id? requestId,
-      @JsonKey(name: '_requestId')
-          Element? requestIdElement,
-      Identifier? identifier,
-      required Reference module,
-      GuidanceResponseStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? subject,
-      Reference? context,
-      FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Reference? performer,
-      CodeableConcept? reasonCodeableConcept,
-      Reference? reasonReference,
-      List<Annotation>? note,
-      List<Reference>? evaluationMessage,
-      Reference? outputParameters,
-      Reference? result,
-      List<DataRequirement>? dataRequirement}) {
-    return _GuidanceResponse(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      requestId: requestId,
-      requestIdElement: requestIdElement,
-      identifier: identifier,
-      module: module,
-      status: status,
-      statusElement: statusElement,
-      subject: subject,
-      context: context,
-      occurrenceDateTime: occurrenceDateTime,
-      occurrenceDateTimeElement: occurrenceDateTimeElement,
-      performer: performer,
-      reasonCodeableConcept: reasonCodeableConcept,
-      reasonReference: reasonReference,
-      note: note,
-      evaluationMessage: evaluationMessage,
-      outputParameters: outputParameters,
-      result: result,
-      dataRequirement: dataRequirement,
-    );
-  }
-
-  GuidanceResponse fromJson(Map<String, Object?> json) {
-    return GuidanceResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GuidanceResponse = _$GuidanceResponseTearOff();
 
 /// @nodoc
 mixin _$GuidanceResponse {
@@ -545,11 +463,11 @@ class _$GuidanceResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GuidanceResponseCopyWith<$Res>
+abstract class _$$_GuidanceResponseCopyWith<$Res>
     implements $GuidanceResponseCopyWith<$Res> {
-  factory _$GuidanceResponseCopyWith(
-          _GuidanceResponse value, $Res Function(_GuidanceResponse) then) =
-      __$GuidanceResponseCopyWithImpl<$Res>;
+  factory _$$_GuidanceResponseCopyWith(
+          _$_GuidanceResponse value, $Res Function(_$_GuidanceResponse) then) =
+      __$$_GuidanceResponseCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
@@ -624,15 +542,15 @@ abstract class _$GuidanceResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$GuidanceResponseCopyWithImpl<$Res>
+class __$$_GuidanceResponseCopyWithImpl<$Res>
     extends _$GuidanceResponseCopyWithImpl<$Res>
-    implements _$GuidanceResponseCopyWith<$Res> {
-  __$GuidanceResponseCopyWithImpl(
-      _GuidanceResponse _value, $Res Function(_GuidanceResponse) _then)
-      : super(_value, (v) => _then(v as _GuidanceResponse));
+    implements _$$_GuidanceResponseCopyWith<$Res> {
+  __$$_GuidanceResponseCopyWithImpl(
+      _$_GuidanceResponse _value, $Res Function(_$_GuidanceResponse) _then)
+      : super(_value, (v) => _then(v as _$_GuidanceResponse));
 
   @override
-  _GuidanceResponse get _value => super._value as _GuidanceResponse;
+  _$_GuidanceResponse get _value => super._value as _$_GuidanceResponse;
 
   @override
   $Res call({
@@ -666,7 +584,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
     Object? result = freezed,
     Object? dataRequirement = freezed,
   }) {
-    return _then(_GuidanceResponse(
+    return _then(_$_GuidanceResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -700,15 +618,15 @@ class __$GuidanceResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       requestId: requestId == freezed
@@ -764,11 +682,11 @@ class __$GuidanceResponseCopyWithImpl<$Res>
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       note: note == freezed
-          ? _value.note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       evaluationMessage: evaluationMessage == freezed
-          ? _value.evaluationMessage
+          ? _value._evaluationMessage
           : evaluationMessage // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       outputParameters: outputParameters == freezed
@@ -780,7 +698,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
           : result // ignore: cast_nullable_to_non_nullable
               as Reference?,
       dataRequirement: dataRequirement == freezed
-          ? _value.dataRequirement
+          ? _value._dataRequirement
           : dataRequirement // ignore: cast_nullable_to_non_nullable
               as List<DataRequirement>?,
     ));
@@ -802,10 +720,10 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.requestId,
       @JsonKey(name: '_requestId')
           this.requestIdElement,
@@ -822,12 +740,18 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       this.performer,
       this.reasonCodeableConcept,
       this.reasonReference,
-      this.note,
-      this.evaluationMessage,
+      final List<Annotation>? note,
+      final List<Reference>? evaluationMessage,
       this.outputParameters,
       this.result,
-      this.dataRequirement})
-      : super._();
+      final List<DataRequirement>? dataRequirement})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _note = note,
+        _evaluationMessage = evaluationMessage,
+        _dataRequirement = dataRequirement,
+        super._();
 
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$$_GuidanceResponseFromJson(json);
@@ -851,13 +775,34 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Id? requestId;
   @override
@@ -887,16 +832,36 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   final CodeableConcept? reasonCodeableConcept;
   @override
   final Reference? reasonReference;
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _evaluationMessage;
   @override
-  final List<Reference>? evaluationMessage;
+  List<Reference>? get evaluationMessage {
+    final value = _evaluationMessage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? outputParameters;
   @override
   final Reference? result;
+  final List<DataRequirement>? _dataRequirement;
   @override
-  final List<DataRequirement>? dataRequirement;
+  List<DataRequirement>? get dataRequirement {
+    final value = _dataRequirement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -907,7 +872,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GuidanceResponse &&
+            other is _$_GuidanceResponse &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -920,11 +885,12 @@ class _$_GuidanceResponse extends _GuidanceResponse {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.requestId, requestId) &&
             const DeepCollectionEquality()
                 .equals(other.requestIdElement, requestIdElement) &&
@@ -945,16 +911,17 @@ class _$_GuidanceResponse extends _GuidanceResponse {
                 .equals(other.reasonCodeableConcept, reasonCodeableConcept) &&
             const DeepCollectionEquality()
                 .equals(other.reasonReference, reasonReference) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality()
-                .equals(other.evaluationMessage, evaluationMessage) &&
+                .equals(other._evaluationMessage, _evaluationMessage) &&
             const DeepCollectionEquality()
                 .equals(other.outputParameters, outputParameters) &&
             const DeepCollectionEquality().equals(other.result, result) &&
             const DeepCollectionEquality()
-                .equals(other.dataRequirement, dataRequirement));
+                .equals(other._dataRequirement, _dataRequirement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -966,9 +933,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(requestId),
         const DeepCollectionEquality().hash(requestIdElement),
         const DeepCollectionEquality().hash(identifier),
@@ -982,17 +949,17 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         const DeepCollectionEquality().hash(performer),
         const DeepCollectionEquality().hash(reasonCodeableConcept),
         const DeepCollectionEquality().hash(reasonReference),
-        const DeepCollectionEquality().hash(note),
-        const DeepCollectionEquality().hash(evaluationMessage),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_evaluationMessage),
         const DeepCollectionEquality().hash(outputParameters),
         const DeepCollectionEquality().hash(result),
-        const DeepCollectionEquality().hash(dataRequirement)
+        const DeepCollectionEquality().hash(_dataRequirement)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith =>
-      __$GuidanceResponseCopyWithImpl<_GuidanceResponse>(this, _$identity);
+  _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
+      __$$_GuidanceResponseCopyWithImpl<_$_GuidanceResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1003,41 +970,41 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 abstract class _GuidanceResponse extends GuidanceResponse {
   factory _GuidanceResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Id? requestId,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Id? requestId,
       @JsonKey(name: '_requestId')
-          Element? requestIdElement,
-      Identifier? identifier,
-      required Reference module,
-      GuidanceResponseStatus? status,
+          final Element? requestIdElement,
+      final Identifier? identifier,
+      required final Reference module,
+      final GuidanceResponseStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? subject,
-      Reference? context,
-      FhirDateTime? occurrenceDateTime,
+          final Element? statusElement,
+      final Reference? subject,
+      final Reference? context,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Reference? performer,
-      CodeableConcept? reasonCodeableConcept,
-      Reference? reasonReference,
-      List<Annotation>? note,
-      List<Reference>? evaluationMessage,
-      Reference? outputParameters,
-      Reference? result,
-      List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
+          final Element? occurrenceDateTimeElement,
+      final Reference? performer,
+      final CodeableConcept? reasonCodeableConcept,
+      final Reference? reasonReference,
+      final List<Annotation>? note,
+      final List<Reference>? evaluationMessage,
+      final Reference? outputParameters,
+      final Reference? result,
+      final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
   _GuidanceResponse._() : super._();
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
@@ -1045,71 +1012,74 @@ abstract class _GuidanceResponse extends GuidanceResponse {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get requestId;
+  Id? get requestId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requestId')
-  Element? get requestIdElement;
+  Element? get requestIdElement => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  Reference get module;
+  Reference get module => throw _privateConstructorUsedError;
   @override
-  GuidanceResponseStatus? get status;
+  GuidanceResponseStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  Reference? get context;
+  Reference? get context => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get occurrenceDateTime;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement;
+  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Reference? get performer;
+  Reference? get performer => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get reasonCodeableConcept;
+  CodeableConcept? get reasonCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get reasonReference;
+  Reference? get reasonReference => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get evaluationMessage;
+  List<Reference>? get evaluationMessage => throw _privateConstructorUsedError;
   @override
-  Reference? get outputParameters;
+  Reference? get outputParameters => throw _privateConstructorUsedError;
   @override
-  Reference? get result;
+  Reference? get result => throw _privateConstructorUsedError;
   @override
-  List<DataRequirement>? get dataRequirement;
+  List<DataRequirement>? get dataRequirement =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith =>
+  _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

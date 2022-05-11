@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "testscript-scope-phase-codes",
   "meta": {
-    "lastUpdated": "2021-04-14T22:25:09-04:00",
+    "lastUpdated": "2022-05-06T13:02:42-04:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]

@@ -9,38 +9,36 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "encounter": [
+  "context": [
     {
       "reference": "Encounter/example"
     },
     {
-      "identifier": {
-        "system": "http://someclinic.org/fhir/NamingSystem/imaging-orders",
-        "value": "111222",
-        "assigner": {
-          "display": "XYZ Medical Clinic"
-        }
-      }
+      "reference": "DocumentReference/documentreference-example-xray-encounter"
     }
   ],
   "event": [
     {
-      "coding": [
-        {
-          "system": "http://snomed.info/sct",
-          "code": "39714003",
-          "display": "Skeletal X-ray of wrist and hand"
-        }
-      ]
+      "concept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "39714003",
+            "display": "Skeletal X-ray of wrist and hand"
+          }
+        ]
+      }
     },
     {
-      "coding": [
-        {
-          "system": "http://snomed.info/sct",
-          "code": "85151006",
-          "display": "Structure of left hand (body structure)"
-        }
-      ]
+      "concept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "85151006",
+            "display": "Structure of left hand (body structure)"
+          }
+        ]
+      }
     }
   ],
   "content": [

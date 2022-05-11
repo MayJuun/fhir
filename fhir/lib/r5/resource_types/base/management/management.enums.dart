@@ -13,8 +13,6 @@ enum EncounterStatus {
   cancelled,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum EncounterStatusHistoryStatus {
@@ -30,8 +28,6 @@ enum EncounterStatusHistoryStatus {
   cancelled,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum EncounterLocationStatus {
@@ -43,8 +39,6 @@ enum EncounterLocationStatus {
   reserved,
   @JsonValue('completed')
   completed,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum EpisodeOfCareStatus {
@@ -62,8 +56,6 @@ enum EpisodeOfCareStatus {
   cancelled,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum EpisodeOfCareStatusHistoryStatus {
@@ -81,8 +73,6 @@ enum EpisodeOfCareStatusHistoryStatus {
   cancelled,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum FlagStatus {
@@ -92,8 +82,6 @@ enum FlagStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum LibraryStatus {
@@ -103,8 +91,6 @@ enum LibraryStatus {
   active,
   @JsonValue('retired')
   retired,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum List_Status {
@@ -114,8 +100,6 @@ enum List_Status {
   retired,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum List_Mode {
@@ -125,6 +109,4 @@ enum List_Mode {
   snapshot,
   @JsonValue('changes')
   changes,
-  @JsonValue('unknown')
-  unknown,
 }

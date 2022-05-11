@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "sort-direction",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00"
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00"
   },
   "text": {
     "status": "generated",
@@ -34,7 +34,7 @@
   "title": "SortDirection",
   "status": "draft",
   "experimental": false,
-  "date": "2021-04-15T12:25:09+10:00",
+  "date": "2022-05-06T17:02:42+00:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {

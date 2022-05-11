@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "care-plan-activity-performed",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -36,6 +36,7 @@
   "name": "CarePlanActivityPerformed",
   "title": "Care Plan Activity Performed",
   "status": "draft",
+  "experimental": true,
   "publisher": "HL7 International - Patient Care WG",
   "contact": [
     {

@@ -86,7 +86,7 @@ class FhirPathQuantity {
     if (executedBefore is Date &&
         executedBefore.isValid &&
         executedBefore.value != null) {
-      final newDate = DateTime(
+      final newDate = DateTime.utc(
           executedBefore.value!.year + yearAmount,
           executedBefore.value!.month + monthAmount,
           executedBefore.value!.day + dayAmount);
@@ -122,7 +122,7 @@ class FhirPathQuantity {
         executedBefore.isValid &&
         executedBefore.value != null) {
       final oldDateTime = executedBefore.value!;
-      final newDateTime = DateTime(
+      final newDateTime = DateTime.utc(
         oldDateTime.year + yearAmount,
         oldDateTime.month + monthAmount,
         oldDateTime.day + dayAmount,
@@ -132,11 +132,11 @@ class FhirPathQuantity {
         oldDateTime.millisecond + millisecondAmount,
       );
       if (executedBefore.precision == DateTimePrecision.YYYY) {
-        return FhirDateTime(newDateTime.toString().substring(0, 4));
+        return FhirDateTime(newDateTime.toIso8601String().substring(0, 4));
       } else if (executedBefore.precision == DateTimePrecision.YYYYMM) {
-        return FhirDateTime(newDateTime.toString().substring(0, 7));
+        return FhirDateTime(newDateTime.toIso8601String().substring(0, 7));
       } else if (executedBefore.precision == DateTimePrecision.YYYYMMDD) {
-        return FhirDateTime(newDateTime.toString().substring(0, 10));
+        return FhirDateTime(newDateTime.toIso8601String().substring(0, 10));
       } else {
         return FhirDateTime(newDateTime);
       }

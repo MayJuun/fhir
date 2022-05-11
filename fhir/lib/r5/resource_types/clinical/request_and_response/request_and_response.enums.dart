@@ -13,8 +13,6 @@ enum DeviceUsageStatus {
   stopped,
   @JsonValue('on-hold')
   on_hold,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum GuidanceResponseStatus {
@@ -30,8 +28,6 @@ enum GuidanceResponseStatus {
   failure,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum SupplyDeliveryStatus {
@@ -43,8 +39,6 @@ enum SupplyDeliveryStatus {
   abandoned,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum SupplyRequestStatus {
@@ -60,8 +54,6 @@ enum SupplyRequestStatus {
   completed,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum InventoryReportStatus {
@@ -73,8 +65,6 @@ enum InventoryReportStatus {
   active,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum InventoryReportCountyType {
@@ -82,6 +72,4 @@ enum InventoryReportCountyType {
   snapshot,
   @JsonValue('difference')
   difference,
-  @JsonValue('unknown')
-  unknown,
 }

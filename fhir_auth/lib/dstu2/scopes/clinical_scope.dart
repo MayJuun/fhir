@@ -1,5 +1,5 @@
 // Package imports:
-import 'package:fhir/r4/resource/resource.dart';
+import 'package:fhir/dstu2/resource/resource.dart';
 
 /// This includes the older format as well as the newer, more granular delineation
 /// http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-clinical-data
@@ -28,6 +28,6 @@ class ClinicalScope {
   ClinicalScope(this.role, this.resourceType, this.interaction);
 
   final Role role;
-  final R4ResourceType resourceType;
+  final Dstu2ResourceType resourceType;
   final Interaction interaction;
 }

@@ -26,6 +26,7 @@
       }
     }
   ],
+  "active": true,
   "name": [
     {
       "use": "official",
@@ -70,7 +71,6 @@
       "postalCode": "3999"
     }
   ],
-  "active": true,
   "link": [
     {
       "target": {

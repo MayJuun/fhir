@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../dstu2.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'billing.enums.dart';
 part 'billing.freezed.dart';
 part 'billing.g.dart';

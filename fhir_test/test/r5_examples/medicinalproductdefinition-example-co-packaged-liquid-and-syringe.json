@@ -9,29 +9,32 @@
     {
       "resourceType": "PackagedProductDefinition",
       "id": "package",
+      "packageFor": [
+        {
+          "reference": "#"
+        }
+      ],
       "package": {
         "containedItem": [
           {
-            "item": [
-              {
-                "reference": {
-                  "reference": "#liquidItem"
-                }
+            "item": {
+              "reference": {
+                "reference": "#liquidItem"
               }
-            ],
-            "amountQuantity": {
+            },
+            "amount": {
               "value": 20,
-              "unit": "ml"
+              "unit": "ml",
+              "system": "http://unitsofmeasure.org",
+              "code": "mL"
             }
           },
           {
-            "item": [
-              {
-                "reference": {
-                  "reference": "#syringeDevice"
-                }
+            "item": {
+              "reference": {
+                "reference": "#syringeDevice"
               }
-            ]
+            }
           }
         ]
       }
@@ -39,15 +42,18 @@
     {
       "resourceType": "DeviceDefinition",
       "id": "syringeDevice",
-      "type": [
+      "classification": [
         {
-          "text": "syringe"
+          "type": {
+            "text": "syringe"
+          }
         }
       ]
     },
     {
       "resourceType": "ManufacturedItemDefinition",
       "id": "liquidItem",
+      "status": "active",
       "manufacturedDoseForm": {
         "coding": [
           {
@@ -55,38 +61,6 @@
             "code": "solution for injection"
           }
         ]
-      },
-      "ingredient": [
-        {
-          "reference": {
-            "reference": "#ingredient"
-          }
-        }
-      ]
-    },
-    {
-      "resourceType": "Ingredient",
-      "id": "ingredient",
-      "role": {
-        "coding": [
-          {
-            "system": "http://example.org.uk/fhir/ingredientRole",
-            "code": "active"
-          }
-        ]
-      },
-      "substance": {
-        "code": {
-          "concept": {
-            "coding": [
-              {
-                "system": "http://example.org.uk/fhir/ingredients",
-                "code": "12345",
-                "display": "Wondersubstance BP"
-              }
-            ]
-          }
-        }
       }
     }
   ],
@@ -107,13 +81,6 @@
   "name": [
     {
       "productName": "Wonderdrug+ liquid 20ml"
-    }
-  ],
-  "package": [
-    {
-      "package": {
-        "reference": "#package"
-      }
     }
   ],
   "meta": {

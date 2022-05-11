@@ -48,7 +48,15 @@
   "confidentiality": "N",
   "attester": [
     {
-      "mode": "legal",
+      "mode": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/composition-attestation-mode",
+            "code": "legal",
+            "display": "Legal"
+          }
+        ]
+      },
       "time": "2012-01-04T09:10:14Z",
       "party": {
         "reference": "Practitioner/xcda-author",
@@ -62,16 +70,18 @@
   },
   "relatesTo": [
     {
-      "code": "replaces",
-      "targetReference": {
+      "type": "replaces",
+      "resourceReference": {
         "reference": "Composition/old-example"
       }
     },
     {
-      "code": "appends",
-      "targetIdentifier": {
-        "system": "http://example.org/fhir/NamingSystem/document-ids",
-        "value": "ABC123"
+      "type": "appends",
+      "resourceReference": {
+        "identifier": {
+          "system": "http://example.org/fhir/NamingSystem/document-ids",
+          "value": "ABC123"
+        }
       }
     }
   ],

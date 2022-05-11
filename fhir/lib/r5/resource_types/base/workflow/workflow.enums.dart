@@ -21,8 +21,6 @@ enum AppointmentStatus {
   checked_in,
   @JsonValue('waitlist')
   waitlist,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AppointmentParticipantRequired {
@@ -32,8 +30,6 @@ enum AppointmentParticipantRequired {
   optional,
   @JsonValue('information-only')
   information_only,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AppointmentParticipantStatus {
@@ -45,8 +41,6 @@ enum AppointmentParticipantStatus {
   tentative,
   @JsonValue('needs-action')
   needs_action,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum SlotStatus {
@@ -60,8 +54,6 @@ enum SlotStatus {
   busy_tentative,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum TaskStatus {
@@ -89,13 +81,9 @@ enum TaskStatus {
   completed,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum TaskIntent {
-  @JsonValue('unknown')
-  unknown,
   @JsonValue('proposal')
   proposal,
   @JsonValue('plan')

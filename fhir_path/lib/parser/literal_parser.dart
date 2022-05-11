@@ -35,7 +35,7 @@ class WhiteSpaceParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => value;
+  String prettyPrint([int indent = 2]) => value;
 }
 
 /// Boolean Parser, it returns a FHIR Boolean value
@@ -60,7 +60,7 @@ class BooleanParser extends ValueParser<bool> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// This allows the passing of a variable from the environment into the
@@ -133,7 +133,7 @@ class EnvVariableParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// The Quantity type represents quantities with a specified unit, where
@@ -169,7 +169,7 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// The Integer type represents whole numbers in the range -2^31 to 2^31-1 in
@@ -200,7 +200,7 @@ class IntegerParser extends ValueParser<int> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// The Decimal type represents real values in the range (-10^28+1)/10^8 to
@@ -239,7 +239,7 @@ class DecimalParser extends ValueParser<double> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// Identifiers are used as labels to allow expressions to reference elements
@@ -347,7 +347,7 @@ class IdentifierParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// Identifiers are used as labels to allow expressions to reference elements
@@ -367,7 +367,85 @@ class DelimitedIdentifierParser extends ValueParser<String> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) {
+    final identifierName = value;
+
+    final finalResults = [];
+    final finalPrimitiveExtensions =
+        List<dynamic>.filled(results.length, null, growable: false);
+
+    final passedExtensions = passed[ExtensionParser.extensionKey];
+    passed[ExtensionParser.extensionKey] = null;
+
+    if (passed.isVersion(FhirVersion.r4)
+        ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+            .contains(identifierName)
+        : passed.isVersion(FhirVersion.r5)
+            ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                .contains(identifierName)
+            : passed.isVersion(FhirVersion.dstu2)
+                ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                    .contains(identifierName)
+                : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                        .contains(identifierName) &&
+                    (passed.hasNoContext
+                        ? false
+                        : passed.context?['resourceType'] == identifierName)) {
+      finalResults.add(passed.context);
+    } else {
+      results.forEachIndexed((i, r) {
+        if (r is Map) {
+          String jsonIdentifierName = identifierName;
+          dynamic rValue = r[identifierName];
+          if (rValue == null) {
+            // Support for polymorphism:
+            // If the key cannot be found in the r-map, then find
+            // a key that starts with the same word, e.g. 'value' identifier will
+            // match 'valueDateTime' key.
+            r.forEach((k, v) {
+              if (k.toString().startsWith(identifierName) &&
+                  polymorphicPrefixes.contains(identifierName) &&
+                  startsWithAPolymorphicPrefix(k.toString())) {
+                rValue = v;
+                jsonIdentifierName = k;
+              }
+            });
+          }
+
+          final jsonPrimitiveExtension =
+              r['_$jsonIdentifierName'] as Map<String, dynamic>?;
+          if (jsonPrimitiveExtension != null) {
+            finalPrimitiveExtensions[i] = jsonPrimitiveExtension['extension'];
+          }
+
+          if (rValue is List) {
+            finalResults.addAll(rValue);
+          } else if (rValue != null) {
+            finalResults.add(rValue);
+          } else if (r['resourceType'] == identifierName) {
+            finalResults.add(r);
+          }
+        } else {
+          if (identifierName == "extension") {
+            // Special processing for extensions on primitives
+            if (passedExtensions != null) {
+              final extensionOnPrimitive = passedExtensions[i];
+              if (extensionOnPrimitive != null) {
+                finalResults.addAll(extensionOnPrimitive);
+              }
+            } else {
+              // This primitive does not have an extension
+              // Do nothing.
+            }
+          }
+        }
+      });
+    }
+
+    passed[ExtensionParser.extensionKey] = finalPrimitiveExtensions;
+
+    return finalResults;
+  }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
@@ -383,7 +461,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '`$value`';
+  String prettyPrint([int indent = 2]) => '`$value`';
 }
 
 /// The String type represents string values up to 2^31-1 characters in length.
@@ -413,7 +491,7 @@ class StringParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => "'$value'";
+  String prettyPrint([int indent = 2]) => "'$value'";
 }
 
 /// The DateTime type represents date/time and partial date/time values in the
@@ -494,7 +572,7 @@ class DateTimeParser extends BaseDateTimeParser<List> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '@${toString()}';
+  String prettyPrint([int indent = 2]) => '@${toString()}';
 }
 
 /// The Date type represents date and partial date values in the range
@@ -524,7 +602,7 @@ class DateParser extends BaseDateTimeParser<Date> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '@$value';
+  String prettyPrint([int indent = 2]) => '@$value';
 }
 
 /// The Time type represents time-of-day and partial time-of-day values in the
@@ -560,5 +638,5 @@ class TimeParser extends BaseDateTimeParser<Time> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '@T$value';
+  String prettyPrint([int indent = 2]) => '@T$value';
 }

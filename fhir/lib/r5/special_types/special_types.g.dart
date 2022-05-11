@@ -11,8 +11,7 @@ _$_Narrative _$$_NarrativeFromJson(Map<String, dynamic> json) => _$_Narrative(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$NarrativeStatusEnumMap, json['status'],
-          unknownValue: NarrativeStatus.unknown),
+      status: $enumDecodeNullable(_$NarrativeStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -42,7 +41,6 @@ const _$NarrativeStatusEnumMap = {
   NarrativeStatus.extensions: 'extensions',
   NarrativeStatus.additional: 'additional',
   NarrativeStatus.empty: 'empty',
-  NarrativeStatus.unknown: 'unknown',
 };
 
 _$_CodeableReference _$$_CodeableReferenceFromJson(Map<String, dynamic> json) =>
@@ -677,16 +675,14 @@ _$_Dosage _$$_DosageFromJson(Map<String, dynamic> json) => _$_Dosage(
       timing: json['timing'] == null
           ? null
           : Timing.fromJson(json['timing'] as Map<String, dynamic>),
-      asNeededBoolean: json['asNeededBoolean'] == null
-          ? null
-          : Boolean.fromJson(json['asNeededBoolean']),
-      asNeededBooleanElement: json['_asNeededBoolean'] == null
+      asNeeded:
+          json['asNeeded'] == null ? null : Boolean.fromJson(json['asNeeded']),
+      asNeededElement: json['_asNeededBoolean'] == null
           ? null
           : Element.fromJson(json['_asNeededBoolean'] as Map<String, dynamic>),
-      asNeededCodeableConcept: json['asNeededCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['asNeededCodeableConcept'] as Map<String, dynamic>),
+      asNeededFor: (json['asNeededFor'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
       site: json['site'] == null
           ? null
           : CodeableConcept.fromJson(json['site'] as Map<String, dynamic>),
@@ -736,10 +732,10 @@ Map<String, dynamic> _$$_DosageToJson(_$_Dosage instance) {
   writeNotNull(
       '_patientInstruction', instance.patientInstructionElement?.toJson());
   writeNotNull('timing', instance.timing?.toJson());
-  writeNotNull('asNeededBoolean', instance.asNeededBoolean?.toJson());
-  writeNotNull('_asNeededBoolean', instance.asNeededBooleanElement?.toJson());
+  writeNotNull('asNeeded', instance.asNeeded?.toJson());
+  writeNotNull('_asNeededBoolean', instance.asNeededElement?.toJson());
   writeNotNull(
-      'asNeededCodeableConcept', instance.asNeededCodeableConcept?.toJson());
+      'asNeededFor', instance.asNeededFor?.map((e) => e.toJson()).toList());
   writeNotNull('site', instance.site?.toJson());
   writeNotNull('route', instance.route?.toJson());
   writeNotNull('method', instance.method?.toJson());
@@ -2159,7 +2155,6 @@ const _$ElementDefinitionRepresentationEnumMap = {
   ElementDefinitionRepresentation.typeattr: 'typeAttr',
   ElementDefinitionRepresentation.cdatext: 'cdaText',
   ElementDefinitionRepresentation.xhtml: 'xhtml',
-  ElementDefinitionRepresentation.unknown: 'unknown',
 };
 
 _$_ElementDefinitionSlicing _$$_ElementDefinitionSlicingFromJson(
@@ -2186,8 +2181,7 @@ _$_ElementDefinitionSlicing _$$_ElementDefinitionSlicingFromJson(
           ? null
           : Element.fromJson(json['_ordered'] as Map<String, dynamic>),
       rules: $enumDecodeNullable(
-          _$ElementDefinitionSlicingRulesEnumMap, json['rules'],
-          unknownValue: ElementDefinitionSlicingRules.unknown),
+          _$ElementDefinitionSlicingRulesEnumMap, json['rules']),
       rulesElement: json['_rules'] == null
           ? null
           : Element.fromJson(json['_rules'] as Map<String, dynamic>),
@@ -2223,7 +2217,6 @@ const _$ElementDefinitionSlicingRulesEnumMap = {
   ElementDefinitionSlicingRules.closed: 'closed',
   ElementDefinitionSlicingRules.open: 'open',
   ElementDefinitionSlicingRules.openatend: 'openAtEnd',
-  ElementDefinitionSlicingRules.unknown: 'unknown',
 };
 
 _$_ElementDefinitionDiscriminator _$$_ElementDefinitionDiscriminatorFromJson(
@@ -2237,8 +2230,7 @@ _$_ElementDefinitionDiscriminator _$$_ElementDefinitionDiscriminatorFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       type: $enumDecodeNullable(
-          _$ElementDefinitionDiscriminatorTypeEnumMap, json['type'],
-          unknownValue: ElementDefinitionDiscriminatorType.unknown),
+          _$ElementDefinitionDiscriminatorTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -2277,7 +2269,6 @@ const _$ElementDefinitionDiscriminatorTypeEnumMap = {
   ElementDefinitionDiscriminatorType.pattern: 'pattern',
   ElementDefinitionDiscriminatorType.type: 'type',
   ElementDefinitionDiscriminatorType.profile: 'profile',
-  ElementDefinitionDiscriminatorType.unknown: 'unknown',
 };
 
 _$_ElementDefinitionBase _$$_ElementDefinitionBaseFromJson(
@@ -2359,8 +2350,7 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       versioning: $enumDecodeNullable(
-          _$ElementDefinitionTypeVersioningEnumMap, json['versioning'],
-          unknownValue: ElementDefinitionTypeVersioning.unknown),
+          _$ElementDefinitionTypeVersioningEnumMap, json['versioning']),
       versioningElement: json['_versioning'] == null
           ? null
           : Element.fromJson(json['_versioning'] as Map<String, dynamic>),
@@ -2405,14 +2395,12 @@ const _$ElementDefinitionTypeAggregationEnumMap = {
   ElementDefinitionTypeAggregation.contained: 'contained',
   ElementDefinitionTypeAggregation.referenced: 'referenced',
   ElementDefinitionTypeAggregation.bundled: 'bundled',
-  ElementDefinitionTypeAggregation.unknown: 'unknown',
 };
 
 const _$ElementDefinitionTypeVersioningEnumMap = {
   ElementDefinitionTypeVersioning.either: 'either',
   ElementDefinitionTypeVersioning.independent: 'independent',
   ElementDefinitionTypeVersioning.specific: 'specific',
-  ElementDefinitionTypeVersioning.unknown: 'unknown',
 };
 
 _$_ElementDefinitionExample _$$_ElementDefinitionExampleFromJson(
@@ -2762,8 +2750,7 @@ _$_ElementDefinitionConstraint _$$_ElementDefinitionConstraintFromJson(
           ? null
           : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
       severity: $enumDecodeNullable(
-          _$ElementDefinitionConstraintSeverityEnumMap, json['severity'],
-          unknownValue: ElementDefinitionConstraintSeverity.unknown),
+          _$ElementDefinitionConstraintSeverityEnumMap, json['severity']),
       severityElement: json['_severity'] == null
           ? null
           : Element.fromJson(json['_severity'] as Map<String, dynamic>),
@@ -2818,7 +2805,6 @@ Map<String, dynamic> _$$_ElementDefinitionConstraintToJson(
 const _$ElementDefinitionConstraintSeverityEnumMap = {
   ElementDefinitionConstraintSeverity.error: 'error',
   ElementDefinitionConstraintSeverity.warning: 'warning',
-  ElementDefinitionConstraintSeverity.unknown: 'unknown',
 };
 
 _$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
@@ -2832,8 +2818,7 @@ _$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       strength: $enumDecodeNullable(
-          _$ElementDefinitionBindingStrengthEnumMap, json['strength'],
-          unknownValue: ElementDefinitionBindingStrength.unknown),
+          _$ElementDefinitionBindingStrengthEnumMap, json['strength']),
       strengthElement: json['_strength'] == null
           ? null
           : Element.fromJson(json['_strength'] as Map<String, dynamic>),
@@ -2875,7 +2860,6 @@ const _$ElementDefinitionBindingStrengthEnumMap = {
   ElementDefinitionBindingStrength.extensible: 'extensible',
   ElementDefinitionBindingStrength.preferred: 'preferred',
   ElementDefinitionBindingStrength.example: 'example',
-  ElementDefinitionBindingStrength.unknown: 'unknown',
 };
 
 _$_ElementDefinitionMapping _$$_ElementDefinitionMappingFromJson(

@@ -348,7 +348,9 @@
     {
       "type": "derived-from",
       "display": "Practice Guideline for the Treatment of Patients with Major Depressive Disorder",
-      "url": "http://psychiatryonline.org/pb/assets/raw/sitewide/practice_guidelines/guidelines/mdd.pdf"
+      "document": {
+        "url": "http://psychiatryonline.org/pb/assets/raw/sitewide/practice_guidelines/guidelines/mdd.pdf"
+      }
     },
     {
       "type": "composed-of",

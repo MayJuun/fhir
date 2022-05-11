@@ -12,96 +12,11 @@ part of 'testing.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 TestReport _$TestReportFromJson(Map<String, dynamic> json) {
   return _TestReport.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportTearOff {
-  const _$TestReportTearOff();
-
-  _TestReport call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
-          Stu3ResourceType resourceType = Stu3ResourceType.TestReport,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      TestReportStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required Reference testScript,
-      TestReportResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
-      Decimal? score,
-      @JsonKey(name: '_score')
-          Element? scoreElement,
-      String? tester,
-      @JsonKey(name: '_tester')
-          Element? testerElement,
-      String? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
-      List<TestReportParticipant>? participant,
-      TestReportSetup? setup,
-      List<TestReportTest>? test,
-      TestReportTeardown? teardown}) {
-    return _TestReport(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      name: name,
-      nameElement: nameElement,
-      status: status,
-      statusElement: statusElement,
-      testScript: testScript,
-      result: result,
-      resultElement: resultElement,
-      score: score,
-      scoreElement: scoreElement,
-      tester: tester,
-      testerElement: testerElement,
-      issued: issued,
-      issuedElement: issuedElement,
-      participant: participant,
-      setup: setup,
-      test: test,
-      teardown: teardown,
-    );
-  }
-
-  TestReport fromJson(Map<String, Object?> json) {
-    return TestReport.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReport = _$TestReportTearOff();
 
 /// @nodoc
 mixin _$TestReport {
@@ -527,10 +442,11 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
-  factory _$TestReportCopyWith(
-          _TestReport value, $Res Function(_TestReport) then) =
-      __$TestReportCopyWithImpl<$Res>;
+abstract class _$$_TestReportCopyWith<$Res>
+    implements $TestReportCopyWith<$Res> {
+  factory _$$_TestReportCopyWith(
+          _$_TestReport value, $Res Function(_$_TestReport) then) =
+      __$$_TestReportCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
@@ -604,14 +520,14 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
-    implements _$TestReportCopyWith<$Res> {
-  __$TestReportCopyWithImpl(
-      _TestReport _value, $Res Function(_TestReport) _then)
-      : super(_value, (v) => _then(v as _TestReport));
+class __$$_TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
+    implements _$$_TestReportCopyWith<$Res> {
+  __$$_TestReportCopyWithImpl(
+      _$_TestReport _value, $Res Function(_$_TestReport) _then)
+      : super(_value, (v) => _then(v as _$_TestReport));
 
   @override
-  _TestReport get _value => super._value as _TestReport;
+  _$_TestReport get _value => super._value as _$_TestReport;
 
   @override
   $Res call({
@@ -645,7 +561,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
     Object? test = freezed,
     Object? teardown = freezed,
   }) {
-    return _then(_TestReport(
+    return _then(_$_TestReport(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -679,15 +595,15 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: identifier == freezed
@@ -747,7 +663,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
           : issuedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       participant: participant == freezed
-          ? _value.participant
+          ? _value._participant
           : participant // ignore: cast_nullable_to_non_nullable
               as List<TestReportParticipant>?,
       setup: setup == freezed
@@ -755,7 +671,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
           : setup // ignore: cast_nullable_to_non_nullable
               as TestReportSetup?,
       test: test == freezed
-          ? _value.test
+          ? _value._test
           : test // ignore: cast_nullable_to_non_nullable
               as List<TestReportTest>?,
       teardown: teardown == freezed
@@ -781,10 +697,10 @@ class _$_TestReport extends _TestReport {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.name,
       @JsonKey(name: '_name')
@@ -805,11 +721,16 @@ class _$_TestReport extends _TestReport {
       this.issued,
       @JsonKey(name: '_issued')
           this.issuedElement,
-      this.participant,
+      final List<TestReportParticipant>? participant,
       this.setup,
-      this.test,
+      final List<TestReportTest>? test,
       this.teardown})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _participant = participant,
+        _test = test,
+        super._();
 
   factory _$_TestReport.fromJson(Map<String, dynamic> json) =>
       _$$_TestReportFromJson(json);
@@ -833,13 +754,34 @@ class _$_TestReport extends _TestReport {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Identifier? identifier;
   @override
@@ -874,12 +816,26 @@ class _$_TestReport extends _TestReport {
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
+  final List<TestReportParticipant>? _participant;
   @override
-  final List<TestReportParticipant>? participant;
+  List<TestReportParticipant>? get participant {
+    final value = _participant;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestReportSetup? setup;
+  final List<TestReportTest>? _test;
   @override
-  final List<TestReportTest>? test;
+  List<TestReportTest>? get test {
+    final value = _test;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestReportTeardown? teardown;
 
@@ -892,7 +848,7 @@ class _$_TestReport extends _TestReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReport &&
+            other is _$_TestReport &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -905,11 +861,12 @@ class _$_TestReport extends _TestReport {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.name, name) &&
@@ -933,12 +890,13 @@ class _$_TestReport extends _TestReport {
             const DeepCollectionEquality()
                 .equals(other.issuedElement, issuedElement) &&
             const DeepCollectionEquality()
-                .equals(other.participant, participant) &&
+                .equals(other._participant, _participant) &&
             const DeepCollectionEquality().equals(other.setup, setup) &&
-            const DeepCollectionEquality().equals(other.test, test) &&
+            const DeepCollectionEquality().equals(other._test, _test) &&
             const DeepCollectionEquality().equals(other.teardown, teardown));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -950,9 +908,9 @@ class _$_TestReport extends _TestReport {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(identifier),
         const DeepCollectionEquality().hash(name),
         const DeepCollectionEquality().hash(nameElement),
@@ -967,16 +925,16 @@ class _$_TestReport extends _TestReport {
         const DeepCollectionEquality().hash(testerElement),
         const DeepCollectionEquality().hash(issued),
         const DeepCollectionEquality().hash(issuedElement),
-        const DeepCollectionEquality().hash(participant),
+        const DeepCollectionEquality().hash(_participant),
         const DeepCollectionEquality().hash(setup),
-        const DeepCollectionEquality().hash(test),
+        const DeepCollectionEquality().hash(_test),
         const DeepCollectionEquality().hash(teardown)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportCopyWith<_TestReport> get copyWith =>
-      __$TestReportCopyWithImpl<_TestReport>(this, _$identity);
+  _$$_TestReportCopyWith<_$_TestReport> get copyWith =>
+      __$$_TestReportCopyWithImpl<_$_TestReport>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -987,44 +945,44 @@ class _$_TestReport extends _TestReport {
 abstract class _TestReport extends TestReport {
   factory _TestReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      String? name,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final String? name,
       @JsonKey(name: '_name')
-          Element? nameElement,
-      TestReportStatus? status,
+          final Element? nameElement,
+      final TestReportStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      required Reference testScript,
-      TestReportResult? result,
+          final Element? statusElement,
+      required final Reference testScript,
+      final TestReportResult? result,
       @JsonKey(name: '_result')
-          Element? resultElement,
-      Decimal? score,
+          final Element? resultElement,
+      final Decimal? score,
       @JsonKey(name: '_score')
-          Element? scoreElement,
-      String? tester,
+          final Element? scoreElement,
+      final String? tester,
       @JsonKey(name: '_tester')
-          Element? testerElement,
-      String? issued,
+          final Element? testerElement,
+      final String? issued,
       @JsonKey(name: '_issued')
-          Element? issuedElement,
-      List<TestReportParticipant>? participant,
-      TestReportSetup? setup,
-      List<TestReportTest>? test,
-      TestReportTeardown? teardown}) = _$_TestReport;
+          final Element? issuedElement,
+      final List<TestReportParticipant>? participant,
+      final TestReportSetup? setup,
+      final List<TestReportTest>? test,
+      final TestReportTeardown? teardown}) = _$_TestReport;
   _TestReport._() : super._();
 
   factory _TestReport.fromJson(Map<String, dynamic> json) =
@@ -1032,75 +990,77 @@ abstract class _TestReport extends TestReport {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  TestReportStatus? get status;
+  TestReportStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Reference get testScript;
+  Reference get testScript => throw _privateConstructorUsedError;
   @override
-  TestReportResult? get result;
+  TestReportResult? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
-  Element? get resultElement;
+  Element? get resultElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get score;
+  Decimal? get score => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_score')
-  Element? get scoreElement;
+  Element? get scoreElement => throw _privateConstructorUsedError;
   @override
-  String? get tester;
+  String? get tester => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_tester')
-  Element? get testerElement;
+  Element? get testerElement => throw _privateConstructorUsedError;
   @override
-  String? get issued;
+  String? get issued => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_issued')
-  Element? get issuedElement;
+  Element? get issuedElement => throw _privateConstructorUsedError;
   @override
-  List<TestReportParticipant>? get participant;
+  List<TestReportParticipant>? get participant =>
+      throw _privateConstructorUsedError;
   @override
-  TestReportSetup? get setup;
+  TestReportSetup? get setup => throw _privateConstructorUsedError;
   @override
-  List<TestReportTest>? get test;
+  List<TestReportTest>? get test => throw _privateConstructorUsedError;
   @override
-  TestReportTeardown? get teardown;
+  TestReportTeardown? get teardown => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportCopyWith<_TestReport> get copyWith =>
+  _$$_TestReportCopyWith<_$_TestReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1108,35 +1068,6 @@ TestReportParticipant _$TestReportParticipantFromJson(
     Map<String, dynamic> json) {
   return _TestReportParticipant.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportParticipantTearOff {
-  const _$TestReportParticipantTearOff();
-
-  _TestReportParticipant call(
-      {TestReportParticipantType? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      String? uri,
-      @JsonKey(name: '_uri') Element? uriElement,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement}) {
-    return _TestReportParticipant(
-      type: type,
-      typeElement: typeElement,
-      uri: uri,
-      uriElement: uriElement,
-      display: display,
-      displayElement: displayElement,
-    );
-  }
-
-  TestReportParticipant fromJson(Map<String, Object?> json) {
-    return TestReportParticipant.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportParticipant = _$TestReportParticipantTearOff();
 
 /// @nodoc
 mixin _$TestReportParticipant {
@@ -1255,11 +1186,11 @@ class _$TestReportParticipantCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportParticipantCopyWith<$Res>
+abstract class _$$_TestReportParticipantCopyWith<$Res>
     implements $TestReportParticipantCopyWith<$Res> {
-  factory _$TestReportParticipantCopyWith(_TestReportParticipant value,
-          $Res Function(_TestReportParticipant) then) =
-      __$TestReportParticipantCopyWithImpl<$Res>;
+  factory _$$_TestReportParticipantCopyWith(_$_TestReportParticipant value,
+          $Res Function(_$_TestReportParticipant) then) =
+      __$$_TestReportParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
       {TestReportParticipantType? type,
@@ -1278,15 +1209,16 @@ abstract class _$TestReportParticipantCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestReportParticipantCopyWithImpl<$Res>
+class __$$_TestReportParticipantCopyWithImpl<$Res>
     extends _$TestReportParticipantCopyWithImpl<$Res>
-    implements _$TestReportParticipantCopyWith<$Res> {
-  __$TestReportParticipantCopyWithImpl(_TestReportParticipant _value,
-      $Res Function(_TestReportParticipant) _then)
-      : super(_value, (v) => _then(v as _TestReportParticipant));
+    implements _$$_TestReportParticipantCopyWith<$Res> {
+  __$$_TestReportParticipantCopyWithImpl(_$_TestReportParticipant _value,
+      $Res Function(_$_TestReportParticipant) _then)
+      : super(_value, (v) => _then(v as _$_TestReportParticipant));
 
   @override
-  _TestReportParticipant get _value => super._value as _TestReportParticipant;
+  _$_TestReportParticipant get _value =>
+      super._value as _$_TestReportParticipant;
 
   @override
   $Res call({
@@ -1297,7 +1229,7 @@ class __$TestReportParticipantCopyWithImpl<$Res>
     Object? display = freezed,
     Object? displayElement = freezed,
   }) {
-    return _then(_TestReportParticipant(
+    return _then(_$_TestReportParticipant(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1366,7 +1298,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportParticipant &&
+            other is _$_TestReportParticipant &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.typeElement, typeElement) &&
@@ -1378,6 +1310,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
                 .equals(other.displayElement, displayElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1390,8 +1323,8 @@ class _$_TestReportParticipant extends _TestReportParticipant {
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportParticipantCopyWith<_TestReportParticipant> get copyWith =>
-      __$TestReportParticipantCopyWithImpl<_TestReportParticipant>(
+  _$$_TestReportParticipantCopyWith<_$_TestReportParticipant> get copyWith =>
+      __$$_TestReportParticipantCopyWithImpl<_$_TestReportParticipant>(
           this, _$identity);
 
   @override
@@ -1402,12 +1335,12 @@ class _$_TestReportParticipant extends _TestReportParticipant {
 
 abstract class _TestReportParticipant extends TestReportParticipant {
   factory _TestReportParticipant(
-          {TestReportParticipantType? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          String? uri,
-          @JsonKey(name: '_uri') Element? uriElement,
-          String? display,
-          @JsonKey(name: '_display') Element? displayElement}) =
+          {final TestReportParticipantType? type,
+          @JsonKey(name: '_type') final Element? typeElement,
+          final String? uri,
+          @JsonKey(name: '_uri') final Element? uriElement,
+          final String? display,
+          @JsonKey(name: '_display') final Element? displayElement}) =
       _$_TestReportParticipant;
   _TestReportParticipant._() : super._();
 
@@ -1415,47 +1348,29 @@ abstract class _TestReportParticipant extends TestReportParticipant {
       _$_TestReportParticipant.fromJson;
 
   @override
-  TestReportParticipantType? get type;
+  TestReportParticipantType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String? get uri;
+  String? get uri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_uri')
-  Element? get uriElement;
+  Element? get uriElement => throw _privateConstructorUsedError;
   @override
-  String? get display;
+  String? get display => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement;
+  Element? get displayElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportParticipantCopyWith<_TestReportParticipant> get copyWith =>
+  _$$_TestReportParticipantCopyWith<_$_TestReportParticipant> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestReportSetup _$TestReportSetupFromJson(Map<String, dynamic> json) {
   return _TestReportSetup.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportSetupTearOff {
-  const _$TestReportSetupTearOff();
-
-  _TestReportSetup call({required List<TestReportAction> action}) {
-    return _TestReportSetup(
-      action: action,
-    );
-  }
-
-  TestReportSetup fromJson(Map<String, Object?> json) {
-    return TestReportSetup.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportSetup = _$TestReportSetupTearOff();
 
 /// @nodoc
 mixin _$TestReportSetup {
@@ -1498,33 +1413,33 @@ class _$TestReportSetupCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportSetupCopyWith<$Res>
+abstract class _$$_TestReportSetupCopyWith<$Res>
     implements $TestReportSetupCopyWith<$Res> {
-  factory _$TestReportSetupCopyWith(
-          _TestReportSetup value, $Res Function(_TestReportSetup) then) =
-      __$TestReportSetupCopyWithImpl<$Res>;
+  factory _$$_TestReportSetupCopyWith(
+          _$_TestReportSetup value, $Res Function(_$_TestReportSetup) then) =
+      __$$_TestReportSetupCopyWithImpl<$Res>;
   @override
   $Res call({List<TestReportAction> action});
 }
 
 /// @nodoc
-class __$TestReportSetupCopyWithImpl<$Res>
+class __$$_TestReportSetupCopyWithImpl<$Res>
     extends _$TestReportSetupCopyWithImpl<$Res>
-    implements _$TestReportSetupCopyWith<$Res> {
-  __$TestReportSetupCopyWithImpl(
-      _TestReportSetup _value, $Res Function(_TestReportSetup) _then)
-      : super(_value, (v) => _then(v as _TestReportSetup));
+    implements _$$_TestReportSetupCopyWith<$Res> {
+  __$$_TestReportSetupCopyWithImpl(
+      _$_TestReportSetup _value, $Res Function(_$_TestReportSetup) _then)
+      : super(_value, (v) => _then(v as _$_TestReportSetup));
 
   @override
-  _TestReportSetup get _value => super._value as _TestReportSetup;
+  _$_TestReportSetup get _value => super._value as _$_TestReportSetup;
 
   @override
   $Res call({
     Object? action = freezed,
   }) {
-    return _then(_TestReportSetup(
+    return _then(_$_TestReportSetup(
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestReportAction>,
     ));
@@ -1534,13 +1449,19 @@ class __$TestReportSetupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportSetup extends _TestReportSetup {
-  _$_TestReportSetup({required this.action}) : super._();
+  _$_TestReportSetup({required final List<TestReportAction> action})
+      : _action = action,
+        super._();
 
   factory _$_TestReportSetup.fromJson(Map<String, dynamic> json) =>
       _$$_TestReportSetupFromJson(json);
 
+  final List<TestReportAction> _action;
   @override
-  final List<TestReportAction> action;
+  List<TestReportAction> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -1551,18 +1472,19 @@ class _$_TestReportSetup extends _TestReportSetup {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportSetup &&
-            const DeepCollectionEquality().equals(other.action, action));
+            other is _$_TestReportSetup &&
+            const DeepCollectionEquality().equals(other._action, _action));
   }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportSetupCopyWith<_TestReportSetup> get copyWith =>
-      __$TestReportSetupCopyWithImpl<_TestReportSetup>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_action));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TestReportSetupCopyWith<_$_TestReportSetup> get copyWith =>
+      __$$_TestReportSetupCopyWithImpl<_$_TestReportSetup>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1571,7 +1493,7 @@ class _$_TestReportSetup extends _TestReportSetup {
 }
 
 abstract class _TestReportSetup extends TestReportSetup {
-  factory _TestReportSetup({required List<TestReportAction> action}) =
+  factory _TestReportSetup({required final List<TestReportAction> action}) =
       _$_TestReportSetup;
   _TestReportSetup._() : super._();
 
@@ -1579,37 +1501,16 @@ abstract class _TestReportSetup extends TestReportSetup {
       _$_TestReportSetup.fromJson;
 
   @override
-  List<TestReportAction> get action;
+  List<TestReportAction> get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportSetupCopyWith<_TestReportSetup> get copyWith =>
+  _$$_TestReportSetupCopyWith<_$_TestReportSetup> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestReportAction _$TestReportActionFromJson(Map<String, dynamic> json) {
   return _TestReportAction.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportActionTearOff {
-  const _$TestReportActionTearOff();
-
-  _TestReportAction call(
-      {TestReportOperation? operation,
-      @JsonKey(name: 'assert') TestReportAssert? assert_}) {
-    return _TestReportAction(
-      operation: operation,
-      assert_: assert_,
-    );
-  }
-
-  TestReportAction fromJson(Map<String, Object?> json) {
-    return TestReportAction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportAction = _$TestReportActionTearOff();
 
 /// @nodoc
 mixin _$TestReportAction {
@@ -1686,11 +1587,11 @@ class _$TestReportActionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportActionCopyWith<$Res>
+abstract class _$$_TestReportActionCopyWith<$Res>
     implements $TestReportActionCopyWith<$Res> {
-  factory _$TestReportActionCopyWith(
-          _TestReportAction value, $Res Function(_TestReportAction) then) =
-      __$TestReportActionCopyWithImpl<$Res>;
+  factory _$$_TestReportActionCopyWith(
+          _$_TestReportAction value, $Res Function(_$_TestReportAction) then) =
+      __$$_TestReportActionCopyWithImpl<$Res>;
   @override
   $Res call(
       {TestReportOperation? operation,
@@ -1703,22 +1604,22 @@ abstract class _$TestReportActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestReportActionCopyWithImpl<$Res>
+class __$$_TestReportActionCopyWithImpl<$Res>
     extends _$TestReportActionCopyWithImpl<$Res>
-    implements _$TestReportActionCopyWith<$Res> {
-  __$TestReportActionCopyWithImpl(
-      _TestReportAction _value, $Res Function(_TestReportAction) _then)
-      : super(_value, (v) => _then(v as _TestReportAction));
+    implements _$$_TestReportActionCopyWith<$Res> {
+  __$$_TestReportActionCopyWithImpl(
+      _$_TestReportAction _value, $Res Function(_$_TestReportAction) _then)
+      : super(_value, (v) => _then(v as _$_TestReportAction));
 
   @override
-  _TestReportAction get _value => super._value as _TestReportAction;
+  _$_TestReportAction get _value => super._value as _$_TestReportAction;
 
   @override
   $Res call({
     Object? operation = freezed,
     Object? assert_ = freezed,
   }) {
-    return _then(_TestReportAction(
+    return _then(_$_TestReportAction(
       operation: operation == freezed
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
@@ -1755,11 +1656,12 @@ class _$_TestReportAction extends _TestReportAction {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportAction &&
+            other is _$_TestReportAction &&
             const DeepCollectionEquality().equals(other.operation, operation) &&
             const DeepCollectionEquality().equals(other.assert_, assert_));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1768,8 +1670,8 @@ class _$_TestReportAction extends _TestReportAction {
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportActionCopyWith<_TestReportAction> get copyWith =>
-      __$TestReportActionCopyWithImpl<_TestReportAction>(this, _$identity);
+  _$$_TestReportActionCopyWith<_$_TestReportAction> get copyWith =>
+      __$$_TestReportActionCopyWithImpl<_$_TestReportAction>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1779,8 +1681,8 @@ class _$_TestReportAction extends _TestReportAction {
 
 abstract class _TestReportAction extends TestReportAction {
   factory _TestReportAction(
-          {TestReportOperation? operation,
-          @JsonKey(name: 'assert') TestReportAssert? assert_}) =
+          {final TestReportOperation? operation,
+          @JsonKey(name: 'assert') final TestReportAssert? assert_}) =
       _$_TestReportAction;
   _TestReportAction._() : super._();
 
@@ -1788,48 +1690,19 @@ abstract class _TestReportAction extends TestReportAction {
       _$_TestReportAction.fromJson;
 
   @override
-  TestReportOperation? get operation;
+  TestReportOperation? get operation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'assert')
-  TestReportAssert? get assert_;
+  TestReportAssert? get assert_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportActionCopyWith<_TestReportAction> get copyWith =>
+  _$$_TestReportActionCopyWith<_$_TestReportAction> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestReportOperation _$TestReportOperationFromJson(Map<String, dynamic> json) {
   return _TestReportOperation.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportOperationTearOff {
-  const _$TestReportOperationTearOff();
-
-  _TestReportOperation call(
-      {TestReportOperationResult? result,
-      @JsonKey(name: '_result') Element? resultElement,
-      String? message,
-      @JsonKey(name: '_message') Element? messageElement,
-      String? detail,
-      @JsonKey(name: '_detail') Element? detailElement}) {
-    return _TestReportOperation(
-      result: result,
-      resultElement: resultElement,
-      message: message,
-      messageElement: messageElement,
-      detail: detail,
-      detailElement: detailElement,
-    );
-  }
-
-  TestReportOperation fromJson(Map<String, Object?> json) {
-    return TestReportOperation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportOperation = _$TestReportOperationTearOff();
 
 /// @nodoc
 mixin _$TestReportOperation {
@@ -1948,11 +1821,11 @@ class _$TestReportOperationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportOperationCopyWith<$Res>
+abstract class _$$_TestReportOperationCopyWith<$Res>
     implements $TestReportOperationCopyWith<$Res> {
-  factory _$TestReportOperationCopyWith(_TestReportOperation value,
-          $Res Function(_TestReportOperation) then) =
-      __$TestReportOperationCopyWithImpl<$Res>;
+  factory _$$_TestReportOperationCopyWith(_$_TestReportOperation value,
+          $Res Function(_$_TestReportOperation) then) =
+      __$$_TestReportOperationCopyWithImpl<$Res>;
   @override
   $Res call(
       {TestReportOperationResult? result,
@@ -1971,15 +1844,15 @@ abstract class _$TestReportOperationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestReportOperationCopyWithImpl<$Res>
+class __$$_TestReportOperationCopyWithImpl<$Res>
     extends _$TestReportOperationCopyWithImpl<$Res>
-    implements _$TestReportOperationCopyWith<$Res> {
-  __$TestReportOperationCopyWithImpl(
-      _TestReportOperation _value, $Res Function(_TestReportOperation) _then)
-      : super(_value, (v) => _then(v as _TestReportOperation));
+    implements _$$_TestReportOperationCopyWith<$Res> {
+  __$$_TestReportOperationCopyWithImpl(_$_TestReportOperation _value,
+      $Res Function(_$_TestReportOperation) _then)
+      : super(_value, (v) => _then(v as _$_TestReportOperation));
 
   @override
-  _TestReportOperation get _value => super._value as _TestReportOperation;
+  _$_TestReportOperation get _value => super._value as _$_TestReportOperation;
 
   @override
   $Res call({
@@ -1990,7 +1863,7 @@ class __$TestReportOperationCopyWithImpl<$Res>
     Object? detail = freezed,
     Object? detailElement = freezed,
   }) {
-    return _then(_TestReportOperation(
+    return _then(_$_TestReportOperation(
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
@@ -2059,7 +1932,7 @@ class _$_TestReportOperation extends _TestReportOperation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportOperation &&
+            other is _$_TestReportOperation &&
             const DeepCollectionEquality().equals(other.result, result) &&
             const DeepCollectionEquality()
                 .equals(other.resultElement, resultElement) &&
@@ -2071,6 +1944,7 @@ class _$_TestReportOperation extends _TestReportOperation {
                 .equals(other.detailElement, detailElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2083,8 +1957,8 @@ class _$_TestReportOperation extends _TestReportOperation {
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportOperationCopyWith<_TestReportOperation> get copyWith =>
-      __$TestReportOperationCopyWithImpl<_TestReportOperation>(
+  _$$_TestReportOperationCopyWith<_$_TestReportOperation> get copyWith =>
+      __$$_TestReportOperationCopyWithImpl<_$_TestReportOperation>(
           this, _$identity);
 
   @override
@@ -2095,12 +1969,12 @@ class _$_TestReportOperation extends _TestReportOperation {
 
 abstract class _TestReportOperation extends TestReportOperation {
   factory _TestReportOperation(
-          {TestReportOperationResult? result,
-          @JsonKey(name: '_result') Element? resultElement,
-          String? message,
-          @JsonKey(name: '_message') Element? messageElement,
-          String? detail,
-          @JsonKey(name: '_detail') Element? detailElement}) =
+          {final TestReportOperationResult? result,
+          @JsonKey(name: '_result') final Element? resultElement,
+          final String? message,
+          @JsonKey(name: '_message') final Element? messageElement,
+          final String? detail,
+          @JsonKey(name: '_detail') final Element? detailElement}) =
       _$_TestReportOperation;
   _TestReportOperation._() : super._();
 
@@ -2108,58 +1982,29 @@ abstract class _TestReportOperation extends TestReportOperation {
       _$_TestReportOperation.fromJson;
 
   @override
-  TestReportOperationResult? get result;
+  TestReportOperationResult? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
-  Element? get resultElement;
+  Element? get resultElement => throw _privateConstructorUsedError;
   @override
-  String? get message;
+  String? get message => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_message')
-  Element? get messageElement;
+  Element? get messageElement => throw _privateConstructorUsedError;
   @override
-  String? get detail;
+  String? get detail => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_detail')
-  Element? get detailElement;
+  Element? get detailElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportOperationCopyWith<_TestReportOperation> get copyWith =>
+  _$$_TestReportOperationCopyWith<_$_TestReportOperation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestReportAssert _$TestReportAssertFromJson(Map<String, dynamic> json) {
   return _TestReportAssert.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportAssertTearOff {
-  const _$TestReportAssertTearOff();
-
-  _TestReportAssert call(
-      {TestReportAssertResult? result,
-      @JsonKey(name: '_result') Element? resultElement,
-      String? message,
-      @JsonKey(name: '_message') Element? messageElement,
-      String? detail,
-      @JsonKey(name: '_detail') Element? detailElement}) {
-    return _TestReportAssert(
-      result: result,
-      resultElement: resultElement,
-      message: message,
-      messageElement: messageElement,
-      detail: detail,
-      detailElement: detailElement,
-    );
-  }
-
-  TestReportAssert fromJson(Map<String, Object?> json) {
-    return TestReportAssert.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportAssert = _$TestReportAssertTearOff();
 
 /// @nodoc
 mixin _$TestReportAssert {
@@ -2278,11 +2123,11 @@ class _$TestReportAssertCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportAssertCopyWith<$Res>
+abstract class _$$_TestReportAssertCopyWith<$Res>
     implements $TestReportAssertCopyWith<$Res> {
-  factory _$TestReportAssertCopyWith(
-          _TestReportAssert value, $Res Function(_TestReportAssert) then) =
-      __$TestReportAssertCopyWithImpl<$Res>;
+  factory _$$_TestReportAssertCopyWith(
+          _$_TestReportAssert value, $Res Function(_$_TestReportAssert) then) =
+      __$$_TestReportAssertCopyWithImpl<$Res>;
   @override
   $Res call(
       {TestReportAssertResult? result,
@@ -2301,15 +2146,15 @@ abstract class _$TestReportAssertCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestReportAssertCopyWithImpl<$Res>
+class __$$_TestReportAssertCopyWithImpl<$Res>
     extends _$TestReportAssertCopyWithImpl<$Res>
-    implements _$TestReportAssertCopyWith<$Res> {
-  __$TestReportAssertCopyWithImpl(
-      _TestReportAssert _value, $Res Function(_TestReportAssert) _then)
-      : super(_value, (v) => _then(v as _TestReportAssert));
+    implements _$$_TestReportAssertCopyWith<$Res> {
+  __$$_TestReportAssertCopyWithImpl(
+      _$_TestReportAssert _value, $Res Function(_$_TestReportAssert) _then)
+      : super(_value, (v) => _then(v as _$_TestReportAssert));
 
   @override
-  _TestReportAssert get _value => super._value as _TestReportAssert;
+  _$_TestReportAssert get _value => super._value as _$_TestReportAssert;
 
   @override
   $Res call({
@@ -2320,7 +2165,7 @@ class __$TestReportAssertCopyWithImpl<$Res>
     Object? detail = freezed,
     Object? detailElement = freezed,
   }) {
-    return _then(_TestReportAssert(
+    return _then(_$_TestReportAssert(
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
@@ -2389,7 +2234,7 @@ class _$_TestReportAssert extends _TestReportAssert {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportAssert &&
+            other is _$_TestReportAssert &&
             const DeepCollectionEquality().equals(other.result, result) &&
             const DeepCollectionEquality()
                 .equals(other.resultElement, resultElement) &&
@@ -2401,6 +2246,7 @@ class _$_TestReportAssert extends _TestReportAssert {
                 .equals(other.detailElement, detailElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2413,8 +2259,8 @@ class _$_TestReportAssert extends _TestReportAssert {
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportAssertCopyWith<_TestReportAssert> get copyWith =>
-      __$TestReportAssertCopyWithImpl<_TestReportAssert>(this, _$identity);
+  _$$_TestReportAssertCopyWith<_$_TestReportAssert> get copyWith =>
+      __$$_TestReportAssertCopyWithImpl<_$_TestReportAssert>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2424,68 +2270,42 @@ class _$_TestReportAssert extends _TestReportAssert {
 
 abstract class _TestReportAssert extends TestReportAssert {
   factory _TestReportAssert(
-      {TestReportAssertResult? result,
-      @JsonKey(name: '_result') Element? resultElement,
-      String? message,
-      @JsonKey(name: '_message') Element? messageElement,
-      String? detail,
-      @JsonKey(name: '_detail') Element? detailElement}) = _$_TestReportAssert;
+          {final TestReportAssertResult? result,
+          @JsonKey(name: '_result') final Element? resultElement,
+          final String? message,
+          @JsonKey(name: '_message') final Element? messageElement,
+          final String? detail,
+          @JsonKey(name: '_detail') final Element? detailElement}) =
+      _$_TestReportAssert;
   _TestReportAssert._() : super._();
 
   factory _TestReportAssert.fromJson(Map<String, dynamic> json) =
       _$_TestReportAssert.fromJson;
 
   @override
-  TestReportAssertResult? get result;
+  TestReportAssertResult? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
-  Element? get resultElement;
+  Element? get resultElement => throw _privateConstructorUsedError;
   @override
-  String? get message;
+  String? get message => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_message')
-  Element? get messageElement;
+  Element? get messageElement => throw _privateConstructorUsedError;
   @override
-  String? get detail;
+  String? get detail => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_detail')
-  Element? get detailElement;
+  Element? get detailElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportAssertCopyWith<_TestReportAssert> get copyWith =>
+  _$$_TestReportAssertCopyWith<_$_TestReportAssert> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestReportTest _$TestReportTestFromJson(Map<String, dynamic> json) {
   return _TestReportTest.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportTestTearOff {
-  const _$TestReportTestTearOff();
-
-  _TestReportTest call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      required List<TestReportAction1> action}) {
-    return _TestReportTest(
-      name: name,
-      nameElement: nameElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      action: action,
-    );
-  }
-
-  TestReportTest fromJson(Map<String, Object?> json) {
-    return TestReportTest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportTest = _$TestReportTestTearOff();
 
 /// @nodoc
 mixin _$TestReportTest {
@@ -2584,11 +2404,11 @@ class _$TestReportTestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportTestCopyWith<$Res>
+abstract class _$$_TestReportTestCopyWith<$Res>
     implements $TestReportTestCopyWith<$Res> {
-  factory _$TestReportTestCopyWith(
-          _TestReportTest value, $Res Function(_TestReportTest) then) =
-      __$TestReportTestCopyWithImpl<$Res>;
+  factory _$$_TestReportTestCopyWith(
+          _$_TestReportTest value, $Res Function(_$_TestReportTest) then) =
+      __$$_TestReportTestCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -2604,15 +2424,15 @@ abstract class _$TestReportTestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestReportTestCopyWithImpl<$Res>
+class __$$_TestReportTestCopyWithImpl<$Res>
     extends _$TestReportTestCopyWithImpl<$Res>
-    implements _$TestReportTestCopyWith<$Res> {
-  __$TestReportTestCopyWithImpl(
-      _TestReportTest _value, $Res Function(_TestReportTest) _then)
-      : super(_value, (v) => _then(v as _TestReportTest));
+    implements _$$_TestReportTestCopyWith<$Res> {
+  __$$_TestReportTestCopyWithImpl(
+      _$_TestReportTest _value, $Res Function(_$_TestReportTest) _then)
+      : super(_value, (v) => _then(v as _$_TestReportTest));
 
   @override
-  _TestReportTest get _value => super._value as _TestReportTest;
+  _$_TestReportTest get _value => super._value as _$_TestReportTest;
 
   @override
   $Res call({
@@ -2622,7 +2442,7 @@ class __$TestReportTestCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? action = freezed,
   }) {
-    return _then(_TestReportTest(
+    return _then(_$_TestReportTest(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -2640,7 +2460,7 @@ class __$TestReportTestCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestReportAction1>,
     ));
@@ -2655,8 +2475,9 @@ class _$_TestReportTest extends _TestReportTest {
       @JsonKey(name: '_name') this.nameElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      required this.action})
-      : super._();
+      required final List<TestReportAction1> action})
+      : _action = action,
+        super._();
 
   factory _$_TestReportTest.fromJson(Map<String, dynamic> json) =>
       _$$_TestReportTestFromJson(json);
@@ -2671,8 +2492,12 @@ class _$_TestReportTest extends _TestReportTest {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<TestReportAction1> _action;
   @override
-  final List<TestReportAction1> action;
+  List<TestReportAction1> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -2683,7 +2508,7 @@ class _$_TestReportTest extends _TestReportTest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportTest &&
+            other is _$_TestReportTest &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -2691,9 +2516,10 @@ class _$_TestReportTest extends _TestReportTest {
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.action, action));
+            const DeepCollectionEquality().equals(other._action, _action));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2701,12 +2527,12 @@ class _$_TestReportTest extends _TestReportTest {
       const DeepCollectionEquality().hash(nameElement),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(action));
+      const DeepCollectionEquality().hash(_action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportTestCopyWith<_TestReportTest> get copyWith =>
-      __$TestReportTestCopyWithImpl<_TestReportTest>(this, _$identity);
+  _$$_TestReportTestCopyWith<_$_TestReportTest> get copyWith =>
+      __$$_TestReportTestCopyWithImpl<_$_TestReportTest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2716,58 +2542,37 @@ class _$_TestReportTest extends _TestReportTest {
 
 abstract class _TestReportTest extends TestReportTest {
   factory _TestReportTest(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      required List<TestReportAction1> action}) = _$_TestReportTest;
+      {final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      required final List<TestReportAction1> action}) = _$_TestReportTest;
   _TestReportTest._() : super._();
 
   factory _TestReportTest.fromJson(Map<String, dynamic> json) =
       _$_TestReportTest.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<TestReportAction1> get action;
+  List<TestReportAction1> get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportTestCopyWith<_TestReportTest> get copyWith =>
+  _$$_TestReportTestCopyWith<_$_TestReportTest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestReportAction1 _$TestReportAction1FromJson(Map<String, dynamic> json) {
   return _TestReportAction1.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportAction1TearOff {
-  const _$TestReportAction1TearOff();
-
-  _TestReportAction1 call(
-      {TestReportOperation? operation,
-      @JsonKey(name: 'assert') TestReportAssert? assert_}) {
-    return _TestReportAction1(
-      operation: operation,
-      assert_: assert_,
-    );
-  }
-
-  TestReportAction1 fromJson(Map<String, Object?> json) {
-    return TestReportAction1.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportAction1 = _$TestReportAction1TearOff();
 
 /// @nodoc
 mixin _$TestReportAction1 {
@@ -2844,11 +2649,11 @@ class _$TestReportAction1CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportAction1CopyWith<$Res>
+abstract class _$$_TestReportAction1CopyWith<$Res>
     implements $TestReportAction1CopyWith<$Res> {
-  factory _$TestReportAction1CopyWith(
-          _TestReportAction1 value, $Res Function(_TestReportAction1) then) =
-      __$TestReportAction1CopyWithImpl<$Res>;
+  factory _$$_TestReportAction1CopyWith(_$_TestReportAction1 value,
+          $Res Function(_$_TestReportAction1) then) =
+      __$$_TestReportAction1CopyWithImpl<$Res>;
   @override
   $Res call(
       {TestReportOperation? operation,
@@ -2861,22 +2666,22 @@ abstract class _$TestReportAction1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestReportAction1CopyWithImpl<$Res>
+class __$$_TestReportAction1CopyWithImpl<$Res>
     extends _$TestReportAction1CopyWithImpl<$Res>
-    implements _$TestReportAction1CopyWith<$Res> {
-  __$TestReportAction1CopyWithImpl(
-      _TestReportAction1 _value, $Res Function(_TestReportAction1) _then)
-      : super(_value, (v) => _then(v as _TestReportAction1));
+    implements _$$_TestReportAction1CopyWith<$Res> {
+  __$$_TestReportAction1CopyWithImpl(
+      _$_TestReportAction1 _value, $Res Function(_$_TestReportAction1) _then)
+      : super(_value, (v) => _then(v as _$_TestReportAction1));
 
   @override
-  _TestReportAction1 get _value => super._value as _TestReportAction1;
+  _$_TestReportAction1 get _value => super._value as _$_TestReportAction1;
 
   @override
   $Res call({
     Object? operation = freezed,
     Object? assert_ = freezed,
   }) {
-    return _then(_TestReportAction1(
+    return _then(_$_TestReportAction1(
       operation: operation == freezed
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
@@ -2913,11 +2718,12 @@ class _$_TestReportAction1 extends _TestReportAction1 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportAction1 &&
+            other is _$_TestReportAction1 &&
             const DeepCollectionEquality().equals(other.operation, operation) &&
             const DeepCollectionEquality().equals(other.assert_, assert_));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2926,8 +2732,9 @@ class _$_TestReportAction1 extends _TestReportAction1 {
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportAction1CopyWith<_TestReportAction1> get copyWith =>
-      __$TestReportAction1CopyWithImpl<_TestReportAction1>(this, _$identity);
+  _$$_TestReportAction1CopyWith<_$_TestReportAction1> get copyWith =>
+      __$$_TestReportAction1CopyWithImpl<_$_TestReportAction1>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2937,8 +2744,8 @@ class _$_TestReportAction1 extends _TestReportAction1 {
 
 abstract class _TestReportAction1 extends TestReportAction1 {
   factory _TestReportAction1(
-          {TestReportOperation? operation,
-          @JsonKey(name: 'assert') TestReportAssert? assert_}) =
+          {final TestReportOperation? operation,
+          @JsonKey(name: 'assert') final TestReportAssert? assert_}) =
       _$_TestReportAction1;
   _TestReportAction1._() : super._();
 
@@ -2946,37 +2753,19 @@ abstract class _TestReportAction1 extends TestReportAction1 {
       _$_TestReportAction1.fromJson;
 
   @override
-  TestReportOperation? get operation;
+  TestReportOperation? get operation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'assert')
-  TestReportAssert? get assert_;
+  TestReportAssert? get assert_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportAction1CopyWith<_TestReportAction1> get copyWith =>
+  _$$_TestReportAction1CopyWith<_$_TestReportAction1> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestReportTeardown _$TestReportTeardownFromJson(Map<String, dynamic> json) {
   return _TestReportTeardown.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportTeardownTearOff {
-  const _$TestReportTeardownTearOff();
-
-  _TestReportTeardown call({required List<TestReportAction2> action}) {
-    return _TestReportTeardown(
-      action: action,
-    );
-  }
-
-  TestReportTeardown fromJson(Map<String, Object?> json) {
-    return TestReportTeardown.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportTeardown = _$TestReportTeardownTearOff();
 
 /// @nodoc
 mixin _$TestReportTeardown {
@@ -3019,33 +2808,33 @@ class _$TestReportTeardownCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportTeardownCopyWith<$Res>
+abstract class _$$_TestReportTeardownCopyWith<$Res>
     implements $TestReportTeardownCopyWith<$Res> {
-  factory _$TestReportTeardownCopyWith(
-          _TestReportTeardown value, $Res Function(_TestReportTeardown) then) =
-      __$TestReportTeardownCopyWithImpl<$Res>;
+  factory _$$_TestReportTeardownCopyWith(_$_TestReportTeardown value,
+          $Res Function(_$_TestReportTeardown) then) =
+      __$$_TestReportTeardownCopyWithImpl<$Res>;
   @override
   $Res call({List<TestReportAction2> action});
 }
 
 /// @nodoc
-class __$TestReportTeardownCopyWithImpl<$Res>
+class __$$_TestReportTeardownCopyWithImpl<$Res>
     extends _$TestReportTeardownCopyWithImpl<$Res>
-    implements _$TestReportTeardownCopyWith<$Res> {
-  __$TestReportTeardownCopyWithImpl(
-      _TestReportTeardown _value, $Res Function(_TestReportTeardown) _then)
-      : super(_value, (v) => _then(v as _TestReportTeardown));
+    implements _$$_TestReportTeardownCopyWith<$Res> {
+  __$$_TestReportTeardownCopyWithImpl(
+      _$_TestReportTeardown _value, $Res Function(_$_TestReportTeardown) _then)
+      : super(_value, (v) => _then(v as _$_TestReportTeardown));
 
   @override
-  _TestReportTeardown get _value => super._value as _TestReportTeardown;
+  _$_TestReportTeardown get _value => super._value as _$_TestReportTeardown;
 
   @override
   $Res call({
     Object? action = freezed,
   }) {
-    return _then(_TestReportTeardown(
+    return _then(_$_TestReportTeardown(
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestReportAction2>,
     ));
@@ -3055,13 +2844,19 @@ class __$TestReportTeardownCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportTeardown extends _TestReportTeardown {
-  _$_TestReportTeardown({required this.action}) : super._();
+  _$_TestReportTeardown({required final List<TestReportAction2> action})
+      : _action = action,
+        super._();
 
   factory _$_TestReportTeardown.fromJson(Map<String, dynamic> json) =>
       _$$_TestReportTeardownFromJson(json);
 
+  final List<TestReportAction2> _action;
   @override
-  final List<TestReportAction2> action;
+  List<TestReportAction2> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -3072,18 +2867,20 @@ class _$_TestReportTeardown extends _TestReportTeardown {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportTeardown &&
-            const DeepCollectionEquality().equals(other.action, action));
+            other is _$_TestReportTeardown &&
+            const DeepCollectionEquality().equals(other._action, _action));
   }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportTeardownCopyWith<_TestReportTeardown> get copyWith =>
-      __$TestReportTeardownCopyWithImpl<_TestReportTeardown>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_action));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TestReportTeardownCopyWith<_$_TestReportTeardown> get copyWith =>
+      __$$_TestReportTeardownCopyWithImpl<_$_TestReportTeardown>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3092,7 +2889,7 @@ class _$_TestReportTeardown extends _TestReportTeardown {
 }
 
 abstract class _TestReportTeardown extends TestReportTeardown {
-  factory _TestReportTeardown({required List<TestReportAction2> action}) =
+  factory _TestReportTeardown({required final List<TestReportAction2> action}) =
       _$_TestReportTeardown;
   _TestReportTeardown._() : super._();
 
@@ -3100,34 +2897,16 @@ abstract class _TestReportTeardown extends TestReportTeardown {
       _$_TestReportTeardown.fromJson;
 
   @override
-  List<TestReportAction2> get action;
+  List<TestReportAction2> get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportTeardownCopyWith<_TestReportTeardown> get copyWith =>
+  _$$_TestReportTeardownCopyWith<_$_TestReportTeardown> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestReportAction2 _$TestReportAction2FromJson(Map<String, dynamic> json) {
   return _TestReportAction2.fromJson(json);
 }
-
-/// @nodoc
-class _$TestReportAction2TearOff {
-  const _$TestReportAction2TearOff();
-
-  _TestReportAction2 call({required TestReportOperation operation}) {
-    return _TestReportAction2(
-      operation: operation,
-    );
-  }
-
-  TestReportAction2 fromJson(Map<String, Object?> json) {
-    return TestReportAction2.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestReportAction2 = _$TestReportAction2TearOff();
 
 /// @nodoc
 mixin _$TestReportAction2 {
@@ -3179,11 +2958,11 @@ class _$TestReportAction2CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestReportAction2CopyWith<$Res>
+abstract class _$$_TestReportAction2CopyWith<$Res>
     implements $TestReportAction2CopyWith<$Res> {
-  factory _$TestReportAction2CopyWith(
-          _TestReportAction2 value, $Res Function(_TestReportAction2) then) =
-      __$TestReportAction2CopyWithImpl<$Res>;
+  factory _$$_TestReportAction2CopyWith(_$_TestReportAction2 value,
+          $Res Function(_$_TestReportAction2) then) =
+      __$$_TestReportAction2CopyWithImpl<$Res>;
   @override
   $Res call({TestReportOperation operation});
 
@@ -3192,21 +2971,21 @@ abstract class _$TestReportAction2CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestReportAction2CopyWithImpl<$Res>
+class __$$_TestReportAction2CopyWithImpl<$Res>
     extends _$TestReportAction2CopyWithImpl<$Res>
-    implements _$TestReportAction2CopyWith<$Res> {
-  __$TestReportAction2CopyWithImpl(
-      _TestReportAction2 _value, $Res Function(_TestReportAction2) _then)
-      : super(_value, (v) => _then(v as _TestReportAction2));
+    implements _$$_TestReportAction2CopyWith<$Res> {
+  __$$_TestReportAction2CopyWithImpl(
+      _$_TestReportAction2 _value, $Res Function(_$_TestReportAction2) _then)
+      : super(_value, (v) => _then(v as _$_TestReportAction2));
 
   @override
-  _TestReportAction2 get _value => super._value as _TestReportAction2;
+  _$_TestReportAction2 get _value => super._value as _$_TestReportAction2;
 
   @override
   $Res call({
     Object? operation = freezed,
   }) {
-    return _then(_TestReportAction2(
+    return _then(_$_TestReportAction2(
       operation: operation == freezed
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
@@ -3235,18 +3014,20 @@ class _$_TestReportAction2 extends _TestReportAction2 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestReportAction2 &&
+            other is _$_TestReportAction2 &&
             const DeepCollectionEquality().equals(other.operation, operation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(operation));
 
   @JsonKey(ignore: true)
   @override
-  _$TestReportAction2CopyWith<_TestReportAction2> get copyWith =>
-      __$TestReportAction2CopyWithImpl<_TestReportAction2>(this, _$identity);
+  _$$_TestReportAction2CopyWith<_$_TestReportAction2> get copyWith =>
+      __$$_TestReportAction2CopyWithImpl<_$_TestReportAction2>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3255,7 +3036,7 @@ class _$_TestReportAction2 extends _TestReportAction2 {
 }
 
 abstract class _TestReportAction2 extends TestReportAction2 {
-  factory _TestReportAction2({required TestReportOperation operation}) =
+  factory _TestReportAction2({required final TestReportOperation operation}) =
       _$_TestReportAction2;
   _TestReportAction2._() : super._();
 
@@ -3263,144 +3044,16 @@ abstract class _TestReportAction2 extends TestReportAction2 {
       _$_TestReportAction2.fromJson;
 
   @override
-  TestReportOperation get operation;
+  TestReportOperation get operation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestReportAction2CopyWith<_TestReportAction2> get copyWith =>
+  _$$_TestReportAction2CopyWith<_$_TestReportAction2> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
   return _TestScript.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptTearOff {
-  const _$TestScriptTearOff();
-
-  _TestScript call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
-          Stu3ResourceType resourceType = Stu3ResourceType.TestScript,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      Identifier? identifier,
-      String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      TestScriptStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      Date? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ContactDetail>? contact,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
-      String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      List<TestScriptOrigin>? origin,
-      List<TestScriptDestination>? destination,
-      TestScriptMetadata? metadata,
-      List<TestScriptFixture>? fixture,
-      List<Reference>? profile,
-      List<TestScriptVariable>? variable,
-      List<TestScriptRule>? rule,
-      List<TestScriptRuleset>? ruleset,
-      TestScriptSetup? setup,
-      List<TestScriptTest>? test,
-      TestScriptTeardown? teardown}) {
-    return _TestScript(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      identifier: identifier,
-      version: version,
-      versionElement: versionElement,
-      name: name,
-      nameElement: nameElement,
-      title: title,
-      titleElement: titleElement,
-      status: status,
-      statusElement: statusElement,
-      experimental: experimental,
-      experimentalElement: experimentalElement,
-      date: date,
-      dateElement: dateElement,
-      publisher: publisher,
-      publisherElement: publisherElement,
-      contact: contact,
-      description: description,
-      descriptionElement: descriptionElement,
-      useContext: useContext,
-      jurisdiction: jurisdiction,
-      purpose: purpose,
-      purposeElement: purposeElement,
-      copyright: copyright,
-      copyrightElement: copyrightElement,
-      origin: origin,
-      destination: destination,
-      metadata: metadata,
-      fixture: fixture,
-      profile: profile,
-      variable: variable,
-      rule: rule,
-      ruleset: ruleset,
-      setup: setup,
-      test: test,
-      teardown: teardown,
-    );
-  }
-
-  TestScript fromJson(Map<String, Object?> json) {
-    return TestScript.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScript = _$TestScriptTearOff();
 
 /// @nodoc
 mixin _$TestScript {
@@ -4033,10 +3686,11 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
-  factory _$TestScriptCopyWith(
-          _TestScript value, $Res Function(_TestScript) then) =
-      __$TestScriptCopyWithImpl<$Res>;
+abstract class _$$_TestScriptCopyWith<$Res>
+    implements $TestScriptCopyWith<$Res> {
+  factory _$$_TestScriptCopyWith(
+          _$_TestScript value, $Res Function(_$_TestScript) then) =
+      __$$_TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
@@ -4144,14 +3798,14 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
-    implements _$TestScriptCopyWith<$Res> {
-  __$TestScriptCopyWithImpl(
-      _TestScript _value, $Res Function(_TestScript) _then)
-      : super(_value, (v) => _then(v as _TestScript));
+class __$$_TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
+    implements _$$_TestScriptCopyWith<$Res> {
+  __$$_TestScriptCopyWithImpl(
+      _$_TestScript _value, $Res Function(_$_TestScript) _then)
+      : super(_value, (v) => _then(v as _$_TestScript));
 
   @override
-  _TestScript get _value => super._value as _TestScript;
+  _$_TestScript get _value => super._value as _$_TestScript;
 
   @override
   $Res call({
@@ -4204,7 +3858,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     Object? test = freezed,
     Object? teardown = freezed,
   }) {
-    return _then(_TestScript(
+    return _then(_$_TestScript(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4238,15 +3892,15 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: contained == freezed
-          ? _value.contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: extension_ == freezed
-          ? _value.extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: url == freezed
@@ -4318,7 +3972,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: contact == freezed
-          ? _value.contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       description: description == freezed
@@ -4330,11 +3984,11 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       useContext: useContext == freezed
-          ? _value.useContext
+          ? _value._useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
-          ? _value.jurisdiction
+          ? _value._jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       purpose: purpose == freezed
@@ -4354,11 +4008,11 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       origin: origin == freezed
-          ? _value.origin
+          ? _value._origin
           : origin // ignore: cast_nullable_to_non_nullable
               as List<TestScriptOrigin>?,
       destination: destination == freezed
-          ? _value.destination
+          ? _value._destination
           : destination // ignore: cast_nullable_to_non_nullable
               as List<TestScriptDestination>?,
       metadata: metadata == freezed
@@ -4366,23 +4020,23 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : metadata // ignore: cast_nullable_to_non_nullable
               as TestScriptMetadata?,
       fixture: fixture == freezed
-          ? _value.fixture
+          ? _value._fixture
           : fixture // ignore: cast_nullable_to_non_nullable
               as List<TestScriptFixture>?,
       profile: profile == freezed
-          ? _value.profile
+          ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       variable: variable == freezed
-          ? _value.variable
+          ? _value._variable
           : variable // ignore: cast_nullable_to_non_nullable
               as List<TestScriptVariable>?,
       rule: rule == freezed
-          ? _value.rule
+          ? _value._rule
           : rule // ignore: cast_nullable_to_non_nullable
               as List<TestScriptRule>?,
       ruleset: ruleset == freezed
-          ? _value.ruleset
+          ? _value._ruleset
           : ruleset // ignore: cast_nullable_to_non_nullable
               as List<TestScriptRuleset>?,
       setup: setup == freezed
@@ -4390,7 +4044,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : setup // ignore: cast_nullable_to_non_nullable
               as TestScriptSetup?,
       test: test == freezed
-          ? _value.test
+          ? _value._test
           : test // ignore: cast_nullable_to_non_nullable
               as List<TestScriptTest>?,
       teardown: teardown == freezed
@@ -4416,10 +4070,10 @@ class _$_TestScript extends _TestScript {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
@@ -4445,30 +4099,44 @@ class _$_TestScript extends _TestScript {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      this.contact,
+      final List<ContactDetail>? contact,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.useContext,
-      this.jurisdiction,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
       this.purpose,
       @JsonKey(name: '_purpose')
           this.purposeElement,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      this.origin,
-      this.destination,
+      final List<TestScriptOrigin>? origin,
+      final List<TestScriptDestination>? destination,
       this.metadata,
-      this.fixture,
-      this.profile,
-      this.variable,
-      this.rule,
-      this.ruleset,
+      final List<TestScriptFixture>? fixture,
+      final List<Reference>? profile,
+      final List<TestScriptVariable>? variable,
+      final List<TestScriptRule>? rule,
+      final List<TestScriptRuleset>? ruleset,
       this.setup,
-      this.test,
+      final List<TestScriptTest>? test,
       this.teardown})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _useContext = useContext,
+        _jurisdiction = jurisdiction,
+        _origin = origin,
+        _destination = destination,
+        _fixture = fixture,
+        _profile = profile,
+        _variable = variable,
+        _rule = rule,
+        _ruleset = ruleset,
+        _test = test,
+        super._();
 
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptFromJson(json);
@@ -4492,13 +4160,34 @@ class _$_TestScript extends _TestScript {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? url;
   @override
@@ -4541,17 +4230,38 @@ class _$_TestScript extends _TestScript {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+  final List<ContactDetail>? _contact;
   @override
-  final List<ContactDetail>? contact;
+  List<ContactDetail>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<UsageContext>? _useContext;
   @override
-  final List<UsageContext>? useContext;
+  List<UsageContext>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _jurisdiction;
   @override
-  final List<CodeableConcept>? jurisdiction;
+  List<CodeableConcept>? get jurisdiction {
+    final value = _jurisdiction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? purpose;
   @override
@@ -4562,26 +4272,82 @@ class _$_TestScript extends _TestScript {
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
+  final List<TestScriptOrigin>? _origin;
   @override
-  final List<TestScriptOrigin>? origin;
+  List<TestScriptOrigin>? get origin {
+    final value = _origin;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptDestination>? _destination;
   @override
-  final List<TestScriptDestination>? destination;
+  List<TestScriptDestination>? get destination {
+    final value = _destination;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestScriptMetadata? metadata;
+  final List<TestScriptFixture>? _fixture;
   @override
-  final List<TestScriptFixture>? fixture;
+  List<TestScriptFixture>? get fixture {
+    final value = _fixture;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _profile;
   @override
-  final List<Reference>? profile;
+  List<Reference>? get profile {
+    final value = _profile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptVariable>? _variable;
   @override
-  final List<TestScriptVariable>? variable;
+  List<TestScriptVariable>? get variable {
+    final value = _variable;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptRule>? _rule;
   @override
-  final List<TestScriptRule>? rule;
+  List<TestScriptRule>? get rule {
+    final value = _rule;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptRuleset>? _ruleset;
   @override
-  final List<TestScriptRuleset>? ruleset;
+  List<TestScriptRuleset>? get ruleset {
+    final value = _ruleset;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestScriptSetup? setup;
+  final List<TestScriptTest>? _test;
   @override
-  final List<TestScriptTest>? test;
+  List<TestScriptTest>? get test {
+    final value = _test;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final TestScriptTeardown? teardown;
 
@@ -4594,7 +4360,7 @@ class _$_TestScript extends _TestScript {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScript &&
+            other is _$_TestScript &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -4607,11 +4373,12 @@ class _$_TestScript extends _TestScript {
             const DeepCollectionEquality()
                 .equals(other.languageElement, languageElement) &&
             const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
+                .equals(other._contained, _contained) &&
             const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement) &&
@@ -4639,35 +4406,36 @@ class _$_TestScript extends _TestScript {
             const DeepCollectionEquality().equals(other.publisher, publisher) &&
             const DeepCollectionEquality()
                 .equals(other.publisherElement, publisherElement) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other.useContext, useContext) &&
+                .equals(other._useContext, _useContext) &&
             const DeepCollectionEquality()
-                .equals(other.jurisdiction, jurisdiction) &&
+                .equals(other._jurisdiction, _jurisdiction) &&
             const DeepCollectionEquality().equals(other.purpose, purpose) &&
             const DeepCollectionEquality()
                 .equals(other.purposeElement, purposeElement) &&
             const DeepCollectionEquality().equals(other.copyright, copyright) &&
             const DeepCollectionEquality()
                 .equals(other.copyrightElement, copyrightElement) &&
-            const DeepCollectionEquality().equals(other.origin, origin) &&
+            const DeepCollectionEquality().equals(other._origin, _origin) &&
             const DeepCollectionEquality()
-                .equals(other.destination, destination) &&
+                .equals(other._destination, _destination) &&
             const DeepCollectionEquality().equals(other.metadata, metadata) &&
-            const DeepCollectionEquality().equals(other.fixture, fixture) &&
-            const DeepCollectionEquality().equals(other.profile, profile) &&
-            const DeepCollectionEquality().equals(other.variable, variable) &&
-            const DeepCollectionEquality().equals(other.rule, rule) &&
-            const DeepCollectionEquality().equals(other.ruleset, ruleset) &&
+            const DeepCollectionEquality().equals(other._fixture, _fixture) &&
+            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other._variable, _variable) &&
+            const DeepCollectionEquality().equals(other._rule, _rule) &&
+            const DeepCollectionEquality().equals(other._ruleset, _ruleset) &&
             const DeepCollectionEquality().equals(other.setup, setup) &&
-            const DeepCollectionEquality().equals(other.test, test) &&
+            const DeepCollectionEquality().equals(other._test, _test) &&
             const DeepCollectionEquality().equals(other.teardown, teardown));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4679,9 +4447,9 @@ class _$_TestScript extends _TestScript {
         const DeepCollectionEquality().hash(language),
         const DeepCollectionEquality().hash(languageElement),
         const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(contained),
-        const DeepCollectionEquality().hash(extension_),
-        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(url),
         const DeepCollectionEquality().hash(urlElement),
         const DeepCollectionEquality().hash(identifier),
@@ -4699,32 +4467,32 @@ class _$_TestScript extends _TestScript {
         const DeepCollectionEquality().hash(dateElement),
         const DeepCollectionEquality().hash(publisher),
         const DeepCollectionEquality().hash(publisherElement),
-        const DeepCollectionEquality().hash(contact),
+        const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(useContext),
-        const DeepCollectionEquality().hash(jurisdiction),
+        const DeepCollectionEquality().hash(_useContext),
+        const DeepCollectionEquality().hash(_jurisdiction),
         const DeepCollectionEquality().hash(purpose),
         const DeepCollectionEquality().hash(purposeElement),
         const DeepCollectionEquality().hash(copyright),
         const DeepCollectionEquality().hash(copyrightElement),
-        const DeepCollectionEquality().hash(origin),
-        const DeepCollectionEquality().hash(destination),
+        const DeepCollectionEquality().hash(_origin),
+        const DeepCollectionEquality().hash(_destination),
         const DeepCollectionEquality().hash(metadata),
-        const DeepCollectionEquality().hash(fixture),
-        const DeepCollectionEquality().hash(profile),
-        const DeepCollectionEquality().hash(variable),
-        const DeepCollectionEquality().hash(rule),
-        const DeepCollectionEquality().hash(ruleset),
+        const DeepCollectionEquality().hash(_fixture),
+        const DeepCollectionEquality().hash(_profile),
+        const DeepCollectionEquality().hash(_variable),
+        const DeepCollectionEquality().hash(_rule),
+        const DeepCollectionEquality().hash(_ruleset),
         const DeepCollectionEquality().hash(setup),
-        const DeepCollectionEquality().hash(test),
+        const DeepCollectionEquality().hash(_test),
         const DeepCollectionEquality().hash(teardown)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptCopyWith<_TestScript> get copyWith =>
-      __$TestScriptCopyWithImpl<_TestScript>(this, _$identity);
+  _$$_TestScriptCopyWith<_$_TestScript> get copyWith =>
+      __$$_TestScriptCopyWithImpl<_$_TestScript>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4735,68 +4503,68 @@ class _$_TestScript extends _TestScript {
 abstract class _TestScript extends TestScript {
   factory _TestScript(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? url,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? url,
       @JsonKey(name: '_url')
-          Element? urlElement,
-      Identifier? identifier,
-      String? version,
+          final Element? urlElement,
+      final Identifier? identifier,
+      final String? version,
       @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
+          final Element? versionElement,
+      final String? name,
       @JsonKey(name: '_name')
-          Element? nameElement,
-      String? title,
+          final Element? nameElement,
+      final String? title,
       @JsonKey(name: '_title')
-          Element? titleElement,
-      TestScriptStatus? status,
+          final Element? titleElement,
+      final TestScriptStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? experimental,
+          final Element? statusElement,
+      final Boolean? experimental,
       @JsonKey(name: '_experimental')
-          Element? experimentalElement,
-      Date? date,
+          final Element? experimentalElement,
+      final Date? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
-      String? publisher,
+          final Element? dateElement,
+      final String? publisher,
       @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ContactDetail>? contact,
-      String? description,
+          final Element? publisherElement,
+      final List<ContactDetail>? contact,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      String? purpose,
+          final Element? descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final String? purpose,
       @JsonKey(name: '_purpose')
-          Element? purposeElement,
-      String? copyright,
+          final Element? purposeElement,
+      final String? copyright,
       @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      List<TestScriptOrigin>? origin,
-      List<TestScriptDestination>? destination,
-      TestScriptMetadata? metadata,
-      List<TestScriptFixture>? fixture,
-      List<Reference>? profile,
-      List<TestScriptVariable>? variable,
-      List<TestScriptRule>? rule,
-      List<TestScriptRuleset>? ruleset,
-      TestScriptSetup? setup,
-      List<TestScriptTest>? test,
-      TestScriptTeardown? teardown}) = _$_TestScript;
+          final Element? copyrightElement,
+      final List<TestScriptOrigin>? origin,
+      final List<TestScriptDestination>? destination,
+      final TestScriptMetadata? metadata,
+      final List<TestScriptFixture>? fixture,
+      final List<Reference>? profile,
+      final List<TestScriptVariable>? variable,
+      final List<TestScriptRule>? rule,
+      final List<TestScriptRuleset>? ruleset,
+      final TestScriptSetup? setup,
+      final List<TestScriptTest>? test,
+      final TestScriptTeardown? teardown}) = _$_TestScript;
   _TestScript._() : super._();
 
   factory _TestScript.fromJson(Map<String, dynamic> json) =
@@ -4804,147 +4572,126 @@ abstract class _TestScript extends TestScript {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
-  Stu3ResourceType get resourceType;
+  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  TestScriptStatus? get status;
+  TestScriptStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  Date? get date;
+  Date? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  String? get purpose;
+  String? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  String? get copyright;
+  String? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  List<TestScriptOrigin>? get origin;
+  List<TestScriptOrigin>? get origin => throw _privateConstructorUsedError;
   @override
-  List<TestScriptDestination>? get destination;
+  List<TestScriptDestination>? get destination =>
+      throw _privateConstructorUsedError;
   @override
-  TestScriptMetadata? get metadata;
+  TestScriptMetadata? get metadata => throw _privateConstructorUsedError;
   @override
-  List<TestScriptFixture>? get fixture;
+  List<TestScriptFixture>? get fixture => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get profile;
+  List<Reference>? get profile => throw _privateConstructorUsedError;
   @override
-  List<TestScriptVariable>? get variable;
+  List<TestScriptVariable>? get variable => throw _privateConstructorUsedError;
   @override
-  List<TestScriptRule>? get rule;
+  List<TestScriptRule>? get rule => throw _privateConstructorUsedError;
   @override
-  List<TestScriptRuleset>? get ruleset;
+  List<TestScriptRuleset>? get ruleset => throw _privateConstructorUsedError;
   @override
-  TestScriptSetup? get setup;
+  TestScriptSetup? get setup => throw _privateConstructorUsedError;
   @override
-  List<TestScriptTest>? get test;
+  List<TestScriptTest>? get test => throw _privateConstructorUsedError;
   @override
-  TestScriptTeardown? get teardown;
+  TestScriptTeardown? get teardown => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptCopyWith<_TestScript> get copyWith =>
+  _$$_TestScriptCopyWith<_$_TestScript> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptOrigin _$TestScriptOriginFromJson(Map<String, dynamic> json) {
   return _TestScriptOrigin.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptOriginTearOff {
-  const _$TestScriptOriginTearOff();
-
-  _TestScriptOrigin call(
-      {Decimal? index,
-      @JsonKey(name: '_index') Element? indexElement,
-      required Coding profile}) {
-    return _TestScriptOrigin(
-      index: index,
-      indexElement: indexElement,
-      profile: profile,
-    );
-  }
-
-  TestScriptOrigin fromJson(Map<String, Object?> json) {
-    return TestScriptOrigin.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptOrigin = _$TestScriptOriginTearOff();
 
 /// @nodoc
 mixin _$TestScriptOrigin {
@@ -5024,11 +4771,11 @@ class _$TestScriptOriginCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptOriginCopyWith<$Res>
+abstract class _$$_TestScriptOriginCopyWith<$Res>
     implements $TestScriptOriginCopyWith<$Res> {
-  factory _$TestScriptOriginCopyWith(
-          _TestScriptOrigin value, $Res Function(_TestScriptOrigin) then) =
-      __$TestScriptOriginCopyWithImpl<$Res>;
+  factory _$$_TestScriptOriginCopyWith(
+          _$_TestScriptOrigin value, $Res Function(_$_TestScriptOrigin) then) =
+      __$$_TestScriptOriginCopyWithImpl<$Res>;
   @override
   $Res call(
       {Decimal? index,
@@ -5042,15 +4789,15 @@ abstract class _$TestScriptOriginCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptOriginCopyWithImpl<$Res>
+class __$$_TestScriptOriginCopyWithImpl<$Res>
     extends _$TestScriptOriginCopyWithImpl<$Res>
-    implements _$TestScriptOriginCopyWith<$Res> {
-  __$TestScriptOriginCopyWithImpl(
-      _TestScriptOrigin _value, $Res Function(_TestScriptOrigin) _then)
-      : super(_value, (v) => _then(v as _TestScriptOrigin));
+    implements _$$_TestScriptOriginCopyWith<$Res> {
+  __$$_TestScriptOriginCopyWithImpl(
+      _$_TestScriptOrigin _value, $Res Function(_$_TestScriptOrigin) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptOrigin));
 
   @override
-  _TestScriptOrigin get _value => super._value as _TestScriptOrigin;
+  _$_TestScriptOrigin get _value => super._value as _$_TestScriptOrigin;
 
   @override
   $Res call({
@@ -5058,7 +4805,7 @@ class __$TestScriptOriginCopyWithImpl<$Res>
     Object? indexElement = freezed,
     Object? profile = freezed,
   }) {
-    return _then(_TestScriptOrigin(
+    return _then(_$_TestScriptOrigin(
       index: index == freezed
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
@@ -5104,13 +4851,14 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptOrigin &&
+            other is _$_TestScriptOrigin &&
             const DeepCollectionEquality().equals(other.index, index) &&
             const DeepCollectionEquality()
                 .equals(other.indexElement, indexElement) &&
             const DeepCollectionEquality().equals(other.profile, profile));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5120,8 +4868,8 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptOriginCopyWith<_TestScriptOrigin> get copyWith =>
-      __$TestScriptOriginCopyWithImpl<_TestScriptOrigin>(this, _$identity);
+  _$$_TestScriptOriginCopyWith<_$_TestScriptOrigin> get copyWith =>
+      __$$_TestScriptOriginCopyWithImpl<_$_TestScriptOrigin>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5131,24 +4879,24 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
 
 abstract class _TestScriptOrigin extends TestScriptOrigin {
   factory _TestScriptOrigin(
-      {Decimal? index,
-      @JsonKey(name: '_index') Element? indexElement,
-      required Coding profile}) = _$_TestScriptOrigin;
+      {final Decimal? index,
+      @JsonKey(name: '_index') final Element? indexElement,
+      required final Coding profile}) = _$_TestScriptOrigin;
   _TestScriptOrigin._() : super._();
 
   factory _TestScriptOrigin.fromJson(Map<String, dynamic> json) =
       _$_TestScriptOrigin.fromJson;
 
   @override
-  Decimal? get index;
+  Decimal? get index => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_index')
-  Element? get indexElement;
+  Element? get indexElement => throw _privateConstructorUsedError;
   @override
-  Coding get profile;
+  Coding get profile => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptOriginCopyWith<_TestScriptOrigin> get copyWith =>
+  _$$_TestScriptOriginCopyWith<_$_TestScriptOrigin> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5156,29 +4904,6 @@ TestScriptDestination _$TestScriptDestinationFromJson(
     Map<String, dynamic> json) {
   return _TestScriptDestination.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptDestinationTearOff {
-  const _$TestScriptDestinationTearOff();
-
-  _TestScriptDestination call(
-      {Decimal? index,
-      @JsonKey(name: '_index') Element? indexElement,
-      required Coding profile}) {
-    return _TestScriptDestination(
-      index: index,
-      indexElement: indexElement,
-      profile: profile,
-    );
-  }
-
-  TestScriptDestination fromJson(Map<String, Object?> json) {
-    return TestScriptDestination.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptDestination = _$TestScriptDestinationTearOff();
 
 /// @nodoc
 mixin _$TestScriptDestination {
@@ -5258,11 +4983,11 @@ class _$TestScriptDestinationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptDestinationCopyWith<$Res>
+abstract class _$$_TestScriptDestinationCopyWith<$Res>
     implements $TestScriptDestinationCopyWith<$Res> {
-  factory _$TestScriptDestinationCopyWith(_TestScriptDestination value,
-          $Res Function(_TestScriptDestination) then) =
-      __$TestScriptDestinationCopyWithImpl<$Res>;
+  factory _$$_TestScriptDestinationCopyWith(_$_TestScriptDestination value,
+          $Res Function(_$_TestScriptDestination) then) =
+      __$$_TestScriptDestinationCopyWithImpl<$Res>;
   @override
   $Res call(
       {Decimal? index,
@@ -5276,15 +5001,16 @@ abstract class _$TestScriptDestinationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptDestinationCopyWithImpl<$Res>
+class __$$_TestScriptDestinationCopyWithImpl<$Res>
     extends _$TestScriptDestinationCopyWithImpl<$Res>
-    implements _$TestScriptDestinationCopyWith<$Res> {
-  __$TestScriptDestinationCopyWithImpl(_TestScriptDestination _value,
-      $Res Function(_TestScriptDestination) _then)
-      : super(_value, (v) => _then(v as _TestScriptDestination));
+    implements _$$_TestScriptDestinationCopyWith<$Res> {
+  __$$_TestScriptDestinationCopyWithImpl(_$_TestScriptDestination _value,
+      $Res Function(_$_TestScriptDestination) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptDestination));
 
   @override
-  _TestScriptDestination get _value => super._value as _TestScriptDestination;
+  _$_TestScriptDestination get _value =>
+      super._value as _$_TestScriptDestination;
 
   @override
   $Res call({
@@ -5292,7 +5018,7 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
     Object? indexElement = freezed,
     Object? profile = freezed,
   }) {
-    return _then(_TestScriptDestination(
+    return _then(_$_TestScriptDestination(
       index: index == freezed
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
@@ -5338,13 +5064,14 @@ class _$_TestScriptDestination extends _TestScriptDestination {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptDestination &&
+            other is _$_TestScriptDestination &&
             const DeepCollectionEquality().equals(other.index, index) &&
             const DeepCollectionEquality()
                 .equals(other.indexElement, indexElement) &&
             const DeepCollectionEquality().equals(other.profile, profile));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5354,8 +5081,8 @@ class _$_TestScriptDestination extends _TestScriptDestination {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptDestinationCopyWith<_TestScriptDestination> get copyWith =>
-      __$TestScriptDestinationCopyWithImpl<_TestScriptDestination>(
+  _$$_TestScriptDestinationCopyWith<_$_TestScriptDestination> get copyWith =>
+      __$$_TestScriptDestinationCopyWithImpl<_$_TestScriptDestination>(
           this, _$identity);
 
   @override
@@ -5366,51 +5093,30 @@ class _$_TestScriptDestination extends _TestScriptDestination {
 
 abstract class _TestScriptDestination extends TestScriptDestination {
   factory _TestScriptDestination(
-      {Decimal? index,
-      @JsonKey(name: '_index') Element? indexElement,
-      required Coding profile}) = _$_TestScriptDestination;
+      {final Decimal? index,
+      @JsonKey(name: '_index') final Element? indexElement,
+      required final Coding profile}) = _$_TestScriptDestination;
   _TestScriptDestination._() : super._();
 
   factory _TestScriptDestination.fromJson(Map<String, dynamic> json) =
       _$_TestScriptDestination.fromJson;
 
   @override
-  Decimal? get index;
+  Decimal? get index => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_index')
-  Element? get indexElement;
+  Element? get indexElement => throw _privateConstructorUsedError;
   @override
-  Coding get profile;
+  Coding get profile => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptDestinationCopyWith<_TestScriptDestination> get copyWith =>
+  _$$_TestScriptDestinationCopyWith<_$_TestScriptDestination> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptMetadata _$TestScriptMetadataFromJson(Map<String, dynamic> json) {
   return _TestScriptMetadata.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptMetadataTearOff {
-  const _$TestScriptMetadataTearOff();
-
-  _TestScriptMetadata call(
-      {List<TestScriptLink>? link,
-      required List<TestScriptCapability> capability}) {
-    return _TestScriptMetadata(
-      link: link,
-      capability: capability,
-    );
-  }
-
-  TestScriptMetadata fromJson(Map<String, Object?> json) {
-    return TestScriptMetadata.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptMetadata = _$TestScriptMetadataTearOff();
 
 /// @nodoc
 mixin _$TestScriptMetadata {
@@ -5461,39 +5167,39 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptMetadataCopyWith<$Res>
+abstract class _$$_TestScriptMetadataCopyWith<$Res>
     implements $TestScriptMetadataCopyWith<$Res> {
-  factory _$TestScriptMetadataCopyWith(
-          _TestScriptMetadata value, $Res Function(_TestScriptMetadata) then) =
-      __$TestScriptMetadataCopyWithImpl<$Res>;
+  factory _$$_TestScriptMetadataCopyWith(_$_TestScriptMetadata value,
+          $Res Function(_$_TestScriptMetadata) then) =
+      __$$_TestScriptMetadataCopyWithImpl<$Res>;
   @override
   $Res call(
       {List<TestScriptLink>? link, List<TestScriptCapability> capability});
 }
 
 /// @nodoc
-class __$TestScriptMetadataCopyWithImpl<$Res>
+class __$$_TestScriptMetadataCopyWithImpl<$Res>
     extends _$TestScriptMetadataCopyWithImpl<$Res>
-    implements _$TestScriptMetadataCopyWith<$Res> {
-  __$TestScriptMetadataCopyWithImpl(
-      _TestScriptMetadata _value, $Res Function(_TestScriptMetadata) _then)
-      : super(_value, (v) => _then(v as _TestScriptMetadata));
+    implements _$$_TestScriptMetadataCopyWith<$Res> {
+  __$$_TestScriptMetadataCopyWithImpl(
+      _$_TestScriptMetadata _value, $Res Function(_$_TestScriptMetadata) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptMetadata));
 
   @override
-  _TestScriptMetadata get _value => super._value as _TestScriptMetadata;
+  _$_TestScriptMetadata get _value => super._value as _$_TestScriptMetadata;
 
   @override
   $Res call({
     Object? link = freezed,
     Object? capability = freezed,
   }) {
-    return _then(_TestScriptMetadata(
+    return _then(_$_TestScriptMetadata(
       link: link == freezed
-          ? _value.link
+          ? _value._link
           : link // ignore: cast_nullable_to_non_nullable
               as List<TestScriptLink>?,
       capability: capability == freezed
-          ? _value.capability
+          ? _value._capability
           : capability // ignore: cast_nullable_to_non_nullable
               as List<TestScriptCapability>,
     ));
@@ -5503,15 +5209,31 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptMetadata extends _TestScriptMetadata {
-  _$_TestScriptMetadata({this.link, required this.capability}) : super._();
+  _$_TestScriptMetadata(
+      {final List<TestScriptLink>? link,
+      required final List<TestScriptCapability> capability})
+      : _link = link,
+        _capability = capability,
+        super._();
 
   factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptMetadataFromJson(json);
 
+  final List<TestScriptLink>? _link;
   @override
-  final List<TestScriptLink>? link;
+  List<TestScriptLink>? get link {
+    final value = _link;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TestScriptCapability> _capability;
   @override
-  final List<TestScriptCapability> capability;
+  List<TestScriptCapability> get capability {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_capability);
+  }
 
   @override
   String toString() {
@@ -5522,22 +5244,24 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptMetadata &&
-            const DeepCollectionEquality().equals(other.link, link) &&
+            other is _$_TestScriptMetadata &&
+            const DeepCollectionEquality().equals(other._link, _link) &&
             const DeepCollectionEquality()
-                .equals(other.capability, capability));
+                .equals(other._capability, _capability));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(link),
-      const DeepCollectionEquality().hash(capability));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith =>
-      __$TestScriptMetadataCopyWithImpl<_TestScriptMetadata>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_link),
+      const DeepCollectionEquality().hash(_capability));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
+      __$$_TestScriptMetadataCopyWithImpl<_$_TestScriptMetadata>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5547,51 +5271,28 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 
 abstract class _TestScriptMetadata extends TestScriptMetadata {
   factory _TestScriptMetadata(
-      {List<TestScriptLink>? link,
-      required List<TestScriptCapability> capability}) = _$_TestScriptMetadata;
+          {final List<TestScriptLink>? link,
+          required final List<TestScriptCapability> capability}) =
+      _$_TestScriptMetadata;
   _TestScriptMetadata._() : super._();
 
   factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
       _$_TestScriptMetadata.fromJson;
 
   @override
-  List<TestScriptLink>? get link;
+  List<TestScriptLink>? get link => throw _privateConstructorUsedError;
   @override
-  List<TestScriptCapability> get capability;
+  List<TestScriptCapability> get capability =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith =>
+  _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptLink _$TestScriptLinkFromJson(Map<String, dynamic> json) {
   return _TestScriptLink.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptLinkTearOff {
-  const _$TestScriptLinkTearOff();
-
-  _TestScriptLink call(
-      {String? url,
-      @JsonKey(name: '_url') Element? urlElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement}) {
-    return _TestScriptLink(
-      url: url,
-      urlElement: urlElement,
-      description: description,
-      descriptionElement: descriptionElement,
-    );
-  }
-
-  TestScriptLink fromJson(Map<String, Object?> json) {
-    return TestScriptLink.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptLink = _$TestScriptLinkTearOff();
 
 /// @nodoc
 mixin _$TestScriptLink {
@@ -5683,11 +5384,11 @@ class _$TestScriptLinkCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptLinkCopyWith<$Res>
+abstract class _$$_TestScriptLinkCopyWith<$Res>
     implements $TestScriptLinkCopyWith<$Res> {
-  factory _$TestScriptLinkCopyWith(
-          _TestScriptLink value, $Res Function(_TestScriptLink) then) =
-      __$TestScriptLinkCopyWithImpl<$Res>;
+  factory _$$_TestScriptLinkCopyWith(
+          _$_TestScriptLink value, $Res Function(_$_TestScriptLink) then) =
+      __$$_TestScriptLinkCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? url,
@@ -5702,15 +5403,15 @@ abstract class _$TestScriptLinkCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptLinkCopyWithImpl<$Res>
+class __$$_TestScriptLinkCopyWithImpl<$Res>
     extends _$TestScriptLinkCopyWithImpl<$Res>
-    implements _$TestScriptLinkCopyWith<$Res> {
-  __$TestScriptLinkCopyWithImpl(
-      _TestScriptLink _value, $Res Function(_TestScriptLink) _then)
-      : super(_value, (v) => _then(v as _TestScriptLink));
+    implements _$$_TestScriptLinkCopyWith<$Res> {
+  __$$_TestScriptLinkCopyWithImpl(
+      _$_TestScriptLink _value, $Res Function(_$_TestScriptLink) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptLink));
 
   @override
-  _TestScriptLink get _value => super._value as _TestScriptLink;
+  _$_TestScriptLink get _value => super._value as _$_TestScriptLink;
 
   @override
   $Res call({
@@ -5719,7 +5420,7 @@ class __$TestScriptLinkCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
   }) {
-    return _then(_TestScriptLink(
+    return _then(_$_TestScriptLink(
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -5773,7 +5474,7 @@ class _$_TestScriptLink extends _TestScriptLink {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptLink &&
+            other is _$_TestScriptLink &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement) &&
@@ -5783,6 +5484,7 @@ class _$_TestScriptLink extends _TestScriptLink {
                 .equals(other.descriptionElement, descriptionElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5793,8 +5495,8 @@ class _$_TestScriptLink extends _TestScriptLink {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptLinkCopyWith<_TestScriptLink> get copyWith =>
-      __$TestScriptLinkCopyWithImpl<_TestScriptLink>(this, _$identity);
+  _$$_TestScriptLinkCopyWith<_$_TestScriptLink> get copyWith =>
+      __$$_TestScriptLinkCopyWithImpl<_$_TestScriptLink>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -5804,10 +5506,10 @@ class _$_TestScriptLink extends _TestScriptLink {
 
 abstract class _TestScriptLink extends TestScriptLink {
   factory _TestScriptLink(
-          {String? url,
-          @JsonKey(name: '_url') Element? urlElement,
-          String? description,
-          @JsonKey(name: '_description') Element? descriptionElement}) =
+          {final String? url,
+          @JsonKey(name: '_url') final Element? urlElement,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_TestScriptLink;
   _TestScriptLink._() : super._();
 
@@ -5815,67 +5517,24 @@ abstract class _TestScriptLink extends TestScriptLink {
       _$_TestScriptLink.fromJson;
 
   @override
-  String? get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptLinkCopyWith<_TestScriptLink> get copyWith =>
+  _$$_TestScriptLinkCopyWith<_$_TestScriptLink> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptCapability _$TestScriptCapabilityFromJson(Map<String, dynamic> json) {
   return _TestScriptCapability.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptCapabilityTearOff {
-  const _$TestScriptCapabilityTearOff();
-
-  _TestScriptCapability call(
-      {@JsonKey(name: 'required') Boolean? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? validated,
-      @JsonKey(name: '_validated') Element? validatedElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Decimal>? origin,
-      @JsonKey(name: '_origin') List<Element?>? originElement,
-      Decimal? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
-      List<String>? link,
-      @JsonKey(name: '_link') List<Element?>? linkElement,
-      required Reference capabilities}) {
-    return _TestScriptCapability(
-      required_: required_,
-      requiredElement: requiredElement,
-      validated: validated,
-      validatedElement: validatedElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      origin: origin,
-      originElement: originElement,
-      destination: destination,
-      destinationElement: destinationElement,
-      link: link,
-      linkElement: linkElement,
-      capabilities: capabilities,
-    );
-  }
-
-  TestScriptCapability fromJson(Map<String, Object?> json) {
-    return TestScriptCapability.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptCapability = _$TestScriptCapabilityTearOff();
 
 /// @nodoc
 mixin _$TestScriptCapability {
@@ -6067,11 +5726,11 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptCapabilityCopyWith<$Res>
+abstract class _$$_TestScriptCapabilityCopyWith<$Res>
     implements $TestScriptCapabilityCopyWith<$Res> {
-  factory _$TestScriptCapabilityCopyWith(_TestScriptCapability value,
-          $Res Function(_TestScriptCapability) then) =
-      __$TestScriptCapabilityCopyWithImpl<$Res>;
+  factory _$$_TestScriptCapabilityCopyWith(_$_TestScriptCapability value,
+          $Res Function(_$_TestScriptCapability) then) =
+      __$$_TestScriptCapabilityCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'required') Boolean? required_,
@@ -6101,15 +5760,15 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptCapabilityCopyWithImpl<$Res>
+class __$$_TestScriptCapabilityCopyWithImpl<$Res>
     extends _$TestScriptCapabilityCopyWithImpl<$Res>
-    implements _$TestScriptCapabilityCopyWith<$Res> {
-  __$TestScriptCapabilityCopyWithImpl(
-      _TestScriptCapability _value, $Res Function(_TestScriptCapability) _then)
-      : super(_value, (v) => _then(v as _TestScriptCapability));
+    implements _$$_TestScriptCapabilityCopyWith<$Res> {
+  __$$_TestScriptCapabilityCopyWithImpl(_$_TestScriptCapability _value,
+      $Res Function(_$_TestScriptCapability) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptCapability));
 
   @override
-  _TestScriptCapability get _value => super._value as _TestScriptCapability;
+  _$_TestScriptCapability get _value => super._value as _$_TestScriptCapability;
 
   @override
   $Res call({
@@ -6127,7 +5786,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
     Object? linkElement = freezed,
     Object? capabilities = freezed,
   }) {
-    return _then(_TestScriptCapability(
+    return _then(_$_TestScriptCapability(
       required_: required_ == freezed
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
@@ -6153,11 +5812,11 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       origin: origin == freezed
-          ? _value.origin
+          ? _value._origin
           : origin // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       originElement: originElement == freezed
-          ? _value.originElement
+          ? _value._originElement
           : originElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       destination: destination == freezed
@@ -6169,11 +5828,11 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
           : destinationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       link: link == freezed
-          ? _value.link
+          ? _value._link
           : link // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       linkElement: linkElement == freezed
-          ? _value.linkElement
+          ? _value._linkElement
           : linkElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       capabilities: capabilities == freezed
@@ -6194,14 +5853,18 @@ class _$_TestScriptCapability extends _TestScriptCapability {
       @JsonKey(name: '_validated') this.validatedElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      this.origin,
-      @JsonKey(name: '_origin') this.originElement,
+      final List<Decimal>? origin,
+      @JsonKey(name: '_origin') final List<Element?>? originElement,
       this.destination,
       @JsonKey(name: '_destination') this.destinationElement,
-      this.link,
-      @JsonKey(name: '_link') this.linkElement,
+      final List<String>? link,
+      @JsonKey(name: '_link') final List<Element?>? linkElement,
       required this.capabilities})
-      : super._();
+      : _origin = origin,
+        _originElement = originElement,
+        _link = link,
+        _linkElement = linkElement,
+        super._();
 
   factory _$_TestScriptCapability.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptCapabilityFromJson(json);
@@ -6222,21 +5885,49 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<Decimal>? _origin;
   @override
-  final List<Decimal>? origin;
+  List<Decimal>? get origin {
+    final value = _origin;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element?>? _originElement;
   @override
   @JsonKey(name: '_origin')
-  final List<Element?>? originElement;
+  List<Element?>? get originElement {
+    final value = _originElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Decimal? destination;
   @override
   @JsonKey(name: '_destination')
   final Element? destinationElement;
+  final List<String>? _link;
   @override
-  final List<String>? link;
+  List<String>? get link {
+    final value = _link;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Element?>? _linkElement;
   @override
   @JsonKey(name: '_link')
-  final List<Element?>? linkElement;
+  List<Element?>? get linkElement {
+    final value = _linkElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference capabilities;
 
@@ -6249,7 +5940,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptCapability &&
+            other is _$_TestScriptCapability &&
             const DeepCollectionEquality().equals(other.required_, required_) &&
             const DeepCollectionEquality()
                 .equals(other.requiredElement, requiredElement) &&
@@ -6260,20 +5951,21 @@ class _$_TestScriptCapability extends _TestScriptCapability {
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.origin, origin) &&
+            const DeepCollectionEquality().equals(other._origin, _origin) &&
             const DeepCollectionEquality()
-                .equals(other.originElement, originElement) &&
+                .equals(other._originElement, _originElement) &&
             const DeepCollectionEquality()
                 .equals(other.destination, destination) &&
             const DeepCollectionEquality()
                 .equals(other.destinationElement, destinationElement) &&
-            const DeepCollectionEquality().equals(other.link, link) &&
+            const DeepCollectionEquality().equals(other._link, _link) &&
             const DeepCollectionEquality()
-                .equals(other.linkElement, linkElement) &&
+                .equals(other._linkElement, _linkElement) &&
             const DeepCollectionEquality()
                 .equals(other.capabilities, capabilities));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6283,18 +5975,18 @@ class _$_TestScriptCapability extends _TestScriptCapability {
       const DeepCollectionEquality().hash(validatedElement),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(origin),
-      const DeepCollectionEquality().hash(originElement),
+      const DeepCollectionEquality().hash(_origin),
+      const DeepCollectionEquality().hash(_originElement),
       const DeepCollectionEquality().hash(destination),
       const DeepCollectionEquality().hash(destinationElement),
-      const DeepCollectionEquality().hash(link),
-      const DeepCollectionEquality().hash(linkElement),
+      const DeepCollectionEquality().hash(_link),
+      const DeepCollectionEquality().hash(_linkElement),
       const DeepCollectionEquality().hash(capabilities));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith =>
-      __$TestScriptCapabilityCopyWithImpl<_TestScriptCapability>(
+  _$$_TestScriptCapabilityCopyWith<_$_TestScriptCapability> get copyWith =>
+      __$$_TestScriptCapabilityCopyWithImpl<_$_TestScriptCapability>(
           this, _$identity);
 
   @override
@@ -6305,19 +5997,19 @@ class _$_TestScriptCapability extends _TestScriptCapability {
 
 abstract class _TestScriptCapability extends TestScriptCapability {
   factory _TestScriptCapability(
-      {@JsonKey(name: 'required') Boolean? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? validated,
-      @JsonKey(name: '_validated') Element? validatedElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Decimal>? origin,
-      @JsonKey(name: '_origin') List<Element?>? originElement,
-      Decimal? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
-      List<String>? link,
-      @JsonKey(name: '_link') List<Element?>? linkElement,
-      required Reference capabilities}) = _$_TestScriptCapability;
+      {@JsonKey(name: 'required') final Boolean? required_,
+      @JsonKey(name: '_required') final Element? requiredElement,
+      final Boolean? validated,
+      @JsonKey(name: '_validated') final Element? validatedElement,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<Decimal>? origin,
+      @JsonKey(name: '_origin') final List<Element?>? originElement,
+      final Decimal? destination,
+      @JsonKey(name: '_destination') final Element? destinationElement,
+      final List<String>? link,
+      @JsonKey(name: '_link') final List<Element?>? linkElement,
+      required final Reference capabilities}) = _$_TestScriptCapability;
   _TestScriptCapability._() : super._();
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
@@ -6325,73 +6017,46 @@ abstract class _TestScriptCapability extends TestScriptCapability {
 
   @override
   @JsonKey(name: 'required')
-  Boolean? get required_;
+  Boolean? get required_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_required')
-  Element? get requiredElement;
+  Element? get requiredElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get validated;
+  Boolean? get validated => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_validated')
-  Element? get validatedElement;
+  Element? get validatedElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<Decimal>? get origin;
+  List<Decimal>? get origin => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_origin')
-  List<Element?>? get originElement;
+  List<Element?>? get originElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get destination;
+  Decimal? get destination => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_destination')
-  Element? get destinationElement;
+  Element? get destinationElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get link;
+  List<String>? get link => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_link')
-  List<Element?>? get linkElement;
+  List<Element?>? get linkElement => throw _privateConstructorUsedError;
   @override
-  Reference get capabilities;
+  Reference get capabilities => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith =>
+  _$$_TestScriptCapabilityCopyWith<_$_TestScriptCapability> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptFixture _$TestScriptFixtureFromJson(Map<String, dynamic> json) {
   return _TestScriptFixture.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptFixtureTearOff {
-  const _$TestScriptFixtureTearOff();
-
-  _TestScriptFixture call(
-      {Boolean? autocreate,
-      @JsonKey(name: '_autocreate') Element? autocreateElement,
-      Boolean? autodelete,
-      @JsonKey(name: '_autodelete') Element? autodeleteElement,
-      Reference? resource}) {
-    return _TestScriptFixture(
-      autocreate: autocreate,
-      autocreateElement: autocreateElement,
-      autodelete: autodelete,
-      autodeleteElement: autodeleteElement,
-      resource: resource,
-    );
-  }
-
-  TestScriptFixture fromJson(Map<String, Object?> json) {
-    return TestScriptFixture.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptFixture = _$TestScriptFixtureTearOff();
 
 /// @nodoc
 mixin _$TestScriptFixture {
@@ -6502,11 +6167,11 @@ class _$TestScriptFixtureCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptFixtureCopyWith<$Res>
+abstract class _$$_TestScriptFixtureCopyWith<$Res>
     implements $TestScriptFixtureCopyWith<$Res> {
-  factory _$TestScriptFixtureCopyWith(
-          _TestScriptFixture value, $Res Function(_TestScriptFixture) then) =
-      __$TestScriptFixtureCopyWithImpl<$Res>;
+  factory _$$_TestScriptFixtureCopyWith(_$_TestScriptFixture value,
+          $Res Function(_$_TestScriptFixture) then) =
+      __$$_TestScriptFixtureCopyWithImpl<$Res>;
   @override
   $Res call(
       {Boolean? autocreate,
@@ -6524,15 +6189,15 @@ abstract class _$TestScriptFixtureCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptFixtureCopyWithImpl<$Res>
+class __$$_TestScriptFixtureCopyWithImpl<$Res>
     extends _$TestScriptFixtureCopyWithImpl<$Res>
-    implements _$TestScriptFixtureCopyWith<$Res> {
-  __$TestScriptFixtureCopyWithImpl(
-      _TestScriptFixture _value, $Res Function(_TestScriptFixture) _then)
-      : super(_value, (v) => _then(v as _TestScriptFixture));
+    implements _$$_TestScriptFixtureCopyWith<$Res> {
+  __$$_TestScriptFixtureCopyWithImpl(
+      _$_TestScriptFixture _value, $Res Function(_$_TestScriptFixture) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptFixture));
 
   @override
-  _TestScriptFixture get _value => super._value as _TestScriptFixture;
+  _$_TestScriptFixture get _value => super._value as _$_TestScriptFixture;
 
   @override
   $Res call({
@@ -6542,7 +6207,7 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
     Object? autodeleteElement = freezed,
     Object? resource = freezed,
   }) {
-    return _then(_TestScriptFixture(
+    return _then(_$_TestScriptFixture(
       autocreate: autocreate == freezed
           ? _value.autocreate
           : autocreate // ignore: cast_nullable_to_non_nullable
@@ -6603,7 +6268,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptFixture &&
+            other is _$_TestScriptFixture &&
             const DeepCollectionEquality()
                 .equals(other.autocreate, autocreate) &&
             const DeepCollectionEquality()
@@ -6615,6 +6280,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
             const DeepCollectionEquality().equals(other.resource, resource));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6626,8 +6292,9 @@ class _$_TestScriptFixture extends _TestScriptFixture {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith =>
-      __$TestScriptFixtureCopyWithImpl<_TestScriptFixture>(this, _$identity);
+  _$$_TestScriptFixtureCopyWith<_$_TestScriptFixture> get copyWith =>
+      __$$_TestScriptFixtureCopyWithImpl<_$_TestScriptFixture>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -6637,86 +6304,37 @@ class _$_TestScriptFixture extends _TestScriptFixture {
 
 abstract class _TestScriptFixture extends TestScriptFixture {
   factory _TestScriptFixture(
-      {Boolean? autocreate,
-      @JsonKey(name: '_autocreate') Element? autocreateElement,
-      Boolean? autodelete,
-      @JsonKey(name: '_autodelete') Element? autodeleteElement,
-      Reference? resource}) = _$_TestScriptFixture;
+      {final Boolean? autocreate,
+      @JsonKey(name: '_autocreate') final Element? autocreateElement,
+      final Boolean? autodelete,
+      @JsonKey(name: '_autodelete') final Element? autodeleteElement,
+      final Reference? resource}) = _$_TestScriptFixture;
   _TestScriptFixture._() : super._();
 
   factory _TestScriptFixture.fromJson(Map<String, dynamic> json) =
       _$_TestScriptFixture.fromJson;
 
   @override
-  Boolean? get autocreate;
+  Boolean? get autocreate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_autocreate')
-  Element? get autocreateElement;
+  Element? get autocreateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get autodelete;
+  Boolean? get autodelete => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_autodelete')
-  Element? get autodeleteElement;
+  Element? get autodeleteElement => throw _privateConstructorUsedError;
   @override
-  Reference? get resource;
+  Reference? get resource => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith =>
+  _$$_TestScriptFixtureCopyWith<_$_TestScriptFixture> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptVariable _$TestScriptVariableFromJson(Map<String, dynamic> json) {
   return _TestScriptVariable.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptVariableTearOff {
-  const _$TestScriptVariableTearOff();
-
-  _TestScriptVariable call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? defaultValue,
-      @JsonKey(name: '_defaultValue') Element? defaultValueElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      String? expression,
-      @JsonKey(name: '_expression') Element? expressionElement,
-      String? headerField,
-      @JsonKey(name: '_headerField') Element? headerFieldElement,
-      String? hint,
-      @JsonKey(name: '_hint') Element? hintElement,
-      String? path,
-      @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
-      @JsonKey(name: '_sourceId') Element? sourceIdElement}) {
-    return _TestScriptVariable(
-      name: name,
-      nameElement: nameElement,
-      defaultValue: defaultValue,
-      defaultValueElement: defaultValueElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      expression: expression,
-      expressionElement: expressionElement,
-      headerField: headerField,
-      headerFieldElement: headerFieldElement,
-      hint: hint,
-      hintElement: hintElement,
-      path: path,
-      pathElement: pathElement,
-      sourceId: sourceId,
-      sourceIdElement: sourceIdElement,
-    );
-  }
-
-  TestScriptVariable fromJson(Map<String, Object?> json) {
-    return TestScriptVariable.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptVariable = _$TestScriptVariableTearOff();
 
 /// @nodoc
 mixin _$TestScriptVariable {
@@ -6970,11 +6588,11 @@ class _$TestScriptVariableCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptVariableCopyWith<$Res>
+abstract class _$$_TestScriptVariableCopyWith<$Res>
     implements $TestScriptVariableCopyWith<$Res> {
-  factory _$TestScriptVariableCopyWith(
-          _TestScriptVariable value, $Res Function(_TestScriptVariable) then) =
-      __$TestScriptVariableCopyWithImpl<$Res>;
+  factory _$$_TestScriptVariableCopyWith(_$_TestScriptVariable value,
+          $Res Function(_$_TestScriptVariable) then) =
+      __$$_TestScriptVariableCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -7013,15 +6631,15 @@ abstract class _$TestScriptVariableCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptVariableCopyWithImpl<$Res>
+class __$$_TestScriptVariableCopyWithImpl<$Res>
     extends _$TestScriptVariableCopyWithImpl<$Res>
-    implements _$TestScriptVariableCopyWith<$Res> {
-  __$TestScriptVariableCopyWithImpl(
-      _TestScriptVariable _value, $Res Function(_TestScriptVariable) _then)
-      : super(_value, (v) => _then(v as _TestScriptVariable));
+    implements _$$_TestScriptVariableCopyWith<$Res> {
+  __$$_TestScriptVariableCopyWithImpl(
+      _$_TestScriptVariable _value, $Res Function(_$_TestScriptVariable) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptVariable));
 
   @override
-  _TestScriptVariable get _value => super._value as _TestScriptVariable;
+  _$_TestScriptVariable get _value => super._value as _$_TestScriptVariable;
 
   @override
   $Res call({
@@ -7042,7 +6660,7 @@ class __$TestScriptVariableCopyWithImpl<$Res>
     Object? sourceId = freezed,
     Object? sourceIdElement = freezed,
   }) {
-    return _then(_TestScriptVariable(
+    return _then(_$_TestScriptVariable(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -7186,7 +6804,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptVariable &&
+            other is _$_TestScriptVariable &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -7217,6 +6835,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
                 .equals(other.sourceIdElement, sourceIdElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7239,8 +6858,9 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith =>
-      __$TestScriptVariableCopyWithImpl<_TestScriptVariable>(this, _$identity);
+  _$$_TestScriptVariableCopyWith<_$_TestScriptVariable> get copyWith =>
+      __$$_TestScriptVariableCopyWithImpl<_$_TestScriptVariable>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7250,22 +6870,22 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 
 abstract class _TestScriptVariable extends TestScriptVariable {
   factory _TestScriptVariable(
-          {String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          String? defaultValue,
-          @JsonKey(name: '_defaultValue') Element? defaultValueElement,
-          String? description,
-          @JsonKey(name: '_description') Element? descriptionElement,
-          String? expression,
-          @JsonKey(name: '_expression') Element? expressionElement,
-          String? headerField,
-          @JsonKey(name: '_headerField') Element? headerFieldElement,
-          String? hint,
-          @JsonKey(name: '_hint') Element? hintElement,
-          String? path,
-          @JsonKey(name: '_path') Element? pathElement,
-          Id? sourceId,
-          @JsonKey(name: '_sourceId') Element? sourceIdElement}) =
+          {final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? defaultValue,
+          @JsonKey(name: '_defaultValue') final Element? defaultValueElement,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final String? expression,
+          @JsonKey(name: '_expression') final Element? expressionElement,
+          final String? headerField,
+          @JsonKey(name: '_headerField') final Element? headerFieldElement,
+          final String? hint,
+          @JsonKey(name: '_hint') final Element? hintElement,
+          final String? path,
+          @JsonKey(name: '_path') final Element? pathElement,
+          final Id? sourceId,
+          @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
 
@@ -7273,74 +6893,54 @@ abstract class _TestScriptVariable extends TestScriptVariable {
       _$_TestScriptVariable.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get defaultValue;
+  String? get defaultValue => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValue')
-  Element? get defaultValueElement;
+  Element? get defaultValueElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  String? get expression;
+  String? get expression => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
+  Element? get expressionElement => throw _privateConstructorUsedError;
   @override
-  String? get headerField;
+  String? get headerField => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_headerField')
-  Element? get headerFieldElement;
+  Element? get headerFieldElement => throw _privateConstructorUsedError;
   @override
-  String? get hint;
+  String? get hint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_hint')
-  Element? get hintElement;
+  Element? get hintElement => throw _privateConstructorUsedError;
   @override
-  String? get path;
+  String? get path => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement;
+  Element? get pathElement => throw _privateConstructorUsedError;
   @override
-  Id? get sourceId;
+  Id? get sourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sourceId')
-  Element? get sourceIdElement;
+  Element? get sourceIdElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith =>
+  _$$_TestScriptVariableCopyWith<_$_TestScriptVariable> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptRule _$TestScriptRuleFromJson(Map<String, dynamic> json) {
   return _TestScriptRule.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptRuleTearOff {
-  const _$TestScriptRuleTearOff();
-
-  _TestScriptRule call(
-      {required Reference resource, List<TestScriptParam>? param}) {
-    return _TestScriptRule(
-      resource: resource,
-      param: param,
-    );
-  }
-
-  TestScriptRule fromJson(Map<String, Object?> json) {
-    return TestScriptRule.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptRule = _$TestScriptRuleTearOff();
 
 /// @nodoc
 mixin _$TestScriptRule {
@@ -7398,11 +6998,11 @@ class _$TestScriptRuleCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptRuleCopyWith<$Res>
+abstract class _$$_TestScriptRuleCopyWith<$Res>
     implements $TestScriptRuleCopyWith<$Res> {
-  factory _$TestScriptRuleCopyWith(
-          _TestScriptRule value, $Res Function(_TestScriptRule) then) =
-      __$TestScriptRuleCopyWithImpl<$Res>;
+  factory _$$_TestScriptRuleCopyWith(
+          _$_TestScriptRule value, $Res Function(_$_TestScriptRule) then) =
+      __$$_TestScriptRuleCopyWithImpl<$Res>;
   @override
   $Res call({Reference resource, List<TestScriptParam>? param});
 
@@ -7411,28 +7011,28 @@ abstract class _$TestScriptRuleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptRuleCopyWithImpl<$Res>
+class __$$_TestScriptRuleCopyWithImpl<$Res>
     extends _$TestScriptRuleCopyWithImpl<$Res>
-    implements _$TestScriptRuleCopyWith<$Res> {
-  __$TestScriptRuleCopyWithImpl(
-      _TestScriptRule _value, $Res Function(_TestScriptRule) _then)
-      : super(_value, (v) => _then(v as _TestScriptRule));
+    implements _$$_TestScriptRuleCopyWith<$Res> {
+  __$$_TestScriptRuleCopyWithImpl(
+      _$_TestScriptRule _value, $Res Function(_$_TestScriptRule) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptRule));
 
   @override
-  _TestScriptRule get _value => super._value as _TestScriptRule;
+  _$_TestScriptRule get _value => super._value as _$_TestScriptRule;
 
   @override
   $Res call({
     Object? resource = freezed,
     Object? param = freezed,
   }) {
-    return _then(_TestScriptRule(
+    return _then(_$_TestScriptRule(
       resource: resource == freezed
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Reference,
       param: param == freezed
-          ? _value.param
+          ? _value._param
           : param // ignore: cast_nullable_to_non_nullable
               as List<TestScriptParam>?,
     ));
@@ -7442,15 +7042,24 @@ class __$TestScriptRuleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptRule extends _TestScriptRule {
-  _$_TestScriptRule({required this.resource, this.param}) : super._();
+  _$_TestScriptRule(
+      {required this.resource, final List<TestScriptParam>? param})
+      : _param = param,
+        super._();
 
   factory _$_TestScriptRule.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptRuleFromJson(json);
 
   @override
   final Reference resource;
+  final List<TestScriptParam>? _param;
   @override
-  final List<TestScriptParam>? param;
+  List<TestScriptParam>? get param {
+    final value = _param;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -7461,21 +7070,22 @@ class _$_TestScriptRule extends _TestScriptRule {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptRule &&
+            other is _$_TestScriptRule &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
-            const DeepCollectionEquality().equals(other.param, param));
+            const DeepCollectionEquality().equals(other._param, _param));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(resource),
-      const DeepCollectionEquality().hash(param));
+      const DeepCollectionEquality().hash(_param));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptRuleCopyWith<_TestScriptRule> get copyWith =>
-      __$TestScriptRuleCopyWithImpl<_TestScriptRule>(this, _$identity);
+  _$$_TestScriptRuleCopyWith<_$_TestScriptRule> get copyWith =>
+      __$$_TestScriptRuleCopyWithImpl<_$_TestScriptRule>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7485,51 +7095,26 @@ class _$_TestScriptRule extends _TestScriptRule {
 
 abstract class _TestScriptRule extends TestScriptRule {
   factory _TestScriptRule(
-      {required Reference resource,
-      List<TestScriptParam>? param}) = _$_TestScriptRule;
+      {required final Reference resource,
+      final List<TestScriptParam>? param}) = _$_TestScriptRule;
   _TestScriptRule._() : super._();
 
   factory _TestScriptRule.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRule.fromJson;
 
   @override
-  Reference get resource;
+  Reference get resource => throw _privateConstructorUsedError;
   @override
-  List<TestScriptParam>? get param;
+  List<TestScriptParam>? get param => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptRuleCopyWith<_TestScriptRule> get copyWith =>
+  _$$_TestScriptRuleCopyWith<_$_TestScriptRule> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptParam _$TestScriptParamFromJson(Map<String, dynamic> json) {
   return _TestScriptParam.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptParamTearOff {
-  const _$TestScriptParamTearOff();
-
-  _TestScriptParam call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _TestScriptParam(
-      name: name,
-      nameElement: nameElement,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  TestScriptParam fromJson(Map<String, Object?> json) {
-    return TestScriptParam.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptParam = _$TestScriptParamTearOff();
 
 /// @nodoc
 mixin _$TestScriptParam {
@@ -7621,11 +7206,11 @@ class _$TestScriptParamCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptParamCopyWith<$Res>
+abstract class _$$_TestScriptParamCopyWith<$Res>
     implements $TestScriptParamCopyWith<$Res> {
-  factory _$TestScriptParamCopyWith(
-          _TestScriptParam value, $Res Function(_TestScriptParam) then) =
-      __$TestScriptParamCopyWithImpl<$Res>;
+  factory _$$_TestScriptParamCopyWith(
+          _$_TestScriptParam value, $Res Function(_$_TestScriptParam) then) =
+      __$$_TestScriptParamCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -7640,15 +7225,15 @@ abstract class _$TestScriptParamCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptParamCopyWithImpl<$Res>
+class __$$_TestScriptParamCopyWithImpl<$Res>
     extends _$TestScriptParamCopyWithImpl<$Res>
-    implements _$TestScriptParamCopyWith<$Res> {
-  __$TestScriptParamCopyWithImpl(
-      _TestScriptParam _value, $Res Function(_TestScriptParam) _then)
-      : super(_value, (v) => _then(v as _TestScriptParam));
+    implements _$$_TestScriptParamCopyWith<$Res> {
+  __$$_TestScriptParamCopyWithImpl(
+      _$_TestScriptParam _value, $Res Function(_$_TestScriptParam) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptParam));
 
   @override
-  _TestScriptParam get _value => super._value as _TestScriptParam;
+  _$_TestScriptParam get _value => super._value as _$_TestScriptParam;
 
   @override
   $Res call({
@@ -7657,7 +7242,7 @@ class __$TestScriptParamCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_TestScriptParam(
+    return _then(_$_TestScriptParam(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -7711,7 +7296,7 @@ class _$_TestScriptParam extends _TestScriptParam {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptParam &&
+            other is _$_TestScriptParam &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -7720,6 +7305,7 @@ class _$_TestScriptParam extends _TestScriptParam {
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7730,8 +7316,8 @@ class _$_TestScriptParam extends _TestScriptParam {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptParamCopyWith<_TestScriptParam> get copyWith =>
-      __$TestScriptParamCopyWithImpl<_TestScriptParam>(this, _$identity);
+  _$$_TestScriptParamCopyWith<_$_TestScriptParam> get copyWith =>
+      __$$_TestScriptParamCopyWithImpl<_$_TestScriptParam>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7741,54 +7327,35 @@ class _$_TestScriptParam extends _TestScriptParam {
 
 abstract class _TestScriptParam extends TestScriptParam {
   factory _TestScriptParam(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) = _$_TestScriptParam;
+          {final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
+      _$_TestScriptParam;
   _TestScriptParam._() : super._();
 
   factory _TestScriptParam.fromJson(Map<String, dynamic> json) =
       _$_TestScriptParam.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptParamCopyWith<_TestScriptParam> get copyWith =>
+  _$$_TestScriptParamCopyWith<_$_TestScriptParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptRuleset _$TestScriptRulesetFromJson(Map<String, dynamic> json) {
   return _TestScriptRuleset.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptRulesetTearOff {
-  const _$TestScriptRulesetTearOff();
-
-  _TestScriptRuleset call(
-      {required Reference resource, required List<TestScriptRule1> rule}) {
-    return _TestScriptRuleset(
-      resource: resource,
-      rule: rule,
-    );
-  }
-
-  TestScriptRuleset fromJson(Map<String, Object?> json) {
-    return TestScriptRuleset.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptRuleset = _$TestScriptRulesetTearOff();
 
 /// @nodoc
 mixin _$TestScriptRuleset {
@@ -7846,11 +7413,11 @@ class _$TestScriptRulesetCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptRulesetCopyWith<$Res>
+abstract class _$$_TestScriptRulesetCopyWith<$Res>
     implements $TestScriptRulesetCopyWith<$Res> {
-  factory _$TestScriptRulesetCopyWith(
-          _TestScriptRuleset value, $Res Function(_TestScriptRuleset) then) =
-      __$TestScriptRulesetCopyWithImpl<$Res>;
+  factory _$$_TestScriptRulesetCopyWith(_$_TestScriptRuleset value,
+          $Res Function(_$_TestScriptRuleset) then) =
+      __$$_TestScriptRulesetCopyWithImpl<$Res>;
   @override
   $Res call({Reference resource, List<TestScriptRule1> rule});
 
@@ -7859,28 +7426,28 @@ abstract class _$TestScriptRulesetCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptRulesetCopyWithImpl<$Res>
+class __$$_TestScriptRulesetCopyWithImpl<$Res>
     extends _$TestScriptRulesetCopyWithImpl<$Res>
-    implements _$TestScriptRulesetCopyWith<$Res> {
-  __$TestScriptRulesetCopyWithImpl(
-      _TestScriptRuleset _value, $Res Function(_TestScriptRuleset) _then)
-      : super(_value, (v) => _then(v as _TestScriptRuleset));
+    implements _$$_TestScriptRulesetCopyWith<$Res> {
+  __$$_TestScriptRulesetCopyWithImpl(
+      _$_TestScriptRuleset _value, $Res Function(_$_TestScriptRuleset) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptRuleset));
 
   @override
-  _TestScriptRuleset get _value => super._value as _TestScriptRuleset;
+  _$_TestScriptRuleset get _value => super._value as _$_TestScriptRuleset;
 
   @override
   $Res call({
     Object? resource = freezed,
     Object? rule = freezed,
   }) {
-    return _then(_TestScriptRuleset(
+    return _then(_$_TestScriptRuleset(
       resource: resource == freezed
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Reference,
       rule: rule == freezed
-          ? _value.rule
+          ? _value._rule
           : rule // ignore: cast_nullable_to_non_nullable
               as List<TestScriptRule1>,
     ));
@@ -7890,16 +7457,22 @@ class __$TestScriptRulesetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptRuleset extends _TestScriptRuleset {
-  _$_TestScriptRuleset({required this.resource, required this.rule})
-      : super._();
+  _$_TestScriptRuleset(
+      {required this.resource, required final List<TestScriptRule1> rule})
+      : _rule = rule,
+        super._();
 
   factory _$_TestScriptRuleset.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptRulesetFromJson(json);
 
   @override
   final Reference resource;
+  final List<TestScriptRule1> _rule;
   @override
-  final List<TestScriptRule1> rule;
+  List<TestScriptRule1> get rule {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_rule);
+  }
 
   @override
   String toString() {
@@ -7910,21 +7483,23 @@ class _$_TestScriptRuleset extends _TestScriptRuleset {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptRuleset &&
+            other is _$_TestScriptRuleset &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
-            const DeepCollectionEquality().equals(other.rule, rule));
+            const DeepCollectionEquality().equals(other._rule, _rule));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(resource),
-      const DeepCollectionEquality().hash(rule));
+      const DeepCollectionEquality().hash(_rule));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptRulesetCopyWith<_TestScriptRuleset> get copyWith =>
-      __$TestScriptRulesetCopyWithImpl<_TestScriptRuleset>(this, _$identity);
+  _$$_TestScriptRulesetCopyWith<_$_TestScriptRuleset> get copyWith =>
+      __$$_TestScriptRulesetCopyWithImpl<_$_TestScriptRuleset>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -7934,49 +7509,26 @@ class _$_TestScriptRuleset extends _TestScriptRuleset {
 
 abstract class _TestScriptRuleset extends TestScriptRuleset {
   factory _TestScriptRuleset(
-      {required Reference resource,
-      required List<TestScriptRule1> rule}) = _$_TestScriptRuleset;
+      {required final Reference resource,
+      required final List<TestScriptRule1> rule}) = _$_TestScriptRuleset;
   _TestScriptRuleset._() : super._();
 
   factory _TestScriptRuleset.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRuleset.fromJson;
 
   @override
-  Reference get resource;
+  Reference get resource => throw _privateConstructorUsedError;
   @override
-  List<TestScriptRule1> get rule;
+  List<TestScriptRule1> get rule => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptRulesetCopyWith<_TestScriptRuleset> get copyWith =>
+  _$$_TestScriptRulesetCopyWith<_$_TestScriptRuleset> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptRule1 _$TestScriptRule1FromJson(Map<String, dynamic> json) {
   return _TestScriptRule1.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptRule1TearOff {
-  const _$TestScriptRule1TearOff();
-
-  _TestScriptRule1 call(
-      {Id? ruleId,
-      @JsonKey(name: '_ruleId') Element? ruleIdElement,
-      List<TestScriptParam1>? param}) {
-    return _TestScriptRule1(
-      ruleId: ruleId,
-      ruleIdElement: ruleIdElement,
-      param: param,
-    );
-  }
-
-  TestScriptRule1 fromJson(Map<String, Object?> json) {
-    return TestScriptRule1.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptRule1 = _$TestScriptRule1TearOff();
 
 /// @nodoc
 mixin _$TestScriptRule1 {
@@ -8048,11 +7600,11 @@ class _$TestScriptRule1CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptRule1CopyWith<$Res>
+abstract class _$$_TestScriptRule1CopyWith<$Res>
     implements $TestScriptRule1CopyWith<$Res> {
-  factory _$TestScriptRule1CopyWith(
-          _TestScriptRule1 value, $Res Function(_TestScriptRule1) then) =
-      __$TestScriptRule1CopyWithImpl<$Res>;
+  factory _$$_TestScriptRule1CopyWith(
+          _$_TestScriptRule1 value, $Res Function(_$_TestScriptRule1) then) =
+      __$$_TestScriptRule1CopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? ruleId,
@@ -8064,15 +7616,15 @@ abstract class _$TestScriptRule1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptRule1CopyWithImpl<$Res>
+class __$$_TestScriptRule1CopyWithImpl<$Res>
     extends _$TestScriptRule1CopyWithImpl<$Res>
-    implements _$TestScriptRule1CopyWith<$Res> {
-  __$TestScriptRule1CopyWithImpl(
-      _TestScriptRule1 _value, $Res Function(_TestScriptRule1) _then)
-      : super(_value, (v) => _then(v as _TestScriptRule1));
+    implements _$$_TestScriptRule1CopyWith<$Res> {
+  __$$_TestScriptRule1CopyWithImpl(
+      _$_TestScriptRule1 _value, $Res Function(_$_TestScriptRule1) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptRule1));
 
   @override
-  _TestScriptRule1 get _value => super._value as _TestScriptRule1;
+  _$_TestScriptRule1 get _value => super._value as _$_TestScriptRule1;
 
   @override
   $Res call({
@@ -8080,7 +7632,7 @@ class __$TestScriptRule1CopyWithImpl<$Res>
     Object? ruleIdElement = freezed,
     Object? param = freezed,
   }) {
-    return _then(_TestScriptRule1(
+    return _then(_$_TestScriptRule1(
       ruleId: ruleId == freezed
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
@@ -8090,7 +7642,7 @@ class __$TestScriptRule1CopyWithImpl<$Res>
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       param: param == freezed
-          ? _value.param
+          ? _value._param
           : param // ignore: cast_nullable_to_non_nullable
               as List<TestScriptParam1>?,
     ));
@@ -8101,8 +7653,11 @@ class __$TestScriptRule1CopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScriptRule1 extends _TestScriptRule1 {
   _$_TestScriptRule1(
-      {this.ruleId, @JsonKey(name: '_ruleId') this.ruleIdElement, this.param})
-      : super._();
+      {this.ruleId,
+      @JsonKey(name: '_ruleId') this.ruleIdElement,
+      final List<TestScriptParam1>? param})
+      : _param = param,
+        super._();
 
   factory _$_TestScriptRule1.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptRule1FromJson(json);
@@ -8112,8 +7667,14 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
+  final List<TestScriptParam1>? _param;
   @override
-  final List<TestScriptParam1>? param;
+  List<TestScriptParam1>? get param {
+    final value = _param;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -8124,24 +7685,25 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptRule1 &&
+            other is _$_TestScriptRule1 &&
             const DeepCollectionEquality().equals(other.ruleId, ruleId) &&
             const DeepCollectionEquality()
                 .equals(other.ruleIdElement, ruleIdElement) &&
-            const DeepCollectionEquality().equals(other.param, param));
+            const DeepCollectionEquality().equals(other._param, _param));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(ruleId),
       const DeepCollectionEquality().hash(ruleIdElement),
-      const DeepCollectionEquality().hash(param));
+      const DeepCollectionEquality().hash(_param));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptRule1CopyWith<_TestScriptRule1> get copyWith =>
-      __$TestScriptRule1CopyWithImpl<_TestScriptRule1>(this, _$identity);
+  _$$_TestScriptRule1CopyWith<_$_TestScriptRule1> get copyWith =>
+      __$$_TestScriptRule1CopyWithImpl<_$_TestScriptRule1>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8151,55 +7713,30 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
 
 abstract class _TestScriptRule1 extends TestScriptRule1 {
   factory _TestScriptRule1(
-      {Id? ruleId,
-      @JsonKey(name: '_ruleId') Element? ruleIdElement,
-      List<TestScriptParam1>? param}) = _$_TestScriptRule1;
+      {final Id? ruleId,
+      @JsonKey(name: '_ruleId') final Element? ruleIdElement,
+      final List<TestScriptParam1>? param}) = _$_TestScriptRule1;
   _TestScriptRule1._() : super._();
 
   factory _TestScriptRule1.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRule1.fromJson;
 
   @override
-  Id? get ruleId;
+  Id? get ruleId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ruleId')
-  Element? get ruleIdElement;
+  Element? get ruleIdElement => throw _privateConstructorUsedError;
   @override
-  List<TestScriptParam1>? get param;
+  List<TestScriptParam1>? get param => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptRule1CopyWith<_TestScriptRule1> get copyWith =>
+  _$$_TestScriptRule1CopyWith<_$_TestScriptRule1> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptParam1 _$TestScriptParam1FromJson(Map<String, dynamic> json) {
   return _TestScriptParam1.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptParam1TearOff {
-  const _$TestScriptParam1TearOff();
-
-  _TestScriptParam1 call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _TestScriptParam1(
-      name: name,
-      nameElement: nameElement,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  TestScriptParam1 fromJson(Map<String, Object?> json) {
-    return TestScriptParam1.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptParam1 = _$TestScriptParam1TearOff();
 
 /// @nodoc
 mixin _$TestScriptParam1 {
@@ -8291,11 +7828,11 @@ class _$TestScriptParam1CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptParam1CopyWith<$Res>
+abstract class _$$_TestScriptParam1CopyWith<$Res>
     implements $TestScriptParam1CopyWith<$Res> {
-  factory _$TestScriptParam1CopyWith(
-          _TestScriptParam1 value, $Res Function(_TestScriptParam1) then) =
-      __$TestScriptParam1CopyWithImpl<$Res>;
+  factory _$$_TestScriptParam1CopyWith(
+          _$_TestScriptParam1 value, $Res Function(_$_TestScriptParam1) then) =
+      __$$_TestScriptParam1CopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -8310,15 +7847,15 @@ abstract class _$TestScriptParam1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptParam1CopyWithImpl<$Res>
+class __$$_TestScriptParam1CopyWithImpl<$Res>
     extends _$TestScriptParam1CopyWithImpl<$Res>
-    implements _$TestScriptParam1CopyWith<$Res> {
-  __$TestScriptParam1CopyWithImpl(
-      _TestScriptParam1 _value, $Res Function(_TestScriptParam1) _then)
-      : super(_value, (v) => _then(v as _TestScriptParam1));
+    implements _$$_TestScriptParam1CopyWith<$Res> {
+  __$$_TestScriptParam1CopyWithImpl(
+      _$_TestScriptParam1 _value, $Res Function(_$_TestScriptParam1) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptParam1));
 
   @override
-  _TestScriptParam1 get _value => super._value as _TestScriptParam1;
+  _$_TestScriptParam1 get _value => super._value as _$_TestScriptParam1;
 
   @override
   $Res call({
@@ -8327,7 +7864,7 @@ class __$TestScriptParam1CopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_TestScriptParam1(
+    return _then(_$_TestScriptParam1(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -8381,7 +7918,7 @@ class _$_TestScriptParam1 extends _TestScriptParam1 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptParam1 &&
+            other is _$_TestScriptParam1 &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -8390,6 +7927,7 @@ class _$_TestScriptParam1 extends _TestScriptParam1 {
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8400,8 +7938,8 @@ class _$_TestScriptParam1 extends _TestScriptParam1 {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptParam1CopyWith<_TestScriptParam1> get copyWith =>
-      __$TestScriptParam1CopyWithImpl<_TestScriptParam1>(this, _$identity);
+  _$$_TestScriptParam1CopyWith<_$_TestScriptParam1> get copyWith =>
+      __$$_TestScriptParam1CopyWithImpl<_$_TestScriptParam1>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8411,52 +7949,35 @@ class _$_TestScriptParam1 extends _TestScriptParam1 {
 
 abstract class _TestScriptParam1 extends TestScriptParam1 {
   factory _TestScriptParam1(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) = _$_TestScriptParam1;
+          {final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
+      _$_TestScriptParam1;
   _TestScriptParam1._() : super._();
 
   factory _TestScriptParam1.fromJson(Map<String, dynamic> json) =
       _$_TestScriptParam1.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptParam1CopyWith<_TestScriptParam1> get copyWith =>
+  _$$_TestScriptParam1CopyWith<_$_TestScriptParam1> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptSetup _$TestScriptSetupFromJson(Map<String, dynamic> json) {
   return _TestScriptSetup.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptSetupTearOff {
-  const _$TestScriptSetupTearOff();
-
-  _TestScriptSetup call({required List<TestScriptAction> action}) {
-    return _TestScriptSetup(
-      action: action,
-    );
-  }
-
-  TestScriptSetup fromJson(Map<String, Object?> json) {
-    return TestScriptSetup.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptSetup = _$TestScriptSetupTearOff();
 
 /// @nodoc
 mixin _$TestScriptSetup {
@@ -8499,33 +8020,33 @@ class _$TestScriptSetupCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptSetupCopyWith<$Res>
+abstract class _$$_TestScriptSetupCopyWith<$Res>
     implements $TestScriptSetupCopyWith<$Res> {
-  factory _$TestScriptSetupCopyWith(
-          _TestScriptSetup value, $Res Function(_TestScriptSetup) then) =
-      __$TestScriptSetupCopyWithImpl<$Res>;
+  factory _$$_TestScriptSetupCopyWith(
+          _$_TestScriptSetup value, $Res Function(_$_TestScriptSetup) then) =
+      __$$_TestScriptSetupCopyWithImpl<$Res>;
   @override
   $Res call({List<TestScriptAction> action});
 }
 
 /// @nodoc
-class __$TestScriptSetupCopyWithImpl<$Res>
+class __$$_TestScriptSetupCopyWithImpl<$Res>
     extends _$TestScriptSetupCopyWithImpl<$Res>
-    implements _$TestScriptSetupCopyWith<$Res> {
-  __$TestScriptSetupCopyWithImpl(
-      _TestScriptSetup _value, $Res Function(_TestScriptSetup) _then)
-      : super(_value, (v) => _then(v as _TestScriptSetup));
+    implements _$$_TestScriptSetupCopyWith<$Res> {
+  __$$_TestScriptSetupCopyWithImpl(
+      _$_TestScriptSetup _value, $Res Function(_$_TestScriptSetup) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptSetup));
 
   @override
-  _TestScriptSetup get _value => super._value as _TestScriptSetup;
+  _$_TestScriptSetup get _value => super._value as _$_TestScriptSetup;
 
   @override
   $Res call({
     Object? action = freezed,
   }) {
-    return _then(_TestScriptSetup(
+    return _then(_$_TestScriptSetup(
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestScriptAction>,
     ));
@@ -8535,13 +8056,19 @@ class __$TestScriptSetupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptSetup extends _TestScriptSetup {
-  _$_TestScriptSetup({required this.action}) : super._();
+  _$_TestScriptSetup({required final List<TestScriptAction> action})
+      : _action = action,
+        super._();
 
   factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptSetupFromJson(json);
 
+  final List<TestScriptAction> _action;
   @override
-  final List<TestScriptAction> action;
+  List<TestScriptAction> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -8552,18 +8079,19 @@ class _$_TestScriptSetup extends _TestScriptSetup {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptSetup &&
-            const DeepCollectionEquality().equals(other.action, action));
+            other is _$_TestScriptSetup &&
+            const DeepCollectionEquality().equals(other._action, _action));
   }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith =>
-      __$TestScriptSetupCopyWithImpl<_TestScriptSetup>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_action));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TestScriptSetupCopyWith<_$_TestScriptSetup> get copyWith =>
+      __$$_TestScriptSetupCopyWithImpl<_$_TestScriptSetup>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8572,7 +8100,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
 }
 
 abstract class _TestScriptSetup extends TestScriptSetup {
-  factory _TestScriptSetup({required List<TestScriptAction> action}) =
+  factory _TestScriptSetup({required final List<TestScriptAction> action}) =
       _$_TestScriptSetup;
   _TestScriptSetup._() : super._();
 
@@ -8580,37 +8108,16 @@ abstract class _TestScriptSetup extends TestScriptSetup {
       _$_TestScriptSetup.fromJson;
 
   @override
-  List<TestScriptAction> get action;
+  List<TestScriptAction> get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith =>
+  _$$_TestScriptSetupCopyWith<_$_TestScriptSetup> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptAction _$TestScriptActionFromJson(Map<String, dynamic> json) {
   return _TestScriptAction.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptActionTearOff {
-  const _$TestScriptActionTearOff();
-
-  _TestScriptAction call(
-      {TestScriptOperation? operation,
-      @JsonKey(name: 'assert') TestScriptAssert? assert_}) {
-    return _TestScriptAction(
-      operation: operation,
-      assert_: assert_,
-    );
-  }
-
-  TestScriptAction fromJson(Map<String, Object?> json) {
-    return TestScriptAction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptAction = _$TestScriptActionTearOff();
 
 /// @nodoc
 mixin _$TestScriptAction {
@@ -8687,11 +8194,11 @@ class _$TestScriptActionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptActionCopyWith<$Res>
+abstract class _$$_TestScriptActionCopyWith<$Res>
     implements $TestScriptActionCopyWith<$Res> {
-  factory _$TestScriptActionCopyWith(
-          _TestScriptAction value, $Res Function(_TestScriptAction) then) =
-      __$TestScriptActionCopyWithImpl<$Res>;
+  factory _$$_TestScriptActionCopyWith(
+          _$_TestScriptAction value, $Res Function(_$_TestScriptAction) then) =
+      __$$_TestScriptActionCopyWithImpl<$Res>;
   @override
   $Res call(
       {TestScriptOperation? operation,
@@ -8704,22 +8211,22 @@ abstract class _$TestScriptActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptActionCopyWithImpl<$Res>
+class __$$_TestScriptActionCopyWithImpl<$Res>
     extends _$TestScriptActionCopyWithImpl<$Res>
-    implements _$TestScriptActionCopyWith<$Res> {
-  __$TestScriptActionCopyWithImpl(
-      _TestScriptAction _value, $Res Function(_TestScriptAction) _then)
-      : super(_value, (v) => _then(v as _TestScriptAction));
+    implements _$$_TestScriptActionCopyWith<$Res> {
+  __$$_TestScriptActionCopyWithImpl(
+      _$_TestScriptAction _value, $Res Function(_$_TestScriptAction) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptAction));
 
   @override
-  _TestScriptAction get _value => super._value as _TestScriptAction;
+  _$_TestScriptAction get _value => super._value as _$_TestScriptAction;
 
   @override
   $Res call({
     Object? operation = freezed,
     Object? assert_ = freezed,
   }) {
-    return _then(_TestScriptAction(
+    return _then(_$_TestScriptAction(
       operation: operation == freezed
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
@@ -8756,11 +8263,12 @@ class _$_TestScriptAction extends _TestScriptAction {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptAction &&
+            other is _$_TestScriptAction &&
             const DeepCollectionEquality().equals(other.operation, operation) &&
             const DeepCollectionEquality().equals(other.assert_, assert_));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8769,8 +8277,8 @@ class _$_TestScriptAction extends _TestScriptAction {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptActionCopyWith<_TestScriptAction> get copyWith =>
-      __$TestScriptActionCopyWithImpl<_TestScriptAction>(this, _$identity);
+  _$$_TestScriptActionCopyWith<_$_TestScriptAction> get copyWith =>
+      __$$_TestScriptActionCopyWithImpl<_$_TestScriptAction>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -8780,8 +8288,8 @@ class _$_TestScriptAction extends _TestScriptAction {
 
 abstract class _TestScriptAction extends TestScriptAction {
   factory _TestScriptAction(
-          {TestScriptOperation? operation,
-          @JsonKey(name: 'assert') TestScriptAssert? assert_}) =
+          {final TestScriptOperation? operation,
+          @JsonKey(name: 'assert') final TestScriptAssert? assert_}) =
       _$_TestScriptAction;
   _TestScriptAction._() : super._();
 
@@ -8789,96 +8297,19 @@ abstract class _TestScriptAction extends TestScriptAction {
       _$_TestScriptAction.fromJson;
 
   @override
-  TestScriptOperation? get operation;
+  TestScriptOperation? get operation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'assert')
-  TestScriptAssert? get assert_;
+  TestScriptAssert? get assert_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptActionCopyWith<_TestScriptAction> get copyWith =>
+  _$$_TestScriptActionCopyWith<_$_TestScriptAction> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptOperation _$TestScriptOperationFromJson(Map<String, dynamic> json) {
   return _TestScriptOperation.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptOperationTearOff {
-  const _$TestScriptOperationTearOff();
-
-  _TestScriptOperation call(
-      {Coding? type,
-      String? resource,
-      @JsonKey(name: '_resource') Element? resourceElement,
-      String? label,
-      @JsonKey(name: '_label') Element? labelElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      TestScriptOperationAccept? accept,
-      @JsonKey(name: '_accept') Element? acceptElement,
-      TestScriptOperationContentType? contentType,
-      @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Decimal? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
-      Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Decimal? origin,
-      @JsonKey(name: '_origin') Element? originElement,
-      String? params,
-      @JsonKey(name: '_params') Element? paramsElement,
-      List<TestScriptRequestHeader>? requestHeader,
-      Id? requestId,
-      @JsonKey(name: '_requestId') Element? requestIdElement,
-      Id? responseId,
-      @JsonKey(name: '_responseId') Element? responseIdElement,
-      Id? sourceId,
-      @JsonKey(name: '_sourceId') Element? sourceIdElement,
-      Id? targetId,
-      @JsonKey(name: '_targetId') Element? targetIdElement,
-      String? url,
-      @JsonKey(name: '_url') Element? urlElement}) {
-    return _TestScriptOperation(
-      type: type,
-      resource: resource,
-      resourceElement: resourceElement,
-      label: label,
-      labelElement: labelElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      accept: accept,
-      acceptElement: acceptElement,
-      contentType: contentType,
-      contentTypeElement: contentTypeElement,
-      destination: destination,
-      destinationElement: destinationElement,
-      encodeRequestUrl: encodeRequestUrl,
-      encodeRequestUrlElement: encodeRequestUrlElement,
-      origin: origin,
-      originElement: originElement,
-      params: params,
-      paramsElement: paramsElement,
-      requestHeader: requestHeader,
-      requestId: requestId,
-      requestIdElement: requestIdElement,
-      responseId: responseId,
-      responseIdElement: responseIdElement,
-      sourceId: sourceId,
-      sourceIdElement: sourceIdElement,
-      targetId: targetId,
-      targetIdElement: targetIdElement,
-      url: url,
-      urlElement: urlElement,
-    );
-  }
-
-  TestScriptOperation fromJson(Map<String, Object?> json) {
-    return TestScriptOperation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptOperation = _$TestScriptOperationTearOff();
 
 /// @nodoc
 mixin _$TestScriptOperation {
@@ -9322,11 +8753,11 @@ class _$TestScriptOperationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptOperationCopyWith<$Res>
+abstract class _$$_TestScriptOperationCopyWith<$Res>
     implements $TestScriptOperationCopyWith<$Res> {
-  factory _$TestScriptOperationCopyWith(_TestScriptOperation value,
-          $Res Function(_TestScriptOperation) then) =
-      __$TestScriptOperationCopyWithImpl<$Res>;
+  factory _$$_TestScriptOperationCopyWith(_$_TestScriptOperation value,
+          $Res Function(_$_TestScriptOperation) then) =
+      __$$_TestScriptOperationCopyWithImpl<$Res>;
   @override
   $Res call(
       {Coding? type,
@@ -9393,15 +8824,15 @@ abstract class _$TestScriptOperationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptOperationCopyWithImpl<$Res>
+class __$$_TestScriptOperationCopyWithImpl<$Res>
     extends _$TestScriptOperationCopyWithImpl<$Res>
-    implements _$TestScriptOperationCopyWith<$Res> {
-  __$TestScriptOperationCopyWithImpl(
-      _TestScriptOperation _value, $Res Function(_TestScriptOperation) _then)
-      : super(_value, (v) => _then(v as _TestScriptOperation));
+    implements _$$_TestScriptOperationCopyWith<$Res> {
+  __$$_TestScriptOperationCopyWithImpl(_$_TestScriptOperation _value,
+      $Res Function(_$_TestScriptOperation) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptOperation));
 
   @override
-  _TestScriptOperation get _value => super._value as _TestScriptOperation;
+  _$_TestScriptOperation get _value => super._value as _$_TestScriptOperation;
 
   @override
   $Res call({
@@ -9436,7 +8867,7 @@ class __$TestScriptOperationCopyWithImpl<$Res>
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
-    return _then(_TestScriptOperation(
+    return _then(_$_TestScriptOperation(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -9514,7 +8945,7 @@ class __$TestScriptOperationCopyWithImpl<$Res>
           : paramsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       requestHeader: requestHeader == freezed
-          ? _value.requestHeader
+          ? _value._requestHeader
           : requestHeader // ignore: cast_nullable_to_non_nullable
               as List<TestScriptRequestHeader>?,
       requestId: requestId == freezed
@@ -9584,7 +9015,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
       @JsonKey(name: '_origin') this.originElement,
       this.params,
       @JsonKey(name: '_params') this.paramsElement,
-      this.requestHeader,
+      final List<TestScriptRequestHeader>? requestHeader,
       this.requestId,
       @JsonKey(name: '_requestId') this.requestIdElement,
       this.responseId,
@@ -9595,7 +9026,8 @@ class _$_TestScriptOperation extends _TestScriptOperation {
       @JsonKey(name: '_targetId') this.targetIdElement,
       this.url,
       @JsonKey(name: '_url') this.urlElement})
-      : super._();
+      : _requestHeader = requestHeader,
+        super._();
 
   factory _$_TestScriptOperation.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptOperationFromJson(json);
@@ -9647,8 +9079,15 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   @override
   @JsonKey(name: '_params')
   final Element? paramsElement;
+  final List<TestScriptRequestHeader>? _requestHeader;
   @override
-  final List<TestScriptRequestHeader>? requestHeader;
+  List<TestScriptRequestHeader>? get requestHeader {
+    final value = _requestHeader;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Id? requestId;
   @override
@@ -9684,7 +9123,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptOperation &&
+            other is _$_TestScriptOperation &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
             const DeepCollectionEquality()
@@ -9718,7 +9157,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
             const DeepCollectionEquality()
                 .equals(other.paramsElement, paramsElement) &&
             const DeepCollectionEquality()
-                .equals(other.requestHeader, requestHeader) &&
+                .equals(other._requestHeader, _requestHeader) &&
             const DeepCollectionEquality().equals(other.requestId, requestId) &&
             const DeepCollectionEquality()
                 .equals(other.requestIdElement, requestIdElement) &&
@@ -9737,6 +9176,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
                 .equals(other.urlElement, urlElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -9759,7 +9199,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
         const DeepCollectionEquality().hash(originElement),
         const DeepCollectionEquality().hash(params),
         const DeepCollectionEquality().hash(paramsElement),
-        const DeepCollectionEquality().hash(requestHeader),
+        const DeepCollectionEquality().hash(_requestHeader),
         const DeepCollectionEquality().hash(requestId),
         const DeepCollectionEquality().hash(requestIdElement),
         const DeepCollectionEquality().hash(responseId),
@@ -9774,8 +9214,8 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptOperationCopyWith<_TestScriptOperation> get copyWith =>
-      __$TestScriptOperationCopyWithImpl<_TestScriptOperation>(
+  _$$_TestScriptOperationCopyWith<_$_TestScriptOperation> get copyWith =>
+      __$$_TestScriptOperationCopyWithImpl<_$_TestScriptOperation>(
           this, _$identity);
 
   @override
@@ -9786,118 +9226,134 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
 abstract class _TestScriptOperation extends TestScriptOperation {
   factory _TestScriptOperation(
-      {Coding? type,
-      String? resource,
-      @JsonKey(name: '_resource') Element? resourceElement,
-      String? label,
-      @JsonKey(name: '_label') Element? labelElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      TestScriptOperationAccept? accept,
-      @JsonKey(name: '_accept') Element? acceptElement,
-      TestScriptOperationContentType? contentType,
-      @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Decimal? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
-      Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Decimal? origin,
-      @JsonKey(name: '_origin') Element? originElement,
-      String? params,
-      @JsonKey(name: '_params') Element? paramsElement,
-      List<TestScriptRequestHeader>? requestHeader,
-      Id? requestId,
-      @JsonKey(name: '_requestId') Element? requestIdElement,
-      Id? responseId,
-      @JsonKey(name: '_responseId') Element? responseIdElement,
-      Id? sourceId,
-      @JsonKey(name: '_sourceId') Element? sourceIdElement,
-      Id? targetId,
-      @JsonKey(name: '_targetId') Element? targetIdElement,
-      String? url,
-      @JsonKey(name: '_url') Element? urlElement}) = _$_TestScriptOperation;
+      {final Coding? type,
+      final String? resource,
+      @JsonKey(name: '_resource')
+          final Element? resourceElement,
+      final String? label,
+      @JsonKey(name: '_label')
+          final Element? labelElement,
+      final String? description,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
+      final TestScriptOperationAccept? accept,
+      @JsonKey(name: '_accept')
+          final Element? acceptElement,
+      final TestScriptOperationContentType? contentType,
+      @JsonKey(name: '_contentType')
+          final Element? contentTypeElement,
+      final Decimal? destination,
+      @JsonKey(name: '_destination')
+          final Element? destinationElement,
+      final Boolean? encodeRequestUrl,
+      @JsonKey(name: '_encodeRequestUrl')
+          final Element? encodeRequestUrlElement,
+      final Decimal? origin,
+      @JsonKey(name: '_origin')
+          final Element? originElement,
+      final String? params,
+      @JsonKey(name: '_params')
+          final Element? paramsElement,
+      final List<TestScriptRequestHeader>? requestHeader,
+      final Id? requestId,
+      @JsonKey(name: '_requestId')
+          final Element? requestIdElement,
+      final Id? responseId,
+      @JsonKey(name: '_responseId')
+          final Element? responseIdElement,
+      final Id? sourceId,
+      @JsonKey(name: '_sourceId')
+          final Element? sourceIdElement,
+      final Id? targetId,
+      @JsonKey(name: '_targetId')
+          final Element? targetIdElement,
+      final String? url,
+      @JsonKey(name: '_url')
+          final Element? urlElement}) = _$_TestScriptOperation;
   _TestScriptOperation._() : super._();
 
   factory _TestScriptOperation.fromJson(Map<String, dynamic> json) =
       _$_TestScriptOperation.fromJson;
 
   @override
-  Coding? get type;
+  Coding? get type => throw _privateConstructorUsedError;
   @override
-  String? get resource;
+  String? get resource => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_resource')
-  Element? get resourceElement;
+  Element? get resourceElement => throw _privateConstructorUsedError;
   @override
-  String? get label;
+  String? get label => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_label')
-  Element? get labelElement;
+  Element? get labelElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  TestScriptOperationAccept? get accept;
+  TestScriptOperationAccept? get accept => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_accept')
-  Element? get acceptElement;
+  Element? get acceptElement => throw _privateConstructorUsedError;
   @override
-  TestScriptOperationContentType? get contentType;
+  TestScriptOperationContentType? get contentType =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_contentType')
-  Element? get contentTypeElement;
+  Element? get contentTypeElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get destination;
+  Decimal? get destination => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_destination')
-  Element? get destinationElement;
+  Element? get destinationElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get encodeRequestUrl;
+  Boolean? get encodeRequestUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_encodeRequestUrl')
-  Element? get encodeRequestUrlElement;
+  Element? get encodeRequestUrlElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get origin;
+  Decimal? get origin => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_origin')
-  Element? get originElement;
+  Element? get originElement => throw _privateConstructorUsedError;
   @override
-  String? get params;
+  String? get params => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_params')
-  Element? get paramsElement;
+  Element? get paramsElement => throw _privateConstructorUsedError;
   @override
-  List<TestScriptRequestHeader>? get requestHeader;
+  List<TestScriptRequestHeader>? get requestHeader =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get requestId;
+  Id? get requestId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requestId')
-  Element? get requestIdElement;
+  Element? get requestIdElement => throw _privateConstructorUsedError;
   @override
-  Id? get responseId;
+  Id? get responseId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_responseId')
-  Element? get responseIdElement;
+  Element? get responseIdElement => throw _privateConstructorUsedError;
   @override
-  Id? get sourceId;
+  Id? get sourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sourceId')
-  Element? get sourceIdElement;
+  Element? get sourceIdElement => throw _privateConstructorUsedError;
   @override
-  Id? get targetId;
+  Id? get targetId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_targetId')
-  Element? get targetIdElement;
+  Element? get targetIdElement => throw _privateConstructorUsedError;
   @override
-  String? get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptOperationCopyWith<_TestScriptOperation> get copyWith =>
+  _$$_TestScriptOperationCopyWith<_$_TestScriptOperation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9905,31 +9361,6 @@ TestScriptRequestHeader _$TestScriptRequestHeaderFromJson(
     Map<String, dynamic> json) {
   return _TestScriptRequestHeader.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptRequestHeaderTearOff {
-  const _$TestScriptRequestHeaderTearOff();
-
-  _TestScriptRequestHeader call(
-      {String? field,
-      @JsonKey(name: '_field') Element? fieldElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _TestScriptRequestHeader(
-      field: field,
-      fieldElement: fieldElement,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  TestScriptRequestHeader fromJson(Map<String, Object?> json) {
-    return TestScriptRequestHeader.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptRequestHeader = _$TestScriptRequestHeaderTearOff();
 
 /// @nodoc
 mixin _$TestScriptRequestHeader {
@@ -10021,11 +9452,11 @@ class _$TestScriptRequestHeaderCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptRequestHeaderCopyWith<$Res>
+abstract class _$$_TestScriptRequestHeaderCopyWith<$Res>
     implements $TestScriptRequestHeaderCopyWith<$Res> {
-  factory _$TestScriptRequestHeaderCopyWith(_TestScriptRequestHeader value,
-          $Res Function(_TestScriptRequestHeader) then) =
-      __$TestScriptRequestHeaderCopyWithImpl<$Res>;
+  factory _$$_TestScriptRequestHeaderCopyWith(_$_TestScriptRequestHeader value,
+          $Res Function(_$_TestScriptRequestHeader) then) =
+      __$$_TestScriptRequestHeaderCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? field,
@@ -10040,16 +9471,16 @@ abstract class _$TestScriptRequestHeaderCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptRequestHeaderCopyWithImpl<$Res>
+class __$$_TestScriptRequestHeaderCopyWithImpl<$Res>
     extends _$TestScriptRequestHeaderCopyWithImpl<$Res>
-    implements _$TestScriptRequestHeaderCopyWith<$Res> {
-  __$TestScriptRequestHeaderCopyWithImpl(_TestScriptRequestHeader _value,
-      $Res Function(_TestScriptRequestHeader) _then)
-      : super(_value, (v) => _then(v as _TestScriptRequestHeader));
+    implements _$$_TestScriptRequestHeaderCopyWith<$Res> {
+  __$$_TestScriptRequestHeaderCopyWithImpl(_$_TestScriptRequestHeader _value,
+      $Res Function(_$_TestScriptRequestHeader) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptRequestHeader));
 
   @override
-  _TestScriptRequestHeader get _value =>
-      super._value as _TestScriptRequestHeader;
+  _$_TestScriptRequestHeader get _value =>
+      super._value as _$_TestScriptRequestHeader;
 
   @override
   $Res call({
@@ -10058,7 +9489,7 @@ class __$TestScriptRequestHeaderCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_TestScriptRequestHeader(
+    return _then(_$_TestScriptRequestHeader(
       field: field == freezed
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -10112,7 +9543,7 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptRequestHeader &&
+            other is _$_TestScriptRequestHeader &&
             const DeepCollectionEquality().equals(other.field, field) &&
             const DeepCollectionEquality()
                 .equals(other.fieldElement, fieldElement) &&
@@ -10121,6 +9552,7 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -10131,9 +9563,10 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptRequestHeaderCopyWith<_TestScriptRequestHeader> get copyWith =>
-      __$TestScriptRequestHeaderCopyWithImpl<_TestScriptRequestHeader>(
-          this, _$identity);
+  _$$_TestScriptRequestHeaderCopyWith<_$_TestScriptRequestHeader>
+      get copyWith =>
+          __$$_TestScriptRequestHeaderCopyWithImpl<_$_TestScriptRequestHeader>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -10143,10 +9576,10 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
 
 abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
   factory _TestScriptRequestHeader(
-          {String? field,
-          @JsonKey(name: '_field') Element? fieldElement,
-          String? value,
-          @JsonKey(name: '_value') Element? valueElement}) =
+          {final String? field,
+          @JsonKey(name: '_field') final Element? fieldElement,
+          final String? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
       _$_TestScriptRequestHeader;
   _TestScriptRequestHeader._() : super._();
 
@@ -10154,156 +9587,24 @@ abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
       _$_TestScriptRequestHeader.fromJson;
 
   @override
-  String? get field;
+  String? get field => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_field')
-  Element? get fieldElement;
+  Element? get fieldElement => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptRequestHeaderCopyWith<_TestScriptRequestHeader> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_TestScriptRequestHeaderCopyWith<_$_TestScriptRequestHeader>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 TestScriptAssert _$TestScriptAssertFromJson(Map<String, dynamic> json) {
   return _TestScriptAssert.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptAssertTearOff {
-  const _$TestScriptAssertTearOff();
-
-  _TestScriptAssert call(
-      {String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      TestScriptAssertDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement,
-      String? compareToSourceId,
-      @JsonKey(name: '_compareToSourceId')
-          Element? compareToSourceIdElement,
-      String? compareToSourceExpression,
-      @JsonKey(name: '_compareToSourceExpression')
-          Element? compareToSourceExpressionElement,
-      String? compareToSourcePath,
-      @JsonKey(name: '_compareToSourcePath')
-          Element? compareToSourcePathElement,
-      TestScriptAssertContentType? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
-      String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
-      String? headerField,
-      @JsonKey(name: '_headerField')
-          Element? headerFieldElement,
-      String? minimumId,
-      @JsonKey(name: '_minimumId')
-          Element? minimumIdElement,
-      Boolean? navigationLinks,
-      @JsonKey(name: '_navigationLinks')
-          Element? navigationLinksElement,
-      @JsonKey(name: 'operator')
-          TestScriptAssertOperator? operator_,
-      @JsonKey(name: '_operator')
-          Element? operatorElement,
-      String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      TestScriptAssertRequestMethod? requestMethod,
-      @JsonKey(name: '_requestMethod')
-          Element? requestMethodElement,
-      String? requestURL,
-      @JsonKey(name: '_requestURL')
-          Element? requestURLElement,
-      String? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
-      TestScriptAssertResponse? response,
-      @JsonKey(name: '_response')
-          Element? responseElement,
-      String? responseCode,
-      @JsonKey(name: '_responseCode')
-          Element? responseCodeElement,
-      TestScriptRule2? rule,
-      TestScriptRuleset1? ruleset,
-      Id? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
-      Date? validateProfileId,
-      @JsonKey(name: '_validateProfileId')
-          Element? validateProfileIdElement,
-      String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
-      Boolean? warningOnly,
-      @JsonKey(name: '_warningOnly')
-          Element? warningOnlyElement}) {
-    return _TestScriptAssert(
-      label: label,
-      labelElement: labelElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      direction: direction,
-      directionElement: directionElement,
-      compareToSourceId: compareToSourceId,
-      compareToSourceIdElement: compareToSourceIdElement,
-      compareToSourceExpression: compareToSourceExpression,
-      compareToSourceExpressionElement: compareToSourceExpressionElement,
-      compareToSourcePath: compareToSourcePath,
-      compareToSourcePathElement: compareToSourcePathElement,
-      contentType: contentType,
-      contentTypeElement: contentTypeElement,
-      expression: expression,
-      expressionElement: expressionElement,
-      headerField: headerField,
-      headerFieldElement: headerFieldElement,
-      minimumId: minimumId,
-      minimumIdElement: minimumIdElement,
-      navigationLinks: navigationLinks,
-      navigationLinksElement: navigationLinksElement,
-      operator_: operator_,
-      operatorElement: operatorElement,
-      path: path,
-      pathElement: pathElement,
-      requestMethod: requestMethod,
-      requestMethodElement: requestMethodElement,
-      requestURL: requestURL,
-      requestURLElement: requestURLElement,
-      resource: resource,
-      resourceElement: resourceElement,
-      response: response,
-      responseElement: responseElement,
-      responseCode: responseCode,
-      responseCodeElement: responseCodeElement,
-      rule: rule,
-      ruleset: ruleset,
-      sourceId: sourceId,
-      sourceIdElement: sourceIdElement,
-      validateProfileId: validateProfileId,
-      validateProfileIdElement: validateProfileIdElement,
-      value: value,
-      valueElement: valueElement,
-      warningOnly: warningOnly,
-      warningOnlyElement: warningOnlyElement,
-    );
-  }
-
-  TestScriptAssert fromJson(Map<String, Object?> json) {
-    return TestScriptAssert.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptAssert = _$TestScriptAssertTearOff();
 
 /// @nodoc
 mixin _$TestScriptAssert {
@@ -11003,11 +10304,11 @@ class _$TestScriptAssertCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptAssertCopyWith<$Res>
+abstract class _$$_TestScriptAssertCopyWith<$Res>
     implements $TestScriptAssertCopyWith<$Res> {
-  factory _$TestScriptAssertCopyWith(
-          _TestScriptAssert value, $Res Function(_TestScriptAssert) then) =
-      __$TestScriptAssertCopyWithImpl<$Res>;
+  factory _$$_TestScriptAssertCopyWith(
+          _$_TestScriptAssert value, $Res Function(_$_TestScriptAssert) then) =
+      __$$_TestScriptAssertCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? label,
@@ -11131,15 +10432,15 @@ abstract class _$TestScriptAssertCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptAssertCopyWithImpl<$Res>
+class __$$_TestScriptAssertCopyWithImpl<$Res>
     extends _$TestScriptAssertCopyWithImpl<$Res>
-    implements _$TestScriptAssertCopyWith<$Res> {
-  __$TestScriptAssertCopyWithImpl(
-      _TestScriptAssert _value, $Res Function(_TestScriptAssert) _then)
-      : super(_value, (v) => _then(v as _TestScriptAssert));
+    implements _$$_TestScriptAssertCopyWith<$Res> {
+  __$$_TestScriptAssertCopyWithImpl(
+      _$_TestScriptAssert _value, $Res Function(_$_TestScriptAssert) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptAssert));
 
   @override
-  _TestScriptAssert get _value => super._value as _TestScriptAssert;
+  _$_TestScriptAssert get _value => super._value as _$_TestScriptAssert;
 
   @override
   $Res call({
@@ -11190,7 +10491,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
     Object? warningOnly = freezed,
     Object? warningOnlyElement = freezed,
   }) {
-    return _then(_TestScriptAssert(
+    return _then(_$_TestScriptAssert(
       label: label == freezed
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -11583,7 +10884,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptAssert &&
+            other is _$_TestScriptAssert &&
             const DeepCollectionEquality().equals(other.label, label) &&
             const DeepCollectionEquality()
                 .equals(other.labelElement, labelElement) &&
@@ -11668,6 +10969,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
                 .equals(other.warningOnlyElement, warningOnlyElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -11721,8 +11023,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptAssertCopyWith<_TestScriptAssert> get copyWith =>
-      __$TestScriptAssertCopyWithImpl<_TestScriptAssert>(this, _$identity);
+  _$$_TestScriptAssertCopyWith<_$_TestScriptAssert> get copyWith =>
+      __$$_TestScriptAssertCopyWithImpl<_$_TestScriptAssert>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -11732,227 +11034,208 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
 abstract class _TestScriptAssert extends TestScriptAssert {
   factory _TestScriptAssert(
-      {String? label,
+      {final String? label,
       @JsonKey(name: '_label')
-          Element? labelElement,
-      String? description,
+          final Element? labelElement,
+      final String? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      TestScriptAssertDirection? direction,
+          final Element? descriptionElement,
+      final TestScriptAssertDirection? direction,
       @JsonKey(name: '_direction')
-          Element? directionElement,
-      String? compareToSourceId,
+          final Element? directionElement,
+      final String? compareToSourceId,
       @JsonKey(name: '_compareToSourceId')
-          Element? compareToSourceIdElement,
-      String? compareToSourceExpression,
+          final Element? compareToSourceIdElement,
+      final String? compareToSourceExpression,
       @JsonKey(name: '_compareToSourceExpression')
-          Element? compareToSourceExpressionElement,
-      String? compareToSourcePath,
+          final Element? compareToSourceExpressionElement,
+      final String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
-          Element? compareToSourcePathElement,
-      TestScriptAssertContentType? contentType,
+          final Element? compareToSourcePathElement,
+      final TestScriptAssertContentType? contentType,
       @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
-      String? expression,
+          final Element? contentTypeElement,
+      final String? expression,
       @JsonKey(name: '_expression')
-          Element? expressionElement,
-      String? headerField,
+          final Element? expressionElement,
+      final String? headerField,
       @JsonKey(name: '_headerField')
-          Element? headerFieldElement,
-      String? minimumId,
+          final Element? headerFieldElement,
+      final String? minimumId,
       @JsonKey(name: '_minimumId')
-          Element? minimumIdElement,
-      Boolean? navigationLinks,
+          final Element? minimumIdElement,
+      final Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
-          Element? navigationLinksElement,
+          final Element? navigationLinksElement,
       @JsonKey(name: 'operator')
-          TestScriptAssertOperator? operator_,
+          final TestScriptAssertOperator? operator_,
       @JsonKey(name: '_operator')
-          Element? operatorElement,
-      String? path,
+          final Element? operatorElement,
+      final String? path,
       @JsonKey(name: '_path')
-          Element? pathElement,
-      TestScriptAssertRequestMethod? requestMethod,
+          final Element? pathElement,
+      final TestScriptAssertRequestMethod? requestMethod,
       @JsonKey(name: '_requestMethod')
-          Element? requestMethodElement,
-      String? requestURL,
+          final Element? requestMethodElement,
+      final String? requestURL,
       @JsonKey(name: '_requestURL')
-          Element? requestURLElement,
-      String? resource,
+          final Element? requestURLElement,
+      final String? resource,
       @JsonKey(name: '_resource')
-          Element? resourceElement,
-      TestScriptAssertResponse? response,
+          final Element? resourceElement,
+      final TestScriptAssertResponse? response,
       @JsonKey(name: '_response')
-          Element? responseElement,
-      String? responseCode,
+          final Element? responseElement,
+      final String? responseCode,
       @JsonKey(name: '_responseCode')
-          Element? responseCodeElement,
-      TestScriptRule2? rule,
-      TestScriptRuleset1? ruleset,
-      Id? sourceId,
+          final Element? responseCodeElement,
+      final TestScriptRule2? rule,
+      final TestScriptRuleset1? ruleset,
+      final Id? sourceId,
       @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
-      Date? validateProfileId,
+          final Element? sourceIdElement,
+      final Date? validateProfileId,
       @JsonKey(name: '_validateProfileId')
-          Element? validateProfileIdElement,
-      String? value,
+          final Element? validateProfileIdElement,
+      final String? value,
       @JsonKey(name: '_value')
-          Element? valueElement,
-      Boolean? warningOnly,
+          final Element? valueElement,
+      final Boolean? warningOnly,
       @JsonKey(name: '_warningOnly')
-          Element? warningOnlyElement}) = _$_TestScriptAssert;
+          final Element? warningOnlyElement}) = _$_TestScriptAssert;
   _TestScriptAssert._() : super._();
 
   factory _TestScriptAssert.fromJson(Map<String, dynamic> json) =
       _$_TestScriptAssert.fromJson;
 
   @override
-  String? get label;
+  String? get label => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_label')
-  Element? get labelElement;
+  Element? get labelElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  TestScriptAssertDirection? get direction;
+  TestScriptAssertDirection? get direction =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_direction')
-  Element? get directionElement;
+  Element? get directionElement => throw _privateConstructorUsedError;
   @override
-  String? get compareToSourceId;
+  String? get compareToSourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_compareToSourceId')
-  Element? get compareToSourceIdElement;
+  Element? get compareToSourceIdElement => throw _privateConstructorUsedError;
   @override
-  String? get compareToSourceExpression;
+  String? get compareToSourceExpression => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_compareToSourceExpression')
-  Element? get compareToSourceExpressionElement;
+  Element? get compareToSourceExpressionElement =>
+      throw _privateConstructorUsedError;
   @override
-  String? get compareToSourcePath;
+  String? get compareToSourcePath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_compareToSourcePath')
-  Element? get compareToSourcePathElement;
+  Element? get compareToSourcePathElement => throw _privateConstructorUsedError;
   @override
-  TestScriptAssertContentType? get contentType;
+  TestScriptAssertContentType? get contentType =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_contentType')
-  Element? get contentTypeElement;
+  Element? get contentTypeElement => throw _privateConstructorUsedError;
   @override
-  String? get expression;
+  String? get expression => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
+  Element? get expressionElement => throw _privateConstructorUsedError;
   @override
-  String? get headerField;
+  String? get headerField => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_headerField')
-  Element? get headerFieldElement;
+  Element? get headerFieldElement => throw _privateConstructorUsedError;
   @override
-  String? get minimumId;
+  String? get minimumId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_minimumId')
-  Element? get minimumIdElement;
+  Element? get minimumIdElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get navigationLinks;
+  Boolean? get navigationLinks => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_navigationLinks')
-  Element? get navigationLinksElement;
+  Element? get navigationLinksElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'operator')
-  TestScriptAssertOperator? get operator_;
+  TestScriptAssertOperator? get operator_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_operator')
-  Element? get operatorElement;
+  Element? get operatorElement => throw _privateConstructorUsedError;
   @override
-  String? get path;
+  String? get path => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement;
+  Element? get pathElement => throw _privateConstructorUsedError;
   @override
-  TestScriptAssertRequestMethod? get requestMethod;
+  TestScriptAssertRequestMethod? get requestMethod =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requestMethod')
-  Element? get requestMethodElement;
+  Element? get requestMethodElement => throw _privateConstructorUsedError;
   @override
-  String? get requestURL;
+  String? get requestURL => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requestURL')
-  Element? get requestURLElement;
+  Element? get requestURLElement => throw _privateConstructorUsedError;
   @override
-  String? get resource;
+  String? get resource => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_resource')
-  Element? get resourceElement;
+  Element? get resourceElement => throw _privateConstructorUsedError;
   @override
-  TestScriptAssertResponse? get response;
+  TestScriptAssertResponse? get response => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_response')
-  Element? get responseElement;
+  Element? get responseElement => throw _privateConstructorUsedError;
   @override
-  String? get responseCode;
+  String? get responseCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_responseCode')
-  Element? get responseCodeElement;
+  Element? get responseCodeElement => throw _privateConstructorUsedError;
   @override
-  TestScriptRule2? get rule;
+  TestScriptRule2? get rule => throw _privateConstructorUsedError;
   @override
-  TestScriptRuleset1? get ruleset;
+  TestScriptRuleset1? get ruleset => throw _privateConstructorUsedError;
   @override
-  Id? get sourceId;
+  Id? get sourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sourceId')
-  Element? get sourceIdElement;
+  Element? get sourceIdElement => throw _privateConstructorUsedError;
   @override
-  Date? get validateProfileId;
+  Date? get validateProfileId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_validateProfileId')
-  Element? get validateProfileIdElement;
+  Element? get validateProfileIdElement => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get warningOnly;
+  Boolean? get warningOnly => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_warningOnly')
-  Element? get warningOnlyElement;
+  Element? get warningOnlyElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptAssertCopyWith<_TestScriptAssert> get copyWith =>
+  _$$_TestScriptAssertCopyWith<_$_TestScriptAssert> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptRule2 _$TestScriptRule2FromJson(Map<String, dynamic> json) {
   return _TestScriptRule2.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptRule2TearOff {
-  const _$TestScriptRule2TearOff();
-
-  _TestScriptRule2 call(
-      {Id? ruleId,
-      @JsonKey(name: '_ruleId') Element? ruleIdElement,
-      List<TestScriptParam2>? param}) {
-    return _TestScriptRule2(
-      ruleId: ruleId,
-      ruleIdElement: ruleIdElement,
-      param: param,
-    );
-  }
-
-  TestScriptRule2 fromJson(Map<String, Object?> json) {
-    return TestScriptRule2.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptRule2 = _$TestScriptRule2TearOff();
 
 /// @nodoc
 mixin _$TestScriptRule2 {
@@ -12024,11 +11307,11 @@ class _$TestScriptRule2CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptRule2CopyWith<$Res>
+abstract class _$$_TestScriptRule2CopyWith<$Res>
     implements $TestScriptRule2CopyWith<$Res> {
-  factory _$TestScriptRule2CopyWith(
-          _TestScriptRule2 value, $Res Function(_TestScriptRule2) then) =
-      __$TestScriptRule2CopyWithImpl<$Res>;
+  factory _$$_TestScriptRule2CopyWith(
+          _$_TestScriptRule2 value, $Res Function(_$_TestScriptRule2) then) =
+      __$$_TestScriptRule2CopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? ruleId,
@@ -12040,15 +11323,15 @@ abstract class _$TestScriptRule2CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptRule2CopyWithImpl<$Res>
+class __$$_TestScriptRule2CopyWithImpl<$Res>
     extends _$TestScriptRule2CopyWithImpl<$Res>
-    implements _$TestScriptRule2CopyWith<$Res> {
-  __$TestScriptRule2CopyWithImpl(
-      _TestScriptRule2 _value, $Res Function(_TestScriptRule2) _then)
-      : super(_value, (v) => _then(v as _TestScriptRule2));
+    implements _$$_TestScriptRule2CopyWith<$Res> {
+  __$$_TestScriptRule2CopyWithImpl(
+      _$_TestScriptRule2 _value, $Res Function(_$_TestScriptRule2) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptRule2));
 
   @override
-  _TestScriptRule2 get _value => super._value as _TestScriptRule2;
+  _$_TestScriptRule2 get _value => super._value as _$_TestScriptRule2;
 
   @override
   $Res call({
@@ -12056,7 +11339,7 @@ class __$TestScriptRule2CopyWithImpl<$Res>
     Object? ruleIdElement = freezed,
     Object? param = freezed,
   }) {
-    return _then(_TestScriptRule2(
+    return _then(_$_TestScriptRule2(
       ruleId: ruleId == freezed
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
@@ -12066,7 +11349,7 @@ class __$TestScriptRule2CopyWithImpl<$Res>
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       param: param == freezed
-          ? _value.param
+          ? _value._param
           : param // ignore: cast_nullable_to_non_nullable
               as List<TestScriptParam2>?,
     ));
@@ -12077,8 +11360,11 @@ class __$TestScriptRule2CopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScriptRule2 extends _TestScriptRule2 {
   _$_TestScriptRule2(
-      {this.ruleId, @JsonKey(name: '_ruleId') this.ruleIdElement, this.param})
-      : super._();
+      {this.ruleId,
+      @JsonKey(name: '_ruleId') this.ruleIdElement,
+      final List<TestScriptParam2>? param})
+      : _param = param,
+        super._();
 
   factory _$_TestScriptRule2.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptRule2FromJson(json);
@@ -12088,8 +11374,14 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
+  final List<TestScriptParam2>? _param;
   @override
-  final List<TestScriptParam2>? param;
+  List<TestScriptParam2>? get param {
+    final value = _param;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -12100,24 +11392,25 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptRule2 &&
+            other is _$_TestScriptRule2 &&
             const DeepCollectionEquality().equals(other.ruleId, ruleId) &&
             const DeepCollectionEquality()
                 .equals(other.ruleIdElement, ruleIdElement) &&
-            const DeepCollectionEquality().equals(other.param, param));
+            const DeepCollectionEquality().equals(other._param, _param));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(ruleId),
       const DeepCollectionEquality().hash(ruleIdElement),
-      const DeepCollectionEquality().hash(param));
+      const DeepCollectionEquality().hash(_param));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptRule2CopyWith<_TestScriptRule2> get copyWith =>
-      __$TestScriptRule2CopyWithImpl<_TestScriptRule2>(this, _$identity);
+  _$$_TestScriptRule2CopyWith<_$_TestScriptRule2> get copyWith =>
+      __$$_TestScriptRule2CopyWithImpl<_$_TestScriptRule2>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -12127,55 +11420,30 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
 
 abstract class _TestScriptRule2 extends TestScriptRule2 {
   factory _TestScriptRule2(
-      {Id? ruleId,
-      @JsonKey(name: '_ruleId') Element? ruleIdElement,
-      List<TestScriptParam2>? param}) = _$_TestScriptRule2;
+      {final Id? ruleId,
+      @JsonKey(name: '_ruleId') final Element? ruleIdElement,
+      final List<TestScriptParam2>? param}) = _$_TestScriptRule2;
   _TestScriptRule2._() : super._();
 
   factory _TestScriptRule2.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRule2.fromJson;
 
   @override
-  Id? get ruleId;
+  Id? get ruleId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ruleId')
-  Element? get ruleIdElement;
+  Element? get ruleIdElement => throw _privateConstructorUsedError;
   @override
-  List<TestScriptParam2>? get param;
+  List<TestScriptParam2>? get param => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptRule2CopyWith<_TestScriptRule2> get copyWith =>
+  _$$_TestScriptRule2CopyWith<_$_TestScriptRule2> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptParam2 _$TestScriptParam2FromJson(Map<String, dynamic> json) {
   return _TestScriptParam2.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptParam2TearOff {
-  const _$TestScriptParam2TearOff();
-
-  _TestScriptParam2 call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _TestScriptParam2(
-      name: name,
-      nameElement: nameElement,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  TestScriptParam2 fromJson(Map<String, Object?> json) {
-    return TestScriptParam2.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptParam2 = _$TestScriptParam2TearOff();
 
 /// @nodoc
 mixin _$TestScriptParam2 {
@@ -12267,11 +11535,11 @@ class _$TestScriptParam2CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptParam2CopyWith<$Res>
+abstract class _$$_TestScriptParam2CopyWith<$Res>
     implements $TestScriptParam2CopyWith<$Res> {
-  factory _$TestScriptParam2CopyWith(
-          _TestScriptParam2 value, $Res Function(_TestScriptParam2) then) =
-      __$TestScriptParam2CopyWithImpl<$Res>;
+  factory _$$_TestScriptParam2CopyWith(
+          _$_TestScriptParam2 value, $Res Function(_$_TestScriptParam2) then) =
+      __$$_TestScriptParam2CopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -12286,15 +11554,15 @@ abstract class _$TestScriptParam2CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptParam2CopyWithImpl<$Res>
+class __$$_TestScriptParam2CopyWithImpl<$Res>
     extends _$TestScriptParam2CopyWithImpl<$Res>
-    implements _$TestScriptParam2CopyWith<$Res> {
-  __$TestScriptParam2CopyWithImpl(
-      _TestScriptParam2 _value, $Res Function(_TestScriptParam2) _then)
-      : super(_value, (v) => _then(v as _TestScriptParam2));
+    implements _$$_TestScriptParam2CopyWith<$Res> {
+  __$$_TestScriptParam2CopyWithImpl(
+      _$_TestScriptParam2 _value, $Res Function(_$_TestScriptParam2) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptParam2));
 
   @override
-  _TestScriptParam2 get _value => super._value as _TestScriptParam2;
+  _$_TestScriptParam2 get _value => super._value as _$_TestScriptParam2;
 
   @override
   $Res call({
@@ -12303,7 +11571,7 @@ class __$TestScriptParam2CopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_TestScriptParam2(
+    return _then(_$_TestScriptParam2(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -12357,7 +11625,7 @@ class _$_TestScriptParam2 extends _TestScriptParam2 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptParam2 &&
+            other is _$_TestScriptParam2 &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -12366,6 +11634,7 @@ class _$_TestScriptParam2 extends _TestScriptParam2 {
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -12376,8 +11645,8 @@ class _$_TestScriptParam2 extends _TestScriptParam2 {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptParam2CopyWith<_TestScriptParam2> get copyWith =>
-      __$TestScriptParam2CopyWithImpl<_TestScriptParam2>(this, _$identity);
+  _$$_TestScriptParam2CopyWith<_$_TestScriptParam2> get copyWith =>
+      __$$_TestScriptParam2CopyWithImpl<_$_TestScriptParam2>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -12387,57 +11656,35 @@ class _$_TestScriptParam2 extends _TestScriptParam2 {
 
 abstract class _TestScriptParam2 extends TestScriptParam2 {
   factory _TestScriptParam2(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) = _$_TestScriptParam2;
+          {final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
+      _$_TestScriptParam2;
   _TestScriptParam2._() : super._();
 
   factory _TestScriptParam2.fromJson(Map<String, dynamic> json) =
       _$_TestScriptParam2.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptParam2CopyWith<_TestScriptParam2> get copyWith =>
+  _$$_TestScriptParam2CopyWith<_$_TestScriptParam2> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptRuleset1 _$TestScriptRuleset1FromJson(Map<String, dynamic> json) {
   return _TestScriptRuleset1.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptRuleset1TearOff {
-  const _$TestScriptRuleset1TearOff();
-
-  _TestScriptRuleset1 call(
-      {Id? rulesetId,
-      @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
-      List<TestScriptRule3>? rule}) {
-    return _TestScriptRuleset1(
-      rulesetId: rulesetId,
-      rulesetIdElement: rulesetIdElement,
-      rule: rule,
-    );
-  }
-
-  TestScriptRuleset1 fromJson(Map<String, Object?> json) {
-    return TestScriptRuleset1.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptRuleset1 = _$TestScriptRuleset1TearOff();
 
 /// @nodoc
 mixin _$TestScriptRuleset1 {
@@ -12509,11 +11756,11 @@ class _$TestScriptRuleset1CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptRuleset1CopyWith<$Res>
+abstract class _$$_TestScriptRuleset1CopyWith<$Res>
     implements $TestScriptRuleset1CopyWith<$Res> {
-  factory _$TestScriptRuleset1CopyWith(
-          _TestScriptRuleset1 value, $Res Function(_TestScriptRuleset1) then) =
-      __$TestScriptRuleset1CopyWithImpl<$Res>;
+  factory _$$_TestScriptRuleset1CopyWith(_$_TestScriptRuleset1 value,
+          $Res Function(_$_TestScriptRuleset1) then) =
+      __$$_TestScriptRuleset1CopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? rulesetId,
@@ -12525,15 +11772,15 @@ abstract class _$TestScriptRuleset1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptRuleset1CopyWithImpl<$Res>
+class __$$_TestScriptRuleset1CopyWithImpl<$Res>
     extends _$TestScriptRuleset1CopyWithImpl<$Res>
-    implements _$TestScriptRuleset1CopyWith<$Res> {
-  __$TestScriptRuleset1CopyWithImpl(
-      _TestScriptRuleset1 _value, $Res Function(_TestScriptRuleset1) _then)
-      : super(_value, (v) => _then(v as _TestScriptRuleset1));
+    implements _$$_TestScriptRuleset1CopyWith<$Res> {
+  __$$_TestScriptRuleset1CopyWithImpl(
+      _$_TestScriptRuleset1 _value, $Res Function(_$_TestScriptRuleset1) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptRuleset1));
 
   @override
-  _TestScriptRuleset1 get _value => super._value as _TestScriptRuleset1;
+  _$_TestScriptRuleset1 get _value => super._value as _$_TestScriptRuleset1;
 
   @override
   $Res call({
@@ -12541,7 +11788,7 @@ class __$TestScriptRuleset1CopyWithImpl<$Res>
     Object? rulesetIdElement = freezed,
     Object? rule = freezed,
   }) {
-    return _then(_TestScriptRuleset1(
+    return _then(_$_TestScriptRuleset1(
       rulesetId: rulesetId == freezed
           ? _value.rulesetId
           : rulesetId // ignore: cast_nullable_to_non_nullable
@@ -12551,7 +11798,7 @@ class __$TestScriptRuleset1CopyWithImpl<$Res>
           : rulesetIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       rule: rule == freezed
-          ? _value.rule
+          ? _value._rule
           : rule // ignore: cast_nullable_to_non_nullable
               as List<TestScriptRule3>?,
     ));
@@ -12564,8 +11811,9 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
   _$_TestScriptRuleset1(
       {this.rulesetId,
       @JsonKey(name: '_rulesetId') this.rulesetIdElement,
-      this.rule})
-      : super._();
+      final List<TestScriptRule3>? rule})
+      : _rule = rule,
+        super._();
 
   factory _$_TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptRuleset1FromJson(json);
@@ -12575,8 +11823,14 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
   @override
   @JsonKey(name: '_rulesetId')
   final Element? rulesetIdElement;
+  final List<TestScriptRule3>? _rule;
   @override
-  final List<TestScriptRule3>? rule;
+  List<TestScriptRule3>? get rule {
+    final value = _rule;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -12587,24 +11841,26 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptRuleset1 &&
+            other is _$_TestScriptRuleset1 &&
             const DeepCollectionEquality().equals(other.rulesetId, rulesetId) &&
             const DeepCollectionEquality()
                 .equals(other.rulesetIdElement, rulesetIdElement) &&
-            const DeepCollectionEquality().equals(other.rule, rule));
+            const DeepCollectionEquality().equals(other._rule, _rule));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(rulesetId),
       const DeepCollectionEquality().hash(rulesetIdElement),
-      const DeepCollectionEquality().hash(rule));
+      const DeepCollectionEquality().hash(_rule));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptRuleset1CopyWith<_TestScriptRuleset1> get copyWith =>
-      __$TestScriptRuleset1CopyWithImpl<_TestScriptRuleset1>(this, _$identity);
+  _$$_TestScriptRuleset1CopyWith<_$_TestScriptRuleset1> get copyWith =>
+      __$$_TestScriptRuleset1CopyWithImpl<_$_TestScriptRuleset1>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -12614,53 +11870,30 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
 
 abstract class _TestScriptRuleset1 extends TestScriptRuleset1 {
   factory _TestScriptRuleset1(
-      {Id? rulesetId,
-      @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
-      List<TestScriptRule3>? rule}) = _$_TestScriptRuleset1;
+      {final Id? rulesetId,
+      @JsonKey(name: '_rulesetId') final Element? rulesetIdElement,
+      final List<TestScriptRule3>? rule}) = _$_TestScriptRuleset1;
   _TestScriptRuleset1._() : super._();
 
   factory _TestScriptRuleset1.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRuleset1.fromJson;
 
   @override
-  Id? get rulesetId;
+  Id? get rulesetId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_rulesetId')
-  Element? get rulesetIdElement;
+  Element? get rulesetIdElement => throw _privateConstructorUsedError;
   @override
-  List<TestScriptRule3>? get rule;
+  List<TestScriptRule3>? get rule => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptRuleset1CopyWith<_TestScriptRuleset1> get copyWith =>
+  _$$_TestScriptRuleset1CopyWith<_$_TestScriptRuleset1> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptRule3 _$TestScriptRule3FromJson(Map<String, dynamic> json) {
   return _TestScriptRule3.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptRule3TearOff {
-  const _$TestScriptRule3TearOff();
-
-  _TestScriptRule3 call(
-      {Id? ruleId,
-      @JsonKey(name: '_ruleId') Element? ruleIdElement,
-      List<TestScriptParam3>? param}) {
-    return _TestScriptRule3(
-      ruleId: ruleId,
-      ruleIdElement: ruleIdElement,
-      param: param,
-    );
-  }
-
-  TestScriptRule3 fromJson(Map<String, Object?> json) {
-    return TestScriptRule3.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptRule3 = _$TestScriptRule3TearOff();
 
 /// @nodoc
 mixin _$TestScriptRule3 {
@@ -12732,11 +11965,11 @@ class _$TestScriptRule3CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptRule3CopyWith<$Res>
+abstract class _$$_TestScriptRule3CopyWith<$Res>
     implements $TestScriptRule3CopyWith<$Res> {
-  factory _$TestScriptRule3CopyWith(
-          _TestScriptRule3 value, $Res Function(_TestScriptRule3) then) =
-      __$TestScriptRule3CopyWithImpl<$Res>;
+  factory _$$_TestScriptRule3CopyWith(
+          _$_TestScriptRule3 value, $Res Function(_$_TestScriptRule3) then) =
+      __$$_TestScriptRule3CopyWithImpl<$Res>;
   @override
   $Res call(
       {Id? ruleId,
@@ -12748,15 +11981,15 @@ abstract class _$TestScriptRule3CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptRule3CopyWithImpl<$Res>
+class __$$_TestScriptRule3CopyWithImpl<$Res>
     extends _$TestScriptRule3CopyWithImpl<$Res>
-    implements _$TestScriptRule3CopyWith<$Res> {
-  __$TestScriptRule3CopyWithImpl(
-      _TestScriptRule3 _value, $Res Function(_TestScriptRule3) _then)
-      : super(_value, (v) => _then(v as _TestScriptRule3));
+    implements _$$_TestScriptRule3CopyWith<$Res> {
+  __$$_TestScriptRule3CopyWithImpl(
+      _$_TestScriptRule3 _value, $Res Function(_$_TestScriptRule3) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptRule3));
 
   @override
-  _TestScriptRule3 get _value => super._value as _TestScriptRule3;
+  _$_TestScriptRule3 get _value => super._value as _$_TestScriptRule3;
 
   @override
   $Res call({
@@ -12764,7 +11997,7 @@ class __$TestScriptRule3CopyWithImpl<$Res>
     Object? ruleIdElement = freezed,
     Object? param = freezed,
   }) {
-    return _then(_TestScriptRule3(
+    return _then(_$_TestScriptRule3(
       ruleId: ruleId == freezed
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
@@ -12774,7 +12007,7 @@ class __$TestScriptRule3CopyWithImpl<$Res>
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       param: param == freezed
-          ? _value.param
+          ? _value._param
           : param // ignore: cast_nullable_to_non_nullable
               as List<TestScriptParam3>?,
     ));
@@ -12785,8 +12018,11 @@ class __$TestScriptRule3CopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScriptRule3 extends _TestScriptRule3 {
   _$_TestScriptRule3(
-      {this.ruleId, @JsonKey(name: '_ruleId') this.ruleIdElement, this.param})
-      : super._();
+      {this.ruleId,
+      @JsonKey(name: '_ruleId') this.ruleIdElement,
+      final List<TestScriptParam3>? param})
+      : _param = param,
+        super._();
 
   factory _$_TestScriptRule3.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptRule3FromJson(json);
@@ -12796,8 +12032,14 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
+  final List<TestScriptParam3>? _param;
   @override
-  final List<TestScriptParam3>? param;
+  List<TestScriptParam3>? get param {
+    final value = _param;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -12808,24 +12050,25 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptRule3 &&
+            other is _$_TestScriptRule3 &&
             const DeepCollectionEquality().equals(other.ruleId, ruleId) &&
             const DeepCollectionEquality()
                 .equals(other.ruleIdElement, ruleIdElement) &&
-            const DeepCollectionEquality().equals(other.param, param));
+            const DeepCollectionEquality().equals(other._param, _param));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(ruleId),
       const DeepCollectionEquality().hash(ruleIdElement),
-      const DeepCollectionEquality().hash(param));
+      const DeepCollectionEquality().hash(_param));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptRule3CopyWith<_TestScriptRule3> get copyWith =>
-      __$TestScriptRule3CopyWithImpl<_TestScriptRule3>(this, _$identity);
+  _$$_TestScriptRule3CopyWith<_$_TestScriptRule3> get copyWith =>
+      __$$_TestScriptRule3CopyWithImpl<_$_TestScriptRule3>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -12835,55 +12078,30 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
 
 abstract class _TestScriptRule3 extends TestScriptRule3 {
   factory _TestScriptRule3(
-      {Id? ruleId,
-      @JsonKey(name: '_ruleId') Element? ruleIdElement,
-      List<TestScriptParam3>? param}) = _$_TestScriptRule3;
+      {final Id? ruleId,
+      @JsonKey(name: '_ruleId') final Element? ruleIdElement,
+      final List<TestScriptParam3>? param}) = _$_TestScriptRule3;
   _TestScriptRule3._() : super._();
 
   factory _TestScriptRule3.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRule3.fromJson;
 
   @override
-  Id? get ruleId;
+  Id? get ruleId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ruleId')
-  Element? get ruleIdElement;
+  Element? get ruleIdElement => throw _privateConstructorUsedError;
   @override
-  List<TestScriptParam3>? get param;
+  List<TestScriptParam3>? get param => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptRule3CopyWith<_TestScriptRule3> get copyWith =>
+  _$$_TestScriptRule3CopyWith<_$_TestScriptRule3> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptParam3 _$TestScriptParam3FromJson(Map<String, dynamic> json) {
   return _TestScriptParam3.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptParam3TearOff {
-  const _$TestScriptParam3TearOff();
-
-  _TestScriptParam3 call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _TestScriptParam3(
-      name: name,
-      nameElement: nameElement,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  TestScriptParam3 fromJson(Map<String, Object?> json) {
-    return TestScriptParam3.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptParam3 = _$TestScriptParam3TearOff();
 
 /// @nodoc
 mixin _$TestScriptParam3 {
@@ -12975,11 +12193,11 @@ class _$TestScriptParam3CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptParam3CopyWith<$Res>
+abstract class _$$_TestScriptParam3CopyWith<$Res>
     implements $TestScriptParam3CopyWith<$Res> {
-  factory _$TestScriptParam3CopyWith(
-          _TestScriptParam3 value, $Res Function(_TestScriptParam3) then) =
-      __$TestScriptParam3CopyWithImpl<$Res>;
+  factory _$$_TestScriptParam3CopyWith(
+          _$_TestScriptParam3 value, $Res Function(_$_TestScriptParam3) then) =
+      __$$_TestScriptParam3CopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -12994,15 +12212,15 @@ abstract class _$TestScriptParam3CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptParam3CopyWithImpl<$Res>
+class __$$_TestScriptParam3CopyWithImpl<$Res>
     extends _$TestScriptParam3CopyWithImpl<$Res>
-    implements _$TestScriptParam3CopyWith<$Res> {
-  __$TestScriptParam3CopyWithImpl(
-      _TestScriptParam3 _value, $Res Function(_TestScriptParam3) _then)
-      : super(_value, (v) => _then(v as _TestScriptParam3));
+    implements _$$_TestScriptParam3CopyWith<$Res> {
+  __$$_TestScriptParam3CopyWithImpl(
+      _$_TestScriptParam3 _value, $Res Function(_$_TestScriptParam3) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptParam3));
 
   @override
-  _TestScriptParam3 get _value => super._value as _TestScriptParam3;
+  _$_TestScriptParam3 get _value => super._value as _$_TestScriptParam3;
 
   @override
   $Res call({
@@ -13011,7 +12229,7 @@ class __$TestScriptParam3CopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_TestScriptParam3(
+    return _then(_$_TestScriptParam3(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -13065,7 +12283,7 @@ class _$_TestScriptParam3 extends _TestScriptParam3 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptParam3 &&
+            other is _$_TestScriptParam3 &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -13074,6 +12292,7 @@ class _$_TestScriptParam3 extends _TestScriptParam3 {
                 .equals(other.valueElement, valueElement));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13084,8 +12303,8 @@ class _$_TestScriptParam3 extends _TestScriptParam3 {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptParam3CopyWith<_TestScriptParam3> get copyWith =>
-      __$TestScriptParam3CopyWithImpl<_TestScriptParam3>(this, _$identity);
+  _$$_TestScriptParam3CopyWith<_$_TestScriptParam3> get copyWith =>
+      __$$_TestScriptParam3CopyWithImpl<_$_TestScriptParam3>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13095,61 +12314,35 @@ class _$_TestScriptParam3 extends _TestScriptParam3 {
 
 abstract class _TestScriptParam3 extends TestScriptParam3 {
   factory _TestScriptParam3(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) = _$_TestScriptParam3;
+          {final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
+      _$_TestScriptParam3;
   _TestScriptParam3._() : super._();
 
   factory _TestScriptParam3.fromJson(Map<String, dynamic> json) =
       _$_TestScriptParam3.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptParam3CopyWith<_TestScriptParam3> get copyWith =>
+  _$$_TestScriptParam3CopyWith<_$_TestScriptParam3> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptTest _$TestScriptTestFromJson(Map<String, dynamic> json) {
   return _TestScriptTest.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptTestTearOff {
-  const _$TestScriptTestTearOff();
-
-  _TestScriptTest call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      required List<TestScriptAction1> action}) {
-    return _TestScriptTest(
-      name: name,
-      nameElement: nameElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      action: action,
-    );
-  }
-
-  TestScriptTest fromJson(Map<String, Object?> json) {
-    return TestScriptTest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptTest = _$TestScriptTestTearOff();
 
 /// @nodoc
 mixin _$TestScriptTest {
@@ -13248,11 +12441,11 @@ class _$TestScriptTestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptTestCopyWith<$Res>
+abstract class _$$_TestScriptTestCopyWith<$Res>
     implements $TestScriptTestCopyWith<$Res> {
-  factory _$TestScriptTestCopyWith(
-          _TestScriptTest value, $Res Function(_TestScriptTest) then) =
-      __$TestScriptTestCopyWithImpl<$Res>;
+  factory _$$_TestScriptTestCopyWith(
+          _$_TestScriptTest value, $Res Function(_$_TestScriptTest) then) =
+      __$$_TestScriptTestCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -13268,15 +12461,15 @@ abstract class _$TestScriptTestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptTestCopyWithImpl<$Res>
+class __$$_TestScriptTestCopyWithImpl<$Res>
     extends _$TestScriptTestCopyWithImpl<$Res>
-    implements _$TestScriptTestCopyWith<$Res> {
-  __$TestScriptTestCopyWithImpl(
-      _TestScriptTest _value, $Res Function(_TestScriptTest) _then)
-      : super(_value, (v) => _then(v as _TestScriptTest));
+    implements _$$_TestScriptTestCopyWith<$Res> {
+  __$$_TestScriptTestCopyWithImpl(
+      _$_TestScriptTest _value, $Res Function(_$_TestScriptTest) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptTest));
 
   @override
-  _TestScriptTest get _value => super._value as _TestScriptTest;
+  _$_TestScriptTest get _value => super._value as _$_TestScriptTest;
 
   @override
   $Res call({
@@ -13286,7 +12479,7 @@ class __$TestScriptTestCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? action = freezed,
   }) {
-    return _then(_TestScriptTest(
+    return _then(_$_TestScriptTest(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -13304,7 +12497,7 @@ class __$TestScriptTestCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestScriptAction1>,
     ));
@@ -13319,8 +12512,9 @@ class _$_TestScriptTest extends _TestScriptTest {
       @JsonKey(name: '_name') this.nameElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      required this.action})
-      : super._();
+      required final List<TestScriptAction1> action})
+      : _action = action,
+        super._();
 
   factory _$_TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptTestFromJson(json);
@@ -13335,8 +12529,12 @@ class _$_TestScriptTest extends _TestScriptTest {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<TestScriptAction1> _action;
   @override
-  final List<TestScriptAction1> action;
+  List<TestScriptAction1> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -13347,7 +12545,7 @@ class _$_TestScriptTest extends _TestScriptTest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptTest &&
+            other is _$_TestScriptTest &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
@@ -13355,9 +12553,10 @@ class _$_TestScriptTest extends _TestScriptTest {
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.action, action));
+            const DeepCollectionEquality().equals(other._action, _action));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13365,12 +12564,12 @@ class _$_TestScriptTest extends _TestScriptTest {
       const DeepCollectionEquality().hash(nameElement),
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(action));
+      const DeepCollectionEquality().hash(_action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptTestCopyWith<_TestScriptTest> get copyWith =>
-      __$TestScriptTestCopyWithImpl<_TestScriptTest>(this, _$identity);
+  _$$_TestScriptTestCopyWith<_$_TestScriptTest> get copyWith =>
+      __$$_TestScriptTestCopyWithImpl<_$_TestScriptTest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13380,58 +12579,37 @@ class _$_TestScriptTest extends _TestScriptTest {
 
 abstract class _TestScriptTest extends TestScriptTest {
   factory _TestScriptTest(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      required List<TestScriptAction1> action}) = _$_TestScriptTest;
+      {final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      required final List<TestScriptAction1> action}) = _$_TestScriptTest;
   _TestScriptTest._() : super._();
 
   factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTest.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<TestScriptAction1> get action;
+  List<TestScriptAction1> get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptTestCopyWith<_TestScriptTest> get copyWith =>
+  _$$_TestScriptTestCopyWith<_$_TestScriptTest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptAction1 _$TestScriptAction1FromJson(Map<String, dynamic> json) {
   return _TestScriptAction1.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptAction1TearOff {
-  const _$TestScriptAction1TearOff();
-
-  _TestScriptAction1 call(
-      {TestScriptOperation? operation,
-      @JsonKey(name: 'assert') TestScriptAssert? assert_}) {
-    return _TestScriptAction1(
-      operation: operation,
-      assert_: assert_,
-    );
-  }
-
-  TestScriptAction1 fromJson(Map<String, Object?> json) {
-    return TestScriptAction1.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptAction1 = _$TestScriptAction1TearOff();
 
 /// @nodoc
 mixin _$TestScriptAction1 {
@@ -13508,11 +12686,11 @@ class _$TestScriptAction1CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptAction1CopyWith<$Res>
+abstract class _$$_TestScriptAction1CopyWith<$Res>
     implements $TestScriptAction1CopyWith<$Res> {
-  factory _$TestScriptAction1CopyWith(
-          _TestScriptAction1 value, $Res Function(_TestScriptAction1) then) =
-      __$TestScriptAction1CopyWithImpl<$Res>;
+  factory _$$_TestScriptAction1CopyWith(_$_TestScriptAction1 value,
+          $Res Function(_$_TestScriptAction1) then) =
+      __$$_TestScriptAction1CopyWithImpl<$Res>;
   @override
   $Res call(
       {TestScriptOperation? operation,
@@ -13525,22 +12703,22 @@ abstract class _$TestScriptAction1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptAction1CopyWithImpl<$Res>
+class __$$_TestScriptAction1CopyWithImpl<$Res>
     extends _$TestScriptAction1CopyWithImpl<$Res>
-    implements _$TestScriptAction1CopyWith<$Res> {
-  __$TestScriptAction1CopyWithImpl(
-      _TestScriptAction1 _value, $Res Function(_TestScriptAction1) _then)
-      : super(_value, (v) => _then(v as _TestScriptAction1));
+    implements _$$_TestScriptAction1CopyWith<$Res> {
+  __$$_TestScriptAction1CopyWithImpl(
+      _$_TestScriptAction1 _value, $Res Function(_$_TestScriptAction1) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptAction1));
 
   @override
-  _TestScriptAction1 get _value => super._value as _TestScriptAction1;
+  _$_TestScriptAction1 get _value => super._value as _$_TestScriptAction1;
 
   @override
   $Res call({
     Object? operation = freezed,
     Object? assert_ = freezed,
   }) {
-    return _then(_TestScriptAction1(
+    return _then(_$_TestScriptAction1(
       operation: operation == freezed
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
@@ -13577,11 +12755,12 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptAction1 &&
+            other is _$_TestScriptAction1 &&
             const DeepCollectionEquality().equals(other.operation, operation) &&
             const DeepCollectionEquality().equals(other.assert_, assert_));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13590,8 +12769,9 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptAction1CopyWith<_TestScriptAction1> get copyWith =>
-      __$TestScriptAction1CopyWithImpl<_TestScriptAction1>(this, _$identity);
+  _$$_TestScriptAction1CopyWith<_$_TestScriptAction1> get copyWith =>
+      __$$_TestScriptAction1CopyWithImpl<_$_TestScriptAction1>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13601,8 +12781,8 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
 
 abstract class _TestScriptAction1 extends TestScriptAction1 {
   factory _TestScriptAction1(
-          {TestScriptOperation? operation,
-          @JsonKey(name: 'assert') TestScriptAssert? assert_}) =
+          {final TestScriptOperation? operation,
+          @JsonKey(name: 'assert') final TestScriptAssert? assert_}) =
       _$_TestScriptAction1;
   _TestScriptAction1._() : super._();
 
@@ -13610,37 +12790,19 @@ abstract class _TestScriptAction1 extends TestScriptAction1 {
       _$_TestScriptAction1.fromJson;
 
   @override
-  TestScriptOperation? get operation;
+  TestScriptOperation? get operation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'assert')
-  TestScriptAssert? get assert_;
+  TestScriptAssert? get assert_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptAction1CopyWith<_TestScriptAction1> get copyWith =>
+  _$$_TestScriptAction1CopyWith<_$_TestScriptAction1> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptTeardown _$TestScriptTeardownFromJson(Map<String, dynamic> json) {
   return _TestScriptTeardown.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptTeardownTearOff {
-  const _$TestScriptTeardownTearOff();
-
-  _TestScriptTeardown call({required List<TestScriptAction2> action}) {
-    return _TestScriptTeardown(
-      action: action,
-    );
-  }
-
-  TestScriptTeardown fromJson(Map<String, Object?> json) {
-    return TestScriptTeardown.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptTeardown = _$TestScriptTeardownTearOff();
 
 /// @nodoc
 mixin _$TestScriptTeardown {
@@ -13683,33 +12845,33 @@ class _$TestScriptTeardownCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptTeardownCopyWith<$Res>
+abstract class _$$_TestScriptTeardownCopyWith<$Res>
     implements $TestScriptTeardownCopyWith<$Res> {
-  factory _$TestScriptTeardownCopyWith(
-          _TestScriptTeardown value, $Res Function(_TestScriptTeardown) then) =
-      __$TestScriptTeardownCopyWithImpl<$Res>;
+  factory _$$_TestScriptTeardownCopyWith(_$_TestScriptTeardown value,
+          $Res Function(_$_TestScriptTeardown) then) =
+      __$$_TestScriptTeardownCopyWithImpl<$Res>;
   @override
   $Res call({List<TestScriptAction2> action});
 }
 
 /// @nodoc
-class __$TestScriptTeardownCopyWithImpl<$Res>
+class __$$_TestScriptTeardownCopyWithImpl<$Res>
     extends _$TestScriptTeardownCopyWithImpl<$Res>
-    implements _$TestScriptTeardownCopyWith<$Res> {
-  __$TestScriptTeardownCopyWithImpl(
-      _TestScriptTeardown _value, $Res Function(_TestScriptTeardown) _then)
-      : super(_value, (v) => _then(v as _TestScriptTeardown));
+    implements _$$_TestScriptTeardownCopyWith<$Res> {
+  __$$_TestScriptTeardownCopyWithImpl(
+      _$_TestScriptTeardown _value, $Res Function(_$_TestScriptTeardown) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptTeardown));
 
   @override
-  _TestScriptTeardown get _value => super._value as _TestScriptTeardown;
+  _$_TestScriptTeardown get _value => super._value as _$_TestScriptTeardown;
 
   @override
   $Res call({
     Object? action = freezed,
   }) {
-    return _then(_TestScriptTeardown(
+    return _then(_$_TestScriptTeardown(
       action: action == freezed
-          ? _value.action
+          ? _value._action
           : action // ignore: cast_nullable_to_non_nullable
               as List<TestScriptAction2>,
     ));
@@ -13719,13 +12881,19 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptTeardown extends _TestScriptTeardown {
-  _$_TestScriptTeardown({required this.action}) : super._();
+  _$_TestScriptTeardown({required final List<TestScriptAction2> action})
+      : _action = action,
+        super._();
 
   factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$$_TestScriptTeardownFromJson(json);
 
+  final List<TestScriptAction2> _action;
   @override
-  final List<TestScriptAction2> action;
+  List<TestScriptAction2> get action {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_action);
+  }
 
   @override
   String toString() {
@@ -13736,18 +12904,20 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptTeardown &&
-            const DeepCollectionEquality().equals(other.action, action));
+            other is _$_TestScriptTeardown &&
+            const DeepCollectionEquality().equals(other._action, _action));
   }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(action));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith =>
-      __$TestScriptTeardownCopyWithImpl<_TestScriptTeardown>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_action));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TestScriptTeardownCopyWith<_$_TestScriptTeardown> get copyWith =>
+      __$$_TestScriptTeardownCopyWithImpl<_$_TestScriptTeardown>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13756,7 +12926,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
 }
 
 abstract class _TestScriptTeardown extends TestScriptTeardown {
-  factory _TestScriptTeardown({required List<TestScriptAction2> action}) =
+  factory _TestScriptTeardown({required final List<TestScriptAction2> action}) =
       _$_TestScriptTeardown;
   _TestScriptTeardown._() : super._();
 
@@ -13764,34 +12934,16 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
       _$_TestScriptTeardown.fromJson;
 
   @override
-  List<TestScriptAction2> get action;
+  List<TestScriptAction2> get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith =>
+  _$$_TestScriptTeardownCopyWith<_$_TestScriptTeardown> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TestScriptAction2 _$TestScriptAction2FromJson(Map<String, dynamic> json) {
   return _TestScriptAction2.fromJson(json);
 }
-
-/// @nodoc
-class _$TestScriptAction2TearOff {
-  const _$TestScriptAction2TearOff();
-
-  _TestScriptAction2 call({required TestScriptOperation operation}) {
-    return _TestScriptAction2(
-      operation: operation,
-    );
-  }
-
-  TestScriptAction2 fromJson(Map<String, Object?> json) {
-    return TestScriptAction2.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TestScriptAction2 = _$TestScriptAction2TearOff();
 
 /// @nodoc
 mixin _$TestScriptAction2 {
@@ -13843,11 +12995,11 @@ class _$TestScriptAction2CopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TestScriptAction2CopyWith<$Res>
+abstract class _$$_TestScriptAction2CopyWith<$Res>
     implements $TestScriptAction2CopyWith<$Res> {
-  factory _$TestScriptAction2CopyWith(
-          _TestScriptAction2 value, $Res Function(_TestScriptAction2) then) =
-      __$TestScriptAction2CopyWithImpl<$Res>;
+  factory _$$_TestScriptAction2CopyWith(_$_TestScriptAction2 value,
+          $Res Function(_$_TestScriptAction2) then) =
+      __$$_TestScriptAction2CopyWithImpl<$Res>;
   @override
   $Res call({TestScriptOperation operation});
 
@@ -13856,21 +13008,21 @@ abstract class _$TestScriptAction2CopyWith<$Res>
 }
 
 /// @nodoc
-class __$TestScriptAction2CopyWithImpl<$Res>
+class __$$_TestScriptAction2CopyWithImpl<$Res>
     extends _$TestScriptAction2CopyWithImpl<$Res>
-    implements _$TestScriptAction2CopyWith<$Res> {
-  __$TestScriptAction2CopyWithImpl(
-      _TestScriptAction2 _value, $Res Function(_TestScriptAction2) _then)
-      : super(_value, (v) => _then(v as _TestScriptAction2));
+    implements _$$_TestScriptAction2CopyWith<$Res> {
+  __$$_TestScriptAction2CopyWithImpl(
+      _$_TestScriptAction2 _value, $Res Function(_$_TestScriptAction2) _then)
+      : super(_value, (v) => _then(v as _$_TestScriptAction2));
 
   @override
-  _TestScriptAction2 get _value => super._value as _TestScriptAction2;
+  _$_TestScriptAction2 get _value => super._value as _$_TestScriptAction2;
 
   @override
   $Res call({
     Object? operation = freezed,
   }) {
-    return _then(_TestScriptAction2(
+    return _then(_$_TestScriptAction2(
       operation: operation == freezed
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
@@ -13899,18 +13051,20 @@ class _$_TestScriptAction2 extends _TestScriptAction2 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TestScriptAction2 &&
+            other is _$_TestScriptAction2 &&
             const DeepCollectionEquality().equals(other.operation, operation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(operation));
 
   @JsonKey(ignore: true)
   @override
-  _$TestScriptAction2CopyWith<_TestScriptAction2> get copyWith =>
-      __$TestScriptAction2CopyWithImpl<_TestScriptAction2>(this, _$identity);
+  _$$_TestScriptAction2CopyWith<_$_TestScriptAction2> get copyWith =>
+      __$$_TestScriptAction2CopyWithImpl<_$_TestScriptAction2>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -13919,7 +13073,7 @@ class _$_TestScriptAction2 extends _TestScriptAction2 {
 }
 
 abstract class _TestScriptAction2 extends TestScriptAction2 {
-  factory _TestScriptAction2({required TestScriptOperation operation}) =
+  factory _TestScriptAction2({required final TestScriptOperation operation}) =
       _$_TestScriptAction2;
   _TestScriptAction2._() : super._();
 
@@ -13927,9 +13081,9 @@ abstract class _TestScriptAction2 extends TestScriptAction2 {
       _$_TestScriptAction2.fromJson;
 
   @override
-  TestScriptOperation get operation;
+  TestScriptOperation get operation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TestScriptAction2CopyWith<_TestScriptAction2> get copyWith =>
+  _$$_TestScriptAction2CopyWith<_$_TestScriptAction2> get copyWith =>
       throw _privateConstructorUsedError;
 }

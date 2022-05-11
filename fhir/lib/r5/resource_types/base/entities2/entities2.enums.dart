@@ -11,8 +11,6 @@ enum BiologicallyDerivedProductProductCategory {
   cells,
   @JsonValue('biologicalAgent')
   biologicalagent,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum BiologicallyDerivedProductStatus {
@@ -20,8 +18,6 @@ enum BiologicallyDerivedProductStatus {
   available,
   @JsonValue('unavailable')
   unavailable,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum BiologicallyDerivedProductStorageScale {
@@ -31,8 +27,6 @@ enum BiologicallyDerivedProductStorageScale {
   celsius,
   @JsonValue('kelvin')
   kelvin,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DeviceStatus {
@@ -42,8 +36,6 @@ enum DeviceStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DeviceUdiCarrierEntryType {
@@ -59,8 +51,6 @@ enum DeviceUdiCarrierEntryType {
   self_reported,
   @JsonValue('electronic-transmission')
   electronic_transmission,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DeviceDeviceNameType {
@@ -76,8 +66,6 @@ enum DeviceDeviceNameType {
   model_name,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DeviceMetricOperationalStatus {
@@ -89,8 +77,6 @@ enum DeviceMetricOperationalStatus {
   standby,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DeviceMetricColor {
@@ -110,8 +96,6 @@ enum DeviceMetricColor {
   cyan,
   @JsonValue('white')
   white,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DeviceMetricCategory {
@@ -123,8 +107,6 @@ enum DeviceMetricCategory {
   calculation,
   @JsonValue('unspecified')
   unspecified,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DeviceMetricCalibrationType {
@@ -136,8 +118,6 @@ enum DeviceMetricCalibrationType {
   gain,
   @JsonValue('two-point')
   two_point,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DeviceMetricCalibrationState {
@@ -149,8 +129,6 @@ enum DeviceMetricCalibrationState {
   calibrated,
   @JsonValue('unspecified')
   unspecified,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum NutritionProductStatus {
@@ -160,8 +138,6 @@ enum NutritionProductStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum SubstanceStatus {
@@ -171,6 +147,4 @@ enum SubstanceStatus {
   inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
 }

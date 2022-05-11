@@ -12,7 +12,6 @@ class FpNotParser extends FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) {
     final input = SingletonEvaluation.toBool(results,
         name: 'input for .not()', operation: 'not()', collection: results);
-
     return input != null ? [!input] : [];
   }
 
@@ -29,7 +28,7 @@ class FpNotParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.not()';
+  String prettyPrint([int indent = 2]) => '.not()';
 }
 
 class NowParser extends FhirPathParser {
@@ -53,7 +52,7 @@ class NowParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.now()';
+  String prettyPrint([int indent = 2]) => '.now()';
 }
 
 class TimeOfDayParser extends FhirPathParser {
@@ -77,7 +76,7 @@ class TimeOfDayParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.timeOfDay()';
+  String prettyPrint([int indent = 2]) => '.timeOfDay()';
 }
 
 class TodayParser extends FhirPathParser {
@@ -101,7 +100,7 @@ class TodayParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.today()';
+  String prettyPrint([int indent = 2]) => '.today()';
 }
 
 class TraceParser extends ValueParser {
@@ -126,6 +125,6 @@ class TraceParser extends ValueParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       'trace(\n${value.prettyPrint(indent + 1)}\n)';
 }

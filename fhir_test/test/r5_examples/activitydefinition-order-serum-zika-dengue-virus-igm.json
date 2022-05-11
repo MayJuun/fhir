@@ -12,7 +12,9 @@
     {
       "type": "documentation",
       "display": "Explanation of diagnostic tests for Zika virus and which to use based on the patient’s clinical and exposure history.",
-      "url": "http://www.cdc.gov/zika/hc-providers/diagnostic.html"
+      "document": {
+        "url": "http://www.cdc.gov/zika/hc-providers/diagnostic.html"
+      }
     },
     {
       "type": "derived-from",

@@ -3,8 +3,73 @@
   "id": "example",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e[Put rendering here]\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;example\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eproductCode\u003c/b\u003e: E0398 (Details: [not stated] code E0398 \u003d \u0027E0398\u0027, stated as \u0027null\u0027)\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: A9999E0398A999921123456000001\u003c/p\u003e\u003cp\u003e\u003cb\u003ebiologicalSource\u003c/b\u003e: id: A999921123456\u003c/p\u003e\u003cp\u003e\u003cb\u003eprocessingFacility\u003c/b\u003e: \u003ca href\u003d\"todo.html\"\u003eOrganization/A9999\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edivision\u003c/b\u003e: A00000\u003c/p\u003e\u003cp\u003e\u003cb\u003eproductStatus\u003c/b\u003e: available (Details: [not stated] code available \u003d \u0027available\u0027, stated as \u0027null\u0027)\u003c/p\u003e\u003cp\u003e\u003cb\u003eexpirationDate\u003c/b\u003e: 2021-08-02T23:59:00-05:00\u003c/p\u003e\u003cp\u003e\u003cb\u003estorageTempRequirements\u003c/b\u003e: 1-6 degrees C\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eproperty\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: ABORhD (Details: [not stated] code ABORhD \u003d \u0027ABORhD\u0027, stated as \u0027null\u0027)\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: A RhD Positive \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (ABORhD#62)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eproperty\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: V (Details: [not stated] code V \u003d \u0027V\u0027, stated as \u0027null\u0027)\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: Volunteer \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (CollectionType#V)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003c/div\u003e"
   },
+  "productCode": {
+    "code": "E0398"
+  },
+  "identifier": [
+    {
+      "system": "https://www.isbt128.org/uri/MPHOUniqueIdentifier",
+      "value": "A9999E0398A999921123456000001"
+    }
+  ],
+  "biologicalSource": {
+    "system": "https://www.isbt128.org/uri/DonationIdentificationNumber",
+    "value": "A999921123456"
+  },
+  "processingFacility": [
+    {
+      "reference": "Organization/A9999"
+    }
+  ],
+  "division": "A00000",
+  "productStatus": {
+    "code": "available"
+  },
+  "expirationDate": "2021-08-02T23:59:00-05:00",
+  "storageTempRequirements": {
+    "low": {
+      "value": 1,
+      "unit": "degrees C",
+      "system": "http://unitsofmeasure.org"
+    },
+    "high": {
+      "value": 6,
+      "unit": "degrees C",
+      "system": "http://unitsofmeasure.org"
+    }
+  },
+  "property": [
+    {
+      "type": {
+        "code": "ABORhD"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.isbt128.org/uri/ABORhD",
+            "code": "62",
+            "display": "A RhD Positive"
+          }
+        ]
+      }
+    },
+    {
+      "type": {
+        "code": "V"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.isbt128.org/uri/CollectionType",
+            "code": "V",
+            "display": "Volunteer"
+          }
+        ]
+      }
+    }
+  ],
   "meta": {
     "tag": [
       {

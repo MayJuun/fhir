@@ -28,7 +28,7 @@ class BracketsIndexParser extends ValueParser<int> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '[$value]';
+  String prettyPrint([int indent = 2]) => '[$value]';
 }
 
 /// If the function takes an expression as a parameter, the function will
@@ -61,7 +61,7 @@ class IndexParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => 'index';
+  String prettyPrint([int indent = 2]) => 'index';
 }
 
 class IterationContext {
@@ -127,7 +127,7 @@ class ThisParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => 'this';
+  String prettyPrint([int indent = 2]) => 'this';
 }
 
 class TotalParser extends ValueParser<String> {
@@ -151,7 +151,7 @@ class TotalParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => 'total';
+  String prettyPrint([int indent = 2]) => 'total';
 }
 
 /// Performs general-purpose aggregation by evaluating the aggregator
@@ -218,7 +218,7 @@ class AggregateParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       'aggregate(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
@@ -249,7 +249,7 @@ class EmptySetParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '{ }';
+  String prettyPrint([int indent = 2]) => '{ }';
 }
 
 class DotParser extends FhirPathParser {
@@ -272,5 +272,5 @@ class DotParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.';
+  String prettyPrint([int indent = 2]) => '.';
 }

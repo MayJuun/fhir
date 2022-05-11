@@ -132,6 +132,23 @@ class FhirPathInvalidExpressionException extends FhirPathException {
         );
 }
 
+/// The FHIRPath expression is using elements that have been deprecated.
+class FhirPathDeprecatedExpressionException extends FhirPathException {
+  FhirPathDeprecatedExpressionException(
+    String message, {
+    String? pathExpression,
+    int? offset,
+    String? token,
+    Object? cause,
+  }) : super(
+          message,
+          pathExpression: pathExpression,
+          offset: offset,
+          token: token,
+          cause: cause,
+        );
+}
+
 /// The evaluation of the expression failed with the given parameters.
 class FhirPathEvaluationException extends FhirPathException {
   FhirPathEvaluationException(

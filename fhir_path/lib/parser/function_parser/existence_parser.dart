@@ -26,7 +26,7 @@ class EmptyParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.empty()';
+  String prettyPrint([int indent = 2]) => '.empty()';
 }
 
 class HasValueParser extends FhirPathParser {
@@ -76,7 +76,7 @@ class HasValueParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.hasValue(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -128,7 +128,7 @@ class ExistsParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.exists(${value.isEmpty ? "" : "\n${"  " * indent}${value.prettyPrint(indent + 1)}\n"}'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -174,7 +174,7 @@ class AllParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) {
+  String prettyPrint([int indent = 2]) {
     if (value.isEmpty) {
       return '.all()';
     }
@@ -211,7 +211,7 @@ class AllTrueParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.allTrue()';
+  String prettyPrint([int indent = 2]) => '.allTrue()';
 }
 
 /// Takes a collection of Boolean values and returns true if any of the items are true.
@@ -242,7 +242,7 @@ class AnyTrueParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.anyTrue()';
+  String prettyPrint([int indent = 2]) => '.anyTrue()';
 }
 
 /// Takes a collection of Boolean values and returns true if all the items are false.
@@ -273,7 +273,7 @@ class AllFalseParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.allFalse()';
+  String prettyPrint([int indent = 2]) => '.allFalse()';
 }
 
 /// Takes a collection of Boolean values and returns true if any of the items are false.
@@ -304,7 +304,7 @@ class AnyFalseParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.anyFalse()';
+  String prettyPrint([int indent = 2]) => '.anyFalse()';
 }
 
 class SubsetOfParser extends ValueParser<ParserList> {
@@ -341,7 +341,7 @@ class SubsetOfParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.subsetOf(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -380,7 +380,7 @@ class SupersetOfParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.supersetOf(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -405,7 +405,7 @@ class CountParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.count()';
+  String prettyPrint([int indent = 2]) => '.count()';
 }
 
 class DistinctParser extends FhirPathParser {
@@ -436,7 +436,7 @@ class DistinctParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.distinct()';
+  String prettyPrint([int indent = 2]) => '.distinct()';
 }
 
 class IsDistinctParser extends FhirPathParser {
@@ -467,5 +467,5 @@ class IsDistinctParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.isDistinct()';
+  String prettyPrint([int indent = 2]) => '.isDistinct()';
 }

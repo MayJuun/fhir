@@ -1,0 +1,119 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "research-study-statusDate-activity",
+  "meta": {
+    "lastUpdated": "2022-05-06T17:02:42+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system http://terminology.hl7.org/CodeSystem/research-study-statusDate-activity defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003erecord-verification\u003ca name\u003d\"research-study-statusDate-activity-record-verification\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRecord Verification\u003c/td\u003e\u003ctd\u003eRecord has been verified.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eoverall-study\u003ca name\u003d\"research-study-statusDate-activity-overall-study\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eOverall study\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eprimary-outcome-data-collection\u003ca name\u003d\"research-study-statusDate-activity-primary-outcome-data-collection\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePrimary outcome data collection\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eregistration-submission \u003ca name\u003d\"research-study-statusDate-activity-registration-submission.160\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRegistration submission\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eregistration-submission-qc\u003ca name\u003d\"research-study-statusDate-activity-registration-submission-qc\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRegistration submission QC\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eregistration-posting\u003ca name\u003d\"research-study-statusDate-activity-registration-posting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRegistration posting\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresults-submission\u003ca name\u003d\"research-study-statusDate-activity-results-submission\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResults submission\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresults-submission-qc\u003ca name\u003d\"research-study-statusDate-activity-results-submission-qc\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResults submission QC\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresults-posting\u003ca name\u003d\"research-study-statusDate-activity-results-posting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResults posting\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003edisposition-submission\u003ca name\u003d\"research-study-statusDate-activity-disposition-submission\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDisposition submission\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003edisposition-submission-qc\u003ca name\u003d\"research-study-statusDate-activity-disposition-submission-qc\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDisposition submission QC\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003edisposition-posting\u003ca name\u003d\"research-study-statusDate-activity-disposition-posting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDisposition posting\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eupdate-submission\u003ca name\u003d\"research-study-statusDate-activity-update-submission\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUpdate submission\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eupdate-posting\u003ca name\u003d\"research-study-statusDate-activity-update-posting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUpdate posting\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "brr"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://terminology.hl7.org/CodeSystem/research-study-statusDate-activity",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.1680"
+    }
+  ],
+  "version": "4.6.0",
+  "name": "ResearchStudyStatusDateActivity",
+  "title": "ResearchStudyStatusDateActivity",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-02-10T20:40:00+00:00",
+  "publisher": "HL7 (FHIR Project)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "Codes for activity that changed study status.",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/research-study-statusDate-activity",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "record-verification",
+      "display": "Record Verification",
+      "definition": "Record has been verified."
+    },
+    {
+      "code": "overall-study",
+      "display": "Overall study"
+    },
+    {
+      "code": "primary-outcome-data-collection",
+      "display": "Primary outcome data collection"
+    },
+    {
+      "code": "registration-submission ",
+      "display": "Registration submission"
+    },
+    {
+      "code": "registration-submission-qc",
+      "display": "Registration submission QC"
+    },
+    {
+      "code": "registration-posting",
+      "display": "Registration posting"
+    },
+    {
+      "code": "results-submission",
+      "display": "Results submission"
+    },
+    {
+      "code": "results-submission-qc",
+      "display": "Results submission QC"
+    },
+    {
+      "code": "results-posting",
+      "display": "Results posting"
+    },
+    {
+      "code": "disposition-submission",
+      "display": "Disposition submission"
+    },
+    {
+      "code": "disposition-submission-qc",
+      "display": "Disposition submission QC"
+    },
+    {
+      "code": "disposition-posting",
+      "display": "Disposition posting"
+    },
+    {
+      "code": "update-submission",
+      "display": "Update submission"
+    },
+    {
+      "code": "update-posting",
+      "display": "Update posting"
+    }
+  ]
+}

@@ -84,7 +84,9 @@
     {
       "type": "derived-from",
       "display": "Overweight and Obesity Treatment Guidelines",
-      "url": "http://www.nhlbi.nih.gov/health-pro/guidelines/current/obesity-guidelines/e_textbook/txgd/algorthm/algorthm.htm"
+      "document": {
+        "url": "http://www.nhlbi.nih.gov/health-pro/guidelines/current/obesity-guidelines/e_textbook/txgd/algorthm/algorthm.htm"
+      }
     }
   ],
   "goal": [
@@ -117,7 +119,9 @@
         {
           "type": "justification",
           "display": "Evaluation and Treatment Strategy",
-          "url": "https://www.nhlbi.nih.gov/health-pro/guidelines/current/obesity-guidelines/e_textbook/txgd/42.htm"
+          "document": {
+            "url": "https://www.nhlbi.nih.gov/health-pro/guidelines/current/obesity-guidelines/e_textbook/txgd/42.htm"
+          }
         }
       ],
       "target": [

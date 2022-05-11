@@ -3,6 +3,7 @@ import 'package:petitparser/petitparser.dart';
 
 // Project imports:
 import 'arg_fxn_lexer.dart';
+import 'deprecated_lexer.dart';
 import 'extension_lexer.dart';
 import 'literal_lexer.dart';
 import 'no_arg_fxn_lexer.dart';
@@ -77,7 +78,8 @@ final functionLexer = unionFunctionLexer |
     excludeLexer |
     traceLexer |
     aggregateLexer |
-    iifLexer;
+    iifLexer |
+    deprecatedLexer;
 
 /// Lexer for all types of white space
 final wsLexer = whiteSpaceLexer | lineCommentLexer | multiLineCommentLexer;
@@ -145,3 +147,8 @@ final simpleLexer = toBooleanLexer |
     avgLexer |
     answersLexer |
     ordinalLexer;
+
+/// Deprecated - these Lexers will throw errors, but this allows us
+/// to provide more useful error messages
+final deprecatedLexer = asFunctionLexer |
+    isFunctionLexer;

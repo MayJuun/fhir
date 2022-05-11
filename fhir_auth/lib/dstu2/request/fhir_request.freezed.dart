@@ -12,404 +12,7 @@ part of 'fhir_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$FhirRequestTearOff {
-  const _$FhirRequestTearOff();
-
-  _FhirReadRequest read(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      required Id id,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirReadRequest(
-      base: base,
-      type: type,
-      id: id,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirVReadRequest vRead(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      required Id id,
-      required Id vid,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirVReadRequest(
-      base: base,
-      type: type,
-      id: id,
-      vid: vid,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirUpdateRequest update(
-      {required Uri base,
-      required Resource resource,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirUpdateRequest(
-      base: base,
-      resource: resource,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirPatchRequest patch(
-      {required Uri base,
-      required Resource resource,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirPatchRequest(
-      base: base,
-      resource: resource,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirDeleteRequest delete(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      required Id id,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirDeleteRequest(
-      base: base,
-      type: type,
-      id: id,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirCreateRequest create(
-      {required Uri base,
-      required Resource resource,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirCreateRequest(
-      base: base,
-      resource: resource,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirSearchRequest search(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      bool usePost = false,
-      RestfulRequest restfulRequest = RestfulRequest.get_,
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirSearchRequest(
-      base: base,
-      type: type,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      usePost: usePost,
-      restfulRequest: restfulRequest,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirSearchAllRequest searchAll(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirSearchAllRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirCapabilitiesRequest capabilities(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Mode mode = Mode.full,
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirCapabilitiesRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mode: mode,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirTransactionRequest transaction(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      required Bundle bundle,
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirTransactionRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      bundle: bundle,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirBatchRequest batch(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      required Bundle bundle,
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirBatchRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      bundle: bundle,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirHistoryRequest history(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      required Id id,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirHistoryRequest(
-      base: base,
-      type: type,
-      id: id,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      count: count,
-      since: since,
-      at: at,
-      reference: reference,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirHistoryTypeRequest historyType(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirHistoryTypeRequest(
-      base: base,
-      type: type,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      count: count,
-      since: since,
-      at: at,
-      reference: reference,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirHistoryAllRequest historyAll(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirHistoryAllRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      count: count,
-      since: since,
-      at: at,
-      reference: reference,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-
-  _FhirOperationRequest operation(
-      {required Uri base,
-      Dstu2ResourceType? type,
-      Id? id,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Map<String, dynamic> fhirParameter = const <String, dynamic>{},
-      required String operation,
-      bool usePost = false,
-      bool useFormData = false,
-      MimeType? mimeType,
-      required FhirClient client}) {
-    return _FhirOperationRequest(
-      base: base,
-      type: type,
-      id: id,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      fhirParameter: fhirParameter,
-      operation: operation,
-      usePost: usePost,
-      useFormData: useFormData,
-      mimeType: mimeType,
-      client: client,
-    );
-  }
-}
-
-/// @nodoc
-const $FhirRequest = _$FhirRequestTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$FhirRequest {
@@ -421,7 +24,6 @@ mixin _$FhirRequest {
   List<String> get parameters => throw _privateConstructorUsedError;
   MimeType? get mimeType => throw _privateConstructorUsedError;
   FhirClient get client => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -1133,11 +735,11 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$FhirReadRequestCopyWith<$Res>
+abstract class _$$_FhirReadRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirReadRequestCopyWith(
-          _FhirReadRequest value, $Res Function(_FhirReadRequest) then) =
-      __$FhirReadRequestCopyWithImpl<$Res>;
+  factory _$$_FhirReadRequestCopyWith(
+          _$_FhirReadRequest value, $Res Function(_$_FhirReadRequest) then) =
+      __$$_FhirReadRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -1153,15 +755,15 @@ abstract class _$FhirReadRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirReadRequestCopyWithImpl<$Res>
+class __$$_FhirReadRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirReadRequestCopyWith<$Res> {
-  __$FhirReadRequestCopyWithImpl(
-      _FhirReadRequest _value, $Res Function(_FhirReadRequest) _then)
-      : super(_value, (v) => _then(v as _FhirReadRequest));
+    implements _$$_FhirReadRequestCopyWith<$Res> {
+  __$$_FhirReadRequestCopyWithImpl(
+      _$_FhirReadRequest _value, $Res Function(_$_FhirReadRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirReadRequest));
 
   @override
-  _FhirReadRequest get _value => super._value as _FhirReadRequest;
+  _$_FhirReadRequest get _value => super._value as _$_FhirReadRequest;
 
   @override
   $Res call({
@@ -1176,7 +778,7 @@ class __$FhirReadRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirReadRequest(
+    return _then(_$_FhirReadRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -1202,11 +804,11 @@ class __$FhirReadRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       mimeType: mimeType == freezed
@@ -1231,11 +833,13 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
@@ -1243,21 +847,31 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   final Dstu2ResourceType type;
   @override
   final Id id;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final MimeType? mimeType;
   @override
@@ -1272,16 +886,16 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirReadRequest &&
+            other is _$_FhirReadRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
   }
@@ -1295,15 +909,15 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
-      __$FhirReadRequestCopyWithImpl<_FhirReadRequest>(this, _$identity);
+  _$$_FhirReadRequestCopyWith<_$_FhirReadRequest> get copyWith =>
+      __$$_FhirReadRequestCopyWithImpl<_$_FhirReadRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1967,48 +1581,48 @@ class _$_FhirReadRequest extends _FhirReadRequest {
 
 abstract class _FhirReadRequest extends FhirRequest {
   factory _FhirReadRequest(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      required Id id,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirReadRequest;
+      {required final Uri base,
+      required final Dstu2ResourceType type,
+      required final Id id,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirReadRequest;
   _FhirReadRequest._() : super._();
 
   @override
-  Uri get base;
-  Dstu2ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Dstu2ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
+  _$$_FhirReadRequestCopyWith<_$_FhirReadRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirVReadRequestCopyWith<$Res>
+abstract class _$$_FhirVReadRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirVReadRequestCopyWith(
-          _FhirVReadRequest value, $Res Function(_FhirVReadRequest) then) =
-      __$FhirVReadRequestCopyWithImpl<$Res>;
+  factory _$$_FhirVReadRequestCopyWith(
+          _$_FhirVReadRequest value, $Res Function(_$_FhirVReadRequest) then) =
+      __$$_FhirVReadRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -2025,15 +1639,15 @@ abstract class _$FhirVReadRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirVReadRequestCopyWithImpl<$Res>
+class __$$_FhirVReadRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirVReadRequestCopyWith<$Res> {
-  __$FhirVReadRequestCopyWithImpl(
-      _FhirVReadRequest _value, $Res Function(_FhirVReadRequest) _then)
-      : super(_value, (v) => _then(v as _FhirVReadRequest));
+    implements _$$_FhirVReadRequestCopyWith<$Res> {
+  __$$_FhirVReadRequestCopyWithImpl(
+      _$_FhirVReadRequest _value, $Res Function(_$_FhirVReadRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirVReadRequest));
 
   @override
-  _FhirVReadRequest get _value => super._value as _FhirVReadRequest;
+  _$_FhirVReadRequest get _value => super._value as _$_FhirVReadRequest;
 
   @override
   $Res call({
@@ -2049,7 +1663,7 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirVReadRequest(
+    return _then(_$_FhirVReadRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -2079,11 +1693,11 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       mimeType: mimeType == freezed
@@ -2109,11 +1723,13 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
@@ -2123,21 +1739,31 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   final Id id;
   @override
   final Id vid;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final MimeType? mimeType;
   @override
@@ -2152,7 +1778,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirVReadRequest &&
+            other is _$_FhirVReadRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -2160,9 +1786,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
   }
@@ -2177,15 +1803,15 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
-      __$FhirVReadRequestCopyWithImpl<_FhirVReadRequest>(this, _$identity);
+  _$$_FhirVReadRequestCopyWith<_$_FhirVReadRequest> get copyWith =>
+      __$$_FhirVReadRequestCopyWithImpl<_$_FhirVReadRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2849,50 +2475,50 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
 
 abstract class _FhirVReadRequest extends FhirRequest {
   factory _FhirVReadRequest(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      required Id id,
-      required Id vid,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirVReadRequest;
+      {required final Uri base,
+      required final Dstu2ResourceType type,
+      required final Id id,
+      required final Id vid,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirVReadRequest;
   _FhirVReadRequest._() : super._();
 
   @override
-  Uri get base;
-  Dstu2ResourceType get type;
-  Id get id;
-  Id get vid;
+  Uri get base => throw _privateConstructorUsedError;
+  Dstu2ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
+  Id get vid => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
+  _$$_FhirVReadRequestCopyWith<_$_FhirVReadRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirUpdateRequestCopyWith<$Res>
+abstract class _$$_FhirUpdateRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirUpdateRequestCopyWith(
-          _FhirUpdateRequest value, $Res Function(_FhirUpdateRequest) then) =
-      __$FhirUpdateRequestCopyWithImpl<$Res>;
+  factory _$$_FhirUpdateRequestCopyWith(_$_FhirUpdateRequest value,
+          $Res Function(_$_FhirUpdateRequest) then) =
+      __$$_FhirUpdateRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -2907,15 +2533,15 @@ abstract class _$FhirUpdateRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirUpdateRequestCopyWithImpl<$Res>
+class __$$_FhirUpdateRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirUpdateRequestCopyWith<$Res> {
-  __$FhirUpdateRequestCopyWithImpl(
-      _FhirUpdateRequest _value, $Res Function(_FhirUpdateRequest) _then)
-      : super(_value, (v) => _then(v as _FhirUpdateRequest));
+    implements _$$_FhirUpdateRequestCopyWith<$Res> {
+  __$$_FhirUpdateRequestCopyWithImpl(
+      _$_FhirUpdateRequest _value, $Res Function(_$_FhirUpdateRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirUpdateRequest));
 
   @override
-  _FhirUpdateRequest get _value => super._value as _FhirUpdateRequest;
+  _$_FhirUpdateRequest get _value => super._value as _$_FhirUpdateRequest;
 
   @override
   $Res call({
@@ -2929,7 +2555,7 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirUpdateRequest(
+    return _then(_$_FhirUpdateRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -2951,11 +2577,11 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       mimeType: mimeType == freezed
@@ -2979,31 +2605,43 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final MimeType? mimeType;
   @override
@@ -3018,15 +2656,15 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirUpdateRequest &&
+            other is _$_FhirUpdateRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
   }
@@ -3039,15 +2677,16 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
-      __$FhirUpdateRequestCopyWithImpl<_FhirUpdateRequest>(this, _$identity);
+  _$$_FhirUpdateRequestCopyWith<_$_FhirUpdateRequest> get copyWith =>
+      __$$_FhirUpdateRequestCopyWithImpl<_$_FhirUpdateRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3711,46 +3350,46 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
 
 abstract class _FhirUpdateRequest extends FhirRequest {
   factory _FhirUpdateRequest(
-      {required Uri base,
-      required Resource resource,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirUpdateRequest;
+      {required final Uri base,
+      required final Resource resource,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirUpdateRequest;
   _FhirUpdateRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
+  _$$_FhirUpdateRequestCopyWith<_$_FhirUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirPatchRequestCopyWith<$Res>
+abstract class _$$_FhirPatchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirPatchRequestCopyWith(
-          _FhirPatchRequest value, $Res Function(_FhirPatchRequest) then) =
-      __$FhirPatchRequestCopyWithImpl<$Res>;
+  factory _$$_FhirPatchRequestCopyWith(
+          _$_FhirPatchRequest value, $Res Function(_$_FhirPatchRequest) then) =
+      __$$_FhirPatchRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -3765,15 +3404,15 @@ abstract class _$FhirPatchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirPatchRequestCopyWithImpl<$Res>
+class __$$_FhirPatchRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirPatchRequestCopyWith<$Res> {
-  __$FhirPatchRequestCopyWithImpl(
-      _FhirPatchRequest _value, $Res Function(_FhirPatchRequest) _then)
-      : super(_value, (v) => _then(v as _FhirPatchRequest));
+    implements _$$_FhirPatchRequestCopyWith<$Res> {
+  __$$_FhirPatchRequestCopyWithImpl(
+      _$_FhirPatchRequest _value, $Res Function(_$_FhirPatchRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirPatchRequest));
 
   @override
-  _FhirPatchRequest get _value => super._value as _FhirPatchRequest;
+  _$_FhirPatchRequest get _value => super._value as _$_FhirPatchRequest;
 
   @override
   $Res call({
@@ -3787,7 +3426,7 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirPatchRequest(
+    return _then(_$_FhirPatchRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -3809,11 +3448,11 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       mimeType: mimeType == freezed
@@ -3837,31 +3476,43 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final MimeType? mimeType;
   @override
@@ -3876,15 +3527,15 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirPatchRequest &&
+            other is _$_FhirPatchRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
   }
@@ -3897,15 +3548,15 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
-      __$FhirPatchRequestCopyWithImpl<_FhirPatchRequest>(this, _$identity);
+  _$$_FhirPatchRequestCopyWith<_$_FhirPatchRequest> get copyWith =>
+      __$$_FhirPatchRequestCopyWithImpl<_$_FhirPatchRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4569,46 +4220,46 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
 
 abstract class _FhirPatchRequest extends FhirRequest {
   factory _FhirPatchRequest(
-      {required Uri base,
-      required Resource resource,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirPatchRequest;
+      {required final Uri base,
+      required final Resource resource,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirPatchRequest;
   _FhirPatchRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
+  _$$_FhirPatchRequestCopyWith<_$_FhirPatchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirDeleteRequestCopyWith<$Res>
+abstract class _$$_FhirDeleteRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirDeleteRequestCopyWith(
-          _FhirDeleteRequest value, $Res Function(_FhirDeleteRequest) then) =
-      __$FhirDeleteRequestCopyWithImpl<$Res>;
+  factory _$$_FhirDeleteRequestCopyWith(_$_FhirDeleteRequest value,
+          $Res Function(_$_FhirDeleteRequest) then) =
+      __$$_FhirDeleteRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -4624,15 +4275,15 @@ abstract class _$FhirDeleteRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirDeleteRequestCopyWithImpl<$Res>
+class __$$_FhirDeleteRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirDeleteRequestCopyWith<$Res> {
-  __$FhirDeleteRequestCopyWithImpl(
-      _FhirDeleteRequest _value, $Res Function(_FhirDeleteRequest) _then)
-      : super(_value, (v) => _then(v as _FhirDeleteRequest));
+    implements _$$_FhirDeleteRequestCopyWith<$Res> {
+  __$$_FhirDeleteRequestCopyWithImpl(
+      _$_FhirDeleteRequest _value, $Res Function(_$_FhirDeleteRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirDeleteRequest));
 
   @override
-  _FhirDeleteRequest get _value => super._value as _FhirDeleteRequest;
+  _$_FhirDeleteRequest get _value => super._value as _$_FhirDeleteRequest;
 
   @override
   $Res call({
@@ -4647,7 +4298,7 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirDeleteRequest(
+    return _then(_$_FhirDeleteRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -4673,11 +4324,11 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       mimeType: mimeType == freezed
@@ -4702,11 +4353,13 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
@@ -4714,21 +4367,31 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   final Dstu2ResourceType type;
   @override
   final Id id;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final MimeType? mimeType;
   @override
@@ -4743,16 +4406,16 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirDeleteRequest &&
+            other is _$_FhirDeleteRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
   }
@@ -4766,15 +4429,16 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
-      __$FhirDeleteRequestCopyWithImpl<_FhirDeleteRequest>(this, _$identity);
+  _$$_FhirDeleteRequestCopyWith<_$_FhirDeleteRequest> get copyWith =>
+      __$$_FhirDeleteRequestCopyWithImpl<_$_FhirDeleteRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5438,48 +5102,48 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
 
 abstract class _FhirDeleteRequest extends FhirRequest {
   factory _FhirDeleteRequest(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      required Id id,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirDeleteRequest;
+      {required final Uri base,
+      required final Dstu2ResourceType type,
+      required final Id id,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirDeleteRequest;
   _FhirDeleteRequest._() : super._();
 
   @override
-  Uri get base;
-  Dstu2ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Dstu2ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
+  _$$_FhirDeleteRequestCopyWith<_$_FhirDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirCreateRequestCopyWith<$Res>
+abstract class _$$_FhirCreateRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirCreateRequestCopyWith(
-          _FhirCreateRequest value, $Res Function(_FhirCreateRequest) then) =
-      __$FhirCreateRequestCopyWithImpl<$Res>;
+  factory _$$_FhirCreateRequestCopyWith(_$_FhirCreateRequest value,
+          $Res Function(_$_FhirCreateRequest) then) =
+      __$$_FhirCreateRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -5494,15 +5158,15 @@ abstract class _$FhirCreateRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirCreateRequestCopyWithImpl<$Res>
+class __$$_FhirCreateRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirCreateRequestCopyWith<$Res> {
-  __$FhirCreateRequestCopyWithImpl(
-      _FhirCreateRequest _value, $Res Function(_FhirCreateRequest) _then)
-      : super(_value, (v) => _then(v as _FhirCreateRequest));
+    implements _$$_FhirCreateRequestCopyWith<$Res> {
+  __$$_FhirCreateRequestCopyWithImpl(
+      _$_FhirCreateRequest _value, $Res Function(_$_FhirCreateRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirCreateRequest));
 
   @override
-  _FhirCreateRequest get _value => super._value as _FhirCreateRequest;
+  _$_FhirCreateRequest get _value => super._value as _$_FhirCreateRequest;
 
   @override
   $Res call({
@@ -5516,7 +5180,7 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirCreateRequest(
+    return _then(_$_FhirCreateRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -5538,11 +5202,11 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       mimeType: mimeType == freezed
@@ -5566,31 +5230,43 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final MimeType? mimeType;
   @override
@@ -5605,15 +5281,15 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirCreateRequest &&
+            other is _$_FhirCreateRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
   }
@@ -5626,15 +5302,16 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
-      __$FhirCreateRequestCopyWithImpl<_FhirCreateRequest>(this, _$identity);
+  _$$_FhirCreateRequestCopyWith<_$_FhirCreateRequest> get copyWith =>
+      __$$_FhirCreateRequestCopyWithImpl<_$_FhirCreateRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6298,46 +5975,46 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
 
 abstract class _FhirCreateRequest extends FhirRequest {
   factory _FhirCreateRequest(
-      {required Uri base,
-      required Resource resource,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirCreateRequest;
+      {required final Uri base,
+      required final Resource resource,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirCreateRequest;
   _FhirCreateRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
+  _$$_FhirCreateRequestCopyWith<_$_FhirCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirSearchRequestCopyWith<$Res>
+abstract class _$$_FhirSearchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirSearchRequestCopyWith(
-          _FhirSearchRequest value, $Res Function(_FhirSearchRequest) then) =
-      __$FhirSearchRequestCopyWithImpl<$Res>;
+  factory _$$_FhirSearchRequestCopyWith(_$_FhirSearchRequest value,
+          $Res Function(_$_FhirSearchRequest) then) =
+      __$$_FhirSearchRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -6354,15 +6031,15 @@ abstract class _$FhirSearchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirSearchRequestCopyWithImpl<$Res>
+class __$$_FhirSearchRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirSearchRequestCopyWith<$Res> {
-  __$FhirSearchRequestCopyWithImpl(
-      _FhirSearchRequest _value, $Res Function(_FhirSearchRequest) _then)
-      : super(_value, (v) => _then(v as _FhirSearchRequest));
+    implements _$$_FhirSearchRequestCopyWith<$Res> {
+  __$$_FhirSearchRequestCopyWithImpl(
+      _$_FhirSearchRequest _value, $Res Function(_$_FhirSearchRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirSearchRequest));
 
   @override
-  _FhirSearchRequest get _value => super._value as _FhirSearchRequest;
+  _$_FhirSearchRequest get _value => super._value as _$_FhirSearchRequest;
 
   @override
   $Res call({
@@ -6378,7 +6055,7 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirSearchRequest(
+    return _then(_$_FhirSearchRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -6400,11 +6077,11 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       usePost: usePost == freezed
@@ -6436,38 +6113,50 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.usePost = false,
       this.restfulRequest = RestfulRequest.get_,
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final Dstu2ResourceType type;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
   @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
+  @JsonKey()
   final bool usePost;
-  @JsonKey()
   @override
+  @JsonKey()
   final RestfulRequest restfulRequest;
   @override
   final MimeType? mimeType;
@@ -6483,15 +6172,15 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirSearchRequest &&
+            other is _$_FhirSearchRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.usePost, usePost) &&
             const DeepCollectionEquality()
                 .equals(other.restfulRequest, restfulRequest) &&
@@ -6507,8 +6196,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(usePost),
       const DeepCollectionEquality().hash(restfulRequest),
       const DeepCollectionEquality().hash(mimeType),
@@ -6516,8 +6205,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
-      __$FhirSearchRequestCopyWithImpl<_FhirSearchRequest>(this, _$identity);
+  _$$_FhirSearchRequestCopyWith<_$_FhirSearchRequest> get copyWith =>
+      __$$_FhirSearchRequestCopyWithImpl<_$_FhirSearchRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7181,50 +6871,50 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 
 abstract class _FhirSearchRequest extends FhirRequest {
   factory _FhirSearchRequest(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      bool usePost,
-      RestfulRequest restfulRequest,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirSearchRequest;
+      {required final Uri base,
+      required final Dstu2ResourceType type,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final bool usePost,
+      final RestfulRequest restfulRequest,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirSearchRequest;
   _FhirSearchRequest._() : super._();
 
   @override
-  Uri get base;
-  Dstu2ResourceType get type;
+  Uri get base => throw _privateConstructorUsedError;
+  Dstu2ResourceType get type => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  bool get usePost;
-  RestfulRequest get restfulRequest;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  bool get usePost => throw _privateConstructorUsedError;
+  RestfulRequest get restfulRequest => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
+  _$$_FhirSearchRequestCopyWith<_$_FhirSearchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirSearchAllRequestCopyWith<$Res>
+abstract class _$$_FhirSearchAllRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirSearchAllRequestCopyWith(_FhirSearchAllRequest value,
-          $Res Function(_FhirSearchAllRequest) then) =
-      __$FhirSearchAllRequestCopyWithImpl<$Res>;
+  factory _$$_FhirSearchAllRequestCopyWith(_$_FhirSearchAllRequest value,
+          $Res Function(_$_FhirSearchAllRequest) then) =
+      __$$_FhirSearchAllRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -7238,15 +6928,15 @@ abstract class _$FhirSearchAllRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirSearchAllRequestCopyWithImpl<$Res>
+class __$$_FhirSearchAllRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirSearchAllRequestCopyWith<$Res> {
-  __$FhirSearchAllRequestCopyWithImpl(
-      _FhirSearchAllRequest _value, $Res Function(_FhirSearchAllRequest) _then)
-      : super(_value, (v) => _then(v as _FhirSearchAllRequest));
+    implements _$$_FhirSearchAllRequestCopyWith<$Res> {
+  __$$_FhirSearchAllRequestCopyWithImpl(_$_FhirSearchAllRequest _value,
+      $Res Function(_$_FhirSearchAllRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirSearchAllRequest));
 
   @override
-  _FhirSearchAllRequest get _value => super._value as _FhirSearchAllRequest;
+  _$_FhirSearchAllRequest get _value => super._value as _$_FhirSearchAllRequest;
 
   @override
   $Res call({
@@ -7259,7 +6949,7 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirSearchAllRequest(
+    return _then(_$_FhirSearchAllRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -7277,11 +6967,11 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       mimeType: mimeType == freezed
@@ -7304,29 +6994,41 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final MimeType? mimeType;
   @override
@@ -7341,14 +7043,14 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirSearchAllRequest &&
+            other is _$_FhirSearchAllRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
   }
@@ -7360,15 +7062,15 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
-      __$FhirSearchAllRequestCopyWithImpl<_FhirSearchAllRequest>(
+  _$$_FhirSearchAllRequestCopyWith<_$_FhirSearchAllRequest> get copyWith =>
+      __$$_FhirSearchAllRequestCopyWithImpl<_$_FhirSearchAllRequest>(
           this, _$identity);
 
   @override
@@ -8033,44 +7735,44 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 
 abstract class _FhirSearchAllRequest extends FhirRequest {
   factory _FhirSearchAllRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirSearchAllRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirSearchAllRequest;
   _FhirSearchAllRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
+  _$$_FhirSearchAllRequestCopyWith<_$_FhirSearchAllRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirCapabilitiesRequestCopyWith<$Res>
+abstract class _$$_FhirCapabilitiesRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirCapabilitiesRequestCopyWith(_FhirCapabilitiesRequest value,
-          $Res Function(_FhirCapabilitiesRequest) then) =
-      __$FhirCapabilitiesRequestCopyWithImpl<$Res>;
+  factory _$$_FhirCapabilitiesRequestCopyWith(_$_FhirCapabilitiesRequest value,
+          $Res Function(_$_FhirCapabilitiesRequest) then) =
+      __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -8085,16 +7787,16 @@ abstract class _$FhirCapabilitiesRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
+class __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirCapabilitiesRequestCopyWith<$Res> {
-  __$FhirCapabilitiesRequestCopyWithImpl(_FhirCapabilitiesRequest _value,
-      $Res Function(_FhirCapabilitiesRequest) _then)
-      : super(_value, (v) => _then(v as _FhirCapabilitiesRequest));
+    implements _$$_FhirCapabilitiesRequestCopyWith<$Res> {
+  __$$_FhirCapabilitiesRequestCopyWithImpl(_$_FhirCapabilitiesRequest _value,
+      $Res Function(_$_FhirCapabilitiesRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirCapabilitiesRequest));
 
   @override
-  _FhirCapabilitiesRequest get _value =>
-      super._value as _FhirCapabilitiesRequest;
+  _$_FhirCapabilitiesRequest get _value =>
+      super._value as _$_FhirCapabilitiesRequest;
 
   @override
   $Res call({
@@ -8108,7 +7810,7 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirCapabilitiesRequest(
+    return _then(_$_FhirCapabilitiesRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -8126,11 +7828,11 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       mode: mode == freezed
@@ -8157,32 +7859,44 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mode = Mode.full,
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
   @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
+  @JsonKey()
   final Mode mode;
   @override
   final MimeType? mimeType;
@@ -8198,14 +7912,14 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirCapabilitiesRequest &&
+            other is _$_FhirCapabilitiesRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.mode, mode) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
@@ -8218,17 +7932,18 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(mode),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
-      __$FhirCapabilitiesRequestCopyWithImpl<_FhirCapabilitiesRequest>(
-          this, _$identity);
+  _$$_FhirCapabilitiesRequestCopyWith<_$_FhirCapabilitiesRequest>
+      get copyWith =>
+          __$$_FhirCapabilitiesRequestCopyWithImpl<_$_FhirCapabilitiesRequest>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8892,46 +8607,46 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 
 abstract class _FhirCapabilitiesRequest extends FhirRequest {
   factory _FhirCapabilitiesRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Mode mode,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirCapabilitiesRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Mode mode,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirCapabilitiesRequest;
   _FhirCapabilitiesRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Mode get mode;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Mode get mode => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_FhirCapabilitiesRequestCopyWith<_$_FhirCapabilitiesRequest>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirTransactionRequestCopyWith<$Res>
+abstract class _$$_FhirTransactionRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirTransactionRequestCopyWith(_FhirTransactionRequest value,
-          $Res Function(_FhirTransactionRequest) then) =
-      __$FhirTransactionRequestCopyWithImpl<$Res>;
+  factory _$$_FhirTransactionRequestCopyWith(_$_FhirTransactionRequest value,
+          $Res Function(_$_FhirTransactionRequest) then) =
+      __$$_FhirTransactionRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -8948,15 +8663,16 @@ abstract class _$FhirTransactionRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirTransactionRequestCopyWithImpl<$Res>
+class __$$_FhirTransactionRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirTransactionRequestCopyWith<$Res> {
-  __$FhirTransactionRequestCopyWithImpl(_FhirTransactionRequest _value,
-      $Res Function(_FhirTransactionRequest) _then)
-      : super(_value, (v) => _then(v as _FhirTransactionRequest));
+    implements _$$_FhirTransactionRequestCopyWith<$Res> {
+  __$$_FhirTransactionRequestCopyWithImpl(_$_FhirTransactionRequest _value,
+      $Res Function(_$_FhirTransactionRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirTransactionRequest));
 
   @override
-  _FhirTransactionRequest get _value => super._value as _FhirTransactionRequest;
+  _$_FhirTransactionRequest get _value =>
+      super._value as _$_FhirTransactionRequest;
 
   @override
   $Res call({
@@ -8970,7 +8686,7 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirTransactionRequest(
+    return _then(_$_FhirTransactionRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -8988,11 +8704,11 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       bundle: bundle == freezed
@@ -9026,30 +8742,42 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       required this.bundle,
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Bundle bundle;
   @override
@@ -9066,14 +8794,14 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirTransactionRequest &&
+            other is _$_FhirTransactionRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.bundle, bundle) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
@@ -9086,16 +8814,16 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(bundle),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
-      __$FhirTransactionRequestCopyWithImpl<_FhirTransactionRequest>(
+  _$$_FhirTransactionRequestCopyWith<_$_FhirTransactionRequest> get copyWith =>
+      __$$_FhirTransactionRequestCopyWithImpl<_$_FhirTransactionRequest>(
           this, _$identity);
 
   @override
@@ -9760,46 +9488,46 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 
 abstract class _FhirTransactionRequest extends FhirRequest {
   factory _FhirTransactionRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      required Bundle bundle,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirTransactionRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      required final Bundle bundle,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirTransactionRequest;
   _FhirTransactionRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Bundle get bundle;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Bundle get bundle => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
+  _$$_FhirTransactionRequestCopyWith<_$_FhirTransactionRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirBatchRequestCopyWith<$Res>
+abstract class _$$_FhirBatchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirBatchRequestCopyWith(
-          _FhirBatchRequest value, $Res Function(_FhirBatchRequest) then) =
-      __$FhirBatchRequestCopyWithImpl<$Res>;
+  factory _$$_FhirBatchRequestCopyWith(
+          _$_FhirBatchRequest value, $Res Function(_$_FhirBatchRequest) then) =
+      __$$_FhirBatchRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -9816,15 +9544,15 @@ abstract class _$FhirBatchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirBatchRequestCopyWithImpl<$Res>
+class __$$_FhirBatchRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirBatchRequestCopyWith<$Res> {
-  __$FhirBatchRequestCopyWithImpl(
-      _FhirBatchRequest _value, $Res Function(_FhirBatchRequest) _then)
-      : super(_value, (v) => _then(v as _FhirBatchRequest));
+    implements _$$_FhirBatchRequestCopyWith<$Res> {
+  __$$_FhirBatchRequestCopyWithImpl(
+      _$_FhirBatchRequest _value, $Res Function(_$_FhirBatchRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirBatchRequest));
 
   @override
-  _FhirBatchRequest get _value => super._value as _FhirBatchRequest;
+  _$_FhirBatchRequest get _value => super._value as _$_FhirBatchRequest;
 
   @override
   $Res call({
@@ -9838,7 +9566,7 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirBatchRequest(
+    return _then(_$_FhirBatchRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -9856,11 +9584,11 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       bundle: bundle == freezed
@@ -9894,30 +9622,42 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       required this.bundle,
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Bundle bundle;
   @override
@@ -9934,14 +9674,14 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirBatchRequest &&
+            other is _$_FhirBatchRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.bundle, bundle) &&
             const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
             const DeepCollectionEquality().equals(other.client, client));
@@ -9954,16 +9694,16 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(bundle),
       const DeepCollectionEquality().hash(mimeType),
       const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
-  _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
-      __$FhirBatchRequestCopyWithImpl<_FhirBatchRequest>(this, _$identity);
+  _$$_FhirBatchRequestCopyWith<_$_FhirBatchRequest> get copyWith =>
+      __$$_FhirBatchRequestCopyWithImpl<_$_FhirBatchRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -10627,46 +10367,46 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 
 abstract class _FhirBatchRequest extends FhirRequest {
   factory _FhirBatchRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      required Bundle bundle,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirBatchRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      required final Bundle bundle,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirBatchRequest;
   _FhirBatchRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Bundle get bundle;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Bundle get bundle => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
+  _$$_FhirBatchRequestCopyWith<_$_FhirBatchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirHistoryRequestCopyWith<$Res>
+abstract class _$$_FhirHistoryRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirHistoryRequestCopyWith(
-          _FhirHistoryRequest value, $Res Function(_FhirHistoryRequest) then) =
-      __$FhirHistoryRequestCopyWithImpl<$Res>;
+  factory _$$_FhirHistoryRequestCopyWith(_$_FhirHistoryRequest value,
+          $Res Function(_$_FhirHistoryRequest) then) =
+      __$$_FhirHistoryRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -10686,15 +10426,15 @@ abstract class _$FhirHistoryRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirHistoryRequestCopyWithImpl<$Res>
+class __$$_FhirHistoryRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirHistoryRequestCopyWith<$Res> {
-  __$FhirHistoryRequestCopyWithImpl(
-      _FhirHistoryRequest _value, $Res Function(_FhirHistoryRequest) _then)
-      : super(_value, (v) => _then(v as _FhirHistoryRequest));
+    implements _$$_FhirHistoryRequestCopyWith<$Res> {
+  __$$_FhirHistoryRequestCopyWithImpl(
+      _$_FhirHistoryRequest _value, $Res Function(_$_FhirHistoryRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirHistoryRequest));
 
   @override
-  _FhirHistoryRequest get _value => super._value as _FhirHistoryRequest;
+  _$_FhirHistoryRequest get _value => super._value as _$_FhirHistoryRequest;
 
   @override
   $Res call({
@@ -10713,7 +10453,7 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirHistoryRequest(
+    return _then(_$_FhirHistoryRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -10739,11 +10479,11 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       count: count == freezed
@@ -10784,15 +10524,17 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.count,
       this.since,
       this.at,
       this.reference,
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
@@ -10800,21 +10542,31 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   final Dstu2ResourceType type;
   @override
   final Id id;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final int? count;
   @override
@@ -10837,16 +10589,16 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirHistoryRequest &&
+            other is _$_FhirHistoryRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.count, count) &&
             const DeepCollectionEquality().equals(other.since, since) &&
             const DeepCollectionEquality().equals(other.at, at) &&
@@ -10864,8 +10616,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(count),
       const DeepCollectionEquality().hash(since),
       const DeepCollectionEquality().hash(at),
@@ -10875,8 +10627,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
-      __$FhirHistoryRequestCopyWithImpl<_FhirHistoryRequest>(this, _$identity);
+  _$$_FhirHistoryRequestCopyWith<_$_FhirHistoryRequest> get copyWith =>
+      __$$_FhirHistoryRequestCopyWithImpl<_$_FhirHistoryRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11540,56 +11293,56 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 
 abstract class _FhirHistoryRequest extends FhirRequest {
   factory _FhirHistoryRequest(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      required Id id,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirHistoryRequest;
+      {required final Uri base,
+      required final Dstu2ResourceType type,
+      required final Id id,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final int? count,
+      final Instant? since,
+      final FhirDateTime? at,
+      final String? reference,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirHistoryRequest;
   _FhirHistoryRequest._() : super._();
 
   @override
-  Uri get base;
-  Dstu2ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Dstu2ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int? get count;
-  Instant? get since;
-  FhirDateTime? get at;
-  String? get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
+  _$$_FhirHistoryRequestCopyWith<_$_FhirHistoryRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirHistoryTypeRequestCopyWith<$Res>
+abstract class _$$_FhirHistoryTypeRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirHistoryTypeRequestCopyWith(_FhirHistoryTypeRequest value,
-          $Res Function(_FhirHistoryTypeRequest) then) =
-      __$FhirHistoryTypeRequestCopyWithImpl<$Res>;
+  factory _$$_FhirHistoryTypeRequestCopyWith(_$_FhirHistoryTypeRequest value,
+          $Res Function(_$_FhirHistoryTypeRequest) then) =
+      __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -11608,15 +11361,16 @@ abstract class _$FhirHistoryTypeRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
+class __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirHistoryTypeRequestCopyWith<$Res> {
-  __$FhirHistoryTypeRequestCopyWithImpl(_FhirHistoryTypeRequest _value,
-      $Res Function(_FhirHistoryTypeRequest) _then)
-      : super(_value, (v) => _then(v as _FhirHistoryTypeRequest));
+    implements _$$_FhirHistoryTypeRequestCopyWith<$Res> {
+  __$$_FhirHistoryTypeRequestCopyWithImpl(_$_FhirHistoryTypeRequest _value,
+      $Res Function(_$_FhirHistoryTypeRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirHistoryTypeRequest));
 
   @override
-  _FhirHistoryTypeRequest get _value => super._value as _FhirHistoryTypeRequest;
+  _$_FhirHistoryTypeRequest get _value =>
+      super._value as _$_FhirHistoryTypeRequest;
 
   @override
   $Res call({
@@ -11634,7 +11388,7 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirHistoryTypeRequest(
+    return _then(_$_FhirHistoryTypeRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -11656,11 +11410,11 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       count: count == freezed
@@ -11700,35 +11454,47 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.count,
       this.since,
       this.at,
       this.reference,
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final Dstu2ResourceType type;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final int? count;
   @override
@@ -11751,15 +11517,15 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirHistoryTypeRequest &&
+            other is _$_FhirHistoryTypeRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.count, count) &&
             const DeepCollectionEquality().equals(other.since, since) &&
             const DeepCollectionEquality().equals(other.at, at) &&
@@ -11776,8 +11542,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(count),
       const DeepCollectionEquality().hash(since),
       const DeepCollectionEquality().hash(at),
@@ -11787,8 +11553,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
-      __$FhirHistoryTypeRequestCopyWithImpl<_FhirHistoryTypeRequest>(
+  _$$_FhirHistoryTypeRequestCopyWith<_$_FhirHistoryTypeRequest> get copyWith =>
+      __$$_FhirHistoryTypeRequestCopyWithImpl<_$_FhirHistoryTypeRequest>(
           this, _$identity);
 
   @override
@@ -12453,54 +12219,54 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 
 abstract class _FhirHistoryTypeRequest extends FhirRequest {
   factory _FhirHistoryTypeRequest(
-      {required Uri base,
-      required Dstu2ResourceType type,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirHistoryTypeRequest;
+      {required final Uri base,
+      required final Dstu2ResourceType type,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final int? count,
+      final Instant? since,
+      final FhirDateTime? at,
+      final String? reference,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirHistoryTypeRequest;
   _FhirHistoryTypeRequest._() : super._();
 
   @override
-  Uri get base;
-  Dstu2ResourceType get type;
+  Uri get base => throw _privateConstructorUsedError;
+  Dstu2ResourceType get type => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int? get count;
-  Instant? get since;
-  FhirDateTime? get at;
-  String? get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
+  _$$_FhirHistoryTypeRequestCopyWith<_$_FhirHistoryTypeRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirHistoryAllRequestCopyWith<$Res>
+abstract class _$$_FhirHistoryAllRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirHistoryAllRequestCopyWith(_FhirHistoryAllRequest value,
-          $Res Function(_FhirHistoryAllRequest) then) =
-      __$FhirHistoryAllRequestCopyWithImpl<$Res>;
+  factory _$$_FhirHistoryAllRequestCopyWith(_$_FhirHistoryAllRequest value,
+          $Res Function(_$_FhirHistoryAllRequest) then) =
+      __$$_FhirHistoryAllRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -12518,15 +12284,16 @@ abstract class _$FhirHistoryAllRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirHistoryAllRequestCopyWithImpl<$Res>
+class __$$_FhirHistoryAllRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirHistoryAllRequestCopyWith<$Res> {
-  __$FhirHistoryAllRequestCopyWithImpl(_FhirHistoryAllRequest _value,
-      $Res Function(_FhirHistoryAllRequest) _then)
-      : super(_value, (v) => _then(v as _FhirHistoryAllRequest));
+    implements _$$_FhirHistoryAllRequestCopyWith<$Res> {
+  __$$_FhirHistoryAllRequestCopyWithImpl(_$_FhirHistoryAllRequest _value,
+      $Res Function(_$_FhirHistoryAllRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirHistoryAllRequest));
 
   @override
-  _FhirHistoryAllRequest get _value => super._value as _FhirHistoryAllRequest;
+  _$_FhirHistoryAllRequest get _value =>
+      super._value as _$_FhirHistoryAllRequest;
 
   @override
   $Res call({
@@ -12543,7 +12310,7 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirHistoryAllRequest(
+    return _then(_$_FhirHistoryAllRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -12561,11 +12328,11 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       count: count == freezed
@@ -12604,33 +12371,45 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.count,
       this.since,
       this.at,
       this.reference,
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final int? count;
   @override
@@ -12653,14 +12432,14 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirHistoryAllRequest &&
+            other is _$_FhirHistoryAllRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality().equals(other.count, count) &&
             const DeepCollectionEquality().equals(other.since, since) &&
             const DeepCollectionEquality().equals(other.at, at) &&
@@ -12676,8 +12455,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
       const DeepCollectionEquality().hash(count),
       const DeepCollectionEquality().hash(since),
       const DeepCollectionEquality().hash(at),
@@ -12687,8 +12466,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
-      __$FhirHistoryAllRequestCopyWithImpl<_FhirHistoryAllRequest>(
+  _$$_FhirHistoryAllRequestCopyWith<_$_FhirHistoryAllRequest> get copyWith =>
+      __$$_FhirHistoryAllRequestCopyWithImpl<_$_FhirHistoryAllRequest>(
           this, _$identity);
 
   @override
@@ -13353,52 +13132,52 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 
 abstract class _FhirHistoryAllRequest extends FhirRequest {
   factory _FhirHistoryAllRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirHistoryAllRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final int? count,
+      final Instant? since,
+      final FhirDateTime? at,
+      final String? reference,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirHistoryAllRequest;
   _FhirHistoryAllRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int? get count;
-  Instant? get since;
-  FhirDateTime? get at;
-  String? get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
+  _$$_FhirHistoryAllRequestCopyWith<_$_FhirHistoryAllRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirOperationRequestCopyWith<$Res>
+abstract class _$$_FhirOperationRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirOperationRequestCopyWith(_FhirOperationRequest value,
-          $Res Function(_FhirOperationRequest) then) =
-      __$FhirOperationRequestCopyWithImpl<$Res>;
+  factory _$$_FhirOperationRequestCopyWith(_$_FhirOperationRequest value,
+          $Res Function(_$_FhirOperationRequest) then) =
+      __$$_FhirOperationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -13418,15 +13197,15 @@ abstract class _$FhirOperationRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirOperationRequestCopyWithImpl<$Res>
+class __$$_FhirOperationRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirOperationRequestCopyWith<$Res> {
-  __$FhirOperationRequestCopyWithImpl(
-      _FhirOperationRequest _value, $Res Function(_FhirOperationRequest) _then)
-      : super(_value, (v) => _then(v as _FhirOperationRequest));
+    implements _$$_FhirOperationRequestCopyWith<$Res> {
+  __$$_FhirOperationRequestCopyWithImpl(_$_FhirOperationRequest _value,
+      $Res Function(_$_FhirOperationRequest) _then)
+      : super(_value, (v) => _then(v as _$_FhirOperationRequest));
 
   @override
-  _FhirOperationRequest get _value => super._value as _FhirOperationRequest;
+  _$_FhirOperationRequest get _value => super._value as _$_FhirOperationRequest;
 
   @override
   $Res call({
@@ -13445,7 +13224,7 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirOperationRequest(
+    return _then(_$_FhirOperationRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -13471,15 +13250,15 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
           : format // ignore: cast_nullable_to_non_nullable
               as String,
       elements: elements == freezed
-          ? _value.elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
       parameters: parameters == freezed
-          ? _value.parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       fhirParameter: fhirParameter == freezed
-          ? _value.fhirParameter
+          ? _value._fhirParameter
           : fhirParameter // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       operation: operation == freezed
@@ -13516,15 +13295,18 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
-      this.fhirParameter = const <String, dynamic>{},
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
+      final Map<String, dynamic> fhirParameter = const <String, dynamic>{},
       required this.operation,
       this.usePost = false,
       this.useFormData = false,
       this.mimeType,
       required this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        _fhirParameter = fhirParameter,
+        super._();
 
   @override
   final Uri base;
@@ -13532,31 +13314,46 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   final Dstu2ResourceType? type;
   @override
   final Id? id;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey()
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey()
   @override
+  @JsonKey()
   final String format;
-  @JsonKey()
+  final List<String> _elements;
   @override
-  final List<String> elements;
   @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
   @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
+  final Map<String, dynamic> _fhirParameter;
   @override
-  final Map<String, dynamic> fhirParameter;
+  @JsonKey()
+  Map<String, dynamic> get fhirParameter {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_fhirParameter);
+  }
+
   @override
   final String operation;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool usePost;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool useFormData;
   @override
   final MimeType? mimeType;
@@ -13572,18 +13369,18 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FhirOperationRequest &&
+            other is _$_FhirOperationRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
             const DeepCollectionEquality().equals(other.format, format) &&
-            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
-                .equals(other.parameters, parameters) &&
+                .equals(other._parameters, _parameters) &&
             const DeepCollectionEquality()
-                .equals(other.fhirParameter, fhirParameter) &&
+                .equals(other._fhirParameter, _fhirParameter) &&
             const DeepCollectionEquality().equals(other.operation, operation) &&
             const DeepCollectionEquality().equals(other.usePost, usePost) &&
             const DeepCollectionEquality()
@@ -13601,9 +13398,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       const DeepCollectionEquality().hash(pretty),
       const DeepCollectionEquality().hash(summary),
       const DeepCollectionEquality().hash(format),
-      const DeepCollectionEquality().hash(elements),
-      const DeepCollectionEquality().hash(parameters),
-      const DeepCollectionEquality().hash(fhirParameter),
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      const DeepCollectionEquality().hash(_fhirParameter),
       const DeepCollectionEquality().hash(operation),
       const DeepCollectionEquality().hash(usePost),
       const DeepCollectionEquality().hash(useFormData),
@@ -13612,8 +13409,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
-      __$FhirOperationRequestCopyWithImpl<_FhirOperationRequest>(
+  _$$_FhirOperationRequestCopyWith<_$_FhirOperationRequest> get copyWith =>
+      __$$_FhirOperationRequestCopyWithImpl<_$_FhirOperationRequest>(
           this, _$identity);
 
   @override
@@ -14317,46 +14114,46 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 
 abstract class _FhirOperationRequest extends FhirRequest {
   factory _FhirOperationRequest(
-      {required Uri base,
-      Dstu2ResourceType? type,
-      Id? id,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Map<String, dynamic> fhirParameter,
-      required String operation,
-      bool usePost,
-      bool useFormData,
-      MimeType? mimeType,
-      required FhirClient client}) = _$_FhirOperationRequest;
+      {required final Uri base,
+      final Dstu2ResourceType? type,
+      final Id? id,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Map<String, dynamic> fhirParameter,
+      required final String operation,
+      final bool usePost,
+      final bool useFormData,
+      final MimeType? mimeType,
+      required final FhirClient client}) = _$_FhirOperationRequest;
   _FhirOperationRequest._() : super._();
 
   @override
-  Uri get base;
-  Dstu2ResourceType? get type;
-  Id? get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Dstu2ResourceType? get type => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Map<String, dynamic> get fhirParameter;
-  String get operation;
-  bool get usePost;
-  bool get useFormData;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Map<String, dynamic> get fhirParameter => throw _privateConstructorUsedError;
+  String get operation => throw _privateConstructorUsedError;
+  bool get usePost => throw _privateConstructorUsedError;
+  bool get useFormData => throw _privateConstructorUsedError;
   @override
-  MimeType? get mimeType;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   @override
-  FhirClient get client;
+  FhirClient get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
+  _$$_FhirOperationRequestCopyWith<_$_FhirOperationRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }

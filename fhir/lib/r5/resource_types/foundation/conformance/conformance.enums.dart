@@ -181,7 +181,7 @@ enum CapabilityStatementSearchParamType {
   @JsonValue('quantity')
   quantity,
   @JsonValue('uri')
-  uri,
+  FhirUri,
   @JsonValue('special')
   special,
   @JsonValue('unknown')
@@ -307,7 +307,7 @@ enum CapabilityStatement2SearchParamType {
   @JsonValue('quantity')
   quantity,
   @JsonValue('uri')
-  uri,
+  FhirUri,
   @JsonValue('special')
   special,
   @JsonValue('unknown')
@@ -1316,7 +1316,7 @@ enum OperationDefinitionParameterSearchType {
   @JsonValue('quantity')
   quantity,
   @JsonValue('uri')
-  uri,
+  FhirUri,
   @JsonValue('special')
   special,
   @JsonValue('unknown')
@@ -1363,7 +1363,7 @@ enum SearchParameterType {
   @JsonValue('quantity')
   quantity,
   @JsonValue('uri')
-  uri,
+  FhirUri,
   @JsonValue('special')
   special,
   @JsonValue('unknown')

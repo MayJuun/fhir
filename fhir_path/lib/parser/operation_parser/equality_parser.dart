@@ -72,7 +72,7 @@ class EqualsParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '='
+  String prettyPrint([int indent = 2]) => '='
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -104,7 +104,7 @@ class EquivalentParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '~'
+  String prettyPrint([int indent = 2]) => '~'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -121,6 +121,8 @@ class NotEqualsParser extends OperatorParser {
     final equalsParser = EqualsParser();
     equalsParser.before = this.before;
     equalsParser.after = this.after;
+    print(before.prettyPrint(1));
+    print(after.prettyPrint(2));
     final equality = equalsParser.execute(results, passed);
     return FpNotParser().execute(equality, passed);
   }
@@ -140,7 +142,7 @@ class NotEqualsParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '${"  " * indent}!='
+  String prettyPrint([int indent = 2]) => '${"  " * indent}!='
       '\n${"  " * indent}${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -196,7 +198,7 @@ class NotEquivalentParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '${"  " * indent}!~'
+  String prettyPrint([int indent = 2]) => '${"  " * indent}!~'
       '\n${"  " * indent}${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${"  " * indent}${after.prettyPrint(indent + 1)}';
 }

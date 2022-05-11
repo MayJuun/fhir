@@ -42,32 +42,25 @@ class Time {
   bool operator ==(Object o) {
     if (identical(this, o)) {
       return true;
-    } else if (!isValid ||
-        (o is Time && !o.isValid) ||
-        (o is String && !Time(o).isValid)) {
-      throw Exception(
-          'Two values were passed to the time ">" comparison operator, but were not both valid\n'
-          'Argument 1: $value\nArgument 2: $o');
+    } else if (o is! Time && o is! String) {
+      return false;
+    }
+    final String? compareTime = o is Time
+        ? o.value
+        : o is String
+            ? o
+            : null;
+    final List<String> thisList = value!.split(':');
+    final List<String> compareList = compareTime!.split(':');
+    if (thisList.length != compareList.length) {
+      return false;
     } else {
-      final String? compareTime = o is Time
-          ? o.value
-          : o is String
-              ? Time(o).value
-              : null;
-      final List<String> thisList = value!.split(':');
-      final List<String> compareList = compareTime!.split(':');
-      if (thisList.length != compareList.length) {
-        throw Exception(
-            'Two values were passed to the time ">" comparison operator without equal precisions\n'
-            'Argument 1: $value\nArgument 2: $o');
-      } else {
-        for (int i = 0; i < thisList.length; i++) {
-          if (num.parse(thisList[i]) != num.parse(compareList[i])) {
-            return false;
-          }
+      for (int i = 0; i < thisList.length; i++) {
+        if (num.parse(thisList[i]) != num.parse(compareList[i])) {
+          return false;
         }
-        return true;
       }
+      return true;
     }
   }
 

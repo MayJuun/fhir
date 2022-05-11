@@ -6,18 +6,17 @@ import 'new_patient.dart';
 import 'scopes.dart';
 
 Future hapiRequest() async {
-  final client = HttpFhirClient(
+  final client = FhirClient(
     fhirUri: FhirUri(Api.hapiUrl),
     scopes: scopes.scopesList(),
   );
 
   try {
-    await client.login();
-    if (client.fhirUri?.value != null) {
+    if (client.fhirUri.value != null) {
       final _newPatient = newPatient();
       print('Patient to be uploaded:\n${_newPatient.toJson()}');
       final request1 = FhirRequest.create(
-        base: client.fhirUri!.value!,
+        base: client.fhirUri.value!,
         //?? Uri.parse('127.0.0.1'),
         resource: _newPatient,
         client: client,
@@ -35,7 +34,7 @@ Future hapiRequest() async {
         print(newId);
       } else {
         final request2 = FhirRequest.read(
-          base: client.fhirUri!.value ?? Uri.parse('127.0.0.1'),
+          base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
           type: R4ResourceType.Patient,
           id: newId,
           client: client,

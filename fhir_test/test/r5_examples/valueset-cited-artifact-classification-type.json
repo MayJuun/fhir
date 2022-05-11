@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "cited-artifact-classification-type",
   "meta": {
-    "lastUpdated": "2021-04-15T13:25:09.461+11:00",
+    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -40,7 +40,7 @@
   "name": "CitedArtifactClassificationType",
   "title": "CitedArtifactClassificationType",
   "status": "draft",
-  "experimental": false,
+  "experimental": true,
   "date": "2021-03-11T10:55:11.085+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [

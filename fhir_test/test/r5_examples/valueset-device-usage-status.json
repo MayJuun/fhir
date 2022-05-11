@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "device-usage-status",
   "meta": {
-    "lastUpdated": "2021-04-15T13:25:09.461+11:00",
+    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -22,7 +22,7 @@
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "valueInteger": 0
+      "valueInteger": 1
     }
   ],
   "url": "http://hl7.org/fhir/ValueSet/device-usage-status",
@@ -36,7 +36,7 @@
   "name": "DeviceUsageStatus",
   "title": "DeviceUsageStatus",
   "status": "draft",
-  "experimental": false,
+  "experimental": true,
   "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [

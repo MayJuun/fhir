@@ -1,0 +1,77 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "imagingselection-coordinatetype",
+  "meta": {
+    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem",
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003eThis code system http://hl7.org/fhir/imagingselection-coordinatetype defines the following codes:\u003c/p\u003e\n      \n      \u003ctable class\u003d\"codes\"\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003e\n            \n            \u003cb\u003eCode\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDisplay\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cz\u003eDefinition\u003c/z\u003e\n          \n          \u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003eregistered\n            \n            \u003ca name\u003d\"imagingselection-coordinatetype-2d\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e2D\u003c/td\u003e\n          \n          \u003ctd\u003eThe selected image region is defined in a 2D coordinate system.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003eregistered\n            \n            \u003ca name\u003d\"imagingselection-coordinatetype-3d\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e3D\u003c/td\u003e\n          \n          \u003ctd\u003eThe selected image region is defined in a 3D coordinate system.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n      \n      \u003c/table\u003e\n    \n    \u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "ii"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 3
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "ii"
+    }
+  ],
+  "url": "http://hl7.org/fhir/imagingselection-coordinatetype",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.0"
+    }
+  ],
+  "version": "4.6.0",
+  "name": "ImagingSelectionCoordinateType",
+  "title": "ImagingSelectionCoordinateType",
+  "status": "draft",
+  "experimental": false,
+  "date": "2021-01-05T10:01:24+11:00",
+  "publisher": "HL7 (FHIR Project)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "The type of coordinates describing an image region.",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/imagingselection-coordinatetype",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "2d",
+      "display": "2D",
+      "definition": "The selected image region is defined in a 2D coordinate system."
+    },
+    {
+      "code": "3d",
+      "display": "3D",
+      "definition": "The selected image region is defined in a 3D coordinate system."
+    }
+  ]
+}

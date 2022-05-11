@@ -5,8 +5,6 @@ enum AdverseEventActuality {
   actual,
   @JsonValue('potential')
   potential,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AllergyIntoleranceType {
@@ -14,8 +12,6 @@ enum AllergyIntoleranceType {
   allergy,
   @JsonValue('intolerance')
   intolerance,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AllergyIntoleranceCategory {
@@ -27,8 +23,6 @@ enum AllergyIntoleranceCategory {
   environment,
   @JsonValue('biologic')
   biologic,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AllergyIntoleranceCriticality {
@@ -38,8 +32,6 @@ enum AllergyIntoleranceCriticality {
   high,
   @JsonValue('unable-to-assess')
   unable_to_assess,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum AllergyIntoleranceReactionSeverity {
@@ -49,8 +41,6 @@ enum AllergyIntoleranceReactionSeverity {
   moderate,
   @JsonValue('severe')
   severe,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DetectedIssueSeverity {
@@ -60,8 +50,6 @@ enum DetectedIssueSeverity {
   moderate,
   @JsonValue('low')
   low,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum FamilyMemberHistoryStatus {
@@ -73,6 +61,4 @@ enum FamilyMemberHistoryStatus {
   entered_in_error,
   @JsonValue('health-unknown')
   health_unknown,
-  @JsonValue('unknown')
-  unknown,
 }

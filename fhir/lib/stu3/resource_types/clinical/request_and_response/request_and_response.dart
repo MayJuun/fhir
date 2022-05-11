@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../stu3.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'request_and_response.enums.dart';
 part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';

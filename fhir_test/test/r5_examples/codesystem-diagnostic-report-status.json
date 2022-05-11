@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "diagnostic-report-status",
   "meta": {
-    "lastUpdated": "2021-04-15T13:25:09.461+11:00",
+    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
@@ -56,6 +56,7 @@
   "description": "The status of the diagnostic report.",
   "caseSensitive": true,
   "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
+  "hierarchyMeaning": "is-a",
   "content": "complete",
   "concept": [
     {

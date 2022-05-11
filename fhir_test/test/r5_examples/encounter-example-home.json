@@ -28,13 +28,13 @@
         "start": "2015-01-17T16:00:00+10:00",
         "end": "2015-01-17T16:30:00+10:00"
       },
-      "individual": {
+      "actor": {
         "reference": "Practitioner/example",
         "display": "Dr Adam Careful"
       }
     }
   ],
-  "period": {
+  "actualPeriod": {
     "start": "2015-01-17T16:00:00+10:00",
     "end": "2015-01-17T16:30:00+10:00"
   },

@@ -9,8 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../r5.dart';
 
-// import 'package:flutter/foundation.dart';
-
 part 'special_types.enums.dart';
 part 'special_types.freezed.dart';
 part 'special_types.g.dart';
@@ -21,7 +19,7 @@ class Narrative with _$Narrative {
   factory Narrative({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus? status,
+    NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required String div,
   }) = _Narrative;
@@ -585,9 +583,9 @@ class Dosage with _$Dosage {
     String? patientInstruction,
     @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
     Timing? timing,
-    Boolean? asNeededBoolean,
-    @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
-    CodeableConcept? asNeededCodeableConcept,
+    Boolean? asNeeded,
+    @JsonKey(name: '_asNeededBoolean') Element? asNeededElement,
+    List<CodeableConcept>? asNeededFor,
     CodeableConcept? site,
     CodeableConcept? route,
     CodeableConcept? method,
@@ -1033,8 +1031,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     @JsonKey(name: '_description') Element? descriptionElement,
     Boolean? ordered,
     @JsonKey(name: '_ordered') Element? orderedElement,
-    @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-        ElementDefinitionSlicingRules? rules,
+    ElementDefinitionSlicingRules? rules,
     @JsonKey(name: '_rules') Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 
@@ -1076,8 +1073,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-        ElementDefinitionDiscriminatorType? type,
+    ElementDefinitionDiscriminatorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -1175,8 +1171,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     List<Canonical>? targetProfile,
     List<ElementDefinitionTypeAggregation>? aggregation,
     @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
-    @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-        ElementDefinitionTypeVersioning? versioning,
+    ElementDefinitionTypeVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
   }) = _ElementDefinitionType;
 
@@ -1335,8 +1330,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
-    @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-        ElementDefinitionConstraintSeverity? severity,
+    ElementDefinitionConstraintSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     String? human,
     @JsonKey(name: '_human') Element? humanElement,
@@ -1385,8 +1379,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-        ElementDefinitionBindingStrength? strength,
+    ElementDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,

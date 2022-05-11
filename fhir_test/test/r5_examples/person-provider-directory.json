@@ -20,6 +20,7 @@
       "value": "444444444"
     }
   ],
+  "active": true,
   "name": [
     {
       "use": "official",
@@ -52,7 +53,6 @@
     "reference": "http://www.northfield-regional.com/Organization/2",
     "display": "Northfield Regional Physician Directory"
   },
-  "active": true,
   "link": [
     {
       "target": {

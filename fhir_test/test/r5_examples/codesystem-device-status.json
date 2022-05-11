@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "device-status",
   "meta": {
-    "lastUpdated": "2021-04-15T13:25:09.461+11:00",
+    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
@@ -72,11 +72,6 @@
       "code": "entered-in-error",
       "display": "Entered in Error",
       "definition": "The device was entered in error and voided."
-    },
-    {
-      "code": "unknown",
-      "display": "Unknown",
-      "definition": "The status of the device has not been determined."
     }
   ]
 }

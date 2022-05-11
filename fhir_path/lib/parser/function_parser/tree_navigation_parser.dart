@@ -35,7 +35,7 @@ class ChildrenParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.children()';
+  String prettyPrint([int indent = 2]) => '.children()';
 }
 
 class DescendantsParser extends FhirPathParser {
@@ -63,5 +63,5 @@ class DescendantsParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.descendants()';
+  String prettyPrint([int indent = 2]) => '.descendants()';
 }
