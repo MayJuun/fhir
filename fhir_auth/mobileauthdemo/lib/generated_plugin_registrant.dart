@@ -4,7 +4,6 @@
 
 // ignore_for_file: directives_ordering
 // ignore_for_file: lines_longer_than_80_chars
-// ignore_for_file: implementation_imports
 
 import 'package:flutter_secure_storage_web/flutter_secure_storage_web.dart';
 import 'package:flutter_web_auth/src/flutter_web_auth_web.dart';

@@ -1,46 +1,85 @@
-// Package imports:
-import 'package:fhir/primitive_types/primitive_types.dart';
-import 'package:http/http.dart';
+import 'dart:convert';
+import 'dart:typed_data';
 
-class FhirClient {
+import 'package:fhir/primitive_types/primitive_types.dart';
+import 'package:http/http.dart' as http;
+
+class FhirClient implements http.Client {
   FhirClient({
     required this.fhirUri,
-    this.redirectUri,
-    this.clientId = '',
-    this.secret,
-    this.scopes = const ['openid', 'profile', 'email', 'user/*.*'],
+    this.scopes,
+    this.launch,
   });
 
+  factory FhirClient.factory({
+    required FhirUri fhirUri,
+    List<String>? scopes,
+    String? launch,
+  }) =>
+      FhirClient(fhirUri: fhirUri, scopes: scopes, launch: launch);
+
   FhirUri fhirUri;
-  FhirUri? redirectUri;
-  String clientId;
-  String? secret;
-  List<String> scopes;
+  List<String>? scopes;
+  String? launch;
 
-  Future<void> login() async {}
+  @override
+  Future<http.Response> get(Uri url, {Map<String, String>? headers}) async =>
+      await http.get(url, headers: headers);
 
-  Future<bool> isLoggedIn() async => false;
+  @override
+  Future<http.Response> put(Uri url,
+          {Map<String, String>? headers,
+          Object? body,
+          Encoding? encoding}) async =>
+      await http.put(url, headers: headers, body: body, encoding: encoding);
 
-  Future<void> logout() async {}
+  @override
+  Future<http.Response> post(Uri url,
+          {Map<String, String>? headers,
+          Object? body,
+          Encoding? encoding}) async =>
+      await http.post(url, headers: headers, body: body, encoding: encoding);
 
-  Future<Map<String, String>> newHeaders(Map<String, String>? headers) async =>
-      {};
+  @override
+  Future<http.Response> delete(Uri url,
+          {Map<String, String>? headers,
+          Object? body,
+          Encoding? encoding}) async =>
+      await http.delete(url, headers: headers, encoding: encoding);
 
-  Future<Response?> get(String url, {Map<String, String>? headers}) async =>
-      await get(url, headers: await newHeaders(headers));
+  @override
+  Future<http.Response> patch(Uri url,
+          {Map<String, String>? headers,
+          Object? body,
+          Encoding? encoding}) async =>
+      await http.patch(url, headers: headers, body: body, encoding: encoding);
 
-  Future<Response?> put(String url,
-          {Map<String, String>? headers, dynamic body}) async =>
-      await put(url, headers: await newHeaders(headers), body: body);
+  @override
+  void close() {
+    // TODO: implement close
+  }
 
-  Future<Response?> post(String url,
-          {Map<String, String>? headers, dynamic body}) async =>
-      await post(url, headers: await newHeaders(headers), body: body);
+  @override
+  Future<http.Response> head(Uri url, {Map<String, String>? headers}) {
+    // TODO: implement head
+    throw UnimplementedError();
+  }
 
-  Future<Response?> delete(String url, {Map<String, String>? headers}) async =>
-      await delete(url, headers: await newHeaders(headers));
+  @override
+  Future<String> read(Uri url, {Map<String, String>? headers}) {
+    // TODO: implement read
+    throw UnimplementedError();
+  }
 
-  Future<Response?> patch(String url,
-          {Map<String, String>? headers, dynamic body}) async =>
-      await patch(url, headers: await newHeaders(headers), body: body);
+  @override
+  Future<Uint8List> readBytes(Uri url, {Map<String, String>? headers}) {
+    // TODO: implement readBytes
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<http.StreamedResponse> send(http.BaseRequest request) {
+    // TODO: implement send
+    throw UnimplementedError();
+  }
 }

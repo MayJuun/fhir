@@ -12,46 +12,7 @@ part of 'scopes.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ScopesTearOff {
-  const _$ScopesTearOff();
-
-  _Scopes call(
-      {List<ClinicalScope>? clinicalScopes,
-      bool? openid,
-      bool? fhirUser,
-      bool? profile,
-      bool? offlineAccess,
-      bool? onlineAccess,
-      bool? ehrLaunch,
-      bool? patientLaunch,
-      bool? encounterLaunch,
-      bool? needPatientBanner,
-      bool? smartOrchestrateLaunch,
-      String? intent,
-      List<String>? additional}) {
-    return _Scopes(
-      clinicalScopes: clinicalScopes,
-      openid: openid,
-      fhirUser: fhirUser,
-      profile: profile,
-      offlineAccess: offlineAccess,
-      onlineAccess: onlineAccess,
-      ehrLaunch: ehrLaunch,
-      patientLaunch: patientLaunch,
-      encounterLaunch: encounterLaunch,
-      needPatientBanner: needPatientBanner,
-      smartOrchestrateLaunch: smartOrchestrateLaunch,
-      intent: intent,
-      additional: additional,
-    );
-  }
-}
-
-/// @nodoc
-const $Scopes = _$ScopesTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Scopes {
@@ -202,9 +163,9 @@ class _$ScopesCopyWithImpl<$Res> implements $ScopesCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ScopesCopyWith<$Res> implements $ScopesCopyWith<$Res> {
-  factory _$ScopesCopyWith(_Scopes value, $Res Function(_Scopes) then) =
-      __$ScopesCopyWithImpl<$Res>;
+abstract class _$$_ScopesCopyWith<$Res> implements $ScopesCopyWith<$Res> {
+  factory _$$_ScopesCopyWith(_$_Scopes value, $Res Function(_$_Scopes) then) =
+      __$$_ScopesCopyWithImpl<$Res>;
   @override
   $Res call(
       {List<ClinicalScope>? clinicalScopes,
@@ -223,13 +184,13 @@ abstract class _$ScopesCopyWith<$Res> implements $ScopesCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
-    implements _$ScopesCopyWith<$Res> {
-  __$ScopesCopyWithImpl(_Scopes _value, $Res Function(_Scopes) _then)
-      : super(_value, (v) => _then(v as _Scopes));
+class __$$_ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
+    implements _$$_ScopesCopyWith<$Res> {
+  __$$_ScopesCopyWithImpl(_$_Scopes _value, $Res Function(_$_Scopes) _then)
+      : super(_value, (v) => _then(v as _$_Scopes));
 
   @override
-  _Scopes get _value => super._value as _Scopes;
+  _$_Scopes get _value => super._value as _$_Scopes;
 
   @override
   $Res call({
@@ -247,9 +208,9 @@ class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
     Object? intent = freezed,
     Object? additional = freezed,
   }) {
-    return _then(_Scopes(
+    return _then(_$_Scopes(
       clinicalScopes: clinicalScopes == freezed
-          ? _value.clinicalScopes
+          ? _value._clinicalScopes
           : clinicalScopes // ignore: cast_nullable_to_non_nullable
               as List<ClinicalScope>?,
       openid: openid == freezed
@@ -297,7 +258,7 @@ class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
           : intent // ignore: cast_nullable_to_non_nullable
               as String?,
       additional: additional == freezed
-          ? _value.additional
+          ? _value._additional
           : additional // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ));
@@ -308,7 +269,7 @@ class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
 
 class _$_Scopes extends _Scopes {
   _$_Scopes(
-      {this.clinicalScopes,
+      {final List<ClinicalScope>? clinicalScopes,
       this.openid,
       this.fhirUser,
       this.profile,
@@ -320,63 +281,78 @@ class _$_Scopes extends _Scopes {
       this.needPatientBanner,
       this.smartOrchestrateLaunch,
       this.intent,
-      this.additional})
-      : super._();
-
-  @override
+      final List<String>? additional})
+      : _clinicalScopes = clinicalScopes,
+        _additional = additional,
+        super._();
 
   /// see the clinical scopes class for details
-  final List<ClinicalScope>? clinicalScopes;
+  final List<ClinicalScope>? _clinicalScopes;
+
+  /// see the clinical scopes class for details
   @override
+  List<ClinicalScope>? get clinicalScopes {
+    final value = _clinicalScopes;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  final bool? openid;
   @override
+  final bool? openid;
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  final bool? fhirUser;
   @override
+  final bool? fhirUser;
 
   /// this is being deprecated but still commonly required
-  final bool? profile;
   @override
+  final bool? profile;
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  final bool? offlineAccess;
   @override
+  final bool? offlineAccess;
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  final bool? onlineAccess;
   @override
+  final bool? onlineAccess;
 
   ///if this app is going to be launched from within an EHR
-  final bool? ehrLaunch;
   @override
+  final bool? ehrLaunch;
 
   /// if the context of this app is about a specific patient
-  final bool? patientLaunch;
   @override
+  final bool? patientLaunch;
 
   /// if the context of this app is in regards to a specific encounter
-  final bool? encounterLaunch;
   @override
+  final bool? encounterLaunch;
 
   /// does this request need a patient banner
-  final bool? needPatientBanner;
   @override
+  final bool? needPatientBanner;
 
   /// I'm not actually sure what this does
-  final bool? smartOrchestrateLaunch;
   @override
+  final bool? smartOrchestrateLaunch;
 
   /// String value describing the intent of the application launch
-  final String? intent;
   @override
-  final List<String>? additional;
+  final String? intent;
+  final List<String>? _additional;
+  @override
+  List<String>? get additional {
+    final value = _additional;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -387,9 +363,9 @@ class _$_Scopes extends _Scopes {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Scopes &&
+            other is _$_Scopes &&
             const DeepCollectionEquality()
-                .equals(other.clinicalScopes, clinicalScopes) &&
+                .equals(other._clinicalScopes, _clinicalScopes) &&
             const DeepCollectionEquality().equals(other.openid, openid) &&
             const DeepCollectionEquality().equals(other.fhirUser, fhirUser) &&
             const DeepCollectionEquality().equals(other.profile, profile) &&
@@ -408,13 +384,13 @@ class _$_Scopes extends _Scopes {
                 .equals(other.smartOrchestrateLaunch, smartOrchestrateLaunch) &&
             const DeepCollectionEquality().equals(other.intent, intent) &&
             const DeepCollectionEquality()
-                .equals(other.additional, additional));
+                .equals(other._additional, _additional));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(clinicalScopes),
+      const DeepCollectionEquality().hash(_clinicalScopes),
       const DeepCollectionEquality().hash(openid),
       const DeepCollectionEquality().hash(fhirUser),
       const DeepCollectionEquality().hash(profile),
@@ -426,86 +402,87 @@ class _$_Scopes extends _Scopes {
       const DeepCollectionEquality().hash(needPatientBanner),
       const DeepCollectionEquality().hash(smartOrchestrateLaunch),
       const DeepCollectionEquality().hash(intent),
-      const DeepCollectionEquality().hash(additional));
+      const DeepCollectionEquality().hash(_additional));
 
   @JsonKey(ignore: true)
   @override
-  _$ScopesCopyWith<_Scopes> get copyWith =>
-      __$ScopesCopyWithImpl<_Scopes>(this, _$identity);
+  _$$_ScopesCopyWith<_$_Scopes> get copyWith =>
+      __$$_ScopesCopyWithImpl<_$_Scopes>(this, _$identity);
 }
 
 abstract class _Scopes extends Scopes {
   factory _Scopes(
-      {List<ClinicalScope>? clinicalScopes,
-      bool? openid,
-      bool? fhirUser,
-      bool? profile,
-      bool? offlineAccess,
-      bool? onlineAccess,
-      bool? ehrLaunch,
-      bool? patientLaunch,
-      bool? encounterLaunch,
-      bool? needPatientBanner,
-      bool? smartOrchestrateLaunch,
-      String? intent,
-      List<String>? additional}) = _$_Scopes;
+      {final List<ClinicalScope>? clinicalScopes,
+      final bool? openid,
+      final bool? fhirUser,
+      final bool? profile,
+      final bool? offlineAccess,
+      final bool? onlineAccess,
+      final bool? ehrLaunch,
+      final bool? patientLaunch,
+      final bool? encounterLaunch,
+      final bool? needPatientBanner,
+      final bool? smartOrchestrateLaunch,
+      final String? intent,
+      final List<String>? additional}) = _$_Scopes;
   _Scopes._() : super._();
 
   @override
 
   /// see the clinical scopes class for details
-  List<ClinicalScope>? get clinicalScopes;
+  List<ClinicalScope>? get clinicalScopes => throw _privateConstructorUsedError;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  bool? get openid;
+  bool? get openid => throw _privateConstructorUsedError;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  bool? get fhirUser;
+  bool? get fhirUser => throw _privateConstructorUsedError;
   @override
 
   /// this is being deprecated but still commonly required
-  bool? get profile;
+  bool? get profile => throw _privateConstructorUsedError;
   @override
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  bool? get offlineAccess;
+  bool? get offlineAccess => throw _privateConstructorUsedError;
   @override
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  bool? get onlineAccess;
+  bool? get onlineAccess => throw _privateConstructorUsedError;
   @override
 
   ///if this app is going to be launched from within an EHR
-  bool? get ehrLaunch;
+  bool? get ehrLaunch => throw _privateConstructorUsedError;
   @override
 
   /// if the context of this app is about a specific patient
-  bool? get patientLaunch;
+  bool? get patientLaunch => throw _privateConstructorUsedError;
   @override
 
   /// if the context of this app is in regards to a specific encounter
-  bool? get encounterLaunch;
+  bool? get encounterLaunch => throw _privateConstructorUsedError;
   @override
 
   /// does this request need a patient banner
-  bool? get needPatientBanner;
+  bool? get needPatientBanner => throw _privateConstructorUsedError;
   @override
 
   /// I'm not actually sure what this does
-  bool? get smartOrchestrateLaunch;
+  bool? get smartOrchestrateLaunch => throw _privateConstructorUsedError;
   @override
 
   /// String value describing the intent of the application launch
-  String? get intent;
+  String? get intent => throw _privateConstructorUsedError;
   @override
-  List<String>? get additional;
+  List<String>? get additional => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ScopesCopyWith<_Scopes> get copyWith => throw _privateConstructorUsedError;
+  _$$_ScopesCopyWith<_$_Scopes> get copyWith =>
+      throw _privateConstructorUsedError;
 }

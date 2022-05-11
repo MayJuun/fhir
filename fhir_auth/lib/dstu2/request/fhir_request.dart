@@ -7,8 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart';
 
 // Project imports:
+// import '../../globals.dart' as globals;
 import '../../dstu2.dart';
-import '../../globals.dart' as globals;
 
 part 'fhir_request.freezed.dart';
 
@@ -699,7 +699,7 @@ class FhirRequest with _$FhirRequest {
     try {
       final result = await _makeRequest(
           type: type,
-          thisRequest: uri,
+          thisRequest: Uri.parse(uri),
           client: client,
           headers: headers,
           resource: resource?.toJson());
@@ -717,8 +717,8 @@ class FhirRequest with _$FhirRequest {
     uri += _format();
     uri += _pretty();
     uri += _summary();
-    uri += _elements();
-    uri += _parameters(parameters);
+    uri += _urlElements();
+    uri += _urlParameters(parameters);
     return uri;
   }
 
@@ -729,12 +729,12 @@ class FhirRequest with _$FhirRequest {
     uri += _format();
     uri += _pretty();
     uri += _summary();
-    uri += _elements();
+    uri += _urlElements();
     return uri;
   }
 
   String formData({List<String> parameters = const <String>[]}) {
-    return _parameters(parameters, join: false);
+    return _urlParameters(parameters, join: false);
   }
 
   String _encodeParam(String value, {bool join = true}) =>
@@ -756,11 +756,11 @@ class FhirRequest with _$FhirRequest {
       ? _encodeParam('_summary=${enumToString(summary)}', join: join)
       : '';
 
-  String _elements({bool join = true}) => elements.isNotEmpty
+  String _urlElements({bool join = true}) => elements.isNotEmpty
       ? _encodeParam('_elements=${elements.join(",")}', join: join)
       : '';
 
-  String _parameters(List<String> parameters, {bool join = true}) {
+  String _urlParameters(List<String> parameters, {bool join = true}) {
     if (parameters.isEmpty) {
       return '';
     } else {
@@ -815,17 +815,13 @@ class FhirRequest with _$FhirRequest {
 
   Future<Resource> _makeRequest({
     required RestfulRequest type,
-    required String thisRequest,
+    required Uri thisRequest,
     required FhirClient client,
     Map<String, String>? headers,
     Map<String, dynamic>? resource,
     String? formData,
   }) async {
     Response? result;
-
-    if (globals.kTestMode) {
-      return _operationOutcome(thisRequest);
-    }
 
     try {
       switch (type) {
@@ -885,32 +881,28 @@ class FhirRequest with _$FhirRequest {
       return _operationOutcome('Failed to complete a restful request, ',
           diagnostics: 'Exception: $e');
     }
-    if (result == null) {
-      return _operationOutcome('Failed to complete a restful request, ',
-          diagnostics: 'Results was null');
-    } else {
-      if (_errorCodes.containsKey(result.statusCode)) {
-        return OperationOutcome(issue: [
-          OperationOutcomeIssue(
-            severity: IssueSeverity.error,
-            code: Code('unknown'),
-            details: CodeableConcept(text: 'Failed to make restful request'),
-            diagnostics: '\nStatus Code: ${result.statusCode} -'
-                ' ${_errorCodes[result.statusCode]}'
-                '\nResult headers: ${result.headers}'
-                '\nResult body: ${result.body}',
-          )
-        ]);
-      }
-      return Resource.fromJson(jsonDecode(result.body));
+
+    if (_errorCodes.containsKey(result.statusCode)) {
+      return OperationOutcome(issue: [
+        OperationOutcomeIssue(
+          severity: IssueSeverity.error,
+          code: Code('unknown'),
+          details: CodeableConcept(text: 'Failed to make restful request'),
+          diagnostics: '\nStatus Code: ${result.statusCode} -'
+              ' ${_errorCodes[result.statusCode]}'
+              '\nResult headers: ${result.headers}'
+              '\nResult body: ${result.body}',
+        )
+      ]);
     }
+    return Resource.fromJson(jsonDecode(result.body));
   }
 
   OperationOutcome _operationOutcome(String issue, {String? diagnostics}) =>
       OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: IssueSeverity.error,
-          code: Code('value'),
+          code: Code('error'),
           details: CodeableConcept(text: issue),
           diagnostics: diagnostics,
         )
