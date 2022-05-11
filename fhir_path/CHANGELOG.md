@@ -1,7 +1,11 @@
 # fhir_path
-## [0.6.4]
+## [0.7.1]
 * Fix lazy evaluation of environment (regression bug introduced in 0.5.0-21)
 * Better documentation of parameters
+
+## [0.7.0]
+
+* Updated dependencies
 
 ## [0.6.3]
 
