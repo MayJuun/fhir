@@ -401,7 +401,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxValueUri') Element? maxValueUriElement,
     Date? maxValueDate,
     @JsonKey(name: '_maxValueDate') Element? maxValueDateElement,
-  FhirDateTime? maxValueDateTime,
+    FhirDateTime? maxValueDateTime,
     @JsonKey(name: '_maxValueDateTime') Element? maxValueDateTimeElement,
     Time? maxValueTime,
     @JsonKey(name: '_maxValueTime') Element? maxValueTimeElement,

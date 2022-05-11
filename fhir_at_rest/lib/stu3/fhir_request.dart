@@ -711,8 +711,8 @@ class FhirRequest with _$FhirRequest {
     uri += _format();
     uri += _pretty();
     uri += _summary();
-    uri += _elements();
-    uri += _parameters(parameters);
+    uri += _urlElements();
+    uri += _urlParameters(parameters);
     return uri;
   }
 
@@ -724,13 +724,13 @@ class FhirRequest with _$FhirRequest {
     uri += _format();
     uri += _pretty();
     uri += _summary();
-    uri += _elements();
+    uri += _urlElements();
     return uri;
   }
 
   /// Return a string from the formData
   String formData({List<String> parameters = const <String>[]}) {
-    return _parameters(parameters, join: false);
+    return _urlParameters(parameters, join: false);
   }
 
   /// encodeParameters
@@ -758,12 +758,12 @@ class FhirRequest with _$FhirRequest {
       : '';
 
   /// places any elements
-  String _elements({bool join = true}) => elements.isNotEmpty
+  String _urlElements({bool join = true}) => elements.isNotEmpty
       ? _encodeParam('_elements=${elements.join(",")}', join: join)
       : '';
 
   /// places any parameters
-  String _parameters(List<String> parameters, {bool join = true}) {
+  String _urlParameters(List<String> parameters, {bool join = true}) {
     if (parameters.isEmpty) {
       return '';
     } else {
