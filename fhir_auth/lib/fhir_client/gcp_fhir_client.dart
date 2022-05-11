@@ -26,7 +26,7 @@ class GcpFhirClient extends SecureFhirClient {
         ) {
     _googleSignIn = GoogleSignIn(
       scopes: scopes,
-      clientId: clientId == '' ? null : clientId,
+      clientId: clientId,
     );
   }
 

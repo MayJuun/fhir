@@ -1,8 +1,14 @@
 # fhir_bulk
 
+## [0.7.0]
+
+* Updated dependenciees
+* FHIR 0.7.0
+* Freezed 2.0.0
+
 ## [0.6.1]
 
-* Updated depndencies
+* Updated dependencies
 * Now FHIR 0.6.2
 * Import sorter
 
