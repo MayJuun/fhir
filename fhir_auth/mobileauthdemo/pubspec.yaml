@@ -5,6 +5,7 @@ environment:
 
 dependencies:
   fhir: ^0.7.0
+  fhir_at_rest: ^0.7.0
   fhir_auth:
     path: ../../fhir_auth
   flutter:
@@ -13,7 +14,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lints: ^1.0.1
 
 flutter:
   uses-material-design: true

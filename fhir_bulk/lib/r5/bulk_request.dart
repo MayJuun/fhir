@@ -163,8 +163,8 @@ class BulkRequest with _$BulkRequest {
       OperationOutcome(
         issue: [
           OperationOutcomeIssue(
-            severity: OperationOutcomeIssueSeverity.error,
-            code: OperationOutcomeIssueCode.unknown,
+            severity: Code('error'),
+            code: Code('unknown'),
             details: CodeableConcept(text: 'Failed to make restful request'),
             diagnostics: '\nStatus Code: $statusCode -'
                 ' ${_errorCodes[statusCode]}'
@@ -185,8 +185,8 @@ class BulkRequest with _$BulkRequest {
         OperationOutcome(
           issue: [
             OperationOutcomeIssue(
-              severity: OperationOutcomeIssueSeverity.error,
-              code: OperationOutcomeIssueCode.value,
+              severity: Code('error'),
+              code: Code('value'),
               details: CodeableConcept(text: issue),
               diagnostics: diagnostics,
             ),

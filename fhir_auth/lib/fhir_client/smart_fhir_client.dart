@@ -51,7 +51,6 @@ class SmartFhirClient extends SecureFhirClient {
     }
     if (redirectUri != null) {
       oAuth2Client = OAuth2Client(
-        /// Just one slash, required by Google specs
         redirectUri: redirectUri.toString(),
         customUriScheme: redirectUri!.value?.scheme ?? redirectUri.toString(),
         authorizeUrl: authorizeUrl.toString(),
@@ -68,7 +67,7 @@ class SmartFhirClient extends SecureFhirClient {
         clientSecret: secret,
       );
 
-      await oAuth2Helper!.getToken();
+      await oAuth2Helper?.getToken();
     }
   }
 

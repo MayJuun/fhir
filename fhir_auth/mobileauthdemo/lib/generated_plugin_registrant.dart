@@ -8,6 +8,7 @@
 import 'package:flutter_secure_storage_web/flutter_secure_storage_web.dart';
 import 'package:flutter_web_auth/src/flutter_web_auth_web.dart';
 import 'package:google_sign_in_web/google_sign_in_web.dart';
+import 'package:url_launcher_web/url_launcher_web.dart';
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
@@ -16,5 +17,6 @@ void registerPlugins(Registrar registrar) {
   FlutterSecureStorageWeb.registerWith(registrar);
   FlutterWebAuthPlugin.registerWith(registrar);
   GoogleSignInPlugin.registerWith(registrar);
+  UrlLauncherPlugin.registerWith(registrar);
   registrar.registerMessageHandler();
 }
