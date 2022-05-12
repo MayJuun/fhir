@@ -2,11 +2,15 @@
 
 import 'dart:convert';
 
+import 'package:oauth2/oauth2.dart' as oauth2;
 import 'package:collection/collection.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:http/http.dart' as http;
-import 'package:oauth2_client/oauth2_client.dart';
+// import 'package:oauth2_client/oauth2_client.dart';
 import 'package:oauth2_client/oauth2_helper.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 import 'secure_fhir_client.dart';
 
@@ -40,8 +44,10 @@ class SmartFhirClient extends SecureFhirClient {
   String? customUriScheme;
   FhirUri? authorizeUrl;
   FhirUri? tokenUrl;
-  OAuth2Client? oAuth2Client;
+  // OAuth2Client? oAuth2Client;
   OAuth2Helper? oAuth2Helper;
+  Uri? responseUrl;
+  WebViewController? webViewController;
 
   Future<void> login() async {
     if (authorizeUrl == null || tokenUrl == null) {
@@ -49,30 +55,54 @@ class SmartFhirClient extends SecureFhirClient {
       authorizeUrl = _getUri(capabilityStatement, 'authorize');
       tokenUrl = _getUri(capabilityStatement, 'token');
     }
-    if (redirectUri != null) {
-      oAuth2Client = OAuth2Client(
-        redirectUri: redirectUri.toString(),
-        customUriScheme: redirectUri!.value?.scheme ?? redirectUri.toString(),
-        authorizeUrl: authorizeUrl.toString(),
-        tokenUrl: tokenUrl.toString(),
-      );
-    }
-    if (oAuth2Client != null) {
-      oAuth2Helper = OAuth2Helper(
-        oAuth2Client!,
-        grantType: OAuth2Helper.AUTHORIZATION_CODE,
-        clientId: clientId!,
-        scopes: scopes,
-        authCodeParams: {'aud': fhirUri.value.toString()},
-        clientSecret: secret,
-      );
+    print(authorizeUrl);
+    print(tokenUrl);
+    final grant = oauth2.AuthorizationCodeGrant(
+      clientId!,
+      authorizeUrl!.value!,
+      tokenUrl!.value!,
+      secret: secret,
+    );
+    print(grant);
+    final authorizationUrl = grant.getAuthorizationUrl(redirectUri!.value!);
+    print(authorizationUrl);
+    await launchUrl(authorizationUrl);
+    WebView(
+      javascriptMode: JavascriptMode.unrestricted,
+      initialUrl: authorizationUrl.toString(),
+      onWebViewCreated: (WebViewController controller) {
+        webViewController = controller;
+      },
+      navigationDelegate: (navReq) {
+        if (navReq.url.startsWith(redirectUri.toString())) {
+          responseUrl = Uri.parse(navReq.url);
+          return NavigationDecision.prevent;
+        }
+        return NavigationDecision.navigate;
+      },
+    );
+    // webViewController.
+    // if (redirectUri != null) {
+    //   oAuth2Client = OAuth2Client(
+    //     redirectUri: redirectUri.toString(),
+    //     customUriScheme: redirectUri!.value?.scheme ?? redirectUri.toString(),
+    //     authorizeUrl: authorizeUrl.toString(),
+    //     tokenUrl: tokenUrl.toString(),
+    //   );
+    // }
+    // if (oAuth2Client != null) {
+    //   final tknResp = await oAuth2Client!.getTokenWithAuthCodeFlow(
+    //     clientId: clientId!,
+    //     scopes: scopes,
+    //     clientSecret: secret,
+    //   );
 
-      await oAuth2Helper?.getToken();
-    }
+    //   print(tknResp.accessToken);
+    // }
   }
 
   Future<void> logout() async {
-    oAuth2Client = null;
+    // oAuth2Client = null;
     oAuth2Helper = null;
   }
 

@@ -15,7 +15,12 @@ dependencies:
   google_sign_in: ^5.3.1
   http: ^0.13.4
   json_annotation: ^4.5.0
+  oauth2: ^2.0.0
   oauth2_client: ^2.4.0
+  # oauth2_client:
+  #   path: ../../oauth2_client
+  url_launcher: ^6.1.2
+  webview_flutter: ^3.0.4
 
 dev_dependencies:
   build_runner: ^2.1.10
