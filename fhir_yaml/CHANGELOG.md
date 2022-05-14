@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [0.8.0]
+
+* Updating to Dart 2.17.0 
+
 ## [0.7.0]
 
 * Not updating anything, just keeping versions in sync with rest of packages

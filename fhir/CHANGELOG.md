@@ -1,5 +1,12 @@
 # fhir
 
+## [0.8.0]
+
+* Updating so soon for Flutter 3.0.0
+* Removed a lot of enums that I had left in R5
+* Removed the generation files that I used
+* Some basic formatting things
+
 ## [0.7.0]
 
 * Finally updating R5 to most recent releast (0.4.6) - complete with comments
