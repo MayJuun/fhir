@@ -312,10 +312,10 @@ Future<void> main() async {
       }
     }
   }
-  // await File('enums.dart').writeAsString(enums);
-  final bigString = stringMap.values
-      .join('\n\n/// ***********************************************\n\n');
-  File('temp.dart').writeAsString(bigString);
+  await File('enums.dart').writeAsString(enums);
+  // final bigString = stringMap.values
+  //     .join('\n\n/// ***********************************************\n\n');
+  // File('temp.dart').writeAsString(bigString);
 }
 
 const finalReplace = <String, String>{

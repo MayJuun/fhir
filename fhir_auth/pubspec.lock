@@ -231,7 +231,7 @@ packages:
     source: hosted
     version: "1.1.2"
   flutter_web_auth:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: flutter_web_auth
       url: "https://pub.dartlang.org"

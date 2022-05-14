@@ -26,18 +26,18 @@ enum QuantityComparator {
   ad,
 }
 
-enum DurationComparator {
-  @JsonValue('<')
-  lt,
-  @JsonValue('<=')
-  le,
-  @JsonValue('>=')
-  ge,
-  @JsonValue('>')
-  gt,
-  @JsonValue('ad')
-  ad,
-}
+// enum DurationComparator {
+//   @JsonValue('<')
+//   lt,
+//   @JsonValue('<=')
+//   le,
+//   @JsonValue('>=')
+//   ge,
+//   @JsonValue('>')
+//   gt,
+//   @JsonValue('ad')
+//   ad,
+// }
 
 enum DistanceComparator {
   @JsonValue('<')
@@ -93,28 +93,6 @@ enum HumanNameUse {
   old,
   @JsonValue('maiden')
   maiden,
-}
-
-enum AddressUse {
-  @JsonValue('home')
-  home,
-  @JsonValue('work')
-  work,
-  @JsonValue('temp')
-  temp,
-  @JsonValue('old')
-  old,
-  @JsonValue('billing')
-  billing,
-}
-
-enum AddressType {
-  @JsonValue('postal')
-  postal,
-  @JsonValue('physical')
-  physical,
-  @JsonValue('both')
-  both,
 }
 
 enum ContactPointSystem {

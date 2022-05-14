@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_collection_literals, sort_constructors_first
 
 import 'dart:convert';
+import 'dart:html' as html;
 
+import 'package:flutter_web_auth/flutter_web_auth.dart';
 import 'package:oauth2/oauth2.dart' as oauth2;
 import 'package:collection/collection.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
@@ -66,21 +68,31 @@ class SmartFhirClient extends SecureFhirClient {
     print(grant);
     final authorizationUrl = grant.getAuthorizationUrl(redirectUri!.value!);
     print(authorizationUrl);
-    await launchUrl(authorizationUrl);
-    WebView(
-      javascriptMode: JavascriptMode.unrestricted,
-      initialUrl: authorizationUrl.toString(),
-      onWebViewCreated: (WebViewController controller) {
-        webViewController = controller;
-      },
-      navigationDelegate: (navReq) {
-        if (navReq.url.startsWith(redirectUri.toString())) {
-          responseUrl = Uri.parse(navReq.url);
-          return NavigationDecision.prevent;
-        }
-        return NavigationDecision.navigate;
-      },
-    );
+    final popupLogin = html.window.open(
+        authorizeUrl.toString(),
+        'oauth2_client::authenticateWindow',
+        'menubar=no, status=no, scrollbars=no, menubar=no, width=1000, height=500');
+
+    var messageEvt = await html.window.onMessage.firstWhere(
+        (evt) => evt.origin == Uri.parse(redirectUri.toString()).origin);
+
+    popupLogin.close();
+
+    print(messageEvt.data); // await launchUrl(authorizationUrl);
+    // WebView(
+    //   javascriptMode: JavascriptMode.unrestricted,
+    //   initialUrl: authorizationUrl.toString(),
+    //   onWebViewCreated: (WebViewController controller) {
+    //     webViewController = controller;
+    //   },
+    //   navigationDelegate: (navReq) {
+    //     if (navReq.url.startsWith(redirectUri.toString())) {
+    //       responseUrl = Uri.parse(navReq.url);
+    //       return NavigationDecision.prevent;
+    //     }
+    //     return NavigationDecision.navigate;
+    //   },
+    // );
     // webViewController.
     // if (redirectUri != null) {
     //   oAuth2Client = OAuth2Client(
