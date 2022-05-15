@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'evidence_based_medicine.enums.dart';
 part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';
 
@@ -210,7 +209,6 @@ class ArtifactAssessmentContent with _$ArtifactAssessmentContent {
   }) = _ArtifactAssessmentContent;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

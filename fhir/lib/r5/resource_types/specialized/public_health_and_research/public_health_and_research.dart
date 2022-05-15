@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'public_health_and_research.enums.dart';
 part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 

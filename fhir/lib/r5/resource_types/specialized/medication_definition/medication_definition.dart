@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'medication_definition.enums.dart';
 part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
 
@@ -941,7 +940,6 @@ class ClinicalUseDefinitionContraindication
   }) = _ClinicalUseDefinitionContraindication;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1000,7 +998,6 @@ class ClinicalUseDefinitionOtherTherapy
   }) = _ClinicalUseDefinitionOtherTherapy;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1079,7 +1076,6 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
   }) = _ClinicalUseDefinitionIndication;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1145,7 +1141,6 @@ class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
   }) = _ClinicalUseDefinitionInteraction;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1203,7 +1198,6 @@ class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
   }) = _ClinicalUseDefinitionInteractant;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1265,7 +1259,6 @@ class ClinicalUseDefinitionUndesirableEffect
   }) = _ClinicalUseDefinitionUndesirableEffect;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1326,7 +1319,6 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
   }) = _ClinicalUseDefinitionWarning;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

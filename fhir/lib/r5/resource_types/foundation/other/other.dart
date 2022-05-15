@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'other.enums.dart';
 part 'other.freezed.dart';
 part 'other.g.dart';
 
@@ -230,7 +229,7 @@ class Bundle with Resource, _$Bundle {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Identifier? identifier,
-    BundleType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Instant? timestamp,
     @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -435,7 +434,7 @@ class BundleSearch with _$BundleSearch {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    BundleSearchMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
@@ -514,7 +513,7 @@ class BundleRequest with _$BundleRequest {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    BundleRequestMethod? method,
+    Code? method,
     @JsonKey(name: '_method') Element? methodElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,

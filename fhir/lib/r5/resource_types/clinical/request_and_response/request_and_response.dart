@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'request_and_response.enums.dart';
 part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
@@ -874,7 +873,6 @@ class DeviceDispensePerformer with _$DeviceDispensePerformer {
   }) = _DeviceDispensePerformer;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

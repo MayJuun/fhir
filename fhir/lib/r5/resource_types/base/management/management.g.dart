@@ -1175,11 +1175,11 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$List_StatusEnumMap, json['status']),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      mode: $enumDecodeNullable(_$List_ModeEnumMap, json['mode']),
+      mode: json['mode'] == null ? null : Code.fromJson(json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -1244,9 +1244,9 @@ Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$List_StatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('mode', _$List_ModeEnumMap[instance.mode]);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
@@ -1262,18 +1262,6 @@ Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
   writeNotNull('emptyReason', instance.emptyReason?.toJson());
   return val;
 }
-
-const _$List_StatusEnumMap = {
-  List_Status.current: 'current',
-  List_Status.retired: 'retired',
-  List_Status.entered_in_error: 'entered-in-error',
-};
-
-const _$List_ModeEnumMap = {
-  List_Mode.working: 'working',
-  List_Mode.snapshot: 'snapshot',
-  List_Mode.changes: 'changes',
-};
 
 _$_ListEntry _$$_ListEntryFromJson(Map<String, dynamic> json) => _$_ListEntry(
       id: json['id'] as String?,

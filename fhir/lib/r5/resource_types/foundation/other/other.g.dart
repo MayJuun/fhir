@@ -344,7 +344,7 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(_$BundleTypeEnumMap, json['type']),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -405,7 +405,7 @@ Map<String, dynamic> _$$_BundleToJson(_$_Bundle instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('type', _$BundleTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('timestamp', instance.timestamp?.toJson());
   writeNotNull('_timestamp', instance.timestampElement?.toJson());
@@ -416,20 +416,6 @@ Map<String, dynamic> _$$_BundleToJson(_$_Bundle instance) {
   writeNotNull('signature', instance.signature?.toJson());
   return val;
 }
-
-const _$BundleTypeEnumMap = {
-  BundleType.document: 'document',
-  BundleType.message: 'message',
-  BundleType.transaction: 'transaction',
-  BundleType.transaction_response: 'transaction-response',
-  BundleType.batch: 'batch',
-  BundleType.batch_response: 'batch-response',
-  BundleType.history: 'history',
-  BundleType.searchset: 'searchset',
-  BundleType.collection: 'collection',
-  BundleType.subscription_notification: 'subscription-notification',
-  BundleType.unknown: 'unknown',
-};
 
 _$_BundleLink _$$_BundleLinkFromJson(Map<String, dynamic> json) =>
     _$_BundleLink(
@@ -535,7 +521,7 @@ _$_BundleSearch _$$_BundleSearchFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: $enumDecodeNullable(_$BundleSearchModeEnumMap, json['mode']),
+      mode: json['mode'] == null ? null : Code.fromJson(json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -559,19 +545,12 @@ Map<String, dynamic> _$$_BundleSearchToJson(_$_BundleSearch instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('mode', _$BundleSearchModeEnumMap[instance.mode]);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('score', instance.score?.toJson());
   writeNotNull('_score', instance.scoreElement?.toJson());
   return val;
 }
-
-const _$BundleSearchModeEnumMap = {
-  BundleSearchMode.match: 'match',
-  BundleSearchMode.include: 'include',
-  BundleSearchMode.outcome: 'outcome',
-  BundleSearchMode.unknown: 'unknown',
-};
 
 _$_BundleRequest _$$_BundleRequestFromJson(Map<String, dynamic> json) =>
     _$_BundleRequest(
@@ -582,7 +561,7 @@ _$_BundleRequest _$$_BundleRequestFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      method: $enumDecodeNullable(_$BundleRequestMethodEnumMap, json['method']),
+      method: json['method'] == null ? null : Code.fromJson(json['method']),
       methodElement: json['_method'] == null
           ? null
           : Element.fromJson(json['_method'] as Map<String, dynamic>),
@@ -624,7 +603,7 @@ Map<String, dynamic> _$$_BundleRequestToJson(_$_BundleRequest instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('method', _$BundleRequestMethodEnumMap[instance.method]);
+  writeNotNull('method', instance.method?.toJson());
   writeNotNull('_method', instance.methodElement?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
@@ -638,16 +617,6 @@ Map<String, dynamic> _$$_BundleRequestToJson(_$_BundleRequest instance) {
   writeNotNull('_ifNoneExist', instance.ifNoneExistElement?.toJson());
   return val;
 }
-
-const _$BundleRequestMethodEnumMap = {
-  BundleRequestMethod.get_: 'GET',
-  BundleRequestMethod.head: 'HEAD',
-  BundleRequestMethod.post: 'POST',
-  BundleRequestMethod.put: 'PUT',
-  BundleRequestMethod.delete: 'DELETE',
-  BundleRequestMethod.patch: 'PATCH',
-  BundleRequestMethod.unknown: 'unknown',
-};
 
 _$_BundleResponse _$$_BundleResponseFromJson(Map<String, dynamic> json) =>
     _$_BundleResponse(

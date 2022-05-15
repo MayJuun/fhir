@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'workflow.enums.dart';
 part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
@@ -1616,7 +1615,6 @@ class TransportRestriction with _$TransportRestriction {
   }) = _TransportRestriction;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1888,7 +1886,6 @@ class TransportInput with _$TransportInput {
   }) = _TransportInput;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2160,7 +2157,6 @@ class TransportOutput with _$TransportOutput {
   }) = _TransportOutput;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

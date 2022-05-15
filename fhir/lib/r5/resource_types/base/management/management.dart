@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'management.enums.dart';
 part 'management.freezed.dart';
 part 'management.g.dart';
 
@@ -1226,9 +1225,9 @@ class List_ with Resource, _$List_ {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    List_Status? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List_Mode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,

@@ -1132,7 +1132,7 @@ mixin _$Bundle {
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
-  BundleType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Instant? get timestamp => throw _privateConstructorUsedError;
@@ -1163,7 +1163,7 @@ abstract class $BundleCopyWith<$Res> {
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
       Identifier? identifier,
-      BundleType? type,
+      Code? type,
       @JsonKey(name: '_type') Element? typeElement,
       Instant? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -1247,7 +1247,7 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as BundleType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1386,7 +1386,7 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
       Identifier? identifier,
-      BundleType? type,
+      Code? type,
       @JsonKey(name: '_type') Element? typeElement,
       Instant? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -1479,7 +1479,7 @@ class __$$_BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as BundleType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1564,7 +1564,7 @@ class _$_Bundle extends _Bundle {
   @override
   final Identifier? identifier;
   @override
-  final BundleType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -1679,7 +1679,7 @@ abstract class _Bundle extends Bundle {
       final Code? language,
       @JsonKey(name: '_language') final Element? languageElement,
       final Identifier? identifier,
-      final BundleType? type,
+      final Code? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final Instant? timestamp,
       @JsonKey(name: '_timestamp') final Element? timestampElement,
@@ -1711,7 +1711,7 @@ abstract class _Bundle extends Bundle {
   @override
   Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  BundleType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -2491,7 +2491,7 @@ mixin _$BundleSearch {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  BundleSearchMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   Decimal? get score => throw _privateConstructorUsedError;
@@ -2513,7 +2513,7 @@ abstract class $BundleSearchCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      BundleSearchMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
       @JsonKey(name: '_score') Element? scoreElement});
@@ -2556,7 +2556,7 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as BundleSearchMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -2606,7 +2606,7 @@ abstract class _$$_BundleSearchCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      BundleSearchMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
       @JsonKey(name: '_score') Element? scoreElement});
@@ -2654,7 +2654,7 @@ class __$$_BundleSearchCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as BundleSearchMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -2711,7 +2711,7 @@ class _$_BundleSearch extends _BundleSearch {
   }
 
   @override
-  final BundleSearchMode? mode;
+  final Code? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -2772,7 +2772,7 @@ abstract class _BundleSearch extends BundleSearch {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final BundleSearchMode? mode,
+      final Code? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
       final Decimal? score,
       @JsonKey(name: '_score') final Element? scoreElement}) = _$_BundleSearch;
@@ -2790,7 +2790,7 @@ abstract class _BundleSearch extends BundleSearch {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  BundleSearchMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -2816,7 +2816,7 @@ mixin _$BundleRequest {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  BundleRequestMethod? get method => throw _privateConstructorUsedError;
+  Code? get method => throw _privateConstructorUsedError;
   @JsonKey(name: '_method')
   Element? get methodElement => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
@@ -2850,7 +2850,7 @@ abstract class $BundleRequestCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      BundleRequestMethod? method,
+      Code? method,
       @JsonKey(name: '_method') Element? methodElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -2914,7 +2914,7 @@ class _$BundleRequestCopyWithImpl<$Res>
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as BundleRequestMethod?,
+              as Code?,
       methodElement: methodElement == freezed
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -3040,7 +3040,7 @@ abstract class _$$_BundleRequestCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      BundleRequestMethod? method,
+      Code? method,
       @JsonKey(name: '_method') Element? methodElement,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -3112,7 +3112,7 @@ class __$$_BundleRequestCopyWithImpl<$Res>
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as BundleRequestMethod?,
+              as Code?,
       methodElement: methodElement == freezed
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -3209,7 +3209,7 @@ class _$_BundleRequest extends _BundleRequest {
   }
 
   @override
-  final BundleRequestMethod? method;
+  final Code? method;
   @override
   @JsonKey(name: '_method')
   final Element? methodElement;
@@ -3314,7 +3314,7 @@ abstract class _BundleRequest extends BundleRequest {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final BundleRequestMethod? method,
+      final Code? method,
       @JsonKey(name: '_method')
           final Element? methodElement,
       final FhirUri? url,
@@ -3346,7 +3346,7 @@ abstract class _BundleRequest extends BundleRequest {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  BundleRequestMethod? get method => throw _privateConstructorUsedError;
+  Code? get method => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_method')
   Element? get methodElement => throw _privateConstructorUsedError;

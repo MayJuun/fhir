@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'quality_reporting_and_testing.enums.dart';
 part 'quality_reporting_and_testing.freezed.dart';
 part 'quality_reporting_and_testing.g.dart';
 

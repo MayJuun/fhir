@@ -10,7 +10,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r5.dart';
 
 //
-part 'diagnostics.enums.dart';
+
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
@@ -603,7 +603,6 @@ class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
   }) = _ImagingSelectionPerformer;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -685,7 +684,6 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
   }) = _ImagingSelectionInstance;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -752,7 +750,6 @@ class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
   }) = _ImagingSelectionImageRegion;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

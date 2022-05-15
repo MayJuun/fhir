@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r5.dart';
 
-part 'security.enums.dart';
 part 'security.freezed.dart';
 part 'security.g.dart';
 

@@ -7600,10 +7600,10 @@ mixin _$List_ {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List_Status? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  List_Mode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
@@ -7643,9 +7643,9 @@ abstract class $List_CopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List_Status? status,
+      Code? status,
       @JsonKey(name: '_status') Element? statusElement,
-      List_Mode? mode,
+      Code? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -7767,7 +7767,7 @@ class _$List_CopyWithImpl<$Res> implements $List_CopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as List_Status?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7775,7 +7775,7 @@ class _$List_CopyWithImpl<$Res> implements $List_CopyWith<$Res> {
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as List_Mode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -8004,9 +8004,9 @@ abstract class _$$_List_CopyWith<$Res> implements $List_CopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      List_Status? status,
+      Code? status,
       @JsonKey(name: '_status') Element? statusElement,
-      List_Mode? mode,
+      Code? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -8143,7 +8143,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as List_Status?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8151,7 +8151,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as List_Mode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -8308,12 +8308,12 @@ class _$_List_ extends _List_ {
   }
 
   @override
-  final List_Status? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final List_Mode? mode;
+  final Code? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -8470,9 +8470,9 @@ abstract class _List_ extends List_ {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final List_Status? status,
+      final Code? status,
       @JsonKey(name: '_status') final Element? statusElement,
-      final List_Mode? mode,
+      final Code? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
@@ -8519,12 +8519,12 @@ abstract class _List_ extends List_ {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List_Status? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  List_Mode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
