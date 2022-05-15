@@ -1,5 +1,11 @@
 # fhir_bulk
 
+## [0.8.0]
+
+* Updated dependenciees
+* FHIR 0.8.0
+* Dart 2.17.0
+
 ## [0.7.0]
 
 * Updated dependenciees

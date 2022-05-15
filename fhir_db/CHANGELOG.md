@@ -1,5 +1,11 @@
 # fhir_db
 
+## [0.8.0]
+
+* updated dependencies
+* FHIR 0.8.0
+* Dart 2.17.0 & Flutter 3.0
+
 ## [0.6.1]
 
 * updated dependencies (includin fhir 0.6.2)

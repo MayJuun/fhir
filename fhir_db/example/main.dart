@@ -8,7 +8,7 @@ Future<void> main() async {
 
   final resourceDao = ResourceDao();
 
-  // await resourceDao.updatePw('newPw', null);
+  /// await resourceDao.updatePw('newPw', null);
   await resourceDao.deleteAllResources(null);
 
   group('Playing with passwords', () {
