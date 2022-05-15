@@ -841,8 +841,6 @@ class FhirRequest with _$FhirRequest {
       switch (type) {
         case RestfulRequest.get_:
           {
-            print(thisRequest);
-            print(headers);
             result = await client.get(
               Uri.parse(thisRequest),
               headers: headers,

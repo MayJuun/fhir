@@ -14,9 +14,45 @@ Future roundtripTest() async {
     'errors are printed out in the debug console',
     () {
       test(
-        '\n****Json has been Validated****',
+        '\n****Dstu2 Json has been Validated****',
         () async {
-          var testList = await jsonValidation();
+          var testList = await dstu2JsonValidation();
+
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
+          expect(testList.isEmpty, true);
+        },
+        timeout: Timeout(Duration(minutes: 15)),
+      );
+      test(
+        '\n****Stu3 Json has been Validated****',
+        () async {
+          var testList = await stu3JsonValidation();
+
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
+          expect(testList.isEmpty, true);
+        },
+        timeout: Timeout(Duration(minutes: 15)),
+      );
+      test(
+        '\n****R4 Json has been Validated****',
+        () async {
+          var testList = await r4JsonValidation();
+
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
+          expect(testList.isEmpty, true);
+        },
+        timeout: Timeout(Duration(minutes: 15)),
+      );
+      test(
+        '\n****R5 Json has been Validated****',
+        () async {
+          var testList = await r5JsonValidation();
 
           print(
               'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
@@ -27,9 +63,48 @@ Future roundtripTest() async {
       );
 
       test(
-        '\n****Yaml has been Validated****',
+        '\n****Dstu2 Yaml has been Validated****',
         () async {
-          var testList = await yamlValidation();
+          var testList = await dstu2YamlValidation();
+
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
+          expect(testList.isEmpty, true);
+        },
+        timeout: Timeout(Duration(minutes: 25)),
+      );
+
+      test(
+        '\n****Stu3 Yaml has been Validated****',
+        () async {
+          var testList = await stu3YamlValidation();
+
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
+          expect(testList.isEmpty, true);
+        },
+        timeout: Timeout(Duration(minutes: 25)),
+      );
+
+      test(
+        '\n****R4 Yaml has been Validated****',
+        () async {
+          var testList = await r4YamlValidation();
+
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
+          expect(testList.isEmpty, true);
+        },
+        timeout: Timeout(Duration(minutes: 25)),
+      );
+
+      test(
+        '\n****R5 Yaml has been Validated****',
+        () async {
+          var testList = await r5YamlValidation();
 
           print(
               'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');

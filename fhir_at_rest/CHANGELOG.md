@@ -1,5 +1,9 @@
 # fhir_at_rest
 
+## [0.8.0]
+
+* Updated to be in line with base FHIR package and with Flutter 3.0.0
+
 ## [0.7.0]
 
 * updated dependencies (including Freezed 2.0)
