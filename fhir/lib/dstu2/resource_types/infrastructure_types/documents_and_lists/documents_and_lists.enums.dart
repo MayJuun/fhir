@@ -12,6 +12,7 @@ enum CompositionStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DocumentReferenceStatus {
   @JsonValue('current')
   current,
@@ -22,6 +23,7 @@ enum DocumentReferenceStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DocumentManifestStatus {
   @JsonValue('current')
   current,
@@ -32,6 +34,7 @@ enum DocumentManifestStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ListStatus {
   @JsonValue('current')
   current,
@@ -42,6 +45,7 @@ enum ListStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ListMode {
   @JsonValue('working')
   working,
@@ -52,6 +56,7 @@ enum ListMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AttesterMode {
   @JsonValue('personal')
   personal,
@@ -64,6 +69,7 @@ enum AttesterMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SectionMode {
   @JsonValue('working')
   working,
@@ -74,6 +80,7 @@ enum SectionMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RelatesToCode {
   @JsonValue('replaces')
   replaces,

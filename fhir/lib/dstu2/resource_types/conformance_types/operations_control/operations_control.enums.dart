@@ -10,6 +10,7 @@ enum ConformanceStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ConformanceKind {
   @JsonValue('instance')
   instance,
@@ -20,6 +21,7 @@ enum ConformanceKind {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ConformanceAcceptUnknown {
   @JsonValue('no')
   no,
@@ -32,6 +34,7 @@ enum ConformanceAcceptUnknown {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ConformanceFormat {
   @JsonValue('xml')
   xml,
@@ -50,6 +53,7 @@ enum ConformanceFormat {
   @JsonValue('unknown')
   unknown,
 }
+
 enum OperationDefinitionStatus {
   @JsonValue('draft')
   draft,
@@ -60,6 +64,7 @@ enum OperationDefinitionStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum OperationDefinitionKind {
   @JsonValue('operation')
   operation,
@@ -68,6 +73,7 @@ enum OperationDefinitionKind {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SearchParameterStatus {
   @JsonValue('draft')
   draft,
@@ -78,6 +84,7 @@ enum SearchParameterStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SearchParameterType {
   @JsonValue('number')
   number,
@@ -98,6 +105,7 @@ enum SearchParameterType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SearchParameterXpathUsage {
   @JsonValue('normal')
   normal,
@@ -112,6 +120,7 @@ enum SearchParameterXpathUsage {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RestMode {
   @JsonValue('client')
   client,
@@ -120,6 +129,7 @@ enum RestMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RestTransactionMode {
   @JsonValue('not-supported')
   not_supported,
@@ -132,6 +142,7 @@ enum RestTransactionMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DocumentMode {
   @JsonValue('producer')
   producer,
@@ -140,6 +151,7 @@ enum DocumentMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ParameterUse {
   @JsonValue('in')
   in_,
@@ -148,6 +160,7 @@ enum ParameterUse {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ResourceVersioning {
   @JsonValue('no-version')
   no_version,
@@ -158,6 +171,7 @@ enum ResourceVersioning {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ResourceConditionalDelete {
   @JsonValue('not-supported')
   not_supported,
@@ -168,6 +182,7 @@ enum ResourceConditionalDelete {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ResourceInteractionCode {
   @JsonValue('read')
   read,
@@ -190,6 +205,7 @@ enum ResourceInteractionCode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RestInteractionCode {
   @JsonValue('transaction')
   transaction,
@@ -200,6 +216,7 @@ enum RestInteractionCode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EventCategory {
   @JsonValue('Consequence')
   consequence,
@@ -210,6 +227,7 @@ enum EventCategory {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EventMode {
   @JsonValue('sender')
   sender,
@@ -218,6 +236,7 @@ enum EventMode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum OperationDefinitionBindingStrength {
   @JsonValue('required')
   required,
@@ -251,6 +270,7 @@ enum SearchParamType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SearchParamModifier {
   @JsonValue('missing')
   missing,

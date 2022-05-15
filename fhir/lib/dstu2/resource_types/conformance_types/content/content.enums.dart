@@ -10,6 +10,7 @@ enum StructureDefinitionStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum StructureDefinitionKind {
   @JsonValue('datatype')
   datatype,
@@ -20,6 +21,7 @@ enum StructureDefinitionKind {
   @JsonValue('unknown')
   unknown,
 }
+
 enum StructureDefinitionContextType {
   @JsonValue('resource')
   resource,
@@ -32,6 +34,7 @@ enum StructureDefinitionContextType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DataElementStatus {
   @JsonValue('draft')
   draft,
@@ -42,6 +45,7 @@ enum DataElementStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DataElementStringency {
   @JsonValue('comparable')
   comparable,

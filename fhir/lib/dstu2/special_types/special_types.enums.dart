@@ -12,6 +12,7 @@ enum NarrativeStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SlicingRules {
   @JsonValue('closed')
   closed,
@@ -22,6 +23,7 @@ enum SlicingRules {
   @JsonValue('unknown')
   unknown,
 }
+
 enum TypeAggregation {
   @JsonValue('contained')
   contained,
@@ -32,6 +34,7 @@ enum TypeAggregation {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ConstraintSeverity {
   @JsonValue('error')
   error,
@@ -40,6 +43,7 @@ enum ConstraintSeverity {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ElementDefinitionBindingStrength {
   @JsonValue('required')
   required,

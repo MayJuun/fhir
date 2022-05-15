@@ -24,6 +24,7 @@ enum ProcedureRequestStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ProcedureRequestPriority {
   @JsonValue('routine')
   routine,
@@ -36,6 +37,7 @@ enum ProcedureRequestPriority {
   @JsonValue('unknown')
   unknown,
 }
+
 enum CarePlanStatus {
   @JsonValue('proposed')
   proposed,
@@ -50,6 +52,7 @@ enum CarePlanStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum GoalStatus {
   @JsonValue('proposed')
   proposed,
@@ -72,6 +75,7 @@ enum GoalStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum NutritionOrderStatus {
   @JsonValue('proposed')
   proposed,
@@ -92,6 +96,7 @@ enum NutritionOrderStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ReferralRequestStatus {
   @JsonValue('draft')
   draft,
@@ -110,6 +115,7 @@ enum ReferralRequestStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DispenseEye {
   @JsonValue('right')
   right,
@@ -118,6 +124,7 @@ enum DispenseEye {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DispenseBase {
   @JsonValue('up')
   up,
@@ -130,6 +137,7 @@ enum DispenseBase {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RelatedPlanCode {
   @JsonValue('includes')
   includes,
@@ -140,6 +148,7 @@ enum RelatedPlanCode {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DetailStatus {
   @JsonValue('not-started')
   not_started,

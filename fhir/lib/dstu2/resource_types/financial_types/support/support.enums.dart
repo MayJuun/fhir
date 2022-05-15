@@ -8,6 +8,7 @@ enum EnrollmentResponseOutcome {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EligibilityResponseOutcome {
   @JsonValue('complete')
   complete,

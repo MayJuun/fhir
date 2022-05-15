@@ -10,6 +10,7 @@ enum ImplementationGuideStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum TestScriptStatus {
   @JsonValue('draft')
   draft,
@@ -20,6 +21,7 @@ enum TestScriptStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DependencyType {
   @JsonValue('reference')
   reference,
@@ -28,6 +30,7 @@ enum DependencyType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum PageKind {
   @JsonValue('page')
   page,
@@ -48,6 +51,7 @@ enum PageKind {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ResourcePurpose {
   @JsonValue('example')
   example,
@@ -64,6 +68,7 @@ enum ResourcePurpose {
   @JsonValue('unknown')
   unknown,
 }
+
 enum OperationAccept {
   @JsonValue('xml')
   xml,
@@ -72,6 +77,7 @@ enum OperationAccept {
   @JsonValue('unknown')
   unknown,
 }
+
 enum OperationContentType {
   @JsonValue('xml')
   xml,
@@ -80,6 +86,7 @@ enum OperationContentType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AssertDirection {
   @JsonValue('response')
   response,
@@ -88,6 +95,7 @@ enum AssertDirection {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AssertContentType {
   @JsonValue('xml')
   xml,
@@ -96,6 +104,7 @@ enum AssertContentType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AssertOperator {
   @JsonValue('equals')
   equals,
@@ -120,6 +129,7 @@ enum AssertOperator {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AssertResponse {
   @JsonValue('okay')
   okay,

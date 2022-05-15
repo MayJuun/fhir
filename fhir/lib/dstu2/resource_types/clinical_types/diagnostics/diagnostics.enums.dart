@@ -12,6 +12,7 @@ enum ImagingStudyAvailability {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DiagnosticReportStatus {
   @JsonValue('registered')
   registered,
@@ -30,6 +31,7 @@ enum DiagnosticReportStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ObservationStatus {
   @JsonValue('registered')
   registered,
@@ -46,6 +48,7 @@ enum ObservationStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SpecimenStatus {
   @JsonValue('available')
   available,
@@ -58,6 +61,7 @@ enum SpecimenStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DiagnosticOrderStatus {
   @JsonValue('proposed')
   proposed,
@@ -88,6 +92,7 @@ enum DiagnosticOrderStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DiagnosticOrderPriority {
   @JsonValue('routine')
   routine,
@@ -100,6 +105,7 @@ enum DiagnosticOrderPriority {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SeriesAvailability {
   @JsonValue('ONLINE')
   online,
@@ -112,6 +118,7 @@ enum SeriesAvailability {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RelatedType {
   @JsonValue('has-member')
   has_member,
@@ -128,6 +135,7 @@ enum RelatedType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum EventStatus {
   @JsonValue('proposed')
   proposed,
@@ -158,6 +166,7 @@ enum EventStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ItemStatus {
   @JsonValue('proposed')
   proposed,

@@ -10,6 +10,7 @@ enum ValueSetStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum NamingSystemStatus {
   @JsonValue('draft')
   draft,
@@ -20,6 +21,7 @@ enum NamingSystemStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum NamingSystemKind {
   @JsonValue('codesystem')
   codesystem,
@@ -30,6 +32,7 @@ enum NamingSystemKind {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ConceptMapStatus {
   @JsonValue('draft')
   draft,
@@ -40,6 +43,7 @@ enum ConceptMapStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum UniqueIdType {
   @JsonValue('oid')
   oid,
@@ -52,6 +56,7 @@ enum UniqueIdType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum TargetEquivalence {
   @JsonValue('equivalent')
   equivalent,
@@ -74,6 +79,7 @@ enum TargetEquivalence {
   @JsonValue('unknown')
   unknown,
 }
+
 enum FilterOp {
   @JsonValue('=')
   equal,

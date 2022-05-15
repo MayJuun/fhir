@@ -12,6 +12,7 @@ enum SubscriptionStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum IssueSeverity {
   @JsonValue('fatal')
   fatal,
@@ -24,6 +25,7 @@ enum IssueSeverity {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ChannelType {
   @JsonValue('rest-hook')
   rest_hook,
@@ -38,6 +40,7 @@ enum ChannelType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ResponseCode {
   @JsonValue('ok')
   ok,

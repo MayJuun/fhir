@@ -26,6 +26,7 @@ enum DeviceComponentMeasurementPrinciple {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DeviceMetricOperationalStatus {
   @JsonValue('on')
   on_,
@@ -36,6 +37,7 @@ enum DeviceMetricOperationalStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DeviceMetricColor {
   @JsonValue('black')
   black,
@@ -56,6 +58,7 @@ enum DeviceMetricColor {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DeviceMetricCategory {
   @JsonValue('measurement')
   measurement,
@@ -68,6 +71,7 @@ enum DeviceMetricCategory {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DeviceStatus {
   @JsonValue('available')
   available,
@@ -78,6 +82,7 @@ enum DeviceStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum CalibrationType {
   @JsonValue('unspecified')
   unspecified,
@@ -90,6 +95,7 @@ enum CalibrationType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum CalibrationState {
   @JsonValue('not-calibrated')
   not_calibrated,

@@ -12,6 +12,7 @@ enum QuantityComparator {
   @JsonValue('unknown')
   unknown,
 }
+
 enum IdentifierUse {
   @JsonValue('usual')
   usual,
@@ -24,6 +25,7 @@ enum IdentifierUse {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AddressUse {
   @JsonValue('home')
   home,
@@ -36,6 +38,7 @@ enum AddressUse {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AddressType {
   @JsonValue('postal')
   postal,
@@ -46,6 +49,7 @@ enum AddressType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum HumanNameUse {
   @JsonValue('usual')
   usual,
@@ -64,6 +68,7 @@ enum HumanNameUse {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ContactPointSystem {
   @JsonValue('phone')
   phone,
@@ -78,6 +83,7 @@ enum ContactPointSystem {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ContactPointUse {
   @JsonValue('home')
   home,
@@ -92,6 +98,7 @@ enum ContactPointUse {
   @JsonValue('unknown')
   unknown,
 }
+
 enum RepeatUnits {
   @JsonValue('s')
   s,

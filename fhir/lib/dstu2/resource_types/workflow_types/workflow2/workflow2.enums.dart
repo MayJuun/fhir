@@ -12,6 +12,7 @@ enum ProcessRequestAction {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SupplyDeliveryStatus {
   @JsonValue('in-progress')
   in_progress,
@@ -22,6 +23,7 @@ enum SupplyDeliveryStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SupplyRequestStatus {
   @JsonValue('requested')
   requested,

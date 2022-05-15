@@ -22,6 +22,7 @@ enum OrderResponseOrderStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DeviceUseRequestStatus {
   @JsonValue('proposed')
   proposed,
@@ -46,6 +47,7 @@ enum DeviceUseRequestStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum DeviceUseRequestPriority {
   @JsonValue('routine')
   routine,
@@ -58,6 +60,7 @@ enum DeviceUseRequestPriority {
   @JsonValue('unknown')
   unknown,
 }
+
 enum CommunicationRequestStatus {
   @JsonValue('proposed')
   proposed,

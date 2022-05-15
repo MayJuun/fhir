@@ -18,6 +18,7 @@ enum AppointmentStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum SlotFreeBusyType {
   @JsonValue('busy')
   busy,
@@ -30,6 +31,7 @@ enum SlotFreeBusyType {
   @JsonValue('unknown')
   unknown,
 }
+
 enum AppointmentResponseParticipantStatus {
   @JsonValue('accepted')
   accepted,
@@ -46,6 +48,7 @@ enum AppointmentResponseParticipantStatus {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ParticipantRequired {
   @JsonValue('required')
   required,
@@ -56,6 +59,7 @@ enum ParticipantRequired {
   @JsonValue('unknown')
   unknown,
 }
+
 enum ParticipantStatus {
   @JsonValue('accepted')
   accepted,
