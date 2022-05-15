@@ -143,6 +143,7 @@ void testBasicOperators() {
       expect(walkPath('@T12:25 < @T12:25'), [false]);
       expect(walkPath('@T12:27 < @T12:25'), [false]);
       expect(walkPath("'String' < 'String'"), [false]);
+      expect(walkPath("'String' < 'string'"), [true]);
       expect(walkPath("'string' < 'String'"), [false]);
       expect(walkPath('10 < 5 // false'), [false]);
       expect(
