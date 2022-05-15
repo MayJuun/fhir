@@ -53,7 +53,10 @@ The passed resource WILL be added to this map as `'%resource'`, so you don't nee
 - Quantities, toQuantity, convertsToQuantity, unary operators for Quantities
 - trace
 - Reflection
-- Complicated, nested tests
+- Correct takeParser
+- System.something (models - https://hl7.org/fhirpath/#models)
+- Confirm equivalence works properly
+- Correct some of the issues with "this is type"
 
 ### Notes on Structure
 

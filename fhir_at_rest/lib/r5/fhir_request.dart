@@ -522,7 +522,7 @@ class FhirRequest with _$FhirRequest {
         mimeType: m.mimeType,
       ),
       transaction: (m) async {
-        if (m.bundle.type != BundleType.transaction) {
+        if (m.bundle.type != Code('transaction')) {
           return _operationOutcome(
               'A Transaction request was made, but no Bundle was included.');
         }
@@ -549,7 +549,7 @@ class FhirRequest with _$FhirRequest {
         );
       },
       batch: (m) async {
-        if (m.bundle.type != BundleType.batch) {
+        if (m.bundle.type != Code('batch')) {
           return _operationOutcome(
               'A Batch request was made, but the included Bundle is not a'
               ' batch type.');
