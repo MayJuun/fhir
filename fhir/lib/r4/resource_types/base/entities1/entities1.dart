@@ -150,10 +150,6 @@ class Endpoint with Resource, _$Endpoint {
     @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _Endpoint;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Endpoint.fromYaml(dynamic yaml) => yaml is String
       ? Endpoint.fromJson(
@@ -372,10 +368,6 @@ class HealthcareService with Resource, _$HealthcareService {
         Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _HealthcareService;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
@@ -821,10 +813,6 @@ class Location with Resource, _$Location {
     List<Reference>? endpoint,
   }) = _Location;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Location.fromYaml(dynamic yaml) => yaml is String
       ? Location.fromJson(
@@ -1154,10 +1142,6 @@ class Organization with Resource, _$Organization {
     List<Reference>? endpoint,
   }) = _Organization;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Organization.fromYaml(dynamic yaml) => yaml is String
       ? Organization.fromJson(
@@ -1393,10 +1377,6 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     List<ContactPoint>? telecom,
     List<Reference>? endpoint,
   }) = _OrganizationAffiliation;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OrganizationAffiliation.fromYaml(dynamic yaml) => yaml is String

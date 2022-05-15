@@ -49,10 +49,6 @@ class Media with Resource, _$Media {
     required Attachment content,
   }) = _Media;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Media.fromYaml(dynamic yaml) => yaml is String
       ? Media.fromJson(
@@ -96,10 +92,6 @@ class Binary with Resource, _$Binary {
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     Base64Binary? content,
   }) = _Binary;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Binary.fromYaml(dynamic yaml) => yaml is String
@@ -149,10 +141,6 @@ class Bundle with Resource, _$Bundle {
     List<BundleEntry>? entry,
     Signature? signature,
   }) = _Bundle;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
@@ -446,10 +434,6 @@ class Basic with Resource, _$Basic {
     Date? created,
     @JsonKey(name: '_created') Element? createdElement,
   }) = _Basic;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Basic.fromYaml(dynamic yaml) => yaml is String

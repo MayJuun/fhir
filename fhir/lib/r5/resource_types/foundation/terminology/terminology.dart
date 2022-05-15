@@ -185,10 +185,6 @@ class CodeSystem with Resource, _$CodeSystem {
     List<CodeSystemConcept>? concept,
   }) = _CodeSystem;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystem.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystem.fromJson(
@@ -755,10 +751,6 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(name: '_targetCanonical') Element? targetCanonicalElement,
     List<ConceptMapGroup>? group,
   }) = _ConceptMap;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
@@ -1328,10 +1320,6 @@ class ConceptMap2 with Resource, _$ConceptMap2 {
     @JsonKey(name: '_targetCanonical') Element? targetCanonicalElement,
     List<ConceptMap2Group>? group,
   }) = _ConceptMap2;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMap2.fromYaml(dynamic yaml) => yaml is String
@@ -1931,10 +1919,6 @@ class NamingSystem with Resource, _$NamingSystem {
     required List<NamingSystemUniqueId> uniqueId,
   }) = _NamingSystem;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystem.fromJson(
@@ -2208,10 +2192,6 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     TerminologyCapabilitiesTranslation? translation,
     TerminologyCapabilitiesClosure? closure,
   }) = _TerminologyCapabilities;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilities.fromYaml(dynamic yaml) => yaml is String
@@ -3044,10 +3024,6 @@ class ValueSet with Resource, _$ValueSet {
     ValueSetExpansion? expansion,
     ValueSetScope? scope,
   }) = _ValueSet;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String

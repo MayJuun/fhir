@@ -258,10 +258,6 @@ class Measure with Resource, _$Measure {
     List<MeasureSupplementalData>? supplementalData,
   }) = _Measure;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Measure.fromYaml(dynamic yaml) => yaml is String
       ? Measure.fromJson(
@@ -738,10 +734,6 @@ class MeasureReport with Resource, _$MeasureReport {
     List<MeasureReportGroup>? group,
     List<Reference>? evaluatedResource,
   }) = _MeasureReport;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureReport.fromYaml(dynamic yaml) => yaml is String
@@ -1302,10 +1294,6 @@ class TestReport with Resource, _$TestReport {
     List<TestReportTest>? test,
     TestReportTeardown? teardown,
   }) = _TestReport;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReport.fromYaml(dynamic yaml) => yaml is String
@@ -2035,10 +2023,6 @@ class TestScript with Resource, _$TestScript {
     List<TestScriptTest>? test,
     TestScriptTeardown? teardown,
   }) = _TestScript;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScript.fromYaml(dynamic yaml) => yaml is String

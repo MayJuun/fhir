@@ -47,10 +47,6 @@ class Questionnaire with Resource, _$Questionnaire {
     required QuestionnaireGroup group,
   }) = _Questionnaire;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Questionnaire.fromYaml(dynamic yaml) => yaml is String
       ? Questionnaire.fromJson(
@@ -212,10 +208,6 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     Reference? encounter,
     QuestionnaireResponseGroup? group,
   }) = _QuestionnaireResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
@@ -414,10 +406,6 @@ class Provenance with Resource, _$Provenance {
     List<Signature>? signature,
   }) = _Provenance;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
       ? Provenance.fromJson(
@@ -603,10 +591,6 @@ class AuditEvent with Resource, _$AuditEvent {
     required AuditEventSource source,
     List<AuditEventObject>? object,
   }) = _AuditEvent;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String

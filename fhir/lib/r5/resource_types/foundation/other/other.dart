@@ -74,10 +74,6 @@ class Basic with Resource, _$Basic {
     Reference? author,
   }) = _Basic;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Basic.fromYaml(dynamic yaml) => yaml is String
       ? Basic.fromJson(
@@ -148,10 +144,6 @@ class Binary with Resource, _$Binary {
     Base64Binary? data,
     @JsonKey(name: '_data') Element? dataElement,
   }) = _Binary;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Binary.fromYaml(dynamic yaml) => yaml is String
@@ -239,10 +231,6 @@ class Bundle with Resource, _$Bundle {
     List<BundleEntry>? entry,
     Signature? signature,
   }) = _Bundle;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
@@ -692,10 +680,6 @@ class Linkage with Resource, _$Linkage {
     required List<LinkageItem> item,
   }) = _Linkage;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Linkage.fromYaml(dynamic yaml) => yaml is String
       ? Linkage.fromJson(
@@ -866,10 +850,6 @@ class MessageHeader with Resource, _$MessageHeader {
     List<Reference>? focus,
     Canonical? definition,
   }) = _MessageHeader;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
@@ -1156,10 +1136,6 @@ class OperationOutcome with Resource, _$OperationOutcome {
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcome.fromJson(
@@ -1306,10 +1282,6 @@ class Parameters with Resource, _$Parameters {
     @JsonKey(name: '_language') Element? languageElement,
     List<ParametersParameter>? parameter,
   }) = _Parameters;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
@@ -1746,10 +1718,6 @@ class Subscription with Resource, _$Subscription {
     @JsonKey(name: '_maxCount') Element? maxCountElement,
   }) = _Subscription;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Subscription.fromYaml(dynamic yaml) => yaml is String
       ? Subscription.fromJson(
@@ -1927,10 +1895,6 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     Canonical? topic,
     List<CodeableConcept>? error,
   }) = _SubscriptionStatus;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionStatus.fromYaml(dynamic yaml) => yaml is String
@@ -2181,10 +2145,6 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     List<SubscriptionTopicCanFilterBy>? canFilterBy,
     List<SubscriptionTopicNotificationShape>? notificationShape,
   }) = _SubscriptionTopic;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionTopic.fromYaml(dynamic yaml) => yaml is String

@@ -182,10 +182,6 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     List<CapabilityStatementDocument>? document,
   }) = _CapabilityStatement;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement.fromJson(
@@ -1326,10 +1322,6 @@ class CapabilityStatement2 with Resource, _$CapabilityStatement2 {
     List<CapabilityStatement2Rest>? rest,
   }) = _CapabilityStatement2;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement2.fromJson(
@@ -2138,10 +2130,6 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     List<CompartmentDefinitionResource>? resource,
   }) = _CompartmentDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompartmentDefinition.fromYaml(dynamic yaml) => yaml is String
       ? CompartmentDefinition.fromJson(
@@ -2372,10 +2360,6 @@ class ExampleScenario with Resource, _$ExampleScenario {
     List<ExampleScenarioProcess>? process,
     List<Canonical>? workflow,
   }) = _ExampleScenario;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenario.fromYaml(dynamic yaml) => yaml is String
@@ -3138,10 +3122,6 @@ class GraphDefinition with Resource, _$GraphDefinition {
     List<GraphDefinitionLink>? link,
   }) = _GraphDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinition.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinition.fromJson(
@@ -3558,10 +3538,6 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     ImplementationGuideDefinition? definition,
     ImplementationGuideManifest? manifest,
   }) = _ImplementationGuide;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
@@ -4520,10 +4496,6 @@ class MessageDefinition with Resource, _$MessageDefinition {
     Canonical? graph,
   }) = _MessageDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinition.fromYaml(dynamic yaml) => yaml is String
       ? MessageDefinition.fromJson(
@@ -4870,10 +4842,6 @@ class OperationDefinition with Resource, _$OperationDefinition {
     List<OperationDefinitionParameter>? parameter,
     List<OperationDefinitionOverload>? overload,
   }) = _OperationDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -5397,10 +5365,6 @@ class SearchParameter with Resource, _$SearchParameter {
     List<SearchParameterComponent>? component,
   }) = _SearchParameter;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameter.fromJson(
@@ -5664,10 +5628,6 @@ class StructureDefinition with Resource, _$StructureDefinition {
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
   }) = _StructureDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -6074,10 +6034,6 @@ class StructureMap with Resource, _$StructureMap {
     @JsonKey(name: 'import') List<Canonical>? import_,
     required List<StructureMapGroup> group,
   }) = _StructureMap;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMap.fromYaml(dynamic yaml) => yaml is String

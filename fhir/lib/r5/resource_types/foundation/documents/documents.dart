@@ -137,10 +137,6 @@ class Composition with Resource, _$Composition {
     List<CompositionSection>? section,
   }) = _Composition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Composition.fromYaml(dynamic yaml) => yaml is String
       ? Composition.fromJson(
@@ -471,10 +467,6 @@ class DocumentManifest with Resource, _$DocumentManifest {
     List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentManifest.fromYaml(dynamic yaml) => yaml is String
       ? DocumentManifest.fromJson(
@@ -681,10 +673,6 @@ class DocumentReference with Resource, _$DocumentReference {
     Reference? sourcePatientInfo,
     List<Reference>? related,
   }) = _DocumentReference;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String

@@ -274,10 +274,6 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
     List<EffectEvidenceSynthesisCertainty>? certainty,
   }) = _EffectEvidenceSynthesis;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EffectEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
       ? EffectEvidenceSynthesis.fromJson(
@@ -1023,10 +1019,6 @@ class Evidence with Resource, _$Evidence {
     List<Reference>? outcome,
   }) = _Evidence;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Evidence.fromYaml(dynamic yaml) => yaml is String
       ? Evidence.fromJson(
@@ -1309,10 +1301,6 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(name: '_type') Element? typeElement,
     required List<EvidenceVariableCharacteristic> characteristic,
   }) = _EvidenceVariable;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
@@ -1799,10 +1787,6 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
     Reference? outcome,
   }) = _ResearchDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ResearchDefinition.fromJson(
@@ -2139,10 +2123,6 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
     @JsonKey(name: '_variableType') Element? variableTypeElement,
     required List<ResearchElementDefinitionCharacteristic> characteristic,
   }) = _ResearchElementDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchElementDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -2613,10 +2593,6 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
     RiskEvidenceSynthesisRiskEstimate? riskEstimate,
     List<RiskEvidenceSynthesisCertainty>? certainty,
   }) = _RiskEvidenceSynthesis;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String

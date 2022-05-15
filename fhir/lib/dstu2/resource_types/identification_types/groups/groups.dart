@@ -44,10 +44,6 @@ class Organization with Resource, _$Organization {
     // @JsonKey(name: '_alias') Element? aliasElement,
   }) = _Organization;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Organization.fromYaml(dynamic yaml) => yaml is String
       ? Organization.fromJson(
@@ -166,10 +162,6 @@ class HealthcareService with Resource, _$HealthcareService {
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
   }) = _HealthcareService;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
@@ -363,10 +355,6 @@ class Group with Resource, _$Group {
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
   }) = _Group;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Group.fromYaml(dynamic yaml) => yaml is String

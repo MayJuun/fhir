@@ -60,10 +60,6 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     required ImplementationGuidePage page,
   }) = _ImplementationGuide;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuide.fromJson(
@@ -399,10 +395,6 @@ class TestScript with Resource, _$TestScript {
     List<TestScriptTest>? test,
     TestScriptTeardown? teardown,
   }) = _TestScript;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScript.fromYaml(dynamic yaml) => yaml is String

@@ -49,10 +49,6 @@ class Coverage with Resource, _$Coverage {
     List<Reference>? contract,
   }) = _Coverage;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
       ? Coverage.fromJson(
@@ -107,10 +103,6 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     Reference? provider,
     Reference? organization,
   }) = _EligibilityRequest;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
@@ -173,10 +165,6 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     Reference? requestOrganization,
   }) = _EligibilityResponse;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
       ? EligibilityResponse.fromJson(
@@ -234,10 +222,6 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     required Reference coverage,
     required Coding relationship,
   }) = _EnrollmentRequest;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
@@ -299,10 +283,6 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Reference? requestProvider,
     Reference? requestOrganization,
   }) = _EnrollmentResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String

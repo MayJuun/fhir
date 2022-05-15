@@ -272,10 +272,6 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     List<ActivityDefinitionDynamicValue>? dynamicValue,
   }) = _ActivityDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ActivityDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ActivityDefinition.fromJson(
@@ -645,10 +641,6 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     List<ConditionDefinitionQuestionnaire>? questionnaire,
     List<ConditionDefinitionPlan>? plan,
   }) = _ConditionDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConditionDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -1119,10 +1111,6 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     DeviceDefinitionCorrectiveAction? correctiveAction,
     List<DeviceDefinitionChargeItem>? chargeItem,
   }) = _DeviceDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -2395,10 +2383,6 @@ class EventDefinition with Resource, _$EventDefinition {
     required List<TriggerDefinition> trigger,
   }) = _EventDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EventDefinition.fromYaml(dynamic yaml) => yaml is String
       ? EventDefinition.fromJson(
@@ -2625,10 +2609,6 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     List<Reference>? hasMember,
     List<ObservationDefinitionComponent>? component,
   }) = _ObservationDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ObservationDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -3091,10 +3071,6 @@ class PlanDefinition with Resource, _$PlanDefinition {
     List<PlanDefinitionActor>? actor,
     List<PlanDefinitionAction>? action,
   }) = _PlanDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -4176,10 +4152,6 @@ class Questionnaire with Resource, _$Questionnaire {
     List<QuestionnaireItem>? item,
   }) = _Questionnaire;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Questionnaire.fromYaml(dynamic yaml) => yaml is String
       ? Questionnaire.fromJson(
@@ -4821,10 +4793,6 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     List<CodeableConcept>? collection,
     List<SpecimenDefinitionTypeTested>? typeTested,
   }) = _SpecimenDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenDefinition.fromYaml(dynamic yaml) => yaml is String

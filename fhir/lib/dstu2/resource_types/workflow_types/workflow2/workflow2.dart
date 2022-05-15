@@ -47,10 +47,6 @@ class ProcessRequest with Resource, _$ProcessRequest {
     Period? period,
   }) = _ProcessRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ProcessRequest.fromYaml(dynamic yaml) => yaml is String
       ? ProcessRequest.fromJson(
@@ -149,10 +145,6 @@ class ProcessResponse with Resource, _$ProcessResponse {
     List<ProcessResponseNotes>? notes,
     List<Coding>? error,
   }) = _ProcessResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ProcessResponse.fromYaml(dynamic yaml) => yaml is String
@@ -256,10 +248,6 @@ class SupplyRequest with Resource, _$SupplyRequest {
     SupplyRequestWhen? when,
   }) = _SupplyRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequest.fromJson(
@@ -361,10 +349,6 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     Reference? destination,
     List<Reference>? receiver,
   }) = _SupplyDelivery;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String

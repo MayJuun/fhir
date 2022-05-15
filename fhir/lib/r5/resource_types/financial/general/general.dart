@@ -101,10 +101,6 @@ class Account with Resource, _$Account {
     Reference? partOf,
   }) = _Account;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Account.fromYaml(dynamic yaml) => yaml is String
       ? Account.fromJson(
@@ -404,10 +400,6 @@ class ChargeItem with Resource, _$ChargeItem {
     List<Reference>? supportingInformation,
   }) = _ChargeItem;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItem.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItem.fromJson(
@@ -671,10 +663,6 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     List<ChargeItemDefinitionApplicability>? applicability,
     List<ChargeItemDefinitionPropertyGroup>? propertyGroup,
   }) = _ChargeItemDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItemDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -1083,10 +1071,6 @@ class Contract with Resource, _$Contract {
     Attachment? legallyBindingAttachment,
     Reference? legallyBindingReference,
   }) = _Contract;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Contract.fromYaml(dynamic yaml) => yaml is String
@@ -2525,10 +2509,6 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     Period? benefitPeriod,
     List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
   }) = _ExplanationOfBenefit;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
@@ -4310,10 +4290,6 @@ class InsurancePlan with Resource, _$InsurancePlan {
     List<InsurancePlanCoverage>? coverage,
     List<InsurancePlanPlan>? plan,
   }) = _InsurancePlan;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlan.fromYaml(dynamic yaml) => yaml is String

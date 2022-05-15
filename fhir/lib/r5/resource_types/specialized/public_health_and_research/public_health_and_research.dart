@@ -191,10 +191,6 @@ class ResearchStudy with Resource, _$ResearchStudy {
     List<ResearchStudyWebLocation>? webLocation,
   }) = _ResearchStudy;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudy.fromJson(
@@ -959,10 +955,6 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @JsonKey(name: '_actualArm') Element? actualArmElement,
     Reference? consent,
   }) = _ResearchSubject;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String

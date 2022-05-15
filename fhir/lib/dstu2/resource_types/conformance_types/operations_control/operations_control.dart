@@ -57,10 +57,6 @@ class Conformance with Resource, _$Conformance {
     List<ConformanceDocument>? document,
   }) = _Conformance;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Conformance.fromYaml(dynamic yaml) => yaml is String
       ? Conformance.fromJson(
@@ -132,10 +128,6 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     List<ConformanceMessaging>? messaging,
     List<ConformanceDocument>? document,
   }) = _CapabilityStatement;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
@@ -891,10 +883,6 @@ class OperationDefinition with Resource, _$OperationDefinition {
     List<OperationDefinitionParameter>? parameter,
   }) = _OperationDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinition.fromJson(
@@ -1087,10 +1075,6 @@ class SearchParameter with Resource, _$SearchParameter {
         SearchParameterXpathUsage? xpathUsage,
     List<Code>? target,
   }) = _SearchParameter;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String

@@ -177,10 +177,6 @@ class Coverage with Resource, _$Coverage {
     List<Reference>? contract,
   }) = _Coverage;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
       ? Coverage.fromJson(
@@ -599,10 +595,6 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     List<CoverageEligibilityRequestInsurance>? insurance,
     List<CoverageEligibilityRequestItem>? item,
   }) = _CoverageEligibilityRequest;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityRequest.fromYaml(dynamic yaml) => yaml is String
@@ -1129,10 +1121,6 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     List<CoverageEligibilityResponseError>? error,
   }) = _CoverageEligibilityResponse;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityResponse.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityResponse.fromJson(
@@ -1639,10 +1627,6 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     Reference? coverage,
   }) = _EnrollmentRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentRequest.fromJson(
@@ -1784,10 +1768,6 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Reference? organization,
     Reference? requestProvider,
   }) = _EnrollmentResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String

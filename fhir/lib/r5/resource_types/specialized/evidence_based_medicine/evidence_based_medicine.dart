@@ -119,10 +119,6 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
     @JsonKey(name: '_disposition') Element? dispositionElement,
   }) = _ArtifactAssessment;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ArtifactAssessment.fromYaml(dynamic yaml) => yaml is String
       ? ArtifactAssessment.fromJson(
@@ -411,10 +407,6 @@ class Citation with Resource, _$Citation {
     List<CitationStatusDate>? statusDate,
     CitationCitedArtifact? citedArtifact,
   }) = _Citation;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Citation.fromYaml(dynamic yaml) => yaml is String
@@ -2047,10 +2039,6 @@ class Evidence with Resource, _$Evidence {
     List<EvidenceCertainty>? certainty,
   }) = _Evidence;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Evidence.fromYaml(dynamic yaml) => yaml is String
       ? Evidence.fromJson(
@@ -2780,10 +2768,6 @@ class EvidenceReport with Resource, _$EvidenceReport {
     List<EvidenceReportSection>? section,
   }) = _EvidenceReport;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceReport.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceReport.fromJson(
@@ -3359,10 +3343,6 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(name: '_handling') Element? handlingElement,
     List<EvidenceVariableCategory>? category,
   }) = _EvidenceVariable;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String

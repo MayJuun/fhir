@@ -141,10 +141,6 @@ class AuditEvent with Resource, _$AuditEvent {
     List<AuditEventEntity>? entity,
   }) = _AuditEvent;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
       ? AuditEvent.fromJson(
@@ -802,10 +798,6 @@ class Consent with Resource, _$Consent {
     ConsentProvision? provision,
   }) = _Consent;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Consent.fromYaml(dynamic yaml) => yaml is String
       ? Consent.fromJson(
@@ -1410,10 +1402,6 @@ class Provenance with Resource, _$Provenance {
     List<ProvenanceEntity>? entity,
     List<Signature>? signature,
   }) = _Provenance;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String

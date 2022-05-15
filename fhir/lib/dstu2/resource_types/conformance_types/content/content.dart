@@ -73,10 +73,6 @@ class StructureDefinition with Resource, _$StructureDefinition {
     StructureDefinitionDifferential? differential,
   }) = _StructureDefinition;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinition.fromJson(
@@ -311,10 +307,6 @@ class DataElement with Resource, _$DataElement {
     List<DataElementMapping>? mapping,
     required List<ElementDefinition> element,
   }) = _DataElement;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DataElement.fromYaml(dynamic yaml) => yaml is String

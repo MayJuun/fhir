@@ -220,10 +220,6 @@ class Immunization with Resource, _$Immunization {
     List<ImmunizationProtocolApplied>? protocolApplied,
   }) = _Immunization;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Immunization.fromYaml(dynamic yaml) => yaml is String
       ? Immunization.fromJson(
@@ -771,10 +767,6 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     @JsonKey(name: '_seriesDosesString') Element? seriesDosesStringElement,
   }) = _ImmunizationEvaluation;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationEvaluation.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationEvaluation.fromJson(
@@ -898,10 +890,6 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     Reference? authority,
     required List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationRecommendation.fromYaml(dynamic yaml) => yaml is String
@@ -1245,10 +1233,6 @@ class Medication with Resource, _$Medication {
     List<MedicationIngredient>? ingredient,
     MedicationBatch? batch,
   }) = _Medication;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Medication.fromYaml(dynamic yaml) => yaml is String
@@ -1631,10 +1615,6 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     MedicationAdministrationDosage? dosage,
     List<Reference>? eventHistory,
   }) = _MedicationAdministration;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationAdministration.fromYaml(dynamic yaml) => yaml is String
@@ -2048,10 +2028,6 @@ class MedicationDispense with Resource, _$MedicationDispense {
     List<Reference>? eventHistory,
   }) = _MedicationDispense;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationDispense.fromYaml(dynamic yaml) => yaml is String
       ? MedicationDispense.fromJson(
@@ -2425,10 +2401,6 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     List<MedicationKnowledgeRegulatory>? regulatory,
     List<MedicationKnowledgeKinetics>? kinetics,
   }) = _MedicationKnowledge;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledge.fromYaml(dynamic yaml) => yaml is String
@@ -3912,10 +3884,6 @@ class MedicationRequest with Resource, _$MedicationRequest {
     List<Reference>? eventHistory,
   }) = _MedicationRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationRequest.fromYaml(dynamic yaml) => yaml is String
       ? MedicationRequest.fromJson(
@@ -4399,10 +4367,6 @@ class MedicationStatement with Resource, _$MedicationStatement {
     List<Annotation>? note,
     List<Dosage>? dosage,
   }) = _MedicationStatement;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationStatement.fromYaml(dynamic yaml) => yaml is String

@@ -138,10 +138,6 @@ class PaymentNotice with Resource, _$PaymentNotice {
     CodeableConcept? paymentStatus,
   }) = _PaymentNotice;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
       ? PaymentNotice.fromJson(
@@ -313,10 +309,6 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     CodeableConcept? formCode,
     List<PaymentReconciliationProcessNote>? processNote,
   }) = _PaymentReconciliation;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String

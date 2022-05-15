@@ -41,10 +41,6 @@ class BodySite with Resource, _$BodySite {
     required Reference patient,
   }) = _BodySite;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory BodySite.fromYaml(dynamic yaml) => yaml is String
       ? BodySite.fromJson(
@@ -113,10 +109,6 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<CodeableConcept>? codedDiagnosis,
     List<Attachment>? presentedForm,
   }) = _DiagnosticReport;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DiagnosticReport.fromYaml(dynamic yaml) => yaml is String
@@ -251,10 +243,6 @@ class ImagingManifest with Resource, _$ImagingManifest {
     @JsonKey(name: '_description') Element? descriptionElement,
     required List<ImagingManifestStudy> study,
   }) = _ImagingManifest;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ImagingManifest.fromYaml(dynamic yaml) => yaml is String
@@ -452,10 +440,6 @@ class ImagingStudy with Resource, _$ImagingStudy {
     List<ImagingStudySeries>? series,
   }) = _ImagingStudy;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ImagingStudy.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudy.fromJson(
@@ -642,10 +626,6 @@ class Observation with Resource, _$Observation {
     List<ObservationRelated>? related,
     List<ObservationComponent>? component,
   }) = _Observation;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Observation.fromYaml(dynamic yaml) => yaml is String
@@ -845,10 +825,6 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     List<QuestionnaireResponseItem>? item,
   }) = _QuestionnaireResponse;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponse.fromJson(
@@ -1018,10 +994,6 @@ class Sequence with Resource, _$Sequence {
     List<SequenceRepository>? repository,
     List<Reference>? pointer,
   }) = _Sequence;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Sequence.fromYaml(dynamic yaml) => yaml is String
@@ -1292,10 +1264,6 @@ class Specimen with Resource, _$Specimen {
     List<SpecimenContainer>? container,
     List<Annotation>? note,
   }) = _Specimen;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Specimen.fromYaml(dynamic yaml) => yaml is String

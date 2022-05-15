@@ -199,10 +199,6 @@ class Communication with Resource, _$Communication {
     List<Annotation>? note,
   }) = _Communication;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Communication.fromYaml(dynamic yaml) => yaml is String
       ? Communication.fromJson(
@@ -497,10 +493,6 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     List<Reference>? reasonReference,
     List<Annotation>? note,
   }) = _CommunicationRequest;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
@@ -817,10 +809,6 @@ class DeviceRequest with Resource, _$DeviceRequest {
     List<Reference>? relevantHistory,
   }) = _DeviceRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceRequest.fromYaml(dynamic yaml) => yaml is String
       ? DeviceRequest.fromJson(
@@ -1076,10 +1064,6 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     List<Annotation>? note,
   }) = _DeviceUseStatement;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUseStatement.fromJson(
@@ -1283,10 +1267,6 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     List<DataRequirement>? dataRequirement,
   }) = _GuidanceResponse;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
       ? GuidanceResponse.fromJson(
@@ -1442,10 +1422,6 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     Reference? destination,
     List<Reference>? receiver,
   }) = _SupplyDelivery;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
@@ -1705,10 +1681,6 @@ class SupplyRequest with Resource, _$SupplyRequest {
     Reference? deliverFrom,
     Reference? deliverTo,
   }) = _SupplyRequest;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String

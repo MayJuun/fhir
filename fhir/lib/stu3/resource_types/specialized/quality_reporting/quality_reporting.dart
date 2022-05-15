@@ -93,10 +93,6 @@ class Measure with Resource, _$Measure {
     List<MeasureSupplementalData>? supplementalData,
   }) = _Measure;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Measure.fromYaml(dynamic yaml) => yaml is String
       ? Measure.fromJson(
@@ -330,10 +326,6 @@ class MeasureReport with Resource, _$MeasureReport {
     List<MeasureReportGroup>? group,
     Reference? evaluatedResources,
   }) = _MeasureReport;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReport.fromYaml(dynamic yaml) => yaml is String

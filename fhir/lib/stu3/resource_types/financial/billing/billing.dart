@@ -65,10 +65,6 @@ class Claim with Resource, _$Claim {
     Money? total,
   }) = _Claim;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Claim.fromYaml(dynamic yaml) => yaml is String
       ? Claim.fromJson(
@@ -657,10 +653,6 @@ class ClaimResponse with Resource, _$ClaimResponse {
     List<Reference>? communicationRequest,
     List<ClaimResponseInsurance>? insurance,
   }) = _ClaimResponse;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponse.fromYaml(dynamic yaml) => yaml is String

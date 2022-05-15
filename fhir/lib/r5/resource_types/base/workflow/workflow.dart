@@ -147,10 +147,6 @@ class Appointment with Resource, _$Appointment {
     List<Period>? requestedPeriod,
   }) = _Appointment;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
       ? Appointment.fromJson(
@@ -331,10 +327,6 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _AppointmentResponse;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentResponse.fromJson(
@@ -436,10 +428,6 @@ class Schedule with Resource, _$Schedule {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _Schedule;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
@@ -560,10 +548,6 @@ class Slot with Resource, _$Slot {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _Slot;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Slot.fromYaml(dynamic yaml) => yaml is String
@@ -748,10 +732,6 @@ class Task with Resource, _$Task {
     List<TaskInput>? input,
     List<TaskOutput>? output,
   }) = _Task;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Task.fromYaml(dynamic yaml) => yaml is String
@@ -1552,10 +1532,6 @@ class Transport with Resource, _$Transport {
     Reference? history,
   }) = _Transport;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Transport.fromYaml(dynamic yaml) => yaml is String
       ? Transport.fromJson(
@@ -2287,10 +2263,6 @@ class VerificationResult with Resource, _$VerificationResult {
     VerificationResultAttestation? attestation,
     List<VerificationResultValidator>? validator,
   }) = _VerificationResult;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory VerificationResult.fromYaml(dynamic yaml) => yaml is String

@@ -61,10 +61,6 @@ class Patient with Resource, _$Patient {
     List<PatientLink>? link,
   }) = _Patient;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Patient.fromYaml(dynamic yaml) => yaml is String
       ? Patient.fromJson(
@@ -304,10 +300,6 @@ class Practitioner with Resource, _$Practitioner {
     List<CodeableConcept>? communication,
   }) = _Practitioner;
 
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Practitioner.fromYaml(dynamic yaml) => yaml is String
       ? Practitioner.fromJson(
@@ -460,10 +452,6 @@ class RelatedPerson with Resource, _$RelatedPerson {
 
     // @JsonKey(name: '_active') Element? activeElement,
   }) = _RelatedPerson;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory RelatedPerson.fromYaml(dynamic yaml) => yaml is String
