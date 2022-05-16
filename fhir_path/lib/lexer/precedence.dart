@@ -40,8 +40,10 @@ const operatorOrderMap = {
   /// #06: is, as
   IsParser: 6,
   AsParser: 6,
+
   /// deprecated
   IsFunctionParser: 6,
+
   /// deprecated
   AsFunctionParser: 6,
 

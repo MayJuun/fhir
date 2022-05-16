@@ -13,5 +13,5 @@ import '../../fhir_path.dart';
 final Parser<AsFunctionParser> asFunctionLexer =
     (string('as(') | string('.as(')).map((_) => AsFunctionParser());
 
-    final Parser<IsFunctionParser> isFunctionLexer =
+final Parser<IsFunctionParser> isFunctionLexer =
     (string('as(') | string('.as(')).map((_) => IsFunctionParser());

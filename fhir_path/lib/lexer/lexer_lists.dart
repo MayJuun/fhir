@@ -150,5 +150,4 @@ final simpleLexer = toBooleanLexer |
 
 /// Deprecated - these Lexers will throw errors, but this allows us
 /// to provide more useful error messages
-final deprecatedLexer = asFunctionLexer |
-    isFunctionLexer;
+final deprecatedLexer = asFunctionLexer | isFunctionLexer;
