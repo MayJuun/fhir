@@ -3,6 +3,9 @@
 projectId="demos-322021"
 projectName="fhir-path-demo"
 
+gcloud config set project $projecId
+# gcloud auth login
+
 flutter clean ; flutter pub get
 
 flutter build web --web-renderer canvaskit --release

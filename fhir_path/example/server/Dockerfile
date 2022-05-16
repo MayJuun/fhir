@@ -1,16 +1,24 @@
-################
-FROM google/dart:2.15.0
+# Specify the Dart SDK base image version using dart:<version> (ex: dart:2.12)
+FROM dart:stable AS build
 
+# Resolve app dependencies.
 WORKDIR /app
-COPY pubspec.yaml /app/pubspec.yaml
+COPY pubspec.* ./
 RUN dart pub get
+
+# Copy app source code and AOT compile it.
 COPY . .
+# Ensure packages are still up-to-date if anything has changed
 RUN dart pub get --offline
 RUN dart compile exe bin/server.dart -o bin/server
 
-########################
-FROM subfuzion/dart:slim
-COPY --from=0 /app/bin/server /app/bin/server
-COPY --from=0 /app/web /app/web
+# Build minimal serving image from AOT-compiled `/server` and required system
+# libraries and configuration files stored in `/runtime/` from the build stage.
+FROM scratch
+COPY --from=build /runtime/ /
+COPY --from=build /app/bin/server /app/bin/
+COPY --from=build /app/web /app/web
+
+# Start server.
 EXPOSE 8080
-ENTRYPOINT ["/app/bin/server"]
+CMD ["/app/bin/server"]
