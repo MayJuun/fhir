@@ -3,15 +3,14 @@ description: A Dart/Flutter package for authorization & authentication, includes
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: '>=2.16.0 <3.0.0'
+  sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.6.2
+  fhir: ^0.8.0
   fhir_auth:
     path: ../../fhir_auth
   flutter:
     sdk: flutter
-  lints: ^1.0.1
 
 flutter:
   uses-material-design: true
