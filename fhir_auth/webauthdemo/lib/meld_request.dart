@@ -1,4 +1,5 @@
 import 'package:fhir/r4.dart';
+import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
 
 import 'api.dart';
@@ -6,7 +7,7 @@ import 'new_patient.dart';
 import 'scopes.dart';
 
 Future<void> meldRequest(Uri fhirCallback) async {
-  final client = SmartClient.getSmartClient(
+  final client = SmartFhirClient(
     fhirUri: FhirUri(Api.meldUrl),
     clientId: Api.meldClientId,
     redirectUri: FhirUri(fhirCallback),
@@ -15,13 +16,11 @@ Future<void> meldRequest(Uri fhirCallback) async {
 
   await client.login();
 
-  print(client.fhirUri?.value);
-
-  if (client.fhirUri?.value != null) {
+  if (client.fhirUri.value != null) {
     final _newPatient = newPatient();
     print('Patient to be uploaded:\n${_newPatient.toJson()}');
     final request1 = FhirRequest.create(
-      base: client.fhirUri!.value!,
+      base: client.fhirUri.value!,
       //?? Uri.parse('127.0.0.1'),
       resource: _newPatient,
       client: client,
@@ -39,7 +38,7 @@ Future<void> meldRequest(Uri fhirCallback) async {
       print(newId);
     } else {
       final request2 = FhirRequest.read(
-        base: client.fhirUri?.value ?? Uri.parse('127.0.0.1'),
+        base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
         type: R4ResourceType.Patient,
         id: newId,
         client: client,

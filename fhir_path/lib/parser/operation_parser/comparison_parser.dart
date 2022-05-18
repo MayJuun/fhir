@@ -165,7 +165,7 @@ List executeComparisons(List results, ParserList before, ParserList after,
   }
 
   bool comparable(String param1, dynamic param2, Comparator comparator) {
-    var compareValue;
+    final compareValue;
     switch (param2.runtimeType) {
       case num:
         compareValue = num.tryParse(param1);

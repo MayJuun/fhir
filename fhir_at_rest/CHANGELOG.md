@@ -1,5 +1,10 @@
 # fhir_at_rest
 
+## [0.8.1]
+
+* It's annoying that headers were required for requests, especially if they weren't used
+* Now headers are optional
+
 ## [0.8.0]
 
 * Updated to be in line with base FHIR package and with Flutter 3.0.0

@@ -63,7 +63,7 @@ class Scopes with _$Scopes {
   List<String> scopesList() {
     List<String> returnValue = [];
     if (openid ?? false) {
-      returnValue.add('openId');
+      returnValue.add('openid');
     }
     if (fhirUser ?? false) {
       returnValue.add('fhirUser');

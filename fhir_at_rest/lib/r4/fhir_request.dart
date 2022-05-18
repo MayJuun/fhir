@@ -450,9 +450,7 @@ class FhirRequest with _$FhirRequest {
   /// after creating a request with the above constructors, they can be called
   /// to interact with the server by using this method. If necessary,
   /// authorization or other headers can be passed in as well
-  Future<Resource> request({
-    required Map<String, String> headers,
-  }) async {
+  Future<Resource> request({Map<String, String>? headers}) async {
     return await map(
       read: (m) async => await _request(
         RestfulRequest.get_,
@@ -681,7 +679,7 @@ class FhirRequest with _$FhirRequest {
   Future<Resource> _request(
     RestfulRequest type,
     String uri,
-    Map<String, String> headers,
+    Map<String, String>? headers,
     String requestType, {
     Resource? resource,
     String? formData,
@@ -823,13 +821,14 @@ class FhirRequest with _$FhirRequest {
   Future<Resource> _makeRequest({
     required RestfulRequest type,
     required String thisRequest,
-    required Map<String, String> headers,
+    Map<String, String>? headers,
     Map<String, dynamic>? resource,
     String? formData,
     Encoding? encoding,
     MimeType? mimeType,
     Client? client,
   }) async {
+    headers ??= <String, String>{};
     Response result;
     client ??= Client();
 

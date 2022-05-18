@@ -17,7 +17,7 @@ Future<void> main() async {
     offlineAccess: true,
   );
 
-  final client = SmartClient.getSmartClient(
+  final client = SmartFhirClient(
     fhirUri: FhirUri(url),
     clientId: clientId,
     redirectUri: FhirUri(fhirCallback),
@@ -26,11 +26,11 @@ Future<void> main() async {
 
   try {
     await client.login();
-    if (client.fhirUri?.value != null) {
+    if (client.fhirUri.value != null) {
       final _newPatient = Patient(id: Id('12345'));
       print('Patient to be uploaded:\n${_newPatient.toJson()}');
       final request1 = FhirRequest.create(
-        base: client.fhirUri!.value!,
+        base: client.fhirUri.value!,
         //?? Uri.parse('127.0.0.1'),
         resource: _newPatient,
         client: client,
@@ -48,7 +48,7 @@ Future<void> main() async {
         print(newId);
       } else {
         final request2 = FhirRequest.read(
-          base: client.fhirUri!.value ?? Uri.parse('127.0.0.1'),
+          base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
           type: R4ResourceType.Patient,
           id: newId,
           client: client,
@@ -65,4 +65,31 @@ Future<void> main() async {
     print('Error $e');
     print('Stack $stack');
   }
+}
+
+/// Just to remove errors from this file, doesn't actually do anything
+class FhirRequest {
+  Uri? base;
+  R4ResourceType? type;
+  Id? id;
+  FhirClient? client;
+  Resource? resource;
+
+  FhirRequest(this.base, this.type, this.id, this.client, this.resource);
+
+  dynamic request() => '';
+
+  factory FhirRequest.read({
+    Uri? base,
+    R4ResourceType? type,
+    Id? id,
+    FhirClient? client,
+  }) =>
+      FhirRequest(base, type, id, client, null);
+  factory FhirRequest.create({
+    Uri? base,
+    Resource? resource,
+    FhirClient? client,
+  }) =>
+      FhirRequest(base, null, null, client, resource);
 }

@@ -1,7 +1,7 @@
 import 'package:fhir/r4.dart';
 import 'package:fhir_auth/r4.dart';
 
-Future<Resource?> request(SmartClient client) async {
+Future<Resource?> request(SmartFhirClient client) async {
   await client.login();
 
   print('Patient launch context Id: ${client.patientId}');

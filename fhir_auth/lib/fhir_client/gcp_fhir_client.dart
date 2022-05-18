@@ -44,12 +44,10 @@ class GcpFhirClient extends SecureFhirClient {
 
   @override
   Future<Map<String, String>> newHeaders(Map<String, String>? headers) async {
-    if (headers == null) {
-      return await _googleSignIn.currentUser?.authHeaders ?? <String, String>{};
-    } else {
-      headers.addAll(
-          await _googleSignIn.currentUser?.authHeaders ?? <String, String>{});
-      return headers;
-    }
+    print(await _googleSignIn.currentUser?.authHeaders);
+    headers ??= <String, String>{};
+    headers.addAll(
+        await _googleSignIn.currentUser?.authHeaders ?? <String, String>{});
+    return headers;
   }
 }

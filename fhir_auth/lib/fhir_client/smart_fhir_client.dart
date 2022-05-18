@@ -1,18 +1,17 @@
 // ignore_for_file: prefer_collection_literals, sort_constructors_first
-
 import 'dart:convert';
-import 'dart:html' as html;
 
-import 'package:flutter_web_auth/flutter_web_auth.dart';
-import 'package:oauth2/oauth2.dart' as oauth2;
+import 'package:oauth2/oauth2.dart';
 import 'package:collection/collection.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:http/http.dart' as http;
-// import 'package:oauth2_client/oauth2_client.dart';
-import 'package:oauth2_client/oauth2_helper.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-// import 'package:url_launcher/url_launcher.dart';
+
+import 'authenticate/base_authentication.dart';
+import 'authenticate/authenticate.dart'
+    // ignore: uri_does_not_exist
+    if (dart.library.io) 'authenticate/mobile_authentication.dart'
+    // ignore: uri_does_not_exist
+    if (dart.library.html) 'authenticate/web_authentication.dart';
 
 import 'secure_fhir_client.dart';
 
@@ -25,7 +24,6 @@ class SmartFhirClient extends SecureFhirClient {
     List<String>? scopes,
     this.authorizeUrl,
     this.tokenUrl,
-    this.oAuth2Helper,
     String? launch,
     String? secret,
   }) : super(
@@ -33,10 +31,10 @@ class SmartFhirClient extends SecureFhirClient {
           clientId: clientId,
           redirectUri: redirectUri,
           scopes: [
-            'openid',
-            'profile',
-            'email',
-            'user/*.*',
+            // 'openid',
+            // 'profile',
+            // 'email',
+            // 'user/*.*',
             if (scopes != null) ...scopes
           ].toSet().toList(),
           launch: launch,
@@ -46,10 +44,9 @@ class SmartFhirClient extends SecureFhirClient {
   String? customUriScheme;
   FhirUri? authorizeUrl;
   FhirUri? tokenUrl;
-  // OAuth2Client? oAuth2Client;
-  OAuth2Helper? oAuth2Helper;
   Uri? responseUrl;
-  WebViewController? webViewController;
+  BaseAuthentication authClient = createAuthentication();
+  Client? client;
 
   Future<void> login() async {
     if (authorizeUrl == null || tokenUrl == null) {
@@ -57,129 +54,42 @@ class SmartFhirClient extends SecureFhirClient {
       authorizeUrl = _getUri(capabilityStatement, 'authorize');
       tokenUrl = _getUri(capabilityStatement, 'token');
     }
-    print(authorizeUrl);
-    print(tokenUrl);
-    final grant = oauth2.AuthorizationCodeGrant(
+
+    final grant = AuthorizationCodeGrant(
       clientId!,
       authorizeUrl!.value!,
       tokenUrl!.value!,
       secret: secret,
     );
-    print(grant);
-    final authorizationUrl = grant.getAuthorizationUrl(redirectUri!.value!);
-    print(authorizationUrl);
-    final popupLogin = html.window.open(
-        authorizeUrl.toString(),
-        'oauth2_client::authenticateWindow',
-        'menubar=no, status=no, scrollbars=no, menubar=no, width=1000, height=500');
+    var authorizationUrl = grant.getAuthorizationUrl(
+      redirectUri!.value!,
+      // scopes: scopes,
+    );
+    final params = Map.of(authorizationUrl.queryParameters);
+    params['aud'] = '$fhirUri';
+    authorizationUrl = authorizationUrl.replace(queryParameters: params);
+    final returnValue = await authClient.authenticate(
+      authorizationUrl: authorizationUrl,
+      redirectUri: redirectUri!,
+    );
 
-    var messageEvt = await html.window.onMessage.firstWhere(
-        (evt) => evt.origin == Uri.parse(redirectUri.toString()).origin);
-
-    popupLogin.close();
-
-    print(messageEvt.data); // await launchUrl(authorizationUrl);
-    // WebView(
-    //   javascriptMode: JavascriptMode.unrestricted,
-    //   initialUrl: authorizationUrl.toString(),
-    //   onWebViewCreated: (WebViewController controller) {
-    //     webViewController = controller;
-    //   },
-    //   navigationDelegate: (navReq) {
-    //     if (navReq.url.startsWith(redirectUri.toString())) {
-    //       responseUrl = Uri.parse(navReq.url);
-    //       return NavigationDecision.prevent;
-    //     }
-    //     return NavigationDecision.navigate;
-    //   },
-    // );
-    // webViewController.
-    // if (redirectUri != null) {
-    //   oAuth2Client = OAuth2Client(
-    //     redirectUri: redirectUri.toString(),
-    //     customUriScheme: redirectUri!.value?.scheme ?? redirectUri.toString(),
-    //     authorizeUrl: authorizeUrl.toString(),
-    //     tokenUrl: tokenUrl.toString(),
-    //   );
-    // }
-    // if (oAuth2Client != null) {
-    //   final tknResp = await oAuth2Client!.getTokenWithAuthCodeFlow(
-    //     clientId: clientId!,
-    //     scopes: scopes,
-    //     clientSecret: secret,
-    //   );
-
-    //   print(tknResp.accessToken);
-    // }
+    client = await grant
+        .handleAuthorizationResponse(Uri.parse(returnValue).queryParameters);
   }
 
   Future<void> logout() async {
-    // oAuth2Client = null;
-    oAuth2Helper = null;
+    client?.close();
+    client = null;
   }
 
-  void oAuth2HelperException() {
-    if (oAuth2Helper == null) {
-      throw Exception('Oauth2Helper unable to be instantiated and logged in');
+  @override
+  Future<Map<String, String>> newHeaders(Map<String, String>? headers) async {
+    headers ??= <String, String>{};
+    if (client?.credentials.accessToken != null) {
+      headers['Authorization'] = 'Bearer ${client!.credentials.accessToken}';
     }
-  }
-
-  Future<void> loginIfNeeded() async {
-    await loginIfNeeded();
-    oAuth2HelperException();
-  }
-
-  @override
-  Future<http.Response> get(Uri url, {Map<String, String>? headers}) async {
-    await loginIfNeeded();
-    return await oAuth2Helper!.get(url.toString(), headers: headers);
-  }
-
-  @override
-  Future<http.Response> put(
-    Uri url, {
-    Map<String, String>? headers,
-    Object? body,
-    Encoding? encoding,
-  }) async {
-    await loginIfNeeded();
-    return await oAuth2Helper!
-        .put(url.toString(), headers: headers, body: body);
-  }
-
-  @override
-  Future<http.Response> post(
-    Uri url, {
-    Map<String, String>? headers,
-    Object? body,
-    Encoding? encoding,
-  }) async {
-    await loginIfNeeded();
-    return await oAuth2Helper!
-        .post(url.toString(), headers: headers, body: body);
-  }
-
-  @override
-  Future<http.Response> delete(
-    Uri url, {
-    Map<String, String>? headers,
-    Object? body,
-    Encoding? encoding,
-  }) async {
-    await loginIfNeeded();
-    return await oAuth2Helper!.delete(url.toString(), headers: headers);
-  }
-
-  @override
-  Future<http.Response> patch(
-    Uri url, {
-    Map<String, String>? headers,
-    Object? body,
-    Encoding? encoding,
-  }) async {
-    await loginIfNeeded();
-    return await oAuth2Helper!
-        .patch(url.toString(), headers: headers, body: body);
+    headers.addAll(authHeaders ?? <String, String>{});
+    return headers;
   }
 
   Future<Map<String, dynamic>> _getCapabilityStatement() async {

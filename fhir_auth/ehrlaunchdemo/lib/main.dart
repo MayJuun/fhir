@@ -44,7 +44,7 @@ class DemoPage extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(16, 30, 16, 0),
                   child: Text('No Client ID was supplied'))));
     }
-    final client = SmartClient.getSmartClient(
+    final client = SmartFhirClient(
       fhirUri: FhirUri(iss),
       clientId: clientId,
       redirectUri: FhirUri(fhirCallback),
