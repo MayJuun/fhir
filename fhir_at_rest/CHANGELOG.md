@@ -1,5 +1,9 @@
 # fhir_at_rest
 
+## [0.8.2]
+
+* Trying to return more useful error messages when something fails.
+
 ## [0.8.1]
 
 * It's annoying that headers were required for requests, especially if they weren't used

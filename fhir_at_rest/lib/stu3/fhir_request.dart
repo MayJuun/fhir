@@ -695,9 +695,9 @@ class FhirRequest with _$FhirRequest {
         mimeType: mimeType,
       );
       return result;
-    } catch (e) {
-      return _operationOutcome('Failed to complete a $requestType request, ',
-          diagnostics: 'Exception: $e');
+    } catch (e, stack) {
+      return _operationOutcome('Failed to complete a restful request, ',
+          diagnostics: 'Exception: $e\nStack: $stack');
     }
   }
 
@@ -897,9 +897,9 @@ class FhirRequest with _$FhirRequest {
             break;
           }
       }
-    } catch (e) {
+    } catch (e, stack) {
       return _operationOutcome('Failed to complete a restful request, ',
-          diagnostics: 'Exception: $e');
+          diagnostics: 'Exception: $e\nStack: $stack');
     }
 
     if (_errorCodes.containsKey(result.statusCode)) {
@@ -916,17 +916,50 @@ class FhirRequest with _$FhirRequest {
       ]);
     } else {
       final body = jsonDecode(result.body);
-      if (body?['response'] != null &&
-          body['response']['resourceType'] == 'OperationOutcome') {
-        final operationOutcome = OperationOutcome.fromJson(body['response']);
+      if (body?['response'] == null) {
+        return OperationOutcome(issue: [
+          OperationOutcomeIssue(
+            severity: OperationOutcomeIssueSeverity.error,
+            code: OperationOutcomeIssueCode.unknown,
+            details:
+                CodeableConcept(text: 'Result body had no defined response'),
+            diagnostics: '\nStatus Code: ${result.statusCode} -'
+                ' ${_errorCodes[result.statusCode]}'
+                '\nResult headers: ${result.headers}'
+                '\nResult body: ${result.body}',
+          )
+        ]);
+      } else if (body['response']['resourceType'] == 'OperationOutcome') {
+        var operationOutcome = OperationOutcome.fromJson(body['response']);
         if (body?['status'] != null || body?['message'] != null) {
-          operationOutcome.issue.add(OperationOutcomeIssue(
-              diagnostics:
-                  'Status: ${body?['status']}\nMessage: ${body?['message']}\n'));
+          operationOutcome = operationOutcome.copyWith(
+            issue: [
+              if (operationOutcome.issue.isNotEmpty) ...operationOutcome.issue,
+              OperationOutcomeIssue(
+                  diagnostics:
+                      'Status: ${body?['status']}\nMessage: ${body?['message']}\n'),
+            ],
+          );
         }
         return operationOutcome;
       } else {
-        return Resource.fromJson(jsonDecode(result.body));
+        final newResource = Resource.fromJson(jsonDecode(result.body));
+        if (newResource.resourceType == null) {
+          return OperationOutcome(issue: [
+            OperationOutcomeIssue(
+              severity: OperationOutcomeIssueSeverity.error,
+              code: OperationOutcomeIssueCode.unknown,
+              details: CodeableConcept(
+                  text: 'ResourceType returned was unrecognized'),
+              diagnostics: '\nStatus Code: ${result.statusCode} -'
+                  ' ${_errorCodes[result.statusCode]}'
+                  '\nResult headers: ${result.headers}'
+                  '\nResult body: ${result.body}',
+            )
+          ]);
+        } else {
+          return newResource;
+        }
       }
     }
   }
