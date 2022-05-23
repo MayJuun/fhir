@@ -32,7 +32,14 @@ class GcpFhirClient extends SecureFhirClient {
 
   late GoogleSignIn _googleSignIn;
 
-  Future<void> login() async => await _googleSignIn.signIn();
+  Future<void> login() async {
+    try {
+      await _googleSignIn.signIn();
+    } catch (e, stack) {
+      print('Exception: $e');
+      print('Stack at time of Exception: \n$stack');
+    }
+  }
 
   Future<void> logout() async => await _googleSignIn.signOut();
 
@@ -44,7 +51,6 @@ class GcpFhirClient extends SecureFhirClient {
 
   @override
   Future<Map<String, String>> newHeaders(Map<String, String>? headers) async {
-    print(await _googleSignIn.currentUser?.authHeaders);
     headers ??= <String, String>{};
     headers.addAll(
         await _googleSignIn.currentUser?.authHeaders ?? <String, String>{});

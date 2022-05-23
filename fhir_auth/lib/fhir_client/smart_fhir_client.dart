@@ -30,13 +30,7 @@ class SmartFhirClient extends SecureFhirClient {
           fhirUri: fhirUri,
           clientId: clientId,
           redirectUri: redirectUri,
-          scopes: [
-            // 'openid',
-            // 'profile',
-            // 'email',
-            // 'user/*.*',
-            if (scopes != null) ...scopes
-          ].toSet().toList(),
+          scopes: scopes,
           launch: launch,
           secret: secret,
         );
@@ -47,6 +41,8 @@ class SmartFhirClient extends SecureFhirClient {
   Uri? responseUrl;
   BaseAuthentication authClient = createAuthentication();
   Client? client;
+  String? patientId;
+  String? encounterId;
 
   Future<void> login() async {
     if (authorizeUrl == null || tokenUrl == null) {
@@ -63,18 +59,22 @@ class SmartFhirClient extends SecureFhirClient {
     );
     var authorizationUrl = grant.getAuthorizationUrl(
       redirectUri!.value!,
-      // scopes: scopes,
+      scopes: scopes,
     );
     final params = Map.of(authorizationUrl.queryParameters);
     params['aud'] = '$fhirUri';
     authorizationUrl = authorizationUrl.replace(queryParameters: params);
-    final returnValue = await authClient.authenticate(
-      authorizationUrl: authorizationUrl,
-      redirectUri: redirectUri!,
-    );
-
-    client = await grant
-        .handleAuthorizationResponse(Uri.parse(returnValue).queryParameters);
+    try {
+      final returnValue = await authClient.authenticate(
+        authorizationUrl: authorizationUrl,
+        redirectUri: redirectUri!,
+      );
+      client = await grant
+          .handleAuthorizationResponse(Uri.parse(returnValue).queryParameters);
+    } catch (e, stack) {
+      print('Exception: $e');
+      print('Stack: $stack');
+    }
   }
 
   Future<void> logout() async {

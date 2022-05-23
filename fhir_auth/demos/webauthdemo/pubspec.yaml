@@ -7,9 +7,11 @@ environment:
 
 dependencies:
   fhir: ^0.8.0
-  fhir_at_rest: ^0.8.1
+  # fhir_at_rest: ^0.8.2
+  fhir_at_rest:
+    path: ../../../fhir_at_rest
   fhir_auth:
-    path: ../../fhir_auth
+    path: ../../../fhir_auth
   flutter:
     sdk: flutter
   flutter_web_plugins:

@@ -17,7 +17,7 @@ class SecureFhirClient extends FhirClient {
     this.secret,
   }) : super(
           fhirUri: fhirUri,
-          scopes: ['openid', 'profile', 'email', if (scopes != null) ...scopes]
+          scopes: ['openid', 'profile', if (scopes != null) ...scopes]
               .toSet()
               .toList(),
           launch: launch,
@@ -56,15 +56,20 @@ class SecureFhirClient extends FhirClient {
 
   @override
   Future<http.Response> post(Uri url,
-          {Map<String, String>? headers,
-          Object? body,
-          Encoding? encoding}) async =>
-      await http.post(
-        url,
-        headers: await newHeaders(headers),
-        body: body,
-        encoding: encoding,
-      );
+      {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
+    print(headers);
+    print(body);
+    print(encoding);
+    final response = await http.post(
+      url,
+      headers: await newHeaders(headers),
+      body: body,
+      encoding: encoding,
+    );
+    print(response.headers);
+    print(response.body);
+    return response;
+  }
 
   @override
   Future<http.Response> delete(Uri url,

@@ -1,4 +1,5 @@
 import 'package:fhir/r4.dart';
+import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
 
 Future<Resource?> request(SmartFhirClient client) async {
@@ -7,7 +8,7 @@ Future<Resource?> request(SmartFhirClient client) async {
   print('Patient launch context Id: ${client.patientId}');
 
   final request = FhirRequest.read(
-    base: client.fhirUri?.value ?? Uri.parse('127.0.0.1'),
+    base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
     type: R4ResourceType.Patient,
     id: Id(client.patientId),
     client: client,

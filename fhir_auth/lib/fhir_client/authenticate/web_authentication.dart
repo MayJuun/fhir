@@ -13,13 +13,17 @@ class WebAuthentication implements BaseAuthentication {
     final popupLogin = html.window.open(
         authorizationUrl.toString(),
         'oauth2_client::authenticateWindow',
-        'menubar=no, status=no, scrollbars=no, menubar=no, width=1000, height=500');
+        'menubar=no, status=no, scrollbars=no, menubar=no, width=1000, height=800');
 
-    final messageEvt = await html.window.onMessage
-        .firstWhere((evt) => evt.origin == redirectUri.value!.origin);
+    try {
+      final messageEvt = await html.window.onMessage
+          .firstWhere((evt) => evt.origin == redirectUri.value!.origin);
 
-    popupLogin.close();
+      popupLogin.close();
 
-    return messageEvt.data;
+      return messageEvt.data;
+    } catch (e, stack) {
+      return 'Failed with Exception:$e\nHere is the Stack: $stack';
+    }
   }
 }
