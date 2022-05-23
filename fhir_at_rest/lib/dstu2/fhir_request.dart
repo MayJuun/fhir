@@ -916,7 +916,7 @@ class FhirRequest with _$FhirRequest {
       ]);
     } else {
       final body = jsonDecode(result.body);
-      if (body?['response'] == null) {
+      if (body?['resourceType'] == null) {
         return OperationOutcome(issue: [
           OperationOutcomeIssue(
             severity: IssueSeverity.error,
@@ -929,7 +929,7 @@ class FhirRequest with _$FhirRequest {
                 '\nResult body: ${result.body}',
           )
         ]);
-      } else if (body['response']['resourceType'] == 'OperationOutcome') {
+      } else if (body['resourceType'] == 'OperationOutcome') {
         var operationOutcome = OperationOutcome.fromJson(body['response']);
         if (body?['status'] != null || body?['message'] != null) {
           operationOutcome = operationOutcome.copyWith(
