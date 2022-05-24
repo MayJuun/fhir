@@ -62,8 +62,8 @@ class FhirDb {
     var db = await _getDb('fhir.db', password);
     await db.close();
 
-    final _appDocDir = await getApplicationDocumentsDirectory();
-    await File(join(_appDocDir.path, 'fhir.db')).delete();
+    final appDocDir = await getApplicationDocumentsDirectory();
+    await File(join(appDocDir.path, 'fhir.db')).delete();
 
     // Setting the completer to null will lead to
     // creating a new database the next time we try to access it.
@@ -80,10 +80,10 @@ class FhirDb {
 
   Future<Database> _getDb(String path, String? pw) async {
     /// Platform-specific directory
-    final _appDocDir = await getApplicationDocumentsDirectory();
+    final appDocDir = await getApplicationDocumentsDirectory();
 
     /// Db path
-    final dbPath = join(_appDocDir.path, path);
+    final dbPath = join(appDocDir.path, path);
 
     /// check if there is a codec and pw
     final codec = pw == null ? null : _codec(pw);
@@ -101,7 +101,7 @@ class FhirDb {
 
   Future _updatePw(String? oldPw, String? newPw) async {
     /// Platform-specific directory
-    final _appDocDir = await getApplicationDocumentsDirectory();
+    final appDocDir = await getApplicationDocumentsDirectory();
 
     /// Get the old Db
     var db = await _getDb('fhir.db', oldPw);
@@ -114,11 +114,11 @@ class FhirDb {
 
     /// Create a copy of the old db - in case something messes up while we're
     /// changing to the new password
-    File(join(_appDocDir.path, 'fhir.db'))
-        .copy(join(_appDocDir.path, 'old_fhir.db'));
+    File(join(appDocDir.path, 'fhir.db'))
+        .copy(join(appDocDir.path, 'old_fhir.db'));
 
     /// Get the path to the original Db
-    final dbPath = join(_appDocDir.path, 'fhir.db');
+    final dbPath = join(appDocDir.path, 'fhir.db');
 
     /// Create the new Db with the new pw and codec
     db = await importDatabase(
@@ -129,7 +129,7 @@ class FhirDb {
     );
 
     /// Delete the old Db after the Db has successfully updated
-    await File(join(_appDocDir.path, 'old_fhir.db')).delete();
+    await File(join(appDocDir.path, 'old_fhir.db')).delete();
 
     /// Clearing the completer, reinstantiating it, and complete the Db
     _dbOpenCompleter = null;

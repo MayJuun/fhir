@@ -8,7 +8,7 @@ class GeneralDao {
   GeneralDao();
 
   /// this only stores items in the 'general' store
-  StoreRef<String, Map<String, dynamic>> _generalStore =
+  final StoreRef<String, Map<String, dynamic>> _generalStore =
       stringMapStoreFactory.store('general');
 
   /// access the database
