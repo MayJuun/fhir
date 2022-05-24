@@ -1,5 +1,9 @@
 # fhir_at_rest
 
+## [0.8.3]
+
+* Freezed constructors don't really need to be private. And occasionally you may want to have the ability to cast them.
+
 ## [0.8.2]
 
 * Trying to return more useful error messages when something fails.

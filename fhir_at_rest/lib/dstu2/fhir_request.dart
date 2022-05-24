@@ -41,7 +41,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirReadRequest;
+  }) = FhirReadRequest;
 
   ///  VREAD constructor
   /// [base] - the base URI for the FHIR server
@@ -70,7 +70,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirVReadRequest;
+  }) = FhirVReadRequest;
 
   ///  UPDATE constructor
   /// [base] - the base URI for the FHIR server
@@ -94,7 +94,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirUpdateRequest;
+  }) = FhirUpdateRequest;
 
   ///  PATCH constructor
   /// [base] - the base URI for the FHIR server
@@ -118,7 +118,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirPatchRequest;
+  }) = FhirPatchRequest;
 
   ///  DELETE constructor
   /// [base] - the base URI for the FHIR server
@@ -145,7 +145,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirDeleteRequest;
+  }) = FhirDeleteRequest;
 
   ///  CREATE constructor
   /// [base] - the base URI for the FHIR server
@@ -169,7 +169,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirCreateRequest;
+  }) = FhirCreateRequest;
 
   ///  SEARCH constructor
   /// [base] - the base URI for the FHIR server
@@ -198,7 +198,7 @@ class FhirRequest with _$FhirRequest {
     @Default(RestfulRequest.get_) RestfulRequest restfulRequest,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirSearchRequest;
+  }) = FhirSearchRequest;
 
   ///  SEARCH-ALL constructor
   /// [base] - the base URI for the FHIR server
@@ -221,7 +221,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirSearchAllRequest;
+  }) = FhirSearchAllRequest;
 
   ///  SEARCH-ALL constructor
   /// [base] - the base URI for the FHIR server
@@ -246,7 +246,7 @@ class FhirRequest with _$FhirRequest {
     @Default(Mode.full) Mode mode,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirCapabilitiesRequest;
+  }) = FhirCapabilitiesRequest;
 
   ///  TRANSACTION constructor
   /// [base] - the base URI for the FHIR server
@@ -271,7 +271,7 @@ class FhirRequest with _$FhirRequest {
     required Bundle bundle,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirTransactionRequest;
+  }) = FhirTransactionRequest;
 
   ///  BATCH constructor
   /// [base] - the base URI for the FHIR server
@@ -296,7 +296,7 @@ class FhirRequest with _$FhirRequest {
     required Bundle bundle,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirBatchRequest;
+  }) = FhirBatchRequest;
 
   ///  HISTORY constructor
   /// [base] - the base URI for the FHIR server
@@ -336,7 +336,7 @@ class FhirRequest with _$FhirRequest {
     String? reference,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirHistoryRequest;
+  }) = FhirHistoryRequest;
 
   ///  HISTORY-TYPE constructor
   /// [base] - the base URI for the FHIR server
@@ -374,7 +374,7 @@ class FhirRequest with _$FhirRequest {
     String? reference,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirHistoryTypeRequest;
+  }) = FhirHistoryTypeRequest;
 
   ///  HISTORY-ALL constructor
   /// [base] - the base URI for the FHIR server
@@ -410,7 +410,7 @@ class FhirRequest with _$FhirRequest {
     String? reference,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirHistoryAllRequest;
+  }) = FhirHistoryAllRequest;
 
   ///  OPERATION constructor
   /// [base] - the base URI for the FHIR server
@@ -444,7 +444,7 @@ class FhirRequest with _$FhirRequest {
     @Default(false) bool useFormData,
     MimeType? mimeType,
     Client? client,
-  }) = _FhirOperationRequest;
+  }) = FhirOperationRequest;
 
   /// REQUEST
   /// after creating a request with the above constructors, they can be called

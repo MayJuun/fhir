@@ -600,59 +600,59 @@ mixin _$FhirRequest {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -735,11 +735,11 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_FhirReadRequestCopyWith<$Res>
+abstract class _$$FhirReadRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirReadRequestCopyWith(
-          _$_FhirReadRequest value, $Res Function(_$_FhirReadRequest) then) =
-      __$$_FhirReadRequestCopyWithImpl<$Res>;
+  factory _$$FhirReadRequestCopyWith(
+          _$FhirReadRequest value, $Res Function(_$FhirReadRequest) then) =
+      __$$FhirReadRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -755,15 +755,15 @@ abstract class _$$_FhirReadRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirReadRequestCopyWithImpl<$Res>
+class __$$FhirReadRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirReadRequestCopyWith<$Res> {
-  __$$_FhirReadRequestCopyWithImpl(
-      _$_FhirReadRequest _value, $Res Function(_$_FhirReadRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirReadRequest));
+    implements _$$FhirReadRequestCopyWith<$Res> {
+  __$$FhirReadRequestCopyWithImpl(
+      _$FhirReadRequest _value, $Res Function(_$FhirReadRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirReadRequest));
 
   @override
-  _$_FhirReadRequest get _value => super._value as _$_FhirReadRequest;
+  _$FhirReadRequest get _value => super._value as _$FhirReadRequest;
 
   @override
   $Res call({
@@ -778,7 +778,7 @@ class __$$_FhirReadRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirReadRequest(
+    return _then(_$FhirReadRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -825,8 +825,8 @@ class __$$_FhirReadRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirReadRequest extends _FhirReadRequest {
-  _$_FhirReadRequest(
+class _$FhirReadRequest extends FhirReadRequest {
+  _$FhirReadRequest(
       {required this.base,
       required this.type,
       required this.id,
@@ -886,7 +886,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirReadRequest &&
+            other is _$FhirReadRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -916,8 +916,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirReadRequestCopyWith<_$_FhirReadRequest> get copyWith =>
-      __$$_FhirReadRequestCopyWithImpl<_$_FhirReadRequest>(this, _$identity);
+  _$$FhirReadRequestCopyWith<_$FhirReadRequest> get copyWith =>
+      __$$FhirReadRequestCopyWithImpl<_$FhirReadRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1511,21 +1511,21 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return read(this);
   }
@@ -1533,21 +1533,21 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return read?.call(this);
   }
@@ -1555,21 +1555,21 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (read != null) {
@@ -1579,8 +1579,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   }
 }
 
-abstract class _FhirReadRequest extends FhirRequest {
-  factory _FhirReadRequest(
+abstract class FhirReadRequest extends FhirRequest {
+  factory FhirReadRequest(
       {required final Uri base,
       required final Stu3ResourceType type,
       required final Id id,
@@ -1590,8 +1590,8 @@ abstract class _FhirReadRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirReadRequest;
-  _FhirReadRequest._() : super._();
+      final Client? client}) = _$FhirReadRequest;
+  FhirReadRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -1613,16 +1613,16 @@ abstract class _FhirReadRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirReadRequestCopyWith<_$_FhirReadRequest> get copyWith =>
+  _$$FhirReadRequestCopyWith<_$FhirReadRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirVReadRequestCopyWith<$Res>
+abstract class _$$FhirVReadRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirVReadRequestCopyWith(
-          _$_FhirVReadRequest value, $Res Function(_$_FhirVReadRequest) then) =
-      __$$_FhirVReadRequestCopyWithImpl<$Res>;
+  factory _$$FhirVReadRequestCopyWith(
+          _$FhirVReadRequest value, $Res Function(_$FhirVReadRequest) then) =
+      __$$FhirVReadRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -1639,15 +1639,15 @@ abstract class _$$_FhirVReadRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirVReadRequestCopyWithImpl<$Res>
+class __$$FhirVReadRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirVReadRequestCopyWith<$Res> {
-  __$$_FhirVReadRequestCopyWithImpl(
-      _$_FhirVReadRequest _value, $Res Function(_$_FhirVReadRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirVReadRequest));
+    implements _$$FhirVReadRequestCopyWith<$Res> {
+  __$$FhirVReadRequestCopyWithImpl(
+      _$FhirVReadRequest _value, $Res Function(_$FhirVReadRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirVReadRequest));
 
   @override
-  _$_FhirVReadRequest get _value => super._value as _$_FhirVReadRequest;
+  _$FhirVReadRequest get _value => super._value as _$FhirVReadRequest;
 
   @override
   $Res call({
@@ -1663,7 +1663,7 @@ class __$$_FhirVReadRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirVReadRequest(
+    return _then(_$FhirVReadRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -1714,8 +1714,8 @@ class __$$_FhirVReadRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirVReadRequest extends _FhirVReadRequest {
-  _$_FhirVReadRequest(
+class _$FhirVReadRequest extends FhirVReadRequest {
+  _$FhirVReadRequest(
       {required this.base,
       required this.type,
       required this.id,
@@ -1778,7 +1778,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirVReadRequest &&
+            other is _$FhirVReadRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1810,8 +1810,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirVReadRequestCopyWith<_$_FhirVReadRequest> get copyWith =>
-      __$$_FhirVReadRequestCopyWithImpl<_$_FhirVReadRequest>(this, _$identity);
+  _$$FhirVReadRequestCopyWith<_$FhirVReadRequest> get copyWith =>
+      __$$FhirVReadRequestCopyWithImpl<_$FhirVReadRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2405,21 +2405,21 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return vRead(this);
   }
@@ -2427,21 +2427,21 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return vRead?.call(this);
   }
@@ -2449,21 +2449,21 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (vRead != null) {
@@ -2473,8 +2473,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   }
 }
 
-abstract class _FhirVReadRequest extends FhirRequest {
-  factory _FhirVReadRequest(
+abstract class FhirVReadRequest extends FhirRequest {
+  factory FhirVReadRequest(
       {required final Uri base,
       required final Stu3ResourceType type,
       required final Id id,
@@ -2485,8 +2485,8 @@ abstract class _FhirVReadRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirVReadRequest;
-  _FhirVReadRequest._() : super._();
+      final Client? client}) = _$FhirVReadRequest;
+  FhirVReadRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -2509,16 +2509,16 @@ abstract class _FhirVReadRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirVReadRequestCopyWith<_$_FhirVReadRequest> get copyWith =>
+  _$$FhirVReadRequestCopyWith<_$FhirVReadRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirUpdateRequestCopyWith<$Res>
+abstract class _$$FhirUpdateRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirUpdateRequestCopyWith(_$_FhirUpdateRequest value,
-          $Res Function(_$_FhirUpdateRequest) then) =
-      __$$_FhirUpdateRequestCopyWithImpl<$Res>;
+  factory _$$FhirUpdateRequestCopyWith(
+          _$FhirUpdateRequest value, $Res Function(_$FhirUpdateRequest) then) =
+      __$$FhirUpdateRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -2533,15 +2533,15 @@ abstract class _$$_FhirUpdateRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirUpdateRequestCopyWithImpl<$Res>
+class __$$FhirUpdateRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirUpdateRequestCopyWith<$Res> {
-  __$$_FhirUpdateRequestCopyWithImpl(
-      _$_FhirUpdateRequest _value, $Res Function(_$_FhirUpdateRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirUpdateRequest));
+    implements _$$FhirUpdateRequestCopyWith<$Res> {
+  __$$FhirUpdateRequestCopyWithImpl(
+      _$FhirUpdateRequest _value, $Res Function(_$FhirUpdateRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirUpdateRequest));
 
   @override
-  _$_FhirUpdateRequest get _value => super._value as _$_FhirUpdateRequest;
+  _$FhirUpdateRequest get _value => super._value as _$FhirUpdateRequest;
 
   @override
   $Res call({
@@ -2555,7 +2555,7 @@ class __$$_FhirUpdateRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirUpdateRequest(
+    return _then(_$FhirUpdateRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -2598,8 +2598,8 @@ class __$$_FhirUpdateRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirUpdateRequest extends _FhirUpdateRequest {
-  _$_FhirUpdateRequest(
+class _$FhirUpdateRequest extends FhirUpdateRequest {
+  _$FhirUpdateRequest(
       {required this.base,
       required this.resource,
       this.pretty = false,
@@ -2656,7 +2656,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirUpdateRequest &&
+            other is _$FhirUpdateRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
@@ -2684,9 +2684,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirUpdateRequestCopyWith<_$_FhirUpdateRequest> get copyWith =>
-      __$$_FhirUpdateRequestCopyWithImpl<_$_FhirUpdateRequest>(
-          this, _$identity);
+  _$$FhirUpdateRequestCopyWith<_$FhirUpdateRequest> get copyWith =>
+      __$$FhirUpdateRequestCopyWithImpl<_$FhirUpdateRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3280,21 +3279,21 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return update(this);
   }
@@ -3302,21 +3301,21 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return update?.call(this);
   }
@@ -3324,21 +3323,21 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (update != null) {
@@ -3348,8 +3347,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   }
 }
 
-abstract class _FhirUpdateRequest extends FhirRequest {
-  factory _FhirUpdateRequest(
+abstract class FhirUpdateRequest extends FhirRequest {
+  factory FhirUpdateRequest(
       {required final Uri base,
       required final Resource resource,
       final bool pretty,
@@ -3358,8 +3357,8 @@ abstract class _FhirUpdateRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirUpdateRequest;
-  _FhirUpdateRequest._() : super._();
+      final Client? client}) = _$FhirUpdateRequest;
+  FhirUpdateRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -3380,16 +3379,16 @@ abstract class _FhirUpdateRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirUpdateRequestCopyWith<_$_FhirUpdateRequest> get copyWith =>
+  _$$FhirUpdateRequestCopyWith<_$FhirUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirPatchRequestCopyWith<$Res>
+abstract class _$$FhirPatchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirPatchRequestCopyWith(
-          _$_FhirPatchRequest value, $Res Function(_$_FhirPatchRequest) then) =
-      __$$_FhirPatchRequestCopyWithImpl<$Res>;
+  factory _$$FhirPatchRequestCopyWith(
+          _$FhirPatchRequest value, $Res Function(_$FhirPatchRequest) then) =
+      __$$FhirPatchRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -3404,15 +3403,15 @@ abstract class _$$_FhirPatchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirPatchRequestCopyWithImpl<$Res>
+class __$$FhirPatchRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirPatchRequestCopyWith<$Res> {
-  __$$_FhirPatchRequestCopyWithImpl(
-      _$_FhirPatchRequest _value, $Res Function(_$_FhirPatchRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirPatchRequest));
+    implements _$$FhirPatchRequestCopyWith<$Res> {
+  __$$FhirPatchRequestCopyWithImpl(
+      _$FhirPatchRequest _value, $Res Function(_$FhirPatchRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirPatchRequest));
 
   @override
-  _$_FhirPatchRequest get _value => super._value as _$_FhirPatchRequest;
+  _$FhirPatchRequest get _value => super._value as _$FhirPatchRequest;
 
   @override
   $Res call({
@@ -3426,7 +3425,7 @@ class __$$_FhirPatchRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirPatchRequest(
+    return _then(_$FhirPatchRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -3469,8 +3468,8 @@ class __$$_FhirPatchRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirPatchRequest extends _FhirPatchRequest {
-  _$_FhirPatchRequest(
+class _$FhirPatchRequest extends FhirPatchRequest {
+  _$FhirPatchRequest(
       {required this.base,
       required this.resource,
       this.pretty = false,
@@ -3527,7 +3526,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirPatchRequest &&
+            other is _$FhirPatchRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
@@ -3555,8 +3554,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirPatchRequestCopyWith<_$_FhirPatchRequest> get copyWith =>
-      __$$_FhirPatchRequestCopyWithImpl<_$_FhirPatchRequest>(this, _$identity);
+  _$$FhirPatchRequestCopyWith<_$FhirPatchRequest> get copyWith =>
+      __$$FhirPatchRequestCopyWithImpl<_$FhirPatchRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4150,21 +4149,21 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return patch(this);
   }
@@ -4172,21 +4171,21 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return patch?.call(this);
   }
@@ -4194,21 +4193,21 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (patch != null) {
@@ -4218,8 +4217,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   }
 }
 
-abstract class _FhirPatchRequest extends FhirRequest {
-  factory _FhirPatchRequest(
+abstract class FhirPatchRequest extends FhirRequest {
+  factory FhirPatchRequest(
       {required final Uri base,
       required final Resource resource,
       final bool pretty,
@@ -4228,8 +4227,8 @@ abstract class _FhirPatchRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirPatchRequest;
-  _FhirPatchRequest._() : super._();
+      final Client? client}) = _$FhirPatchRequest;
+  FhirPatchRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -4250,16 +4249,16 @@ abstract class _FhirPatchRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirPatchRequestCopyWith<_$_FhirPatchRequest> get copyWith =>
+  _$$FhirPatchRequestCopyWith<_$FhirPatchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirDeleteRequestCopyWith<$Res>
+abstract class _$$FhirDeleteRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirDeleteRequestCopyWith(_$_FhirDeleteRequest value,
-          $Res Function(_$_FhirDeleteRequest) then) =
-      __$$_FhirDeleteRequestCopyWithImpl<$Res>;
+  factory _$$FhirDeleteRequestCopyWith(
+          _$FhirDeleteRequest value, $Res Function(_$FhirDeleteRequest) then) =
+      __$$FhirDeleteRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -4275,15 +4274,15 @@ abstract class _$$_FhirDeleteRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirDeleteRequestCopyWithImpl<$Res>
+class __$$FhirDeleteRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirDeleteRequestCopyWith<$Res> {
-  __$$_FhirDeleteRequestCopyWithImpl(
-      _$_FhirDeleteRequest _value, $Res Function(_$_FhirDeleteRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirDeleteRequest));
+    implements _$$FhirDeleteRequestCopyWith<$Res> {
+  __$$FhirDeleteRequestCopyWithImpl(
+      _$FhirDeleteRequest _value, $Res Function(_$FhirDeleteRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirDeleteRequest));
 
   @override
-  _$_FhirDeleteRequest get _value => super._value as _$_FhirDeleteRequest;
+  _$FhirDeleteRequest get _value => super._value as _$FhirDeleteRequest;
 
   @override
   $Res call({
@@ -4298,7 +4297,7 @@ class __$$_FhirDeleteRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirDeleteRequest(
+    return _then(_$FhirDeleteRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -4345,8 +4344,8 @@ class __$$_FhirDeleteRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirDeleteRequest extends _FhirDeleteRequest {
-  _$_FhirDeleteRequest(
+class _$FhirDeleteRequest extends FhirDeleteRequest {
+  _$FhirDeleteRequest(
       {required this.base,
       required this.type,
       required this.id,
@@ -4406,7 +4405,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirDeleteRequest &&
+            other is _$FhirDeleteRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -4436,9 +4435,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirDeleteRequestCopyWith<_$_FhirDeleteRequest> get copyWith =>
-      __$$_FhirDeleteRequestCopyWithImpl<_$_FhirDeleteRequest>(
-          this, _$identity);
+  _$$FhirDeleteRequestCopyWith<_$FhirDeleteRequest> get copyWith =>
+      __$$FhirDeleteRequestCopyWithImpl<_$FhirDeleteRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5032,21 +5030,21 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return delete(this);
   }
@@ -5054,21 +5052,21 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return delete?.call(this);
   }
@@ -5076,21 +5074,21 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -5100,8 +5098,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   }
 }
 
-abstract class _FhirDeleteRequest extends FhirRequest {
-  factory _FhirDeleteRequest(
+abstract class FhirDeleteRequest extends FhirRequest {
+  factory FhirDeleteRequest(
       {required final Uri base,
       required final Stu3ResourceType type,
       required final Id id,
@@ -5111,8 +5109,8 @@ abstract class _FhirDeleteRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirDeleteRequest;
-  _FhirDeleteRequest._() : super._();
+      final Client? client}) = _$FhirDeleteRequest;
+  FhirDeleteRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -5134,16 +5132,16 @@ abstract class _FhirDeleteRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirDeleteRequestCopyWith<_$_FhirDeleteRequest> get copyWith =>
+  _$$FhirDeleteRequestCopyWith<_$FhirDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirCreateRequestCopyWith<$Res>
+abstract class _$$FhirCreateRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirCreateRequestCopyWith(_$_FhirCreateRequest value,
-          $Res Function(_$_FhirCreateRequest) then) =
-      __$$_FhirCreateRequestCopyWithImpl<$Res>;
+  factory _$$FhirCreateRequestCopyWith(
+          _$FhirCreateRequest value, $Res Function(_$FhirCreateRequest) then) =
+      __$$FhirCreateRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -5158,15 +5156,15 @@ abstract class _$$_FhirCreateRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirCreateRequestCopyWithImpl<$Res>
+class __$$FhirCreateRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirCreateRequestCopyWith<$Res> {
-  __$$_FhirCreateRequestCopyWithImpl(
-      _$_FhirCreateRequest _value, $Res Function(_$_FhirCreateRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirCreateRequest));
+    implements _$$FhirCreateRequestCopyWith<$Res> {
+  __$$FhirCreateRequestCopyWithImpl(
+      _$FhirCreateRequest _value, $Res Function(_$FhirCreateRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirCreateRequest));
 
   @override
-  _$_FhirCreateRequest get _value => super._value as _$_FhirCreateRequest;
+  _$FhirCreateRequest get _value => super._value as _$FhirCreateRequest;
 
   @override
   $Res call({
@@ -5180,7 +5178,7 @@ class __$$_FhirCreateRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirCreateRequest(
+    return _then(_$FhirCreateRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -5223,8 +5221,8 @@ class __$$_FhirCreateRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirCreateRequest extends _FhirCreateRequest {
-  _$_FhirCreateRequest(
+class _$FhirCreateRequest extends FhirCreateRequest {
+  _$FhirCreateRequest(
       {required this.base,
       required this.resource,
       this.pretty = false,
@@ -5281,7 +5279,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirCreateRequest &&
+            other is _$FhirCreateRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.resource, resource) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
@@ -5309,9 +5307,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirCreateRequestCopyWith<_$_FhirCreateRequest> get copyWith =>
-      __$$_FhirCreateRequestCopyWithImpl<_$_FhirCreateRequest>(
-          this, _$identity);
+  _$$FhirCreateRequestCopyWith<_$FhirCreateRequest> get copyWith =>
+      __$$FhirCreateRequestCopyWithImpl<_$FhirCreateRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5905,21 +5902,21 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return create(this);
   }
@@ -5927,21 +5924,21 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return create?.call(this);
   }
@@ -5949,21 +5946,21 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (create != null) {
@@ -5973,8 +5970,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   }
 }
 
-abstract class _FhirCreateRequest extends FhirRequest {
-  factory _FhirCreateRequest(
+abstract class FhirCreateRequest extends FhirRequest {
+  factory FhirCreateRequest(
       {required final Uri base,
       required final Resource resource,
       final bool pretty,
@@ -5983,8 +5980,8 @@ abstract class _FhirCreateRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirCreateRequest;
-  _FhirCreateRequest._() : super._();
+      final Client? client}) = _$FhirCreateRequest;
+  FhirCreateRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -6005,16 +6002,16 @@ abstract class _FhirCreateRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirCreateRequestCopyWith<_$_FhirCreateRequest> get copyWith =>
+  _$$FhirCreateRequestCopyWith<_$FhirCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirSearchRequestCopyWith<$Res>
+abstract class _$$FhirSearchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirSearchRequestCopyWith(_$_FhirSearchRequest value,
-          $Res Function(_$_FhirSearchRequest) then) =
-      __$$_FhirSearchRequestCopyWithImpl<$Res>;
+  factory _$$FhirSearchRequestCopyWith(
+          _$FhirSearchRequest value, $Res Function(_$FhirSearchRequest) then) =
+      __$$FhirSearchRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -6031,15 +6028,15 @@ abstract class _$$_FhirSearchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirSearchRequestCopyWithImpl<$Res>
+class __$$FhirSearchRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirSearchRequestCopyWith<$Res> {
-  __$$_FhirSearchRequestCopyWithImpl(
-      _$_FhirSearchRequest _value, $Res Function(_$_FhirSearchRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirSearchRequest));
+    implements _$$FhirSearchRequestCopyWith<$Res> {
+  __$$FhirSearchRequestCopyWithImpl(
+      _$FhirSearchRequest _value, $Res Function(_$FhirSearchRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirSearchRequest));
 
   @override
-  _$_FhirSearchRequest get _value => super._value as _$_FhirSearchRequest;
+  _$FhirSearchRequest get _value => super._value as _$FhirSearchRequest;
 
   @override
   $Res call({
@@ -6055,7 +6052,7 @@ class __$$_FhirSearchRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirSearchRequest(
+    return _then(_$FhirSearchRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -6106,8 +6103,8 @@ class __$$_FhirSearchRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirSearchRequest extends _FhirSearchRequest {
-  _$_FhirSearchRequest(
+class _$FhirSearchRequest extends FhirSearchRequest {
+  _$FhirSearchRequest(
       {required this.base,
       required this.type,
       this.pretty = false,
@@ -6172,7 +6169,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirSearchRequest &&
+            other is _$FhirSearchRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
@@ -6205,9 +6202,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirSearchRequestCopyWith<_$_FhirSearchRequest> get copyWith =>
-      __$$_FhirSearchRequestCopyWithImpl<_$_FhirSearchRequest>(
-          this, _$identity);
+  _$$FhirSearchRequestCopyWith<_$FhirSearchRequest> get copyWith =>
+      __$$FhirSearchRequestCopyWithImpl<_$FhirSearchRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6801,21 +6797,21 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return search(this);
   }
@@ -6823,21 +6819,21 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return search?.call(this);
   }
@@ -6845,21 +6841,21 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -6869,8 +6865,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   }
 }
 
-abstract class _FhirSearchRequest extends FhirRequest {
-  factory _FhirSearchRequest(
+abstract class FhirSearchRequest extends FhirRequest {
+  factory FhirSearchRequest(
       {required final Uri base,
       required final Stu3ResourceType type,
       final bool pretty,
@@ -6881,8 +6877,8 @@ abstract class _FhirSearchRequest extends FhirRequest {
       final bool usePost,
       final RestfulRequest restfulRequest,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirSearchRequest;
-  _FhirSearchRequest._() : super._();
+      final Client? client}) = _$FhirSearchRequest;
+  FhirSearchRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -6905,16 +6901,16 @@ abstract class _FhirSearchRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirSearchRequestCopyWith<_$_FhirSearchRequest> get copyWith =>
+  _$$FhirSearchRequestCopyWith<_$FhirSearchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirSearchAllRequestCopyWith<$Res>
+abstract class _$$FhirSearchAllRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirSearchAllRequestCopyWith(_$_FhirSearchAllRequest value,
-          $Res Function(_$_FhirSearchAllRequest) then) =
-      __$$_FhirSearchAllRequestCopyWithImpl<$Res>;
+  factory _$$FhirSearchAllRequestCopyWith(_$FhirSearchAllRequest value,
+          $Res Function(_$FhirSearchAllRequest) then) =
+      __$$FhirSearchAllRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -6928,15 +6924,15 @@ abstract class _$$_FhirSearchAllRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirSearchAllRequestCopyWithImpl<$Res>
+class __$$FhirSearchAllRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirSearchAllRequestCopyWith<$Res> {
-  __$$_FhirSearchAllRequestCopyWithImpl(_$_FhirSearchAllRequest _value,
-      $Res Function(_$_FhirSearchAllRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirSearchAllRequest));
+    implements _$$FhirSearchAllRequestCopyWith<$Res> {
+  __$$FhirSearchAllRequestCopyWithImpl(_$FhirSearchAllRequest _value,
+      $Res Function(_$FhirSearchAllRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirSearchAllRequest));
 
   @override
-  _$_FhirSearchAllRequest get _value => super._value as _$_FhirSearchAllRequest;
+  _$FhirSearchAllRequest get _value => super._value as _$FhirSearchAllRequest;
 
   @override
   $Res call({
@@ -6949,7 +6945,7 @@ class __$$_FhirSearchAllRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirSearchAllRequest(
+    return _then(_$FhirSearchAllRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -6988,8 +6984,8 @@ class __$$_FhirSearchAllRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
-  _$_FhirSearchAllRequest(
+class _$FhirSearchAllRequest extends FhirSearchAllRequest {
+  _$FhirSearchAllRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -7043,7 +7039,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirSearchAllRequest &&
+            other is _$FhirSearchAllRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
@@ -7069,8 +7065,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirSearchAllRequestCopyWith<_$_FhirSearchAllRequest> get copyWith =>
-      __$$_FhirSearchAllRequestCopyWithImpl<_$_FhirSearchAllRequest>(
+  _$$FhirSearchAllRequestCopyWith<_$FhirSearchAllRequest> get copyWith =>
+      __$$FhirSearchAllRequestCopyWithImpl<_$FhirSearchAllRequest>(
           this, _$identity);
 
   @override
@@ -7665,21 +7661,21 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return searchAll(this);
   }
@@ -7687,21 +7683,21 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return searchAll?.call(this);
   }
@@ -7709,21 +7705,21 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (searchAll != null) {
@@ -7733,8 +7729,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   }
 }
 
-abstract class _FhirSearchAllRequest extends FhirRequest {
-  factory _FhirSearchAllRequest(
+abstract class FhirSearchAllRequest extends FhirRequest {
+  factory FhirSearchAllRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -7742,8 +7738,8 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirSearchAllRequest;
-  _FhirSearchAllRequest._() : super._();
+      final Client? client}) = _$FhirSearchAllRequest;
+  FhirSearchAllRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -7763,16 +7759,16 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirSearchAllRequestCopyWith<_$_FhirSearchAllRequest> get copyWith =>
+  _$$FhirSearchAllRequestCopyWith<_$FhirSearchAllRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirCapabilitiesRequestCopyWith<$Res>
+abstract class _$$FhirCapabilitiesRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirCapabilitiesRequestCopyWith(_$_FhirCapabilitiesRequest value,
-          $Res Function(_$_FhirCapabilitiesRequest) then) =
-      __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>;
+  factory _$$FhirCapabilitiesRequestCopyWith(_$FhirCapabilitiesRequest value,
+          $Res Function(_$FhirCapabilitiesRequest) then) =
+      __$$FhirCapabilitiesRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -7787,16 +7783,16 @@ abstract class _$$_FhirCapabilitiesRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>
+class __$$FhirCapabilitiesRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirCapabilitiesRequestCopyWith<$Res> {
-  __$$_FhirCapabilitiesRequestCopyWithImpl(_$_FhirCapabilitiesRequest _value,
-      $Res Function(_$_FhirCapabilitiesRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirCapabilitiesRequest));
+    implements _$$FhirCapabilitiesRequestCopyWith<$Res> {
+  __$$FhirCapabilitiesRequestCopyWithImpl(_$FhirCapabilitiesRequest _value,
+      $Res Function(_$FhirCapabilitiesRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirCapabilitiesRequest));
 
   @override
-  _$_FhirCapabilitiesRequest get _value =>
-      super._value as _$_FhirCapabilitiesRequest;
+  _$FhirCapabilitiesRequest get _value =>
+      super._value as _$FhirCapabilitiesRequest;
 
   @override
   $Res call({
@@ -7810,7 +7806,7 @@ class __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirCapabilitiesRequest(
+    return _then(_$FhirCapabilitiesRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -7853,8 +7849,8 @@ class __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
-  _$_FhirCapabilitiesRequest(
+class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
+  _$FhirCapabilitiesRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -7912,7 +7908,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirCapabilitiesRequest &&
+            other is _$FhirCapabilitiesRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
@@ -7940,10 +7936,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirCapabilitiesRequestCopyWith<_$_FhirCapabilitiesRequest>
-      get copyWith =>
-          __$$_FhirCapabilitiesRequestCopyWithImpl<_$_FhirCapabilitiesRequest>(
-              this, _$identity);
+  _$$FhirCapabilitiesRequestCopyWith<_$FhirCapabilitiesRequest> get copyWith =>
+      __$$FhirCapabilitiesRequestCopyWithImpl<_$FhirCapabilitiesRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8537,21 +8532,21 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return capabilities(this);
   }
@@ -8559,21 +8554,21 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return capabilities?.call(this);
   }
@@ -8581,21 +8576,21 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (capabilities != null) {
@@ -8605,8 +8600,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   }
 }
 
-abstract class _FhirCapabilitiesRequest extends FhirRequest {
-  factory _FhirCapabilitiesRequest(
+abstract class FhirCapabilitiesRequest extends FhirRequest {
+  factory FhirCapabilitiesRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -8615,8 +8610,8 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
       final List<String> parameters,
       final Mode mode,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirCapabilitiesRequest;
-  _FhirCapabilitiesRequest._() : super._();
+      final Client? client}) = _$FhirCapabilitiesRequest;
+  FhirCapabilitiesRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -8637,16 +8632,16 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirCapabilitiesRequestCopyWith<_$_FhirCapabilitiesRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$FhirCapabilitiesRequestCopyWith<_$FhirCapabilitiesRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirTransactionRequestCopyWith<$Res>
+abstract class _$$FhirTransactionRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirTransactionRequestCopyWith(_$_FhirTransactionRequest value,
-          $Res Function(_$_FhirTransactionRequest) then) =
-      __$$_FhirTransactionRequestCopyWithImpl<$Res>;
+  factory _$$FhirTransactionRequestCopyWith(_$FhirTransactionRequest value,
+          $Res Function(_$FhirTransactionRequest) then) =
+      __$$FhirTransactionRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -8663,16 +8658,16 @@ abstract class _$$_FhirTransactionRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirTransactionRequestCopyWithImpl<$Res>
+class __$$FhirTransactionRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirTransactionRequestCopyWith<$Res> {
-  __$$_FhirTransactionRequestCopyWithImpl(_$_FhirTransactionRequest _value,
-      $Res Function(_$_FhirTransactionRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirTransactionRequest));
+    implements _$$FhirTransactionRequestCopyWith<$Res> {
+  __$$FhirTransactionRequestCopyWithImpl(_$FhirTransactionRequest _value,
+      $Res Function(_$FhirTransactionRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirTransactionRequest));
 
   @override
-  _$_FhirTransactionRequest get _value =>
-      super._value as _$_FhirTransactionRequest;
+  _$FhirTransactionRequest get _value =>
+      super._value as _$FhirTransactionRequest;
 
   @override
   $Res call({
@@ -8686,7 +8681,7 @@ class __$$_FhirTransactionRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirTransactionRequest(
+    return _then(_$FhirTransactionRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -8736,8 +8731,8 @@ class __$$_FhirTransactionRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirTransactionRequest extends _FhirTransactionRequest {
-  _$_FhirTransactionRequest(
+class _$FhirTransactionRequest extends FhirTransactionRequest {
+  _$FhirTransactionRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -8794,7 +8789,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirTransactionRequest &&
+            other is _$FhirTransactionRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
@@ -8822,8 +8817,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirTransactionRequestCopyWith<_$_FhirTransactionRequest> get copyWith =>
-      __$$_FhirTransactionRequestCopyWithImpl<_$_FhirTransactionRequest>(
+  _$$FhirTransactionRequestCopyWith<_$FhirTransactionRequest> get copyWith =>
+      __$$FhirTransactionRequestCopyWithImpl<_$FhirTransactionRequest>(
           this, _$identity);
 
   @override
@@ -9418,21 +9413,21 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return transaction(this);
   }
@@ -9440,21 +9435,21 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return transaction?.call(this);
   }
@@ -9462,21 +9457,21 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (transaction != null) {
@@ -9486,8 +9481,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   }
 }
 
-abstract class _FhirTransactionRequest extends FhirRequest {
-  factory _FhirTransactionRequest(
+abstract class FhirTransactionRequest extends FhirRequest {
+  factory FhirTransactionRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -9496,8 +9491,8 @@ abstract class _FhirTransactionRequest extends FhirRequest {
       final List<String> parameters,
       required final Bundle bundle,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirTransactionRequest;
-  _FhirTransactionRequest._() : super._();
+      final Client? client}) = _$FhirTransactionRequest;
+  FhirTransactionRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -9518,16 +9513,16 @@ abstract class _FhirTransactionRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirTransactionRequestCopyWith<_$_FhirTransactionRequest> get copyWith =>
+  _$$FhirTransactionRequestCopyWith<_$FhirTransactionRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirBatchRequestCopyWith<$Res>
+abstract class _$$FhirBatchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirBatchRequestCopyWith(
-          _$_FhirBatchRequest value, $Res Function(_$_FhirBatchRequest) then) =
-      __$$_FhirBatchRequestCopyWithImpl<$Res>;
+  factory _$$FhirBatchRequestCopyWith(
+          _$FhirBatchRequest value, $Res Function(_$FhirBatchRequest) then) =
+      __$$FhirBatchRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -9544,15 +9539,15 @@ abstract class _$$_FhirBatchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirBatchRequestCopyWithImpl<$Res>
+class __$$FhirBatchRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirBatchRequestCopyWith<$Res> {
-  __$$_FhirBatchRequestCopyWithImpl(
-      _$_FhirBatchRequest _value, $Res Function(_$_FhirBatchRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirBatchRequest));
+    implements _$$FhirBatchRequestCopyWith<$Res> {
+  __$$FhirBatchRequestCopyWithImpl(
+      _$FhirBatchRequest _value, $Res Function(_$FhirBatchRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirBatchRequest));
 
   @override
-  _$_FhirBatchRequest get _value => super._value as _$_FhirBatchRequest;
+  _$FhirBatchRequest get _value => super._value as _$FhirBatchRequest;
 
   @override
   $Res call({
@@ -9566,7 +9561,7 @@ class __$$_FhirBatchRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirBatchRequest(
+    return _then(_$FhirBatchRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -9616,8 +9611,8 @@ class __$$_FhirBatchRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirBatchRequest extends _FhirBatchRequest {
-  _$_FhirBatchRequest(
+class _$FhirBatchRequest extends FhirBatchRequest {
+  _$FhirBatchRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -9674,7 +9669,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirBatchRequest &&
+            other is _$FhirBatchRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
@@ -9702,8 +9697,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirBatchRequestCopyWith<_$_FhirBatchRequest> get copyWith =>
-      __$$_FhirBatchRequestCopyWithImpl<_$_FhirBatchRequest>(this, _$identity);
+  _$$FhirBatchRequestCopyWith<_$FhirBatchRequest> get copyWith =>
+      __$$FhirBatchRequestCopyWithImpl<_$FhirBatchRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -10297,21 +10292,21 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return batch(this);
   }
@@ -10319,21 +10314,21 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return batch?.call(this);
   }
@@ -10341,21 +10336,21 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (batch != null) {
@@ -10365,8 +10360,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   }
 }
 
-abstract class _FhirBatchRequest extends FhirRequest {
-  factory _FhirBatchRequest(
+abstract class FhirBatchRequest extends FhirRequest {
+  factory FhirBatchRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -10375,8 +10370,8 @@ abstract class _FhirBatchRequest extends FhirRequest {
       final List<String> parameters,
       required final Bundle bundle,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirBatchRequest;
-  _FhirBatchRequest._() : super._();
+      final Client? client}) = _$FhirBatchRequest;
+  FhirBatchRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -10397,16 +10392,16 @@ abstract class _FhirBatchRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirBatchRequestCopyWith<_$_FhirBatchRequest> get copyWith =>
+  _$$FhirBatchRequestCopyWith<_$FhirBatchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirHistoryRequestCopyWith<$Res>
+abstract class _$$FhirHistoryRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirHistoryRequestCopyWith(_$_FhirHistoryRequest value,
-          $Res Function(_$_FhirHistoryRequest) then) =
-      __$$_FhirHistoryRequestCopyWithImpl<$Res>;
+  factory _$$FhirHistoryRequestCopyWith(_$FhirHistoryRequest value,
+          $Res Function(_$FhirHistoryRequest) then) =
+      __$$FhirHistoryRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -10426,15 +10421,15 @@ abstract class _$$_FhirHistoryRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirHistoryRequestCopyWithImpl<$Res>
+class __$$FhirHistoryRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirHistoryRequestCopyWith<$Res> {
-  __$$_FhirHistoryRequestCopyWithImpl(
-      _$_FhirHistoryRequest _value, $Res Function(_$_FhirHistoryRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirHistoryRequest));
+    implements _$$FhirHistoryRequestCopyWith<$Res> {
+  __$$FhirHistoryRequestCopyWithImpl(
+      _$FhirHistoryRequest _value, $Res Function(_$FhirHistoryRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirHistoryRequest));
 
   @override
-  _$_FhirHistoryRequest get _value => super._value as _$_FhirHistoryRequest;
+  _$FhirHistoryRequest get _value => super._value as _$FhirHistoryRequest;
 
   @override
   $Res call({
@@ -10453,7 +10448,7 @@ class __$$_FhirHistoryRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirHistoryRequest(
+    return _then(_$FhirHistoryRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -10516,8 +10511,8 @@ class __$$_FhirHistoryRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirHistoryRequest extends _FhirHistoryRequest {
-  _$_FhirHistoryRequest(
+class _$FhirHistoryRequest extends FhirHistoryRequest {
+  _$FhirHistoryRequest(
       {required this.base,
       required this.type,
       required this.id,
@@ -10589,7 +10584,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirHistoryRequest &&
+            other is _$FhirHistoryRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -10627,8 +10622,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirHistoryRequestCopyWith<_$_FhirHistoryRequest> get copyWith =>
-      __$$_FhirHistoryRequestCopyWithImpl<_$_FhirHistoryRequest>(
+  _$$FhirHistoryRequestCopyWith<_$FhirHistoryRequest> get copyWith =>
+      __$$FhirHistoryRequestCopyWithImpl<_$FhirHistoryRequest>(
           this, _$identity);
 
   @override
@@ -11223,21 +11218,21 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return history(this);
   }
@@ -11245,21 +11240,21 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return history?.call(this);
   }
@@ -11267,21 +11262,21 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (history != null) {
@@ -11291,8 +11286,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   }
 }
 
-abstract class _FhirHistoryRequest extends FhirRequest {
-  factory _FhirHistoryRequest(
+abstract class FhirHistoryRequest extends FhirRequest {
+  factory FhirHistoryRequest(
       {required final Uri base,
       required final Stu3ResourceType type,
       required final Id id,
@@ -11306,8 +11301,8 @@ abstract class _FhirHistoryRequest extends FhirRequest {
       final FhirDateTime? at,
       final String? reference,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirHistoryRequest;
-  _FhirHistoryRequest._() : super._();
+      final Client? client}) = _$FhirHistoryRequest;
+  FhirHistoryRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -11333,16 +11328,16 @@ abstract class _FhirHistoryRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirHistoryRequestCopyWith<_$_FhirHistoryRequest> get copyWith =>
+  _$$FhirHistoryRequestCopyWith<_$FhirHistoryRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirHistoryTypeRequestCopyWith<$Res>
+abstract class _$$FhirHistoryTypeRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirHistoryTypeRequestCopyWith(_$_FhirHistoryTypeRequest value,
-          $Res Function(_$_FhirHistoryTypeRequest) then) =
-      __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>;
+  factory _$$FhirHistoryTypeRequestCopyWith(_$FhirHistoryTypeRequest value,
+          $Res Function(_$FhirHistoryTypeRequest) then) =
+      __$$FhirHistoryTypeRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -11361,16 +11356,16 @@ abstract class _$$_FhirHistoryTypeRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>
+class __$$FhirHistoryTypeRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirHistoryTypeRequestCopyWith<$Res> {
-  __$$_FhirHistoryTypeRequestCopyWithImpl(_$_FhirHistoryTypeRequest _value,
-      $Res Function(_$_FhirHistoryTypeRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirHistoryTypeRequest));
+    implements _$$FhirHistoryTypeRequestCopyWith<$Res> {
+  __$$FhirHistoryTypeRequestCopyWithImpl(_$FhirHistoryTypeRequest _value,
+      $Res Function(_$FhirHistoryTypeRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirHistoryTypeRequest));
 
   @override
-  _$_FhirHistoryTypeRequest get _value =>
-      super._value as _$_FhirHistoryTypeRequest;
+  _$FhirHistoryTypeRequest get _value =>
+      super._value as _$FhirHistoryTypeRequest;
 
   @override
   $Res call({
@@ -11388,7 +11383,7 @@ class __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirHistoryTypeRequest(
+    return _then(_$FhirHistoryTypeRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -11447,8 +11442,8 @@ class __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
-  _$_FhirHistoryTypeRequest(
+class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
+  _$FhirHistoryTypeRequest(
       {required this.base,
       required this.type,
       this.pretty = false,
@@ -11517,7 +11512,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirHistoryTypeRequest &&
+            other is _$FhirHistoryTypeRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
@@ -11553,8 +11548,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirHistoryTypeRequestCopyWith<_$_FhirHistoryTypeRequest> get copyWith =>
-      __$$_FhirHistoryTypeRequestCopyWithImpl<_$_FhirHistoryTypeRequest>(
+  _$$FhirHistoryTypeRequestCopyWith<_$FhirHistoryTypeRequest> get copyWith =>
+      __$$FhirHistoryTypeRequestCopyWithImpl<_$FhirHistoryTypeRequest>(
           this, _$identity);
 
   @override
@@ -12149,21 +12144,21 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return historyType(this);
   }
@@ -12171,21 +12166,21 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return historyType?.call(this);
   }
@@ -12193,21 +12188,21 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (historyType != null) {
@@ -12217,8 +12212,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   }
 }
 
-abstract class _FhirHistoryTypeRequest extends FhirRequest {
-  factory _FhirHistoryTypeRequest(
+abstract class FhirHistoryTypeRequest extends FhirRequest {
+  factory FhirHistoryTypeRequest(
       {required final Uri base,
       required final Stu3ResourceType type,
       final bool pretty,
@@ -12231,8 +12226,8 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
       final FhirDateTime? at,
       final String? reference,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirHistoryTypeRequest;
-  _FhirHistoryTypeRequest._() : super._();
+      final Client? client}) = _$FhirHistoryTypeRequest;
+  FhirHistoryTypeRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -12257,16 +12252,16 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirHistoryTypeRequestCopyWith<_$_FhirHistoryTypeRequest> get copyWith =>
+  _$$FhirHistoryTypeRequestCopyWith<_$FhirHistoryTypeRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirHistoryAllRequestCopyWith<$Res>
+abstract class _$$FhirHistoryAllRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirHistoryAllRequestCopyWith(_$_FhirHistoryAllRequest value,
-          $Res Function(_$_FhirHistoryAllRequest) then) =
-      __$$_FhirHistoryAllRequestCopyWithImpl<$Res>;
+  factory _$$FhirHistoryAllRequestCopyWith(_$FhirHistoryAllRequest value,
+          $Res Function(_$FhirHistoryAllRequest) then) =
+      __$$FhirHistoryAllRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -12284,16 +12279,15 @@ abstract class _$$_FhirHistoryAllRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirHistoryAllRequestCopyWithImpl<$Res>
+class __$$FhirHistoryAllRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirHistoryAllRequestCopyWith<$Res> {
-  __$$_FhirHistoryAllRequestCopyWithImpl(_$_FhirHistoryAllRequest _value,
-      $Res Function(_$_FhirHistoryAllRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirHistoryAllRequest));
+    implements _$$FhirHistoryAllRequestCopyWith<$Res> {
+  __$$FhirHistoryAllRequestCopyWithImpl(_$FhirHistoryAllRequest _value,
+      $Res Function(_$FhirHistoryAllRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirHistoryAllRequest));
 
   @override
-  _$_FhirHistoryAllRequest get _value =>
-      super._value as _$_FhirHistoryAllRequest;
+  _$FhirHistoryAllRequest get _value => super._value as _$FhirHistoryAllRequest;
 
   @override
   $Res call({
@@ -12310,7 +12304,7 @@ class __$$_FhirHistoryAllRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirHistoryAllRequest(
+    return _then(_$FhirHistoryAllRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -12365,8 +12359,8 @@ class __$$_FhirHistoryAllRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
-  _$_FhirHistoryAllRequest(
+class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
+  _$FhirHistoryAllRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -12432,7 +12426,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirHistoryAllRequest &&
+            other is _$FhirHistoryAllRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.pretty, pretty) &&
             const DeepCollectionEquality().equals(other.summary, summary) &&
@@ -12466,8 +12460,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirHistoryAllRequestCopyWith<_$_FhirHistoryAllRequest> get copyWith =>
-      __$$_FhirHistoryAllRequestCopyWithImpl<_$_FhirHistoryAllRequest>(
+  _$$FhirHistoryAllRequestCopyWith<_$FhirHistoryAllRequest> get copyWith =>
+      __$$FhirHistoryAllRequestCopyWithImpl<_$FhirHistoryAllRequest>(
           this, _$identity);
 
   @override
@@ -13062,21 +13056,21 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return historyAll(this);
   }
@@ -13084,21 +13078,21 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return historyAll?.call(this);
   }
@@ -13106,21 +13100,21 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (historyAll != null) {
@@ -13130,8 +13124,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   }
 }
 
-abstract class _FhirHistoryAllRequest extends FhirRequest {
-  factory _FhirHistoryAllRequest(
+abstract class FhirHistoryAllRequest extends FhirRequest {
+  factory FhirHistoryAllRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -13143,8 +13137,8 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
       final FhirDateTime? at,
       final String? reference,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirHistoryAllRequest;
-  _FhirHistoryAllRequest._() : super._();
+      final Client? client}) = _$FhirHistoryAllRequest;
+  FhirHistoryAllRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -13168,16 +13162,16 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirHistoryAllRequestCopyWith<_$_FhirHistoryAllRequest> get copyWith =>
+  _$$FhirHistoryAllRequestCopyWith<_$FhirHistoryAllRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirOperationRequestCopyWith<$Res>
+abstract class _$$FhirOperationRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirOperationRequestCopyWith(_$_FhirOperationRequest value,
-          $Res Function(_$_FhirOperationRequest) then) =
-      __$$_FhirOperationRequestCopyWithImpl<$Res>;
+  factory _$$FhirOperationRequestCopyWith(_$FhirOperationRequest value,
+          $Res Function(_$FhirOperationRequest) then) =
+      __$$FhirOperationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {Uri base,
@@ -13197,15 +13191,15 @@ abstract class _$$_FhirOperationRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirOperationRequestCopyWithImpl<$Res>
+class __$$FhirOperationRequestCopyWithImpl<$Res>
     extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$$_FhirOperationRequestCopyWith<$Res> {
-  __$$_FhirOperationRequestCopyWithImpl(_$_FhirOperationRequest _value,
-      $Res Function(_$_FhirOperationRequest) _then)
-      : super(_value, (v) => _then(v as _$_FhirOperationRequest));
+    implements _$$FhirOperationRequestCopyWith<$Res> {
+  __$$FhirOperationRequestCopyWithImpl(_$FhirOperationRequest _value,
+      $Res Function(_$FhirOperationRequest) _then)
+      : super(_value, (v) => _then(v as _$FhirOperationRequest));
 
   @override
-  _$_FhirOperationRequest get _value => super._value as _$_FhirOperationRequest;
+  _$FhirOperationRequest get _value => super._value as _$FhirOperationRequest;
 
   @override
   $Res call({
@@ -13224,7 +13218,7 @@ class __$$_FhirOperationRequestCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirOperationRequest(
+    return _then(_$FhirOperationRequest(
       base: base == freezed
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -13287,8 +13281,8 @@ class __$$_FhirOperationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirOperationRequest extends _FhirOperationRequest {
-  _$_FhirOperationRequest(
+class _$FhirOperationRequest extends FhirOperationRequest {
+  _$FhirOperationRequest(
       {required this.base,
       this.type,
       this.id,
@@ -13369,7 +13363,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirOperationRequest &&
+            other is _$FhirOperationRequest &&
             const DeepCollectionEquality().equals(other.base, base) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -13409,8 +13403,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FhirOperationRequestCopyWith<_$_FhirOperationRequest> get copyWith =>
-      __$$_FhirOperationRequestCopyWithImpl<_$_FhirOperationRequest>(
+  _$$FhirOperationRequestCopyWith<_$FhirOperationRequest> get copyWith =>
+      __$$FhirOperationRequestCopyWithImpl<_$FhirOperationRequest>(
           this, _$identity);
 
   @override
@@ -14044,21 +14038,21 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FhirReadRequest value) read,
-    required TResult Function(_FhirVReadRequest value) vRead,
-    required TResult Function(_FhirUpdateRequest value) update,
-    required TResult Function(_FhirPatchRequest value) patch,
-    required TResult Function(_FhirDeleteRequest value) delete,
-    required TResult Function(_FhirCreateRequest value) create,
-    required TResult Function(_FhirSearchRequest value) search,
-    required TResult Function(_FhirSearchAllRequest value) searchAll,
-    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
-    required TResult Function(_FhirTransactionRequest value) transaction,
-    required TResult Function(_FhirBatchRequest value) batch,
-    required TResult Function(_FhirHistoryRequest value) history,
-    required TResult Function(_FhirHistoryTypeRequest value) historyType,
-    required TResult Function(_FhirHistoryAllRequest value) historyAll,
-    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(FhirReadRequest value) read,
+    required TResult Function(FhirVReadRequest value) vRead,
+    required TResult Function(FhirUpdateRequest value) update,
+    required TResult Function(FhirPatchRequest value) patch,
+    required TResult Function(FhirDeleteRequest value) delete,
+    required TResult Function(FhirCreateRequest value) create,
+    required TResult Function(FhirSearchRequest value) search,
+    required TResult Function(FhirSearchAllRequest value) searchAll,
+    required TResult Function(FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(FhirTransactionRequest value) transaction,
+    required TResult Function(FhirBatchRequest value) batch,
+    required TResult Function(FhirHistoryRequest value) history,
+    required TResult Function(FhirHistoryTypeRequest value) historyType,
+    required TResult Function(FhirHistoryAllRequest value) historyAll,
+    required TResult Function(FhirOperationRequest value) operation,
   }) {
     return operation(this);
   }
@@ -14066,21 +14060,21 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
   }) {
     return operation?.call(this);
   }
@@ -14088,21 +14082,21 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FhirReadRequest value)? read,
-    TResult Function(_FhirVReadRequest value)? vRead,
-    TResult Function(_FhirUpdateRequest value)? update,
-    TResult Function(_FhirPatchRequest value)? patch,
-    TResult Function(_FhirDeleteRequest value)? delete,
-    TResult Function(_FhirCreateRequest value)? create,
-    TResult Function(_FhirSearchRequest value)? search,
-    TResult Function(_FhirSearchAllRequest value)? searchAll,
-    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
-    TResult Function(_FhirTransactionRequest value)? transaction,
-    TResult Function(_FhirBatchRequest value)? batch,
-    TResult Function(_FhirHistoryRequest value)? history,
-    TResult Function(_FhirHistoryTypeRequest value)? historyType,
-    TResult Function(_FhirHistoryAllRequest value)? historyAll,
-    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(FhirReadRequest value)? read,
+    TResult Function(FhirVReadRequest value)? vRead,
+    TResult Function(FhirUpdateRequest value)? update,
+    TResult Function(FhirPatchRequest value)? patch,
+    TResult Function(FhirDeleteRequest value)? delete,
+    TResult Function(FhirCreateRequest value)? create,
+    TResult Function(FhirSearchRequest value)? search,
+    TResult Function(FhirSearchAllRequest value)? searchAll,
+    TResult Function(FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(FhirTransactionRequest value)? transaction,
+    TResult Function(FhirBatchRequest value)? batch,
+    TResult Function(FhirHistoryRequest value)? history,
+    TResult Function(FhirHistoryTypeRequest value)? historyType,
+    TResult Function(FhirHistoryAllRequest value)? historyAll,
+    TResult Function(FhirOperationRequest value)? operation,
     required TResult orElse(),
   }) {
     if (operation != null) {
@@ -14112,8 +14106,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   }
 }
 
-abstract class _FhirOperationRequest extends FhirRequest {
-  factory _FhirOperationRequest(
+abstract class FhirOperationRequest extends FhirRequest {
+  factory FhirOperationRequest(
       {required final Uri base,
       final Stu3ResourceType? type,
       final Id? id,
@@ -14127,8 +14121,8 @@ abstract class _FhirOperationRequest extends FhirRequest {
       final bool usePost,
       final bool useFormData,
       final MimeType? mimeType,
-      final Client? client}) = _$_FhirOperationRequest;
-  _FhirOperationRequest._() : super._();
+      final Client? client}) = _$FhirOperationRequest;
+  FhirOperationRequest._() : super._();
 
   @override
   Uri get base => throw _privateConstructorUsedError;
@@ -14154,6 +14148,6 @@ abstract class _FhirOperationRequest extends FhirRequest {
   Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirOperationRequestCopyWith<_$_FhirOperationRequest> get copyWith =>
+  _$$FhirOperationRequestCopyWith<_$FhirOperationRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
