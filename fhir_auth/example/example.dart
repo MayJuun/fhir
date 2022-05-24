@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:fhir/r4.dart';
 import 'package:fhir_auth/r4.dart';
 
@@ -27,25 +29,25 @@ Future<void> main() async {
   try {
     await client.login();
     if (client.fhirUri.value != null) {
-      final _newPatient = Patient(id: Id('12345'));
-      print('Patient to be uploaded:\n${_newPatient.toJson()}');
+      final newPatient = Patient(id: Id('12345'));
+      log('Patient to be uploaded:\n${newPatient.toJson()}');
       final request1 = FhirRequest.create(
         base: client.fhirUri.value!,
         //?? Uri.parse('127.0.0.1'),
-        resource: _newPatient,
+        resource: newPatient,
         client: client,
       );
 
       Id? newId;
       try {
         final response = await request1.request();
-        print('Response from upload:\n${response.toJson()}');
+        log('Response from upload:\n${response.toJson()}');
         newId = response.id;
       } catch (e) {
-        print(e);
+        log(e.toString());
       }
       if (newId is! Id) {
-        print(newId);
+        log(newId.toString());
       } else {
         final request2 = FhirRequest.read(
           base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
@@ -55,15 +57,15 @@ Future<void> main() async {
         );
         try {
           final response = await request2.request();
-          print('Response from read:\n${response.toJson()}');
+          log('Response from read:\n${response.toJson()}');
         } catch (e) {
-          print(e);
+          log(e.toString());
         }
       }
     }
   } catch (e, stack) {
-    print('Error $e');
-    print('Stack $stack');
+    log('Error $e');
+    log('Stack $stack');
   }
 }
 

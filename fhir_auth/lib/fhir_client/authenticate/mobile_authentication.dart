@@ -1,6 +1,9 @@
+// Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
-import 'base_authentication.dart';
 import 'package:flutter_web_auth/flutter_web_auth.dart';
+
+// Project imports:
+import 'base_authentication.dart';
 
 BaseAuthentication createAuthentication() => MobileAuthentication();
 

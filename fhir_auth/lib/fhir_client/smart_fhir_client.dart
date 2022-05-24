@@ -1,19 +1,24 @@
 // ignore_for_file: prefer_collection_literals, sort_constructors_first
-import 'dart:convert';
 
-import 'package:oauth2/oauth2.dart';
+// Dart imports:
+import 'dart:convert';
+import 'dart:developer';
+
+// Package imports:
 import 'package:collection/collection.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:http/http.dart' as http;
+import 'package:oauth2/oauth2.dart';
 
+// Project imports:
 import 'authenticate/base_authentication.dart';
+import 'secure_fhir_client.dart';
+
 import 'authenticate/authenticate.dart'
     // ignore: uri_does_not_exist
     if (dart.library.io) 'authenticate/mobile_authentication.dart'
     // ignore: uri_does_not_exist
     if (dart.library.html) 'authenticate/web_authentication.dart';
-
-import 'secure_fhir_client.dart';
 
 class SmartFhirClient extends SecureFhirClient {
   SmartFhirClient({
@@ -72,8 +77,8 @@ class SmartFhirClient extends SecureFhirClient {
       client = await grant
           .handleAuthorizationResponse(Uri.parse(returnValue).queryParameters);
     } catch (e, stack) {
-      print('Exception: $e');
-      print('Stack: $stack');
+      log('Exception: $e');
+      log('Stack: $stack');
     }
   }
 

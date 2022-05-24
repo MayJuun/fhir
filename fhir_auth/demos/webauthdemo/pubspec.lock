@@ -67,10 +67,10 @@ packages:
   fhir_at_rest:
     dependency: "direct main"
     description:
-      path: "../../../fhir_at_rest"
-      relative: true
-    source: path
-    version: "0.8.2"
+      name: fhir_at_rest
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.8.3"
   fhir_auth:
     dependency: "direct main"
     description:
@@ -120,7 +120,7 @@ packages:
       name: google_sign_in
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.3.1"
+    version: "5.3.2"
   google_sign_in_android:
     dependency: transitive
     description:

@@ -7,16 +7,14 @@ environment:
 
 dependencies:
   fhir: ^0.8.0
-  # fhir_at_rest: ^0.8.2
-  fhir_at_rest:
-    path: ../../../fhir_at_rest
+  fhir_at_rest: ^0.8.3
   fhir_auth:
     path: ../../../fhir_auth
   flutter:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  google_sign_in: ^5.3.1
+  google_sign_in: ^5.3.2
 
 dev_dependencies:
   flutter_test:

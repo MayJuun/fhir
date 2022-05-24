@@ -1,5 +1,15 @@
 # fhir_auth
 
+## [0.8.0]
+
+* Updated Dependencies
+* Fhir 0.8.0
+* Flutter 3.0.0
+* All Clients are now extensions of http.Client, so they can be passed to fhir_at_rest, and so all requests have been removed from fhir_auth for easier maintenance
+* Moved All demos to demo folder
+* Same client for each FHIR version, as the only difference for authentication is getting the endpoints
+* For web, you will need to include a version of the redirect.html that is included in the lib directory
+
 ## [0.6.1]
 
 * Updated dependencies

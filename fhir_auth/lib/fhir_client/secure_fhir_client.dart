@@ -1,9 +1,13 @@
 // ignore_for_file: prefer_collection_literals, sort_constructors_first
 
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:http/http.dart' as http;
+
+// Project imports:
 import 'fhir_client.dart';
 
 class SecureFhirClient extends FhirClient {
@@ -57,17 +61,12 @@ class SecureFhirClient extends FhirClient {
   @override
   Future<http.Response> post(Uri url,
       {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-    print(headers);
-    print(body);
-    print(encoding);
     final response = await http.post(
       url,
       headers: await newHeaders(headers),
       body: body,
       encoding: encoding,
     );
-    print(response.headers);
-    print(response.body);
     return response;
   }
 

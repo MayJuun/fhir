@@ -1,6 +1,13 @@
-import 'package:fhir/primitive_types/primitive_types.dart';
-import 'base_authentication.dart';
+// ignore_for_file: avoid_web_libraries_in_flutter
+
+// Dart imports:
 import 'dart:html' as html;
+
+// Package imports:
+import 'package:fhir/primitive_types/primitive_types.dart';
+
+// Project imports:
+import 'base_authentication.dart';
 
 BaseAuthentication createAuthentication() => WebAuthentication();
 

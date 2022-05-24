@@ -1,8 +1,13 @@
 // ignore_for_file: prefer_collection_literals, sort_constructors_first
 
+// Dart imports:
+import 'dart:developer';
+
+// Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+// Project imports:
 import 'secure_fhir_client.dart';
 
 class GcpFhirClient extends SecureFhirClient {
@@ -36,8 +41,8 @@ class GcpFhirClient extends SecureFhirClient {
     try {
       await _googleSignIn.signIn();
     } catch (e, stack) {
-      print('Exception: $e');
-      print('Stack at time of Exception: \n$stack');
+      log('Exception: $e');
+      log('Stack at time of Exception: \n$stack');
     }
   }
 
