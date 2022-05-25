@@ -13,6 +13,8 @@ import '../globals.dart' as globals;
 part 'fhir_request.freezed.dart';
 
 @freezed
+
+/// The class for making requests to a FHIR server
 class FhirRequest with _$FhirRequest {
   FhirRequest._();
 
@@ -452,6 +454,7 @@ class FhirRequest with _$FhirRequest {
   /// authorization or other headers can be passed in as well
   Future<Resource> request({Map<String, String>? headers}) async {
     return await map(
+      /// READ
       read: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
@@ -459,6 +462,8 @@ class FhirRequest with _$FhirRequest {
         'Read',
         mimeType: m.mimeType,
       ),
+
+      /// VREAD
       vRead: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
@@ -466,6 +471,8 @@ class FhirRequest with _$FhirRequest {
         'Vread',
         mimeType: m.mimeType,
       ),
+
+      /// UPDATE
       update: (m) async => await _request(
         RestfulRequest.put_,
         uri(parameters: m.parameters),
@@ -474,6 +481,8 @@ class FhirRequest with _$FhirRequest {
         resource: m.resource,
         mimeType: m.mimeType,
       ),
+
+      /// PATCH
       patch: (m) async => await _request(
         RestfulRequest.patch_,
         uri(parameters: m.parameters),
@@ -482,6 +491,8 @@ class FhirRequest with _$FhirRequest {
         resource: m.resource,
         mimeType: m.mimeType,
       ),
+
+      /// DELETE
       delete: (m) async => await _request(
         RestfulRequest.delete_,
         uri(parameters: m.parameters),
@@ -489,6 +500,8 @@ class FhirRequest with _$FhirRequest {
         'Delete',
         mimeType: m.mimeType,
       ),
+
+      /// CREATE
       create: (m) async => await _request(
         RestfulRequest.post_,
         uri(parameters: m.parameters),
@@ -497,6 +510,8 @@ class FhirRequest with _$FhirRequest {
         resource: m.resource,
         mimeType: m.mimeType,
       ),
+
+      /// SEARCH
       search: (m) async => await _request(
         m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
         m.usePost ? url : uri(parameters: m.parameters),
@@ -505,6 +520,8 @@ class FhirRequest with _$FhirRequest {
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
         mimeType: m.mimeType,
       ),
+
+      /// SEARCHALL
       searchAll: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
@@ -512,6 +529,8 @@ class FhirRequest with _$FhirRequest {
         'Search All',
         mimeType: m.mimeType,
       ),
+
+      /// CAPABILITIES
       capabilities: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
@@ -519,6 +538,8 @@ class FhirRequest with _$FhirRequest {
         'Capabilities',
         mimeType: m.mimeType,
       ),
+
+      /// TRANSACTION
       transaction: (m) async {
         if (m.bundle.type != BundleType.transaction) {
           return _operationOutcome(
@@ -546,6 +567,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// BATCH
       batch: (m) async {
         if (m.bundle.type != BundleType.batch) {
           return _operationOutcome(
@@ -574,6 +597,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// HISTORY
       history: (m) async {
         final List<String> parameterList = [];
         final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
@@ -593,6 +618,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// HISTORYTYPE
       historyType: (m) async {
         final List<String> parameterList = [];
         final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
@@ -612,6 +639,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// HISTORYALL
       historyAll: (m) async {
         final List<String> parameterList = [];
         final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
@@ -631,6 +660,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// OPERATION
       operation: (m) async => await _request(
         m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
         m.usePost ? url : uri(parameters: parameters),
@@ -773,42 +804,55 @@ class FhirRequest with _$FhirRequest {
     }
   }
 
-  /// unioon method to get the url
+  /// union method to get the url
   String _url() => map(
-        // READ
+        /// READ
         read: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
-        // VREAD
+
+        /// VREAD
         vRead: (f) =>
             '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
-        // UPDATE
+
+        /// UPDATE
         update: (f) =>
             '${f.base}/${f.resource.resourceTypeString}/${f.resource.id.toString()}',
-        // PATCH
+
+        /// PATCH
         patch: (f) =>
             '${f.base}/${f.resource.resourceTypeString}/${f.resource.id.toString()}',
-        // DELETE
+
+        /// DELETE
         delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
-        // CREATE
+
+        /// CREATE
         create: (f) =>
             '${f.base}/${enumToString(f.resource.resourceTypeString)}',
-        // SEARCH
+
+        /// SEARCH
         search: (f) => '${f.base}/${enumToString(f.type)}'
             '${f.restfulRequest == RestfulRequest.post_ ? '/_search' : ''}',
-        // SEARCH-ALL
+
+        /// SEARCH-ALL
         searchAll: (f) => '${f.base}',
-        // CAPABILITIES
+
+        /// CAPABILITIES
         capabilities: (f) => '${f.base}/metadata',
-        // BATCH / TRANSACTION
+
+        /// BATCH / TRANSACTION
         transaction: (f) => '${f.base}',
         batch: (f) => '${f.base}',
-        // HISTORY
+
+        /// HISTORY
         history: (f) =>
             '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
-        // HISTORY-TYPE
+
+        /// HISTORY-TYPE
         historyType: (f) => '${f.base}/${enumToString(f.type)}/_history',
-        // HISTORY-ALL
+
+        /// HISTORY-ALL
         historyAll: (f) => '${f.base}/_history',
-        // OPERATION
+
+        /// OPERATION
         operation: (f) => '${f.base}/'
             '${f.type != null ? "${enumToString(f.type)}/" : ''}'
             '${f.type != null && f.id != null ? "${enumToString(f.id)}/" : ''}'
