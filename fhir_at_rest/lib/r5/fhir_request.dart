@@ -454,6 +454,7 @@ class FhirRequest with _$FhirRequest {
   /// authorization or other headers can be passed in as well
   Future<Resource> request({Map<String, String>? headers}) async {
     return await map(
+      /// READ
       read: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
@@ -461,6 +462,8 @@ class FhirRequest with _$FhirRequest {
         'Read',
         mimeType: m.mimeType,
       ),
+
+      /// VREAD
       vRead: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
@@ -468,6 +471,8 @@ class FhirRequest with _$FhirRequest {
         'Vread',
         mimeType: m.mimeType,
       ),
+
+      /// UPDATE
       update: (m) async => await _request(
         RestfulRequest.put_,
         uri(parameters: m.parameters),
@@ -476,6 +481,8 @@ class FhirRequest with _$FhirRequest {
         resource: m.resource,
         mimeType: m.mimeType,
       ),
+
+      /// PATCH
       patch: (m) async => await _request(
         RestfulRequest.patch_,
         uri(parameters: m.parameters),
@@ -484,6 +491,8 @@ class FhirRequest with _$FhirRequest {
         resource: m.resource,
         mimeType: m.mimeType,
       ),
+
+      /// DELETE
       delete: (m) async => await _request(
         RestfulRequest.delete_,
         uri(parameters: m.parameters),
@@ -491,6 +500,8 @@ class FhirRequest with _$FhirRequest {
         'Delete',
         mimeType: m.mimeType,
       ),
+
+      /// CREATE
       create: (m) async => await _request(
         RestfulRequest.post_,
         uri(parameters: m.parameters),
@@ -499,6 +510,8 @@ class FhirRequest with _$FhirRequest {
         resource: m.resource,
         mimeType: m.mimeType,
       ),
+
+      /// SEARCH
       search: (m) async => await _request(
         m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
         m.usePost ? url : uri(parameters: m.parameters),
@@ -507,6 +520,8 @@ class FhirRequest with _$FhirRequest {
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
         mimeType: m.mimeType,
       ),
+
+      /// SEARCHALL
       searchAll: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
@@ -514,6 +529,8 @@ class FhirRequest with _$FhirRequest {
         'Search All',
         mimeType: m.mimeType,
       ),
+
+      /// CAPABILITIES
       capabilities: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
@@ -521,6 +538,8 @@ class FhirRequest with _$FhirRequest {
         'Capabilities',
         mimeType: m.mimeType,
       ),
+
+      /// TRANSACTION
       transaction: (m) async {
         if (m.bundle.type != Code('transaction')) {
           return _operationOutcome(
@@ -548,6 +567,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// BATCH
       batch: (m) async {
         if (m.bundle.type != Code('batch')) {
           return _operationOutcome(
@@ -576,6 +597,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// HISTORY
       history: (m) async {
         final List<String> parameterList = [];
         final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
@@ -595,6 +618,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// HISTORYTYPE
       historyType: (m) async {
         final List<String> parameterList = [];
         final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
@@ -614,6 +639,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// HISTORYALL
       historyAll: (m) async {
         final List<String> parameterList = [];
         final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
@@ -633,6 +660,8 @@ class FhirRequest with _$FhirRequest {
           mimeType: m.mimeType,
         );
       },
+
+      /// OPERATION
       operation: (m) async => await _request(
         m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
         m.usePost ? url : uri(parameters: parameters),
