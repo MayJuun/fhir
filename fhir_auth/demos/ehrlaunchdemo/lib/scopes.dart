@@ -14,3 +14,18 @@ final scopes = Scopes(
   offlineAccess: true,
   ehrLaunch: true,
 );
+
+final patientScopes = Scopes(
+  clinicalScopes: [
+    ClinicalScope(
+      Role.patient,
+      R4ResourceType.Patient,
+      Interaction.read,
+    ),
+  ],
+  openid: true,
+  offlineAccess: true,
+  patientLaunch: true,
+  fhirUser: true,
+  ehrLaunch: true,
+);

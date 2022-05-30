@@ -26,8 +26,9 @@ class DemoPage extends StatelessWidget {
     final iss = queryParameters['iss'];
     print('Iss: $iss');
     final launch = queryParameters['launch'];
-    print('Launch: $launch');
-    final clientId = queryParameters['clientId'];
+    print('Launch: "$launch"');
+    final clientId =
+        queryParameters['clientId'] ?? 'd3ba137c-63ca-45df-ade8-3e66f1fe90b9';
     final currentUri = Uri.base;
     final fhirCallback = Uri(
       host: currentUri.host,
@@ -37,19 +38,19 @@ class DemoPage extends StatelessWidget {
     );
     print('Redirect: $fhirCallback');
 
-    if (clientId == null) {
-      return const MaterialApp(
-          home: Scaffold(
-              body: Padding(
-                  padding: EdgeInsets.fromLTRB(16, 30, 16, 0),
-                  child: Text('No Client ID was supplied'))));
-    }
+    // if (clientId == null) {
+    //   return const MaterialApp(
+    //       home: Scaffold(
+    //           body: Padding(
+    //               padding: EdgeInsets.fromLTRB(16, 30, 16, 0),
+    //               child: Text('No Client ID was supplied'))));
+    // }
     final client = SmartFhirClient(
       fhirUri: FhirUri(iss),
       clientId: clientId,
       redirectUri: FhirUri(fhirCallback),
-      scopes: scopes.scopesList(),
-      launch: launch,
+      scopes: patientScopes.scopesList(),
+      // launch: launch,
     );
 
     final result = request(client);

@@ -76,6 +76,10 @@ class SmartFhirClient extends SecureFhirClient {
       );
       client = await grant
           .handleAuthorizationResponse(Uri.parse(returnValue).queryParameters);
+      print(client?.credentials.accessToken);
+      print(client?.credentials.toJson());
+      print(client?.identifier);
+      print(client?.toString());
     } catch (e, stack) {
       log('Exception: $e');
       log('Stack: $stack');

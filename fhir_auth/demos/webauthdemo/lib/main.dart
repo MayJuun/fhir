@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'aidbox_request.dart';
+import 'epic_clinician.dart';
+import 'epic_patient.dart';
 import 'gcs_request.dart';
 import 'hapi_request.dart';
 import 'meld_request.dart';
@@ -33,8 +35,8 @@ class DemoPage extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.fromLTRB(16, 30, 16, 0),
           child: GridView.count(
-            childAspectRatio: 2.0,
-            crossAxisCount: 2,
+            childAspectRatio: 1.5,
+            crossAxisCount: 3,
             children: [
               ElevatedButton(
                   style: ButtonStyle(
@@ -76,6 +78,38 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/gcp.png'),
                   onPressed: () async => await gcsRequest(fhirCallback)),
+              ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Text(
+                    'Epic Patient',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 36.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onPressed: () async =>
+                      await epicPatientRequest(fhirCallback)),
+              ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Text(
+                    'Epic Clinician',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 36.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onPressed: () async =>
+                      await epicClinicianRequest(fhirCallback)),
             ],
           ),
         ),
