@@ -9,6 +9,41 @@ enum Interaction {
   read,
   write,
   any,
+
+  /// 5
+  cruds,
+
+  /// 4
+  ruds,
+  cuds,
+  crds,
+  crus,
+  crud,
+
+  /// 3
+  uds,
+  rds,
+  rud,
+  cds,
+  cud,
+  rus,
+  cus,
+  cru,
+
+  /// 2
+  cr,
+  cu,
+  cd,
+  cs,
+  ru,
+  rd,
+  rs,
+  ud,
+  us,
+  ds,
+
+  /// 1
+
   c,
   r,
   u,
@@ -20,6 +55,7 @@ enum Interaction {
 enum Role {
   patient,
   user,
+  system,
 }
 
 /// Together these 3 items make up a FHIR Clinical scope
