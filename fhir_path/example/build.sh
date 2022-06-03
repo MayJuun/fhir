@@ -3,8 +3,8 @@
 projectId="demos-322021"
 projectName="fhir-path-demo"
 
-gcloud config set project $projecId
-# gcloud auth login
+gcloud config set project $projectId
+gcloud auth login
 
 flutter clean ; flutter pub get
 

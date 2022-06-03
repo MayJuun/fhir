@@ -19,18 +19,18 @@ Future<void> epicPatientRequest(Uri fhirCallback) async {
 
   print('logged in');
 
-  if (client.fhirUri.value != null) {
-    final request = FhirRequest.read(
-      base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
-      type: R4ResourceType.Patient,
-      id: Id('erXuFYUfucBZaryVksYEcMg3'),
-      client: client,
-    );
-    try {
-      final response = await request.request();
-      print('Response from read:\n${response.toJson()}');
-    } catch (e) {
-      print(e);
-    }
-  }
+  // if (client.fhirUri.value != null) {
+  //   final request = FhirRequest.read(
+  //     base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
+  //     type: R4ResourceType.Patient,
+  //     id: Id('erXuFYUfucBZaryVksYEcMg3'),
+  //     client: client,
+  //   );
+  //   try {
+  //     final response = await request.request();
+  //     print('Response from read:\n${response.toJson()}');
+  //   } catch (e) {
+  //     print(e);
+  //   }
+  // }
 }

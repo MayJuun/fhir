@@ -61,9 +61,20 @@ enum Role {
 /// Together these 3 items make up a FHIR Clinical scope
 /// http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#clinical-scope-syntax
 class ClinicalScope {
-  ClinicalScope(this.role, this.resourceType, this.interaction);
+  ClinicalScope({
+    required this.role,
+    this.resourceType,
+    bool? allTypes,
+    required this.interaction,
+  }) {
+    allTypes = allTypes;
+    if (resourceType == null) {
+      allTypes = true;
+    }
+  }
 
   final Role role;
-  final R4ResourceType resourceType;
+  final R4ResourceType? resourceType;
+  late final bool? allTypes;
   final Interaction interaction;
 }

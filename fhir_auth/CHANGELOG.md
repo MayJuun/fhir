@@ -1,5 +1,9 @@
 # fhir_auth
 
+## [0.8.1]
+
+* Added demos
+
 ## [0.8.0]
 
 * Updated Dependencies

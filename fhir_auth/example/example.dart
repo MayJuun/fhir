@@ -10,9 +10,9 @@ Future<void> main() async {
   final scopes = Scopes(
     clinicalScopes: [
       ClinicalScope(
-        Role.patient,
-        R4ResourceType.Patient,
-        Interaction.any,
+        role: Role.patient,
+        resourceType: R4ResourceType.Patient,
+        interaction: Interaction.any,
       ),
     ],
     openid: true,

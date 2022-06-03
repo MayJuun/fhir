@@ -5,9 +5,9 @@ import 'package:fhir_auth/r4.dart';
 final scopes = Scopes(
   clinicalScopes: [
     ClinicalScope(
-      Role.user,
-      R4ResourceType.Patient,
-      Interaction.any,
+      role: Role.user,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.any,
     ),
   ],
   openid: true,
@@ -18,9 +18,9 @@ final scopes = Scopes(
 final patientScopes = Scopes(
   clinicalScopes: [
     ClinicalScope(
-      Role.patient,
-      R4ResourceType.Patient,
-      Interaction.read,
+      role: Role.patient,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.read,
     ),
   ],
   openid: true,
