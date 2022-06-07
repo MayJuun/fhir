@@ -212,30 +212,25 @@ void testBasicTypes() {
     });
     test('Non-Escape Sequences', () {
       /// ToDo: figure out escape sequences
+      expect(
+          ((parseResult(r"'\p' // 'p'") as ParserList).first as StringParser)
+              .value,
+          'p');
+      expect(
+          ((parseResult(r"'\\p' // '\p'") as ParserList).first as StringParser)
+              .value,
+          r'\p');
+      expect(
+          ((parseResult(r"'\3' // '3'") as ParserList).first as StringParser)
+              .value,
+          '3');
+      expect(
+          ((parseResult(r"'\u005' // 'u005'") as ParserList).first
+                  as StringParser)
+              .value,
+          'u005');
       // expect(
-      //     ((parseResult("'\p' // 'p'") as ParserList).first as StringParser)
-      //         .value
-      //         .value,
-      //     'p');
-      // expect(
-      //     ((parseResult("'\\p' // '\p'") as ParserList).first as StringParser)
-      //         .value
-      //         .value,
-      //     '\p');
-      // expect(
-      //     ((parseResult("'\3' // '3'") as ParserList).first as StringParser)
-      //         .value
-      //         .value,
-      //     '3');
-      // expect(
-      //     ((parseResult("'\u005' // 'u005'") as ParserList).first
-      //             as StringParser)
-      //         .value
-      //         .value,
-      //     'u005');
-      // expect(
-      //     ((parseResult("'\' // ''") as ParserList).first as StringParser)
-      //         .value
+      //     ((parseResult(r"'\' // ''") as ParserList).first as StringParser)
       //         .value,
       //     '');
     });

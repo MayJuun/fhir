@@ -1,4 +1,6 @@
 // Package imports:
+import 'dart:convert';
+
 import 'package:petitparser/petitparser.dart';
 
 // Project imports:
@@ -56,9 +58,18 @@ final Parser<IntegerParser> integerLexer =
 
 /// A String is signified by single quotes (') on either end
 final Parser<StringParser> stringLexer =
-    (char("'") & (escLexer | char("'").neg()).star() & char("'"))
-        .flatten()
-        .map((value) => StringParser(value));
+    (char("'") & (escLexer | char("'").neg()).star() & char("'")).map((value) {
+  final middleValue = value[1]
+      .map((e) => e is Token
+          ? e.value.contains('u')
+              ? utf8.decode([int.parse(e.value.split('u').last, radix: 16)])
+              : e.value.replaceAll('\\\\', '\\')
+          : e == r'\'
+              ? ''
+              : e)
+      .join('');
+  return StringParser('${value[0]}$middleValue${value[2]}');
+});
 
 /// An Identifier has no quotes
 final Parser<IdentifierParser> identifierLexer =
@@ -69,10 +80,18 @@ final Parser<IdentifierParser> identifierLexer =
 
 /// DelimitedIdentifier is signified by a backquote (`) on either end
 final Parser<DelimitedIdentifierParser> delimitedIdentifierLexer =
-    (char('`') & (escLexer | char('`').neg()).star() & char('`'))
-        .flatten()
-        .map((value) => DelimitedIdentifierParser(value));
-
+    (char('`') & (escLexer | char('`').neg()).star() & char('`')).map((value) {
+  final middleValue = value[1]
+      .map((e) => e is Token
+          ? e.value.contains('u')
+              ? utf8.decode([int.parse(e.value.split('u').last, radix: 16)])
+              : e.value.replaceAll('\\\\', '\\')
+          : e == r'\'
+              ? ''
+              : e)
+      .join('');
+  return DelimitedIdentifierParser('${value[0]}$middleValue${value[2]}');
+});
 final escLexer = (char(r'\') &
         (char('`') |
             char("'") |

@@ -471,7 +471,9 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
               pathExpression: r"@T14:34:28.123 is Time"),
           [true]);
     });
-/* TODO: throws errors, but doesn't return false, should it?
+/* TODO: throws errors, doesn't return false, depends on parsing
+   Current: "@T14:34:28Z" => TimeParser (@T14:34:28) + IdentifierParser (Z)
+   
     test("testLiteralTimeUtc", () {
 //<test name="testLiteralTimeUTC" inputfile="patient-example.xml" invalid="true"><expression>@T14:34:28Z is Time</expression>});
 
@@ -616,6 +618,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
               pathExpression: r"Patient.birthDate = @1974-12-25"),
           [true]);
     });
+    // requires date to look in extension
     // test("testDateNotEqual", () {
     //   expect(
     //       walkFhirPath(
@@ -659,8 +662,6 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
               pathExpression: r"Patient.birthDate != @T12:14"),
           [true]);
     });
-    // todo: has an issue comparing because Patient.birthDate is going to be
-    // a String, and today() is going to be a Date
     test("testDateNotEqualToday", () {
       expect(
           walkFhirPath(
@@ -712,13 +713,13 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
           [true]);
     });
   });
-  // test("testLiteralUnicode", () {
-  //   expect(
-  //       walkFhirPath(
-  //           context: patientExample(),
-  //           pathExpression: r"Patient.name.given.first() = 'P\u0065ter'"),
-  //       [true]);
-  // });
+  test("testLiteralUnicode", () {
+    expect(
+        walkFhirPath(
+            context: patientExample(),
+            pathExpression: r"Patient.name.given.first() = 'P\u0065ter'"),
+        [true]);
+  });
 
   test("testCollectionNotEmpty", () {
     expect(
@@ -2070,8 +2071,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
     //   expect(
     //       walkFhirPath(
     //           context: patientExample(),
-    //           pathExpression:
-    //               r"Patient.name.take(0).given.exists() = false"),
+    //           pathExpression: r"Patient.name.take(0).given.exists() = false"),
     //       [true]);
     // });
   });

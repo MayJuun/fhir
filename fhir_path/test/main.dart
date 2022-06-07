@@ -8,18 +8,47 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 
 void main() {
-  final path = "(%resource.item.where(linkId='/8302-2').answer.value*3)";
-  print(walkFhirPath(
-    context: ozair,
-    pathExpression: path,
-    resource: ozair,
-  ));
+  print(parseFhirPath(r"Patient.name.given.first() = 'P\u0065ter'"));
+  print(walkFhirPath(context: ozair, pathExpression: r"'P\u0065ter'"));
+  print(jsonEncode(r'P\u0065ter'));
+  // print('P\u0065ter');
+  print((parseFhirPath(r"'\p' // 'p'").first as StringParser).value);
+  print(parseFhirPath(r"'\p' // 'p'").prettyPrint());
 
-  final response = QuestionnaireResponse.fromJson(ozair);
+  print('1: ${(parseFhirPath(r"'\\p' // '\p'").first as StringParser).value}');
+  print('2: ${parseFhirPath(r"'\\p' // '\p'").prettyPrint()}');
+  // print(utf8..encode('e'));
+  // print(int.parse('0065', radix: 16));
+  // print(utf8.decode([int.parse('0065', radix: 16)]));
+  // print("${r'/u0065'.replaceAll(r'/u', r'\u')}");
+  // print('\u0065');
+  // Utf8Decoder().convert(intList);
+  // final path = "(%resource.item.where(linkId='/8302-2').answer.value*3)";
 
-  print(response.item?[0].answer?[0].valueDecimal);
-  print(response.item?[0].answer?[0].valueDecimal?.isInt);
-  print(response.item?[0].answer?[0].valueDecimal?.isValid);
+  // test("testLiteralUnicode", () {
+  //   expect(
+
+  //       [true]);
+  // });
+
+  // (parseFhirPath(r"Patient.name.given.first() = 'P\u0065ter'").first
+  //         as EqualsParser)
+  //     .after
+  //     .value
+  //     .forEach((element) {
+  //   print(element.runtimeType);
+  // });
+  // print(walkFhirPath(
+  //   context: ozair,
+  //   pathExpression: '@T14:34:28Z',
+  //   resource: ozair,
+  // ));
+
+  // final response = QuestionnaireResponse.fromJson(ozair);
+
+  // print(response.item?[0].answer?[0].valueDecimal);
+  // print(response.item?[0].answer?[0].valueDecimal?.isInt);
+  // print(response.item?[0].answer?[0].valueDecimal?.isValid);
 
   // final l1 = '1,2,3,4,5,6,7,8,9,0';
   // final l2 = '1,2,3,4,5';

@@ -1,24 +1,31 @@
-# Specify the Dart SDK base image version using dart:<version> (ex: dart:2.12)
-FROM dart:stable AS build
+################
+# Currently, this Dockerfile fails to build for web on M1 machines
+# see this error: https://github.com/rvolosatovs/docker-protobuf/issues/81
+# ...this example: https://github.com/rvolosatovs/docker-protobuf/blob/main/Dockerfile
+# ...these instructions: https://github.com/tonistiigi/xx
 
-# Resolve app dependencies.
+# FROM --platform=$BUILDPLATFORM tonistiigi/xx AS xx
+# FROM --platform=$BUILDPLATFORM alpine
+# # copy xx scripts to your build stage
+# COPY --from=xx / /
+# # export TARGETPLATFORM (or other TARGET*)
+# ARG TARGETPLATFORM
+# # you can now call xx-* commands
+# RUN xx-info env
+
+################
+FROM dart:2.17
+
 WORKDIR /app
-COPY pubspec.* ./
+COPY pubspec.yaml /app/pubspec.yaml
 RUN dart pub get
-
-# Copy app source code and AOT compile it.
 COPY . .
-# Ensure packages are still up-to-date if anything has changed
 RUN dart pub get --offline
 RUN dart compile exe bin/server.dart -o bin/server
 
-# Build minimal serving image from AOT-compiled `/server` and required system
-# libraries and configuration files stored in `/runtime/` from the build stage.
-FROM scratch
-COPY --from=build /runtime/ /
-COPY --from=build /app/bin/server /app/bin/
-COPY --from=build /app/web /app/web
-
-# Start server.
+########################
+FROM subfuzion/dart:slim
+COPY --from=0 /app/bin/server /app/bin/server
+COPY --from=0 /app/web /app/web
 EXPOSE 8080
-CMD ["/app/bin/server"]
+ENTRYPOINT ["/app/bin/server"]
