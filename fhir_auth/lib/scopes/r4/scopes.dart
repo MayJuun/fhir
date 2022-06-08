@@ -93,7 +93,7 @@ class Scopes with _$Scopes {
             : scope.role == Role.user
                 ? 'user/'
                 : 'system/';
-        scopeArgument += (scope.allTypes ?? false)
+        scopeArgument += scope.allTypes
             ? '*.'
             : ResourceUtils.resourceTypeToStringMap[scope.resourceType] ?? '';
         scopeArgument += scope.interaction == Interaction.any

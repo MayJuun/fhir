@@ -15,6 +15,9 @@ dependencies:
   url_launcher: ^6.1.2
   yaml_writer: ^1.0.1
 
+dev_dependencies:
+  flutter_lints: ^2.0.1
+
 flutter:
   uses-material-design: true
 

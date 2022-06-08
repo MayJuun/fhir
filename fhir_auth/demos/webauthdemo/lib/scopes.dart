@@ -5,16 +5,31 @@ import 'package:fhir_auth/r4.dart';
 final scopes = Scopes(
   clinicalScopes: [
     ClinicalScope(
-      role: Role.patient,
+      role: Role.user,
       resourceType: R4ResourceType.Patient,
       interaction: Interaction.any,
     ),
   ],
   openid: true,
   offlineAccess: true,
+  patientLaunch: true,
+  fhirUser: true,
 );
 
-final patientScopes = Scopes(
+final epicUserScopes = Scopes(
+  clinicalScopes: [
+    ClinicalScope(
+      role: Role.user,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.any,
+    ),
+  ],
+  openid: true,
+  offlineAccess: true,
+  fhirUser: true,
+);
+
+final epicPatientScopes = Scopes(
   clinicalScopes: [
     ClinicalScope(
       role: Role.patient,

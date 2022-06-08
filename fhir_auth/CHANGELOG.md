@@ -3,6 +3,13 @@
 ## [0.8.1]
 
 * Added demos
+    1. External Web demos - aidbox, google, hapi, meld
+    2. Internal EHR demos (all web) - meld & epic
+    3. External Mobile demos - aidbox, google, hapi, meld
+* Updated to new granular SMART scopes (not in use yet, usually)
+* Added system, in addition to patient & user scopes
+* Had to add new authorizationCodeGrant (extended from Oauth2) to save some of the passed FHIR values
+* Added epic class for values it may pass at launch
 
 ## [0.8.0]
 

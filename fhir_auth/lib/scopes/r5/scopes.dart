@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_final_locals
 
 // Package imports:
-import 'package:fhir/stu3.dart';
+import 'package:fhir/r5.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 // Project imports:
@@ -88,14 +88,17 @@ class Scopes with _$Scopes {
     }
     if (clinicalScopes != null) {
       for (final scope in clinicalScopes!) {
-        var scopeArgument = scope.role == Role.patient ? 'patient/' : 'user/';
-        scopeArgument +=
-            ResourceUtils.resourceTypeToStringMap[scope.resourceType] ?? '';
+        var scopeArgument = scope.role == Role.patient
+            ? 'patient/'
+            : scope.role == Role.user
+                ? 'user/'
+                : 'system/';
+        scopeArgument += scope.allTypes
+            ? '*.'
+            : ResourceUtils.resourceTypeToStringMap[scope.resourceType] ?? '';
         scopeArgument += scope.interaction == Interaction.any
             ? '.*'
-            : scope.interaction == Interaction.write
-                ? '.write'
-                : '.read';
+            : '.${scope.interaction.toString().split(".").last}';
         returnValue.add(scopeArgument);
       }
     }

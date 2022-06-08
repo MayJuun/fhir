@@ -12,9 +12,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(title: 'Demo', home: DemoPage(Uri.base.queryParameters));
-  }
+  Widget build(BuildContext context) =>
+      MaterialApp(title: 'Demo', home: DemoPage(Uri.base.queryParameters));
 }
 
 class DemoPage extends StatelessWidget {
@@ -23,35 +22,9 @@ class DemoPage extends StatelessWidget {
   final Map<String, String> queryParameters;
   @override
   Widget build(BuildContext context) {
-    final iss = queryParameters['iss'];
-    print('Iss: $iss');
-    final launch = queryParameters['launch'];
-    print('Launch: "$launch"');
-    final clientId =
-        queryParameters['clientId'] ?? 'd3ba137c-63ca-45df-ade8-3e66f1fe90b9';
-    final currentUri = Uri.base;
-    final fhirCallback = Uri(
-      host: currentUri.host,
-      scheme: currentUri.scheme,
-      port: currentUri.port,
-      path: '/redirect.html',
-    );
-    print('Redirect: $fhirCallback');
-
-    // if (clientId == null) {
-    //   return const MaterialApp(
-    //       home: Scaffold(
-    //           body: Padding(
-    //               padding: EdgeInsets.fromLTRB(16, 30, 16, 0),
-    //               child: Text('No Client ID was supplied'))));
-    // }
-    final client = SmartFhirClient(
-      fhirUri: FhirUri(iss),
-      clientId: clientId,
-      redirectUri: FhirUri(fhirCallback),
-      scopes: patientScopes.scopesList(),
-      // launch: launch,
-    );
+    final client = SmartFhirClient.fromLaunchParameters(
+        Uri.base, queryParameters,
+        scopes: patientScopes.scopesList());
 
     final result = request(client);
     return MaterialApp(
@@ -70,11 +43,7 @@ class DemoPage extends StatelessWidget {
                   Text(
                       'Given Names: ${(snapshot.data as Patient).name?[0].given?.join(" ")}'),
                   Text('ID: ${(snapshot.data as Patient).id}'),
-                  Text('ISS: $iss'),
-                ];
-              } else if (iss == null) {
-                children = [
-                  const Text('App Was Not Launched from an EHR'),
+                  Text('ISS: ${client.fhirUri}'),
                 ];
               } else {
                 children = [

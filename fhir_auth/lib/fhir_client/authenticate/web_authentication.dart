@@ -23,10 +23,8 @@ class WebAuthentication implements BaseAuthentication {
         'menubar=no, status=no, scrollbars=no, menubar=no, width=1000, height=800');
 
     try {
-      final messageEvt = await html.window.onMessage.firstWhere((evt) {
-        print(evt.data);
-        return evt.origin == redirectUri.value!.origin;
-      });
+      final messageEvt = await html.window.onMessage
+          .firstWhere((evt) => evt.origin == redirectUri.value!.origin);
 
       popupLogin.close();
 

@@ -29,7 +29,6 @@ class DemoPage extends StatelessWidget {
       port: currentUri.port,
       path: '/redirect.html',
     );
-    print(fhirCallback);
     return MaterialApp(
       home: Scaffold(
         body: Padding(
