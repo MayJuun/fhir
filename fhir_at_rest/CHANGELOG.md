@@ -1,5 +1,10 @@
 # fhir_at_rest
 
+## [0.8.4]
+
+* Epic passes responds to successful queries with an empty body, but puts a location (which is a reference) to the resource involved
+* Now passes back an Informational OperationOutcome for successful requests, along with details of the request made, and the location (reference) to the resource involved
+
 ## [0.8.3]
 
 * Freezed constructors don't really need to be private. And occasionally you may want to have the ability to cast them.

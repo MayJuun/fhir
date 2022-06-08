@@ -6,42 +6,42 @@ Patient newPatient() {
   final endDigits = digits(6).toString();
   final zNum = digits(4).toString();
   return Patient(
-    // identifier: [
-    // Identifier(
-    //   type: CodeableConcept(
-    //     coding: [
-    //       Coding(
-    //         system: FhirUri('http://terminology.hl7.org/CodeSystem/v2-0203'),
-    //         code: Code('SS'),
-    //       ),
-    //     ],
-    //   ),
-    //   system: FhirUri('http://hl7.org/fhir/sid/us-ssn'),
-    //   value: digits(9).toString(),
-    // ),
-    // Identifier.fromJson({
-    //   "use": "usual",
-    //   "type": {"text": "WPRINTERNAL"},
-    //   "system": "urn:oid: 1.2.840.114350.1.13.0.1.7.2.${digits(6)}",
-    //   "value": "${digits(3)}",
-    // }),
-    // Identifier.fromJson(
-    //   {
-    //     "use": "usual",
-    //     "type": {"text": "EXTERNAL"},
-    //     "system": "urn:oid: 1.2.840.114350.1.13.0.1.7.2.$endDigits",
-    //     "value": "Z$zNum"
-    //   },
-    // ),
-    // Identifier.fromJson(
-    //   {
-    //     "use": "usual",
-    //     "type": {"text": "INTERNAL"},
-    //     "system": "urn:oid: 1.2.840.114350.1.13.0.1.7.2.$endDigits",
-    //     "value": "Z$zNum"
-    //   },
-    // ),
-    // ],
+    identifier: [
+      Identifier(
+        type: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://terminology.hl7.org/CodeSystem/v2-0203'),
+              code: Code('SS'),
+            ),
+          ],
+        ),
+        system: FhirUri('http://hl7.org/fhir/sid/us-ssn'),
+        value: digits(9).toString(),
+      ),
+      Identifier.fromJson({
+        "use": "usual",
+        "type": {"text": "WPRINTERNAL"},
+        "system": "urn:oid: 1.2.840.114350.1.13.0.1.7.2.${digits(6)}",
+        "value": "${digits(3)}",
+      }),
+      Identifier.fromJson(
+        {
+          "use": "usual",
+          "type": {"text": "EXTERNAL"},
+          "system": "urn:oid: 1.2.840.114350.1.13.0.1.7.2.$endDigits",
+          "value": "Z$zNum"
+        },
+      ),
+      Identifier.fromJson(
+        {
+          "use": "usual",
+          "type": {"text": "INTERNAL"},
+          "system": "urn:oid: 1.2.840.114350.1.13.0.1.7.2.$endDigits",
+          "value": "Z$zNum"
+        },
+      ),
+    ],
     active: Boolean(true),
     name: [
       HumanName(

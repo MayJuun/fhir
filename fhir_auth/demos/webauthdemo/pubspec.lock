@@ -70,7 +70,7 @@ packages:
       path: "../../../fhir_at_rest"
       relative: true
     source: path
-    version: "0.8.3"
+    version: "0.8.4"
   fhir_auth:
     dependency: "direct main"
     description:

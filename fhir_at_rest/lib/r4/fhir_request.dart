@@ -960,50 +960,81 @@ class FhirRequest with _$FhirRequest {
         )
       ]);
     } else {
-      final body = jsonDecode(result.body);
-      if (body?['resourceType'] == null) {
-        return OperationOutcome(issue: [
-          OperationOutcomeIssue(
-            severity: OperationOutcomeIssueSeverity.error,
-            code: OperationOutcomeIssueCode.unknown,
-            details:
-                CodeableConcept(text: 'Result body had no defined response'),
-            diagnostics: '\nStatus Code: ${result.statusCode} -'
-                ' ${_errorCodes[result.statusCode]}'
-                '\nResult headers: ${result.headers}'
-                '\nResult body: ${result.body}',
-          )
-        ]);
-      } else if (body['resourceType'] == 'OperationOutcome') {
-        var operationOutcome = OperationOutcome.fromJson(body['response']);
-        if (body?['status'] != null || body?['message'] != null) {
-          operationOutcome = operationOutcome.copyWith(
-            issue: [
-              if (operationOutcome.issue.isNotEmpty) ...operationOutcome.issue,
-              OperationOutcomeIssue(
-                  diagnostics:
-                      'Status: ${body?['status']}\nMessage: ${body?['message']}\n'),
-            ],
-          );
+      if (result.body == '') {
+        if (result.statusCode == 200 || result.statusCode == 201) {
+          return OperationOutcome(issue: [
+            OperationOutcomeIssue(
+                code: OperationOutcomeIssueCode.informational,
+                diagnostics: 'Your request succeeded with a status of '
+                    '${result.statusCode}\nbut the result did not have a body\n'
+                    'Your request was: \n'
+                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
+                    'Body: ${formData ?? jsonEncode(resource)}',
+                location: result.headers['Location'] == null
+                    ? null
+                    : [result.headers['Location']!]),
+          ]);
+        } else {
+          return OperationOutcome(issue: [
+            OperationOutcomeIssue(
+                code: OperationOutcomeIssueCode.informational,
+                diagnostics: 'Your request succeeded with a status of '
+                    '${result.statusCode}\nbut the result did not have a body\n'
+                    'Your request was: \n'
+                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
+                    'Body: ${formData ?? jsonEncode(resource)}',
+                location: result.headers['Location'] == null
+                    ? null
+                    : [result.headers['Location']!]),
+          ]);
         }
-        return operationOutcome;
       } else {
-        final newResource = Resource.fromJson(jsonDecode(result.body));
-        if (newResource.resourceType == null) {
+        final body = jsonDecode(result.body);
+        if (body?['resourceType'] == null) {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
               severity: OperationOutcomeIssueSeverity.error,
               code: OperationOutcomeIssueCode.unknown,
-              details: CodeableConcept(
-                  text: 'ResourceType returned was unrecognized'),
+              details:
+                  CodeableConcept(text: 'Result body had no defined response'),
               diagnostics: '\nStatus Code: ${result.statusCode} -'
                   ' ${_errorCodes[result.statusCode]}'
                   '\nResult headers: ${result.headers}'
                   '\nResult body: ${result.body}',
             )
           ]);
+        } else if (body['resourceType'] == 'OperationOutcome') {
+          var operationOutcome = OperationOutcome.fromJson(body['response']);
+          if (body?['status'] != null || body?['message'] != null) {
+            operationOutcome = operationOutcome.copyWith(
+              issue: [
+                if (operationOutcome.issue.isNotEmpty)
+                  ...operationOutcome.issue,
+                OperationOutcomeIssue(
+                    diagnostics:
+                        'Status: ${body?['status']}\nMessage: ${body?['message']}\n'),
+              ],
+            );
+          }
+          return operationOutcome;
         } else {
-          return newResource;
+          final newResource = Resource.fromJson(jsonDecode(result.body));
+          if (newResource.resourceType == null) {
+            return OperationOutcome(issue: [
+              OperationOutcomeIssue(
+                severity: OperationOutcomeIssueSeverity.error,
+                code: OperationOutcomeIssueCode.unknown,
+                details: CodeableConcept(
+                    text: 'ResourceType returned was unrecognized'),
+                diagnostics: '\nStatus Code: ${result.statusCode} -'
+                    ' ${_errorCodes[result.statusCode]}'
+                    '\nResult headers: ${result.headers}'
+                    '\nResult body: ${result.body}',
+              )
+            ]);
+          } else {
+            return newResource;
+          }
         }
       }
     }

@@ -427,7 +427,7 @@ class FhirRequest with _$FhirRequest {
   /// [parameters] - any extra parameters
   /// [fhirParameters] - any extra fhirParameters
   ///   ToDo: why did I include this?
-  /// [usePost] - defines if you would prefer to use a post request instead of
+  /// [usePost] - defines if you would prefer to use a post request instead of Get
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
@@ -725,9 +725,10 @@ class FhirRequest with _$FhirRequest {
         resource: resource == null ? null : resource.toJson(),
         mimeType: mimeType,
       );
+
       return result;
     } catch (e, stack) {
-      return _operationOutcome('Failed to complete a restful request, ',
+      return _operationOutcome('Failed to complete a $requestType request, ',
           diagnostics: 'Exception: $e\nStack: $stack');
     }
   }
@@ -959,52 +960,85 @@ class FhirRequest with _$FhirRequest {
         )
       ]);
     } else {
-      final body = jsonDecode(result.body);
-      if (body?['resourceType'] == null) {
-        return OperationOutcome(issue: [
-          OperationOutcomeIssue(
-            severity: IssueSeverity.error,
-            code: Code('unknown'),
-            details:
-                CodeableConcept(text: 'Result body had no defined response'),
-            diagnostics: '\nStatus Code: ${result.statusCode} -'
-                ' ${_errorCodes[result.statusCode]}'
-                '\nResult headers: ${result.headers}'
-                '\nResult body: ${result.body}',
-          )
-        ]);
-      } else if (body['resourceType'] == 'OperationOutcome') {
-        var operationOutcome = OperationOutcome.fromJson(body['response']);
-        if (body?['status'] != null || body?['message'] != null) {
-          operationOutcome = operationOutcome.copyWith(
-            issue: [
-              if (operationOutcome.issue.isNotEmpty) ...operationOutcome.issue,
-              OperationOutcomeIssue(
-                  severity: IssueSeverity.error,
-                  code: Code('unknown'),
-                  diagnostics:
-                      'Status: ${body?['status']}\nMessage: ${body?['message']}\n'),
-            ],
-          );
+      if (result.body == '') {
+        if (result.statusCode == 200 || result.statusCode == 201) {
+          return OperationOutcome(issue: [
+            OperationOutcomeIssue(
+                severity: IssueSeverity.information,
+                code: Code('informational'),
+                diagnostics: 'Your request succeeded with a status of '
+                    '${result.statusCode}\nbut the result did not have a body\n'
+                    'Your request was: \n'
+                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
+                    'Body: ${formData ?? jsonEncode(resource)}',
+                location: result.headers['Location'] == null
+                    ? null
+                    : [result.headers['Location']!]),
+          ]);
+        } else {
+          return OperationOutcome(issue: [
+            OperationOutcomeIssue(
+                severity: IssueSeverity.information,
+                code: Code('informational'),
+                diagnostics: 'Your request succeeded with a status of '
+                    '${result.statusCode}\nbut the result did not have a body\n'
+                    'Your request was: \n'
+                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
+                    'Body: ${formData ?? jsonEncode(resource)}',
+                location: result.headers['Location'] == null
+                    ? null
+                    : [result.headers['Location']!]),
+          ]);
         }
-        return operationOutcome;
       } else {
-        final newResource = Resource.fromJson(jsonDecode(result.body));
-        if (newResource.resourceType == null) {
+        final body = jsonDecode(result.body);
+        if (body?['resourceType'] == null) {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
               severity: IssueSeverity.error,
               code: Code('unknown'),
-              details: CodeableConcept(
-                  text: 'ResourceType returned was unrecognized'),
+              details:
+                  CodeableConcept(text: 'Result body had no defined response'),
               diagnostics: '\nStatus Code: ${result.statusCode} -'
                   ' ${_errorCodes[result.statusCode]}'
                   '\nResult headers: ${result.headers}'
                   '\nResult body: ${result.body}',
             )
           ]);
+        } else if (body['resourceType'] == 'OperationOutcome') {
+          var operationOutcome = OperationOutcome.fromJson(body['response']);
+          if (body?['status'] != null || body?['message'] != null) {
+            operationOutcome = operationOutcome.copyWith(
+              issue: [
+                if (operationOutcome.issue.isNotEmpty)
+                  ...operationOutcome.issue,
+                OperationOutcomeIssue(
+                    severity: IssueSeverity.error,
+                    code: Code('issue'),
+                    diagnostics:
+                        'Status: ${body?['status']}\nMessage: ${body?['message']}\n'),
+              ],
+            );
+          }
+          return operationOutcome;
         } else {
-          return newResource;
+          final newResource = Resource.fromJson(jsonDecode(result.body));
+          if (newResource.resourceType == null) {
+            return OperationOutcome(issue: [
+              OperationOutcomeIssue(
+                severity: IssueSeverity.error,
+                code: Code('unknown'),
+                details: CodeableConcept(
+                    text: 'ResourceType returned was unrecognized'),
+                diagnostics: '\nStatus Code: ${result.statusCode} -'
+                    ' ${_errorCodes[result.statusCode]}'
+                    '\nResult headers: ${result.headers}'
+                    '\nResult body: ${result.body}',
+              )
+            ]);
+          } else {
+            return newResource;
+          }
         }
       }
     }

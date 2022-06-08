@@ -12,8 +12,6 @@ final scopes = Scopes(
   ],
   openid: true,
   offlineAccess: true,
-  patientLaunch: true,
-  fhirUser: true,
 );
 
 final epicUserScopes = Scopes(
