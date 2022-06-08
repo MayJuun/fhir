@@ -188,8 +188,6 @@ class SmartFhirClient extends SecureFhirClient {
     } catch (e, stack) {
       log('Exception: $e');
       log('Stack: $stack');
-      print('Exception: $e');
-      print('Stack: $stack');
     }
   }
 
