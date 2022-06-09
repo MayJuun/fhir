@@ -1,5 +1,8 @@
 // Package imports:
+import 'dart:convert';
+
 import 'package:fhir/r4.dart';
+import 'package:jwt_decoder/jwt_decoder.dart';
 
 // Project imports:
 import 'smart_fhir_client.dart';
@@ -40,11 +43,13 @@ class EpicFhirClient extends SmartFhirClient {
     String? secret,
     String redirectPath = '/redirect.html',
   }) {
+    launch ??= queryParameters['launch'];
+    final launchParameters = launch == null ? null : JwtDecoder.decode(launch);
     fhirUri ??= queryParameters['iss'] == null
         ? throw Exception('no fhirUri was passed for SMART launch')
         : FhirUri(queryParameters['iss']);
-    launch ??= queryParameters['launch'];
-    clientId ??= queryParameters['clientId'];
+    clientId ??= queryParameters['clientId'] ??
+        (launchParameters == null ? null : launchParameters['client_id']);
     redirectUri ??= FhirUri(Uri(
       host: base.host,
       scheme: base.scheme,

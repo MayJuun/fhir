@@ -12,10 +12,22 @@ final scopes = Scopes(
   ],
   openid: true,
   offlineAccess: true,
-  ehrLaunch: true,
 );
 
-final patientScopes = Scopes(
+final epicUserScopes = Scopes(
+  clinicalScopes: [
+    ClinicalScope(
+      role: Role.user,
+      resourceType: R4ResourceType.Patient,
+      interaction: Interaction.any,
+    ),
+  ],
+  openid: true,
+  offlineAccess: true,
+  fhirUser: true,
+);
+
+final epicPatientScopes = Scopes(
   clinicalScopes: [
     ClinicalScope(
       role: Role.patient,
@@ -27,5 +39,4 @@ final patientScopes = Scopes(
   offlineAccess: true,
   patientLaunch: true,
   fhirUser: true,
-  ehrLaunch: true,
 );

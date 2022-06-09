@@ -2,22 +2,99 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
 
-Future<Resource?> request(SmartFhirClient client) async {
+Future<Resource?> request(SmartFhirClient client,
+    [bool isPatient = true]) async {
   await client.login();
 
-  print('Patient launch context Id: ${client.patientId}');
+  if (client.fhirUri.value != null) {
+    if (isPatient) {
+      print('Patient launch context Id: ${client.patientId}');
+      if (client.patientId != null) {
+        final request2 = FhirRequest.read(
+          base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
+          type: R4ResourceType.Patient,
+          id: Id(client.patientId!),
+          client: client,
+        );
 
-  final request = FhirRequest.read(
-    base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
-    type: R4ResourceType.Patient,
-    id: Id(client.patientId),
-    client: client,
-  );
-  try {
-    final response = await request.request();
-    return response;
-  } catch (e) {
-    print(e);
-    return null;
+        final response = await request2.request();
+        print('Response from read:\n${response.toJson()}');
+      }
+    } else {
+      print('Patient to be uploaded:\n${_newPatient.toJson()}');
+      final request1 = FhirRequest.create(
+        base: client.fhirUri.value!,
+        resource: _newPatient,
+        client: client,
+      );
+
+      Id? newId;
+
+      final response = await request1.request();
+      print('Response from upload:\n${response.toJson()}');
+      newId = response.id;
+
+      if (newId is! Id) {
+        if (response is OperationOutcome &&
+            response.issue.isNotEmpty &&
+            response.issue.first.location != null &&
+            response.issue.first.location!.isNotEmpty) {
+          final location = response.issue.first.location!.first;
+          final resourceType = ResourceUtils
+              .resourceTypeFromStringMap[location.split('/').first];
+          final newId = Id(location.split('/').last);
+          if (resourceType == null ||
+              newId.value == null ||
+              newId.value == '') {
+            print('Cannot attempt to read resource');
+          } else {
+            final request2 = FhirRequest.read(
+              base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
+              type: resourceType,
+              id: newId,
+              client: client,
+            );
+
+            final response = await request2.request();
+            print('Response from read:\n${response.toJson()}');
+          }
+        }
+      } else {
+        final request2 = FhirRequest.read(
+          base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
+          type: R4ResourceType.Patient,
+          id: newId,
+          client: client,
+        );
+
+        final response = await request2.request();
+        print('Response from read:\n${response.toJson()}');
+      }
+    }
   }
 }
+
+final _newPatient = Patient.fromJson({
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {"system": "http://hl7.org/fhir/sid/us-ssn", "code": "SB"}
+        ]
+      },
+      "system": "urn:oid:2.16.840.1.113883.4.1",
+      "value": "444114567"
+    }
+  ],
+  "name": [
+    {
+      "use": "usual",
+      "text": "Derrick Lin",
+      "family": "Lin",
+      "given": ["Derrick"]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1973-06-03",
+});

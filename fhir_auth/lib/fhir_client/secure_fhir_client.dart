@@ -61,12 +61,18 @@ class SecureFhirClient extends FhirClient {
   @override
   Future<http.Response> post(Uri url,
       {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
+    print(url);
+    print(await newHeaders(headers));
+    print(body);
     final response = await http.post(
       url,
       headers: await newHeaders(headers),
       body: body,
       encoding: encoding,
     );
+    print(response.statusCode);
+    print(response.headers);
+    print(response.body);
     return response;
   }
 
