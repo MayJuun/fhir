@@ -37,6 +37,7 @@ class GcpFhirClient extends SecureFhirClient {
 
   late GoogleSignIn _googleSignIn;
 
+  @override
   Future<void> login() async {
     try {
       await _googleSignIn.signIn();

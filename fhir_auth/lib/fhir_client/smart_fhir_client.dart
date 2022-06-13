@@ -48,9 +48,9 @@ class SmartFhirClient extends SecureFhirClient {
     String? secret,
     String redirectPath = '/redirect.html',
   }) {
-    final launchParameters =
-        launch == null ? null : utf8.decode(base64.decode(launch));
-    print(launchParameters);
+    // final launchParameters =
+    //     launch == null ? null : utf8.decode(base64.decode(launch));
+    // print(launchParameters);
     fhirUri ??= queryParameters['iss'] == null
         ? throw Exception('no fhirUri was passed for SMART launch')
         : FhirUri(queryParameters['iss']);
@@ -127,6 +127,7 @@ class SmartFhirClient extends SecureFhirClient {
   /// EHR Launch scenarios.
   String? tenant;
 
+  @override
   Future<void> login() async {
     /// if no authorizeUrl or tokenUrl, go find them
     if (authorizeUrl == null || tokenUrl == null) {

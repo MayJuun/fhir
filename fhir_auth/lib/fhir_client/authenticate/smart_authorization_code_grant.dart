@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings, implementation_imports
 
 // Dart imports:
+import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
-import 'dart:async';
 
 // Package imports:
 import 'package:crypto/crypto.dart';

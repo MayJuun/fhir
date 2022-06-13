@@ -67,10 +67,10 @@ packages:
   fhir_at_rest:
     dependency: "direct main"
     description:
-      path: "../../../fhir_at_rest"
-      relative: true
-    source: path
-    version: "0.8.4"
+      name: fhir_at_rest
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.8.3"
   fhir_auth:
     dependency: "direct main"
     description:
@@ -177,6 +177,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.5.0"
+  jwt_decoder:
+    dependency: transitive
+    description:
+      name: jwt_decoder
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
   lints:
     dependency: "direct dev"
     description:

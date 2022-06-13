@@ -1,6 +1,4 @@
 // Package imports:
-import 'dart:convert';
-
 import 'package:fhir/r4.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 

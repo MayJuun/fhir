@@ -32,6 +32,8 @@ class SecureFhirClient extends FhirClient {
   Map<String, String>? authHeaders;
   String? secret;
 
+  Future<void> login() async {}
+
   Future<bool> isSignedIn() async => authHeaders == null;
 
   Future<bool> isLoggedIn() async => authHeaders == null;
@@ -61,18 +63,16 @@ class SecureFhirClient extends FhirClient {
   @override
   Future<http.Response> post(Uri url,
       {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-    print(url);
-    print(await newHeaders(headers));
-    print(body);
+    // print('URL: $url');
+    // print('BODY TO SEND: $body');
     final response = await http.post(
       url,
       headers: await newHeaders(headers),
       body: body,
       encoding: encoding,
     );
-    print(response.statusCode);
-    print(response.headers);
-    print(response.body);
+    // print(response.statusCode);
+    // print('RETURNED BODY: ${response.body}');
     return response;
   }
 
