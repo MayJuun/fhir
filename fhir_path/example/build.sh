@@ -22,8 +22,12 @@ docker build -t $projectName .
 docker build -t gcr.io/$projectId/$projectName .
 docker push gcr.io/$projectId/$projectName
 
-# # # return back to root directory
+# # return back to root directory
 cd ..
 
-# # deploy on google cloud
-gcloud run deploy $projectName --image gcr.io/$projectId/$projectName
+# deploy on google cloud
+# (probably) allows to connect to mayjuun or localhost
+gcloud run deploy $projectName --image gcr.io/$projectId/$projectName --set-env-vars=ESPv2_ARGS=--cors_preset=cors_with_regex++--cors_allow_origin_regex="^https?://.+\.mayjuun\.com$ https://localhost"
+
+# (probably) used for local testing
+# gcloud run deploy $projectName --image gcr.io/$projectId/$projectName --set-env-vars=ESPv2_ARGS=--cors_preset=basic++--cors_allow_origin="https://localhost"
