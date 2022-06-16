@@ -728,7 +728,9 @@ class FhirRequest with _$FhirRequest {
 
       return result;
     } catch (e, stack) {
-      return _operationOutcome('Failed to complete a $requestType request, ',
+      return _operationOutcome(
+          'Failed to complete a $requestType request. \n'
+          'Point of failure was the Future<Resource> _request() function',
           diagnostics: 'Exception: $e\nStack: $stack');
     }
   }
@@ -943,7 +945,10 @@ class FhirRequest with _$FhirRequest {
           }
       }
     } catch (e, stack) {
-      return _operationOutcome('Failed to complete a restful request, ',
+      return _operationOutcome(
+          'Failed to complete a $type request. '
+          'The error occurred during the actual process of making the request.'
+          'This means it\'s most likely an issue on the side of the app, not the server.',
           diagnostics: 'Exception: $e\nStack: $stack');
     }
 
@@ -952,7 +957,10 @@ class FhirRequest with _$FhirRequest {
         OperationOutcomeIssue(
           severity: Code('error'),
           code: Code('unknown'),
-          details: CodeableConcept(text: 'Failed to make restful request'),
+          details: CodeableConcept(
+              text: 'Failed to complete a restful request.\n'
+                  'The request was made, and a failing status code of some kind was returned.\n'
+                  'See details below.'),
           diagnostics: '\nStatus Code: ${result.statusCode} -'
               ' ${_errorCodes[result.statusCode]}'
               '\nResult headers: ${result.headers}'
@@ -995,8 +1003,9 @@ class FhirRequest with _$FhirRequest {
             OperationOutcomeIssue(
               severity: Code('error'),
               code: Code('unknown'),
-              details:
-                  CodeableConcept(text: 'Result body had no defined response'),
+              details: CodeableConcept(
+                  text:
+                      'Request was made, but the result body had no defined response'),
               diagnostics: '\nStatus Code: ${result.statusCode} -'
                   ' ${_errorCodes[result.statusCode]}'
                   '\nResult headers: ${result.headers}'
@@ -1025,7 +1034,8 @@ class FhirRequest with _$FhirRequest {
                 severity: Code('error'),
                 code: Code('unknown'),
                 details: CodeableConcept(
-                    text: 'ResourceType returned was unrecognized'),
+                    text: 'Request was made and seemed to return a Resource,\n'
+                        'but the ResourceType returned was unrecognized'),
                 diagnostics: '\nStatus Code: ${result.statusCode} -'
                     ' ${_errorCodes[result.statusCode]}'
                     '\nResult headers: ${result.headers}'

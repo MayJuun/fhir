@@ -4,6 +4,7 @@
 
 * Epic passes responds to successful queries with an empty body, but puts a location (which is a reference) to the resource involved
 * Now passes back an Informational OperationOutcome for successful requests, along with details of the request made, and the location (reference) to the resource involved
+* Still trying to improve error messages
 
 ## [0.8.3]
 
