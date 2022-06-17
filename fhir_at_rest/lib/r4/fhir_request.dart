@@ -918,7 +918,7 @@ class FhirRequest with _$FhirRequest {
           {
             headers['Content-Type'] =
                 mimeType == null || MimeTypeEnumMap[mimeType] == null
-                    ? 'application/fhir+json'
+                    ? 'application/json-patch+json'
                     : MimeTypeEnumMap[mimeType]!;
             result = await client.patch(
               Uri.parse(thisRequest),
