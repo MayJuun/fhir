@@ -975,9 +975,13 @@ class FhirRequest with _$FhirRequest {
                 code: OperationOutcomeIssueCode.informational,
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
-                    'Your request was: \n'
-                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
-                    'Body: ${formData ?? jsonEncode(resource)}',
+                    'Your request was:'
+                    '\nRequestType: $type'
+                    '\nRequestUrl: $thisRequest'
+                    '\nRequestHeaders: $headers'
+                    '\nRequestBody: ${formData ?? jsonEncode(resource)}'
+                    '\nYour result was:'
+                    '\nResultHeaders: ${result.headers}',
                 location: result.headers['Location'] == null
                     ? null
                     : [result.headers['Location']!]),
@@ -988,9 +992,13 @@ class FhirRequest with _$FhirRequest {
                 code: OperationOutcomeIssueCode.informational,
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
-                    'Your request was: \n'
-                    'Type: $type\nRequestUrl: $thisRequest\nHeaders: $headers\n'
-                    'Body: ${formData ?? jsonEncode(resource)}',
+                    'Your request was:'
+                    '\nRequestType: $type'
+                    '\nRequestUrl: $thisRequest'
+                    '\nRequestHeaders: $headers'
+                    '\nRequestBody: ${formData ?? jsonEncode(resource)}'
+                    '\nYour result was:'
+                    '\nResultHeaders: ${result.headers}',
                 location: result.headers['Location'] == null
                     ? null
                     : [result.headers['Location']!]),
@@ -1008,8 +1016,8 @@ class FhirRequest with _$FhirRequest {
                       'Request was made, but the result body had no defined response'),
               diagnostics: '\nStatus Code: ${result.statusCode} -'
                   ' ${_errorCodes[result.statusCode]}'
-                  '\nResult headers: ${result.headers}'
-                  '\nResult body: ${result.body}',
+                  '\nResultHeaders: ${result.headers}'
+                  '\nResultBody: ${result.body}',
             )
           ]);
         } else if (body['resourceType'] == 'OperationOutcome') {
@@ -1038,8 +1046,8 @@ class FhirRequest with _$FhirRequest {
                         'but the ResourceType returned was unrecognized'),
                 diagnostics: '\nStatus Code: ${result.statusCode} -'
                     ' ${_errorCodes[result.statusCode]}'
-                    '\nResult headers: ${result.headers}'
-                    '\nResult body: ${result.body}',
+                    '\nResultHeaders: ${result.headers}'
+                    '\nResultBody: ${result.body}',
               )
             ]);
           } else {

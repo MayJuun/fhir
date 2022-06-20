@@ -7,9 +7,9 @@ environment:
 
 dependencies:
   fhir: ^0.8.0
-  fhir_at_rest: ^0.8.3
-  # fhir_at_rest:
-    # path: ../../../fhir_at_rest
+  # fhir_at_rest: ^0.8.3
+  fhir_at_rest:
+    path: ../../../fhir_at_rest
   fhir_auth:
     path: ../../../fhir_auth
   flutter:
