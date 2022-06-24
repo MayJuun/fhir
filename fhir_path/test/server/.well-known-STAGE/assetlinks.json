@@ -1,9 +1,0 @@
-[{
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-        "namespace": "android_app",
-        "package_name": "com.mayjuun.njinck.healthstory.stage",
-        "sha256_cert_fingerprints": ["3C:C3:FF:46:D9:28:50:2F:A1:58:1B:E6:2B:47:64:6F:FC:00:79:ED:47:AE:4D:3B:32:05:DE:F7:4B:60:EE:F2",
-        "54:13:1A:95:14:B9:2B:55:A8:EA:88:57:F9:13:69:FD:5C:0F:02:E3:5B:FC:AD:40:0B:7E:B4:C7:92:CC:B7:CD"]
-    }
-}]
