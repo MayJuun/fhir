@@ -20,6 +20,18 @@ class IsParser extends OperatorParser {
     final executedAfter = after.length == 1 && after.first is IdentifierParser
         ? [(after.first as IdentifierParser).value]
         : after.execute(results.toList(), passed);
+
+    print('Before');
+    executedBefore.forEach((element) {
+      print(element);
+      print(element.runtimeType);
+    });
+    print('After');
+    executedAfter.forEach((element) {
+      print(element);
+    });
+    print(executedAfter.first == 'Decimal');
+    print([executedBefore.first is double || executedBefore.first is Decimal]);
     return executedBefore.isEmpty ||
             executedBefore.length != 1 ||
             executedAfter.isEmpty ||
@@ -53,13 +65,21 @@ class IsParser extends OperatorParser {
                       ]
                     : executedAfter.first == 'Integer'
                         ? [
-                            executedBefore.first is int ||
-                                executedBefore.first is Integer
+                            (executedBefore.first is int ||
+                                    executedBefore.first is Integer) &&
+
+                                /// This is because of transpilation to javascript
+                                !executedBefore.first.toString().contains('.')
                           ]
                         : executedAfter.first == 'Decimal'
                             ? [
-                                executedBefore.first is double ||
-                                    executedBefore.first is Decimal
+                                (executedBefore.first is double ||
+                                        executedBefore.first is Decimal) &&
+
+                                    /// This is because of transpilation to javascript
+                                    executedBefore.first
+                                        .toString()
+                                        .contains('.')
                               ]
                             : executedAfter.first == 'Date'
                                 ? [executedBefore.first is Date]

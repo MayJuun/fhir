@@ -1,0 +1,11 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+           {
+             "appID": "Y759W68Q4K.com.mayjuun.njinck.healthstory.stage",
+             "paths": ["*"]
+           }
+       ]
+   }
+}

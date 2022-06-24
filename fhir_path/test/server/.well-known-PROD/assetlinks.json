@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "com.mayjuun.njinck.healthstory",
+        "sha256_cert_fingerprints": ["E0:56:CE:56:DF:57:E5:6A:A6:29:85:00:7B:88:37:3D:56:35:31:0A:46:E7:45:23:B5:E7:BA:9F:BF:59:A1:EF",
+        "54:13:1A:95:14:B9:2B:55:A8:EA:88:57:F9:13:69:FD:5C:0F:02:E3:5B:FC:AD:40:0B:7E:B4:C7:92:CC:B7:CD"]
+    }
+}]

@@ -1054,11 +1054,11 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$List_StatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$ListStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      mode: $enumDecodeNullable(_$List_ModeEnumMap, json['mode']),
+      mode: $enumDecodeNullable(_$ListModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -1123,9 +1123,9 @@ Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$List_StatusEnumMap[instance.status]);
+  writeNotNull('status', _$ListStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('mode', _$List_ModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$ListModeEnumMap[instance.mode]);
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
@@ -1142,18 +1142,18 @@ Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
   return val;
 }
 
-const _$List_StatusEnumMap = {
-  List_Status.current: 'current',
-  List_Status.retired: 'retired',
-  List_Status.entered_in_error: 'entered-in-error',
-  List_Status.unknown: 'unknown',
+const _$ListStatusEnumMap = {
+  ListStatus.current: 'current',
+  ListStatus.retired: 'retired',
+  ListStatus.entered_in_error: 'entered-in-error',
+  ListStatus.unknown: 'unknown',
 };
 
-const _$List_ModeEnumMap = {
-  List_Mode.working: 'working',
-  List_Mode.snapshot: 'snapshot',
-  List_Mode.changes: 'changes',
-  List_Mode.unknown: 'unknown',
+const _$ListModeEnumMap = {
+  ListMode.working: 'working',
+  ListMode.snapshot: 'snapshot',
+  ListMode.changes: 'changes',
+  ListMode.unknown: 'unknown',
 };
 
 _$_ListEntry _$$_ListEntryFromJson(Map<String, dynamic> json) => _$_ListEntry(

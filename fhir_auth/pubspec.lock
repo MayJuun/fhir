@@ -81,9 +81,9 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      name: fhir
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "../fhir"
+      relative: true
+    source: path
     version: "0.8.0"
   fhir_yaml:
     dependency: transitive

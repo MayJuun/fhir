@@ -9,7 +9,8 @@ environment:
 
 dependencies:
   collection: ^1.16.0
-  fhir: ^0.8.0
+  fhir: 
+    path: ../fhir
   petitparser: ^5.0.0
 
 dev_dependencies:

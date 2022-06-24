@@ -185,9 +185,11 @@ class OfTypeParser extends ValueParser<ParserList> {
           ((executedValue.first as IdentifierParser).value == 'boolean' &&
               (e is bool || e is Boolean)) ||
           ((executedValue.first as IdentifierParser).value == 'integer' &&
-              (e is int || e is Integer)) ||
+              (e is int || e is Integer) &&
+              !e.toString().contains('.')) ||
           ((executedValue.first as IdentifierParser).value == 'decimal' &&
-              (e is double || e is Decimal)) ||
+              (e is double || e is Decimal) &&
+              e.toString().contains('.')) ||
           ((executedValue.first as IdentifierParser).value == 'date' &&
               e is Date) ||
           ((executedValue.first as IdentifierParser).value == 'datetime' &&
