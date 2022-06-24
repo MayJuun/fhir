@@ -7,9 +7,13 @@ gcloud config set project $projectId
 # gcloud auth login
 version="1"
 
-cd server
+cd webtest
+flutter build web --profile
+
+cd ../server
+rm -r web
+cp -r ../webtest/build/web web
 docker build -t $projectName .
-cd ..
 docker build -t gcr.io/$projectId/$projectName:v$version .
 docker push gcr.io/$projectId/$projectName:v$version
 
