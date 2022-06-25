@@ -127,6 +127,7 @@ class LessEqualParser extends OperatorParser {
 
 enum Comparator { gt, gte, lt, lte }
 
+/// Todo: review if appropriately comparing different types
 List executeComparisons(List results, ParserList before, ParserList after,
     Map<String, dynamic> passed, Comparator comparator,
     {bool where = false}) {
@@ -211,24 +212,46 @@ List executeComparisons(List results, ParserList before, ParserList after,
     }
   }
 
-  bool compare(dynamic param1, dynamic param2) {
+  bool? compare(dynamic param1, dynamic param2) {
+    bool? nullIfIncomparable() {
+      try {
+        return comparator == Comparator.gt
+            ? param1 > param2
+            : comparator == Comparator.gte
+                ? param1 >= param2
+                : comparator == Comparator.lt
+                    ? param1 < param2
+                    : param1 <= param2;
+      } catch (e) {
+        return null;
+      }
+    }
+
     switch (comparator) {
       case Comparator.gt:
         return param1 is String
             ? comparable(param1, param2, Comparator.gt)
-            : param1 > param2;
+            : param2 is String
+                ? null
+                : nullIfIncomparable();
       case Comparator.gte:
         return param1 is String
             ? comparable(param1, param2, Comparator.gte) || param1 == param2
-            : param1 >= param2;
+            : param2 is String
+                ? null
+                : nullIfIncomparable();
       case Comparator.lt:
         return param1 is String
             ? comparable(param1, param2, Comparator.lt) && param1 != param2
-            : param1 < param2;
+            : param2 is String
+                ? null
+                : nullIfIncomparable();
       case Comparator.lte:
         return param1 is String
             ? comparable(param1, param2, Comparator.lte) || param1 == param2
-            : param1 <= param2;
+            : param2 is String
+                ? null
+                : nullIfIncomparable();
     }
   }
 
@@ -243,6 +266,14 @@ List executeComparisons(List results, ParserList before, ParserList after,
       operation: comparator.toString(),
       collection: results);
 
+  print(lhs);
+  if (lhs.isNotEmpty) {
+    print(lhs.first.runtimeType);
+  }
+  print(rhs);
+  if (rhs.isNotEmpty) {
+    print(rhs.first.runtimeType);
+  }
   if (lhs.isEmpty || rhs.isEmpty) {
     return [];
   } else {
@@ -264,15 +295,12 @@ List executeComparisons(List results, ParserList before, ParserList after,
           arguments: [before, after]);
     } else {
       if (where) {
-        results
-            .retainWhere((element) => compare(element[lhs.first], rhs.first));
+        results.retainWhere(
+            (element) => compare(element[lhs.first], rhs.first) ?? false);
         return results;
       } else {
-        try {
-          return [compare(lhs.first, rhs.first)];
-        } catch (e) {
-          return [];
-        }
+        final newResult = compare(lhs.first, rhs.first);
+        return newResult == null ? [] : [newResult];
       }
     }
   }

@@ -8,9 +8,13 @@ gcloud config set project $projectId
 version="1"
 
 cd webtest
+flutter clean
+flutter pub get
 flutter build web --profile
 
 cd ../server
+flutter clean
+flutter pub get
 rm -r web
 cp -r ../webtest/build/web web
 docker build -t $projectName .

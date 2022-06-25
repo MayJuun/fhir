@@ -1,4 +1,4 @@
-name: cuestionario_server
+name: fhirpath_test_server
 description: A server app using the shelf package and Docker.
 version: 1.0.0
 # homepage: https://www.example.com
