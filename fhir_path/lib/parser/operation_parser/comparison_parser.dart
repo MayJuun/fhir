@@ -266,14 +266,6 @@ List executeComparisons(List results, ParserList before, ParserList after,
       operation: comparator.toString(),
       collection: results);
 
-  print(lhs);
-  if (lhs.isNotEmpty) {
-    print(lhs.first.runtimeType);
-  }
-  print(rhs);
-  if (rhs.isNotEmpty) {
-    print(rhs.first.runtimeType);
-  }
   if (lhs.isEmpty || rhs.isEmpty) {
     return [];
   } else {

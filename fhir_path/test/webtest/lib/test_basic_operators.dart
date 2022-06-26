@@ -182,6 +182,7 @@ void testBasicOperators() {
       //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
       //     [true]);
       expect(walkPath('@2018-03-01 <= @2018-01-01 // false'), [false]);
+
       expect(walkPath('@2018-03 <= @2018-03-01 // empty ({ })'), []);
       expect(walkPath('@2018-03-01T10:30:00 <= @2018-03-01T10:00:00 // false'),
           [false]);
@@ -221,20 +222,9 @@ void testBasicOperators() {
       expect(walkPath('@T10:30:00 >= @T10:30:00.0 // true'), [true]);
     });
     test('is : ', () {
-      print(parseFhirPath('12 is Integer').prettyPrint());
-      print(parseFhirPath('12 is Integer').verbosePrint(2));
       expect(walkPath('12 is Integer'), [true]);
-
-      print(parseFhirPath('12 is Decimal').prettyPrint());
-      print(parseFhirPath('12 is Decimal').verbosePrint(2));
       expect(walkPath('12 is Decimal'), [false]);
-
-      print(parseFhirPath('12.5 is Integer').prettyPrint());
-      print(parseFhirPath('12.5 is Integer').verbosePrint(2));
       expect(walkPath('12.5 is Integer'), [false]);
-
-      print(parseFhirPath('12.5 is Decimal').prettyPrint());
-      print(parseFhirPath('12.5 is Decimal').verbosePrint(2));
       expect(walkPath('12.5 is Decimal'), [true]);
     });
   });

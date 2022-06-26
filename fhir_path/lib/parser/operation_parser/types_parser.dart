@@ -21,17 +21,6 @@ class IsParser extends OperatorParser {
         ? [(after.first as IdentifierParser).value]
         : after.execute(results.toList(), passed);
 
-    print('Before');
-    executedBefore.forEach((element) {
-      print(element);
-      print(element.runtimeType);
-    });
-    print('After');
-    executedAfter.forEach((element) {
-      print(element);
-    });
-    print(executedAfter.first == 'Decimal');
-    print([executedBefore.first is double || executedBefore.first is Decimal]);
     return executedBefore.isEmpty ||
             executedBefore.length != 1 ||
             executedAfter.isEmpty ||

@@ -24,7 +24,7 @@ final epicUserScopes = Scopes(
   ],
   openid: true,
   offlineAccess: true,
-    patientLaunch: true,
+  // patientLaunch: true,
   fhirUser: true,
 );
 

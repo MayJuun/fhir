@@ -50,21 +50,21 @@ abstract class FhirDateTimeBase {
                   : throw ArgumentError(
                       'Two values were passed to the date time ">" comparison operator, '
                       'they were not both valid FhirDateTimeBase types\n'
-                      'Argument 1: $value (${value.runtimeType})\n'
-                      'Argument 2: $o (${o.runtimeType})')
+                      'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
+                      'Argument 2: $o (${o.runtimeType}): Valid - true}')
           : isValid && o.isValid
               ? o.toString().length == toString().length
                   ? value!.isAfter(o.value!)
                   : throw ArgumentError(
                       'Two values were passed to the date time ">" comparison operator, '
-                      'they were not both valid FhirDateTimeBase types\n'
+                      'they were not defined to the same precision\n'
                       'Argument 1: $value (${value.runtimeType})\n'
                       'Argument 2: $o (${o.runtimeType})')
               : throw ArgumentError(
                   'Two values were passed to the date time ">" comparison operator, '
                   'they were not both valid FhirDateTimeBase types\n'
-                  'Argument 1: $value (${value.runtimeType})\n'
-                  'Argument 2: $o (${o.runtimeType})');
+                  'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
+                  'Argument 2: $o (${o.runtimeType}): Valid - ${o.isValid}');
 
   bool operator >=(Object o) => this == o || this > o;
 

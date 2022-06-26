@@ -42,7 +42,7 @@ final Parser<EnvVariableParser> envVariableLexer =
         .map((value) => EnvVariableParser(value));
 
 final Parser<QuantityParser> quantityLexer =
-    (numberLexer & char(' ').plus() & (durationLexer | unitLexer))
+    (numberLexer & char(' ') & (durationLexer | unitLexer))
         .flatten()
         .map((value) => QuantityParser(value));
 

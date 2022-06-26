@@ -9,6 +9,7 @@ import 'dart:math';
 import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
+import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:oauth2/oauth2.dart';
 import 'package:oauth2/src/handle_access_token_response.dart';
 import 'package:oauth2/src/parameters.dart';
@@ -333,16 +334,44 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
     var response =
         await _httpClient!.post(tokenEndpoint, headers: headers, body: body);
     fhirParameters.addAll(jsonDecode(response.body));
+    print(response.headers);
+    print(response.body);
 
-    var credentials = handleAccessTokenResponse(
-        response, tokenEndpoint, startTime, _scopes, _delimiter,
-        getParameters: _getParameters);
-    return Client(credentials,
-        identifier: identifier,
-        secret: secret,
-        basicAuth: _basicAuth,
-        httpClient: _httpClient,
-        onCredentialsRefreshed: _onCredentialsRefreshed);
+    // ***********************
+    // var request = http.Request('POST', tokenEndpoint);
+    // if (headers != null) request.headers.addAll(headers);
+    // request.bodyFields = body.cast<String, String>();
+    // final stream = await _httpClient?.send(request);
+    // final response2 =
+    //     stream == null ? null : await http.Response.fromStream(stream);
+    // print(response2?.headers);
+    // print(response2?.body);
+    // final newBody = response2?.body;
+    // if (newBody != null) {
+    //   final newBodyJson = jsonDecode(newBody);
+    //   final accessToken = newBodyJson['access_token'];
+    //   final idToken = newBodyJson['id_token'];
+    //   if (accessToken != null) {
+    //     print(JwtDecoder.decode(accessToken));
+    //   }
+    //   if (idToken != null) {
+    //     print(JwtDecoder.decode(idToken));
+    //   }
+    // }
+
+    throw Exception('Did you make it work?');
+
+    // ***********************************
+
+    // var credentials = handleAccessTokenResponse(
+    //     response, tokenEndpoint, startTime, _scopes, _delimiter,
+    //     getParameters: _getParameters);
+    // return Client(credentials,
+    //     identifier: identifier,
+    //     secret: secret,
+    //     basicAuth: _basicAuth,
+    //     httpClient: _httpClient,
+    //     onCredentialsRefreshed: _onCredentialsRefreshed);
   }
 
   /// Randomly generate a 128 character string to be used as the PKCE code verifier

@@ -13,26 +13,8 @@ class BracketsIndexParser extends ValueParser<int> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
-  List execute(List results, Map<String, dynamic> passed) {
-    print('Results: $results');
-    print('Results Length: ${results.length}');
-    print('Value: $value');
-    print('Value out of range? ${value > results.length}');
-    print(
-        'Supposedly returning: ${results.isEmpty || value > results.length - 1 ? [] : [
-            results[value]
-          ]}');
-    log('Results: $results');
-    log('Results Length: ${results.length}');
-    log('Value: $value');
-    log('Value out of range? ${value > results.length}');
-    log('Supposedly returning: ${results.isEmpty || value > results.length - 1 ? [] : [
-        results[value]
-      ]}');
-    return results.isEmpty || value > results.length - 1
-        ? []
-        : [results[value]];
-  }
+  List execute(List results, Map<String, dynamic> passed) =>
+      results.isEmpty || value > results.length - 1 ? [] : [results[value]];
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in
