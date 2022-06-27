@@ -16,6 +16,7 @@ export 'integer64.dart';
 export 'markdown.dart';
 export 'oid.dart';
 export 'positive_int.dart';
+export 'primitive_type_exceptions.dart';
 export 'time.dart';
 export 'unsigned_int.dart';
 export 'uuid.dart';

@@ -2,6 +2,7 @@
 
 // Project imports:
 import 'primitive_types.dart';
+import 'primitive_type_exceptions.dart';
 
 abstract class FhirDateTimeBase {
   const FhirDateTimeBase(
@@ -34,70 +35,93 @@ abstract class FhirDateTimeBase {
               ? o.length == toString().length && value == FhirDateTime(o).value
               : false;
 
+  bool _greaterThan(Object o, String comparator) {
+    // print('_greaterThan');
+    // print(this);
+    // print(valueString);
+    // print(runtimeType);
+    // if (this is Date) {
+    //   print((this as Date).precision);
+    // }
+    // print(o);
+    // print(o.runtimeType);
+    // if (o is Date) {
+    //   print(o.valueString);
+    //   print(o.precision);
+    // }
+    return identical(this, o)
+        ? false
+        : o is! FhirDateTimeBase
+            ? o is String && isValid && FhirDateTime(o).isValid
+                ? o.length == toString().length
+                    ? value!.isAfter(FhirDateTime(o).value!)
+                    : throw UnequalPrecision<FhirDateTimeBase>(
+                        'Two values were passed to the date time '
+                        '"$comparator" comparison operator, '
+                        'they did not have the same precision\n'
+                        'Argument 1: $value\nArgument 2: $o ')
+                : o is DateTime && isValid
+                    ? value!.isAfter(o)
+                    : throw InvalidTypes<FhirDateTimeBase>(
+                        'Two values were passed to the date time '
+                        '"$comparator" comparison operator, '
+                        'they were not both valid FhirDateTimeBase types\n'
+                        'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
+                        'Argument 2: $o (${o.runtimeType}): Valid - true}')
+            : isValid && o.isValid
+                ? o.toString().length == toString().length
+                    ? value!.isAfter(o.value!)
+                    : throw UnequalPrecision<FhirDateTimeBase>(
+                        'Two values were passed to the date time '
+                        '"$comparator" comparison operator, '
+                        'they were not defined to the same precision\n'
+                        'Argument 1: $value (${value.runtimeType})\n'
+                        'Argument 2: $o (${o.runtimeType})')
+                : throw InvalidTypes<FhirDateTimeBase>(
+                    'Two values were passed to the date time '
+                    '"$comparator" comparison operator, '
+                    'they were not both valid FhirDateTimeBase types\n'
+                    'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
+                    'Argument 2: $o (${o.runtimeType}): Valid - ${o.isValid}');
+  }
+
   /// ToDo: may need to fix for precision
-  bool operator >(Object o) => identical(this, o)
-      ? false
-      : o is! FhirDateTimeBase
-          ? o is String && isValid && FhirDateTime(o).isValid
-              ? o.length == toString().length
-                  ? value!.isAfter(FhirDateTime(o).value!)
-                  : throw ArgumentError(
-                      'Two values were passed to the date time ">" comparison operator, '
-                      'they did not have the same precision\n'
-                      'Argument 1: $value\nArgument 2: $o ')
-              : o is DateTime && isValid
-                  ? value!.isAfter(o)
-                  : throw ArgumentError(
-                      'Two values were passed to the date time ">" comparison operator, '
-                      'they were not both valid FhirDateTimeBase types\n'
-                      'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
-                      'Argument 2: $o (${o.runtimeType}): Valid - true}')
-          : isValid && o.isValid
-              ? o.toString().length == toString().length
-                  ? value!.isAfter(o.value!)
-                  : throw ArgumentError(
-                      'Two values were passed to the date time ">" comparison operator, '
-                      'they were not defined to the same precision\n'
-                      'Argument 1: $value (${value.runtimeType})\n'
-                      'Argument 2: $o (${o.runtimeType})')
-              : throw ArgumentError(
-                  'Two values were passed to the date time ">" comparison operator, '
-                  'they were not both valid FhirDateTimeBase types\n'
-                  'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
-                  'Argument 2: $o (${o.runtimeType}): Valid - ${o.isValid}');
+  bool operator >(Object o) => this != o && _greaterThan(o, '>');
 
-  bool operator >=(Object o) => this == o || this > o;
+  bool operator >=(Object o) => this == o || _greaterThan(o, '>=');
 
-  bool operator <(Object o) => identical(this, o)
-      ? false
-      : o is! FhirDateTimeBase
-          ? o is String && isValid && FhirDateTime(o).isValid
-              ? o.length == toString().length
-                  ? value!.isBefore(FhirDateTime(o).value!)
-                  : throw ArgumentError(
-                      'Two values were passed to the date time "<" comparison operator, '
-                      'they did not have the same precision\n'
-                      'Argument 1: $value\nArgument 2: $o ')
-              : o is DateTime && isValid
-                  ? value!.isBefore(o)
-                  : throw ArgumentError(
-                      'Two values were passed to the date time "<" comparison operator, '
-                      'they were not both valid FhirDateTimeBase types\n'
-                      'Argument 1: $value (${value.runtimeType})\n'
-                      'Argument 2: $o (${o.runtimeType})')
-          : isValid && o.isValid
-              ? o.toString().length == toString().length
-                  ? value!.isBefore(o.value!)
-                  : throw ArgumentError(
-                      'Two values were passed to the date time "<" comparison operator, '
-                      'they were not both valid FhirDateTimeBase types\n'
-                      'Argument 1: $value (${value.runtimeType})\n'
-                      'Argument 2: $o (${o.runtimeType})')
-              : throw ArgumentError(
-                  'Two values were passed to the date time "<" comparison operator, '
-                  'they were not both valid FhirDateTimeBase types\n'
-                  'Argument 1: $value (${value.runtimeType})\n'
-                  'Argument 2: $o (${o.runtimeType})');
+  bool operator <(Object o) => this != o && !_greaterThan(o, '<');
 
-  bool operator <=(Object o) => this == o || this < o;
+  bool operator <=(Object o) => this == o || !_greaterThan(o, '<=');
+  // identical(this, o)
+  //     ? false
+  //     : o is! FhirDateTimeBase
+  //         ? o is String && isValid && FhirDateTime(o).isValid
+  //             ? o.length == toString().length
+  //                 ? value!.isBefore(FhirDateTime(o).value!)
+  //                 : throw ArgumentError(
+  //                     'Two values were passed to the date time "<" comparison operator, '
+  //                     'they did not have the same precision\n'
+  //                     'Argument 1: $value\nArgument 2: $o ')
+  //             : o is DateTime && isValid
+  //                 ? value!.isBefore(o)
+  //                 : throw ArgumentError(
+  //                     'Two values were passed to the date time "<" comparison operator, '
+  //                     'they were not both valid FhirDateTimeBase types\n'
+  //                     'Argument 1: $value (${value.runtimeType})\n'
+  //                     'Argument 2: $o (${o.runtimeType})')
+  //         : isValid && o.isValid
+  //             ? o.toString().length == toString().length
+  //                 ? value!.isBefore(o.value!)
+  //                 : throw ArgumentError(
+  //                     'Two values were passed to the date time "<" comparison operator, '
+  //                     'they were not both valid FhirDateTimeBase types\n'
+  //                     'Argument 1: $value (${value.runtimeType})\n'
+  //                     'Argument 2: $o (${o.runtimeType})')
+  //             : throw ArgumentError(
+  //                 'Two values were passed to the date time "<" comparison operator, '
+  //                 'they were not both valid FhirDateTimeBase types\n'
+  //                 'Argument 1: $value (${value.runtimeType})\n'
+  //                 'Argument 2: $o (${o.runtimeType})');
+
 }

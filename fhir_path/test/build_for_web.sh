@@ -2,7 +2,7 @@
 
 projectId="demos-322021"
 # projectName="fhir-path-test-sin-paren-fxns-ws-simple-word-symbol-special-datetimes"
-projectName="fhir-path-test-ignoring"
+projectName="fhir-path-trying-dates"
 
 gcloud config set project $projectId
 # gcloud auth login

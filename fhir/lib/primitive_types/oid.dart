@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:yaml/yaml.dart';
+import 'primitive_type_exceptions.dart';
 
 class Oid {
   const Oid._(this._valueString, this._valueOid, this._isValid);
@@ -20,7 +21,7 @@ class Oid {
       ? Oid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Oid.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Oid>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;

@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:yaml/yaml.dart';
+import 'primitive_type_exceptions.dart';
 
 class Time {
   const Time._(this._valueString, this._valueTime, this._isValid);
@@ -21,7 +22,7 @@ class Time {
       ? Time.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Time.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Time>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
@@ -70,16 +71,18 @@ class Time {
     } else if (!isValid ||
         (o is Time && !o.isValid) ||
         (o is String && !Time(o).isValid)) {
-      throw Exception(
-          'Two values were passed to the time ">" comparison operator, but were not both valid\n'
+      throw InvalidTypes<Time>(
+          'Two values were passed to the time ">" comparison operator, '
+          'but were not both valid\n'
           'Argument 1: $value\nArgument 2: $o');
     } else {
       final String? compareTime = o is Time ? o.value : Time(o as String).value;
       final List<String> thisList = value!.split(':');
       final List<String> compareList = compareTime!.split(':');
       if (thisList.length != compareList.length) {
-        throw Exception(
-            'Two values were passed to the time ">" comparison operator without equal precisions\n'
+        throw UnequalPrecision<Time>(
+            'Two values were passed to the time ">" comparison operator '
+            'without equal precisions\n'
             'Argument 1: $value\nArgument 2: $o');
       } else {
         for (int i = 0; i < thisList.length; i++) {
@@ -100,16 +103,18 @@ class Time {
     } else if (!isValid ||
         (o is Time && !o.isValid) ||
         (o is String && !Time(o).isValid)) {
-      throw Exception(
-          'Two values were passed to the time "<" comparison operator, but were not both valid\n'
+      throw InvalidTypes<Time>(
+          'Two values were passed to the time "<" comparison operator, '
+          'but were not both valid\n'
           'Argument 1: $value\nArgument 2: $o');
     } else {
       final String? compareTime = o is Time ? o.value : Time(o as String).value;
       final List<String> thisList = value!.split(':');
       final List<String> compareList = compareTime!.split(':');
       if (thisList.length != compareList.length) {
-        throw Exception(
-            'Two values were passed to the time "<" comparison operator without equal precisions\n'
+        throw UnequalPrecision<Time>(
+            'Two values were passed to the time "<" comparison operator '
+            'without equal precisions\n'
             'Argument 1: $value\nArgument 2: $o');
       } else {
         for (int i = 0; i < thisList.length; i++) {

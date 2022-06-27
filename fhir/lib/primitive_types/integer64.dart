@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:yaml/yaml.dart';
+import 'primitive_type_exceptions.dart';
 
 class Integer64 {
   const Integer64._(this.valueString, this.valueNumber, this.isValid);
@@ -20,8 +21,8 @@ class Integer64 {
           ? Integer64._(inValue, null, false)
           : Integer64._(inValue, tempInteger64, true);
     }
-    throw ArgumentError(
-        'Integer64 cannot be constructed from $inValue (which is an ${inValue.runtimeType}).');
+    throw CannotBeConstructed<Integer64>('Integer64 cannot be constructed from '
+        '$inValue (which is an ${inValue.runtimeType}).');
   }
 
   factory Integer64.fromJson(dynamic json) => Integer64(json);
@@ -30,7 +31,7 @@ class Integer64 {
       ? Integer64.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Integer64.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Integer64>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   BigInt? get value => valueNumber;
@@ -58,7 +59,7 @@ class Integer64 {
   bool operator >(Object o) => valueNumber == null ||
           (o is! Integer64 && o is! BigInt) ||
           (o is Integer64 && o.valueNumber == null)
-      ? throw ArgumentError('One of the values is not valid or null\n'
+      ? throw InvalidTypes<Integer64>('One of the values is not valid or null\n'
           'This number is: ${toString()}, compared number is ${o.toString()}')
       : o is Integer64
           ? valueNumber! > o.valueNumber!
@@ -69,7 +70,7 @@ class Integer64 {
   bool operator <(Object o) => valueNumber == null ||
           (o is! Integer64 && o is! BigInt) ||
           (o is Integer64 && o.valueNumber == null)
-      ? throw ArgumentError('One of the values is not valid or null\n'
+      ? throw InvalidTypes<Integer64>('One of the values is not valid or null\n'
           'This number is: ${toString()}, compared number is ${o.toString()}')
       : o is Integer64
           ? valueNumber! < o.valueNumber!

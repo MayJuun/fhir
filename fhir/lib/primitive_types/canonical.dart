@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:yaml/yaml.dart';
+import 'primitive_type_exceptions.dart';
 
 class Canonical {
   const Canonical._(this._valueString, this._valueCanonical, this._isValid);
@@ -20,7 +21,8 @@ class Canonical {
       return Canonical._(inValue, null, false);
     }
 
-    throw ArgumentError('Canonical cannot be constructed from $inValue.');
+    throw CannotBeConstructed<Canonical>(
+        'Canonical cannot be constructed from $inValue.');
   }
 
   factory Canonical.fromJson(dynamic json) => Canonical(json);
@@ -29,7 +31,7 @@ class Canonical {
       ? Canonical.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Canonical.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Canonical>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;

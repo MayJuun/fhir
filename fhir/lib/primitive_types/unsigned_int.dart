@@ -6,6 +6,7 @@ import 'package:yaml/yaml.dart';
 
 // Project imports:
 import 'fhir_number.dart';
+import 'primitive_type_exceptions.dart';
 
 class UnsignedInt extends FhirNumber {
   const UnsignedInt._(String valueString, int? valueNumber, bool isValid)
@@ -24,7 +25,8 @@ class UnsignedInt extends FhirNumber {
               ? UnsignedInt._(inValue.toString(), tempUnsignedInt, true)
               : UnsignedInt._(inValue.toString(), null, false);
     }
-    throw ArgumentError('UnsignedInt cannot be constructed from $inValue.');
+    throw CannotBeConstructed<UnsignedInt>(
+        'UnsignedInt cannot be constructed from $inValue.');
   }
 
   factory UnsignedInt.fromJson(dynamic json) => UnsignedInt(json);
@@ -35,7 +37,7 @@ class UnsignedInt extends FhirNumber {
       : yaml is YamlMap
           ? UnsignedInt.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw FormatException(
+          : throw YamlFormatException<UnsignedInt>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   int? get value => valueNumber as int?;

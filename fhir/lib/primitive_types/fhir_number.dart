@@ -1,5 +1,7 @@
 //ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
 
+import 'primitive_type_exceptions.dart';
+
 abstract class FhirNumber {
   const FhirNumber(this.valueString, this.valueNumber, this.isValid);
 
@@ -28,7 +30,8 @@ abstract class FhirNumber {
   bool operator >(Object o) => valueNumber == null ||
           (o is! FhirNumber && o is! num) ||
           (o is FhirNumber && o.valueNumber == null)
-      ? throw ArgumentError('One of the values is not valid or null\n'
+      ? throw InvalidTypes<FhirNumber>(
+          'One of the values is not valid or null\n'
           'This number is: ${toString()}, compared number is ${o.toString()}')
       : o is FhirNumber
           ? valueNumber! > o.valueNumber!
@@ -39,7 +42,8 @@ abstract class FhirNumber {
   bool operator <(Object o) => valueNumber == null ||
           (o is! FhirNumber && o is! num) ||
           (o is FhirNumber && o.valueNumber == null)
-      ? throw ArgumentError('One of the values is not valid or null\n'
+      ? throw InvalidTypes<FhirNumber>(
+          'One of the values is not valid or null\n'
           'This number is: ${toString()}, compared number is ${o.toString()}')
       : o is FhirNumber
           ? valueNumber! < o.valueNumber!

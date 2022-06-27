@@ -7,6 +7,7 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import 'fhir_number.dart';
 import 'integer.dart';
+import 'primitive_type_exceptions.dart';
 
 class Decimal extends FhirNumber {
   const Decimal._(
@@ -34,7 +35,7 @@ class Decimal extends FhirNumber {
         int.tryParse(inValue.toString()) != null,
       );
     }
-    throw ArgumentError(
+    throw CannotBeConstructed<Decimal>(
         'Decimal cannot be constructed from $inValue ${inValue.runtimeType}');
   }
 
@@ -44,7 +45,7 @@ class Decimal extends FhirNumber {
       ? Decimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Decimal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw FormatException(
+          : throw YamlFormatException<Decimal>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final bool isInt;

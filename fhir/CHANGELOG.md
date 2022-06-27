@@ -1,5 +1,10 @@
 # fhir
 
+## [0.8.1]
+* Fixed some comparisons in primitive types
+* Added classes for Exceptions in primitives (mostly because I needed them for fhir_path)
+* Ensured R4 is up to version R4B
+
 ## [0.8.0]
 
 * Updating so soon for Flutter 3.0.0

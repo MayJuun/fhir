@@ -7,16 +7,30 @@ import 'package:fhir/r4.dart';
 // Project imports:
 import 'package:fhir_path/fhir_path.dart';
 
-void main() {
-  print(parseFhirPath(r"Patient.name.given.first() = 'P\u0065ter'"));
-  print(walkFhirPath(context: ozair, pathExpression: r"'P\u0065ter'"));
-  print(jsonEncode(r'P\u0065ter'));
-  // print('P\u0065ter');
-  print((parseFhirPath(r"'\p' // 'p'").first as StringParser).value);
-  print(parseFhirPath(r"'\p' // 'p'").prettyPrint());
+import 'crafft1.dart';
+import 'crafft3.dart';
 
-  print('1: ${(parseFhirPath(r"'\\p' // '\p'").first as StringParser).value}');
-  print('2: ${parseFhirPath(r"'\\p' // '\p'").prettyPrint()}');
+void main() {
+  final crafft =
+      r"(iif(%resource.entry.resource.ofType(QuestionnaireResponse).item.where(linkId.contains('/crafft')).answer.where(exists()).valueCoding.extension.valueDecimal.aggregate($this + $total, 0).exists(), %resource.entry.resource.ofType(QuestionnaireResponse).item.where(linkId.contains('/crafft')).answer.where(exists()).valueCoding.extension.valueDecimal.aggregate($this + $total, 0), 0) + iif(%resource.entry.resource.ofType(QuestionnaireResponse).item.item.where(linkId.contains('/crafft')).answer.where(exists()).valueCoding.extension.valueDecimal.aggregate($this + $total, 0).exists(), %resource.entry.resource.ofType(QuestionnaireResponse).item.item.where(linkId.contains('/crafft')).answer.where(exists()).valueCoding.extension.valueDecimal.aggregate($this + $total, 0), 0)).select(iif($this > 1, $this.toString() + ';high;Serious Problem, needs more assessment', iif($this < 2, $this.toString() + ';low', $this)))"; //select())";
+
+  print(walkFhirPath(
+      resource: crafft1, context: crafft2, pathExpression: crafft));
+
+  print(walkFhirPath(
+      resource: crafft2, context: crafft2, pathExpression: crafft));
+
+  print(walkFhirPath(
+      resource: crafft3, context: crafft2, pathExpression: crafft));
+  // print(parseFhirPath(r"Patient.name.given.first() = 'P\u0065ter'"));
+  // print(walkFhirPath(context: ozair, pathExpression: r"'P\u0065ter'"));
+  // print(jsonEncode(r'P\u0065ter'));
+  // // print('P\u0065ter');
+  // print((parseFhirPath(r"'\p' // 'p'").first as StringParser).value);
+  // print(parseFhirPath(r"'\p' // 'p'").prettyPrint());
+
+  // print('1: ${(parseFhirPath(r"'\\p' // '\p'").first as StringParser).value}');
+  // print('2: ${parseFhirPath(r"'\\p' // '\p'").prettyPrint()}');
   // print(utf8..encode('e'));
   // print(int.parse('0065', radix: 16));
   // print(utf8.decode([int.parse('0065', radix: 16)]));
@@ -89,6 +103,175 @@ void main() {
   //   '%practitioner': null,
   // }));
 }
+
+final crafft2 = {
+  'resourceType': 'Bundle',
+  'type': 'transaction',
+  'entry': [
+    {
+      'resource': {
+        'resourceType': 'QuestionnaireResponse',
+        'questionnaire': 'mayjuun.com/fhir/Questionnaire/crafft',
+        'status': 'in-progress',
+        'subject': {'reference': 'Patient/398889622'},
+        'item': [
+          {
+            'linkId': '/crafft/past_12_months',
+            'text':
+                'During the PAST 12 MONTHS, on how many days did you (Put “0” if none):',
+            'answer': [],
+            'item': [
+              {
+                'linkId': '/crafft/past_12_months/alcohol',
+                'text':
+                    'Drink more than a few sips of beer, wine, or any drink containing alcohol?',
+                'answer': [
+                  {'valueInteger': 100}
+                ]
+              },
+              {
+                'linkId': '/crafft/past_12_months/marijuana',
+                'text':
+                    'Use any marjuana (weed, oil, or hash, by smoking, vaping, or in food) or “synthetic marijuana (like “K2”, “Spice”) or “vaping” THC oil?',
+                'answer': [
+                  {'valueInteger': 65}
+                ]
+              },
+              {
+                'linkId': '/crafft/past_12_months/drugs',
+                'text':
+                    'Use anything else to get high (like other illegal drugs, prescription or over-the-counter medications, and things that you sniff, huff, or vape)?',
+                'answer': [
+                  {'valueInteger': 30}
+                ]
+              }
+            ]
+          },
+          {
+            'linkId': '/crafft/ridden_in_car_intoxicated',
+            'text':
+                'I have ridden “IN” a CAR driven by someone (including myself) who was “high” or had been using alcohol or drugs.',
+            'answer': [
+              {
+                'valueCoding': {
+                  'extension': [
+                    {
+                      'url':
+                          'http://hl7.org/fhir/StructureDefinition/ordinalValue',
+                      'valueDecimal': 1
+                    }
+                  ],
+                  'code': '5',
+                  'display': '5'
+                }
+              }
+            ]
+          },
+          {
+            'linkId': '/crafft/use_alcohol_drugs_to_relax',
+            'text':
+                'I use alcohol or drugs to RELAX, feel better about myself, or fit in.',
+            'answer': [
+              {
+                'valueCoding': {
+                  'extension': [
+                    {
+                      'url':
+                          'http://hl7.org/fhir/StructureDefinition/ordinalValue',
+                      'valueDecimal': 1
+                    }
+                  ],
+                  'code': '5',
+                  'display': '5'
+                }
+              }
+            ]
+          },
+          {
+            'linkId': '/crafft/use_alcohol_drugs_alone',
+            'text': 'I use alcohol or drugs while I am by myself, or ALONE.',
+            'answer': [
+              {
+                'valueCoding': {
+                  'extension': [
+                    {
+                      'url':
+                          'http://hl7.org/fhir/StructureDefinition/ordinalValue',
+                      'valueDecimal': 0
+                    }
+                  ],
+                  'code': '1',
+                  'display': '1'
+                }
+              }
+            ]
+          },
+          {
+            'linkId': '/crafft/forget_things_while_using_alcohol_drugs',
+            'text':
+                'I sometimes FORGET things I did while using alcohol or drugs.',
+            'answer': [
+              {
+                'valueCoding': {
+                  'extension': [
+                    {
+                      'url':
+                          'http://hl7.org/fhir/StructureDefinition/ordinalValue',
+                      'valueDecimal': 0
+                    }
+                  ],
+                  'code': '1',
+                  'display': '1'
+                }
+              }
+            ]
+          },
+          {
+            'linkId': '/crafft/told_to_cut_down',
+            'text':
+                'My FAMILY or FRIENDS tell me that I should cut down on my drinking or drug use.',
+            'answer': [
+              {
+                'valueCoding': {
+                  'extension': [
+                    {
+                      'url':
+                          'http://hl7.org/fhir/StructureDefinition/ordinalValue',
+                      'valueDecimal': 0
+                    }
+                  ],
+                  'code': '1',
+                  'display': '1'
+                }
+              }
+            ]
+          },
+          {
+            'linkId': '/crafft/gotten_into_trouble_while_using',
+            'text':
+                'I have gotten into TROUBLE while I was using alcohol or drugs.',
+            'answer': [
+              {
+                'valueCoding': {
+                  'extension': [
+                    {
+                      'url':
+                          'http://hl7.org/fhir/StructureDefinition/ordinalValue',
+                      'valueDecimal': 0
+                    }
+                  ],
+                  'code': '1',
+                  'display': '1'
+                }
+              }
+            ]
+          }
+        ]
+      },
+      'request': {'method': 'POST', 'url': 'QuestionnaireResponse'}
+    },
+  ]
+};
 
 final ozair = <String, dynamic>{
   "resourceType": "QuestionnaireResponse",
