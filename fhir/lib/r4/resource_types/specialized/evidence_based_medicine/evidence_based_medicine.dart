@@ -16,118 +16,181 @@ part 'evidence_based_medicine.g.dart';
 class Citation with Resource, _$Citation {
   Citation._();
 
-  /// [Citation]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [Citation] The Citation Resource enables reference to any knowledge
+  /// artifact for purposes of identification and attribution. The Citation Resource
+  /// supports existing reference structures and developing publication practices
+  /// such as versioning, expressing complex contributorship roles, and referencing
+  /// computable resources.
   ///
-  /// [resourceType]: This is a Citation resource;
+  /// [resourceType] This is a Citation resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained
+  /// by the infrastructure. Changes to the content might not always be associated
+  /// with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that defines the
+  /// special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] _(_implicitRules): Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] _(_language): Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to contain
+  /// sufficient detail to make it "clinically safe" for a human to just read the
+  /// narrative. Resource definitions may define what content should be represented
+  /// in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified independently,
+  /// and nor can they have their own independent transaction scope.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of the
+  /// containing element's descendants. Usually modifier elements provide negation or
+  /// qualification. To make the use of extensions safe and manageable, there is a
+  /// strict set of governance applied to the definition and use of extensions.
+  /// Though any implementer is allowed to define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [url]: An absolute URI that is used to identify this citation when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this citation when it is
+  /// referenced in a specification, model, design or an instance; also called its
+  /// canonical identifier. This SHOULD be globally unique and SHOULD be a literal
+  /// address at which at which an authoritative instance of this summary is (or will
+  /// be) published. This URL can be the target of a canonical reference. It SHALL
+  /// remain the same when the summary is stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] _(_url): Extensions for url
   ///
-  /// [identifier]: A formal identifier that is used to identify this citation when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this citation
+  /// when it is represented in other formats, or referenced in a specification,
+  /// model, design or an instance.
   ///
-  /// [version]: The identifier that is used to identify this version of the citation when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the citation author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  /// citation when it is referenced in a specification, model, design or instance.
+  /// This is an arbitrary value managed by the citation author and is not expected
+  /// to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if
+  /// a managed version is not available. There is also no expectation that versions
+  /// can be placed in a lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] _(_version): Extensions for version
   ///
-  /// [name]: A natural language name identifying the citation. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the citation. This name should
+  /// be usable as an identifier for the module by machine processing applications
+  /// such as code generation.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] _(_name): Extensions for name
   ///
-  /// [title]: A short, descriptive, user-friendly title for the citation.;
+  /// [title] A short, descriptive, user-friendly title for the citation.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [titleElement] _(_title): Extensions for title
   ///
-  /// [status]: The status of this summary. Enables tracking the life-cycle of the content.;
+  /// [status] The status of this summary. Enables tracking the life-cycle of
+  /// the content.
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [statusElement] _(_status): Extensions for status
   ///
-  /// [experimental]: A Boolean value to indicate that this citation is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this citation is authored
+  /// for testing purposes (or education/evaluation/marketing) and is not intended to
+  /// be used for genuine usage.
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [experimentalElement] _(_experimental): Extensions for experimental
   ///
-  /// [date]: The date  (and optionally time) when the citation was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the citation changes.;
+  /// [date] The date  (and optionally time) when the citation was published.
+  /// The date must change when the business version changes and it must change if
+  /// the status code changes. In addition, it should change when the substantive
+  /// content of the citation changes.
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [dateElement] _(_date): Extensions for date
   ///
-  /// [publisher]: The name of the organization or individual that published the citation.;
+  /// [publisher] The name of the organization or individual that published the
+  /// citation.
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [publisherElement] _(_publisher): Extensions for publisher
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  /// with the publisher.
   ///
-  /// [description]: A free text natural language description of the citation from a consumer's perspective.;
+  /// [description] A free text natural language description of the citation
+  /// from a consumer's perspective.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [descriptionElement] _(_description): Extensions for description
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate citation instances.;
+  /// [useContext] The content was developed with a focus and intent of
+  /// supporting the contexts that are listed. These contexts may be general
+  /// categories (gender, age, ...) or may be references to specific programs
+  /// (insurance plans, studies, ...) and may be used to assist with indexing and
+  /// searching for appropriate citation instances.
   ///
-  /// [jurisdiction]: A legal or geographic region in which the citation is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the citation is
+  /// intended to be used.
   ///
-  /// [purpose]: Explanation of why this citation is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this citation is needed and why it has been
+  /// designed as it has.
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [purposeElement] _(_purpose): Extensions for purpose
   ///
-  /// [copyright]: Use and/or publishing restrictions for the Citation, not for the cited artifact.;
+  /// [copyright] Use and/or publishing restrictions for the Citation, not for
+  /// the cited artifact.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [copyrightElement] _(_copyright): Extensions for copyright
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.;
+  /// [approvalDate] The date on which the resource content was approved by the
+  /// publisher. Approval happens once when the content is officially approved for
+  /// usage.
   ///
-  /// [approvalDateElement] (_approvalDate): Extensions for approvalDate;
+  /// [approvalDateElement] _(_approvalDate): Extensions for approvalDate
   ///
-  /// [lastReviewDate]: The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.;
+  /// [lastReviewDate] The date on which the resource content was last reviewed.
+  /// Review happens periodically after approval but does not change the original
+  /// approval date.
   ///
-  /// [lastReviewDateElement] (_lastReviewDate): Extensions for lastReviewDate;
+  /// [lastReviewDateElement] _(_lastReviewDate): Extensions for lastReviewDate
   ///
-  /// [effectivePeriod]: The period during which the citation content was or is planned to be in active use.;
+  /// [effectivePeriod] The period during which the citation content was or is
+  /// planned to be in active use.
   ///
-  /// [topic]: Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.;
+  /// [author] Who authored the Citation.
   ///
-  /// [author]: Who authored the Citation.;
+  /// [editor] Who edited the Citation.
   ///
-  /// [editor]: Who edited the Citation.;
+  /// [reviewer] Who reviewed the Citation.
   ///
-  /// [reviewer]: Who reviewed the Citation.;
+  /// [endorser] Who endorsed the Citation.
   ///
-  /// [endorser]: Who endorsed the Citation.;
+  /// [summary] A human-readable display of the citation.
   ///
-  /// [relatedArtifact]: Artifact related to the Citation Resource.;
+  /// [classification] The assignment to an organizing scheme.
   ///
-  /// [summary]: A human-readable display of the citation.;
+  /// [note] Used for general notes and annotations not coded elsewhere.
   ///
-  /// [classification]: The assignment to an organizing scheme.;
+  /// [currentState] The status of the citation.
   ///
-  /// [note]: Used for general notes and annotations not coded elsewhere.;
+  /// [statusDate] An effective date or period for a status of the citation.
   ///
-  /// [currentState]: The status of the citation.;
+  /// [relatesTo] Artifact related to the Citation Resource.
   ///
-  /// [statusDate]: An effective date or period for a status of the citation.;
-  ///
-  /// [citedArtifact]: The article or artifact being described.;
+  /// [citedArtifact] The article or artifact being described.
   factory Citation({
     @Default(R4ResourceType.Citation) R4ResourceType resourceType,
     String? id,
@@ -218,22 +281,40 @@ class Citation with Resource, _$Citation {
 class CitationSummary with _$CitationSummary {
   CitationSummary._();
 
-  /// [CitationSummary]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationSummary] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [style]: Format for display of the citation.;
+  /// [style] Format for display of the citation.
   ///
-  /// [text]: The human-readable display of the citation.;
+  /// [text] The human-readable display of the citation.
   ///
-  /// [textElement] (_text): Extensions for text;
+  /// [textElement] _(_text) Extensions for text
   factory CitationSummary({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -278,20 +359,38 @@ class CitationSummary with _$CitationSummary {
 class CitationClassification with _$CitationClassification {
   CitationClassification._();
 
-  /// [CitationClassification]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationClassification] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: The kind of classifier (e.g. publication type, keyword).;
+  /// [type] The kind of classifier (e.g. publication type, keyword).
   ///
-  /// [classifier]: The specific classification value.;
+  /// [classifier] The specific classification value.
   factory CitationClassification({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -335,24 +434,42 @@ class CitationClassification with _$CitationClassification {
 class CitationStatusDate with _$CitationStatusDate {
   CitationStatusDate._();
 
-  /// [CitationStatusDate]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationStatusDate] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [activity]: Classification of the status.;
+  /// [activity] Classification of the status.
   ///
-  /// [actual]: Either occurred or expected.;
+  /// [actual] Either occurred or expected.
   ///
-  /// [actualElement] (_actual): Extensions for actual;
+  /// [actualElement] _(_actual) Extensions for actual
   ///
-  /// [period]: When the status started and/or ended.;
+  /// [period] When the status started and/or ended.
   factory CitationStatusDate({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -398,42 +515,52 @@ class CitationStatusDate with _$CitationStatusDate {
 class CitationRelatesTo with _$CitationRelatesTo {
   CitationRelatesTo._();
 
-  /// [CitationRelatesTo]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationRelatesTo] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: The type of relationship to the related artifact.;
+  /// [relationshipType] How the Citation resource relates to the target artifact.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [targetClassifier] The clasification of the related artifact.
   ///
-  /// [classifier]: Provides additional classifiers of the related artifact.;
+  /// [targetUri] The article or artifact that the Citation Resource is related
+  /// to.
   ///
-  /// [label]: A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.;
+  /// [targetUriElement] _(_targetUri) Extensions for targetUri
   ///
-  /// [labelElement] (_label): Extensions for label;
+  /// [targetIdentifier] The article or artifact that the Citation Resource is
+  /// related to.
   ///
-  /// [display]: A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.;
+  /// [targetReference] The article or artifact that the Citation Resource is
+  /// related to.
   ///
-  /// [displayElement] (_display): Extensions for display;
-  ///
-  /// [citation]: A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.;
-  ///
-  /// [citationElement] (_citation): Extensions for citation;
-  ///
-  /// [document]: The document being referenced, represented as an attachment. This is exclusive with the resource element.;
-  ///
-  /// [resource]: The related artifact, such as a library, value set, profile, or other knowledge resource.;
-  ///
-  /// [resourceElement] (_resource): Extensions for resource;
-  ///
-  /// [resourceReference]: The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource.;
+  /// [targetAttachment] The article or artifact that the Citation Resource is
+  /// related to.
   factory CitationRelatesTo({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -482,48 +609,72 @@ class CitationRelatesTo with _$CitationRelatesTo {
 class CitationCitedArtifact with _$CitationCitedArtifact {
   CitationCitedArtifact._();
 
-  /// [CitationCitedArtifact]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationCitedArtifact] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [identifier]: A formal identifier that is used to identify this citation when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this citation
+  /// when it is represented in other formats, or referenced in a specification,
+  /// model, design or an instance.
   ///
-  /// [relatedIdentifier]: A formal identifier that is used to identify things closely related to this citation.;
+  /// [relatedIdentifier] A formal identifier that is used to identify things
+  /// closely related to this citation.
   ///
-  /// [dateAccessed]: When the cited artifact was accessed.;
+  /// [dateAccessed] When the cited artifact was accessed.
   ///
-  /// [dateAccessedElement] (_dateAccessed): Extensions for dateAccessed;
+  /// [dateAccessedElement] _(_dateAccessed) Extensions for dateAccessed
   ///
-  /// [version]: The defined version of the cited artifact.;
+  /// [version] The defined version of the cited artifact.
   ///
-  /// [currentState]: The status of the cited artifact.;
+  /// [currentState] The status of the cited artifact.
   ///
-  /// [statusDate]: An effective date or period for a status of the cited artifact.;
+  /// [statusDate] An effective date or period for a status of the cited artifact.
   ///
-  /// [title]: The title details of the article or artifact.;
+  /// [title] The title details of the article or artifact.
   ///
-  /// [abstract]: Summary of the article or artifact.;
+  /// [abstract] Summary of the article or artifact.
   ///
-  /// [part]: The component of the article or artifact.;
+  /// [part] The component of the article or artifact.
   ///
-  /// [relatesTo]: The artifact related to the cited artifact.;
+  /// [relatesTo] The artifact related to the cited artifact.
   ///
-  /// [publicationForm]: If multiple, used to represent alternative forms of the article that are not separate citations.;
+  /// [publicationForm] If multiple, used to represent alternative forms of the
+  /// article that are not separate citations.
   ///
-  /// [webLocation]: Used for any URL for the article or artifact cited.;
+  /// [webLocation] Used for any URL for the article or artifact cited.
   ///
-  /// [classification]: The assignment to an organizing scheme.;
+  /// [classification] The assignment to an organizing scheme.
   ///
-  /// [contributorship]: This element is used to list authors and other contributors, their contact information, specific contributions, and summary statements.;
+  /// [contributorship] This element is used to list authors and other
+  /// contributors, their contact information, specific contributions, and summary
+  /// statements.
   ///
-  /// [note]: Any additional information or content for the article or artifact.;
+  /// [note] Any additional information or content for the article or artifact.
   factory CitationCitedArtifact({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -538,7 +689,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
     List<CitationTitle>? title,
     @JsonKey(name: 'abstract') List<CitationAbstract>? abstract_,
     @JsonKey(name: 'part') CitationPart? part_,
-    List<CitationRelatesTo>? relatesTo,
+    List<CitationRelatesTo1>? relatesTo,
     List<CitationPublicationForm>? publicationForm,
     List<CitationWebLocation>? webLocation,
     List<CitationClassification1>? classification,
@@ -581,22 +732,40 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
 class CitationVersion with _$CitationVersion {
   CitationVersion._();
 
-  /// [CitationVersion]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationVersion] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [value]: The version number or other version identifier.;
+  /// [value] The version number or other version identifier.
   ///
-  /// [valueElement] (_value): Extensions for value;
+  /// [valueElement] _(_value) Extensions for value
   ///
-  /// [baseCitation]: Citation for the main version of the cited artifact.;
+  /// [baseCitation] Citation for the main version of the cited artifact.
   factory CitationVersion({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -641,24 +810,42 @@ class CitationVersion with _$CitationVersion {
 class CitationStatusDate1 with _$CitationStatusDate1 {
   CitationStatusDate1._();
 
-  /// [CitationStatusDate1]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationStatusDate1] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [activity]: Classification of the status.;
+  /// [activity] Classification of the status.
   ///
-  /// [actual]: Either occurred or expected.;
+  /// [actual] Either occurred or expected.
   ///
-  /// [actualElement] (_actual): Extensions for actual;
+  /// [actualElement] _(_actual) Extensions for actual
   ///
-  /// [period]: When the status started and/or ended.;
+  /// [period] When the status started and/or ended.
   factory CitationStatusDate1({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -704,24 +891,42 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
 class CitationTitle with _$CitationTitle {
   CitationTitle._();
 
-  /// [CitationTitle]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationTitle] The Citation Resource enables reference to any knowledge
+  /// artifact for purposes of identification and attribution. The Citation Resource
+  /// supports existing reference structures and developing publication practices
+  /// such as versioning, expressing complex contributorship roles, and referencing
+  /// computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: Used to express the reason or specific aspect for the title.;
+  /// [type] Used to express the reason or specific aspect for the title.
   ///
-  /// [language]: Used to express the specific language.;
+  /// [language] Used to express the specific language.
   ///
-  /// [text]: The title of the article or artifact.;
+  /// [text] The title of the article or artifact.
   ///
-  /// [textElement] (_text): Extensions for text;
+  /// [textElement] _(_text) Extensions for text
   factory CitationTitle({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -767,28 +972,46 @@ class CitationTitle with _$CitationTitle {
 class CitationAbstract with _$CitationAbstract {
   CitationAbstract._();
 
-  /// [CitationAbstract]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationAbstract] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: Used to express the reason or specific aspect for the abstract.;
+  /// [type] Used to express the reason or specific aspect for the abstract.
   ///
-  /// [language]: Used to express the specific language.;
+  /// [language] Used to express the specific language.
   ///
-  /// [text]: Abstract content.;
+  /// [text] Abstract content.
   ///
-  /// [textElement] (_text): Extensions for text;
+  /// [textElement] _(_text) Extensions for text
   ///
-  /// [copyright]: Copyright notice for the abstract.;
+  /// [copyright] Copyright notice for the abstract.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [copyrightElement] _(_copyright) Extensions for copyright
   factory CitationAbstract({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -836,24 +1059,42 @@ class CitationAbstract with _$CitationAbstract {
 class CitationPart with _$CitationPart {
   CitationPart._();
 
-  /// [CitationPart]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationPart] The Citation Resource enables reference to any knowledge
+  /// artifact for purposes of identification and attribution. The Citation Resource
+  /// supports existing reference structures and developing publication practices
+  /// such as versioning, expressing complex contributorship roles, and referencing
+  /// computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: The kind of component.;
+  /// [type] The kind of component.
   ///
-  /// [value]: The specification of the component.;
+  /// [value] The specification of the component.
   ///
-  /// [valueElement] (_value): Extensions for value;
+  /// [valueElement] _(_value) Extensions for value
   ///
-  /// [baseCitation]: The citation for the full article or artifact.;
+  /// [baseCitation] The citation for the full article or artifact.
   factory CitationPart({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -895,60 +1136,173 @@ class CitationPart with _$CitationPart {
   }
 }
 
-/// CitationRelatesTo1
+@freezed
+class CitationRelatesTo1 with _$CitationRelatesTo1 {
+  CitationRelatesTo1._();
+
+  /// [CitationRelatesTo1] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
+  ///
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
+  ///
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
+  ///
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
+  ///
+  /// [relationshipType] How the cited artifact relates to the target artifact.
+  ///
+  /// [targetClassifier] The clasification of the related artifact.
+  ///
+  /// [targetUri] The article or artifact that the cited artifact is related to.
+  ///
+  /// [targetUriElement] _(_targetUri) Extensions for targetUri
+  ///
+  /// [targetIdentifier] The article or artifact that the cited artifact is
+  /// related to.
+  ///
+  /// [targetReference] The article or artifact that the cited artifact is
+  /// related to.
+  ///
+  /// [targetAttachment] The article or artifact that the cited artifact is
+  /// related to.
+  factory CitationRelatesTo1({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept relationshipType,
+    List<CodeableConcept>? targetClassifier,
+    FhirUri? targetUri,
+    @JsonKey(name: '_targetUri') Element? targetUriElement,
+    Identifier? targetIdentifier,
+    Reference? targetReference,
+    Attachment? targetAttachment,
+  }) = _CitationRelatesTo1;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationRelatesTo1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationRelatesTo1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CitationRelatesTo1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationRelatesTo1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CitationRelatesTo1.fromJson(Map<String, dynamic> json) =>
+      _$CitationRelatesTo1FromJson(json);
+
+  /// Acts like a constructor, returns a [CitationRelatesTo1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CitationRelatesTo1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CitationRelatesTo1FromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
 
 @freezed
 class CitationPublicationForm with _$CitationPublicationForm {
   CitationPublicationForm._();
 
-  /// [CitationPublicationForm]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationPublicationForm] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [publishedIn]: The collection the cited article or artifact is published in.;
+  /// [publishedIn] The collection the cited article or artifact is published in.
   ///
-  /// [periodicRelease]: The specific issue in which the cited article resides.;
+  /// [periodicRelease] The specific issue in which the cited article resides.
   ///
-  /// [articleDate]: The date the article was added to the database, or the date the article was released (which may differ from the journal issue publication date).;
+  /// [articleDate] The date the article was added to the database, or the date
+  /// the article was released (which may differ from the journal issue publication
+  /// date).
   ///
-  /// [articleDateElement] (_articleDate): Extensions for articleDate;
+  /// [articleDateElement] _(_articleDate) Extensions for articleDate
   ///
-  /// [lastRevisionDate]: The date the article was last revised or updated in the database.;
+  /// [lastRevisionDate] The date the article was last revised or updated in the
+  /// database.
   ///
-  /// [lastRevisionDateElement] (_lastRevisionDate): Extensions for lastRevisionDate;
+  /// [lastRevisionDateElement] _(_lastRevisionDate) Extensions for
+  /// lastRevisionDate
   ///
-  /// [language]: Language in which this form of the article is published.;
+  /// [language] Language in which this form of the article is published.
   ///
-  /// [accessionNumber]: Entry number or identifier for inclusion in a database.;
+  /// [accessionNumber] Entry number or identifier for inclusion in a database.
   ///
-  /// [accessionNumberElement] (_accessionNumber): Extensions for accessionNumber;
+  /// [accessionNumberElement] _(_accessionNumber) Extensions for accessionNumber
   ///
-  /// [pageString]: Used for full display of pagination.;
+  /// [pageString] Used for full display of pagination.
   ///
-  /// [pageStringElement] (_pageString): Extensions for pageString;
+  /// [pageStringElement] _(_pageString) Extensions for pageString
   ///
-  /// [firstPage]: Used for isolated representation of first page.;
+  /// [firstPage] Used for isolated representation of first page.
   ///
-  /// [firstPageElement] (_firstPage): Extensions for firstPage;
+  /// [firstPageElement] _(_firstPage) Extensions for firstPage
   ///
-  /// [lastPage]: Used for isolated representation of last page.;
+  /// [lastPage] Used for isolated representation of last page.
   ///
-  /// [lastPageElement] (_lastPage): Extensions for lastPage;
+  /// [lastPageElement] _(_lastPage) Extensions for lastPage
   ///
-  /// [pageCount]: Actual or approximate number of pages or screens.;
+  /// [pageCount] Actual or approximate number of pages or screens.
   ///
-  /// [pageCountElement] (_pageCount): Extensions for pageCount;
+  /// [pageCountElement] _(_pageCount) Extensions for pageCount
   ///
-  /// [copyright]: Copyright notice for the full article or artifact.;
+  /// [copyright] Copyright notice for the full article or artifact.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [copyrightElement] _(_copyright) Extensions for copyright
   factory CitationPublicationForm({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1009,30 +1363,50 @@ class CitationPublicationForm with _$CitationPublicationForm {
 class CitationPublishedIn with _$CitationPublishedIn {
   CitationPublishedIn._();
 
-  /// [CitationPublishedIn]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationPublishedIn] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: Kind of container (e.g. Periodical, database, or book).;
+  /// [type] Kind of container (e.g. Periodical, database, or book).
   ///
-  /// [identifier]: Journal identifiers include ISSN, ISO Abbreviation and NLMuniqueID; Book identifiers include ISBN.;
+  /// [identifier] Journal identifiers include ISSN, ISO Abbreviation and
+  /// NLMuniqueID; Book identifiers include ISBN.
   ///
-  /// [title]: Name of the database or title of the book or journal.;
+  /// [title] Name of the database or title of the book or journal.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [titleElement] _(_title) Extensions for title
   ///
-  /// [publisher]: Name of the publisher.;
+  /// [publisher] Name of the publisher.
   ///
-  /// [publisherLocation]: Geographic location of the publisher.;
+  /// [publisherLocation] Geographic location of the publisher.
   ///
-  /// [publisherLocationElement] (_publisherLocation): Extensions for publisherLocation;
+  /// [publisherLocationElement] _(_publisherLocation) Extensions for
+  /// publisherLocation
   factory CitationPublishedIn({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1081,28 +1455,49 @@ class CitationPublishedIn with _$CitationPublishedIn {
 class CitationPeriodicRelease with _$CitationPeriodicRelease {
   CitationPeriodicRelease._();
 
-  /// [CitationPeriodicRelease]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationPeriodicRelease] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [citedMedium]: Describes the form of the medium cited. Common codes are "Internet" or "Print".;
+  /// [citedMedium] Describes the form of the medium cited. Common codes are
+  /// "Internet" or "Print".
   ///
-  /// [volume]: Volume number of journal in which the article is published.;
+  /// [volume] Volume number of journal in which the article is published.
   ///
-  /// [volumeElement] (_volume): Extensions for volume;
+  /// [volumeElement] _(_volume) Extensions for volume
   ///
-  /// [issue]: Issue, part or supplement of journal in which the article is published.;
+  /// [issue] Issue, part or supplement of journal in which the article is
+  /// published.
   ///
-  /// [issueElement] (_issue): Extensions for issue;
+  /// [issueElement] _(_issue) Extensions for issue
   ///
-  /// [dateOfPublication]: Defining the date on which the issue of the journal was published.;
+  /// [dateOfPublication] Defining the date on which the issue of the journal was
+  /// published.
   factory CitationPeriodicRelease({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1150,40 +1545,59 @@ class CitationPeriodicRelease with _$CitationPeriodicRelease {
 class CitationDateOfPublication with _$CitationDateOfPublication {
   CitationDateOfPublication._();
 
-  /// [CitationDateOfPublication]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationDateOfPublication] The Citation Resource enables reference to
+  /// any knowledge artifact for purposes of identification and attribution. The
+  /// Citation Resource supports existing reference structures and developing
+  /// publication practices such as versioning, expressing complex contributorship
+  /// roles, and referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [date]: Date on which the issue of the journal was published.;
+  /// [date] Date on which the issue of the journal was published.
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [dateElement] _(_date) Extensions for date
   ///
-  /// [year]: Year on which the issue of the journal was published.;
+  /// [year] Year on which the issue of the journal was published.
   ///
-  /// [yearElement] (_year): Extensions for year;
+  /// [yearElement] _(_year) Extensions for year
   ///
-  /// [month]: Month on which the issue of the journal was published.;
+  /// [month] Month on which the issue of the journal was published.
   ///
-  /// [monthElement] (_month): Extensions for month;
+  /// [monthElement] _(_month) Extensions for month
   ///
-  /// [day]: Day on which the issue of the journal was published.;
+  /// [day] Day on which the issue of the journal was published.
   ///
-  /// [dayElement] (_day): Extensions for day;
+  /// [dayElement] _(_day) Extensions for day
   ///
-  /// [season]: Spring, Summer, Fall/Autumn, Winter.;
+  /// [season] Spring, Summer, Fall/Autumn, Winter.
   ///
-  /// [seasonElement] (_season): Extensions for season;
+  /// [seasonElement] _(_season) Extensions for season
   ///
-  /// [text]: Text representation of the date of which the issue of the journal was published.;
+  /// [text] Text representation of the date of which the issue of the journal
+  /// was published.
   ///
-  /// [textElement] (_text): Extensions for text;
+  /// [textElement] _(_text) Extensions for text
   factory CitationDateOfPublication({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1237,22 +1651,40 @@ class CitationDateOfPublication with _$CitationDateOfPublication {
 class CitationWebLocation with _$CitationWebLocation {
   CitationWebLocation._();
 
-  /// [CitationWebLocation]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationWebLocation] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [classifier]: Code the reason for different URLs, e.g. abstract and full-text.;
+  /// [type] Code the reason for different URLs, e.g. abstract and full-text.
   ///
-  /// [url]: The specific URL.;
+  /// [url] The specific URL.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] _(_url) Extensions for url
   factory CitationWebLocation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1297,22 +1729,40 @@ class CitationWebLocation with _$CitationWebLocation {
 class CitationClassification1 with _$CitationClassification1 {
   CitationClassification1._();
 
-  /// [CitationClassification1]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationClassification1] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: The kind of classifier (e.g. publication type, keyword).;
+  /// [type] The kind of classifier (e.g. publication type, keyword).
   ///
-  /// [classifier]: The specific classification value.;
+  /// [classifier] The specific classification value.
   ///
-  /// [artifactAssessment]: Complex or externally created classification.;
+  /// [whoClassified] Provenance and copyright of classification.
   factory CitationClassification1({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1358,28 +1808,50 @@ class CitationClassification1 with _$CitationClassification1 {
 class CitationWhoClassified with _$CitationWhoClassified {
   CitationWhoClassified._();
 
-  /// [CitationWhoClassified]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
+  /// [CitationWhoClassified] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [person]: Person who created the classification.
+  /// [person] Person who created the classification.
   ///
-  /// [organization]: Organization who created the classification.
+  /// [organization] Organization who created the classification.
   ///
-  /// [publisher]: The publisher of the classification, not the publisher of the article or artifact being cited.
+  /// [publisher] The publisher of the classification, not the publisher of the
+  /// article or artifact being cited.
   ///
-  /// [classifierCopyright]: Rights management statement for the classification.
+  /// [classifierCopyright] Rights management statement for the classification.
   ///
-  /// [_classifierCopyright]: Extensions for classifierCopyright
+  /// [classifierCopyrightElement] _(_classifierCopyright) Extensions for
+  /// classifierCopyright
   ///
-  /// [freeToShare]: Acceptable to re-use the classification.
+  /// [freeToShare] Acceptable to re-use the classification.
   ///
-  /// [_freeToShare]: Extensions for freeToShare
+  /// [freeToShareElement] _(_freeToShare) Extensions for freeToShare
   factory CitationWhoClassified({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1428,24 +1900,43 @@ class CitationWhoClassified with _$CitationWhoClassified {
 class CitationContributorship with _$CitationContributorship {
   CitationContributorship._();
 
-  /// [CitationContributorship]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationContributorship] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [complete]: Indicates if the list includes all authors and/or contributors.;
+  /// [complete] Indicates if the list includes all authors and/or contributors.
   ///
-  /// [completeElement] (_complete): Extensions for complete;
+  /// [completeElement] _(_complete) Extensions for complete
   ///
-  /// [entry]: An individual entity named in the author list or contributor list.;
+  /// [entry] An individual entity named in the author list or contributor list.
   ///
-  /// [summary]: Used to record a display of the author/contributor list without separate coding for each list member.;
+  /// [summary] Used to record a display of the author/contributor list without
+  /// separate coding for each list member.
   factory CitationContributorship({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1491,38 +1982,69 @@ class CitationContributorship with _$CitationContributorship {
 class CitationEntry with _$CitationEntry {
   CitationEntry._();
 
-  /// [CitationEntry]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationEntry] The Citation Resource enables reference to any knowledge
+  /// artifact for purposes of identification and attribution. The Citation Resource
+  /// supports existing reference structures and developing publication practices
+  /// such as versioning, expressing complex contributorship roles, and referencing
+  /// computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [contributor]: The identity of the individual entity.;
+  /// [name] A name associated with the individual.
   ///
-  /// [forenameInitials]: Initials for forename.;
+  /// [initials] Initials for forename.
   ///
-  /// [forenameInitialsElement] (_forenameInitials): Extensions for forenameInitials;
+  /// [initialsElement] _(_initials) Extensions for initials
   ///
-  /// [affiliation]: Organization affiliated with the entity.;
+  /// [collectiveName] Used for collective or corporate name as an author.
   ///
-  /// [contributionType]: This element identifies the specific nature of an individual’s contribution with respect to the cited work.;
+  /// [collectiveNameElement] _(_collectiveName) Extensions for collectiveName
   ///
-  /// [role]: The role of the contributor (e.g. author, editor, reviewer).;
+  /// [identifier] Unique person identifier.
   ///
-  /// [contributionInstance]: Contributions with accounting for time or number.;
+  /// [affiliationInfo] Organization affiliated with the entity.
   ///
-  /// [correspondingContact]: Indication of which contributor is the corresponding contributor for the role.;
+  /// [address] Physical mailing address for the author or contributor.
   ///
-  /// [correspondingContactElement] (_correspondingContact): Extensions for correspondingContact;
+  /// [telecom] Email or telephone contact methods for the author or contributor.
   ///
-  /// [rankingOrder]: Provides a numerical ranking to represent the degree of contributorship relative to other contributors, such as 1 for first author and 2 for second author.;
+  /// [contributionType] This element identifies the specific nature of an
+  /// individual’s contribution with respect to the cited work.
   ///
-  /// [rankingOrderElement] (_rankingOrder): Extensions for rankingOrder;
+  /// [role] The role of the contributor (e.g. author, editor, reviewer).
+  ///
+  /// [contributionInstance] Contributions with accounting for time or number.
+  ///
+  /// [correspondingContact] Indication of which contributor is the corresponding
+  /// contributor for the role.
+  ///
+  /// [correspondingContactElement] _(_correspondingContact) Extensions for
+  /// correspondingContact
+  ///
+  /// [listOrder] Used to code order of authors.
+  ///
+  /// [listOrderElement] _(_listOrder) Extensions for listOrder
   factory CitationEntry({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1581,24 +2103,44 @@ class CitationEntry with _$CitationEntry {
 class CitationAffiliationInfo with _$CitationAffiliationInfo {
   CitationAffiliationInfo._();
 
-  /// [CitationAffiliationInfo]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationAffiliationInfo] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [complete]: Indicates if the list includes all authors and/or contributors.;
+  /// [affiliation] Display for the organization.
   ///
-  /// [completeElement] (_complete): Extensions for complete;
+  /// [affiliationElement] _(_affiliation) Extensions for affiliation
   ///
-  /// [entry]: An individual entity named in the author list or contributor list.;
+  /// [role] Role within the organization, such as professional title.
   ///
-  /// [summary]: Used to record a display of the author/contributor list without separate coding for each list member.;
+  /// [roleElement] _(_role) Extensions for role
+  ///
+  /// [identifier] Identifier for the organization.
   factory CitationAffiliationInfo({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1645,22 +2187,40 @@ class CitationAffiliationInfo with _$CitationAffiliationInfo {
 class CitationContributionInstance with _$CitationContributionInstance {
   CitationContributionInstance._();
 
-  /// [CitationContributionInstance]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationContributionInstance] The Citation Resource enables reference to
+  /// any knowledge artifact for purposes of identification and attribution. The
+  /// Citation Resource supports existing reference structures and developing
+  /// publication practices such as versioning, expressing complex contributorship
+  /// roles, and referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: The specific contribution.;
+  /// [type] The specific contribution.
   ///
-  /// [time]: The time that the contribution was made.;
+  /// [time] The time that the contribution was made.
   ///
-  /// [timeElement] (_time): Extensions for time;
+  /// [timeElement] _(_time) Extensions for time
   factory CitationContributionInstance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1705,24 +2265,46 @@ class CitationContributionInstance with _$CitationContributionInstance {
 class CitationSummary1 with _$CitationSummary1 {
   CitationSummary1._();
 
-  /// [CitationSummary1]: The Citation Resource enables reference to any knowledge artifact for purposes of identification and attribution. The Citation Resource supports existing reference structures and developing publication practices such as versioning, expressing complex contributorship roles, and referencing computable resources.
-
+  /// [CitationSummary1] The Citation Resource enables reference to any
+  /// knowledge artifact for purposes of identification and attribution. The Citation
+  /// Resource supports existing reference structures and developing publication
+  /// practices such as versioning, expressing complex contributorship roles, and
+  /// referencing computable resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references).
+  /// This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions safe
+  /// and manageable, there is a strict set of governance  applied to the definition
+  /// and use of extensions. Though any implementer can define an extension, there is
+  /// a set of requirements that SHALL be met as part of the definition of the
+  /// extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is
+  /// not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the understanding
+  /// of the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and manageable,
+  /// there is a strict set of governance applied to the definition and use of
+  /// extensions. Though any implementer can define an extension, there is a set of
+  /// requirements that SHALL be met as part of the definition of the extension.
+  /// Applications processing a resource are required to check for modifier
+  /// extensions.Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  /// modifierExtension itself).
   ///
-  /// [type]: Used most commonly to express an author list or a contributorship statement.;
+  /// [type] Used most commonly to express an author list or a contributorship
+  /// statement.
   ///
-  /// [style]: The format for the display string.;
+  /// [style] The format for the display string.
   ///
-  /// [source]: Used to code the producer or rule for creating the display string.;
+  /// [source] Used to code the producer or rule for creating the display string.
   ///
-  /// [value]: The display string for the author list, contributor list, or contributorship statement.;
+  /// [value] The display string for the author list, contributor list, or
+  /// contributorship statement.
   ///
-  /// [valueElement] (_value): Extensions for value;
+  /// [valueElement] _(_value) Extensions for value
   factory CitationSummary1({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1769,51 +2351,51 @@ class CitationSummary1 with _$CitationSummary1 {
 class Evidence with Resource, _$Evidence {
   Evidence._();
 
-  /// [Evidence]: The Evidence resource describes the conditional state
+  /// [Evidence] The Evidence resource describes the conditional state
   /// (population and any exposures being compared within the population) and
   /// outcome (if specified) that the knowledge (evidence, assertion,
   ///  recommendation) is about.
   ///
-  /// [resourceType]: This is a Evidence resource
+  /// [resourceType] This is a Evidence resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -1827,7 +2409,7 @@ class Evidence with Resource, _$Evidence {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [url]: An absolute URI that is used to identify this evidence when it is
+  /// [url] An absolute URI that is used to identify this evidence when it is
   /// referenced in a specification, model, design or an instance; also called
   /// its canonical identifier. This SHOULD be globally unique and SHOULD be a
   /// literal address at which at which an authoritative instance of this
@@ -1835,13 +2417,13 @@ class Evidence with Resource, _$Evidence {
   /// canonical reference. It SHALL remain the same when the evidence is stored
   ///  on different servers.
   ///
-  /// [urlElement]: Extensions for url
+  /// [urlElement] Extensions for url
   ///
-  /// [identifier]: A formal identifier that is used to identify this evidence
+  /// [identifier] A formal identifier that is used to identify this evidence
   /// when it is represented in other formats, or referenced in a specification,
   ///  model, design or an instance.
   ///
-  /// [version]: The identifier that is used to identify this version of the
+  /// [version] The identifier that is used to identify this version of the
   /// evidence when it is referenced in a specification, model, design or
   /// instance. This is an arbitrary value managed by the evidence author and is
   /// not expected to be globally unique. For example, it might be a timestamp
@@ -1853,113 +2435,113 @@ class Evidence with Resource, _$Evidence {
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   ///
-  /// [versionElement]: Extensions for version
+  /// [versionElement] Extensions for version
   ///
-  /// [name]: A natural language name identifying the evidence. This name should
+  /// [name] A natural language name identifying the evidence. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [title]: A short, descriptive, user-friendly title for the evidence.
+  /// [title] A short, descriptive, user-friendly title for the evidence.
   ///
-  /// [titleElement]: Extensions for title
+  /// [titleElement] Extensions for title
   ///
-  /// [shortTitle]: The short title provides an alternate title for use in
+  /// [shortTitle] The short title provides an alternate title for use in
   /// informal descriptive contexts where the full, formal title is not
   ///  necessary.
   ///
-  /// [shortTitleElement]: Extensions for shortTitle
+  /// [shortTitleElement] Extensions for shortTitle
   ///
-  /// [subtitle]: An explanatory or alternate title for the Evidence giving
+  /// [subtitle] An explanatory or alternate title for the Evidence giving
   ///  additional information about its content.
   ///
-  /// [subtitleElement]: Extensions for subtitle
+  /// [subtitleElement] Extensions for subtitle
   ///
-  /// [status]: The status of this evidence. Enables tracking the life-cycle of
+  /// [status] The status of this evidence. Enables tracking the life-cycle of
   ///  the content.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [date]: The date  (and optionally time) when the evidence was published.
+  /// [date] The date  (and optionally time) when the evidence was published.
   /// The date must change when the business version changes and it must change
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the evidence changes.
   ///
-  /// [dateElement]: Extensions for date
+  /// [dateElement] Extensions for date
   ///
-  /// [publisher]: The name of the organization or individual that published the
+  /// [publisher] The name of the organization or individual that published the
   ///  evidence.
   ///
-  /// [publisherElement]: Extensions for publisher
+  /// [publisherElement] Extensions for publisher
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating
+  /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   ///
-  /// [description]: A free text natural language description of the evidence
+  /// [description] A free text natural language description of the evidence
   ///  from a consumer's perspective.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [note]: A human-readable string to clarify or explain concepts about the
+  /// [note] A human-readable string to clarify or explain concepts about the
   ///  resource.
   ///
-  /// [useContext]: The content was developed with a focus and intent of
+  /// [useContext] The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate evidence instances.
   ///
-  /// [jurisdiction]: A legal or geographic region in which the evidence is
+  /// [jurisdiction] A legal or geographic region in which the evidence is
   ///  intended to be used.
   ///
-  /// [copyright]: A copyright statement relating to the evidence and/or its
+  /// [copyright] A copyright statement relating to the evidence and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the evidence.
   ///
-  /// [copyrightElement]: Extensions for copyright
+  /// [copyrightElement] Extensions for copyright
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the
+  /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [approvalDateElement]: Extensions for approvalDate
+  /// [approvalDateElement] Extensions for approvalDate
   ///
-  /// [lastReviewDate]: The date on which the resource content was last
+  /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [lastReviewDateElement]: Extensions for lastReviewDate
+  /// [lastReviewDateElement] Extensions for lastReviewDate
   ///
-  /// [effectivePeriod]: The period during which the evidence content was or is
+  /// [effectivePeriod] The period during which the evidence content was or is
   ///  planned to be in active use.
   ///
-  /// [topic]: Descriptive topics related to the content of the Evidence. Topics
+  /// [topic] Descriptive topics related to the content of the Evidence. Topics
   /// provide a high-level categorization grouping types of Evidences that can
   ///  be useful for filtering and searching.
   ///
-  /// [author]: An individiual or organization primarily involved in the
+  /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
   ///
-  /// [editor]: An individual or organization primarily responsible for internal
+  /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
   ///
-  /// [reviewer]: An individual or organization primarily responsible for review
+  /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
   ///
-  /// [endorser]: An individual or organization responsible for officially
+  /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
   ///
-  /// [relatedArtifact]: Related artifacts such as additional documentation,
+  /// [relatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [exposureBackground]: A reference to a EvidenceVariable resource that
+  /// [exposureBackground] A reference to a EvidenceVariable resource that
   ///  defines the population for the research.
   ///
-  /// [exposureVariant]: A reference to a EvidenceVariable resource that defines
+  /// [exposureVariant] A reference to a EvidenceVariable resource that defines
   ///  the exposure for the research.
   ///
-  /// [outcome]: A reference to a EvidenceVariable resomece that defines the
+  /// [outcome] A reference to a EvidenceVariable resomece that defines the
   ///  outcome for the research.
   factory Evidence({
     @Default(R4ResourceType.Evidence)
@@ -2047,124 +2629,124 @@ class Evidence with Resource, _$Evidence {
 class EvidenceReport with Resource, _$EvidenceReport {
   EvidenceReport._();
 
-  /// [EvidenceReport]: The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
+  /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
   ///
-  /// [resourceType]: This is a EvidenceReport resource;
+  /// [resourceType] This is a EvidenceReport resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: An absolute URI that is used to identify this EvidenceReport when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this EvidenceReport when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: A formal identifier that is used to identify this EvidenceReport when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this EvidenceReport when it is represented in other formats, or referenced in a specification, model, design or an instance.;
   ///
-  /// [version]: The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [name]: A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for the {{title}}.;
+  /// [title] A short, descriptive, user-friendly title for the {{title}}.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [status]: The status of this summary. Enables tracking the life-cycle of the content.;
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [experimental]: A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
   ///
   /// [experimentalElement] (_experimental): Extensions for experimental;
   ///
-  /// [date]: The date  (and optionally time) when the {{title}} was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the {{title}} changes.;
+  /// [date] The date  (and optionally time) when the {{title}} was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the {{title}} changes.;
   ///
   /// [dateElement] (_date): Extensions for date;
   ///
-  /// [publisher]: The name of the organization or individual that published the evidence report.;
+  /// [publisher] The name of the organization or individual that published the evidence report.;
   ///
   /// [publisherElement] (_publisher): Extensions for publisher;
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
   ///
-  /// [description]: A free text natural language description of the {{title}} from a consumer's perspective.;
+  /// [description] A free text natural language description of the {{title}} from a consumer's perspective.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence report instances.;
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence report instances.;
   ///
-  /// [jurisdiction]: A legal or geographic region in which the {{title}} is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.;
   ///
-  /// [purpose]: Explanation of why this {{title}} is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.;
   ///
   /// [purposeElement] (_purpose): Extensions for purpose;
   ///
-  /// [copyright]: A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.;
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.;
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.;
   ///
   /// [approvalDateElement] (_approvalDate): Extensions for approvalDate;
   ///
-  /// [lastReviewDate]: The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.;
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.;
   ///
   /// [lastReviewDateElement] (_lastReviewDate): Extensions for lastReviewDate;
   ///
-  /// [effectivePeriod]: The period during which the {{title}} content was or is planned to be in active use.;
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.;
   ///
-  /// [topic]: Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.;
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.;
   ///
-  /// [author]: An individiual, organization, or device primarily involved in the creation and maintenance of the content.;
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.;
   ///
-  /// [editor]: An individiual, organization, or device primarily responsible for internal coherence of the content.;
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.;
   ///
-  /// [reviewer]: An individiual, organization, or device primarily responsible for review of some aspect of the content.;
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.;
   ///
-  /// [endorser]: An individiual, organization, or device responsible for officially endorsing the content for use in some setting.;
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.;
   ///
-  /// [relatedArtifact]: Link, description or reference to artifact associated with the report.;
+  /// [relatedArtifact] Link, description or reference to artifact associated with the report.;
   ///
-  /// [relatedIdentifier]: A formal identifier that is used to identify things closely related to this EvidenceReport.;
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to this EvidenceReport.;
   ///
-  /// [citeAsReference]: Citation Resource or display of suggested citation for this report.;
+  /// [citeAsReference] Citation Resource or display of suggested citation for this report.;
   ///
-  /// [citeAsMarkdown]: Citation Resource or display of suggested citation for this report.;
+  /// [citeAsMarkdown] Citation Resource or display of suggested citation for this report.;
   ///
   /// [citeAsMarkdownElement] (_citeAsMarkdown): Extensions for citeAsMarkdown;
   ///
-  /// [type]: Specifies the kind of report, such as grouping of classifiers, search results, or human-compiled expression.;
+  /// [type] Specifies the kind of report, such as grouping of classifiers, search results, or human-compiled expression.;
   ///
-  /// [note]: Used for footnotes and annotations.;
+  /// [note] Used for footnotes and annotations.;
   ///
-  /// [subject]: Specifies the subject or focus of the report. Answers "What is this report about?".;
+  /// [subject] Specifies the subject or focus of the report. Answers "What is this report about?".;
   ///
-  /// [relatesTo]: Relationships that this composition has with other compositions or documents that already exist.;
+  /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.;
   ///
-  /// [section]: The root of the sections that make up the composition.;
+  /// [section] The root of the sections that make up the composition.;
   factory EvidenceReport({
     @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
     String? id,
@@ -2257,20 +2839,20 @@ class EvidenceReport with Resource, _$EvidenceReport {
 class EvidenceReportSubject with _$EvidenceReportSubject {
   EvidenceReportSubject._();
 
-  /// [EvidenceReportSubject]: The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
+  /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [characteristic]: Characteristic.;
+  /// [characteristic] Characteristic.;
   ///
-  /// [note]: Used for general notes and annotations not coded elsewhere.;
+  /// [note] Used for general notes and annotations not coded elsewhere.;
   factory EvidenceReportSubject({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2314,36 +2896,36 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
 class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   EvidenceReportCharacteristic._();
 
-  /// [EvidenceReportCharacteristic]: The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
+  /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: Characteristic code.;
+  /// [code] Characteristic code.;
   ///
-  /// [valueReference]: Characteristic value.;
+  /// [valueReference] Characteristic value.;
   ///
-  /// [valueCodeableConcept]: Characteristic value.;
+  /// [valueCodeableConcept] Characteristic value.;
   ///
-  /// [valueBoolean]: Characteristic value.;
+  /// [valueBoolean] Characteristic value.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
-  /// [valueQuantity]: Characteristic value.;
+  /// [valueQuantity] Characteristic value.;
   ///
-  /// [valueRange]: Characteristic value.;
+  /// [valueRange] Characteristic value.;
   ///
-  /// [exclude]: Is used to express not the characteristic.;
+  /// [exclude] Is used to express not the characteristic.;
   ///
   /// [excludeElement] (_exclude): Extensions for exclude;
   ///
-  /// [period]: Timeframe for the characteristic.;
+  /// [period] Timeframe for the characteristic.;
   factory EvidenceReportCharacteristic({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2395,22 +2977,22 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
 class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   EvidenceReportRelatesTo._();
 
-  /// [EvidenceReportRelatesTo]: The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
+  /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: The type of relationship that this composition has with anther composition or document.;
+  /// [code] The type of relationship that this composition has with anther composition or document.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [target]: The target composition/document of this relationship.;
+  /// [target] The target composition/document of this relationship.;
   factory EvidenceReportRelatesTo({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2455,28 +3037,28 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
 class EvidenceReportTarget with _$EvidenceReportTarget {
   EvidenceReportTarget._();
 
-  /// [EvidenceReportTarget]: The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
+  /// [EvidenceReportTarget] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: Target of the relationship URL.;
+  /// [url] Target of the relationship URL.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: Target of the relationship Identifier.;
+  /// [identifier] Target of the relationship Identifier.;
   ///
-  /// [display]: Target of the relationship Display.;
+  /// [display] Target of the relationship Display.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [resource]: Target of the relationship Resource reference.;
+  /// [resource] Target of the relationship Resource reference.;
   factory EvidenceReportTarget({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2524,44 +3106,44 @@ class EvidenceReportTarget with _$EvidenceReportTarget {
 class EvidenceReportSection with _$EvidenceReportSection {
   EvidenceReportSection._();
 
-  /// [EvidenceReportSection]: The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
+  /// [EvidenceReportSection] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [title]: The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents.;
+  /// [title] The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [focus]: A code identifying the kind of content contained within the section. This should be consistent with the section title.;
+  /// [focus] A code identifying the kind of content contained within the section. This should be consistent with the section title.;
   ///
-  /// [focusReference]: A definitional Resource identifying the kind of content contained within the section. This should be consistent with the section title.;
+  /// [focusReference] A definitional Resource identifying the kind of content contained within the section. This should be consistent with the section title.;
   ///
-  /// [author]: Identifies who is responsible for the information in this section, not necessarily who typed it in.;
+  /// [author] Identifies who is responsible for the information in this section, not necessarily who typed it in.;
   ///
-  /// [text]: A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is peferred to contain sufficient detail to make it acceptable for a human to just read the narrative.;
+  /// [text] A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is peferred to contain sufficient detail to make it acceptable for a human to just read the narrative.;
   ///
-  /// [mode]: How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.;
+  /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.;
   ///
   /// [modeElement] (_mode): Extensions for mode;
   ///
-  /// [orderedBy]: Specifies the order applied to the items in the section entries.;
+  /// [orderedBy] Specifies the order applied to the items in the section entries.;
   ///
-  /// [entryClassifier]: Specifies any type of classification of the evidence report.;
+  /// [entryClassifier] Specifies any type of classification of the evidence report.;
   ///
-  /// [entryReference]: A reference to the actual resource from which the narrative in the section is derived.;
+  /// [entryReference] A reference to the actual resource from which the narrative in the section is derived.;
   ///
-  /// [entryQuantity]: Quantity as content.;
+  /// [entryQuantity] Quantity as content.;
   ///
-  /// [emptyReason]: If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.;
+  /// [emptyReason] If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.;
   ///
-  /// [section]: A nested sub-section within this section.;
+  /// [section] A nested sub-section within this section.;
   factory EvidenceReportSection({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2617,49 +3199,49 @@ class EvidenceReportSection with _$EvidenceReportSection {
 class EvidenceVariable with Resource, _$EvidenceVariable {
   EvidenceVariable._();
 
-  /// [EvidenceVariable]: The EvidenceVariable resource describes a "PICO"
+  /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
   ///  element that knowledge (evidence, assertion, recommendation) is about.
   ///
-  /// [resourceType]: This is a EvidenceVariable resource
+  /// [resourceType] This is a EvidenceVariable resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -2673,7 +3255,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [url]: An absolute URI that is used to identify this evidence variable
+  /// [url] An absolute URI that is used to identify this evidence variable
   /// when it is referenced in a specification, model, design or an instance;
   /// also called its canonical identifier. This SHOULD be globally unique and
   /// SHOULD be a literal address at which at which an authoritative instance of
@@ -2681,13 +3263,13 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  evidence variable is stored on different servers.
   ///
-  /// [urlElement]: Extensions for url
+  /// [urlElement] Extensions for url
   ///
-  /// [identifier]: A formal identifier that is used to identify this evidence
+  /// [identifier] A formal identifier that is used to identify this evidence
   /// variable when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
   ///
-  /// [version]: The identifier that is used to identify this version of the
+  /// [version] The identifier that is used to identify this version of the
   /// evidence variable when it is referenced in a specification, model, design
   /// or instance. This is an arbitrary value managed by the evidence variable
   /// author and is not expected to be globally unique. For example, it might be
@@ -2699,114 +3281,114 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// Support Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   ///
-  /// [versionElement]: Extensions for version
+  /// [versionElement] Extensions for version
   ///
-  /// [name]: A natural language name identifying the evidence variable. This
+  /// [name] A natural language name identifying the evidence variable. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [title]: A short, descriptive, user-friendly title for the evidence
+  /// [title] A short, descriptive, user-friendly title for the evidence
   ///  variable.
   ///
-  /// [titleElement]: Extensions for title
+  /// [titleElement] Extensions for title
   ///
-  /// [shortTitle]: The short title provides an alternate title for use in
+  /// [shortTitle] The short title provides an alternate title for use in
   /// informal descriptive contexts where the full, formal title is not
   ///  necessary.
   ///
-  /// [shortTitleElement]: Extensions for shortTitle
+  /// [shortTitleElement] Extensions for shortTitle
   ///
-  /// [subtitle]: An explanatory or alternate title for the EvidenceVariable
+  /// [subtitle] An explanatory or alternate title for the EvidenceVariable
   ///  giving additional information about its content.
   ///
-  /// [subtitleElement]: Extensions for subtitle
+  /// [subtitleElement] Extensions for subtitle
   ///
-  /// [status]: The status of this evidence variable. Enables tracking the
+  /// [status] The status of this evidence variable. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [date]: The date  (and optionally time) when the evidence variable was
+  /// [date] The date  (and optionally time) when the evidence variable was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the evidence variable changes.
   ///
-  /// [dateElement]: Extensions for date
+  /// [dateElement] Extensions for date
   ///
-  /// [publisher]: The name of the organization or individual that published the
+  /// [publisher] The name of the organization or individual that published the
   ///  evidence variable.
   ///
-  /// [publisherElement]: Extensions for publisher
+  /// [publisherElement] Extensions for publisher
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating
+  /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   ///
-  /// [description]: A free text natural language description of the evidence
+  /// [description] A free text natural language description of the evidence
   ///  variable from a consumer's perspective.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [note]: A human-readable string to clarify or explain concepts about the
+  /// [note] A human-readable string to clarify or explain concepts about the
   ///  resource.
   ///
-  /// [useContext]: The content was developed with a focus and intent of
+  /// [useContext] The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate evidence variable instances.
   ///
-  /// [jurisdiction]: A legal or geographic region in which the evidence
+  /// [jurisdiction] A legal or geographic region in which the evidence
   ///  variable is intended to be used.
   ///
-  /// [copyright]: A copyright statement relating to the evidence variable
+  /// [copyright] A copyright statement relating to the evidence variable
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the evidence variable.
   ///
-  /// [copyrightElement]: Extensions for copyright
+  /// [copyrightElement] Extensions for copyright
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the
+  /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [approvalDateElement]: Extensions for approvalDate
+  /// [approvalDateElement] Extensions for approvalDate
   ///
-  /// [lastReviewDate]: The date on which the resource content was last
+  /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [lastReviewDateElement]: Extensions for lastReviewDate
+  /// [lastReviewDateElement] Extensions for lastReviewDate
   ///
-  /// [effectivePeriod]: The period during which the evidence variable content
+  /// [effectivePeriod] The period during which the evidence variable content
   ///  was or is planned to be in active use.
   ///
-  /// [topic]: Descriptive topics related to the content of the
+  /// [topic] Descriptive topics related to the content of the
   /// EvidenceVariable. Topics provide a high-level categorization grouping
   /// types of EvidenceVariables that can be useful for filtering and
   ///  searching.
   ///
-  /// [author]: An individiual or organization primarily involved in the
+  /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
   ///
-  /// [editor]: An individual or organization primarily responsible for internal
+  /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
   ///
-  /// [reviewer]: An individual or organization primarily responsible for review
+  /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
   ///
-  /// [endorser]: An individual or organization responsible for officially
+  /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
   ///
-  /// [relatedArtifact]: Related artifacts such as additional documentation,
+  /// [relatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [type]: The type of evidence element, a population, an exposure, or an
+  /// [type] The type of evidence element, a population, an exposure, or an
   ///  outcome.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [characteristic]: A characteristic that defines the members of the
+  /// [characteristic] A characteristic that defines the members of the
   /// evidence element. Multiple characteristics are applied with "and"
   ///  semantics.
   factory EvidenceVariable({
@@ -2898,21 +3480,21 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
 class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   EvidenceVariableCharacteristic._();
 
-  /// [EvidenceVariableCharacteristic]: The EvidenceVariable resource describes
+  /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
   /// a "PICO" element that knowledge (evidence, assertion, recommendation) is
   ///  about.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -2926,72 +3508,72 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [description]: A short, natural language description of the characteristic
+  /// [description] A short, natural language description of the characteristic
   ///  that could be used to communicate the criteria to an end-user.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [definitionReference]: Define members of the evidence element using Codes
+  /// [definitionReference] Define members of the evidence element using Codes
   /// (such as condition, medication, or observation), Expressions ( using an
   /// expression language such as FHIRPath or CQL) or DataRequirements (such as
   ///  Diabetes diagnosis onset in the last year).
   ///
-  /// [definitionCanonical]: Define members of the evidence element using Codes
+  /// [definitionCanonical] Define members of the evidence element using Codes
   /// (such as condition, medication, or observation), Expressions ( using an
   /// expression language such as FHIRPath or CQL) or DataRequirements (such as
   ///  Diabetes diagnosis onset in the last year).
   ///
-  /// [definitionCanonicalElement]: Extensions for definitionCanonical
+  /// [definitionCanonicalElement] Extensions for definitionCanonical
   ///
-  /// [definitionCodeableConcept]: Define members of the evidence element using
+  /// [definitionCodeableConcept] Define members of the evidence element using
   /// Codes (such as condition, medication, or observation), Expressions ( using
   /// an expression language such as FHIRPath or CQL) or DataRequirements (such
   ///  as Diabetes diagnosis onset in the last year).
   ///
-  /// [definitionExpression]: Define members of the evidence element using Codes
+  /// [definitionExpression] Define members of the evidence element using Codes
   /// (such as condition, medication, or observation), Expressions ( using an
   /// expression language such as FHIRPath or CQL) or DataRequirements (such as
   ///  Diabetes diagnosis onset in the last year).
   ///
-  /// [definitionDataRequirement]: Define members of the evidence element using
+  /// [definitionDataRequirement] Define members of the evidence element using
   /// Codes (such as condition, medication, or observation), Expressions ( using
   /// an expression language such as FHIRPath or CQL) or DataRequirements (such
   ///  as Diabetes diagnosis onset in the last year).
   ///
-  /// [definitionTriggerDefinition]: Define members of the evidence element
+  /// [definitionTriggerDefinition] Define members of the evidence element
   /// using Codes (such as condition, medication, or observation), Expressions (
   /// using an expression language such as FHIRPath or CQL) or DataRequirements
   ///  (such as Diabetes diagnosis onset in the last year).
   ///
-  /// [usageContext]: Use UsageContext to define the members of the population,
+  /// [usageContext] Use UsageContext to define the members of the population,
   ///  such as Age Ranges, Genders, Settings.
   ///
-  /// [exclude]: When true, members with this characteristic are excluded from
+  /// [exclude] When true, members with this characteristic are excluded from
   ///  the element.
   ///
-  /// [excludeElement]: Extensions for exclude
+  /// [excludeElement] Extensions for exclude
   ///
-  /// [participantEffectiveDateTime]: Indicates what effective period the study
+  /// [participantEffectiveDateTime] Indicates what effective period the study
   ///  covers.
   ///
-  /// [participantEffectiveDateTimeElement]: Extensions for
+  /// [participantEffectiveDateTimeElement] Extensions for
   ///  participantEffectiveDateTime
   ///
-  /// [participantEffectivePeriod]: Indicates what effective period the study
+  /// [participantEffectivePeriod] Indicates what effective period the study
   ///  covers.
   ///
-  /// [participantEffectiveDuration]: Indicates what effective period the study
+  /// [participantEffectiveDuration] Indicates what effective period the study
   ///  covers.
   ///
-  /// [participantEffectiveTiming]: Indicates what effective period the study
+  /// [participantEffectiveTiming] Indicates what effective period the study
   ///  covers.
   ///
-  /// [timeFromStart]: Indicates duration from the participant's study entry.
+  /// [timeFromStart] Indicates duration from the participant's study entry.
   ///
-  /// [groupMeasure]: Indicates how elements are aggregated within the study
+  /// [groupMeasure] Indicates how elements are aggregated within the study
   ///  effective period.
   ///
-  /// [groupMeasureElement]: Extensions for groupMeasure
+  /// [groupMeasureElement] Extensions for groupMeasure
   factory EvidenceVariableCharacteristic({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3055,51 +3637,51 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
 class ResearchDefinition with Resource, _$ResearchDefinition {
   ResearchDefinition._();
 
-  /// [ResearchDefinition]: The ResearchDefinition resource describes the
+  /// [ResearchDefinition] The ResearchDefinition resource describes the
   /// conditional state (population and any exposures being compared within the
   /// population) and outcome (if specified) that the knowledge (evidence,
   ///  assertion, recommendation) is about.
   ///
-  /// [resourceType]: This is a ResearchDefinition resource
+  /// [resourceType] This is a ResearchDefinition resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -3113,7 +3695,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [url]: An absolute URI that is used to identify this research definition
+  /// [url] An absolute URI that is used to identify this research definition
   /// when it is referenced in a specification, model, design or an instance;
   /// also called its canonical identifier. This SHOULD be globally unique and
   /// SHOULD be a literal address at which at which an authoritative instance of
@@ -3121,13 +3703,13 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  research definition is stored on different servers.
   ///
-  /// [urlElement]: Extensions for url
+  /// [urlElement] Extensions for url
   ///
-  /// [identifier]: A formal identifier that is used to identify this research
+  /// [identifier] A formal identifier that is used to identify this research
   /// definition when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
   ///
-  /// [version]: The identifier that is used to identify this version of the
+  /// [version] The identifier that is used to identify this version of the
   /// research definition when it is referenced in a specification, model,
   /// design or instance. This is an arbitrary value managed by the research
   /// definition author and is not expected to be globally unique. For example,
@@ -3139,147 +3721,147 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// knowledge assets, refer to the Decision Support Service specification.
   ///  Note that a version is required for non-experimental active artifacts.
   ///
-  /// [versionElement]: Extensions for version
+  /// [versionElement] Extensions for version
   ///
-  /// [name]: A natural language name identifying the research definition. This
+  /// [name] A natural language name identifying the research definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [title]: A short, descriptive, user-friendly title for the research
+  /// [title] A short, descriptive, user-friendly title for the research
   ///  definition.
   ///
-  /// [titleElement]: Extensions for title
+  /// [titleElement] Extensions for title
   ///
-  /// [shortTitle]: The short title provides an alternate title for use in
+  /// [shortTitle] The short title provides an alternate title for use in
   /// informal descriptive contexts where the full, formal title is not
   ///  necessary.
   ///
-  /// [shortTitleElement]: Extensions for shortTitle
+  /// [shortTitleElement] Extensions for shortTitle
   ///
-  /// [subtitle]: An explanatory or alternate title for the ResearchDefinition
+  /// [subtitle] An explanatory or alternate title for the ResearchDefinition
   ///  giving additional information about its content.
   ///
-  /// [subtitleElement]: Extensions for subtitle
+  /// [subtitleElement] Extensions for subtitle
   ///
-  /// [status]: The status of this research definition. Enables tracking the
+  /// [status] The status of this research definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [experimental]: A Boolean value to indicate that this research definition
+  /// [experimental] A Boolean value to indicate that this research definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   ///
-  /// [experimentalElement]: Extensions for experimental
+  /// [experimentalElement] Extensions for experimental
   ///
-  /// [subjectCodeableConcept]: The intended subjects for the
+  /// [subjectCodeableConcept] The intended subjects for the
   /// ResearchDefinition. If this element is not provided, a Patient subject is
   ///  assumed, but the subject of the ResearchDefinition can be anything.
   ///
-  /// [subjectReference]: The intended subjects for the ResearchDefinition. If
+  /// [subjectReference] The intended subjects for the ResearchDefinition. If
   /// this element is not provided, a Patient subject is assumed, but the
   ///  subject of the ResearchDefinition can be anything.
   ///
-  /// [date]: The date  (and optionally time) when the research definition was
+  /// [date] The date  (and optionally time) when the research definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the research definition changes.
   ///
-  /// [dateElement]: Extensions for date
+  /// [dateElement] Extensions for date
   ///
-  /// [publisher]: The name of the organization or individual that published the
+  /// [publisher] The name of the organization or individual that published the
   ///  research definition.
   ///
-  /// [publisherElement]: Extensions for publisher
+  /// [publisherElement] Extensions for publisher
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating
+  /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   ///
-  /// [description]: A free text natural language description of the research
+  /// [description] A free text natural language description of the research
   ///  definition from a consumer's perspective.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [comment]: A human-readable string to clarify or explain concepts about
+  /// [comment] A human-readable string to clarify or explain concepts about
   ///  the resource.
   ///
-  /// [commentElement]: Extensions for comment
+  /// [commentElement] Extensions for comment
   ///
-  /// [useContext]: The content was developed with a focus and intent of
+  /// [useContext] The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate research definition instances.
   ///
-  /// [jurisdiction]: A legal or geographic region in which the research
+  /// [jurisdiction] A legal or geographic region in which the research
   ///  definition is intended to be used.
   ///
-  /// [purpose]: Explanation of why this research definition is needed and why
+  /// [purpose] Explanation of why this research definition is needed and why
   ///  it has been designed as it has.
   ///
-  /// [purposeElement]: Extensions for purpose
+  /// [purposeElement] Extensions for purpose
   ///
-  /// [usage]: A detailed description, from a clinical perspective, of how the
+  /// [usage] A detailed description, from a clinical perspective, of how the
   ///  ResearchDefinition is used.
   ///
-  /// [usageElement]: Extensions for usage
+  /// [usageElement] Extensions for usage
   ///
-  /// [copyright]: A copyright statement relating to the research definition
+  /// [copyright] A copyright statement relating to the research definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the research definition.
   ///
-  /// [copyrightElement]: Extensions for copyright
+  /// [copyrightElement] Extensions for copyright
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the
+  /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [approvalDateElement]: Extensions for approvalDate
+  /// [approvalDateElement] Extensions for approvalDate
   ///
-  /// [lastReviewDate]: The date on which the resource content was last
+  /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [lastReviewDateElement]: Extensions for lastReviewDate
+  /// [lastReviewDateElement] Extensions for lastReviewDate
   ///
-  /// [effectivePeriod]: The period during which the research definition content
+  /// [effectivePeriod] The period during which the research definition content
   ///  was or is planned to be in active use.
   ///
-  /// [topic]: Descriptive topics related to the content of the
+  /// [topic] Descriptive topics related to the content of the
   /// ResearchDefinition. Topics provide a high-level categorization grouping
   /// types of ResearchDefinitions that can be useful for filtering and
   ///  searching.
   ///
-  /// [author]: An individiual or organization primarily involved in the
+  /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
   ///
-  /// [editor]: An individual or organization primarily responsible for internal
+  /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
   ///
-  /// [reviewer]: An individual or organization primarily responsible for review
+  /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
   ///
-  /// [endorser]: An individual or organization responsible for officially
+  /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
   ///
-  /// [relatedArtifact]: Related artifacts such as additional documentation,
+  /// [relatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library]: A reference to a Library resource containing the formal logic
+  /// [library] A reference to a Library resource containing the formal logic
   ///  used by the ResearchDefinition.
   ///
-  /// [population]: A reference to a ResearchElementDefinition resource that
+  /// [population] A reference to a ResearchElementDefinition resource that
   ///  defines the population for the research.
   ///
-  /// [exposure]: A reference to a ResearchElementDefinition resource that
+  /// [exposure] A reference to a ResearchElementDefinition resource that
   ///  defines the exposure for the research.
   ///
-  /// [exposureAlternative]: A reference to a ResearchElementDefinition resource
+  /// [exposureAlternative] A reference to a ResearchElementDefinition resource
   ///  that defines the exposureAlternative for the research.
   ///
-  /// [outcome]: A reference to a ResearchElementDefinition resomece that
+  /// [outcome] A reference to a ResearchElementDefinition resomece that
   ///  defines the outcome for the research.
   factory ResearchDefinition({
     @Default(R4ResourceType.ResearchDefinition)
@@ -3381,50 +3963,50 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
 class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   ResearchElementDefinition._();
 
-  /// [ResearchElementDefinition]: The ResearchElementDefinition resource
+  /// [ResearchElementDefinition] The ResearchElementDefinition resource
   /// describes a "PICO" element that knowledge (evidence, assertion,
   ///  recommendation) is about.
   ///
-  /// [resourceType]: This is a ResearchElementDefinition resource
+  /// [resourceType] This is a ResearchElementDefinition resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -3438,7 +4020,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [url]: An absolute URI that is used to identify this research element
+  /// [url] An absolute URI that is used to identify this research element
   /// definition when it is referenced in a specification, model, design or an
   /// instance; also called its canonical identifier. This SHOULD be globally
   /// unique and SHOULD be a literal address at which at which an authoritative
@@ -3446,13 +4028,13 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// This URL can be the target of a canonical reference. It SHALL remain the
   ///  same when the research element definition is stored on different servers.
   ///
-  /// [urlElement]: Extensions for url
+  /// [urlElement] Extensions for url
   ///
-  /// [identifier]: A formal identifier that is used to identify this research
+  /// [identifier] A formal identifier that is used to identify this research
   /// element definition when it is represented in other formats, or referenced
   ///  in a specification, model, design or an instance.
   ///
-  /// [version]: The identifier that is used to identify this version of the
+  /// [version] The identifier that is used to identify this version of the
   /// research element definition when it is referenced in a specification,
   /// model, design or instance. This is an arbitrary value managed by the
   /// research element definition author and is not expected to be globally
@@ -3464,154 +4046,154 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// knowledge assets, refer to the Decision Support Service specification.
   ///  Note that a version is required for non-experimental active artifacts.
   ///
-  /// [versionElement]: Extensions for version
+  /// [versionElement] Extensions for version
   ///
-  /// [name]: A natural language name identifying the research element
+  /// [name] A natural language name identifying the research element
   /// definition. This name should be usable as an identifier for the module by
   ///  machine processing applications such as code generation.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [title]: A short, descriptive, user-friendly title for the research
+  /// [title] A short, descriptive, user-friendly title for the research
   ///  element definition.
   ///
-  /// [titleElement]: Extensions for title
+  /// [titleElement] Extensions for title
   ///
-  /// [shortTitle]: The short title provides an alternate title for use in
+  /// [shortTitle] The short title provides an alternate title for use in
   /// informal descriptive contexts where the full, formal title is not
   ///  necessary.
   ///
-  /// [shortTitleElement]: Extensions for shortTitle
+  /// [shortTitleElement] Extensions for shortTitle
   ///
-  /// [subtitle]: An explanatory or alternate title for the
+  /// [subtitle] An explanatory or alternate title for the
   /// ResearchElementDefinition giving additional information about its
   ///  content.
   ///
-  /// [subtitleElement]: Extensions for subtitle
+  /// [subtitleElement] Extensions for subtitle
   ///
-  /// [status]: The status of this research element definition. Enables tracking
+  /// [status] The status of this research element definition. Enables tracking
   ///  the life-cycle of the content.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [experimental]: A Boolean value to indicate that this research element
+  /// [experimental] A Boolean value to indicate that this research element
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
   ///
-  /// [experimentalElement]: Extensions for experimental
+  /// [experimentalElement] Extensions for experimental
   ///
-  /// [subjectCodeableConcept]: The intended subjects for the
+  /// [subjectCodeableConcept] The intended subjects for the
   /// ResearchElementDefinition. If this element is not provided, a Patient
   /// subject is assumed, but the subject of the ResearchElementDefinition can
   ///  be anything.
   ///
-  /// [subjectReference]: The intended subjects for the
+  /// [subjectReference] The intended subjects for the
   /// ResearchElementDefinition. If this element is not provided, a Patient
   /// subject is assumed, but the subject of the ResearchElementDefinition can
   ///  be anything.
   ///
-  /// [date]: The date  (and optionally time) when the research element
+  /// [date] The date  (and optionally time) when the research element
   /// definition was published. The date must change when the business version
   /// changes and it must change if the status code changes. In addition, it
   /// should change when the substantive content of the research element
   ///  definition changes.
   ///
-  /// [dateElement]: Extensions for date
+  /// [dateElement] Extensions for date
   ///
-  /// [publisher]: The name of the organization or individual that published the
+  /// [publisher] The name of the organization or individual that published the
   ///  research element definition.
   ///
-  /// [publisherElement]: Extensions for publisher
+  /// [publisherElement] Extensions for publisher
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating
+  /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   ///
-  /// [description]: A free text natural language description of the research
+  /// [description] A free text natural language description of the research
   ///  element definition from a consumer's perspective.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [comment]: A human-readable string to clarify or explain concepts about
+  /// [comment] A human-readable string to clarify or explain concepts about
   ///  the resource.
   ///
-  /// [commentElement]: Extensions for comment
+  /// [commentElement] Extensions for comment
   ///
-  /// [useContext]: The content was developed with a focus and intent of
+  /// [useContext] The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate research element definition instances.
   ///
-  /// [jurisdiction]: A legal or geographic region in which the research element
+  /// [jurisdiction] A legal or geographic region in which the research element
   ///  definition is intended to be used.
   ///
-  /// [purpose]: Explanation of why this research element definition is needed
+  /// [purpose] Explanation of why this research element definition is needed
   ///  and why it has been designed as it has.
   ///
-  /// [purposeElement]: Extensions for purpose
+  /// [purposeElement] Extensions for purpose
   ///
-  /// [usage]: A detailed description, from a clinical perspective, of how the
+  /// [usage] A detailed description, from a clinical perspective, of how the
   ///  ResearchElementDefinition is used.
   ///
-  /// [usageElement]: Extensions for usage
+  /// [usageElement] Extensions for usage
   ///
-  /// [copyright]: A copyright statement relating to the research element
+  /// [copyright] A copyright statement relating to the research element
   /// definition and/or its contents. Copyright statements are generally legal
   /// restrictions on the use and publishing of the research element
   ///  definition.
   ///
-  /// [copyrightElement]: Extensions for copyright
+  /// [copyrightElement] Extensions for copyright
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the
+  /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [approvalDateElement]: Extensions for approvalDate
+  /// [approvalDateElement] Extensions for approvalDate
   ///
-  /// [lastReviewDate]: The date on which the resource content was last
+  /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [lastReviewDateElement]: Extensions for lastReviewDate
+  /// [lastReviewDateElement] Extensions for lastReviewDate
   ///
-  /// [effectivePeriod]: The period during which the research element definition
+  /// [effectivePeriod] The period during which the research element definition
   ///  content was or is planned to be in active use.
   ///
-  /// [topic]: Descriptive topics related to the content of the
+  /// [topic] Descriptive topics related to the content of the
   /// ResearchElementDefinition. Topics provide a high-level categorization
   /// grouping types of ResearchElementDefinitions that can be useful for
   ///  filtering and searching.
   ///
-  /// [author]: An individiual or organization primarily involved in the
+  /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
   ///
-  /// [editor]: An individual or organization primarily responsible for internal
+  /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
   ///
-  /// [reviewer]: An individual or organization primarily responsible for review
+  /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
   ///
-  /// [endorser]: An individual or organization responsible for officially
+  /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
   ///
-  /// [relatedArtifact]: Related artifacts such as additional documentation,
+  /// [relatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library]: A reference to a Library resource containing the formal logic
+  /// [library] A reference to a Library resource containing the formal logic
   ///  used by the ResearchElementDefinition.
   ///
-  /// [type]: The type of research element, a population, an exposure, or an
+  /// [type] The type of research element, a population, an exposure, or an
   ///  outcome.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [variableType]: The type of the outcome (e.g. Dichotomous, Continuous, or
+  /// [variableType] The type of the outcome (e.g. Dichotomous, Continuous, or
   ///  Descriptive).
   ///
-  /// [variableTypeElement]: Extensions for variableType
+  /// [variableTypeElement] Extensions for variableType
   ///
-  /// [characteristic]: A characteristic that defines the members of the
+  /// [characteristic] A characteristic that defines the members of the
   /// research element. Multiple characteristics are applied with "and"
   ///  semantics.
   factory ResearchElementDefinition({
@@ -3716,21 +4298,21 @@ class ResearchElementDefinitionCharacteristic
     with _$ResearchElementDefinitionCharacteristic {
   ResearchElementDefinitionCharacteristic._();
 
-  /// [ResearchElementDefinitionCharacteristic]: The ResearchElementDefinition
+  /// [ResearchElementDefinitionCharacteristic] The ResearchElementDefinition
   /// resource describes a "PICO" element that knowledge (evidence, assertion,
   ///  recommendation) is about.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -3744,91 +4326,91 @@ class ResearchElementDefinitionCharacteristic
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [definitionCodeableConcept]: Define members of the research element using
+  /// [definitionCodeableConcept] Define members of the research element using
   /// Codes (such as condition, medication, or observation), Expressions ( using
   /// an expression language such as FHIRPath or CQL) or DataRequirements (such
   ///  as Diabetes diagnosis onset in the last year).
   ///
-  /// [definitionCanonical]: Define members of the research element using Codes
+  /// [definitionCanonical] Define members of the research element using Codes
   /// (such as condition, medication, or observation), Expressions ( using an
   /// expression language such as FHIRPath or CQL) or DataRequirements (such as
   ///  Diabetes diagnosis onset in the last year).
   ///
-  /// [definitionCanonicalElement]: Extensions for definitionCanonical
+  /// [definitionCanonicalElement] Extensions for definitionCanonical
   ///
-  /// [definitionExpression]: Define members of the research element using Codes
+  /// [definitionExpression] Define members of the research element using Codes
   /// (such as condition, medication, or observation), Expressions ( using an
   /// expression language such as FHIRPath or CQL) or DataRequirements (such as
   ///  Diabetes diagnosis onset in the last year).
   ///
-  /// [definitionDataRequirement]: Define members of the research element using
+  /// [definitionDataRequirement] Define members of the research element using
   /// Codes (such as condition, medication, or observation), Expressions ( using
   /// an expression language such as FHIRPath or CQL) or DataRequirements (such
   ///  as Diabetes diagnosis onset in the last year).
   ///
-  /// [usageContext]: Use UsageContext to define the members of the population,
+  /// [usageContext] Use UsageContext to define the members of the population,
   ///  such as Age Ranges, Genders, Settings.
   ///
-  /// [exclude]: When true, members with this characteristic are excluded from
+  /// [exclude] When true, members with this characteristic are excluded from
   ///  the element.
   ///
-  /// [excludeElement]: Extensions for exclude
+  /// [excludeElement] Extensions for exclude
   ///
-  /// [unitOfMeasure]: Specifies the UCUM unit for the outcome.
+  /// [unitOfMeasure] Specifies the UCUM unit for the outcome.
   ///
-  /// [studyEffectiveDescription]: A narrative description of the time period
+  /// [studyEffectiveDescription] A narrative description of the time period
   ///  the study covers.
   ///
-  /// [studyEffectiveDescriptionElement]: Extensions for studyEffectiveDescription
+  /// [studyEffectiveDescriptionElement] Extensions for studyEffectiveDescription
   ///
-  /// [studyEffectiveDateTime]: Indicates what effective period the study
+  /// [studyEffectiveDateTime] Indicates what effective period the study
   ///  covers.
   ///
-  /// [studyEffectiveDateTimeElement]: Extensions for studyEffectiveDateTime
+  /// [studyEffectiveDateTimeElement] Extensions for studyEffectiveDateTime
   ///
-  /// [studyEffectivePeriod]: Indicates what effective period the study covers.
+  /// [studyEffectivePeriod] Indicates what effective period the study covers.
   ///
-  /// [studyEffectiveDuration]: Indicates what effective period the study
+  /// [studyEffectiveDuration] Indicates what effective period the study
   ///  covers.
   ///
-  /// [studyEffectiveTiming]: Indicates what effective period the study covers.
+  /// [studyEffectiveTiming] Indicates what effective period the study covers.
   ///
-  /// [studyEffectiveTimeFromStart]: Indicates duration from the study
+  /// [studyEffectiveTimeFromStart] Indicates duration from the study
   ///  initiation.
   ///
-  /// [studyEffectiveGroupMeasure]: Indicates how elements are aggregated within
+  /// [studyEffectiveGroupMeasure] Indicates how elements are aggregated within
   ///  the study effective period.
   ///
-  /// [studyEffectiveGroupMeasureElement]: Extensions for studyEffectiveGroupMeasure
+  /// [studyEffectiveGroupMeasureElement] Extensions for studyEffectiveGroupMeasure
   ///
-  /// [participantEffectiveDescription]: A narrative description of the time
+  /// [participantEffectiveDescription] A narrative description of the time
   ///  period the study covers.
   ///
-  /// [participantEffectiveDescriptionElement]: Extensions for
+  /// [participantEffectiveDescriptionElement] Extensions for
   ///  participantEffectiveDescription
   ///
-  /// [participantEffectiveDateTime]: Indicates what effective period the study
+  /// [participantEffectiveDateTime] Indicates what effective period the study
   ///  covers.
   ///
-  /// [participantEffectiveDateTimeElement]: Extensions for
+  /// [participantEffectiveDateTimeElement] Extensions for
   ///  participantEffectiveDateTime
   ///
-  /// [participantEffectivePeriod]: Indicates what effective period the study
+  /// [participantEffectivePeriod] Indicates what effective period the study
   ///  covers.
   ///
-  /// [participantEffectiveDuration]: Indicates what effective period the study
+  /// [participantEffectiveDuration] Indicates what effective period the study
   ///  covers.
   ///
-  /// [participantEffectiveTiming]: Indicates what effective period the study
+  /// [participantEffectiveTiming] Indicates what effective period the study
   ///  covers.
   ///
-  /// [participantEffectiveTimeFromStart]: Indicates duration from the
+  /// [participantEffectiveTimeFromStart] Indicates duration from the
   ///  participant's study entry.
   ///
-  /// [participantEffectiveGroupMeasure]: Indicates how elements are aggregated
+  /// [participantEffectiveGroupMeasure] Indicates how elements are aggregated
   ///  within the study effective period.
   ///
-  /// [participantEffectiveGroupMeasureElement]: Extensions for
+  /// [participantEffectiveGroupMeasureElement] Extensions for
   ///  participantEffectiveGroupMeasure
   factory ResearchElementDefinitionCharacteristic({
     String? id,

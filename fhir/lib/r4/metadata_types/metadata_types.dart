@@ -17,24 +17,24 @@ part 'metadata_types.g.dart';
 class ContactDetail with _$ContactDetail {
   ContactDetail._();
 
-  /// [ContactDetail]: Specifies contact information for a person or
+  /// [ContactDetail] Specifies contact information for a person or
   ///  organization.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [name]: The name of an individual to contact.
+  /// [name] The name of an individual to contact.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [telecom]: The contact details for the individual (if a name was provided)
+  /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
   factory ContactDetail({
     String? id,
@@ -79,29 +79,29 @@ class ContactDetail with _$ContactDetail {
 class Contributor with _$Contributor {
   Contributor._();
 
-  /// [Contributor]: A contributor to the content of a knowledge asset,
+  /// [Contributor] A contributor to the content of a knowledge asset,
   ///  including authors, editors, reviewers, and endorsers.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [type]: The type of contributor.
+  /// [type] The type of contributor.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [name]: The name of the individual or organization responsible for the
+  /// [name] The name of the individual or organization responsible for the
   ///  contribution.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating
+  /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
   factory Contributor({
     String? id,
@@ -148,35 +148,35 @@ class Contributor with _$Contributor {
 class DataRequirement with _$DataRequirement {
   DataRequirement._();
 
-  /// [DataRequirement]: Describes a required data item for evaluation in terms
+  /// [DataRequirement] Describes a required data item for evaluation in terms
   ///  of the type of data, and optional code or date-based filters of the data.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [type]: The type of the required data, specified as the type name of a
+  /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [profile]: The profile of the required data, specified as the uri of the
+  /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
   ///
-  /// [subjectCodeableConcept]: The intended subjects of the data requirement.
+  /// [subjectCodeableConcept] The intended subjects of the data requirement.
   ///  If this element is not provided, a Patient subject is assumed.
   ///
-  /// [subjectReference]: The intended subjects of the data requirement. If this
+  /// [subjectReference] The intended subjects of the data requirement. If this
   ///  element is not provided, a Patient subject is assumed.
   ///
-  /// [mustSupport]: Indicates that specific elements of the type are referenced
+  /// [mustSupport] Indicates that specific elements of the type are referenced
   /// by the knowledge module and must be supported by the consumer in order to
   /// obtain an effective evaluation. This does not mean that a value is
   /// required for this element, only that the consuming system must understand
@@ -186,24 +186,24 @@ class DataRequirement with _$DataRequirement {
   /// indexers, and .resolve() (see the [Simple FHIRPath
   ///  Profile](fhirpath.html#simple) for full details).
   ///
-  /// [mustSupportElement]: Extensions for mustSupport
+  /// [mustSupportElement] Extensions for mustSupport
   ///
-  /// [codeFilter]: Code filters specify additional constraints on the data,
+  /// [codeFilter] Code filters specify additional constraints on the data,
   /// specifying the value set of interest for a particular element of the data.
   /// Each code filter defines an additional constraint on the data, i.e. code
   ///  filters are AND'ed, not OR'ed.
   ///
-  /// [dateFilter]: Date filters specify additional constraints on the data in
+  /// [dateFilter] Date filters specify additional constraints on the data in
   /// terms of the applicable date range for specific elements. Each date filter
   /// specifies an additional constraint on the data, i.e. date filters are
   ///  AND'ed, not OR'ed.
   ///
-  /// [limit]: Specifies a maximum number of results that are required (uses the
+  /// [limit] Specifies a maximum number of results that are required (uses the
   ///  _count search parameter).
   ///
-  /// [limitElement]: Extensions for limit
+  /// [limitElement] Extensions for limit
   ///
-  /// [sort]: Specifies the order of the results to be returned.
+  /// [sort] Specifies the order of the results to be returned.
   factory DataRequirement({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -256,21 +256,21 @@ class DataRequirement with _$DataRequirement {
 class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   DataRequirementCodeFilter._();
 
-  /// [DataRequirementCodeFilter]: Describes a required data item for
+  /// [DataRequirementCodeFilter] Describes a required data item for
   /// evaluation in terms of the type of data, and optional code or date-based
   ///  filters of the data.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -284,7 +284,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [path]: The code-valued attribute of the filter. The specified path SHALL
+  /// [path] The code-valued attribute of the filter. The specified path SHALL
   /// be a FHIRPath resolveable on the specified type of the DataRequirement,
   /// and SHALL consist only of identifiers, constant indexers, and .resolve().
   /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
@@ -293,20 +293,20 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// Note that the index must be an integer constant. The path must resolve to
   ///  an element of type code, Coding, or CodeableConcept.
   ///
-  /// [pathElement]: Extensions for path
+  /// [pathElement] Extensions for path
   ///
-  /// [searchParam]: A token parameter that refers to a search parameter defined
+  /// [searchParam] A token parameter that refers to a search parameter defined
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type code, Coding, or CodeableConcept.
   ///
-  /// [searchParamElement]: Extensions for searchParam
+  /// [searchParamElement] Extensions for searchParam
   ///
-  /// [valueSet]: The valueset for the code filter. The valueSet and code
+  /// [valueSet] The valueset for the code filter. The valueSet and code
   /// elements are additive. If valueSet is specified, the filter will return
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
   ///
-  /// [code]: The codes for the code filter. If values are given, the filter
+  /// [code] The codes for the code filter. If values are given, the filter
   /// will return only those data items for which the code-valued attribute
   /// specified by the path has a value that is one of the specified codes. If
   /// codes are specified in addition to a value set, the filter returns items
@@ -358,21 +358,21 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 class DataRequirementDateFilter with _$DataRequirementDateFilter {
   DataRequirementDateFilter._();
 
-  /// [DataRequirementDateFilter]: Describes a required data item for
+  /// [DataRequirementDateFilter] Describes a required data item for
   /// evaluation in terms of the type of data, and optional code or date-based
   ///  filters of the data.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -386,7 +386,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [path]: The date-valued attribute of the filter. The specified path SHALL
+  /// [path] The date-valued attribute of the filter. The specified path SHALL
   /// be a FHIRPath resolveable on the specified type of the DataRequirement,
   /// and SHALL consist only of identifiers, constant indexers, and .resolve().
   /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
@@ -395,31 +395,31 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// Note that the index must be an integer constant. The path must resolve to
   ///  an element of type date, dateTime, Period, Schedule, or Timing.
   ///
-  /// [pathElement]: Extensions for path
+  /// [pathElement] Extensions for path
   ///
-  /// [searchParam]: A date parameter that refers to a search parameter defined
+  /// [searchParam] A date parameter that refers to a search parameter defined
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type date, dateTime, Period, Schedule, or Timing.
   ///
-  /// [searchParamElement]: Extensions for searchParam
+  /// [searchParamElement] Extensions for searchParam
   ///
-  /// [valueDateTime]: The value of the filter. If period is specified, the
+  /// [valueDateTime] The value of the filter. If period is specified, the
   /// filter will return only those data items that fall within the bounds
   /// determined by the Period, inclusive of the period boundaries. If dateTime
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
   ///
-  /// [valueDateTimeElement]: Extensions for valueDateTime
+  /// [valueDateTimeElement] Extensions for valueDateTime
   ///
-  /// [valuePeriod]: The value of the filter. If period is specified, the filter
+  /// [valuePeriod] The value of the filter. If period is specified, the filter
   /// will return only those data items that fall within the bounds determined
   /// by the Period, inclusive of the period boundaries. If dateTime is
   /// specified, the filter will return only those data items that are equal to
   /// the specified dateTime. If a Duration is specified, the filter will return
   ///  only those data items that fall within Duration before now.
   ///
-  /// [valueDuration]: The value of the filter. If period is specified, the
+  /// [valueDuration] The value of the filter. If period is specified, the
   /// filter will return only those data items that fall within the bounds
   /// determined by the Period, inclusive of the period boundaries. If dateTime
   /// is specified, the filter will return only those data items that are equal
@@ -474,21 +474,21 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
 class DataRequirementSort with _$DataRequirementSort {
   DataRequirementSort._();
 
-  /// [DataRequirementSort]: Describes a required data item for evaluation in
+  /// [DataRequirementSort] Describes a required data item for evaluation in
   /// terms of the type of data, and optional code or date-based filters of the
   ///  data.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -502,17 +502,17 @@ class DataRequirementSort with _$DataRequirementSort {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [path]: The attribute of the sort. The specified path must be resolvable
+  /// [path] The attribute of the sort. The specified path must be resolvable
   /// from the type of the required data. The path is allowed to contain
   /// qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to
   /// traverse multiple-cardinality sub-elements. Note that the index must be an
   ///  integer constant.
   ///
-  /// [pathElement]: Extensions for path
+  /// [pathElement] Extensions for path
   ///
-  /// [direction]: The direction of the sort, ascending or descending.
+  /// [direction] The direction of the sort, ascending or descending.
   ///
-  /// [directionElement]: Extensions for direction
+  /// [directionElement] Extensions for direction
   factory DataRequirementSort({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -559,50 +559,50 @@ class DataRequirementSort with _$DataRequirementSort {
 class ParameterDefinition with _$ParameterDefinition {
   ParameterDefinition._();
 
-  /// [ParameterDefinition]: The parameters to the module. This collection
+  /// [ParameterDefinition] The parameters to the module. This collection
   /// specifies both the input and output parameters. Input parameters are
   /// provided by the caller as part of the $evaluate operation. Output
   ///  parameters are included in the GuidanceResponse.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [name]: The name of the parameter used to allow access to the value of the
+  /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [use]: Whether the parameter is input or output for the module.
+  /// [use] Whether the parameter is input or output for the module.
   ///
-  /// [useElement]: Extensions for use
+  /// [useElement] Extensions for use
   ///
-  /// [min]: The minimum number of times this parameter SHALL appear in the
+  /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
   ///
-  /// [minElement]: Extensions for min
+  /// [minElement] Extensions for min
   ///
-  /// [max]: The maximum number of times this element is permitted to appear in
+  /// [max] The maximum number of times this element is permitted to appear in
   ///  the request or response.
   ///
-  /// [maxElement]: Extensions for max
+  /// [maxElement] Extensions for max
   ///
-  /// [documentation]: A brief discussion of what the parameter is for and how
+  /// [documentation] A brief discussion of what the parameter is for and how
   ///  it is used by the module.
   ///
-  /// [documentationElement]: Extensions for documentation
+  /// [documentationElement] Extensions for documentation
   ///
-  /// [type]: The type of the parameter.
+  /// [type] The type of the parameter.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [profile]: If specified, this indicates a profile that the input data must
+  /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
   factory ParameterDefinition({
     String? id,
@@ -657,47 +657,47 @@ class ParameterDefinition with _$ParameterDefinition {
 class RelatedArtifact with _$RelatedArtifact {
   RelatedArtifact._();
 
-  /// [RelatedArtifact]: Related artifacts such as additional documentation,
+  /// [RelatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [type]: The type of relationship to the related artifact.
+  /// [type] The type of relationship to the related artifact.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [label]: A short label that can be used to reference the citation from
+  /// [label] A short label that can be used to reference the citation from
   ///  elsewhere in the containing artifact, such as a footnote index.
   ///
-  /// [labelElement]: Extensions for label
+  /// [labelElement] Extensions for label
   ///
-  /// [display]: A brief description of the document or knowledge resource being
+  /// [display] A brief description of the document or knowledge resource being
   ///  referenced, suitable for display to a consumer.
   ///
-  /// [displayElement]: Extensions for display
+  /// [displayElement] Extensions for display
   ///
-  /// [citation]: A bibliographic citation for the related artifact. This text
+  /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
   ///
-  /// [citationElement]: Extensions for citation
+  /// [citationElement] Extensions for citation
   ///
-  /// [url]: A url for the artifact that can be followed to access the actual
+  /// [url] A url for the artifact that can be followed to access the actual
   ///  content.
   ///
-  /// [urlElement]: Extensions for url
+  /// [urlElement] Extensions for url
   ///
-  /// [document]: The document being referenced, represented as an attachment.
+  /// [document] The document being referenced, represented as an attachment.
   ///  This is exclusive with the resource element.
   ///
-  /// [resource]: The related resource, such as a library, value set, profile,
+  /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
   factory RelatedArtifact({
     String? id,
@@ -752,48 +752,48 @@ class RelatedArtifact with _$RelatedArtifact {
 class TriggerDefinition with _$TriggerDefinition {
   TriggerDefinition._();
 
-  /// [TriggerDefinition]: A description of a triggering event. Triggering
+  /// [TriggerDefinition] A description of a triggering event. Triggering
   /// events can be named events, data events, or periodic, as determined by the
   ///  type element.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [type]: The type of triggering event.
+  /// [type] The type of triggering event.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [name]: A formal name for the event. This may be an absolute URI that
+  /// [name] A formal name for the event. This may be an absolute URI that
   /// identifies the event formally (e.g. from a trigger registry), or a simple
   ///  relative URI that identifies the event in a local context.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [timingTiming]: The timing of the event (if this is a periodic trigger).
+  /// [timingTiming] The timing of the event (if this is a periodic trigger).
   ///
-  /// [timingReference]: The timing of the event (if this is a periodic
+  /// [timingReference] The timing of the event (if this is a periodic
   ///  trigger).
   ///
-  /// [timingDate]: The timing of the event (if this is a periodic trigger).
+  /// [timingDate] The timing of the event (if this is a periodic trigger).
   ///
-  /// [timingDateElement]: Extensions for timingDate
+  /// [timingDateElement] Extensions for timingDate
   ///
-  /// [timingDateTime]: The timing of the event (if this is a periodic trigger).
+  /// [timingDateTime] The timing of the event (if this is a periodic trigger).
   ///
-  /// [timingDateTimeElement]: Extensions for timingDateTime
+  /// [timingDateTimeElement] Extensions for timingDateTime
   ///
-  /// [data]: The triggering data of the event (if this is a data trigger). If
+  /// [data] The triggering data of the event (if this is a data trigger). If
   /// more than one data is requirement is specified, then all the data
   ///  requirements must be true.
   ///
-  /// [condition]: A boolean-valued expression that is evaluated in the context
+  /// [condition] A boolean-valued expression that is evaluated in the context
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
   factory TriggerDefinition({
@@ -849,34 +849,34 @@ class TriggerDefinition with _$TriggerDefinition {
 class UsageContext with _$UsageContext {
   UsageContext._();
 
-  /// [UsageContext]: Specifies clinical/business/etc. metadata that can be used
+  /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
   /// to retrieve, index and/or categorize an artifact. This metadata can either
   /// be specific to the applicable population (e.g., age category, DRG) or the
   ///  specific context of care (e.g., venue, care setting, provider of care).
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [code]: A code that identifies the type of context being specified by this
+  /// [code] A code that identifies the type of context being specified by this
   ///  usage context.
   ///
-  /// [valueCodeableConcept]: A value that defines the context specified in this
+  /// [valueCodeableConcept] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
   ///
-  /// [valueQuantity]: A value that defines the context specified in this
+  /// [valueQuantity] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
   ///
-  /// [valueRange]: A value that defines the context specified in this context
+  /// [valueRange] A value that defines the context specified in this context
   ///  of use. The interpretation of the value is defined by the code.
   ///
-  /// [valueReference]: A value that defines the context specified in this
+  /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
   factory UsageContext({
     String? id,
@@ -923,43 +923,43 @@ class UsageContext with _$UsageContext {
 class Expression with _$Expression {
   Expression._();
 
-  /// [Expression]: A expression that is evaluated in a specified context and
+  /// [Expression] A expression that is evaluated in a specified context and
   /// returns a value. The context of use of the expression must specify the
   /// context in which the expression is evaluated, and how the result of the
   ///  expression is used.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [description]: A brief, natural language description of the condition that
+  /// [description] A brief, natural language description of the condition that
   ///  effectively communicates the intended semantics.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [name]: A short name assigned to the expression to allow for multiple
+  /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [language]: The media type of the language for the expression.
+  /// [language] The media type of the language for the expression.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [expression]: An expression in the specified language that returns a
+  /// [expression] An expression in the specified language that returns a
   ///  value.
   ///
-  /// [expressionElement]: Extensions for expression
+  /// [expressionElement] Extensions for expression
   ///
-  /// [reference]: A URI that defines where the expression is found.
+  /// [reference] A URI that defines where the expression is found.
   ///
-  /// [referenceElement]: Extensions for reference
+  /// [referenceElement] Extensions for reference
   factory Expression({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

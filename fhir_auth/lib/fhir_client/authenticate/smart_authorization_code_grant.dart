@@ -39,7 +39,7 @@ import 'package:oauth2/src/utils.dart';
 /// [handleAuthorizationCode] to process the authorization server's response and
 /// construct a [Client].
 ///
-/// [authorization code grant]: http://tools.ietf.org/html/draft-ietf-oauth-v2-31#section-4.1
+/// [authorization code grant] http://tools.ietf.org/html/draft-ietf-oauth-v2-31#section-4.1
 class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// FhirParameters
   final Map<String, dynamic> fhirParameters = {};
@@ -134,7 +134,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// is not recommended by the OAuth 2.0 spec, and should only be used if the
   /// server doesn't support Basic authentication.
   ///
-  /// [RFC 2617]: https://tools.ietf.org/html/rfc2617
+  /// [RFC 2617] https://tools.ietf.org/html/rfc2617
   ///
   /// [httpClient] is used for all HTTP requests made by this grant, as well as
   /// those of the [Client] is constructs.
@@ -146,7 +146,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// random codeVerifier will be generated.
   /// The codeVerifier must meet requirements specified in [RFC 7636].
   ///
-  /// [RFC 7636]: https://tools.ietf.org/html/rfc7636#section-4.1
+  /// [RFC 7636] https://tools.ietf.org/html/rfc7636#section-4.1
   ///
   /// The scope strings will be separated by the provided [delimiter]. This
   /// defaults to `" "`, the OAuth2 standard, but some APIs (such as Facebook's)
@@ -160,7 +160,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// as its body as a UTF-8-decoded string. It should return a map in the same
   /// format as the [standard JSON response][].
   ///
-  /// [standard JSON response]: https://tools.ietf.org/html/rfc6749#section-5.1
+  /// [standard JSON response] https://tools.ietf.org/html/rfc6749#section-5.1
   SmartAuthorizationCodeGrant(
       this.identifier, this.authorizationEndpoint, this.tokenEndpoint,
       {this.secret,

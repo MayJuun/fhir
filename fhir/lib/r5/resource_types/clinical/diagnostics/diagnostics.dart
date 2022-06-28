@@ -18,52 +18,52 @@ part 'diagnostics.g.dart';
 class BodyStructure with Resource, _$BodyStructure {
   BodyStructure._();
 
-  /// [BodyStructure]: Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
+  /// [BodyStructure] Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
 
   ///
-  /// [resourceType]: This is a BodyStructure resource;
+  /// [resourceType] This is a BodyStructure resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Identifier for this instance of the anatomical structure.;
+  /// [identifier] Identifier for this instance of the anatomical structure.;
   ///
-  /// [active]: Whether this body site is in active use.;
+  /// [active] Whether this body site is in active use.;
   ///
   /// [activeElement] (_active): Extensions for active;
   ///
-  /// [morphology]: The kind of structure being represented by the body structure at `BodyStructure.location`.  This can define both normal and abnormal morphologies.;
+  /// [morphology] The kind of structure being represented by the body structure at `BodyStructure.location`.  This can define both normal and abnormal morphologies.;
   ///
-  /// [includedStructure]: The anatomical location(s) or region(s) of the specimen, lesion, or body structure.;
+  /// [includedStructure] The anatomical location(s) or region(s) of the specimen, lesion, or body structure.;
   ///
-  /// [excludedStructure]: The anatomical location(s) or region(s) not occupied or represented by the specimen, lesion, or body structure.;
+  /// [excludedStructure] The anatomical location(s) or region(s) not occupied or represented by the specimen, lesion, or body structure.;
   ///
-  /// [description]: A summary, characterization or explanation of the body structure.;
+  /// [description] A summary, characterization or explanation of the body structure.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [image]: Image or images used to identify a location.;
+  /// [image] Image or images used to identify a location.;
   ///
-  /// [patient]: The person to which the body site belongs.;
+  /// [patient] The person to which the body site belongs.;
   factory BodyStructure({
     @Default(R5ResourceType.BodyStructure) R5ResourceType resourceType,
     Id? id,
@@ -120,20 +120,20 @@ class BodyStructure with Resource, _$BodyStructure {
 class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
   BodyStructureIncludedStructure._();
 
-  /// [BodyStructureIncludedStructure]: Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
+  /// [BodyStructureIncludedStructure] Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [structure]: Code that represents the included structure.;
+  /// [structure] Code that represents the included structure.;
   ///
-  /// [laterality]: Code that represents the included structure laterality.;
+  /// [laterality] Code that represents the included structure laterality.;
   ///
-  /// [qualifier]: Code that represents the included structure qualifier.;
+  /// [qualifier] Code that represents the included structure qualifier.;
   factory BodyStructureIncludedStructure({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -179,20 +179,20 @@ class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
 class BodyStructureExcludedStructure with _$BodyStructureExcludedStructure {
   BodyStructureExcludedStructure._();
 
-  /// [BodyStructureExcludedStructure]: Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
+  /// [BodyStructureExcludedStructure] Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [structure]: Code that represents the excluded structure.;
+  /// [structure] Code that represents the excluded structure.;
   ///
-  /// [laterality]: Code that represents the excluded structure laterality.;
+  /// [laterality] Code that represents the excluded structure laterality.;
   ///
-  /// [qualifier]: Code that represents the excluded structure qualifier.;
+  /// [qualifier] Code that represents the excluded structure qualifier.;
   factory BodyStructureExcludedStructure({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -238,82 +238,82 @@ class BodyStructureExcludedStructure with _$BodyStructureExcludedStructure {
 class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
 
-  /// [DiagnosticReport]: The findings and interpretation of diagnostic tests performed on patients, groups of patients, products, substances, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports. The report also includes non-clinical context such as batch analysis and stability reporting of products and substances.
+  /// [DiagnosticReport] The findings and interpretation of diagnostic tests performed on patients, groups of patients, products, substances, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports. The report also includes non-clinical context such as batch analysis and stability reporting of products and substances.
 
   ///
-  /// [resourceType]: This is a DiagnosticReport resource;
+  /// [resourceType] This is a DiagnosticReport resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Identifiers assigned to this report by the performer or other systems.;
+  /// [identifier] Identifiers assigned to this report by the performer or other systems.;
   ///
-  /// [basedOn]: Details concerning a service requested.;
+  /// [basedOn] Details concerning a service requested.;
   ///
-  /// [status]: The status of the diagnostic report.;
+  /// [status] The status of the diagnostic report.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [category]: A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.;
+  /// [category] A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.;
   ///
-  /// [code]: A code or name that describes this diagnostic report.;
+  /// [code] A code or name that describes this diagnostic report.;
   ///
-  /// [subject]: The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.;
+  /// [subject] The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.;
   ///
-  /// [encounter]: The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about.;
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about.;
   ///
-  /// [effectiveDateTime]: The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.;
+  /// [effectiveDateTime] The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.;
   ///
   /// [effectiveDateTimeElement] (_effectiveDateTime): Extensions for effectiveDateTime;
   ///
-  /// [effectivePeriod]: The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.;
+  /// [effectivePeriod] The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.;
   ///
-  /// [issued]: The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.;
+  /// [issued] The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.;
   ///
   /// [issuedElement] (_issued): Extensions for issued;
   ///
-  /// [performer]: The diagnostic service that is responsible for issuing the report.;
+  /// [performer] The diagnostic service that is responsible for issuing the report.;
   ///
-  /// [resultsInterpreter]: The practitioner or organization that is responsible for the report's conclusions and interpretations.;
+  /// [resultsInterpreter] The practitioner or organization that is responsible for the report's conclusions and interpretations.;
   ///
-  /// [specimen]: Details about the specimens on which this diagnostic report is based.;
+  /// [specimen] Details about the specimens on which this diagnostic report is based.;
   ///
-  /// [result]: [Observations](observation.html)  that are part of this diagnostic report.;
+  /// [result] [Observations](observation.html)  that are part of this diagnostic report.;
   ///
-  /// [note]: Comments about the diagnostic report.;
+  /// [note] Comments about the diagnostic report.;
   ///
-  /// [imagingStudy]: One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.;
+  /// [imagingStudy] One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.;
   ///
-  /// [media]: A list of key images or data associated with this report. The images or data are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).;
+  /// [media] A list of key images or data associated with this report. The images or data are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).;
   ///
-  /// [composition]: Reference to a Composition resource instance that provides structure for organizing the contents of the DiagnosticReport.;
+  /// [composition] Reference to a Composition resource instance that provides structure for organizing the contents of the DiagnosticReport.;
   ///
-  /// [conclusion]: Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.;
+  /// [conclusion] Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.;
   ///
   /// [conclusionElement] (_conclusion): Extensions for conclusion;
   ///
-  /// [conclusionCode]: One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.;
+  /// [conclusionCode] One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.;
   ///
-  /// [presentedForm]: Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.;
+  /// [presentedForm] Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.;
   factory DiagnosticReport({
     @Default(R5ResourceType.DiagnosticReport) R5ResourceType resourceType,
     Id? id,
@@ -385,22 +385,22 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 class DiagnosticReportMedia with _$DiagnosticReportMedia {
   DiagnosticReportMedia._();
 
-  /// [DiagnosticReportMedia]: The findings and interpretation of diagnostic tests performed on patients, groups of patients, products, substances, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports. The report also includes non-clinical context such as batch analysis and stability reporting of products and substances.
+  /// [DiagnosticReportMedia] The findings and interpretation of diagnostic tests performed on patients, groups of patients, products, substances, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports. The report also includes non-clinical context such as batch analysis and stability reporting of products and substances.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [comment]: A comment about the image or data. Typically, this is used to provide an explanation for why the image or data is included, or to draw the viewer's attention to important features.;
+  /// [comment] A comment about the image or data. Typically, this is used to provide an explanation for why the image or data is included, or to draw the viewer's attention to important features.;
   ///
   /// [commentElement] (_comment): Extensions for comment;
   ///
-  /// [link]: Reference to the image or data source.;
+  /// [link] Reference to the image or data source.;
   factory DiagnosticReportMedia({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -445,67 +445,67 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
 class ImagingSelection with Resource, _$ImagingSelection {
   ImagingSelection._();
 
-  /// [ImagingSelection]: A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
+  /// [ImagingSelection] A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
   ///
-  /// [resourceType]: This is a ImagingSelection resource;
+  /// [resourceType] This is a ImagingSelection resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: A unique identifier assigned to this imaging selection.;
+  /// [identifier] A unique identifier assigned to this imaging selection.;
   ///
-  /// [subject]: The patient, or group of patients, location, device, organization, procedure or practitioner this imaging selection is about and into whose or what record the imaging selection is placed.;
+  /// [subject] The patient, or group of patients, location, device, organization, procedure or practitioner this imaging selection is about and into whose or what record the imaging selection is placed.;
   ///
-  /// [issued]: The date and time this imaging selection was created.;
+  /// [issued] The date and time this imaging selection was created.;
   ///
   /// [issuedElement] (_issued): Extensions for issued;
   ///
-  /// [performer]: Author – human or machine.;
+  /// [performer] Author – human or machine.;
   ///
-  /// [basedOn]: A list of the diagnostic requests that resulted in this imaging selection being performed.;
+  /// [basedOn] A list of the diagnostic requests that resulted in this imaging selection being performed.;
   ///
-  /// [category]: Classifies the imaging selection.;
+  /// [category] Classifies the imaging selection.;
   ///
-  /// [code]: Describes the imaging selection.;
+  /// [code] Describes the imaging selection.;
   ///
-  /// [studyUid]: The Study Instance UID for the DICOM Study from which the images were selected.;
+  /// [studyUid] The Study Instance UID for the DICOM Study from which the images were selected.;
   ///
   /// [studyUidElement] (_studyUid): Extensions for studyUid;
   ///
-  /// [derivedFrom]: The imaging study from which the imaging selection is made.;
+  /// [derivedFrom] The imaging study from which the imaging selection is made.;
   ///
-  /// [endpoint]: The network service providing retrieval access to the selected images, frames, etc. See implementation notes for information about using DICOM endpoints.;
+  /// [endpoint] The network service providing retrieval access to the selected images, frames, etc. See implementation notes for information about using DICOM endpoints.;
   ///
-  /// [seriesUid]: The Series Instance UID for the DICOM Series from which the images were selected.;
+  /// [seriesUid] The Series Instance UID for the DICOM Series from which the images were selected.;
   ///
   /// [seriesUidElement] (_seriesUid): Extensions for seriesUid;
   ///
-  /// [frameOfReferenceUid]: The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.;
+  /// [frameOfReferenceUid] The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.;
   ///
   /// [frameOfReferenceUidElement] (_frameOfReferenceUid): Extensions for frameOfReferenceUid;
   ///
-  /// [bodySite]: The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings.;
+  /// [bodySite] The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings.;
   ///
-  /// [instance]: Each imaging selection includes one or more selected DICOM SOP instances.;
+  /// [instance] Each imaging selection includes one or more selected DICOM SOP instances.;
   ///
-  /// [imageRegion]: Each imaging selection might includes one or more image regions. Image regions are specified by a region type and a set of 2D or 3D coordinates.;
+  /// [imageRegion] Each imaging selection might includes one or more image regions. Image regions are specified by a region type and a set of 2D or 3D coordinates.;
   factory ImagingSelection({
     @Default(R5ResourceType.ImagingSelection) R5ResourceType resourceType,
     Id? id,
@@ -571,17 +571,17 @@ class ImagingSelection with Resource, _$ImagingSelection {
 class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
   ImagingSelectionPerformer._();
 
-  /// [ImagingSelectionPerformer]: A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
+  /// [ImagingSelectionPerformer] A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [function]: Distinguishes the type of involvement of the performer.;
+  /// [function] Distinguishes the type of involvement of the performer.;
   ///
-  /// [actor]: Author – human or machine.;
+  /// [actor] Author – human or machine.;
   factory ImagingSelectionPerformer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -625,33 +625,33 @@ class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
 class ImagingSelectionInstance with _$ImagingSelectionInstance {
   ImagingSelectionInstance._();
 
-  /// [ImagingSelectionInstance]: A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
+  /// [ImagingSelectionInstance] A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [uid]: The SOP Instance UID for the selected DICOM instance.;
+  /// [uid] The SOP Instance UID for the selected DICOM instance.;
   ///
   /// [uidElement] (_uid): Extensions for uid;
   ///
-  /// [sopClass]: The SOP Class UID for the selected DICOM instance.;
+  /// [sopClass] The SOP Class UID for the selected DICOM instance.;
   ///
-  /// [frameList]: The set of frames within a multi-frame SOP Instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate frame numbers.       If this is absent, all frames within the referenced SOP Instance are included in the selection.;
+  /// [frameList] The set of frames within a multi-frame SOP Instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate frame numbers.       If this is absent, all frames within the referenced SOP Instance are included in the selection.;
   ///
   /// [frameListElement] (_frameList): Extensions for frameList;
   ///
-  /// [observationUid]: The unique identifier for the observation Content Item (and its subsidiary Content Items, if any) that are included in the imaging selection.;
+  /// [observationUid] The unique identifier for the observation Content Item (and its subsidiary Content Items, if any) that are included in the imaging selection.;
   ///
   /// [observationUidElement] (_observationUid): Extensions for observationUid;
   ///
-  /// [segmentList]: The set of segments within a segmentation SOP Instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate segment numbers.       If this is absent, all segments within the referenced segmentation SOP Instance are included in the selection.;
+  /// [segmentList] The set of segments within a segmentation SOP Instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate segment numbers.       If this is absent, all segments within the referenced segmentation SOP Instance are included in the selection.;
   ///
   /// [segmentListElement] (_segmentList): Extensions for segmentList;
   ///
-  /// [roiList]: The set of regions of interest (ROI) within a radiotherapy structure set instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate ROI numbers.       If this is absent, all ROIs within the referenced radiotherapy structure set SOP Instance are included in the selection.;
+  /// [roiList] The set of regions of interest (ROI) within a radiotherapy structure set instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate ROI numbers.       If this is absent, all ROIs within the referenced radiotherapy structure set SOP Instance are included in the selection.;
   ///
   /// [roiListElement] (_roiList): Extensions for roiList;
   factory ImagingSelectionInstance({
@@ -706,23 +706,23 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
 class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
   ImagingSelectionImageRegion._();
 
-  /// [ImagingSelectionImageRegion]: A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
+  /// [ImagingSelectionImageRegion] A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [regionType]: Specifies the type of image region.;
+  /// [regionType] Specifies the type of image region.;
   ///
   /// [regionTypeElement] (_regionType): Extensions for regionType;
   ///
-  /// [coordinateType]: Specifies the type of coordinate system that define the image region.;
+  /// [coordinateType] Specifies the type of coordinate system that define the image region.;
   ///
   /// [coordinateTypeElement] (_coordinateType): Extensions for coordinateType;
   ///
-  /// [coordinate]: The coordinates describing the image region.       If coordinateType is 2D this specifies sequence of (x,y) coordinates in the coordinate system of the image specified by the instance.uid element that contains this image region.       If coordinateType is 3D this specifies sequence of (x,y,z) coordinates in the coordinate system specified by the frameOfReferenceUid element.;
+  /// [coordinate] The coordinates describing the image region.       If coordinateType is 2D this specifies sequence of (x,y) coordinates in the coordinate system of the image specified by the instance.uid element that contains this image region.       If coordinateType is 3D this specifies sequence of (x,y,z) coordinates in the coordinate system specified by the frameOfReferenceUid element.;
   ///
   /// [coordinateElement] (_coordinate): Extensions for coordinate;
   factory ImagingSelectionImageRegion({
@@ -772,78 +772,78 @@ class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
 class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
 
-  /// [ImagingStudy]: Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
+  /// [ImagingStudy] Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 
   ///
-  /// [resourceType]: This is a ImagingStudy resource;
+  /// [resourceType] This is a ImagingStudy resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Identifiers for the ImagingStudy such as DICOM Study Instance UID.;
+  /// [identifier] Identifiers for the ImagingStudy such as DICOM Study Instance UID.;
   ///
-  /// [status]: The current state of the ImagingStudy resource. This is not the status of any ServiceRequest or Task resources associated with the ImagingStudy.;
+  /// [status] The current state of the ImagingStudy resource. This is not the status of any ServiceRequest or Task resources associated with the ImagingStudy.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [modality]: A list of all the distinct values of series.modality. This may include both acquisition and non-acquisition modalities.;
+  /// [modality] A list of all the distinct values of series.modality. This may include both acquisition and non-acquisition modalities.;
   ///
-  /// [subject]: The subject, typically a patient, of the imaging study.;
+  /// [subject] The subject, typically a patient, of the imaging study.;
   ///
-  /// [encounter]: The healthcare event (e.g. a patient and healthcare provider interaction) during which this ImagingStudy is made.;
+  /// [encounter] The healthcare event (e.g. a patient and healthcare provider interaction) during which this ImagingStudy is made.;
   ///
-  /// [started]: Date and time the study started.;
+  /// [started] Date and time the study started.;
   ///
   /// [startedElement] (_started): Extensions for started;
   ///
-  /// [basedOn]: A list of the diagnostic requests that resulted in this imaging study being performed.;
+  /// [basedOn] A list of the diagnostic requests that resulted in this imaging study being performed.;
   ///
-  /// [referrer]: The requesting/referring physician.;
+  /// [referrer] The requesting/referring physician.;
   ///
-  /// [interpreter]: Who read the study and interpreted the images or other content.;
+  /// [interpreter] Who read the study and interpreted the images or other content.;
   ///
-  /// [endpoint]: The network service providing access (e.g., query, view, or retrieval) for the study. See implementation notes for information about using DICOM endpoints. A study-level endpoint applies to each series in the study, unless overridden by a series-level endpoint with the same Endpoint.connectionType.;
+  /// [endpoint] The network service providing access (e.g., query, view, or retrieval) for the study. See implementation notes for information about using DICOM endpoints. A study-level endpoint applies to each series in the study, unless overridden by a series-level endpoint with the same Endpoint.connectionType.;
   ///
-  /// [numberOfSeries]: Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.;
+  /// [numberOfSeries] Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.;
   ///
   /// [numberOfSeriesElement] (_numberOfSeries): Extensions for numberOfSeries;
   ///
-  /// [numberOfInstances]: Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.;
+  /// [numberOfInstances] Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.;
   ///
   /// [numberOfInstancesElement] (_numberOfInstances): Extensions for numberOfInstances;
   ///
-  /// [procedure]: The procedure or code from which this ImagingStudy was part of.;
+  /// [procedure] The procedure or code from which this ImagingStudy was part of.;
   ///
-  /// [location]: The principal physical location where the ImagingStudy was performed.;
+  /// [location] The principal physical location where the ImagingStudy was performed.;
   ///
-  /// [reason]: Description of clinical condition indicating why the ImagingStudy was requested, and/or Indicates another resource whose existence justifies this Study.;
+  /// [reason] Description of clinical condition indicating why the ImagingStudy was requested, and/or Indicates another resource whose existence justifies this Study.;
   ///
-  /// [note]: Per the recommended DICOM mapping, this element is derived from the Study Description attribute (0008,1030). Observations or findings about the imaging study should be recorded in another resource, e.g. Observation, and not in this element.;
+  /// [note] Per the recommended DICOM mapping, this element is derived from the Study Description attribute (0008,1030). Observations or findings about the imaging study should be recorded in another resource, e.g. Observation, and not in this element.;
   ///
-  /// [description]: The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed.;
+  /// [description] The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [series]: Each study has one or more series of images or other content.;
+  /// [series] Each study has one or more series of images or other content.;
   factory ImagingStudy({
     @Default(R5ResourceType.ImagingStudy) R5ResourceType resourceType,
     Id? id,
@@ -913,50 +913,50 @@ class ImagingStudy with Resource, _$ImagingStudy {
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
 
-  /// [ImagingStudySeries]: Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
+  /// [ImagingStudySeries] Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [uid]: The DICOM Series Instance UID for the series.;
+  /// [uid] The DICOM Series Instance UID for the series.;
   ///
   /// [uidElement] (_uid): Extensions for uid;
   ///
-  /// [number]: The numeric identifier of this series in the study.;
+  /// [number] The numeric identifier of this series in the study.;
   ///
   /// [numberElement] (_number): Extensions for number;
   ///
-  /// [modality]: The distinct modality for this series. This may include both acquisition and non-acquisition modalities.;
+  /// [modality] The distinct modality for this series. This may include both acquisition and non-acquisition modalities.;
   ///
-  /// [description]: A description of the series.;
+  /// [description] A description of the series.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [numberOfInstances]: Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.;
+  /// [numberOfInstances] Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.;
   ///
   /// [numberOfInstancesElement] (_numberOfInstances): Extensions for numberOfInstances;
   ///
-  /// [endpoint]: The network service providing access (e.g., query, view, or retrieval) for this series. See implementation notes for information about using DICOM endpoints. A series-level endpoint, if present, has precedence over a study-level endpoint with the same Endpoint.connectionType.;
+  /// [endpoint] The network service providing access (e.g., query, view, or retrieval) for this series. See implementation notes for information about using DICOM endpoints. A series-level endpoint, if present, has precedence over a study-level endpoint with the same Endpoint.connectionType.;
   ///
-  /// [bodySite]: The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of body part imaged; if so, it shall be consistent with any content of ImagingStudy.series.laterality.;
+  /// [bodySite] The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of body part imaged; if so, it shall be consistent with any content of ImagingStudy.series.laterality.;
   ///
-  /// [laterality]: The laterality of the (possibly paired) anatomic structures examined. E.g., the left knee, both lungs, or unpaired abdomen. If present, shall be consistent with any laterality information indicated in ImagingStudy.series.bodySite.;
+  /// [laterality] The laterality of the (possibly paired) anatomic structures examined. E.g., the left knee, both lungs, or unpaired abdomen. If present, shall be consistent with any laterality information indicated in ImagingStudy.series.bodySite.;
   ///
-  /// [specimen]: The specimen imaged, e.g., for whole slide imaging of a biopsy.;
+  /// [specimen] The specimen imaged, e.g., for whole slide imaging of a biopsy.;
   ///
-  /// [started]: The date and time the series was started.;
+  /// [started] The date and time the series was started.;
   ///
   /// [startedElement] (_started): Extensions for started;
   ///
-  /// [performer]: Indicates who or what performed the series and how they were involved.;
+  /// [performer] Indicates who or what performed the series and how they were involved.;
   ///
-  /// [instance]: A single SOP instance within the series, e.g. an image, or presentation state.;
+  /// [instance] A single SOP instance within the series, e.g. an image, or presentation state.;
   factory ImagingStudySeries({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1015,20 +1015,20 @@ class ImagingStudySeries with _$ImagingStudySeries {
 class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ImagingStudyPerformer._();
 
-  /// [ImagingStudyPerformer]: Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
+  /// [ImagingStudyPerformer] Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [function]: Distinguishes the type of involvement of the performer in the series.;
+  /// [function] Distinguishes the type of involvement of the performer in the series.;
   ///
-  /// [actor]: Indicates who or what performed the series.;
+  /// [actor] Indicates who or what performed the series.;
   factory ImagingStudyPerformer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1072,28 +1072,28 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
 class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
 
-  /// [ImagingStudyInstance]: Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
+  /// [ImagingStudyInstance] Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [uid]: The DICOM SOP Instance UID for this image or other DICOM content.;
+  /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.;
   ///
   /// [uidElement] (_uid): Extensions for uid;
   ///
-  /// [sopClass]: DICOM instance  type.;
+  /// [sopClass] DICOM instance  type.;
   ///
-  /// [number]: The number of instance in the series.;
+  /// [number] The number of instance in the series.;
   ///
   /// [numberElement] (_number): Extensions for number;
   ///
-  /// [title]: The description of the instance.;
+  /// [title] The description of the instance.;
   ///
   /// [titleElement] (_title): Extensions for title;
   factory ImagingStudyInstance({
@@ -1144,56 +1144,56 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
 class MolecularSequence with Resource, _$MolecularSequence {
   MolecularSequence._();
 
-  /// [MolecularSequence]: Representation of a molecular sequence.
+  /// [MolecularSequence] Representation of a molecular sequence.
 
   ///
-  /// [resourceType]: This is a MolecularSequence resource;
+  /// [resourceType] This is a MolecularSequence resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: A unique identifier for this particular sequence instance.;
+  /// [identifier] A unique identifier for this particular sequence instance.;
   ///
-  /// [type]: Amino Acid Sequence/ DNA Sequence / RNA Sequence.;
+  /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.;
   ///
   /// [typeElement] (_type): Extensions for type;
   ///
-  /// [patient]: Indicates the patient this sequence is associated too.;
+  /// [patient] Indicates the patient this sequence is associated too.;
   ///
-  /// [specimen]: Specimen used for sequencing.;
+  /// [specimen] Specimen used for sequencing.;
   ///
-  /// [device]: The method for sequencing, for example, chip information.;
+  /// [device] The method for sequencing, for example, chip information.;
   ///
-  /// [performer]: The organization or lab that should be responsible for this result.;
+  /// [performer] The organization or lab that should be responsible for this result.;
   ///
-  /// [literal]: Sequence that was observed. It is the result marked by referenceSeq along with variant records on referenceSeq. This shall start from referenceSeq.windowStart and end by referenceSeq.windowEnd.;
+  /// [literal] Sequence that was observed. It is the result marked by referenceSeq along with variant records on referenceSeq. This shall start from referenceSeq.windowStart and end by referenceSeq.windowEnd.;
   ///
   /// [literalElement] (_literal): Extensions for literal;
   ///
-  /// [formatted]: Sequence that was observed as file content. Can be an actual file contents, or referenced by a URL to an external system.;
+  /// [formatted] Sequence that was observed as file content. Can be an actual file contents, or referenced by a URL to an external system.;
   ///
-  /// [relative]: A sequence defined relative to another sequence.;
+  /// [relative] A sequence defined relative to another sequence.;
   ///
-  /// [pointer]: Pointer to next atomic sequence which at most contains one variant.;
+  /// [pointer] Pointer to next atomic sequence which at most contains one variant.;
   factory MolecularSequence({
     @Default(R5ResourceType.MolecularSequence) R5ResourceType resourceType,
     Id? id,
@@ -1252,20 +1252,20 @@ class MolecularSequence with Resource, _$MolecularSequence {
 class MolecularSequenceRelative with _$MolecularSequenceRelative {
   MolecularSequenceRelative._();
 
-  /// [MolecularSequenceRelative]: Representation of a molecular sequence.
+  /// [MolecularSequenceRelative] Representation of a molecular sequence.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [coordinateSystem]: These are different ways of identifying nucleotides or amino acids within a sequence. Different databases and file types may use different systems. For detail definitions, see https://loinc.org/92822-6/ for more detail.;
+  /// [coordinateSystem] These are different ways of identifying nucleotides or amino acids within a sequence. Different databases and file types may use different systems. For detail definitions, see https://loinc.org/92822-6/ for more detail.;
   ///
-  /// [reference]: A sequence that is used as a reference to describe variants that are present in a sequence analyzed.;
+  /// [reference] A sequence that is used as a reference to describe variants that are present in a sequence analyzed.;
   ///
-  /// [edit]: Changes in sequence from the reference.;
+  /// [edit] Changes in sequence from the reference.;
   factory MolecularSequenceRelative({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1310,42 +1310,42 @@ class MolecularSequenceRelative with _$MolecularSequenceRelative {
 class MolecularSequenceReference with _$MolecularSequenceReference {
   MolecularSequenceReference._();
 
-  /// [MolecularSequenceReference]: Representation of a molecular sequence.
+  /// [MolecularSequenceReference] Representation of a molecular sequence.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [chromosome]: Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).;
+  /// [chromosome] Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).;
   ///
-  /// [genomeBuild]: The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37'.  Version number must be included if a versioned release of a primary build was used.;
+  /// [genomeBuild] The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37'.  Version number must be included if a versioned release of a primary build was used.;
   ///
   /// [genomeBuildElement] (_genomeBuild): Extensions for genomeBuild;
   ///
-  /// [orientation]: A relative reference to a DNA strand based on gene orientation. The strand that contains the open reading frame of the gene is the "sense" strand, and the opposite complementary strand is the "antisense" strand.;
+  /// [orientation] A relative reference to a DNA strand based on gene orientation. The strand that contains the open reading frame of the gene is the "sense" strand, and the opposite complementary strand is the "antisense" strand.;
   ///
   /// [orientationElement] (_orientation): Extensions for orientation;
   ///
-  /// [referenceSeqId]: This field carries the ID for the reference sequence. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers when they become available. (See- Report sponsored by GEN2PHEN at the European Bioinformatics Institute at Hinxton UK April 24-25, 2008).;
+  /// [referenceSeqId] This field carries the ID for the reference sequence. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers when they become available. (See- Report sponsored by GEN2PHEN at the European Bioinformatics Institute at Hinxton UK April 24-25, 2008).;
   ///
-  /// [referenceSeqPointer]: A pointer to another MolecularSequence entity as reference sequence.;
+  /// [referenceSeqPointer] A pointer to another MolecularSequence entity as reference sequence.;
   ///
-  /// [referenceSeqString]: A string like "ACGT".;
+  /// [referenceSeqString] A string like "ACGT".;
   ///
   /// [referenceSeqStringElement] (_referenceSeqString): Extensions for referenceSeqString;
   ///
-  /// [strand]: An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.;
+  /// [strand] An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.;
   ///
   /// [strandElement] (_strand): Extensions for strand;
   ///
-  /// [windowStart]: Start position of the window on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.;
+  /// [windowStart] Start position of the window on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.;
   ///
   /// [windowStartElement] (_windowStart): Extensions for windowStart;
   ///
-  /// [windowEnd]: End position of the window on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.;
+  /// [windowEnd] End position of the window on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.;
   ///
   /// [windowEndElement] (_windowEnd): Extensions for windowEnd;
   factory MolecularSequenceReference({
@@ -1404,32 +1404,32 @@ class MolecularSequenceReference with _$MolecularSequenceReference {
 class MolecularSequenceEdit with _$MolecularSequenceEdit {
   MolecularSequenceEdit._();
 
-  /// [MolecularSequenceEdit]: Representation of a molecular sequence.
+  /// [MolecularSequenceEdit] Representation of a molecular sequence.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [start]: Start position of the edit on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.;
+  /// [start] Start position of the edit on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.;
   ///
   /// [startElement] (_start): Extensions for start;
   ///
-  /// [end]: End position of the edit on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.;
+  /// [end] End position of the edit on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.;
   ///
   /// [endElement] (_end): Extensions for end;
   ///
-  /// [observedAllele]: Allele that was observed. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed  sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.;
+  /// [observedAllele] Allele that was observed. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed  sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.;
   ///
   /// [observedAlleleElement] (_observedAllele): Extensions for observedAllele;
   ///
-  /// [referenceAllele]: Allele in the reference sequence. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.;
+  /// [referenceAllele] Allele in the reference sequence. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.;
   ///
   /// [referenceAlleleElement] (_referenceAllele): Extensions for referenceAllele;
   ///
-  /// [cigar]: Extended CIGAR string for aligning the sequence with reference bases. See documentation [here](https://samtools.github.io/hts-specs/SAMv1.pdf) and search for CIGAR.;
+  /// [cigar] Extended CIGAR string for aligning the sequence with reference bases. See documentation [here](https://samtools.github.io/hts-specs/SAMv1.pdf) and search for CIGAR.;
   ///
   /// [cigarElement] (_cigar): Extensions for cigar;
   factory MolecularSequenceEdit({
@@ -1483,136 +1483,136 @@ class MolecularSequenceEdit with _$MolecularSequenceEdit {
 class Observation with Resource, _$Observation {
   Observation._();
 
-  /// [Observation]: Measurements and simple assertions made about a patient, device or other subject.
+  /// [Observation] Measurements and simple assertions made about a patient, device or other subject.
 
   ///
-  /// [resourceType]: This is a Observation resource;
+  /// [resourceType] This is a Observation resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: A unique identifier assigned to this observation.;
+  /// [identifier] A unique identifier assigned to this observation.;
   ///
-  /// [instantiatesCanonical]: The reference to a FHIR ObservationDefinition resource that provides the definition that is adhered to in whole or in part by this Observation instance.;
+  /// [instantiatesCanonical] The reference to a FHIR ObservationDefinition resource that provides the definition that is adhered to in whole or in part by this Observation instance.;
   ///
   /// [instantiatesCanonicalElement] (_instantiatesCanonical): Extensions for instantiatesCanonical;
   ///
-  /// [instantiatesReference]: The reference to a FHIR ObservationDefinition resource that provides the definition that is adhered to in whole or in part by this Observation instance.;
+  /// [instantiatesReference] The reference to a FHIR ObservationDefinition resource that provides the definition that is adhered to in whole or in part by this Observation instance.;
   ///
-  /// [basedOn]: A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.;
+  /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.;
   ///
-  /// [triggeredBy]: Identifies the observation(s) that triggered the performance of this observation.;
+  /// [triggeredBy] Identifies the observation(s) that triggered the performance of this observation.;
   ///
-  /// [partOf]: A larger event of which this particular Observation is a component or step.  For example,  an observation as part of a procedure.;
+  /// [partOf] A larger event of which this particular Observation is a component or step.  For example,  an observation as part of a procedure.;
   ///
-  /// [status]: The status of the result value.;
+  /// [status] The status of the result value.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [category]: A code that classifies the general type of observation being made.;
+  /// [category] A code that classifies the general type of observation being made.;
   ///
-  /// [code]: Describes what was observed. Sometimes this is called the observation "name".;
+  /// [code] Describes what was observed. Sometimes this is called the observation "name".;
   ///
-  /// [subject]: The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about and into whose or what record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.;
+  /// [subject] The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about and into whose or what record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.;
   ///
-  /// [focus]: The actual focus of an observation when it is not the patient of record representing something or someone associated with the patient such as a spouse, parent, fetus, or donor. For example, fetus observations in a mother's record.  The focus of an observation could also be an existing condition,  an intervention, the subject's diet,  another observation of the subject,  or a body structure such as tumor or implanted device.   An example use case would be using the Observation resource to capture whether the mother is trained to change her child's tracheostomy tube. In this example, the child is the patient of record and the mother is the focus.;
+  /// [focus] The actual focus of an observation when it is not the patient of record representing something or someone associated with the patient such as a spouse, parent, fetus, or donor. For example, fetus observations in a mother's record.  The focus of an observation could also be an existing condition,  an intervention, the subject's diet,  another observation of the subject,  or a body structure such as tumor or implanted device.   An example use case would be using the Observation resource to capture whether the mother is trained to change her child's tracheostomy tube. In this example, the child is the patient of record and the mother is the focus.;
   ///
-  /// [encounter]: The healthcare event  (e.g. a patient and healthcare provider interaction) during which this observation is made.;
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider interaction) during which this observation is made.;
   ///
-  /// [effectiveDateTime]: The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.;
+  /// [effectiveDateTime] The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.;
   ///
   /// [effectiveDateTimeElement] (_effectiveDateTime): Extensions for effectiveDateTime;
   ///
-  /// [effectivePeriod]: The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.;
+  /// [effectivePeriod] The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.;
   ///
-  /// [effectiveTiming]: The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.;
+  /// [effectiveTiming] The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.;
   ///
-  /// [effectiveInstant]: The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.;
+  /// [effectiveInstant] The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.;
   ///
   /// [effectiveInstantElement] (_effectiveInstant): Extensions for effectiveInstant;
   ///
-  /// [issued]: The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified.;
+  /// [issued] The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified.;
   ///
   /// [issuedElement] (_issued): Extensions for issued;
   ///
-  /// [performer]: Who was responsible for asserting the observed value as "true".;
+  /// [performer] Who was responsible for asserting the observed value as "true".;
   ///
-  /// [valueQuantity]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueQuantity] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueCodeableConcept]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueCodeableConcept] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueString]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueString] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueStringElement] (_valueString): Extensions for valueString;
   ///
-  /// [valueBoolean]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueBoolean] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
-  /// [valueInteger]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueInteger] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
   ///
-  /// [valueRange]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueRange] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueRatio]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueRatio] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueSampledData]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueSampledData] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueTime]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueTime] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueTimeElement] (_valueTime): Extensions for valueTime;
   ///
-  /// [valueDateTime]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueDateTime] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
   ///
-  /// [valuePeriod]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valuePeriod] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueAttachment]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueAttachment] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [dataAbsentReason]: Provides a reason why the expected value in the element Observation.value[x] is missing.;
+  /// [dataAbsentReason] Provides a reason why the expected value in the element Observation.value[x] is missing.;
   ///
-  /// [interpretation]: A categorical assessment of an observation value.  For example, high, low, normal.;
+  /// [interpretation] A categorical assessment of an observation value.  For example, high, low, normal.;
   ///
-  /// [note]: Comments about the observation or the results.;
+  /// [note] Comments about the observation or the results.;
   ///
-  /// [bodySite]: Indicates the site on the subject's body where the observation was made (i.e. the target site).;
+  /// [bodySite] Indicates the site on the subject's body where the observation was made (i.e. the target site).;
   ///
-  /// [bodyStructure]: Indicates the body structure on the subject's body where the observation was made (i.e. the target site).;
+  /// [bodyStructure] Indicates the body structure on the subject's body where the observation was made (i.e. the target site).;
   ///
-  /// [method]: Indicates the mechanism used to perform the observation.;
+  /// [method] Indicates the mechanism used to perform the observation.;
   ///
-  /// [specimen]: The specimen that was used when this observation was made.;
+  /// [specimen] The specimen that was used when this observation was made.;
   ///
-  /// [device]: The device used to generate the observation data.;
+  /// [device] The device used to generate the observation data.;
   ///
-  /// [referenceRange]: Guidance on how to interpret the value by comparison to a normal or recommended range.  Multiple reference ranges are interpreted as an "OR".   In other words, to represent two distinct target populations, two `referenceRange` elements would be used.;
+  /// [referenceRange] Guidance on how to interpret the value by comparison to a normal or recommended range.  Multiple reference ranges are interpreted as an "OR".   In other words, to represent two distinct target populations, two `referenceRange` elements would be used.;
   ///
-  /// [hasMember]: This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.;
+  /// [hasMember] This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.;
   ///
-  /// [derivedFrom]: The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.;
+  /// [derivedFrom] The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.;
   ///
-  /// [component]: Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.;
+  /// [component] Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.;
   factory Observation({
     @Default(R5ResourceType.Observation) R5ResourceType resourceType,
     Id? id,
@@ -1712,22 +1712,22 @@ class Observation with Resource, _$Observation {
 class ObservationTriggeredBy with _$ObservationTriggeredBy {
   ObservationTriggeredBy._();
 
-  /// [ObservationTriggeredBy]: Measurements and simple assertions made about a patient, device or other subject.
+  /// [ObservationTriggeredBy] Measurements and simple assertions made about a patient, device or other subject.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [observation]: Reference to the triggering observation.;
+  /// [observation] Reference to the triggering observation.;
   ///
-  /// [type]: The type of trigger. Reflex | Repeat | Re-run.;
+  /// [type] The type of trigger. Reflex | Repeat | Re-run.;
   ///
   /// [typeElement] (_type): Extensions for type;
   ///
-  /// [reason]: Provides the reason why this observation was performed as a result of the observation(s) referenced.;
+  /// [reason] Provides the reason why this observation was performed as a result of the observation(s) referenced.;
   ///
   /// [reasonElement] (_reason): Extensions for reason;
   factory ObservationTriggeredBy({
@@ -1776,30 +1776,30 @@ class ObservationTriggeredBy with _$ObservationTriggeredBy {
 class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
 
-  /// [ObservationReferenceRange]: Measurements and simple assertions made about a patient, device or other subject.
+  /// [ObservationReferenceRange] Measurements and simple assertions made about a patient, device or other subject.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [low]: The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).;
+  /// [low] The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).;
   ///
-  /// [high]: The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).;
+  /// [high] The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).;
   ///
-  /// [normalValue]: The value of the normal value of the reference range.;
+  /// [normalValue] The value of the normal value of the reference range.;
   ///
-  /// [type]: Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.;
+  /// [type] Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.;
   ///
-  /// [appliesTo]: Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an "AND" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.;
+  /// [appliesTo] Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an "AND" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.;
   ///
-  /// [age]: The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.;
+  /// [age] The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.;
   ///
-  /// [text]: Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of "Negative" or a list or table of "normals".;
+  /// [text] Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of "Negative" or a list or table of "normals".;
   ///
   /// [textElement] (_text): Extensions for text;
   factory ObservationReferenceRange({
@@ -1851,58 +1851,58 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
 
-  /// [ObservationComponent]: Measurements and simple assertions made about a patient, device or other subject.
+  /// [ObservationComponent] Measurements and simple assertions made about a patient, device or other subject.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: Describes what was observed. Sometimes this is called the observation "code".;
+  /// [code] Describes what was observed. Sometimes this is called the observation "code".;
   ///
-  /// [valueQuantity]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueQuantity] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueCodeableConcept]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueCodeableConcept] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueString]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueString] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueStringElement] (_valueString): Extensions for valueString;
   ///
-  /// [valueBoolean]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueBoolean] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
-  /// [valueInteger]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueInteger] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
   ///
-  /// [valueRange]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueRange] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueRatio]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueRatio] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueSampledData]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueSampledData] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueTime]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueTime] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueTimeElement] (_valueTime): Extensions for valueTime;
   ///
-  /// [valueDateTime]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueDateTime] The information determined as a result of making the observation, if the information has a simple value.;
   ///
   /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
   ///
-  /// [valuePeriod]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valuePeriod] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [valueAttachment]: The information determined as a result of making the observation, if the information has a simple value.;
+  /// [valueAttachment] The information determined as a result of making the observation, if the information has a simple value.;
   ///
-  /// [dataAbsentReason]: Provides a reason why the expected value in the element Observation.component.value[x] is missing.;
+  /// [dataAbsentReason] Provides a reason why the expected value in the element Observation.component.value[x] is missing.;
   ///
-  /// [interpretation]: A categorical assessment of an observation value.  For example, high, low, normal.;
+  /// [interpretation] A categorical assessment of an observation value.  For example, high, low, normal.;
   ///
-  /// [referenceRange]: Guidance on how to interpret the value by comparison to a normal or recommended range.;
+  /// [referenceRange] Guidance on how to interpret the value by comparison to a normal or recommended range.;
   factory ObservationComponent({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1965,58 +1965,58 @@ class ObservationComponent with _$ObservationComponent {
 class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
 
-  /// [QuestionnaireResponse]: A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
+  /// [QuestionnaireResponse] A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
 
   ///
-  /// [resourceType]: This is a QuestionnaireResponse resource;
+  /// [resourceType] This is a QuestionnaireResponse resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: A business identifier assigned to a particular completed (or partially completed) questionnaire.;
+  /// [identifier] A business identifier assigned to a particular completed (or partially completed) questionnaire.;
   ///
-  /// [basedOn]: The order, proposal or plan that is fulfilled in whole or in part by this QuestionnaireResponse.  For example, a ServiceRequest seeking an intake assessment or a decision support recommendation to assess for post-partum depression.;
+  /// [basedOn] The order, proposal or plan that is fulfilled in whole or in part by this QuestionnaireResponse.  For example, a ServiceRequest seeking an intake assessment or a decision support recommendation to assess for post-partum depression.;
   ///
-  /// [partOf]: A procedure or observation that this questionnaire was performed as part of the execution of.  For example, the surgery a checklist was executed as part of.;
+  /// [partOf] A procedure or observation that this questionnaire was performed as part of the execution of.  For example, the surgery a checklist was executed as part of.;
   ///
-  /// [questionnaire]: The Questionnaire that defines and organizes the questions for which answers are being provided.;
+  /// [questionnaire] The Questionnaire that defines and organizes the questions for which answers are being provided.;
   ///
-  /// [status]: The position of the questionnaire response within its overall lifecycle.;
+  /// [status] The position of the questionnaire response within its overall lifecycle.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [subject]: The subject of the questionnaire response.  This could be a patient, organization, practitioner, device, etc.  This is who/what the answers apply to, but is not necessarily the source of information.;
+  /// [subject] The subject of the questionnaire response.  This could be a patient, organization, practitioner, device, etc.  This is who/what the answers apply to, but is not necessarily the source of information.;
   ///
-  /// [encounter]: The Encounter during which this questionnaire response was created or to which the creation of this record is tightly associated.;
+  /// [encounter] The Encounter during which this questionnaire response was created or to which the creation of this record is tightly associated.;
   ///
-  /// [authored]: The date and/or time that this questionnaire response was last modified by the user - e.g. changing answers or revising status.;
+  /// [authored] The date and/or time that this questionnaire response was last modified by the user - e.g. changing answers or revising status.;
   ///
   /// [authoredElement] (_authored): Extensions for authored;
   ///
-  /// [author]: The individual or device that received the answers to the questions in the QuestionnaireResponse and recorded them in the system.;
+  /// [author] The individual or device that received the answers to the questions in the QuestionnaireResponse and recorded them in the system.;
   ///
-  /// [source]: The individual or device that answered the questions about the subject.;
+  /// [source] The individual or device that answered the questions about the subject.;
   ///
-  /// [item]: A group or question item from the original questionnaire for which answers are provided.;
+  /// [item] A group or question item from the original questionnaire for which answers are provided.;
   factory QuestionnaireResponse({
     @Default(R5ResourceType.QuestionnaireResponse) R5ResourceType resourceType,
     Id? id,
@@ -2076,32 +2076,32 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
 
-  /// [QuestionnaireResponseItem]: A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
+  /// [QuestionnaireResponseItem] A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [linkId]: The item from the Questionnaire that corresponds to this item in the QuestionnaireResponse resource.;
+  /// [linkId] The item from the Questionnaire that corresponds to this item in the QuestionnaireResponse resource.;
   ///
   /// [linkIdElement] (_linkId): Extensions for linkId;
   ///
-  /// [definition]: A reference to an [ElementDefinition](elementdefinition.html) that provides the details for the item.;
+  /// [definition] A reference to an [ElementDefinition](elementdefinition.html) that provides the details for the item.;
   ///
   /// [definitionElement] (_definition): Extensions for definition;
   ///
-  /// [text]: Text that is displayed above the contents of the group or as the text of the question being answered.;
+  /// [text] Text that is displayed above the contents of the group or as the text of the question being answered.;
   ///
   /// [textElement] (_text): Extensions for text;
   ///
-  /// [answer]: The respondent's answer(s) to the question.;
+  /// [answer] The respondent's answer(s) to the question.;
   ///
-  /// [item]: Sub-questions, sub-groups or display items nested beneath a group.;
+  /// [item] Sub-questions, sub-groups or display items nested beneath a group.;
   factory QuestionnaireResponseItem({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2151,58 +2151,58 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
 
-  /// [QuestionnaireResponseAnswer]: A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
+  /// [QuestionnaireResponseAnswer] A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [valueBoolean]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueBoolean] The answer (or one of the answers) provided by the respondent to the question.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
-  /// [valueDecimal]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueDecimal] The answer (or one of the answers) provided by the respondent to the question.;
   ///
   /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal;
   ///
-  /// [valueInteger]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueInteger] The answer (or one of the answers) provided by the respondent to the question.;
   ///
   /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
   ///
-  /// [valueDate]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueDate] The answer (or one of the answers) provided by the respondent to the question.;
   ///
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   ///
-  /// [valueDateTime]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueDateTime] The answer (or one of the answers) provided by the respondent to the question.;
   ///
   /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
   ///
-  /// [valueTime]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueTime] The answer (or one of the answers) provided by the respondent to the question.;
   ///
   /// [valueTimeElement] (_valueTime): Extensions for valueTime;
   ///
-  /// [valueString]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueString] The answer (or one of the answers) provided by the respondent to the question.;
   ///
   /// [valueStringElement] (_valueString): Extensions for valueString;
   ///
-  /// [valueUri]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueUri] The answer (or one of the answers) provided by the respondent to the question.;
   ///
   /// [valueUriElement] (_valueUri): Extensions for valueUri;
   ///
-  /// [valueAttachment]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueAttachment] The answer (or one of the answers) provided by the respondent to the question.;
   ///
-  /// [valueCoding]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueCoding] The answer (or one of the answers) provided by the respondent to the question.;
   ///
-  /// [valueQuantity]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueQuantity] The answer (or one of the answers) provided by the respondent to the question.;
   ///
-  /// [valueReference]: The answer (or one of the answers) provided by the respondent to the question.;
+  /// [valueReference] The answer (or one of the answers) provided by the respondent to the question.;
   ///
-  /// [item]: Nested groups and/or questions found within this particular answer.;
+  /// [item] Nested groups and/or questions found within this particular answer.;
   factory QuestionnaireResponseAnswer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2265,64 +2265,64 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 class Specimen with Resource, _$Specimen {
   Specimen._();
 
-  /// [Specimen]: A sample to be used for analysis.
+  /// [Specimen] A sample to be used for analysis.
 
   ///
-  /// [resourceType]: This is a Specimen resource;
+  /// [resourceType] This is a Specimen resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Id for specimen.;
+  /// [identifier] Id for specimen.;
   ///
-  /// [accessionIdentifier]: The identifier assigned by the lab when accessioning specimen(s). This is not necessarily the same as the specimen identifier, depending on local lab procedures.;
+  /// [accessionIdentifier] The identifier assigned by the lab when accessioning specimen(s). This is not necessarily the same as the specimen identifier, depending on local lab procedures.;
   ///
-  /// [status]: The availability of the specimen.;
+  /// [status] The availability of the specimen.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [type]: The kind of material that forms the specimen.;
+  /// [type] The kind of material that forms the specimen.;
   ///
-  /// [subject]: Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance, a biologically-derived product, or a device.;
+  /// [subject] Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance, a biologically-derived product, or a device.;
   ///
-  /// [receivedTime]: Time when specimen is received by the testing laboratory for processing or testing.;
+  /// [receivedTime] Time when specimen is received by the testing laboratory for processing or testing.;
   ///
   /// [receivedTimeElement] (_receivedTime): Extensions for receivedTime;
   ///
-  /// [parent]: Reference to the parent (source) specimen which is used when the specimen was either derived from or a component of another specimen.;
+  /// [parent] Reference to the parent (source) specimen which is used when the specimen was either derived from or a component of another specimen.;
   ///
-  /// [request]: Details concerning a service request that required a specimen to be collected.;
+  /// [request] Details concerning a service request that required a specimen to be collected.;
   ///
-  /// [feature]: A physical feature or landmark on a specimen, highlighted for context by the collector of the specimen (e.g. surgeon), that identifies the type of feature as well as its meaning (e.g. the red ink indicating the resection margin of the right lobe of the excised prostate tissue or wire loop at radiologically suspected tumor location).;
+  /// [feature] A physical feature or landmark on a specimen, highlighted for context by the collector of the specimen (e.g. surgeon), that identifies the type of feature as well as its meaning (e.g. the red ink indicating the resection margin of the right lobe of the excised prostate tissue or wire loop at radiologically suspected tumor location).;
   ///
-  /// [collection]: Details concerning the specimen collection.;
+  /// [collection] Details concerning the specimen collection.;
   ///
-  /// [processing]: Details concerning processing and processing steps for the specimen.;
+  /// [processing] Details concerning processing and processing steps for the specimen.;
   ///
-  /// [container]: The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here.;
+  /// [container] The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here.;
   ///
-  /// [condition]: A mode or state of being that describes the nature of the specimen.;
+  /// [condition] A mode or state of being that describes the nature of the specimen.;
   ///
-  /// [note]: To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen).;
+  /// [note] To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen).;
   factory Specimen({
     @Default(R5ResourceType.Specimen) R5ResourceType resourceType,
     Id? id,
@@ -2385,18 +2385,18 @@ class Specimen with Resource, _$Specimen {
 class SpecimenFeature with _$SpecimenFeature {
   SpecimenFeature._();
 
-  /// [SpecimenFeature]: A sample to be used for analysis.
+  /// [SpecimenFeature] A sample to be used for analysis.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [type]: The landmark or feature being highlighted.;
+  /// [type] The landmark or feature being highlighted.;
   ///
-  /// [description]: Description of the feature of the specimen.;
+  /// [description] Description of the feature of the specimen.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   factory SpecimenFeature({
@@ -2443,40 +2443,40 @@ class SpecimenFeature with _$SpecimenFeature {
 class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
 
-  /// [SpecimenCollection]: A sample to be used for analysis.
+  /// [SpecimenCollection] A sample to be used for analysis.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [collector]: Person who collected the specimen.;
+  /// [collector] Person who collected the specimen.;
   ///
-  /// [collectedDateTime]: Time when specimen was collected from subject - the physiologically relevant time.;
+  /// [collectedDateTime] Time when specimen was collected from subject - the physiologically relevant time.;
   ///
   /// [collectedDateTimeElement] (_collectedDateTime): Extensions for collectedDateTime;
   ///
-  /// [collectedPeriod]: Time when specimen was collected from subject - the physiologically relevant time.;
+  /// [collectedPeriod] Time when specimen was collected from subject - the physiologically relevant time.;
   ///
-  /// [duration]: The span of time over which the collection of a specimen occurred.;
+  /// [duration] The span of time over which the collection of a specimen occurred.;
   ///
-  /// [quantity]: The quantity of specimen collected; for instance the volume of a blood sample, or the physical measurement of an anatomic pathology sample.;
+  /// [quantity] The quantity of specimen collected; for instance the volume of a blood sample, or the physical measurement of an anatomic pathology sample.;
   ///
-  /// [method]: A coded value specifying the technique that is used to perform the procedure.;
+  /// [method] A coded value specifying the technique that is used to perform the procedure.;
   ///
-  /// [device]: A coded value specifying the technique that is used to perform the procedure.;
+  /// [device] A coded value specifying the technique that is used to perform the procedure.;
   ///
-  /// [procedure]: The procedure event during which the specimen was collected (e.g. the surgery leading to the collection of a pathology sample).;
+  /// [procedure] The procedure event during which the specimen was collected (e.g. the surgery leading to the collection of a pathology sample).;
   ///
-  /// [bodySite]: Anatomical location from which the specimen was collected (if subject is a patient). This is the target site.  This element is not used for environmental specimens.;
+  /// [bodySite] Anatomical location from which the specimen was collected (if subject is a patient). This is the target site.  This element is not used for environmental specimens.;
   ///
-  /// [fastingStatusCodeableConcept]: Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.;
+  /// [fastingStatusCodeableConcept] Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.;
   ///
-  /// [fastingStatusDuration]: Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.;
+  /// [fastingStatusDuration] Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.;
   factory SpecimenCollection({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2530,30 +2530,30 @@ class SpecimenCollection with _$SpecimenCollection {
 class SpecimenProcessing with _$SpecimenProcessing {
   SpecimenProcessing._();
 
-  /// [SpecimenProcessing]: A sample to be used for analysis.
+  /// [SpecimenProcessing] A sample to be used for analysis.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [description]: Textual description of procedure.;
+  /// [description] Textual description of procedure.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [method]: A coded value specifying the method used to process the specimen.;
+  /// [method] A coded value specifying the method used to process the specimen.;
   ///
-  /// [additive]: Material used in the processing step.;
+  /// [additive] Material used in the processing step.;
   ///
-  /// [timeDateTime]: A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.;
+  /// [timeDateTime] A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.;
   ///
   /// [timeDateTimeElement] (_timeDateTime): Extensions for timeDateTime;
   ///
-  /// [timePeriod]: A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.;
+  /// [timePeriod] A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.;
   factory SpecimenProcessing({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2602,22 +2602,22 @@ class SpecimenProcessing with _$SpecimenProcessing {
 class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
 
-  /// [SpecimenContainer]: A sample to be used for analysis.
+  /// [SpecimenContainer] A sample to be used for analysis.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [device]: The device resource for the the container holding the specimen. If the container is in a holder then the referenced device will point to a parent device.;
+  /// [device] The device resource for the the container holding the specimen. If the container is in a holder then the referenced device will point to a parent device.;
   ///
-  /// [location]: The location of the container holding the specimen.;
+  /// [location] The location of the container holding the specimen.;
   ///
-  /// [specimenQuantity]: The quantity of specimen in the container; may be volume, dimensions, or other appropriate measurements, depending on the specimen type.;
+  /// [specimenQuantity] The quantity of specimen in the container; may be volume, dimensions, or other appropriate measurements, depending on the specimen type.;
   factory SpecimenContainer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

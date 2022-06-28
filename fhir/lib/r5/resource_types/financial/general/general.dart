@@ -16,62 +16,62 @@ part 'general.g.dart';
 class Account with Resource, _$Account {
   Account._();
 
-  /// [Account]: A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
+  /// [Account] A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
 
   ///
-  /// [resourceType]: This is a Account resource;
+  /// [resourceType] This is a Account resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Unique identifier used to reference the account.  Might or might not be intended for human use (e.g. credit card number).;
+  /// [identifier] Unique identifier used to reference the account.  Might or might not be intended for human use (e.g. credit card number).;
   ///
-  /// [status]: Indicates whether the account is presently used/usable or not.;
+  /// [status] Indicates whether the account is presently used/usable or not.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [billingStatus]: The BillingStatus tracks the lifecycle of the account through the billing process. It indicates how transactions are treated when they are allocated to the account.;
+  /// [billingStatus] The BillingStatus tracks the lifecycle of the account through the billing process. It indicates how transactions are treated when they are allocated to the account.;
   ///
-  /// [type]: Categorizes the account for reporting and searching purposes.;
+  /// [type] Categorizes the account for reporting and searching purposes.;
   ///
-  /// [name]: Name used for the account when displaying it to humans in reports, etc.;
+  /// [name] Name used for the account when displaying it to humans in reports, etc.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [subject]: Identifies the entity which incurs the expenses. While the immediate recipients of services or goods might be entities related to the subject, the expenses were ultimately incurred by the subject of the Account.;
+  /// [subject] Identifies the entity which incurs the expenses. While the immediate recipients of services or goods might be entities related to the subject, the expenses were ultimately incurred by the subject of the Account.;
   ///
-  /// [servicePeriod]: The date range of services associated with this account.;
+  /// [servicePeriod] The date range of services associated with this account.;
   ///
-  /// [coverage]: The party(s) that are responsible for covering the payment of this account, and what order should they be applied to the account.;
+  /// [coverage] The party(s) that are responsible for covering the payment of this account, and what order should they be applied to the account.;
   ///
-  /// [owner]: Indicates the service area, hospital, department, etc. with responsibility for managing the Account.;
+  /// [owner] Indicates the service area, hospital, department, etc. with responsibility for managing the Account.;
   ///
-  /// [description]: Provides additional information about what the account tracks and how it is used.;
+  /// [description] Provides additional information about what the account tracks and how it is used.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [guarantor]: The parties responsible for balancing the account if other payment options fall short.;
+  /// [guarantor] The parties responsible for balancing the account if other payment options fall short.;
   ///
-  /// [partOf]: Reference to a parent Account.;
+  /// [partOf] Reference to a parent Account.;
   factory Account({
     @Default(R5ResourceType.Account) R5ResourceType resourceType,
     Id? id,
@@ -133,22 +133,22 @@ class Account with Resource, _$Account {
 class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
 
-  /// [AccountCoverage]: A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
+  /// [AccountCoverage] A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [coverage]: The party(s) that contribute to payment (or part of) of the charges applied to this account (including self-pay).
+  /// [coverage] The party(s) that contribute to payment (or part of) of the charges applied to this account (including self-pay).
 
   /// A coverage may only be responsible for specific types of charges, and the sequence of the coverages in the account could be important when processing billing.;
   ///
-  /// [priority]: The priority of the coverage in the context of this account.;
+  /// [priority] The priority of the coverage in the context of this account.;
   ///
   /// [priorityElement] (_priority): Extensions for priority;
   factory AccountCoverage({
@@ -195,24 +195,24 @@ class AccountCoverage with _$AccountCoverage {
 class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
 
-  /// [AccountGuarantor]: A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
+  /// [AccountGuarantor] A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [party]: The entity who is responsible.;
+  /// [party] The entity who is responsible.;
   ///
-  /// [onHold]: A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.;
+  /// [onHold] A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.;
   ///
   /// [onHoldElement] (_onHold): Extensions for onHold;
   ///
-  /// [period]: The timeframe during which the guarantor accepts responsibility for the account.;
+  /// [period] The timeframe during which the guarantor accepts responsibility for the account.;
   factory AccountGuarantor({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -258,100 +258,100 @@ class AccountGuarantor with _$AccountGuarantor {
 class ChargeItem with Resource, _$ChargeItem {
   ChargeItem._();
 
-  /// [ChargeItem]: The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.
+  /// [ChargeItem] The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.
 
   ///
-  /// [resourceType]: This is a ChargeItem resource;
+  /// [resourceType] This is a ChargeItem resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Identifiers assigned to this event performer or other systems.;
+  /// [identifier] Identifiers assigned to this event performer or other systems.;
   ///
-  /// [definitionUri]: References the (external) source of pricing information, rules of application for the code this ChargeItem uses.;
+  /// [definitionUri] References the (external) source of pricing information, rules of application for the code this ChargeItem uses.;
   ///
   /// [definitionUriElement] (_definitionUri): Extensions for definitionUri;
   ///
-  /// [definitionCanonical]: References the source of pricing information, rules of application for the code this ChargeItem uses.;
+  /// [definitionCanonical] References the source of pricing information, rules of application for the code this ChargeItem uses.;
   ///
-  /// [status]: The current state of the ChargeItem.;
+  /// [status] The current state of the ChargeItem.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [partOf]: ChargeItems can be grouped to larger ChargeItems covering the whole set.;
+  /// [partOf] ChargeItems can be grouped to larger ChargeItems covering the whole set.;
   ///
-  /// [code]: A code that identifies the charge, like a billing code.;
+  /// [code] A code that identifies the charge, like a billing code.;
   ///
-  /// [subject]: The individual or set of individuals the action is being or was performed on.;
+  /// [subject] The individual or set of individuals the action is being or was performed on.;
   ///
-  /// [context]: The encounter or episode of care that establishes the context for this event.;
+  /// [context] The encounter or episode of care that establishes the context for this event.;
   ///
-  /// [occurrenceDateTime]: Date/time(s) or duration when the charged service was applied.;
+  /// [occurrenceDateTime] Date/time(s) or duration when the charged service was applied.;
   ///
   /// [occurrenceDateTimeElement] (_occurrenceDateTime): Extensions for occurrenceDateTime;
   ///
-  /// [occurrencePeriod]: Date/time(s) or duration when the charged service was applied.;
+  /// [occurrencePeriod] Date/time(s) or duration when the charged service was applied.;
   ///
-  /// [occurrenceTiming]: Date/time(s) or duration when the charged service was applied.;
+  /// [occurrenceTiming] Date/time(s) or duration when the charged service was applied.;
   ///
-  /// [performer]: Indicates who or what performed or participated in the charged service.;
+  /// [performer] Indicates who or what performed or participated in the charged service.;
   ///
-  /// [performingOrganization]: The organization requesting the service.;
+  /// [performingOrganization] The organization requesting the service.;
   ///
-  /// [requestingOrganization]: The organization performing the service.;
+  /// [requestingOrganization] The organization performing the service.;
   ///
-  /// [costCenter]: The financial cost center permits the tracking of charge attribution.;
+  /// [costCenter] The financial cost center permits the tracking of charge attribution.;
   ///
-  /// [quantity]: Quantity of which the charge item has been serviced.;
+  /// [quantity] Quantity of which the charge item has been serviced.;
   ///
-  /// [bodysite]: The anatomical location where the related service has been applied.;
+  /// [bodysite] The anatomical location where the related service has been applied.;
   ///
-  /// [factorOverride]: Factor overriding the factor determined by the rules associated with the code.;
+  /// [factorOverride] Factor overriding the factor determined by the rules associated with the code.;
   ///
   /// [factorOverrideElement] (_factorOverride): Extensions for factorOverride;
   ///
-  /// [priceOverride]: Total price of the charge overriding the list price associated with the code.;
+  /// [priceOverride] Total price of the charge overriding the list price associated with the code.;
   ///
-  /// [overrideReason]: If the list price or the rule-based factor associated with the code is overridden, this attribute can capture a text to indicate the  reason for this action.;
+  /// [overrideReason] If the list price or the rule-based factor associated with the code is overridden, this attribute can capture a text to indicate the  reason for this action.;
   ///
   /// [overrideReasonElement] (_overrideReason): Extensions for overrideReason;
   ///
-  /// [enterer]: The device, practitioner, etc. who entered the charge item.;
+  /// [enterer] The device, practitioner, etc. who entered the charge item.;
   ///
-  /// [enteredDate]: Date the charge item was entered.;
+  /// [enteredDate] Date the charge item was entered.;
   ///
   /// [enteredDateElement] (_enteredDate): Extensions for enteredDate;
   ///
-  /// [reason]: Describes why the event occurred in coded or textual form.;
+  /// [reason] Describes why the event occurred in coded or textual form.;
   ///
-  /// [service]: Indicated the rendered service that caused this charge.;
+  /// [service] Indicated the rendered service that caused this charge.;
   ///
-  /// [product]: Identifies the device, food, drug or other product being charged either by type code or reference to an instance.;
+  /// [product] Identifies the device, food, drug or other product being charged either by type code or reference to an instance.;
   ///
-  /// [account]: Account into which this ChargeItems belongs.;
+  /// [account] Account into which this ChargeItems belongs.;
   ///
-  /// [note]: Comments made about the event by the performer, subject or other participants.;
+  /// [note] Comments made about the event by the performer, subject or other participants.;
   ///
-  /// [supportingInformation]: Further information supporting this charge.;
+  /// [supportingInformation] Further information supporting this charge.;
   factory ChargeItem({
     @Default(R5ResourceType.ChargeItem) R5ResourceType resourceType,
     Id? id,
@@ -432,20 +432,20 @@ class ChargeItem with Resource, _$ChargeItem {
 class ChargeItemPerformer with _$ChargeItemPerformer {
   ChargeItemPerformer._();
 
-  /// [ChargeItemPerformer]: The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.
+  /// [ChargeItemPerformer] The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [function]: Describes the type of performance or participation(e.g. primary surgeon, anesthesiologiest, etc.).;
+  /// [function] Describes the type of performance or participation(e.g. primary surgeon, anesthesiologiest, etc.).;
   ///
-  /// [actor]: The device, practitioner, etc. who performed or participated in the service.;
+  /// [actor] The device, practitioner, etc. who performed or participated in the service.;
   factory ChargeItemPerformer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -489,122 +489,122 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
 class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ChargeItemDefinition._();
 
-  /// [ChargeItemDefinition]: The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
+  /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
 
   ///
-  /// [resourceType]: This is a ChargeItemDefinition resource;
+  /// [resourceType] This is a ChargeItemDefinition resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: An absolute URI that is used to identify this charge item definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this charge item definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the charge item definition is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this charge item definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this charge item definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the charge item definition is stored on different servers.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: A formal identifier that is used to identify this charge item definition when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this charge item definition when it is represented in other formats, or referenced in a specification, model, design or an instance.;
   ///
-  /// [version]: The identifier that is used to identify this version of the charge item definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the charge item definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active assets.;
+  /// [version] The identifier that is used to identify this version of the charge item definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the charge item definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active assets.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [name]: A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for the charge item definition.;
+  /// [title] A short, descriptive, user-friendly title for the charge item definition.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [status]: The current state of the ChargeItemDefinition.;
+  /// [status] The current state of the ChargeItemDefinition.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [experimental]: A Boolean value to indicate that this charge item definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this charge item definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
   ///
   /// [experimentalElement] (_experimental): Extensions for experimental;
   ///
-  /// [date]: The date  (and optionally time) when the charge item definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the charge item definition changes.;
+  /// [date] The date  (and optionally time) when the charge item definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the charge item definition changes.;
   ///
   /// [dateElement] (_date): Extensions for date;
   ///
-  /// [publisher]: The name of the organization or individual that published the charge item definition.;
+  /// [publisher] The name of the organization or individual that published the charge item definition.;
   ///
   /// [publisherElement] (_publisher): Extensions for publisher;
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
   ///
-  /// [description]: A free text natural language description of the charge item definition from a consumer's perspective.;
+  /// [description] A free text natural language description of the charge item definition from a consumer's perspective.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate charge item definition instances.;
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate charge item definition instances.;
   ///
-  /// [jurisdiction]: A legal or geographic region in which the charge item definition is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the charge item definition is intended to be used.;
   ///
-  /// [purpose]: Explanation of why this {{title}} is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.;
   ///
   /// [purposeElement] (_purpose): Extensions for purpose;
   ///
-  /// [copyright]: A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition.;
+  /// [copyright] A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.;
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.;
   ///
   /// [approvalDateElement] (_approvalDate): Extensions for approvalDate;
   ///
-  /// [lastReviewDate]: The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.;
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.;
   ///
   /// [lastReviewDateElement] (_lastReviewDate): Extensions for lastReviewDate;
   ///
-  /// [effectivePeriod]: The period during which the charge item definition content was or is planned to be in active use.;
+  /// [effectivePeriod] The period during which the charge item definition content was or is planned to be in active use.;
   ///
-  /// [topic]: Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.;
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.;
   ///
-  /// [author]: An individiual or organization primarily involved in the creation and maintenance of the {{title}}.;
+  /// [author] An individiual or organization primarily involved in the creation and maintenance of the {{title}}.;
   ///
-  /// [editor]: An individual or organization primarily responsible for internal coherence of the {{title}}.;
+  /// [editor] An individual or organization primarily responsible for internal coherence of the {{title}}.;
   ///
-  /// [reviewer]: An individual or organization primarily responsible for review of some aspect of the {{title}}.;
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the {{title}}.;
   ///
-  /// [endorser]: An individual or organization responsible for officially endorsing the {{title}} for use in some setting.;
+  /// [endorser] An individual or organization responsible for officially endorsing the {{title}} for use in some setting.;
   ///
-  /// [relatedArtifact]: Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.;
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.;
   ///
-  /// [derivedFromUri]: The URL pointing to an externally-defined charge item definition that is adhered to in whole or in part by this definition.;
+  /// [derivedFromUri] The URL pointing to an externally-defined charge item definition that is adhered to in whole or in part by this definition.;
   ///
   /// [derivedFromUriElement] (_derivedFromUri): Extensions for derivedFromUri;
   ///
-  /// [partOf]: A larger definition of which this particular definition is a component or step.;
+  /// [partOf] A larger definition of which this particular definition is a component or step.;
   ///
-  /// [replaces]: As new versions of a protocol or guideline are defined, allows identification of what versions are replaced by a new instance.;
+  /// [replaces] As new versions of a protocol or guideline are defined, allows identification of what versions are replaced by a new instance.;
   ///
-  /// [code]: The defined billing details in this resource pertain to the given billing code.;
+  /// [code] The defined billing details in this resource pertain to the given billing code.;
   ///
-  /// [instance]: The defined billing details in this resource pertain to the given product instance(s).;
+  /// [instance] The defined billing details in this resource pertain to the given product instance(s).;
   ///
-  /// [applicability]: Expressions that describe applicability criteria for the billing code.;
+  /// [applicability] Expressions that describe applicability criteria for the billing code.;
   ///
-  /// [propertyGroup]: Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.;
+  /// [propertyGroup] Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.;
   factory ChargeItemDefinition({
     @Default(R5ResourceType.ChargeItemDefinition) R5ResourceType resourceType,
     Id? id,
@@ -697,26 +697,26 @@ class ChargeItemDefinitionApplicability
     with _$ChargeItemDefinitionApplicability {
   ChargeItemDefinitionApplicability._();
 
-  /// [ChargeItemDefinitionApplicability]: The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
+  /// [ChargeItemDefinitionApplicability] The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [description]: A brief, natural language description of the condition that effectively communicates the intended semantics.;
+  /// [description] A brief, natural language description of the condition that effectively communicates the intended semantics.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [language]: The media type of the language for the expression, e.g. "text/cql" for Clinical Query Language expressions or "text/fhirpath" for FHIRPath expressions.;
+  /// [language] The media type of the language for the expression, e.g. "text/cql" for Clinical Query Language expressions or "text/fhirpath" for FHIRPath expressions.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [expression]: An expression that returns true or false, indicating whether the condition is satisfied. When using FHIRPath expressions, the %context environment variable must be replaced at runtime with the ChargeItem resource to which this definition is applied.;
+  /// [expression] An expression that returns true or false, indicating whether the condition is satisfied. When using FHIRPath expressions, the %context environment variable must be replaced at runtime with the ChargeItem resource to which this definition is applied.;
   ///
   /// [expressionElement] (_expression): Extensions for expression;
   factory ChargeItemDefinitionApplicability({
@@ -769,20 +769,20 @@ class ChargeItemDefinitionPropertyGroup
     with _$ChargeItemDefinitionPropertyGroup {
   ChargeItemDefinitionPropertyGroup._();
 
-  /// [ChargeItemDefinitionPropertyGroup]: The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
+  /// [ChargeItemDefinitionPropertyGroup] The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [applicability]: Expressions that describe applicability criteria for the priceComponent.;
+  /// [applicability] Expressions that describe applicability criteria for the priceComponent.;
   ///
-  /// [priceComponent]: The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.;
+  /// [priceComponent] The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.;
   factory ChargeItemDefinitionPropertyGroup({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -829,28 +829,28 @@ class ChargeItemDefinitionPriceComponent
     with _$ChargeItemDefinitionPriceComponent {
   ChargeItemDefinitionPriceComponent._();
 
-  /// [ChargeItemDefinitionPriceComponent]: The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
+  /// [ChargeItemDefinitionPriceComponent] The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [type]: This code identifies the type of the component.;
+  /// [type] This code identifies the type of the component.;
   ///
   /// [typeElement] (_type): Extensions for type;
   ///
-  /// [code]: A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.;
+  /// [code] A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.;
   ///
-  /// [factor]: The factor that has been applied on the base price for calculating this component.;
+  /// [factor] The factor that has been applied on the base price for calculating this component.;
   ///
   /// [factorElement] (_factor): Extensions for factor;
   ///
-  /// [amount]: The amount calculated for this component.;
+  /// [amount] The amount calculated for this component.;
   factory ChargeItemDefinitionPriceComponent({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -900,120 +900,120 @@ class ChargeItemDefinitionPriceComponent
 class Contract with Resource, _$Contract {
   Contract._();
 
-  /// [Contract]: Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+  /// [Contract] Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
 
   ///
-  /// [resourceType]: This is a Contract resource;
+  /// [resourceType] This is a Contract resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Unique identifier for this Contract or a derivative that references a Source Contract.;
+  /// [identifier] Unique identifier for this Contract or a derivative that references a Source Contract.;
   ///
-  /// [url]: Canonical identifier for this contract, represented as a URI (globally unique).;
+  /// [url] Canonical identifier for this contract, represented as a URI (globally unique).;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [version]: An edition identifier used for business purposes to label business significant variants.;
+  /// [version] An edition identifier used for business purposes to label business significant variants.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [status]: The status of the resource instance.;
+  /// [status] The status of the resource instance.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [legalState]: Legal states of the formation of a legal instrument, which is a formally executed written document that can be formally attributed to its author, records and formally expresses a legally enforceable act, process, or contractual duty, obligation, or right, and therefore evidences that act, process, or agreement.;
+  /// [legalState] Legal states of the formation of a legal instrument, which is a formally executed written document that can be formally attributed to its author, records and formally expresses a legally enforceable act, process, or contractual duty, obligation, or right, and therefore evidences that act, process, or agreement.;
   ///
-  /// [instantiatesCanonical]: The URL pointing to a FHIR-defined Contract Definition that is adhered to in whole or part by this Contract.;
+  /// [instantiatesCanonical] The URL pointing to a FHIR-defined Contract Definition that is adhered to in whole or part by this Contract.;
   ///
-  /// [instantiatesUri]: The URL pointing to an externally maintained definition that is adhered to in whole or in part by this Contract.;
+  /// [instantiatesUri] The URL pointing to an externally maintained definition that is adhered to in whole or in part by this Contract.;
   ///
   /// [instantiatesUriElement] (_instantiatesUri): Extensions for instantiatesUri;
   ///
-  /// [contentDerivative]: The minimal content derived from the basal information source at a specific stage in its lifecycle.;
+  /// [contentDerivative] The minimal content derived from the basal information source at a specific stage in its lifecycle.;
   ///
-  /// [issued]: When this  Contract was issued.;
+  /// [issued] When this  Contract was issued.;
   ///
   /// [issuedElement] (_issued): Extensions for issued;
   ///
-  /// [applies]: Relevant time or time-period when this Contract is applicable.;
+  /// [applies] Relevant time or time-period when this Contract is applicable.;
   ///
-  /// [expirationType]: Event resulting in discontinuation or termination of this Contract instance by one or more parties to the contract.;
+  /// [expirationType] Event resulting in discontinuation or termination of this Contract instance by one or more parties to the contract.;
   ///
-  /// [subject]: The target entity impacted by or of interest to parties to the agreement.;
+  /// [subject] The target entity impacted by or of interest to parties to the agreement.;
   ///
-  /// [authority]: A formally or informally recognized grouping of people, principals, organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of contracts and policies.;
+  /// [authority] A formally or informally recognized grouping of people, principals, organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of contracts and policies.;
   ///
-  /// [domain]: Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources.;
+  /// [domain] Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources.;
   ///
-  /// [site]: Sites in which the contract is complied with,  exercised, or in force.;
+  /// [site] Sites in which the contract is complied with,  exercised, or in force.;
   ///
-  /// [name]: A natural language name identifying this Contract definition, derivative, or instance in any legal state. Provides additional information about its content. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying this Contract definition, derivative, or instance in any legal state. Provides additional information about its content. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.;
+  /// [title] A short, descriptive, user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [subtitle]: An explanatory or alternate user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.;
+  /// [subtitle] An explanatory or alternate user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.;
   ///
   /// [subtitleElement] (_subtitle): Extensions for subtitle;
   ///
-  /// [alias]: Alternative representation of the title for this Contract definition, derivative, or instance in any legal state., e.g., a domain specific contract number related to legislation.;
+  /// [alias] Alternative representation of the title for this Contract definition, derivative, or instance in any legal state., e.g., a domain specific contract number related to legislation.;
   ///
   /// [aliasElement] (_alias): Extensions for alias;
   ///
-  /// [author]: The individual or organization that authored the Contract definition, derivative, or instance in any legal state.;
+  /// [author] The individual or organization that authored the Contract definition, derivative, or instance in any legal state.;
   ///
-  /// [scope]: A selector of legal concerns for this Contract definition, derivative, or instance in any legal state.;
+  /// [scope] A selector of legal concerns for this Contract definition, derivative, or instance in any legal state.;
   ///
-  /// [topicCodeableConcept]: Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.;
+  /// [topicCodeableConcept] Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.;
   ///
-  /// [topicReference]: Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.;
+  /// [topicReference] Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.;
   ///
-  /// [type]: A high-level category for the legal instrument, whether constructed as a Contract definition, derivative, or instance in any legal state.  Provides additional information about its content within the context of the Contract's scope to distinguish the kinds of systems that would be interested in the contract.;
+  /// [type] A high-level category for the legal instrument, whether constructed as a Contract definition, derivative, or instance in any legal state.  Provides additional information about its content within the context of the Contract's scope to distinguish the kinds of systems that would be interested in the contract.;
   ///
-  /// [subType]: Sub-category for the Contract that distinguishes the kinds of systems that would be interested in the Contract within the context of the Contract's scope.;
+  /// [subType] Sub-category for the Contract that distinguishes the kinds of systems that would be interested in the Contract within the context of the Contract's scope.;
   ///
-  /// [contentDefinition]: Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.;
+  /// [contentDefinition] Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.;
   ///
-  /// [term]: One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.;
+  /// [term] One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.;
   ///
-  /// [supportingInfo]: Information that may be needed by/relevant to the performer in their execution of this term action.;
+  /// [supportingInfo] Information that may be needed by/relevant to the performer in their execution of this term action.;
   ///
-  /// [relevantHistory]: Links to Provenance records for past versions of this Contract definition, derivative, or instance, which identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the Contract.  The Provence.entity indicates the target that was changed in the update. http://build.fhir.org/provenance-definitions.html#Provenance.entity.;
+  /// [relevantHistory] Links to Provenance records for past versions of this Contract definition, derivative, or instance, which identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the Contract.  The Provence.entity indicates the target that was changed in the update. http://build.fhir.org/provenance-definitions.html#Provenance.entity.;
   ///
-  /// [signer]: Parties with legal standing in the Contract, including the principal parties, the grantor(s) and grantee(s), which are any person or organization bound by the contract, and any ancillary parties, which facilitate the execution of the contract such as a notary or witness.;
+  /// [signer] Parties with legal standing in the Contract, including the principal parties, the grantor(s) and grantee(s), which are any person or organization bound by the contract, and any ancillary parties, which facilitate the execution of the contract such as a notary or witness.;
   ///
-  /// [friendly]: The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.;
+  /// [friendly] The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.;
   ///
-  /// [legal]: List of Legal expressions or representations of this Contract.;
+  /// [legal] List of Legal expressions or representations of this Contract.;
   ///
-  /// [rule]: List of Computable Policy Rule Language Representations of this Contract.;
+  /// [rule] List of Computable Policy Rule Language Representations of this Contract.;
   ///
-  /// [legallyBindingAttachment]: Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.;
+  /// [legallyBindingAttachment] Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.;
   ///
-  /// [legallyBindingReference]: Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.;
+  /// [legallyBindingReference] Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.;
   factory Contract({
     @Default(R5ResourceType.Contract) R5ResourceType resourceType,
     Id? id,
@@ -1104,32 +1104,32 @@ class Contract with Resource, _$Contract {
 class ContractContentDefinition with _$ContractContentDefinition {
   ContractContentDefinition._();
 
-  /// [ContractContentDefinition]: Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+  /// [ContractContentDefinition] Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [type]: Precusory content structure and use, i.e., a boilerplate, template, application for a contract such as an insurance policy or benefits under a program, e.g., workers compensation.;
+  /// [type] Precusory content structure and use, i.e., a boilerplate, template, application for a contract such as an insurance policy or benefits under a program, e.g., workers compensation.;
   ///
-  /// [subType]: Detailed Precusory content type.;
+  /// [subType] Detailed Precusory content type.;
   ///
-  /// [publisher]: The  individual or organization that published the Contract precursor content.;
+  /// [publisher] The  individual or organization that published the Contract precursor content.;
   ///
-  /// [publicationDate]: The date (and optionally time) when the contract was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the contract changes.;
+  /// [publicationDate] The date (and optionally time) when the contract was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the contract changes.;
   ///
   /// [publicationDateElement] (_publicationDate): Extensions for publicationDate;
   ///
-  /// [publicationStatus]: amended | appended | cancelled | disputed | entered-in-error | executable +.;
+  /// [publicationStatus] amended | appended | cancelled | disputed | entered-in-error | executable +.;
   ///
   /// [publicationStatusElement] (_publicationStatus): Extensions for publicationStatus;
   ///
-  /// [copyright]: A copyright statement relating to Contract precursor content. Copyright statements are generally legal restrictions on the use and publishing of the Contract precursor content.;
+  /// [copyright] A copyright statement relating to Contract precursor content. Copyright statements are generally legal restrictions on the use and publishing of the Contract precursor content.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   factory ContractContentDefinition({
@@ -1182,46 +1182,46 @@ class ContractContentDefinition with _$ContractContentDefinition {
 class ContractTerm with _$ContractTerm {
   ContractTerm._();
 
-  /// [ContractTerm]: Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+  /// [ContractTerm] Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Unique identifier for this particular Contract Provision.;
+  /// [identifier] Unique identifier for this particular Contract Provision.;
   ///
-  /// [issued]: When this Contract Provision was issued.;
+  /// [issued] When this Contract Provision was issued.;
   ///
   /// [issuedElement] (_issued): Extensions for issued;
   ///
-  /// [applies]: Relevant time or time-period when this Contract Provision is applicable.;
+  /// [applies] Relevant time or time-period when this Contract Provision is applicable.;
   ///
-  /// [topicCodeableConcept]: The entity that the term applies to.;
+  /// [topicCodeableConcept] The entity that the term applies to.;
   ///
-  /// [topicReference]: The entity that the term applies to.;
+  /// [topicReference] The entity that the term applies to.;
   ///
-  /// [type]: A legal clause or condition contained within a contract that requires one or both parties to perform a particular requirement by some specified time or prevents one or both parties from performing a particular requirement by some specified time.;
+  /// [type] A legal clause or condition contained within a contract that requires one or both parties to perform a particular requirement by some specified time or prevents one or both parties from performing a particular requirement by some specified time.;
   ///
-  /// [subType]: A specialized legal clause or condition based on overarching contract type.;
+  /// [subType] A specialized legal clause or condition based on overarching contract type.;
   ///
-  /// [text]: Statement of a provision in a policy or a contract.;
+  /// [text] Statement of a provision in a policy or a contract.;
   ///
   /// [textElement] (_text): Extensions for text;
   ///
-  /// [securityLabel]: Security labels that protect the handling of information about the term and its elements, which may be specifically identified..;
+  /// [securityLabel] Security labels that protect the handling of information about the term and its elements, which may be specifically identified..;
   ///
-  /// [offer]: The matter of concern in the context of this provision of the agrement.;
+  /// [offer] The matter of concern in the context of this provision of the agrement.;
   ///
-  /// [asset]: Contract Term Asset List.;
+  /// [asset] Contract Term Asset List.;
   ///
-  /// [action]: An actor taking a role in an activity for which it can be assigned some degree of responsibility for the activity taking place.;
+  /// [action] An actor taking a role in an activity for which it can be assigned some degree of responsibility for the activity taking place.;
   ///
-  /// [group]: Nested group of Contract Provisions.;
+  /// [group] Nested group of Contract Provisions.;
   factory ContractTerm({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1278,26 +1278,26 @@ class ContractTerm with _$ContractTerm {
 class ContractSecurityLabel with _$ContractSecurityLabel {
   ContractSecurityLabel._();
 
-  /// [ContractSecurityLabel]: Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+  /// [ContractSecurityLabel] Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [number]: Number used to link this term or term element to the applicable Security Label.;
+  /// [number] Number used to link this term or term element to the applicable Security Label.;
   ///
   /// [numberElement] (_number): Extensions for number;
   ///
-  /// [classification]: Security label privacy tag that species the level of confidentiality protection required for this term and/or term elements.;
+  /// [classification] Security label privacy tag that species the level of confidentiality protection required for this term and/or term elements.;
   ///
-  /// [category]: Security label privacy tag that species the applicable privacy and security policies governing this term and/or term elements.;
+  /// [category] Security label privacy tag that species the applicable privacy and security policies governing this term and/or term elements.;
   ///
-  /// [control]: Security label privacy tag that species the manner in which term and/or term elements are to be protected.;
+  /// [control] Security label privacy tag that species the manner in which term and/or term elements are to be protected.;
   factory ContractSecurityLabel({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1344,40 +1344,40 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
 class ContractOffer with _$ContractOffer {
   ContractOffer._();
 
-  /// [ContractOffer]: Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+  /// [ContractOffer] Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: Unique identifier for this particular Contract Provision.;
+  /// [identifier] Unique identifier for this particular Contract Provision.;
   ///
-  /// [party]: Offer Recipient.;
+  /// [party] Offer Recipient.;
   ///
-  /// [topic]: The owner of an asset has the residual control rights over the asset: the right to decide all usages of the asset in any way not inconsistent with a prior contract, custom, or law (Hart, 1995, p. 30).;
+  /// [topic] The owner of an asset has the residual control rights over the asset: the right to decide all usages of the asset in any way not inconsistent with a prior contract, custom, or law (Hart, 1995, p. 30).;
   ///
-  /// [type]: Type of Contract Provision such as specific requirements, purposes for actions, obligations, prohibitions, e.g. life time maximum benefit.;
+  /// [type] Type of Contract Provision such as specific requirements, purposes for actions, obligations, prohibitions, e.g. life time maximum benefit.;
   ///
-  /// [decision]: Type of choice made by accepting party with respect to an offer made by an offeror/ grantee.;
+  /// [decision] Type of choice made by accepting party with respect to an offer made by an offeror/ grantee.;
   ///
-  /// [decisionMode]: How the decision about a Contract was conveyed.;
+  /// [decisionMode] How the decision about a Contract was conveyed.;
   ///
-  /// [answer]: Response to offer text.;
+  /// [answer] Response to offer text.;
   ///
-  /// [text]: Human readable form of this Contract Offer.;
+  /// [text] Human readable form of this Contract Offer.;
   ///
   /// [textElement] (_text): Extensions for text;
   ///
-  /// [linkId]: The id of the clause or question text of the offer in the referenced questionnaire/response.;
+  /// [linkId] The id of the clause or question text of the offer in the referenced questionnaire/response.;
   ///
   /// [linkIdElement] (_linkId): Extensions for linkId;
   ///
-  /// [securityLabelNumber]: Security labels that protects the offer.;
+  /// [securityLabelNumber] Security labels that protects the offer.;
   ///
   /// [securityLabelNumberElement] (_securityLabelNumber): Extensions for securityLabelNumber;
   factory ContractOffer({
@@ -1435,20 +1435,20 @@ class ContractOffer with _$ContractOffer {
 class ContractParty with _$ContractParty {
   ContractParty._();
 
-  /// [ContractParty]: Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+  /// [ContractParty] Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [reference]: Participant in the offer.;
+  /// [reference] Participant in the offer.;
   ///
-  /// [role]: How the party participates in the offer.;
+  /// [role] How the party participates in the offer.;
   factory ContractParty({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1492,56 +1492,56 @@ class ContractParty with _$ContractParty {
 class ContractAnswer with _$ContractAnswer {
   ContractAnswer._();
 
-  /// [ContractAnswer]: Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+  /// [ContractAnswer] Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [valueBoolean]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueBoolean] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
-  /// [valueDecimal]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueDecimal] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
   /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal;
   ///
-  /// [valueInteger]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueInteger] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
   /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
   ///
-  /// [valueDate]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueDate] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   ///
-  /// [valueDateTime]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueDateTime] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
   /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
   ///
-  /// [valueTime]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueTime] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
   /// [valueTimeElement] (_valueTime): Extensions for valueTime;
   ///
-  /// [valueString]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueString] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
   /// [valueStringElement] (_valueString): Extensions for valueString;
   ///
-  /// [valueUri]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueUri] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
   /// [valueUriElement] (_valueUri): Extensions for valueUri;
   ///
-  /// [valueAttachment]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueAttachment] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
-  /// [valueCoding]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueCoding] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
-  /// [valueQuantity]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueQuantity] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   ///
-  /// [valueReference]: Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
+  /// [valueReference] Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.;
   factory ContractAnswer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1603,40 +1603,40 @@ class ContractAnswer with _$ContractAnswer {
 class ContractAsset with _$ContractAsset {
   ContractAsset._();
 
-  /// [ContractAsset]: Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
+  /// [ContractAsset] Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [scope]: Differentiates the kind of the asset .;
+  /// [scope] Differentiates the kind of the asset .;
   ///
-  /// [type]: Target entity type about which the term may be concerned.;
+  /// [type] Target entity type about which the term may be concerned.;
   ///
-  /// [typeReference]: Associated entities.;
+  /// [typeReference] Associated entities.;
   ///
-  /// [subtype]: May be a subtype or part of an offered asset.;
+  /// [subtype] May be a subtype or part of an offered asset.;
   ///
-  /// [relationship]: Specifies the applicability of the term to an asset resource instance, and instances it refers to orinstances that refer to it, and/or are owned by the offeree.;
+  /// [relationship] Specifies the applicability of the term to an asset resource instance, and instances it refers to orinstances that refer to it, and/or are owned by the offeree.;
   ///
-  /// [context]: Circumstance of the asset.;
+  /// [context] Circumstance of the asset.;
   ///
-  /// [condition]: Description of the quality and completeness of the asset that imay be a factor in its valuation.;
+  /// [condition] Description of the quality and completeness of the asset that imay be a factor in its valuation.;
   ///
   /// [conditionElement] (_condition): Extensions for condition;
   ///
-  /// [periodType]: Type of Asset availability for use or ownership.;
+  /// [periodType] Type of Asset availability for use or ownership.;
   ///
-  /// [period]: Asset relevant contractual time period.;
+  /// [period] Asset relevant contractual time period.;
   ///
-  /// [usePeriod]: Time period of asset use.;
+  /// [usePeriod] Time period of asset use.;
   ///
-  /// [text]: Clause or question text (Prose Object) concerning the asset in a linked form, such as a QuestionnaireResponse used in the formation of the contract.;
+  /// [text] Clause or question text (Prose Object) concerning the asset in a linked form, such as a QuestionnaireResponse used in the formation of the contract.;
   ///
   /// [textElement] (_text): Extensions for text;
   ///

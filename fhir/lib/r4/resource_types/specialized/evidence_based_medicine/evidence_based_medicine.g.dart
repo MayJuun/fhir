@@ -591,7 +591,7 @@ _$_CitationCitedArtifact _$$_CitationCitedArtifactFromJson(
           ? null
           : CitationPart.fromJson(json['part'] as Map<String, dynamic>),
       relatesTo: (json['relatesTo'] as List<dynamic>?)
-          ?.map((e) => CitationRelatesTo.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => CitationRelatesTo1.fromJson(e as Map<String, dynamic>))
           .toList(),
       publicationForm: (json['publicationForm'] as List<dynamic>?)
           ?.map((e) =>
@@ -865,6 +865,66 @@ Map<String, dynamic> _$$_CitationPartToJson(_$_CitationPart instance) {
   writeNotNull('value', instance.value);
   writeNotNull('_value', instance.valueElement?.toJson());
   writeNotNull('baseCitation', instance.baseCitation?.toJson());
+  return val;
+}
+
+_$_CitationRelatesTo1 _$$_CitationRelatesTo1FromJson(
+        Map<String, dynamic> json) =>
+    _$_CitationRelatesTo1(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      relationshipType: CodeableConcept.fromJson(
+          json['relationshipType'] as Map<String, dynamic>),
+      targetClassifier: (json['targetClassifier'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      targetUri: json['targetUri'] == null
+          ? null
+          : FhirUri.fromJson(json['targetUri']),
+      targetUriElement: json['_targetUri'] == null
+          ? null
+          : Element.fromJson(json['_targetUri'] as Map<String, dynamic>),
+      targetIdentifier: json['targetIdentifier'] == null
+          ? null
+          : Identifier.fromJson(
+              json['targetIdentifier'] as Map<String, dynamic>),
+      targetReference: json['targetReference'] == null
+          ? null
+          : Reference.fromJson(json['targetReference'] as Map<String, dynamic>),
+      targetAttachment: json['targetAttachment'] == null
+          ? null
+          : Attachment.fromJson(
+              json['targetAttachment'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_CitationRelatesTo1ToJson(
+    _$_CitationRelatesTo1 instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['relationshipType'] = instance.relationshipType.toJson();
+  writeNotNull('targetClassifier',
+      instance.targetClassifier?.map((e) => e.toJson()).toList());
+  writeNotNull('targetUri', instance.targetUri?.toJson());
+  writeNotNull('_targetUri', instance.targetUriElement?.toJson());
+  writeNotNull('targetIdentifier', instance.targetIdentifier?.toJson());
+  writeNotNull('targetReference', instance.targetReference?.toJson());
+  writeNotNull('targetAttachment', instance.targetAttachment?.toJson());
   return val;
 }
 

@@ -4,6 +4,7 @@
 * Fixed some comparisons in primitive types
 * Added classes for Exceptions in primitives (mostly because I needed them for fhir_path)
 * Ensured R4 is up to version R4B (this includes anumber of breaking changes)
+* Fixed all the comments (can't put ':' after brackets if you want it to recognize a variable name)
 
 ## [0.8.0]
 

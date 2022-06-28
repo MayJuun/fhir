@@ -16,19 +16,19 @@ part 'draft_types.g.dart';
 class Population with _$Population {
   Population._();
 
-  /// [Population]: A populatioof people with some set of grouping criteria.
+  /// [Population] A populatioof people with some set of grouping criteria.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -42,15 +42,15 @@ class Population with _$Population {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [ageRange]: The age of the specific population.
+  /// [ageRange] The age of the specific population.
   ///
-  /// [ageCodeableConcept]: The age of the specific population.
+  /// [ageCodeableConcept] The age of the specific population.
   ///
-  /// [gender]: The gender of the specific population.
+  /// [gender] The gender of the specific population.
   ///
-  /// [race]: Race of the specific population.
+  /// [race] Race of the specific population.
   ///
-  /// [physiologicalCondition]: The existing physiological conditions of the
+  /// [physiologicalCondition] The existing physiological conditions of the
   ///  specific population to which this applies.
   factory Population({
     String? id,
@@ -98,20 +98,20 @@ class Population with _$Population {
 class ProductShelfLife with _$ProductShelfLife {
   ProductShelfLife._();
 
-  /// [ProductShelfLife]: The shelf-life and storage information for a medicinal
+  /// [ProductShelfLife] The shelf-life and storage information for a medicinal
   ///  product item or container can be described using this class.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -125,21 +125,21 @@ class ProductShelfLife with _$ProductShelfLife {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: Unique identifier for the packaged Medicinal Product.
+  /// [identifier] Unique identifier for the packaged Medicinal Product.
   ///
-  /// [type]: This describes the shelf life, taking into account various
+  /// [type] This describes the shelf life, taking into account various
   /// scenarios such as shelf life of the packaged Medicinal Product itself,
   /// shelf life after transformation where necessary and shelf life after the
   /// first opening of a bottle, etc. The shelf life type shall be specified
   /// using an appropriate controlled vocabulary The controlled term and the
   ///  controlled term identifier shall be specified.
   ///
-  /// [period]: The shelf life time period can be specified using a numerical
+  /// [period] The shelf life time period can be specified using a numerical
   /// value for the period of time and its unit of time measurement The unit of
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
   ///
-  /// [specialPrecautionsForStorage]: Special precautions for storage, if any,
+  /// [specialPrecautionsForStorage] Special precautions for storage, if any,
   /// can be specified using an appropriate controlled vocabulary The controlled
   ///  term and the controlled term identifier shall be specified.
   factory ProductShelfLife({
@@ -187,21 +187,21 @@ class ProductShelfLife with _$ProductShelfLife {
 class ProdCharacteristic with _$ProdCharacteristic {
   ProdCharacteristic._();
 
-  /// [ProdCharacteristic]: The marketing status describes the date when a
+  /// [ProdCharacteristic] The marketing status describes the date when a
   /// medicinal product is actually put on the market or the date as of which it
   ///  is no longer available.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -215,56 +215,56 @@ class ProdCharacteristic with _$ProdCharacteristic {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [height]: Where applicable, the height can be specified using a numerical
+  /// [height] Where applicable, the height can be specified using a numerical
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
   ///
-  /// [width]: Where applicable, the width can be specified using a numerical
+  /// [width] Where applicable, the width can be specified using a numerical
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
   ///
-  /// [depth]: Where applicable, the depth can be specified using a numerical
+  /// [depth] Where applicable, the depth can be specified using a numerical
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
   ///
-  /// [weight]: Where applicable, the weight can be specified using a numerical
+  /// [weight] Where applicable, the weight can be specified using a numerical
   /// value and its unit of measurement The unit of measurement shall be
   /// specified in accordance with ISO 11240 and the resulting terminology The
   ///  symbol and the symbol identifier shall be used.
   ///
-  /// [nominalVolume]: Where applicable, the nominal volume can be specified
+  /// [nominalVolume] Where applicable, the nominal volume can be specified
   /// using a numerical value and its unit of measurement The unit of
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
   ///
-  /// [externalDiameter]: Where applicable, the external diameter can be
+  /// [externalDiameter] Where applicable, the external diameter can be
   /// specified using a numerical value and its unit of measurement The unit of
   /// measurement shall be specified in accordance with ISO 11240 and the
   ///  resulting terminology The symbol and the symbol identifier shall be used.
   ///
-  /// [shape]: Where applicable, the shape can be specified An appropriate
+  /// [shape] Where applicable, the shape can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   ///
-  /// [shapeElement]: Extensions for shape
+  /// [shapeElement] Extensions for shape
   ///
-  /// [color]: Where applicable, the color can be specified An appropriate
+  /// [color] Where applicable, the color can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   ///
-  /// [colorElement]: Extensions for color
+  /// [colorElement] Extensions for color
   ///
-  /// [imprint]: Where applicable, the imprint can be specified as text.
+  /// [imprint] Where applicable, the imprint can be specified as text.
   ///
-  /// [imprintElement]: Extensions for imprint
+  /// [imprintElement] Extensions for imprint
   ///
-  /// [image]: Where applicable, the image can be provided The format of the
+  /// [image] Where applicable, the image can be provided The format of the
   ///  image attachment shall be specified by regional implementations.
   ///
-  /// [scoring]: Where applicable, the scoring can be specified An appropriate
+  /// [scoring] Where applicable, the scoring can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   factory ProdCharacteristic({
@@ -322,21 +322,21 @@ class ProdCharacteristic with _$ProdCharacteristic {
 class MarketingStatus with _$MarketingStatus {
   MarketingStatus._();
 
-  /// [MarketingStatus]: The marketing status describes the date when a
+  /// [MarketingStatus] The marketing status describes the date when a
   /// medicinal product is actually put on the market or the date as of which it
   ///  is no longer available.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -350,21 +350,21 @@ class MarketingStatus with _$MarketingStatus {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [country]: The country in which the marketing authorisation has been
+  /// [country] The country in which the marketing authorisation has been
   /// granted shall be specified It should be specified using the ISO 3166 ‑ 1
   ///  alpha-2 code elements.
   ///
-  /// [jurisdiction]: Where a Medicines Regulatory Agency has granted a
+  /// [jurisdiction] Where a Medicines Regulatory Agency has granted a
   /// marketing authorisation for which specific provisions within a
   /// jurisdiction apply, the jurisdiction can be specified using an appropriate
   /// controlled terminology The controlled term and the controlled term
   ///  identifier shall be specified.
   ///
-  /// [status]: This attribute provides information on the status of the
+  /// [status] This attribute provides information on the status of the
   /// marketing of the medicinal product See ISO/TS 20443 for more information
   ///  and examples.
   ///
-  /// [dateRange]: The date when the Medicinal Product is placed on the market
+  /// [dateRange] The date when the Medicinal Product is placed on the market
   /// by the Marketing Authorisation Holder (or where applicable, the
   /// manufacturer/distributor) in a country and/or jurisdiction shall be
   /// provided A complete date consisting of day, month and year shall be
@@ -372,7 +372,7 @@ class MarketingStatus with _$MarketingStatus {
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
   ///
-  /// [restoreDate]: The date when the Medicinal Product is placed on the market
+  /// [restoreDate] The date when the Medicinal Product is placed on the market
   /// by the Marketing Authorisation Holder (or where applicable, the
   /// manufacturer/distributor) in a country and/or jurisdiction shall be
   /// provided A complete date consisting of day, month and year shall be
@@ -380,7 +380,7 @@ class MarketingStatus with _$MarketingStatus {
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
   ///
-  /// [restoreDateElement]: Extensions for restoreDate
+  /// [restoreDateElement] Extensions for restoreDate
   factory MarketingStatus({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

@@ -3109,7 +3109,7 @@ mixin _$CitationCitedArtifact {
   List<CitationAbstract>? get abstract_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'part')
   CitationPart? get part_ => throw _privateConstructorUsedError;
-  List<CitationRelatesTo>? get relatesTo => throw _privateConstructorUsedError;
+  List<CitationRelatesTo1>? get relatesTo => throw _privateConstructorUsedError;
   List<CitationPublicationForm>? get publicationForm =>
       throw _privateConstructorUsedError;
   List<CitationWebLocation>? get webLocation =>
@@ -3145,7 +3145,7 @@ abstract class $CitationCitedArtifactCopyWith<$Res> {
       List<CitationTitle>? title,
       @JsonKey(name: 'abstract') List<CitationAbstract>? abstract_,
       @JsonKey(name: 'part') CitationPart? part_,
-      List<CitationRelatesTo>? relatesTo,
+      List<CitationRelatesTo1>? relatesTo,
       List<CitationPublicationForm>? publicationForm,
       List<CitationWebLocation>? webLocation,
       List<CitationClassification1>? classification,
@@ -3245,7 +3245,7 @@ class _$CitationCitedArtifactCopyWithImpl<$Res>
       relatesTo: relatesTo == freezed
           ? _value.relatesTo
           : relatesTo // ignore: cast_nullable_to_non_nullable
-              as List<CitationRelatesTo>?,
+              as List<CitationRelatesTo1>?,
       publicationForm: publicationForm == freezed
           ? _value.publicationForm
           : publicationForm // ignore: cast_nullable_to_non_nullable
@@ -3336,7 +3336,7 @@ abstract class _$$_CitationCitedArtifactCopyWith<$Res>
       List<CitationTitle>? title,
       @JsonKey(name: 'abstract') List<CitationAbstract>? abstract_,
       @JsonKey(name: 'part') CitationPart? part_,
-      List<CitationRelatesTo>? relatesTo,
+      List<CitationRelatesTo1>? relatesTo,
       List<CitationPublicationForm>? publicationForm,
       List<CitationWebLocation>? webLocation,
       List<CitationClassification1>? classification,
@@ -3443,7 +3443,7 @@ class __$$_CitationCitedArtifactCopyWithImpl<$Res>
       relatesTo: relatesTo == freezed
           ? _value._relatesTo
           : relatesTo // ignore: cast_nullable_to_non_nullable
-              as List<CitationRelatesTo>?,
+              as List<CitationRelatesTo1>?,
       publicationForm: publicationForm == freezed
           ? _value._publicationForm
           : publicationForm // ignore: cast_nullable_to_non_nullable
@@ -3485,7 +3485,7 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
       final List<CitationTitle>? title,
       @JsonKey(name: 'abstract') final List<CitationAbstract>? abstract_,
       @JsonKey(name: 'part') this.part_,
-      final List<CitationRelatesTo>? relatesTo,
+      final List<CitationRelatesTo1>? relatesTo,
       final List<CitationPublicationForm>? publicationForm,
       final List<CitationWebLocation>? webLocation,
       final List<CitationClassification1>? classification,
@@ -3595,9 +3595,9 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
   @override
   @JsonKey(name: 'part')
   final CitationPart? part_;
-  final List<CitationRelatesTo>? _relatesTo;
+  final List<CitationRelatesTo1>? _relatesTo;
   @override
-  List<CitationRelatesTo>? get relatesTo {
+  List<CitationRelatesTo1>? get relatesTo {
     final value = _relatesTo;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -3739,7 +3739,7 @@ abstract class _CitationCitedArtifact extends CitationCitedArtifact {
       final List<CitationTitle>? title,
       @JsonKey(name: 'abstract') final List<CitationAbstract>? abstract_,
       @JsonKey(name: 'part') final CitationPart? part_,
-      final List<CitationRelatesTo>? relatesTo,
+      final List<CitationRelatesTo1>? relatesTo,
       final List<CitationPublicationForm>? publicationForm,
       final List<CitationWebLocation>? webLocation,
       final List<CitationClassification1>? classification,
@@ -3783,7 +3783,7 @@ abstract class _CitationCitedArtifact extends CitationCitedArtifact {
   @JsonKey(name: 'part')
   CitationPart? get part_ => throw _privateConstructorUsedError;
   @override
-  List<CitationRelatesTo>? get relatesTo => throw _privateConstructorUsedError;
+  List<CitationRelatesTo1>? get relatesTo => throw _privateConstructorUsedError;
   @override
   List<CitationPublicationForm>? get publicationForm =>
       throw _privateConstructorUsedError;
@@ -5495,6 +5495,445 @@ abstract class _CitationPart extends CitationPart {
   @override
   @JsonKey(ignore: true)
   _$$_CitationPartCopyWith<_$_CitationPart> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationRelatesTo1 _$CitationRelatesTo1FromJson(Map<String, dynamic> json) {
+  return _CitationRelatesTo1.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationRelatesTo1 {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get relationshipType => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get targetClassifier =>
+      throw _privateConstructorUsedError;
+  FhirUri? get targetUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_targetUri')
+  Element? get targetUriElement => throw _privateConstructorUsedError;
+  Identifier? get targetIdentifier => throw _privateConstructorUsedError;
+  Reference? get targetReference => throw _privateConstructorUsedError;
+  Attachment? get targetAttachment => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationRelatesTo1CopyWith<CitationRelatesTo1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationRelatesTo1CopyWith<$Res> {
+  factory $CitationRelatesTo1CopyWith(
+          CitationRelatesTo1 value, $Res Function(CitationRelatesTo1) then) =
+      _$CitationRelatesTo1CopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept relationshipType,
+      List<CodeableConcept>? targetClassifier,
+      FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') Element? targetUriElement,
+      Identifier? targetIdentifier,
+      Reference? targetReference,
+      Attachment? targetAttachment});
+
+  $CodeableConceptCopyWith<$Res> get relationshipType;
+  $ElementCopyWith<$Res>? get targetUriElement;
+  $IdentifierCopyWith<$Res>? get targetIdentifier;
+  $ReferenceCopyWith<$Res>? get targetReference;
+  $AttachmentCopyWith<$Res>? get targetAttachment;
+}
+
+/// @nodoc
+class _$CitationRelatesTo1CopyWithImpl<$Res>
+    implements $CitationRelatesTo1CopyWith<$Res> {
+  _$CitationRelatesTo1CopyWithImpl(this._value, this._then);
+
+  final CitationRelatesTo1 _value;
+  // ignore: unused_field
+  final $Res Function(CitationRelatesTo1) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? relationshipType = freezed,
+    Object? targetClassifier = freezed,
+    Object? targetUri = freezed,
+    Object? targetUriElement = freezed,
+    Object? targetIdentifier = freezed,
+    Object? targetReference = freezed,
+    Object? targetAttachment = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      relationshipType: relationshipType == freezed
+          ? _value.relationshipType
+          : relationshipType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      targetClassifier: targetClassifier == freezed
+          ? _value.targetClassifier
+          : targetClassifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      targetUri: targetUri == freezed
+          ? _value.targetUri
+          : targetUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      targetUriElement: targetUriElement == freezed
+          ? _value.targetUriElement
+          : targetUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      targetIdentifier: targetIdentifier == freezed
+          ? _value.targetIdentifier
+          : targetIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      targetReference: targetReference == freezed
+          ? _value.targetReference
+          : targetReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      targetAttachment: targetAttachment == freezed
+          ? _value.targetAttachment
+          : targetAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get relationshipType {
+    return $CodeableConceptCopyWith<$Res>(_value.relationshipType, (value) {
+      return _then(_value.copyWith(relationshipType: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get targetUriElement {
+    if (_value.targetUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.targetUriElement!, (value) {
+      return _then(_value.copyWith(targetUriElement: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res>? get targetIdentifier {
+    if (_value.targetIdentifier == null) {
+      return null;
+    }
+
+    return $IdentifierCopyWith<$Res>(_value.targetIdentifier!, (value) {
+      return _then(_value.copyWith(targetIdentifier: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get targetReference {
+    if (_value.targetReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.targetReference!, (value) {
+      return _then(_value.copyWith(targetReference: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res>? get targetAttachment {
+    if (_value.targetAttachment == null) {
+      return null;
+    }
+
+    return $AttachmentCopyWith<$Res>(_value.targetAttachment!, (value) {
+      return _then(_value.copyWith(targetAttachment: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationRelatesTo1CopyWith<$Res>
+    implements $CitationRelatesTo1CopyWith<$Res> {
+  factory _$$_CitationRelatesTo1CopyWith(_$_CitationRelatesTo1 value,
+          $Res Function(_$_CitationRelatesTo1) then) =
+      __$$_CitationRelatesTo1CopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept relationshipType,
+      List<CodeableConcept>? targetClassifier,
+      FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') Element? targetUriElement,
+      Identifier? targetIdentifier,
+      Reference? targetReference,
+      Attachment? targetAttachment});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get relationshipType;
+  @override
+  $ElementCopyWith<$Res>? get targetUriElement;
+  @override
+  $IdentifierCopyWith<$Res>? get targetIdentifier;
+  @override
+  $ReferenceCopyWith<$Res>? get targetReference;
+  @override
+  $AttachmentCopyWith<$Res>? get targetAttachment;
+}
+
+/// @nodoc
+class __$$_CitationRelatesTo1CopyWithImpl<$Res>
+    extends _$CitationRelatesTo1CopyWithImpl<$Res>
+    implements _$$_CitationRelatesTo1CopyWith<$Res> {
+  __$$_CitationRelatesTo1CopyWithImpl(
+      _$_CitationRelatesTo1 _value, $Res Function(_$_CitationRelatesTo1) _then)
+      : super(_value, (v) => _then(v as _$_CitationRelatesTo1));
+
+  @override
+  _$_CitationRelatesTo1 get _value => super._value as _$_CitationRelatesTo1;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? relationshipType = freezed,
+    Object? targetClassifier = freezed,
+    Object? targetUri = freezed,
+    Object? targetUriElement = freezed,
+    Object? targetIdentifier = freezed,
+    Object? targetReference = freezed,
+    Object? targetAttachment = freezed,
+  }) {
+    return _then(_$_CitationRelatesTo1(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      relationshipType: relationshipType == freezed
+          ? _value.relationshipType
+          : relationshipType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      targetClassifier: targetClassifier == freezed
+          ? _value._targetClassifier
+          : targetClassifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      targetUri: targetUri == freezed
+          ? _value.targetUri
+          : targetUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      targetUriElement: targetUriElement == freezed
+          ? _value.targetUriElement
+          : targetUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      targetIdentifier: targetIdentifier == freezed
+          ? _value.targetIdentifier
+          : targetIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      targetReference: targetReference == freezed
+          ? _value.targetReference
+          : targetReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      targetAttachment: targetAttachment == freezed
+          ? _value.targetAttachment
+          : targetAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationRelatesTo1 extends _CitationRelatesTo1 {
+  _$_CitationRelatesTo1(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.relationshipType,
+      final List<CodeableConcept>? targetClassifier,
+      this.targetUri,
+      @JsonKey(name: '_targetUri') this.targetUriElement,
+      this.targetIdentifier,
+      this.targetReference,
+      this.targetAttachment})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _targetClassifier = targetClassifier,
+        super._();
+
+  factory _$_CitationRelatesTo1.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationRelatesTo1FromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept relationshipType;
+  final List<CodeableConcept>? _targetClassifier;
+  @override
+  List<CodeableConcept>? get targetClassifier {
+    final value = _targetClassifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirUri? targetUri;
+  @override
+  @JsonKey(name: '_targetUri')
+  final Element? targetUriElement;
+  @override
+  final Identifier? targetIdentifier;
+  @override
+  final Reference? targetReference;
+  @override
+  final Attachment? targetAttachment;
+
+  @override
+  String toString() {
+    return 'CitationRelatesTo1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, relationshipType: $relationshipType, targetClassifier: $targetClassifier, targetUri: $targetUri, targetUriElement: $targetUriElement, targetIdentifier: $targetIdentifier, targetReference: $targetReference, targetAttachment: $targetAttachment)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationRelatesTo1 &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.relationshipType, relationshipType) &&
+            const DeepCollectionEquality()
+                .equals(other._targetClassifier, _targetClassifier) &&
+            const DeepCollectionEquality().equals(other.targetUri, targetUri) &&
+            const DeepCollectionEquality()
+                .equals(other.targetUriElement, targetUriElement) &&
+            const DeepCollectionEquality()
+                .equals(other.targetIdentifier, targetIdentifier) &&
+            const DeepCollectionEquality()
+                .equals(other.targetReference, targetReference) &&
+            const DeepCollectionEquality()
+                .equals(other.targetAttachment, targetAttachment));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(relationshipType),
+      const DeepCollectionEquality().hash(_targetClassifier),
+      const DeepCollectionEquality().hash(targetUri),
+      const DeepCollectionEquality().hash(targetUriElement),
+      const DeepCollectionEquality().hash(targetIdentifier),
+      const DeepCollectionEquality().hash(targetReference),
+      const DeepCollectionEquality().hash(targetAttachment));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationRelatesTo1CopyWith<_$_CitationRelatesTo1> get copyWith =>
+      __$$_CitationRelatesTo1CopyWithImpl<_$_CitationRelatesTo1>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationRelatesTo1ToJson(this);
+  }
+}
+
+abstract class _CitationRelatesTo1 extends CitationRelatesTo1 {
+  factory _CitationRelatesTo1(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept relationshipType,
+      final List<CodeableConcept>? targetClassifier,
+      final FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') final Element? targetUriElement,
+      final Identifier? targetIdentifier,
+      final Reference? targetReference,
+      final Attachment? targetAttachment}) = _$_CitationRelatesTo1;
+  _CitationRelatesTo1._() : super._();
+
+  factory _CitationRelatesTo1.fromJson(Map<String, dynamic> json) =
+      _$_CitationRelatesTo1.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get relationshipType => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get targetClassifier =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirUri? get targetUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_targetUri')
+  Element? get targetUriElement => throw _privateConstructorUsedError;
+  @override
+  Identifier? get targetIdentifier => throw _privateConstructorUsedError;
+  @override
+  Reference? get targetReference => throw _privateConstructorUsedError;
+  @override
+  Attachment? get targetAttachment => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationRelatesTo1CopyWith<_$_CitationRelatesTo1> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

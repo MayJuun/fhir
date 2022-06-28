@@ -16,50 +16,50 @@ part 'security.g.dart';
 class AuditEvent with Resource, _$AuditEvent {
   AuditEvent._();
 
-  /// [AuditEvent]: A record of an event made for purposes of maintaining a
+  /// [AuditEvent] A record of an event made for purposes of maintaining a
   /// security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
-  /// [resourceType]: This is a AuditEvent resource
+  /// [resourceType] This is a AuditEvent resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -73,40 +73,40 @@ class AuditEvent with Resource, _$AuditEvent {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [type]: Identifier for a family of the event.  For example, a menu item,
+  /// [type] Identifier for a family of the event.  For example, a menu item,
   /// program, rule, policy, function code, application name or URL. It
   ///  identifies the performed function.
   ///
-  /// [subtype]: Identifier for the category of event.
+  /// [subtype] Identifier for the category of event.
   ///
-  /// [action]: Indicator for type of action performed during the event that
+  /// [action] Indicator for type of action performed during the event that
   ///  generated the audit.
   ///
-  /// [actionElement]: Extensions for action
+  /// [actionElement] Extensions for action
   ///
-  /// [period]: The period during which the activity occurred.
+  /// [period] The period during which the activity occurred.
   ///
-  /// [recorded]: The time when the event was recorded.
+  /// [recorded] The time when the event was recorded.
   ///
-  /// [recordedElement]: Extensions for recorded
+  /// [recordedElement] Extensions for recorded
   ///
-  /// [outcome]: Indicates whether the event succeeded or failed.
+  /// [outcome] Indicates whether the event succeeded or failed.
   ///
-  /// [outcomeElement]: Extensions for outcome
+  /// [outcomeElement] Extensions for outcome
   ///
-  /// [outcomeDesc]: A free text description of the outcome of the event.
+  /// [outcomeDesc] A free text description of the outcome of the event.
   ///
-  /// [outcomeDescElement]: Extensions for outcomeDesc
+  /// [outcomeDescElement] Extensions for outcomeDesc
   ///
-  /// [purposeOfEvent]: The purposeOfUse (reason) that was used during the event
+  /// [purposeOfEvent] The purposeOfUse (reason) that was used during the event
   ///  being recorded.
   ///
-  /// [agent]: An actor taking an active role in the event or activity that is
+  /// [agent] An actor taking an active role in the event or activity that is
   ///  logged.
   ///
-  /// [source]: The system that is reporting the event.
+  /// [source] The system that is reporting the event.
   ///
-  /// [entity]: Specific instances of data or objects that have been accessed.
+  /// [entity] Specific instances of data or objects that have been accessed.
   factory AuditEvent({
     @Default(R4ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
@@ -170,21 +170,21 @@ class AuditEvent with Resource, _$AuditEvent {
 class AuditEventAgent with _$AuditEventAgent {
   AuditEventAgent._();
 
-  /// [AuditEventAgent]: A record of an event made for purposes of maintaining
+  /// [AuditEventAgent] A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -198,47 +198,47 @@ class AuditEventAgent with _$AuditEventAgent {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [type]: Specification of the participation type the user plays when
+  /// [type] Specification of the participation type the user plays when
   ///  performing the event.
   ///
-  /// [role]: The security role that the user was acting under, that come from
+  /// [role] The security role that the user was acting under, that come from
   /// local codes defined by the access control security system (e.g. RBAC,
   ///  ABAC) used in the local context.
   ///
-  /// [who]: Reference to who this agent is that was involved in the event.
+  /// [who] Reference to who this agent is that was involved in the event.
   ///
-  /// [altId]: Alternative agent Identifier. For a human, this should be a user
+  /// [altId] Alternative agent Identifier. For a human, this should be a user
   /// identifier text string from authentication system. This identifier would
   /// be one known to a common authentication system (e.g. single sign-on), if
   ///  available.
   ///
-  /// [altIdElement]: Extensions for altId
+  /// [altIdElement] Extensions for altId
   ///
-  /// [name]: Human-meaningful name for the agent.
+  /// [name] Human-meaningful name for the agent.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [requestor]: Indicator that the user is or is not the requestor, or
+  /// [requestor] Indicator that the user is or is not the requestor, or
   ///  initiator, for the event being audited.
   ///
-  /// [requestorElement]: Extensions for requestor
+  /// [requestorElement] Extensions for requestor
   ///
-  /// [location]: Where the event occurred.
+  /// [location] Where the event occurred.
   ///
-  /// [policy]: The policy or plan that authorized the activity being recorded.
+  /// [policy] The policy or plan that authorized the activity being recorded.
   /// Typically, a single activity may have multiple applicable policies, such
   /// as patient consent, guarantor funding, etc. The policy would also indicate
   ///  the security token used.
   ///
-  /// [policyElement]: Extensions for policy
+  /// [policyElement] Extensions for policy
   ///
-  /// [media]: Type of media involved. Used when the event is about
+  /// [media] Type of media involved. Used when the event is about
   ///  exporting/importing onto media.
   ///
-  /// [network]: Logical network location for application activity, if the
+  /// [network] Logical network location for application activity, if the
   ///  activity has a network location.
   ///
-  /// [purposeOfUse]: The reason (purpose of use), specific to this agent, that
+  /// [purposeOfUse] The reason (purpose of use), specific to this agent, that
   ///  was used during the event being recorded.
   factory AuditEventAgent({
     String? id,
@@ -296,21 +296,21 @@ class AuditEventAgent with _$AuditEventAgent {
 class AuditEventNetwork with _$AuditEventNetwork {
   AuditEventNetwork._();
 
-  /// [AuditEventNetwork]: A record of an event made for purposes of
+  /// [AuditEventNetwork] A record of an event made for purposes of
   /// maintaining a security log. Typical uses include detection of intrusion
   ///  attempts and monitoring for inappropriate usage.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -324,15 +324,15 @@ class AuditEventNetwork with _$AuditEventNetwork {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [address]: An identifier for the network access point of the user device
+  /// [address] An identifier for the network access point of the user device
   ///  for the audit event.
   ///
-  /// [addressElement]: Extensions for address
+  /// [addressElement] Extensions for address
   ///
-  /// [type]: An identifier for the type of network access point that originated
+  /// [type] An identifier for the type of network access point that originated
   ///  the audit event.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   factory AuditEventNetwork({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -378,21 +378,21 @@ class AuditEventNetwork with _$AuditEventNetwork {
 class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
 
-  /// [AuditEventSource]: A record of an event made for purposes of maintaining
+  /// [AuditEventSource] A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -406,15 +406,15 @@ class AuditEventSource with _$AuditEventSource {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [site]: Logical source location within the healthcare enterprise network.
+  /// [site] Logical source location within the healthcare enterprise network.
   /// For example, a hospital or other provider location within a multi-entity
   ///  provider group.
   ///
-  /// [siteElement]: Extensions for site
+  /// [siteElement] Extensions for site
   ///
-  /// [observer]: Identifier of the source where the event was detected.
+  /// [observer] Identifier of the source where the event was detected.
   ///
-  /// [type]: Code specifying the type of source where event originated.
+  /// [type] Code specifying the type of source where event originated.
   factory AuditEventSource({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -460,21 +460,21 @@ class AuditEventSource with _$AuditEventSource {
 class AuditEventEntity with _$AuditEventEntity {
   AuditEventEntity._();
 
-  /// [AuditEventEntity]: A record of an event made for purposes of maintaining
+  /// [AuditEventEntity] A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -488,31 +488,31 @@ class AuditEventEntity with _$AuditEventEntity {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [what]: Identifies a specific instance of the entity. The reference should
+  /// [what] Identifies a specific instance of the entity. The reference should
   ///  be version specific.
   ///
-  /// [type]: The type of the object that was involved in this audit event.
+  /// [type] The type of the object that was involved in this audit event.
   ///
-  /// [role]: Code representing the role the entity played in the event being
+  /// [role] Code representing the role the entity played in the event being
   ///  audited.
   ///
-  /// [lifecycle]: Identifier for the data life-cycle stage for the entity.
+  /// [lifecycle] Identifier for the data life-cycle stage for the entity.
   ///
-  /// [securityLabel]: Security labels for the identified entity.
+  /// [securityLabel] Security labels for the identified entity.
   ///
-  /// [name]: A name of the entity in the audit event.
+  /// [name] A name of the entity in the audit event.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [description]: Text that describes the entity in more detail.
+  /// [description] Text that describes the entity in more detail.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [query]: The query parameters for a query-type entities.
+  /// [query] The query parameters for a query-type entities.
   ///
-  /// [queryElement]: Extensions for query
+  /// [queryElement] Extensions for query
   ///
-  /// [detail]: Tagged value pairs for conveying additional information about
+  /// [detail] Tagged value pairs for conveying additional information about
   ///  the entity.
   factory AuditEventEntity({
     String? id,
@@ -567,21 +567,21 @@ class AuditEventEntity with _$AuditEventEntity {
 class AuditEventDetail with _$AuditEventDetail {
   AuditEventDetail._();
 
-  /// [AuditEventDetail]: A record of an event made for purposes of maintaining
+  /// [AuditEventDetail] A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -595,17 +595,17 @@ class AuditEventDetail with _$AuditEventDetail {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [type]: The type of extra detail provided in the value.
+  /// [type] The type of extra detail provided in the value.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [valueString]: The  value of the extra detail.
+  /// [valueString] The  value of the extra detail.
   ///
-  /// [valueStringElement]: Extensions for valueString
+  /// [valueStringElement] Extensions for valueString
   ///
-  /// [valueBase64Binary]: The  value of the extra detail.
+  /// [valueBase64Binary] The  value of the extra detail.
   ///
-  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   factory AuditEventDetail({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -653,51 +653,51 @@ class AuditEventDetail with _$AuditEventDetail {
 class Consent with Resource, _$Consent {
   Consent._();
 
-  /// [Consent]: A record of a healthcare consumer’s  choices, which permits or
+  /// [Consent] A record of a healthcare consumer’s  choices, which permits or
   /// denies identified recipient(s) or recipient role(s) to perform one or more
   /// actions within a given policy context, for specific purposes and periods
   ///  of time.
   ///
-  /// [resourceType]: This is a Consent resource
+  /// [resourceType] This is a Consent resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -711,56 +711,56 @@ class Consent with Resource, _$Consent {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: Unique identifier for this copy of the Consent Statement.
+  /// [identifier] Unique identifier for this copy of the Consent Statement.
   ///
-  /// [status]: Indicates the current state of this consent.
+  /// [status] Indicates the current state of this consent.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [scope]: A selector of the type of consent being presented: ADR, Privacy,
+  /// [scope] A selector of the type of consent being presented: ADR, Privacy,
   ///  Treatment, Research.  This list is now extensible.
   ///
-  /// [category]: A classification of the type of consents found in the
+  /// [category] A classification of the type of consents found in the
   /// statement. This element supports indexing and retrieval of consent
   ///  statements.
   ///
-  /// [patient]: The patient/healthcare consumer to whom this consent applies.
+  /// [patient] The patient/healthcare consumer to whom this consent applies.
   ///
-  /// [dateTime]: When this  Consent was issued / created / indexed.
+  /// [dateTime] When this  Consent was issued / created / indexed.
   ///
-  /// [dateTimeElement]: Extensions for dateTime
+  /// [dateTimeElement] Extensions for dateTime
   ///
-  /// [performer]: Either the Grantor, which is the entity responsible for
+  /// [performer] Either the Grantor, which is the entity responsible for
   /// granting the rights listed in a Consent Directive or the Grantee, which is
   /// the entity responsible for complying with the Consent Directive, including
   /// any obligations or limitations on authorizations and enforcement of
   ///  prohibitions.
   ///
-  /// [organization]: The organization that manages the consent, and the
+  /// [organization] The organization that manages the consent, and the
   ///  framework within which it is executed.
   ///
-  /// [sourceAttachment]: The source on which this consent statement is based.
+  /// [sourceAttachment] The source on which this consent statement is based.
   /// The source might be a scanned original paper form, or a reference to a
   /// consent that links back to such a source, a reference to a document
   ///  repository (e.g. XDS) that stores the original consent document.
   ///
-  /// [sourceReference]: The source on which this consent statement is based.
+  /// [sourceReference] The source on which this consent statement is based.
   /// The source might be a scanned original paper form, or a reference to a
   /// consent that links back to such a source, a reference to a document
   ///  repository (e.g. XDS) that stores the original consent document.
   ///
-  /// [policy]: The references to the policies that are included in this consent
+  /// [policy] The references to the policies that are included in this consent
   /// scope. Policies may be organizational, but are often defined
   ///  jurisdictionally, or in law.
   ///
-  /// [policyRule]: A reference to the specific base computable regulation or
+  /// [policyRule] A reference to the specific base computable regulation or
   ///  policy.
   ///
-  /// [verification]: Whether a treatment instruction (e.g. artificial
+  /// [verification] Whether a treatment instruction (e.g. artificial
   /// respiration yes or no) was verified with the patient, his/her family or
   ///  another authorized person.
   ///
-  /// [provision]: An exception to the base policy of this consent. An exception
+  /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
   factory Consent({
     @Default(R4ResourceType.Consent)
@@ -826,22 +826,22 @@ class Consent with Resource, _$Consent {
 class ConsentPolicy with _$ConsentPolicy {
   ConsentPolicy._();
 
-  /// [ConsentPolicy]: A record of a healthcare consumer’s  choices, which
+  /// [ConsentPolicy] A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
   /// one or more actions within a given policy context, for specific purposes
   ///  and periods of time.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -855,16 +855,16 @@ class ConsentPolicy with _$ConsentPolicy {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [authority]: Entity or Organization having regulatory jurisdiction or
+  /// [authority] Entity or Organization having regulatory jurisdiction or
   ///  accountability for  enforcing policies pertaining to Consent Directives.
   ///
-  /// [authorityElement]: Extensions for authority
+  /// [authorityElement] Extensions for authority
   ///
-  /// [uri]: The references to the policies that are included in this consent
+  /// [uri] The references to the policies that are included in this consent
   /// scope. Policies may be organizational, but are often defined
   ///  jurisdictionally, or in law.
   ///
-  /// [uriElement]: Extensions for uri
+  /// [uriElement] Extensions for uri
   factory ConsentPolicy({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -910,22 +910,22 @@ class ConsentPolicy with _$ConsentPolicy {
 class ConsentVerification with _$ConsentVerification {
   ConsentVerification._();
 
-  /// [ConsentVerification]: A record of a healthcare consumer’s  choices,
+  /// [ConsentVerification] A record of a healthcare consumer’s  choices,
   /// which permits or denies identified recipient(s) or recipient role(s) to
   /// perform one or more actions within a given policy context, for specific
   ///  purposes and periods of time.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -939,16 +939,16 @@ class ConsentVerification with _$ConsentVerification {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [verified]: Has the instruction been verified.
+  /// [verified] Has the instruction been verified.
   ///
-  /// [verifiedElement]: Extensions for verified
+  /// [verifiedElement] Extensions for verified
   ///
-  /// [verifiedWith]: Who verified the instruction (Patient, Relative or other
+  /// [verifiedWith] Who verified the instruction (Patient, Relative or other
   ///  Authorized Person).
   ///
-  /// [verificationDate]: Date verification was collected.
+  /// [verificationDate] Date verification was collected.
   ///
-  /// [verificationDateElement]: Extensions for verificationDate
+  /// [verificationDateElement] Extensions for verificationDate
   factory ConsentVerification({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -995,22 +995,22 @@ class ConsentVerification with _$ConsentVerification {
 class ConsentProvision with _$ConsentProvision {
   ConsentProvision._();
 
-  /// [ConsentProvision]: A record of a healthcare consumer’s  choices, which
+  /// [ConsentProvision] A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
   /// one or more actions within a given policy context, for specific purposes
   ///  and periods of time.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1024,38 +1024,38 @@ class ConsentProvision with _$ConsentProvision {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [type]: Action  to take - permit or deny - when the rule conditions are
+  /// [type] Action  to take - permit or deny - when the rule conditions are
   ///  met.  Not permitted in root rule, required in all nested rules.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [period]: The timeframe in this rule is valid.
+  /// [period] The timeframe in this rule is valid.
   ///
-  /// [actor]: Who or what is controlled by this rule. Use group to identify a
+  /// [actor] Who or what is controlled by this rule. Use group to identify a
   ///  set of actors by some property they share (e.g. 'admitting officers').
   ///
-  /// [action]: Actions controlled by this Rule.
+  /// [action] Actions controlled by this Rule.
   ///
-  /// [securityLabel]: A security label, comprised of 0..* security label fields
+  /// [securityLabel] A security label, comprised of 0..* security label fields
   /// (Privacy tags), which define which resources are controlled by this
   ///  exception.
   ///
-  /// [purpose]: The context of the activities a user is taking - why the user
+  /// [purpose] The context of the activities a user is taking - why the user
   ///  is accessing the data - that are controlled by this rule.
   ///
-  /// [class]: The class of information covered by this rule. The type can be a
+  /// [class] The class of information covered by this rule. The type can be a
   /// FHIR resource type, a profile on a type, or a CDA document, or some other
   ///  type that indicates what sort of information the consent relates to.
   ///
-  /// [code]: If this code is found in an instance, then the rule applies.
+  /// [code] If this code is found in an instance, then the rule applies.
   ///
-  /// [dataPeriod]: Clinical or Operational Relevant period of time that bounds
+  /// [dataPeriod] Clinical or Operational Relevant period of time that bounds
   ///  the data controlled by this rule.
   ///
-  /// [data]: The resources controlled by this rule if specific resources are
+  /// [data] The resources controlled by this rule if specific resources are
   ///  referenced.
   ///
-  /// [provision]: Rules which provide exceptions to the base rule or subrules.
+  /// [provision] Rules which provide exceptions to the base rule or subrules.
   factory ConsentProvision({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1109,22 +1109,22 @@ class ConsentProvision with _$ConsentProvision {
 class ConsentActor with _$ConsentActor {
   ConsentActor._();
 
-  /// [ConsentActor]: A record of a healthcare consumer’s  choices, which
+  /// [ConsentActor] A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
   /// one or more actions within a given policy context, for specific purposes
   ///  and periods of time.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1138,10 +1138,10 @@ class ConsentActor with _$ConsentActor {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [role]: How the individual is involved in the resources content that is
+  /// [role] How the individual is involved in the resources content that is
   ///  described in the exception.
   ///
-  /// [reference]: The resource that identifies the actor. To identify actors by
+  /// [reference] The resource that identifies the actor. To identify actors by
   /// type, use group to identify a set of actors by some property they share
   ///  (e.g. 'admitting officers').
   factory ConsentActor({
@@ -1187,22 +1187,22 @@ class ConsentActor with _$ConsentActor {
 class ConsentData with _$ConsentData {
   ConsentData._();
 
-  /// [ConsentData]: A record of a healthcare consumer’s  choices, which
+  /// [ConsentData] A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
   /// one or more actions within a given policy context, for specific purposes
   ///  and periods of time.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1216,12 +1216,12 @@ class ConsentData with _$ConsentData {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [meaning]: How the resource reference is interpreted when testing consent
+  /// [meaning] How the resource reference is interpreted when testing consent
   ///  restrictions.
   ///
-  /// [meaningElement]: Extensions for meaning
+  /// [meaningElement] Extensions for meaning
   ///
-  /// [reference]: A reference to a specific resource that defines which
+  /// [reference] A reference to a specific resource that defines which
   ///  resources are covered by this consent.
   factory ConsentData({
     String? id,
@@ -1267,7 +1267,7 @@ class ConsentData with _$ConsentData {
 class Provenance with Resource, _$Provenance {
   Provenance._();
 
-  /// [Provenance]: Provenance of a resource is a record that describes entities
+  /// [Provenance] Provenance of a resource is a record that describes entities
   /// and processes involved in producing and delivering or otherwise
   /// influencing that resource. Provenance provides a critical foundation for
   /// assessing authenticity, enabling trust, and allowing reproducibility.
@@ -1278,46 +1278,46 @@ class Provenance with Resource, _$Provenance {
   /// Document Completion - has the artifact been legally authenticated), all of
   ///  which may impact security, privacy, and trust policies.
   ///
-  /// [resourceType]: This is a Provenance resource
+  /// [resourceType] This is a Provenance resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -1331,40 +1331,40 @@ class Provenance with Resource, _$Provenance {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [target]: The Reference(s) that were generated or updated by  the activity
+  /// [target] The Reference(s) that were generated or updated by  the activity
   /// described in this resource. A provenance can point to more than one target
   ///  if multiple resources were created/updated by the same activity.
   ///
-  /// [occurredPeriod]: The period during which the activity occurred.
+  /// [occurredPeriod] The period during which the activity occurred.
   ///
-  /// [occurredDateTime]: The period during which the activity occurred.
+  /// [occurredDateTime] The period during which the activity occurred.
   ///
-  /// [occurredDateTimeElement]: Extensions for occurredDateTime
+  /// [occurredDateTimeElement] Extensions for occurredDateTime
   ///
-  /// [recorded]: The instant of time at which the activity was recorded.
+  /// [recorded] The instant of time at which the activity was recorded.
   ///
-  /// [recordedElement]: Extensions for recorded
+  /// [recordedElement] Extensions for recorded
   ///
-  /// [policy]: Policy or plan the activity was defined by. Typically, a single
+  /// [policy] Policy or plan the activity was defined by. Typically, a single
   /// activity may have multiple applicable policy documents, such as patient
   ///  consent, guarantor funding, etc.
   ///
-  /// [policyElement]: Extensions for policy
+  /// [policyElement] Extensions for policy
   ///
-  /// [location]: Where the activity occurred, if relevant.
+  /// [location] Where the activity occurred, if relevant.
   ///
-  /// [reason]: The reason that the activity was taking place.
+  /// [reason] The reason that the activity was taking place.
   ///
-  /// [activity]: An activity is something that occurs over a period of time and
+  /// [activity] An activity is something that occurs over a period of time and
   /// acts upon or with entities; it may include consuming, processing,
   ///  transforming, modifying, relocating, using, or generating entities.
   ///
-  /// [agent]: An actor taking a role in an activity  for which it can be
+  /// [agent] An actor taking a role in an activity  for which it can be
   ///  assigned some degree of responsibility for the activity taking place.
   ///
-  /// [entity]: An entity used in this activity.
+  /// [entity] An entity used in this activity.
   ///
-  /// [signature]: A digital signature on the target Reference(s). The signer
+  /// [signature] A digital signature on the target Reference(s). The signer
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
   factory Provenance({
@@ -1429,7 +1429,7 @@ class Provenance with Resource, _$Provenance {
 class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
 
-  /// [ProvenanceAgent]: Provenance of a resource is a record that describes
+  /// [ProvenanceAgent] Provenance of a resource is a record that describes
   /// entities and processes involved in producing and delivering or otherwise
   /// influencing that resource. Provenance provides a critical foundation for
   /// assessing authenticity, enabling trust, and allowing reproducibility.
@@ -1440,17 +1440,17 @@ class ProvenanceAgent with _$ProvenanceAgent {
   /// Document Completion - has the artifact been legally authenticated), all of
   ///  which may impact security, privacy, and trust policies.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1464,15 +1464,15 @@ class ProvenanceAgent with _$ProvenanceAgent {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [type]: The participation the agent had with respect to the activity.
+  /// [type] The participation the agent had with respect to the activity.
   ///
-  /// [role]: The function of the agent with respect to the activity. The
+  /// [role] The function of the agent with respect to the activity. The
   ///  security role enabling the agent with respect to the activity.
   ///
-  /// [who]: The individual, device or organization that participated in the
+  /// [who] The individual, device or organization that participated in the
   ///  event.
   ///
-  /// [onBehalfOf]: The individual, device, or organization for whom the change
+  /// [onBehalfOf] The individual, device, or organization for whom the change
   ///  was made.
   factory ProvenanceAgent({
     String? id,
@@ -1519,7 +1519,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
 class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
 
-  /// [ProvenanceEntity]: Provenance of a resource is a record that describes
+  /// [ProvenanceEntity] Provenance of a resource is a record that describes
   /// entities and processes involved in producing and delivering or otherwise
   /// influencing that resource. Provenance provides a critical foundation for
   /// assessing authenticity, enabling trust, and allowing reproducibility.
@@ -1530,17 +1530,17 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// Document Completion - has the artifact been legally authenticated), all of
   ///  which may impact security, privacy, and trust policies.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1554,14 +1554,14 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [role]: How the entity was used during the activity.
+  /// [role] How the entity was used during the activity.
   ///
-  /// [roleElement]: Extensions for role
+  /// [roleElement] Extensions for role
   ///
-  /// [what]: Identity of the  Entity used. May be a logical or physical uri and
+  /// [what] Identity of the  Entity used. May be a logical or physical uri and
   ///  maybe absolute or relative.
   ///
-  /// [agent]: The entity is attributed to an agent to express the agent's
+  /// [agent] The entity is attributed to an agent to express the agent's
   /// responsibility for that entity, possibly along with other agents. This
   /// description can be understood as shorthand for saying that the agent was
   ///  responsible for the activity which generated the entity.

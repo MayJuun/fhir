@@ -1131,6 +1131,9 @@ _$_NutritionProduct _$$_NutritionProductFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               NutritionProductIngredient.fromJson(e as Map<String, dynamic>))
           .toList(),
+      knownAllergen: (json['knownAllergen'] as List<dynamic>?)
+          ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
+          .toList(),
       characteristic: (json['characteristic'] as List<dynamic>?)
           ?.map((e) => NutritionProductCharacteristic.fromJson(
               e as Map<String, dynamic>))
@@ -1177,6 +1180,8 @@ Map<String, dynamic> _$$_NutritionProductToJson(_$_NutritionProduct instance) {
   writeNotNull('nutrient', instance.nutrient?.map((e) => e.toJson()).toList());
   writeNotNull(
       'ingredient', instance.ingredient?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'knownAllergen', instance.knownAllergen?.map((e) => e.toJson()).toList());
   writeNotNull('characteristic',
       instance.characteristic?.map((e) => e.toJson()).toList());
   writeNotNull('instance', instance.instance?.map((e) => e.toJson()).toList());
@@ -1194,6 +1199,9 @@ _$_NutritionProductNutrient _$$_NutritionProductNutrientFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      item: json['item'] == null
+          ? null
+          : CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
       amount: (json['amount'] as List<dynamic>?)
           ?.map((e) => Ratio.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1214,6 +1222,7 @@ Map<String, dynamic> _$$_NutritionProductNutrientToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('item', instance.item?.toJson());
   writeNotNull('amount', instance.amount?.map((e) => e.toJson()).toList());
   return val;
 }
@@ -1228,6 +1237,7 @@ _$_NutritionProductIngredient _$$_NutritionProductIngredientFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      item: CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
       amount: (json['amount'] as List<dynamic>?)
           ?.map((e) => Ratio.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1248,6 +1258,7 @@ Map<String, dynamic> _$$_NutritionProductIngredientToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['item'] = instance.item.toJson();
   writeNotNull('amount', instance.amount?.map((e) => e.toJson()).toList());
   return val;
 }

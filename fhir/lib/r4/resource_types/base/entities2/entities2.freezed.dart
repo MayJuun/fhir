@@ -7364,7 +7364,9 @@ mixin _$NutritionProduct {
   List<NutritionProductNutrient>? get nutrient =>
       throw _privateConstructorUsedError;
   List<NutritionProductIngredient>? get ingredient =>
-      throw _privateConstructorUsedError; // List<CodeableReference>? knownAllergen,
+      throw _privateConstructorUsedError;
+  List<CodeableReference>? get knownAllergen =>
+      throw _privateConstructorUsedError;
   List<NutritionProductCharacteristic>? get characteristic =>
       throw _privateConstructorUsedError;
   List<NutritionProductInstance>? get instance =>
@@ -7401,6 +7403,7 @@ abstract class $NutritionProductCopyWith<$Res> {
       List<Reference>? manufacturer,
       List<NutritionProductNutrient>? nutrient,
       List<NutritionProductIngredient>? ingredient,
+      List<CodeableReference>? knownAllergen,
       List<NutritionProductCharacteristic>? characteristic,
       List<NutritionProductInstance>? instance,
       List<Annotation>? note});
@@ -7442,6 +7445,7 @@ class _$NutritionProductCopyWithImpl<$Res>
     Object? manufacturer = freezed,
     Object? nutrient = freezed,
     Object? ingredient = freezed,
+    Object? knownAllergen = freezed,
     Object? characteristic = freezed,
     Object? instance = freezed,
     Object? note = freezed,
@@ -7519,6 +7523,10 @@ class _$NutritionProductCopyWithImpl<$Res>
           ? _value.ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
               as List<NutritionProductIngredient>?,
+      knownAllergen: knownAllergen == freezed
+          ? _value.knownAllergen
+          : knownAllergen // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
       characteristic: characteristic == freezed
           ? _value.characteristic
           : characteristic // ignore: cast_nullable_to_non_nullable
@@ -7627,6 +7635,7 @@ abstract class _$$_NutritionProductCopyWith<$Res>
       List<Reference>? manufacturer,
       List<NutritionProductNutrient>? nutrient,
       List<NutritionProductIngredient>? ingredient,
+      List<CodeableReference>? knownAllergen,
       List<NutritionProductCharacteristic>? characteristic,
       List<NutritionProductInstance>? instance,
       List<Annotation>? note});
@@ -7676,6 +7685,7 @@ class __$$_NutritionProductCopyWithImpl<$Res>
     Object? manufacturer = freezed,
     Object? nutrient = freezed,
     Object? ingredient = freezed,
+    Object? knownAllergen = freezed,
     Object? characteristic = freezed,
     Object? instance = freezed,
     Object? note = freezed,
@@ -7753,6 +7763,10 @@ class __$$_NutritionProductCopyWithImpl<$Res>
           ? _value._ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
               as List<NutritionProductIngredient>?,
+      knownAllergen: knownAllergen == freezed
+          ? _value._knownAllergen
+          : knownAllergen // ignore: cast_nullable_to_non_nullable
+              as List<CodeableReference>?,
       characteristic: characteristic == freezed
           ? _value._characteristic
           : characteristic // ignore: cast_nullable_to_non_nullable
@@ -7791,6 +7805,7 @@ class _$_NutritionProduct extends _NutritionProduct {
       final List<Reference>? manufacturer,
       final List<NutritionProductNutrient>? nutrient,
       final List<NutritionProductIngredient>? ingredient,
+      final List<CodeableReference>? knownAllergen,
       final List<NutritionProductCharacteristic>? characteristic,
       final List<NutritionProductInstance>? instance,
       final List<Annotation>? note})
@@ -7801,6 +7816,7 @@ class _$_NutritionProduct extends _NutritionProduct {
         _manufacturer = manufacturer,
         _nutrient = nutrient,
         _ingredient = ingredient,
+        _knownAllergen = knownAllergen,
         _characteristic = characteristic,
         _instance = instance,
         _note = note,
@@ -7899,9 +7915,16 @@ class _$_NutritionProduct extends _NutritionProduct {
     return EqualUnmodifiableListView(value);
   }
 
-// List<CodeableReference>? knownAllergen,
+  final List<CodeableReference>? _knownAllergen;
+  @override
+  List<CodeableReference>? get knownAllergen {
+    final value = _knownAllergen;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<NutritionProductCharacteristic>? _characteristic;
-// List<CodeableReference>? knownAllergen,
   @override
   List<NutritionProductCharacteristic>? get characteristic {
     final value = _characteristic;
@@ -7930,7 +7953,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   @override
   String toString() {
-    return 'NutritionProduct(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, status: $status, statusElement: $statusElement, category: $category, manufacturer: $manufacturer, nutrient: $nutrient, ingredient: $ingredient, characteristic: $characteristic, instance: $instance, note: $note)';
+    return 'NutritionProduct(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, status: $status, statusElement: $statusElement, category: $category, manufacturer: $manufacturer, nutrient: $nutrient, ingredient: $ingredient, knownAllergen: $knownAllergen, characteristic: $characteristic, instance: $instance, note: $note)';
   }
 
   @override
@@ -7967,6 +7990,8 @@ class _$_NutritionProduct extends _NutritionProduct {
             const DeepCollectionEquality()
                 .equals(other._ingredient, _ingredient) &&
             const DeepCollectionEquality()
+                .equals(other._knownAllergen, _knownAllergen) &&
+            const DeepCollectionEquality()
                 .equals(other._characteristic, _characteristic) &&
             const DeepCollectionEquality().equals(other._instance, _instance) &&
             const DeepCollectionEquality().equals(other._note, _note));
@@ -7994,6 +8019,7 @@ class _$_NutritionProduct extends _NutritionProduct {
         const DeepCollectionEquality().hash(_manufacturer),
         const DeepCollectionEquality().hash(_nutrient),
         const DeepCollectionEquality().hash(_ingredient),
+        const DeepCollectionEquality().hash(_knownAllergen),
         const DeepCollectionEquality().hash(_characteristic),
         const DeepCollectionEquality().hash(_instance),
         const DeepCollectionEquality().hash(_note)
@@ -8030,6 +8056,7 @@ abstract class _NutritionProduct extends NutritionProduct {
       final List<Reference>? manufacturer,
       final List<NutritionProductNutrient>? nutrient,
       final List<NutritionProductIngredient>? ingredient,
+      final List<CodeableReference>? knownAllergen,
       final List<NutritionProductCharacteristic>? characteristic,
       final List<NutritionProductInstance>? instance,
       final List<Annotation>? note}) = _$_NutritionProduct;
@@ -8081,7 +8108,10 @@ abstract class _NutritionProduct extends NutritionProduct {
   @override
   List<NutritionProductIngredient>? get ingredient =>
       throw _privateConstructorUsedError;
-  @override // List<CodeableReference>? knownAllergen,
+  @override
+  List<CodeableReference>? get knownAllergen =>
+      throw _privateConstructorUsedError;
+  @override
   List<NutritionProductCharacteristic>? get characteristic =>
       throw _privateConstructorUsedError;
   @override
@@ -8106,7 +8136,8 @@ mixin _$NutritionProductNutrient {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError; // CodeableReference? item,
+      throw _privateConstructorUsedError;
+  CodeableReference? get item => throw _privateConstructorUsedError;
   List<Ratio>? get amount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8124,7 +8155,10 @@ abstract class $NutritionProductNutrientCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      CodeableReference? item,
       List<Ratio>? amount});
+
+  $CodeableReferenceCopyWith<$Res>? get item;
 }
 
 /// @nodoc
@@ -8141,6 +8175,7 @@ class _$NutritionProductNutrientCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? item = freezed,
     Object? amount = freezed,
   }) {
     return _then(_value.copyWith(
@@ -8156,11 +8191,26 @@ class _$NutritionProductNutrientCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       amount: amount == freezed
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as List<Ratio>?,
     ));
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res>? get item {
+    if (_value.item == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.item!, (value) {
+      return _then(_value.copyWith(item: value));
+    });
   }
 }
 
@@ -8176,7 +8226,11 @@ abstract class _$$_NutritionProductNutrientCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      CodeableReference? item,
       List<Ratio>? amount});
+
+  @override
+  $CodeableReferenceCopyWith<$Res>? get item;
 }
 
 /// @nodoc
@@ -8196,6 +8250,7 @@ class __$$_NutritionProductNutrientCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? item = freezed,
     Object? amount = freezed,
   }) {
     return _then(_$_NutritionProductNutrient(
@@ -8211,6 +8266,10 @@ class __$$_NutritionProductNutrientCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       amount: amount == freezed
           ? _value._amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -8226,6 +8285,7 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
+      this.item,
       final List<Ratio>? amount})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -8256,9 +8316,9 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
     return EqualUnmodifiableListView(value);
   }
 
-// CodeableReference? item,
+  @override
+  final CodeableReference? item;
   final List<Ratio>? _amount;
-// CodeableReference? item,
   @override
   List<Ratio>? get amount {
     final value = _amount;
@@ -8269,7 +8329,7 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
 
   @override
   String toString() {
-    return 'NutritionProductNutrient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amount: $amount)';
+    return 'NutritionProductNutrient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, item: $item, amount: $amount)';
   }
 
   @override
@@ -8282,6 +8342,7 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
             const DeepCollectionEquality().equals(other._amount, _amount));
   }
 
@@ -8292,6 +8353,7 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(item),
       const DeepCollectionEquality().hash(_amount));
 
   @JsonKey(ignore: true)
@@ -8311,6 +8373,7 @@ abstract class _NutritionProductNutrient extends NutritionProductNutrient {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
+      final CodeableReference? item,
       final List<Ratio>? amount}) = _$_NutritionProductNutrient;
   _NutritionProductNutrient._() : super._();
 
@@ -8325,7 +8388,9 @@ abstract class _NutritionProductNutrient extends NutritionProductNutrient {
   @override
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @override // CodeableReference? item,
+  @override
+  CodeableReference? get item => throw _privateConstructorUsedError;
+  @override
   List<Ratio>? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
@@ -8344,7 +8409,8 @@ mixin _$NutritionProductIngredient {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError; // required CodeableReference item,
+      throw _privateConstructorUsedError;
+  CodeableReference get item => throw _privateConstructorUsedError;
   List<Ratio>? get amount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8362,7 +8428,10 @@ abstract class $NutritionProductIngredientCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      CodeableReference item,
       List<Ratio>? amount});
+
+  $CodeableReferenceCopyWith<$Res> get item;
 }
 
 /// @nodoc
@@ -8379,6 +8448,7 @@ class _$NutritionProductIngredientCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? item = freezed,
     Object? amount = freezed,
   }) {
     return _then(_value.copyWith(
@@ -8394,11 +8464,22 @@ class _$NutritionProductIngredientCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
       amount: amount == freezed
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as List<Ratio>?,
     ));
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res> get item {
+    return $CodeableReferenceCopyWith<$Res>(_value.item, (value) {
+      return _then(_value.copyWith(item: value));
+    });
   }
 }
 
@@ -8414,7 +8495,11 @@ abstract class _$$_NutritionProductIngredientCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      CodeableReference item,
       List<Ratio>? amount});
+
+  @override
+  $CodeableReferenceCopyWith<$Res> get item;
 }
 
 /// @nodoc
@@ -8435,6 +8520,7 @@ class __$$_NutritionProductIngredientCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? item = freezed,
     Object? amount = freezed,
   }) {
     return _then(_$_NutritionProductIngredient(
@@ -8450,6 +8536,10 @@ class __$$_NutritionProductIngredientCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference,
       amount: amount == freezed
           ? _value._amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -8465,6 +8555,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
+      required this.item,
       final List<Ratio>? amount})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -8495,9 +8586,9 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
     return EqualUnmodifiableListView(value);
   }
 
-// required CodeableReference item,
+  @override
+  final CodeableReference item;
   final List<Ratio>? _amount;
-// required CodeableReference item,
   @override
   List<Ratio>? get amount {
     final value = _amount;
@@ -8508,7 +8599,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 
   @override
   String toString() {
-    return 'NutritionProductIngredient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amount: $amount)';
+    return 'NutritionProductIngredient(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, item: $item, amount: $amount)';
   }
 
   @override
@@ -8521,6 +8612,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
             const DeepCollectionEquality().equals(other._amount, _amount));
   }
 
@@ -8531,6 +8623,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(item),
       const DeepCollectionEquality().hash(_amount));
 
   @JsonKey(ignore: true)
@@ -8550,6 +8643,7 @@ abstract class _NutritionProductIngredient extends NutritionProductIngredient {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
+      required final CodeableReference item,
       final List<Ratio>? amount}) = _$_NutritionProductIngredient;
   _NutritionProductIngredient._() : super._();
 
@@ -8564,7 +8658,9 @@ abstract class _NutritionProductIngredient extends NutritionProductIngredient {
   @override
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @override // required CodeableReference item,
+  @override
+  CodeableReference get item => throw _privateConstructorUsedError;
+  @override
   List<Ratio>? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
