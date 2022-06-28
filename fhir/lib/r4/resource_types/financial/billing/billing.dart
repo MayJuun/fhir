@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'billing.enums.dart';
 part 'billing.freezed.dart';
 part 'billing.g.dart';
 
@@ -162,7 +161,7 @@ class Claim with Resource, _$Claim {
     @Default(R4ResourceType.Claim)
     @JsonKey(unknownEnumValue: R4ResourceType.Claim)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -177,7 +176,7 @@ class Claim with Resource, _$Claim {
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept type,
     CodeableConcept? subType,
-    @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse? use,
+    Code? use,
     @JsonKey(name: '_use') Element? useElement,
     required Reference patient,
     Period? billablePeriod,
@@ -1561,7 +1560,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     @Default(R4ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2583,8 +2582,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
     List<FhirExtension>? modifierExtension,
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
-    @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-        ClaimResponseProcessNoteType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -2932,7 +2930,7 @@ class Invoice with Resource, _$Invoice {
     @Default(R4ResourceType.Invoice)
     @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2943,7 +2941,7 @@ class Invoice with Resource, _$Invoice {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: InvoiceStatus.unknown) InvoiceStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? cancelledReason,
     @JsonKey(name: '_cancelledReason') Element? cancelledReasonElement,
@@ -3209,8 +3207,7 @@ class InvoicePriceComponent with _$InvoicePriceComponent {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-        InvoicePriceComponentType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? code,
     Decimal? factor,

@@ -22,7 +22,7 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 mixin _$Appointment {
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -37,8 +37,7 @@ mixin _$Appointment {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-  AppointmentStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get cancelationReason => throw _privateConstructorUsedError;
@@ -95,7 +94,7 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -109,8 +108,7 @@ abstract class $AppointmentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancelationReason,
@@ -228,7 +226,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -272,7 +270,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as AppointmentStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -568,7 +566,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -582,8 +580,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancelationReason,
@@ -718,7 +715,7 @@ class __$$_AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -762,7 +759,7 @@ class __$$_AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as AppointmentStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -903,8 +900,7 @@ class _$_Appointment extends _Appointment {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.cancelationReason,
@@ -966,7 +962,7 @@ class _$_Appointment extends _Appointment {
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -1019,8 +1015,7 @@ class _$_Appointment extends _Appointment {
   }
 
   @override
-  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-  final AppointmentStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1303,7 +1298,7 @@ abstract class _Appointment extends Appointment {
   factory _Appointment(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1317,8 +1312,7 @@ abstract class _Appointment extends Appointment {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          final AppointmentStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? cancelationReason,
@@ -1366,7 +1360,7 @@ abstract class _Appointment extends Appointment {
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -1392,8 +1386,7 @@ abstract class _Appointment extends Appointment {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-  AppointmentStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1484,16 +1477,10 @@ mixin _$AppointmentParticipant {
       throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   Reference? get actor => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'required',
-      unknownEnumValue: AppointmentParticipantRequired.unknown)
-  AppointmentParticipantRequired? get required_ =>
-      throw _privateConstructorUsedError;
+  Code? get required_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-  AppointmentParticipantStatus? get status =>
-      throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
@@ -1511,19 +1498,14 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       _$AppointmentParticipantCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
-      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
-          AppointmentParticipantRequired? required_,
-      @JsonKey(name: '_required')
-          Element? requiredElement,
-      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-          AppointmentParticipantStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      Code? required_,
+      @JsonKey(name: '_required') Element? requiredElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? period});
 
   $ReferenceCopyWith<$Res>? get actor;
@@ -1578,7 +1560,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
       required_: required_ == freezed
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as AppointmentParticipantRequired?,
+              as Code?,
       requiredElement: requiredElement == freezed
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -1586,7 +1568,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as AppointmentParticipantStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1652,19 +1634,14 @@ abstract class _$$_AppointmentParticipantCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
-      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
-          AppointmentParticipantRequired? required_,
-      @JsonKey(name: '_required')
-          Element? requiredElement,
-      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-          AppointmentParticipantStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      Code? required_,
+      @JsonKey(name: '_required') Element? requiredElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? period});
 
   @override
@@ -1726,7 +1703,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
       required_: required_ == freezed
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as AppointmentParticipantRequired?,
+              as Code?,
       requiredElement: requiredElement == freezed
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -1734,7 +1711,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as AppointmentParticipantStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1752,19 +1729,14 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? type,
       this.actor,
-      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
-          this.required_,
-      @JsonKey(name: '_required')
-          this.requiredElement,
-      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      this.required_,
+      @JsonKey(name: '_required') this.requiredElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.period})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1807,16 +1779,12 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   @override
   final Reference? actor;
   @override
-  @JsonKey(
-      name: 'required',
-      unknownEnumValue: AppointmentParticipantRequired.unknown)
-  final AppointmentParticipantRequired? required_;
+  final Code? required_;
   @override
   @JsonKey(name: '_required')
   final Element? requiredElement;
   @override
-  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-  final AppointmentParticipantStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1879,19 +1847,14 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 abstract class _AppointmentParticipant extends AppointmentParticipant {
   factory _AppointmentParticipant(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? type,
       final Reference? actor,
-      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
-          final AppointmentParticipantRequired? required_,
-      @JsonKey(name: '_required')
-          final Element? requiredElement,
-      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-          final AppointmentParticipantStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final Code? required_,
+      @JsonKey(name: '_required') final Element? requiredElement,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Period? period}) = _$_AppointmentParticipant;
   _AppointmentParticipant._() : super._();
 
@@ -1911,18 +1874,12 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @override
   Reference? get actor => throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      name: 'required',
-      unknownEnumValue: AppointmentParticipantRequired.unknown)
-  AppointmentParticipantRequired? get required_ =>
-      throw _privateConstructorUsedError;
+  Code? get required_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-  AppointmentParticipantStatus? get status =>
-      throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1942,7 +1899,7 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -1988,7 +1945,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2073,7 +2030,7 @@ class _$AppointmentResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2278,7 +2235,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2375,7 +2332,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2513,7 +2470,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -2694,7 +2651,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2732,7 +2689,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -2798,7 +2755,7 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 mixin _$Schedule {
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -2839,7 +2796,7 @@ abstract class $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2914,7 +2871,7 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3081,7 +3038,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3165,7 +3122,7 @@ class __$$_ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3294,7 +3251,7 @@ class _$_Schedule extends _Schedule {
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -3482,7 +3439,7 @@ abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3515,7 +3472,7 @@ abstract class _Schedule extends Schedule {
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -3575,7 +3532,7 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 mixin _$Slot {
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3596,8 +3553,7 @@ mixin _$Slot {
   List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
   CodeableConcept? get appointmentType => throw _privateConstructorUsedError;
   Reference get schedule => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: SlotStatus.unknown)
-  SlotStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Instant? get start => throw _privateConstructorUsedError;
@@ -3625,7 +3581,7 @@ abstract class $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3644,8 +3600,7 @@ abstract class $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       Reference schedule,
-      @JsonKey(unknownEnumValue: SlotStatus.unknown)
-          SlotStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Instant? start,
@@ -3720,7 +3675,7 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3784,7 +3739,7 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SlotStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3950,7 +3905,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3969,8 +3924,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       Reference schedule,
-      @JsonKey(unknownEnumValue: SlotStatus.unknown)
-          SlotStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Instant? start,
@@ -4057,7 +4011,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4121,7 +4075,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SlotStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4187,8 +4141,7 @@ class _$_Slot extends _Slot {
       final List<CodeableConcept>? specialty,
       this.appointmentType,
       required this.schedule,
-      @JsonKey(unknownEnumValue: SlotStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.start,
@@ -4218,7 +4171,7 @@ class _$_Slot extends _Slot {
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -4302,8 +4255,7 @@ class _$_Slot extends _Slot {
   @override
   final Reference schedule;
   @override
-  @JsonKey(unknownEnumValue: SlotStatus.unknown)
-  final SlotStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -4433,7 +4385,7 @@ abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4452,8 +4404,7 @@ abstract class _Slot extends Slot {
       final List<CodeableConcept>? specialty,
       final CodeableConcept? appointmentType,
       required final Reference schedule,
-      @JsonKey(unknownEnumValue: SlotStatus.unknown)
-          final SlotStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Instant? start,
@@ -4476,7 +4427,7 @@ abstract class _Slot extends Slot {
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -4513,8 +4464,7 @@ abstract class _Slot extends Slot {
   @override
   Reference get schedule => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: SlotStatus.unknown)
-  SlotStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -4551,7 +4501,7 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
 mixin _$Task {
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -4573,14 +4523,12 @@ mixin _$Task {
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TaskStatus.unknown)
-  TaskStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
   CodeableConcept? get businessStatus => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TaskIntent.unknown)
-  TaskIntent? get intent => throw _privateConstructorUsedError;
+  Code? get intent => throw _privateConstructorUsedError;
   @JsonKey(name: '_intent')
   Element? get intentElement => throw _privateConstructorUsedError;
   Code? get priority => throw _privateConstructorUsedError;
@@ -4627,7 +4575,7 @@ abstract class $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4648,14 +4596,12 @@ abstract class $TaskCopyWith<$Res> {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: TaskStatus.unknown)
-          TaskStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept? businessStatus,
-      @JsonKey(unknownEnumValue: TaskIntent.unknown)
-          TaskIntent? intent,
+      Code? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
       Code? priority,
@@ -4784,7 +4730,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4852,7 +4798,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as TaskStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4868,7 +4814,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       intent: intent == freezed
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as TaskIntent?,
+              as Code?,
       intentElement: intentElement == freezed
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -5260,7 +5206,7 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5281,14 +5227,12 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: TaskStatus.unknown)
-          TaskStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept? businessStatus,
-      @JsonKey(unknownEnumValue: TaskIntent.unknown)
-          TaskIntent? intent,
+      Code? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
       Code? priority,
@@ -5443,7 +5387,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5511,7 +5455,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as TaskStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5527,7 +5471,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       intent: intent == freezed
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as TaskIntent?,
+              as Code?,
       intentElement: intentElement == freezed
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -5663,14 +5607,12 @@ class _$_Task extends _Task {
       final List<Reference>? basedOn,
       this.groupIdentifier,
       final List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: TaskStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.statusReason,
       this.businessStatus,
-      @JsonKey(unknownEnumValue: TaskIntent.unknown)
-          this.intent,
+      this.intent,
       @JsonKey(name: '_intent')
           this.intentElement,
       this.priority,
@@ -5723,7 +5665,7 @@ class _$_Task extends _Task {
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -5803,8 +5745,7 @@ class _$_Task extends _Task {
   }
 
   @override
-  @JsonKey(unknownEnumValue: TaskStatus.unknown)
-  final TaskStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -5813,8 +5754,7 @@ class _$_Task extends _Task {
   @override
   final CodeableConcept? businessStatus;
   @override
-  @JsonKey(unknownEnumValue: TaskIntent.unknown)
-  final TaskIntent? intent;
+  final Code? intent;
   @override
   @JsonKey(name: '_intent')
   final Element? intentElement;
@@ -6076,7 +6016,7 @@ abstract class _Task extends Task {
   factory _Task(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6097,14 +6037,12 @@ abstract class _Task extends Task {
       final List<Reference>? basedOn,
       final Identifier? groupIdentifier,
       final List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: TaskStatus.unknown)
-          final TaskStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? statusReason,
       final CodeableConcept? businessStatus,
-      @JsonKey(unknownEnumValue: TaskIntent.unknown)
-          final TaskIntent? intent,
+      final Code? intent,
       @JsonKey(name: '_intent')
           final Element? intentElement,
       final Code? priority,
@@ -6145,7 +6083,7 @@ abstract class _Task extends Task {
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -6184,8 +6122,7 @@ abstract class _Task extends Task {
   @override
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TaskStatus.unknown)
-  TaskStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -6194,8 +6131,7 @@ abstract class _Task extends Task {
   @override
   CodeableConcept? get businessStatus => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TaskIntent.unknown)
-  TaskIntent? get intent => throw _privateConstructorUsedError;
+  Code? get intent => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_intent')
   Element? get intentElement => throw _privateConstructorUsedError;
@@ -11633,7 +11569,7 @@ VerificationResult _$VerificationResultFromJson(Map<String, dynamic> json) {
 mixin _$VerificationResult {
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -11691,7 +11627,7 @@ abstract class $VerificationResultCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11794,7 +11730,7 @@ class _$VerificationResultCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12065,7 +12001,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12183,7 +12119,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12361,7 +12297,7 @@ class _$_VerificationResult extends _VerificationResult {
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -12605,7 +12541,7 @@ abstract class _VerificationResult extends VerificationResult {
   factory _VerificationResult(
           {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
               final R4ResourceType resourceType,
-          final Id? id,
+          final String? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -12652,7 +12588,7 @@ abstract class _VerificationResult extends VerificationResult {
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override

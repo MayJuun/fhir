@@ -645,5 +645,7 @@ const _$ExpressionLanguageEnumMap = {
   ExpressionLanguage.text_cql: 'text/cql',
   ExpressionLanguage.text_fhirpath: 'text/fhirpath',
   ExpressionLanguage.application_x_fhir_query: 'application/x-fhir-query',
+  ExpressionLanguage.text_cql_identifier: 'text/cql-identifier',
+  ExpressionLanguage.text_cql_expression: 'text/cql-expression',
   ExpressionLanguage.unknown: 'unknown',
 };

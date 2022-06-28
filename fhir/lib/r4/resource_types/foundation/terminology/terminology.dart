@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'terminology.enums.dart';
 part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
@@ -211,7 +210,7 @@ class CodeSystem with Resource, _$CodeSystem {
     @Default(R4ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -230,8 +229,7 @@ class CodeSystem with Resource, _$CodeSystem {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-        CodeSystemStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -251,15 +249,13 @@ class CodeSystem with Resource, _$CodeSystem {
     Boolean? caseSensitive,
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
     Canonical? valueSet,
-    @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-        CodeSystemHierarchyMeaning? hierarchyMeaning,
+    Code? hierarchyMeaning,
     @JsonKey(name: '_hierarchyMeaning') Element? hierarchyMeaningElement,
     Boolean? compositional,
     @JsonKey(name: '_compositional') Element? compositionalElement,
     Boolean? versionNeeded,
     @JsonKey(name: '_versionNeeded') Element? versionNeededElement,
-    @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-        CodeSystemContent? content,
+    Code? content,
     @JsonKey(name: '_content') Element? contentElement,
     Canonical? supplements,
     UnsignedInt? count,
@@ -454,8 +450,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
     @JsonKey(name: '_uri') Element? uriElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-        CodeSystemPropertyType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _CodeSystemProperty;
 
@@ -966,7 +961,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @Default(R4ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -985,8 +980,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-        ConceptMapStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1302,8 +1296,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
-        ConceptMapTargetEquivalence? equivalence,
+    Code? equivalence,
     @JsonKey(name: '_equivalence') Element? equivalenceElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -1496,8 +1489,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-        ConceptMapUnmappedMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1664,7 +1656,7 @@ class NamingSystem with Resource, _$NamingSystem {
     @Default(R4ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1676,10 +1668,9 @@ class NamingSystem with Resource, _$NamingSystem {
     List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-        NamingSystemStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -1785,8 +1776,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-        NamingSystemUniqueIdType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -2012,7 +2002,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @Default(R4ResourceType.TerminologyCapabilities)
     @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2030,8 +2020,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-        TerminologyCapabilitiesStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2056,8 +2045,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
     List<TerminologyCapabilitiesCodeSystem>? codeSystem,
     TerminologyCapabilitiesExpansion? expansion,
-    @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-        TerminologyCapabilitiesCodeSearch? codeSearch,
+    Code? codeSearch,
     @JsonKey(name: '_codeSearch') Element? codeSearchElement,
     TerminologyCapabilitiesValidateCode? validateCode,
     TerminologyCapabilitiesTranslation? translation,
@@ -3035,7 +3023,7 @@ class ValueSet with Resource, _$ValueSet {
     @Default(R4ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -3054,7 +3042,7 @@ class ValueSet with Resource, _$ValueSet {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -3528,7 +3516,7 @@ class ValueSetFilter with _$ValueSetFilter {
     List<FhirExtension>? modifierExtension,
     Code? property,
     @JsonKey(name: '_property') Element? propertyElement,
-    @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp? op,
+    Code? op,
     @JsonKey(name: '_op') Element? opElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,

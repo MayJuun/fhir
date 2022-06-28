@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'summary.enums.dart';
 part 'summary.freezed.dart';
 part 'summary.g.dart';
 
@@ -148,7 +147,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     @Default(R4ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -159,8 +158,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
-    @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
-        AdverseEventActuality? actuality,
+    Code? actuality,
     @JsonKey(name: '_actuality') Element? actualityElement,
     List<CodeableConcept>? category,
     CodeableConcept? event,
@@ -528,7 +526,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     @Default(R4ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -541,13 +539,11 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     List<Identifier>? identifier,
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
-        AllergyIntoleranceType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-    List<AllergyIntoleranceCategory>? category,
+    List<Code>? category,
     @JsonKey(name: '_category') List<Element?>? categoryElement,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-        AllergyIntoleranceCriticality? criticality,
+    Code? criticality,
     @JsonKey(name: '_criticality') Element? criticalityElement,
     CodeableConcept? code,
     required Reference patient,
@@ -673,8 +669,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirDateTime? onset,
     @JsonKey(name: '_onset') Element? onsetElement,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
-        AllergyIntoleranceReactionSeverity? severity,
+    Code? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     List<Annotation>? note,
@@ -854,7 +849,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     @Default(R4ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1248,7 +1243,7 @@ class Condition with Resource, _$Condition {
     @Default(R4ResourceType.Condition)
     @JsonKey(unknownEnumValue: R4ResourceType.Condition)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1588,7 +1583,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     @Default(R4ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1602,8 +1597,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? code,
-    @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
-        DetectedIssueSeverity? severity,
+    Code? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     Reference? patient,
     FhirDateTime? identifiedDateTime,
@@ -1971,7 +1965,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @Default(R4ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1985,8 +1979,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
-    @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
-        FamilyMemberHistoryStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? dataAbsentReason,
     required Reference patient,
@@ -2346,7 +2339,7 @@ class Procedure with Resource, _$Procedure {
     @Default(R4ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

@@ -277,6 +277,251 @@ abstract class _Narrative extends Narrative {
       throw _privateConstructorUsedError;
 }
 
+CodeableReference _$CodeableReferenceFromJson(Map<String, dynamic> json) {
+  return _CodeableReference.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CodeableReference {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  CodeableConcept? get concept => throw _privateConstructorUsedError;
+  Reference? get reference => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CodeableReferenceCopyWith<CodeableReference> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CodeableReferenceCopyWith<$Res> {
+  factory $CodeableReferenceCopyWith(
+          CodeableReference value, $Res Function(CodeableReference) then) =
+      _$CodeableReferenceCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? concept,
+      Reference? reference});
+
+  $CodeableConceptCopyWith<$Res>? get concept;
+  $ReferenceCopyWith<$Res>? get reference;
+}
+
+/// @nodoc
+class _$CodeableReferenceCopyWithImpl<$Res>
+    implements $CodeableReferenceCopyWith<$Res> {
+  _$CodeableReferenceCopyWithImpl(this._value, this._then);
+
+  final CodeableReference _value;
+  // ignore: unused_field
+  final $Res Function(CodeableReference) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? concept = freezed,
+    Object? reference = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      concept: concept == freezed
+          ? _value.concept
+          : concept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get concept {
+    if (_value.concept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.concept!, (value) {
+      return _then(_value.copyWith(concept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get reference {
+    if (_value.reference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reference!, (value) {
+      return _then(_value.copyWith(reference: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CodeableReferenceCopyWith<$Res>
+    implements $CodeableReferenceCopyWith<$Res> {
+  factory _$$_CodeableReferenceCopyWith(_$_CodeableReference value,
+          $Res Function(_$_CodeableReference) then) =
+      __$$_CodeableReferenceCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? concept,
+      Reference? reference});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get concept;
+  @override
+  $ReferenceCopyWith<$Res>? get reference;
+}
+
+/// @nodoc
+class __$$_CodeableReferenceCopyWithImpl<$Res>
+    extends _$CodeableReferenceCopyWithImpl<$Res>
+    implements _$$_CodeableReferenceCopyWith<$Res> {
+  __$$_CodeableReferenceCopyWithImpl(
+      _$_CodeableReference _value, $Res Function(_$_CodeableReference) _then)
+      : super(_value, (v) => _then(v as _$_CodeableReference));
+
+  @override
+  _$_CodeableReference get _value => super._value as _$_CodeableReference;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? concept = freezed,
+    Object? reference = freezed,
+  }) {
+    return _then(_$_CodeableReference(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      concept: concept == freezed
+          ? _value.concept
+          : concept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CodeableReference extends _CodeableReference {
+  _$_CodeableReference(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.concept,
+      this.reference})
+      : _extension_ = extension_,
+        super._();
+
+  factory _$_CodeableReference.fromJson(Map<String, dynamic> json) =>
+      _$$_CodeableReferenceFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? concept;
+  @override
+  final Reference? reference;
+
+  @override
+  String toString() {
+    return 'CodeableReference(id: $id, extension_: $extension_, concept: $concept, reference: $reference)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CodeableReference &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality().equals(other.concept, concept) &&
+            const DeepCollectionEquality().equals(other.reference, reference));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(concept),
+      const DeepCollectionEquality().hash(reference));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CodeableReferenceCopyWith<_$_CodeableReference> get copyWith =>
+      __$$_CodeableReferenceCopyWithImpl<_$_CodeableReference>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CodeableReferenceToJson(this);
+  }
+}
+
+abstract class _CodeableReference extends CodeableReference {
+  factory _CodeableReference(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final CodeableConcept? concept,
+      final Reference? reference}) = _$_CodeableReference;
+  _CodeableReference._() : super._();
+
+  factory _CodeableReference.fromJson(Map<String, dynamic> json) =
+      _$_CodeableReference.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get concept => throw _privateConstructorUsedError;
+  @override
+  Reference? get reference => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CodeableReferenceCopyWith<_$_CodeableReference> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Reference _$ReferenceFromJson(Map<String, dynamic> json) {
   return _Reference.fromJson(json);
 }
@@ -2438,6 +2683,8 @@ mixin _$ElementDefinition {
   Attachment? get defaultValueAttachment => throw _privateConstructorUsedError;
   CodeableConcept? get defaultValueCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get defaultValueCodeableReference =>
+      throw _privateConstructorUsedError;
   Coding? get defaultValueCoding => throw _privateConstructorUsedError;
   ContactPoint? get defaultValueContactPoint =>
       throw _privateConstructorUsedError;
@@ -2451,6 +2698,7 @@ mixin _$ElementDefinition {
   Quantity? get defaultValueQuantity => throw _privateConstructorUsedError;
   Range? get defaultValueRange => throw _privateConstructorUsedError;
   Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
+  RatioRange? get defaultValueRatioRange => throw _privateConstructorUsedError;
   Reference? get defaultValueReference => throw _privateConstructorUsedError;
   SampledData? get defaultValueSampledData =>
       throw _privateConstructorUsedError;
@@ -2472,7 +2720,6 @@ mixin _$ElementDefinition {
   UsageContext? get defaultValueUsageContext =>
       throw _privateConstructorUsedError;
   Dosage? get defaultValueDosage => throw _privateConstructorUsedError;
-  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
   Markdown? get meaningWhenMissing => throw _privateConstructorUsedError;
   @JsonKey(name: '_meaningWhenMissing')
   Element? get meaningWhenMissingElement => throw _privateConstructorUsedError;
@@ -2542,6 +2789,8 @@ mixin _$ElementDefinition {
   Attachment? get fixedAttachment => throw _privateConstructorUsedError;
   CodeableConcept? get fixedCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get fixedCodeableReference =>
+      throw _privateConstructorUsedError;
   Coding? get fixedCoding => throw _privateConstructorUsedError;
   ContactPoint? get fixedContactPoint => throw _privateConstructorUsedError;
   Count? get fixedCount => throw _privateConstructorUsedError;
@@ -2554,6 +2803,7 @@ mixin _$ElementDefinition {
   Quantity? get fixedQuantity => throw _privateConstructorUsedError;
   Range? get fixedRange => throw _privateConstructorUsedError;
   Ratio? get fixedRatio => throw _privateConstructorUsedError;
+  RatioRange? get fixedRatioRange => throw _privateConstructorUsedError;
   Reference? get fixedReference => throw _privateConstructorUsedError;
   SampledData? get fixedSampledData => throw _privateConstructorUsedError;
   Signature? get fixedSignature => throw _privateConstructorUsedError;
@@ -2571,7 +2821,6 @@ mixin _$ElementDefinition {
       throw _privateConstructorUsedError;
   UsageContext? get fixedUsageContext => throw _privateConstructorUsedError;
   Dosage? get fixedDosage => throw _privateConstructorUsedError;
-  Meta? get fixedMeta => throw _privateConstructorUsedError;
   Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternBase64Binary')
   Element? get patternBase64BinaryElement => throw _privateConstructorUsedError;
@@ -2635,6 +2884,8 @@ mixin _$ElementDefinition {
   Attachment? get patternAttachment => throw _privateConstructorUsedError;
   CodeableConcept? get patternCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get patternCodeableReference =>
+      throw _privateConstructorUsedError;
   Coding? get patternCoding => throw _privateConstructorUsedError;
   ContactPoint? get patternContactPoint => throw _privateConstructorUsedError;
   Count? get patternCount => throw _privateConstructorUsedError;
@@ -2647,6 +2898,7 @@ mixin _$ElementDefinition {
   Quantity? get patternQuantity => throw _privateConstructorUsedError;
   Range? get patternRange => throw _privateConstructorUsedError;
   Ratio? get patternRatio => throw _privateConstructorUsedError;
+  RatioRange? get patternRatioRange => throw _privateConstructorUsedError;
   Reference? get patternReference => throw _privateConstructorUsedError;
   SampledData? get patternSampledData => throw _privateConstructorUsedError;
   Signature? get patternSignature => throw _privateConstructorUsedError;
@@ -2664,7 +2916,6 @@ mixin _$ElementDefinition {
       throw _privateConstructorUsedError;
   UsageContext? get patternUsageContext => throw _privateConstructorUsedError;
   Dosage? get patternDosage => throw _privateConstructorUsedError;
-  Meta? get patternMeta => throw _privateConstructorUsedError;
   List<ElementDefinitionExample>? get example =>
       throw _privateConstructorUsedError;
   Date? get minValueDate => throw _privateConstructorUsedError;
@@ -2862,6 +3113,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? defaultValueAnnotation,
       Attachment? defaultValueAttachment,
       CodeableConcept? defaultValueCodeableConcept,
+      CodeableReference? defaultValueCodeableReference,
       Coding? defaultValueCoding,
       ContactPoint? defaultValueContactPoint,
       Count? defaultValueCount,
@@ -2874,6 +3126,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? defaultValueQuantity,
       Range? defaultValueRange,
       Ratio? defaultValueRatio,
+      RatioRange? defaultValueRatioRange,
       Reference? defaultValueReference,
       SampledData? defaultValueSampledData,
       Signature? defaultValueSignature,
@@ -2887,7 +3140,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? defaultValueTriggerDefinition,
       UsageContext? defaultValueUsageContext,
       Dosage? defaultValueDosage,
-      Meta? defaultValueMeta,
       Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           Element? meaningWhenMissingElement,
@@ -2956,6 +3208,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? fixedAnnotation,
       Attachment? fixedAttachment,
       CodeableConcept? fixedCodeableConcept,
+      CodeableReference? fixedCodeableReference,
       Coding? fixedCoding,
       ContactPoint? fixedContactPoint,
       Count? fixedCount,
@@ -2968,6 +3221,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? fixedQuantity,
       Range? fixedRange,
       Ratio? fixedRatio,
+      RatioRange? fixedRatioRange,
       Reference? fixedReference,
       SampledData? fixedSampledData,
       Signature? fixedSignature,
@@ -2981,7 +3235,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-      Meta? fixedMeta,
       Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
@@ -3044,6 +3297,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? patternAnnotation,
       Attachment? patternAttachment,
       CodeableConcept? patternCodeableConcept,
+      CodeableReference? patternCodeableReference,
       Coding? patternCoding,
       ContactPoint? patternContactPoint,
       Count? patternCount,
@@ -3056,6 +3310,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? patternQuantity,
       Range? patternRange,
       Ratio? patternRatio,
+      RatioRange? patternRatioRange,
       Reference? patternReference,
       SampledData? patternSampledData,
       Signature? patternSignature,
@@ -3069,7 +3324,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? patternTriggerDefinition,
       UsageContext? patternUsageContext,
       Dosage? patternDosage,
-      Meta? patternMeta,
       List<ElementDefinitionExample>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -3180,6 +3434,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get defaultValueAnnotation;
   $AttachmentCopyWith<$Res>? get defaultValueAttachment;
   $CodeableConceptCopyWith<$Res>? get defaultValueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference;
   $CodingCopyWith<$Res>? get defaultValueCoding;
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint;
   $CountCopyWith<$Res>? get defaultValueCount;
@@ -3192,6 +3447,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get defaultValueQuantity;
   $RangeCopyWith<$Res>? get defaultValueRange;
   $RatioCopyWith<$Res>? get defaultValueRatio;
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange;
   $ReferenceCopyWith<$Res>? get defaultValueReference;
   $SampledDataCopyWith<$Res>? get defaultValueSampledData;
   $SignatureCopyWith<$Res>? get defaultValueSignature;
@@ -3205,7 +3461,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get defaultValueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get defaultValueUsageContext;
   $DosageCopyWith<$Res>? get defaultValueDosage;
-  $MetaCopyWith<$Res>? get defaultValueMeta;
   $ElementCopyWith<$Res>? get meaningWhenMissingElement;
   $ElementCopyWith<$Res>? get orderMeaningElement;
   $ElementCopyWith<$Res>? get fixedBase64BinaryElement;
@@ -3232,6 +3487,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get fixedAnnotation;
   $AttachmentCopyWith<$Res>? get fixedAttachment;
   $CodeableConceptCopyWith<$Res>? get fixedCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference;
   $CodingCopyWith<$Res>? get fixedCoding;
   $ContactPointCopyWith<$Res>? get fixedContactPoint;
   $CountCopyWith<$Res>? get fixedCount;
@@ -3244,6 +3500,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get fixedQuantity;
   $RangeCopyWith<$Res>? get fixedRange;
   $RatioCopyWith<$Res>? get fixedRatio;
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange;
   $ReferenceCopyWith<$Res>? get fixedReference;
   $SampledDataCopyWith<$Res>? get fixedSampledData;
   $SignatureCopyWith<$Res>? get fixedSignature;
@@ -3257,7 +3514,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get fixedTriggerDefinition;
   $UsageContextCopyWith<$Res>? get fixedUsageContext;
   $DosageCopyWith<$Res>? get fixedDosage;
-  $MetaCopyWith<$Res>? get fixedMeta;
   $ElementCopyWith<$Res>? get patternBase64BinaryElement;
   $ElementCopyWith<$Res>? get patternBooleanElement;
   $ElementCopyWith<$Res>? get patternCanonicalElement;
@@ -3282,6 +3538,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get patternAnnotation;
   $AttachmentCopyWith<$Res>? get patternAttachment;
   $CodeableConceptCopyWith<$Res>? get patternCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference;
   $CodingCopyWith<$Res>? get patternCoding;
   $ContactPointCopyWith<$Res>? get patternContactPoint;
   $CountCopyWith<$Res>? get patternCount;
@@ -3294,6 +3551,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get patternQuantity;
   $RangeCopyWith<$Res>? get patternRange;
   $RatioCopyWith<$Res>? get patternRatio;
+  $RatioRangeCopyWith<$Res>? get patternRatioRange;
   $ReferenceCopyWith<$Res>? get patternReference;
   $SampledDataCopyWith<$Res>? get patternSampledData;
   $SignatureCopyWith<$Res>? get patternSignature;
@@ -3307,7 +3565,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get patternTriggerDefinition;
   $UsageContextCopyWith<$Res>? get patternUsageContext;
   $DosageCopyWith<$Res>? get patternDosage;
-  $MetaCopyWith<$Res>? get patternMeta;
   $ElementCopyWith<$Res>? get minValueDateElement;
   $ElementCopyWith<$Res>? get minValueDateTimeElement;
   $ElementCopyWith<$Res>? get minValueInstantElement;
@@ -3421,6 +3678,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueAnnotation = freezed,
     Object? defaultValueAttachment = freezed,
     Object? defaultValueCodeableConcept = freezed,
+    Object? defaultValueCodeableReference = freezed,
     Object? defaultValueCoding = freezed,
     Object? defaultValueContactPoint = freezed,
     Object? defaultValueCount = freezed,
@@ -3433,6 +3691,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueQuantity = freezed,
     Object? defaultValueRange = freezed,
     Object? defaultValueRatio = freezed,
+    Object? defaultValueRatioRange = freezed,
     Object? defaultValueReference = freezed,
     Object? defaultValueSampledData = freezed,
     Object? defaultValueSignature = freezed,
@@ -3446,7 +3705,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueTriggerDefinition = freezed,
     Object? defaultValueUsageContext = freezed,
     Object? defaultValueDosage = freezed,
-    Object? defaultValueMeta = freezed,
     Object? meaningWhenMissing = freezed,
     Object? meaningWhenMissingElement = freezed,
     Object? orderMeaning = freezed,
@@ -3494,6 +3752,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedAnnotation = freezed,
     Object? fixedAttachment = freezed,
     Object? fixedCodeableConcept = freezed,
+    Object? fixedCodeableReference = freezed,
     Object? fixedCoding = freezed,
     Object? fixedContactPoint = freezed,
     Object? fixedCount = freezed,
@@ -3506,6 +3765,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedQuantity = freezed,
     Object? fixedRange = freezed,
     Object? fixedRatio = freezed,
+    Object? fixedRatioRange = freezed,
     Object? fixedReference = freezed,
     Object? fixedSampledData = freezed,
     Object? fixedSignature = freezed,
@@ -3519,7 +3779,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedTriggerDefinition = freezed,
     Object? fixedUsageContext = freezed,
     Object? fixedDosage = freezed,
-    Object? fixedMeta = freezed,
     Object? patternBase64Binary = freezed,
     Object? patternBase64BinaryElement = freezed,
     Object? patternBoolean = freezed,
@@ -3563,6 +3822,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternAnnotation = freezed,
     Object? patternAttachment = freezed,
     Object? patternCodeableConcept = freezed,
+    Object? patternCodeableReference = freezed,
     Object? patternCoding = freezed,
     Object? patternContactPoint = freezed,
     Object? patternCount = freezed,
@@ -3575,6 +3835,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternQuantity = freezed,
     Object? patternRange = freezed,
     Object? patternRatio = freezed,
+    Object? patternRatioRange = freezed,
     Object? patternReference = freezed,
     Object? patternSampledData = freezed,
     Object? patternSignature = freezed,
@@ -3588,7 +3849,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternTriggerDefinition = freezed,
     Object? patternUsageContext = freezed,
     Object? patternDosage = freezed,
-    Object? patternMeta = freezed,
     Object? example = freezed,
     Object? minValueDate = freezed,
     Object? minValueDateElement = freezed,
@@ -3946,6 +4206,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueCodeableConcept
           : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      defaultValueCodeableReference: defaultValueCodeableReference == freezed
+          ? _value.defaultValueCodeableReference
+          : defaultValueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       defaultValueCoding: defaultValueCoding == freezed
           ? _value.defaultValueCoding
           : defaultValueCoding // ignore: cast_nullable_to_non_nullable
@@ -3994,6 +4258,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueRatio
           : defaultValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      defaultValueRatioRange: defaultValueRatioRange == freezed
+          ? _value.defaultValueRatioRange
+          : defaultValueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       defaultValueReference: defaultValueReference == freezed
           ? _value.defaultValueReference
           : defaultValueReference // ignore: cast_nullable_to_non_nullable
@@ -4047,10 +4315,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueDosage
           : defaultValueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      defaultValueMeta: defaultValueMeta == freezed
-          ? _value.defaultValueMeta
-          : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       meaningWhenMissing: meaningWhenMissing == freezed
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
@@ -4239,6 +4503,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedCodeableConcept
           : fixedCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      fixedCodeableReference: fixedCodeableReference == freezed
+          ? _value.fixedCodeableReference
+          : fixedCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       fixedCoding: fixedCoding == freezed
           ? _value.fixedCoding
           : fixedCoding // ignore: cast_nullable_to_non_nullable
@@ -4287,6 +4555,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedRatio
           : fixedRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      fixedRatioRange: fixedRatioRange == freezed
+          ? _value.fixedRatioRange
+          : fixedRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       fixedReference: fixedReference == freezed
           ? _value.fixedReference
           : fixedReference // ignore: cast_nullable_to_non_nullable
@@ -4339,10 +4611,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedDosage
           : fixedDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      fixedMeta: fixedMeta == freezed
-          ? _value.fixedMeta
-          : fixedMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       patternBase64Binary: patternBase64Binary == freezed
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
@@ -4515,6 +4783,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternCodeableConcept
           : patternCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      patternCodeableReference: patternCodeableReference == freezed
+          ? _value.patternCodeableReference
+          : patternCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       patternCoding: patternCoding == freezed
           ? _value.patternCoding
           : patternCoding // ignore: cast_nullable_to_non_nullable
@@ -4563,6 +4835,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternRatio
           : patternRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      patternRatioRange: patternRatioRange == freezed
+          ? _value.patternRatioRange
+          : patternRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       patternReference: patternReference == freezed
           ? _value.patternReference
           : patternReference // ignore: cast_nullable_to_non_nullable
@@ -4615,10 +4891,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternDosage
           : patternDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      patternMeta: patternMeta == freezed
-          ? _value.patternMeta
-          : patternMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       example: example == freezed
           ? _value.example
           : example // ignore: cast_nullable_to_non_nullable
@@ -5235,6 +5507,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference {
+    if (_value.defaultValueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(
+        _value.defaultValueCodeableReference!, (value) {
+      return _then(_value.copyWith(defaultValueCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get defaultValueCoding {
     if (_value.defaultValueCoding == null) {
       return null;
@@ -5364,6 +5648,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.defaultValueRatio!, (value) {
       return _then(_value.copyWith(defaultValueRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange {
+    if (_value.defaultValueRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.defaultValueRatioRange!, (value) {
+      return _then(_value.copyWith(defaultValueRatioRange: value));
     });
   }
 
@@ -5513,17 +5808,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.defaultValueDosage!, (value) {
       return _then(_value.copyWith(defaultValueDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get defaultValueMeta {
-    if (_value.defaultValueMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.defaultValueMeta!, (value) {
-      return _then(_value.copyWith(defaultValueMeta: value));
     });
   }
 
@@ -5815,6 +6099,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference {
+    if (_value.fixedCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.fixedCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(fixedCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get fixedCoding {
     if (_value.fixedCoding == null) {
       return null;
@@ -5943,6 +6239,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.fixedRatio!, (value) {
       return _then(_value.copyWith(fixedRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange {
+    if (_value.fixedRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.fixedRatioRange!, (value) {
+      return _then(_value.copyWith(fixedRatioRange: value));
     });
   }
 
@@ -6090,17 +6397,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.fixedDosage!, (value) {
       return _then(_value.copyWith(fixedDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get fixedMeta {
-    if (_value.fixedMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.fixedMeta!, (value) {
-      return _then(_value.copyWith(fixedMeta: value));
     });
   }
 
@@ -6370,6 +6666,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference {
+    if (_value.patternCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.patternCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(patternCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get patternCoding {
     if (_value.patternCoding == null) {
       return null;
@@ -6498,6 +6806,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.patternRatio!, (value) {
       return _then(_value.copyWith(patternRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get patternRatioRange {
+    if (_value.patternRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.patternRatioRange!, (value) {
+      return _then(_value.copyWith(patternRatioRange: value));
     });
   }
 
@@ -6645,17 +6964,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.patternDosage!, (value) {
       return _then(_value.copyWith(patternDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get patternMeta {
-    if (_value.patternMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.patternMeta!, (value) {
-      return _then(_value.copyWith(patternMeta: value));
     });
   }
 
@@ -7041,6 +7349,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Annotation? defaultValueAnnotation,
       Attachment? defaultValueAttachment,
       CodeableConcept? defaultValueCodeableConcept,
+      CodeableReference? defaultValueCodeableReference,
       Coding? defaultValueCoding,
       ContactPoint? defaultValueContactPoint,
       Count? defaultValueCount,
@@ -7053,6 +7362,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Quantity? defaultValueQuantity,
       Range? defaultValueRange,
       Ratio? defaultValueRatio,
+      RatioRange? defaultValueRatioRange,
       Reference? defaultValueReference,
       SampledData? defaultValueSampledData,
       Signature? defaultValueSignature,
@@ -7066,7 +7376,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       TriggerDefinition? defaultValueTriggerDefinition,
       UsageContext? defaultValueUsageContext,
       Dosage? defaultValueDosage,
-      Meta? defaultValueMeta,
       Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           Element? meaningWhenMissingElement,
@@ -7135,6 +7444,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Annotation? fixedAnnotation,
       Attachment? fixedAttachment,
       CodeableConcept? fixedCodeableConcept,
+      CodeableReference? fixedCodeableReference,
       Coding? fixedCoding,
       ContactPoint? fixedContactPoint,
       Count? fixedCount,
@@ -7147,6 +7457,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Quantity? fixedQuantity,
       Range? fixedRange,
       Ratio? fixedRatio,
+      RatioRange? fixedRatioRange,
       Reference? fixedReference,
       SampledData? fixedSampledData,
       Signature? fixedSignature,
@@ -7160,7 +7471,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-      Meta? fixedMeta,
       Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
@@ -7223,6 +7533,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Annotation? patternAnnotation,
       Attachment? patternAttachment,
       CodeableConcept? patternCodeableConcept,
+      CodeableReference? patternCodeableReference,
       Coding? patternCoding,
       ContactPoint? patternContactPoint,
       Count? patternCount,
@@ -7235,6 +7546,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Quantity? patternQuantity,
       Range? patternRange,
       Ratio? patternRatio,
+      RatioRange? patternRatioRange,
       Reference? patternReference,
       SampledData? patternSampledData,
       Signature? patternSignature,
@@ -7248,7 +7560,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       TriggerDefinition? patternTriggerDefinition,
       UsageContext? patternUsageContext,
       Dosage? patternDosage,
-      Meta? patternMeta,
       List<ElementDefinitionExample>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -7397,6 +7708,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get defaultValueCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get defaultValueCoding;
   @override
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint;
@@ -7420,6 +7733,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get defaultValueRange;
   @override
   $RatioCopyWith<$Res>? get defaultValueRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get defaultValueReference;
   @override
@@ -7446,8 +7761,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get defaultValueUsageContext;
   @override
   $DosageCopyWith<$Res>? get defaultValueDosage;
-  @override
-  $MetaCopyWith<$Res>? get defaultValueMeta;
   @override
   $ElementCopyWith<$Res>? get meaningWhenMissingElement;
   @override
@@ -7501,6 +7814,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get fixedCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get fixedCoding;
   @override
   $ContactPointCopyWith<$Res>? get fixedContactPoint;
@@ -7524,6 +7839,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get fixedRange;
   @override
   $RatioCopyWith<$Res>? get fixedRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get fixedReference;
   @override
@@ -7550,8 +7867,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get fixedUsageContext;
   @override
   $DosageCopyWith<$Res>? get fixedDosage;
-  @override
-  $MetaCopyWith<$Res>? get fixedMeta;
   @override
   $ElementCopyWith<$Res>? get patternBase64BinaryElement;
   @override
@@ -7601,6 +7916,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get patternCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get patternCoding;
   @override
   $ContactPointCopyWith<$Res>? get patternContactPoint;
@@ -7624,6 +7941,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get patternRange;
   @override
   $RatioCopyWith<$Res>? get patternRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get patternRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get patternReference;
   @override
@@ -7650,8 +7969,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get patternUsageContext;
   @override
   $DosageCopyWith<$Res>? get patternDosage;
-  @override
-  $MetaCopyWith<$Res>? get patternMeta;
   @override
   $ElementCopyWith<$Res>? get minValueDateElement;
   @override
@@ -7791,6 +8108,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueAnnotation = freezed,
     Object? defaultValueAttachment = freezed,
     Object? defaultValueCodeableConcept = freezed,
+    Object? defaultValueCodeableReference = freezed,
     Object? defaultValueCoding = freezed,
     Object? defaultValueContactPoint = freezed,
     Object? defaultValueCount = freezed,
@@ -7803,6 +8121,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueQuantity = freezed,
     Object? defaultValueRange = freezed,
     Object? defaultValueRatio = freezed,
+    Object? defaultValueRatioRange = freezed,
     Object? defaultValueReference = freezed,
     Object? defaultValueSampledData = freezed,
     Object? defaultValueSignature = freezed,
@@ -7816,7 +8135,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueTriggerDefinition = freezed,
     Object? defaultValueUsageContext = freezed,
     Object? defaultValueDosage = freezed,
-    Object? defaultValueMeta = freezed,
     Object? meaningWhenMissing = freezed,
     Object? meaningWhenMissingElement = freezed,
     Object? orderMeaning = freezed,
@@ -7864,6 +8182,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? fixedAnnotation = freezed,
     Object? fixedAttachment = freezed,
     Object? fixedCodeableConcept = freezed,
+    Object? fixedCodeableReference = freezed,
     Object? fixedCoding = freezed,
     Object? fixedContactPoint = freezed,
     Object? fixedCount = freezed,
@@ -7876,6 +8195,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? fixedQuantity = freezed,
     Object? fixedRange = freezed,
     Object? fixedRatio = freezed,
+    Object? fixedRatioRange = freezed,
     Object? fixedReference = freezed,
     Object? fixedSampledData = freezed,
     Object? fixedSignature = freezed,
@@ -7889,7 +8209,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? fixedTriggerDefinition = freezed,
     Object? fixedUsageContext = freezed,
     Object? fixedDosage = freezed,
-    Object? fixedMeta = freezed,
     Object? patternBase64Binary = freezed,
     Object? patternBase64BinaryElement = freezed,
     Object? patternBoolean = freezed,
@@ -7933,6 +8252,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? patternAnnotation = freezed,
     Object? patternAttachment = freezed,
     Object? patternCodeableConcept = freezed,
+    Object? patternCodeableReference = freezed,
     Object? patternCoding = freezed,
     Object? patternContactPoint = freezed,
     Object? patternCount = freezed,
@@ -7945,6 +8265,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? patternQuantity = freezed,
     Object? patternRange = freezed,
     Object? patternRatio = freezed,
+    Object? patternRatioRange = freezed,
     Object? patternReference = freezed,
     Object? patternSampledData = freezed,
     Object? patternSignature = freezed,
@@ -7958,7 +8279,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? patternTriggerDefinition = freezed,
     Object? patternUsageContext = freezed,
     Object? patternDosage = freezed,
-    Object? patternMeta = freezed,
     Object? example = freezed,
     Object? minValueDate = freezed,
     Object? minValueDateElement = freezed,
@@ -8316,6 +8636,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueCodeableConcept
           : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      defaultValueCodeableReference: defaultValueCodeableReference == freezed
+          ? _value.defaultValueCodeableReference
+          : defaultValueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       defaultValueCoding: defaultValueCoding == freezed
           ? _value.defaultValueCoding
           : defaultValueCoding // ignore: cast_nullable_to_non_nullable
@@ -8364,6 +8688,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueRatio
           : defaultValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      defaultValueRatioRange: defaultValueRatioRange == freezed
+          ? _value.defaultValueRatioRange
+          : defaultValueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       defaultValueReference: defaultValueReference == freezed
           ? _value.defaultValueReference
           : defaultValueReference // ignore: cast_nullable_to_non_nullable
@@ -8417,10 +8745,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueDosage
           : defaultValueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      defaultValueMeta: defaultValueMeta == freezed
-          ? _value.defaultValueMeta
-          : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       meaningWhenMissing: meaningWhenMissing == freezed
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
@@ -8609,6 +8933,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedCodeableConcept
           : fixedCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      fixedCodeableReference: fixedCodeableReference == freezed
+          ? _value.fixedCodeableReference
+          : fixedCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       fixedCoding: fixedCoding == freezed
           ? _value.fixedCoding
           : fixedCoding // ignore: cast_nullable_to_non_nullable
@@ -8657,6 +8985,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedRatio
           : fixedRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      fixedRatioRange: fixedRatioRange == freezed
+          ? _value.fixedRatioRange
+          : fixedRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       fixedReference: fixedReference == freezed
           ? _value.fixedReference
           : fixedReference // ignore: cast_nullable_to_non_nullable
@@ -8709,10 +9041,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedDosage
           : fixedDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      fixedMeta: fixedMeta == freezed
-          ? _value.fixedMeta
-          : fixedMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       patternBase64Binary: patternBase64Binary == freezed
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
@@ -8885,6 +9213,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternCodeableConcept
           : patternCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      patternCodeableReference: patternCodeableReference == freezed
+          ? _value.patternCodeableReference
+          : patternCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       patternCoding: patternCoding == freezed
           ? _value.patternCoding
           : patternCoding // ignore: cast_nullable_to_non_nullable
@@ -8933,6 +9265,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternRatio
           : patternRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      patternRatioRange: patternRatioRange == freezed
+          ? _value.patternRatioRange
+          : patternRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       patternReference: patternReference == freezed
           ? _value.patternReference
           : patternReference // ignore: cast_nullable_to_non_nullable
@@ -8985,10 +9321,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternDosage
           : patternDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      patternMeta: patternMeta == freezed
-          ? _value.patternMeta
-          : patternMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       example: example == freezed
           ? _value._example
           : example // ignore: cast_nullable_to_non_nullable
@@ -9306,6 +9638,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueAnnotation,
       this.defaultValueAttachment,
       this.defaultValueCodeableConcept,
+      this.defaultValueCodeableReference,
       this.defaultValueCoding,
       this.defaultValueContactPoint,
       this.defaultValueCount,
@@ -9318,6 +9651,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueQuantity,
       this.defaultValueRange,
       this.defaultValueRatio,
+      this.defaultValueRatioRange,
       this.defaultValueReference,
       this.defaultValueSampledData,
       this.defaultValueSignature,
@@ -9331,7 +9665,6 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueTriggerDefinition,
       this.defaultValueUsageContext,
       this.defaultValueDosage,
-      this.defaultValueMeta,
       this.meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           this.meaningWhenMissingElement,
@@ -9400,6 +9733,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedAnnotation,
       this.fixedAttachment,
       this.fixedCodeableConcept,
+      this.fixedCodeableReference,
       this.fixedCoding,
       this.fixedContactPoint,
       this.fixedCount,
@@ -9412,6 +9746,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedQuantity,
       this.fixedRange,
       this.fixedRatio,
+      this.fixedRatioRange,
       this.fixedReference,
       this.fixedSampledData,
       this.fixedSignature,
@@ -9425,7 +9760,6 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedTriggerDefinition,
       this.fixedUsageContext,
       this.fixedDosage,
-      this.fixedMeta,
       this.patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           this.patternBase64BinaryElement,
@@ -9488,6 +9822,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternAnnotation,
       this.patternAttachment,
       this.patternCodeableConcept,
+      this.patternCodeableReference,
       this.patternCoding,
       this.patternContactPoint,
       this.patternCount,
@@ -9500,6 +9835,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternQuantity,
       this.patternRange,
       this.patternRatio,
+      this.patternRatioRange,
       this.patternReference,
       this.patternSampledData,
       this.patternSignature,
@@ -9513,7 +9849,6 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternTriggerDefinition,
       this.patternUsageContext,
       this.patternDosage,
-      this.patternMeta,
       final List<ElementDefinitionExample>? example,
       this.minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -9846,6 +10181,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final CodeableConcept? defaultValueCodeableConcept;
   @override
+  final CodeableReference? defaultValueCodeableReference;
+  @override
   final Coding? defaultValueCoding;
   @override
   final ContactPoint? defaultValueContactPoint;
@@ -9869,6 +10206,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Range? defaultValueRange;
   @override
   final Ratio? defaultValueRatio;
+  @override
+  final RatioRange? defaultValueRatioRange;
   @override
   final Reference? defaultValueReference;
   @override
@@ -9895,8 +10234,6 @@ class _$_ElementDefinition extends _ElementDefinition {
   final UsageContext? defaultValueUsageContext;
   @override
   final Dosage? defaultValueDosage;
-  @override
-  final Meta? defaultValueMeta;
   @override
   final Markdown? meaningWhenMissing;
   @override
@@ -10013,6 +10350,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final CodeableConcept? fixedCodeableConcept;
   @override
+  final CodeableReference? fixedCodeableReference;
+  @override
   final Coding? fixedCoding;
   @override
   final ContactPoint? fixedContactPoint;
@@ -10036,6 +10375,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Range? fixedRange;
   @override
   final Ratio? fixedRatio;
+  @override
+  final RatioRange? fixedRatioRange;
   @override
   final Reference? fixedReference;
   @override
@@ -10062,8 +10403,6 @@ class _$_ElementDefinition extends _ElementDefinition {
   final UsageContext? fixedUsageContext;
   @override
   final Dosage? fixedDosage;
-  @override
-  final Meta? fixedMeta;
   @override
   final Base64Binary? patternBase64Binary;
   @override
@@ -10170,6 +10509,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final CodeableConcept? patternCodeableConcept;
   @override
+  final CodeableReference? patternCodeableReference;
+  @override
   final Coding? patternCoding;
   @override
   final ContactPoint? patternContactPoint;
@@ -10193,6 +10534,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Range? patternRange;
   @override
   final Ratio? patternRatio;
+  @override
+  final RatioRange? patternRatioRange;
   @override
   final Reference? patternReference;
   @override
@@ -10219,8 +10562,6 @@ class _$_ElementDefinition extends _ElementDefinition {
   final UsageContext? patternUsageContext;
   @override
   final Dosage? patternDosage;
-  @override
-  final Meta? patternMeta;
   final List<ElementDefinitionExample>? _example;
   @override
   List<ElementDefinitionExample>? get example {
@@ -10380,7 +10721,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, pathElement: $pathElement, representation: $representation, representationElement: $representationElement, sliceName: $sliceName, sliceNameElement: $sliceNameElement, sliceIsConstraining: $sliceIsConstraining, sliceIsConstrainingElement: $sliceIsConstrainingElement, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comment: $comment, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, contentReference: $contentReference, contentReferenceElement: $contentReferenceElement, type: $type, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonical: $defaultValueCanonical, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueUrl: $defaultValueUrl, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, defaultValueMeta: $defaultValueMeta, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaning: $orderMeaning, orderMeaningElement: $orderMeaningElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedCanonical: $fixedCanonical, fixedCanonicalElement: $fixedCanonicalElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedTime: $fixedTime, fixedTimeElement: $fixedTimeElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedUrl: $fixedUrl, fixedUrlElement: $fixedUrlElement, fixedUuid: $fixedUuid, fixedUuidElement: $fixedUuidElement, fixedAddress: $fixedAddress, fixedAge: $fixedAge, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedContactPoint: $fixedContactPoint, fixedCount: $fixedCount, fixedDistance: $fixedDistance, fixedDuration: $fixedDuration, fixedHumanName: $fixedHumanName, fixedIdentifier: $fixedIdentifier, fixedMoney: $fixedMoney, fixedPeriod: $fixedPeriod, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedRatio: $fixedRatio, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedTiming: $fixedTiming, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDataRequirement: $fixedDataRequirement, fixedExpression: $fixedExpression, fixedParameterDefinition: $fixedParameterDefinition, fixedRelatedArtifact: $fixedRelatedArtifact, fixedTriggerDefinition: $fixedTriggerDefinition, fixedUsageContext: $fixedUsageContext, fixedDosage: $fixedDosage, fixedMeta: $fixedMeta, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternCanonical: $patternCanonical, patternCanonicalElement: $patternCanonicalElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternId: $patternId, patternIdElement: $patternIdElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternString: $patternString, patternStringElement: $patternStringElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternUrl: $patternUrl, patternUrlElement: $patternUrlElement, patternUuid: $patternUuid, patternUuidElement: $patternUuidElement, patternAddress: $patternAddress, patternAge: $patternAge, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternContactPoint: $patternContactPoint, patternCount: $patternCount, patternDistance: $patternDistance, patternDuration: $patternDuration, patternHumanName: $patternHumanName, patternIdentifier: $patternIdentifier, patternMoney: $patternMoney, patternPeriod: $patternPeriod, patternQuantity: $patternQuantity, patternRange: $patternRange, patternRatio: $patternRatio, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternTiming: $patternTiming, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDataRequirement: $patternDataRequirement, patternExpression: $patternExpression, patternParameterDefinition: $patternParameterDefinition, patternRelatedArtifact: $patternRelatedArtifact, patternTriggerDefinition: $patternTriggerDefinition, patternUsageContext: $patternUsageContext, patternDosage: $patternDosage, patternMeta: $patternMeta, example: $example, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isModifierReason: $isModifierReason, isModifierReasonElement: $isModifierReasonElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
+    return 'ElementDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, pathElement: $pathElement, representation: $representation, representationElement: $representationElement, sliceName: $sliceName, sliceNameElement: $sliceNameElement, sliceIsConstraining: $sliceIsConstraining, sliceIsConstrainingElement: $sliceIsConstrainingElement, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comment: $comment, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, contentReference: $contentReference, contentReferenceElement: $contentReferenceElement, type: $type, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonical: $defaultValueCanonical, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueUrl: $defaultValueUrl, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCodeableReference: $defaultValueCodeableReference, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueRatioRange: $defaultValueRatioRange, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaning: $orderMeaning, orderMeaningElement: $orderMeaningElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedCanonical: $fixedCanonical, fixedCanonicalElement: $fixedCanonicalElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedTime: $fixedTime, fixedTimeElement: $fixedTimeElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedUrl: $fixedUrl, fixedUrlElement: $fixedUrlElement, fixedUuid: $fixedUuid, fixedUuidElement: $fixedUuidElement, fixedAddress: $fixedAddress, fixedAge: $fixedAge, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedCodeableConcept: $fixedCodeableConcept, fixedCodeableReference: $fixedCodeableReference, fixedCoding: $fixedCoding, fixedContactPoint: $fixedContactPoint, fixedCount: $fixedCount, fixedDistance: $fixedDistance, fixedDuration: $fixedDuration, fixedHumanName: $fixedHumanName, fixedIdentifier: $fixedIdentifier, fixedMoney: $fixedMoney, fixedPeriod: $fixedPeriod, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedRatio: $fixedRatio, fixedRatioRange: $fixedRatioRange, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedTiming: $fixedTiming, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDataRequirement: $fixedDataRequirement, fixedExpression: $fixedExpression, fixedParameterDefinition: $fixedParameterDefinition, fixedRelatedArtifact: $fixedRelatedArtifact, fixedTriggerDefinition: $fixedTriggerDefinition, fixedUsageContext: $fixedUsageContext, fixedDosage: $fixedDosage, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternCanonical: $patternCanonical, patternCanonicalElement: $patternCanonicalElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternId: $patternId, patternIdElement: $patternIdElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternString: $patternString, patternStringElement: $patternStringElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternUrl: $patternUrl, patternUrlElement: $patternUrlElement, patternUuid: $patternUuid, patternUuidElement: $patternUuidElement, patternAddress: $patternAddress, patternAge: $patternAge, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternCodeableConcept: $patternCodeableConcept, patternCodeableReference: $patternCodeableReference, patternCoding: $patternCoding, patternContactPoint: $patternContactPoint, patternCount: $patternCount, patternDistance: $patternDistance, patternDuration: $patternDuration, patternHumanName: $patternHumanName, patternIdentifier: $patternIdentifier, patternMoney: $patternMoney, patternPeriod: $patternPeriod, patternQuantity: $patternQuantity, patternRange: $patternRange, patternRatio: $patternRatio, patternRatioRange: $patternRatioRange, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternTiming: $patternTiming, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDataRequirement: $patternDataRequirement, patternExpression: $patternExpression, patternParameterDefinition: $patternParameterDefinition, patternRelatedArtifact: $patternRelatedArtifact, patternTriggerDefinition: $patternTriggerDefinition, patternUsageContext: $patternUsageContext, patternDosage: $patternDosage, example: $example, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isModifierReason: $isModifierReason, isModifierReasonElement: $isModifierReasonElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
   }
 
   @override
@@ -10505,6 +10846,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueAnnotation, defaultValueAnnotation) &&
             const DeepCollectionEquality().equals(other.defaultValueAttachment, defaultValueAttachment) &&
             const DeepCollectionEquality().equals(other.defaultValueCodeableConcept, defaultValueCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.defaultValueCodeableReference, defaultValueCodeableReference) &&
             const DeepCollectionEquality().equals(other.defaultValueCoding, defaultValueCoding) &&
             const DeepCollectionEquality().equals(other.defaultValueContactPoint, defaultValueContactPoint) &&
             const DeepCollectionEquality().equals(other.defaultValueCount, defaultValueCount) &&
@@ -10517,6 +10859,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueQuantity, defaultValueQuantity) &&
             const DeepCollectionEquality().equals(other.defaultValueRange, defaultValueRange) &&
             const DeepCollectionEquality().equals(other.defaultValueRatio, defaultValueRatio) &&
+            const DeepCollectionEquality().equals(other.defaultValueRatioRange, defaultValueRatioRange) &&
             const DeepCollectionEquality().equals(other.defaultValueReference, defaultValueReference) &&
             const DeepCollectionEquality().equals(other.defaultValueSampledData, defaultValueSampledData) &&
             const DeepCollectionEquality().equals(other.defaultValueSignature, defaultValueSignature) &&
@@ -10530,7 +10873,6 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueTriggerDefinition, defaultValueTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.defaultValueUsageContext, defaultValueUsageContext) &&
             const DeepCollectionEquality().equals(other.defaultValueDosage, defaultValueDosage) &&
-            const DeepCollectionEquality().equals(other.defaultValueMeta, defaultValueMeta) &&
             const DeepCollectionEquality().equals(other.meaningWhenMissing, meaningWhenMissing) &&
             const DeepCollectionEquality().equals(other.meaningWhenMissingElement, meaningWhenMissingElement) &&
             const DeepCollectionEquality().equals(other.orderMeaning, orderMeaning) &&
@@ -10578,6 +10920,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedAnnotation, fixedAnnotation) &&
             const DeepCollectionEquality().equals(other.fixedAttachment, fixedAttachment) &&
             const DeepCollectionEquality().equals(other.fixedCodeableConcept, fixedCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.fixedCodeableReference, fixedCodeableReference) &&
             const DeepCollectionEquality().equals(other.fixedCoding, fixedCoding) &&
             const DeepCollectionEquality().equals(other.fixedContactPoint, fixedContactPoint) &&
             const DeepCollectionEquality().equals(other.fixedCount, fixedCount) &&
@@ -10590,6 +10933,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedQuantity, fixedQuantity) &&
             const DeepCollectionEquality().equals(other.fixedRange, fixedRange) &&
             const DeepCollectionEquality().equals(other.fixedRatio, fixedRatio) &&
+            const DeepCollectionEquality().equals(other.fixedRatioRange, fixedRatioRange) &&
             const DeepCollectionEquality().equals(other.fixedReference, fixedReference) &&
             const DeepCollectionEquality().equals(other.fixedSampledData, fixedSampledData) &&
             const DeepCollectionEquality().equals(other.fixedSignature, fixedSignature) &&
@@ -10603,7 +10947,6 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedTriggerDefinition, fixedTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.fixedUsageContext, fixedUsageContext) &&
             const DeepCollectionEquality().equals(other.fixedDosage, fixedDosage) &&
-            const DeepCollectionEquality().equals(other.fixedMeta, fixedMeta) &&
             const DeepCollectionEquality().equals(other.patternBase64Binary, patternBase64Binary) &&
             const DeepCollectionEquality().equals(other.patternBase64BinaryElement, patternBase64BinaryElement) &&
             const DeepCollectionEquality().equals(other.patternBoolean, patternBoolean) &&
@@ -10647,6 +10990,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternAnnotation, patternAnnotation) &&
             const DeepCollectionEquality().equals(other.patternAttachment, patternAttachment) &&
             const DeepCollectionEquality().equals(other.patternCodeableConcept, patternCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.patternCodeableReference, patternCodeableReference) &&
             const DeepCollectionEquality().equals(other.patternCoding, patternCoding) &&
             const DeepCollectionEquality().equals(other.patternContactPoint, patternContactPoint) &&
             const DeepCollectionEquality().equals(other.patternCount, patternCount) &&
@@ -10659,6 +11003,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternQuantity, patternQuantity) &&
             const DeepCollectionEquality().equals(other.patternRange, patternRange) &&
             const DeepCollectionEquality().equals(other.patternRatio, patternRatio) &&
+            const DeepCollectionEquality().equals(other.patternRatioRange, patternRatioRange) &&
             const DeepCollectionEquality().equals(other.patternReference, patternReference) &&
             const DeepCollectionEquality().equals(other.patternSampledData, patternSampledData) &&
             const DeepCollectionEquality().equals(other.patternSignature, patternSignature) &&
@@ -10672,7 +11017,6 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternTriggerDefinition, patternTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.patternUsageContext, patternUsageContext) &&
             const DeepCollectionEquality().equals(other.patternDosage, patternDosage) &&
-            const DeepCollectionEquality().equals(other.patternMeta, patternMeta) &&
             const DeepCollectionEquality().equals(other._example, _example) &&
             const DeepCollectionEquality().equals(other.minValueDate, minValueDate) &&
             const DeepCollectionEquality().equals(other.minValueDateElement, minValueDateElement) &&
@@ -10805,6 +11149,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueAnnotation),
         const DeepCollectionEquality().hash(defaultValueAttachment),
         const DeepCollectionEquality().hash(defaultValueCodeableConcept),
+        const DeepCollectionEquality().hash(defaultValueCodeableReference),
         const DeepCollectionEquality().hash(defaultValueCoding),
         const DeepCollectionEquality().hash(defaultValueContactPoint),
         const DeepCollectionEquality().hash(defaultValueCount),
@@ -10817,6 +11162,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueQuantity),
         const DeepCollectionEquality().hash(defaultValueRange),
         const DeepCollectionEquality().hash(defaultValueRatio),
+        const DeepCollectionEquality().hash(defaultValueRatioRange),
         const DeepCollectionEquality().hash(defaultValueReference),
         const DeepCollectionEquality().hash(defaultValueSampledData),
         const DeepCollectionEquality().hash(defaultValueSignature),
@@ -10830,7 +11176,6 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueTriggerDefinition),
         const DeepCollectionEquality().hash(defaultValueUsageContext),
         const DeepCollectionEquality().hash(defaultValueDosage),
-        const DeepCollectionEquality().hash(defaultValueMeta),
         const DeepCollectionEquality().hash(meaningWhenMissing),
         const DeepCollectionEquality().hash(meaningWhenMissingElement),
         const DeepCollectionEquality().hash(orderMeaning),
@@ -10878,6 +11223,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedAnnotation),
         const DeepCollectionEquality().hash(fixedAttachment),
         const DeepCollectionEquality().hash(fixedCodeableConcept),
+        const DeepCollectionEquality().hash(fixedCodeableReference),
         const DeepCollectionEquality().hash(fixedCoding),
         const DeepCollectionEquality().hash(fixedContactPoint),
         const DeepCollectionEquality().hash(fixedCount),
@@ -10890,6 +11236,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedQuantity),
         const DeepCollectionEquality().hash(fixedRange),
         const DeepCollectionEquality().hash(fixedRatio),
+        const DeepCollectionEquality().hash(fixedRatioRange),
         const DeepCollectionEquality().hash(fixedReference),
         const DeepCollectionEquality().hash(fixedSampledData),
         const DeepCollectionEquality().hash(fixedSignature),
@@ -10903,7 +11250,6 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedTriggerDefinition),
         const DeepCollectionEquality().hash(fixedUsageContext),
         const DeepCollectionEquality().hash(fixedDosage),
-        const DeepCollectionEquality().hash(fixedMeta),
         const DeepCollectionEquality().hash(patternBase64Binary),
         const DeepCollectionEquality().hash(patternBase64BinaryElement),
         const DeepCollectionEquality().hash(patternBoolean),
@@ -10947,6 +11293,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternAnnotation),
         const DeepCollectionEquality().hash(patternAttachment),
         const DeepCollectionEquality().hash(patternCodeableConcept),
+        const DeepCollectionEquality().hash(patternCodeableReference),
         const DeepCollectionEquality().hash(patternCoding),
         const DeepCollectionEquality().hash(patternContactPoint),
         const DeepCollectionEquality().hash(patternCount),
@@ -10959,6 +11306,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternQuantity),
         const DeepCollectionEquality().hash(patternRange),
         const DeepCollectionEquality().hash(patternRatio),
+        const DeepCollectionEquality().hash(patternRatioRange),
         const DeepCollectionEquality().hash(patternReference),
         const DeepCollectionEquality().hash(patternSampledData),
         const DeepCollectionEquality().hash(patternSignature),
@@ -10972,7 +11320,6 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternTriggerDefinition),
         const DeepCollectionEquality().hash(patternUsageContext),
         const DeepCollectionEquality().hash(patternDosage),
-        const DeepCollectionEquality().hash(patternMeta),
         const DeepCollectionEquality().hash(_example),
         const DeepCollectionEquality().hash(minValueDate),
         const DeepCollectionEquality().hash(minValueDateElement),
@@ -11148,6 +11495,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Annotation? defaultValueAnnotation,
       final Attachment? defaultValueAttachment,
       final CodeableConcept? defaultValueCodeableConcept,
+      final CodeableReference? defaultValueCodeableReference,
       final Coding? defaultValueCoding,
       final ContactPoint? defaultValueContactPoint,
       final Count? defaultValueCount,
@@ -11160,6 +11508,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Quantity? defaultValueQuantity,
       final Range? defaultValueRange,
       final Ratio? defaultValueRatio,
+      final RatioRange? defaultValueRatioRange,
       final Reference? defaultValueReference,
       final SampledData? defaultValueSampledData,
       final Signature? defaultValueSignature,
@@ -11173,7 +11522,6 @@ abstract class _ElementDefinition extends ElementDefinition {
       final TriggerDefinition? defaultValueTriggerDefinition,
       final UsageContext? defaultValueUsageContext,
       final Dosage? defaultValueDosage,
-      final Meta? defaultValueMeta,
       final Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           final Element? meaningWhenMissingElement,
@@ -11242,6 +11590,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Annotation? fixedAnnotation,
       final Attachment? fixedAttachment,
       final CodeableConcept? fixedCodeableConcept,
+      final CodeableReference? fixedCodeableReference,
       final Coding? fixedCoding,
       final ContactPoint? fixedContactPoint,
       final Count? fixedCount,
@@ -11254,6 +11603,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Quantity? fixedQuantity,
       final Range? fixedRange,
       final Ratio? fixedRatio,
+      final RatioRange? fixedRatioRange,
       final Reference? fixedReference,
       final SampledData? fixedSampledData,
       final Signature? fixedSignature,
@@ -11267,7 +11617,6 @@ abstract class _ElementDefinition extends ElementDefinition {
       final TriggerDefinition? fixedTriggerDefinition,
       final UsageContext? fixedUsageContext,
       final Dosage? fixedDosage,
-      final Meta? fixedMeta,
       final Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           final Element? patternBase64BinaryElement,
@@ -11330,6 +11679,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Annotation? patternAnnotation,
       final Attachment? patternAttachment,
       final CodeableConcept? patternCodeableConcept,
+      final CodeableReference? patternCodeableReference,
       final Coding? patternCoding,
       final ContactPoint? patternContactPoint,
       final Count? patternCount,
@@ -11342,6 +11692,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Quantity? patternQuantity,
       final Range? patternRange,
       final Ratio? patternRatio,
+      final RatioRange? patternRatioRange,
       final Reference? patternReference,
       final SampledData? patternSampledData,
       final Signature? patternSignature,
@@ -11355,7 +11706,6 @@ abstract class _ElementDefinition extends ElementDefinition {
       final TriggerDefinition? patternTriggerDefinition,
       final UsageContext? patternUsageContext,
       final Dosage? patternDosage,
-      final Meta? patternMeta,
       final List<ElementDefinitionExample>? example,
       final Date? minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -11632,6 +11982,9 @@ abstract class _ElementDefinition extends ElementDefinition {
   CodeableConcept? get defaultValueCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
+  CodeableReference? get defaultValueCodeableReference =>
+      throw _privateConstructorUsedError;
+  @override
   Coding? get defaultValueCoding => throw _privateConstructorUsedError;
   @override
   ContactPoint? get defaultValueContactPoint =>
@@ -11656,6 +12009,8 @@ abstract class _ElementDefinition extends ElementDefinition {
   Range? get defaultValueRange => throw _privateConstructorUsedError;
   @override
   Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
+  @override
+  RatioRange? get defaultValueRatioRange => throw _privateConstructorUsedError;
   @override
   Reference? get defaultValueReference => throw _privateConstructorUsedError;
   @override
@@ -11690,8 +12045,6 @@ abstract class _ElementDefinition extends ElementDefinition {
       throw _privateConstructorUsedError;
   @override
   Dosage? get defaultValueDosage => throw _privateConstructorUsedError;
-  @override
-  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
   @override
   Markdown? get meaningWhenMissing => throw _privateConstructorUsedError;
   @override
@@ -11809,6 +12162,9 @@ abstract class _ElementDefinition extends ElementDefinition {
   CodeableConcept? get fixedCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
+  CodeableReference? get fixedCodeableReference =>
+      throw _privateConstructorUsedError;
+  @override
   Coding? get fixedCoding => throw _privateConstructorUsedError;
   @override
   ContactPoint? get fixedContactPoint => throw _privateConstructorUsedError;
@@ -11832,6 +12188,8 @@ abstract class _ElementDefinition extends ElementDefinition {
   Range? get fixedRange => throw _privateConstructorUsedError;
   @override
   Ratio? get fixedRatio => throw _privateConstructorUsedError;
+  @override
+  RatioRange? get fixedRatioRange => throw _privateConstructorUsedError;
   @override
   Reference? get fixedReference => throw _privateConstructorUsedError;
   @override
@@ -11862,8 +12220,6 @@ abstract class _ElementDefinition extends ElementDefinition {
   UsageContext? get fixedUsageContext => throw _privateConstructorUsedError;
   @override
   Dosage? get fixedDosage => throw _privateConstructorUsedError;
-  @override
-  Meta? get fixedMeta => throw _privateConstructorUsedError;
   @override
   Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
   @override
@@ -11971,6 +12327,9 @@ abstract class _ElementDefinition extends ElementDefinition {
   CodeableConcept? get patternCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
+  CodeableReference? get patternCodeableReference =>
+      throw _privateConstructorUsedError;
+  @override
   Coding? get patternCoding => throw _privateConstructorUsedError;
   @override
   ContactPoint? get patternContactPoint => throw _privateConstructorUsedError;
@@ -11994,6 +12353,8 @@ abstract class _ElementDefinition extends ElementDefinition {
   Range? get patternRange => throw _privateConstructorUsedError;
   @override
   Ratio? get patternRatio => throw _privateConstructorUsedError;
+  @override
+  RatioRange? get patternRatioRange => throw _privateConstructorUsedError;
   @override
   Reference? get patternReference => throw _privateConstructorUsedError;
   @override
@@ -12024,8 +12385,6 @@ abstract class _ElementDefinition extends ElementDefinition {
   UsageContext? get patternUsageContext => throw _privateConstructorUsedError;
   @override
   Dosage? get patternDosage => throw _privateConstructorUsedError;
-  @override
-  Meta? get patternMeta => throw _privateConstructorUsedError;
   @override
   List<ElementDefinitionExample>? get example =>
       throw _privateConstructorUsedError;
@@ -13945,6 +14304,8 @@ mixin _$ElementDefinitionExample {
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
   Coding? get valueCoding => throw _privateConstructorUsedError;
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Count? get valueCount => throw _privateConstructorUsedError;
@@ -13957,6 +14318,7 @@ mixin _$ElementDefinitionExample {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
   Range? get valueRange => throw _privateConstructorUsedError;
   Ratio? get valueRatio => throw _privateConstructorUsedError;
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
   Reference? get valueReference => throw _privateConstructorUsedError;
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
   Signature? get valueSignature => throw _privateConstructorUsedError;
@@ -14036,6 +14398,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       Annotation? valueAnnotation,
       Attachment? valueAttachment,
       CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
       Coding? valueCoding,
       ContactPoint? valueContactPoint,
       Count? valueCount,
@@ -14048,6 +14411,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       Quantity? valueQuantity,
       Range? valueRange,
       Ratio? valueRatio,
+      RatioRange? valueRatioRange,
       Reference? valueReference,
       SampledData? valueSampledData,
       Signature? valueSignature,
@@ -14088,6 +14452,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get valueAnnotation;
   $AttachmentCopyWith<$Res>? get valueAttachment;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
   $CodingCopyWith<$Res>? get valueCoding;
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
@@ -14100,6 +14465,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get valueQuantity;
   $RangeCopyWith<$Res>? get valueRange;
   $RatioCopyWith<$Res>? get valueRatio;
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
   $ReferenceCopyWith<$Res>? get valueReference;
   $SampledDataCopyWith<$Res>? get valueSampledData;
   $SignatureCopyWith<$Res>? get valueSignature;
@@ -14175,6 +14541,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueAnnotation = freezed,
     Object? valueAttachment = freezed,
     Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
     Object? valueCoding = freezed,
     Object? valueContactPoint = freezed,
     Object? valueCount = freezed,
@@ -14187,6 +14554,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
     Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
     Object? valueReference = freezed,
     Object? valueSampledData = freezed,
     Object? valueSignature = freezed,
@@ -14395,6 +14763,10 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
@@ -14443,6 +14815,10 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueRatio
           : valueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference // ignore: cast_nullable_to_non_nullable
@@ -14779,6 +15155,18 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference {
+    if (_value.valueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.valueCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get valueCoding {
     if (_value.valueCoding == null) {
       return null;
@@ -14907,6 +15295,17 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
       return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange {
+    if (_value.valueRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.valueRatioRange!, (value) {
+      return _then(_value.copyWith(valueRatioRange: value));
     });
   }
 
@@ -15126,6 +15525,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       Annotation? valueAnnotation,
       Attachment? valueAttachment,
       CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
       Coding? valueCoding,
       ContactPoint? valueContactPoint,
       Count? valueCount,
@@ -15138,6 +15538,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       Quantity? valueQuantity,
       Range? valueRange,
       Ratio? valueRatio,
+      RatioRange? valueRatioRange,
       Reference? valueReference,
       SampledData? valueSampledData,
       Signature? valueSignature,
@@ -15204,6 +15605,8 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get valueCoding;
   @override
   $ContactPointCopyWith<$Res>? get valueContactPoint;
@@ -15227,6 +15630,8 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
   $RangeCopyWith<$Res>? get valueRange;
   @override
   $RatioCopyWith<$Res>? get valueRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get valueReference;
   @override
@@ -15319,6 +15724,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueAnnotation = freezed,
     Object? valueAttachment = freezed,
     Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
     Object? valueCoding = freezed,
     Object? valueContactPoint = freezed,
     Object? valueCount = freezed,
@@ -15331,6 +15737,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
     Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
     Object? valueReference = freezed,
     Object? valueSampledData = freezed,
     Object? valueSignature = freezed,
@@ -15539,6 +15946,10 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
@@ -15587,6 +15998,10 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueRatio
           : valueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference // ignore: cast_nullable_to_non_nullable
@@ -15699,6 +16114,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueAnnotation,
       this.valueAttachment,
       this.valueCodeableConcept,
+      this.valueCodeableReference,
       this.valueCoding,
       this.valueContactPoint,
       this.valueCount,
@@ -15711,6 +16127,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueQuantity,
       this.valueRange,
       this.valueRatio,
+      this.valueRatioRange,
       this.valueReference,
       this.valueSampledData,
       this.valueSignature,
@@ -15864,6 +16281,8 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   @override
   final CodeableConcept? valueCodeableConcept;
   @override
+  final CodeableReference? valueCodeableReference;
+  @override
   final Coding? valueCoding;
   @override
   final ContactPoint? valueContactPoint;
@@ -15887,6 +16306,8 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   final Range? valueRange;
   @override
   final Ratio? valueRatio;
+  @override
+  final RatioRange? valueRatioRange;
   @override
   final Reference? valueReference;
   @override
@@ -15918,7 +16339,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
   @override
   String toString() {
-    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCodeableReference: $valueCodeableReference, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueRatioRange: $valueRatioRange, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
   }
 
   @override
@@ -16012,6 +16433,8 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
             const DeepCollectionEquality()
+                .equals(other.valueCodeableReference, valueCodeableReference) &&
+            const DeepCollectionEquality()
                 .equals(other.valueCoding, valueCoding) &&
             const DeepCollectionEquality()
                 .equals(other.valueContactPoint, valueContactPoint) &&
@@ -16021,14 +16444,14 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
                 .equals(other.valueDistance, valueDistance) &&
             const DeepCollectionEquality()
                 .equals(other.valueDuration, valueDuration) &&
-            const DeepCollectionEquality()
-                .equals(other.valueHumanName, valueHumanName) &&
+            const DeepCollectionEquality().equals(other.valueHumanName, valueHumanName) &&
             const DeepCollectionEquality().equals(other.valueIdentifier, valueIdentifier) &&
             const DeepCollectionEquality().equals(other.valueMoney, valueMoney) &&
             const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod) &&
             const DeepCollectionEquality().equals(other.valueQuantity, valueQuantity) &&
             const DeepCollectionEquality().equals(other.valueRange, valueRange) &&
             const DeepCollectionEquality().equals(other.valueRatio, valueRatio) &&
+            const DeepCollectionEquality().equals(other.valueRatioRange, valueRatioRange) &&
             const DeepCollectionEquality().equals(other.valueReference, valueReference) &&
             const DeepCollectionEquality().equals(other.valueSampledData, valueSampledData) &&
             const DeepCollectionEquality().equals(other.valueSignature, valueSignature) &&
@@ -16097,6 +16520,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
         const DeepCollectionEquality().hash(valueAnnotation),
         const DeepCollectionEquality().hash(valueAttachment),
         const DeepCollectionEquality().hash(valueCodeableConcept),
+        const DeepCollectionEquality().hash(valueCodeableReference),
         const DeepCollectionEquality().hash(valueCoding),
         const DeepCollectionEquality().hash(valueContactPoint),
         const DeepCollectionEquality().hash(valueCount),
@@ -16109,6 +16533,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
         const DeepCollectionEquality().hash(valueQuantity),
         const DeepCollectionEquality().hash(valueRange),
         const DeepCollectionEquality().hash(valueRatio),
+        const DeepCollectionEquality().hash(valueRatioRange),
         const DeepCollectionEquality().hash(valueReference),
         const DeepCollectionEquality().hash(valueSampledData),
         const DeepCollectionEquality().hash(valueSignature),
@@ -16208,6 +16633,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final Annotation? valueAnnotation,
       final Attachment? valueAttachment,
       final CodeableConcept? valueCodeableConcept,
+      final CodeableReference? valueCodeableReference,
       final Coding? valueCoding,
       final ContactPoint? valueContactPoint,
       final Count? valueCount,
@@ -16220,6 +16646,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final Quantity? valueQuantity,
       final Range? valueRange,
       final Ratio? valueRatio,
+      final RatioRange? valueRatioRange,
       final Reference? valueReference,
       final SampledData? valueSampledData,
       final Signature? valueSignature,
@@ -16359,6 +16786,9 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
+  @override
   Coding? get valueCoding => throw _privateConstructorUsedError;
   @override
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
@@ -16382,6 +16812,8 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   Range? get valueRange => throw _privateConstructorUsedError;
   @override
   Ratio? get valueRatio => throw _privateConstructorUsedError;
+  @override
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
   @override
   Reference? get valueReference => throw _privateConstructorUsedError;
   @override

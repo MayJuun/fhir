@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'diagnostics.enums.dart';
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
@@ -103,7 +102,7 @@ class BodyStructure with Resource, _$BodyStructure {
     @Default(R4ResourceType.BodyStructure)
     @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -296,7 +295,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     @Default(R4ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -308,8 +307,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<Reference>? basedOn,
-    @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-        DiagnosticReportStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
@@ -583,7 +581,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @Default(R4ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -594,8 +592,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-        ImagingStudyStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Coding>? modality,
     required Reference subject,
@@ -1102,7 +1099,7 @@ class Media with Resource, _$Media {
     @Default(R4ResourceType.Media)
     @JsonKey(unknownEnumValue: R4ResourceType.Media)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1292,7 +1289,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     @Default(R4ResourceType.MolecularSequence)
     @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1303,8 +1300,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-        MolecularSequenceType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Integer? coordinateSystem,
     @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,
@@ -1439,15 +1435,13 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     CodeableConcept? chromosome,
     String? genomeBuild,
     @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
-    @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-        MolecularSequenceReferenceSeqOrientation? orientation,
+    Code? orientation,
     @JsonKey(name: '_orientation') Element? orientationElement,
     CodeableConcept? referenceSeqId,
     Reference? referenceSeqPointer,
     String? referenceSeqString,
     @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
-    @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-        MolecularSequenceReferenceSeqStrand? strand,
+    Code? strand,
     @JsonKey(name: '_strand') Element? strandElement,
     Integer? windowStart,
     @JsonKey(name: '_windowStart') Element? windowStartElement,
@@ -1714,8 +1708,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-        MolecularSequenceQualityType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? standardSequence,
     Integer? start,
@@ -1953,8 +1946,7 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-        MolecularSequenceRepositoryType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -2462,7 +2454,7 @@ class Observation with Resource, _$Observation {
     @Default(R4ResourceType.Observation)
     @JsonKey(unknownEnumValue: R4ResourceType.Observation)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2475,8 +2467,7 @@ class Observation with Resource, _$Observation {
     List<Identifier>? identifier,
     List<Reference>? basedOn,
     List<Reference>? partOf,
-    @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-        ObservationStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
@@ -2901,7 +2892,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @Default(R4ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2916,8 +2907,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     List<Reference>? partOf,
     Canonical? questionnaire,
     @JsonKey(name: '_questionnaire') Element? questionnaireElement,
-    @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-        QuestionnaireResponseStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,
@@ -3300,7 +3290,7 @@ class Specimen with Resource, _$Specimen {
     @Default(R4ResourceType.Specimen)
     @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -3312,8 +3302,7 @@ class Specimen with Resource, _$Specimen {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     Identifier? accessionIdentifier,
-    @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
+    Code? statusElement,
     CodeableConcept? type,
     Reference? subject,
     FhirDateTime? receivedTime,

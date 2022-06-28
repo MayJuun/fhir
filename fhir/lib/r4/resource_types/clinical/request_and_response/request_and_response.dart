@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'request_and_response.enums.dart';
 part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
@@ -159,7 +158,7 @@ class Communication with Resource, _$Communication {
     @Default(R4ResourceType.Communication)
     @JsonKey(unknownEnumValue: R4ResourceType.Communication)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -454,7 +453,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     @Default(R4ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -764,7 +763,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     @Default(R4ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1033,7 +1032,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     @Default(R4ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1045,8 +1044,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<Reference>? basedOn,
-    @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-        DeviceUseStatementStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference subject,
     List<Reference>? derivedFrom,
@@ -1233,7 +1231,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     @Default(R4ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1250,8 +1248,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     Canonical? moduleCanonical,
     @JsonKey(name: '_moduleCanonical') Element? moduleCanonicalElement,
     CodeableConcept? moduleCodeableConcept,
-    @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-        GuidanceResponseStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,
@@ -1395,7 +1392,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     @Default(R4ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1408,8 +1405,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     List<Identifier>? identifier,
     List<Reference>? basedOn,
     List<Reference>? partOf,
-    @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-        SupplyDeliveryStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? patient,
     CodeableConcept? type,
@@ -1647,7 +1643,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @Default(R4ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1658,8 +1654,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-        SupplyRequestStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
     Code? priority,

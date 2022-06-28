@@ -22,7 +22,7 @@ Endpoint _$EndpointFromJson(Map<String, dynamic> json) {
 mixin _$Endpoint {
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -37,8 +37,7 @@ mixin _$Endpoint {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  EndpointStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Coding get connectionType => throw _privateConstructorUsedError;
@@ -73,7 +72,7 @@ abstract class $EndpointCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -87,8 +86,7 @@ abstract class $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding connectionType,
@@ -167,7 +165,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -211,7 +209,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EndpointStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -387,7 +385,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -401,8 +399,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding connectionType,
@@ -493,7 +490,7 @@ class __$$_EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -537,7 +534,7 @@ class __$$_EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EndpointStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -618,8 +615,7 @@ class _$_Endpoint extends _Endpoint {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.connectionType,
@@ -658,7 +654,7 @@ class _$_Endpoint extends _Endpoint {
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -711,8 +707,7 @@ class _$_Endpoint extends _Endpoint {
   }
 
   @override
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  final EndpointStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -890,7 +885,7 @@ abstract class _Endpoint extends Endpoint {
   factory _Endpoint(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -904,8 +899,7 @@ abstract class _Endpoint extends Endpoint {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          final EndpointStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       required final Coding connectionType,
@@ -933,7 +927,7 @@ abstract class _Endpoint extends Endpoint {
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -959,8 +953,7 @@ abstract class _Endpoint extends Endpoint {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  EndpointStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1009,7 +1002,7 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) {
 mixin _$HealthcareService {
   @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -1082,7 +1075,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1207,7 +1200,7 @@ class _$HealthcareServiceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1511,7 +1504,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1650,7 +1643,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1894,7 +1887,7 @@ class _$_HealthcareService extends _HealthcareService {
   @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -2259,7 +2252,7 @@ abstract class _HealthcareService extends HealthcareService {
   factory _HealthcareService(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2317,7 +2310,7 @@ abstract class _HealthcareService extends HealthcareService {
   @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -2741,8 +2734,7 @@ mixin _$HealthcareServiceAvailableTime {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  List<HealthcareServiceAvailableTimeDaysOfWeek>? get daysOfWeek =>
-      throw _privateConstructorUsedError;
+  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @JsonKey(name: '_daysOfWeek')
   List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
   Boolean? get allDay => throw _privateConstructorUsedError;
@@ -2771,7 +2763,7 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+      List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
@@ -2824,7 +2816,7 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<HealthcareServiceAvailableTimeDaysOfWeek>?,
+              as List<Code>?,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -2902,7 +2894,7 @@ abstract class _$$_HealthcareServiceAvailableTimeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+      List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
@@ -2962,7 +2954,7 @@ class __$$_HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: daysOfWeek == freezed
           ? _value._daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<HealthcareServiceAvailableTimeDaysOfWeek>?,
+              as List<Code>?,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value._daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -3003,7 +2995,7 @@ class _$_HealthcareServiceAvailableTime
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+      final List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') final List<Element?>? daysOfWeekElement,
       this.allDay,
       @JsonKey(name: '_allDay') this.allDayElement,
@@ -3042,9 +3034,9 @@ class _$_HealthcareServiceAvailableTime
     return EqualUnmodifiableListView(value);
   }
 
-  final List<HealthcareServiceAvailableTimeDaysOfWeek>? _daysOfWeek;
+  final List<Code>? _daysOfWeek;
   @override
-  List<HealthcareServiceAvailableTimeDaysOfWeek>? get daysOfWeek {
+  List<Code>? get daysOfWeek {
     final value = _daysOfWeek;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -3144,7 +3136,7 @@ abstract class _HealthcareServiceAvailableTime
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+          final List<Code>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               final List<Element?>? daysOfWeekElement,
           final Boolean? allDay,
@@ -3171,8 +3163,7 @@ abstract class _HealthcareServiceAvailableTime
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  List<HealthcareServiceAvailableTimeDaysOfWeek>? get daysOfWeek =>
-      throw _privateConstructorUsedError;
+  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_daysOfWeek')
   List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
@@ -3515,7 +3506,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 mixin _$Location {
   @JsonKey(unknownEnumValue: R4ResourceType.Location)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3530,8 +3521,7 @@ mixin _$Location {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Coding? get operationalStatus => throw _privateConstructorUsedError;
@@ -3544,8 +3534,7 @@ mixin _$Location {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  LocationMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
@@ -3576,7 +3565,7 @@ abstract class $LocationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3590,8 +3579,7 @@ abstract class $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -3604,8 +3592,7 @@ abstract class $LocationCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -3691,7 +3678,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3735,7 +3722,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as LocationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3771,7 +3758,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as LocationMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -3999,7 +3986,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4013,8 +4000,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -4027,8 +4013,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -4131,7 +4116,7 @@ class __$$_LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4175,7 +4160,7 @@ class __$$_LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as LocationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4211,7 +4196,7 @@ class __$$_LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as LocationMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -4284,8 +4269,7 @@ class _$_Location extends _Location {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.operationalStatus,
@@ -4298,8 +4282,7 @@ class _$_Location extends _Location {
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          this.mode,
+      this.mode,
       @JsonKey(name: '_mode')
           this.modeElement,
       final List<CodeableConcept>? type,
@@ -4333,7 +4316,7 @@ class _$_Location extends _Location {
   @JsonKey(unknownEnumValue: R4ResourceType.Location)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -4386,8 +4369,7 @@ class _$_Location extends _Location {
   }
 
   @override
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  final LocationStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -4423,8 +4405,7 @@ class _$_Location extends _Location {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  final LocationMode? mode;
+  final Code? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -4601,7 +4582,7 @@ abstract class _Location extends Location {
   factory _Location(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4615,8 +4596,7 @@ abstract class _Location extends Location {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          final LocationStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Coding? operationalStatus,
@@ -4629,8 +4609,7 @@ abstract class _Location extends Location {
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          final LocationMode? mode,
+      final Code? mode,
       @JsonKey(name: '_mode')
           final Element? modeElement,
       final List<CodeableConcept>? type,
@@ -4653,7 +4632,7 @@ abstract class _Location extends Location {
   @JsonKey(unknownEnumValue: R4ResourceType.Location)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -4679,8 +4658,7 @@ abstract class _Location extends Location {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -4702,8 +4680,7 @@ abstract class _Location extends Location {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  LocationMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -5589,7 +5566,7 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) {
 mixin _$Organization {
   @JsonKey(unknownEnumValue: R4ResourceType.Organization)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -5634,7 +5611,7 @@ abstract class $OrganizationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5716,7 +5693,7 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5896,7 +5873,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5988,7 +5965,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6136,7 +6113,7 @@ class _$_Organization extends _Organization {
   @JsonKey(unknownEnumValue: R4ResourceType.Organization)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -6356,7 +6333,7 @@ abstract class _Organization extends Organization {
   factory _Organization(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6394,7 +6371,7 @@ abstract class _Organization extends Organization {
   @JsonKey(unknownEnumValue: R4ResourceType.Organization)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -6802,7 +6779,7 @@ OrganizationAffiliation _$OrganizationAffiliationFromJson(
 mixin _$OrganizationAffiliation {
   @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6846,7 +6823,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6928,7 +6905,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7119,7 +7096,7 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7212,7 +7189,7 @@ class __$$_OrganizationAffiliationCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7358,7 +7335,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -7580,7 +7557,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   factory _OrganizationAffiliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7616,7 +7593,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override

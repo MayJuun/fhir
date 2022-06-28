@@ -22,7 +22,7 @@ ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) {
 mixin _$ResearchStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -42,8 +42,7 @@ mixin _$ResearchStudy {
   Element? get titleElement => throw _privateConstructorUsedError;
   List<Reference>? get protocol => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-  ResearchStudyStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get primaryPurposeType => throw _privateConstructorUsedError;
@@ -84,7 +83,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -103,8 +102,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
           Element? titleElement,
       List<Reference>? protocol,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -202,7 +200,7 @@ class _$ResearchStudyCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -262,7 +260,7 @@ class _$ResearchStudyCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchStudyStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -504,7 +502,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -523,8 +521,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
           Element? titleElement,
       List<Reference>? protocol,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -637,7 +634,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -697,7 +694,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchStudyStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -811,8 +808,7 @@ class _$_ResearchStudy extends _ResearchStudy {
           this.titleElement,
       final List<Reference>? protocol,
       final List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.primaryPurposeType,
@@ -863,7 +859,7 @@ class _$_ResearchStudy extends _ResearchStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -939,8 +935,7 @@ class _$_ResearchStudy extends _ResearchStudy {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-  final ResearchStudyStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1197,7 +1192,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1216,8 +1211,7 @@ abstract class _ResearchStudy extends ResearchStudy {
           final Element? titleElement,
       final List<Reference>? protocol,
       final List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          final ResearchStudyStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? primaryPurposeType,
@@ -1250,7 +1244,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -1285,8 +1279,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-  ResearchStudyStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -2014,7 +2007,7 @@ ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) {
 mixin _$ResearchSubject {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -2029,8 +2022,7 @@ mixin _$ResearchSubject {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-  ResearchSubjectStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
@@ -2058,7 +2050,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2072,8 +2064,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
@@ -2142,7 +2133,7 @@ class _$ResearchSubjectCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2186,7 +2177,7 @@ class _$ResearchSubjectCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchSubjectStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2350,7 +2341,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2364,8 +2355,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
@@ -2447,7 +2437,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2491,7 +2481,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchSubjectStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2552,8 +2542,7 @@ class _$_ResearchSubject extends _ResearchSubject {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.period,
@@ -2579,7 +2568,7 @@ class _$_ResearchSubject extends _ResearchSubject {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -2632,8 +2621,7 @@ class _$_ResearchSubject extends _ResearchSubject {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-  final ResearchSubjectStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -2746,7 +2734,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2760,8 +2748,7 @@ abstract class _ResearchSubject extends ResearchSubject {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          final ResearchSubjectStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Period? period,
@@ -2783,7 +2770,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -2809,8 +2796,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-  ResearchSubjectStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;

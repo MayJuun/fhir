@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'support.enums.dart';
 part 'support.freezed.dart';
 part 'support.g.dart';
 
@@ -142,7 +141,7 @@ class Coverage with Resource, _$Coverage {
     @Default(R4ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -565,7 +564,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     @Default(R4ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -579,7 +578,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? priority,
-    List<CoverageEligibilityRequestPurpose>? purpose,
+    List<Code>? purpose,
     @JsonKey(name: '_purpose') List<Element?>? purposeElement,
     required Reference patient,
     Date? servicedDate,
@@ -1085,7 +1084,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     @Default(R4ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1098,7 +1097,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     List<Identifier>? identifier,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<CoverageEligibilityResponsePurpose>? purpose,
+    List<Code>? purpose,
     @JsonKey(name: '_purpose') List<Element?>? purposeElement,
     required Reference patient,
     Date? servicedDate,
@@ -1108,8 +1107,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     @JsonKey(name: '_created') Element? createdElement,
     Reference? requestor,
     required Reference request,
-    @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-        CoverageEligibilityResponseOutcome? outcome,
+    Code? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
@@ -1606,7 +1604,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @Default(R4ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1744,7 +1742,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @Default(R4ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1758,8 +1756,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? request,
-    @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-        EnrollmentResponseOutcome? outcome,
+    Code? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

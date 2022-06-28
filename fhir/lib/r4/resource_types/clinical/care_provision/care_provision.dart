@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'care_provision.enums.dart';
 part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
@@ -161,7 +160,7 @@ class CarePlan with Resource, _$CarePlan {
     @Default(R4ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -451,8 +450,7 @@ class CarePlanDetail with _$CarePlanDetail {
     List<CodeableConcept>? reasonCode,
     List<Reference>? reasonReference,
     List<Reference>? goal,
-    @JsonKey(unknownEnumValue: CarePlanDetailStatus.unknown)
-        CarePlanDetailStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
     Boolean? doNotPerform,
@@ -606,7 +604,7 @@ class CareTeam with Resource, _$CareTeam {
     @Default(R4ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -617,7 +615,7 @@ class CareTeam with Resource, _$CareTeam {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     String? name,
@@ -865,7 +863,7 @@ class Goal with Resource, _$Goal {
     @Default(R4ResourceType.Goal)
     @JsonKey(unknownEnumValue: R4ResourceType.Goal)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -876,8 +874,7 @@ class Goal with Resource, _$Goal {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
-        GoalLifecycleStatus? lifecycleStatus,
+    Code? lifecycleStatus,
     @JsonKey(name: '_lifecycleStatus') Element? lifecycleStatusElement,
     CodeableConcept? achievementStatus,
     List<CodeableConcept>? category,
@@ -1213,7 +1210,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
     @Default(R4ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1946,7 +1943,7 @@ class RequestGroup with Resource, _$RequestGroup {
     @Default(R4ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2489,7 +2486,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
     @Default(R4ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2875,7 +2872,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     @Default(R4ResourceType.ServiceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -3054,7 +3051,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
     @Default(R4ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -3193,8 +3190,7 @@ class VisionPrescriptionLensSpecification
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept product,
-    @JsonKey(unknownEnumValue: VisionPrescriptionLensSpecificationEye.unknown)
-        VisionPrescriptionLensSpecificationEye? eye,
+    Code? eye,
     @JsonKey(name: '_eye') Element? eyeElement,
     Decimal? sphere,
     @JsonKey(name: '_sphere') Element? sphereElement,
@@ -3284,8 +3280,7 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
     List<FhirExtension>? modifierExtension,
     Decimal? amount,
     @JsonKey(name: '_amount') Element? amountElement,
-    @JsonKey(unknownEnumValue: VisionPrescriptionPrismBase.unknown)
-        VisionPrescriptionPrismBase? base,
+    Code? base,
     @JsonKey(name: '_base') Element? baseElement,
   }) = _VisionPrescriptionPrism;
 

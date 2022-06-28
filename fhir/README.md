@@ -4,13 +4,13 @@ A Dart/Flutter package for working with FHIR® resources. FHIR® is the register
 
 It contains packages for the 3 released FHIR versions:
 
-- [R4 v4.0.1](https://hl7.org/fhir/R4/)
-- [Stu3 v3.0.2](https://www.hl7.org/fhir/stu3/)
-- [Dstu2 v1.0.2](https://www.hl7.org/fhir/DSTU2/)
+- [R4 v4.3.0 - FHIR Release #4B](http://hl7.org/fhir/R4B/)
+- [Stu3 v3.0.2 - FHIR Release 3 (STU) with 2 technical errata (Permanent Home)](http://hl7.org/fhir/STU3/)
+- [Dstu2 v1.0.2 - DSTU 2 (Official version) with 1 technical errata (Permanent home)](http://hl7.org/fhir/DSTU2/)
 
-As well as the R5 Preview #3:
+As well as the R5 (constantly in flux as it's actively being balloted):
 
-- [v4.5.0: R5 Preview #3](https://hl7.org/fhir/2020Feb/)
+- [R5 v4.6.0 - 	FHIR Release #5: Snapshot #1 (Jan 2022 Connectathon)](http://hl7.org/fhir/2021May/)
 
 ## Say Hello
 
@@ -28,7 +28,7 @@ In order to use this package in your app, you must include the following in your
 
 ```yaml
 dependencies:
-  fhir: ^0.6.2
+  fhir: ^0.9.0
 ```
 
 Or if you want to include the most recent unreleased version from Github

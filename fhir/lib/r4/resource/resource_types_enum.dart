@@ -5,6 +5,8 @@ enum R4ResourceType {
   Account,
   @JsonValue('ActivityDefinition')
   ActivityDefinition,
+  @JsonValue('AdministrableProductDefinition')
+  AdministrableProductDefinition,
   @JsonValue('AdverseEvent')
   AdverseEvent,
   @JsonValue('AllergyIntolerance')
@@ -37,12 +39,16 @@ enum R4ResourceType {
   ChargeItem,
   @JsonValue('ChargeItemDefinition')
   ChargeItemDefinition,
+  @JsonValue('Citation')
+  Citation,
   @JsonValue('Claim')
   Claim,
   @JsonValue('ClaimResponse')
   ClaimResponse,
   @JsonValue('ClinicalImpression')
   ClinicalImpression,
+  @JsonValue('ClinicalUseDefinition')
+  ClinicalUseDefinition,
   @JsonValue('CodeSystem')
   CodeSystem,
   @JsonValue('Communication')
@@ -85,8 +91,6 @@ enum R4ResourceType {
   DocumentManifest,
   @JsonValue('DocumentReference')
   DocumentReference,
-  @JsonValue('EffectEvidenceSynthesis')
-  EffectEvidenceSynthesis,
   @JsonValue('Encounter')
   Encounter,
   @JsonValue('Endpoint')
@@ -101,6 +105,8 @@ enum R4ResourceType {
   EventDefinition,
   @JsonValue('Evidence')
   Evidence,
+  @JsonValue('EvidenceReport')
+  EvidenceReport,
   @JsonValue('EvidenceVariable')
   EvidenceVariable,
   @JsonValue('ExampleScenario')
@@ -131,6 +137,8 @@ enum R4ResourceType {
   ImmunizationRecommendation,
   @JsonValue('ImplementationGuide')
   ImplementationGuide,
+  @JsonValue('Ingredient')
+  Ingredient,
   @JsonValue('InsurancePlan')
   InsurancePlan,
   @JsonValue('Invoice')
@@ -143,6 +151,8 @@ enum R4ResourceType {
   List_,
   @JsonValue('Location')
   Location,
+  @JsonValue('ManufacturedItemDefinition')
+  ManufacturedItemDefinition,
   @JsonValue('Measure')
   Measure,
   @JsonValue('MeasureReport')
@@ -161,26 +171,8 @@ enum R4ResourceType {
   MedicationRequest,
   @JsonValue('MedicationStatement')
   MedicationStatement,
-  @JsonValue('MedicinalProduct')
-  MedicinalProduct,
-  @JsonValue('MedicinalProductAuthorization')
-  MedicinalProductAuthorization,
-  @JsonValue('MedicinalProductContraindication')
-  MedicinalProductContraindication,
-  @JsonValue('MedicinalProductIndication')
-  MedicinalProductIndication,
-  @JsonValue('MedicinalProductIngredient')
-  MedicinalProductIngredient,
-  @JsonValue('MedicinalProductInteraction')
-  MedicinalProductInteraction,
-  @JsonValue('MedicinalProductManufactured')
-  MedicinalProductManufactured,
-  @JsonValue('MedicinalProductPackaged')
-  MedicinalProductPackaged,
-  @JsonValue('MedicinalProductPharmaceutical')
-  MedicinalProductPharmaceutical,
-  @JsonValue('MedicinalProductUndesirableEffect')
-  MedicinalProductUndesirableEffect,
+  @JsonValue('MedicinalProductDefinition')
+  MedicinalProductDefinition,
   @JsonValue('MessageDefinition')
   MessageDefinition,
   @JsonValue('MessageHeader')
@@ -191,6 +183,8 @@ enum R4ResourceType {
   NamingSystem,
   @JsonValue('NutritionOrder')
   NutritionOrder,
+  @JsonValue('NutritionProduct')
+  NutritionProduct,
   @JsonValue('Observation')
   Observation,
   @JsonValue('ObservationDefinition')
@@ -203,6 +197,8 @@ enum R4ResourceType {
   Organization,
   @JsonValue('OrganizationAffiliation')
   OrganizationAffiliation,
+  @JsonValue('PackagedProductDefinition')
+  PackagedProductDefinition,
   @JsonValue('Parameters')
   Parameters,
   @JsonValue('Patient')
@@ -227,6 +223,8 @@ enum R4ResourceType {
   Questionnaire,
   @JsonValue('QuestionnaireResponse')
   QuestionnaireResponse,
+  @JsonValue('RegulatedAuthorization')
+  RegulatedAuthorization,
   @JsonValue('RelatedPerson')
   RelatedPerson,
   @JsonValue('RequestGroup')
@@ -241,8 +239,6 @@ enum R4ResourceType {
   ResearchSubject,
   @JsonValue('RiskAssessment')
   RiskAssessment,
-  @JsonValue('RiskEvidenceSynthesis')
-  RiskEvidenceSynthesis,
   @JsonValue('Schedule')
   Schedule,
   @JsonValue('SearchParameter')
@@ -261,20 +257,14 @@ enum R4ResourceType {
   StructureMap,
   @JsonValue('Subscription')
   Subscription,
+  @JsonValue('SubscriptionStatus')
+  SubscriptionStatus,
+  @JsonValue('SubscriptionTopic')
+  SubscriptionTopic,
   @JsonValue('Substance')
   Substance,
-  @JsonValue('SubstanceNucleicAcid')
-  SubstanceNucleicAcid,
-  @JsonValue('SubstancePolymer')
-  SubstancePolymer,
-  @JsonValue('SubstanceProtein')
-  SubstanceProtein,
-  @JsonValue('SubstanceReferenceInformation')
-  SubstanceReferenceInformation,
-  @JsonValue('SubstanceSourceMaterial')
-  SubstanceSourceMaterial,
-  @JsonValue('SubstanceSpecification')
-  SubstanceSpecification,
+  @JsonValue('SubstanceDefinition')
+  SubstanceDefinition,
   @JsonValue('SupplyDelivery')
   SupplyDelivery,
   @JsonValue('SupplyRequest')

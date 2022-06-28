@@ -22,7 +22,7 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
 mixin _$Coverage {
   @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -81,7 +81,7 @@ abstract class $CoverageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -196,7 +196,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -510,7 +510,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -643,7 +643,7 @@ class __$$_CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -842,7 +842,7 @@ class _$_Coverage extends _Coverage {
   @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -1093,7 +1093,7 @@ abstract class _Coverage extends Coverage {
   factory _Coverage(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1144,7 +1144,7 @@ abstract class _Coverage extends Coverage {
   @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -2213,7 +2213,7 @@ CoverageEligibilityRequest _$CoverageEligibilityRequestFromJson(
 mixin _$CoverageEligibilityRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -2232,8 +2232,7 @@ mixin _$CoverageEligibilityRequest {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get priority => throw _privateConstructorUsedError;
-  List<CoverageEligibilityRequestPurpose>? get purpose =>
-      throw _privateConstructorUsedError;
+  List<Code>? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
   List<Element?>? get purposeElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
@@ -2269,7 +2268,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2287,7 +2286,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? priority,
-      List<CoverageEligibilityRequestPurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
           List<Element?>? purposeElement,
       Reference patient,
@@ -2372,7 +2371,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2428,7 +2427,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
       purpose: purpose == freezed
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<CoverageEligibilityRequestPurpose>?,
+              as List<Code>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -2646,7 +2645,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2664,7 +2663,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? priority,
-      List<CoverageEligibilityRequestPurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
           List<Element?>? purposeElement,
       Reference patient,
@@ -2767,7 +2766,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2823,7 +2822,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
       purpose: purpose == freezed
           ? _value._purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<CoverageEligibilityRequestPurpose>?,
+              as List<Code>?,
       purposeElement: purposeElement == freezed
           ? _value._purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -2908,7 +2907,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       @JsonKey(name: '_status')
           this.statusElement,
       this.priority,
-      final List<CoverageEligibilityRequestPurpose>? purpose,
+      final List<Code>? purpose,
       @JsonKey(name: '_purpose')
           final List<Element?>? purposeElement,
       required this.patient,
@@ -2944,7 +2943,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -3003,9 +3002,9 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   final Element? statusElement;
   @override
   final CodeableConcept? priority;
-  final List<CoverageEligibilityRequestPurpose>? _purpose;
+  final List<Code>? _purpose;
   @override
-  List<CoverageEligibilityRequestPurpose>? get purpose {
+  List<Code>? get purpose {
     final value = _purpose;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -3181,7 +3180,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   factory _CoverageEligibilityRequest(
           {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
               final R4ResourceType resourceType,
-          final Id? id,
+          final String? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -3199,7 +3198,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           @JsonKey(name: '_status')
               final Element? statusElement,
           final CodeableConcept? priority,
-          final List<CoverageEligibilityRequestPurpose>? purpose,
+          final List<Code>? purpose,
           @JsonKey(name: '_purpose')
               final List<Element?>? purposeElement,
           required final Reference patient,
@@ -3227,7 +3226,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -3260,8 +3259,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   @override
   CodeableConcept? get priority => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityRequestPurpose>? get purpose =>
-      throw _privateConstructorUsedError;
+  List<Code>? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
   List<Element?>? get purposeElement => throw _privateConstructorUsedError;
@@ -4956,7 +4954,7 @@ CoverageEligibilityResponse _$CoverageEligibilityResponseFromJson(
 mixin _$CoverageEligibilityResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -4974,8 +4972,7 @@ mixin _$CoverageEligibilityResponse {
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  List<CoverageEligibilityResponsePurpose>? get purpose =>
-      throw _privateConstructorUsedError;
+  List<Code>? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
   List<Element?>? get purposeElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
@@ -4988,9 +4985,7 @@ mixin _$CoverageEligibilityResponse {
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get requestor => throw _privateConstructorUsedError;
   Reference get request => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-  CoverageEligibilityResponseOutcome? get outcome =>
-      throw _privateConstructorUsedError;
+  Code? get outcome => throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;
   String? get disposition => throw _privateConstructorUsedError;
@@ -5021,7 +5016,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5038,7 +5033,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CoverageEligibilityResponsePurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
           List<Element?>? purposeElement,
       Reference patient,
@@ -5051,8 +5046,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
           Element? createdElement,
       Reference? requestor,
       Reference request,
-      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-          CoverageEligibilityResponseOutcome? outcome,
+      Code? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -5138,7 +5132,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5190,7 +5184,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       purpose: purpose == freezed
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<CoverageEligibilityResponsePurpose>?,
+              as List<Code>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -5230,7 +5224,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as CoverageEligibilityResponseOutcome?,
+              as Code?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -5446,7 +5440,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5463,7 +5457,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CoverageEligibilityResponsePurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
           List<Element?>? purposeElement,
       Reference patient,
@@ -5476,8 +5470,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
           Element? createdElement,
       Reference? requestor,
       Reference request,
-      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-          CoverageEligibilityResponseOutcome? outcome,
+      Code? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -5583,7 +5576,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5635,7 +5628,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
       purpose: purpose == freezed
           ? _value._purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<CoverageEligibilityResponsePurpose>?,
+              as List<Code>?,
       purposeElement: purposeElement == freezed
           ? _value._purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -5675,7 +5668,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as CoverageEligibilityResponseOutcome?,
+              as Code?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -5739,7 +5732,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      final List<CoverageEligibilityResponsePurpose>? purpose,
+      final List<Code>? purpose,
       @JsonKey(name: '_purpose')
           final List<Element?>? purposeElement,
       required this.patient,
@@ -5752,8 +5745,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
           this.createdElement,
       this.requestor,
       required this.request,
-      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-          this.outcome,
+      this.outcome,
       @JsonKey(name: '_outcome')
           this.outcomeElement,
       this.disposition,
@@ -5783,7 +5775,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -5840,9 +5832,9 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
-  final List<CoverageEligibilityResponsePurpose>? _purpose;
+  final List<Code>? _purpose;
   @override
-  List<CoverageEligibilityResponsePurpose>? get purpose {
+  List<Code>? get purpose {
     final value = _purpose;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -5878,8 +5870,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @override
   final Reference request;
   @override
-  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-  final CoverageEligibilityResponseOutcome? outcome;
+  final Code? outcome;
   @override
   @JsonKey(name: '_outcome')
   final Element? outcomeElement;
@@ -6038,7 +6029,7 @@ abstract class _CoverageEligibilityResponse
   factory _CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6055,7 +6046,7 @@ abstract class _CoverageEligibilityResponse
       final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final List<CoverageEligibilityResponsePurpose>? purpose,
+      final List<Code>? purpose,
       @JsonKey(name: '_purpose')
           final List<Element?>? purposeElement,
       required final Reference patient,
@@ -6068,8 +6059,7 @@ abstract class _CoverageEligibilityResponse
           final Element? createdElement,
       final Reference? requestor,
       required final Reference request,
-      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-          final CoverageEligibilityResponseOutcome? outcome,
+      final Code? outcome,
       @JsonKey(name: '_outcome')
           final Element? outcomeElement,
       final String? disposition,
@@ -6092,7 +6082,7 @@ abstract class _CoverageEligibilityResponse
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -6123,8 +6113,7 @@ abstract class _CoverageEligibilityResponse
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityResponsePurpose>? get purpose =>
-      throw _privateConstructorUsedError;
+  List<Code>? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
   List<Element?>? get purposeElement => throw _privateConstructorUsedError;
@@ -6147,9 +6136,7 @@ abstract class _CoverageEligibilityResponse
   @override
   Reference get request => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-  CoverageEligibilityResponseOutcome? get outcome =>
-      throw _privateConstructorUsedError;
+  Code? get outcome => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;
@@ -8237,7 +8224,7 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
 mixin _$EnrollmentRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -8277,7 +8264,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8354,7 +8341,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8551,7 +8538,7 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8640,7 +8627,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8760,7 +8747,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -8915,7 +8902,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8948,7 +8935,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -9005,7 +8992,7 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
 mixin _$EnrollmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -9024,8 +9011,7 @@ mixin _$EnrollmentResponse {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get request => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-  EnrollmentResponseOutcome? get outcome => throw _privateConstructorUsedError;
+  Code? get outcome => throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;
   String? get disposition => throw _privateConstructorUsedError;
@@ -9051,7 +9037,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9069,8 +9055,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
-      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-          EnrollmentResponseOutcome? outcome,
+      Code? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -9138,7 +9123,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9194,7 +9179,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as EnrollmentResponseOutcome?,
+              as Code?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -9358,7 +9343,7 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9376,8 +9361,7 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
-      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-          EnrollmentResponseOutcome? outcome,
+      Code? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -9458,7 +9442,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9514,7 +9498,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as EnrollmentResponseOutcome?,
+              as Code?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -9571,8 +9555,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       @JsonKey(name: '_status')
           this.statusElement,
       this.request,
-      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-          this.outcome,
+      this.outcome,
       @JsonKey(name: '_outcome')
           this.outcomeElement,
       this.disposition,
@@ -9596,7 +9579,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -9656,8 +9639,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @override
   final Reference? request;
   @override
-  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-  final EnrollmentResponseOutcome? outcome;
+  final Code? outcome;
   @override
   @JsonKey(name: '_outcome')
   final Element? outcomeElement;
@@ -9771,7 +9753,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9789,8 +9771,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Reference? request,
-      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-          final EnrollmentResponseOutcome? outcome,
+      final Code? outcome,
       @JsonKey(name: '_outcome')
           final Element? outcomeElement,
       final String? disposition,
@@ -9810,7 +9791,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -9843,8 +9824,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @override
   Reference? get request => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-  EnrollmentResponseOutcome? get outcome => throw _privateConstructorUsedError;
+  Code? get outcome => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;

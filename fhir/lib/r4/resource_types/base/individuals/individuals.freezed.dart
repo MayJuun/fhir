@@ -22,7 +22,7 @@ Group _$GroupFromJson(Map<String, dynamic> json) {
 mixin _$Group {
   @JsonKey(unknownEnumValue: R4ResourceType.Group)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -40,8 +40,7 @@ mixin _$Group {
   Boolean? get active => throw _privateConstructorUsedError;
   @JsonKey(name: '_active')
   Element? get activeElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: GroupType.unknown)
-  GroupType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Boolean? get actual => throw _privateConstructorUsedError;
@@ -71,7 +70,7 @@ abstract class $GroupCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -88,8 +87,7 @@ abstract class $GroupCopyWith<$Res> {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          GroupType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Boolean? actual,
@@ -164,7 +162,7 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -216,7 +214,7 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as GroupType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -394,7 +392,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -411,8 +409,7 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          GroupType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Boolean? actual,
@@ -499,7 +496,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -551,7 +548,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as GroupType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -623,8 +620,7 @@ class _$_Group extends _Group {
       this.active,
       @JsonKey(name: '_active')
           this.activeElement,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          this.type,
+      this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.actual,
@@ -655,7 +651,7 @@ class _$_Group extends _Group {
   @JsonKey(unknownEnumValue: R4ResourceType.Group)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -713,8 +709,7 @@ class _$_Group extends _Group {
   @JsonKey(name: '_active')
   final Element? activeElement;
   @override
-  @JsonKey(unknownEnumValue: GroupType.unknown)
-  final GroupType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -855,7 +850,7 @@ abstract class _Group extends Group {
   factory _Group(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -872,8 +867,7 @@ abstract class _Group extends Group {
       final Boolean? active,
       @JsonKey(name: '_active')
           final Element? activeElement,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          final GroupType? type,
+      final Code? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
       final Boolean? actual,
@@ -897,7 +891,7 @@ abstract class _Group extends Group {
   @JsonKey(unknownEnumValue: R4ResourceType.Group)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -928,8 +922,7 @@ abstract class _Group extends Group {
   @JsonKey(name: '_active')
   Element? get activeElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: GroupType.unknown)
-  GroupType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -1843,7 +1836,7 @@ Patient _$PatientFromJson(Map<String, dynamic> json) {
 mixin _$Patient {
   @JsonKey(unknownEnumValue: R4ResourceType.Patient)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -1863,8 +1856,7 @@ mixin _$Patient {
   Element? get activeElement => throw _privateConstructorUsedError;
   List<HumanName>? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PatientGender.unknown)
-  PatientGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Date? get birthDate => throw _privateConstructorUsedError;
@@ -1907,7 +1899,7 @@ abstract class $PatientCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1926,8 +1918,7 @@ abstract class $PatientCopyWith<$Res> {
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PatientGender.unknown)
-          PatientGender? gender,
+      Code? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -2024,7 +2015,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2084,7 +2075,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as PatientGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -2317,7 +2308,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2336,8 +2327,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PatientGender.unknown)
-          PatientGender? gender,
+      Code? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -2448,7 +2438,7 @@ class __$$_PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2508,7 +2498,7 @@ class __$$_PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as PatientGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -2614,8 +2604,7 @@ class _$_Patient extends _Patient {
           this.activeElement,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PatientGender.unknown)
-          this.gender,
+      this.gender,
       @JsonKey(name: '_gender')
           this.genderElement,
       this.birthDate,
@@ -2662,7 +2651,7 @@ class _$_Patient extends _Patient {
   @JsonKey(unknownEnumValue: R4ResourceType.Patient)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -2738,8 +2727,7 @@ class _$_Patient extends _Patient {
   }
 
   @override
-  @JsonKey(unknownEnumValue: PatientGender.unknown)
-  final PatientGender? gender;
+  final Code? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -2956,7 +2944,7 @@ abstract class _Patient extends Patient {
   factory _Patient(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2975,8 +2963,7 @@ abstract class _Patient extends Patient {
           final Element? activeElement,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PatientGender.unknown)
-          final PatientGender? gender,
+      final Code? gender,
       @JsonKey(name: '_gender')
           final Element? genderElement,
       final Date? birthDate,
@@ -3010,7 +2997,7 @@ abstract class _Patient extends Patient {
   @JsonKey(unknownEnumValue: R4ResourceType.Patient)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -3045,8 +3032,7 @@ abstract class _Patient extends Patient {
   @override
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PatientGender.unknown)
-  PatientGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -3116,8 +3102,7 @@ mixin _$PatientContact {
   HumanName? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   Address? get address => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-  PatientContactGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Reference? get organization => throw _privateConstructorUsedError;
@@ -3136,17 +3121,14 @@ abstract class $PatientContactCopyWith<$Res> {
       _$PatientContactCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? relationship,
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-          PatientContactGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      Code? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
 
@@ -3212,7 +3194,7 @@ class _$PatientContactCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as PatientContactGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -3293,17 +3275,14 @@ abstract class _$$_PatientContactCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? relationship,
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-          PatientContactGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      Code? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
 
@@ -3376,7 +3355,7 @@ class __$$_PatientContactCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as PatientContactGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -3404,7 +3383,7 @@ class _$_PatientContact extends _PatientContact {
       this.name,
       final List<ContactPoint>? telecom,
       this.address,
-      @JsonKey(unknownEnumValue: PatientContactGender.unknown) this.gender,
+      this.gender,
       @JsonKey(name: '_gender') this.genderElement,
       this.organization,
       this.period})
@@ -3461,8 +3440,7 @@ class _$_PatientContact extends _PatientContact {
   @override
   final Address? address;
   @override
-  @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-  final PatientContactGender? gender;
+  final Code? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -3529,17 +3507,14 @@ class _$_PatientContact extends _PatientContact {
 abstract class _PatientContact extends PatientContact {
   factory _PatientContact(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? relationship,
       final HumanName? name,
       final List<ContactPoint>? telecom,
       final Address? address,
-      @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-          final PatientContactGender? gender,
-      @JsonKey(name: '_gender')
-          final Element? genderElement,
+      final Code? gender,
+      @JsonKey(name: '_gender') final Element? genderElement,
       final Reference? organization,
       final Period? period}) = _$_PatientContact;
   _PatientContact._() : super._();
@@ -3564,8 +3539,7 @@ abstract class _PatientContact extends PatientContact {
   @override
   Address? get address => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-  PatientContactGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -3890,8 +3864,7 @@ mixin _$PatientLink {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Reference get other => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-  PatientLinkType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
@@ -3911,7 +3884,7 @@ abstract class $PatientLinkCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
+      Code? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ReferenceCopyWith<$Res> get other;
@@ -3955,7 +3928,7 @@ class _$PatientLinkCopyWithImpl<$Res> implements $PatientLinkCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PatientLinkType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3994,7 +3967,7 @@ abstract class _$$_PatientLinkCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
+      Code? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -4042,7 +4015,7 @@ class __$$_PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PatientLinkType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4059,7 +4032,7 @@ class _$_PatientLink extends _PatientLink {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -4092,8 +4065,7 @@ class _$_PatientLink extends _PatientLink {
   @override
   final Reference other;
   @override
-  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-  final PatientLinkType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -4144,14 +4116,11 @@ class _$_PatientLink extends _PatientLink {
 abstract class _PatientLink extends PatientLink {
   factory _PatientLink(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-          final PatientLinkType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement}) = _$_PatientLink;
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement}) = _$_PatientLink;
   _PatientLink._() : super._();
 
   factory _PatientLink.fromJson(Map<String, dynamic> json) =
@@ -4168,8 +4137,7 @@ abstract class _PatientLink extends PatientLink {
   @override
   Reference get other => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-  PatientLinkType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -4187,7 +4155,7 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
 mixin _$Person {
   @JsonKey(unknownEnumValue: R4ResourceType.Person)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -4204,8 +4172,7 @@ mixin _$Person {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<HumanName>? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PersonGender.unknown)
-  PersonGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Date? get birthDate => throw _privateConstructorUsedError;
@@ -4231,7 +4198,7 @@ abstract class $PersonCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4247,8 +4214,7 @@ abstract class $PersonCopyWith<$Res> {
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown)
-          PersonGender? gender,
+      Code? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -4316,7 +4282,7 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4368,7 +4334,7 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as PersonGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -4516,7 +4482,7 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4532,8 +4498,7 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown)
-          PersonGender? gender,
+      Code? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -4611,7 +4576,7 @@ class __$$_PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4663,7 +4628,7 @@ class __$$_PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as PersonGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -4726,8 +4691,7 @@ class _$_Person extends _Person {
       final List<Identifier>? identifier,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown)
-          this.gender,
+      this.gender,
       @JsonKey(name: '_gender')
           this.genderElement,
       this.birthDate,
@@ -4757,7 +4721,7 @@ class _$_Person extends _Person {
   @JsonKey(unknownEnumValue: R4ResourceType.Person)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -4828,8 +4792,7 @@ class _$_Person extends _Person {
   }
 
   @override
-  @JsonKey(unknownEnumValue: PersonGender.unknown)
-  final PersonGender? gender;
+  final Code? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -4958,7 +4921,7 @@ abstract class _Person extends Person {
   factory _Person(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4974,8 +4937,7 @@ abstract class _Person extends Person {
       final List<Identifier>? identifier,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown)
-          final PersonGender? gender,
+      final Code? gender,
       @JsonKey(name: '_gender')
           final Element? genderElement,
       final Date? birthDate,
@@ -4996,7 +4958,7 @@ abstract class _Person extends Person {
   @JsonKey(unknownEnumValue: R4ResourceType.Person)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -5026,8 +4988,7 @@ abstract class _Person extends Person {
   @override
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PersonGender.unknown)
-  PersonGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -5067,8 +5028,7 @@ mixin _$PersonLink {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Reference get target => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-  PersonLinkAssurance? get assurance => throw _privateConstructorUsedError;
+  Code? get assurance => throw _privateConstructorUsedError;
   @JsonKey(name: '_assurance')
   Element? get assuranceElement => throw _privateConstructorUsedError;
 
@@ -5085,14 +5045,11 @@ abstract class $PersonLinkCopyWith<$Res> {
       _$PersonLinkCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          PersonLinkAssurance? assurance,
-      @JsonKey(name: '_assurance')
-          Element? assuranceElement});
+      Code? assurance,
+      @JsonKey(name: '_assurance') Element? assuranceElement});
 
   $ReferenceCopyWith<$Res> get target;
   $ElementCopyWith<$Res>? get assuranceElement;
@@ -5135,7 +5092,7 @@ class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
       assurance: assurance == freezed
           ? _value.assurance
           : assurance // ignore: cast_nullable_to_non_nullable
-              as PersonLinkAssurance?,
+              as Code?,
       assuranceElement: assuranceElement == freezed
           ? _value.assuranceElement
           : assuranceElement // ignore: cast_nullable_to_non_nullable
@@ -5171,14 +5128,11 @@ abstract class _$$_PersonLinkCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          PersonLinkAssurance? assurance,
-      @JsonKey(name: '_assurance')
-          Element? assuranceElement});
+      Code? assurance,
+      @JsonKey(name: '_assurance') Element? assuranceElement});
 
   @override
   $ReferenceCopyWith<$Res> get target;
@@ -5225,7 +5179,7 @@ class __$$_PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
       assurance: assurance == freezed
           ? _value.assurance
           : assurance // ignore: cast_nullable_to_non_nullable
-              as PersonLinkAssurance?,
+              as Code?,
       assuranceElement: assuranceElement == freezed
           ? _value.assuranceElement
           : assuranceElement // ignore: cast_nullable_to_non_nullable
@@ -5242,7 +5196,7 @@ class _$_PersonLink extends _PersonLink {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.target,
-      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown) this.assurance,
+      this.assurance,
       @JsonKey(name: '_assurance') this.assuranceElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -5275,8 +5229,7 @@ class _$_PersonLink extends _PersonLink {
   @override
   final Reference target;
   @override
-  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-  final PersonLinkAssurance? assurance;
+  final Code? assurance;
   @override
   @JsonKey(name: '_assurance')
   final Element? assuranceElement;
@@ -5326,15 +5279,13 @@ class _$_PersonLink extends _PersonLink {
 
 abstract class _PersonLink extends PersonLink {
   factory _PersonLink(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final Reference target,
-      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          final PersonLinkAssurance? assurance,
-      @JsonKey(name: '_assurance')
-          final Element? assuranceElement}) = _$_PersonLink;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final Reference target,
+          final Code? assurance,
+          @JsonKey(name: '_assurance') final Element? assuranceElement}) =
+      _$_PersonLink;
   _PersonLink._() : super._();
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
@@ -5351,8 +5302,7 @@ abstract class _PersonLink extends PersonLink {
   @override
   Reference get target => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-  PersonLinkAssurance? get assurance => throw _privateConstructorUsedError;
+  Code? get assurance => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_assurance')
   Element? get assuranceElement => throw _privateConstructorUsedError;
@@ -5370,7 +5320,7 @@ Practitioner _$PractitionerFromJson(Map<String, dynamic> json) {
 mixin _$Practitioner {
   @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -5391,8 +5341,7 @@ mixin _$Practitioner {
   List<HumanName>? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-  PractitionerGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Date? get birthDate => throw _privateConstructorUsedError;
@@ -5418,7 +5367,7 @@ abstract class $PractitionerCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5438,8 +5387,7 @@ abstract class $PractitionerCopyWith<$Res> {
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
-      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-          PractitionerGender? gender,
+      Code? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -5501,7 +5449,7 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5565,7 +5513,7 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as PractitionerGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -5681,7 +5629,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5701,8 +5649,7 @@ abstract class _$$_PractitionerCopyWith<$Res>
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
-      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-          PractitionerGender? gender,
+      Code? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -5774,7 +5721,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5838,7 +5785,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as PractitionerGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -5893,8 +5840,7 @@ class _$_Practitioner extends _Practitioner {
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
       final List<Address>? address,
-      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-          this.gender,
+      this.gender,
       @JsonKey(name: '_gender')
           this.genderElement,
       this.birthDate,
@@ -5922,7 +5868,7 @@ class _$_Practitioner extends _Practitioner {
   @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -6007,8 +5953,7 @@ class _$_Practitioner extends _Practitioner {
   }
 
   @override
-  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-  final PractitionerGender? gender;
+  final Code? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -6138,7 +6083,7 @@ abstract class _Practitioner extends Practitioner {
   factory _Practitioner(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6158,8 +6103,7 @@ abstract class _Practitioner extends Practitioner {
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
       final List<Address>? address,
-      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-          final PractitionerGender? gender,
+      final Code? gender,
       @JsonKey(name: '_gender')
           final Element? genderElement,
       final Date? birthDate,
@@ -6177,7 +6121,7 @@ abstract class _Practitioner extends Practitioner {
   @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -6214,8 +6158,7 @@ abstract class _Practitioner extends Practitioner {
   @override
   List<Address>? get address => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-  PractitionerGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -6588,7 +6531,7 @@ PractitionerRole _$PractitionerRoleFromJson(Map<String, dynamic> json) {
 mixin _$PractitionerRole {
   @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6638,7 +6581,7 @@ abstract class $PractitionerRoleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6728,7 +6671,7 @@ class _$PractitionerRoleCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6943,7 +6886,7 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7044,7 +6987,7 @@ class __$$_PractitionerRoleCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7207,7 +7150,7 @@ class _$_PractitionerRole extends _PractitionerRole {
   @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -7452,7 +7395,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   factory _PractitionerRole(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7492,7 +7435,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -8340,7 +8283,7 @@ RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) {
 mixin _$RelatedPerson {
   @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -8362,8 +8305,7 @@ mixin _$RelatedPerson {
   List<CodeableConcept>? get relationship => throw _privateConstructorUsedError;
   List<HumanName>? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-  RelatedPersonGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Date? get birthDate => throw _privateConstructorUsedError;
@@ -8389,7 +8331,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8410,8 +8352,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-          RelatedPersonGender? gender,
+      Code? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -8479,7 +8420,7 @@ class _$RelatedPersonCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8547,7 +8488,7 @@ class _$RelatedPersonCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as RelatedPersonGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -8685,7 +8626,7 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8706,8 +8647,7 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-          RelatedPersonGender? gender,
+      Code? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -8786,7 +8726,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8854,7 +8794,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as RelatedPersonGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -8914,8 +8854,7 @@ class _$_RelatedPerson extends _RelatedPerson {
       final List<CodeableConcept>? relationship,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-          this.gender,
+      this.gender,
       @JsonKey(name: '_gender')
           this.genderElement,
       this.birthDate,
@@ -8944,7 +8883,7 @@ class _$_RelatedPerson extends _RelatedPerson {
   @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -9031,8 +8970,7 @@ class _$_RelatedPerson extends _RelatedPerson {
   }
 
   @override
-  @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-  final RelatedPersonGender? gender;
+  final Code? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -9168,7 +9106,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   factory _RelatedPerson(
           {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
               final R4ResourceType resourceType,
-          final Id? id,
+          final String? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -9189,8 +9127,7 @@ abstract class _RelatedPerson extends RelatedPerson {
           final List<CodeableConcept>? relationship,
           final List<HumanName>? name,
           final List<ContactPoint>? telecom,
-          @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-              final RelatedPersonGender? gender,
+          final Code? gender,
           @JsonKey(name: '_gender')
               final Element? genderElement,
           final Date? birthDate,
@@ -9210,7 +9147,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -9249,8 +9186,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @override
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-  RelatedPersonGender? get gender => throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;

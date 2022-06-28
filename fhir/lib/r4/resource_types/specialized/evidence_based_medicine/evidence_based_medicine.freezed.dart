@@ -14,16 +14,14 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-EffectEvidenceSynthesis _$EffectEvidenceSynthesisFromJson(
-    Map<String, dynamic> json) {
-  return _EffectEvidenceSynthesis.fromJson(json);
+Citation _$CitationFromJson(Map<String, dynamic> json) {
+  return _Citation.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EffectEvidenceSynthesis {
-  @JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+mixin _$Citation {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -50,11 +48,12 @@ mixin _$EffectEvidenceSynthesis {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EffectEvidenceSynthesisStatus.unknown)
-  EffectEvidenceSynthesisStatus? get status =>
-      throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -65,9 +64,11 @@ mixin _$EffectEvidenceSynthesis {
   Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  List<Annotation>? get note => throw _privateConstructorUsedError;
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement => throw _privateConstructorUsedError;
   Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
@@ -77,112 +78,88 @@ mixin _$EffectEvidenceSynthesis {
   Date? get lastReviewDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
-  Period? get effectivePeriod => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  Period? get effectivePeriod =>
+      throw _privateConstructorUsedError; // List<CodeableConcept>? topic,
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
-  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
-  List<RelatedArtifact>? get relatedArtifact =>
+  List<ContactDetail>? get endorser =>
+      throw _privateConstructorUsedError; // List<RelatedArtifact>? relatedArtifact,
+  List<CitationSummary>? get summary => throw _privateConstructorUsedError;
+  List<CitationClassification>? get classification =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
-  CodeableConcept? get studyType => throw _privateConstructorUsedError;
-  Reference get population => throw _privateConstructorUsedError;
-  Reference get exposure => throw _privateConstructorUsedError;
-  Reference get exposureAlternative => throw _privateConstructorUsedError;
-  Reference get outcome => throw _privateConstructorUsedError;
-  EffectEvidenceSynthesisSampleSize? get sampleSize =>
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get currentState => throw _privateConstructorUsedError;
+  List<CitationStatusDate>? get statusDate =>
       throw _privateConstructorUsedError;
-  List<EffectEvidenceSynthesisResultsByExposure>? get resultsByExposure =>
-      throw _privateConstructorUsedError;
-  List<EffectEvidenceSynthesisEffectEstimate>? get effectEstimate =>
-      throw _privateConstructorUsedError;
-  List<EffectEvidenceSynthesisCertainty>? get certainty =>
+  List<CitationRelatesTo>? get relatesTo => throw _privateConstructorUsedError;
+  CitationCitedArtifact? get citedArtifact =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EffectEvidenceSynthesisCopyWith<EffectEvidenceSynthesis> get copyWith =>
+  $CitationCopyWith<Citation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
-  factory $EffectEvidenceSynthesisCopyWith(EffectEvidenceSynthesis value,
-          $Res Function(EffectEvidenceSynthesis) then) =
-      _$EffectEvidenceSynthesisCopyWithImpl<$Res>;
+abstract class $CitationCopyWith<$Res> {
+  factory $CitationCopyWith(Citation value, $Res Function(Citation) then) =
+      _$CitationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
-          R4ResourceType resourceType,
-      Id? id,
+      {R4ResourceType resourceType,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      @JsonKey(unknownEnumValue: EffectEvidenceSynthesisStatus.unknown)
-          EffectEvidenceSynthesisStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_title') Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<Annotation>? note,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      CodeableConcept? synthesisType,
-      CodeableConcept? studyType,
-      Reference population,
-      Reference exposure,
-      Reference exposureAlternative,
-      Reference outcome,
-      EffectEvidenceSynthesisSampleSize? sampleSize,
-      List<EffectEvidenceSynthesisResultsByExposure>? resultsByExposure,
-      List<EffectEvidenceSynthesisEffectEstimate>? effectEstimate,
-      List<EffectEvidenceSynthesisCertainty>? certainty});
+      List<CitationSummary>? summary,
+      List<CitationClassification>? classification,
+      List<Annotation>? note,
+      List<CodeableConcept>? currentState,
+      List<CitationStatusDate>? statusDate,
+      List<CitationRelatesTo>? relatesTo,
+      CitationCitedArtifact? citedArtifact});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -193,30 +170,25 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get experimentalElement;
   $ElementCopyWith<$Res>? get dateElement;
   $ElementCopyWith<$Res>? get publisherElement;
   $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
-  $CodeableConceptCopyWith<$Res>? get synthesisType;
-  $CodeableConceptCopyWith<$Res>? get studyType;
-  $ReferenceCopyWith<$Res> get population;
-  $ReferenceCopyWith<$Res> get exposure;
-  $ReferenceCopyWith<$Res> get exposureAlternative;
-  $ReferenceCopyWith<$Res> get outcome;
-  $EffectEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize;
+  $CitationCitedArtifactCopyWith<$Res>? get citedArtifact;
 }
 
 /// @nodoc
-class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
-    implements $EffectEvidenceSynthesisCopyWith<$Res> {
-  _$EffectEvidenceSynthesisCopyWithImpl(this._value, this._then);
+class _$CitationCopyWithImpl<$Res> implements $CitationCopyWith<$Res> {
+  _$CitationCopyWithImpl(this._value, this._then);
 
-  final EffectEvidenceSynthesis _value;
+  final Citation _value;
   // ignore: unused_field
-  final $Res Function(EffectEvidenceSynthesis) _then;
+  final $Res Function(Citation) _then;
 
   @override
   $Res call({
@@ -242,6 +214,8 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
     Object? titleElement = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
     Object? publisher = freezed,
@@ -249,9 +223,10 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
     Object? contact = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
-    Object? note = freezed,
     Object? useContext = freezed,
     Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
     Object? approvalDate = freezed,
@@ -259,22 +234,17 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
-    Object? topic = freezed,
     Object? author = freezed,
     Object? editor = freezed,
     Object? reviewer = freezed,
     Object? endorser = freezed,
-    Object? relatedArtifact = freezed,
-    Object? synthesisType = freezed,
-    Object? studyType = freezed,
-    Object? population = freezed,
-    Object? exposure = freezed,
-    Object? exposureAlternative = freezed,
-    Object? outcome = freezed,
-    Object? sampleSize = freezed,
-    Object? resultsByExposure = freezed,
-    Object? effectEstimate = freezed,
-    Object? certainty = freezed,
+    Object? summary = freezed,
+    Object? classification = freezed,
+    Object? note = freezed,
+    Object? currentState = freezed,
+    Object? statusDate = freezed,
+    Object? relatesTo = freezed,
+    Object? citedArtifact = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -284,7 +254,7 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -360,10 +330,18 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EffectEvidenceSynthesisStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: experimental == freezed
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       date: date == freezed
           ? _value.date
@@ -393,10 +371,6 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
@@ -405,6 +379,14 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       copyright: copyright == freezed
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
@@ -433,10 +415,6 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      topic: topic == freezed
-          ? _value.topic
-          : topic // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
       author: author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -453,50 +431,34 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.endorser
           : endorser // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
-      relatedArtifact: relatedArtifact == freezed
-          ? _value.relatedArtifact
-          : relatedArtifact // ignore: cast_nullable_to_non_nullable
-              as List<RelatedArtifact>?,
-      synthesisType: synthesisType == freezed
-          ? _value.synthesisType
-          : synthesisType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      studyType: studyType == freezed
-          ? _value.studyType
-          : studyType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      population: population == freezed
-          ? _value.population
-          : population // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      exposure: exposure == freezed
-          ? _value.exposure
-          : exposure // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      exposureAlternative: exposureAlternative == freezed
-          ? _value.exposureAlternative
-          : exposureAlternative // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      outcome: outcome == freezed
-          ? _value.outcome
-          : outcome // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      sampleSize: sampleSize == freezed
-          ? _value.sampleSize
-          : sampleSize // ignore: cast_nullable_to_non_nullable
-              as EffectEvidenceSynthesisSampleSize?,
-      resultsByExposure: resultsByExposure == freezed
-          ? _value.resultsByExposure
-          : resultsByExposure // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisResultsByExposure>?,
-      effectEstimate: effectEstimate == freezed
-          ? _value.effectEstimate
-          : effectEstimate // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisEffectEstimate>?,
-      certainty: certainty == freezed
-          ? _value.certainty
-          : certainty // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisCertainty>?,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as List<CitationSummary>?,
+      classification: classification == freezed
+          ? _value.classification
+          : classification // ignore: cast_nullable_to_non_nullable
+              as List<CitationClassification>?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      currentState: currentState == freezed
+          ? _value.currentState
+          : currentState // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      statusDate: statusDate == freezed
+          ? _value.statusDate
+          : statusDate // ignore: cast_nullable_to_non_nullable
+              as List<CitationStatusDate>?,
+      relatesTo: relatesTo == freezed
+          ? _value.relatesTo
+          : relatesTo // ignore: cast_nullable_to_non_nullable
+              as List<CitationRelatesTo>?,
+      citedArtifact: citedArtifact == freezed
+          ? _value.citedArtifact
+          : citedArtifact // ignore: cast_nullable_to_non_nullable
+              as CitationCitedArtifact?,
     ));
   }
 
@@ -600,6 +562,17 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.experimentalElement!, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
@@ -629,6 +602,17 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
       return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.purposeElement!, (value) {
+      return _then(_value.copyWith(purposeElement: value));
     });
   }
 
@@ -677,147 +661,77 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get synthesisType {
-    if (_value.synthesisType == null) {
+  $CitationCitedArtifactCopyWith<$Res>? get citedArtifact {
+    if (_value.citedArtifact == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.synthesisType!, (value) {
-      return _then(_value.copyWith(synthesisType: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get studyType {
-    if (_value.studyType == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.studyType!, (value) {
-      return _then(_value.copyWith(studyType: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get population {
-    return $ReferenceCopyWith<$Res>(_value.population, (value) {
-      return _then(_value.copyWith(population: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get exposure {
-    return $ReferenceCopyWith<$Res>(_value.exposure, (value) {
-      return _then(_value.copyWith(exposure: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get exposureAlternative {
-    return $ReferenceCopyWith<$Res>(_value.exposureAlternative, (value) {
-      return _then(_value.copyWith(exposureAlternative: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get outcome {
-    return $ReferenceCopyWith<$Res>(_value.outcome, (value) {
-      return _then(_value.copyWith(outcome: value));
-    });
-  }
-
-  @override
-  $EffectEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize {
-    if (_value.sampleSize == null) {
-      return null;
-    }
-
-    return $EffectEvidenceSynthesisSampleSizeCopyWith<$Res>(_value.sampleSize!,
-        (value) {
-      return _then(_value.copyWith(sampleSize: value));
+    return $CitationCitedArtifactCopyWith<$Res>(_value.citedArtifact!, (value) {
+      return _then(_value.copyWith(citedArtifact: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_EffectEvidenceSynthesisCopyWith<$Res>
-    implements $EffectEvidenceSynthesisCopyWith<$Res> {
-  factory _$$_EffectEvidenceSynthesisCopyWith(_$_EffectEvidenceSynthesis value,
-          $Res Function(_$_EffectEvidenceSynthesis) then) =
-      __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>;
+abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
+  factory _$$_CitationCopyWith(
+          _$_Citation value, $Res Function(_$_Citation) then) =
+      __$$_CitationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
-          R4ResourceType resourceType,
-      Id? id,
+      {R4ResourceType resourceType,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      @JsonKey(unknownEnumValue: EffectEvidenceSynthesisStatus.unknown)
-          EffectEvidenceSynthesisStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_title') Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<Annotation>? note,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      CodeableConcept? synthesisType,
-      CodeableConcept? studyType,
-      Reference population,
-      Reference exposure,
-      Reference exposureAlternative,
-      Reference outcome,
-      EffectEvidenceSynthesisSampleSize? sampleSize,
-      List<EffectEvidenceSynthesisResultsByExposure>? resultsByExposure,
-      List<EffectEvidenceSynthesisEffectEstimate>? effectEstimate,
-      List<EffectEvidenceSynthesisCertainty>? certainty});
+      List<CitationSummary>? summary,
+      List<CitationClassification>? classification,
+      List<Annotation>? note,
+      List<CodeableConcept>? currentState,
+      List<CitationStatusDate>? statusDate,
+      List<CitationRelatesTo>? relatesTo,
+      CitationCitedArtifact? citedArtifact});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -838,11 +752,15 @@ abstract class _$$_EffectEvidenceSynthesisCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
+  $ElementCopyWith<$Res>? get experimentalElement;
+  @override
   $ElementCopyWith<$Res>? get dateElement;
   @override
   $ElementCopyWith<$Res>? get publisherElement;
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ElementCopyWith<$Res>? get purposeElement;
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
   @override
@@ -852,32 +770,18 @@ abstract class _$$_EffectEvidenceSynthesisCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res>? get effectivePeriod;
   @override
-  $CodeableConceptCopyWith<$Res>? get synthesisType;
-  @override
-  $CodeableConceptCopyWith<$Res>? get studyType;
-  @override
-  $ReferenceCopyWith<$Res> get population;
-  @override
-  $ReferenceCopyWith<$Res> get exposure;
-  @override
-  $ReferenceCopyWith<$Res> get exposureAlternative;
-  @override
-  $ReferenceCopyWith<$Res> get outcome;
-  @override
-  $EffectEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize;
+  $CitationCitedArtifactCopyWith<$Res>? get citedArtifact;
 }
 
 /// @nodoc
-class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
-    extends _$EffectEvidenceSynthesisCopyWithImpl<$Res>
-    implements _$$_EffectEvidenceSynthesisCopyWith<$Res> {
-  __$$_EffectEvidenceSynthesisCopyWithImpl(_$_EffectEvidenceSynthesis _value,
-      $Res Function(_$_EffectEvidenceSynthesis) _then)
-      : super(_value, (v) => _then(v as _$_EffectEvidenceSynthesis));
+class __$$_CitationCopyWithImpl<$Res> extends _$CitationCopyWithImpl<$Res>
+    implements _$$_CitationCopyWith<$Res> {
+  __$$_CitationCopyWithImpl(
+      _$_Citation _value, $Res Function(_$_Citation) _then)
+      : super(_value, (v) => _then(v as _$_Citation));
 
   @override
-  _$_EffectEvidenceSynthesis get _value =>
-      super._value as _$_EffectEvidenceSynthesis;
+  _$_Citation get _value => super._value as _$_Citation;
 
   @override
   $Res call({
@@ -903,6 +807,8 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
     Object? titleElement = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
     Object? publisher = freezed,
@@ -910,9 +816,10 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
     Object? contact = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
-    Object? note = freezed,
     Object? useContext = freezed,
     Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
     Object? approvalDate = freezed,
@@ -920,24 +827,19 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
-    Object? topic = freezed,
     Object? author = freezed,
     Object? editor = freezed,
     Object? reviewer = freezed,
     Object? endorser = freezed,
-    Object? relatedArtifact = freezed,
-    Object? synthesisType = freezed,
-    Object? studyType = freezed,
-    Object? population = freezed,
-    Object? exposure = freezed,
-    Object? exposureAlternative = freezed,
-    Object? outcome = freezed,
-    Object? sampleSize = freezed,
-    Object? resultsByExposure = freezed,
-    Object? effectEstimate = freezed,
-    Object? certainty = freezed,
+    Object? summary = freezed,
+    Object? classification = freezed,
+    Object? note = freezed,
+    Object? currentState = freezed,
+    Object? statusDate = freezed,
+    Object? relatesTo = freezed,
+    Object? citedArtifact = freezed,
   }) {
-    return _then(_$_EffectEvidenceSynthesis(
+    return _then(_$_Citation(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -945,7 +847,7 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1021,10 +923,18 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EffectEvidenceSynthesisStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: experimental == freezed
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       date: date == freezed
           ? _value.date
@@ -1054,10 +964,6 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      note: note == freezed
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
       useContext: useContext == freezed
           ? _value._useContext
           : useContext // ignore: cast_nullable_to_non_nullable
@@ -1066,6 +972,14 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value._jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       copyright: copyright == freezed
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
@@ -1094,10 +1008,6 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      topic: topic == freezed
-          ? _value._topic
-          : topic // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
       author: author == freezed
           ? _value._author
           : author // ignore: cast_nullable_to_non_nullable
@@ -1114,156 +1024,122 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value._endorser
           : endorser // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
-      relatedArtifact: relatedArtifact == freezed
-          ? _value._relatedArtifact
-          : relatedArtifact // ignore: cast_nullable_to_non_nullable
-              as List<RelatedArtifact>?,
-      synthesisType: synthesisType == freezed
-          ? _value.synthesisType
-          : synthesisType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      studyType: studyType == freezed
-          ? _value.studyType
-          : studyType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      population: population == freezed
-          ? _value.population
-          : population // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      exposure: exposure == freezed
-          ? _value.exposure
-          : exposure // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      exposureAlternative: exposureAlternative == freezed
-          ? _value.exposureAlternative
-          : exposureAlternative // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      outcome: outcome == freezed
-          ? _value.outcome
-          : outcome // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      sampleSize: sampleSize == freezed
-          ? _value.sampleSize
-          : sampleSize // ignore: cast_nullable_to_non_nullable
-              as EffectEvidenceSynthesisSampleSize?,
-      resultsByExposure: resultsByExposure == freezed
-          ? _value._resultsByExposure
-          : resultsByExposure // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisResultsByExposure>?,
-      effectEstimate: effectEstimate == freezed
-          ? _value._effectEstimate
-          : effectEstimate // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisEffectEstimate>?,
-      certainty: certainty == freezed
-          ? _value._certainty
-          : certainty // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisCertainty>?,
+      summary: summary == freezed
+          ? _value._summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as List<CitationSummary>?,
+      classification: classification == freezed
+          ? _value._classification
+          : classification // ignore: cast_nullable_to_non_nullable
+              as List<CitationClassification>?,
+      note: note == freezed
+          ? _value._note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      currentState: currentState == freezed
+          ? _value._currentState
+          : currentState // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      statusDate: statusDate == freezed
+          ? _value._statusDate
+          : statusDate // ignore: cast_nullable_to_non_nullable
+              as List<CitationStatusDate>?,
+      relatesTo: relatesTo == freezed
+          ? _value._relatesTo
+          : relatesTo // ignore: cast_nullable_to_non_nullable
+              as List<CitationRelatesTo>?,
+      citedArtifact: citedArtifact == freezed
+          ? _value.citedArtifact
+          : citedArtifact // ignore: cast_nullable_to_non_nullable
+              as CitationCitedArtifact?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
-  _$_EffectEvidenceSynthesis(
-      {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
-          this.resourceType = R4ResourceType.EffectEvidenceSynthesis,
+class _$_Citation extends _Citation {
+  _$_Citation(
+      {this.resourceType = R4ResourceType.Citation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(unknownEnumValue: EffectEvidenceSynthesisStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_title') this.titleElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      final List<Annotation>? note,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
+      this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
       final List<ContactDetail>? editor,
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      this.synthesisType,
-      this.studyType,
-      required this.population,
-      required this.exposure,
-      required this.exposureAlternative,
-      required this.outcome,
-      this.sampleSize,
-      final List<EffectEvidenceSynthesisResultsByExposure>? resultsByExposure,
-      final List<EffectEvidenceSynthesisEffectEstimate>? effectEstimate,
-      final List<EffectEvidenceSynthesisCertainty>? certainty})
+      final List<CitationSummary>? summary,
+      final List<CitationClassification>? classification,
+      final List<Annotation>? note,
+      final List<CodeableConcept>? currentState,
+      final List<CitationStatusDate>? statusDate,
+      final List<CitationRelatesTo>? relatesTo,
+      this.citedArtifact})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
         _contact = contact,
-        _note = note,
         _useContext = useContext,
         _jurisdiction = jurisdiction,
-        _topic = topic,
         _author = author,
         _editor = editor,
         _reviewer = reviewer,
         _endorser = endorser,
-        _relatedArtifact = relatedArtifact,
-        _resultsByExposure = resultsByExposure,
-        _effectEstimate = effectEstimate,
-        _certainty = certainty,
+        _summary = summary,
+        _classification = classification,
+        _note = note,
+        _currentState = currentState,
+        _statusDate = statusDate,
+        _relatesTo = relatesTo,
         super._();
 
-  factory _$_EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
-      _$$_EffectEvidenceSynthesisFromJson(json);
+  factory _$_Citation.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+  @JsonKey()
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -1336,11 +1212,15 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: EffectEvidenceSynthesisStatus.unknown)
-  final EffectEvidenceSynthesisStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+  @override
+  final Boolean? experimental;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element? experimentalElement;
   @override
   final FhirDateTime? date;
   @override
@@ -1365,15 +1245,6 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<Annotation>? _note;
-  @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   final List<UsageContext>? _useContext;
   @override
   List<UsageContext>? get useContext {
@@ -1393,6 +1264,11 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   }
 
   @override
+  final Markdown? purpose;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element? purposeElement;
+  @override
   final Markdown? copyright;
   @override
   @JsonKey(name: '_copyright')
@@ -1409,16 +1285,9 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<CodeableConcept>? _topic;
-  @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+// List<CodeableConcept>? topic,
   final List<ContactDetail>? _author;
+// List<CodeableConcept>? topic,
   @override
   List<ContactDetail>? get author {
     final value = _author;
@@ -1454,66 +1323,75 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<RelatedArtifact>? _relatedArtifact;
+// List<RelatedArtifact>? relatedArtifact,
+  final List<CitationSummary>? _summary;
+// List<RelatedArtifact>? relatedArtifact,
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
+  List<CitationSummary>? get summary {
+    final value = _summary;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationClassification>? _classification;
+  @override
+  List<CitationClassification>? get classification {
+    final value = _classification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
+  @override
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _currentState;
+  @override
+  List<CodeableConcept>? get currentState {
+    final value = _currentState;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationStatusDate>? _statusDate;
+  @override
+  List<CitationStatusDate>? get statusDate {
+    final value = _statusDate;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationRelatesTo>? _relatesTo;
+  @override
+  List<CitationRelatesTo>? get relatesTo {
+    final value = _relatesTo;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
 
   @override
-  final CodeableConcept? synthesisType;
-  @override
-  final CodeableConcept? studyType;
-  @override
-  final Reference population;
-  @override
-  final Reference exposure;
-  @override
-  final Reference exposureAlternative;
-  @override
-  final Reference outcome;
-  @override
-  final EffectEvidenceSynthesisSampleSize? sampleSize;
-  final List<EffectEvidenceSynthesisResultsByExposure>? _resultsByExposure;
-  @override
-  List<EffectEvidenceSynthesisResultsByExposure>? get resultsByExposure {
-    final value = _resultsByExposure;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<EffectEvidenceSynthesisEffectEstimate>? _effectEstimate;
-  @override
-  List<EffectEvidenceSynthesisEffectEstimate>? get effectEstimate {
-    final value = _effectEstimate;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<EffectEvidenceSynthesisCertainty>? _certainty;
-  @override
-  List<EffectEvidenceSynthesisCertainty>? get certainty {
-    final value = _certainty;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final CitationCitedArtifact? citedArtifact;
 
   @override
   String toString() {
-    return 'EffectEvidenceSynthesis(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, note: $note, useContext: $useContext, jurisdiction: $jurisdiction, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, synthesisType: $synthesisType, studyType: $studyType, population: $population, exposure: $exposure, exposureAlternative: $exposureAlternative, outcome: $outcome, sampleSize: $sampleSize, resultsByExposure: $resultsByExposure, effectEstimate: $effectEstimate, certainty: $certainty)';
+    return 'Citation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, summary: $summary, classification: $classification, note: $note, currentState: $currentState, statusDate: $statusDate, relatesTo: $relatesTo, citedArtifact: $citedArtifact)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EffectEvidenceSynthesis &&
+            other is _$_Citation &&
             const DeepCollectionEquality()
                 .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -1549,6 +1427,10 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality()
+                .equals(other.experimental, experimental) &&
+            const DeepCollectionEquality()
+                .equals(other.experimentalElement, experimentalElement) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
@@ -1560,11 +1442,13 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
                 .equals(other.description, description) &&
             const DeepCollectionEquality()
                 .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality()
                 .equals(other._useContext, _useContext) &&
             const DeepCollectionEquality()
                 .equals(other._jurisdiction, _jurisdiction) &&
+            const DeepCollectionEquality().equals(other.purpose, purpose) &&
+            const DeepCollectionEquality()
+                .equals(other.purposeElement, purposeElement) &&
             const DeepCollectionEquality().equals(other.copyright, copyright) &&
             const DeepCollectionEquality()
                 .equals(other.copyrightElement, copyrightElement) &&
@@ -1578,30 +1462,22 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
                 .equals(other.lastReviewDateElement, lastReviewDateElement) &&
             const DeepCollectionEquality()
                 .equals(other.effectivePeriod, effectivePeriod) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
             const DeepCollectionEquality().equals(other._author, _author) &&
             const DeepCollectionEquality().equals(other._editor, _editor) &&
             const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
             const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality().equals(other._summary, _summary) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
+                .equals(other._classification, _classification) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality()
-                .equals(other.synthesisType, synthesisType) &&
-            const DeepCollectionEquality().equals(other.studyType, studyType) &&
+                .equals(other._currentState, _currentState) &&
             const DeepCollectionEquality()
-                .equals(other.population, population) &&
-            const DeepCollectionEquality().equals(other.exposure, exposure) &&
+                .equals(other._statusDate, _statusDate) &&
             const DeepCollectionEquality()
-                .equals(other.exposureAlternative, exposureAlternative) &&
-            const DeepCollectionEquality().equals(other.outcome, outcome) &&
+                .equals(other._relatesTo, _relatesTo) &&
             const DeepCollectionEquality()
-                .equals(other.sampleSize, sampleSize) &&
-            const DeepCollectionEquality()
-                .equals(other._resultsByExposure, _resultsByExposure) &&
-            const DeepCollectionEquality()
-                .equals(other._effectEstimate, _effectEstimate) &&
-            const DeepCollectionEquality()
-                .equals(other._certainty, _certainty));
+                .equals(other.citedArtifact, citedArtifact));
   }
 
   @JsonKey(ignore: true)
@@ -1630,6 +1506,8 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
         const DeepCollectionEquality().hash(titleElement),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(experimental),
+        const DeepCollectionEquality().hash(experimentalElement),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
         const DeepCollectionEquality().hash(publisher),
@@ -1637,9 +1515,10 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
         const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(_note),
         const DeepCollectionEquality().hash(_useContext),
         const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(purpose),
+        const DeepCollectionEquality().hash(purposeElement),
         const DeepCollectionEquality().hash(copyright),
         const DeepCollectionEquality().hash(copyrightElement),
         const DeepCollectionEquality().hash(approvalDate),
@@ -1647,121 +1526,93 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
         const DeepCollectionEquality().hash(lastReviewDate),
         const DeepCollectionEquality().hash(lastReviewDateElement),
         const DeepCollectionEquality().hash(effectivePeriod),
-        const DeepCollectionEquality().hash(_topic),
         const DeepCollectionEquality().hash(_author),
         const DeepCollectionEquality().hash(_editor),
         const DeepCollectionEquality().hash(_reviewer),
         const DeepCollectionEquality().hash(_endorser),
-        const DeepCollectionEquality().hash(_relatedArtifact),
-        const DeepCollectionEquality().hash(synthesisType),
-        const DeepCollectionEquality().hash(studyType),
-        const DeepCollectionEquality().hash(population),
-        const DeepCollectionEquality().hash(exposure),
-        const DeepCollectionEquality().hash(exposureAlternative),
-        const DeepCollectionEquality().hash(outcome),
-        const DeepCollectionEquality().hash(sampleSize),
-        const DeepCollectionEquality().hash(_resultsByExposure),
-        const DeepCollectionEquality().hash(_effectEstimate),
-        const DeepCollectionEquality().hash(_certainty)
+        const DeepCollectionEquality().hash(_summary),
+        const DeepCollectionEquality().hash(_classification),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_currentState),
+        const DeepCollectionEquality().hash(_statusDate),
+        const DeepCollectionEquality().hash(_relatesTo),
+        const DeepCollectionEquality().hash(citedArtifact)
       ]);
 
   @JsonKey(ignore: true)
   @override
-  _$$_EffectEvidenceSynthesisCopyWith<_$_EffectEvidenceSynthesis>
-      get copyWith =>
-          __$$_EffectEvidenceSynthesisCopyWithImpl<_$_EffectEvidenceSynthesis>(
-              this, _$identity);
+  _$$_CitationCopyWith<_$_Citation> get copyWith =>
+      __$$_CitationCopyWithImpl<_$_Citation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EffectEvidenceSynthesisToJson(this);
+    return _$$_CitationToJson(this);
   }
 }
 
-abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
-  factory _EffectEvidenceSynthesis(
-      {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
-          final R4ResourceType resourceType,
-      final Id? id,
+abstract class _Citation extends Citation {
+  factory _Citation(
+      {final R4ResourceType resourceType,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
-      @JsonKey(unknownEnumValue: EffectEvidenceSynthesisStatus.unknown)
-          final EffectEvidenceSynthesisStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_title') final Element? titleElement,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final Boolean? experimental,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactDetail>? contact,
       final Markdown? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      final List<Annotation>? note,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
+      final Markdown? purpose,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
       final Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          final Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
       final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          final Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
       final Period? effectivePeriod,
-      final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
       final List<ContactDetail>? editor,
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      final CodeableConcept? synthesisType,
-      final CodeableConcept? studyType,
-      required final Reference population,
-      required final Reference exposure,
-      required final Reference exposureAlternative,
-      required final Reference outcome,
-      final EffectEvidenceSynthesisSampleSize? sampleSize,
-      final List<EffectEvidenceSynthesisResultsByExposure>? resultsByExposure,
-      final List<EffectEvidenceSynthesisEffectEstimate>? effectEstimate,
-      final List<EffectEvidenceSynthesisCertainty>?
-          certainty}) = _$_EffectEvidenceSynthesis;
-  _EffectEvidenceSynthesis._() : super._();
+      final List<CitationSummary>? summary,
+      final List<CitationClassification>? classification,
+      final List<Annotation>? note,
+      final List<CodeableConcept>? currentState,
+      final List<CitationStatusDate>? statusDate,
+      final List<CitationRelatesTo>? relatesTo,
+      final CitationCitedArtifact? citedArtifact}) = _$_Citation;
+  _Citation._() : super._();
 
-  factory _EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =
-      _$_EffectEvidenceSynthesis.fromJson;
+  factory _Citation.fromJson(Map<String, dynamic> json) = _$_Citation.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -1807,12 +1658,15 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EffectEvidenceSynthesisStatus.unknown)
-  EffectEvidenceSynthesisStatus? get status =>
-      throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @override
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
@@ -1831,11 +1685,14 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  @override
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  @override
+  Markdown? get purpose => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
   Markdown? get copyright => throw _privateConstructorUsedError;
   @override
@@ -1853,9 +1710,7 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   @override
   Period? get effectivePeriod => throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
-  @override
+  @override // List<CodeableConcept>? topic,
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
   @override
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
@@ -1863,984 +1718,85 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
   @override
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @override // List<RelatedArtifact>? relatedArtifact,
+  List<CitationSummary>? get summary => throw _privateConstructorUsedError;
   @override
-  List<RelatedArtifact>? get relatedArtifact =>
+  List<CitationClassification>? get classification =>
       throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get studyType => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get currentState => throw _privateConstructorUsedError;
   @override
-  Reference get population => throw _privateConstructorUsedError;
-  @override
-  Reference get exposure => throw _privateConstructorUsedError;
-  @override
-  Reference get exposureAlternative => throw _privateConstructorUsedError;
-  @override
-  Reference get outcome => throw _privateConstructorUsedError;
-  @override
-  EffectEvidenceSynthesisSampleSize? get sampleSize =>
+  List<CitationStatusDate>? get statusDate =>
       throw _privateConstructorUsedError;
   @override
-  List<EffectEvidenceSynthesisResultsByExposure>? get resultsByExposure =>
-      throw _privateConstructorUsedError;
+  List<CitationRelatesTo>? get relatesTo => throw _privateConstructorUsedError;
   @override
-  List<EffectEvidenceSynthesisEffectEstimate>? get effectEstimate =>
-      throw _privateConstructorUsedError;
-  @override
-  List<EffectEvidenceSynthesisCertainty>? get certainty =>
+  CitationCitedArtifact? get citedArtifact =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_EffectEvidenceSynthesisCopyWith<_$_EffectEvidenceSynthesis>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_CitationCopyWith<_$_Citation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-EffectEvidenceSynthesisSampleSize _$EffectEvidenceSynthesisSampleSizeFromJson(
-    Map<String, dynamic> json) {
-  return _EffectEvidenceSynthesisSampleSize.fromJson(json);
+CitationSummary _$CitationSummaryFromJson(Map<String, dynamic> json) {
+  return _CitationSummary.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EffectEvidenceSynthesisSampleSize {
+mixin _$CitationSummary {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  Integer? get numberOfStudies => throw _privateConstructorUsedError;
-  @JsonKey(name: '_numberOfStudies')
-  Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
-  Integer? get numberOfParticipants => throw _privateConstructorUsedError;
-  @JsonKey(name: '_numberOfParticipants')
-  Element? get numberOfParticipantsElement =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get style => throw _privateConstructorUsedError;
+  Markdown? get text => throw _privateConstructorUsedError;
+  @JsonKey(name: '_text')
+  Element? get textElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EffectEvidenceSynthesisSampleSizeCopyWith<EffectEvidenceSynthesisSampleSize>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
-  factory $EffectEvidenceSynthesisSampleSizeCopyWith(
-          EffectEvidenceSynthesisSampleSize value,
-          $Res Function(EffectEvidenceSynthesisSampleSize) then) =
-      _$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Integer? numberOfStudies,
-      @JsonKey(name: '_numberOfStudies')
-          Element? numberOfStudiesElement,
-      Integer? numberOfParticipants,
-      @JsonKey(name: '_numberOfParticipants')
-          Element? numberOfParticipantsElement});
-
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $ElementCopyWith<$Res>? get numberOfStudiesElement;
-  $ElementCopyWith<$Res>? get numberOfParticipantsElement;
-}
-
-/// @nodoc
-class _$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
-    implements $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
-  _$EffectEvidenceSynthesisSampleSizeCopyWithImpl(this._value, this._then);
-
-  final EffectEvidenceSynthesisSampleSize _value;
-  // ignore: unused_field
-  final $Res Function(EffectEvidenceSynthesisSampleSize) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? numberOfStudies = freezed,
-    Object? numberOfStudiesElement = freezed,
-    Object? numberOfParticipants = freezed,
-    Object? numberOfParticipantsElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numberOfStudies: numberOfStudies == freezed
-          ? _value.numberOfStudies
-          : numberOfStudies // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numberOfStudiesElement: numberOfStudiesElement == freezed
-          ? _value.numberOfStudiesElement
-          : numberOfStudiesElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numberOfParticipants: numberOfParticipants == freezed
-          ? _value.numberOfParticipants
-          : numberOfParticipants // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numberOfParticipantsElement: numberOfParticipantsElement == freezed
-          ? _value.numberOfParticipantsElement
-          : numberOfParticipantsElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get numberOfStudiesElement {
-    if (_value.numberOfStudiesElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.numberOfStudiesElement!, (value) {
-      return _then(_value.copyWith(numberOfStudiesElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get numberOfParticipantsElement {
-    if (_value.numberOfParticipantsElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.numberOfParticipantsElement!, (value) {
-      return _then(_value.copyWith(numberOfParticipantsElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_EffectEvidenceSynthesisSampleSizeCopyWith<$Res>
-    implements $EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
-  factory _$$_EffectEvidenceSynthesisSampleSizeCopyWith(
-          _$_EffectEvidenceSynthesisSampleSize value,
-          $Res Function(_$_EffectEvidenceSynthesisSampleSize) then) =
-      __$$_EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Integer? numberOfStudies,
-      @JsonKey(name: '_numberOfStudies')
-          Element? numberOfStudiesElement,
-      Integer? numberOfParticipants,
-      @JsonKey(name: '_numberOfParticipants')
-          Element? numberOfParticipantsElement});
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
-  @override
-  $ElementCopyWith<$Res>? get numberOfStudiesElement;
-  @override
-  $ElementCopyWith<$Res>? get numberOfParticipantsElement;
-}
-
-/// @nodoc
-class __$$_EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
-    extends _$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
-    implements _$$_EffectEvidenceSynthesisSampleSizeCopyWith<$Res> {
-  __$$_EffectEvidenceSynthesisSampleSizeCopyWithImpl(
-      _$_EffectEvidenceSynthesisSampleSize _value,
-      $Res Function(_$_EffectEvidenceSynthesisSampleSize) _then)
-      : super(_value, (v) => _then(v as _$_EffectEvidenceSynthesisSampleSize));
-
-  @override
-  _$_EffectEvidenceSynthesisSampleSize get _value =>
-      super._value as _$_EffectEvidenceSynthesisSampleSize;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? numberOfStudies = freezed,
-    Object? numberOfStudiesElement = freezed,
-    Object? numberOfParticipants = freezed,
-    Object? numberOfParticipantsElement = freezed,
-  }) {
-    return _then(_$_EffectEvidenceSynthesisSampleSize(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numberOfStudies: numberOfStudies == freezed
-          ? _value.numberOfStudies
-          : numberOfStudies // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numberOfStudiesElement: numberOfStudiesElement == freezed
-          ? _value.numberOfStudiesElement
-          : numberOfStudiesElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numberOfParticipants: numberOfParticipants == freezed
-          ? _value.numberOfParticipants
-          : numberOfParticipants // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numberOfParticipantsElement: numberOfParticipantsElement == freezed
-          ? _value.numberOfParticipantsElement
-          : numberOfParticipantsElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_EffectEvidenceSynthesisSampleSize
-    extends _EffectEvidenceSynthesisSampleSize {
-  _$_EffectEvidenceSynthesisSampleSize(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      this.numberOfStudies,
-      @JsonKey(name: '_numberOfStudies') this.numberOfStudiesElement,
-      this.numberOfParticipants,
-      @JsonKey(name: '_numberOfParticipants') this.numberOfParticipantsElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_EffectEvidenceSynthesisSampleSize.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_EffectEvidenceSynthesisSampleSizeFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final String? description;
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-  @override
-  final Integer? numberOfStudies;
-  @override
-  @JsonKey(name: '_numberOfStudies')
-  final Element? numberOfStudiesElement;
-  @override
-  final Integer? numberOfParticipants;
-  @override
-  @JsonKey(name: '_numberOfParticipants')
-  final Element? numberOfParticipantsElement;
-
-  @override
-  String toString() {
-    return 'EffectEvidenceSynthesisSampleSize(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, numberOfStudies: $numberOfStudies, numberOfStudiesElement: $numberOfStudiesElement, numberOfParticipants: $numberOfParticipants, numberOfParticipantsElement: $numberOfParticipantsElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_EffectEvidenceSynthesisSampleSize &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality()
-                .equals(other.numberOfStudies, numberOfStudies) &&
-            const DeepCollectionEquality()
-                .equals(other.numberOfStudiesElement, numberOfStudiesElement) &&
-            const DeepCollectionEquality()
-                .equals(other.numberOfParticipants, numberOfParticipants) &&
-            const DeepCollectionEquality().equals(
-                other.numberOfParticipantsElement,
-                numberOfParticipantsElement));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(numberOfStudies),
-      const DeepCollectionEquality().hash(numberOfStudiesElement),
-      const DeepCollectionEquality().hash(numberOfParticipants),
-      const DeepCollectionEquality().hash(numberOfParticipantsElement));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_EffectEvidenceSynthesisSampleSizeCopyWith<
-          _$_EffectEvidenceSynthesisSampleSize>
-      get copyWith => __$$_EffectEvidenceSynthesisSampleSizeCopyWithImpl<
-          _$_EffectEvidenceSynthesisSampleSize>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_EffectEvidenceSynthesisSampleSizeToJson(this);
-  }
-}
-
-abstract class _EffectEvidenceSynthesisSampleSize
-    extends EffectEvidenceSynthesisSampleSize {
-  factory _EffectEvidenceSynthesisSampleSize(
-          {final String? id,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          final Integer? numberOfStudies,
-          @JsonKey(name: '_numberOfStudies')
-              final Element? numberOfStudiesElement,
-          final Integer? numberOfParticipants,
-          @JsonKey(name: '_numberOfParticipants')
-              final Element? numberOfParticipantsElement}) =
-      _$_EffectEvidenceSynthesisSampleSize;
-  _EffectEvidenceSynthesisSampleSize._() : super._();
-
-  factory _EffectEvidenceSynthesisSampleSize.fromJson(
-          Map<String, dynamic> json) =
-      _$_EffectEvidenceSynthesisSampleSize.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
+  $CitationSummaryCopyWith<CitationSummary> get copyWith =>
       throw _privateConstructorUsedError;
-  @override
-  String? get description => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  @override
-  Integer? get numberOfStudies => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_numberOfStudies')
-  Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
-  @override
-  Integer? get numberOfParticipants => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_numberOfParticipants')
-  Element? get numberOfParticipantsElement =>
-      throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_EffectEvidenceSynthesisSampleSizeCopyWith<
-          _$_EffectEvidenceSynthesisSampleSize>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-EffectEvidenceSynthesisResultsByExposure
-    _$EffectEvidenceSynthesisResultsByExposureFromJson(
-        Map<String, dynamic> json) {
-  return _EffectEvidenceSynthesisResultsByExposure.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EffectEvidenceSynthesisResultsByExposure {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  @JsonKey(
-      unknownEnumValue:
-          EffectEvidenceSynthesisResultsByExposureExposureState.unknown)
-  EffectEvidenceSynthesisResultsByExposureExposureState? get exposureState =>
-      throw _privateConstructorUsedError;
-  @JsonKey(name: '_exposureState')
-  Element? get exposureStateElement => throw _privateConstructorUsedError;
-  CodeableConcept? get variantState => throw _privateConstructorUsedError;
-  Reference get riskEvidenceSynthesis => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EffectEvidenceSynthesisResultsByExposureCopyWith<
-          EffectEvidenceSynthesisResultsByExposure>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
-  factory $EffectEvidenceSynthesisResultsByExposureCopyWith(
-          EffectEvidenceSynthesisResultsByExposure value,
-          $Res Function(EffectEvidenceSynthesisResultsByExposure) then) =
-      _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @JsonKey(
-          unknownEnumValue:
-              EffectEvidenceSynthesisResultsByExposureExposureState.unknown)
-          EffectEvidenceSynthesisResultsByExposureExposureState? exposureState,
-      @JsonKey(name: '_exposureState')
-          Element? exposureStateElement,
-      CodeableConcept? variantState,
-      Reference riskEvidenceSynthesis});
-
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $ElementCopyWith<$Res>? get exposureStateElement;
-  $CodeableConceptCopyWith<$Res>? get variantState;
-  $ReferenceCopyWith<$Res> get riskEvidenceSynthesis;
-}
-
-/// @nodoc
-class _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
-    implements $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
-  _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl(
-      this._value, this._then);
-
-  final EffectEvidenceSynthesisResultsByExposure _value;
-  // ignore: unused_field
-  final $Res Function(EffectEvidenceSynthesisResultsByExposure) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? exposureState = freezed,
-    Object? exposureStateElement = freezed,
-    Object? variantState = freezed,
-    Object? riskEvidenceSynthesis = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      exposureState: exposureState == freezed
-          ? _value.exposureState
-          : exposureState // ignore: cast_nullable_to_non_nullable
-              as EffectEvidenceSynthesisResultsByExposureExposureState?,
-      exposureStateElement: exposureStateElement == freezed
-          ? _value.exposureStateElement
-          : exposureStateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      variantState: variantState == freezed
-          ? _value.variantState
-          : variantState // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      riskEvidenceSynthesis: riskEvidenceSynthesis == freezed
-          ? _value.riskEvidenceSynthesis
-          : riskEvidenceSynthesis // ignore: cast_nullable_to_non_nullable
-              as Reference,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get exposureStateElement {
-    if (_value.exposureStateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.exposureStateElement!, (value) {
-      return _then(_value.copyWith(exposureStateElement: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get variantState {
-    if (_value.variantState == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.variantState!, (value) {
-      return _then(_value.copyWith(variantState: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get riskEvidenceSynthesis {
-    return $ReferenceCopyWith<$Res>(_value.riskEvidenceSynthesis, (value) {
-      return _then(_value.copyWith(riskEvidenceSynthesis: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_EffectEvidenceSynthesisResultsByExposureCopyWith<$Res>
-    implements $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
-  factory _$$_EffectEvidenceSynthesisResultsByExposureCopyWith(
-          _$_EffectEvidenceSynthesisResultsByExposure value,
-          $Res Function(_$_EffectEvidenceSynthesisResultsByExposure) then) =
-      __$$_EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @JsonKey(
-          unknownEnumValue:
-              EffectEvidenceSynthesisResultsByExposureExposureState.unknown)
-          EffectEvidenceSynthesisResultsByExposureExposureState? exposureState,
-      @JsonKey(name: '_exposureState')
-          Element? exposureStateElement,
-      CodeableConcept? variantState,
-      Reference riskEvidenceSynthesis});
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
-  @override
-  $ElementCopyWith<$Res>? get exposureStateElement;
-  @override
-  $CodeableConceptCopyWith<$Res>? get variantState;
-  @override
-  $ReferenceCopyWith<$Res> get riskEvidenceSynthesis;
-}
-
-/// @nodoc
-class __$$_EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
-    extends _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
-    implements _$$_EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
-  __$$_EffectEvidenceSynthesisResultsByExposureCopyWithImpl(
-      _$_EffectEvidenceSynthesisResultsByExposure _value,
-      $Res Function(_$_EffectEvidenceSynthesisResultsByExposure) _then)
-      : super(_value,
-            (v) => _then(v as _$_EffectEvidenceSynthesisResultsByExposure));
-
-  @override
-  _$_EffectEvidenceSynthesisResultsByExposure get _value =>
-      super._value as _$_EffectEvidenceSynthesisResultsByExposure;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? exposureState = freezed,
-    Object? exposureStateElement = freezed,
-    Object? variantState = freezed,
-    Object? riskEvidenceSynthesis = freezed,
-  }) {
-    return _then(_$_EffectEvidenceSynthesisResultsByExposure(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      exposureState: exposureState == freezed
-          ? _value.exposureState
-          : exposureState // ignore: cast_nullable_to_non_nullable
-              as EffectEvidenceSynthesisResultsByExposureExposureState?,
-      exposureStateElement: exposureStateElement == freezed
-          ? _value.exposureStateElement
-          : exposureStateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      variantState: variantState == freezed
-          ? _value.variantState
-          : variantState // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      riskEvidenceSynthesis: riskEvidenceSynthesis == freezed
-          ? _value.riskEvidenceSynthesis
-          : riskEvidenceSynthesis // ignore: cast_nullable_to_non_nullable
-              as Reference,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_EffectEvidenceSynthesisResultsByExposure
-    extends _EffectEvidenceSynthesisResultsByExposure {
-  _$_EffectEvidenceSynthesisResultsByExposure(
-      {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(
-          unknownEnumValue:
-              EffectEvidenceSynthesisResultsByExposureExposureState.unknown)
-          this.exposureState,
-      @JsonKey(name: '_exposureState')
-          this.exposureStateElement,
-      this.variantState,
-      required this.riskEvidenceSynthesis})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_EffectEvidenceSynthesisResultsByExposure.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_EffectEvidenceSynthesisResultsByExposureFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final String? description;
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-  @override
-  @JsonKey(
-      unknownEnumValue:
-          EffectEvidenceSynthesisResultsByExposureExposureState.unknown)
-  final EffectEvidenceSynthesisResultsByExposureExposureState? exposureState;
-  @override
-  @JsonKey(name: '_exposureState')
-  final Element? exposureStateElement;
-  @override
-  final CodeableConcept? variantState;
-  @override
-  final Reference riskEvidenceSynthesis;
-
-  @override
-  String toString() {
-    return 'EffectEvidenceSynthesisResultsByExposure(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, exposureState: $exposureState, exposureStateElement: $exposureStateElement, variantState: $variantState, riskEvidenceSynthesis: $riskEvidenceSynthesis)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_EffectEvidenceSynthesisResultsByExposure &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality()
-                .equals(other.exposureState, exposureState) &&
-            const DeepCollectionEquality()
-                .equals(other.exposureStateElement, exposureStateElement) &&
-            const DeepCollectionEquality()
-                .equals(other.variantState, variantState) &&
-            const DeepCollectionEquality()
-                .equals(other.riskEvidenceSynthesis, riskEvidenceSynthesis));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(exposureState),
-      const DeepCollectionEquality().hash(exposureStateElement),
-      const DeepCollectionEquality().hash(variantState),
-      const DeepCollectionEquality().hash(riskEvidenceSynthesis));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_EffectEvidenceSynthesisResultsByExposureCopyWith<
-          _$_EffectEvidenceSynthesisResultsByExposure>
-      get copyWith => __$$_EffectEvidenceSynthesisResultsByExposureCopyWithImpl<
-          _$_EffectEvidenceSynthesisResultsByExposure>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_EffectEvidenceSynthesisResultsByExposureToJson(this);
-  }
-}
-
-abstract class _EffectEvidenceSynthesisResultsByExposure
-    extends EffectEvidenceSynthesisResultsByExposure {
-  factory _EffectEvidenceSynthesisResultsByExposure(
-          {final String? id,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          @JsonKey(
-              unknownEnumValue:
-                  EffectEvidenceSynthesisResultsByExposureExposureState.unknown)
-              final EffectEvidenceSynthesisResultsByExposureExposureState?
-                  exposureState,
-          @JsonKey(name: '_exposureState')
-              final Element? exposureStateElement,
-          final CodeableConcept? variantState,
-          required final Reference riskEvidenceSynthesis}) =
-      _$_EffectEvidenceSynthesisResultsByExposure;
-  _EffectEvidenceSynthesisResultsByExposure._() : super._();
-
-  factory _EffectEvidenceSynthesisResultsByExposure.fromJson(
-          Map<String, dynamic> json) =
-      _$_EffectEvidenceSynthesisResultsByExposure.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  String? get description => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(
-      unknownEnumValue:
-          EffectEvidenceSynthesisResultsByExposureExposureState.unknown)
-  EffectEvidenceSynthesisResultsByExposureExposureState? get exposureState =>
-      throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_exposureState')
-  Element? get exposureStateElement => throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get variantState => throw _privateConstructorUsedError;
-  @override
-  Reference get riskEvidenceSynthesis => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_EffectEvidenceSynthesisResultsByExposureCopyWith<
-          _$_EffectEvidenceSynthesisResultsByExposure>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-EffectEvidenceSynthesisEffectEstimate
-    _$EffectEvidenceSynthesisEffectEstimateFromJson(Map<String, dynamic> json) {
-  return _EffectEvidenceSynthesisEffectEstimate.fromJson(json);
-}
-
-/// @nodoc
-mixin _$EffectEvidenceSynthesisEffectEstimate {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  CodeableConcept? get variantState => throw _privateConstructorUsedError;
-  Decimal? get value => throw _privateConstructorUsedError;
-  @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
-  CodeableConcept? get unitOfMeasure => throw _privateConstructorUsedError;
-  List<EffectEvidenceSynthesisPrecisionEstimate>? get precisionEstimate =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EffectEvidenceSynthesisEffectEstimateCopyWith<
-          EffectEvidenceSynthesisEffectEstimate>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
-  factory $EffectEvidenceSynthesisEffectEstimateCopyWith(
-          EffectEvidenceSynthesisEffectEstimate value,
-          $Res Function(EffectEvidenceSynthesisEffectEstimate) then) =
-      _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>;
+abstract class $CitationSummaryCopyWith<$Res> {
+  factory $CitationSummaryCopyWith(
+          CitationSummary value, $Res Function(CitationSummary) then) =
+      _$CitationSummaryCopyWithImpl<$Res>;
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      CodeableConcept? type,
-      CodeableConcept? variantState,
-      Decimal? value,
-      @JsonKey(name: '_value') Element? valueElement,
-      CodeableConcept? unitOfMeasure,
-      List<EffectEvidenceSynthesisPrecisionEstimate>? precisionEstimate});
+      CodeableConcept? style,
+      Markdown? text,
+      @JsonKey(name: '_text') Element? textElement});
 
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $CodeableConceptCopyWith<$Res>? get type;
-  $CodeableConceptCopyWith<$Res>? get variantState;
-  $ElementCopyWith<$Res>? get valueElement;
-  $CodeableConceptCopyWith<$Res>? get unitOfMeasure;
+  $CodeableConceptCopyWith<$Res>? get style;
+  $ElementCopyWith<$Res>? get textElement;
 }
 
 /// @nodoc
-class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
-    implements $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
-  _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl(this._value, this._then);
+class _$CitationSummaryCopyWithImpl<$Res>
+    implements $CitationSummaryCopyWith<$Res> {
+  _$CitationSummaryCopyWithImpl(this._value, this._then);
 
-  final EffectEvidenceSynthesisEffectEstimate _value;
+  final CitationSummary _value;
   // ignore: unused_field
-  final $Res Function(EffectEvidenceSynthesisEffectEstimate) _then;
+  final $Res Function(CitationSummary) _then;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? type = freezed,
-    Object? variantState = freezed,
-    Object? value = freezed,
-    Object? valueElement = freezed,
-    Object? unitOfMeasure = freezed,
-    Object? precisionEstimate = freezed,
+    Object? style = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -2855,50 +1811,3067 @@ class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
+      style: style == freezed
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      variantState: variantState == freezed
-          ? _value.variantState
-          : variantState // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      valueElement: valueElement == freezed
-          ? _value.valueElement
-          : valueElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      unitOfMeasure: unitOfMeasure == freezed
-          ? _value.unitOfMeasure
-          : unitOfMeasure // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      precisionEstimate: precisionEstimate == freezed
-          ? _value.precisionEstimate
-          : precisionEstimate // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisPrecisionEstimate>?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
+  $CodeableConceptCopyWith<$Res>? get style {
+    if (_value.style == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+    return $CodeableConceptCopyWith<$Res>(_value.style!, (value) {
+      return _then(_value.copyWith(style: value));
     });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get textElement {
+    if (_value.textElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.textElement!, (value) {
+      return _then(_value.copyWith(textElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationSummaryCopyWith<$Res>
+    implements $CitationSummaryCopyWith<$Res> {
+  factory _$$_CitationSummaryCopyWith(
+          _$_CitationSummary value, $Res Function(_$_CitationSummary) then) =
+      __$$_CitationSummaryCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? style,
+      Markdown? text,
+      @JsonKey(name: '_text') Element? textElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get style;
+  @override
+  $ElementCopyWith<$Res>? get textElement;
+}
+
+/// @nodoc
+class __$$_CitationSummaryCopyWithImpl<$Res>
+    extends _$CitationSummaryCopyWithImpl<$Res>
+    implements _$$_CitationSummaryCopyWith<$Res> {
+  __$$_CitationSummaryCopyWithImpl(
+      _$_CitationSummary _value, $Res Function(_$_CitationSummary) _then)
+      : super(_value, (v) => _then(v as _$_CitationSummary));
+
+  @override
+  _$_CitationSummary get _value => super._value as _$_CitationSummary;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? style = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
+  }) {
+    return _then(_$_CitationSummary(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      style: style == freezed
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationSummary extends _CitationSummary {
+  _$_CitationSummary(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.style,
+      this.text,
+      @JsonKey(name: '_text') this.textElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationSummary.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationSummaryFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? style;
+  @override
+  final Markdown? text;
+  @override
+  @JsonKey(name: '_text')
+  final Element? textElement;
+
+  @override
+  String toString() {
+    return 'CitationSummary(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, style: $style, text: $text, textElement: $textElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationSummary &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.style, style) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other.textElement, textElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(style),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(textElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationSummaryCopyWith<_$_CitationSummary> get copyWith =>
+      __$$_CitationSummaryCopyWithImpl<_$_CitationSummary>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationSummaryToJson(this);
+  }
+}
+
+abstract class _CitationSummary extends CitationSummary {
+  factory _CitationSummary(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? style,
+      final Markdown? text,
+      @JsonKey(name: '_text') final Element? textElement}) = _$_CitationSummary;
+  _CitationSummary._() : super._();
+
+  factory _CitationSummary.fromJson(Map<String, dynamic> json) =
+      _$_CitationSummary.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get style => throw _privateConstructorUsedError;
+  @override
+  Markdown? get text => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_text')
+  Element? get textElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationSummaryCopyWith<_$_CitationSummary> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationClassification _$CitationClassificationFromJson(
+    Map<String, dynamic> json) {
+  return _CitationClassification.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationClassification {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationClassificationCopyWith<CitationClassification> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationClassificationCopyWith<$Res> {
+  factory $CitationClassificationCopyWith(CitationClassification value,
+          $Res Function(CitationClassification) then) =
+      _$CitationClassificationCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      List<CodeableConcept>? classifier});
+
+  $CodeableConceptCopyWith<$Res>? get type;
+}
+
+/// @nodoc
+class _$CitationClassificationCopyWithImpl<$Res>
+    implements $CitationClassificationCopyWith<$Res> {
+  _$CitationClassificationCopyWithImpl(this._value, this._then);
+
+  final CitationClassification _value;
+  // ignore: unused_field
+  final $Res Function(CitationClassification) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? classifier = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      classifier: classifier == freezed
+          ? _value.classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationClassificationCopyWith<$Res>
+    implements $CitationClassificationCopyWith<$Res> {
+  factory _$$_CitationClassificationCopyWith(_$_CitationClassification value,
+          $Res Function(_$_CitationClassification) then) =
+      __$$_CitationClassificationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      List<CodeableConcept>? classifier});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+}
+
+/// @nodoc
+class __$$_CitationClassificationCopyWithImpl<$Res>
+    extends _$CitationClassificationCopyWithImpl<$Res>
+    implements _$$_CitationClassificationCopyWith<$Res> {
+  __$$_CitationClassificationCopyWithImpl(_$_CitationClassification _value,
+      $Res Function(_$_CitationClassification) _then)
+      : super(_value, (v) => _then(v as _$_CitationClassification));
+
+  @override
+  _$_CitationClassification get _value =>
+      super._value as _$_CitationClassification;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? classifier = freezed,
+  }) {
+    return _then(_$_CitationClassification(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      classifier: classifier == freezed
+          ? _value._classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationClassification extends _CitationClassification {
+  _$_CitationClassification(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      final List<CodeableConcept>? classifier})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _classifier = classifier,
+        super._();
+
+  factory _$_CitationClassification.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationClassificationFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? type;
+  final List<CodeableConcept>? _classifier;
+  @override
+  List<CodeableConcept>? get classifier {
+    final value = _classifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'CitationClassification(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, classifier: $classifier)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationClassification &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other._classifier, _classifier));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(_classifier));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationClassificationCopyWith<_$_CitationClassification> get copyWith =>
+      __$$_CitationClassificationCopyWithImpl<_$_CitationClassification>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationClassificationToJson(this);
+  }
+}
+
+abstract class _CitationClassification extends CitationClassification {
+  factory _CitationClassification(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? type,
+      final List<CodeableConcept>? classifier}) = _$_CitationClassification;
+  _CitationClassification._() : super._();
+
+  factory _CitationClassification.fromJson(Map<String, dynamic> json) =
+      _$_CitationClassification.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationClassificationCopyWith<_$_CitationClassification> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationStatusDate _$CitationStatusDateFromJson(Map<String, dynamic> json) {
+  return _CitationStatusDate.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationStatusDate {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get activity => throw _privateConstructorUsedError;
+  Boolean? get actual => throw _privateConstructorUsedError;
+  @JsonKey(name: '_actual')
+  Element? get actualElement => throw _privateConstructorUsedError;
+  Period get period => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationStatusDateCopyWith<CitationStatusDate> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationStatusDateCopyWith<$Res> {
+  factory $CitationStatusDateCopyWith(
+          CitationStatusDate value, $Res Function(CitationStatusDate) then) =
+      _$CitationStatusDateCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept activity,
+      Boolean? actual,
+      @JsonKey(name: '_actual') Element? actualElement,
+      Period period});
+
+  $CodeableConceptCopyWith<$Res> get activity;
+  $ElementCopyWith<$Res>? get actualElement;
+  $PeriodCopyWith<$Res> get period;
+}
+
+/// @nodoc
+class _$CitationStatusDateCopyWithImpl<$Res>
+    implements $CitationStatusDateCopyWith<$Res> {
+  _$CitationStatusDateCopyWithImpl(this._value, this._then);
+
+  final CitationStatusDate _value;
+  // ignore: unused_field
+  final $Res Function(CitationStatusDate) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? activity = freezed,
+    Object? actual = freezed,
+    Object? actualElement = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      actual: actual == freezed
+          ? _value.actual
+          : actual // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      actualElement: actualElement == freezed
+          ? _value.actualElement
+          : actualElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get activity {
+    return $CodeableConceptCopyWith<$Res>(_value.activity, (value) {
+      return _then(_value.copyWith(activity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get actualElement {
+    if (_value.actualElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.actualElement!, (value) {
+      return _then(_value.copyWith(actualElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationStatusDateCopyWith<$Res>
+    implements $CitationStatusDateCopyWith<$Res> {
+  factory _$$_CitationStatusDateCopyWith(_$_CitationStatusDate value,
+          $Res Function(_$_CitationStatusDate) then) =
+      __$$_CitationStatusDateCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept activity,
+      Boolean? actual,
+      @JsonKey(name: '_actual') Element? actualElement,
+      Period period});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get activity;
+  @override
+  $ElementCopyWith<$Res>? get actualElement;
+  @override
+  $PeriodCopyWith<$Res> get period;
+}
+
+/// @nodoc
+class __$$_CitationStatusDateCopyWithImpl<$Res>
+    extends _$CitationStatusDateCopyWithImpl<$Res>
+    implements _$$_CitationStatusDateCopyWith<$Res> {
+  __$$_CitationStatusDateCopyWithImpl(
+      _$_CitationStatusDate _value, $Res Function(_$_CitationStatusDate) _then)
+      : super(_value, (v) => _then(v as _$_CitationStatusDate));
+
+  @override
+  _$_CitationStatusDate get _value => super._value as _$_CitationStatusDate;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? activity = freezed,
+    Object? actual = freezed,
+    Object? actualElement = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_$_CitationStatusDate(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      actual: actual == freezed
+          ? _value.actual
+          : actual // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      actualElement: actualElement == freezed
+          ? _value.actualElement
+          : actualElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationStatusDate extends _CitationStatusDate {
+  _$_CitationStatusDate(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.activity,
+      this.actual,
+      @JsonKey(name: '_actual') this.actualElement,
+      required this.period})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationStatusDate.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationStatusDateFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept activity;
+  @override
+  final Boolean? actual;
+  @override
+  @JsonKey(name: '_actual')
+  final Element? actualElement;
+  @override
+  final Period period;
+
+  @override
+  String toString() {
+    return 'CitationStatusDate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, activity: $activity, actual: $actual, actualElement: $actualElement, period: $period)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationStatusDate &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.activity, activity) &&
+            const DeepCollectionEquality().equals(other.actual, actual) &&
+            const DeepCollectionEquality()
+                .equals(other.actualElement, actualElement) &&
+            const DeepCollectionEquality().equals(other.period, period));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(activity),
+      const DeepCollectionEquality().hash(actual),
+      const DeepCollectionEquality().hash(actualElement),
+      const DeepCollectionEquality().hash(period));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationStatusDateCopyWith<_$_CitationStatusDate> get copyWith =>
+      __$$_CitationStatusDateCopyWithImpl<_$_CitationStatusDate>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationStatusDateToJson(this);
+  }
+}
+
+abstract class _CitationStatusDate extends CitationStatusDate {
+  factory _CitationStatusDate(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept activity,
+      final Boolean? actual,
+      @JsonKey(name: '_actual') final Element? actualElement,
+      required final Period period}) = _$_CitationStatusDate;
+  _CitationStatusDate._() : super._();
+
+  factory _CitationStatusDate.fromJson(Map<String, dynamic> json) =
+      _$_CitationStatusDate.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get activity => throw _privateConstructorUsedError;
+  @override
+  Boolean? get actual => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_actual')
+  Element? get actualElement => throw _privateConstructorUsedError;
+  @override
+  Period get period => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationStatusDateCopyWith<_$_CitationStatusDate> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationRelatesTo _$CitationRelatesToFromJson(Map<String, dynamic> json) {
+  return _CitationRelatesTo.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationRelatesTo {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get relationshipType => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get targetClassifier =>
+      throw _privateConstructorUsedError;
+  FhirUri? get targetUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_targetUri')
+  Element? get targetUriElement => throw _privateConstructorUsedError;
+  Identifier? get targetIdentifier => throw _privateConstructorUsedError;
+  Reference? get targetReference => throw _privateConstructorUsedError;
+  Attachment? get targetAttachment => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationRelatesToCopyWith<CitationRelatesTo> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationRelatesToCopyWith<$Res> {
+  factory $CitationRelatesToCopyWith(
+          CitationRelatesTo value, $Res Function(CitationRelatesTo) then) =
+      _$CitationRelatesToCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept relationshipType,
+      List<CodeableConcept>? targetClassifier,
+      FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') Element? targetUriElement,
+      Identifier? targetIdentifier,
+      Reference? targetReference,
+      Attachment? targetAttachment});
+
+  $CodeableConceptCopyWith<$Res> get relationshipType;
+  $ElementCopyWith<$Res>? get targetUriElement;
+  $IdentifierCopyWith<$Res>? get targetIdentifier;
+  $ReferenceCopyWith<$Res>? get targetReference;
+  $AttachmentCopyWith<$Res>? get targetAttachment;
+}
+
+/// @nodoc
+class _$CitationRelatesToCopyWithImpl<$Res>
+    implements $CitationRelatesToCopyWith<$Res> {
+  _$CitationRelatesToCopyWithImpl(this._value, this._then);
+
+  final CitationRelatesTo _value;
+  // ignore: unused_field
+  final $Res Function(CitationRelatesTo) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? relationshipType = freezed,
+    Object? targetClassifier = freezed,
+    Object? targetUri = freezed,
+    Object? targetUriElement = freezed,
+    Object? targetIdentifier = freezed,
+    Object? targetReference = freezed,
+    Object? targetAttachment = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      relationshipType: relationshipType == freezed
+          ? _value.relationshipType
+          : relationshipType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      targetClassifier: targetClassifier == freezed
+          ? _value.targetClassifier
+          : targetClassifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      targetUri: targetUri == freezed
+          ? _value.targetUri
+          : targetUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      targetUriElement: targetUriElement == freezed
+          ? _value.targetUriElement
+          : targetUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      targetIdentifier: targetIdentifier == freezed
+          ? _value.targetIdentifier
+          : targetIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      targetReference: targetReference == freezed
+          ? _value.targetReference
+          : targetReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      targetAttachment: targetAttachment == freezed
+          ? _value.targetAttachment
+          : targetAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get relationshipType {
+    return $CodeableConceptCopyWith<$Res>(_value.relationshipType, (value) {
+      return _then(_value.copyWith(relationshipType: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get targetUriElement {
+    if (_value.targetUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.targetUriElement!, (value) {
+      return _then(_value.copyWith(targetUriElement: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res>? get targetIdentifier {
+    if (_value.targetIdentifier == null) {
+      return null;
+    }
+
+    return $IdentifierCopyWith<$Res>(_value.targetIdentifier!, (value) {
+      return _then(_value.copyWith(targetIdentifier: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get targetReference {
+    if (_value.targetReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.targetReference!, (value) {
+      return _then(_value.copyWith(targetReference: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res>? get targetAttachment {
+    if (_value.targetAttachment == null) {
+      return null;
+    }
+
+    return $AttachmentCopyWith<$Res>(_value.targetAttachment!, (value) {
+      return _then(_value.copyWith(targetAttachment: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationRelatesToCopyWith<$Res>
+    implements $CitationRelatesToCopyWith<$Res> {
+  factory _$$_CitationRelatesToCopyWith(_$_CitationRelatesTo value,
+          $Res Function(_$_CitationRelatesTo) then) =
+      __$$_CitationRelatesToCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept relationshipType,
+      List<CodeableConcept>? targetClassifier,
+      FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') Element? targetUriElement,
+      Identifier? targetIdentifier,
+      Reference? targetReference,
+      Attachment? targetAttachment});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get relationshipType;
+  @override
+  $ElementCopyWith<$Res>? get targetUriElement;
+  @override
+  $IdentifierCopyWith<$Res>? get targetIdentifier;
+  @override
+  $ReferenceCopyWith<$Res>? get targetReference;
+  @override
+  $AttachmentCopyWith<$Res>? get targetAttachment;
+}
+
+/// @nodoc
+class __$$_CitationRelatesToCopyWithImpl<$Res>
+    extends _$CitationRelatesToCopyWithImpl<$Res>
+    implements _$$_CitationRelatesToCopyWith<$Res> {
+  __$$_CitationRelatesToCopyWithImpl(
+      _$_CitationRelatesTo _value, $Res Function(_$_CitationRelatesTo) _then)
+      : super(_value, (v) => _then(v as _$_CitationRelatesTo));
+
+  @override
+  _$_CitationRelatesTo get _value => super._value as _$_CitationRelatesTo;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? relationshipType = freezed,
+    Object? targetClassifier = freezed,
+    Object? targetUri = freezed,
+    Object? targetUriElement = freezed,
+    Object? targetIdentifier = freezed,
+    Object? targetReference = freezed,
+    Object? targetAttachment = freezed,
+  }) {
+    return _then(_$_CitationRelatesTo(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      relationshipType: relationshipType == freezed
+          ? _value.relationshipType
+          : relationshipType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      targetClassifier: targetClassifier == freezed
+          ? _value._targetClassifier
+          : targetClassifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      targetUri: targetUri == freezed
+          ? _value.targetUri
+          : targetUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      targetUriElement: targetUriElement == freezed
+          ? _value.targetUriElement
+          : targetUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      targetIdentifier: targetIdentifier == freezed
+          ? _value.targetIdentifier
+          : targetIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      targetReference: targetReference == freezed
+          ? _value.targetReference
+          : targetReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      targetAttachment: targetAttachment == freezed
+          ? _value.targetAttachment
+          : targetAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationRelatesTo extends _CitationRelatesTo {
+  _$_CitationRelatesTo(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.relationshipType,
+      final List<CodeableConcept>? targetClassifier,
+      this.targetUri,
+      @JsonKey(name: '_targetUri') this.targetUriElement,
+      this.targetIdentifier,
+      this.targetReference,
+      this.targetAttachment})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _targetClassifier = targetClassifier,
+        super._();
+
+  factory _$_CitationRelatesTo.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationRelatesToFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept relationshipType;
+  final List<CodeableConcept>? _targetClassifier;
+  @override
+  List<CodeableConcept>? get targetClassifier {
+    final value = _targetClassifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirUri? targetUri;
+  @override
+  @JsonKey(name: '_targetUri')
+  final Element? targetUriElement;
+  @override
+  final Identifier? targetIdentifier;
+  @override
+  final Reference? targetReference;
+  @override
+  final Attachment? targetAttachment;
+
+  @override
+  String toString() {
+    return 'CitationRelatesTo(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, relationshipType: $relationshipType, targetClassifier: $targetClassifier, targetUri: $targetUri, targetUriElement: $targetUriElement, targetIdentifier: $targetIdentifier, targetReference: $targetReference, targetAttachment: $targetAttachment)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationRelatesTo &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.relationshipType, relationshipType) &&
+            const DeepCollectionEquality()
+                .equals(other._targetClassifier, _targetClassifier) &&
+            const DeepCollectionEquality().equals(other.targetUri, targetUri) &&
+            const DeepCollectionEquality()
+                .equals(other.targetUriElement, targetUriElement) &&
+            const DeepCollectionEquality()
+                .equals(other.targetIdentifier, targetIdentifier) &&
+            const DeepCollectionEquality()
+                .equals(other.targetReference, targetReference) &&
+            const DeepCollectionEquality()
+                .equals(other.targetAttachment, targetAttachment));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(relationshipType),
+      const DeepCollectionEquality().hash(_targetClassifier),
+      const DeepCollectionEquality().hash(targetUri),
+      const DeepCollectionEquality().hash(targetUriElement),
+      const DeepCollectionEquality().hash(targetIdentifier),
+      const DeepCollectionEquality().hash(targetReference),
+      const DeepCollectionEquality().hash(targetAttachment));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationRelatesToCopyWith<_$_CitationRelatesTo> get copyWith =>
+      __$$_CitationRelatesToCopyWithImpl<_$_CitationRelatesTo>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationRelatesToToJson(this);
+  }
+}
+
+abstract class _CitationRelatesTo extends CitationRelatesTo {
+  factory _CitationRelatesTo(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept relationshipType,
+      final List<CodeableConcept>? targetClassifier,
+      final FhirUri? targetUri,
+      @JsonKey(name: '_targetUri') final Element? targetUriElement,
+      final Identifier? targetIdentifier,
+      final Reference? targetReference,
+      final Attachment? targetAttachment}) = _$_CitationRelatesTo;
+  _CitationRelatesTo._() : super._();
+
+  factory _CitationRelatesTo.fromJson(Map<String, dynamic> json) =
+      _$_CitationRelatesTo.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get relationshipType => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get targetClassifier =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirUri? get targetUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_targetUri')
+  Element? get targetUriElement => throw _privateConstructorUsedError;
+  @override
+  Identifier? get targetIdentifier => throw _privateConstructorUsedError;
+  @override
+  Reference? get targetReference => throw _privateConstructorUsedError;
+  @override
+  Attachment? get targetAttachment => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationRelatesToCopyWith<_$_CitationRelatesTo> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationCitedArtifact _$CitationCitedArtifactFromJson(
+    Map<String, dynamic> json) {
+  return _CitationCitedArtifact.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationCitedArtifact {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
+  FhirDateTime? get dateAccessed => throw _privateConstructorUsedError;
+  @JsonKey(name: '_dateAccessed')
+  Element? get dateAccessedElement => throw _privateConstructorUsedError;
+  CitationVersion? get version => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get currentState => throw _privateConstructorUsedError;
+  List<CitationStatusDate1>? get statusDate =>
+      throw _privateConstructorUsedError;
+  List<CitationTitle>? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: 'abstract')
+  List<CitationAbstract>? get abstract_ => throw _privateConstructorUsedError;
+  @JsonKey(name: 'part')
+  CitationPart? get part_ => throw _privateConstructorUsedError;
+  List<CitationRelatesTo>? get relatesTo => throw _privateConstructorUsedError;
+  List<CitationPublicationForm>? get publicationForm =>
+      throw _privateConstructorUsedError;
+  List<CitationWebLocation>? get webLocation =>
+      throw _privateConstructorUsedError;
+  List<CitationClassification1>? get classification =>
+      throw _privateConstructorUsedError;
+  CitationContributorship? get contributorship =>
+      throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationCitedArtifactCopyWith<CitationCitedArtifact> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationCitedArtifactCopyWith<$Res> {
+  factory $CitationCitedArtifactCopyWith(CitationCitedArtifact value,
+          $Res Function(CitationCitedArtifact) then) =
+      _$CitationCitedArtifactCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Identifier>? relatedIdentifier,
+      FhirDateTime? dateAccessed,
+      @JsonKey(name: '_dateAccessed') Element? dateAccessedElement,
+      CitationVersion? version,
+      List<CodeableConcept>? currentState,
+      List<CitationStatusDate1>? statusDate,
+      List<CitationTitle>? title,
+      @JsonKey(name: 'abstract') List<CitationAbstract>? abstract_,
+      @JsonKey(name: 'part') CitationPart? part_,
+      List<CitationRelatesTo>? relatesTo,
+      List<CitationPublicationForm>? publicationForm,
+      List<CitationWebLocation>? webLocation,
+      List<CitationClassification1>? classification,
+      CitationContributorship? contributorship,
+      List<Annotation>? note});
+
+  $ElementCopyWith<$Res>? get dateAccessedElement;
+  $CitationVersionCopyWith<$Res>? get version;
+  $CitationPartCopyWith<$Res>? get part_;
+  $CitationContributorshipCopyWith<$Res>? get contributorship;
+}
+
+/// @nodoc
+class _$CitationCitedArtifactCopyWithImpl<$Res>
+    implements $CitationCitedArtifactCopyWith<$Res> {
+  _$CitationCitedArtifactCopyWithImpl(this._value, this._then);
+
+  final CitationCitedArtifact _value;
+  // ignore: unused_field
+  final $Res Function(CitationCitedArtifact) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? relatedIdentifier = freezed,
+    Object? dateAccessed = freezed,
+    Object? dateAccessedElement = freezed,
+    Object? version = freezed,
+    Object? currentState = freezed,
+    Object? statusDate = freezed,
+    Object? title = freezed,
+    Object? abstract_ = freezed,
+    Object? part_ = freezed,
+    Object? relatesTo = freezed,
+    Object? publicationForm = freezed,
+    Object? webLocation = freezed,
+    Object? classification = freezed,
+    Object? contributorship = freezed,
+    Object? note = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      relatedIdentifier: relatedIdentifier == freezed
+          ? _value.relatedIdentifier
+          : relatedIdentifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      dateAccessed: dateAccessed == freezed
+          ? _value.dateAccessed
+          : dateAccessed // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateAccessedElement: dateAccessedElement == freezed
+          ? _value.dateAccessedElement
+          : dateAccessedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as CitationVersion?,
+      currentState: currentState == freezed
+          ? _value.currentState
+          : currentState // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      statusDate: statusDate == freezed
+          ? _value.statusDate
+          : statusDate // ignore: cast_nullable_to_non_nullable
+              as List<CitationStatusDate1>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as List<CitationTitle>?,
+      abstract_: abstract_ == freezed
+          ? _value.abstract_
+          : abstract_ // ignore: cast_nullable_to_non_nullable
+              as List<CitationAbstract>?,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as CitationPart?,
+      relatesTo: relatesTo == freezed
+          ? _value.relatesTo
+          : relatesTo // ignore: cast_nullable_to_non_nullable
+              as List<CitationRelatesTo>?,
+      publicationForm: publicationForm == freezed
+          ? _value.publicationForm
+          : publicationForm // ignore: cast_nullable_to_non_nullable
+              as List<CitationPublicationForm>?,
+      webLocation: webLocation == freezed
+          ? _value.webLocation
+          : webLocation // ignore: cast_nullable_to_non_nullable
+              as List<CitationWebLocation>?,
+      classification: classification == freezed
+          ? _value.classification
+          : classification // ignore: cast_nullable_to_non_nullable
+              as List<CitationClassification1>?,
+      contributorship: contributorship == freezed
+          ? _value.contributorship
+          : contributorship // ignore: cast_nullable_to_non_nullable
+              as CitationContributorship?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get dateAccessedElement {
+    if (_value.dateAccessedElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dateAccessedElement!, (value) {
+      return _then(_value.copyWith(dateAccessedElement: value));
+    });
+  }
+
+  @override
+  $CitationVersionCopyWith<$Res>? get version {
+    if (_value.version == null) {
+      return null;
+    }
+
+    return $CitationVersionCopyWith<$Res>(_value.version!, (value) {
+      return _then(_value.copyWith(version: value));
+    });
+  }
+
+  @override
+  $CitationPartCopyWith<$Res>? get part_ {
+    if (_value.part_ == null) {
+      return null;
+    }
+
+    return $CitationPartCopyWith<$Res>(_value.part_!, (value) {
+      return _then(_value.copyWith(part_: value));
+    });
+  }
+
+  @override
+  $CitationContributorshipCopyWith<$Res>? get contributorship {
+    if (_value.contributorship == null) {
+      return null;
+    }
+
+    return $CitationContributorshipCopyWith<$Res>(_value.contributorship!,
+        (value) {
+      return _then(_value.copyWith(contributorship: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationCitedArtifactCopyWith<$Res>
+    implements $CitationCitedArtifactCopyWith<$Res> {
+  factory _$$_CitationCitedArtifactCopyWith(_$_CitationCitedArtifact value,
+          $Res Function(_$_CitationCitedArtifact) then) =
+      __$$_CitationCitedArtifactCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<Identifier>? relatedIdentifier,
+      FhirDateTime? dateAccessed,
+      @JsonKey(name: '_dateAccessed') Element? dateAccessedElement,
+      CitationVersion? version,
+      List<CodeableConcept>? currentState,
+      List<CitationStatusDate1>? statusDate,
+      List<CitationTitle>? title,
+      @JsonKey(name: 'abstract') List<CitationAbstract>? abstract_,
+      @JsonKey(name: 'part') CitationPart? part_,
+      List<CitationRelatesTo>? relatesTo,
+      List<CitationPublicationForm>? publicationForm,
+      List<CitationWebLocation>? webLocation,
+      List<CitationClassification1>? classification,
+      CitationContributorship? contributorship,
+      List<Annotation>? note});
+
+  @override
+  $ElementCopyWith<$Res>? get dateAccessedElement;
+  @override
+  $CitationVersionCopyWith<$Res>? get version;
+  @override
+  $CitationPartCopyWith<$Res>? get part_;
+  @override
+  $CitationContributorshipCopyWith<$Res>? get contributorship;
+}
+
+/// @nodoc
+class __$$_CitationCitedArtifactCopyWithImpl<$Res>
+    extends _$CitationCitedArtifactCopyWithImpl<$Res>
+    implements _$$_CitationCitedArtifactCopyWith<$Res> {
+  __$$_CitationCitedArtifactCopyWithImpl(_$_CitationCitedArtifact _value,
+      $Res Function(_$_CitationCitedArtifact) _then)
+      : super(_value, (v) => _then(v as _$_CitationCitedArtifact));
+
+  @override
+  _$_CitationCitedArtifact get _value =>
+      super._value as _$_CitationCitedArtifact;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? relatedIdentifier = freezed,
+    Object? dateAccessed = freezed,
+    Object? dateAccessedElement = freezed,
+    Object? version = freezed,
+    Object? currentState = freezed,
+    Object? statusDate = freezed,
+    Object? title = freezed,
+    Object? abstract_ = freezed,
+    Object? part_ = freezed,
+    Object? relatesTo = freezed,
+    Object? publicationForm = freezed,
+    Object? webLocation = freezed,
+    Object? classification = freezed,
+    Object? contributorship = freezed,
+    Object? note = freezed,
+  }) {
+    return _then(_$_CitationCitedArtifact(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      relatedIdentifier: relatedIdentifier == freezed
+          ? _value._relatedIdentifier
+          : relatedIdentifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      dateAccessed: dateAccessed == freezed
+          ? _value.dateAccessed
+          : dateAccessed // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateAccessedElement: dateAccessedElement == freezed
+          ? _value.dateAccessedElement
+          : dateAccessedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as CitationVersion?,
+      currentState: currentState == freezed
+          ? _value._currentState
+          : currentState // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      statusDate: statusDate == freezed
+          ? _value._statusDate
+          : statusDate // ignore: cast_nullable_to_non_nullable
+              as List<CitationStatusDate1>?,
+      title: title == freezed
+          ? _value._title
+          : title // ignore: cast_nullable_to_non_nullable
+              as List<CitationTitle>?,
+      abstract_: abstract_ == freezed
+          ? _value._abstract_
+          : abstract_ // ignore: cast_nullable_to_non_nullable
+              as List<CitationAbstract>?,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as CitationPart?,
+      relatesTo: relatesTo == freezed
+          ? _value._relatesTo
+          : relatesTo // ignore: cast_nullable_to_non_nullable
+              as List<CitationRelatesTo>?,
+      publicationForm: publicationForm == freezed
+          ? _value._publicationForm
+          : publicationForm // ignore: cast_nullable_to_non_nullable
+              as List<CitationPublicationForm>?,
+      webLocation: webLocation == freezed
+          ? _value._webLocation
+          : webLocation // ignore: cast_nullable_to_non_nullable
+              as List<CitationWebLocation>?,
+      classification: classification == freezed
+          ? _value._classification
+          : classification // ignore: cast_nullable_to_non_nullable
+              as List<CitationClassification1>?,
+      contributorship: contributorship == freezed
+          ? _value.contributorship
+          : contributorship // ignore: cast_nullable_to_non_nullable
+              as CitationContributorship?,
+      note: note == freezed
+          ? _value._note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationCitedArtifact extends _CitationCitedArtifact {
+  _$_CitationCitedArtifact(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Identifier>? relatedIdentifier,
+      this.dateAccessed,
+      @JsonKey(name: '_dateAccessed') this.dateAccessedElement,
+      this.version,
+      final List<CodeableConcept>? currentState,
+      final List<CitationStatusDate1>? statusDate,
+      final List<CitationTitle>? title,
+      @JsonKey(name: 'abstract') final List<CitationAbstract>? abstract_,
+      @JsonKey(name: 'part') this.part_,
+      final List<CitationRelatesTo>? relatesTo,
+      final List<CitationPublicationForm>? publicationForm,
+      final List<CitationWebLocation>? webLocation,
+      final List<CitationClassification1>? classification,
+      this.contributorship,
+      final List<Annotation>? note})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _relatedIdentifier = relatedIdentifier,
+        _currentState = currentState,
+        _statusDate = statusDate,
+        _title = title,
+        _abstract_ = abstract_,
+        _relatesTo = relatesTo,
+        _publicationForm = publicationForm,
+        _webLocation = webLocation,
+        _classification = classification,
+        _note = note,
+        super._();
+
+  factory _$_CitationCitedArtifact.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationCitedArtifactFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _relatedIdentifier;
+  @override
+  List<Identifier>? get relatedIdentifier {
+    final value = _relatedIdentifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirDateTime? dateAccessed;
+  @override
+  @JsonKey(name: '_dateAccessed')
+  final Element? dateAccessedElement;
+  @override
+  final CitationVersion? version;
+  final List<CodeableConcept>? _currentState;
+  @override
+  List<CodeableConcept>? get currentState {
+    final value = _currentState;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationStatusDate1>? _statusDate;
+  @override
+  List<CitationStatusDate1>? get statusDate {
+    final value = _statusDate;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationTitle>? _title;
+  @override
+  List<CitationTitle>? get title {
+    final value = _title;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationAbstract>? _abstract_;
+  @override
+  @JsonKey(name: 'abstract')
+  List<CitationAbstract>? get abstract_ {
+    final value = _abstract_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  @JsonKey(name: 'part')
+  final CitationPart? part_;
+  final List<CitationRelatesTo>? _relatesTo;
+  @override
+  List<CitationRelatesTo>? get relatesTo {
+    final value = _relatesTo;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationPublicationForm>? _publicationForm;
+  @override
+  List<CitationPublicationForm>? get publicationForm {
+    final value = _publicationForm;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationWebLocation>? _webLocation;
+  @override
+  List<CitationWebLocation>? get webLocation {
+    final value = _webLocation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationClassification1>? _classification;
+  @override
+  List<CitationClassification1>? get classification {
+    final value = _classification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CitationContributorship? contributorship;
+  final List<Annotation>? _note;
+  @override
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'CitationCitedArtifact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, relatedIdentifier: $relatedIdentifier, dateAccessed: $dateAccessed, dateAccessedElement: $dateAccessedElement, version: $version, currentState: $currentState, statusDate: $statusDate, title: $title, abstract_: $abstract_, part_: $part_, relatesTo: $relatesTo, publicationForm: $publicationForm, webLocation: $webLocation, classification: $classification, contributorship: $contributorship, note: $note)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationCitedArtifact &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality()
+                .equals(other._relatedIdentifier, _relatedIdentifier) &&
+            const DeepCollectionEquality()
+                .equals(other.dateAccessed, dateAccessed) &&
+            const DeepCollectionEquality()
+                .equals(other.dateAccessedElement, dateAccessedElement) &&
+            const DeepCollectionEquality().equals(other.version, version) &&
+            const DeepCollectionEquality()
+                .equals(other._currentState, _currentState) &&
+            const DeepCollectionEquality()
+                .equals(other._statusDate, _statusDate) &&
+            const DeepCollectionEquality().equals(other._title, _title) &&
+            const DeepCollectionEquality()
+                .equals(other._abstract_, _abstract_) &&
+            const DeepCollectionEquality().equals(other.part_, part_) &&
+            const DeepCollectionEquality()
+                .equals(other._relatesTo, _relatesTo) &&
+            const DeepCollectionEquality()
+                .equals(other._publicationForm, _publicationForm) &&
+            const DeepCollectionEquality()
+                .equals(other._webLocation, _webLocation) &&
+            const DeepCollectionEquality()
+                .equals(other._classification, _classification) &&
+            const DeepCollectionEquality()
+                .equals(other.contributorship, contributorship) &&
+            const DeepCollectionEquality().equals(other._note, _note));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_relatedIdentifier),
+        const DeepCollectionEquality().hash(dateAccessed),
+        const DeepCollectionEquality().hash(dateAccessedElement),
+        const DeepCollectionEquality().hash(version),
+        const DeepCollectionEquality().hash(_currentState),
+        const DeepCollectionEquality().hash(_statusDate),
+        const DeepCollectionEquality().hash(_title),
+        const DeepCollectionEquality().hash(_abstract_),
+        const DeepCollectionEquality().hash(part_),
+        const DeepCollectionEquality().hash(_relatesTo),
+        const DeepCollectionEquality().hash(_publicationForm),
+        const DeepCollectionEquality().hash(_webLocation),
+        const DeepCollectionEquality().hash(_classification),
+        const DeepCollectionEquality().hash(contributorship),
+        const DeepCollectionEquality().hash(_note)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationCitedArtifactCopyWith<_$_CitationCitedArtifact> get copyWith =>
+      __$$_CitationCitedArtifactCopyWithImpl<_$_CitationCitedArtifact>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationCitedArtifactToJson(this);
+  }
+}
+
+abstract class _CitationCitedArtifact extends CitationCitedArtifact {
+  factory _CitationCitedArtifact(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Identifier>? relatedIdentifier,
+      final FhirDateTime? dateAccessed,
+      @JsonKey(name: '_dateAccessed') final Element? dateAccessedElement,
+      final CitationVersion? version,
+      final List<CodeableConcept>? currentState,
+      final List<CitationStatusDate1>? statusDate,
+      final List<CitationTitle>? title,
+      @JsonKey(name: 'abstract') final List<CitationAbstract>? abstract_,
+      @JsonKey(name: 'part') final CitationPart? part_,
+      final List<CitationRelatesTo>? relatesTo,
+      final List<CitationPublicationForm>? publicationForm,
+      final List<CitationWebLocation>? webLocation,
+      final List<CitationClassification1>? classification,
+      final CitationContributorship? contributorship,
+      final List<Annotation>? note}) = _$_CitationCitedArtifact;
+  _CitationCitedArtifact._() : super._();
+
+  factory _CitationCitedArtifact.fromJson(Map<String, dynamic> json) =
+      _$_CitationCitedArtifact.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get dateAccessed => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_dateAccessed')
+  Element? get dateAccessedElement => throw _privateConstructorUsedError;
+  @override
+  CitationVersion? get version => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get currentState => throw _privateConstructorUsedError;
+  @override
+  List<CitationStatusDate1>? get statusDate =>
+      throw _privateConstructorUsedError;
+  @override
+  List<CitationTitle>? get title => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'abstract')
+  List<CitationAbstract>? get abstract_ => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'part')
+  CitationPart? get part_ => throw _privateConstructorUsedError;
+  @override
+  List<CitationRelatesTo>? get relatesTo => throw _privateConstructorUsedError;
+  @override
+  List<CitationPublicationForm>? get publicationForm =>
+      throw _privateConstructorUsedError;
+  @override
+  List<CitationWebLocation>? get webLocation =>
+      throw _privateConstructorUsedError;
+  @override
+  List<CitationClassification1>? get classification =>
+      throw _privateConstructorUsedError;
+  @override
+  CitationContributorship? get contributorship =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationCitedArtifactCopyWith<_$_CitationCitedArtifact> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationVersion _$CitationVersionFromJson(Map<String, dynamic> json) {
+  return _CitationVersion.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationVersion {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
+  @JsonKey(name: '_value')
+  Element? get valueElement => throw _privateConstructorUsedError;
+  Reference? get baseCitation => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationVersionCopyWith<CitationVersion> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationVersionCopyWith<$Res> {
+  factory $CitationVersionCopyWith(
+          CitationVersion value, $Res Function(CitationVersion) then) =
+      _$CitationVersionCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? value,
+      @JsonKey(name: '_value') Element? valueElement,
+      Reference? baseCitation});
+
+  $ElementCopyWith<$Res>? get valueElement;
+  $ReferenceCopyWith<$Res>? get baseCitation;
+}
+
+/// @nodoc
+class _$CitationVersionCopyWithImpl<$Res>
+    implements $CitationVersionCopyWith<$Res> {
+  _$CitationVersionCopyWithImpl(this._value, this._then);
+
+  final CitationVersion _value;
+  // ignore: unused_field
+  final $Res Function(CitationVersion) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+    Object? baseCitation = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      baseCitation: baseCitation == freezed
+          ? _value.baseCitation
+          : baseCitation // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueElement!, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get baseCitation {
+    if (_value.baseCitation == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.baseCitation!, (value) {
+      return _then(_value.copyWith(baseCitation: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationVersionCopyWith<$Res>
+    implements $CitationVersionCopyWith<$Res> {
+  factory _$$_CitationVersionCopyWith(
+          _$_CitationVersion value, $Res Function(_$_CitationVersion) then) =
+      __$$_CitationVersionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? value,
+      @JsonKey(name: '_value') Element? valueElement,
+      Reference? baseCitation});
+
+  @override
+  $ElementCopyWith<$Res>? get valueElement;
+  @override
+  $ReferenceCopyWith<$Res>? get baseCitation;
+}
+
+/// @nodoc
+class __$$_CitationVersionCopyWithImpl<$Res>
+    extends _$CitationVersionCopyWithImpl<$Res>
+    implements _$$_CitationVersionCopyWith<$Res> {
+  __$$_CitationVersionCopyWithImpl(
+      _$_CitationVersion _value, $Res Function(_$_CitationVersion) _then)
+      : super(_value, (v) => _then(v as _$_CitationVersion));
+
+  @override
+  _$_CitationVersion get _value => super._value as _$_CitationVersion;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+    Object? baseCitation = freezed,
+  }) {
+    return _then(_$_CitationVersion(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      baseCitation: baseCitation == freezed
+          ? _value.baseCitation
+          : baseCitation // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationVersion extends _CitationVersion {
+  _$_CitationVersion(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.value,
+      @JsonKey(name: '_value') this.valueElement,
+      this.baseCitation})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationVersion.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationVersionFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? value;
+  @override
+  @JsonKey(name: '_value')
+  final Element? valueElement;
+  @override
+  final Reference? baseCitation;
+
+  @override
+  String toString() {
+    return 'CitationVersion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, value: $value, valueElement: $valueElement, baseCitation: $baseCitation)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationVersion &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
+            const DeepCollectionEquality()
+                .equals(other.valueElement, valueElement) &&
+            const DeepCollectionEquality()
+                .equals(other.baseCitation, baseCitation));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(value),
+      const DeepCollectionEquality().hash(valueElement),
+      const DeepCollectionEquality().hash(baseCitation));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationVersionCopyWith<_$_CitationVersion> get copyWith =>
+      __$$_CitationVersionCopyWithImpl<_$_CitationVersion>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationVersionToJson(this);
+  }
+}
+
+abstract class _CitationVersion extends CitationVersion {
+  factory _CitationVersion(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? value,
+      @JsonKey(name: '_value') final Element? valueElement,
+      final Reference? baseCitation}) = _$_CitationVersion;
+  _CitationVersion._() : super._();
+
+  factory _CitationVersion.fromJson(Map<String, dynamic> json) =
+      _$_CitationVersion.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  String? get value => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_value')
+  Element? get valueElement => throw _privateConstructorUsedError;
+  @override
+  Reference? get baseCitation => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationVersionCopyWith<_$_CitationVersion> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationStatusDate1 _$CitationStatusDate1FromJson(Map<String, dynamic> json) {
+  return _CitationStatusDate1.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationStatusDate1 {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get activity => throw _privateConstructorUsedError;
+  Boolean? get actual => throw _privateConstructorUsedError;
+  @JsonKey(name: '_actual')
+  Element? get actualElement => throw _privateConstructorUsedError;
+  Period get period => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationStatusDate1CopyWith<CitationStatusDate1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationStatusDate1CopyWith<$Res> {
+  factory $CitationStatusDate1CopyWith(
+          CitationStatusDate1 value, $Res Function(CitationStatusDate1) then) =
+      _$CitationStatusDate1CopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept activity,
+      Boolean? actual,
+      @JsonKey(name: '_actual') Element? actualElement,
+      Period period});
+
+  $CodeableConceptCopyWith<$Res> get activity;
+  $ElementCopyWith<$Res>? get actualElement;
+  $PeriodCopyWith<$Res> get period;
+}
+
+/// @nodoc
+class _$CitationStatusDate1CopyWithImpl<$Res>
+    implements $CitationStatusDate1CopyWith<$Res> {
+  _$CitationStatusDate1CopyWithImpl(this._value, this._then);
+
+  final CitationStatusDate1 _value;
+  // ignore: unused_field
+  final $Res Function(CitationStatusDate1) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? activity = freezed,
+    Object? actual = freezed,
+    Object? actualElement = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      actual: actual == freezed
+          ? _value.actual
+          : actual // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      actualElement: actualElement == freezed
+          ? _value.actualElement
+          : actualElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get activity {
+    return $CodeableConceptCopyWith<$Res>(_value.activity, (value) {
+      return _then(_value.copyWith(activity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get actualElement {
+    if (_value.actualElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.actualElement!, (value) {
+      return _then(_value.copyWith(actualElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationStatusDate1CopyWith<$Res>
+    implements $CitationStatusDate1CopyWith<$Res> {
+  factory _$$_CitationStatusDate1CopyWith(_$_CitationStatusDate1 value,
+          $Res Function(_$_CitationStatusDate1) then) =
+      __$$_CitationStatusDate1CopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept activity,
+      Boolean? actual,
+      @JsonKey(name: '_actual') Element? actualElement,
+      Period period});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get activity;
+  @override
+  $ElementCopyWith<$Res>? get actualElement;
+  @override
+  $PeriodCopyWith<$Res> get period;
+}
+
+/// @nodoc
+class __$$_CitationStatusDate1CopyWithImpl<$Res>
+    extends _$CitationStatusDate1CopyWithImpl<$Res>
+    implements _$$_CitationStatusDate1CopyWith<$Res> {
+  __$$_CitationStatusDate1CopyWithImpl(_$_CitationStatusDate1 _value,
+      $Res Function(_$_CitationStatusDate1) _then)
+      : super(_value, (v) => _then(v as _$_CitationStatusDate1));
+
+  @override
+  _$_CitationStatusDate1 get _value => super._value as _$_CitationStatusDate1;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? activity = freezed,
+    Object? actual = freezed,
+    Object? actualElement = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_$_CitationStatusDate1(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      activity: activity == freezed
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      actual: actual == freezed
+          ? _value.actual
+          : actual // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      actualElement: actualElement == freezed
+          ? _value.actualElement
+          : actualElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationStatusDate1 extends _CitationStatusDate1 {
+  _$_CitationStatusDate1(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.activity,
+      this.actual,
+      @JsonKey(name: '_actual') this.actualElement,
+      required this.period})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationStatusDate1.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationStatusDate1FromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept activity;
+  @override
+  final Boolean? actual;
+  @override
+  @JsonKey(name: '_actual')
+  final Element? actualElement;
+  @override
+  final Period period;
+
+  @override
+  String toString() {
+    return 'CitationStatusDate1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, activity: $activity, actual: $actual, actualElement: $actualElement, period: $period)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationStatusDate1 &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.activity, activity) &&
+            const DeepCollectionEquality().equals(other.actual, actual) &&
+            const DeepCollectionEquality()
+                .equals(other.actualElement, actualElement) &&
+            const DeepCollectionEquality().equals(other.period, period));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(activity),
+      const DeepCollectionEquality().hash(actual),
+      const DeepCollectionEquality().hash(actualElement),
+      const DeepCollectionEquality().hash(period));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationStatusDate1CopyWith<_$_CitationStatusDate1> get copyWith =>
+      __$$_CitationStatusDate1CopyWithImpl<_$_CitationStatusDate1>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationStatusDate1ToJson(this);
+  }
+}
+
+abstract class _CitationStatusDate1 extends CitationStatusDate1 {
+  factory _CitationStatusDate1(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept activity,
+      final Boolean? actual,
+      @JsonKey(name: '_actual') final Element? actualElement,
+      required final Period period}) = _$_CitationStatusDate1;
+  _CitationStatusDate1._() : super._();
+
+  factory _CitationStatusDate1.fromJson(Map<String, dynamic> json) =
+      _$_CitationStatusDate1.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get activity => throw _privateConstructorUsedError;
+  @override
+  Boolean? get actual => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_actual')
+  Element? get actualElement => throw _privateConstructorUsedError;
+  @override
+  Period get period => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationStatusDate1CopyWith<_$_CitationStatusDate1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationTitle _$CitationTitleFromJson(Map<String, dynamic> json) {
+  return _CitationTitle.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationTitle {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get language => throw _privateConstructorUsedError;
+  Markdown? get text => throw _privateConstructorUsedError;
+  @JsonKey(name: '_text')
+  Element? get textElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationTitleCopyWith<CitationTitle> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationTitleCopyWith<$Res> {
+  factory $CitationTitleCopyWith(
+          CitationTitle value, $Res Function(CitationTitle) then) =
+      _$CitationTitleCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      CodeableConcept? language,
+      Markdown? text,
+      @JsonKey(name: '_text') Element? textElement});
+
+  $CodeableConceptCopyWith<$Res>? get language;
+  $ElementCopyWith<$Res>? get textElement;
+}
+
+/// @nodoc
+class _$CitationTitleCopyWithImpl<$Res>
+    implements $CitationTitleCopyWith<$Res> {
+  _$CitationTitleCopyWithImpl(this._value, this._then);
+
+  final CitationTitle _value;
+  // ignore: unused_field
+  final $Res Function(CitationTitle) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? language = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get language {
+    if (_value.language == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.language!, (value) {
+      return _then(_value.copyWith(language: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get textElement {
+    if (_value.textElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.textElement!, (value) {
+      return _then(_value.copyWith(textElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationTitleCopyWith<$Res>
+    implements $CitationTitleCopyWith<$Res> {
+  factory _$$_CitationTitleCopyWith(
+          _$_CitationTitle value, $Res Function(_$_CitationTitle) then) =
+      __$$_CitationTitleCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      CodeableConcept? language,
+      Markdown? text,
+      @JsonKey(name: '_text') Element? textElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get language;
+  @override
+  $ElementCopyWith<$Res>? get textElement;
+}
+
+/// @nodoc
+class __$$_CitationTitleCopyWithImpl<$Res>
+    extends _$CitationTitleCopyWithImpl<$Res>
+    implements _$$_CitationTitleCopyWith<$Res> {
+  __$$_CitationTitleCopyWithImpl(
+      _$_CitationTitle _value, $Res Function(_$_CitationTitle) _then)
+      : super(_value, (v) => _then(v as _$_CitationTitle));
+
+  @override
+  _$_CitationTitle get _value => super._value as _$_CitationTitle;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? language = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
+  }) {
+    return _then(_$_CitationTitle(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value._type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationTitle extends _CitationTitle {
+  _$_CitationTitle(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? type,
+      this.language,
+      this.text,
+      @JsonKey(name: '_text') this.textElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _type = type,
+        super._();
+
+  factory _$_CitationTitle.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationTitleFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _type;
+  @override
+  List<CodeableConcept>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? language;
+  @override
+  final Markdown? text;
+  @override
+  @JsonKey(name: '_text')
+  final Element? textElement;
+
+  @override
+  String toString() {
+    return 'CitationTitle(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, language: $language, text: $text, textElement: $textElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationTitle &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other.textElement, textElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(language),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(textElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationTitleCopyWith<_$_CitationTitle> get copyWith =>
+      __$$_CitationTitleCopyWithImpl<_$_CitationTitle>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationTitleToJson(this);
+  }
+}
+
+abstract class _CitationTitle extends CitationTitle {
+  factory _CitationTitle(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<CodeableConcept>? type,
+      final CodeableConcept? language,
+      final Markdown? text,
+      @JsonKey(name: '_text') final Element? textElement}) = _$_CitationTitle;
+  _CitationTitle._() : super._();
+
+  factory _CitationTitle.fromJson(Map<String, dynamic> json) =
+      _$_CitationTitle.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get language => throw _privateConstructorUsedError;
+  @override
+  Markdown? get text => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_text')
+  Element? get textElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationTitleCopyWith<_$_CitationTitle> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationAbstract _$CitationAbstractFromJson(Map<String, dynamic> json) {
+  return _CitationAbstract.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationAbstract {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get language => throw _privateConstructorUsedError;
+  Markdown? get text => throw _privateConstructorUsedError;
+  @JsonKey(name: '_text')
+  Element? get textElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationAbstractCopyWith<CitationAbstract> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationAbstractCopyWith<$Res> {
+  factory $CitationAbstractCopyWith(
+          CitationAbstract value, $Res Function(CitationAbstract) then) =
+      _$CitationAbstractCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      CodeableConcept? language,
+      Markdown? text,
+      @JsonKey(name: '_text') Element? textElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement});
+
+  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res>? get language;
+  $ElementCopyWith<$Res>? get textElement;
+  $ElementCopyWith<$Res>? get copyrightElement;
+}
+
+/// @nodoc
+class _$CitationAbstractCopyWithImpl<$Res>
+    implements $CitationAbstractCopyWith<$Res> {
+  _$CitationAbstractCopyWithImpl(this._value, this._then);
+
+  final CitationAbstract _value;
+  // ignore: unused_field
+  final $Res Function(CitationAbstract) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? language = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
   }
 
   @override
@@ -2913,13 +4886,382 @@ class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get variantState {
-    if (_value.variantState == null) {
+  $CodeableConceptCopyWith<$Res>? get language {
+    if (_value.language == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.variantState!, (value) {
-      return _then(_value.copyWith(variantState: value));
+    return $CodeableConceptCopyWith<$Res>(_value.language!, (value) {
+      return _then(_value.copyWith(language: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get textElement {
+    if (_value.textElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.textElement!, (value) {
+      return _then(_value.copyWith(textElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationAbstractCopyWith<$Res>
+    implements $CitationAbstractCopyWith<$Res> {
+  factory _$$_CitationAbstractCopyWith(
+          _$_CitationAbstract value, $Res Function(_$_CitationAbstract) then) =
+      __$$_CitationAbstractCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      CodeableConcept? language,
+      Markdown? text,
+      @JsonKey(name: '_text') Element? textElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $CodeableConceptCopyWith<$Res>? get language;
+  @override
+  $ElementCopyWith<$Res>? get textElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement;
+}
+
+/// @nodoc
+class __$$_CitationAbstractCopyWithImpl<$Res>
+    extends _$CitationAbstractCopyWithImpl<$Res>
+    implements _$$_CitationAbstractCopyWith<$Res> {
+  __$$_CitationAbstractCopyWithImpl(
+      _$_CitationAbstract _value, $Res Function(_$_CitationAbstract) _then)
+      : super(_value, (v) => _then(v as _$_CitationAbstract));
+
+  @override
+  _$_CitationAbstract get _value => super._value as _$_CitationAbstract;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? language = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+  }) {
+    return _then(_$_CitationAbstract(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationAbstract extends _CitationAbstract {
+  _$_CitationAbstract(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      this.language,
+      this.text,
+      @JsonKey(name: '_text') this.textElement,
+      this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationAbstract.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationAbstractFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? type;
+  @override
+  final CodeableConcept? language;
+  @override
+  final Markdown? text;
+  @override
+  @JsonKey(name: '_text')
+  final Element? textElement;
+  @override
+  final Markdown? copyright;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element? copyrightElement;
+
+  @override
+  String toString() {
+    return 'CitationAbstract(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, language: $language, text: $text, textElement: $textElement, copyright: $copyright, copyrightElement: $copyrightElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationAbstract &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other.textElement, textElement) &&
+            const DeepCollectionEquality().equals(other.copyright, copyright) &&
+            const DeepCollectionEquality()
+                .equals(other.copyrightElement, copyrightElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(language),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(textElement),
+      const DeepCollectionEquality().hash(copyright),
+      const DeepCollectionEquality().hash(copyrightElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationAbstractCopyWith<_$_CitationAbstract> get copyWith =>
+      __$$_CitationAbstractCopyWithImpl<_$_CitationAbstract>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationAbstractToJson(this);
+  }
+}
+
+abstract class _CitationAbstract extends CitationAbstract {
+  factory _CitationAbstract(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final CodeableConcept? language,
+          final Markdown? text,
+          @JsonKey(name: '_text') final Element? textElement,
+          final Markdown? copyright,
+          @JsonKey(name: '_copyright') final Element? copyrightElement}) =
+      _$_CitationAbstract;
+  _CitationAbstract._() : super._();
+
+  factory _CitationAbstract.fromJson(Map<String, dynamic> json) =
+      _$_CitationAbstract.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get language => throw _privateConstructorUsedError;
+  @override
+  Markdown? get text => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_text')
+  Element? get textElement => throw _privateConstructorUsedError;
+  @override
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationAbstractCopyWith<_$_CitationAbstract> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationPart _$CitationPartFromJson(Map<String, dynamic> json) {
+  return _CitationPart.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationPart {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
+  @JsonKey(name: '_value')
+  Element? get valueElement => throw _privateConstructorUsedError;
+  Reference? get baseCitation => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationPartCopyWith<CitationPart> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationPartCopyWith<$Res> {
+  factory $CitationPartCopyWith(
+          CitationPart value, $Res Function(CitationPart) then) =
+      _$CitationPartCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      String? value,
+      @JsonKey(name: '_value') Element? valueElement,
+      Reference? baseCitation});
+
+  $CodeableConceptCopyWith<$Res>? get type;
+  $ElementCopyWith<$Res>? get valueElement;
+  $ReferenceCopyWith<$Res>? get baseCitation;
+}
+
+/// @nodoc
+class _$CitationPartCopyWithImpl<$Res> implements $CitationPartCopyWith<$Res> {
+  _$CitationPartCopyWithImpl(this._value, this._then);
+
+  final CitationPart _value;
+  // ignore: unused_field
+  final $Res Function(CitationPart) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+    Object? baseCitation = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      baseCitation: baseCitation == freezed
+          ? _value.baseCitation
+          : baseCitation // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
     });
   }
 
@@ -2935,79 +5277,63 @@ class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get unitOfMeasure {
-    if (_value.unitOfMeasure == null) {
+  $ReferenceCopyWith<$Res>? get baseCitation {
+    if (_value.baseCitation == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.unitOfMeasure!, (value) {
-      return _then(_value.copyWith(unitOfMeasure: value));
+    return $ReferenceCopyWith<$Res>(_value.baseCitation!, (value) {
+      return _then(_value.copyWith(baseCitation: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_EffectEvidenceSynthesisEffectEstimateCopyWith<$Res>
-    implements $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
-  factory _$$_EffectEvidenceSynthesisEffectEstimateCopyWith(
-          _$_EffectEvidenceSynthesisEffectEstimate value,
-          $Res Function(_$_EffectEvidenceSynthesisEffectEstimate) then) =
-      __$$_EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>;
+abstract class _$$_CitationPartCopyWith<$Res>
+    implements $CitationPartCopyWith<$Res> {
+  factory _$$_CitationPartCopyWith(
+          _$_CitationPart value, $Res Function(_$_CitationPart) then) =
+      __$$_CitationPartCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? type,
-      CodeableConcept? variantState,
-      Decimal? value,
+      String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      CodeableConcept? unitOfMeasure,
-      List<EffectEvidenceSynthesisPrecisionEstimate>? precisionEstimate});
+      Reference? baseCitation});
 
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
   @override
   $CodeableConceptCopyWith<$Res>? get type;
   @override
-  $CodeableConceptCopyWith<$Res>? get variantState;
-  @override
   $ElementCopyWith<$Res>? get valueElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get unitOfMeasure;
+  $ReferenceCopyWith<$Res>? get baseCitation;
 }
 
 /// @nodoc
-class __$$_EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
-    extends _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
-    implements _$$_EffectEvidenceSynthesisEffectEstimateCopyWith<$Res> {
-  __$$_EffectEvidenceSynthesisEffectEstimateCopyWithImpl(
-      _$_EffectEvidenceSynthesisEffectEstimate _value,
-      $Res Function(_$_EffectEvidenceSynthesisEffectEstimate) _then)
-      : super(_value,
-            (v) => _then(v as _$_EffectEvidenceSynthesisEffectEstimate));
+class __$$_CitationPartCopyWithImpl<$Res>
+    extends _$CitationPartCopyWithImpl<$Res>
+    implements _$$_CitationPartCopyWith<$Res> {
+  __$$_CitationPartCopyWithImpl(
+      _$_CitationPart _value, $Res Function(_$_CitationPart) _then)
+      : super(_value, (v) => _then(v as _$_CitationPart));
 
   @override
-  _$_EffectEvidenceSynthesisEffectEstimate get _value =>
-      super._value as _$_EffectEvidenceSynthesisEffectEstimate;
+  _$_CitationPart get _value => super._value as _$_CitationPart;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
     Object? type = freezed,
-    Object? variantState = freezed,
     Object? value = freezed,
     Object? valueElement = freezed,
-    Object? unitOfMeasure = freezed,
-    Object? precisionEstimate = freezed,
+    Object? baseCitation = freezed,
   }) {
-    return _then(_$_EffectEvidenceSynthesisEffectEstimate(
+    return _then(_$_CitationPart(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3020,66 +5346,43 @@ class __$$_EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      variantState: variantState == freezed
-          ? _value.variantState
-          : variantState // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       value: value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as String?,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      unitOfMeasure: unitOfMeasure == freezed
-          ? _value.unitOfMeasure
-          : unitOfMeasure // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      precisionEstimate: precisionEstimate == freezed
-          ? _value._precisionEstimate
-          : precisionEstimate // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisPrecisionEstimate>?,
+      baseCitation: baseCitation == freezed
+          ? _value.baseCitation
+          : baseCitation // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_EffectEvidenceSynthesisEffectEstimate
-    extends _EffectEvidenceSynthesisEffectEstimate {
-  _$_EffectEvidenceSynthesisEffectEstimate(
+class _$_CitationPart extends _CitationPart {
+  _$_CitationPart(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
       this.type,
-      this.variantState,
       this.value,
       @JsonKey(name: '_value') this.valueElement,
-      this.unitOfMeasure,
-      final List<EffectEvidenceSynthesisPrecisionEstimate>? precisionEstimate})
+      this.baseCitation})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
-        _precisionEstimate = precisionEstimate,
         super._();
 
-  factory _$_EffectEvidenceSynthesisEffectEstimate.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_EffectEvidenceSynthesisEffectEstimateFromJson(json);
+  factory _$_CitationPart.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationPartFromJson(json);
 
   @override
   final String? id;
@@ -3103,59 +5406,36 @@ class _$_EffectEvidenceSynthesisEffectEstimate
   }
 
   @override
-  final String? description;
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-  @override
   final CodeableConcept? type;
   @override
-  final CodeableConcept? variantState;
-  @override
-  final Decimal? value;
+  final String? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
   @override
-  final CodeableConcept? unitOfMeasure;
-  final List<EffectEvidenceSynthesisPrecisionEstimate>? _precisionEstimate;
-  @override
-  List<EffectEvidenceSynthesisPrecisionEstimate>? get precisionEstimate {
-    final value = _precisionEstimate;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final Reference? baseCitation;
 
   @override
   String toString() {
-    return 'EffectEvidenceSynthesisEffectEstimate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, type: $type, variantState: $variantState, value: $value, valueElement: $valueElement, unitOfMeasure: $unitOfMeasure, precisionEstimate: $precisionEstimate)';
+    return 'CitationPart(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, value: $value, valueElement: $valueElement, baseCitation: $baseCitation)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EffectEvidenceSynthesisEffectEstimate &&
+            other is _$_CitationPart &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.variantState, variantState) &&
             const DeepCollectionEquality().equals(other.value, value) &&
             const DeepCollectionEquality()
                 .equals(other.valueElement, valueElement) &&
             const DeepCollectionEquality()
-                .equals(other.unitOfMeasure, unitOfMeasure) &&
-            const DeepCollectionEquality()
-                .equals(other._precisionEstimate, _precisionEstimate));
+                .equals(other.baseCitation, baseCitation));
   }
 
   @JsonKey(ignore: true)
@@ -3165,48 +5445,35 @@ class _$_EffectEvidenceSynthesisEffectEstimate
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(descriptionElement),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(variantState),
       const DeepCollectionEquality().hash(value),
       const DeepCollectionEquality().hash(valueElement),
-      const DeepCollectionEquality().hash(unitOfMeasure),
-      const DeepCollectionEquality().hash(_precisionEstimate));
+      const DeepCollectionEquality().hash(baseCitation));
 
   @JsonKey(ignore: true)
   @override
-  _$$_EffectEvidenceSynthesisEffectEstimateCopyWith<
-          _$_EffectEvidenceSynthesisEffectEstimate>
-      get copyWith => __$$_EffectEvidenceSynthesisEffectEstimateCopyWithImpl<
-          _$_EffectEvidenceSynthesisEffectEstimate>(this, _$identity);
+  _$$_CitationPartCopyWith<_$_CitationPart> get copyWith =>
+      __$$_CitationPartCopyWithImpl<_$_CitationPart>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EffectEvidenceSynthesisEffectEstimateToJson(this);
+    return _$$_CitationPartToJson(this);
   }
 }
 
-abstract class _EffectEvidenceSynthesisEffectEstimate
-    extends EffectEvidenceSynthesisEffectEstimate {
-  factory _EffectEvidenceSynthesisEffectEstimate(
+abstract class _CitationPart extends CitationPart {
+  factory _CitationPart(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final String? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
       final CodeableConcept? type,
-      final CodeableConcept? variantState,
-      final Decimal? value,
+      final String? value,
       @JsonKey(name: '_value') final Element? valueElement,
-      final CodeableConcept? unitOfMeasure,
-      final List<EffectEvidenceSynthesisPrecisionEstimate>?
-          precisionEstimate}) = _$_EffectEvidenceSynthesisEffectEstimate;
-  _EffectEvidenceSynthesisEffectEstimate._() : super._();
+      final Reference? baseCitation}) = _$_CitationPart;
+  _CitationPart._() : super._();
 
-  factory _EffectEvidenceSynthesisEffectEstimate.fromJson(
-          Map<String, dynamic> json) =
-      _$_EffectEvidenceSynthesisEffectEstimate.fromJson;
+  factory _CitationPart.fromJson(Map<String, dynamic> json) =
+      _$_CitationPart.fromJson;
 
   @override
   String? get id => throw _privateConstructorUsedError;
@@ -3217,524 +5484,141 @@ abstract class _EffectEvidenceSynthesisEffectEstimate
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  String? get description => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  @override
   CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get variantState => throw _privateConstructorUsedError;
-  @override
-  Decimal? get value => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get unitOfMeasure => throw _privateConstructorUsedError;
+  Reference? get baseCitation => throw _privateConstructorUsedError;
   @override
-  List<EffectEvidenceSynthesisPrecisionEstimate>? get precisionEstimate =>
+  @JsonKey(ignore: true)
+  _$$_CitationPartCopyWith<_$_CitationPart> get copyWith =>
       throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_EffectEvidenceSynthesisEffectEstimateCopyWith<
-          _$_EffectEvidenceSynthesisEffectEstimate>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
-EffectEvidenceSynthesisPrecisionEstimate
-    _$EffectEvidenceSynthesisPrecisionEstimateFromJson(
-        Map<String, dynamic> json) {
-  return _EffectEvidenceSynthesisPrecisionEstimate.fromJson(json);
-}
-
-/// @nodoc
-mixin _$EffectEvidenceSynthesisPrecisionEstimate {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  Decimal? get level => throw _privateConstructorUsedError;
-  @JsonKey(name: '_level')
-  Element? get levelElement => throw _privateConstructorUsedError;
-  Decimal? get from => throw _privateConstructorUsedError;
-  @JsonKey(name: '_from')
-  Element? get fromElement => throw _privateConstructorUsedError;
-  Decimal? get to => throw _privateConstructorUsedError;
-  @JsonKey(name: '_to')
-  Element? get toElement => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EffectEvidenceSynthesisPrecisionEstimateCopyWith<
-          EffectEvidenceSynthesisPrecisionEstimate>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
-  factory $EffectEvidenceSynthesisPrecisionEstimateCopyWith(
-          EffectEvidenceSynthesisPrecisionEstimate value,
-          $Res Function(EffectEvidenceSynthesisPrecisionEstimate) then) =
-      _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Decimal? level,
-      @JsonKey(name: '_level') Element? levelElement,
-      Decimal? from,
-      @JsonKey(name: '_from') Element? fromElement,
-      Decimal? to,
-      @JsonKey(name: '_to') Element? toElement});
-
-  $CodeableConceptCopyWith<$Res>? get type;
-  $ElementCopyWith<$Res>? get levelElement;
-  $ElementCopyWith<$Res>? get fromElement;
-  $ElementCopyWith<$Res>? get toElement;
-}
-
-/// @nodoc
-class _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
-    implements $EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
-  _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl(
-      this._value, this._then);
-
-  final EffectEvidenceSynthesisPrecisionEstimate _value;
-  // ignore: unused_field
-  final $Res Function(EffectEvidenceSynthesisPrecisionEstimate) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? level = freezed,
-    Object? levelElement = freezed,
-    Object? from = freezed,
-    Object? fromElement = freezed,
-    Object? to = freezed,
-    Object? toElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      level: level == freezed
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      levelElement: levelElement == freezed
-          ? _value.levelElement
-          : levelElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      from: from == freezed
-          ? _value.from
-          : from // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      fromElement: fromElement == freezed
-          ? _value.fromElement
-          : fromElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      to: to == freezed
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      toElement: toElement == freezed
-          ? _value.toElement
-          : toElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get levelElement {
-    if (_value.levelElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.levelElement!, (value) {
-      return _then(_value.copyWith(levelElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get fromElement {
-    if (_value.fromElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.fromElement!, (value) {
-      return _then(_value.copyWith(fromElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get toElement {
-    if (_value.toElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.toElement!, (value) {
-      return _then(_value.copyWith(toElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res>
-    implements $EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
-  factory _$$_EffectEvidenceSynthesisPrecisionEstimateCopyWith(
-          _$_EffectEvidenceSynthesisPrecisionEstimate value,
-          $Res Function(_$_EffectEvidenceSynthesisPrecisionEstimate) then) =
-      __$$_EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Decimal? level,
-      @JsonKey(name: '_level') Element? levelElement,
-      Decimal? from,
-      @JsonKey(name: '_from') Element? fromElement,
-      Decimal? to,
-      @JsonKey(name: '_to') Element? toElement});
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type;
-  @override
-  $ElementCopyWith<$Res>? get levelElement;
-  @override
-  $ElementCopyWith<$Res>? get fromElement;
-  @override
-  $ElementCopyWith<$Res>? get toElement;
-}
-
-/// @nodoc
-class __$$_EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
-    extends _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
-    implements _$$_EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
-  __$$_EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl(
-      _$_EffectEvidenceSynthesisPrecisionEstimate _value,
-      $Res Function(_$_EffectEvidenceSynthesisPrecisionEstimate) _then)
-      : super(_value,
-            (v) => _then(v as _$_EffectEvidenceSynthesisPrecisionEstimate));
-
-  @override
-  _$_EffectEvidenceSynthesisPrecisionEstimate get _value =>
-      super._value as _$_EffectEvidenceSynthesisPrecisionEstimate;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? level = freezed,
-    Object? levelElement = freezed,
-    Object? from = freezed,
-    Object? fromElement = freezed,
-    Object? to = freezed,
-    Object? toElement = freezed,
-  }) {
-    return _then(_$_EffectEvidenceSynthesisPrecisionEstimate(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      level: level == freezed
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      levelElement: levelElement == freezed
-          ? _value.levelElement
-          : levelElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      from: from == freezed
-          ? _value.from
-          : from // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      fromElement: fromElement == freezed
-          ? _value.fromElement
-          : fromElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      to: to == freezed
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      toElement: toElement == freezed
-          ? _value.toElement
-          : toElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_EffectEvidenceSynthesisPrecisionEstimate
-    extends _EffectEvidenceSynthesisPrecisionEstimate {
-  _$_EffectEvidenceSynthesisPrecisionEstimate(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.type,
-      this.level,
-      @JsonKey(name: '_level') this.levelElement,
-      this.from,
-      @JsonKey(name: '_from') this.fromElement,
-      this.to,
-      @JsonKey(name: '_to') this.toElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_EffectEvidenceSynthesisPrecisionEstimate.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_EffectEvidenceSynthesisPrecisionEstimateFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final CodeableConcept? type;
-  @override
-  final Decimal? level;
-  @override
-  @JsonKey(name: '_level')
-  final Element? levelElement;
-  @override
-  final Decimal? from;
-  @override
-  @JsonKey(name: '_from')
-  final Element? fromElement;
-  @override
-  final Decimal? to;
-  @override
-  @JsonKey(name: '_to')
-  final Element? toElement;
-
-  @override
-  String toString() {
-    return 'EffectEvidenceSynthesisPrecisionEstimate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, level: $level, levelElement: $levelElement, from: $from, fromElement: $fromElement, to: $to, toElement: $toElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_EffectEvidenceSynthesisPrecisionEstimate &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.level, level) &&
-            const DeepCollectionEquality()
-                .equals(other.levelElement, levelElement) &&
-            const DeepCollectionEquality().equals(other.from, from) &&
-            const DeepCollectionEquality()
-                .equals(other.fromElement, fromElement) &&
-            const DeepCollectionEquality().equals(other.to, to) &&
-            const DeepCollectionEquality().equals(other.toElement, toElement));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(level),
-      const DeepCollectionEquality().hash(levelElement),
-      const DeepCollectionEquality().hash(from),
-      const DeepCollectionEquality().hash(fromElement),
-      const DeepCollectionEquality().hash(to),
-      const DeepCollectionEquality().hash(toElement));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_EffectEvidenceSynthesisPrecisionEstimateCopyWith<
-          _$_EffectEvidenceSynthesisPrecisionEstimate>
-      get copyWith => __$$_EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<
-          _$_EffectEvidenceSynthesisPrecisionEstimate>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_EffectEvidenceSynthesisPrecisionEstimateToJson(this);
-  }
-}
-
-abstract class _EffectEvidenceSynthesisPrecisionEstimate
-    extends EffectEvidenceSynthesisPrecisionEstimate {
-  factory _EffectEvidenceSynthesisPrecisionEstimate(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final CodeableConcept? type,
-          final Decimal? level,
-          @JsonKey(name: '_level') final Element? levelElement,
-          final Decimal? from,
-          @JsonKey(name: '_from') final Element? fromElement,
-          final Decimal? to,
-          @JsonKey(name: '_to') final Element? toElement}) =
-      _$_EffectEvidenceSynthesisPrecisionEstimate;
-  _EffectEvidenceSynthesisPrecisionEstimate._() : super._();
-
-  factory _EffectEvidenceSynthesisPrecisionEstimate.fromJson(
-          Map<String, dynamic> json) =
-      _$_EffectEvidenceSynthesisPrecisionEstimate.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  @override
-  Decimal? get level => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_level')
-  Element? get levelElement => throw _privateConstructorUsedError;
-  @override
-  Decimal? get from => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_from')
-  Element? get fromElement => throw _privateConstructorUsedError;
-  @override
-  Decimal? get to => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_to')
-  Element? get toElement => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_EffectEvidenceSynthesisPrecisionEstimateCopyWith<
-          _$_EffectEvidenceSynthesisPrecisionEstimate>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-EffectEvidenceSynthesisCertainty _$EffectEvidenceSynthesisCertaintyFromJson(
+CitationPublicationForm _$CitationPublicationFormFromJson(
     Map<String, dynamic> json) {
-  return _EffectEvidenceSynthesisCertainty.fromJson(json);
+  return _CitationPublicationForm.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EffectEvidenceSynthesisCertainty {
+mixin _$CitationPublicationForm {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  List<EffectEvidenceSynthesisCertaintySubcomponent>?
-      get certaintySubcomponent => throw _privateConstructorUsedError;
+  CitationPublishedIn? get publishedIn => throw _privateConstructorUsedError;
+  CitationPeriodicRelease? get periodicRelease =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get articleDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_articleDate')
+  Element? get articleDateElement => throw _privateConstructorUsedError;
+  FhirDateTime? get lastRevisionDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_lastRevisionDate')
+  Element? get lastRevisionDateElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get language => throw _privateConstructorUsedError;
+  String? get accessionNumber => throw _privateConstructorUsedError;
+  @JsonKey(name: '_accessionNumber')
+  Element? get accessionNumberElement => throw _privateConstructorUsedError;
+  String? get pageString => throw _privateConstructorUsedError;
+  @JsonKey(name: '_pageString')
+  Element? get pageStringElement => throw _privateConstructorUsedError;
+  String? get firstPage => throw _privateConstructorUsedError;
+  @JsonKey(name: '_firstPage')
+  Element? get firstPageElement => throw _privateConstructorUsedError;
+  String? get lastPage => throw _privateConstructorUsedError;
+  @JsonKey(name: '_lastPage')
+  Element? get lastPageElement => throw _privateConstructorUsedError;
+  String? get pageCount => throw _privateConstructorUsedError;
+  @JsonKey(name: '_pageCount')
+  Element? get pageCountElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EffectEvidenceSynthesisCertaintyCopyWith<EffectEvidenceSynthesisCertainty>
-      get copyWith => throw _privateConstructorUsedError;
+  $CitationPublicationFormCopyWith<CitationPublicationForm> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
-  factory $EffectEvidenceSynthesisCertaintyCopyWith(
-          EffectEvidenceSynthesisCertainty value,
-          $Res Function(EffectEvidenceSynthesisCertainty) then) =
-      _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>;
+abstract class $CitationPublicationFormCopyWith<$Res> {
+  factory $CitationPublicationFormCopyWith(CitationPublicationForm value,
+          $Res Function(CitationPublicationForm) then) =
+      _$CitationPublicationFormCopyWithImpl<$Res>;
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? rating,
-      List<Annotation>? note,
-      List<EffectEvidenceSynthesisCertaintySubcomponent>?
-          certaintySubcomponent});
+      CitationPublishedIn? publishedIn,
+      CitationPeriodicRelease? periodicRelease,
+      FhirDateTime? articleDate,
+      @JsonKey(name: '_articleDate') Element? articleDateElement,
+      FhirDateTime? lastRevisionDate,
+      @JsonKey(name: '_lastRevisionDate') Element? lastRevisionDateElement,
+      List<CodeableConcept>? language,
+      String? accessionNumber,
+      @JsonKey(name: '_accessionNumber') Element? accessionNumberElement,
+      String? pageString,
+      @JsonKey(name: '_pageString') Element? pageStringElement,
+      String? firstPage,
+      @JsonKey(name: '_firstPage') Element? firstPageElement,
+      String? lastPage,
+      @JsonKey(name: '_lastPage') Element? lastPageElement,
+      String? pageCount,
+      @JsonKey(name: '_pageCount') Element? pageCountElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement});
+
+  $CitationPublishedInCopyWith<$Res>? get publishedIn;
+  $CitationPeriodicReleaseCopyWith<$Res>? get periodicRelease;
+  $ElementCopyWith<$Res>? get articleDateElement;
+  $ElementCopyWith<$Res>? get lastRevisionDateElement;
+  $ElementCopyWith<$Res>? get accessionNumberElement;
+  $ElementCopyWith<$Res>? get pageStringElement;
+  $ElementCopyWith<$Res>? get firstPageElement;
+  $ElementCopyWith<$Res>? get lastPageElement;
+  $ElementCopyWith<$Res>? get pageCountElement;
+  $ElementCopyWith<$Res>? get copyrightElement;
 }
 
 /// @nodoc
-class _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
-    implements $EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
-  _$EffectEvidenceSynthesisCertaintyCopyWithImpl(this._value, this._then);
+class _$CitationPublicationFormCopyWithImpl<$Res>
+    implements $CitationPublicationFormCopyWith<$Res> {
+  _$CitationPublicationFormCopyWithImpl(this._value, this._then);
 
-  final EffectEvidenceSynthesisCertainty _value;
+  final CitationPublicationForm _value;
   // ignore: unused_field
-  final $Res Function(EffectEvidenceSynthesisCertainty) _then;
+  final $Res Function(CitationPublicationForm) _then;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? rating = freezed,
-    Object? note = freezed,
-    Object? certaintySubcomponent = freezed,
+    Object? publishedIn = freezed,
+    Object? periodicRelease = freezed,
+    Object? articleDate = freezed,
+    Object? articleDateElement = freezed,
+    Object? lastRevisionDate = freezed,
+    Object? lastRevisionDateElement = freezed,
+    Object? language = freezed,
+    Object? accessionNumber = freezed,
+    Object? accessionNumberElement = freezed,
+    Object? pageString = freezed,
+    Object? pageStringElement = freezed,
+    Object? firstPage = freezed,
+    Object? firstPageElement = freezed,
+    Object? lastPage = freezed,
+    Object? lastPageElement = freezed,
+    Object? pageCount = freezed,
+    Object? pageCountElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -3749,390 +5633,288 @@ class _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      rating: rating == freezed
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
+      publishedIn: publishedIn == freezed
+          ? _value.publishedIn
+          : publishedIn // ignore: cast_nullable_to_non_nullable
+              as CitationPublishedIn?,
+      periodicRelease: periodicRelease == freezed
+          ? _value.periodicRelease
+          : periodicRelease // ignore: cast_nullable_to_non_nullable
+              as CitationPeriodicRelease?,
+      articleDate: articleDate == freezed
+          ? _value.articleDate
+          : articleDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      articleDateElement: articleDateElement == freezed
+          ? _value.articleDateElement
+          : articleDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastRevisionDate: lastRevisionDate == freezed
+          ? _value.lastRevisionDate
+          : lastRevisionDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      lastRevisionDateElement: lastRevisionDateElement == freezed
+          ? _value.lastRevisionDateElement
+          : lastRevisionDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      certaintySubcomponent: certaintySubcomponent == freezed
-          ? _value.certaintySubcomponent
-          : certaintySubcomponent // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisCertaintySubcomponent>?,
-    ));
-  }
-}
-
-/// @nodoc
-abstract class _$$_EffectEvidenceSynthesisCertaintyCopyWith<$Res>
-    implements $EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
-  factory _$$_EffectEvidenceSynthesisCertaintyCopyWith(
-          _$_EffectEvidenceSynthesisCertainty value,
-          $Res Function(_$_EffectEvidenceSynthesisCertainty) then) =
-      __$$_EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? rating,
-      List<Annotation>? note,
-      List<EffectEvidenceSynthesisCertaintySubcomponent>?
-          certaintySubcomponent});
-}
-
-/// @nodoc
-class __$$_EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
-    extends _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
-    implements _$$_EffectEvidenceSynthesisCertaintyCopyWith<$Res> {
-  __$$_EffectEvidenceSynthesisCertaintyCopyWithImpl(
-      _$_EffectEvidenceSynthesisCertainty _value,
-      $Res Function(_$_EffectEvidenceSynthesisCertainty) _then)
-      : super(_value, (v) => _then(v as _$_EffectEvidenceSynthesisCertainty));
-
-  @override
-  _$_EffectEvidenceSynthesisCertainty get _value =>
-      super._value as _$_EffectEvidenceSynthesisCertainty;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? rating = freezed,
-    Object? note = freezed,
-    Object? certaintySubcomponent = freezed,
-  }) {
-    return _then(_$_EffectEvidenceSynthesisCertainty(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      accessionNumber: accessionNumber == freezed
+          ? _value.accessionNumber
+          : accessionNumber // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      rating: rating == freezed
-          ? _value._rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      note: note == freezed
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      certaintySubcomponent: certaintySubcomponent == freezed
-          ? _value._certaintySubcomponent
-          : certaintySubcomponent // ignore: cast_nullable_to_non_nullable
-              as List<EffectEvidenceSynthesisCertaintySubcomponent>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_EffectEvidenceSynthesisCertainty
-    extends _EffectEvidenceSynthesisCertainty {
-  _$_EffectEvidenceSynthesisCertainty(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note,
-      final List<EffectEvidenceSynthesisCertaintySubcomponent>?
-          certaintySubcomponent})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _rating = rating,
-        _note = note,
-        _certaintySubcomponent = certaintySubcomponent,
-        super._();
-
-  factory _$_EffectEvidenceSynthesisCertainty.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_EffectEvidenceSynthesisCertaintyFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _rating;
-  @override
-  List<CodeableConcept>? get rating {
-    final value = _rating;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
-  @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<EffectEvidenceSynthesisCertaintySubcomponent>?
-      _certaintySubcomponent;
-  @override
-  List<EffectEvidenceSynthesisCertaintySubcomponent>?
-      get certaintySubcomponent {
-    final value = _certaintySubcomponent;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'EffectEvidenceSynthesisCertainty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, rating: $rating, note: $note, certaintySubcomponent: $certaintySubcomponent)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_EffectEvidenceSynthesisCertainty &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other._rating, _rating) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
-            const DeepCollectionEquality()
-                .equals(other._certaintySubcomponent, _certaintySubcomponent));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_rating),
-      const DeepCollectionEquality().hash(_note),
-      const DeepCollectionEquality().hash(_certaintySubcomponent));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_EffectEvidenceSynthesisCertaintyCopyWith<
-          _$_EffectEvidenceSynthesisCertainty>
-      get copyWith => __$$_EffectEvidenceSynthesisCertaintyCopyWithImpl<
-          _$_EffectEvidenceSynthesisCertainty>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_EffectEvidenceSynthesisCertaintyToJson(this);
-  }
-}
-
-abstract class _EffectEvidenceSynthesisCertainty
-    extends EffectEvidenceSynthesisCertainty {
-  factory _EffectEvidenceSynthesisCertainty(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note,
-      final List<EffectEvidenceSynthesisCertaintySubcomponent>?
-          certaintySubcomponent}) = _$_EffectEvidenceSynthesisCertainty;
-  _EffectEvidenceSynthesisCertainty._() : super._();
-
-  factory _EffectEvidenceSynthesisCertainty.fromJson(
-      Map<String, dynamic> json) = _$_EffectEvidenceSynthesisCertainty.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  @override
-  List<EffectEvidenceSynthesisCertaintySubcomponent>?
-      get certaintySubcomponent => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_EffectEvidenceSynthesisCertaintyCopyWith<
-          _$_EffectEvidenceSynthesisCertainty>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-EffectEvidenceSynthesisCertaintySubcomponent
-    _$EffectEvidenceSynthesisCertaintySubcomponentFromJson(
-        Map<String, dynamic> json) {
-  return _EffectEvidenceSynthesisCertaintySubcomponent.fromJson(json);
-}
-
-/// @nodoc
-mixin _$EffectEvidenceSynthesisCertaintySubcomponent {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<
-          EffectEvidenceSynthesisCertaintySubcomponent>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
-  factory $EffectEvidenceSynthesisCertaintySubcomponentCopyWith(
-          EffectEvidenceSynthesisCertaintySubcomponent value,
-          $Res Function(EffectEvidenceSynthesisCertaintySubcomponent) then) =
-      _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      List<CodeableConcept>? rating,
-      List<Annotation>? note});
-
-  $CodeableConceptCopyWith<$Res>? get type;
-}
-
-/// @nodoc
-class _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
-    implements $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
-  _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl(
-      this._value, this._then);
-
-  final EffectEvidenceSynthesisCertaintySubcomponent _value;
-  // ignore: unused_field
-  final $Res Function(EffectEvidenceSynthesisCertaintySubcomponent) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? rating = freezed,
-    Object? note = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      accessionNumberElement: accessionNumberElement == freezed
+          ? _value.accessionNumberElement
+          : accessionNumberElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      pageString: pageString == freezed
+          ? _value.pageString
+          : pageString // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      rating: rating == freezed
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
+      pageStringElement: pageStringElement == freezed
+          ? _value.pageStringElement
+          : pageStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      firstPage: firstPage == freezed
+          ? _value.firstPage
+          : firstPage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      firstPageElement: firstPageElement == freezed
+          ? _value.firstPageElement
+          : firstPageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastPage: lastPage == freezed
+          ? _value.lastPage
+          : lastPage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastPageElement: lastPageElement == freezed
+          ? _value.lastPageElement
+          : lastPageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      pageCount: pageCount == freezed
+          ? _value.pageCount
+          : pageCount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pageCountElement: pageCountElement == freezed
+          ? _value.pageCountElement
+          : pageCountElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
+  $CitationPublishedInCopyWith<$Res>? get publishedIn {
+    if (_value.publishedIn == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+    return $CitationPublishedInCopyWith<$Res>(_value.publishedIn!, (value) {
+      return _then(_value.copyWith(publishedIn: value));
+    });
+  }
+
+  @override
+  $CitationPeriodicReleaseCopyWith<$Res>? get periodicRelease {
+    if (_value.periodicRelease == null) {
+      return null;
+    }
+
+    return $CitationPeriodicReleaseCopyWith<$Res>(_value.periodicRelease!,
+        (value) {
+      return _then(_value.copyWith(periodicRelease: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get articleDateElement {
+    if (_value.articleDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.articleDateElement!, (value) {
+      return _then(_value.copyWith(articleDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get lastRevisionDateElement {
+    if (_value.lastRevisionDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lastRevisionDateElement!, (value) {
+      return _then(_value.copyWith(lastRevisionDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get accessionNumberElement {
+    if (_value.accessionNumberElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.accessionNumberElement!, (value) {
+      return _then(_value.copyWith(accessionNumberElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get pageStringElement {
+    if (_value.pageStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.pageStringElement!, (value) {
+      return _then(_value.copyWith(pageStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get firstPageElement {
+    if (_value.firstPageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.firstPageElement!, (value) {
+      return _then(_value.copyWith(firstPageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get lastPageElement {
+    if (_value.lastPageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lastPageElement!, (value) {
+      return _then(_value.copyWith(lastPageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get pageCountElement {
+    if (_value.pageCountElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.pageCountElement!, (value) {
+      return _then(_value.copyWith(pageCountElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res>
-    implements $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
-  factory _$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWith(
-          _$_EffectEvidenceSynthesisCertaintySubcomponent value,
-          $Res Function(_$_EffectEvidenceSynthesisCertaintySubcomponent) then) =
-      __$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>;
+abstract class _$$_CitationPublicationFormCopyWith<$Res>
+    implements $CitationPublicationFormCopyWith<$Res> {
+  factory _$$_CitationPublicationFormCopyWith(_$_CitationPublicationForm value,
+          $Res Function(_$_CitationPublicationForm) then) =
+      __$$_CitationPublicationFormCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      List<CodeableConcept>? rating,
-      List<Annotation>? note});
+      CitationPublishedIn? publishedIn,
+      CitationPeriodicRelease? periodicRelease,
+      FhirDateTime? articleDate,
+      @JsonKey(name: '_articleDate') Element? articleDateElement,
+      FhirDateTime? lastRevisionDate,
+      @JsonKey(name: '_lastRevisionDate') Element? lastRevisionDateElement,
+      List<CodeableConcept>? language,
+      String? accessionNumber,
+      @JsonKey(name: '_accessionNumber') Element? accessionNumberElement,
+      String? pageString,
+      @JsonKey(name: '_pageString') Element? pageStringElement,
+      String? firstPage,
+      @JsonKey(name: '_firstPage') Element? firstPageElement,
+      String? lastPage,
+      @JsonKey(name: '_lastPage') Element? lastPageElement,
+      String? pageCount,
+      @JsonKey(name: '_pageCount') Element? pageCountElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CitationPublishedInCopyWith<$Res>? get publishedIn;
+  @override
+  $CitationPeriodicReleaseCopyWith<$Res>? get periodicRelease;
+  @override
+  $ElementCopyWith<$Res>? get articleDateElement;
+  @override
+  $ElementCopyWith<$Res>? get lastRevisionDateElement;
+  @override
+  $ElementCopyWith<$Res>? get accessionNumberElement;
+  @override
+  $ElementCopyWith<$Res>? get pageStringElement;
+  @override
+  $ElementCopyWith<$Res>? get firstPageElement;
+  @override
+  $ElementCopyWith<$Res>? get lastPageElement;
+  @override
+  $ElementCopyWith<$Res>? get pageCountElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement;
 }
 
 /// @nodoc
-class __$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
-    extends _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
-    implements _$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
-  __$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl(
-      _$_EffectEvidenceSynthesisCertaintySubcomponent _value,
-      $Res Function(_$_EffectEvidenceSynthesisCertaintySubcomponent) _then)
-      : super(_value,
-            (v) => _then(v as _$_EffectEvidenceSynthesisCertaintySubcomponent));
+class __$$_CitationPublicationFormCopyWithImpl<$Res>
+    extends _$CitationPublicationFormCopyWithImpl<$Res>
+    implements _$$_CitationPublicationFormCopyWith<$Res> {
+  __$$_CitationPublicationFormCopyWithImpl(_$_CitationPublicationForm _value,
+      $Res Function(_$_CitationPublicationForm) _then)
+      : super(_value, (v) => _then(v as _$_CitationPublicationForm));
 
   @override
-  _$_EffectEvidenceSynthesisCertaintySubcomponent get _value =>
-      super._value as _$_EffectEvidenceSynthesisCertaintySubcomponent;
+  _$_CitationPublicationForm get _value =>
+      super._value as _$_CitationPublicationForm;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? rating = freezed,
-    Object? note = freezed,
+    Object? publishedIn = freezed,
+    Object? periodicRelease = freezed,
+    Object? articleDate = freezed,
+    Object? articleDateElement = freezed,
+    Object? lastRevisionDate = freezed,
+    Object? lastRevisionDateElement = freezed,
+    Object? language = freezed,
+    Object? accessionNumber = freezed,
+    Object? accessionNumberElement = freezed,
+    Object? pageString = freezed,
+    Object? pageStringElement = freezed,
+    Object? firstPage = freezed,
+    Object? firstPageElement = freezed,
+    Object? lastPage = freezed,
+    Object? lastPageElement = freezed,
+    Object? pageCount = freezed,
+    Object? pageCountElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
   }) {
-    return _then(_$_EffectEvidenceSynthesisCertaintySubcomponent(
+    return _then(_$_CitationPublicationForm(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4145,42 +5927,119 @@ class __$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      rating: rating == freezed
-          ? _value._rating
-          : rating // ignore: cast_nullable_to_non_nullable
+      publishedIn: publishedIn == freezed
+          ? _value.publishedIn
+          : publishedIn // ignore: cast_nullable_to_non_nullable
+              as CitationPublishedIn?,
+      periodicRelease: periodicRelease == freezed
+          ? _value.periodicRelease
+          : periodicRelease // ignore: cast_nullable_to_non_nullable
+              as CitationPeriodicRelease?,
+      articleDate: articleDate == freezed
+          ? _value.articleDate
+          : articleDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      articleDateElement: articleDateElement == freezed
+          ? _value.articleDateElement
+          : articleDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastRevisionDate: lastRevisionDate == freezed
+          ? _value.lastRevisionDate
+          : lastRevisionDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      lastRevisionDateElement: lastRevisionDateElement == freezed
+          ? _value.lastRevisionDateElement
+          : lastRevisionDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value._language
+          : language // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      note: note == freezed
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
+      accessionNumber: accessionNumber == freezed
+          ? _value.accessionNumber
+          : accessionNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      accessionNumberElement: accessionNumberElement == freezed
+          ? _value.accessionNumberElement
+          : accessionNumberElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      pageString: pageString == freezed
+          ? _value.pageString
+          : pageString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pageStringElement: pageStringElement == freezed
+          ? _value.pageStringElement
+          : pageStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      firstPage: firstPage == freezed
+          ? _value.firstPage
+          : firstPage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      firstPageElement: firstPageElement == freezed
+          ? _value.firstPageElement
+          : firstPageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastPage: lastPage == freezed
+          ? _value.lastPage
+          : lastPage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastPageElement: lastPageElement == freezed
+          ? _value.lastPageElement
+          : lastPageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      pageCount: pageCount == freezed
+          ? _value.pageCount
+          : pageCount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pageCountElement: pageCountElement == freezed
+          ? _value.pageCountElement
+          : pageCountElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_EffectEvidenceSynthesisCertaintySubcomponent
-    extends _EffectEvidenceSynthesisCertaintySubcomponent {
-  _$_EffectEvidenceSynthesisCertaintySubcomponent(
+class _$_CitationPublicationForm extends _CitationPublicationForm {
+  _$_CitationPublicationForm(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      this.type,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note})
+      this.publishedIn,
+      this.periodicRelease,
+      this.articleDate,
+      @JsonKey(name: '_articleDate') this.articleDateElement,
+      this.lastRevisionDate,
+      @JsonKey(name: '_lastRevisionDate') this.lastRevisionDateElement,
+      final List<CodeableConcept>? language,
+      this.accessionNumber,
+      @JsonKey(name: '_accessionNumber') this.accessionNumberElement,
+      this.pageString,
+      @JsonKey(name: '_pageString') this.pageStringElement,
+      this.firstPage,
+      @JsonKey(name: '_firstPage') this.firstPageElement,
+      this.lastPage,
+      @JsonKey(name: '_lastPage') this.lastPageElement,
+      this.pageCount,
+      @JsonKey(name: '_pageCount') this.pageCountElement,
+      this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
-        _rating = rating,
-        _note = note,
+        _language = language,
         super._();
 
-  factory _$_EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_EffectEvidenceSynthesisCertaintySubcomponentFromJson(json);
+  factory _$_CitationPublicationForm.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationPublicationFormFromJson(json);
 
   @override
   final String? id;
@@ -4204,86 +6063,649 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
   }
 
   @override
-  final CodeableConcept? type;
-  final List<CodeableConcept>? _rating;
+  final CitationPublishedIn? publishedIn;
   @override
-  List<CodeableConcept>? get rating {
-    final value = _rating;
+  final CitationPeriodicRelease? periodicRelease;
+  @override
+  final FhirDateTime? articleDate;
+  @override
+  @JsonKey(name: '_articleDate')
+  final Element? articleDateElement;
+  @override
+  final FhirDateTime? lastRevisionDate;
+  @override
+  @JsonKey(name: '_lastRevisionDate')
+  final Element? lastRevisionDateElement;
+  final List<CodeableConcept>? _language;
+  @override
+  List<CodeableConcept>? get language {
+    final value = _language;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Annotation>? _note;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final String? accessionNumber;
+  @override
+  @JsonKey(name: '_accessionNumber')
+  final Element? accessionNumberElement;
+  @override
+  final String? pageString;
+  @override
+  @JsonKey(name: '_pageString')
+  final Element? pageStringElement;
+  @override
+  final String? firstPage;
+  @override
+  @JsonKey(name: '_firstPage')
+  final Element? firstPageElement;
+  @override
+  final String? lastPage;
+  @override
+  @JsonKey(name: '_lastPage')
+  final Element? lastPageElement;
+  @override
+  final String? pageCount;
+  @override
+  @JsonKey(name: '_pageCount')
+  final Element? pageCountElement;
+  @override
+  final Markdown? copyright;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element? copyrightElement;
 
   @override
   String toString() {
-    return 'EffectEvidenceSynthesisCertaintySubcomponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, rating: $rating, note: $note)';
+    return 'CitationPublicationForm(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, publishedIn: $publishedIn, periodicRelease: $periodicRelease, articleDate: $articleDate, articleDateElement: $articleDateElement, lastRevisionDate: $lastRevisionDate, lastRevisionDateElement: $lastRevisionDateElement, language: $language, accessionNumber: $accessionNumber, accessionNumberElement: $accessionNumberElement, pageString: $pageString, pageStringElement: $pageStringElement, firstPage: $firstPage, firstPageElement: $firstPageElement, lastPage: $lastPage, lastPageElement: $lastPageElement, pageCount: $pageCount, pageCountElement: $pageCountElement, copyright: $copyright, copyrightElement: $copyrightElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EffectEvidenceSynthesisCertaintySubcomponent &&
+            other is _$_CitationPublicationForm &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other._rating, _rating) &&
-            const DeepCollectionEquality().equals(other._note, _note));
+            const DeepCollectionEquality()
+                .equals(other.publishedIn, publishedIn) &&
+            const DeepCollectionEquality()
+                .equals(other.periodicRelease, periodicRelease) &&
+            const DeepCollectionEquality()
+                .equals(other.articleDate, articleDate) &&
+            const DeepCollectionEquality()
+                .equals(other.articleDateElement, articleDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.lastRevisionDate, lastRevisionDate) &&
+            const DeepCollectionEquality().equals(
+                other.lastRevisionDateElement, lastRevisionDateElement) &&
+            const DeepCollectionEquality().equals(other._language, _language) &&
+            const DeepCollectionEquality()
+                .equals(other.accessionNumber, accessionNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.accessionNumberElement, accessionNumberElement) &&
+            const DeepCollectionEquality()
+                .equals(other.pageString, pageString) &&
+            const DeepCollectionEquality()
+                .equals(other.pageStringElement, pageStringElement) &&
+            const DeepCollectionEquality().equals(other.firstPage, firstPage) &&
+            const DeepCollectionEquality()
+                .equals(other.firstPageElement, firstPageElement) &&
+            const DeepCollectionEquality().equals(other.lastPage, lastPage) &&
+            const DeepCollectionEquality()
+                .equals(other.lastPageElement, lastPageElement) &&
+            const DeepCollectionEquality().equals(other.pageCount, pageCount) &&
+            const DeepCollectionEquality()
+                .equals(other.pageCountElement, pageCountElement) &&
+            const DeepCollectionEquality().equals(other.copyright, copyright) &&
+            const DeepCollectionEquality()
+                .equals(other.copyrightElement, copyrightElement));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(_rating),
-      const DeepCollectionEquality().hash(_note));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(publishedIn),
+        const DeepCollectionEquality().hash(periodicRelease),
+        const DeepCollectionEquality().hash(articleDate),
+        const DeepCollectionEquality().hash(articleDateElement),
+        const DeepCollectionEquality().hash(lastRevisionDate),
+        const DeepCollectionEquality().hash(lastRevisionDateElement),
+        const DeepCollectionEquality().hash(_language),
+        const DeepCollectionEquality().hash(accessionNumber),
+        const DeepCollectionEquality().hash(accessionNumberElement),
+        const DeepCollectionEquality().hash(pageString),
+        const DeepCollectionEquality().hash(pageStringElement),
+        const DeepCollectionEquality().hash(firstPage),
+        const DeepCollectionEquality().hash(firstPageElement),
+        const DeepCollectionEquality().hash(lastPage),
+        const DeepCollectionEquality().hash(lastPageElement),
+        const DeepCollectionEquality().hash(pageCount),
+        const DeepCollectionEquality().hash(pageCountElement),
+        const DeepCollectionEquality().hash(copyright),
+        const DeepCollectionEquality().hash(copyrightElement)
+      ]);
 
   @JsonKey(ignore: true)
   @override
-  _$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWith<
-          _$_EffectEvidenceSynthesisCertaintySubcomponent>
+  _$$_CitationPublicationFormCopyWith<_$_CitationPublicationForm>
       get copyWith =>
-          __$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<
-                  _$_EffectEvidenceSynthesisCertaintySubcomponent>(
+          __$$_CitationPublicationFormCopyWithImpl<_$_CitationPublicationForm>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EffectEvidenceSynthesisCertaintySubcomponentToJson(this);
+    return _$$_CitationPublicationFormToJson(this);
   }
 }
 
-abstract class _EffectEvidenceSynthesisCertaintySubcomponent
-    extends EffectEvidenceSynthesisCertaintySubcomponent {
-  factory _EffectEvidenceSynthesisCertaintySubcomponent(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final CodeableConcept? type,
-          final List<CodeableConcept>? rating,
-          final List<Annotation>? note}) =
-      _$_EffectEvidenceSynthesisCertaintySubcomponent;
-  _EffectEvidenceSynthesisCertaintySubcomponent._() : super._();
+abstract class _CitationPublicationForm extends CitationPublicationForm {
+  factory _CitationPublicationForm(
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CitationPublishedIn? publishedIn,
+      final CitationPeriodicRelease? periodicRelease,
+      final FhirDateTime? articleDate,
+      @JsonKey(name: '_articleDate')
+          final Element? articleDateElement,
+      final FhirDateTime? lastRevisionDate,
+      @JsonKey(name: '_lastRevisionDate')
+          final Element? lastRevisionDateElement,
+      final List<CodeableConcept>? language,
+      final String? accessionNumber,
+      @JsonKey(name: '_accessionNumber')
+          final Element? accessionNumberElement,
+      final String? pageString,
+      @JsonKey(name: '_pageString')
+          final Element? pageStringElement,
+      final String? firstPage,
+      @JsonKey(name: '_firstPage')
+          final Element? firstPageElement,
+      final String? lastPage,
+      @JsonKey(name: '_lastPage')
+          final Element? lastPageElement,
+      final String? pageCount,
+      @JsonKey(name: '_pageCount')
+          final Element? pageCountElement,
+      final Markdown? copyright,
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement}) = _$_CitationPublicationForm;
+  _CitationPublicationForm._() : super._();
 
-  factory _EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
-          Map<String, dynamic> json) =
-      _$_EffectEvidenceSynthesisCertaintySubcomponent.fromJson;
+  factory _CitationPublicationForm.fromJson(Map<String, dynamic> json) =
+      _$_CitationPublicationForm.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CitationPublishedIn? get publishedIn => throw _privateConstructorUsedError;
+  @override
+  CitationPeriodicRelease? get periodicRelease =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get articleDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_articleDate')
+  Element? get articleDateElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get lastRevisionDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_lastRevisionDate')
+  Element? get lastRevisionDateElement => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get language => throw _privateConstructorUsedError;
+  @override
+  String? get accessionNumber => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_accessionNumber')
+  Element? get accessionNumberElement => throw _privateConstructorUsedError;
+  @override
+  String? get pageString => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_pageString')
+  Element? get pageStringElement => throw _privateConstructorUsedError;
+  @override
+  String? get firstPage => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_firstPage')
+  Element? get firstPageElement => throw _privateConstructorUsedError;
+  @override
+  String? get lastPage => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_lastPage')
+  Element? get lastPageElement => throw _privateConstructorUsedError;
+  @override
+  String? get pageCount => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_pageCount')
+  Element? get pageCountElement => throw _privateConstructorUsedError;
+  @override
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationPublicationFormCopyWith<_$_CitationPublicationForm>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+CitationPublishedIn _$CitationPublishedInFromJson(Map<String, dynamic> json) {
+  return _CitationPublishedIn.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationPublishedIn {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  Reference? get publisher => throw _privateConstructorUsedError;
+  String? get publisherLocation => throw _privateConstructorUsedError;
+  @JsonKey(name: '_publisherLocation')
+  Element? get publisherLocationElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationPublishedInCopyWith<CitationPublishedIn> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationPublishedInCopyWith<$Res> {
+  factory $CitationPublishedInCopyWith(
+          CitationPublishedIn value, $Res Function(CitationPublishedIn) then) =
+      _$CitationPublishedInCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      List<Identifier>? identifier,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      Reference? publisher,
+      String? publisherLocation,
+      @JsonKey(name: '_publisherLocation') Element? publisherLocationElement});
+
+  $CodeableConceptCopyWith<$Res>? get type;
+  $ElementCopyWith<$Res>? get titleElement;
+  $ReferenceCopyWith<$Res>? get publisher;
+  $ElementCopyWith<$Res>? get publisherLocationElement;
+}
+
+/// @nodoc
+class _$CitationPublishedInCopyWithImpl<$Res>
+    implements $CitationPublishedInCopyWith<$Res> {
+  _$CitationPublishedInCopyWithImpl(this._value, this._then);
+
+  final CitationPublishedIn _value;
+  // ignore: unused_field
+  final $Res Function(CitationPublishedIn) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? identifier = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherLocation = freezed,
+    Object? publisherLocationElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      publisherLocation: publisherLocation == freezed
+          ? _value.publisherLocation
+          : publisherLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherLocationElement: publisherLocationElement == freezed
+          ? _value.publisherLocationElement
+          : publisherLocationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get publisher {
+    if (_value.publisher == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.publisher!, (value) {
+      return _then(_value.copyWith(publisher: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get publisherLocationElement {
+    if (_value.publisherLocationElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publisherLocationElement!, (value) {
+      return _then(_value.copyWith(publisherLocationElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationPublishedInCopyWith<$Res>
+    implements $CitationPublishedInCopyWith<$Res> {
+  factory _$$_CitationPublishedInCopyWith(_$_CitationPublishedIn value,
+          $Res Function(_$_CitationPublishedIn) then) =
+      __$$_CitationPublishedInCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      List<Identifier>? identifier,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      Reference? publisher,
+      String? publisherLocation,
+      @JsonKey(name: '_publisherLocation') Element? publisherLocationElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $ElementCopyWith<$Res>? get titleElement;
+  @override
+  $ReferenceCopyWith<$Res>? get publisher;
+  @override
+  $ElementCopyWith<$Res>? get publisherLocationElement;
+}
+
+/// @nodoc
+class __$$_CitationPublishedInCopyWithImpl<$Res>
+    extends _$CitationPublishedInCopyWithImpl<$Res>
+    implements _$$_CitationPublishedInCopyWith<$Res> {
+  __$$_CitationPublishedInCopyWithImpl(_$_CitationPublishedIn _value,
+      $Res Function(_$_CitationPublishedIn) _then)
+      : super(_value, (v) => _then(v as _$_CitationPublishedIn));
+
+  @override
+  _$_CitationPublishedIn get _value => super._value as _$_CitationPublishedIn;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? identifier = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherLocation = freezed,
+    Object? publisherLocationElement = freezed,
+  }) {
+    return _then(_$_CitationPublishedIn(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      publisherLocation: publisherLocation == freezed
+          ? _value.publisherLocation
+          : publisherLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherLocationElement: publisherLocationElement == freezed
+          ? _value.publisherLocationElement
+          : publisherLocationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationPublishedIn extends _CitationPublishedIn {
+  _$_CitationPublishedIn(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      final List<Identifier>? identifier,
+      this.title,
+      @JsonKey(name: '_title') this.titleElement,
+      this.publisher,
+      this.publisherLocation,
+      @JsonKey(name: '_publisherLocation') this.publisherLocationElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
+
+  factory _$_CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationPublishedInFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? type;
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? title;
+  @override
+  @JsonKey(name: '_title')
+  final Element? titleElement;
+  @override
+  final Reference? publisher;
+  @override
+  final String? publisherLocation;
+  @override
+  @JsonKey(name: '_publisherLocation')
+  final Element? publisherLocationElement;
+
+  @override
+  String toString() {
+    return 'CitationPublishedIn(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, title: $title, titleElement: $titleElement, publisher: $publisher, publisherLocation: $publisherLocation, publisherLocationElement: $publisherLocationElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationPublishedIn &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.titleElement, titleElement) &&
+            const DeepCollectionEquality().equals(other.publisher, publisher) &&
+            const DeepCollectionEquality()
+                .equals(other.publisherLocation, publisherLocation) &&
+            const DeepCollectionEquality().equals(
+                other.publisherLocationElement, publisherLocationElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(_identifier),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(titleElement),
+      const DeepCollectionEquality().hash(publisher),
+      const DeepCollectionEquality().hash(publisherLocation),
+      const DeepCollectionEquality().hash(publisherLocationElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationPublishedInCopyWith<_$_CitationPublishedIn> get copyWith =>
+      __$$_CitationPublishedInCopyWithImpl<_$_CitationPublishedIn>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationPublishedInToJson(this);
+  }
+}
+
+abstract class _CitationPublishedIn extends CitationPublishedIn {
+  factory _CitationPublishedIn(
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? type,
+      final List<Identifier>? identifier,
+      final String? title,
+      @JsonKey(name: '_title')
+          final Element? titleElement,
+      final Reference? publisher,
+      final String? publisherLocation,
+      @JsonKey(name: '_publisherLocation')
+          final Element? publisherLocationElement}) = _$_CitationPublishedIn;
+  _CitationPublishedIn._() : super._();
+
+  factory _CitationPublishedIn.fromJson(Map<String, dynamic> json) =
+      _$_CitationPublishedIn.fromJson;
 
   @override
   String? get id => throw _privateConstructorUsedError;
@@ -4296,14 +6718,4177 @@ abstract class _EffectEvidenceSynthesisCertaintySubcomponent
   @override
   CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  @override
+  Reference? get publisher => throw _privateConstructorUsedError;
+  @override
+  String? get publisherLocation => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_publisherLocation')
+  Element? get publisherLocationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWith<
-          _$_EffectEvidenceSynthesisCertaintySubcomponent>
+  _$$_CitationPublishedInCopyWith<_$_CitationPublishedIn> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationPeriodicRelease _$CitationPeriodicReleaseFromJson(
+    Map<String, dynamic> json) {
+  return _CitationPeriodicRelease.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationPeriodicRelease {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get citedMedium => throw _privateConstructorUsedError;
+  String? get volume => throw _privateConstructorUsedError;
+  @JsonKey(name: '_volume')
+  Element? get volumeElement => throw _privateConstructorUsedError;
+  String? get issue => throw _privateConstructorUsedError;
+  @JsonKey(name: '_issue')
+  Element? get issueElement => throw _privateConstructorUsedError;
+  CitationDateOfPublication? get dateOfPublication =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationPeriodicReleaseCopyWith<CitationPeriodicRelease> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationPeriodicReleaseCopyWith<$Res> {
+  factory $CitationPeriodicReleaseCopyWith(CitationPeriodicRelease value,
+          $Res Function(CitationPeriodicRelease) then) =
+      _$CitationPeriodicReleaseCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? citedMedium,
+      String? volume,
+      @JsonKey(name: '_volume') Element? volumeElement,
+      String? issue,
+      @JsonKey(name: '_issue') Element? issueElement,
+      CitationDateOfPublication? dateOfPublication});
+
+  $CodeableConceptCopyWith<$Res>? get citedMedium;
+  $ElementCopyWith<$Res>? get volumeElement;
+  $ElementCopyWith<$Res>? get issueElement;
+  $CitationDateOfPublicationCopyWith<$Res>? get dateOfPublication;
+}
+
+/// @nodoc
+class _$CitationPeriodicReleaseCopyWithImpl<$Res>
+    implements $CitationPeriodicReleaseCopyWith<$Res> {
+  _$CitationPeriodicReleaseCopyWithImpl(this._value, this._then);
+
+  final CitationPeriodicRelease _value;
+  // ignore: unused_field
+  final $Res Function(CitationPeriodicRelease) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? citedMedium = freezed,
+    Object? volume = freezed,
+    Object? volumeElement = freezed,
+    Object? issue = freezed,
+    Object? issueElement = freezed,
+    Object? dateOfPublication = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      citedMedium: citedMedium == freezed
+          ? _value.citedMedium
+          : citedMedium // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      volume: volume == freezed
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as String?,
+      volumeElement: volumeElement == freezed
+          ? _value.volumeElement
+          : volumeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      issue: issue == freezed
+          ? _value.issue
+          : issue // ignore: cast_nullable_to_non_nullable
+              as String?,
+      issueElement: issueElement == freezed
+          ? _value.issueElement
+          : issueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      dateOfPublication: dateOfPublication == freezed
+          ? _value.dateOfPublication
+          : dateOfPublication // ignore: cast_nullable_to_non_nullable
+              as CitationDateOfPublication?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get citedMedium {
+    if (_value.citedMedium == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.citedMedium!, (value) {
+      return _then(_value.copyWith(citedMedium: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get volumeElement {
+    if (_value.volumeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.volumeElement!, (value) {
+      return _then(_value.copyWith(volumeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get issueElement {
+    if (_value.issueElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.issueElement!, (value) {
+      return _then(_value.copyWith(issueElement: value));
+    });
+  }
+
+  @override
+  $CitationDateOfPublicationCopyWith<$Res>? get dateOfPublication {
+    if (_value.dateOfPublication == null) {
+      return null;
+    }
+
+    return $CitationDateOfPublicationCopyWith<$Res>(_value.dateOfPublication!,
+        (value) {
+      return _then(_value.copyWith(dateOfPublication: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationPeriodicReleaseCopyWith<$Res>
+    implements $CitationPeriodicReleaseCopyWith<$Res> {
+  factory _$$_CitationPeriodicReleaseCopyWith(_$_CitationPeriodicRelease value,
+          $Res Function(_$_CitationPeriodicRelease) then) =
+      __$$_CitationPeriodicReleaseCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? citedMedium,
+      String? volume,
+      @JsonKey(name: '_volume') Element? volumeElement,
+      String? issue,
+      @JsonKey(name: '_issue') Element? issueElement,
+      CitationDateOfPublication? dateOfPublication});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get citedMedium;
+  @override
+  $ElementCopyWith<$Res>? get volumeElement;
+  @override
+  $ElementCopyWith<$Res>? get issueElement;
+  @override
+  $CitationDateOfPublicationCopyWith<$Res>? get dateOfPublication;
+}
+
+/// @nodoc
+class __$$_CitationPeriodicReleaseCopyWithImpl<$Res>
+    extends _$CitationPeriodicReleaseCopyWithImpl<$Res>
+    implements _$$_CitationPeriodicReleaseCopyWith<$Res> {
+  __$$_CitationPeriodicReleaseCopyWithImpl(_$_CitationPeriodicRelease _value,
+      $Res Function(_$_CitationPeriodicRelease) _then)
+      : super(_value, (v) => _then(v as _$_CitationPeriodicRelease));
+
+  @override
+  _$_CitationPeriodicRelease get _value =>
+      super._value as _$_CitationPeriodicRelease;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? citedMedium = freezed,
+    Object? volume = freezed,
+    Object? volumeElement = freezed,
+    Object? issue = freezed,
+    Object? issueElement = freezed,
+    Object? dateOfPublication = freezed,
+  }) {
+    return _then(_$_CitationPeriodicRelease(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      citedMedium: citedMedium == freezed
+          ? _value.citedMedium
+          : citedMedium // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      volume: volume == freezed
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as String?,
+      volumeElement: volumeElement == freezed
+          ? _value.volumeElement
+          : volumeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      issue: issue == freezed
+          ? _value.issue
+          : issue // ignore: cast_nullable_to_non_nullable
+              as String?,
+      issueElement: issueElement == freezed
+          ? _value.issueElement
+          : issueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      dateOfPublication: dateOfPublication == freezed
+          ? _value.dateOfPublication
+          : dateOfPublication // ignore: cast_nullable_to_non_nullable
+              as CitationDateOfPublication?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationPeriodicRelease extends _CitationPeriodicRelease {
+  _$_CitationPeriodicRelease(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.citedMedium,
+      this.volume,
+      @JsonKey(name: '_volume') this.volumeElement,
+      this.issue,
+      @JsonKey(name: '_issue') this.issueElement,
+      this.dateOfPublication})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationPeriodicReleaseFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? citedMedium;
+  @override
+  final String? volume;
+  @override
+  @JsonKey(name: '_volume')
+  final Element? volumeElement;
+  @override
+  final String? issue;
+  @override
+  @JsonKey(name: '_issue')
+  final Element? issueElement;
+  @override
+  final CitationDateOfPublication? dateOfPublication;
+
+  @override
+  String toString() {
+    return 'CitationPeriodicRelease(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, citedMedium: $citedMedium, volume: $volume, volumeElement: $volumeElement, issue: $issue, issueElement: $issueElement, dateOfPublication: $dateOfPublication)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationPeriodicRelease &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.citedMedium, citedMedium) &&
+            const DeepCollectionEquality().equals(other.volume, volume) &&
+            const DeepCollectionEquality()
+                .equals(other.volumeElement, volumeElement) &&
+            const DeepCollectionEquality().equals(other.issue, issue) &&
+            const DeepCollectionEquality()
+                .equals(other.issueElement, issueElement) &&
+            const DeepCollectionEquality()
+                .equals(other.dateOfPublication, dateOfPublication));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(citedMedium),
+      const DeepCollectionEquality().hash(volume),
+      const DeepCollectionEquality().hash(volumeElement),
+      const DeepCollectionEquality().hash(issue),
+      const DeepCollectionEquality().hash(issueElement),
+      const DeepCollectionEquality().hash(dateOfPublication));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationPeriodicReleaseCopyWith<_$_CitationPeriodicRelease>
+      get copyWith =>
+          __$$_CitationPeriodicReleaseCopyWithImpl<_$_CitationPeriodicRelease>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationPeriodicReleaseToJson(this);
+  }
+}
+
+abstract class _CitationPeriodicRelease extends CitationPeriodicRelease {
+  factory _CitationPeriodicRelease(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? citedMedium,
+          final String? volume,
+          @JsonKey(name: '_volume') final Element? volumeElement,
+          final String? issue,
+          @JsonKey(name: '_issue') final Element? issueElement,
+          final CitationDateOfPublication? dateOfPublication}) =
+      _$_CitationPeriodicRelease;
+  _CitationPeriodicRelease._() : super._();
+
+  factory _CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =
+      _$_CitationPeriodicRelease.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get citedMedium => throw _privateConstructorUsedError;
+  @override
+  String? get volume => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_volume')
+  Element? get volumeElement => throw _privateConstructorUsedError;
+  @override
+  String? get issue => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_issue')
+  Element? get issueElement => throw _privateConstructorUsedError;
+  @override
+  CitationDateOfPublication? get dateOfPublication =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationPeriodicReleaseCopyWith<_$_CitationPeriodicRelease>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+CitationDateOfPublication _$CitationDateOfPublicationFromJson(
+    Map<String, dynamic> json) {
+  return _CitationDateOfPublication.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationDateOfPublication {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Date? get date => throw _privateConstructorUsedError;
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get year => throw _privateConstructorUsedError;
+  @JsonKey(name: '_year')
+  Element? get yearElement => throw _privateConstructorUsedError;
+  String? get month => throw _privateConstructorUsedError;
+  @JsonKey(name: '_month')
+  Element? get monthElement => throw _privateConstructorUsedError;
+  String? get day => throw _privateConstructorUsedError;
+  @JsonKey(name: '_day')
+  Element? get dayElement => throw _privateConstructorUsedError;
+  String? get season => throw _privateConstructorUsedError;
+  @JsonKey(name: '_season')
+  Element? get seasonElement => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
+  @JsonKey(name: '_text')
+  Element? get textElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationDateOfPublicationCopyWith<CitationDateOfPublication> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationDateOfPublicationCopyWith<$Res> {
+  factory $CitationDateOfPublicationCopyWith(CitationDateOfPublication value,
+          $Res Function(CitationDateOfPublication) then) =
+      _$CitationDateOfPublicationCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Date? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      String? year,
+      @JsonKey(name: '_year') Element? yearElement,
+      String? month,
+      @JsonKey(name: '_month') Element? monthElement,
+      String? day,
+      @JsonKey(name: '_day') Element? dayElement,
+      String? season,
+      @JsonKey(name: '_season') Element? seasonElement,
+      String? text,
+      @JsonKey(name: '_text') Element? textElement});
+
+  $ElementCopyWith<$Res>? get dateElement;
+  $ElementCopyWith<$Res>? get yearElement;
+  $ElementCopyWith<$Res>? get monthElement;
+  $ElementCopyWith<$Res>? get dayElement;
+  $ElementCopyWith<$Res>? get seasonElement;
+  $ElementCopyWith<$Res>? get textElement;
+}
+
+/// @nodoc
+class _$CitationDateOfPublicationCopyWithImpl<$Res>
+    implements $CitationDateOfPublicationCopyWith<$Res> {
+  _$CitationDateOfPublicationCopyWithImpl(this._value, this._then);
+
+  final CitationDateOfPublication _value;
+  // ignore: unused_field
+  final $Res Function(CitationDateOfPublication) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? year = freezed,
+    Object? yearElement = freezed,
+    Object? month = freezed,
+    Object? monthElement = freezed,
+    Object? day = freezed,
+    Object? dayElement = freezed,
+    Object? season = freezed,
+    Object? seasonElement = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      year: year == freezed
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      yearElement: yearElement == freezed
+          ? _value.yearElement
+          : yearElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      month: month == freezed
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
+      monthElement: monthElement == freezed
+          ? _value.monthElement
+          : monthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      day: day == freezed
+          ? _value.day
+          : day // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dayElement: dayElement == freezed
+          ? _value.dayElement
+          : dayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      season: season == freezed
+          ? _value.season
+          : season // ignore: cast_nullable_to_non_nullable
+              as String?,
+      seasonElement: seasonElement == freezed
+          ? _value.seasonElement
+          : seasonElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get yearElement {
+    if (_value.yearElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.yearElement!, (value) {
+      return _then(_value.copyWith(yearElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get monthElement {
+    if (_value.monthElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.monthElement!, (value) {
+      return _then(_value.copyWith(monthElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get dayElement {
+    if (_value.dayElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dayElement!, (value) {
+      return _then(_value.copyWith(dayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get seasonElement {
+    if (_value.seasonElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.seasonElement!, (value) {
+      return _then(_value.copyWith(seasonElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get textElement {
+    if (_value.textElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.textElement!, (value) {
+      return _then(_value.copyWith(textElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationDateOfPublicationCopyWith<$Res>
+    implements $CitationDateOfPublicationCopyWith<$Res> {
+  factory _$$_CitationDateOfPublicationCopyWith(
+          _$_CitationDateOfPublication value,
+          $Res Function(_$_CitationDateOfPublication) then) =
+      __$$_CitationDateOfPublicationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Date? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      String? year,
+      @JsonKey(name: '_year') Element? yearElement,
+      String? month,
+      @JsonKey(name: '_month') Element? monthElement,
+      String? day,
+      @JsonKey(name: '_day') Element? dayElement,
+      String? season,
+      @JsonKey(name: '_season') Element? seasonElement,
+      String? text,
+      @JsonKey(name: '_text') Element? textElement});
+
+  @override
+  $ElementCopyWith<$Res>? get dateElement;
+  @override
+  $ElementCopyWith<$Res>? get yearElement;
+  @override
+  $ElementCopyWith<$Res>? get monthElement;
+  @override
+  $ElementCopyWith<$Res>? get dayElement;
+  @override
+  $ElementCopyWith<$Res>? get seasonElement;
+  @override
+  $ElementCopyWith<$Res>? get textElement;
+}
+
+/// @nodoc
+class __$$_CitationDateOfPublicationCopyWithImpl<$Res>
+    extends _$CitationDateOfPublicationCopyWithImpl<$Res>
+    implements _$$_CitationDateOfPublicationCopyWith<$Res> {
+  __$$_CitationDateOfPublicationCopyWithImpl(
+      _$_CitationDateOfPublication _value,
+      $Res Function(_$_CitationDateOfPublication) _then)
+      : super(_value, (v) => _then(v as _$_CitationDateOfPublication));
+
+  @override
+  _$_CitationDateOfPublication get _value =>
+      super._value as _$_CitationDateOfPublication;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? year = freezed,
+    Object? yearElement = freezed,
+    Object? month = freezed,
+    Object? monthElement = freezed,
+    Object? day = freezed,
+    Object? dayElement = freezed,
+    Object? season = freezed,
+    Object? seasonElement = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
+  }) {
+    return _then(_$_CitationDateOfPublication(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      year: year == freezed
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
+      yearElement: yearElement == freezed
+          ? _value.yearElement
+          : yearElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      month: month == freezed
+          ? _value.month
+          : month // ignore: cast_nullable_to_non_nullable
+              as String?,
+      monthElement: monthElement == freezed
+          ? _value.monthElement
+          : monthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      day: day == freezed
+          ? _value.day
+          : day // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dayElement: dayElement == freezed
+          ? _value.dayElement
+          : dayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      season: season == freezed
+          ? _value.season
+          : season // ignore: cast_nullable_to_non_nullable
+              as String?,
+      seasonElement: seasonElement == freezed
+          ? _value.seasonElement
+          : seasonElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationDateOfPublication extends _CitationDateOfPublication {
+  _$_CitationDateOfPublication(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.date,
+      @JsonKey(name: '_date') this.dateElement,
+      this.year,
+      @JsonKey(name: '_year') this.yearElement,
+      this.month,
+      @JsonKey(name: '_month') this.monthElement,
+      this.day,
+      @JsonKey(name: '_day') this.dayElement,
+      this.season,
+      @JsonKey(name: '_season') this.seasonElement,
+      this.text,
+      @JsonKey(name: '_text') this.textElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationDateOfPublication.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationDateOfPublicationFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Date? date;
+  @override
+  @JsonKey(name: '_date')
+  final Element? dateElement;
+  @override
+  final String? year;
+  @override
+  @JsonKey(name: '_year')
+  final Element? yearElement;
+  @override
+  final String? month;
+  @override
+  @JsonKey(name: '_month')
+  final Element? monthElement;
+  @override
+  final String? day;
+  @override
+  @JsonKey(name: '_day')
+  final Element? dayElement;
+  @override
+  final String? season;
+  @override
+  @JsonKey(name: '_season')
+  final Element? seasonElement;
+  @override
+  final String? text;
+  @override
+  @JsonKey(name: '_text')
+  final Element? textElement;
+
+  @override
+  String toString() {
+    return 'CitationDateOfPublication(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, date: $date, dateElement: $dateElement, year: $year, yearElement: $yearElement, month: $month, monthElement: $monthElement, day: $day, dayElement: $dayElement, season: $season, seasonElement: $seasonElement, text: $text, textElement: $textElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationDateOfPublication &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.dateElement, dateElement) &&
+            const DeepCollectionEquality().equals(other.year, year) &&
+            const DeepCollectionEquality()
+                .equals(other.yearElement, yearElement) &&
+            const DeepCollectionEquality().equals(other.month, month) &&
+            const DeepCollectionEquality()
+                .equals(other.monthElement, monthElement) &&
+            const DeepCollectionEquality().equals(other.day, day) &&
+            const DeepCollectionEquality()
+                .equals(other.dayElement, dayElement) &&
+            const DeepCollectionEquality().equals(other.season, season) &&
+            const DeepCollectionEquality()
+                .equals(other.seasonElement, seasonElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other.textElement, textElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(date),
+      const DeepCollectionEquality().hash(dateElement),
+      const DeepCollectionEquality().hash(year),
+      const DeepCollectionEquality().hash(yearElement),
+      const DeepCollectionEquality().hash(month),
+      const DeepCollectionEquality().hash(monthElement),
+      const DeepCollectionEquality().hash(day),
+      const DeepCollectionEquality().hash(dayElement),
+      const DeepCollectionEquality().hash(season),
+      const DeepCollectionEquality().hash(seasonElement),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(textElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationDateOfPublicationCopyWith<_$_CitationDateOfPublication>
+      get copyWith => __$$_CitationDateOfPublicationCopyWithImpl<
+          _$_CitationDateOfPublication>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationDateOfPublicationToJson(this);
+  }
+}
+
+abstract class _CitationDateOfPublication extends CitationDateOfPublication {
+  factory _CitationDateOfPublication(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Date? date,
+          @JsonKey(name: '_date') final Element? dateElement,
+          final String? year,
+          @JsonKey(name: '_year') final Element? yearElement,
+          final String? month,
+          @JsonKey(name: '_month') final Element? monthElement,
+          final String? day,
+          @JsonKey(name: '_day') final Element? dayElement,
+          final String? season,
+          @JsonKey(name: '_season') final Element? seasonElement,
+          final String? text,
+          @JsonKey(name: '_text') final Element? textElement}) =
+      _$_CitationDateOfPublication;
+  _CitationDateOfPublication._() : super._();
+
+  factory _CitationDateOfPublication.fromJson(Map<String, dynamic> json) =
+      _$_CitationDateOfPublication.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Date? get date => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  @override
+  String? get year => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_year')
+  Element? get yearElement => throw _privateConstructorUsedError;
+  @override
+  String? get month => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_month')
+  Element? get monthElement => throw _privateConstructorUsedError;
+  @override
+  String? get day => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_day')
+  Element? get dayElement => throw _privateConstructorUsedError;
+  @override
+  String? get season => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_season')
+  Element? get seasonElement => throw _privateConstructorUsedError;
+  @override
+  String? get text => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_text')
+  Element? get textElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationDateOfPublicationCopyWith<_$_CitationDateOfPublication>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+CitationWebLocation _$CitationWebLocationFromJson(Map<String, dynamic> json) {
+  return _CitationWebLocation.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationWebLocation {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationWebLocationCopyWith<CitationWebLocation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationWebLocationCopyWith<$Res> {
+  factory $CitationWebLocationCopyWith(
+          CitationWebLocation value, $Res Function(CitationWebLocation) then) =
+      _$CitationWebLocationCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      FhirUri? url,
+      @JsonKey(name: '_url') Element? urlElement});
+
+  $CodeableConceptCopyWith<$Res>? get type;
+  $ElementCopyWith<$Res>? get urlElement;
+}
+
+/// @nodoc
+class _$CitationWebLocationCopyWithImpl<$Res>
+    implements $CitationWebLocationCopyWith<$Res> {
+  _$CitationWebLocationCopyWithImpl(this._value, this._then);
+
+  final CitationWebLocation _value;
+  // ignore: unused_field
+  final $Res Function(CitationWebLocation) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationWebLocationCopyWith<$Res>
+    implements $CitationWebLocationCopyWith<$Res> {
+  factory _$$_CitationWebLocationCopyWith(_$_CitationWebLocation value,
+          $Res Function(_$_CitationWebLocation) then) =
+      __$$_CitationWebLocationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      FhirUri? url,
+      @JsonKey(name: '_url') Element? urlElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $ElementCopyWith<$Res>? get urlElement;
+}
+
+/// @nodoc
+class __$$_CitationWebLocationCopyWithImpl<$Res>
+    extends _$CitationWebLocationCopyWithImpl<$Res>
+    implements _$$_CitationWebLocationCopyWith<$Res> {
+  __$$_CitationWebLocationCopyWithImpl(_$_CitationWebLocation _value,
+      $Res Function(_$_CitationWebLocation) _then)
+      : super(_value, (v) => _then(v as _$_CitationWebLocation));
+
+  @override
+  _$_CitationWebLocation get _value => super._value as _$_CitationWebLocation;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+  }) {
+    return _then(_$_CitationWebLocation(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationWebLocation extends _CitationWebLocation {
+  _$_CitationWebLocation(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      this.url,
+      @JsonKey(name: '_url') this.urlElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationWebLocation.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationWebLocationFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? type;
+  @override
+  final FhirUri? url;
+  @override
+  @JsonKey(name: '_url')
+  final Element? urlElement;
+
+  @override
+  String toString() {
+    return 'CitationWebLocation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, url: $url, urlElement: $urlElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationWebLocation &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.urlElement, urlElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(urlElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationWebLocationCopyWith<_$_CitationWebLocation> get copyWith =>
+      __$$_CitationWebLocationCopyWithImpl<_$_CitationWebLocation>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationWebLocationToJson(this);
+  }
+}
+
+abstract class _CitationWebLocation extends CitationWebLocation {
+  factory _CitationWebLocation(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final FhirUri? url,
+          @JsonKey(name: '_url') final Element? urlElement}) =
+      _$_CitationWebLocation;
+  _CitationWebLocation._() : super._();
+
+  factory _CitationWebLocation.fromJson(Map<String, dynamic> json) =
+      _$_CitationWebLocation.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get url => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationWebLocationCopyWith<_$_CitationWebLocation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationClassification1 _$CitationClassification1FromJson(
+    Map<String, dynamic> json) {
+  return _CitationClassification1.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationClassification1 {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+  CitationWhoClassified? get whoClassified =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get artifactAssessment => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationClassification1CopyWith<CitationClassification1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationClassification1CopyWith<$Res> {
+  factory $CitationClassification1CopyWith(CitationClassification1 value,
+          $Res Function(CitationClassification1) then) =
+      _$CitationClassification1CopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      List<CodeableConcept>? classifier,
+      CitationWhoClassified? whoClassified,
+      List<Reference>? artifactAssessment});
+
+  $CodeableConceptCopyWith<$Res>? get type;
+  $CitationWhoClassifiedCopyWith<$Res>? get whoClassified;
+}
+
+/// @nodoc
+class _$CitationClassification1CopyWithImpl<$Res>
+    implements $CitationClassification1CopyWith<$Res> {
+  _$CitationClassification1CopyWithImpl(this._value, this._then);
+
+  final CitationClassification1 _value;
+  // ignore: unused_field
+  final $Res Function(CitationClassification1) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? classifier = freezed,
+    Object? whoClassified = freezed,
+    Object? artifactAssessment = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      classifier: classifier == freezed
+          ? _value.classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      whoClassified: whoClassified == freezed
+          ? _value.whoClassified
+          : whoClassified // ignore: cast_nullable_to_non_nullable
+              as CitationWhoClassified?,
+      artifactAssessment: artifactAssessment == freezed
+          ? _value.artifactAssessment
+          : artifactAssessment // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CitationWhoClassifiedCopyWith<$Res>? get whoClassified {
+    if (_value.whoClassified == null) {
+      return null;
+    }
+
+    return $CitationWhoClassifiedCopyWith<$Res>(_value.whoClassified!, (value) {
+      return _then(_value.copyWith(whoClassified: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationClassification1CopyWith<$Res>
+    implements $CitationClassification1CopyWith<$Res> {
+  factory _$$_CitationClassification1CopyWith(_$_CitationClassification1 value,
+          $Res Function(_$_CitationClassification1) then) =
+      __$$_CitationClassification1CopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      List<CodeableConcept>? classifier,
+      CitationWhoClassified? whoClassified,
+      List<Reference>? artifactAssessment});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $CitationWhoClassifiedCopyWith<$Res>? get whoClassified;
+}
+
+/// @nodoc
+class __$$_CitationClassification1CopyWithImpl<$Res>
+    extends _$CitationClassification1CopyWithImpl<$Res>
+    implements _$$_CitationClassification1CopyWith<$Res> {
+  __$$_CitationClassification1CopyWithImpl(_$_CitationClassification1 _value,
+      $Res Function(_$_CitationClassification1) _then)
+      : super(_value, (v) => _then(v as _$_CitationClassification1));
+
+  @override
+  _$_CitationClassification1 get _value =>
+      super._value as _$_CitationClassification1;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? classifier = freezed,
+    Object? whoClassified = freezed,
+    Object? artifactAssessment = freezed,
+  }) {
+    return _then(_$_CitationClassification1(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      classifier: classifier == freezed
+          ? _value._classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      whoClassified: whoClassified == freezed
+          ? _value.whoClassified
+          : whoClassified // ignore: cast_nullable_to_non_nullable
+              as CitationWhoClassified?,
+      artifactAssessment: artifactAssessment == freezed
+          ? _value._artifactAssessment
+          : artifactAssessment // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationClassification1 extends _CitationClassification1 {
+  _$_CitationClassification1(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      final List<CodeableConcept>? classifier,
+      this.whoClassified,
+      final List<Reference>? artifactAssessment})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _classifier = classifier,
+        _artifactAssessment = artifactAssessment,
+        super._();
+
+  factory _$_CitationClassification1.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationClassification1FromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? type;
+  final List<CodeableConcept>? _classifier;
+  @override
+  List<CodeableConcept>? get classifier {
+    final value = _classifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CitationWhoClassified? whoClassified;
+  final List<Reference>? _artifactAssessment;
+  @override
+  List<Reference>? get artifactAssessment {
+    final value = _artifactAssessment;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'CitationClassification1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, classifier: $classifier, whoClassified: $whoClassified, artifactAssessment: $artifactAssessment)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationClassification1 &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other._classifier, _classifier) &&
+            const DeepCollectionEquality()
+                .equals(other.whoClassified, whoClassified) &&
+            const DeepCollectionEquality()
+                .equals(other._artifactAssessment, _artifactAssessment));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(_classifier),
+      const DeepCollectionEquality().hash(whoClassified),
+      const DeepCollectionEquality().hash(_artifactAssessment));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationClassification1CopyWith<_$_CitationClassification1>
+      get copyWith =>
+          __$$_CitationClassification1CopyWithImpl<_$_CitationClassification1>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationClassification1ToJson(this);
+  }
+}
+
+abstract class _CitationClassification1 extends CitationClassification1 {
+  factory _CitationClassification1(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final CodeableConcept? type,
+      final List<CodeableConcept>? classifier,
+      final CitationWhoClassified? whoClassified,
+      final List<Reference>? artifactAssessment}) = _$_CitationClassification1;
+  _CitationClassification1._() : super._();
+
+  factory _CitationClassification1.fromJson(Map<String, dynamic> json) =
+      _$_CitationClassification1.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+  @override
+  CitationWhoClassified? get whoClassified =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get artifactAssessment => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationClassification1CopyWith<_$_CitationClassification1>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+CitationWhoClassified _$CitationWhoClassifiedFromJson(
+    Map<String, dynamic> json) {
+  return _CitationWhoClassified.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationWhoClassified {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Reference? get person => throw _privateConstructorUsedError;
+  Reference? get organization => throw _privateConstructorUsedError;
+  Reference? get publisher => throw _privateConstructorUsedError;
+  String? get classifierCopyright => throw _privateConstructorUsedError;
+  @JsonKey(name: '_classifierCopyright')
+  Element? get classifierCopyrightElement => throw _privateConstructorUsedError;
+  Boolean? get freeToShare => throw _privateConstructorUsedError;
+  @JsonKey(name: '_freeToShare')
+  Element? get freeToShareElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationWhoClassifiedCopyWith<CitationWhoClassified> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationWhoClassifiedCopyWith<$Res> {
+  factory $CitationWhoClassifiedCopyWith(CitationWhoClassified value,
+          $Res Function(CitationWhoClassified) then) =
+      _$CitationWhoClassifiedCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? person,
+      Reference? organization,
+      Reference? publisher,
+      String? classifierCopyright,
+      @JsonKey(name: '_classifierCopyright')
+          Element? classifierCopyrightElement,
+      Boolean? freeToShare,
+      @JsonKey(name: '_freeToShare')
+          Element? freeToShareElement});
+
+  $ReferenceCopyWith<$Res>? get person;
+  $ReferenceCopyWith<$Res>? get organization;
+  $ReferenceCopyWith<$Res>? get publisher;
+  $ElementCopyWith<$Res>? get classifierCopyrightElement;
+  $ElementCopyWith<$Res>? get freeToShareElement;
+}
+
+/// @nodoc
+class _$CitationWhoClassifiedCopyWithImpl<$Res>
+    implements $CitationWhoClassifiedCopyWith<$Res> {
+  _$CitationWhoClassifiedCopyWithImpl(this._value, this._then);
+
+  final CitationWhoClassified _value;
+  // ignore: unused_field
+  final $Res Function(CitationWhoClassified) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? person = freezed,
+    Object? organization = freezed,
+    Object? publisher = freezed,
+    Object? classifierCopyright = freezed,
+    Object? classifierCopyrightElement = freezed,
+    Object? freeToShare = freezed,
+    Object? freeToShareElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      person: person == freezed
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      organization: organization == freezed
+          ? _value.organization
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      classifierCopyright: classifierCopyright == freezed
+          ? _value.classifierCopyright
+          : classifierCopyright // ignore: cast_nullable_to_non_nullable
+              as String?,
+      classifierCopyrightElement: classifierCopyrightElement == freezed
+          ? _value.classifierCopyrightElement
+          : classifierCopyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      freeToShare: freeToShare == freezed
+          ? _value.freeToShare
+          : freeToShare // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      freeToShareElement: freeToShareElement == freezed
+          ? _value.freeToShareElement
+          : freeToShareElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get person {
+    if (_value.person == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.person!, (value) {
+      return _then(_value.copyWith(person: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get organization {
+    if (_value.organization == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.organization!, (value) {
+      return _then(_value.copyWith(organization: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get publisher {
+    if (_value.publisher == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.publisher!, (value) {
+      return _then(_value.copyWith(publisher: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get classifierCopyrightElement {
+    if (_value.classifierCopyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.classifierCopyrightElement!, (value) {
+      return _then(_value.copyWith(classifierCopyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get freeToShareElement {
+    if (_value.freeToShareElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.freeToShareElement!, (value) {
+      return _then(_value.copyWith(freeToShareElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationWhoClassifiedCopyWith<$Res>
+    implements $CitationWhoClassifiedCopyWith<$Res> {
+  factory _$$_CitationWhoClassifiedCopyWith(_$_CitationWhoClassified value,
+          $Res Function(_$_CitationWhoClassified) then) =
+      __$$_CitationWhoClassifiedCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? person,
+      Reference? organization,
+      Reference? publisher,
+      String? classifierCopyright,
+      @JsonKey(name: '_classifierCopyright')
+          Element? classifierCopyrightElement,
+      Boolean? freeToShare,
+      @JsonKey(name: '_freeToShare')
+          Element? freeToShareElement});
+
+  @override
+  $ReferenceCopyWith<$Res>? get person;
+  @override
+  $ReferenceCopyWith<$Res>? get organization;
+  @override
+  $ReferenceCopyWith<$Res>? get publisher;
+  @override
+  $ElementCopyWith<$Res>? get classifierCopyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get freeToShareElement;
+}
+
+/// @nodoc
+class __$$_CitationWhoClassifiedCopyWithImpl<$Res>
+    extends _$CitationWhoClassifiedCopyWithImpl<$Res>
+    implements _$$_CitationWhoClassifiedCopyWith<$Res> {
+  __$$_CitationWhoClassifiedCopyWithImpl(_$_CitationWhoClassified _value,
+      $Res Function(_$_CitationWhoClassified) _then)
+      : super(_value, (v) => _then(v as _$_CitationWhoClassified));
+
+  @override
+  _$_CitationWhoClassified get _value =>
+      super._value as _$_CitationWhoClassified;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? person = freezed,
+    Object? organization = freezed,
+    Object? publisher = freezed,
+    Object? classifierCopyright = freezed,
+    Object? classifierCopyrightElement = freezed,
+    Object? freeToShare = freezed,
+    Object? freeToShareElement = freezed,
+  }) {
+    return _then(_$_CitationWhoClassified(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      person: person == freezed
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      organization: organization == freezed
+          ? _value.organization
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      classifierCopyright: classifierCopyright == freezed
+          ? _value.classifierCopyright
+          : classifierCopyright // ignore: cast_nullable_to_non_nullable
+              as String?,
+      classifierCopyrightElement: classifierCopyrightElement == freezed
+          ? _value.classifierCopyrightElement
+          : classifierCopyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      freeToShare: freeToShare == freezed
+          ? _value.freeToShare
+          : freeToShare // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      freeToShareElement: freeToShareElement == freezed
+          ? _value.freeToShareElement
+          : freeToShareElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationWhoClassified extends _CitationWhoClassified {
+  _$_CitationWhoClassified(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.person,
+      this.organization,
+      this.publisher,
+      this.classifierCopyright,
+      @JsonKey(name: '_classifierCopyright') this.classifierCopyrightElement,
+      this.freeToShare,
+      @JsonKey(name: '_freeToShare') this.freeToShareElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationWhoClassified.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationWhoClassifiedFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference? person;
+  @override
+  final Reference? organization;
+  @override
+  final Reference? publisher;
+  @override
+  final String? classifierCopyright;
+  @override
+  @JsonKey(name: '_classifierCopyright')
+  final Element? classifierCopyrightElement;
+  @override
+  final Boolean? freeToShare;
+  @override
+  @JsonKey(name: '_freeToShare')
+  final Element? freeToShareElement;
+
+  @override
+  String toString() {
+    return 'CitationWhoClassified(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, person: $person, organization: $organization, publisher: $publisher, classifierCopyright: $classifierCopyright, classifierCopyrightElement: $classifierCopyrightElement, freeToShare: $freeToShare, freeToShareElement: $freeToShareElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationWhoClassified &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.person, person) &&
+            const DeepCollectionEquality()
+                .equals(other.organization, organization) &&
+            const DeepCollectionEquality().equals(other.publisher, publisher) &&
+            const DeepCollectionEquality()
+                .equals(other.classifierCopyright, classifierCopyright) &&
+            const DeepCollectionEquality().equals(
+                other.classifierCopyrightElement, classifierCopyrightElement) &&
+            const DeepCollectionEquality()
+                .equals(other.freeToShare, freeToShare) &&
+            const DeepCollectionEquality()
+                .equals(other.freeToShareElement, freeToShareElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(person),
+      const DeepCollectionEquality().hash(organization),
+      const DeepCollectionEquality().hash(publisher),
+      const DeepCollectionEquality().hash(classifierCopyright),
+      const DeepCollectionEquality().hash(classifierCopyrightElement),
+      const DeepCollectionEquality().hash(freeToShare),
+      const DeepCollectionEquality().hash(freeToShareElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationWhoClassifiedCopyWith<_$_CitationWhoClassified> get copyWith =>
+      __$$_CitationWhoClassifiedCopyWithImpl<_$_CitationWhoClassified>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationWhoClassifiedToJson(this);
+  }
+}
+
+abstract class _CitationWhoClassified extends CitationWhoClassified {
+  factory _CitationWhoClassified(
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Reference? person,
+      final Reference? organization,
+      final Reference? publisher,
+      final String? classifierCopyright,
+      @JsonKey(name: '_classifierCopyright')
+          final Element? classifierCopyrightElement,
+      final Boolean? freeToShare,
+      @JsonKey(name: '_freeToShare')
+          final Element? freeToShareElement}) = _$_CitationWhoClassified;
+  _CitationWhoClassified._() : super._();
+
+  factory _CitationWhoClassified.fromJson(Map<String, dynamic> json) =
+      _$_CitationWhoClassified.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Reference? get person => throw _privateConstructorUsedError;
+  @override
+  Reference? get organization => throw _privateConstructorUsedError;
+  @override
+  Reference? get publisher => throw _privateConstructorUsedError;
+  @override
+  String? get classifierCopyright => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_classifierCopyright')
+  Element? get classifierCopyrightElement => throw _privateConstructorUsedError;
+  @override
+  Boolean? get freeToShare => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_freeToShare')
+  Element? get freeToShareElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationWhoClassifiedCopyWith<_$_CitationWhoClassified> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationContributorship _$CitationContributorshipFromJson(
+    Map<String, dynamic> json) {
+  return _CitationContributorship.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationContributorship {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Boolean? get complete => throw _privateConstructorUsedError;
+  @JsonKey(name: '_complete')
+  Element? get completeElement => throw _privateConstructorUsedError;
+  List<CitationEntry>? get entry => throw _privateConstructorUsedError;
+  List<CitationSummary1>? get summary => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationContributorshipCopyWith<CitationContributorship> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationContributorshipCopyWith<$Res> {
+  factory $CitationContributorshipCopyWith(CitationContributorship value,
+          $Res Function(CitationContributorship) then) =
+      _$CitationContributorshipCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? complete,
+      @JsonKey(name: '_complete') Element? completeElement,
+      List<CitationEntry>? entry,
+      List<CitationSummary1>? summary});
+
+  $ElementCopyWith<$Res>? get completeElement;
+}
+
+/// @nodoc
+class _$CitationContributorshipCopyWithImpl<$Res>
+    implements $CitationContributorshipCopyWith<$Res> {
+  _$CitationContributorshipCopyWithImpl(this._value, this._then);
+
+  final CitationContributorship _value;
+  // ignore: unused_field
+  final $Res Function(CitationContributorship) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? complete = freezed,
+    Object? completeElement = freezed,
+    Object? entry = freezed,
+    Object? summary = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      complete: complete == freezed
+          ? _value.complete
+          : complete // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      completeElement: completeElement == freezed
+          ? _value.completeElement
+          : completeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      entry: entry == freezed
+          ? _value.entry
+          : entry // ignore: cast_nullable_to_non_nullable
+              as List<CitationEntry>?,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as List<CitationSummary1>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get completeElement {
+    if (_value.completeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.completeElement!, (value) {
+      return _then(_value.copyWith(completeElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationContributorshipCopyWith<$Res>
+    implements $CitationContributorshipCopyWith<$Res> {
+  factory _$$_CitationContributorshipCopyWith(_$_CitationContributorship value,
+          $Res Function(_$_CitationContributorship) then) =
+      __$$_CitationContributorshipCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? complete,
+      @JsonKey(name: '_complete') Element? completeElement,
+      List<CitationEntry>? entry,
+      List<CitationSummary1>? summary});
+
+  @override
+  $ElementCopyWith<$Res>? get completeElement;
+}
+
+/// @nodoc
+class __$$_CitationContributorshipCopyWithImpl<$Res>
+    extends _$CitationContributorshipCopyWithImpl<$Res>
+    implements _$$_CitationContributorshipCopyWith<$Res> {
+  __$$_CitationContributorshipCopyWithImpl(_$_CitationContributorship _value,
+      $Res Function(_$_CitationContributorship) _then)
+      : super(_value, (v) => _then(v as _$_CitationContributorship));
+
+  @override
+  _$_CitationContributorship get _value =>
+      super._value as _$_CitationContributorship;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? complete = freezed,
+    Object? completeElement = freezed,
+    Object? entry = freezed,
+    Object? summary = freezed,
+  }) {
+    return _then(_$_CitationContributorship(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      complete: complete == freezed
+          ? _value.complete
+          : complete // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      completeElement: completeElement == freezed
+          ? _value.completeElement
+          : completeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      entry: entry == freezed
+          ? _value._entry
+          : entry // ignore: cast_nullable_to_non_nullable
+              as List<CitationEntry>?,
+      summary: summary == freezed
+          ? _value._summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as List<CitationSummary1>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationContributorship extends _CitationContributorship {
+  _$_CitationContributorship(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.complete,
+      @JsonKey(name: '_complete') this.completeElement,
+      final List<CitationEntry>? entry,
+      final List<CitationSummary1>? summary})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _entry = entry,
+        _summary = summary,
+        super._();
+
+  factory _$_CitationContributorship.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationContributorshipFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Boolean? complete;
+  @override
+  @JsonKey(name: '_complete')
+  final Element? completeElement;
+  final List<CitationEntry>? _entry;
+  @override
+  List<CitationEntry>? get entry {
+    final value = _entry;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationSummary1>? _summary;
+  @override
+  List<CitationSummary1>? get summary {
+    final value = _summary;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'CitationContributorship(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, complete: $complete, completeElement: $completeElement, entry: $entry, summary: $summary)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationContributorship &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.complete, complete) &&
+            const DeepCollectionEquality()
+                .equals(other.completeElement, completeElement) &&
+            const DeepCollectionEquality().equals(other._entry, _entry) &&
+            const DeepCollectionEquality().equals(other._summary, _summary));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(complete),
+      const DeepCollectionEquality().hash(completeElement),
+      const DeepCollectionEquality().hash(_entry),
+      const DeepCollectionEquality().hash(_summary));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationContributorshipCopyWith<_$_CitationContributorship>
+      get copyWith =>
+          __$$_CitationContributorshipCopyWithImpl<_$_CitationContributorship>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationContributorshipToJson(this);
+  }
+}
+
+abstract class _CitationContributorship extends CitationContributorship {
+  factory _CitationContributorship(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Boolean? complete,
+      @JsonKey(name: '_complete') final Element? completeElement,
+      final List<CitationEntry>? entry,
+      final List<CitationSummary1>? summary}) = _$_CitationContributorship;
+  _CitationContributorship._() : super._();
+
+  factory _CitationContributorship.fromJson(Map<String, dynamic> json) =
+      _$_CitationContributorship.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Boolean? get complete => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_complete')
+  Element? get completeElement => throw _privateConstructorUsedError;
+  @override
+  List<CitationEntry>? get entry => throw _privateConstructorUsedError;
+  @override
+  List<CitationSummary1>? get summary => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationContributorshipCopyWith<_$_CitationContributorship>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+CitationEntry _$CitationEntryFromJson(Map<String, dynamic> json) {
+  return _CitationEntry.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationEntry {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  HumanName? get name => throw _privateConstructorUsedError;
+  String? get initials => throw _privateConstructorUsedError;
+  @JsonKey(name: '_initials')
+  Element? get initialsElement => throw _privateConstructorUsedError;
+  String? get collectiveName => throw _privateConstructorUsedError;
+  @JsonKey(name: '_collectiveName')
+  Element? get collectiveNameElement => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<CitationAffiliationInfo>? get affiliationInfo =>
+      throw _privateConstructorUsedError;
+  List<Address>? get address => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get contributionType =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get role => throw _privateConstructorUsedError;
+  List<CitationContributionInstance>? get contributionInstance =>
+      throw _privateConstructorUsedError;
+  Boolean? get correspondingContact => throw _privateConstructorUsedError;
+  @JsonKey(name: '_correspondingContact')
+  Element? get correspondingContactElement =>
+      throw _privateConstructorUsedError;
+  PositiveInt? get listOrder => throw _privateConstructorUsedError;
+  @JsonKey(name: '_listOrder')
+  Element? get listOrderElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationEntryCopyWith<CitationEntry> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationEntryCopyWith<$Res> {
+  factory $CitationEntryCopyWith(
+          CitationEntry value, $Res Function(CitationEntry) then) =
+      _$CitationEntryCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      HumanName? name,
+      String? initials,
+      @JsonKey(name: '_initials')
+          Element? initialsElement,
+      String? collectiveName,
+      @JsonKey(name: '_collectiveName')
+          Element? collectiveNameElement,
+      List<Identifier>? identifier,
+      List<CitationAffiliationInfo>? affiliationInfo,
+      List<Address>? address,
+      List<ContactPoint>? telecom,
+      List<CodeableConcept>? contributionType,
+      CodeableConcept? role,
+      List<CitationContributionInstance>? contributionInstance,
+      Boolean? correspondingContact,
+      @JsonKey(name: '_correspondingContact')
+          Element? correspondingContactElement,
+      PositiveInt? listOrder,
+      @JsonKey(name: '_listOrder')
+          Element? listOrderElement});
+
+  $HumanNameCopyWith<$Res>? get name;
+  $ElementCopyWith<$Res>? get initialsElement;
+  $ElementCopyWith<$Res>? get collectiveNameElement;
+  $CodeableConceptCopyWith<$Res>? get role;
+  $ElementCopyWith<$Res>? get correspondingContactElement;
+  $ElementCopyWith<$Res>? get listOrderElement;
+}
+
+/// @nodoc
+class _$CitationEntryCopyWithImpl<$Res>
+    implements $CitationEntryCopyWith<$Res> {
+  _$CitationEntryCopyWithImpl(this._value, this._then);
+
+  final CitationEntry _value;
+  // ignore: unused_field
+  final $Res Function(CitationEntry) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? initials = freezed,
+    Object? initialsElement = freezed,
+    Object? collectiveName = freezed,
+    Object? collectiveNameElement = freezed,
+    Object? identifier = freezed,
+    Object? affiliationInfo = freezed,
+    Object? address = freezed,
+    Object? telecom = freezed,
+    Object? contributionType = freezed,
+    Object? role = freezed,
+    Object? contributionInstance = freezed,
+    Object? correspondingContact = freezed,
+    Object? correspondingContactElement = freezed,
+    Object? listOrder = freezed,
+    Object? listOrderElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
+      initials: initials == freezed
+          ? _value.initials
+          : initials // ignore: cast_nullable_to_non_nullable
+              as String?,
+      initialsElement: initialsElement == freezed
+          ? _value.initialsElement
+          : initialsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      collectiveName: collectiveName == freezed
+          ? _value.collectiveName
+          : collectiveName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      collectiveNameElement: collectiveNameElement == freezed
+          ? _value.collectiveNameElement
+          : collectiveNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      affiliationInfo: affiliationInfo == freezed
+          ? _value.affiliationInfo
+          : affiliationInfo // ignore: cast_nullable_to_non_nullable
+              as List<CitationAffiliationInfo>?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as List<Address>?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      contributionType: contributionType == freezed
+          ? _value.contributionType
+          : contributionType // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      contributionInstance: contributionInstance == freezed
+          ? _value.contributionInstance
+          : contributionInstance // ignore: cast_nullable_to_non_nullable
+              as List<CitationContributionInstance>?,
+      correspondingContact: correspondingContact == freezed
+          ? _value.correspondingContact
+          : correspondingContact // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      correspondingContactElement: correspondingContactElement == freezed
+          ? _value.correspondingContactElement
+          : correspondingContactElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      listOrder: listOrder == freezed
+          ? _value.listOrder
+          : listOrder // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      listOrderElement: listOrderElement == freezed
+          ? _value.listOrderElement
+          : listOrderElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $HumanNameCopyWith<$Res>? get name {
+    if (_value.name == null) {
+      return null;
+    }
+
+    return $HumanNameCopyWith<$Res>(_value.name!, (value) {
+      return _then(_value.copyWith(name: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get initialsElement {
+    if (_value.initialsElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.initialsElement!, (value) {
+      return _then(_value.copyWith(initialsElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get collectiveNameElement {
+    if (_value.collectiveNameElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.collectiveNameElement!, (value) {
+      return _then(_value.copyWith(collectiveNameElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get role {
+    if (_value.role == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.role!, (value) {
+      return _then(_value.copyWith(role: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get correspondingContactElement {
+    if (_value.correspondingContactElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.correspondingContactElement!, (value) {
+      return _then(_value.copyWith(correspondingContactElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get listOrderElement {
+    if (_value.listOrderElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.listOrderElement!, (value) {
+      return _then(_value.copyWith(listOrderElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationEntryCopyWith<$Res>
+    implements $CitationEntryCopyWith<$Res> {
+  factory _$$_CitationEntryCopyWith(
+          _$_CitationEntry value, $Res Function(_$_CitationEntry) then) =
+      __$$_CitationEntryCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      HumanName? name,
+      String? initials,
+      @JsonKey(name: '_initials')
+          Element? initialsElement,
+      String? collectiveName,
+      @JsonKey(name: '_collectiveName')
+          Element? collectiveNameElement,
+      List<Identifier>? identifier,
+      List<CitationAffiliationInfo>? affiliationInfo,
+      List<Address>? address,
+      List<ContactPoint>? telecom,
+      List<CodeableConcept>? contributionType,
+      CodeableConcept? role,
+      List<CitationContributionInstance>? contributionInstance,
+      Boolean? correspondingContact,
+      @JsonKey(name: '_correspondingContact')
+          Element? correspondingContactElement,
+      PositiveInt? listOrder,
+      @JsonKey(name: '_listOrder')
+          Element? listOrderElement});
+
+  @override
+  $HumanNameCopyWith<$Res>? get name;
+  @override
+  $ElementCopyWith<$Res>? get initialsElement;
+  @override
+  $ElementCopyWith<$Res>? get collectiveNameElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get role;
+  @override
+  $ElementCopyWith<$Res>? get correspondingContactElement;
+  @override
+  $ElementCopyWith<$Res>? get listOrderElement;
+}
+
+/// @nodoc
+class __$$_CitationEntryCopyWithImpl<$Res>
+    extends _$CitationEntryCopyWithImpl<$Res>
+    implements _$$_CitationEntryCopyWith<$Res> {
+  __$$_CitationEntryCopyWithImpl(
+      _$_CitationEntry _value, $Res Function(_$_CitationEntry) _then)
+      : super(_value, (v) => _then(v as _$_CitationEntry));
+
+  @override
+  _$_CitationEntry get _value => super._value as _$_CitationEntry;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? initials = freezed,
+    Object? initialsElement = freezed,
+    Object? collectiveName = freezed,
+    Object? collectiveNameElement = freezed,
+    Object? identifier = freezed,
+    Object? affiliationInfo = freezed,
+    Object? address = freezed,
+    Object? telecom = freezed,
+    Object? contributionType = freezed,
+    Object? role = freezed,
+    Object? contributionInstance = freezed,
+    Object? correspondingContact = freezed,
+    Object? correspondingContactElement = freezed,
+    Object? listOrder = freezed,
+    Object? listOrderElement = freezed,
+  }) {
+    return _then(_$_CitationEntry(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
+      initials: initials == freezed
+          ? _value.initials
+          : initials // ignore: cast_nullable_to_non_nullable
+              as String?,
+      initialsElement: initialsElement == freezed
+          ? _value.initialsElement
+          : initialsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      collectiveName: collectiveName == freezed
+          ? _value.collectiveName
+          : collectiveName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      collectiveNameElement: collectiveNameElement == freezed
+          ? _value.collectiveNameElement
+          : collectiveNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      affiliationInfo: affiliationInfo == freezed
+          ? _value._affiliationInfo
+          : affiliationInfo // ignore: cast_nullable_to_non_nullable
+              as List<CitationAffiliationInfo>?,
+      address: address == freezed
+          ? _value._address
+          : address // ignore: cast_nullable_to_non_nullable
+              as List<Address>?,
+      telecom: telecom == freezed
+          ? _value._telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      contributionType: contributionType == freezed
+          ? _value._contributionType
+          : contributionType // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      contributionInstance: contributionInstance == freezed
+          ? _value._contributionInstance
+          : contributionInstance // ignore: cast_nullable_to_non_nullable
+              as List<CitationContributionInstance>?,
+      correspondingContact: correspondingContact == freezed
+          ? _value.correspondingContact
+          : correspondingContact // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      correspondingContactElement: correspondingContactElement == freezed
+          ? _value.correspondingContactElement
+          : correspondingContactElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      listOrder: listOrder == freezed
+          ? _value.listOrder
+          : listOrder // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      listOrderElement: listOrderElement == freezed
+          ? _value.listOrderElement
+          : listOrderElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationEntry extends _CitationEntry {
+  _$_CitationEntry(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.name,
+      this.initials,
+      @JsonKey(name: '_initials') this.initialsElement,
+      this.collectiveName,
+      @JsonKey(name: '_collectiveName') this.collectiveNameElement,
+      final List<Identifier>? identifier,
+      final List<CitationAffiliationInfo>? affiliationInfo,
+      final List<Address>? address,
+      final List<ContactPoint>? telecom,
+      final List<CodeableConcept>? contributionType,
+      this.role,
+      final List<CitationContributionInstance>? contributionInstance,
+      this.correspondingContact,
+      @JsonKey(name: '_correspondingContact') this.correspondingContactElement,
+      this.listOrder,
+      @JsonKey(name: '_listOrder') this.listOrderElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _affiliationInfo = affiliationInfo,
+        _address = address,
+        _telecom = telecom,
+        _contributionType = contributionType,
+        _contributionInstance = contributionInstance,
+        super._();
+
+  factory _$_CitationEntry.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationEntryFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final HumanName? name;
+  @override
+  final String? initials;
+  @override
+  @JsonKey(name: '_initials')
+  final Element? initialsElement;
+  @override
+  final String? collectiveName;
+  @override
+  @JsonKey(name: '_collectiveName')
+  final Element? collectiveNameElement;
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CitationAffiliationInfo>? _affiliationInfo;
+  @override
+  List<CitationAffiliationInfo>? get affiliationInfo {
+    final value = _affiliationInfo;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Address>? _address;
+  @override
+  List<Address>? get address {
+    final value = _address;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactPoint>? _telecom;
+  @override
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _contributionType;
+  @override
+  List<CodeableConcept>? get contributionType {
+    final value = _contributionType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? role;
+  final List<CitationContributionInstance>? _contributionInstance;
+  @override
+  List<CitationContributionInstance>? get contributionInstance {
+    final value = _contributionInstance;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Boolean? correspondingContact;
+  @override
+  @JsonKey(name: '_correspondingContact')
+  final Element? correspondingContactElement;
+  @override
+  final PositiveInt? listOrder;
+  @override
+  @JsonKey(name: '_listOrder')
+  final Element? listOrderElement;
+
+  @override
+  String toString() {
+    return 'CitationEntry(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, initials: $initials, initialsElement: $initialsElement, collectiveName: $collectiveName, collectiveNameElement: $collectiveNameElement, identifier: $identifier, affiliationInfo: $affiliationInfo, address: $address, telecom: $telecom, contributionType: $contributionType, role: $role, contributionInstance: $contributionInstance, correspondingContact: $correspondingContact, correspondingContactElement: $correspondingContactElement, listOrder: $listOrder, listOrderElement: $listOrderElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationEntry &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.initials, initials) &&
+            const DeepCollectionEquality()
+                .equals(other.initialsElement, initialsElement) &&
+            const DeepCollectionEquality()
+                .equals(other.collectiveName, collectiveName) &&
+            const DeepCollectionEquality()
+                .equals(other.collectiveNameElement, collectiveNameElement) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality()
+                .equals(other._affiliationInfo, _affiliationInfo) &&
+            const DeepCollectionEquality().equals(other._address, _address) &&
+            const DeepCollectionEquality().equals(other._telecom, _telecom) &&
+            const DeepCollectionEquality()
+                .equals(other._contributionType, _contributionType) &&
+            const DeepCollectionEquality().equals(other.role, role) &&
+            const DeepCollectionEquality()
+                .equals(other._contributionInstance, _contributionInstance) &&
+            const DeepCollectionEquality()
+                .equals(other.correspondingContact, correspondingContact) &&
+            const DeepCollectionEquality().equals(
+                other.correspondingContactElement,
+                correspondingContactElement) &&
+            const DeepCollectionEquality().equals(other.listOrder, listOrder) &&
+            const DeepCollectionEquality()
+                .equals(other.listOrderElement, listOrderElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(initials),
+        const DeepCollectionEquality().hash(initialsElement),
+        const DeepCollectionEquality().hash(collectiveName),
+        const DeepCollectionEquality().hash(collectiveNameElement),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(_affiliationInfo),
+        const DeepCollectionEquality().hash(_address),
+        const DeepCollectionEquality().hash(_telecom),
+        const DeepCollectionEquality().hash(_contributionType),
+        const DeepCollectionEquality().hash(role),
+        const DeepCollectionEquality().hash(_contributionInstance),
+        const DeepCollectionEquality().hash(correspondingContact),
+        const DeepCollectionEquality().hash(correspondingContactElement),
+        const DeepCollectionEquality().hash(listOrder),
+        const DeepCollectionEquality().hash(listOrderElement)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationEntryCopyWith<_$_CitationEntry> get copyWith =>
+      __$$_CitationEntryCopyWithImpl<_$_CitationEntry>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationEntryToJson(this);
+  }
+}
+
+abstract class _CitationEntry extends CitationEntry {
+  factory _CitationEntry(
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final HumanName? name,
+      final String? initials,
+      @JsonKey(name: '_initials')
+          final Element? initialsElement,
+      final String? collectiveName,
+      @JsonKey(name: '_collectiveName')
+          final Element? collectiveNameElement,
+      final List<Identifier>? identifier,
+      final List<CitationAffiliationInfo>? affiliationInfo,
+      final List<Address>? address,
+      final List<ContactPoint>? telecom,
+      final List<CodeableConcept>? contributionType,
+      final CodeableConcept? role,
+      final List<CitationContributionInstance>? contributionInstance,
+      final Boolean? correspondingContact,
+      @JsonKey(name: '_correspondingContact')
+          final Element? correspondingContactElement,
+      final PositiveInt? listOrder,
+      @JsonKey(name: '_listOrder')
+          final Element? listOrderElement}) = _$_CitationEntry;
+  _CitationEntry._() : super._();
+
+  factory _CitationEntry.fromJson(Map<String, dynamic> json) =
+      _$_CitationEntry.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  HumanName? get name => throw _privateConstructorUsedError;
+  @override
+  String? get initials => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_initials')
+  Element? get initialsElement => throw _privateConstructorUsedError;
+  @override
+  String? get collectiveName => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_collectiveName')
+  Element? get collectiveNameElement => throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  List<CitationAffiliationInfo>? get affiliationInfo =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Address>? get address => throw _privateConstructorUsedError;
+  @override
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get contributionType =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get role => throw _privateConstructorUsedError;
+  @override
+  List<CitationContributionInstance>? get contributionInstance =>
+      throw _privateConstructorUsedError;
+  @override
+  Boolean? get correspondingContact => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_correspondingContact')
+  Element? get correspondingContactElement =>
+      throw _privateConstructorUsedError;
+  @override
+  PositiveInt? get listOrder => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_listOrder')
+  Element? get listOrderElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationEntryCopyWith<_$_CitationEntry> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CitationAffiliationInfo _$CitationAffiliationInfoFromJson(
+    Map<String, dynamic> json) {
+  return _CitationAffiliationInfo.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationAffiliationInfo {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get affiliation => throw _privateConstructorUsedError;
+  @JsonKey(name: '_affiliation')
+  Element? get affiliationElement => throw _privateConstructorUsedError;
+  String? get role => throw _privateConstructorUsedError;
+  @JsonKey(name: '_role')
+  Element? get roleElement => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationAffiliationInfoCopyWith<CitationAffiliationInfo> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationAffiliationInfoCopyWith<$Res> {
+  factory $CitationAffiliationInfoCopyWith(CitationAffiliationInfo value,
+          $Res Function(CitationAffiliationInfo) then) =
+      _$CitationAffiliationInfoCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? affiliation,
+      @JsonKey(name: '_affiliation') Element? affiliationElement,
+      String? role,
+      @JsonKey(name: '_role') Element? roleElement,
+      List<Identifier>? identifier});
+
+  $ElementCopyWith<$Res>? get affiliationElement;
+  $ElementCopyWith<$Res>? get roleElement;
+}
+
+/// @nodoc
+class _$CitationAffiliationInfoCopyWithImpl<$Res>
+    implements $CitationAffiliationInfoCopyWith<$Res> {
+  _$CitationAffiliationInfoCopyWithImpl(this._value, this._then);
+
+  final CitationAffiliationInfo _value;
+  // ignore: unused_field
+  final $Res Function(CitationAffiliationInfo) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? affiliation = freezed,
+    Object? affiliationElement = freezed,
+    Object? role = freezed,
+    Object? roleElement = freezed,
+    Object? identifier = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      affiliation: affiliation == freezed
+          ? _value.affiliation
+          : affiliation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      affiliationElement: affiliationElement == freezed
+          ? _value.affiliationElement
+          : affiliationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roleElement: roleElement == freezed
+          ? _value.roleElement
+          : roleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get affiliationElement {
+    if (_value.affiliationElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.affiliationElement!, (value) {
+      return _then(_value.copyWith(affiliationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get roleElement {
+    if (_value.roleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.roleElement!, (value) {
+      return _then(_value.copyWith(roleElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationAffiliationInfoCopyWith<$Res>
+    implements $CitationAffiliationInfoCopyWith<$Res> {
+  factory _$$_CitationAffiliationInfoCopyWith(_$_CitationAffiliationInfo value,
+          $Res Function(_$_CitationAffiliationInfo) then) =
+      __$$_CitationAffiliationInfoCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? affiliation,
+      @JsonKey(name: '_affiliation') Element? affiliationElement,
+      String? role,
+      @JsonKey(name: '_role') Element? roleElement,
+      List<Identifier>? identifier});
+
+  @override
+  $ElementCopyWith<$Res>? get affiliationElement;
+  @override
+  $ElementCopyWith<$Res>? get roleElement;
+}
+
+/// @nodoc
+class __$$_CitationAffiliationInfoCopyWithImpl<$Res>
+    extends _$CitationAffiliationInfoCopyWithImpl<$Res>
+    implements _$$_CitationAffiliationInfoCopyWith<$Res> {
+  __$$_CitationAffiliationInfoCopyWithImpl(_$_CitationAffiliationInfo _value,
+      $Res Function(_$_CitationAffiliationInfo) _then)
+      : super(_value, (v) => _then(v as _$_CitationAffiliationInfo));
+
+  @override
+  _$_CitationAffiliationInfo get _value =>
+      super._value as _$_CitationAffiliationInfo;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? affiliation = freezed,
+    Object? affiliationElement = freezed,
+    Object? role = freezed,
+    Object? roleElement = freezed,
+    Object? identifier = freezed,
+  }) {
+    return _then(_$_CitationAffiliationInfo(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      affiliation: affiliation == freezed
+          ? _value.affiliation
+          : affiliation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      affiliationElement: affiliationElement == freezed
+          ? _value.affiliationElement
+          : affiliationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as String?,
+      roleElement: roleElement == freezed
+          ? _value.roleElement
+          : roleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
+  _$_CitationAffiliationInfo(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.affiliation,
+      @JsonKey(name: '_affiliation') this.affiliationElement,
+      this.role,
+      @JsonKey(name: '_role') this.roleElement,
+      final List<Identifier>? identifier})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        super._();
+
+  factory _$_CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationAffiliationInfoFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? affiliation;
+  @override
+  @JsonKey(name: '_affiliation')
+  final Element? affiliationElement;
+  @override
+  final String? role;
+  @override
+  @JsonKey(name: '_role')
+  final Element? roleElement;
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'CitationAffiliationInfo(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, affiliation: $affiliation, affiliationElement: $affiliationElement, role: $role, roleElement: $roleElement, identifier: $identifier)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationAffiliationInfo &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.affiliation, affiliation) &&
+            const DeepCollectionEquality()
+                .equals(other.affiliationElement, affiliationElement) &&
+            const DeepCollectionEquality().equals(other.role, role) &&
+            const DeepCollectionEquality()
+                .equals(other.roleElement, roleElement) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(affiliation),
+      const DeepCollectionEquality().hash(affiliationElement),
+      const DeepCollectionEquality().hash(role),
+      const DeepCollectionEquality().hash(roleElement),
+      const DeepCollectionEquality().hash(_identifier));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationAffiliationInfoCopyWith<_$_CitationAffiliationInfo>
+      get copyWith =>
+          __$$_CitationAffiliationInfoCopyWithImpl<_$_CitationAffiliationInfo>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationAffiliationInfoToJson(this);
+  }
+}
+
+abstract class _CitationAffiliationInfo extends CitationAffiliationInfo {
+  factory _CitationAffiliationInfo(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? affiliation,
+      @JsonKey(name: '_affiliation') final Element? affiliationElement,
+      final String? role,
+      @JsonKey(name: '_role') final Element? roleElement,
+      final List<Identifier>? identifier}) = _$_CitationAffiliationInfo;
+  _CitationAffiliationInfo._() : super._();
+
+  factory _CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =
+      _$_CitationAffiliationInfo.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  String? get affiliation => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_affiliation')
+  Element? get affiliationElement => throw _privateConstructorUsedError;
+  @override
+  String? get role => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_role')
+  Element? get roleElement => throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationAffiliationInfoCopyWith<_$_CitationAffiliationInfo>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+CitationContributionInstance _$CitationContributionInstanceFromJson(
+    Map<String, dynamic> json) {
+  return _CitationContributionInstance.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationContributionInstance {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
+  @JsonKey(name: '_time')
+  Element? get timeElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationContributionInstanceCopyWith<CitationContributionInstance>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationContributionInstanceCopyWith<$Res> {
+  factory $CitationContributionInstanceCopyWith(
+          CitationContributionInstance value,
+          $Res Function(CitationContributionInstance) then) =
+      _$CitationContributionInstanceCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      FhirDateTime? time,
+      @JsonKey(name: '_time') Element? timeElement});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $ElementCopyWith<$Res>? get timeElement;
+}
+
+/// @nodoc
+class _$CitationContributionInstanceCopyWithImpl<$Res>
+    implements $CitationContributionInstanceCopyWith<$Res> {
+  _$CitationContributionInstanceCopyWithImpl(this._value, this._then);
+
+  final CitationContributionInstance _value;
+  // ignore: unused_field
+  final $Res Function(CitationContributionInstance) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? time = freezed,
+    Object? timeElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      time: time == freezed
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      timeElement: timeElement == freezed
+          ? _value.timeElement
+          : timeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get timeElement {
+    if (_value.timeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.timeElement!, (value) {
+      return _then(_value.copyWith(timeElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationContributionInstanceCopyWith<$Res>
+    implements $CitationContributionInstanceCopyWith<$Res> {
+  factory _$$_CitationContributionInstanceCopyWith(
+          _$_CitationContributionInstance value,
+          $Res Function(_$_CitationContributionInstance) then) =
+      __$$_CitationContributionInstanceCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      FhirDateTime? time,
+      @JsonKey(name: '_time') Element? timeElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ElementCopyWith<$Res>? get timeElement;
+}
+
+/// @nodoc
+class __$$_CitationContributionInstanceCopyWithImpl<$Res>
+    extends _$CitationContributionInstanceCopyWithImpl<$Res>
+    implements _$$_CitationContributionInstanceCopyWith<$Res> {
+  __$$_CitationContributionInstanceCopyWithImpl(
+      _$_CitationContributionInstance _value,
+      $Res Function(_$_CitationContributionInstance) _then)
+      : super(_value, (v) => _then(v as _$_CitationContributionInstance));
+
+  @override
+  _$_CitationContributionInstance get _value =>
+      super._value as _$_CitationContributionInstance;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? time = freezed,
+    Object? timeElement = freezed,
+  }) {
+    return _then(_$_CitationContributionInstance(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      time: time == freezed
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      timeElement: timeElement == freezed
+          ? _value.timeElement
+          : timeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationContributionInstance extends _CitationContributionInstance {
+  _$_CitationContributionInstance(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
+      this.time,
+      @JsonKey(name: '_time') this.timeElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationContributionInstance.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationContributionInstanceFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept type;
+  @override
+  final FhirDateTime? time;
+  @override
+  @JsonKey(name: '_time')
+  final Element? timeElement;
+
+  @override
+  String toString() {
+    return 'CitationContributionInstance(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, time: $time, timeElement: $timeElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationContributionInstance &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.time, time) &&
+            const DeepCollectionEquality()
+                .equals(other.timeElement, timeElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(time),
+      const DeepCollectionEquality().hash(timeElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationContributionInstanceCopyWith<_$_CitationContributionInstance>
+      get copyWith => __$$_CitationContributionInstanceCopyWithImpl<
+          _$_CitationContributionInstance>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationContributionInstanceToJson(this);
+  }
+}
+
+abstract class _CitationContributionInstance
+    extends CitationContributionInstance {
+  factory _CitationContributionInstance(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          final FhirDateTime? time,
+          @JsonKey(name: '_time') final Element? timeElement}) =
+      _$_CitationContributionInstance;
+  _CitationContributionInstance._() : super._();
+
+  factory _CitationContributionInstance.fromJson(Map<String, dynamic> json) =
+      _$_CitationContributionInstance.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get time => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_time')
+  Element? get timeElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationContributionInstanceCopyWith<_$_CitationContributionInstance>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+CitationSummary1 _$CitationSummary1FromJson(Map<String, dynamic> json) {
+  return _CitationSummary1.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationSummary1 {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get style => throw _privateConstructorUsedError;
+  CodeableConcept? get source => throw _privateConstructorUsedError;
+  Markdown? get value => throw _privateConstructorUsedError;
+  @JsonKey(name: '_value')
+  Element? get valueElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationSummary1CopyWith<CitationSummary1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationSummary1CopyWith<$Res> {
+  factory $CitationSummary1CopyWith(
+          CitationSummary1 value, $Res Function(CitationSummary1) then) =
+      _$CitationSummary1CopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      CodeableConcept? style,
+      CodeableConcept? source,
+      Markdown? value,
+      @JsonKey(name: '_value') Element? valueElement});
+
+  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res>? get style;
+  $CodeableConceptCopyWith<$Res>? get source;
+  $ElementCopyWith<$Res>? get valueElement;
+}
+
+/// @nodoc
+class _$CitationSummary1CopyWithImpl<$Res>
+    implements $CitationSummary1CopyWith<$Res> {
+  _$CitationSummary1CopyWithImpl(this._value, this._then);
+
+  final CitationSummary1 _value;
+  // ignore: unused_field
+  final $Res Function(CitationSummary1) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? style = freezed,
+    Object? source = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      style: style == freezed
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get style {
+    if (_value.style == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.style!, (value) {
+      return _then(_value.copyWith(style: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get source {
+    if (_value.source == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.source!, (value) {
+      return _then(_value.copyWith(source: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueElement!, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationSummary1CopyWith<$Res>
+    implements $CitationSummary1CopyWith<$Res> {
+  factory _$$_CitationSummary1CopyWith(
+          _$_CitationSummary1 value, $Res Function(_$_CitationSummary1) then) =
+      __$$_CitationSummary1CopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      CodeableConcept? style,
+      CodeableConcept? source,
+      Markdown? value,
+      @JsonKey(name: '_value') Element? valueElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $CodeableConceptCopyWith<$Res>? get style;
+  @override
+  $CodeableConceptCopyWith<$Res>? get source;
+  @override
+  $ElementCopyWith<$Res>? get valueElement;
+}
+
+/// @nodoc
+class __$$_CitationSummary1CopyWithImpl<$Res>
+    extends _$CitationSummary1CopyWithImpl<$Res>
+    implements _$$_CitationSummary1CopyWith<$Res> {
+  __$$_CitationSummary1CopyWithImpl(
+      _$_CitationSummary1 _value, $Res Function(_$_CitationSummary1) _then)
+      : super(_value, (v) => _then(v as _$_CitationSummary1));
+
+  @override
+  _$_CitationSummary1 get _value => super._value as _$_CitationSummary1;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? style = freezed,
+    Object? source = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+  }) {
+    return _then(_$_CitationSummary1(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      style: style == freezed
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationSummary1 extends _CitationSummary1 {
+  _$_CitationSummary1(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      this.style,
+      this.source,
+      this.value,
+      @JsonKey(name: '_value') this.valueElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationSummary1.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationSummary1FromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? type;
+  @override
+  final CodeableConcept? style;
+  @override
+  final CodeableConcept? source;
+  @override
+  final Markdown? value;
+  @override
+  @JsonKey(name: '_value')
+  final Element? valueElement;
+
+  @override
+  String toString() {
+    return 'CitationSummary1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, style: $style, source: $source, value: $value, valueElement: $valueElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationSummary1 &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.style, style) &&
+            const DeepCollectionEquality().equals(other.source, source) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
+            const DeepCollectionEquality()
+                .equals(other.valueElement, valueElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(style),
+      const DeepCollectionEquality().hash(source),
+      const DeepCollectionEquality().hash(value),
+      const DeepCollectionEquality().hash(valueElement));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CitationSummary1CopyWith<_$_CitationSummary1> get copyWith =>
+      __$$_CitationSummary1CopyWithImpl<_$_CitationSummary1>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationSummary1ToJson(this);
+  }
+}
+
+abstract class _CitationSummary1 extends CitationSummary1 {
+  factory _CitationSummary1(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final CodeableConcept? style,
+          final CodeableConcept? source,
+          final Markdown? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
+      _$_CitationSummary1;
+  _CitationSummary1._() : super._();
+
+  factory _CitationSummary1.fromJson(Map<String, dynamic> json) =
+      _$_CitationSummary1.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get style => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get source => throw _privateConstructorUsedError;
+  @override
+  Markdown? get value => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_value')
+  Element? get valueElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationSummary1CopyWith<_$_CitationSummary1> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
@@ -4314,7 +10899,7 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
 mixin _$Evidence {
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -4335,25 +10920,26 @@ mixin _$Evidence {
   String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  String? get shortTitle => throw _privateConstructorUsedError;
-  @JsonKey(name: '_shortTitle')
-  Element? get shortTitleElement => throw _privateConstructorUsedError;
-  String? get subtitle => throw _privateConstructorUsedError;
-  @JsonKey(name: '_subtitle')
-  Element? get subtitleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-  EvidenceStatus? get status => throw _privateConstructorUsedError;
+  Reference? get citeAsReference => throw _privateConstructorUsedError;
+  Markdown? get citAsMarkdown => throw _privateConstructorUsedError;
+  @JsonKey(name: '_citeAsMarkdown')
+  Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  Date? get approvalDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
@@ -4362,17 +10948,10 @@ mixin _$Evidence {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
-  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  Date? get approvalDate => throw _privateConstructorUsedError;
-  @JsonKey(name: '_approvalDate')
-  Element? get approvalDateElement => throw _privateConstructorUsedError;
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
-  @JsonKey(name: '_lastReviewDate')
-  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
@@ -4398,7 +10977,7 @@ abstract class $EvidenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4418,25 +10997,26 @@ abstract class $EvidenceCopyWith<$Res> {
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      String? shortTitle,
-      @JsonKey(name: '_shortTitle')
-          Element? shortTitleElement,
-      String? subtitle,
-      @JsonKey(name: '_subtitle')
-          Element? subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          EvidenceStatus? status,
+      Reference? citeAsReference,
+      Markdown? citAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
+      List<UsageContext>? useContext,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
@@ -4445,17 +11025,10 @@ abstract class $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
-      Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -4473,17 +11046,16 @@ abstract class $EvidenceCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ElementCopyWith<$Res>? get versionElement;
-  $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
-  $ElementCopyWith<$Res>? get shortTitleElement;
-  $ElementCopyWith<$Res>? get subtitleElement;
+  $ReferenceCopyWith<$Res>? get citeAsReference;
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement;
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get dateElement;
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
   $ElementCopyWith<$Res>? get publisherElement;
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get copyrightElement;
-  $ElementCopyWith<$Res>? get approvalDateElement;
-  $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
   $ReferenceCopyWith<$Res> get exposureBackground;
 }
@@ -4514,32 +11086,29 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
-    Object? name = freezed,
-    Object? nameElement = freezed,
     Object? title = freezed,
     Object? titleElement = freezed,
-    Object? shortTitle = freezed,
-    Object? shortTitleElement = freezed,
-    Object? subtitle = freezed,
-    Object? subtitleElement = freezed,
+    Object? citeAsReference = freezed,
+    Object? citAsMarkdown = freezed,
+    Object? citeAsMarkdownElement = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
+    Object? useContext = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
     Object? publisher = freezed,
     Object? publisherElement = freezed,
     Object? contact = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? note = freezed,
-    Object? useContext = freezed,
     Object? jurisdiction = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
-    Object? approvalDate = freezed,
-    Object? approvalDateElement = freezed,
-    Object? lastReviewDate = freezed,
-    Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
     Object? topic = freezed,
     Object? author = freezed,
@@ -4559,7 +11128,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4616,14 +11185,6 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameElement: nameElement == freezed
-          ? _value.nameElement
-          : nameElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -4632,26 +11193,22 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      shortTitle: shortTitle == freezed
-          ? _value.shortTitle
-          : shortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      shortTitleElement: shortTitleElement == freezed
-          ? _value.shortTitleElement
-          : shortTitleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      subtitle: subtitle == freezed
-          ? _value.subtitle
-          : subtitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      subtitleElement: subtitleElement == freezed
-          ? _value.subtitleElement
-          : subtitleElement // ignore: cast_nullable_to_non_nullable
+      citeAsReference: citeAsReference == freezed
+          ? _value.citeAsReference
+          : citeAsReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      citAsMarkdown: citAsMarkdown == freezed
+          ? _value.citAsMarkdown
+          : citAsMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      citeAsMarkdownElement: citeAsMarkdownElement == freezed
+          ? _value.citeAsMarkdownElement
+          : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EvidenceStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4663,6 +11220,26 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: useContext == freezed
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      approvalDate: approvalDate == freezed
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: lastReviewDate == freezed
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       publisher: publisher == freezed
           ? _value.publisher
@@ -4688,10 +11265,6 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      useContext: useContext == freezed
-          ? _value.useContext
-          : useContext // ignore: cast_nullable_to_non_nullable
-              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
@@ -4703,22 +11276,6 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      approvalDate: approvalDate == freezed
-          ? _value.approvalDate
-          : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      lastReviewDate: lastReviewDate == freezed
-          ? _value.lastReviewDate
-          : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
@@ -4830,17 +11387,6 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res>? get nameElement {
-    if (_value.nameElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res>? get titleElement {
     if (_value.titleElement == null) {
       return null;
@@ -4852,24 +11398,24 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res>? get shortTitleElement {
-    if (_value.shortTitleElement == null) {
+  $ReferenceCopyWith<$Res>? get citeAsReference {
+    if (_value.citeAsReference == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.shortTitleElement!, (value) {
-      return _then(_value.copyWith(shortTitleElement: value));
+    return $ReferenceCopyWith<$Res>(_value.citeAsReference!, (value) {
+      return _then(_value.copyWith(citeAsReference: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res>? get subtitleElement {
-    if (_value.subtitleElement == null) {
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement {
+    if (_value.citeAsMarkdownElement == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.subtitleElement!, (value) {
-      return _then(_value.copyWith(subtitleElement: value));
+    return $ElementCopyWith<$Res>(_value.citeAsMarkdownElement!, (value) {
+      return _then(_value.copyWith(citeAsMarkdownElement: value));
     });
   }
 
@@ -4892,6 +11438,28 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
 
     return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
       return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.approvalDateElement!, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement!, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
     });
   }
 
@@ -4929,28 +11497,6 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res>? get approvalDateElement {
-    if (_value.approvalDateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.approvalDateElement!, (value) {
-      return _then(_value.copyWith(approvalDateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get lastReviewDateElement {
-    if (_value.lastReviewDateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.lastReviewDateElement!, (value) {
-      return _then(_value.copyWith(lastReviewDateElement: value));
-    });
-  }
-
-  @override
   $PeriodCopyWith<$Res>? get effectivePeriod {
     if (_value.effectivePeriod == null) {
       return null;
@@ -4978,7 +11524,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4998,25 +11544,26 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      String? shortTitle,
-      @JsonKey(name: '_shortTitle')
-          Element? shortTitleElement,
-      String? subtitle,
-      @JsonKey(name: '_subtitle')
-          Element? subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          EvidenceStatus? status,
+      Reference? citeAsReference,
+      Markdown? citAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
+      List<UsageContext>? useContext,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
@@ -5025,17 +11572,10 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
-      Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -5060,27 +11600,25 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get versionElement;
   @override
-  $ElementCopyWith<$Res>? get nameElement;
-  @override
   $ElementCopyWith<$Res>? get titleElement;
   @override
-  $ElementCopyWith<$Res>? get shortTitleElement;
+  $ReferenceCopyWith<$Res>? get citeAsReference;
   @override
-  $ElementCopyWith<$Res>? get subtitleElement;
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement;
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
   $ElementCopyWith<$Res>? get dateElement;
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
   @override
   $ElementCopyWith<$Res>? get publisherElement;
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
-  @override
-  $ElementCopyWith<$Res>? get approvalDateElement;
-  @override
-  $ElementCopyWith<$Res>? get lastReviewDateElement;
   @override
   $PeriodCopyWith<$Res>? get effectivePeriod;
   @override
@@ -5115,32 +11653,29 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
-    Object? name = freezed,
-    Object? nameElement = freezed,
     Object? title = freezed,
     Object? titleElement = freezed,
-    Object? shortTitle = freezed,
-    Object? shortTitleElement = freezed,
-    Object? subtitle = freezed,
-    Object? subtitleElement = freezed,
+    Object? citeAsReference = freezed,
+    Object? citAsMarkdown = freezed,
+    Object? citeAsMarkdownElement = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
+    Object? useContext = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
     Object? publisher = freezed,
     Object? publisherElement = freezed,
     Object? contact = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? note = freezed,
-    Object? useContext = freezed,
     Object? jurisdiction = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
-    Object? approvalDate = freezed,
-    Object? approvalDateElement = freezed,
-    Object? lastReviewDate = freezed,
-    Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
     Object? topic = freezed,
     Object? author = freezed,
@@ -5160,7 +11695,7 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5217,14 +11752,6 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameElement: nameElement == freezed
-          ? _value.nameElement
-          : nameElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -5233,26 +11760,22 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      shortTitle: shortTitle == freezed
-          ? _value.shortTitle
-          : shortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      shortTitleElement: shortTitleElement == freezed
-          ? _value.shortTitleElement
-          : shortTitleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      subtitle: subtitle == freezed
-          ? _value.subtitle
-          : subtitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      subtitleElement: subtitleElement == freezed
-          ? _value.subtitleElement
-          : subtitleElement // ignore: cast_nullable_to_non_nullable
+      citeAsReference: citeAsReference == freezed
+          ? _value.citeAsReference
+          : citeAsReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      citAsMarkdown: citAsMarkdown == freezed
+          ? _value.citAsMarkdown
+          : citAsMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      citeAsMarkdownElement: citeAsMarkdownElement == freezed
+          ? _value.citeAsMarkdownElement
+          : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EvidenceStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5264,6 +11787,26 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: useContext == freezed
+          ? _value._useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      approvalDate: approvalDate == freezed
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: lastReviewDate == freezed
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       publisher: publisher == freezed
           ? _value.publisher
@@ -5289,10 +11832,6 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      useContext: useContext == freezed
-          ? _value._useContext
-          : useContext // ignore: cast_nullable_to_non_nullable
-              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value._jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
@@ -5304,22 +11843,6 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      approvalDate: approvalDate == freezed
-          ? _value.approvalDate
-          : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      lastReviewDate: lastReviewDate == freezed
-          ? _value.lastReviewDate
-          : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
@@ -5391,25 +11914,26 @@ class _$_Evidence extends _Evidence {
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
-      this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.shortTitle,
-      @JsonKey(name: '_shortTitle')
-          this.shortTitleElement,
-      this.subtitle,
-      @JsonKey(name: '_subtitle')
-          this.subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          this.status,
+      this.citeAsReference,
+      this.citAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          this.citeAsMarkdownElement,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
+      final List<UsageContext>? useContext,
+      this.approvalDate,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
@@ -5418,17 +11942,10 @@ class _$_Evidence extends _Evidence {
       @JsonKey(name: '_description')
           this.descriptionElement,
       final List<Annotation>? note,
-      final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      this.approvalDate,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
-      this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
       this.effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -5443,9 +11960,9 @@ class _$_Evidence extends _Evidence {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
+        _useContext = useContext,
         _contact = contact,
         _note = note,
-        _useContext = useContext,
         _jurisdiction = jurisdiction,
         _topic = topic,
         _author = author,
@@ -5464,7 +11981,7 @@ class _$_Evidence extends _Evidence {
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -5527,28 +12044,19 @@ class _$_Evidence extends _Evidence {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
-  final String? name;
-  @override
-  @JsonKey(name: '_name')
-  final Element? nameElement;
-  @override
   final String? title;
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final String? shortTitle;
+  final Reference? citeAsReference;
   @override
-  @JsonKey(name: '_shortTitle')
-  final Element? shortTitleElement;
+  final Markdown? citAsMarkdown;
   @override
-  final String? subtitle;
+  @JsonKey(name: '_citeAsMarkdown')
+  final Element? citeAsMarkdownElement;
   @override
-  @JsonKey(name: '_subtitle')
-  final Element? subtitleElement;
-  @override
-  @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-  final EvidenceStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -5557,6 +12065,25 @@ class _$_Evidence extends _Evidence {
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+  final List<UsageContext>? _useContext;
+  @override
+  List<UsageContext>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Date? approvalDate;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element? approvalDateElement;
+  @override
+  final Date? lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element? lastReviewDateElement;
   @override
   final String? publisher;
   @override
@@ -5585,15 +12112,6 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<UsageContext>? _useContext;
-  @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   final List<CodeableConcept>? _jurisdiction;
   @override
   List<CodeableConcept>? get jurisdiction {
@@ -5608,16 +12126,6 @@ class _$_Evidence extends _Evidence {
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
-  @override
-  final Date? approvalDate;
-  @override
-  @JsonKey(name: '_approvalDate')
-  final Element? approvalDateElement;
-  @override
-  final Date? lastReviewDate;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
   final List<CodeableConcept>? _topic;
@@ -5696,7 +12204,7 @@ class _$_Evidence extends _Evidence {
 
   @override
   String toString() {
-    return 'Evidence(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, note: $note, useContext: $useContext, jurisdiction: $jurisdiction, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, exposureBackground: $exposureBackground, exposureVariant: $exposureVariant, outcome: $outcome)';
+    return 'Evidence(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, title: $title, titleElement: $titleElement, citeAsReference: $citeAsReference, citAsMarkdown: $citAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, useContext: $useContext, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, note: $note, jurisdiction: $jurisdiction, copyright: $copyright, copyrightElement: $copyrightElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, exposureBackground: $exposureBackground, exposureVariant: $exposureVariant, outcome: $outcome)';
   }
 
   @override
@@ -5730,25 +12238,31 @@ class _$_Evidence extends _Evidence {
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality()
                 .equals(other.versionElement, versionElement) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.nameElement, nameElement) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality()
                 .equals(other.titleElement, titleElement) &&
             const DeepCollectionEquality()
-                .equals(other.shortTitle, shortTitle) &&
+                .equals(other.citeAsReference, citeAsReference) &&
             const DeepCollectionEquality()
-                .equals(other.shortTitleElement, shortTitleElement) &&
-            const DeepCollectionEquality().equals(other.subtitle, subtitle) &&
+                .equals(other.citAsMarkdown, citAsMarkdown) &&
             const DeepCollectionEquality()
-                .equals(other.subtitleElement, subtitleElement) &&
+                .equals(other.citeAsMarkdownElement, citeAsMarkdownElement) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
+            const DeepCollectionEquality()
+                .equals(other._useContext, _useContext) &&
+            const DeepCollectionEquality()
+                .equals(other.approvalDate, approvalDate) &&
+            const DeepCollectionEquality()
+                .equals(other.approvalDateElement, approvalDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.lastReviewDate, lastReviewDate) &&
+            const DeepCollectionEquality()
+                .equals(other.lastReviewDateElement, lastReviewDateElement) &&
             const DeepCollectionEquality().equals(other.publisher, publisher) &&
             const DeepCollectionEquality()
                 .equals(other.publisherElement, publisherElement) &&
@@ -5759,20 +12273,10 @@ class _$_Evidence extends _Evidence {
                 .equals(other.descriptionElement, descriptionElement) &&
             const DeepCollectionEquality().equals(other._note, _note) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
-            const DeepCollectionEquality()
                 .equals(other._jurisdiction, _jurisdiction) &&
             const DeepCollectionEquality().equals(other.copyright, copyright) &&
             const DeepCollectionEquality()
                 .equals(other.copyrightElement, copyrightElement) &&
-            const DeepCollectionEquality()
-                .equals(other.approvalDate, approvalDate) &&
-            const DeepCollectionEquality()
-                .equals(other.approvalDateElement, approvalDateElement) &&
-            const DeepCollectionEquality()
-                .equals(other.lastReviewDate, lastReviewDate) &&
-            const DeepCollectionEquality()
-                .equals(other.lastReviewDateElement, lastReviewDateElement) &&
             const DeepCollectionEquality()
                 .equals(other.effectivePeriod, effectivePeriod) &&
             const DeepCollectionEquality().equals(other._topic, _topic) &&
@@ -5809,32 +12313,29 @@ class _$_Evidence extends _Evidence {
         const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(version),
         const DeepCollectionEquality().hash(versionElement),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(nameElement),
         const DeepCollectionEquality().hash(title),
         const DeepCollectionEquality().hash(titleElement),
-        const DeepCollectionEquality().hash(shortTitle),
-        const DeepCollectionEquality().hash(shortTitleElement),
-        const DeepCollectionEquality().hash(subtitle),
-        const DeepCollectionEquality().hash(subtitleElement),
+        const DeepCollectionEquality().hash(citeAsReference),
+        const DeepCollectionEquality().hash(citAsMarkdown),
+        const DeepCollectionEquality().hash(citeAsMarkdownElement),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
+        const DeepCollectionEquality().hash(_useContext),
+        const DeepCollectionEquality().hash(approvalDate),
+        const DeepCollectionEquality().hash(approvalDateElement),
+        const DeepCollectionEquality().hash(lastReviewDate),
+        const DeepCollectionEquality().hash(lastReviewDateElement),
         const DeepCollectionEquality().hash(publisher),
         const DeepCollectionEquality().hash(publisherElement),
         const DeepCollectionEquality().hash(_contact),
         const DeepCollectionEquality().hash(description),
         const DeepCollectionEquality().hash(descriptionElement),
         const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_useContext),
         const DeepCollectionEquality().hash(_jurisdiction),
         const DeepCollectionEquality().hash(copyright),
         const DeepCollectionEquality().hash(copyrightElement),
-        const DeepCollectionEquality().hash(approvalDate),
-        const DeepCollectionEquality().hash(approvalDateElement),
-        const DeepCollectionEquality().hash(lastReviewDate),
-        const DeepCollectionEquality().hash(lastReviewDateElement),
         const DeepCollectionEquality().hash(effectivePeriod),
         const DeepCollectionEquality().hash(_topic),
         const DeepCollectionEquality().hash(_author),
@@ -5862,7 +12363,7 @@ abstract class _Evidence extends Evidence {
   factory _Evidence(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5882,25 +12383,26 @@ abstract class _Evidence extends Evidence {
       final String? version,
       @JsonKey(name: '_version')
           final Element? versionElement,
-      final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final String? shortTitle,
-      @JsonKey(name: '_shortTitle')
-          final Element? shortTitleElement,
-      final String? subtitle,
-      @JsonKey(name: '_subtitle')
-          final Element? subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          final EvidenceStatus? status,
+      final Reference? citeAsReference,
+      final Markdown? citAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          final Element? citeAsMarkdownElement,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
+      final List<UsageContext>? useContext,
+      final Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          final Element? approvalDateElement,
+      final Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          final Element? lastReviewDateElement,
       final String? publisher,
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
@@ -5909,17 +12411,10 @@ abstract class _Evidence extends Evidence {
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<Annotation>? note,
-      final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final Markdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          final Element? approvalDateElement,
-      final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -5938,7 +12433,7 @@ abstract class _Evidence extends Evidence {
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -5974,28 +12469,19 @@ abstract class _Evidence extends Evidence {
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
-  @override
   String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  String? get shortTitle => throw _privateConstructorUsedError;
+  Reference? get citeAsReference => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: '_shortTitle')
-  Element? get shortTitleElement => throw _privateConstructorUsedError;
+  Markdown? get citAsMarkdown => throw _privateConstructorUsedError;
   @override
-  String? get subtitle => throw _privateConstructorUsedError;
+  @JsonKey(name: '_citeAsMarkdown')
+  Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: '_subtitle')
-  Element? get subtitleElement => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-  EvidenceStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -6004,6 +12490,18 @@ abstract class _Evidence extends Evidence {
   @override
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @override
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @override
+  Date? get approvalDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  @override
+  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   @override
   String? get publisher => throw _privateConstructorUsedError;
   @override
@@ -6019,24 +12517,12 @@ abstract class _Evidence extends Evidence {
   @override
   List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
-  @override
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
   Markdown? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  @override
-  Date? get approvalDate => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_approvalDate')
-  Element? get approvalDateElement => throw _privateConstructorUsedError;
-  @override
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   @override
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
@@ -6064,6 +12550,4027 @@ abstract class _Evidence extends Evidence {
       throw _privateConstructorUsedError;
 }
 
+EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) {
+  return _EvidenceReport.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EvidenceReport {
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  @JsonKey(name: '_version')
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: '_name')
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
+  @JsonKey(name: '_publisher')
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  Date? get approvalDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
+  Reference? get citeAsReference => throw _privateConstructorUsedError;
+  Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+  @JsonKey(name: '_citeAsMarkdown')
+  Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  EvidenceReportSubject get subject => throw _privateConstructorUsedError;
+  List<EvidenceReportRelatesTo>? get relatesTo =>
+      throw _privateConstructorUsedError;
+  List<EvidenceReportSection>? get section =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EvidenceReportCopyWith<EvidenceReport> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EvidenceReportCopyWith<$Res> {
+  factory $EvidenceReportCopyWith(
+          EvidenceReport value, $Res Function(EvidenceReport) then) =
+      _$EvidenceReportCopyWithImpl<$Res>;
+  $Res call(
+      {R4ResourceType resourceType,
+      String? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher') Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose') Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      List<Identifier>? relatedIdentifier,
+      Reference? citeAsReference,
+      Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      CodeableConcept? type,
+      List<Annotation>? note,
+      EvidenceReportSubject subject,
+      List<EvidenceReportRelatesTo>? relatesTo,
+      List<EvidenceReportSection>? section});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get urlElement;
+  $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get nameElement;
+  $ElementCopyWith<$Res>? get titleElement;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get experimentalElement;
+  $ElementCopyWith<$Res>? get dateElement;
+  $ElementCopyWith<$Res>? get publisherElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get purposeElement;
+  $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
+  $PeriodCopyWith<$Res>? get effectivePeriod;
+  $ReferenceCopyWith<$Res>? get citeAsReference;
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $EvidenceReportSubjectCopyWith<$Res> get subject;
+}
+
+/// @nodoc
+class _$EvidenceReportCopyWithImpl<$Res>
+    implements $EvidenceReportCopyWith<$Res> {
+  _$EvidenceReportCopyWithImpl(this._value, this._then);
+
+  final EvidenceReport _value;
+  // ignore: unused_field
+  final $Res Function(EvidenceReport) _then;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? identifier = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherElement = freezed,
+    Object? contact = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? useContext = freezed,
+    Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
+    Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
+    Object? relatedIdentifier = freezed,
+    Object? citeAsReference = freezed,
+    Object? citeAsMarkdown = freezed,
+    Object? citeAsMarkdownElement = freezed,
+    Object? type = freezed,
+    Object? note = freezed,
+    Object? subject = freezed,
+    Object? relatesTo = freezed,
+    Object? section = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: experimental == freezed
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: useContext == freezed
+          ? _value.useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      jurisdiction: jurisdiction == freezed
+          ? _value.jurisdiction
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      approvalDate: approvalDate == freezed
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: lastReviewDate == freezed
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      editor: editor == freezed
+          ? _value.editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: reviewer == freezed
+          ? _value.reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: endorser == freezed
+          ? _value.endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      relatedIdentifier: relatedIdentifier == freezed
+          ? _value.relatedIdentifier
+          : relatedIdentifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      citeAsReference: citeAsReference == freezed
+          ? _value.citeAsReference
+          : citeAsReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      citeAsMarkdown: citeAsMarkdown == freezed
+          ? _value.citeAsMarkdown
+          : citeAsMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      citeAsMarkdownElement: citeAsMarkdownElement == freezed
+          ? _value.citeAsMarkdownElement
+          : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as EvidenceReportSubject,
+      relatesTo: relatesTo == freezed
+          ? _value.relatesTo
+          : relatesTo // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceReportRelatesTo>?,
+      section: section == freezed
+          ? _value.section
+          : section // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceReportSection>?,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.experimentalElement!, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publisherElement!, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.purposeElement!, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.approvalDateElement!, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement!, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod!, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get citeAsReference {
+    if (_value.citeAsReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.citeAsReference!, (value) {
+      return _then(_value.copyWith(citeAsReference: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement {
+    if (_value.citeAsMarkdownElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.citeAsMarkdownElement!, (value) {
+      return _then(_value.copyWith(citeAsMarkdownElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $EvidenceReportSubjectCopyWith<$Res> get subject {
+    return $EvidenceReportSubjectCopyWith<$Res>(_value.subject, (value) {
+      return _then(_value.copyWith(subject: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_EvidenceReportCopyWith<$Res>
+    implements $EvidenceReportCopyWith<$Res> {
+  factory _$$_EvidenceReportCopyWith(
+          _$_EvidenceReport value, $Res Function(_$_EvidenceReport) then) =
+      __$$_EvidenceReportCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {R4ResourceType resourceType,
+      String? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher') Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose') Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      List<Identifier>? relatedIdentifier,
+      Reference? citeAsReference,
+      Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      CodeableConcept? type,
+      List<Annotation>? note,
+      EvidenceReportSubject subject,
+      List<EvidenceReportRelatesTo>? relatesTo,
+      List<EvidenceReportSection>? section});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get urlElement;
+  @override
+  $ElementCopyWith<$Res>? get versionElement;
+  @override
+  $ElementCopyWith<$Res>? get nameElement;
+  @override
+  $ElementCopyWith<$Res>? get titleElement;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $ElementCopyWith<$Res>? get experimentalElement;
+  @override
+  $ElementCopyWith<$Res>? get dateElement;
+  @override
+  $ElementCopyWith<$Res>? get publisherElement;
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ElementCopyWith<$Res>? get purposeElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res>? get lastReviewDateElement;
+  @override
+  $PeriodCopyWith<$Res>? get effectivePeriod;
+  @override
+  $ReferenceCopyWith<$Res>? get citeAsReference;
+  @override
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $EvidenceReportSubjectCopyWith<$Res> get subject;
+}
+
+/// @nodoc
+class __$$_EvidenceReportCopyWithImpl<$Res>
+    extends _$EvidenceReportCopyWithImpl<$Res>
+    implements _$$_EvidenceReportCopyWith<$Res> {
+  __$$_EvidenceReportCopyWithImpl(
+      _$_EvidenceReport _value, $Res Function(_$_EvidenceReport) _then)
+      : super(_value, (v) => _then(v as _$_EvidenceReport));
+
+  @override
+  _$_EvidenceReport get _value => super._value as _$_EvidenceReport;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? identifier = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? experimental = freezed,
+    Object? experimentalElement = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? publisher = freezed,
+    Object? publisherElement = freezed,
+    Object? contact = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? useContext = freezed,
+    Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
+    Object? approvalDate = freezed,
+    Object? approvalDateElement = freezed,
+    Object? lastReviewDate = freezed,
+    Object? lastReviewDateElement = freezed,
+    Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
+    Object? relatedIdentifier = freezed,
+    Object? citeAsReference = freezed,
+    Object? citeAsMarkdown = freezed,
+    Object? citeAsMarkdownElement = freezed,
+    Object? type = freezed,
+    Object? note = freezed,
+    Object? subject = freezed,
+    Object? relatesTo = freezed,
+    Object? section = freezed,
+  }) {
+    return _then(_$_EvidenceReport(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      experimental: experimental == freezed
+          ? _value.experimental
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value._contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      useContext: useContext == freezed
+          ? _value._useContext
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      jurisdiction: jurisdiction == freezed
+          ? _value._jurisdiction
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      approvalDate: approvalDate == freezed
+          ? _value.approvalDate
+          : approvalDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastReviewDate: lastReviewDate == freezed
+          ? _value.lastReviewDate
+          : lastReviewDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      topic: topic == freezed
+          ? _value._topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value._author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      editor: editor == freezed
+          ? _value._editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: reviewer == freezed
+          ? _value._reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: endorser == freezed
+          ? _value._endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value._relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
+      relatedIdentifier: relatedIdentifier == freezed
+          ? _value._relatedIdentifier
+          : relatedIdentifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      citeAsReference: citeAsReference == freezed
+          ? _value.citeAsReference
+          : citeAsReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      citeAsMarkdown: citeAsMarkdown == freezed
+          ? _value.citeAsMarkdown
+          : citeAsMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      citeAsMarkdownElement: citeAsMarkdownElement == freezed
+          ? _value.citeAsMarkdownElement
+          : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      note: note == freezed
+          ? _value._note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as EvidenceReportSubject,
+      relatesTo: relatesTo == freezed
+          ? _value._relatesTo
+          : relatesTo // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceReportRelatesTo>?,
+      section: section == freezed
+          ? _value._section
+          : section // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceReportSection>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_EvidenceReport extends _EvidenceReport {
+  _$_EvidenceReport(
+      {this.resourceType = R4ResourceType.EvidenceReport,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.url,
+      @JsonKey(name: '_url') this.urlElement,
+      final List<Identifier>? identifier,
+      this.version,
+      @JsonKey(name: '_version') this.versionElement,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      this.title,
+      @JsonKey(name: '_title') this.titleElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.experimental,
+      @JsonKey(name: '_experimental') this.experimentalElement,
+      this.date,
+      @JsonKey(name: '_date') this.dateElement,
+      this.publisher,
+      @JsonKey(name: '_publisher') this.publisherElement,
+      final List<ContactDetail>? contact,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      this.purpose,
+      @JsonKey(name: '_purpose') this.purposeElement,
+      this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement,
+      this.approvalDate,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      this.lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      this.effectivePeriod,
+      final List<CodeableConcept>? topic,
+      final List<ContactDetail>? author,
+      final List<ContactDetail>? editor,
+      final List<ContactDetail>? reviewer,
+      final List<ContactDetail>? endorser,
+      final List<RelatedArtifact>? relatedArtifact,
+      final List<Identifier>? relatedIdentifier,
+      this.citeAsReference,
+      this.citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown') this.citeAsMarkdownElement,
+      this.type,
+      final List<Annotation>? note,
+      required this.subject,
+      final List<EvidenceReportRelatesTo>? relatesTo,
+      final List<EvidenceReportSection>? section})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _contact = contact,
+        _useContext = useContext,
+        _jurisdiction = jurisdiction,
+        _topic = topic,
+        _author = author,
+        _editor = editor,
+        _reviewer = reviewer,
+        _endorser = endorser,
+        _relatedArtifact = relatedArtifact,
+        _relatedIdentifier = relatedIdentifier,
+        _note = note,
+        _relatesTo = relatesTo,
+        _section = section,
+        super._();
+
+  factory _$_EvidenceReport.fromJson(Map<String, dynamic> json) =>
+      _$$_EvidenceReportFromJson(json);
+
+  @override
+  @JsonKey()
+  final R4ResourceType resourceType;
+  @override
+  final String? id;
+  @override
+  final Meta? meta;
+  @override
+  final FhirUri? implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
+  final Code? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+  @override
+  final Narrative? text;
+  final List<Resource>? _contained;
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirUri? url;
+  @override
+  @JsonKey(name: '_url')
+  final Element? urlElement;
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? version;
+  @override
+  @JsonKey(name: '_version')
+  final Element? versionElement;
+  @override
+  final String? name;
+  @override
+  @JsonKey(name: '_name')
+  final Element? nameElement;
+  @override
+  final String? title;
+  @override
+  @JsonKey(name: '_title')
+  final Element? titleElement;
+  @override
+  final Code? status;
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+  @override
+  final Boolean? experimental;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element? experimentalElement;
+  @override
+  final FhirDateTime? date;
+  @override
+  @JsonKey(name: '_date')
+  final Element? dateElement;
+  @override
+  final String? publisher;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element? publisherElement;
+  final List<ContactDetail>? _contact;
+  @override
+  List<ContactDetail>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Markdown? description;
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+  final List<UsageContext>? _useContext;
+  @override
+  List<UsageContext>? get useContext {
+    final value = _useContext;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _jurisdiction;
+  @override
+  List<CodeableConcept>? get jurisdiction {
+    final value = _jurisdiction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Markdown? purpose;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element? purposeElement;
+  @override
+  final Markdown? copyright;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element? copyrightElement;
+  @override
+  final Date? approvalDate;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element? approvalDateElement;
+  @override
+  final Date? lastReviewDate;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element? lastReviewDateElement;
+  @override
+  final Period? effectivePeriod;
+  final List<CodeableConcept>? _topic;
+  @override
+  List<CodeableConcept>? get topic {
+    final value = _topic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactDetail>? _author;
+  @override
+  List<ContactDetail>? get author {
+    final value = _author;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactDetail>? _editor;
+  @override
+  List<ContactDetail>? get editor {
+    final value = _editor;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactDetail>? _reviewer;
+  @override
+  List<ContactDetail>? get reviewer {
+    final value = _reviewer;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ContactDetail>? _endorser;
+  @override
+  List<ContactDetail>? get endorser {
+    final value = _endorser;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<RelatedArtifact>? _relatedArtifact;
+  @override
+  List<RelatedArtifact>? get relatedArtifact {
+    final value = _relatedArtifact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _relatedIdentifier;
+  @override
+  List<Identifier>? get relatedIdentifier {
+    final value = _relatedIdentifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference? citeAsReference;
+  @override
+  final Markdown? citeAsMarkdown;
+  @override
+  @JsonKey(name: '_citeAsMarkdown')
+  final Element? citeAsMarkdownElement;
+  @override
+  final CodeableConcept? type;
+  final List<Annotation>? _note;
+  @override
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final EvidenceReportSubject subject;
+  final List<EvidenceReportRelatesTo>? _relatesTo;
+  @override
+  List<EvidenceReportRelatesTo>? get relatesTo {
+    final value = _relatesTo;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<EvidenceReportSection>? _section;
+  @override
+  List<EvidenceReportSection>? get section {
+    final value = _section;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'EvidenceReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, relatedIdentifier: $relatedIdentifier, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, type: $type, note: $note, subject: $subject, relatesTo: $relatesTo, section: $section)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_EvidenceReport &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.urlElement, urlElement) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality().equals(other.version, version) &&
+            const DeepCollectionEquality()
+                .equals(other.versionElement, versionElement) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.nameElement, nameElement) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.titleElement, titleElement) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality()
+                .equals(other.experimental, experimental) &&
+            const DeepCollectionEquality()
+                .equals(other.experimentalElement, experimentalElement) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.dateElement, dateElement) &&
+            const DeepCollectionEquality().equals(other.publisher, publisher) &&
+            const DeepCollectionEquality()
+                .equals(other.publisherElement, publisherElement) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality()
+                .equals(other._useContext, _useContext) &&
+            const DeepCollectionEquality()
+                .equals(other._jurisdiction, _jurisdiction) &&
+            const DeepCollectionEquality().equals(other.purpose, purpose) &&
+            const DeepCollectionEquality()
+                .equals(other.purposeElement, purposeElement) &&
+            const DeepCollectionEquality().equals(other.copyright, copyright) &&
+            const DeepCollectionEquality()
+                .equals(other.copyrightElement, copyrightElement) &&
+            const DeepCollectionEquality()
+                .equals(other.approvalDate, approvalDate) &&
+            const DeepCollectionEquality()
+                .equals(other.approvalDateElement, approvalDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.lastReviewDate, lastReviewDate) &&
+            const DeepCollectionEquality()
+                .equals(other.lastReviewDateElement, lastReviewDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.effectivePeriod, effectivePeriod) &&
+            const DeepCollectionEquality().equals(other._topic, _topic) &&
+            const DeepCollectionEquality().equals(other._author, _author) &&
+            const DeepCollectionEquality().equals(other._editor, _editor) &&
+            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
+            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality()
+                .equals(other._relatedArtifact, _relatedArtifact) &&
+            const DeepCollectionEquality()
+                .equals(other._relatedIdentifier, _relatedIdentifier) &&
+            const DeepCollectionEquality()
+                .equals(other.citeAsReference, citeAsReference) &&
+            const DeepCollectionEquality()
+                .equals(other.citeAsMarkdown, citeAsMarkdown) &&
+            const DeepCollectionEquality()
+                .equals(other.citeAsMarkdownElement, citeAsMarkdownElement) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.subject, subject) &&
+            const DeepCollectionEquality()
+                .equals(other._relatesTo, _relatesTo) &&
+            const DeepCollectionEquality().equals(other._section, _section));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(url),
+        const DeepCollectionEquality().hash(urlElement),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(version),
+        const DeepCollectionEquality().hash(versionElement),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(nameElement),
+        const DeepCollectionEquality().hash(title),
+        const DeepCollectionEquality().hash(titleElement),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(experimental),
+        const DeepCollectionEquality().hash(experimentalElement),
+        const DeepCollectionEquality().hash(date),
+        const DeepCollectionEquality().hash(dateElement),
+        const DeepCollectionEquality().hash(publisher),
+        const DeepCollectionEquality().hash(publisherElement),
+        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(descriptionElement),
+        const DeepCollectionEquality().hash(_useContext),
+        const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(purpose),
+        const DeepCollectionEquality().hash(purposeElement),
+        const DeepCollectionEquality().hash(copyright),
+        const DeepCollectionEquality().hash(copyrightElement),
+        const DeepCollectionEquality().hash(approvalDate),
+        const DeepCollectionEquality().hash(approvalDateElement),
+        const DeepCollectionEquality().hash(lastReviewDate),
+        const DeepCollectionEquality().hash(lastReviewDateElement),
+        const DeepCollectionEquality().hash(effectivePeriod),
+        const DeepCollectionEquality().hash(_topic),
+        const DeepCollectionEquality().hash(_author),
+        const DeepCollectionEquality().hash(_editor),
+        const DeepCollectionEquality().hash(_reviewer),
+        const DeepCollectionEquality().hash(_endorser),
+        const DeepCollectionEquality().hash(_relatedArtifact),
+        const DeepCollectionEquality().hash(_relatedIdentifier),
+        const DeepCollectionEquality().hash(citeAsReference),
+        const DeepCollectionEquality().hash(citeAsMarkdown),
+        const DeepCollectionEquality().hash(citeAsMarkdownElement),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(subject),
+        const DeepCollectionEquality().hash(_relatesTo),
+        const DeepCollectionEquality().hash(_section)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_EvidenceReportCopyWith<_$_EvidenceReport> get copyWith =>
+      __$$_EvidenceReportCopyWithImpl<_$_EvidenceReport>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_EvidenceReportToJson(this);
+  }
+}
+
+abstract class _EvidenceReport extends EvidenceReport {
+  factory _EvidenceReport(
+      {final R4ResourceType resourceType,
+      final String? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
+      @JsonKey(name: '_url') final Element? urlElement,
+      final List<Identifier>? identifier,
+      final String? version,
+      @JsonKey(name: '_version') final Element? versionElement,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? title,
+      @JsonKey(name: '_title') final Element? titleElement,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final Boolean? experimental,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date') final Element? dateElement,
+      final String? publisher,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
+      final List<ContactDetail>? contact,
+      final Markdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final Markdown? purpose,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
+      final Markdown? copyright,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
+      final Date? approvalDate,
+      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
+      final Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
+      final Period? effectivePeriod,
+      final List<CodeableConcept>? topic,
+      final List<ContactDetail>? author,
+      final List<ContactDetail>? editor,
+      final List<ContactDetail>? reviewer,
+      final List<ContactDetail>? endorser,
+      final List<RelatedArtifact>? relatedArtifact,
+      final List<Identifier>? relatedIdentifier,
+      final Reference? citeAsReference,
+      final Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown') final Element? citeAsMarkdownElement,
+      final CodeableConcept? type,
+      final List<Annotation>? note,
+      required final EvidenceReportSubject subject,
+      final List<EvidenceReportRelatesTo>? relatesTo,
+      final List<EvidenceReportSection>? section}) = _$_EvidenceReport;
+  _EvidenceReport._() : super._();
+
+  factory _EvidenceReport.fromJson(Map<String, dynamic> json) =
+      _$_EvidenceReport.fromJson;
+
+  @override
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  Meta? get meta => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @override
+  Code? get language => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  @override
+  Narrative? get text => throw _privateConstructorUsedError;
+  @override
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirUri? get url => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  String? get version => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_version')
+  Element? get versionElement => throw _privateConstructorUsedError;
+  @override
+  String? get name => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_name')
+  Element? get nameElement => throw _privateConstructorUsedError;
+  @override
+  String? get title => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  @override
+  Code? get status => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  @override
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_experimental')
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_date')
+  Element? get dateElement => throw _privateConstructorUsedError;
+  @override
+  String? get publisher => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_publisher')
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  @override
+  Markdown? get description => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  @override
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  @override
+  Markdown? get purpose => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  @override
+  Markdown? get copyright => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  @override
+  Date? get approvalDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  @override
+  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  @override
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @override
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
+  @override
+  Reference? get citeAsReference => throw _privateConstructorUsedError;
+  @override
+  Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_citeAsMarkdown')
+  Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  @override
+  EvidenceReportSubject get subject => throw _privateConstructorUsedError;
+  @override
+  List<EvidenceReportRelatesTo>? get relatesTo =>
+      throw _privateConstructorUsedError;
+  @override
+  List<EvidenceReportSection>? get section =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_EvidenceReportCopyWith<_$_EvidenceReport> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+EvidenceReportSubject _$EvidenceReportSubjectFromJson(
+    Map<String, dynamic> json) {
+  return _EvidenceReportSubject.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EvidenceReportSubject {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<EvidenceReportCharacteristic>? get characteristic =>
+      throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EvidenceReportSubjectCopyWith<EvidenceReportSubject> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EvidenceReportSubjectCopyWith<$Res> {
+  factory $EvidenceReportSubjectCopyWith(EvidenceReportSubject value,
+          $Res Function(EvidenceReportSubject) then) =
+      _$EvidenceReportSubjectCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<EvidenceReportCharacteristic>? characteristic,
+      List<Annotation>? note});
+}
+
+/// @nodoc
+class _$EvidenceReportSubjectCopyWithImpl<$Res>
+    implements $EvidenceReportSubjectCopyWith<$Res> {
+  _$EvidenceReportSubjectCopyWithImpl(this._value, this._then);
+
+  final EvidenceReportSubject _value;
+  // ignore: unused_field
+  final $Res Function(EvidenceReportSubject) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? characteristic = freezed,
+    Object? note = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      characteristic: characteristic == freezed
+          ? _value.characteristic
+          : characteristic // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceReportCharacteristic>?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_EvidenceReportSubjectCopyWith<$Res>
+    implements $EvidenceReportSubjectCopyWith<$Res> {
+  factory _$$_EvidenceReportSubjectCopyWith(_$_EvidenceReportSubject value,
+          $Res Function(_$_EvidenceReportSubject) then) =
+      __$$_EvidenceReportSubjectCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<EvidenceReportCharacteristic>? characteristic,
+      List<Annotation>? note});
+}
+
+/// @nodoc
+class __$$_EvidenceReportSubjectCopyWithImpl<$Res>
+    extends _$EvidenceReportSubjectCopyWithImpl<$Res>
+    implements _$$_EvidenceReportSubjectCopyWith<$Res> {
+  __$$_EvidenceReportSubjectCopyWithImpl(_$_EvidenceReportSubject _value,
+      $Res Function(_$_EvidenceReportSubject) _then)
+      : super(_value, (v) => _then(v as _$_EvidenceReportSubject));
+
+  @override
+  _$_EvidenceReportSubject get _value =>
+      super._value as _$_EvidenceReportSubject;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? characteristic = freezed,
+    Object? note = freezed,
+  }) {
+    return _then(_$_EvidenceReportSubject(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      characteristic: characteristic == freezed
+          ? _value._characteristic
+          : characteristic // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceReportCharacteristic>?,
+      note: note == freezed
+          ? _value._note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_EvidenceReportSubject extends _EvidenceReportSubject {
+  _$_EvidenceReportSubject(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<EvidenceReportCharacteristic>? characteristic,
+      final List<Annotation>? note})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _characteristic = characteristic,
+        _note = note,
+        super._();
+
+  factory _$_EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
+      _$$_EvidenceReportSubjectFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<EvidenceReportCharacteristic>? _characteristic;
+  @override
+  List<EvidenceReportCharacteristic>? get characteristic {
+    final value = _characteristic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
+  @override
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'EvidenceReportSubject(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, characteristic: $characteristic, note: $note)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_EvidenceReportSubject &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._characteristic, _characteristic) &&
+            const DeepCollectionEquality().equals(other._note, _note));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_characteristic),
+      const DeepCollectionEquality().hash(_note));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_EvidenceReportSubjectCopyWith<_$_EvidenceReportSubject> get copyWith =>
+      __$$_EvidenceReportSubjectCopyWithImpl<_$_EvidenceReportSubject>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_EvidenceReportSubjectToJson(this);
+  }
+}
+
+abstract class _EvidenceReportSubject extends EvidenceReportSubject {
+  factory _EvidenceReportSubject(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<EvidenceReportCharacteristic>? characteristic,
+      final List<Annotation>? note}) = _$_EvidenceReportSubject;
+  _EvidenceReportSubject._() : super._();
+
+  factory _EvidenceReportSubject.fromJson(Map<String, dynamic> json) =
+      _$_EvidenceReportSubject.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  List<EvidenceReportCharacteristic>? get characteristic =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_EvidenceReportSubjectCopyWith<_$_EvidenceReportSubject> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+EvidenceReportCharacteristic _$EvidenceReportCharacteristicFromJson(
+    Map<String, dynamic> json) {
+  return _EvidenceReportCharacteristic.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EvidenceReportCharacteristic {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Reference? get valueReference => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Boolean? get exclude => throw _privateConstructorUsedError;
+  @JsonKey(name: '_exclude')
+  Element? get excludeElement => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EvidenceReportCharacteristicCopyWith<EvidenceReportCharacteristic>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EvidenceReportCharacteristicCopyWith<$Res> {
+  factory $EvidenceReportCharacteristicCopyWith(
+          EvidenceReportCharacteristic value,
+          $Res Function(EvidenceReportCharacteristic) then) =
+      _$EvidenceReportCharacteristicCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept code,
+      Reference? valueReference,
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Boolean? exclude,
+      @JsonKey(name: '_exclude') Element? excludeElement,
+      Period? period});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $ReferenceCopyWith<$Res>? get valueReference;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $ElementCopyWith<$Res>? get excludeElement;
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class _$EvidenceReportCharacteristicCopyWithImpl<$Res>
+    implements $EvidenceReportCharacteristicCopyWith<$Res> {
+  _$EvidenceReportCharacteristicCopyWithImpl(this._value, this._then);
+
+  final EvidenceReportCharacteristic _value;
+  // ignore: unused_field
+  final $Res Function(EvidenceReportCharacteristic) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? valueReference = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? exclude = freezed,
+    Object? excludeElement = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      exclude: exclude == freezed
+          ? _value.exclude
+          : exclude // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      excludeElement: excludeElement == freezed
+          ? _value.excludeElement
+          : excludeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference {
+    if (_value.valueReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
+      return _then(_value.copyWith(valueReference: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get excludeElement {
+    if (_value.excludeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.excludeElement!, (value) {
+      return _then(_value.copyWith(excludeElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_EvidenceReportCharacteristicCopyWith<$Res>
+    implements $EvidenceReportCharacteristicCopyWith<$Res> {
+  factory _$$_EvidenceReportCharacteristicCopyWith(
+          _$_EvidenceReportCharacteristic value,
+          $Res Function(_$_EvidenceReportCharacteristic) then) =
+      __$$_EvidenceReportCharacteristicCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept code,
+      Reference? valueReference,
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Boolean? exclude,
+      @JsonKey(name: '_exclude') Element? excludeElement,
+      Period? period});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $ElementCopyWith<$Res>? get excludeElement;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class __$$_EvidenceReportCharacteristicCopyWithImpl<$Res>
+    extends _$EvidenceReportCharacteristicCopyWithImpl<$Res>
+    implements _$$_EvidenceReportCharacteristicCopyWith<$Res> {
+  __$$_EvidenceReportCharacteristicCopyWithImpl(
+      _$_EvidenceReportCharacteristic _value,
+      $Res Function(_$_EvidenceReportCharacteristic) _then)
+      : super(_value, (v) => _then(v as _$_EvidenceReportCharacteristic));
+
+  @override
+  _$_EvidenceReportCharacteristic get _value =>
+      super._value as _$_EvidenceReportCharacteristic;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? valueReference = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? exclude = freezed,
+    Object? excludeElement = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_$_EvidenceReportCharacteristic(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      exclude: exclude == freezed
+          ? _value.exclude
+          : exclude // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      excludeElement: excludeElement == freezed
+          ? _value.excludeElement
+          : excludeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
+  _$_EvidenceReportCharacteristic(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.code,
+      this.valueReference,
+      this.valueCodeableConcept,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueQuantity,
+      this.valueRange,
+      this.exclude,
+      @JsonKey(name: '_exclude') this.excludeElement,
+      this.period})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$$_EvidenceReportCharacteristicFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept code;
+  @override
+  final Reference? valueReference;
+  @override
+  final CodeableConcept? valueCodeableConcept;
+  @override
+  final Boolean? valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element? valueBooleanElement;
+  @override
+  final Quantity? valueQuantity;
+  @override
+  final Range? valueRange;
+  @override
+  final Boolean? exclude;
+  @override
+  @JsonKey(name: '_exclude')
+  final Element? excludeElement;
+  @override
+  final Period? period;
+
+  @override
+  String toString() {
+    return 'EvidenceReportCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueReference: $valueReference, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, exclude: $exclude, excludeElement: $excludeElement, period: $period)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_EvidenceReportCharacteristic &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality()
+                .equals(other.valueReference, valueReference) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableConcept, valueCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBoolean, valueBoolean) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBooleanElement, valueBooleanElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueQuantity, valueQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.valueRange, valueRange) &&
+            const DeepCollectionEquality().equals(other.exclude, exclude) &&
+            const DeepCollectionEquality()
+                .equals(other.excludeElement, excludeElement) &&
+            const DeepCollectionEquality().equals(other.period, period));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(valueReference),
+      const DeepCollectionEquality().hash(valueCodeableConcept),
+      const DeepCollectionEquality().hash(valueBoolean),
+      const DeepCollectionEquality().hash(valueBooleanElement),
+      const DeepCollectionEquality().hash(valueQuantity),
+      const DeepCollectionEquality().hash(valueRange),
+      const DeepCollectionEquality().hash(exclude),
+      const DeepCollectionEquality().hash(excludeElement),
+      const DeepCollectionEquality().hash(period));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_EvidenceReportCharacteristicCopyWith<_$_EvidenceReportCharacteristic>
+      get copyWith => __$$_EvidenceReportCharacteristicCopyWithImpl<
+          _$_EvidenceReportCharacteristic>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_EvidenceReportCharacteristicToJson(this);
+  }
+}
+
+abstract class _EvidenceReportCharacteristic
+    extends EvidenceReportCharacteristic {
+  factory _EvidenceReportCharacteristic(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept code,
+      final Reference? valueReference,
+      final CodeableConcept? valueCodeableConcept,
+      final Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
+      final Quantity? valueQuantity,
+      final Range? valueRange,
+      final Boolean? exclude,
+      @JsonKey(name: '_exclude') final Element? excludeElement,
+      final Period? period}) = _$_EvidenceReportCharacteristic;
+  _EvidenceReportCharacteristic._() : super._();
+
+  factory _EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =
+      _$_EvidenceReportCharacteristic.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  @override
+  Reference? get valueReference => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  @override
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  @override
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  @override
+  Range? get valueRange => throw _privateConstructorUsedError;
+  @override
+  Boolean? get exclude => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_exclude')
+  Element? get excludeElement => throw _privateConstructorUsedError;
+  @override
+  Period? get period => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_EvidenceReportCharacteristicCopyWith<_$_EvidenceReportCharacteristic>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+EvidenceReportRelatesTo _$EvidenceReportRelatesToFromJson(
+    Map<String, dynamic> json) {
+  return _EvidenceReportRelatesTo.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EvidenceReportRelatesTo {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(name: '_code')
+  Element? get codeElement => throw _privateConstructorUsedError;
+  EvidenceReportTarget get target => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EvidenceReportRelatesToCopyWith<EvidenceReportRelatesTo> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EvidenceReportRelatesToCopyWith<$Res> {
+  factory $EvidenceReportRelatesToCopyWith(EvidenceReportRelatesTo value,
+          $Res Function(EvidenceReportRelatesTo) then) =
+      _$EvidenceReportRelatesToCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? code,
+      @JsonKey(name: '_code') Element? codeElement,
+      EvidenceReportTarget target});
+
+  $ElementCopyWith<$Res>? get codeElement;
+  $EvidenceReportTargetCopyWith<$Res> get target;
+}
+
+/// @nodoc
+class _$EvidenceReportRelatesToCopyWithImpl<$Res>
+    implements $EvidenceReportRelatesToCopyWith<$Res> {
+  _$EvidenceReportRelatesToCopyWithImpl(this._value, this._then);
+
+  final EvidenceReportRelatesTo _value;
+  // ignore: unused_field
+  final $Res Function(EvidenceReportRelatesTo) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? target = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as EvidenceReportTarget,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.codeElement!, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $EvidenceReportTargetCopyWith<$Res> get target {
+    return $EvidenceReportTargetCopyWith<$Res>(_value.target, (value) {
+      return _then(_value.copyWith(target: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_EvidenceReportRelatesToCopyWith<$Res>
+    implements $EvidenceReportRelatesToCopyWith<$Res> {
+  factory _$$_EvidenceReportRelatesToCopyWith(_$_EvidenceReportRelatesTo value,
+          $Res Function(_$_EvidenceReportRelatesTo) then) =
+      __$$_EvidenceReportRelatesToCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? code,
+      @JsonKey(name: '_code') Element? codeElement,
+      EvidenceReportTarget target});
+
+  @override
+  $ElementCopyWith<$Res>? get codeElement;
+  @override
+  $EvidenceReportTargetCopyWith<$Res> get target;
+}
+
+/// @nodoc
+class __$$_EvidenceReportRelatesToCopyWithImpl<$Res>
+    extends _$EvidenceReportRelatesToCopyWithImpl<$Res>
+    implements _$$_EvidenceReportRelatesToCopyWith<$Res> {
+  __$$_EvidenceReportRelatesToCopyWithImpl(_$_EvidenceReportRelatesTo _value,
+      $Res Function(_$_EvidenceReportRelatesTo) _then)
+      : super(_value, (v) => _then(v as _$_EvidenceReportRelatesTo));
+
+  @override
+  _$_EvidenceReportRelatesTo get _value =>
+      super._value as _$_EvidenceReportRelatesTo;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? target = freezed,
+  }) {
+    return _then(_$_EvidenceReportRelatesTo(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as EvidenceReportTarget,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
+  _$_EvidenceReportRelatesTo(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.code,
+      @JsonKey(name: '_code') this.codeElement,
+      required this.target})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
+      _$$_EvidenceReportRelatesToFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? code;
+  @override
+  @JsonKey(name: '_code')
+  final Element? codeElement;
+  @override
+  final EvidenceReportTarget target;
+
+  @override
+  String toString() {
+    return 'EvidenceReportRelatesTo(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, target: $target)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_EvidenceReportRelatesTo &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality()
+                .equals(other.codeElement, codeElement) &&
+            const DeepCollectionEquality().equals(other.target, target));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(codeElement),
+      const DeepCollectionEquality().hash(target));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_EvidenceReportRelatesToCopyWith<_$_EvidenceReportRelatesTo>
+      get copyWith =>
+          __$$_EvidenceReportRelatesToCopyWithImpl<_$_EvidenceReportRelatesTo>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_EvidenceReportRelatesToToJson(this);
+  }
+}
+
+abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
+  factory _EvidenceReportRelatesTo(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Code? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      required final EvidenceReportTarget target}) = _$_EvidenceReportRelatesTo;
+  _EvidenceReportRelatesTo._() : super._();
+
+  factory _EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =
+      _$_EvidenceReportRelatesTo.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Code? get code => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_code')
+  Element? get codeElement => throw _privateConstructorUsedError;
+  @override
+  EvidenceReportTarget get target => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_EvidenceReportRelatesToCopyWith<_$_EvidenceReportRelatesTo>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+EvidenceReportTarget _$EvidenceReportTargetFromJson(Map<String, dynamic> json) {
+  return _EvidenceReportTarget.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EvidenceReportTarget {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  Markdown? get display => throw _privateConstructorUsedError;
+  @JsonKey(name: '_display')
+  Element? get displayElement => throw _privateConstructorUsedError;
+  Reference? get resource => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EvidenceReportTargetCopyWith<EvidenceReportTarget> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EvidenceReportTargetCopyWith<$Res> {
+  factory $EvidenceReportTargetCopyWith(EvidenceReportTarget value,
+          $Res Function(EvidenceReportTarget) then) =
+      _$EvidenceReportTargetCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      Identifier? identifier,
+      Markdown? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      Reference? resource});
+
+  $ElementCopyWith<$Res>? get urlElement;
+  $IdentifierCopyWith<$Res>? get identifier;
+  $ElementCopyWith<$Res>? get displayElement;
+  $ReferenceCopyWith<$Res>? get resource;
+}
+
+/// @nodoc
+class _$EvidenceReportTargetCopyWithImpl<$Res>
+    implements $EvidenceReportTargetCopyWith<$Res> {
+  _$EvidenceReportTargetCopyWithImpl(this._value, this._then);
+
+  final EvidenceReportTarget _value;
+  // ignore: unused_field
+  final $Res Function(EvidenceReportTarget) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? identifier = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? resource = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res>? get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+
+    return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.displayElement!, (value) {
+      return _then(_value.copyWith(displayElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get resource {
+    if (_value.resource == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.resource!, (value) {
+      return _then(_value.copyWith(resource: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_EvidenceReportTargetCopyWith<$Res>
+    implements $EvidenceReportTargetCopyWith<$Res> {
+  factory _$$_EvidenceReportTargetCopyWith(_$_EvidenceReportTarget value,
+          $Res Function(_$_EvidenceReportTarget) then) =
+      __$$_EvidenceReportTargetCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      Identifier? identifier,
+      Markdown? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      Reference? resource});
+
+  @override
+  $ElementCopyWith<$Res>? get urlElement;
+  @override
+  $IdentifierCopyWith<$Res>? get identifier;
+  @override
+  $ElementCopyWith<$Res>? get displayElement;
+  @override
+  $ReferenceCopyWith<$Res>? get resource;
+}
+
+/// @nodoc
+class __$$_EvidenceReportTargetCopyWithImpl<$Res>
+    extends _$EvidenceReportTargetCopyWithImpl<$Res>
+    implements _$$_EvidenceReportTargetCopyWith<$Res> {
+  __$$_EvidenceReportTargetCopyWithImpl(_$_EvidenceReportTarget _value,
+      $Res Function(_$_EvidenceReportTarget) _then)
+      : super(_value, (v) => _then(v as _$_EvidenceReportTarget));
+
+  @override
+  _$_EvidenceReportTarget get _value => super._value as _$_EvidenceReportTarget;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? identifier = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? resource = freezed,
+  }) {
+    return _then(_$_EvidenceReportTarget(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_EvidenceReportTarget extends _EvidenceReportTarget {
+  _$_EvidenceReportTarget(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.url,
+      @JsonKey(name: '_url') this.urlElement,
+      this.identifier,
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.resource})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_EvidenceReportTarget.fromJson(Map<String, dynamic> json) =>
+      _$$_EvidenceReportTargetFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final FhirUri? url;
+  @override
+  @JsonKey(name: '_url')
+  final Element? urlElement;
+  @override
+  final Identifier? identifier;
+  @override
+  final Markdown? display;
+  @override
+  @JsonKey(name: '_display')
+  final Element? displayElement;
+  @override
+  final Reference? resource;
+
+  @override
+  String toString() {
+    return 'EvidenceReportTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, display: $display, displayElement: $displayElement, resource: $resource)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_EvidenceReportTarget &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.urlElement, urlElement) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.display, display) &&
+            const DeepCollectionEquality()
+                .equals(other.displayElement, displayElement) &&
+            const DeepCollectionEquality().equals(other.resource, resource));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(urlElement),
+      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(display),
+      const DeepCollectionEquality().hash(displayElement),
+      const DeepCollectionEquality().hash(resource));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_EvidenceReportTargetCopyWith<_$_EvidenceReportTarget> get copyWith =>
+      __$$_EvidenceReportTargetCopyWithImpl<_$_EvidenceReportTarget>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_EvidenceReportTargetToJson(this);
+  }
+}
+
+abstract class _EvidenceReportTarget extends EvidenceReportTarget {
+  factory _EvidenceReportTarget(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
+      @JsonKey(name: '_url') final Element? urlElement,
+      final Identifier? identifier,
+      final Markdown? display,
+      @JsonKey(name: '_display') final Element? displayElement,
+      final Reference? resource}) = _$_EvidenceReportTarget;
+  _EvidenceReportTarget._() : super._();
+
+  factory _EvidenceReportTarget.fromJson(Map<String, dynamic> json) =
+      _$_EvidenceReportTarget.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirUri? get url => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_url')
+  Element? get urlElement => throw _privateConstructorUsedError;
+  @override
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  @override
+  Markdown? get display => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_display')
+  Element? get displayElement => throw _privateConstructorUsedError;
+  @override
+  Reference? get resource => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_EvidenceReportTargetCopyWith<_$_EvidenceReportTarget> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+EvidenceReportSection _$EvidenceReportSectionFromJson(
+    Map<String, dynamic> json) {
+  return _EvidenceReportSection.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EvidenceReportSection {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  CodeableConcept? get focus => throw _privateConstructorUsedError;
+  Reference? get focusReference => throw _privateConstructorUsedError;
+  List<Reference>? get author => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(name: '_mode')
+  Element? get modeElement => throw _privateConstructorUsedError;
+  CodeableConcept? get orderedBy => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get entryClassifier =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get entryReference => throw _privateConstructorUsedError;
+  List<Quantity>? get entryQuantity => throw _privateConstructorUsedError;
+  CodeableConcept? get emptyReason => throw _privateConstructorUsedError;
+  List<EvidenceReportSection>? get section =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EvidenceReportSectionCopyWith<EvidenceReportSection> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EvidenceReportSectionCopyWith<$Res> {
+  factory $EvidenceReportSectionCopyWith(EvidenceReportSection value,
+          $Res Function(EvidenceReportSection) then) =
+      _$EvidenceReportSectionCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      CodeableConcept? focus,
+      Reference? focusReference,
+      List<Reference>? author,
+      Narrative? text,
+      Code? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
+      CodeableConcept? orderedBy,
+      List<CodeableConcept>? entryClassifier,
+      List<Reference>? entryReference,
+      List<Quantity>? entryQuantity,
+      CodeableConcept? emptyReason,
+      List<EvidenceReportSection>? section});
+
+  $ElementCopyWith<$Res>? get titleElement;
+  $CodeableConceptCopyWith<$Res>? get focus;
+  $ReferenceCopyWith<$Res>? get focusReference;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get modeElement;
+  $CodeableConceptCopyWith<$Res>? get orderedBy;
+  $CodeableConceptCopyWith<$Res>? get emptyReason;
+}
+
+/// @nodoc
+class _$EvidenceReportSectionCopyWithImpl<$Res>
+    implements $EvidenceReportSectionCopyWith<$Res> {
+  _$EvidenceReportSectionCopyWithImpl(this._value, this._then);
+
+  final EvidenceReportSection _value;
+  // ignore: unused_field
+  final $Res Function(EvidenceReportSection) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? focus = freezed,
+    Object? focusReference = freezed,
+    Object? author = freezed,
+    Object? text = freezed,
+    Object? mode = freezed,
+    Object? modeElement = freezed,
+    Object? orderedBy = freezed,
+    Object? entryClassifier = freezed,
+    Object? entryReference = freezed,
+    Object? entryQuantity = freezed,
+    Object? emptyReason = freezed,
+    Object? section = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      focusReference: focusReference == freezed
+          ? _value.focusReference
+          : focusReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      orderedBy: orderedBy == freezed
+          ? _value.orderedBy
+          : orderedBy // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      entryClassifier: entryClassifier == freezed
+          ? _value.entryClassifier
+          : entryClassifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      entryReference: entryReference == freezed
+          ? _value.entryReference
+          : entryReference // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      entryQuantity: entryQuantity == freezed
+          ? _value.entryQuantity
+          : entryQuantity // ignore: cast_nullable_to_non_nullable
+              as List<Quantity>?,
+      emptyReason: emptyReason == freezed
+          ? _value.emptyReason
+          : emptyReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      section: section == freezed
+          ? _value.section
+          : section // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceReportSection>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get focus {
+    if (_value.focus == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.focus!, (value) {
+      return _then(_value.copyWith(focus: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get focusReference {
+    if (_value.focusReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.focusReference!, (value) {
+      return _then(_value.copyWith(focusReference: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get modeElement {
+    if (_value.modeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.modeElement!, (value) {
+      return _then(_value.copyWith(modeElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get orderedBy {
+    if (_value.orderedBy == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.orderedBy!, (value) {
+      return _then(_value.copyWith(orderedBy: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get emptyReason {
+    if (_value.emptyReason == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.emptyReason!, (value) {
+      return _then(_value.copyWith(emptyReason: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_EvidenceReportSectionCopyWith<$Res>
+    implements $EvidenceReportSectionCopyWith<$Res> {
+  factory _$$_EvidenceReportSectionCopyWith(_$_EvidenceReportSection value,
+          $Res Function(_$_EvidenceReportSection) then) =
+      __$$_EvidenceReportSectionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? title,
+      @JsonKey(name: '_title') Element? titleElement,
+      CodeableConcept? focus,
+      Reference? focusReference,
+      List<Reference>? author,
+      Narrative? text,
+      Code? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
+      CodeableConcept? orderedBy,
+      List<CodeableConcept>? entryClassifier,
+      List<Reference>? entryReference,
+      List<Quantity>? entryQuantity,
+      CodeableConcept? emptyReason,
+      List<EvidenceReportSection>? section});
+
+  @override
+  $ElementCopyWith<$Res>? get titleElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get focus;
+  @override
+  $ReferenceCopyWith<$Res>? get focusReference;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get modeElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get orderedBy;
+  @override
+  $CodeableConceptCopyWith<$Res>? get emptyReason;
+}
+
+/// @nodoc
+class __$$_EvidenceReportSectionCopyWithImpl<$Res>
+    extends _$EvidenceReportSectionCopyWithImpl<$Res>
+    implements _$$_EvidenceReportSectionCopyWith<$Res> {
+  __$$_EvidenceReportSectionCopyWithImpl(_$_EvidenceReportSection _value,
+      $Res Function(_$_EvidenceReportSection) _then)
+      : super(_value, (v) => _then(v as _$_EvidenceReportSection));
+
+  @override
+  _$_EvidenceReportSection get _value =>
+      super._value as _$_EvidenceReportSection;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? title = freezed,
+    Object? titleElement = freezed,
+    Object? focus = freezed,
+    Object? focusReference = freezed,
+    Object? author = freezed,
+    Object? text = freezed,
+    Object? mode = freezed,
+    Object? modeElement = freezed,
+    Object? orderedBy = freezed,
+    Object? entryClassifier = freezed,
+    Object? entryReference = freezed,
+    Object? entryQuantity = freezed,
+    Object? emptyReason = freezed,
+    Object? section = freezed,
+  }) {
+    return _then(_$_EvidenceReportSection(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      focusReference: focusReference == freezed
+          ? _value.focusReference
+          : focusReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      author: author == freezed
+          ? _value._author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      orderedBy: orderedBy == freezed
+          ? _value.orderedBy
+          : orderedBy // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      entryClassifier: entryClassifier == freezed
+          ? _value._entryClassifier
+          : entryClassifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      entryReference: entryReference == freezed
+          ? _value._entryReference
+          : entryReference // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      entryQuantity: entryQuantity == freezed
+          ? _value._entryQuantity
+          : entryQuantity // ignore: cast_nullable_to_non_nullable
+              as List<Quantity>?,
+      emptyReason: emptyReason == freezed
+          ? _value.emptyReason
+          : emptyReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      section: section == freezed
+          ? _value._section
+          : section // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceReportSection>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_EvidenceReportSection extends _EvidenceReportSection {
+  _$_EvidenceReportSection(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.title,
+      @JsonKey(name: '_title') this.titleElement,
+      this.focus,
+      this.focusReference,
+      final List<Reference>? author,
+      this.text,
+      this.mode,
+      @JsonKey(name: '_mode') this.modeElement,
+      this.orderedBy,
+      final List<CodeableConcept>? entryClassifier,
+      final List<Reference>? entryReference,
+      final List<Quantity>? entryQuantity,
+      this.emptyReason,
+      final List<EvidenceReportSection>? section})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _author = author,
+        _entryClassifier = entryClassifier,
+        _entryReference = entryReference,
+        _entryQuantity = entryQuantity,
+        _section = section,
+        super._();
+
+  factory _$_EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
+      _$$_EvidenceReportSectionFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final String? title;
+  @override
+  @JsonKey(name: '_title')
+  final Element? titleElement;
+  @override
+  final CodeableConcept? focus;
+  @override
+  final Reference? focusReference;
+  final List<Reference>? _author;
+  @override
+  List<Reference>? get author {
+    final value = _author;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Narrative? text;
+  @override
+  final Code? mode;
+  @override
+  @JsonKey(name: '_mode')
+  final Element? modeElement;
+  @override
+  final CodeableConcept? orderedBy;
+  final List<CodeableConcept>? _entryClassifier;
+  @override
+  List<CodeableConcept>? get entryClassifier {
+    final value = _entryClassifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _entryReference;
+  @override
+  List<Reference>? get entryReference {
+    final value = _entryReference;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Quantity>? _entryQuantity;
+  @override
+  List<Quantity>? get entryQuantity {
+    final value = _entryQuantity;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? emptyReason;
+  final List<EvidenceReportSection>? _section;
+  @override
+  List<EvidenceReportSection>? get section {
+    final value = _section;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'EvidenceReportSection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, title: $title, titleElement: $titleElement, focus: $focus, focusReference: $focusReference, author: $author, text: $text, mode: $mode, modeElement: $modeElement, orderedBy: $orderedBy, entryClassifier: $entryClassifier, entryReference: $entryReference, entryQuantity: $entryQuantity, emptyReason: $emptyReason, section: $section)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_EvidenceReportSection &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.titleElement, titleElement) &&
+            const DeepCollectionEquality().equals(other.focus, focus) &&
+            const DeepCollectionEquality()
+                .equals(other.focusReference, focusReference) &&
+            const DeepCollectionEquality().equals(other._author, _author) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.mode, mode) &&
+            const DeepCollectionEquality()
+                .equals(other.modeElement, modeElement) &&
+            const DeepCollectionEquality().equals(other.orderedBy, orderedBy) &&
+            const DeepCollectionEquality()
+                .equals(other._entryClassifier, _entryClassifier) &&
+            const DeepCollectionEquality()
+                .equals(other._entryReference, _entryReference) &&
+            const DeepCollectionEquality()
+                .equals(other._entryQuantity, _entryQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.emptyReason, emptyReason) &&
+            const DeepCollectionEquality().equals(other._section, _section));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(titleElement),
+      const DeepCollectionEquality().hash(focus),
+      const DeepCollectionEquality().hash(focusReference),
+      const DeepCollectionEquality().hash(_author),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(mode),
+      const DeepCollectionEquality().hash(modeElement),
+      const DeepCollectionEquality().hash(orderedBy),
+      const DeepCollectionEquality().hash(_entryClassifier),
+      const DeepCollectionEquality().hash(_entryReference),
+      const DeepCollectionEquality().hash(_entryQuantity),
+      const DeepCollectionEquality().hash(emptyReason),
+      const DeepCollectionEquality().hash(_section));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_EvidenceReportSectionCopyWith<_$_EvidenceReportSection> get copyWith =>
+      __$$_EvidenceReportSectionCopyWithImpl<_$_EvidenceReportSection>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_EvidenceReportSectionToJson(this);
+  }
+}
+
+abstract class _EvidenceReportSection extends EvidenceReportSection {
+  factory _EvidenceReportSection(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? title,
+      @JsonKey(name: '_title') final Element? titleElement,
+      final CodeableConcept? focus,
+      final Reference? focusReference,
+      final List<Reference>? author,
+      final Narrative? text,
+      final Code? mode,
+      @JsonKey(name: '_mode') final Element? modeElement,
+      final CodeableConcept? orderedBy,
+      final List<CodeableConcept>? entryClassifier,
+      final List<Reference>? entryReference,
+      final List<Quantity>? entryQuantity,
+      final CodeableConcept? emptyReason,
+      final List<EvidenceReportSection>? section}) = _$_EvidenceReportSection;
+  _EvidenceReportSection._() : super._();
+
+  factory _EvidenceReportSection.fromJson(Map<String, dynamic> json) =
+      _$_EvidenceReportSection.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  String? get title => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_title')
+  Element? get titleElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get focus => throw _privateConstructorUsedError;
+  @override
+  Reference? get focusReference => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get author => throw _privateConstructorUsedError;
+  @override
+  Narrative? get text => throw _privateConstructorUsedError;
+  @override
+  Code? get mode => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_mode')
+  Element? get modeElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get orderedBy => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get entryClassifier =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get entryReference => throw _privateConstructorUsedError;
+  @override
+  List<Quantity>? get entryQuantity => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get emptyReason => throw _privateConstructorUsedError;
+  @override
+  List<EvidenceReportSection>? get section =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_EvidenceReportSectionCopyWith<_$_EvidenceReportSection> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
   return _EvidenceVariable.fromJson(json);
 }
@@ -6072,7 +16579,7 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
 mixin _$EvidenceVariable {
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6105,8 +16612,7 @@ mixin _$EvidenceVariable {
   String? get subtitle => throw _privateConstructorUsedError;
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-  EvidenceVariableStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
@@ -6139,8 +16645,7 @@ mixin _$EvidenceVariable {
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-  EvidenceVariableType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   List<EvidenceVariableCharacteristic> get characteristic =>
@@ -6160,7 +16665,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6192,8 +16697,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-          EvidenceVariableStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirDateTime? date,
@@ -6225,8 +16729,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-          EvidenceVariableType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<EvidenceVariableCharacteristic> characteristic});
@@ -6324,7 +16827,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6416,7 +16919,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6516,7 +17019,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -6748,7 +17251,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6780,8 +17283,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-          EvidenceVariableStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirDateTime? date,
@@ -6813,8 +17315,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
-      @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-          EvidenceVariableType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<EvidenceVariableCharacteristic> characteristic});
@@ -6933,7 +17434,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7025,7 +17526,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7125,7 +17626,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -7176,8 +17677,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       this.subtitle,
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.date,
@@ -7209,8 +17709,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-          this.type,
+      this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       required final List<EvidenceVariableCharacteristic> characteristic})
@@ -7238,7 +17737,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -7321,8 +17820,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-  final EvidenceVariableStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -7449,8 +17947,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   }
 
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-  final EvidenceVariableType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -7629,7 +18126,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   factory _EvidenceVariable(
           {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
               final R4ResourceType resourceType,
-          final Id? id,
+          final String? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -7661,8 +18158,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
           final String? subtitle,
           @JsonKey(name: '_subtitle')
               final Element? subtitleElement,
-          @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-              final EvidenceVariableStatus? status,
+          final Code? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
           final FhirDateTime? date,
@@ -7694,8 +18190,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
           final List<ContactDetail>? reviewer,
           final List<ContactDetail>? endorser,
           final List<RelatedArtifact>? relatedArtifact,
-          @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-              final EvidenceVariableType? type,
+          final Code? type,
           @JsonKey(name: '_type')
               final Element? typeElement,
           required final List<EvidenceVariableCharacteristic> characteristic}) =
@@ -7709,7 +18204,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -7765,8 +18260,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-  EvidenceVariableStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -7824,8 +18318,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-  EvidenceVariableType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -7878,9 +18371,7 @@ mixin _$EvidenceVariableCharacteristic {
       throw _privateConstructorUsedError;
   Timing? get participantEffectiveTiming => throw _privateConstructorUsedError;
   FhirDuration? get timeFromStart => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-  EvidenceVariableCharacteristicGroupMeasure? get groupMeasure =>
-      throw _privateConstructorUsedError;
+  Code? get groupMeasure => throw _privateConstructorUsedError;
   @JsonKey(name: '_groupMeasure')
   Element? get groupMeasureElement => throw _privateConstructorUsedError;
 
@@ -7896,40 +18387,36 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
           EvidenceVariableCharacteristic value,
           $Res Function(EvidenceVariableCharacteristic) then) =
       _$EvidenceVariableCharacteristicCopyWithImpl<$Res>;
-  $Res
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? description,
-          @JsonKey(name: '_description')
-              Element? descriptionElement,
-          Reference? definitionReference,
-          Canonical? definitionCanonical,
-          @JsonKey(name: '_definitionCanonical')
-              Element? definitionCanonicalElement,
-          CodeableConcept? definitionCodeableConcept,
-          Expression? definitionExpression,
-          DataRequirement? definitionDataRequirement,
-          TriggerDefinition? definitionTriggerDefinition,
-          List<UsageContext>? usageContext,
-          Boolean? exclude,
-          @JsonKey(name: '_exclude')
-              Element? excludeElement,
-          FhirDateTime? participantEffectiveDateTime,
-          @JsonKey(name: '_participantEffectiveDateTime')
-              Element? participantEffectiveDateTimeElement,
-          Period? participantEffectivePeriod,
-          FhirDuration? participantEffectiveDuration,
-          Timing? participantEffectiveTiming,
-          FhirDuration? timeFromStart,
-          @JsonKey(
-              unknownEnumValue:
-                  EvidenceVariableCharacteristicGroupMeasure.unknown)
-              EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
-          @JsonKey(name: '_groupMeasure')
-              Element? groupMeasureElement});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      Reference? definitionReference,
+      Canonical? definitionCanonical,
+      @JsonKey(name: '_definitionCanonical')
+          Element? definitionCanonicalElement,
+      CodeableConcept? definitionCodeableConcept,
+      Expression? definitionExpression,
+      DataRequirement? definitionDataRequirement,
+      TriggerDefinition? definitionTriggerDefinition,
+      List<UsageContext>? usageContext,
+      Boolean? exclude,
+      @JsonKey(name: '_exclude')
+          Element? excludeElement,
+      FhirDateTime? participantEffectiveDateTime,
+      @JsonKey(name: '_participantEffectiveDateTime')
+          Element? participantEffectiveDateTimeElement,
+      Period? participantEffectivePeriod,
+      FhirDuration? participantEffectiveDuration,
+      Timing? participantEffectiveTiming,
+      FhirDuration? timeFromStart,
+      Code? groupMeasure,
+      @JsonKey(name: '_groupMeasure')
+          Element? groupMeasureElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $ReferenceCopyWith<$Res>? get definitionReference;
@@ -8071,7 +18558,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       groupMeasure: groupMeasure == freezed
           ? _value.groupMeasure
           : groupMeasure // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableCharacteristicGroupMeasure?,
+              as Code?,
       groupMeasureElement: groupMeasureElement == freezed
           ? _value.groupMeasureElement
           : groupMeasureElement // ignore: cast_nullable_to_non_nullable
@@ -8247,40 +18734,36 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
           $Res Function(_$_EvidenceVariableCharacteristic) then) =
       __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>;
   @override
-  $Res
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? description,
-          @JsonKey(name: '_description')
-              Element? descriptionElement,
-          Reference? definitionReference,
-          Canonical? definitionCanonical,
-          @JsonKey(name: '_definitionCanonical')
-              Element? definitionCanonicalElement,
-          CodeableConcept? definitionCodeableConcept,
-          Expression? definitionExpression,
-          DataRequirement? definitionDataRequirement,
-          TriggerDefinition? definitionTriggerDefinition,
-          List<UsageContext>? usageContext,
-          Boolean? exclude,
-          @JsonKey(name: '_exclude')
-              Element? excludeElement,
-          FhirDateTime? participantEffectiveDateTime,
-          @JsonKey(name: '_participantEffectiveDateTime')
-              Element? participantEffectiveDateTimeElement,
-          Period? participantEffectivePeriod,
-          FhirDuration? participantEffectiveDuration,
-          Timing? participantEffectiveTiming,
-          FhirDuration? timeFromStart,
-          @JsonKey(
-              unknownEnumValue:
-                  EvidenceVariableCharacteristicGroupMeasure.unknown)
-              EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
-          @JsonKey(name: '_groupMeasure')
-              Element? groupMeasureElement});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      Reference? definitionReference,
+      Canonical? definitionCanonical,
+      @JsonKey(name: '_definitionCanonical')
+          Element? definitionCanonicalElement,
+      CodeableConcept? definitionCodeableConcept,
+      Expression? definitionExpression,
+      DataRequirement? definitionDataRequirement,
+      TriggerDefinition? definitionTriggerDefinition,
+      List<UsageContext>? usageContext,
+      Boolean? exclude,
+      @JsonKey(name: '_exclude')
+          Element? excludeElement,
+      FhirDateTime? participantEffectiveDateTime,
+      @JsonKey(name: '_participantEffectiveDateTime')
+          Element? participantEffectiveDateTimeElement,
+      Period? participantEffectivePeriod,
+      FhirDuration? participantEffectiveDuration,
+      Timing? participantEffectiveTiming,
+      FhirDuration? timeFromStart,
+      Code? groupMeasure,
+      @JsonKey(name: '_groupMeasure')
+          Element? groupMeasureElement});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -8440,7 +18923,7 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
       groupMeasure: groupMeasure == freezed
           ? _value.groupMeasure
           : groupMeasure // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableCharacteristicGroupMeasure?,
+              as Code?,
       groupMeasureElement: groupMeasureElement == freezed
           ? _value.groupMeasureElement
           : groupMeasureElement // ignore: cast_nullable_to_non_nullable
@@ -8480,8 +18963,7 @@ class _$_EvidenceVariableCharacteristic
       this.participantEffectiveDuration,
       this.participantEffectiveTiming,
       this.timeFromStart,
-      @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-          this.groupMeasure,
+      this.groupMeasure,
       @JsonKey(name: '_groupMeasure')
           this.groupMeasureElement})
       : _extension_ = extension_,
@@ -8562,8 +19044,7 @@ class _$_EvidenceVariableCharacteristic
   @override
   final FhirDuration? timeFromStart;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-  final EvidenceVariableCharacteristicGroupMeasure? groupMeasure;
+  final Code? groupMeasure;
   @override
   @JsonKey(name: '_groupMeasure')
   final Element? groupMeasureElement;
@@ -8673,36 +19154,36 @@ class _$_EvidenceVariableCharacteristic
 abstract class _EvidenceVariableCharacteristic
     extends EvidenceVariableCharacteristic {
   factory _EvidenceVariableCharacteristic(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      final Reference? definitionReference,
-      final Canonical? definitionCanonical,
-      @JsonKey(name: '_definitionCanonical')
-          final Element? definitionCanonicalElement,
-      final CodeableConcept? definitionCodeableConcept,
-      final Expression? definitionExpression,
-      final DataRequirement? definitionDataRequirement,
-      final TriggerDefinition? definitionTriggerDefinition,
-      final List<UsageContext>? usageContext,
-      final Boolean? exclude,
-      @JsonKey(name: '_exclude')
-          final Element? excludeElement,
-      final FhirDateTime? participantEffectiveDateTime,
-      @JsonKey(name: '_participantEffectiveDateTime')
-          final Element? participantEffectiveDateTimeElement,
-      final Period? participantEffectivePeriod,
-      final FhirDuration? participantEffectiveDuration,
-      final Timing? participantEffectiveTiming,
-      final FhirDuration? timeFromStart,
-      @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-          final EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
-      @JsonKey(name: '_groupMeasure')
-          final Element? groupMeasureElement}) = _$_EvidenceVariableCharacteristic;
+          {final String? id,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? description,
+          @JsonKey(name: '_description')
+              final Element? descriptionElement,
+          final Reference? definitionReference,
+          final Canonical? definitionCanonical,
+          @JsonKey(name: '_definitionCanonical')
+              final Element? definitionCanonicalElement,
+          final CodeableConcept? definitionCodeableConcept,
+          final Expression? definitionExpression,
+          final DataRequirement? definitionDataRequirement,
+          final TriggerDefinition? definitionTriggerDefinition,
+          final List<UsageContext>? usageContext,
+          final Boolean? exclude,
+          @JsonKey(name: '_exclude')
+              final Element? excludeElement,
+          final FhirDateTime? participantEffectiveDateTime,
+          @JsonKey(name: '_participantEffectiveDateTime')
+              final Element? participantEffectiveDateTimeElement,
+          final Period? participantEffectivePeriod,
+          final FhirDuration? participantEffectiveDuration,
+          final Timing? participantEffectiveTiming,
+          final FhirDuration? timeFromStart,
+          final Code? groupMeasure,
+          @JsonKey(name: '_groupMeasure')
+              final Element? groupMeasureElement}) =
+      _$_EvidenceVariableCharacteristic;
   _EvidenceVariableCharacteristic._() : super._();
 
   factory _EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =
@@ -8763,9 +19244,7 @@ abstract class _EvidenceVariableCharacteristic
   @override
   FhirDuration? get timeFromStart => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-  EvidenceVariableCharacteristicGroupMeasure? get groupMeasure =>
-      throw _privateConstructorUsedError;
+  Code? get groupMeasure => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_groupMeasure')
   Element? get groupMeasureElement => throw _privateConstructorUsedError;
@@ -8783,7 +19262,7 @@ ResearchDefinition _$ResearchDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ResearchDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -8816,8 +19295,7 @@ mixin _$ResearchDefinition {
   String? get subtitle => throw _privateConstructorUsedError;
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
-  ResearchDefinitionStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -8885,7 +19363,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8917,8 +19395,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
-          ResearchDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -9082,7 +19559,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9174,7 +19651,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9635,7 +20112,7 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9667,8 +20144,7 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
-          ResearchDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -9861,7 +20337,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9953,7 +20429,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -10148,8 +20624,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       this.subtitle,
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -10225,7 +20700,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -10308,8 +20783,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
-  @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
-  final ResearchDefinitionStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -10681,7 +21155,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   factory _ResearchDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10713,8 +21187,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       final String? subtitle,
       @JsonKey(name: '_subtitle')
           final Element? subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
-          final ResearchDefinitionStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Boolean? experimental,
@@ -10774,7 +21247,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -10830,8 +21303,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
-  ResearchDefinitionStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -10937,7 +21409,7 @@ ResearchElementDefinition _$ResearchElementDefinitionFromJson(
 mixin _$ResearchElementDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -10970,9 +21442,7 @@ mixin _$ResearchElementDefinition {
   String? get subtitle => throw _privateConstructorUsedError;
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionStatus.unknown)
-  ResearchElementDefinitionStatus? get status =>
-      throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -11021,13 +21491,10 @@ mixin _$ResearchElementDefinition {
       throw _privateConstructorUsedError;
   @JsonKey(name: 'library')
   List<Canonical>? get library_ => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
-  ResearchElementDefinitionType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
-  ResearchElementDefinitionVariableType? get variableType =>
-      throw _privateConstructorUsedError;
+  Code? get variableType => throw _privateConstructorUsedError;
   @JsonKey(name: '_variableType')
   Element? get variableTypeElement => throw _privateConstructorUsedError;
   List<ResearchElementDefinitionCharacteristic> get characteristic =>
@@ -11047,7 +21514,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11079,8 +21546,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionStatus.unknown)
-          ResearchElementDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -11127,12 +21593,10 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
           List<Canonical>? library_,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
-          ResearchElementDefinitionType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
-          ResearchElementDefinitionVariableType? variableType,
+      Code? variableType,
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
       List<ResearchElementDefinitionCharacteristic> characteristic});
@@ -11248,7 +21712,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -11340,7 +21804,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11480,7 +21944,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -11488,7 +21952,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
       variableType: variableType == freezed
           ? _value.variableType
           : variableType // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionVariableType?,
+              as Code?,
       variableTypeElement: variableTypeElement == freezed
           ? _value.variableTypeElement
           : variableTypeElement // ignore: cast_nullable_to_non_nullable
@@ -11788,7 +22252,7 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11820,8 +22284,7 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionStatus.unknown)
-          ResearchElementDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -11868,12 +22331,10 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
           List<Canonical>? library_,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
-          ResearchElementDefinitionType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
-          ResearchElementDefinitionVariableType? variableType,
+      Code? variableType,
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
       List<ResearchElementDefinitionCharacteristic> characteristic});
@@ -12018,7 +22479,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12110,7 +22571,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12250,7 +22711,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -12258,7 +22719,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       variableType: variableType == freezed
           ? _value.variableType
           : variableType // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionVariableType?,
+              as Code?,
       variableTypeElement: variableTypeElement == freezed
           ? _value.variableTypeElement
           : variableTypeElement // ignore: cast_nullable_to_non_nullable
@@ -12309,8 +22770,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       this.subtitle,
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -12357,12 +22817,10 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
           final List<Canonical>? library_,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
-          this.type,
+      this.type,
       @JsonKey(name: '_type')
           this.typeElement,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
-          this.variableType,
+      this.variableType,
       @JsonKey(name: '_variableType')
           this.variableTypeElement,
       required final List<ResearchElementDefinitionCharacteristic>
@@ -12393,7 +22851,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -12476,8 +22934,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionStatus.unknown)
-  final ResearchElementDefinitionStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -12643,14 +23100,12 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
-  final ResearchElementDefinitionType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
-  final ResearchElementDefinitionVariableType? variableType;
+  final Code? variableType;
   @override
   @JsonKey(name: '_variableType')
   final Element? variableTypeElement;
@@ -12863,7 +23318,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   factory _ResearchElementDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12895,8 +23350,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       final String? subtitle,
       @JsonKey(name: '_subtitle')
           final Element? subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionStatus.unknown)
-          final ResearchElementDefinitionStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Boolean? experimental,
@@ -12943,12 +23397,10 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
           final List<Canonical>? library_,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
-          final ResearchElementDefinitionType? type,
+      final Code? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
-      @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
-          final ResearchElementDefinitionVariableType? variableType,
+      final Code? variableType,
       @JsonKey(name: '_variableType')
           final Element? variableTypeElement,
       required final List<ResearchElementDefinitionCharacteristic>
@@ -12962,7 +23414,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -13018,9 +23470,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionStatus.unknown)
-  ResearchElementDefinitionStatus? get status =>
-      throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -13104,15 +23554,12 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   @JsonKey(name: 'library')
   List<Canonical>? get library_ => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
-  ResearchElementDefinitionType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
-  ResearchElementDefinitionVariableType? get variableType =>
-      throw _privateConstructorUsedError;
+  Code? get variableType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_variableType')
   Element? get variableTypeElement => throw _privateConstructorUsedError;
@@ -13166,12 +23613,7 @@ mixin _$ResearchElementDefinitionCharacteristic {
   Timing? get studyEffectiveTiming => throw _privateConstructorUsedError;
   FhirDuration? get studyEffectiveTimeFromStart =>
       throw _privateConstructorUsedError;
-  @JsonKey(
-      unknownEnumValue:
-          ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
-              .unknown)
-  ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?
-      get studyEffectiveGroupMeasure => throw _privateConstructorUsedError;
+  Code? get studyEffectiveGroupMeasure => throw _privateConstructorUsedError;
   @JsonKey(name: '_studyEffectiveGroupMeasure')
   Element? get studyEffectiveGroupMeasureElement =>
       throw _privateConstructorUsedError;
@@ -13191,13 +23633,8 @@ mixin _$ResearchElementDefinitionCharacteristic {
   Timing? get participantEffectiveTiming => throw _privateConstructorUsedError;
   FhirDuration? get participantEffectiveTimeFromStart =>
       throw _privateConstructorUsedError;
-  @JsonKey(
-      unknownEnumValue:
-          ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
-              .unknown)
-  ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?
-      get participantEffectiveGroupMeasure =>
-          throw _privateConstructorUsedError;
+  Code? get participantEffectiveGroupMeasure =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_participantEffectiveGroupMeasure')
   Element? get participantEffectiveGroupMeasureElement =>
       throw _privateConstructorUsedError;
@@ -13241,12 +23678,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       FhirDuration? studyEffectiveDuration,
       Timing? studyEffectiveTiming,
       FhirDuration? studyEffectiveTimeFromStart,
-      @JsonKey(
-          unknownEnumValue:
-              ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
-                  .unknown)
-          ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?
-              studyEffectiveGroupMeasure,
+      Code? studyEffectiveGroupMeasure,
       @JsonKey(name: '_studyEffectiveGroupMeasure')
           Element? studyEffectiveGroupMeasureElement,
       String? participantEffectiveDescription,
@@ -13259,12 +23691,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       FhirDuration? participantEffectiveDuration,
       Timing? participantEffectiveTiming,
       FhirDuration? participantEffectiveTimeFromStart,
-      @JsonKey(
-          unknownEnumValue:
-              ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
-                  .unknown)
-          ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?
-              participantEffectiveGroupMeasure,
+      Code? participantEffectiveGroupMeasure,
       @JsonKey(name: '_participantEffectiveGroupMeasure')
           Element? participantEffectiveGroupMeasureElement});
 
@@ -13420,7 +23847,7 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
       studyEffectiveGroupMeasure: studyEffectiveGroupMeasure == freezed
           ? _value.studyEffectiveGroupMeasure
           : studyEffectiveGroupMeasure // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?,
+              as Code?,
       studyEffectiveGroupMeasureElement: studyEffectiveGroupMeasureElement ==
               freezed
           ? _value.studyEffectiveGroupMeasureElement
@@ -13466,7 +23893,7 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
               freezed
           ? _value.participantEffectiveGroupMeasure
           : participantEffectiveGroupMeasure // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?,
+              as Code?,
       participantEffectiveGroupMeasureElement:
           participantEffectiveGroupMeasureElement == freezed
               ? _value.participantEffectiveGroupMeasureElement
@@ -13743,12 +24170,7 @@ abstract class _$$_ResearchElementDefinitionCharacteristicCopyWith<$Res>
       FhirDuration? studyEffectiveDuration,
       Timing? studyEffectiveTiming,
       FhirDuration? studyEffectiveTimeFromStart,
-      @JsonKey(
-          unknownEnumValue:
-              ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
-                  .unknown)
-          ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?
-              studyEffectiveGroupMeasure,
+      Code? studyEffectiveGroupMeasure,
       @JsonKey(name: '_studyEffectiveGroupMeasure')
           Element? studyEffectiveGroupMeasureElement,
       String? participantEffectiveDescription,
@@ -13761,12 +24183,7 @@ abstract class _$$_ResearchElementDefinitionCharacteristicCopyWith<$Res>
       FhirDuration? participantEffectiveDuration,
       Timing? participantEffectiveTiming,
       FhirDuration? participantEffectiveTimeFromStart,
-      @JsonKey(
-          unknownEnumValue:
-              ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
-                  .unknown)
-          ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?
-              participantEffectiveGroupMeasure,
+      Code? participantEffectiveGroupMeasure,
       @JsonKey(name: '_participantEffectiveGroupMeasure')
           Element? participantEffectiveGroupMeasureElement});
 
@@ -13946,7 +24363,7 @@ class __$$_ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
       studyEffectiveGroupMeasure: studyEffectiveGroupMeasure == freezed
           ? _value.studyEffectiveGroupMeasure
           : studyEffectiveGroupMeasure // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?,
+              as Code?,
       studyEffectiveGroupMeasureElement: studyEffectiveGroupMeasureElement ==
               freezed
           ? _value.studyEffectiveGroupMeasureElement
@@ -13992,7 +24409,7 @@ class __$$_ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
               freezed
           ? _value.participantEffectiveGroupMeasure
           : participantEffectiveGroupMeasure // ignore: cast_nullable_to_non_nullable
-              as ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?,
+              as Code?,
       participantEffectiveGroupMeasureElement:
           participantEffectiveGroupMeasureElement == freezed
               ? _value.participantEffectiveGroupMeasureElement
@@ -14032,11 +24449,7 @@ class _$_ResearchElementDefinitionCharacteristic
       this.studyEffectiveDuration,
       this.studyEffectiveTiming,
       this.studyEffectiveTimeFromStart,
-      @JsonKey(
-          unknownEnumValue:
-              ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
-                  .unknown)
-          this.studyEffectiveGroupMeasure,
+      this.studyEffectiveGroupMeasure,
       @JsonKey(name: '_studyEffectiveGroupMeasure')
           this.studyEffectiveGroupMeasureElement,
       this.participantEffectiveDescription,
@@ -14049,11 +24462,7 @@ class _$_ResearchElementDefinitionCharacteristic
       this.participantEffectiveDuration,
       this.participantEffectiveTiming,
       this.participantEffectiveTimeFromStart,
-      @JsonKey(
-          unknownEnumValue:
-              ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
-                  .unknown)
-          this.participantEffectiveGroupMeasure,
+      this.participantEffectiveGroupMeasure,
       @JsonKey(name: '_participantEffectiveGroupMeasure')
           this.participantEffectiveGroupMeasureElement})
       : _extension_ = extension_,
@@ -14132,12 +24541,7 @@ class _$_ResearchElementDefinitionCharacteristic
   @override
   final FhirDuration? studyEffectiveTimeFromStart;
   @override
-  @JsonKey(
-      unknownEnumValue:
-          ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
-              .unknown)
-  final ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?
-      studyEffectiveGroupMeasure;
+  final Code? studyEffectiveGroupMeasure;
   @override
   @JsonKey(name: '_studyEffectiveGroupMeasure')
   final Element? studyEffectiveGroupMeasureElement;
@@ -14160,12 +24564,7 @@ class _$_ResearchElementDefinitionCharacteristic
   @override
   final FhirDuration? participantEffectiveTimeFromStart;
   @override
-  @JsonKey(
-      unknownEnumValue:
-          ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
-              .unknown)
-  final ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?
-      participantEffectiveGroupMeasure;
+  final Code? participantEffectiveGroupMeasure;
   @override
   @JsonKey(name: '_participantEffectiveGroupMeasure')
   final Element? participantEffectiveGroupMeasureElement;
@@ -14338,12 +24737,7 @@ abstract class _ResearchElementDefinitionCharacteristic
           final FhirDuration? studyEffectiveDuration,
           final Timing? studyEffectiveTiming,
           final FhirDuration? studyEffectiveTimeFromStart,
-          @JsonKey(
-              unknownEnumValue:
-                  ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
-                      .unknown)
-              final ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?
-                  studyEffectiveGroupMeasure,
+          final Code? studyEffectiveGroupMeasure,
           @JsonKey(name: '_studyEffectiveGroupMeasure')
               final Element? studyEffectiveGroupMeasureElement,
           final String? participantEffectiveDescription,
@@ -14356,12 +24750,7 @@ abstract class _ResearchElementDefinitionCharacteristic
           final FhirDuration? participantEffectiveDuration,
           final Timing? participantEffectiveTiming,
           final FhirDuration? participantEffectiveTimeFromStart,
-          @JsonKey(
-              unknownEnumValue:
-                  ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
-                      .unknown)
-              final ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?
-                  participantEffectiveGroupMeasure,
+          final Code? participantEffectiveGroupMeasure,
           @JsonKey(name: '_participantEffectiveGroupMeasure')
               final Element? participantEffectiveGroupMeasureElement}) =
       _$_ResearchElementDefinitionCharacteristic;
@@ -14425,12 +24814,7 @@ abstract class _ResearchElementDefinitionCharacteristic
   FhirDuration? get studyEffectiveTimeFromStart =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      unknownEnumValue:
-          ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
-              .unknown)
-  ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?
-      get studyEffectiveGroupMeasure => throw _privateConstructorUsedError;
+  Code? get studyEffectiveGroupMeasure => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_studyEffectiveGroupMeasure')
   Element? get studyEffectiveGroupMeasureElement =>
@@ -14460,13 +24844,8 @@ abstract class _ResearchElementDefinitionCharacteristic
   FhirDuration? get participantEffectiveTimeFromStart =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      unknownEnumValue:
-          ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
-              .unknown)
-  ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?
-      get participantEffectiveGroupMeasure =>
-          throw _privateConstructorUsedError;
+  Code? get participantEffectiveGroupMeasure =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_participantEffectiveGroupMeasure')
   Element? get participantEffectiveGroupMeasureElement =>
@@ -14475,3873 +24854,5 @@ abstract class _ResearchElementDefinitionCharacteristic
   @JsonKey(ignore: true)
   _$$_ResearchElementDefinitionCharacteristicCopyWith<
           _$_ResearchElementDefinitionCharacteristic>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-RiskEvidenceSynthesis _$RiskEvidenceSynthesisFromJson(
-    Map<String, dynamic> json) {
-  return _RiskEvidenceSynthesis.fromJson(json);
-}
-
-/// @nodoc
-mixin _$RiskEvidenceSynthesis {
-  @JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
-  R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
-  Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
-  @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
-  Narrative? get text => throw _privateConstructorUsedError;
-  List<Resource>? get contained => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  FhirUri? get url => throw _privateConstructorUsedError;
-  @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  String? get version => throw _privateConstructorUsedError;
-  @JsonKey(name: '_version')
-  Element? get versionElement => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
-  @JsonKey(name: '_title')
-  Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: RiskEvidenceSynthesisStatus.unknown)
-  RiskEvidenceSynthesisStatus? get status => throw _privateConstructorUsedError;
-  @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
-  FhirDateTime? get date => throw _privateConstructorUsedError;
-  @JsonKey(name: '_date')
-  Element? get dateElement => throw _privateConstructorUsedError;
-  String? get publisher => throw _privateConstructorUsedError;
-  @JsonKey(name: '_publisher')
-  Element? get publisherElement => throw _privateConstructorUsedError;
-  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
-  Markdown? get description => throw _privateConstructorUsedError;
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
-  Markdown? get copyright => throw _privateConstructorUsedError;
-  @JsonKey(name: '_copyright')
-  Element? get copyrightElement => throw _privateConstructorUsedError;
-  Date? get approvalDate => throw _privateConstructorUsedError;
-  @JsonKey(name: '_approvalDate')
-  Element? get approvalDateElement => throw _privateConstructorUsedError;
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
-  @JsonKey(name: '_lastReviewDate')
-  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
-  Period? get effectivePeriod => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
-  List<ContactDetail>? get author => throw _privateConstructorUsedError;
-  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
-  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
-  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
-  List<RelatedArtifact>? get relatedArtifact =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
-  CodeableConcept? get studyType => throw _privateConstructorUsedError;
-  Reference get population => throw _privateConstructorUsedError;
-  Reference? get exposure => throw _privateConstructorUsedError;
-  Reference get outcome => throw _privateConstructorUsedError;
-  RiskEvidenceSynthesisSampleSize? get sampleSize =>
-      throw _privateConstructorUsedError;
-  RiskEvidenceSynthesisRiskEstimate? get riskEstimate =>
-      throw _privateConstructorUsedError;
-  List<RiskEvidenceSynthesisCertainty>? get certainty =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RiskEvidenceSynthesisCopyWith<RiskEvidenceSynthesis> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RiskEvidenceSynthesisCopyWith<$Res> {
-  factory $RiskEvidenceSynthesisCopyWith(RiskEvidenceSynthesis value,
-          $Res Function(RiskEvidenceSynthesis) then) =
-      _$RiskEvidenceSynthesisCopyWithImpl<$Res>;
-  $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      @JsonKey(unknownEnumValue: RiskEvidenceSynthesisStatus.unknown)
-          RiskEvidenceSynthesisStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<Annotation>? note,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
-      Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      CodeableConcept? synthesisType,
-      CodeableConcept? studyType,
-      Reference population,
-      Reference? exposure,
-      Reference outcome,
-      RiskEvidenceSynthesisSampleSize? sampleSize,
-      RiskEvidenceSynthesisRiskEstimate? riskEstimate,
-      List<RiskEvidenceSynthesisCertainty>? certainty});
-
-  $MetaCopyWith<$Res>? get meta;
-  $ElementCopyWith<$Res>? get implicitRulesElement;
-  $ElementCopyWith<$Res>? get languageElement;
-  $NarrativeCopyWith<$Res>? get text;
-  $ElementCopyWith<$Res>? get urlElement;
-  $ElementCopyWith<$Res>? get versionElement;
-  $ElementCopyWith<$Res>? get nameElement;
-  $ElementCopyWith<$Res>? get titleElement;
-  $ElementCopyWith<$Res>? get statusElement;
-  $ElementCopyWith<$Res>? get dateElement;
-  $ElementCopyWith<$Res>? get publisherElement;
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $ElementCopyWith<$Res>? get copyrightElement;
-  $ElementCopyWith<$Res>? get approvalDateElement;
-  $ElementCopyWith<$Res>? get lastReviewDateElement;
-  $PeriodCopyWith<$Res>? get effectivePeriod;
-  $CodeableConceptCopyWith<$Res>? get synthesisType;
-  $CodeableConceptCopyWith<$Res>? get studyType;
-  $ReferenceCopyWith<$Res> get population;
-  $ReferenceCopyWith<$Res>? get exposure;
-  $ReferenceCopyWith<$Res> get outcome;
-  $RiskEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize;
-  $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>? get riskEstimate;
-}
-
-/// @nodoc
-class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
-    implements $RiskEvidenceSynthesisCopyWith<$Res> {
-  _$RiskEvidenceSynthesisCopyWithImpl(this._value, this._then);
-
-  final RiskEvidenceSynthesis _value;
-  // ignore: unused_field
-  final $Res Function(RiskEvidenceSynthesis) _then;
-
-  @override
-  $Res call({
-    Object? resourceType = freezed,
-    Object? id = freezed,
-    Object? meta = freezed,
-    Object? implicitRules = freezed,
-    Object? implicitRulesElement = freezed,
-    Object? language = freezed,
-    Object? languageElement = freezed,
-    Object? text = freezed,
-    Object? contained = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? url = freezed,
-    Object? urlElement = freezed,
-    Object? identifier = freezed,
-    Object? version = freezed,
-    Object? versionElement = freezed,
-    Object? name = freezed,
-    Object? nameElement = freezed,
-    Object? title = freezed,
-    Object? titleElement = freezed,
-    Object? status = freezed,
-    Object? statusElement = freezed,
-    Object? date = freezed,
-    Object? dateElement = freezed,
-    Object? publisher = freezed,
-    Object? publisherElement = freezed,
-    Object? contact = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? note = freezed,
-    Object? useContext = freezed,
-    Object? jurisdiction = freezed,
-    Object? copyright = freezed,
-    Object? copyrightElement = freezed,
-    Object? approvalDate = freezed,
-    Object? approvalDateElement = freezed,
-    Object? lastReviewDate = freezed,
-    Object? lastReviewDateElement = freezed,
-    Object? effectivePeriod = freezed,
-    Object? topic = freezed,
-    Object? author = freezed,
-    Object? editor = freezed,
-    Object? reviewer = freezed,
-    Object? endorser = freezed,
-    Object? relatedArtifact = freezed,
-    Object? synthesisType = freezed,
-    Object? studyType = freezed,
-    Object? population = freezed,
-    Object? exposure = freezed,
-    Object? outcome = freezed,
-    Object? sampleSize = freezed,
-    Object? riskEstimate = freezed,
-    Object? certainty = freezed,
-  }) {
-    return _then(_value.copyWith(
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType // ignore: cast_nullable_to_non_nullable
-              as R4ResourceType,
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
-      meta: meta == freezed
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      language: language == freezed
-          ? _value.language
-          : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      text: text == freezed
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
-          : contained // ignore: cast_nullable_to_non_nullable
-              as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      urlElement: urlElement == freezed
-          ? _value.urlElement
-          : urlElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      identifier: identifier == freezed
-          ? _value.identifier
-          : identifier // ignore: cast_nullable_to_non_nullable
-              as List<Identifier>?,
-      version: version == freezed
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameElement: nameElement == freezed
-          ? _value.nameElement
-          : nameElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      title: title == freezed
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      status: status == freezed
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as RiskEvidenceSynthesisStatus?,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      date: date == freezed
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      dateElement: dateElement == freezed
-          ? _value.dateElement
-          : dateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      publisher: publisher == freezed
-          ? _value.publisher
-          : publisher // ignore: cast_nullable_to_non_nullable
-              as String?,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      useContext: useContext == freezed
-          ? _value.useContext
-          : useContext // ignore: cast_nullable_to_non_nullable
-              as List<UsageContext>?,
-      jurisdiction: jurisdiction == freezed
-          ? _value.jurisdiction
-          : jurisdiction // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      copyright: copyright == freezed
-          ? _value.copyright
-          : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      approvalDate: approvalDate == freezed
-          ? _value.approvalDate
-          : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      lastReviewDate: lastReviewDate == freezed
-          ? _value.lastReviewDate
-          : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      effectivePeriod: effectivePeriod == freezed
-          ? _value.effectivePeriod
-          : effectivePeriod // ignore: cast_nullable_to_non_nullable
-              as Period?,
-      topic: topic == freezed
-          ? _value.topic
-          : topic // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      author: author == freezed
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      editor: editor == freezed
-          ? _value.editor
-          : editor // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      reviewer: reviewer == freezed
-          ? _value.reviewer
-          : reviewer // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      endorser: endorser == freezed
-          ? _value.endorser
-          : endorser // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      relatedArtifact: relatedArtifact == freezed
-          ? _value.relatedArtifact
-          : relatedArtifact // ignore: cast_nullable_to_non_nullable
-              as List<RelatedArtifact>?,
-      synthesisType: synthesisType == freezed
-          ? _value.synthesisType
-          : synthesisType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      studyType: studyType == freezed
-          ? _value.studyType
-          : studyType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      population: population == freezed
-          ? _value.population
-          : population // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      exposure: exposure == freezed
-          ? _value.exposure
-          : exposure // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      outcome: outcome == freezed
-          ? _value.outcome
-          : outcome // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      sampleSize: sampleSize == freezed
-          ? _value.sampleSize
-          : sampleSize // ignore: cast_nullable_to_non_nullable
-              as RiskEvidenceSynthesisSampleSize?,
-      riskEstimate: riskEstimate == freezed
-          ? _value.riskEstimate
-          : riskEstimate // ignore: cast_nullable_to_non_nullable
-              as RiskEvidenceSynthesisRiskEstimate?,
-      certainty: certainty == freezed
-          ? _value.certainty
-          : certainty // ignore: cast_nullable_to_non_nullable
-              as List<RiskEvidenceSynthesisCertainty>?,
-    ));
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get meta {
-    if (_value.meta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get implicitRulesElement {
-    if (_value.implicitRulesElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get languageElement {
-    if (_value.languageElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
-    });
-  }
-
-  @override
-  $NarrativeCopyWith<$Res>? get text {
-    if (_value.text == null) {
-      return null;
-    }
-
-    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get urlElement {
-    if (_value.urlElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
-      return _then(_value.copyWith(urlElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get versionElement {
-    if (_value.versionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
-      return _then(_value.copyWith(versionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get nameElement {
-    if (_value.nameElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get titleElement {
-    if (_value.titleElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
-      return _then(_value.copyWith(titleElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get dateElement {
-    if (_value.dateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
-      return _then(_value.copyWith(dateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get publisherElement {
-    if (_value.publisherElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.publisherElement!, (value) {
-      return _then(_value.copyWith(publisherElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get copyrightElement {
-    if (_value.copyrightElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
-      return _then(_value.copyWith(copyrightElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get approvalDateElement {
-    if (_value.approvalDateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.approvalDateElement!, (value) {
-      return _then(_value.copyWith(approvalDateElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get lastReviewDateElement {
-    if (_value.lastReviewDateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.lastReviewDateElement!, (value) {
-      return _then(_value.copyWith(lastReviewDateElement: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res>? get effectivePeriod {
-    if (_value.effectivePeriod == null) {
-      return null;
-    }
-
-    return $PeriodCopyWith<$Res>(_value.effectivePeriod!, (value) {
-      return _then(_value.copyWith(effectivePeriod: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get synthesisType {
-    if (_value.synthesisType == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.synthesisType!, (value) {
-      return _then(_value.copyWith(synthesisType: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get studyType {
-    if (_value.studyType == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.studyType!, (value) {
-      return _then(_value.copyWith(studyType: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get population {
-    return $ReferenceCopyWith<$Res>(_value.population, (value) {
-      return _then(_value.copyWith(population: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get exposure {
-    if (_value.exposure == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.exposure!, (value) {
-      return _then(_value.copyWith(exposure: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get outcome {
-    return $ReferenceCopyWith<$Res>(_value.outcome, (value) {
-      return _then(_value.copyWith(outcome: value));
-    });
-  }
-
-  @override
-  $RiskEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize {
-    if (_value.sampleSize == null) {
-      return null;
-    }
-
-    return $RiskEvidenceSynthesisSampleSizeCopyWith<$Res>(_value.sampleSize!,
-        (value) {
-      return _then(_value.copyWith(sampleSize: value));
-    });
-  }
-
-  @override
-  $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>? get riskEstimate {
-    if (_value.riskEstimate == null) {
-      return null;
-    }
-
-    return $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>(
-        _value.riskEstimate!, (value) {
-      return _then(_value.copyWith(riskEstimate: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_RiskEvidenceSynthesisCopyWith<$Res>
-    implements $RiskEvidenceSynthesisCopyWith<$Res> {
-  factory _$$_RiskEvidenceSynthesisCopyWith(_$_RiskEvidenceSynthesis value,
-          $Res Function(_$_RiskEvidenceSynthesis) then) =
-      __$$_RiskEvidenceSynthesisCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
-          R4ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      @JsonKey(unknownEnumValue: RiskEvidenceSynthesisStatus.unknown)
-          RiskEvidenceSynthesisStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      List<Annotation>? note,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
-      Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
-      Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      CodeableConcept? synthesisType,
-      CodeableConcept? studyType,
-      Reference population,
-      Reference? exposure,
-      Reference outcome,
-      RiskEvidenceSynthesisSampleSize? sampleSize,
-      RiskEvidenceSynthesisRiskEstimate? riskEstimate,
-      List<RiskEvidenceSynthesisCertainty>? certainty});
-
-  @override
-  $MetaCopyWith<$Res>? get meta;
-  @override
-  $ElementCopyWith<$Res>? get implicitRulesElement;
-  @override
-  $ElementCopyWith<$Res>? get languageElement;
-  @override
-  $NarrativeCopyWith<$Res>? get text;
-  @override
-  $ElementCopyWith<$Res>? get urlElement;
-  @override
-  $ElementCopyWith<$Res>? get versionElement;
-  @override
-  $ElementCopyWith<$Res>? get nameElement;
-  @override
-  $ElementCopyWith<$Res>? get titleElement;
-  @override
-  $ElementCopyWith<$Res>? get statusElement;
-  @override
-  $ElementCopyWith<$Res>? get dateElement;
-  @override
-  $ElementCopyWith<$Res>? get publisherElement;
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
-  @override
-  $ElementCopyWith<$Res>? get copyrightElement;
-  @override
-  $ElementCopyWith<$Res>? get approvalDateElement;
-  @override
-  $ElementCopyWith<$Res>? get lastReviewDateElement;
-  @override
-  $PeriodCopyWith<$Res>? get effectivePeriod;
-  @override
-  $CodeableConceptCopyWith<$Res>? get synthesisType;
-  @override
-  $CodeableConceptCopyWith<$Res>? get studyType;
-  @override
-  $ReferenceCopyWith<$Res> get population;
-  @override
-  $ReferenceCopyWith<$Res>? get exposure;
-  @override
-  $ReferenceCopyWith<$Res> get outcome;
-  @override
-  $RiskEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize;
-  @override
-  $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>? get riskEstimate;
-}
-
-/// @nodoc
-class __$$_RiskEvidenceSynthesisCopyWithImpl<$Res>
-    extends _$RiskEvidenceSynthesisCopyWithImpl<$Res>
-    implements _$$_RiskEvidenceSynthesisCopyWith<$Res> {
-  __$$_RiskEvidenceSynthesisCopyWithImpl(_$_RiskEvidenceSynthesis _value,
-      $Res Function(_$_RiskEvidenceSynthesis) _then)
-      : super(_value, (v) => _then(v as _$_RiskEvidenceSynthesis));
-
-  @override
-  _$_RiskEvidenceSynthesis get _value =>
-      super._value as _$_RiskEvidenceSynthesis;
-
-  @override
-  $Res call({
-    Object? resourceType = freezed,
-    Object? id = freezed,
-    Object? meta = freezed,
-    Object? implicitRules = freezed,
-    Object? implicitRulesElement = freezed,
-    Object? language = freezed,
-    Object? languageElement = freezed,
-    Object? text = freezed,
-    Object? contained = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? url = freezed,
-    Object? urlElement = freezed,
-    Object? identifier = freezed,
-    Object? version = freezed,
-    Object? versionElement = freezed,
-    Object? name = freezed,
-    Object? nameElement = freezed,
-    Object? title = freezed,
-    Object? titleElement = freezed,
-    Object? status = freezed,
-    Object? statusElement = freezed,
-    Object? date = freezed,
-    Object? dateElement = freezed,
-    Object? publisher = freezed,
-    Object? publisherElement = freezed,
-    Object? contact = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? note = freezed,
-    Object? useContext = freezed,
-    Object? jurisdiction = freezed,
-    Object? copyright = freezed,
-    Object? copyrightElement = freezed,
-    Object? approvalDate = freezed,
-    Object? approvalDateElement = freezed,
-    Object? lastReviewDate = freezed,
-    Object? lastReviewDateElement = freezed,
-    Object? effectivePeriod = freezed,
-    Object? topic = freezed,
-    Object? author = freezed,
-    Object? editor = freezed,
-    Object? reviewer = freezed,
-    Object? endorser = freezed,
-    Object? relatedArtifact = freezed,
-    Object? synthesisType = freezed,
-    Object? studyType = freezed,
-    Object? population = freezed,
-    Object? exposure = freezed,
-    Object? outcome = freezed,
-    Object? sampleSize = freezed,
-    Object? riskEstimate = freezed,
-    Object? certainty = freezed,
-  }) {
-    return _then(_$_RiskEvidenceSynthesis(
-      resourceType: resourceType == freezed
-          ? _value.resourceType
-          : resourceType // ignore: cast_nullable_to_non_nullable
-              as R4ResourceType,
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
-      meta: meta == freezed
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
-      implicitRules: implicitRules == freezed
-          ? _value.implicitRules
-          : implicitRules // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
-          ? _value.implicitRulesElement
-          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      language: language == freezed
-          ? _value.language
-          : language // ignore: cast_nullable_to_non_nullable
-              as Code?,
-      languageElement: languageElement == freezed
-          ? _value.languageElement
-          : languageElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      text: text == freezed
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as Narrative?,
-      contained: contained == freezed
-          ? _value._contained
-          : contained // ignore: cast_nullable_to_non_nullable
-              as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      urlElement: urlElement == freezed
-          ? _value.urlElement
-          : urlElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      identifier: identifier == freezed
-          ? _value._identifier
-          : identifier // ignore: cast_nullable_to_non_nullable
-              as List<Identifier>?,
-      version: version == freezed
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-      versionElement: versionElement == freezed
-          ? _value.versionElement
-          : versionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameElement: nameElement == freezed
-          ? _value.nameElement
-          : nameElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      title: title == freezed
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      titleElement: titleElement == freezed
-          ? _value.titleElement
-          : titleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      status: status == freezed
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as RiskEvidenceSynthesisStatus?,
-      statusElement: statusElement == freezed
-          ? _value.statusElement
-          : statusElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      date: date == freezed
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      dateElement: dateElement == freezed
-          ? _value.dateElement
-          : dateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      publisher: publisher == freezed
-          ? _value.publisher
-          : publisher // ignore: cast_nullable_to_non_nullable
-              as String?,
-      publisherElement: publisherElement == freezed
-          ? _value.publisherElement
-          : publisherElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      contact: contact == freezed
-          ? _value._contact
-          : contact // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: note == freezed
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      useContext: useContext == freezed
-          ? _value._useContext
-          : useContext // ignore: cast_nullable_to_non_nullable
-              as List<UsageContext>?,
-      jurisdiction: jurisdiction == freezed
-          ? _value._jurisdiction
-          : jurisdiction // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      copyright: copyright == freezed
-          ? _value.copyright
-          : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
-      copyrightElement: copyrightElement == freezed
-          ? _value.copyrightElement
-          : copyrightElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      approvalDate: approvalDate == freezed
-          ? _value.approvalDate
-          : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      approvalDateElement: approvalDateElement == freezed
-          ? _value.approvalDateElement
-          : approvalDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      lastReviewDate: lastReviewDate == freezed
-          ? _value.lastReviewDate
-          : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      lastReviewDateElement: lastReviewDateElement == freezed
-          ? _value.lastReviewDateElement
-          : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      effectivePeriod: effectivePeriod == freezed
-          ? _value.effectivePeriod
-          : effectivePeriod // ignore: cast_nullable_to_non_nullable
-              as Period?,
-      topic: topic == freezed
-          ? _value._topic
-          : topic // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      author: author == freezed
-          ? _value._author
-          : author // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      editor: editor == freezed
-          ? _value._editor
-          : editor // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      reviewer: reviewer == freezed
-          ? _value._reviewer
-          : reviewer // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      endorser: endorser == freezed
-          ? _value._endorser
-          : endorser // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      relatedArtifact: relatedArtifact == freezed
-          ? _value._relatedArtifact
-          : relatedArtifact // ignore: cast_nullable_to_non_nullable
-              as List<RelatedArtifact>?,
-      synthesisType: synthesisType == freezed
-          ? _value.synthesisType
-          : synthesisType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      studyType: studyType == freezed
-          ? _value.studyType
-          : studyType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      population: population == freezed
-          ? _value.population
-          : population // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      exposure: exposure == freezed
-          ? _value.exposure
-          : exposure // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      outcome: outcome == freezed
-          ? _value.outcome
-          : outcome // ignore: cast_nullable_to_non_nullable
-              as Reference,
-      sampleSize: sampleSize == freezed
-          ? _value.sampleSize
-          : sampleSize // ignore: cast_nullable_to_non_nullable
-              as RiskEvidenceSynthesisSampleSize?,
-      riskEstimate: riskEstimate == freezed
-          ? _value.riskEstimate
-          : riskEstimate // ignore: cast_nullable_to_non_nullable
-              as RiskEvidenceSynthesisRiskEstimate?,
-      certainty: certainty == freezed
-          ? _value._certainty
-          : certainty // ignore: cast_nullable_to_non_nullable
-              as List<RiskEvidenceSynthesisCertainty>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
-  _$_RiskEvidenceSynthesis(
-      {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
-          this.resourceType = R4ResourceType.RiskEvidenceSynthesis,
-      this.id,
-      this.meta,
-      this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
-      this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
-      this.text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
-      this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(unknownEnumValue: RiskEvidenceSynthesisStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      final List<Annotation>? note,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
-      this.approvalDate,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
-      this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
-      this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      this.synthesisType,
-      this.studyType,
-      required this.population,
-      this.exposure,
-      required this.outcome,
-      this.sampleSize,
-      this.riskEstimate,
-      final List<RiskEvidenceSynthesisCertainty>? certainty})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _contact = contact,
-        _note = note,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _author = author,
-        _editor = editor,
-        _reviewer = reviewer,
-        _endorser = endorser,
-        _relatedArtifact = relatedArtifact,
-        _certainty = certainty,
-        super._();
-
-  factory _$_RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
-      _$$_RiskEvidenceSynthesisFromJson(json);
-
-  @override
-  @JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
-  final R4ResourceType resourceType;
-  @override
-  final Id? id;
-  @override
-  final Meta? meta;
-  @override
-  final FhirUri? implicitRules;
-  @override
-  @JsonKey(name: '_implicitRules')
-  final Element? implicitRulesElement;
-  @override
-  final Code? language;
-  @override
-  @JsonKey(name: '_language')
-  final Element? languageElement;
-  @override
-  final Narrative? text;
-  final List<Resource>? _contained;
-  @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final FhirUri? url;
-  @override
-  @JsonKey(name: '_url')
-  final Element? urlElement;
-  final List<Identifier>? _identifier;
-  @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final String? version;
-  @override
-  @JsonKey(name: '_version')
-  final Element? versionElement;
-  @override
-  final String? name;
-  @override
-  @JsonKey(name: '_name')
-  final Element? nameElement;
-  @override
-  final String? title;
-  @override
-  @JsonKey(name: '_title')
-  final Element? titleElement;
-  @override
-  @JsonKey(unknownEnumValue: RiskEvidenceSynthesisStatus.unknown)
-  final RiskEvidenceSynthesisStatus? status;
-  @override
-  @JsonKey(name: '_status')
-  final Element? statusElement;
-  @override
-  final FhirDateTime? date;
-  @override
-  @JsonKey(name: '_date')
-  final Element? dateElement;
-  @override
-  final String? publisher;
-  @override
-  @JsonKey(name: '_publisher')
-  final Element? publisherElement;
-  final List<ContactDetail>? _contact;
-  @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final Markdown? description;
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-  final List<Annotation>? _note;
-  @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<UsageContext>? _useContext;
-  @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
-  @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final Markdown? copyright;
-  @override
-  @JsonKey(name: '_copyright')
-  final Element? copyrightElement;
-  @override
-  final Date? approvalDate;
-  @override
-  @JsonKey(name: '_approvalDate')
-  final Element? approvalDateElement;
-  @override
-  final Date? lastReviewDate;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  final Element? lastReviewDateElement;
-  @override
-  final Period? effectivePeriod;
-  final List<CodeableConcept>? _topic;
-  @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _author;
-  @override
-  List<ContactDetail>? get author {
-    final value = _author;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _editor;
-  @override
-  List<ContactDetail>? get editor {
-    final value = _editor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _reviewer;
-  @override
-  List<ContactDetail>? get reviewer {
-    final value = _reviewer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _endorser;
-  @override
-  List<ContactDetail>? get endorser {
-    final value = _endorser;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _relatedArtifact;
-  @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final CodeableConcept? synthesisType;
-  @override
-  final CodeableConcept? studyType;
-  @override
-  final Reference population;
-  @override
-  final Reference? exposure;
-  @override
-  final Reference outcome;
-  @override
-  final RiskEvidenceSynthesisSampleSize? sampleSize;
-  @override
-  final RiskEvidenceSynthesisRiskEstimate? riskEstimate;
-  final List<RiskEvidenceSynthesisCertainty>? _certainty;
-  @override
-  List<RiskEvidenceSynthesisCertainty>? get certainty {
-    final value = _certainty;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'RiskEvidenceSynthesis(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, note: $note, useContext: $useContext, jurisdiction: $jurisdiction, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, synthesisType: $synthesisType, studyType: $studyType, population: $population, exposure: $exposure, outcome: $outcome, sampleSize: $sampleSize, riskEstimate: $riskEstimate, certainty: $certainty)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RiskEvidenceSynthesis &&
-            const DeepCollectionEquality()
-                .equals(other.resourceType, resourceType) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.meta, meta) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRules, implicitRules) &&
-            const DeepCollectionEquality()
-                .equals(other.implicitRulesElement, implicitRulesElement) &&
-            const DeepCollectionEquality().equals(other.language, language) &&
-            const DeepCollectionEquality()
-                .equals(other.languageElement, languageElement) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.urlElement, urlElement) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other.version, version) &&
-            const DeepCollectionEquality()
-                .equals(other.versionElement, versionElement) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.nameElement, nameElement) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.titleElement, titleElement) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.statusElement, statusElement) &&
-            const DeepCollectionEquality().equals(other.date, date) &&
-            const DeepCollectionEquality()
-                .equals(other.dateElement, dateElement) &&
-            const DeepCollectionEquality().equals(other.publisher, publisher) &&
-            const DeepCollectionEquality()
-                .equals(other.publisherElement, publisherElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
-            const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
-            const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
-            const DeepCollectionEquality().equals(other.copyright, copyright) &&
-            const DeepCollectionEquality()
-                .equals(other.copyrightElement, copyrightElement) &&
-            const DeepCollectionEquality()
-                .equals(other.approvalDate, approvalDate) &&
-            const DeepCollectionEquality()
-                .equals(other.approvalDateElement, approvalDateElement) &&
-            const DeepCollectionEquality()
-                .equals(other.lastReviewDate, lastReviewDate) &&
-            const DeepCollectionEquality()
-                .equals(other.lastReviewDateElement, lastReviewDateElement) &&
-            const DeepCollectionEquality()
-                .equals(other.effectivePeriod, effectivePeriod) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
-            const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other._editor, _editor) &&
-            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
-            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
-            const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            const DeepCollectionEquality()
-                .equals(other.synthesisType, synthesisType) &&
-            const DeepCollectionEquality().equals(other.studyType, studyType) &&
-            const DeepCollectionEquality()
-                .equals(other.population, population) &&
-            const DeepCollectionEquality().equals(other.exposure, exposure) &&
-            const DeepCollectionEquality().equals(other.outcome, outcome) &&
-            const DeepCollectionEquality()
-                .equals(other.sampleSize, sampleSize) &&
-            const DeepCollectionEquality()
-                .equals(other.riskEstimate, riskEstimate) &&
-            const DeepCollectionEquality()
-                .equals(other._certainty, _certainty));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        const DeepCollectionEquality().hash(resourceType),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(meta),
-        const DeepCollectionEquality().hash(implicitRules),
-        const DeepCollectionEquality().hash(implicitRulesElement),
-        const DeepCollectionEquality().hash(language),
-        const DeepCollectionEquality().hash(languageElement),
-        const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(url),
-        const DeepCollectionEquality().hash(urlElement),
-        const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(version),
-        const DeepCollectionEquality().hash(versionElement),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(nameElement),
-        const DeepCollectionEquality().hash(title),
-        const DeepCollectionEquality().hash(titleElement),
-        const DeepCollectionEquality().hash(status),
-        const DeepCollectionEquality().hash(statusElement),
-        const DeepCollectionEquality().hash(date),
-        const DeepCollectionEquality().hash(dateElement),
-        const DeepCollectionEquality().hash(publisher),
-        const DeepCollectionEquality().hash(publisherElement),
-        const DeepCollectionEquality().hash(_contact),
-        const DeepCollectionEquality().hash(description),
-        const DeepCollectionEquality().hash(descriptionElement),
-        const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
-        const DeepCollectionEquality().hash(copyright),
-        const DeepCollectionEquality().hash(copyrightElement),
-        const DeepCollectionEquality().hash(approvalDate),
-        const DeepCollectionEquality().hash(approvalDateElement),
-        const DeepCollectionEquality().hash(lastReviewDate),
-        const DeepCollectionEquality().hash(lastReviewDateElement),
-        const DeepCollectionEquality().hash(effectivePeriod),
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(_editor),
-        const DeepCollectionEquality().hash(_reviewer),
-        const DeepCollectionEquality().hash(_endorser),
-        const DeepCollectionEquality().hash(_relatedArtifact),
-        const DeepCollectionEquality().hash(synthesisType),
-        const DeepCollectionEquality().hash(studyType),
-        const DeepCollectionEquality().hash(population),
-        const DeepCollectionEquality().hash(exposure),
-        const DeepCollectionEquality().hash(outcome),
-        const DeepCollectionEquality().hash(sampleSize),
-        const DeepCollectionEquality().hash(riskEstimate),
-        const DeepCollectionEquality().hash(_certainty)
-      ]);
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_RiskEvidenceSynthesisCopyWith<_$_RiskEvidenceSynthesis> get copyWith =>
-      __$$_RiskEvidenceSynthesisCopyWithImpl<_$_RiskEvidenceSynthesis>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RiskEvidenceSynthesisToJson(this);
-  }
-}
-
-abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
-  factory _RiskEvidenceSynthesis(
-          {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
-              final R4ResourceType resourceType,
-          final Id? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
-          final Code? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final FhirUri? url,
-          @JsonKey(name: '_url')
-              final Element? urlElement,
-          final List<Identifier>? identifier,
-          final String? version,
-          @JsonKey(name: '_version')
-              final Element? versionElement,
-          final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
-          final String? title,
-          @JsonKey(name: '_title')
-              final Element? titleElement,
-          @JsonKey(unknownEnumValue: RiskEvidenceSynthesisStatus.unknown)
-              final RiskEvidenceSynthesisStatus? status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
-          final FhirDateTime? date,
-          @JsonKey(name: '_date')
-              final Element? dateElement,
-          final String? publisher,
-          @JsonKey(name: '_publisher')
-              final Element? publisherElement,
-          final List<ContactDetail>? contact,
-          final Markdown? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          final List<Annotation>? note,
-          final List<UsageContext>? useContext,
-          final List<CodeableConcept>? jurisdiction,
-          final Markdown? copyright,
-          @JsonKey(name: '_copyright')
-              final Element? copyrightElement,
-          final Date? approvalDate,
-          @JsonKey(name: '_approvalDate')
-              final Element? approvalDateElement,
-          final Date? lastReviewDate,
-          @JsonKey(name: '_lastReviewDate')
-              final Element? lastReviewDateElement,
-          final Period? effectivePeriod,
-          final List<CodeableConcept>? topic,
-          final List<ContactDetail>? author,
-          final List<ContactDetail>? editor,
-          final List<ContactDetail>? reviewer,
-          final List<ContactDetail>? endorser,
-          final List<RelatedArtifact>? relatedArtifact,
-          final CodeableConcept? synthesisType,
-          final CodeableConcept? studyType,
-          required final Reference population,
-          final Reference? exposure,
-          required final Reference outcome,
-          final RiskEvidenceSynthesisSampleSize? sampleSize,
-          final RiskEvidenceSynthesisRiskEstimate? riskEstimate,
-          final List<RiskEvidenceSynthesisCertainty>? certainty}) =
-      _$_RiskEvidenceSynthesis;
-  _RiskEvidenceSynthesis._() : super._();
-
-  factory _RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =
-      _$_RiskEvidenceSynthesis.fromJson;
-
-  @override
-  @JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
-  R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @override
-  Id? get id => throw _privateConstructorUsedError;
-  @override
-  Meta? get meta => throw _privateConstructorUsedError;
-  @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  @override
-  Code? get language => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
-  @override
-  Narrative? get text => throw _privateConstructorUsedError;
-  @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  FhirUri? get url => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
-  @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @override
-  String? get version => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_version')
-  Element? get versionElement => throw _privateConstructorUsedError;
-  @override
-  String? get name => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
-  @override
-  String? get title => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_title')
-  Element? get titleElement => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(unknownEnumValue: RiskEvidenceSynthesisStatus.unknown)
-  RiskEvidenceSynthesisStatus? get status => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
-  @override
-  FhirDateTime? get date => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_date')
-  Element? get dateElement => throw _privateConstructorUsedError;
-  @override
-  String? get publisher => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_publisher')
-  Element? get publisherElement => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
-  @override
-  Markdown? get description => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  @override
-  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
-  @override
-  Markdown? get copyright => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_copyright')
-  Element? get copyrightElement => throw _privateConstructorUsedError;
-  @override
-  Date? get approvalDate => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_approvalDate')
-  Element? get approvalDateElement => throw _privateConstructorUsedError;
-  @override
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_lastReviewDate')
-  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
-  @override
-  Period? get effectivePeriod => throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get author => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
-  @override
-  List<RelatedArtifact>? get relatedArtifact =>
-      throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get studyType => throw _privateConstructorUsedError;
-  @override
-  Reference get population => throw _privateConstructorUsedError;
-  @override
-  Reference? get exposure => throw _privateConstructorUsedError;
-  @override
-  Reference get outcome => throw _privateConstructorUsedError;
-  @override
-  RiskEvidenceSynthesisSampleSize? get sampleSize =>
-      throw _privateConstructorUsedError;
-  @override
-  RiskEvidenceSynthesisRiskEstimate? get riskEstimate =>
-      throw _privateConstructorUsedError;
-  @override
-  List<RiskEvidenceSynthesisCertainty>? get certainty =>
-      throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RiskEvidenceSynthesisCopyWith<_$_RiskEvidenceSynthesis> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-RiskEvidenceSynthesisSampleSize _$RiskEvidenceSynthesisSampleSizeFromJson(
-    Map<String, dynamic> json) {
-  return _RiskEvidenceSynthesisSampleSize.fromJson(json);
-}
-
-/// @nodoc
-mixin _$RiskEvidenceSynthesisSampleSize {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  Integer? get numberOfStudies => throw _privateConstructorUsedError;
-  @JsonKey(name: '_numberOfStudies')
-  Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
-  Integer? get numberOfParticipants => throw _privateConstructorUsedError;
-  @JsonKey(name: '_numberOfParticipants')
-  Element? get numberOfParticipantsElement =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RiskEvidenceSynthesisSampleSizeCopyWith<RiskEvidenceSynthesisSampleSize>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
-  factory $RiskEvidenceSynthesisSampleSizeCopyWith(
-          RiskEvidenceSynthesisSampleSize value,
-          $Res Function(RiskEvidenceSynthesisSampleSize) then) =
-      _$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Integer? numberOfStudies,
-      @JsonKey(name: '_numberOfStudies')
-          Element? numberOfStudiesElement,
-      Integer? numberOfParticipants,
-      @JsonKey(name: '_numberOfParticipants')
-          Element? numberOfParticipantsElement});
-
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $ElementCopyWith<$Res>? get numberOfStudiesElement;
-  $ElementCopyWith<$Res>? get numberOfParticipantsElement;
-}
-
-/// @nodoc
-class _$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
-    implements $RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
-  _$RiskEvidenceSynthesisSampleSizeCopyWithImpl(this._value, this._then);
-
-  final RiskEvidenceSynthesisSampleSize _value;
-  // ignore: unused_field
-  final $Res Function(RiskEvidenceSynthesisSampleSize) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? numberOfStudies = freezed,
-    Object? numberOfStudiesElement = freezed,
-    Object? numberOfParticipants = freezed,
-    Object? numberOfParticipantsElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numberOfStudies: numberOfStudies == freezed
-          ? _value.numberOfStudies
-          : numberOfStudies // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numberOfStudiesElement: numberOfStudiesElement == freezed
-          ? _value.numberOfStudiesElement
-          : numberOfStudiesElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numberOfParticipants: numberOfParticipants == freezed
-          ? _value.numberOfParticipants
-          : numberOfParticipants // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numberOfParticipantsElement: numberOfParticipantsElement == freezed
-          ? _value.numberOfParticipantsElement
-          : numberOfParticipantsElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get numberOfStudiesElement {
-    if (_value.numberOfStudiesElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.numberOfStudiesElement!, (value) {
-      return _then(_value.copyWith(numberOfStudiesElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get numberOfParticipantsElement {
-    if (_value.numberOfParticipantsElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.numberOfParticipantsElement!, (value) {
-      return _then(_value.copyWith(numberOfParticipantsElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_RiskEvidenceSynthesisSampleSizeCopyWith<$Res>
-    implements $RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
-  factory _$$_RiskEvidenceSynthesisSampleSizeCopyWith(
-          _$_RiskEvidenceSynthesisSampleSize value,
-          $Res Function(_$_RiskEvidenceSynthesisSampleSize) then) =
-      __$$_RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Integer? numberOfStudies,
-      @JsonKey(name: '_numberOfStudies')
-          Element? numberOfStudiesElement,
-      Integer? numberOfParticipants,
-      @JsonKey(name: '_numberOfParticipants')
-          Element? numberOfParticipantsElement});
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
-  @override
-  $ElementCopyWith<$Res>? get numberOfStudiesElement;
-  @override
-  $ElementCopyWith<$Res>? get numberOfParticipantsElement;
-}
-
-/// @nodoc
-class __$$_RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
-    extends _$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
-    implements _$$_RiskEvidenceSynthesisSampleSizeCopyWith<$Res> {
-  __$$_RiskEvidenceSynthesisSampleSizeCopyWithImpl(
-      _$_RiskEvidenceSynthesisSampleSize _value,
-      $Res Function(_$_RiskEvidenceSynthesisSampleSize) _then)
-      : super(_value, (v) => _then(v as _$_RiskEvidenceSynthesisSampleSize));
-
-  @override
-  _$_RiskEvidenceSynthesisSampleSize get _value =>
-      super._value as _$_RiskEvidenceSynthesisSampleSize;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? numberOfStudies = freezed,
-    Object? numberOfStudiesElement = freezed,
-    Object? numberOfParticipants = freezed,
-    Object? numberOfParticipantsElement = freezed,
-  }) {
-    return _then(_$_RiskEvidenceSynthesisSampleSize(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numberOfStudies: numberOfStudies == freezed
-          ? _value.numberOfStudies
-          : numberOfStudies // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numberOfStudiesElement: numberOfStudiesElement == freezed
-          ? _value.numberOfStudiesElement
-          : numberOfStudiesElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numberOfParticipants: numberOfParticipants == freezed
-          ? _value.numberOfParticipants
-          : numberOfParticipants // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numberOfParticipantsElement: numberOfParticipantsElement == freezed
-          ? _value.numberOfParticipantsElement
-          : numberOfParticipantsElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_RiskEvidenceSynthesisSampleSize
-    extends _RiskEvidenceSynthesisSampleSize {
-  _$_RiskEvidenceSynthesisSampleSize(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      this.numberOfStudies,
-      @JsonKey(name: '_numberOfStudies') this.numberOfStudiesElement,
-      this.numberOfParticipants,
-      @JsonKey(name: '_numberOfParticipants') this.numberOfParticipantsElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_RiskEvidenceSynthesisSampleSize.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_RiskEvidenceSynthesisSampleSizeFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final String? description;
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-  @override
-  final Integer? numberOfStudies;
-  @override
-  @JsonKey(name: '_numberOfStudies')
-  final Element? numberOfStudiesElement;
-  @override
-  final Integer? numberOfParticipants;
-  @override
-  @JsonKey(name: '_numberOfParticipants')
-  final Element? numberOfParticipantsElement;
-
-  @override
-  String toString() {
-    return 'RiskEvidenceSynthesisSampleSize(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, numberOfStudies: $numberOfStudies, numberOfStudiesElement: $numberOfStudiesElement, numberOfParticipants: $numberOfParticipants, numberOfParticipantsElement: $numberOfParticipantsElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RiskEvidenceSynthesisSampleSize &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality()
-                .equals(other.numberOfStudies, numberOfStudies) &&
-            const DeepCollectionEquality()
-                .equals(other.numberOfStudiesElement, numberOfStudiesElement) &&
-            const DeepCollectionEquality()
-                .equals(other.numberOfParticipants, numberOfParticipants) &&
-            const DeepCollectionEquality().equals(
-                other.numberOfParticipantsElement,
-                numberOfParticipantsElement));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(numberOfStudies),
-      const DeepCollectionEquality().hash(numberOfStudiesElement),
-      const DeepCollectionEquality().hash(numberOfParticipants),
-      const DeepCollectionEquality().hash(numberOfParticipantsElement));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_RiskEvidenceSynthesisSampleSizeCopyWith<
-          _$_RiskEvidenceSynthesisSampleSize>
-      get copyWith => __$$_RiskEvidenceSynthesisSampleSizeCopyWithImpl<
-          _$_RiskEvidenceSynthesisSampleSize>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RiskEvidenceSynthesisSampleSizeToJson(this);
-  }
-}
-
-abstract class _RiskEvidenceSynthesisSampleSize
-    extends RiskEvidenceSynthesisSampleSize {
-  factory _RiskEvidenceSynthesisSampleSize(
-          {final String? id,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          final Integer? numberOfStudies,
-          @JsonKey(name: '_numberOfStudies')
-              final Element? numberOfStudiesElement,
-          final Integer? numberOfParticipants,
-          @JsonKey(name: '_numberOfParticipants')
-              final Element? numberOfParticipantsElement}) =
-      _$_RiskEvidenceSynthesisSampleSize;
-  _RiskEvidenceSynthesisSampleSize._() : super._();
-
-  factory _RiskEvidenceSynthesisSampleSize.fromJson(Map<String, dynamic> json) =
-      _$_RiskEvidenceSynthesisSampleSize.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  String? get description => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  @override
-  Integer? get numberOfStudies => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_numberOfStudies')
-  Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
-  @override
-  Integer? get numberOfParticipants => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_numberOfParticipants')
-  Element? get numberOfParticipantsElement =>
-      throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RiskEvidenceSynthesisSampleSizeCopyWith<
-          _$_RiskEvidenceSynthesisSampleSize>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-RiskEvidenceSynthesisRiskEstimate _$RiskEvidenceSynthesisRiskEstimateFromJson(
-    Map<String, dynamic> json) {
-  return _RiskEvidenceSynthesisRiskEstimate.fromJson(json);
-}
-
-/// @nodoc
-mixin _$RiskEvidenceSynthesisRiskEstimate {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  Decimal? get value => throw _privateConstructorUsedError;
-  @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
-  CodeableConcept? get unitOfMeasure => throw _privateConstructorUsedError;
-  Integer? get denominatorCount => throw _privateConstructorUsedError;
-  @JsonKey(name: '_denominatorCount')
-  Element? get denominatorCountElement => throw _privateConstructorUsedError;
-  Integer? get numeratorCount => throw _privateConstructorUsedError;
-  @JsonKey(name: '_numeratorCount')
-  Element? get numeratorCountElement => throw _privateConstructorUsedError;
-  List<RiskEvidenceSynthesisPrecisionEstimate>? get precisionEstimate =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RiskEvidenceSynthesisRiskEstimateCopyWith<RiskEvidenceSynthesisRiskEstimate>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
-  factory $RiskEvidenceSynthesisRiskEstimateCopyWith(
-          RiskEvidenceSynthesisRiskEstimate value,
-          $Res Function(RiskEvidenceSynthesisRiskEstimate) then) =
-      _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      CodeableConcept? type,
-      Decimal? value,
-      @JsonKey(name: '_value') Element? valueElement,
-      CodeableConcept? unitOfMeasure,
-      Integer? denominatorCount,
-      @JsonKey(name: '_denominatorCount') Element? denominatorCountElement,
-      Integer? numeratorCount,
-      @JsonKey(name: '_numeratorCount') Element? numeratorCountElement,
-      List<RiskEvidenceSynthesisPrecisionEstimate>? precisionEstimate});
-
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $CodeableConceptCopyWith<$Res>? get type;
-  $ElementCopyWith<$Res>? get valueElement;
-  $CodeableConceptCopyWith<$Res>? get unitOfMeasure;
-  $ElementCopyWith<$Res>? get denominatorCountElement;
-  $ElementCopyWith<$Res>? get numeratorCountElement;
-}
-
-/// @nodoc
-class _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
-    implements $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
-  _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl(this._value, this._then);
-
-  final RiskEvidenceSynthesisRiskEstimate _value;
-  // ignore: unused_field
-  final $Res Function(RiskEvidenceSynthesisRiskEstimate) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? type = freezed,
-    Object? value = freezed,
-    Object? valueElement = freezed,
-    Object? unitOfMeasure = freezed,
-    Object? denominatorCount = freezed,
-    Object? denominatorCountElement = freezed,
-    Object? numeratorCount = freezed,
-    Object? numeratorCountElement = freezed,
-    Object? precisionEstimate = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      valueElement: valueElement == freezed
-          ? _value.valueElement
-          : valueElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      unitOfMeasure: unitOfMeasure == freezed
-          ? _value.unitOfMeasure
-          : unitOfMeasure // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      denominatorCount: denominatorCount == freezed
-          ? _value.denominatorCount
-          : denominatorCount // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      denominatorCountElement: denominatorCountElement == freezed
-          ? _value.denominatorCountElement
-          : denominatorCountElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numeratorCount: numeratorCount == freezed
-          ? _value.numeratorCount
-          : numeratorCount // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numeratorCountElement: numeratorCountElement == freezed
-          ? _value.numeratorCountElement
-          : numeratorCountElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      precisionEstimate: precisionEstimate == freezed
-          ? _value.precisionEstimate
-          : precisionEstimate // ignore: cast_nullable_to_non_nullable
-              as List<RiskEvidenceSynthesisPrecisionEstimate>?,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get valueElement {
-    if (_value.valueElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueElement!, (value) {
-      return _then(_value.copyWith(valueElement: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get unitOfMeasure {
-    if (_value.unitOfMeasure == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.unitOfMeasure!, (value) {
-      return _then(_value.copyWith(unitOfMeasure: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get denominatorCountElement {
-    if (_value.denominatorCountElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.denominatorCountElement!, (value) {
-      return _then(_value.copyWith(denominatorCountElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get numeratorCountElement {
-    if (_value.numeratorCountElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.numeratorCountElement!, (value) {
-      return _then(_value.copyWith(numeratorCountElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>
-    implements $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
-  factory _$$_RiskEvidenceSynthesisRiskEstimateCopyWith(
-          _$_RiskEvidenceSynthesisRiskEstimate value,
-          $Res Function(_$_RiskEvidenceSynthesisRiskEstimate) then) =
-      __$$_RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      CodeableConcept? type,
-      Decimal? value,
-      @JsonKey(name: '_value') Element? valueElement,
-      CodeableConcept? unitOfMeasure,
-      Integer? denominatorCount,
-      @JsonKey(name: '_denominatorCount') Element? denominatorCountElement,
-      Integer? numeratorCount,
-      @JsonKey(name: '_numeratorCount') Element? numeratorCountElement,
-      List<RiskEvidenceSynthesisPrecisionEstimate>? precisionEstimate});
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
-  @override
-  $CodeableConceptCopyWith<$Res>? get type;
-  @override
-  $ElementCopyWith<$Res>? get valueElement;
-  @override
-  $CodeableConceptCopyWith<$Res>? get unitOfMeasure;
-  @override
-  $ElementCopyWith<$Res>? get denominatorCountElement;
-  @override
-  $ElementCopyWith<$Res>? get numeratorCountElement;
-}
-
-/// @nodoc
-class __$$_RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
-    extends _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
-    implements _$$_RiskEvidenceSynthesisRiskEstimateCopyWith<$Res> {
-  __$$_RiskEvidenceSynthesisRiskEstimateCopyWithImpl(
-      _$_RiskEvidenceSynthesisRiskEstimate _value,
-      $Res Function(_$_RiskEvidenceSynthesisRiskEstimate) _then)
-      : super(_value, (v) => _then(v as _$_RiskEvidenceSynthesisRiskEstimate));
-
-  @override
-  _$_RiskEvidenceSynthesisRiskEstimate get _value =>
-      super._value as _$_RiskEvidenceSynthesisRiskEstimate;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? type = freezed,
-    Object? value = freezed,
-    Object? valueElement = freezed,
-    Object? unitOfMeasure = freezed,
-    Object? denominatorCount = freezed,
-    Object? denominatorCountElement = freezed,
-    Object? numeratorCount = freezed,
-    Object? numeratorCountElement = freezed,
-    Object? precisionEstimate = freezed,
-  }) {
-    return _then(_$_RiskEvidenceSynthesisRiskEstimate(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      valueElement: valueElement == freezed
-          ? _value.valueElement
-          : valueElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      unitOfMeasure: unitOfMeasure == freezed
-          ? _value.unitOfMeasure
-          : unitOfMeasure // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      denominatorCount: denominatorCount == freezed
-          ? _value.denominatorCount
-          : denominatorCount // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      denominatorCountElement: denominatorCountElement == freezed
-          ? _value.denominatorCountElement
-          : denominatorCountElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      numeratorCount: numeratorCount == freezed
-          ? _value.numeratorCount
-          : numeratorCount // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      numeratorCountElement: numeratorCountElement == freezed
-          ? _value.numeratorCountElement
-          : numeratorCountElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      precisionEstimate: precisionEstimate == freezed
-          ? _value._precisionEstimate
-          : precisionEstimate // ignore: cast_nullable_to_non_nullable
-              as List<RiskEvidenceSynthesisPrecisionEstimate>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_RiskEvidenceSynthesisRiskEstimate
-    extends _RiskEvidenceSynthesisRiskEstimate {
-  _$_RiskEvidenceSynthesisRiskEstimate(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      this.type,
-      this.value,
-      @JsonKey(name: '_value') this.valueElement,
-      this.unitOfMeasure,
-      this.denominatorCount,
-      @JsonKey(name: '_denominatorCount') this.denominatorCountElement,
-      this.numeratorCount,
-      @JsonKey(name: '_numeratorCount') this.numeratorCountElement,
-      final List<RiskEvidenceSynthesisPrecisionEstimate>? precisionEstimate})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _precisionEstimate = precisionEstimate,
-        super._();
-
-  factory _$_RiskEvidenceSynthesisRiskEstimate.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_RiskEvidenceSynthesisRiskEstimateFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final String? description;
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-  @override
-  final CodeableConcept? type;
-  @override
-  final Decimal? value;
-  @override
-  @JsonKey(name: '_value')
-  final Element? valueElement;
-  @override
-  final CodeableConcept? unitOfMeasure;
-  @override
-  final Integer? denominatorCount;
-  @override
-  @JsonKey(name: '_denominatorCount')
-  final Element? denominatorCountElement;
-  @override
-  final Integer? numeratorCount;
-  @override
-  @JsonKey(name: '_numeratorCount')
-  final Element? numeratorCountElement;
-  final List<RiskEvidenceSynthesisPrecisionEstimate>? _precisionEstimate;
-  @override
-  List<RiskEvidenceSynthesisPrecisionEstimate>? get precisionEstimate {
-    final value = _precisionEstimate;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'RiskEvidenceSynthesisRiskEstimate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, type: $type, value: $value, valueElement: $valueElement, unitOfMeasure: $unitOfMeasure, denominatorCount: $denominatorCount, denominatorCountElement: $denominatorCountElement, numeratorCount: $numeratorCount, numeratorCountElement: $numeratorCountElement, precisionEstimate: $precisionEstimate)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RiskEvidenceSynthesisRiskEstimate &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.descriptionElement, descriptionElement) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.value, value) &&
-            const DeepCollectionEquality()
-                .equals(other.valueElement, valueElement) &&
-            const DeepCollectionEquality()
-                .equals(other.unitOfMeasure, unitOfMeasure) &&
-            const DeepCollectionEquality()
-                .equals(other.denominatorCount, denominatorCount) &&
-            const DeepCollectionEquality().equals(
-                other.denominatorCountElement, denominatorCountElement) &&
-            const DeepCollectionEquality()
-                .equals(other.numeratorCount, numeratorCount) &&
-            const DeepCollectionEquality()
-                .equals(other.numeratorCountElement, numeratorCountElement) &&
-            const DeepCollectionEquality()
-                .equals(other._precisionEstimate, _precisionEstimate));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(descriptionElement),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(value),
-      const DeepCollectionEquality().hash(valueElement),
-      const DeepCollectionEquality().hash(unitOfMeasure),
-      const DeepCollectionEquality().hash(denominatorCount),
-      const DeepCollectionEquality().hash(denominatorCountElement),
-      const DeepCollectionEquality().hash(numeratorCount),
-      const DeepCollectionEquality().hash(numeratorCountElement),
-      const DeepCollectionEquality().hash(_precisionEstimate));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_RiskEvidenceSynthesisRiskEstimateCopyWith<
-          _$_RiskEvidenceSynthesisRiskEstimate>
-      get copyWith => __$$_RiskEvidenceSynthesisRiskEstimateCopyWithImpl<
-          _$_RiskEvidenceSynthesisRiskEstimate>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RiskEvidenceSynthesisRiskEstimateToJson(this);
-  }
-}
-
-abstract class _RiskEvidenceSynthesisRiskEstimate
-    extends RiskEvidenceSynthesisRiskEstimate {
-  factory _RiskEvidenceSynthesisRiskEstimate(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      final CodeableConcept? type,
-      final Decimal? value,
-      @JsonKey(name: '_value')
-          final Element? valueElement,
-      final CodeableConcept? unitOfMeasure,
-      final Integer? denominatorCount,
-      @JsonKey(name: '_denominatorCount')
-          final Element? denominatorCountElement,
-      final Integer? numeratorCount,
-      @JsonKey(name: '_numeratorCount')
-          final Element? numeratorCountElement,
-      final List<RiskEvidenceSynthesisPrecisionEstimate>?
-          precisionEstimate}) = _$_RiskEvidenceSynthesisRiskEstimate;
-  _RiskEvidenceSynthesisRiskEstimate._() : super._();
-
-  factory _RiskEvidenceSynthesisRiskEstimate.fromJson(
-          Map<String, dynamic> json) =
-      _$_RiskEvidenceSynthesisRiskEstimate.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  String? get description => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  @override
-  Decimal? get value => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get unitOfMeasure => throw _privateConstructorUsedError;
-  @override
-  Integer? get denominatorCount => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_denominatorCount')
-  Element? get denominatorCountElement => throw _privateConstructorUsedError;
-  @override
-  Integer? get numeratorCount => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_numeratorCount')
-  Element? get numeratorCountElement => throw _privateConstructorUsedError;
-  @override
-  List<RiskEvidenceSynthesisPrecisionEstimate>? get precisionEstimate =>
-      throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RiskEvidenceSynthesisRiskEstimateCopyWith<
-          _$_RiskEvidenceSynthesisRiskEstimate>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-RiskEvidenceSynthesisPrecisionEstimate
-    _$RiskEvidenceSynthesisPrecisionEstimateFromJson(
-        Map<String, dynamic> json) {
-  return _RiskEvidenceSynthesisPrecisionEstimate.fromJson(json);
-}
-
-/// @nodoc
-mixin _$RiskEvidenceSynthesisPrecisionEstimate {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  Decimal? get level => throw _privateConstructorUsedError;
-  @JsonKey(name: '_level')
-  Element? get levelElement => throw _privateConstructorUsedError;
-  Decimal? get from => throw _privateConstructorUsedError;
-  @JsonKey(name: '_from')
-  Element? get fromElement => throw _privateConstructorUsedError;
-  Decimal? get to => throw _privateConstructorUsedError;
-  @JsonKey(name: '_to')
-  Element? get toElement => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RiskEvidenceSynthesisPrecisionEstimateCopyWith<
-          RiskEvidenceSynthesisPrecisionEstimate>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
-  factory $RiskEvidenceSynthesisPrecisionEstimateCopyWith(
-          RiskEvidenceSynthesisPrecisionEstimate value,
-          $Res Function(RiskEvidenceSynthesisPrecisionEstimate) then) =
-      _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Decimal? level,
-      @JsonKey(name: '_level') Element? levelElement,
-      Decimal? from,
-      @JsonKey(name: '_from') Element? fromElement,
-      Decimal? to,
-      @JsonKey(name: '_to') Element? toElement});
-
-  $CodeableConceptCopyWith<$Res>? get type;
-  $ElementCopyWith<$Res>? get levelElement;
-  $ElementCopyWith<$Res>? get fromElement;
-  $ElementCopyWith<$Res>? get toElement;
-}
-
-/// @nodoc
-class _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
-    implements $RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
-  _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl(this._value, this._then);
-
-  final RiskEvidenceSynthesisPrecisionEstimate _value;
-  // ignore: unused_field
-  final $Res Function(RiskEvidenceSynthesisPrecisionEstimate) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? level = freezed,
-    Object? levelElement = freezed,
-    Object? from = freezed,
-    Object? fromElement = freezed,
-    Object? to = freezed,
-    Object? toElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      level: level == freezed
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      levelElement: levelElement == freezed
-          ? _value.levelElement
-          : levelElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      from: from == freezed
-          ? _value.from
-          : from // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      fromElement: fromElement == freezed
-          ? _value.fromElement
-          : fromElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      to: to == freezed
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      toElement: toElement == freezed
-          ? _value.toElement
-          : toElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get levelElement {
-    if (_value.levelElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.levelElement!, (value) {
-      return _then(_value.copyWith(levelElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get fromElement {
-    if (_value.fromElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.fromElement!, (value) {
-      return _then(_value.copyWith(fromElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get toElement {
-    if (_value.toElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.toElement!, (value) {
-      return _then(_value.copyWith(toElement: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res>
-    implements $RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
-  factory _$$_RiskEvidenceSynthesisPrecisionEstimateCopyWith(
-          _$_RiskEvidenceSynthesisPrecisionEstimate value,
-          $Res Function(_$_RiskEvidenceSynthesisPrecisionEstimate) then) =
-      __$$_RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      Decimal? level,
-      @JsonKey(name: '_level') Element? levelElement,
-      Decimal? from,
-      @JsonKey(name: '_from') Element? fromElement,
-      Decimal? to,
-      @JsonKey(name: '_to') Element? toElement});
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type;
-  @override
-  $ElementCopyWith<$Res>? get levelElement;
-  @override
-  $ElementCopyWith<$Res>? get fromElement;
-  @override
-  $ElementCopyWith<$Res>? get toElement;
-}
-
-/// @nodoc
-class __$$_RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
-    extends _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
-    implements _$$_RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res> {
-  __$$_RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl(
-      _$_RiskEvidenceSynthesisPrecisionEstimate _value,
-      $Res Function(_$_RiskEvidenceSynthesisPrecisionEstimate) _then)
-      : super(_value,
-            (v) => _then(v as _$_RiskEvidenceSynthesisPrecisionEstimate));
-
-  @override
-  _$_RiskEvidenceSynthesisPrecisionEstimate get _value =>
-      super._value as _$_RiskEvidenceSynthesisPrecisionEstimate;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? level = freezed,
-    Object? levelElement = freezed,
-    Object? from = freezed,
-    Object? fromElement = freezed,
-    Object? to = freezed,
-    Object? toElement = freezed,
-  }) {
-    return _then(_$_RiskEvidenceSynthesisPrecisionEstimate(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      level: level == freezed
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      levelElement: levelElement == freezed
-          ? _value.levelElement
-          : levelElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      from: from == freezed
-          ? _value.from
-          : from // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      fromElement: fromElement == freezed
-          ? _value.fromElement
-          : fromElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      to: to == freezed
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      toElement: toElement == freezed
-          ? _value.toElement
-          : toElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_RiskEvidenceSynthesisPrecisionEstimate
-    extends _RiskEvidenceSynthesisPrecisionEstimate {
-  _$_RiskEvidenceSynthesisPrecisionEstimate(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.type,
-      this.level,
-      @JsonKey(name: '_level') this.levelElement,
-      this.from,
-      @JsonKey(name: '_from') this.fromElement,
-      this.to,
-      @JsonKey(name: '_to') this.toElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_RiskEvidenceSynthesisPrecisionEstimate.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_RiskEvidenceSynthesisPrecisionEstimateFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final CodeableConcept? type;
-  @override
-  final Decimal? level;
-  @override
-  @JsonKey(name: '_level')
-  final Element? levelElement;
-  @override
-  final Decimal? from;
-  @override
-  @JsonKey(name: '_from')
-  final Element? fromElement;
-  @override
-  final Decimal? to;
-  @override
-  @JsonKey(name: '_to')
-  final Element? toElement;
-
-  @override
-  String toString() {
-    return 'RiskEvidenceSynthesisPrecisionEstimate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, level: $level, levelElement: $levelElement, from: $from, fromElement: $fromElement, to: $to, toElement: $toElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RiskEvidenceSynthesisPrecisionEstimate &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.level, level) &&
-            const DeepCollectionEquality()
-                .equals(other.levelElement, levelElement) &&
-            const DeepCollectionEquality().equals(other.from, from) &&
-            const DeepCollectionEquality()
-                .equals(other.fromElement, fromElement) &&
-            const DeepCollectionEquality().equals(other.to, to) &&
-            const DeepCollectionEquality().equals(other.toElement, toElement));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(level),
-      const DeepCollectionEquality().hash(levelElement),
-      const DeepCollectionEquality().hash(from),
-      const DeepCollectionEquality().hash(fromElement),
-      const DeepCollectionEquality().hash(to),
-      const DeepCollectionEquality().hash(toElement));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_RiskEvidenceSynthesisPrecisionEstimateCopyWith<
-          _$_RiskEvidenceSynthesisPrecisionEstimate>
-      get copyWith => __$$_RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<
-          _$_RiskEvidenceSynthesisPrecisionEstimate>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RiskEvidenceSynthesisPrecisionEstimateToJson(this);
-  }
-}
-
-abstract class _RiskEvidenceSynthesisPrecisionEstimate
-    extends RiskEvidenceSynthesisPrecisionEstimate {
-  factory _RiskEvidenceSynthesisPrecisionEstimate(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final CodeableConcept? type,
-          final Decimal? level,
-          @JsonKey(name: '_level') final Element? levelElement,
-          final Decimal? from,
-          @JsonKey(name: '_from') final Element? fromElement,
-          final Decimal? to,
-          @JsonKey(name: '_to') final Element? toElement}) =
-      _$_RiskEvidenceSynthesisPrecisionEstimate;
-  _RiskEvidenceSynthesisPrecisionEstimate._() : super._();
-
-  factory _RiskEvidenceSynthesisPrecisionEstimate.fromJson(
-          Map<String, dynamic> json) =
-      _$_RiskEvidenceSynthesisPrecisionEstimate.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  @override
-  Decimal? get level => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_level')
-  Element? get levelElement => throw _privateConstructorUsedError;
-  @override
-  Decimal? get from => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_from')
-  Element? get fromElement => throw _privateConstructorUsedError;
-  @override
-  Decimal? get to => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_to')
-  Element? get toElement => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RiskEvidenceSynthesisPrecisionEstimateCopyWith<
-          _$_RiskEvidenceSynthesisPrecisionEstimate>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-RiskEvidenceSynthesisCertainty _$RiskEvidenceSynthesisCertaintyFromJson(
-    Map<String, dynamic> json) {
-  return _RiskEvidenceSynthesisCertainty.fromJson(json);
-}
-
-/// @nodoc
-mixin _$RiskEvidenceSynthesisCertainty {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  List<RiskEvidenceSynthesisCertaintySubcomponent>? get certaintySubcomponent =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RiskEvidenceSynthesisCertaintyCopyWith<RiskEvidenceSynthesisCertainty>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
-  factory $RiskEvidenceSynthesisCertaintyCopyWith(
-          RiskEvidenceSynthesisCertainty value,
-          $Res Function(RiskEvidenceSynthesisCertainty) then) =
-      _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? rating,
-      List<Annotation>? note,
-      List<RiskEvidenceSynthesisCertaintySubcomponent>? certaintySubcomponent});
-}
-
-/// @nodoc
-class _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
-    implements $RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
-  _$RiskEvidenceSynthesisCertaintyCopyWithImpl(this._value, this._then);
-
-  final RiskEvidenceSynthesisCertainty _value;
-  // ignore: unused_field
-  final $Res Function(RiskEvidenceSynthesisCertainty) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? rating = freezed,
-    Object? note = freezed,
-    Object? certaintySubcomponent = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      rating: rating == freezed
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      certaintySubcomponent: certaintySubcomponent == freezed
-          ? _value.certaintySubcomponent
-          : certaintySubcomponent // ignore: cast_nullable_to_non_nullable
-              as List<RiskEvidenceSynthesisCertaintySubcomponent>?,
-    ));
-  }
-}
-
-/// @nodoc
-abstract class _$$_RiskEvidenceSynthesisCertaintyCopyWith<$Res>
-    implements $RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
-  factory _$$_RiskEvidenceSynthesisCertaintyCopyWith(
-          _$_RiskEvidenceSynthesisCertainty value,
-          $Res Function(_$_RiskEvidenceSynthesisCertainty) then) =
-      __$$_RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? rating,
-      List<Annotation>? note,
-      List<RiskEvidenceSynthesisCertaintySubcomponent>? certaintySubcomponent});
-}
-
-/// @nodoc
-class __$$_RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
-    extends _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
-    implements _$$_RiskEvidenceSynthesisCertaintyCopyWith<$Res> {
-  __$$_RiskEvidenceSynthesisCertaintyCopyWithImpl(
-      _$_RiskEvidenceSynthesisCertainty _value,
-      $Res Function(_$_RiskEvidenceSynthesisCertainty) _then)
-      : super(_value, (v) => _then(v as _$_RiskEvidenceSynthesisCertainty));
-
-  @override
-  _$_RiskEvidenceSynthesisCertainty get _value =>
-      super._value as _$_RiskEvidenceSynthesisCertainty;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? rating = freezed,
-    Object? note = freezed,
-    Object? certaintySubcomponent = freezed,
-  }) {
-    return _then(_$_RiskEvidenceSynthesisCertainty(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      rating: rating == freezed
-          ? _value._rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      note: note == freezed
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-      certaintySubcomponent: certaintySubcomponent == freezed
-          ? _value._certaintySubcomponent
-          : certaintySubcomponent // ignore: cast_nullable_to_non_nullable
-              as List<RiskEvidenceSynthesisCertaintySubcomponent>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_RiskEvidenceSynthesisCertainty
-    extends _RiskEvidenceSynthesisCertainty {
-  _$_RiskEvidenceSynthesisCertainty(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note,
-      final List<RiskEvidenceSynthesisCertaintySubcomponent>?
-          certaintySubcomponent})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _rating = rating,
-        _note = note,
-        _certaintySubcomponent = certaintySubcomponent,
-        super._();
-
-  factory _$_RiskEvidenceSynthesisCertainty.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_RiskEvidenceSynthesisCertaintyFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _rating;
-  @override
-  List<CodeableConcept>? get rating {
-    final value = _rating;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
-  @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RiskEvidenceSynthesisCertaintySubcomponent>?
-      _certaintySubcomponent;
-  @override
-  List<RiskEvidenceSynthesisCertaintySubcomponent>? get certaintySubcomponent {
-    final value = _certaintySubcomponent;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'RiskEvidenceSynthesisCertainty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, rating: $rating, note: $note, certaintySubcomponent: $certaintySubcomponent)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RiskEvidenceSynthesisCertainty &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other._rating, _rating) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
-            const DeepCollectionEquality()
-                .equals(other._certaintySubcomponent, _certaintySubcomponent));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_rating),
-      const DeepCollectionEquality().hash(_note),
-      const DeepCollectionEquality().hash(_certaintySubcomponent));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_RiskEvidenceSynthesisCertaintyCopyWith<_$_RiskEvidenceSynthesisCertainty>
-      get copyWith => __$$_RiskEvidenceSynthesisCertaintyCopyWithImpl<
-          _$_RiskEvidenceSynthesisCertainty>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RiskEvidenceSynthesisCertaintyToJson(this);
-  }
-}
-
-abstract class _RiskEvidenceSynthesisCertainty
-    extends RiskEvidenceSynthesisCertainty {
-  factory _RiskEvidenceSynthesisCertainty(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note,
-      final List<RiskEvidenceSynthesisCertaintySubcomponent>?
-          certaintySubcomponent}) = _$_RiskEvidenceSynthesisCertainty;
-  _RiskEvidenceSynthesisCertainty._() : super._();
-
-  factory _RiskEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =
-      _$_RiskEvidenceSynthesisCertainty.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  @override
-  List<RiskEvidenceSynthesisCertaintySubcomponent>? get certaintySubcomponent =>
-      throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RiskEvidenceSynthesisCertaintyCopyWith<_$_RiskEvidenceSynthesisCertainty>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-RiskEvidenceSynthesisCertaintySubcomponent
-    _$RiskEvidenceSynthesisCertaintySubcomponentFromJson(
-        Map<String, dynamic> json) {
-  return _RiskEvidenceSynthesisCertaintySubcomponent.fromJson(json);
-}
-
-/// @nodoc
-mixin _$RiskEvidenceSynthesisCertaintySubcomponent {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<
-          RiskEvidenceSynthesisCertaintySubcomponent>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
-  factory $RiskEvidenceSynthesisCertaintySubcomponentCopyWith(
-          RiskEvidenceSynthesisCertaintySubcomponent value,
-          $Res Function(RiskEvidenceSynthesisCertaintySubcomponent) then) =
-      _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      List<CodeableConcept>? rating,
-      List<Annotation>? note});
-
-  $CodeableConceptCopyWith<$Res>? get type;
-}
-
-/// @nodoc
-class _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
-    implements $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
-  _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl(
-      this._value, this._then);
-
-  final RiskEvidenceSynthesisCertaintySubcomponent _value;
-  // ignore: unused_field
-  final $Res Function(RiskEvidenceSynthesisCertaintySubcomponent) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? rating = freezed,
-    Object? note = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      rating: rating == freezed
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-    ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res>
-    implements $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
-  factory _$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWith(
-          _$_RiskEvidenceSynthesisCertaintySubcomponent value,
-          $Res Function(_$_RiskEvidenceSynthesisCertaintySubcomponent) then) =
-      __$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      List<CodeableConcept>? rating,
-      List<Annotation>? note});
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type;
-}
-
-/// @nodoc
-class __$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
-    extends _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
-    implements _$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res> {
-  __$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl(
-      _$_RiskEvidenceSynthesisCertaintySubcomponent _value,
-      $Res Function(_$_RiskEvidenceSynthesisCertaintySubcomponent) _then)
-      : super(_value,
-            (v) => _then(v as _$_RiskEvidenceSynthesisCertaintySubcomponent));
-
-  @override
-  _$_RiskEvidenceSynthesisCertaintySubcomponent get _value =>
-      super._value as _$_RiskEvidenceSynthesisCertaintySubcomponent;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? rating = freezed,
-    Object? note = freezed,
-  }) {
-    return _then(_$_RiskEvidenceSynthesisCertaintySubcomponent(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      rating: rating == freezed
-          ? _value._rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      note: note == freezed
-          ? _value._note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_RiskEvidenceSynthesisCertaintySubcomponent
-    extends _RiskEvidenceSynthesisCertaintySubcomponent {
-  _$_RiskEvidenceSynthesisCertaintySubcomponent(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.type,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _rating = rating,
-        _note = note,
-        super._();
-
-  factory _$_RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_RiskEvidenceSynthesisCertaintySubcomponentFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final CodeableConcept? type;
-  final List<CodeableConcept>? _rating;
-  @override
-  List<CodeableConcept>? get rating {
-    final value = _rating;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
-  @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  String toString() {
-    return 'RiskEvidenceSynthesisCertaintySubcomponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, rating: $rating, note: $note)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RiskEvidenceSynthesisCertaintySubcomponent &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other._rating, _rating) &&
-            const DeepCollectionEquality().equals(other._note, _note));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(_rating),
-      const DeepCollectionEquality().hash(_note));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWith<
-          _$_RiskEvidenceSynthesisCertaintySubcomponent>
-      get copyWith =>
-          __$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<
-              _$_RiskEvidenceSynthesisCertaintySubcomponent>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RiskEvidenceSynthesisCertaintySubcomponentToJson(this);
-  }
-}
-
-abstract class _RiskEvidenceSynthesisCertaintySubcomponent
-    extends RiskEvidenceSynthesisCertaintySubcomponent {
-  factory _RiskEvidenceSynthesisCertaintySubcomponent(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final CodeableConcept? type,
-          final List<CodeableConcept>? rating,
-          final List<Annotation>? note}) =
-      _$_RiskEvidenceSynthesisCertaintySubcomponent;
-  _RiskEvidenceSynthesisCertaintySubcomponent._() : super._();
-
-  factory _RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
-          Map<String, dynamic> json) =
-      _$_RiskEvidenceSynthesisCertaintySubcomponent.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWith<
-          _$_RiskEvidenceSynthesisCertaintySubcomponent>
       get copyWith => throw _privateConstructorUsedError;
 }

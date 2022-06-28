@@ -1260,6 +1260,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     Annotation? valueAnnotation,
     Attachment? valueAttachment,
     CodeableConcept? valueCodeableConcept,
+    CodeableReference? valueCodeableReference,
     Coding? valueCoding,
     ContactPoint? valueContactPoint,
     Count? valueCount,
@@ -1272,6 +1273,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     Quantity? valueQuantity,
     Range? valueRange,
     Ratio? valueRatio,
+    RatioRange? valueRatioRange,
     Reference? valueReference,
     SampledData? valueSampledData,
     Signature? valueSignature,
@@ -1285,7 +1287,6 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     TriggerDefinition? valueTriggerDefinition,
     UsageContext? valueUsageContext,
     Dosage? valueDosage,
-    Meta? valueMeta,
   }) = _ElementDefinitionExample;
 
   /// Produces a Yaml formatted String version of the object

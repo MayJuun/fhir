@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'documents.enums.dart';
 part 'documents.freezed.dart';
 part 'documents.g.dart';
 
@@ -118,7 +117,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
     @Default(R4ResourceType.CatalogEntry)
     @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -135,8 +134,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
     required Reference referencedItem,
     List<Identifier>? additionalIdentifier,
     List<CodeableConcept>? classification,
-    @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
-        CatalogEntryStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? validityPeriod,
     FhirDateTime? validTo,
@@ -217,8 +215,7 @@ class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
-        CatalogEntryRelatedEntryRelationtype? relationtype,
+    Code? relationtype,
     @JsonKey(name: '_relationtype') Element? relationtypeElement,
     required Reference item,
   }) = _CatalogEntryRelatedEntry;
@@ -381,7 +378,7 @@ class Composition with Resource, _$Composition {
     @Default(R4ResourceType.Composition)
     @JsonKey(unknownEnumValue: R4ResourceType.Composition)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -392,8 +389,7 @@ class Composition with Resource, _$Composition {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
-    @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-        CompositionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept type,
     List<CodeableConcept>? category,
@@ -493,8 +489,7 @@ class CompositionAttester with _$CompositionAttester {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
-        CompositionAttesterMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -956,7 +951,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @Default(R4ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -968,8 +963,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     List<FhirExtension>? modifierExtension,
     Identifier? masterIdentifier,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-        DocumentManifestStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     Reference? subject,
@@ -1216,7 +1210,7 @@ class DocumentReference with Resource, _$DocumentReference {
     @Default(R4ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1228,8 +1222,7 @@ class DocumentReference with Resource, _$DocumentReference {
     List<FhirExtension>? modifierExtension,
     Identifier? masterIdentifier,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-        DocumentReferenceStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Code? docStatus,
     @JsonKey(name: '_docStatus') Element? docStatusElement,
@@ -1322,8 +1315,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
-        DocumentReferenceRelatesToCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference target,
   }) = _DocumentReferenceRelatesTo;

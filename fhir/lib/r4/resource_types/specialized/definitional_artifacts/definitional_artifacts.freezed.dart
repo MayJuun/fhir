@@ -22,7 +22,7 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ActivityDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -52,8 +52,7 @@ mixin _$ActivityDefinition {
   String? get subtitle => throw _privateConstructorUsedError;
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-  ActivityDefinitionStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -62,6 +61,9 @@ mixin _$ActivityDefinition {
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
   Reference? get subjectReference => throw _privateConstructorUsedError;
+  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_subjectCanonical')
+  Element? get subjectCanonicalElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -154,7 +156,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -183,8 +185,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-          ActivityDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -192,6 +193,9 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
+      Canonical? subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          Element? subjectCanonicalElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -276,6 +280,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res>? get experimentalElement;
   $CodeableConceptCopyWith<$Res>? get subjectCodeableConcept;
   $ReferenceCopyWith<$Res>? get subjectReference;
+  $ElementCopyWith<$Res>? get subjectCanonicalElement;
   $ElementCopyWith<$Res>? get dateElement;
   $ElementCopyWith<$Res>? get publisherElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -341,6 +346,8 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
     Object? experimentalElement = freezed,
     Object? subjectCodeableConcept = freezed,
     Object? subjectReference = freezed,
+    Object? subjectCanonical = freezed,
+    Object? subjectCanonicalElement = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
     Object? publisher = freezed,
@@ -406,7 +413,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -490,7 +497,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ActivityDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -511,6 +518,14 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
           ? _value.subjectReference
           : subjectReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      subjectCanonical: subjectCanonical == freezed
+          ? _value.subjectCanonical
+          : subjectCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      subjectCanonicalElement: subjectCanonicalElement == freezed
+          ? _value.subjectCanonicalElement
+          : subjectCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -883,6 +898,17 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get subjectCanonicalElement {
+    if (_value.subjectCanonicalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.subjectCanonicalElement!, (value) {
+      return _then(_value.copyWith(subjectCanonicalElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
@@ -1158,7 +1184,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1187,8 +1213,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-          ActivityDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -1196,6 +1221,9 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
+      Canonical? subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          Element? subjectCanonicalElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -1294,6 +1322,8 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get subjectReference;
   @override
+  $ElementCopyWith<$Res>? get subjectCanonicalElement;
+  @override
   $ElementCopyWith<$Res>? get dateElement;
   @override
   $ElementCopyWith<$Res>? get publisherElement;
@@ -1384,6 +1414,8 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
     Object? experimentalElement = freezed,
     Object? subjectCodeableConcept = freezed,
     Object? subjectReference = freezed,
+    Object? subjectCanonical = freezed,
+    Object? subjectCanonicalElement = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
     Object? publisher = freezed,
@@ -1449,7 +1481,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1533,7 +1565,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ActivityDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1554,6 +1586,14 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           ? _value.subjectReference
           : subjectReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      subjectCanonical: subjectCanonical == freezed
+          ? _value.subjectCanonical
+          : subjectCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      subjectCanonicalElement: subjectCanonicalElement == freezed
+          ? _value.subjectCanonicalElement
+          : subjectCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -1817,8 +1857,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       this.subtitle,
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
-      @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -1826,6 +1865,9 @@ class _$_ActivityDefinition extends _ActivityDefinition {
           this.experimentalElement,
       this.subjectCodeableConcept,
       this.subjectReference,
+      this.subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          this.subjectCanonicalElement,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
@@ -1926,7 +1968,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -2004,8 +2046,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
-  @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-  final ActivityDefinitionStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -2018,6 +2059,11 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   final CodeableConcept? subjectCodeableConcept;
   @override
   final Reference? subjectReference;
+  @override
+  final Canonical? subjectCanonical;
+  @override
+  @JsonKey(name: '_subjectCanonical')
+  final Element? subjectCanonicalElement;
   @override
   final FhirDateTime? date;
   @override
@@ -2265,7 +2311,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   @override
   String toString() {
-    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, kind: $kind, kindElement: $kindElement, profile: $profile, code: $code, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingRange: $timingRange, timingDuration: $timingDuration, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, specimenRequirement: $specimenRequirement, observationRequirement: $observationRequirement, observationResultRequirement: $observationResultRequirement, transform: $transform, dynamicValue: $dynamicValue)';
+    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, subjectCanonical: $subjectCanonical, subjectCanonicalElement: $subjectCanonicalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, kind: $kind, kindElement: $kindElement, profile: $profile, code: $code, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingRange: $timingRange, timingDuration: $timingDuration, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, specimenRequirement: $specimenRequirement, observationRequirement: $observationRequirement, observationResultRequirement: $observationResultRequirement, transform: $transform, dynamicValue: $dynamicValue)';
   }
 
   @override
@@ -2319,6 +2365,10 @@ class _$_ActivityDefinition extends _ActivityDefinition {
                 .equals(other.subjectCodeableConcept, subjectCodeableConcept) &&
             const DeepCollectionEquality()
                 .equals(other.subjectReference, subjectReference) &&
+            const DeepCollectionEquality()
+                .equals(other.subjectCanonical, subjectCanonical) &&
+            const DeepCollectionEquality().equals(
+                other.subjectCanonicalElement, subjectCanonicalElement) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
@@ -2385,10 +2435,8 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             const DeepCollectionEquality().equals(other.timingAge, timingAge) &&
             const DeepCollectionEquality()
                 .equals(other.timingPeriod, timingPeriod) &&
-            const DeepCollectionEquality()
-                .equals(other.timingRange, timingRange) &&
-            const DeepCollectionEquality()
-                .equals(other.timingDuration, timingDuration) &&
+            const DeepCollectionEquality().equals(other.timingRange, timingRange) &&
+            const DeepCollectionEquality().equals(other.timingDuration, timingDuration) &&
             const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality().equals(other._participant, _participant) &&
             const DeepCollectionEquality().equals(other.productReference, productReference) &&
@@ -2435,6 +2483,8 @@ class _$_ActivityDefinition extends _ActivityDefinition {
         const DeepCollectionEquality().hash(experimentalElement),
         const DeepCollectionEquality().hash(subjectCodeableConcept),
         const DeepCollectionEquality().hash(subjectReference),
+        const DeepCollectionEquality().hash(subjectCanonical),
+        const DeepCollectionEquality().hash(subjectCanonicalElement),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
         const DeepCollectionEquality().hash(publisher),
@@ -2509,7 +2559,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   factory _ActivityDefinition(
           {@JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
               final R4ResourceType resourceType,
-          final Id? id,
+          final String? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -2538,8 +2588,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final String? subtitle,
           @JsonKey(name: '_subtitle')
               final Element? subtitleElement,
-          @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-              final ActivityDefinitionStatus? status,
+          final Code? status,
           @JsonKey(name: '_status')
               final Element? statusElement,
           final Boolean? experimental,
@@ -2547,6 +2596,9 @@ abstract class _ActivityDefinition extends ActivityDefinition {
               final Element? experimentalElement,
           final CodeableConcept? subjectCodeableConcept,
           final Reference? subjectReference,
+          final Canonical? subjectCanonical,
+          @JsonKey(name: '_subjectCanonical')
+              final Element? subjectCanonicalElement,
           final FhirDateTime? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
@@ -2627,7 +2679,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -2678,8 +2730,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-  ActivityDefinitionStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -2693,6 +2744,11 @@ abstract class _ActivityDefinition extends ActivityDefinition {
       throw _privateConstructorUsedError;
   @override
   Reference? get subjectReference => throw _privateConstructorUsedError;
+  @override
+  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_subjectCanonical')
+  Element? get subjectCanonicalElement => throw _privateConstructorUsedError;
   @override
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
@@ -3457,7 +3513,7 @@ DeviceDefinition _$DeviceDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$DeviceDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3527,7 +3583,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3649,7 +3705,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3967,7 +4023,7 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4105,7 +4161,7 @@ class __$$_DeviceDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4336,7 +4392,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -4674,7 +4730,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   factory _DeviceDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4729,7 +4785,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -5249,9 +5305,7 @@ mixin _$DeviceDefinitionDeviceName {
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-  DeviceDefinitionDeviceNameType? get type =>
-      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
@@ -5268,16 +5322,12 @@ abstract class $DeviceDefinitionDeviceNameCopyWith<$Res> {
       _$DeviceDefinitionDeviceNameCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-          DeviceDefinitionDeviceNameType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement});
+      @JsonKey(name: '_name') Element? nameElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get typeElement;
@@ -5326,7 +5376,7 @@ class _$DeviceDefinitionDeviceNameCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as DeviceDefinitionDeviceNameType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5367,16 +5417,12 @@ abstract class _$$_DeviceDefinitionDeviceNameCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-          DeviceDefinitionDeviceNameType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement});
+      @JsonKey(name: '_name') Element? nameElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -5431,7 +5477,7 @@ class __$$_DeviceDefinitionDeviceNameCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as DeviceDefinitionDeviceNameType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5445,16 +5491,12 @@ class __$$_DeviceDefinitionDeviceNameCopyWithImpl<$Res>
 class _$_DeviceDefinitionDeviceName extends _DeviceDefinitionDeviceName {
   _$_DeviceDefinitionDeviceName(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement})
+      @JsonKey(name: '_name') this.nameElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -5489,8 +5531,7 @@ class _$_DeviceDefinitionDeviceName extends _DeviceDefinitionDeviceName {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-  final DeviceDefinitionDeviceNameType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -5544,17 +5585,14 @@ class _$_DeviceDefinitionDeviceName extends _DeviceDefinitionDeviceName {
 
 abstract class _DeviceDefinitionDeviceName extends DeviceDefinitionDeviceName {
   factory _DeviceDefinitionDeviceName(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-          final DeviceDefinitionDeviceNameType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement}) = _$_DeviceDefinitionDeviceName;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final Code? type,
+          @JsonKey(name: '_type') final Element? typeElement}) =
+      _$_DeviceDefinitionDeviceName;
   _DeviceDefinitionDeviceName._() : super._();
 
   factory _DeviceDefinitionDeviceName.fromJson(Map<String, dynamic> json) =
@@ -5574,9 +5612,7 @@ abstract class _DeviceDefinitionDeviceName extends DeviceDefinitionDeviceName {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-  DeviceDefinitionDeviceNameType? get type =>
-      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -6875,7 +6911,7 @@ EventDefinition _$EventDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$EventDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6905,8 +6941,7 @@ mixin _$EventDefinition {
   String? get subtitle => throw _privateConstructorUsedError;
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-  EventDefinitionStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -6966,7 +7001,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6995,8 +7030,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-          EventDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -7139,7 +7173,7 @@ class _$EventDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7223,7 +7257,7 @@ class _$EventDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EventDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7609,7 +7643,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7638,8 +7672,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-          EventDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -7806,7 +7839,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7890,7 +7923,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EventDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8058,8 +8091,7 @@ class _$_EventDefinition extends _EventDefinition {
       this.subtitle,
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
-      @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -8125,7 +8157,7 @@ class _$_EventDefinition extends _EventDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -8203,8 +8235,7 @@ class _$_EventDefinition extends _EventDefinition {
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
-  @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-  final EventDefinitionStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -8523,7 +8554,7 @@ abstract class _EventDefinition extends EventDefinition {
   factory _EventDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8552,8 +8583,7 @@ abstract class _EventDefinition extends EventDefinition {
       final String? subtitle,
       @JsonKey(name: '_subtitle')
           final Element? subtitleElement,
-      @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-          final EventDefinitionStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Boolean? experimental,
@@ -8605,7 +8635,7 @@ abstract class _EventDefinition extends EventDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -8656,8 +8686,7 @@ abstract class _EventDefinition extends EventDefinition {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-  EventDefinitionStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -8749,7 +8778,7 @@ ObservationDefinition _$ObservationDefinitionFromJson(
 mixin _$ObservationDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -8766,8 +8795,7 @@ mixin _$ObservationDefinition {
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   CodeableConcept get code => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  List<ObservationDefinitionPermittedDataType>? get permittedDataType =>
-      throw _privateConstructorUsedError;
+  List<Code>? get permittedDataType => throw _privateConstructorUsedError;
   @JsonKey(name: '_permittedDataType')
   List<Element>? get permittedDataTypeElement =>
       throw _privateConstructorUsedError;
@@ -8802,7 +8830,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8818,7 +8846,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       List<CodeableConcept>? category,
       CodeableConcept code,
       List<Identifier>? identifier,
-      List<ObservationDefinitionPermittedDataType>? permittedDataType,
+      List<Code>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
       Boolean? multipleResultsAllowed,
@@ -8898,7 +8926,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8950,7 +8978,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
       permittedDataType: permittedDataType == freezed
           ? _value.permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<ObservationDefinitionPermittedDataType>?,
+              as List<Code>?,
       permittedDataTypeElement: permittedDataTypeElement == freezed
           ? _value.permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -9155,7 +9183,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9171,7 +9199,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       List<CodeableConcept>? category,
       CodeableConcept code,
       List<Identifier>? identifier,
-      List<ObservationDefinitionPermittedDataType>? permittedDataType,
+      List<Code>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
       Boolean? multipleResultsAllowed,
@@ -9267,7 +9295,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9319,7 +9347,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       permittedDataType: permittedDataType == freezed
           ? _value._permittedDataType
           : permittedDataType // ignore: cast_nullable_to_non_nullable
-              as List<ObservationDefinitionPermittedDataType>?,
+              as List<Code>?,
       permittedDataTypeElement: permittedDataTypeElement == freezed
           ? _value._permittedDataTypeElement
           : permittedDataTypeElement // ignore: cast_nullable_to_non_nullable
@@ -9394,7 +9422,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
       final List<CodeableConcept>? category,
       required this.code,
       final List<Identifier>? identifier,
-      final List<ObservationDefinitionPermittedDataType>? permittedDataType,
+      final List<Code>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           final List<Element>? permittedDataTypeElement,
       this.multipleResultsAllowed,
@@ -9427,7 +9455,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -9490,9 +9518,9 @@ class _$_ObservationDefinition extends _ObservationDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<ObservationDefinitionPermittedDataType>? _permittedDataType;
+  final List<Code>? _permittedDataType;
   @override
-  List<ObservationDefinitionPermittedDataType>? get permittedDataType {
+  List<Code>? get permittedDataType {
     final value = _permittedDataType;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -9650,7 +9678,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   factory _ObservationDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9666,7 +9694,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
       final List<CodeableConcept>? category,
       required final CodeableConcept code,
       final List<Identifier>? identifier,
-      final List<ObservationDefinitionPermittedDataType>? permittedDataType,
+      final List<Code>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           final List<Element>? permittedDataTypeElement,
       final Boolean? multipleResultsAllowed,
@@ -9691,7 +9719,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -9721,8 +9749,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List<ObservationDefinitionPermittedDataType>? get permittedDataType =>
-      throw _privateConstructorUsedError;
+  List<Code>? get permittedDataType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_permittedDataType')
   List<Element>? get permittedDataTypeElement =>
@@ -10192,19 +10219,13 @@ mixin _$ObservationDefinitionQualifiedInterval {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(
-      unknownEnumValue: ObservationDefinitionQualifiedIntervalCategory.unknown)
-  ObservationDefinitionQualifiedIntervalCategory? get category =>
-      throw _privateConstructorUsedError;
+  Code? get category => throw _privateConstructorUsedError;
   @JsonKey(name: '_category')
   Element? get categoryElement => throw _privateConstructorUsedError;
   Range? get range => throw _privateConstructorUsedError;
   CodeableConcept? get context => throw _privateConstructorUsedError;
   List<CodeableConcept>? get appliesTo => throw _privateConstructorUsedError;
-  @JsonKey(
-      unknownEnumValue: ObservationDefinitionQualifiedIntervalGender.unknown)
-  ObservationDefinitionQualifiedIntervalGender? get gender =>
-      throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Range? get age => throw _privateConstructorUsedError;
@@ -10228,29 +10249,19 @@ abstract class $ObservationDefinitionQualifiedIntervalCopyWith<$Res> {
       _$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(
-          unknownEnumValue:
-              ObservationDefinitionQualifiedIntervalCategory.unknown)
-          ObservationDefinitionQualifiedIntervalCategory? category,
-      @JsonKey(name: '_category')
-          Element? categoryElement,
+      Code? category,
+      @JsonKey(name: '_category') Element? categoryElement,
       Range? range,
       CodeableConcept? context,
       List<CodeableConcept>? appliesTo,
-      @JsonKey(
-          unknownEnumValue:
-              ObservationDefinitionQualifiedIntervalGender.unknown)
-          ObservationDefinitionQualifiedIntervalGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      Code? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Range? age,
       Range? gestationalAge,
       String? condition,
-      @JsonKey(name: '_condition')
-          Element? conditionElement});
+      @JsonKey(name: '_condition') Element? conditionElement});
 
   $ElementCopyWith<$Res>? get categoryElement;
   $RangeCopyWith<$Res>? get range;
@@ -10303,7 +10314,7 @@ class _$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
       category: category == freezed
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as ObservationDefinitionQualifiedIntervalCategory?,
+              as Code?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -10323,7 +10334,7 @@ class _$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as ObservationDefinitionQualifiedIntervalGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -10435,29 +10446,19 @@ abstract class _$$_ObservationDefinitionQualifiedIntervalCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(
-          unknownEnumValue:
-              ObservationDefinitionQualifiedIntervalCategory.unknown)
-          ObservationDefinitionQualifiedIntervalCategory? category,
-      @JsonKey(name: '_category')
-          Element? categoryElement,
+      Code? category,
+      @JsonKey(name: '_category') Element? categoryElement,
       Range? range,
       CodeableConcept? context,
       List<CodeableConcept>? appliesTo,
-      @JsonKey(
-          unknownEnumValue:
-              ObservationDefinitionQualifiedIntervalGender.unknown)
-          ObservationDefinitionQualifiedIntervalGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      Code? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Range? age,
       Range? gestationalAge,
       String? condition,
-      @JsonKey(name: '_condition')
-          Element? conditionElement});
+      @JsonKey(name: '_condition') Element? conditionElement});
 
   @override
   $ElementCopyWith<$Res>? get categoryElement;
@@ -10522,7 +10523,7 @@ class __$$_ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
       category: category == freezed
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as ObservationDefinitionQualifiedIntervalCategory?,
+              as Code?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -10542,7 +10543,7 @@ class __$$_ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as ObservationDefinitionQualifiedIntervalGender?,
+              as Code?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -10573,29 +10574,19 @@ class _$_ObservationDefinitionQualifiedInterval
     extends _ObservationDefinitionQualifiedInterval {
   _$_ObservationDefinitionQualifiedInterval(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(
-          unknownEnumValue:
-              ObservationDefinitionQualifiedIntervalCategory.unknown)
-          this.category,
-      @JsonKey(name: '_category')
-          this.categoryElement,
+      this.category,
+      @JsonKey(name: '_category') this.categoryElement,
       this.range,
       this.context,
       final List<CodeableConcept>? appliesTo,
-      @JsonKey(
-          unknownEnumValue:
-              ObservationDefinitionQualifiedIntervalGender.unknown)
-          this.gender,
-      @JsonKey(name: '_gender')
-          this.genderElement,
+      this.gender,
+      @JsonKey(name: '_gender') this.genderElement,
       this.age,
       this.gestationalAge,
       this.condition,
-      @JsonKey(name: '_condition')
-          this.conditionElement})
+      @JsonKey(name: '_condition') this.conditionElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _appliesTo = appliesTo,
@@ -10627,9 +10618,7 @@ class _$_ObservationDefinitionQualifiedInterval
   }
 
   @override
-  @JsonKey(
-      unknownEnumValue: ObservationDefinitionQualifiedIntervalCategory.unknown)
-  final ObservationDefinitionQualifiedIntervalCategory? category;
+  final Code? category;
   @override
   @JsonKey(name: '_category')
   final Element? categoryElement;
@@ -10647,9 +10636,7 @@ class _$_ObservationDefinitionQualifiedInterval
   }
 
   @override
-  @JsonKey(
-      unknownEnumValue: ObservationDefinitionQualifiedIntervalGender.unknown)
-  final ObservationDefinitionQualifiedIntervalGender? gender;
+  final Code? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -10732,29 +10719,19 @@ abstract class _ObservationDefinitionQualifiedInterval
     extends ObservationDefinitionQualifiedInterval {
   factory _ObservationDefinitionQualifiedInterval(
           {final String? id,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          @JsonKey(
-              unknownEnumValue:
-                  ObservationDefinitionQualifiedIntervalCategory.unknown)
-              final ObservationDefinitionQualifiedIntervalCategory? category,
-          @JsonKey(name: '_category')
-              final Element? categoryElement,
+          final Code? category,
+          @JsonKey(name: '_category') final Element? categoryElement,
           final Range? range,
           final CodeableConcept? context,
           final List<CodeableConcept>? appliesTo,
-          @JsonKey(
-              unknownEnumValue:
-                  ObservationDefinitionQualifiedIntervalGender.unknown)
-              final ObservationDefinitionQualifiedIntervalGender? gender,
-          @JsonKey(name: '_gender')
-              final Element? genderElement,
+          final Code? gender,
+          @JsonKey(name: '_gender') final Element? genderElement,
           final Range? age,
           final Range? gestationalAge,
           final String? condition,
-          @JsonKey(name: '_condition')
-              final Element? conditionElement}) =
+          @JsonKey(name: '_condition') final Element? conditionElement}) =
       _$_ObservationDefinitionQualifiedInterval;
   _ObservationDefinitionQualifiedInterval._() : super._();
 
@@ -10771,10 +10748,7 @@ abstract class _ObservationDefinitionQualifiedInterval
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      unknownEnumValue: ObservationDefinitionQualifiedIntervalCategory.unknown)
-  ObservationDefinitionQualifiedIntervalCategory? get category =>
-      throw _privateConstructorUsedError;
+  Code? get category => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_category')
   Element? get categoryElement => throw _privateConstructorUsedError;
@@ -10785,10 +10759,7 @@ abstract class _ObservationDefinitionQualifiedInterval
   @override
   List<CodeableConcept>? get appliesTo => throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      unknownEnumValue: ObservationDefinitionQualifiedIntervalGender.unknown)
-  ObservationDefinitionQualifiedIntervalGender? get gender =>
-      throw _privateConstructorUsedError;
+  Code? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -10816,7 +10787,7 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$PlanDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -10847,8 +10818,7 @@ mixin _$PlanDefinition {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-  PlanDefinitionStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -10911,7 +10881,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10941,8 +10911,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       CodeableConcept? type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-          PlanDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -11092,7 +11061,7 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -11180,7 +11149,7 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11585,7 +11554,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11615,8 +11584,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       CodeableConcept? type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-          PlanDefinitionStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -11791,7 +11759,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -11879,7 +11847,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12056,8 +12024,7 @@ class _$_PlanDefinition extends _PlanDefinition {
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
       this.type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -12128,7 +12095,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -12208,8 +12175,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final CodeableConcept? type;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-  final PlanDefinitionStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -12555,7 +12521,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   factory _PlanDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12585,8 +12551,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       @JsonKey(name: '_subtitle')
           final Element? subtitleElement,
       final CodeableConcept? type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-          final PlanDefinitionStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Boolean? experimental,
@@ -12641,7 +12606,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -12694,8 +12659,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-  PlanDefinitionStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -13659,29 +13623,19 @@ mixin _$PlanDefinitionAction {
   List<PlanDefinitionParticipant>? get participant =>
       throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-  PlanDefinitionActionGroupingBehavior? get groupingBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get groupingBehavior => throw _privateConstructorUsedError;
   @JsonKey(name: '_groupingBehavior')
   Element? get groupingBehaviorElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-  PlanDefinitionActionSelectionBehavior? get selectionBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get selectionBehavior => throw _privateConstructorUsedError;
   @JsonKey(name: '_selectionBehavior')
   Element? get selectionBehaviorElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-  PlanDefinitionActionRequiredBehavior? get requiredBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get requiredBehavior => throw _privateConstructorUsedError;
   @JsonKey(name: '_requiredBehavior')
   Element? get requiredBehaviorElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-  PlanDefinitionActionPrecheckBehavior? get precheckBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get precheckBehavior => throw _privateConstructorUsedError;
   @JsonKey(name: '_precheckBehavior')
   Element? get precheckBehaviorElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-  PlanDefinitionActionCardinalityBehavior? get cardinalityBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get cardinalityBehavior => throw _privateConstructorUsedError;
   @JsonKey(name: '_cardinalityBehavior')
   Element? get cardinalityBehaviorElement => throw _privateConstructorUsedError;
   Canonical? get definitionCanonical => throw _privateConstructorUsedError;
@@ -13749,24 +13703,19 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       Timing? timingTiming,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-          PlanDefinitionActionGroupingBehavior? groupingBehavior,
+      Code? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
           Element? groupingBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-          PlanDefinitionActionSelectionBehavior? selectionBehavior,
+      Code? selectionBehavior,
       @JsonKey(name: '_selectionBehavior')
           Element? selectionBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-          PlanDefinitionActionRequiredBehavior? requiredBehavior,
+      Code? requiredBehavior,
       @JsonKey(name: '_requiredBehavior')
           Element? requiredBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-          PlanDefinitionActionPrecheckBehavior? precheckBehavior,
+      Code? precheckBehavior,
       @JsonKey(name: '_precheckBehavior')
           Element? precheckBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-          PlanDefinitionActionCardinalityBehavior? cardinalityBehavior,
+      Code? cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element? cardinalityBehaviorElement,
       Canonical? definitionCanonical,
@@ -14005,7 +13954,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
           : groupingBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionGroupingBehavior?,
+              as Code?,
       groupingBehaviorElement: groupingBehaviorElement == freezed
           ? _value.groupingBehaviorElement
           : groupingBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14013,7 +13962,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       selectionBehavior: selectionBehavior == freezed
           ? _value.selectionBehavior
           : selectionBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionSelectionBehavior?,
+              as Code?,
       selectionBehaviorElement: selectionBehaviorElement == freezed
           ? _value.selectionBehaviorElement
           : selectionBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14021,7 +13970,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       requiredBehavior: requiredBehavior == freezed
           ? _value.requiredBehavior
           : requiredBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionRequiredBehavior?,
+              as Code?,
       requiredBehaviorElement: requiredBehaviorElement == freezed
           ? _value.requiredBehaviorElement
           : requiredBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14029,7 +13978,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       precheckBehavior: precheckBehavior == freezed
           ? _value.precheckBehavior
           : precheckBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionPrecheckBehavior?,
+              as Code?,
       precheckBehaviorElement: precheckBehaviorElement == freezed
           ? _value.precheckBehaviorElement
           : precheckBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14037,7 +13986,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       cardinalityBehavior: cardinalityBehavior == freezed
           ? _value.cardinalityBehavior
           : cardinalityBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionCardinalityBehavior?,
+              as Code?,
       cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
           ? _value.cardinalityBehaviorElement
           : cardinalityBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14356,24 +14305,19 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       Timing? timingTiming,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-          PlanDefinitionActionGroupingBehavior? groupingBehavior,
+      Code? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
           Element? groupingBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-          PlanDefinitionActionSelectionBehavior? selectionBehavior,
+      Code? selectionBehavior,
       @JsonKey(name: '_selectionBehavior')
           Element? selectionBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-          PlanDefinitionActionRequiredBehavior? requiredBehavior,
+      Code? requiredBehavior,
       @JsonKey(name: '_requiredBehavior')
           Element? requiredBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-          PlanDefinitionActionPrecheckBehavior? precheckBehavior,
+      Code? precheckBehavior,
       @JsonKey(name: '_precheckBehavior')
           Element? precheckBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-          PlanDefinitionActionCardinalityBehavior? cardinalityBehavior,
+      Code? cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element? cardinalityBehaviorElement,
       Canonical? definitionCanonical,
@@ -14635,7 +14579,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
           : groupingBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionGroupingBehavior?,
+              as Code?,
       groupingBehaviorElement: groupingBehaviorElement == freezed
           ? _value.groupingBehaviorElement
           : groupingBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14643,7 +14587,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       selectionBehavior: selectionBehavior == freezed
           ? _value.selectionBehavior
           : selectionBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionSelectionBehavior?,
+              as Code?,
       selectionBehaviorElement: selectionBehaviorElement == freezed
           ? _value.selectionBehaviorElement
           : selectionBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14651,7 +14595,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       requiredBehavior: requiredBehavior == freezed
           ? _value.requiredBehavior
           : requiredBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionRequiredBehavior?,
+              as Code?,
       requiredBehaviorElement: requiredBehaviorElement == freezed
           ? _value.requiredBehaviorElement
           : requiredBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14659,7 +14603,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       precheckBehavior: precheckBehavior == freezed
           ? _value.precheckBehavior
           : precheckBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionPrecheckBehavior?,
+              as Code?,
       precheckBehaviorElement: precheckBehaviorElement == freezed
           ? _value.precheckBehaviorElement
           : precheckBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14667,7 +14611,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       cardinalityBehavior: cardinalityBehavior == freezed
           ? _value.cardinalityBehavior
           : cardinalityBehavior // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionActionCardinalityBehavior?,
+              as Code?,
       cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
           ? _value.cardinalityBehaviorElement
           : cardinalityBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -14709,30 +14653,23 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
 class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   _$_PlanDefinitionAction(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.prefix,
-      @JsonKey(name: '_prefix')
-          this.prefixElement,
+      @JsonKey(name: '_prefix') this.prefixElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.textEquivalent,
-      @JsonKey(name: '_textEquivalent')
-          this.textEquivalentElement,
+      @JsonKey(name: '_textEquivalent') this.textEquivalentElement,
       this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement,
+      @JsonKey(name: '_priority') this.priorityElement,
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
       final List<Id>? goalId,
-      @JsonKey(name: '_goalId')
-          final List<Element?>? goalIdElement,
+      @JsonKey(name: '_goalId') final List<Element?>? goalIdElement,
       this.subjectCodeableConcept,
       this.subjectReference,
       final List<TriggerDefinition>? trigger,
@@ -14741,8 +14678,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       final List<DataRequirement>? output,
       final List<PlanDefinitionRelatedAction>? relatedAction,
       this.timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          this.timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       this.timingAge,
       this.timingPeriod,
       this.timingDuration,
@@ -14750,32 +14686,20 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       this.timingTiming,
       final List<PlanDefinitionParticipant>? participant,
       this.type,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-          this.groupingBehavior,
-      @JsonKey(name: '_groupingBehavior')
-          this.groupingBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-          this.selectionBehavior,
-      @JsonKey(name: '_selectionBehavior')
-          this.selectionBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-          this.requiredBehavior,
-      @JsonKey(name: '_requiredBehavior')
-          this.requiredBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-          this.precheckBehavior,
-      @JsonKey(name: '_precheckBehavior')
-          this.precheckBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-          this.cardinalityBehavior,
-      @JsonKey(name: '_cardinalityBehavior')
-          this.cardinalityBehaviorElement,
+      this.groupingBehavior,
+      @JsonKey(name: '_groupingBehavior') this.groupingBehaviorElement,
+      this.selectionBehavior,
+      @JsonKey(name: '_selectionBehavior') this.selectionBehaviorElement,
+      this.requiredBehavior,
+      @JsonKey(name: '_requiredBehavior') this.requiredBehaviorElement,
+      this.precheckBehavior,
+      @JsonKey(name: '_precheckBehavior') this.precheckBehaviorElement,
+      this.cardinalityBehavior,
+      @JsonKey(name: '_cardinalityBehavior') this.cardinalityBehaviorElement,
       this.definitionCanonical,
-      @JsonKey(name: '_definitionCanonical')
-          this.definitionCanonicalElement,
+      @JsonKey(name: '_definitionCanonical') this.definitionCanonicalElement,
       this.definitionUri,
-      @JsonKey(name: '_definitionUri')
-          this.definitionUriElement,
+      @JsonKey(name: '_definitionUri') this.definitionUriElement,
       this.transform,
       final List<PlanDefinitionDynamicValue>? dynamicValue,
       final List<PlanDefinitionAction>? action})
@@ -14967,32 +14891,27 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @override
   final CodeableConcept? type;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-  final PlanDefinitionActionGroupingBehavior? groupingBehavior;
+  final Code? groupingBehavior;
   @override
   @JsonKey(name: '_groupingBehavior')
   final Element? groupingBehaviorElement;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-  final PlanDefinitionActionSelectionBehavior? selectionBehavior;
+  final Code? selectionBehavior;
   @override
   @JsonKey(name: '_selectionBehavior')
   final Element? selectionBehaviorElement;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-  final PlanDefinitionActionRequiredBehavior? requiredBehavior;
+  final Code? requiredBehavior;
   @override
   @JsonKey(name: '_requiredBehavior')
   final Element? requiredBehaviorElement;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-  final PlanDefinitionActionPrecheckBehavior? precheckBehavior;
+  final Code? precheckBehavior;
   @override
   @JsonKey(name: '_precheckBehavior')
   final Element? precheckBehaviorElement;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-  final PlanDefinitionActionCardinalityBehavior? cardinalityBehavior;
+  final Code? cardinalityBehavior;
   @override
   @JsonKey(name: '_cardinalityBehavior')
   final Element? cardinalityBehaviorElement;
@@ -15239,24 +15158,19 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final Timing? timingTiming,
       final List<PlanDefinitionParticipant>? participant,
       final CodeableConcept? type,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-          final PlanDefinitionActionGroupingBehavior? groupingBehavior,
+      final Code? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
           final Element? groupingBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-          final PlanDefinitionActionSelectionBehavior? selectionBehavior,
+      final Code? selectionBehavior,
       @JsonKey(name: '_selectionBehavior')
           final Element? selectionBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-          final PlanDefinitionActionRequiredBehavior? requiredBehavior,
+      final Code? requiredBehavior,
       @JsonKey(name: '_requiredBehavior')
           final Element? requiredBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-          final PlanDefinitionActionPrecheckBehavior? precheckBehavior,
+      final Code? precheckBehavior,
       @JsonKey(name: '_precheckBehavior')
           final Element? precheckBehaviorElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-          final PlanDefinitionActionCardinalityBehavior? cardinalityBehavior,
+      final Code? cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           final Element? cardinalityBehaviorElement,
       final Canonical? definitionCanonical,
@@ -15356,37 +15270,27 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-  PlanDefinitionActionGroupingBehavior? get groupingBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get groupingBehavior => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_groupingBehavior')
   Element? get groupingBehaviorElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-  PlanDefinitionActionSelectionBehavior? get selectionBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get selectionBehavior => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_selectionBehavior')
   Element? get selectionBehaviorElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-  PlanDefinitionActionRequiredBehavior? get requiredBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get requiredBehavior => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requiredBehavior')
   Element? get requiredBehaviorElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-  PlanDefinitionActionPrecheckBehavior? get precheckBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get precheckBehavior => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_precheckBehavior')
   Element? get precheckBehaviorElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-  PlanDefinitionActionCardinalityBehavior? get cardinalityBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get cardinalityBehavior => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_cardinalityBehavior')
   Element? get cardinalityBehaviorElement => throw _privateConstructorUsedError;
@@ -15425,8 +15329,7 @@ mixin _$PlanDefinitionCondition {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
-  PlanDefinitionConditionKind? get kind => throw _privateConstructorUsedError;
+  Code? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
   Expression? get expression => throw _privateConstructorUsedError;
@@ -15444,13 +15347,10 @@ abstract class $PlanDefinitionConditionCopyWith<$Res> {
       _$PlanDefinitionConditionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
-          PlanDefinitionConditionKind? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      Code? kind,
+      @JsonKey(name: '_kind') Element? kindElement,
       Expression? expression});
 
   $ElementCopyWith<$Res>? get kindElement;
@@ -15491,7 +15391,7 @@ class _$PlanDefinitionConditionCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionConditionKind?,
+              as Code?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -15535,13 +15435,10 @@ abstract class _$$_PlanDefinitionConditionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
-          PlanDefinitionConditionKind? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      Code? kind,
+      @JsonKey(name: '_kind') Element? kindElement,
       Expression? expression});
 
   @override
@@ -15587,7 +15484,7 @@ class __$$_PlanDefinitionConditionCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionConditionKind?,
+              as Code?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -15607,7 +15504,7 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown) this.kind,
+      this.kind,
       @JsonKey(name: '_kind') this.kindElement,
       this.expression})
       : _extension_ = extension_,
@@ -15639,8 +15536,7 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
   }
 
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
-  final PlanDefinitionConditionKind? kind;
+  final Code? kind;
   @override
   @JsonKey(name: '_kind')
   final Element? kindElement;
@@ -15696,13 +15592,10 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
 abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
   factory _PlanDefinitionCondition(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
-          final PlanDefinitionConditionKind? kind,
-      @JsonKey(name: '_kind')
-          final Element? kindElement,
+      final Code? kind,
+      @JsonKey(name: '_kind') final Element? kindElement,
       final Expression? expression}) = _$_PlanDefinitionCondition;
   _PlanDefinitionCondition._() : super._();
 
@@ -15718,8 +15611,7 @@ abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
-  PlanDefinitionConditionKind? get kind => throw _privateConstructorUsedError;
+  Code? get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
@@ -15746,9 +15638,7 @@ mixin _$PlanDefinitionRelatedAction {
   Id? get actionId => throw _privateConstructorUsedError;
   @JsonKey(name: '_actionId')
   Element? get actionIdElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-  PlanDefinitionRelatedActionRelationship? get relationship =>
-      throw _privateConstructorUsedError;
+  Code? get relationship => throw _privateConstructorUsedError;
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
   FhirDuration? get offsetDuration => throw _privateConstructorUsedError;
@@ -15768,16 +15658,12 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       _$PlanDefinitionRelatedActionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? actionId,
-      @JsonKey(name: '_actionId')
-          Element? actionIdElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-          PlanDefinitionRelatedActionRelationship? relationship,
-      @JsonKey(name: '_relationship')
-          Element? relationshipElement,
+      @JsonKey(name: '_actionId') Element? actionIdElement,
+      Code? relationship,
+      @JsonKey(name: '_relationship') Element? relationshipElement,
       FhirDuration? offsetDuration,
       Range? offsetRange});
 
@@ -15832,7 +15718,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionRelatedActionRelationship?,
+              as Code?,
       relationshipElement: relationshipElement == freezed
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -15903,16 +15789,12 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? actionId,
-      @JsonKey(name: '_actionId')
-          Element? actionIdElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-          PlanDefinitionRelatedActionRelationship? relationship,
-      @JsonKey(name: '_relationship')
-          Element? relationshipElement,
+      @JsonKey(name: '_actionId') Element? actionIdElement,
+      Code? relationship,
+      @JsonKey(name: '_relationship') Element? relationshipElement,
       FhirDuration? offsetDuration,
       Range? offsetRange});
 
@@ -15975,7 +15857,7 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionRelatedActionRelationship?,
+              as Code?,
       relationshipElement: relationshipElement == freezed
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -15997,16 +15879,12 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
 class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
   _$_PlanDefinitionRelatedAction(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.actionId,
-      @JsonKey(name: '_actionId')
-          this.actionIdElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-          this.relationship,
-      @JsonKey(name: '_relationship')
-          this.relationshipElement,
+      @JsonKey(name: '_actionId') this.actionIdElement,
+      this.relationship,
+      @JsonKey(name: '_relationship') this.relationshipElement,
       this.offsetDuration,
       this.offsetRange})
       : _extension_ = extension_,
@@ -16043,8 +15921,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
   @JsonKey(name: '_actionId')
   final Element? actionIdElement;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-  final PlanDefinitionRelatedActionRelationship? relationship;
+  final Code? relationship;
   @override
   @JsonKey(name: '_relationship')
   final Element? relationshipElement;
@@ -16111,16 +15988,12 @@ abstract class _PlanDefinitionRelatedAction
     extends PlanDefinitionRelatedAction {
   factory _PlanDefinitionRelatedAction(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Id? actionId,
-      @JsonKey(name: '_actionId')
-          final Element? actionIdElement,
-      @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-          final PlanDefinitionRelatedActionRelationship? relationship,
-      @JsonKey(name: '_relationship')
-          final Element? relationshipElement,
+      @JsonKey(name: '_actionId') final Element? actionIdElement,
+      final Code? relationship,
+      @JsonKey(name: '_relationship') final Element? relationshipElement,
       final FhirDuration? offsetDuration,
       final Range? offsetRange}) = _$_PlanDefinitionRelatedAction;
   _PlanDefinitionRelatedAction._() : super._();
@@ -16142,9 +16015,7 @@ abstract class _PlanDefinitionRelatedAction
   @JsonKey(name: '_actionId')
   Element? get actionIdElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-  PlanDefinitionRelatedActionRelationship? get relationship =>
-      throw _privateConstructorUsedError;
+  Code? get relationship => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
@@ -16170,8 +16041,7 @@ mixin _$PlanDefinitionParticipant {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-  PlanDefinitionParticipantType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   CodeableConcept? get role => throw _privateConstructorUsedError;
@@ -16189,13 +16059,10 @@ abstract class $PlanDefinitionParticipantCopyWith<$Res> {
       _$PlanDefinitionParticipantCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          PlanDefinitionParticipantType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -16236,7 +16103,7 @@ class _$PlanDefinitionParticipantCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionParticipantType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -16281,13 +16148,10 @@ abstract class _$$_PlanDefinitionParticipantCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          PlanDefinitionParticipantType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
   @override
@@ -16334,7 +16198,7 @@ class __$$_PlanDefinitionParticipantCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PlanDefinitionParticipantType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -16352,13 +16216,10 @@ class __$$_PlanDefinitionParticipantCopyWithImpl<$Res>
 class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
   _$_PlanDefinitionParticipant(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.role})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -16389,8 +16250,7 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
   }
 
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-  final PlanDefinitionParticipantType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -16444,13 +16304,10 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
 abstract class _PlanDefinitionParticipant extends PlanDefinitionParticipant {
   factory _PlanDefinitionParticipant(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-          final PlanDefinitionParticipantType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final CodeableConcept? role}) = _$_PlanDefinitionParticipant;
   _PlanDefinitionParticipant._() : super._();
 
@@ -16466,8 +16323,7 @@ abstract class _PlanDefinitionParticipant extends PlanDefinitionParticipant {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-  PlanDefinitionParticipantType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -16794,7 +16650,7 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 mixin _$Questionnaire {
   @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -16822,8 +16678,7 @@ mixin _$Questionnaire {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-  QuestionnaireStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -16874,7 +16729,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16901,8 +16756,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? derivedFrom,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          QuestionnaireStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -17026,7 +16880,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -17106,7 +16960,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -17419,7 +17273,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17446,8 +17300,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? derivedFrom,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          QuestionnaireStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -17591,7 +17444,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -17671,7 +17524,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -17809,8 +17662,7 @@ class _$_Questionnaire extends _Questionnaire {
       @JsonKey(name: '_title')
           this.titleElement,
       final List<Canonical>? derivedFrom,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -17867,7 +17719,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -17949,8 +17801,7 @@ class _$_Questionnaire extends _Questionnaire {
   }
 
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-  final QuestionnaireStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -18218,7 +18069,7 @@ abstract class _Questionnaire extends Questionnaire {
   factory _Questionnaire(
       {@JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18245,8 +18096,7 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_title')
           final Element? titleElement,
       final List<Canonical>? derivedFrom,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          final QuestionnaireStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Boolean? experimental,
@@ -18291,7 +18141,7 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -18339,8 +18189,7 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-  QuestionnaireStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -18431,15 +18280,12 @@ mixin _$QuestionnaireItem {
   String? get text => throw _privateConstructorUsedError;
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-  QuestionnaireItemType get type => throw _privateConstructorUsedError;
+  Code get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   List<QuestionnaireEnableWhen>? get enableWhen =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-  QuestionnaireItemEnableBehavior? get enableBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get enableBehavior => throw _privateConstructorUsedError;
   @JsonKey(name: '_enableBehavior')
   Element? get enableBehaviorElement => throw _privateConstructorUsedError;
   @JsonKey(name: 'required')
@@ -18474,44 +18320,30 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       _$QuestionnaireItemCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String linkId,
-      @JsonKey(name: '_linkId')
-          Element? linkIdElement,
+      @JsonKey(name: '_linkId') Element? linkIdElement,
       FhirUri? definition,
-      @JsonKey(name: '_definition')
-          Element? definitionElement,
+      @JsonKey(name: '_definition') Element? definitionElement,
       List<Coding>? code,
       String? prefix,
-      @JsonKey(name: '_prefix')
-          Element? prefixElement,
+      @JsonKey(name: '_prefix') Element? prefixElement,
       String? text,
-      @JsonKey(name: '_text')
-          Element? textElement,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_text') Element? textElement,
+      Code type,
+      @JsonKey(name: '_type') Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
-      @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-          QuestionnaireItemEnableBehavior? enableBehavior,
-      @JsonKey(name: '_enableBehavior')
-          Element? enableBehaviorElement,
-      @JsonKey(name: 'required')
-          Boolean? required_,
-      @JsonKey(name: '_required')
-          Element? requiredElement,
+      Code? enableBehavior,
+      @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
+      @JsonKey(name: 'required') Boolean? required_,
+      @JsonKey(name: '_required') Element? requiredElement,
       Boolean? repeats,
-      @JsonKey(name: '_repeats')
-          Element? repeatsElement,
+      @JsonKey(name: '_repeats') Element? repeatsElement,
       Boolean? readOnly,
-      @JsonKey(name: '_readOnly')
-          Element? readOnlyElement,
+      @JsonKey(name: '_readOnly') Element? readOnlyElement,
       Integer? maxLength,
-      @JsonKey(name: '_maxLength')
-          Element? maxLengthElement,
+      @JsonKey(name: '_maxLength') Element? maxLengthElement,
       Canonical? answerValueSet,
       List<QuestionnaireAnswerOption>? answerOption,
       List<QuestionnaireInitial>? initial,
@@ -18622,7 +18454,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireItemType,
+              as Code,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -18634,7 +18466,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       enableBehavior: enableBehavior == freezed
           ? _value.enableBehavior
           : enableBehavior // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireItemEnableBehavior?,
+              as Code?,
       enableBehaviorElement: enableBehaviorElement == freezed
           ? _value.enableBehaviorElement
           : enableBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -18810,44 +18642,30 @@ abstract class _$$_QuestionnaireItemCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String linkId,
-      @JsonKey(name: '_linkId')
-          Element? linkIdElement,
+      @JsonKey(name: '_linkId') Element? linkIdElement,
       FhirUri? definition,
-      @JsonKey(name: '_definition')
-          Element? definitionElement,
+      @JsonKey(name: '_definition') Element? definitionElement,
       List<Coding>? code,
       String? prefix,
-      @JsonKey(name: '_prefix')
-          Element? prefixElement,
+      @JsonKey(name: '_prefix') Element? prefixElement,
       String? text,
-      @JsonKey(name: '_text')
-          Element? textElement,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_text') Element? textElement,
+      Code type,
+      @JsonKey(name: '_type') Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
-      @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-          QuestionnaireItemEnableBehavior? enableBehavior,
-      @JsonKey(name: '_enableBehavior')
-          Element? enableBehaviorElement,
-      @JsonKey(name: 'required')
-          Boolean? required_,
-      @JsonKey(name: '_required')
-          Element? requiredElement,
+      Code? enableBehavior,
+      @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
+      @JsonKey(name: 'required') Boolean? required_,
+      @JsonKey(name: '_required') Element? requiredElement,
       Boolean? repeats,
-      @JsonKey(name: '_repeats')
-          Element? repeatsElement,
+      @JsonKey(name: '_repeats') Element? repeatsElement,
       Boolean? readOnly,
-      @JsonKey(name: '_readOnly')
-          Element? readOnlyElement,
+      @JsonKey(name: '_readOnly') Element? readOnlyElement,
       Integer? maxLength,
-      @JsonKey(name: '_maxLength')
-          Element? maxLengthElement,
+      @JsonKey(name: '_maxLength') Element? maxLengthElement,
       Canonical? answerValueSet,
       List<QuestionnaireAnswerOption>? answerOption,
       List<QuestionnaireInitial>? initial,
@@ -18970,7 +18788,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireItemType,
+              as Code,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -18982,7 +18800,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       enableBehavior: enableBehavior == freezed
           ? _value.enableBehavior
           : enableBehavior // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireItemEnableBehavior?,
+              as Code?,
       enableBehaviorElement: enableBehaviorElement == freezed
           ? _value.enableBehaviorElement
           : enableBehaviorElement // ignore: cast_nullable_to_non_nullable
@@ -19044,44 +18862,30 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
 class _$_QuestionnaireItem extends _QuestionnaireItem {
   _$_QuestionnaireItem(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.linkId,
-      @JsonKey(name: '_linkId')
-          this.linkIdElement,
+      @JsonKey(name: '_linkId') this.linkIdElement,
       this.definition,
-      @JsonKey(name: '_definition')
-          this.definitionElement,
+      @JsonKey(name: '_definition') this.definitionElement,
       final List<Coding>? code,
       this.prefix,
-      @JsonKey(name: '_prefix')
-          this.prefixElement,
+      @JsonKey(name: '_prefix') this.prefixElement,
       this.text,
-      @JsonKey(name: '_text')
-          this.textElement,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          required this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_text') this.textElement,
+      required this.type,
+      @JsonKey(name: '_type') this.typeElement,
       final List<QuestionnaireEnableWhen>? enableWhen,
-      @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-          this.enableBehavior,
-      @JsonKey(name: '_enableBehavior')
-          this.enableBehaviorElement,
-      @JsonKey(name: 'required')
-          this.required_,
-      @JsonKey(name: '_required')
-          this.requiredElement,
+      this.enableBehavior,
+      @JsonKey(name: '_enableBehavior') this.enableBehaviorElement,
+      @JsonKey(name: 'required') this.required_,
+      @JsonKey(name: '_required') this.requiredElement,
       this.repeats,
-      @JsonKey(name: '_repeats')
-          this.repeatsElement,
+      @JsonKey(name: '_repeats') this.repeatsElement,
       this.readOnly,
-      @JsonKey(name: '_readOnly')
-          this.readOnlyElement,
+      @JsonKey(name: '_readOnly') this.readOnlyElement,
       this.maxLength,
-      @JsonKey(name: '_maxLength')
-          this.maxLengthElement,
+      @JsonKey(name: '_maxLength') this.maxLengthElement,
       this.answerValueSet,
       final List<QuestionnaireAnswerOption>? answerOption,
       final List<QuestionnaireInitial>? initial,
@@ -19149,8 +18953,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @JsonKey(name: '_text')
   final Element? textElement;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-  final QuestionnaireItemType type;
+  final Code type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -19164,8 +18967,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   }
 
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-  final QuestionnaireItemEnableBehavior? enableBehavior;
+  final Code? enableBehavior;
   @override
   @JsonKey(name: '_enableBehavior')
   final Element? enableBehaviorElement;
@@ -19327,44 +19129,30 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
 abstract class _QuestionnaireItem extends QuestionnaireItem {
   factory _QuestionnaireItem(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String linkId,
-      @JsonKey(name: '_linkId')
-          final Element? linkIdElement,
+      @JsonKey(name: '_linkId') final Element? linkIdElement,
       final FhirUri? definition,
-      @JsonKey(name: '_definition')
-          final Element? definitionElement,
+      @JsonKey(name: '_definition') final Element? definitionElement,
       final List<Coding>? code,
       final String? prefix,
-      @JsonKey(name: '_prefix')
-          final Element? prefixElement,
+      @JsonKey(name: '_prefix') final Element? prefixElement,
       final String? text,
-      @JsonKey(name: '_text')
-          final Element? textElement,
-      @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          required final QuestionnaireItemType type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_text') final Element? textElement,
+      required final Code type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final List<QuestionnaireEnableWhen>? enableWhen,
-      @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-          final QuestionnaireItemEnableBehavior? enableBehavior,
-      @JsonKey(name: '_enableBehavior')
-          final Element? enableBehaviorElement,
-      @JsonKey(name: 'required')
-          final Boolean? required_,
-      @JsonKey(name: '_required')
-          final Element? requiredElement,
+      final Code? enableBehavior,
+      @JsonKey(name: '_enableBehavior') final Element? enableBehaviorElement,
+      @JsonKey(name: 'required') final Boolean? required_,
+      @JsonKey(name: '_required') final Element? requiredElement,
       final Boolean? repeats,
-      @JsonKey(name: '_repeats')
-          final Element? repeatsElement,
+      @JsonKey(name: '_repeats') final Element? repeatsElement,
       final Boolean? readOnly,
-      @JsonKey(name: '_readOnly')
-          final Element? readOnlyElement,
+      @JsonKey(name: '_readOnly') final Element? readOnlyElement,
       final Integer? maxLength,
-      @JsonKey(name: '_maxLength')
-          final Element? maxLengthElement,
+      @JsonKey(name: '_maxLength') final Element? maxLengthElement,
       final Canonical? answerValueSet,
       final List<QuestionnaireAnswerOption>? answerOption,
       final List<QuestionnaireInitial>? initial,
@@ -19405,8 +19193,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-  QuestionnaireItemType get type => throw _privateConstructorUsedError;
+  Code get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -19414,9 +19201,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   List<QuestionnaireEnableWhen>? get enableWhen =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-  QuestionnaireItemEnableBehavior? get enableBehavior =>
-      throw _privateConstructorUsedError;
+  Code? get enableBehavior => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_enableBehavior')
   Element? get enableBehaviorElement => throw _privateConstructorUsedError;
@@ -19471,11 +19256,8 @@ mixin _$QuestionnaireEnableWhen {
   String? get question => throw _privateConstructorUsedError;
   @JsonKey(name: '_question')
   Element? get questionElement => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'operator',
-      unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  QuestionnaireEnableWhenOperator? get operator_ =>
-      throw _privateConstructorUsedError;
+  @JsonKey(name: 'operator')
+  Code? get operator_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_operator')
   Element? get operatorElement => throw _privateConstructorUsedError;
   Boolean? get answerBoolean => throw _privateConstructorUsedError;
@@ -19516,37 +19298,26 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       _$QuestionnaireEnableWhenCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? question,
-      @JsonKey(name: '_question')
-          Element? questionElement,
-      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator? operator_,
-      @JsonKey(name: '_operator')
-          Element? operatorElement,
+      @JsonKey(name: '_question') Element? questionElement,
+      @JsonKey(name: 'operator') Code? operator_,
+      @JsonKey(name: '_operator') Element? operatorElement,
       Boolean? answerBoolean,
-      @JsonKey(name: '_answerBoolean')
-          Element? answerBooleanElement,
+      @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
       Decimal? answerDecimal,
-      @JsonKey(name: '_answerDecimal')
-          Element? answerDecimalElement,
+      @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
       Integer? answerInteger,
-      @JsonKey(name: '_answerInteger')
-          Element? answerIntegerElement,
+      @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
       Date? answerDate,
-      @JsonKey(name: '_answerDate')
-          Element? answerDateElement,
+      @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
-      @JsonKey(name: '_answerDateTime')
-          Element? answerDateTimeElement,
+      @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
       Time? answerTime,
-      @JsonKey(name: '_answerTime')
-          Element? answerTimeElement,
+      @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
-      @JsonKey(name: '_answerString')
-          Element? answerStringElement,
+      @JsonKey(name: '_answerString') Element? answerStringElement,
       Coding? answerCoding,
       Quantity? answerQuantity,
       Reference? answerReference});
@@ -19625,7 +19396,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       operator_: operator_ == freezed
           ? _value.operator_
           : operator_ // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireEnableWhenOperator?,
+              as Code?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -19843,37 +19614,26 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? question,
-      @JsonKey(name: '_question')
-          Element? questionElement,
-      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          QuestionnaireEnableWhenOperator? operator_,
-      @JsonKey(name: '_operator')
-          Element? operatorElement,
+      @JsonKey(name: '_question') Element? questionElement,
+      @JsonKey(name: 'operator') Code? operator_,
+      @JsonKey(name: '_operator') Element? operatorElement,
       Boolean? answerBoolean,
-      @JsonKey(name: '_answerBoolean')
-          Element? answerBooleanElement,
+      @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
       Decimal? answerDecimal,
-      @JsonKey(name: '_answerDecimal')
-          Element? answerDecimalElement,
+      @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
       Integer? answerInteger,
-      @JsonKey(name: '_answerInteger')
-          Element? answerIntegerElement,
+      @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
       Date? answerDate,
-      @JsonKey(name: '_answerDate')
-          Element? answerDateElement,
+      @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
-      @JsonKey(name: '_answerDateTime')
-          Element? answerDateTimeElement,
+      @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
       Time? answerTime,
-      @JsonKey(name: '_answerTime')
-          Element? answerTimeElement,
+      @JsonKey(name: '_answerTime') Element? answerTimeElement,
       String? answerString,
-      @JsonKey(name: '_answerString')
-          Element? answerStringElement,
+      @JsonKey(name: '_answerString') Element? answerStringElement,
       Coding? answerCoding,
       Quantity? answerQuantity,
       Reference? answerReference});
@@ -19967,7 +19727,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       operator_: operator_ == freezed
           ? _value.operator_
           : operator_ // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireEnableWhenOperator?,
+              as Code?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -20049,37 +19809,26 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
 class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   _$_QuestionnaireEnableWhen(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.question,
-      @JsonKey(name: '_question')
-          this.questionElement,
-      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          this.operator_,
-      @JsonKey(name: '_operator')
-          this.operatorElement,
+      @JsonKey(name: '_question') this.questionElement,
+      @JsonKey(name: 'operator') this.operator_,
+      @JsonKey(name: '_operator') this.operatorElement,
       this.answerBoolean,
-      @JsonKey(name: '_answerBoolean')
-          this.answerBooleanElement,
+      @JsonKey(name: '_answerBoolean') this.answerBooleanElement,
       this.answerDecimal,
-      @JsonKey(name: '_answerDecimal')
-          this.answerDecimalElement,
+      @JsonKey(name: '_answerDecimal') this.answerDecimalElement,
       this.answerInteger,
-      @JsonKey(name: '_answerInteger')
-          this.answerIntegerElement,
+      @JsonKey(name: '_answerInteger') this.answerIntegerElement,
       this.answerDate,
-      @JsonKey(name: '_answerDate')
-          this.answerDateElement,
+      @JsonKey(name: '_answerDate') this.answerDateElement,
       this.answerDateTime,
-      @JsonKey(name: '_answerDateTime')
-          this.answerDateTimeElement,
+      @JsonKey(name: '_answerDateTime') this.answerDateTimeElement,
       this.answerTime,
-      @JsonKey(name: '_answerTime')
-          this.answerTimeElement,
+      @JsonKey(name: '_answerTime') this.answerTimeElement,
       this.answerString,
-      @JsonKey(name: '_answerString')
-          this.answerStringElement,
+      @JsonKey(name: '_answerString') this.answerStringElement,
       this.answerCoding,
       this.answerQuantity,
       this.answerReference})
@@ -20117,10 +19866,8 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   @JsonKey(name: '_question')
   final Element? questionElement;
   @override
-  @JsonKey(
-      name: 'operator',
-      unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  final QuestionnaireEnableWhenOperator? operator_;
+  @JsonKey(name: 'operator')
+  final Code? operator_;
   @override
   @JsonKey(name: '_operator')
   final Element? operatorElement;
@@ -20269,37 +20016,26 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   factory _QuestionnaireEnableWhen(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? question,
-      @JsonKey(name: '_question')
-          final Element? questionElement,
-      @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-          final QuestionnaireEnableWhenOperator? operator_,
-      @JsonKey(name: '_operator')
-          final Element? operatorElement,
+      @JsonKey(name: '_question') final Element? questionElement,
+      @JsonKey(name: 'operator') final Code? operator_,
+      @JsonKey(name: '_operator') final Element? operatorElement,
       final Boolean? answerBoolean,
-      @JsonKey(name: '_answerBoolean')
-          final Element? answerBooleanElement,
+      @JsonKey(name: '_answerBoolean') final Element? answerBooleanElement,
       final Decimal? answerDecimal,
-      @JsonKey(name: '_answerDecimal')
-          final Element? answerDecimalElement,
+      @JsonKey(name: '_answerDecimal') final Element? answerDecimalElement,
       final Integer? answerInteger,
-      @JsonKey(name: '_answerInteger')
-          final Element? answerIntegerElement,
+      @JsonKey(name: '_answerInteger') final Element? answerIntegerElement,
       final Date? answerDate,
-      @JsonKey(name: '_answerDate')
-          final Element? answerDateElement,
+      @JsonKey(name: '_answerDate') final Element? answerDateElement,
       final FhirDateTime? answerDateTime,
-      @JsonKey(name: '_answerDateTime')
-          final Element? answerDateTimeElement,
+      @JsonKey(name: '_answerDateTime') final Element? answerDateTimeElement,
       final Time? answerTime,
-      @JsonKey(name: '_answerTime')
-          final Element? answerTimeElement,
+      @JsonKey(name: '_answerTime') final Element? answerTimeElement,
       final String? answerString,
-      @JsonKey(name: '_answerString')
-          final Element? answerStringElement,
+      @JsonKey(name: '_answerString') final Element? answerStringElement,
       final Coding? answerCoding,
       final Quantity? answerQuantity,
       final Reference? answerReference}) = _$_QuestionnaireEnableWhen;
@@ -20322,11 +20058,8 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   @JsonKey(name: '_question')
   Element? get questionElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      name: 'operator',
-      unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-  QuestionnaireEnableWhenOperator? get operator_ =>
-      throw _privateConstructorUsedError;
+  @JsonKey(name: 'operator')
+  Code? get operator_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_operator')
   Element? get operatorElement => throw _privateConstructorUsedError;
@@ -21815,7 +21548,7 @@ SpecimenDefinition _$SpecimenDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$SpecimenDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -21854,7 +21587,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -21923,7 +21656,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -22079,7 +21812,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -22157,7 +21890,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -22268,7 +22001,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -22430,7 +22163,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   factory _SpecimenDefinition(
           {@JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
               final R4ResourceType resourceType,
-          final Id? id,
+          final String? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -22461,7 +22194,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -22523,9 +22256,7 @@ mixin _$SpecimenDefinitionTypeTested {
   @JsonKey(name: '_isDerived')
   Element? get isDerivedElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-  SpecimenDefinitionTypeTestedPreference? get preference =>
-      throw _privateConstructorUsedError;
+  Code? get preference => throw _privateConstructorUsedError;
   @JsonKey(name: '_preference')
   Element? get preferenceElement => throw _privateConstructorUsedError;
   SpecimenDefinitionContainer? get container =>
@@ -22553,21 +22284,16 @@ abstract class $SpecimenDefinitionTypeTestedCopyWith<$Res> {
       _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Boolean? isDerived,
-      @JsonKey(name: '_isDerived')
-          Element? isDerivedElement,
+      @JsonKey(name: '_isDerived') Element? isDerivedElement,
       CodeableConcept? type,
-      @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-          SpecimenDefinitionTypeTestedPreference? preference,
-      @JsonKey(name: '_preference')
-          Element? preferenceElement,
+      Code? preference,
+      @JsonKey(name: '_preference') Element? preferenceElement,
       SpecimenDefinitionContainer? container,
       String? requirement,
-      @JsonKey(name: '_requirement')
-          Element? requirementElement,
+      @JsonKey(name: '_requirement') Element? requirementElement,
       FhirDuration? retentionTime,
       List<CodeableConcept>? rejectionCriterion,
       List<SpecimenDefinitionHandling>? handling});
@@ -22634,7 +22360,7 @@ class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
       preference: preference == freezed
           ? _value.preference
           : preference // ignore: cast_nullable_to_non_nullable
-              as SpecimenDefinitionTypeTestedPreference?,
+              as Code?,
       preferenceElement: preferenceElement == freezed
           ? _value.preferenceElement
           : preferenceElement // ignore: cast_nullable_to_non_nullable
@@ -22744,21 +22470,16 @@ abstract class _$$_SpecimenDefinitionTypeTestedCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Boolean? isDerived,
-      @JsonKey(name: '_isDerived')
-          Element? isDerivedElement,
+      @JsonKey(name: '_isDerived') Element? isDerivedElement,
       CodeableConcept? type,
-      @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-          SpecimenDefinitionTypeTestedPreference? preference,
-      @JsonKey(name: '_preference')
-          Element? preferenceElement,
+      Code? preference,
+      @JsonKey(name: '_preference') Element? preferenceElement,
       SpecimenDefinitionContainer? container,
       String? requirement,
-      @JsonKey(name: '_requirement')
-          Element? requirementElement,
+      @JsonKey(name: '_requirement') Element? requirementElement,
       FhirDuration? retentionTime,
       List<CodeableConcept>? rejectionCriterion,
       List<SpecimenDefinitionHandling>? handling});
@@ -22835,7 +22556,7 @@ class __$$_SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
       preference: preference == freezed
           ? _value.preference
           : preference // ignore: cast_nullable_to_non_nullable
-              as SpecimenDefinitionTypeTestedPreference?,
+              as Code?,
       preferenceElement: preferenceElement == freezed
           ? _value.preferenceElement
           : preferenceElement // ignore: cast_nullable_to_non_nullable
@@ -22873,21 +22594,16 @@ class __$$_SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
 class _$_SpecimenDefinitionTypeTested extends _SpecimenDefinitionTypeTested {
   _$_SpecimenDefinitionTypeTested(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.isDerived,
-      @JsonKey(name: '_isDerived')
-          this.isDerivedElement,
+      @JsonKey(name: '_isDerived') this.isDerivedElement,
       this.type,
-      @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-          this.preference,
-      @JsonKey(name: '_preference')
-          this.preferenceElement,
+      this.preference,
+      @JsonKey(name: '_preference') this.preferenceElement,
       this.container,
       this.requirement,
-      @JsonKey(name: '_requirement')
-          this.requirementElement,
+      @JsonKey(name: '_requirement') this.requirementElement,
       this.retentionTime,
       final List<CodeableConcept>? rejectionCriterion,
       final List<SpecimenDefinitionHandling>? handling})
@@ -22929,8 +22645,7 @@ class _$_SpecimenDefinitionTypeTested extends _SpecimenDefinitionTypeTested {
   @override
   final CodeableConcept? type;
   @override
-  @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-  final SpecimenDefinitionTypeTestedPreference? preference;
+  final Code? preference;
   @override
   @JsonKey(name: '_preference')
   final Element? preferenceElement;
@@ -23030,26 +22745,21 @@ class _$_SpecimenDefinitionTypeTested extends _SpecimenDefinitionTypeTested {
 abstract class _SpecimenDefinitionTypeTested
     extends SpecimenDefinitionTypeTested {
   factory _SpecimenDefinitionTypeTested(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final Boolean? isDerived,
-      @JsonKey(name: '_isDerived')
-          final Element? isDerivedElement,
-      final CodeableConcept? type,
-      @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-          final SpecimenDefinitionTypeTestedPreference? preference,
-      @JsonKey(name: '_preference')
-          final Element? preferenceElement,
-      final SpecimenDefinitionContainer? container,
-      final String? requirement,
-      @JsonKey(name: '_requirement')
-          final Element? requirementElement,
-      final FhirDuration? retentionTime,
-      final List<CodeableConcept>? rejectionCriterion,
-      final List<SpecimenDefinitionHandling>?
-          handling}) = _$_SpecimenDefinitionTypeTested;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Boolean? isDerived,
+          @JsonKey(name: '_isDerived') final Element? isDerivedElement,
+          final CodeableConcept? type,
+          final Code? preference,
+          @JsonKey(name: '_preference') final Element? preferenceElement,
+          final SpecimenDefinitionContainer? container,
+          final String? requirement,
+          @JsonKey(name: '_requirement') final Element? requirementElement,
+          final FhirDuration? retentionTime,
+          final List<CodeableConcept>? rejectionCriterion,
+          final List<SpecimenDefinitionHandling>? handling}) =
+      _$_SpecimenDefinitionTypeTested;
   _SpecimenDefinitionTypeTested._() : super._();
 
   factory _SpecimenDefinitionTypeTested.fromJson(Map<String, dynamic> json) =
@@ -23071,9 +22781,7 @@ abstract class _SpecimenDefinitionTypeTested
   @override
   CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-  SpecimenDefinitionTypeTestedPreference? get preference =>
-      throw _privateConstructorUsedError;
+  Code? get preference => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_preference')
   Element? get preferenceElement => throw _privateConstructorUsedError;

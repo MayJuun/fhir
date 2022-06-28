@@ -144,6 +144,10 @@ class FhirExtension with _$FhirExtension {
   /// set of the data types (see [Extensibility](extensibility.html) for a
   ///  list).
   ///
+  /// [valueCodeableReference]: Value of extension - must be one of a
+  /// constrained set of the data types (see [Extensibility](extensibility.html)
+  /// for a list).
+  ///
   /// [valueCoding]: Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
@@ -295,6 +299,7 @@ class FhirExtension with _$FhirExtension {
     Annotation? valueAnnotation,
     Attachment? valueAttachment,
     CodeableConcept? valueCodeableConcept,
+    CodeableReference? valueCodeableReference,
     Coding? valueCoding,
     ContactPoint? valueContactPoint,
     Count? valueCount,
@@ -307,6 +312,7 @@ class FhirExtension with _$FhirExtension {
     Quantity? valueQuantity,
     Range? valueRange,
     Ratio? valueRatio,
+    RatioRange? valueRatioRange,
     Reference? valueReference,
     SampledData? valueSampledData,
     Signature? valueSignature,
@@ -320,7 +326,6 @@ class FhirExtension with _$FhirExtension {
     TriggerDefinition? valueTriggerDefinition,
     UsageContext? valueUsageContext,
     Dosage? valueDosage,
-    Meta? valueMeta,
   }) = _FhirExtension;
 
   /// Produces a Yaml formatted String version of the object

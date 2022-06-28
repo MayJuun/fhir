@@ -4,13 +4,13 @@ A Dart/Flutter package for working with FHIR® resources. FHIR® is the register
 
 It contains packages for the 3 released FHIR versions:
 
-- [R4 v4.0.1](https://hl7.org/fhir/R4/)
-- [Stu3 v3.0.2](https://www.hl7.org/fhir/stu3/)
-- [Dstu2 v1.0.2](https://www.hl7.org/fhir/DSTU2/)
+- [R4 v4.3.0 - FHIR Release #4B](http://hl7.org/fhir/R4B/)
+- [Stu3 v3.0.2 - FHIR Release 3 (STU) with 2 technical errata (Permanent Home)](http://hl7.org/fhir/STU3/)
+- [Dstu2 v1.0.2 - DSTU 2 (Official version) with 1 technical errata (Permanent home)](http://hl7.org/fhir/DSTU2/)
 
-As well as the R5 Preview #3:
+As well as the R5 (constantly in flux as it's actively being balloted):
 
-- [v4.5.0: R5 Preview #3](https://hl7.org/fhir/2020Feb/)
+- [R5 v4.6.0 - FHIR Release #5: Draft Ballot](http://hl7.org/fhir/2021May/)
 
 ## Say Hello
 
@@ -48,20 +48,3 @@ ToDo:
 
 1. Update fhir_db (Hive?)
 2. Update fhir_profiles
-
-
-
-factory (.*).fromJson\(Map<String, dynamic> json(.*)\n(.*)\(json\);
-
-
-  factory $1.fromJson(Map<String, dynamic> json$2\n$3 \n/// Acts like a constructor, returns a [$1], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory $1.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return $3(json);
-    } else {
-      throw FormatException('FormatException:\\nYou passed $json\\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }

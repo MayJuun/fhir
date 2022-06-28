@@ -12,7 +12,7 @@ _$_CatalogEntry _$$_CatalogEntryFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CatalogEntry) ??
           R4ResourceType.CatalogEntry,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -59,8 +59,7 @@ _$_CatalogEntry _$$_CatalogEntryFromJson(Map<String, dynamic> json) =>
       classification: (json['classification'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$CatalogEntryStatusEnumMap, json['status'],
-          unknownValue: CatalogEntryStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -104,7 +103,7 @@ Map<String, dynamic> _$$_CatalogEntryToJson(_$_CatalogEntry instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -127,7 +126,7 @@ Map<String, dynamic> _$$_CatalogEntryToJson(_$_CatalogEntry instance) {
       instance.additionalIdentifier?.map((e) => e.toJson()).toList());
   writeNotNull('classification',
       instance.classification?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$CatalogEntryStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('validityPeriod', instance.validityPeriod?.toJson());
   writeNotNull('validTo', instance.validTo?.toJson());
@@ -146,6 +145,8 @@ Map<String, dynamic> _$$_CatalogEntryToJson(_$_CatalogEntry instance) {
 const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Account: 'Account',
   R4ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R4ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
   R4ResourceType.AdverseEvent: 'AdverseEvent',
   R4ResourceType.AllergyIntolerance: 'AllergyIntolerance',
   R4ResourceType.Appointment: 'Appointment',
@@ -162,9 +163,11 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.CatalogEntry: 'CatalogEntry',
   R4ResourceType.ChargeItem: 'ChargeItem',
   R4ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R4ResourceType.Citation: 'Citation',
   R4ResourceType.Claim: 'Claim',
   R4ResourceType.ClaimResponse: 'ClaimResponse',
   R4ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R4ResourceType.ClinicalUseDefinition: 'ClinicalUseDefinition',
   R4ResourceType.CodeSystem: 'CodeSystem',
   R4ResourceType.Communication: 'Communication',
   R4ResourceType.CommunicationRequest: 'CommunicationRequest',
@@ -186,7 +189,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.DiagnosticReport: 'DiagnosticReport',
   R4ResourceType.DocumentManifest: 'DocumentManifest',
   R4ResourceType.DocumentReference: 'DocumentReference',
-  R4ResourceType.EffectEvidenceSynthesis: 'EffectEvidenceSynthesis',
   R4ResourceType.Encounter: 'Encounter',
   R4ResourceType.Endpoint: 'Endpoint',
   R4ResourceType.EnrollmentRequest: 'EnrollmentRequest',
@@ -194,6 +196,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.EpisodeOfCare: 'EpisodeOfCare',
   R4ResourceType.EventDefinition: 'EventDefinition',
   R4ResourceType.Evidence: 'Evidence',
+  R4ResourceType.EvidenceReport: 'EvidenceReport',
   R4ResourceType.EvidenceVariable: 'EvidenceVariable',
   R4ResourceType.ExampleScenario: 'ExampleScenario',
   R4ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
@@ -209,12 +212,14 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
   R4ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R4ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R4ResourceType.Ingredient: 'Ingredient',
   R4ResourceType.InsurancePlan: 'InsurancePlan',
   R4ResourceType.Invoice: 'Invoice',
   R4ResourceType.Library: 'Library',
   R4ResourceType.Linkage: 'Linkage',
   R4ResourceType.List_: 'List',
   R4ResourceType.Location: 'Location',
+  R4ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R4ResourceType.Measure: 'Measure',
   R4ResourceType.MeasureReport: 'MeasureReport',
   R4ResourceType.Media: 'Media',
@@ -224,30 +229,20 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.MedicationKnowledge: 'MedicationKnowledge',
   R4ResourceType.MedicationRequest: 'MedicationRequest',
   R4ResourceType.MedicationStatement: 'MedicationStatement',
-  R4ResourceType.MedicinalProduct: 'MedicinalProduct',
-  R4ResourceType.MedicinalProductAuthorization: 'MedicinalProductAuthorization',
-  R4ResourceType.MedicinalProductContraindication:
-      'MedicinalProductContraindication',
-  R4ResourceType.MedicinalProductIndication: 'MedicinalProductIndication',
-  R4ResourceType.MedicinalProductIngredient: 'MedicinalProductIngredient',
-  R4ResourceType.MedicinalProductInteraction: 'MedicinalProductInteraction',
-  R4ResourceType.MedicinalProductManufactured: 'MedicinalProductManufactured',
-  R4ResourceType.MedicinalProductPackaged: 'MedicinalProductPackaged',
-  R4ResourceType.MedicinalProductPharmaceutical:
-      'MedicinalProductPharmaceutical',
-  R4ResourceType.MedicinalProductUndesirableEffect:
-      'MedicinalProductUndesirableEffect',
+  R4ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
   R4ResourceType.MessageDefinition: 'MessageDefinition',
   R4ResourceType.MessageHeader: 'MessageHeader',
   R4ResourceType.MolecularSequence: 'MolecularSequence',
   R4ResourceType.NamingSystem: 'NamingSystem',
   R4ResourceType.NutritionOrder: 'NutritionOrder',
+  R4ResourceType.NutritionProduct: 'NutritionProduct',
   R4ResourceType.Observation: 'Observation',
   R4ResourceType.ObservationDefinition: 'ObservationDefinition',
   R4ResourceType.OperationDefinition: 'OperationDefinition',
   R4ResourceType.OperationOutcome: 'OperationOutcome',
   R4ResourceType.Organization: 'Organization',
   R4ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R4ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
   R4ResourceType.Parameters: 'Parameters',
   R4ResourceType.Patient: 'Patient',
   R4ResourceType.PaymentNotice: 'PaymentNotice',
@@ -260,6 +255,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Provenance: 'Provenance',
   R4ResourceType.Questionnaire: 'Questionnaire',
   R4ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R4ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R4ResourceType.RelatedPerson: 'RelatedPerson',
   R4ResourceType.RequestGroup: 'RequestGroup',
   R4ResourceType.ResearchDefinition: 'ResearchDefinition',
@@ -267,7 +263,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ResearchStudy: 'ResearchStudy',
   R4ResourceType.ResearchSubject: 'ResearchSubject',
   R4ResourceType.RiskAssessment: 'RiskAssessment',
-  R4ResourceType.RiskEvidenceSynthesis: 'RiskEvidenceSynthesis',
   R4ResourceType.Schedule: 'Schedule',
   R4ResourceType.SearchParameter: 'SearchParameter',
   R4ResourceType.ServiceRequest: 'ServiceRequest',
@@ -277,13 +272,10 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.StructureDefinition: 'StructureDefinition',
   R4ResourceType.StructureMap: 'StructureMap',
   R4ResourceType.Subscription: 'Subscription',
+  R4ResourceType.SubscriptionStatus: 'SubscriptionStatus',
+  R4ResourceType.SubscriptionTopic: 'SubscriptionTopic',
   R4ResourceType.Substance: 'Substance',
-  R4ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
-  R4ResourceType.SubstancePolymer: 'SubstancePolymer',
-  R4ResourceType.SubstanceProtein: 'SubstanceProtein',
-  R4ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
-  R4ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
-  R4ResourceType.SubstanceSpecification: 'SubstanceSpecification',
+  R4ResourceType.SubstanceDefinition: 'SubstanceDefinition',
   R4ResourceType.SupplyDelivery: 'SupplyDelivery',
   R4ResourceType.SupplyRequest: 'SupplyRequest',
   R4ResourceType.Task: 'Task',
@@ -293,13 +285,6 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.ValueSet: 'ValueSet',
   R4ResourceType.VerificationResult: 'VerificationResult',
   R4ResourceType.VisionPrescription: 'VisionPrescription',
-};
-
-const _$CatalogEntryStatusEnumMap = {
-  CatalogEntryStatus.draft: 'draft',
-  CatalogEntryStatus.active: 'active',
-  CatalogEntryStatus.retired: 'retired',
-  CatalogEntryStatus.unknown: 'unknown',
 };
 
 _$_CatalogEntryRelatedEntry _$$_CatalogEntryRelatedEntryFromJson(
@@ -312,9 +297,9 @@ _$_CatalogEntryRelatedEntry _$$_CatalogEntryRelatedEntryFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      relationtype: $enumDecodeNullable(
-          _$CatalogEntryRelatedEntryRelationtypeEnumMap, json['relationtype'],
-          unknownValue: CatalogEntryRelatedEntryRelationtype.unknown),
+      relationtype: json['relationtype'] == null
+          ? null
+          : Code.fromJson(json['relationtype']),
       relationtypeElement: json['_relationtype'] == null
           ? null
           : Element.fromJson(json['_relationtype'] as Map<String, dynamic>),
@@ -336,18 +321,11 @@ Map<String, dynamic> _$$_CatalogEntryRelatedEntryToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('relationtype',
-      _$CatalogEntryRelatedEntryRelationtypeEnumMap[instance.relationtype]);
+  writeNotNull('relationtype', instance.relationtype?.toJson());
   writeNotNull('_relationtype', instance.relationtypeElement?.toJson());
   val['item'] = instance.item.toJson();
   return val;
 }
-
-const _$CatalogEntryRelatedEntryRelationtypeEnumMap = {
-  CatalogEntryRelatedEntryRelationtype.triggers: 'triggers',
-  CatalogEntryRelatedEntryRelationtype.is_replaced_by: 'is-replaced-by',
-  CatalogEntryRelatedEntryRelationtype.unknown: 'unknown',
-};
 
 _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
     _$_Composition(
@@ -355,7 +333,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Composition) ??
           R4ResourceType.Composition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -385,8 +363,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(_$CompositionStatusEnumMap, json['status'],
-          unknownValue: CompositionStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -445,7 +422,7 @@ Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -459,7 +436,7 @@ Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('status', _$CompositionStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   val['type'] = instance.type.toJson();
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
@@ -481,14 +458,6 @@ Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
   return val;
 }
 
-const _$CompositionStatusEnumMap = {
-  CompositionStatus.preliminary: 'preliminary',
-  CompositionStatus.final_: 'final',
-  CompositionStatus.amended: 'amended',
-  CompositionStatus.entered_in_error: 'entered-in-error',
-  CompositionStatus.unknown: 'unknown',
-};
-
 _$_CompositionAttester _$$_CompositionAttesterFromJson(
         Map<String, dynamic> json) =>
     _$_CompositionAttester(
@@ -499,8 +468,7 @@ _$_CompositionAttester _$$_CompositionAttesterFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: $enumDecodeNullable(_$CompositionAttesterModeEnumMap, json['mode'],
-          unknownValue: CompositionAttesterMode.unknown),
+      mode: json['mode'] == null ? null : Code.fromJson(json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -528,21 +496,13 @@ Map<String, dynamic> _$$_CompositionAttesterToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('mode', _$CompositionAttesterModeEnumMap[instance.mode]);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('_time', instance.timeElement?.toJson());
   writeNotNull('party', instance.party?.toJson());
   return val;
 }
-
-const _$CompositionAttesterModeEnumMap = {
-  CompositionAttesterMode.personal: 'personal',
-  CompositionAttesterMode.professional: 'professional',
-  CompositionAttesterMode.legal: 'legal',
-  CompositionAttesterMode.official: 'official',
-  CompositionAttesterMode.unknown: 'unknown',
-};
 
 _$_CompositionRelatesTo _$$_CompositionRelatesToFromJson(
         Map<String, dynamic> json) =>
@@ -710,7 +670,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DocumentManifest) ??
           R4ResourceType.DocumentManifest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -744,9 +704,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(
-          _$DocumentManifestStatusEnumMap, json['status'],
-          unknownValue: DocumentManifestStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -796,7 +754,7 @@ Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -812,7 +770,7 @@ Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
   writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$DocumentManifestStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -829,13 +787,6 @@ Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
   writeNotNull('related', instance.related?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$DocumentManifestStatusEnumMap = {
-  DocumentManifestStatus.current: 'current',
-  DocumentManifestStatus.superseded: 'superseded',
-  DocumentManifestStatus.entered_in_error: 'entered-in-error',
-  DocumentManifestStatus.unknown: 'unknown',
-};
 
 _$_DocumentManifestRelated _$$_DocumentManifestRelatedFromJson(
         Map<String, dynamic> json) =>
@@ -881,7 +832,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DocumentReference) ??
           R4ResourceType.DocumentReference,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -915,9 +866,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(
-          _$DocumentReferenceStatusEnumMap, json['status'],
-          unknownValue: DocumentReferenceStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -981,7 +930,7 @@ Map<String, dynamic> _$$_DocumentReferenceToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -997,7 +946,7 @@ Map<String, dynamic> _$$_DocumentReferenceToJson(
   writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$DocumentReferenceStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('docStatus', instance.docStatus?.toJson());
   writeNotNull('_docStatus', instance.docStatusElement?.toJson());
@@ -1020,13 +969,6 @@ Map<String, dynamic> _$$_DocumentReferenceToJson(
   return val;
 }
 
-const _$DocumentReferenceStatusEnumMap = {
-  DocumentReferenceStatus.current: 'current',
-  DocumentReferenceStatus.superseded: 'superseded',
-  DocumentReferenceStatus.entered_in_error: 'entered-in-error',
-  DocumentReferenceStatus.unknown: 'unknown',
-};
-
 _$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceRelatesTo(
@@ -1037,9 +979,7 @@ _$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: $enumDecodeNullable(
-          _$DocumentReferenceRelatesToCodeEnumMap, json['code'],
-          unknownValue: DocumentReferenceRelatesToCode.unknown),
+      code: json['code'] == null ? null : Code.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -1061,19 +1001,11 @@ Map<String, dynamic> _$$_DocumentReferenceRelatesToToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('code', _$DocumentReferenceRelatesToCodeEnumMap[instance.code]);
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
   val['target'] = instance.target.toJson();
   return val;
 }
-
-const _$DocumentReferenceRelatesToCodeEnumMap = {
-  DocumentReferenceRelatesToCode.replaces: 'replaces',
-  DocumentReferenceRelatesToCode.transforms: 'transforms',
-  DocumentReferenceRelatesToCode.signs: 'signs',
-  DocumentReferenceRelatesToCode.appends: 'appends',
-  DocumentReferenceRelatesToCode.unknown: 'unknown',
-};
 
 _$_DocumentReferenceContent _$$_DocumentReferenceContentFromJson(
         Map<String, dynamic> json) =>

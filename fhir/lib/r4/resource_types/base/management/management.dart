@@ -11,7 +11,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'management.enums.dart';
 part 'management.freezed.dart';
 part 'management.g.dart';
 
@@ -159,7 +158,7 @@ class Encounter with Resource, _$Encounter {
     @Default(R4ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -170,7 +169,7 @@ class Encounter with Resource, _$Encounter {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EncounterStatusHistory>? statusHistory,
     @JsonKey(name: 'class') required Coding class_,
@@ -265,8 +264,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: EncounterStatusHistoryStatus.unknown)
-        EncounterStatusHistoryStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
   }) = _EncounterStatusHistory;
@@ -690,8 +688,7 @@ class EncounterLocation with _$EncounterLocation {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference location,
-    @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-        EncounterLocationStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? physicalType,
     Period? period,
@@ -829,7 +826,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @Default(R4ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -840,8 +837,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-        EpisodeOfCareStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EpisodeOfCareStatusHistory>? statusHistory,
     List<CodeableConcept>? type,
@@ -926,8 +922,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown)
-        EpisodeOfCareStatusHistoryStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
   }) = _EpisodeOfCareStatusHistory;
@@ -1135,7 +1130,7 @@ class Flag with Resource, _$Flag {
     @Default(R4ResourceType.Flag)
     @JsonKey(unknownEnumValue: R4ResourceType.Flag)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1146,7 +1141,7 @@ class Flag with Resource, _$Flag {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
@@ -1402,7 +1397,7 @@ class Library with Resource, _$Library {
     @Default(R4ResourceType.Library)
     @JsonKey(unknownEnumValue: R4ResourceType.Library)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1423,7 +1418,7 @@ class Library with Resource, _$Library {
     @JsonKey(name: '_title') Element? titleElement,
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1593,7 +1588,7 @@ class List_ with Resource, _$List_ {
     @Default(R4ResourceType.List_)
     @JsonKey(unknownEnumValue: R4ResourceType.List_)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1604,9 +1599,9 @@ class List_ with Resource, _$List_ {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ListStatus.unknown) ListStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(unknownEnumValue: ListMode.unknown) ListMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,

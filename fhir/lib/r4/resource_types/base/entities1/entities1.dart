@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'entities1.enums.dart';
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
@@ -122,7 +121,7 @@ class Endpoint with Resource, _$Endpoint {
     @Default(R4ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -133,7 +132,7 @@ class Endpoint with Resource, _$Endpoint {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: EndpointStatus.unknown) EndpointStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Coding connectionType,
     String? name,
@@ -326,7 +325,7 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(R4ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -527,7 +526,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+    List<Code>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
@@ -777,7 +776,7 @@ class Location with Resource, _$Location {
     @Default(R4ResourceType.Location)
     @JsonKey(unknownEnumValue: R4ResourceType.Location)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -788,7 +787,7 @@ class Location with Resource, _$Location {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Coding? operationalStatus,
     String? name,
@@ -797,7 +796,7 @@ class Location with Resource, _$Location {
     @JsonKey(name: '_alias') List<Element?>? aliasElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     List<CodeableConcept>? type,
     List<ContactPoint>? telecom,
@@ -1117,7 +1116,7 @@ class Organization with Resource, _$Organization {
     @Default(R4ResourceType.Organization)
     @JsonKey(unknownEnumValue: R4ResourceType.Organization)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1353,7 +1352,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     @Default(R4ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

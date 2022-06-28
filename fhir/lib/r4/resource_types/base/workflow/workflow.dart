@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'workflow.enums.dart';
 part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
@@ -179,7 +178,7 @@ class Appointment with Resource, _$Appointment {
     @Default(R4ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -190,8 +189,7 @@ class Appointment with Resource, _$Appointment {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-        AppointmentStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? cancelationReason,
     List<CodeableConcept>? serviceCategory,
@@ -306,11 +304,9 @@ class AppointmentParticipant with _$AppointmentParticipant {
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
     Reference? actor,
-    @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
-        AppointmentParticipantRequired? required_,
+    Code? required_,
     @JsonKey(name: '_required') Element? requiredElement,
-    @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-        AppointmentParticipantStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
   }) = _AppointmentParticipant;
@@ -444,7 +440,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @Default(R4ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -590,7 +586,7 @@ class Schedule with Resource, _$Schedule {
     @Default(R4ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -745,7 +741,7 @@ class Slot with Resource, _$Slot {
     @Default(R4ResourceType.Slot)
     @JsonKey(unknownEnumValue: R4ResourceType.Slot)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -761,7 +757,7 @@ class Slot with Resource, _$Slot {
     List<CodeableConcept>? specialty,
     CodeableConcept? appointmentType,
     required Reference schedule,
-    @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Instant? start,
     @JsonKey(name: '_start') Element? startElement,
@@ -969,7 +965,7 @@ class Task with Resource, _$Task {
     @Default(R4ResourceType.Task)
     @JsonKey(unknownEnumValue: R4ResourceType.Task)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -986,11 +982,11 @@ class Task with Resource, _$Task {
     List<Reference>? basedOn,
     Identifier? groupIdentifier,
     List<Reference>? partOf,
-    @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
     CodeableConcept? businessStatus,
-    @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent? intent,
+    Code? intent,
     @JsonKey(name: '_intent') Element? intentElement,
     Code? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -1792,7 +1788,7 @@ class VerificationResult with Resource, _$VerificationResult {
     @Default(R4ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

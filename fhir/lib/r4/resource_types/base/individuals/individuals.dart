@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'individuals.enums.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
@@ -117,7 +116,7 @@ class Group with Resource, _$Group {
     @Default(R4ResourceType.Group)
     @JsonKey(unknownEnumValue: R4ResourceType.Group)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -130,7 +129,7 @@ class Group with Resource, _$Group {
     List<Identifier>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
-    @JsonKey(unknownEnumValue: GroupType.unknown) GroupType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
@@ -488,7 +487,7 @@ class Patient with Resource, _$Patient {
     @Default(R4ResourceType.Patient)
     @JsonKey(unknownEnumValue: R4ResourceType.Patient)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -503,7 +502,7 @@ class Patient with Resource, _$Patient {
     @JsonKey(name: '_active') Element? activeElement,
     List<HumanName>? name,
     List<ContactPoint>? telecom,
-    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -614,8 +613,7 @@ class PatientContact with _$PatientContact {
     HumanName? name,
     List<ContactPoint>? telecom,
     Address? address,
-    @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-        PatientContactGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Reference? organization,
     Period? period,
@@ -775,7 +773,7 @@ class PatientLink with _$PatientLink {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference other,
-    @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _PatientLink;
 
@@ -902,7 +900,7 @@ class Person with Resource, _$Person {
     @Default(R4ResourceType.Person)
     @JsonKey(unknownEnumValue: R4ResourceType.Person)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -915,7 +913,7 @@ class Person with Resource, _$Person {
     List<Identifier>? identifier,
     List<HumanName>? name,
     List<ContactPoint>? telecom,
-    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -996,8 +994,7 @@ class PersonLink with _$PersonLink {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference target,
-    @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-        PersonLinkAssurance? assurance,
+    Code? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
   }) = _PersonLink;
 
@@ -1131,7 +1128,7 @@ class Practitioner with Resource, _$Practitioner {
     @Default(R4ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1147,8 +1144,7 @@ class Practitioner with Resource, _$Practitioner {
     List<HumanName>? name,
     List<ContactPoint>? telecom,
     List<Address>? address,
-    @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-        PractitionerGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -1371,7 +1367,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     @Default(R4ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1702,7 +1698,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     @Default(R4ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1719,8 +1715,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     List<CodeableConcept>? relationship,
     List<HumanName>? name,
     List<ContactPoint>? telecom,
-    @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-        RelatedPersonGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,

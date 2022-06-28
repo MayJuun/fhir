@@ -5764,6 +5764,286 @@ abstract class _Ratio extends Ratio {
       throw _privateConstructorUsedError;
 }
 
+RatioRange _$RatioRangeFromJson(Map<String, dynamic> json) {
+  return _RatioRange.fromJson(json);
+}
+
+/// @nodoc
+mixin _$RatioRange {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Quantity? get lowNumerator => throw _privateConstructorUsedError;
+  Quantity? get highNumerator => throw _privateConstructorUsedError;
+  Quantity? get denominator => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RatioRangeCopyWith<RatioRange> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RatioRangeCopyWith<$Res> {
+  factory $RatioRangeCopyWith(
+          RatioRange value, $Res Function(RatioRange) then) =
+      _$RatioRangeCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Quantity? lowNumerator,
+      Quantity? highNumerator,
+      Quantity? denominator});
+
+  $QuantityCopyWith<$Res>? get lowNumerator;
+  $QuantityCopyWith<$Res>? get highNumerator;
+  $QuantityCopyWith<$Res>? get denominator;
+}
+
+/// @nodoc
+class _$RatioRangeCopyWithImpl<$Res> implements $RatioRangeCopyWith<$Res> {
+  _$RatioRangeCopyWithImpl(this._value, this._then);
+
+  final RatioRange _value;
+  // ignore: unused_field
+  final $Res Function(RatioRange) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? lowNumerator = freezed,
+    Object? highNumerator = freezed,
+    Object? denominator = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      lowNumerator: lowNumerator == freezed
+          ? _value.lowNumerator
+          : lowNumerator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      highNumerator: highNumerator == freezed
+          ? _value.highNumerator
+          : highNumerator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      denominator: denominator == freezed
+          ? _value.denominator
+          : denominator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+    ));
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get lowNumerator {
+    if (_value.lowNumerator == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.lowNumerator!, (value) {
+      return _then(_value.copyWith(lowNumerator: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get highNumerator {
+    if (_value.highNumerator == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.highNumerator!, (value) {
+      return _then(_value.copyWith(highNumerator: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get denominator {
+    if (_value.denominator == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.denominator!, (value) {
+      return _then(_value.copyWith(denominator: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_RatioRangeCopyWith<$Res>
+    implements $RatioRangeCopyWith<$Res> {
+  factory _$$_RatioRangeCopyWith(
+          _$_RatioRange value, $Res Function(_$_RatioRange) then) =
+      __$$_RatioRangeCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Quantity? lowNumerator,
+      Quantity? highNumerator,
+      Quantity? denominator});
+
+  @override
+  $QuantityCopyWith<$Res>? get lowNumerator;
+  @override
+  $QuantityCopyWith<$Res>? get highNumerator;
+  @override
+  $QuantityCopyWith<$Res>? get denominator;
+}
+
+/// @nodoc
+class __$$_RatioRangeCopyWithImpl<$Res> extends _$RatioRangeCopyWithImpl<$Res>
+    implements _$$_RatioRangeCopyWith<$Res> {
+  __$$_RatioRangeCopyWithImpl(
+      _$_RatioRange _value, $Res Function(_$_RatioRange) _then)
+      : super(_value, (v) => _then(v as _$_RatioRange));
+
+  @override
+  _$_RatioRange get _value => super._value as _$_RatioRange;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? lowNumerator = freezed,
+    Object? highNumerator = freezed,
+    Object? denominator = freezed,
+  }) {
+    return _then(_$_RatioRange(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      lowNumerator: lowNumerator == freezed
+          ? _value.lowNumerator
+          : lowNumerator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      highNumerator: highNumerator == freezed
+          ? _value.highNumerator
+          : highNumerator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      denominator: denominator == freezed
+          ? _value.denominator
+          : denominator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_RatioRange extends _RatioRange {
+  _$_RatioRange(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.lowNumerator,
+      this.highNumerator,
+      this.denominator})
+      : _extension_ = extension_,
+        super._();
+
+  factory _$_RatioRange.fromJson(Map<String, dynamic> json) =>
+      _$$_RatioRangeFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Quantity? lowNumerator;
+  @override
+  final Quantity? highNumerator;
+  @override
+  final Quantity? denominator;
+
+  @override
+  String toString() {
+    return 'RatioRange(id: $id, extension_: $extension_, lowNumerator: $lowNumerator, highNumerator: $highNumerator, denominator: $denominator)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_RatioRange &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.lowNumerator, lowNumerator) &&
+            const DeepCollectionEquality()
+                .equals(other.highNumerator, highNumerator) &&
+            const DeepCollectionEquality()
+                .equals(other.denominator, denominator));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(lowNumerator),
+      const DeepCollectionEquality().hash(highNumerator),
+      const DeepCollectionEquality().hash(denominator));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_RatioRangeCopyWith<_$_RatioRange> get copyWith =>
+      __$$_RatioRangeCopyWithImpl<_$_RatioRange>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_RatioRangeToJson(this);
+  }
+}
+
+abstract class _RatioRange extends RatioRange {
+  factory _RatioRange(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final Quantity? lowNumerator,
+      final Quantity? highNumerator,
+      final Quantity? denominator}) = _$_RatioRange;
+  _RatioRange._() : super._();
+
+  factory _RatioRange.fromJson(Map<String, dynamic> json) =
+      _$_RatioRange.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  Quantity? get lowNumerator => throw _privateConstructorUsedError;
+  @override
+  Quantity? get highNumerator => throw _privateConstructorUsedError;
+  @override
+  Quantity? get denominator => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_RatioRangeCopyWith<_$_RatioRange> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 SampledData _$SampledDataFromJson(Map<String, dynamic> json) {
   return _SampledData.fromJson(json);
 }

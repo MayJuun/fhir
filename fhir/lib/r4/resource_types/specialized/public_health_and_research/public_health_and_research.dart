@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'public_health_and_research.enums.dart';
 part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 
@@ -162,7 +161,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @Default(R4ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -177,8 +176,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @JsonKey(name: '_title') Element? titleElement,
     List<Reference>? protocol,
     List<Reference>? partOf,
-    @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-        ResearchStudyStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? primaryPurposeType,
     CodeableConcept? phase,
@@ -490,7 +488,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @Default(R4ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -501,8 +499,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-        ResearchSubjectStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
     required Reference study,

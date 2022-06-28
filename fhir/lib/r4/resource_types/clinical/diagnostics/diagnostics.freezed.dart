@@ -22,7 +22,7 @@ BodyStructure _$BodyStructureFromJson(Map<String, dynamic> json) {
 mixin _$BodyStructure {
   @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -64,7 +64,7 @@ abstract class $BodyStructureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -142,7 +142,7 @@ class _$BodyStructureCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -328,7 +328,7 @@ abstract class _$$_BodyStructureCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -417,7 +417,7 @@ class __$$_BodyStructureCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -544,7 +544,7 @@ class _$_BodyStructure extends _BodyStructure {
   @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -719,7 +719,7 @@ abstract class _BodyStructure extends BodyStructure {
   factory _BodyStructure(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -753,7 +753,7 @@ abstract class _BodyStructure extends BodyStructure {
   @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -813,7 +813,7 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) {
 mixin _$DiagnosticReport {
   @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -829,8 +829,7 @@ mixin _$DiagnosticReport {
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-  DiagnosticReportStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
@@ -871,7 +870,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -886,8 +885,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          DiagnosticReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -981,7 +979,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1029,7 +1027,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as DiagnosticReportStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1252,7 +1250,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1267,8 +1265,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          DiagnosticReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -1376,7 +1373,7 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1424,7 +1421,7 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as DiagnosticReportStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1530,8 +1527,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       final List<CodeableConcept>? category,
@@ -1579,7 +1575,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -1641,8 +1637,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   }
 
   @override
-  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-  final DiagnosticReportStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1871,7 +1866,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1886,8 +1881,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-          final DiagnosticReportStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<CodeableConcept>? category,
@@ -1921,7 +1915,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -1949,8 +1943,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @override
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-  DiagnosticReportStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -2310,7 +2303,7 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) {
 mixin _$ImagingStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -2325,8 +2318,7 @@ mixin _$ImagingStudy {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-  ImagingStudyStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<Coding>? get modality => throw _privateConstructorUsedError;
@@ -2371,7 +2363,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2385,8 +2377,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          ImagingStudyStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Coding>? modality,
@@ -2487,7 +2478,7 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2531,7 +2522,7 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ImagingStudyStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2788,7 +2779,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2802,8 +2793,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          ImagingStudyStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Coding>? modality,
@@ -2921,7 +2911,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2965,7 +2955,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ImagingStudyStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3082,8 +3072,7 @@ class _$_ImagingStudy extends _ImagingStudy {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       final List<Coding>? modality,
@@ -3134,7 +3123,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -3187,8 +3176,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-  final ImagingStudyStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -3429,7 +3417,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   factory _ImagingStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3443,8 +3431,7 @@ abstract class _ImagingStudy extends ImagingStudy {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-          final ImagingStudyStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<Coding>? modality,
@@ -3482,7 +3469,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -3508,8 +3495,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-  ImagingStudyStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -5008,7 +4994,7 @@ Media _$MediaFromJson(Map<String, dynamic> json) {
 mixin _$Media {
   @JsonKey(unknownEnumValue: R4ResourceType.Media)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -5075,7 +5061,7 @@ abstract class $MediaCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5214,7 +5200,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5625,7 +5611,7 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5787,7 +5773,7 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6028,7 +6014,7 @@ class _$_Media extends _Media {
   @JsonKey(unknownEnumValue: R4ResourceType.Media)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -6314,7 +6300,7 @@ abstract class _Media extends Media {
   factory _Media(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6375,7 +6361,7 @@ abstract class _Media extends Media {
   @JsonKey(unknownEnumValue: R4ResourceType.Media)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -6483,7 +6469,7 @@ MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) {
 mixin _$MolecularSequence {
   @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6498,8 +6484,7 @@ mixin _$MolecularSequence {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-  MolecularSequenceType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Integer? get coordinateSystem => throw _privateConstructorUsedError;
@@ -6542,7 +6527,7 @@ abstract class $MolecularSequenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6556,8 +6541,7 @@ abstract class $MolecularSequenceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-          MolecularSequenceType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer? coordinateSystem,
@@ -6648,7 +6632,7 @@ class _$MolecularSequenceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6692,7 +6676,7 @@ class _$MolecularSequenceCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -6934,7 +6918,7 @@ abstract class _$$_MolecularSequenceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6948,8 +6932,7 @@ abstract class _$$_MolecularSequenceCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-          MolecularSequenceType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer? coordinateSystem,
@@ -7056,7 +7039,7 @@ class __$$_MolecularSequenceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7100,7 +7083,7 @@ class __$$_MolecularSequenceCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -7197,8 +7180,7 @@ class _$_MolecularSequence extends _MolecularSequence {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-          this.type,
+      this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.coordinateSystem,
@@ -7239,7 +7221,7 @@ class _$_MolecularSequence extends _MolecularSequence {
   @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -7292,8 +7274,7 @@ class _$_MolecularSequence extends _MolecularSequence {
   }
 
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-  final MolecularSequenceType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -7483,7 +7464,7 @@ abstract class _MolecularSequence extends MolecularSequence {
   factory _MolecularSequence(
           {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
               final R4ResourceType resourceType,
-          final Id? id,
+          final String? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -7497,8 +7478,7 @@ abstract class _MolecularSequence extends MolecularSequence {
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
-          @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-              final MolecularSequenceType? type,
+          final Code? type,
           @JsonKey(name: '_type')
               final Element? typeElement,
           final Integer? coordinateSystem,
@@ -7531,7 +7511,7 @@ abstract class _MolecularSequence extends MolecularSequence {
   @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -7557,8 +7537,7 @@ abstract class _MolecularSequence extends MolecularSequence {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-  MolecularSequenceType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -7626,9 +7605,7 @@ mixin _$MolecularSequenceReferenceSeq {
   String? get genomeBuild => throw _privateConstructorUsedError;
   @JsonKey(name: '_genomeBuild')
   Element? get genomeBuildElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-  MolecularSequenceReferenceSeqOrientation? get orientation =>
-      throw _privateConstructorUsedError;
+  Code? get orientation => throw _privateConstructorUsedError;
   @JsonKey(name: '_orientation')
   Element? get orientationElement => throw _privateConstructorUsedError;
   CodeableConcept? get referenceSeqId => throw _privateConstructorUsedError;
@@ -7636,9 +7613,7 @@ mixin _$MolecularSequenceReferenceSeq {
   String? get referenceSeqString => throw _privateConstructorUsedError;
   @JsonKey(name: '_referenceSeqString')
   Element? get referenceSeqStringElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-  MolecularSequenceReferenceSeqStrand? get strand =>
-      throw _privateConstructorUsedError;
+  Code? get strand => throw _privateConstructorUsedError;
   @JsonKey(name: '_strand')
   Element? get strandElement => throw _privateConstructorUsedError;
   Integer? get windowStart => throw _privateConstructorUsedError;
@@ -7660,37 +7635,25 @@ abstract class $MolecularSequenceReferenceSeqCopyWith<$Res> {
           MolecularSequenceReferenceSeq value,
           $Res Function(MolecularSequenceReferenceSeq) then) =
       _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>;
-  $Res
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? chromosome,
-          String? genomeBuild,
-          @JsonKey(name: '_genomeBuild')
-              Element? genomeBuildElement,
-          @JsonKey(
-              unknownEnumValue:
-                  MolecularSequenceReferenceSeqOrientation.unknown)
-              MolecularSequenceReferenceSeqOrientation? orientation,
-          @JsonKey(name: '_orientation')
-              Element? orientationElement,
-          CodeableConcept? referenceSeqId,
-          Reference? referenceSeqPointer,
-          String? referenceSeqString,
-          @JsonKey(name: '_referenceSeqString')
-              Element? referenceSeqStringElement,
-          @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-              MolecularSequenceReferenceSeqStrand? strand,
-          @JsonKey(name: '_strand')
-              Element? strandElement,
-          Integer? windowStart,
-          @JsonKey(name: '_windowStart')
-              Element? windowStartElement,
-          Integer? windowEnd,
-          @JsonKey(name: '_windowEnd')
-              Element? windowEndElement});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? chromosome,
+      String? genomeBuild,
+      @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
+      Code? orientation,
+      @JsonKey(name: '_orientation') Element? orientationElement,
+      CodeableConcept? referenceSeqId,
+      Reference? referenceSeqPointer,
+      String? referenceSeqString,
+      @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
+      Code? strand,
+      @JsonKey(name: '_strand') Element? strandElement,
+      Integer? windowStart,
+      @JsonKey(name: '_windowStart') Element? windowStartElement,
+      Integer? windowEnd,
+      @JsonKey(name: '_windowEnd') Element? windowEndElement});
 
   $CodeableConceptCopyWith<$Res>? get chromosome;
   $ElementCopyWith<$Res>? get genomeBuildElement;
@@ -7761,7 +7724,7 @@ class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       orientation: orientation == freezed
           ? _value.orientation
           : orientation // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceReferenceSeqOrientation?,
+              as Code?,
       orientationElement: orientationElement == freezed
           ? _value.orientationElement
           : orientationElement // ignore: cast_nullable_to_non_nullable
@@ -7785,7 +7748,7 @@ class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       strand: strand == freezed
           ? _value.strand
           : strand // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceReferenceSeqStrand?,
+              as Code?,
       strandElement: strandElement == freezed
           ? _value.strandElement
           : strandElement // ignore: cast_nullable_to_non_nullable
@@ -7917,37 +7880,25 @@ abstract class _$$_MolecularSequenceReferenceSeqCopyWith<$Res>
           $Res Function(_$_MolecularSequenceReferenceSeq) then) =
       __$$_MolecularSequenceReferenceSeqCopyWithImpl<$Res>;
   @override
-  $Res
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? chromosome,
-          String? genomeBuild,
-          @JsonKey(name: '_genomeBuild')
-              Element? genomeBuildElement,
-          @JsonKey(
-              unknownEnumValue:
-                  MolecularSequenceReferenceSeqOrientation.unknown)
-              MolecularSequenceReferenceSeqOrientation? orientation,
-          @JsonKey(name: '_orientation')
-              Element? orientationElement,
-          CodeableConcept? referenceSeqId,
-          Reference? referenceSeqPointer,
-          String? referenceSeqString,
-          @JsonKey(name: '_referenceSeqString')
-              Element? referenceSeqStringElement,
-          @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-              MolecularSequenceReferenceSeqStrand? strand,
-          @JsonKey(name: '_strand')
-              Element? strandElement,
-          Integer? windowStart,
-          @JsonKey(name: '_windowStart')
-              Element? windowStartElement,
-          Integer? windowEnd,
-          @JsonKey(name: '_windowEnd')
-              Element? windowEndElement});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? chromosome,
+      String? genomeBuild,
+      @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
+      Code? orientation,
+      @JsonKey(name: '_orientation') Element? orientationElement,
+      CodeableConcept? referenceSeqId,
+      Reference? referenceSeqPointer,
+      String? referenceSeqString,
+      @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
+      Code? strand,
+      @JsonKey(name: '_strand') Element? strandElement,
+      Integer? windowStart,
+      @JsonKey(name: '_windowStart') Element? windowStartElement,
+      Integer? windowEnd,
+      @JsonKey(name: '_windowEnd') Element? windowEndElement});
 
   @override
   $CodeableConceptCopyWith<$Res>? get chromosome;
@@ -8031,7 +7982,7 @@ class __$$_MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       orientation: orientation == freezed
           ? _value.orientation
           : orientation // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceReferenceSeqOrientation?,
+              as Code?,
       orientationElement: orientationElement == freezed
           ? _value.orientationElement
           : orientationElement // ignore: cast_nullable_to_non_nullable
@@ -8055,7 +8006,7 @@ class __$$_MolecularSequenceReferenceSeqCopyWithImpl<$Res>
       strand: strand == freezed
           ? _value.strand
           : strand // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceReferenceSeqStrand?,
+              as Code?,
       strandElement: strandElement == freezed
           ? _value.strandElement
           : strandElement // ignore: cast_nullable_to_non_nullable
@@ -8085,32 +8036,23 @@ class __$$_MolecularSequenceReferenceSeqCopyWithImpl<$Res>
 class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
   _$_MolecularSequenceReferenceSeq(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.chromosome,
       this.genomeBuild,
-      @JsonKey(name: '_genomeBuild')
-          this.genomeBuildElement,
-      @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-          this.orientation,
-      @JsonKey(name: '_orientation')
-          this.orientationElement,
+      @JsonKey(name: '_genomeBuild') this.genomeBuildElement,
+      this.orientation,
+      @JsonKey(name: '_orientation') this.orientationElement,
       this.referenceSeqId,
       this.referenceSeqPointer,
       this.referenceSeqString,
-      @JsonKey(name: '_referenceSeqString')
-          this.referenceSeqStringElement,
-      @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-          this.strand,
-      @JsonKey(name: '_strand')
-          this.strandElement,
+      @JsonKey(name: '_referenceSeqString') this.referenceSeqStringElement,
+      this.strand,
+      @JsonKey(name: '_strand') this.strandElement,
       this.windowStart,
-      @JsonKey(name: '_windowStart')
-          this.windowStartElement,
+      @JsonKey(name: '_windowStart') this.windowStartElement,
       this.windowEnd,
-      @JsonKey(name: '_windowEnd')
-          this.windowEndElement})
+      @JsonKey(name: '_windowEnd') this.windowEndElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -8148,8 +8090,7 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
   @JsonKey(name: '_genomeBuild')
   final Element? genomeBuildElement;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-  final MolecularSequenceReferenceSeqOrientation? orientation;
+  final Code? orientation;
   @override
   @JsonKey(name: '_orientation')
   final Element? orientationElement;
@@ -8163,8 +8104,7 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
   @JsonKey(name: '_referenceSeqString')
   final Element? referenceSeqStringElement;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-  final MolecularSequenceReferenceSeqStrand? strand;
+  final Code? strand;
   @override
   @JsonKey(name: '_strand')
   final Element? strandElement;
@@ -8270,8 +8210,7 @@ abstract class _MolecularSequenceReferenceSeq
       final String? genomeBuild,
       @JsonKey(name: '_genomeBuild')
           final Element? genomeBuildElement,
-      @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-          final MolecularSequenceReferenceSeqOrientation? orientation,
+      final Code? orientation,
       @JsonKey(name: '_orientation')
           final Element? orientationElement,
       final CodeableConcept? referenceSeqId,
@@ -8279,8 +8218,7 @@ abstract class _MolecularSequenceReferenceSeq
       final String? referenceSeqString,
       @JsonKey(name: '_referenceSeqString')
           final Element? referenceSeqStringElement,
-      @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-          final MolecularSequenceReferenceSeqStrand? strand,
+      final Code? strand,
       @JsonKey(name: '_strand')
           final Element? strandElement,
       final Integer? windowStart,
@@ -8310,9 +8248,7 @@ abstract class _MolecularSequenceReferenceSeq
   @JsonKey(name: '_genomeBuild')
   Element? get genomeBuildElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-  MolecularSequenceReferenceSeqOrientation? get orientation =>
-      throw _privateConstructorUsedError;
+  Code? get orientation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_orientation')
   Element? get orientationElement => throw _privateConstructorUsedError;
@@ -8326,9 +8262,7 @@ abstract class _MolecularSequenceReferenceSeq
   @JsonKey(name: '_referenceSeqString')
   Element? get referenceSeqStringElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-  MolecularSequenceReferenceSeqStrand? get strand =>
-      throw _privateConstructorUsedError;
+  Code? get strand => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_strand')
   Element? get strandElement => throw _privateConstructorUsedError;
@@ -8908,8 +8842,7 @@ mixin _$MolecularSequenceQuality {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-  MolecularSequenceQualityType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   CodeableConcept? get standardSequence => throw _privateConstructorUsedError;
@@ -8960,46 +8893,33 @@ abstract class $MolecularSequenceQualityCopyWith<$Res> {
       _$MolecularSequenceQualityCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          MolecularSequenceQualityType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? standardSequence,
       Integer? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       Integer? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       Quantity? score,
       CodeableConcept? method,
       Decimal? truthTP,
-      @JsonKey(name: '_truthTP')
-          Element? truthTPElement,
+      @JsonKey(name: '_truthTP') Element? truthTPElement,
       Decimal? queryTP,
-      @JsonKey(name: '_queryTP')
-          Element? queryTPElement,
+      @JsonKey(name: '_queryTP') Element? queryTPElement,
       Decimal? truthFN,
-      @JsonKey(name: '_truthFN')
-          Element? truthFNElement,
+      @JsonKey(name: '_truthFN') Element? truthFNElement,
       Decimal? queryFP,
-      @JsonKey(name: '_queryFP')
-          Element? queryFPElement,
+      @JsonKey(name: '_queryFP') Element? queryFPElement,
       Decimal? gtFP,
-      @JsonKey(name: '_gtFP')
-          Element? gtFPElement,
+      @JsonKey(name: '_gtFP') Element? gtFPElement,
       Decimal? precision,
-      @JsonKey(name: '_precision')
-          Element? precisionElement,
+      @JsonKey(name: '_precision') Element? precisionElement,
       Decimal? recall,
-      @JsonKey(name: '_recall')
-          Element? recallElement,
+      @JsonKey(name: '_recall') Element? recallElement,
       Decimal? fScore,
-      @JsonKey(name: '_fScore')
-          Element? fScoreElement,
+      @JsonKey(name: '_fScore') Element? fScoreElement,
       MolecularSequenceRoc? roc});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -9076,7 +8996,7 @@ class _$MolecularSequenceQualityCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceQualityType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -9356,46 +9276,33 @@ abstract class _$$_MolecularSequenceQualityCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          MolecularSequenceQualityType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? standardSequence,
       Integer? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       Integer? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       Quantity? score,
       CodeableConcept? method,
       Decimal? truthTP,
-      @JsonKey(name: '_truthTP')
-          Element? truthTPElement,
+      @JsonKey(name: '_truthTP') Element? truthTPElement,
       Decimal? queryTP,
-      @JsonKey(name: '_queryTP')
-          Element? queryTPElement,
+      @JsonKey(name: '_queryTP') Element? queryTPElement,
       Decimal? truthFN,
-      @JsonKey(name: '_truthFN')
-          Element? truthFNElement,
+      @JsonKey(name: '_truthFN') Element? truthFNElement,
       Decimal? queryFP,
-      @JsonKey(name: '_queryFP')
-          Element? queryFPElement,
+      @JsonKey(name: '_queryFP') Element? queryFPElement,
       Decimal? gtFP,
-      @JsonKey(name: '_gtFP')
-          Element? gtFPElement,
+      @JsonKey(name: '_gtFP') Element? gtFPElement,
       Decimal? precision,
-      @JsonKey(name: '_precision')
-          Element? precisionElement,
+      @JsonKey(name: '_precision') Element? precisionElement,
       Decimal? recall,
-      @JsonKey(name: '_recall')
-          Element? recallElement,
+      @JsonKey(name: '_recall') Element? recallElement,
       Decimal? fScore,
-      @JsonKey(name: '_fScore')
-          Element? fScoreElement,
+      @JsonKey(name: '_fScore') Element? fScoreElement,
       MolecularSequenceRoc? roc});
 
   @override
@@ -9490,7 +9397,7 @@ class __$$_MolecularSequenceQualityCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceQualityType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -9600,46 +9507,33 @@ class __$$_MolecularSequenceQualityCopyWithImpl<$Res>
 class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
   _$_MolecularSequenceQuality(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.standardSequence,
       this.start,
-      @JsonKey(name: '_start')
-          this.startElement,
+      @JsonKey(name: '_start') this.startElement,
       this.end,
-      @JsonKey(name: '_end')
-          this.endElement,
+      @JsonKey(name: '_end') this.endElement,
       this.score,
       this.method,
       this.truthTP,
-      @JsonKey(name: '_truthTP')
-          this.truthTPElement,
+      @JsonKey(name: '_truthTP') this.truthTPElement,
       this.queryTP,
-      @JsonKey(name: '_queryTP')
-          this.queryTPElement,
+      @JsonKey(name: '_queryTP') this.queryTPElement,
       this.truthFN,
-      @JsonKey(name: '_truthFN')
-          this.truthFNElement,
+      @JsonKey(name: '_truthFN') this.truthFNElement,
       this.queryFP,
-      @JsonKey(name: '_queryFP')
-          this.queryFPElement,
+      @JsonKey(name: '_queryFP') this.queryFPElement,
       this.gtFP,
-      @JsonKey(name: '_gtFP')
-          this.gtFPElement,
+      @JsonKey(name: '_gtFP') this.gtFPElement,
       this.precision,
-      @JsonKey(name: '_precision')
-          this.precisionElement,
+      @JsonKey(name: '_precision') this.precisionElement,
       this.recall,
-      @JsonKey(name: '_recall')
-          this.recallElement,
+      @JsonKey(name: '_recall') this.recallElement,
       this.fScore,
-      @JsonKey(name: '_fScore')
-          this.fScoreElement,
+      @JsonKey(name: '_fScore') this.fScoreElement,
       this.roc})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -9670,8 +9564,7 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
   }
 
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-  final MolecularSequenceQualityType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -9839,46 +9732,33 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
 abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   factory _MolecularSequenceQuality(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-          final MolecularSequenceQualityType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final CodeableConcept? standardSequence,
       final Integer? start,
-      @JsonKey(name: '_start')
-          final Element? startElement,
+      @JsonKey(name: '_start') final Element? startElement,
       final Integer? end,
-      @JsonKey(name: '_end')
-          final Element? endElement,
+      @JsonKey(name: '_end') final Element? endElement,
       final Quantity? score,
       final CodeableConcept? method,
       final Decimal? truthTP,
-      @JsonKey(name: '_truthTP')
-          final Element? truthTPElement,
+      @JsonKey(name: '_truthTP') final Element? truthTPElement,
       final Decimal? queryTP,
-      @JsonKey(name: '_queryTP')
-          final Element? queryTPElement,
+      @JsonKey(name: '_queryTP') final Element? queryTPElement,
       final Decimal? truthFN,
-      @JsonKey(name: '_truthFN')
-          final Element? truthFNElement,
+      @JsonKey(name: '_truthFN') final Element? truthFNElement,
       final Decimal? queryFP,
-      @JsonKey(name: '_queryFP')
-          final Element? queryFPElement,
+      @JsonKey(name: '_queryFP') final Element? queryFPElement,
       final Decimal? gtFP,
-      @JsonKey(name: '_gtFP')
-          final Element? gtFPElement,
+      @JsonKey(name: '_gtFP') final Element? gtFPElement,
       final Decimal? precision,
-      @JsonKey(name: '_precision')
-          final Element? precisionElement,
+      @JsonKey(name: '_precision') final Element? precisionElement,
       final Decimal? recall,
-      @JsonKey(name: '_recall')
-          final Element? recallElement,
+      @JsonKey(name: '_recall') final Element? recallElement,
       final Decimal? fScore,
-      @JsonKey(name: '_fScore')
-          final Element? fScoreElement,
+      @JsonKey(name: '_fScore') final Element? fScoreElement,
       final MolecularSequenceRoc? roc}) = _$_MolecularSequenceQuality;
   _MolecularSequenceQuality._() : super._();
 
@@ -9894,8 +9774,7 @@ abstract class _MolecularSequenceQuality extends MolecularSequenceQuality {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-  MolecularSequenceQualityType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -10623,9 +10502,7 @@ mixin _$MolecularSequenceRepository {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-  MolecularSequenceRepositoryType? get type =>
-      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
@@ -10658,28 +10535,20 @@ abstract class $MolecularSequenceRepositoryCopyWith<$Res> {
       _$MolecularSequenceRepositoryCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          MolecularSequenceRepositoryType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? datasetId,
-      @JsonKey(name: '_datasetId')
-          Element? datasetIdElement,
+      @JsonKey(name: '_datasetId') Element? datasetIdElement,
       String? variantsetId,
-      @JsonKey(name: '_variantsetId')
-          Element? variantsetIdElement,
+      @JsonKey(name: '_variantsetId') Element? variantsetIdElement,
       String? readsetId,
-      @JsonKey(name: '_readsetId')
-          Element? readsetIdElement});
+      @JsonKey(name: '_readsetId') Element? readsetIdElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get urlElement;
@@ -10732,7 +10601,7 @@ class _$MolecularSequenceRepositoryCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceRepositoryType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -10857,28 +10726,20 @@ abstract class _$$_MolecularSequenceRepositoryCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          MolecularSequenceRepositoryType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? datasetId,
-      @JsonKey(name: '_datasetId')
-          Element? datasetIdElement,
+      @JsonKey(name: '_datasetId') Element? datasetIdElement,
       String? variantsetId,
-      @JsonKey(name: '_variantsetId')
-          Element? variantsetIdElement,
+      @JsonKey(name: '_variantsetId') Element? variantsetIdElement,
       String? readsetId,
-      @JsonKey(name: '_readsetId')
-          Element? readsetIdElement});
+      @JsonKey(name: '_readsetId') Element? readsetIdElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -10941,7 +10802,7 @@ class __$$_MolecularSequenceRepositoryCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MolecularSequenceRepositoryType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -10995,28 +10856,20 @@ class __$$_MolecularSequenceRepositoryCopyWithImpl<$Res>
 class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
   _$_MolecularSequenceRepository(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.datasetId,
-      @JsonKey(name: '_datasetId')
-          this.datasetIdElement,
+      @JsonKey(name: '_datasetId') this.datasetIdElement,
       this.variantsetId,
-      @JsonKey(name: '_variantsetId')
-          this.variantsetIdElement,
+      @JsonKey(name: '_variantsetId') this.variantsetIdElement,
       this.readsetId,
-      @JsonKey(name: '_readsetId')
-          this.readsetIdElement})
+      @JsonKey(name: '_readsetId') this.readsetIdElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -11046,8 +10899,7 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
   }
 
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-  final MolecularSequenceRepositoryType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -11148,29 +11000,22 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
 abstract class _MolecularSequenceRepository
     extends MolecularSequenceRepository {
   factory _MolecularSequenceRepository(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-          final MolecularSequenceRepositoryType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
-      final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
-      final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      final String? datasetId,
-      @JsonKey(name: '_datasetId')
-          final Element? datasetIdElement,
-      final String? variantsetId,
-      @JsonKey(name: '_variantsetId')
-          final Element? variantsetIdElement,
-      final String? readsetId,
-      @JsonKey(name: '_readsetId')
-          final Element? readsetIdElement}) = _$_MolecularSequenceRepository;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Code? type,
+          @JsonKey(name: '_type') final Element? typeElement,
+          final FhirUri? url,
+          @JsonKey(name: '_url') final Element? urlElement,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final String? datasetId,
+          @JsonKey(name: '_datasetId') final Element? datasetIdElement,
+          final String? variantsetId,
+          @JsonKey(name: '_variantsetId') final Element? variantsetIdElement,
+          final String? readsetId,
+          @JsonKey(name: '_readsetId') final Element? readsetIdElement}) =
+      _$_MolecularSequenceRepository;
   _MolecularSequenceRepository._() : super._();
 
   factory _MolecularSequenceRepository.fromJson(Map<String, dynamic> json) =
@@ -11185,9 +11030,7 @@ abstract class _MolecularSequenceRepository
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-  MolecularSequenceRepositoryType? get type =>
-      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -12335,7 +12178,7 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) {
 mixin _$Observation {
   @JsonKey(unknownEnumValue: R4ResourceType.Observation)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -12352,8 +12195,7 @@ mixin _$Observation {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-  ObservationStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
@@ -12424,7 +12266,7 @@ abstract class $ObservationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12440,8 +12282,7 @@ abstract class $ObservationCopyWith<$Res> {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          ObservationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -12601,7 +12442,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12653,7 +12494,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ObservationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -13152,7 +12993,7 @@ abstract class _$$_ObservationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -13168,8 +13009,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          ObservationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -13360,7 +13200,7 @@ class __$$_ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -13412,7 +13252,7 @@ class __$$_ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ObservationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -13607,8 +13447,7 @@ class _$_Observation extends _Observation {
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       final List<CodeableConcept>? category,
@@ -13684,7 +13523,7 @@ class _$_Observation extends _Observation {
   @JsonKey(unknownEnumValue: R4ResourceType.Observation)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -13755,8 +13594,7 @@ class _$_Observation extends _Observation {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-  final ObservationStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -14098,7 +13936,7 @@ abstract class _Observation extends Observation {
   factory _Observation(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -14114,8 +13952,7 @@ abstract class _Observation extends Observation {
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-          final ObservationStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final List<CodeableConcept>? category,
@@ -14176,7 +14013,7 @@ abstract class _Observation extends Observation {
   @JsonKey(unknownEnumValue: R4ResourceType.Observation)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -14206,8 +14043,7 @@ abstract class _Observation extends Observation {
   @override
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-  ObservationStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -15624,7 +15460,7 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 mixin _$QuestionnaireResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -15644,8 +15480,7 @@ mixin _$QuestionnaireResponse {
   Canonical? get questionnaire => throw _privateConstructorUsedError;
   @JsonKey(name: '_questionnaire')
   Element? get questionnaireElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-  QuestionnaireResponseStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
@@ -15672,7 +15507,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15691,8 +15526,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       Canonical? questionnaire,
       @JsonKey(name: '_questionnaire')
           Element? questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          QuestionnaireResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -15763,7 +15597,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -15823,7 +15657,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireResponseStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16002,7 +15836,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16021,8 +15855,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
       Canonical? questionnaire,
       @JsonKey(name: '_questionnaire')
           Element? questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          QuestionnaireResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -16108,7 +15941,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -16168,7 +16001,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireResponseStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16230,8 +16063,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
       this.questionnaire,
       @JsonKey(name: '_questionnaire')
           this.questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.subject,
@@ -16257,7 +16089,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -16326,8 +16158,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @JsonKey(name: '_questionnaire')
   final Element? questionnaireElement;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-  final QuestionnaireResponseStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -16449,7 +16280,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16468,8 +16299,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       final Canonical? questionnaire,
       @JsonKey(name: '_questionnaire')
           final Element? questionnaireElement,
-      @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          final QuestionnaireResponseStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Reference? subject,
@@ -16489,7 +16319,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -16524,8 +16354,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @JsonKey(name: '_questionnaire')
   Element? get questionnaireElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-  QuestionnaireResponseStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -17887,7 +17716,7 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) {
 mixin _$Specimen {
   @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -17903,10 +17732,7 @@ mixin _$Specimen {
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   Identifier? get accessionIdentifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-  SpecimenStatus? get status => throw _privateConstructorUsedError;
-  @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Code? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
   FhirDateTime? get receivedTime => throw _privateConstructorUsedError;
@@ -17934,7 +17760,7 @@ abstract class $SpecimenCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17949,10 +17775,7 @@ abstract class $SpecimenCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          SpecimenStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      Code? statusElement,
       CodeableConcept? type,
       Reference? subject,
       FhirDateTime? receivedTime,
@@ -17971,7 +17794,6 @@ abstract class $SpecimenCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $IdentifierCopyWith<$Res>? get accessionIdentifier;
-  $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get type;
   $ReferenceCopyWith<$Res>? get subject;
   $ElementCopyWith<$Res>? get receivedTimeElement;
@@ -18001,7 +17823,6 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
     Object? accessionIdentifier = freezed,
-    Object? status = freezed,
     Object? statusElement = freezed,
     Object? type = freezed,
     Object? subject = freezed,
@@ -18023,7 +17844,7 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -18068,14 +17889,10 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
           ? _value.accessionIdentifier
           : accessionIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as SpecimenStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as Code?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -18179,17 +17996,6 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res>? get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
@@ -18243,7 +18049,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18258,10 +18064,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          SpecimenStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      Code? statusElement,
       CodeableConcept? type,
       Reference? subject,
       FhirDateTime? receivedTime,
@@ -18285,8 +18088,6 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   @override
   $IdentifierCopyWith<$Res>? get accessionIdentifier;
-  @override
-  $ElementCopyWith<$Res>? get statusElement;
   @override
   $CodeableConceptCopyWith<$Res>? get type;
   @override
@@ -18322,7 +18123,6 @@ class __$$_SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
     Object? accessionIdentifier = freezed,
-    Object? status = freezed,
     Object? statusElement = freezed,
     Object? type = freezed,
     Object? subject = freezed,
@@ -18344,7 +18144,7 @@ class __$$_SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -18389,14 +18189,10 @@ class __$$_SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
           ? _value.accessionIdentifier
           : accessionIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as SpecimenStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as Code?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -18466,10 +18262,7 @@ class _$_Specimen extends _Specimen {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      this.statusElement,
       this.type,
       this.subject,
       this.receivedTime,
@@ -18501,7 +18294,7 @@ class _$_Specimen extends _Specimen {
   @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -18556,11 +18349,7 @@ class _$_Specimen extends _Specimen {
   @override
   final Identifier? accessionIdentifier;
   @override
-  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-  final SpecimenStatus? status;
-  @override
-  @JsonKey(name: '_status')
-  final Element? statusElement;
+  final Code? statusElement;
   @override
   final CodeableConcept? type;
   @override
@@ -18628,7 +18417,7 @@ class _$_Specimen extends _Specimen {
 
   @override
   String toString() {
-    return 'Specimen(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, accessionIdentifier: $accessionIdentifier, status: $status, statusElement: $statusElement, type: $type, subject: $subject, receivedTime: $receivedTime, receivedTimeElement: $receivedTimeElement, parent: $parent, request: $request, collection: $collection, processing: $processing, container: $container, condition: $condition, note: $note)';
+    return 'Specimen(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, accessionIdentifier: $accessionIdentifier, statusElement: $statusElement, type: $type, subject: $subject, receivedTime: $receivedTime, receivedTimeElement: $receivedTimeElement, parent: $parent, request: $request, collection: $collection, processing: $processing, container: $container, condition: $condition, note: $note)';
   }
 
   @override
@@ -18658,7 +18447,6 @@ class _$_Specimen extends _Specimen {
                 .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
                 .equals(other.accessionIdentifier, accessionIdentifier) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
@@ -18697,7 +18485,6 @@ class _$_Specimen extends _Specimen {
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(accessionIdentifier),
-        const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(subject),
@@ -18727,7 +18514,7 @@ abstract class _Specimen extends Specimen {
   factory _Specimen(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18742,10 +18529,7 @@ abstract class _Specimen extends Specimen {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Identifier? accessionIdentifier,
-      @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-          final SpecimenStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final Code? statusElement,
       final CodeableConcept? type,
       final Reference? subject,
       final FhirDateTime? receivedTime,
@@ -18766,7 +18550,7 @@ abstract class _Specimen extends Specimen {
   @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -18794,11 +18578,7 @@ abstract class _Specimen extends Specimen {
   @override
   Identifier? get accessionIdentifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: SpecimenStatus.unknown)
-  SpecimenStatus? get status => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Code? get statusElement => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get type => throw _privateConstructorUsedError;
   @override

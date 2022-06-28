@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'entities2.enums.dart';
 part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
@@ -115,7 +114,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -126,12 +125,10 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
-        BiologicallyDerivedProductProductCategory? productCategory,
+    Code? productCategory,
     @JsonKey(name: '_productCategory') Element? productCategoryElement,
     CodeableConcept? productCode,
-    @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
-        BiologicallyDerivedProductStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? request,
     Integer? quantity,
@@ -452,8 +449,7 @@ class BiologicallyDerivedProductStorage
     @JsonKey(name: '_description') Element? descriptionElement,
     Decimal? temperature,
     @JsonKey(name: '_temperature') Element? temperatureElement,
-    @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
-        BiologicallyDerivedProductStorageScale? scale,
+    Code? scale,
     @JsonKey(name: '_scale') Element? scaleElement,
     Period? duration,
   }) = _BiologicallyDerivedProductStorage;
@@ -634,7 +630,7 @@ class Device with Resource, _$Device {
     @Default(R4ResourceType.Device)
     @JsonKey(unknownEnumValue: R4ResourceType.Device)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -647,7 +643,7 @@ class Device with Resource, _$Device {
     List<Identifier>? identifier,
     Reference? definition,
     List<DeviceUdiCarrier>? udiCarrier,
-    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? statusReason,
     String? distinctIdentifier,
@@ -799,8 +795,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
     String? carrierHRF,
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-    @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
-        DeviceUdiCarrierEntryType? entryType,
+    Code? entryType,
     @JsonKey(name: '_entryType') Element? entryTypeElement,
   }) = _DeviceUdiCarrier;
 
@@ -882,8 +877,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
     List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
-        DeviceDeviceNameType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDeviceName;
 
@@ -1269,7 +1263,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1284,14 +1278,11 @@ class DeviceMetric with Resource, _$DeviceMetric {
     CodeableConcept? unit,
     Reference? source,
     Reference? parent,
-    @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-        DeviceMetricOperationalStatus? operationalStatus,
+    Code? operationalStatus,
     @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
-    @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-        DeviceMetricColor? color,
+    Code? color,
     @JsonKey(name: '_color') Element? colorElement,
-    @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
-        DeviceMetricCategory? category,
+    Code? category,
     @JsonKey(name: '_category') Element? categoryElement,
     Timing? measurementPeriod,
     List<DeviceMetricCalibration>? calibration,
@@ -1371,11 +1362,9 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
-        DeviceMetricCalibrationType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-    @JsonKey(unknownEnumValue: DeviceMetricCalibrationState.unknown)
-        DeviceMetricCalibrationState? state,
+    Code? state,
     @JsonKey(name: '_state') Element? stateElement,
     Instant? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -1407,6 +1396,388 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
       return _$DeviceMetricCalibrationFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class NutritionProduct with Resource, _$NutritionProduct {
+  NutritionProduct._();
+
+  /// [NutritionProduct]: A food or supplement that is consumed by patients.
+
+  ///
+  /// [resourceType]: This is a NutritionProduct resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.;
+  ///
+  /// [status]: The current state of the product.;
+  ///
+  /// [statusElement] (_status): Extensions for status;
+  ///
+  /// [category]: Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.;
+  ///
+  /// [manufacturer]: The organisation (manufacturer, representative or legal authorisation holder) that is responsible for the device.;
+  ///
+  /// [nutrient]: The product's nutritional information expressed by the nutrients.;
+  ///
+  /// [ingredient]: Ingredients contained in this product.;
+  ///
+  /// [knownAllergen]: Allergens that are known or suspected to be a part of this nutrition product.;
+  ///
+  /// [characteristic]: Specifies descriptive properties of the nutrition product.;
+  ///
+  /// [instance]: Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
+  ///
+  /// [note]: Comments made about the product.;
+  factory NutritionProduct({
+    @Default(R4ResourceType.NutritionProduct) R4ResourceType resourceType,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? category,
+    List<Reference>? manufacturer,
+    List<NutritionProductNutrient>? nutrient,
+    List<NutritionProductIngredient>? ingredient,
+    // List<CodeableReference>? knownAllergen,
+    List<NutritionProductCharacteristic>? characteristic,
+    List<NutritionProductInstance>? instance,
+    List<Annotation>? note,
+  }) = _NutritionProduct;
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory NutritionProduct.fromYaml(dynamic yaml) => yaml is String
+      ? NutritionProduct.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? NutritionProduct.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'NutritionProduct cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory NutritionProduct.fromJson(Map<String, dynamic> json) =>
+      _$NutritionProductFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProduct], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProduct.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class NutritionProductNutrient with _$NutritionProductNutrient {
+  NutritionProductNutrient._();
+
+  /// [NutritionProductNutrient]: A food or supplement that is consumed by patients.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [item]: The (relevant) nutrients in the product.;
+  ///
+  /// [amount]: The amount of nutrient expressed in one or more units: X per pack / per serving / per dose.;
+  factory NutritionProductNutrient({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    // CodeableReference? item,
+    List<Ratio>? amount,
+  }) = _NutritionProductNutrient;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory NutritionProductNutrient.fromYaml(dynamic yaml) => yaml is String
+      ? NutritionProductNutrient.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? NutritionProductNutrient.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'NutritionProductNutrient cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory NutritionProductNutrient.fromJson(Map<String, dynamic> json) =>
+      _$NutritionProductNutrientFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProductNutrient], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProductNutrient.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductNutrientFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class NutritionProductIngredient with _$NutritionProductIngredient {
+  NutritionProductIngredient._();
+
+  /// [NutritionProductIngredient]: A food or supplement that is consumed by patients.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [item]: The ingredient contained in the product.;
+  ///
+  /// [amount]: The amount of ingredient that is in the product.;
+  factory NutritionProductIngredient({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    // required CodeableReference item,
+    List<Ratio>? amount,
+  }) = _NutritionProductIngredient;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory NutritionProductIngredient.fromYaml(dynamic yaml) => yaml is String
+      ? NutritionProductIngredient.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? NutritionProductIngredient.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'NutritionProductIngredient cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory NutritionProductIngredient.fromJson(Map<String, dynamic> json) =>
+      _$NutritionProductIngredientFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProductIngredient], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProductIngredient.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductIngredientFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
+  NutritionProductCharacteristic._();
+
+  /// [NutritionProductCharacteristic]: A food or supplement that is consumed by patients.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: A code specifying which characteristic of the product is being described (for example, colour, shape).;
+  ///
+  /// [valueCodeableConcept]: The actual characteristic value corresponding to the type.;
+  ///
+  /// [valueString]: The actual characteristic value corresponding to the type.;
+  ///
+  /// [valueStringElement] (_valueString): Extensions for valueString;
+  ///
+  /// [valueQuantity]: The actual characteristic value corresponding to the type.;
+  ///
+  /// [valueBase64Binary]: The actual characteristic value corresponding to the type.;
+  ///
+  /// [valueBase64BinaryElement] (_valueBase64Binary): Extensions for valueBase64Binary;
+  ///
+  /// [valueAttachment]: The actual characteristic value corresponding to the type.;
+  ///
+  /// [valueBoolean]: The actual characteristic value corresponding to the type.;
+  ///
+  /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
+  factory NutritionProductCharacteristic({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    CodeableConcept? valueCodeableConcept,
+    Markdown? valueString,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
+    Quantity? valueQuantity,
+    Base64Binary? valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+    Attachment? valueAttachment,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+  }) = _NutritionProductCharacteristic;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory NutritionProductCharacteristic.fromYaml(dynamic yaml) => yaml
+          is String
+      ? NutritionProductCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? NutritionProductCharacteristic.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'NutritionProductCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory NutritionProductCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$NutritionProductCharacteristicFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProductCharacteristic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProductCharacteristic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductCharacteristicFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class NutritionProductInstance with _$NutritionProductInstance {
+  NutritionProductInstance._();
+
+  /// [NutritionProductInstance]: A food or supplement that is consumed by patients.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [quantity]: The amount of items or instances that the resource considers, for instance when referring to 2 identical units together.;
+  ///
+  /// [identifier]: The identifier for the physical instance, typically a serial number or manufacturer number.;
+  ///
+  /// [name]: The name for the specific product.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [lotNumber]: The identification of the batch or lot of the product.;
+  ///
+  /// [lotNumberElement] (_lotNumber): Extensions for lotNumber;
+  ///
+  /// [expiry]: The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.;
+  ///
+  /// [expiryElement] (_expiry): Extensions for expiry;
+  ///
+  /// [useBy]: The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.;
+  ///
+  /// [useByElement] (_useBy): Extensions for useBy;
+  ///
+  /// [biologicalSource]: An identifier that supports traceability to the biological entity that is the source of biological material in the product.;
+  factory NutritionProductInstance({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? quantity,
+    List<Identifier>? identifier,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? lotNumber,
+    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+    FhirDateTime? expiry,
+    @JsonKey(name: '_expiry') Element? expiryElement,
+    FhirDateTime? useBy,
+    @JsonKey(name: '_useBy') Element? useByElement,
+    Identifier? biologicalSource,
+  }) = _NutritionProductInstance;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory NutritionProductInstance.fromYaml(dynamic yaml) => yaml is String
+      ? NutritionProductInstance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? NutritionProductInstance.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'NutritionProductInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory NutritionProductInstance.fromJson(Map<String, dynamic> json) =>
+      _$NutritionProductInstanceFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProductInstance], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProductInstance.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductInstanceFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1495,7 +1866,7 @@ class Substance with Resource, _$Substance {
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1506,8 +1877,7 @@ class Substance with Resource, _$Substance {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
+    Code? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
     String? description,

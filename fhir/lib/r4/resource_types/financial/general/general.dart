@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'general.enums.dart';
 part 'general.freezed.dart';
 part 'general.g.dart';
 
@@ -114,7 +113,7 @@ class Account with Resource, _$Account {
     @Default(R4ResourceType.Account)
     @JsonKey(unknownEnumValue: R4ResourceType.Account)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -125,7 +124,7 @@ class Account with Resource, _$Account {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     String? name,
@@ -487,7 +486,7 @@ class ChargeItem with Resource, _$ChargeItem {
     @Default(R4ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -501,8 +500,7 @@ class ChargeItem with Resource, _$ChargeItem {
     List<FhirUri>? definitionUri,
     @JsonKey(name: '_definitionUri') List<Element?>? definitionUriElement,
     List<Canonical>? definitionCanonical,
-    @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
-        ChargeItemStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? partOf,
     required CodeableConcept code,
@@ -826,7 +824,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     @Default(R4ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -847,8 +845,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
     List<Canonical>? partOf,
     List<Canonical>? replaces,
-    @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
-        ChargeItemDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1353,7 +1350,7 @@ class Contract with Resource, _$Contract {
     @Default(R4ResourceType.Contract)
     @JsonKey(unknownEnumValue: R4ResourceType.Contract)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -3223,7 +3220,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @Default(R4ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -3234,8 +3231,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
-        ExplanationOfBenefitStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept type,
     CodeableConcept? subType,
@@ -5197,8 +5193,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
     List<FhirExtension>? modifierExtension,
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
-    @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
-        ExplanationOfBenefitProcessNoteType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -5545,7 +5540,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     @Default(R4ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -5556,8 +5551,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
-        InsurancePlanStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? type,
     String? name,

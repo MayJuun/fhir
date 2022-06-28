@@ -1,9 +1,9 @@
 # fhir
 
-## [0.8.1]
+## [0.9.0]
 * Fixed some comparisons in primitive types
 * Added classes for Exceptions in primitives (mostly because I needed them for fhir_path)
-* Ensured R4 is up to version R4B
+* Ensured R4 is up to version R4B (this includes anumber of breaking changes)
 
 ## [0.8.0]
 

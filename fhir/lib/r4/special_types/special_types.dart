@@ -56,6 +56,47 @@ class Narrative with _$Narrative {
 }
 
 @freezed
+class CodeableReference with _$CodeableReference {
+  CodeableReference._();
+  factory CodeableReference({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    CodeableConcept? concept,
+    Reference? reference,
+  }) = _CodeableReference;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CodeableReference.fromYaml(dynamic yaml) => yaml is String
+      ? CodeableReference.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CodeableReference.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CodeableReference cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CodeableReference.fromJson(Map<String, dynamic> json) =>
+      _$CodeableReferenceFromJson(json);
+
+  /// Acts like a constructor, returns a [CodeableReference], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CodeableReference.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CodeableReferenceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
 class Reference with _$Reference {
   Reference._();
 
@@ -2217,6 +2258,7 @@ class ElementDefinition with _$ElementDefinition {
     Annotation? defaultValueAnnotation,
     Attachment? defaultValueAttachment,
     CodeableConcept? defaultValueCodeableConcept,
+    CodeableReference? defaultValueCodeableReference,
     Coding? defaultValueCoding,
     ContactPoint? defaultValueContactPoint,
     Count? defaultValueCount,
@@ -2229,6 +2271,7 @@ class ElementDefinition with _$ElementDefinition {
     Quantity? defaultValueQuantity,
     Range? defaultValueRange,
     Ratio? defaultValueRatio,
+    RatioRange? defaultValueRatioRange,
     Reference? defaultValueReference,
     SampledData? defaultValueSampledData,
     Signature? defaultValueSignature,
@@ -2242,7 +2285,6 @@ class ElementDefinition with _$ElementDefinition {
     TriggerDefinition? defaultValueTriggerDefinition,
     UsageContext? defaultValueUsageContext,
     Dosage? defaultValueDosage,
-    Meta? defaultValueMeta,
     Markdown? meaningWhenMissing,
     @JsonKey(name: '_meaningWhenMissing') Element? meaningWhenMissingElement,
     String? orderMeaning,
@@ -2290,6 +2332,7 @@ class ElementDefinition with _$ElementDefinition {
     Annotation? fixedAnnotation,
     Attachment? fixedAttachment,
     CodeableConcept? fixedCodeableConcept,
+    CodeableReference? fixedCodeableReference,
     Coding? fixedCoding,
     ContactPoint? fixedContactPoint,
     Count? fixedCount,
@@ -2302,6 +2345,7 @@ class ElementDefinition with _$ElementDefinition {
     Quantity? fixedQuantity,
     Range? fixedRange,
     Ratio? fixedRatio,
+    RatioRange? fixedRatioRange,
     Reference? fixedReference,
     SampledData? fixedSampledData,
     Signature? fixedSignature,
@@ -2315,7 +2359,6 @@ class ElementDefinition with _$ElementDefinition {
     TriggerDefinition? fixedTriggerDefinition,
     UsageContext? fixedUsageContext,
     Dosage? fixedDosage,
-    Meta? fixedMeta,
     Base64Binary? patternBase64Binary,
     @JsonKey(name: '_patternBase64Binary') Element? patternBase64BinaryElement,
     Boolean? patternBoolean,
@@ -2359,6 +2402,7 @@ class ElementDefinition with _$ElementDefinition {
     Annotation? patternAnnotation,
     Attachment? patternAttachment,
     CodeableConcept? patternCodeableConcept,
+    CodeableReference? patternCodeableReference,
     Coding? patternCoding,
     ContactPoint? patternContactPoint,
     Count? patternCount,
@@ -2371,6 +2415,7 @@ class ElementDefinition with _$ElementDefinition {
     Quantity? patternQuantity,
     Range? patternRange,
     Ratio? patternRatio,
+    RatioRange? patternRatioRange,
     Reference? patternReference,
     SampledData? patternSampledData,
     Signature? patternSignature,
@@ -2384,7 +2429,6 @@ class ElementDefinition with _$ElementDefinition {
     TriggerDefinition? patternTriggerDefinition,
     UsageContext? patternUsageContext,
     Dosage? patternDosage,
-    Meta? patternMeta,
     List<ElementDefinitionExample>? example,
     Date? minValueDate,
     @JsonKey(name: '_minValueDate') Element? minValueDateElement,
@@ -3125,6 +3169,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     Annotation? valueAnnotation,
     Attachment? valueAttachment,
     CodeableConcept? valueCodeableConcept,
+    CodeableReference? valueCodeableReference,
     Coding? valueCoding,
     ContactPoint? valueContactPoint,
     Count? valueCount,
@@ -3137,6 +3182,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     Quantity? valueQuantity,
     Range? valueRange,
     Ratio? valueRatio,
+    RatioRange? valueRatioRange,
     Reference? valueReference,
     SampledData? valueSampledData,
     Signature? valueSignature,

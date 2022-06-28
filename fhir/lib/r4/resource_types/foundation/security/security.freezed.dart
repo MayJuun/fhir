@@ -22,7 +22,7 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
 mixin _$AuditEvent {
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -38,16 +38,14 @@ mixin _$AuditEvent {
       throw _privateConstructorUsedError;
   Coding get type => throw _privateConstructorUsedError;
   List<Coding>? get subtype => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-  AuditEventAction? get action => throw _privateConstructorUsedError;
+  Code? get action => throw _privateConstructorUsedError;
   @JsonKey(name: '_action')
   Element? get actionElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
   Instant? get recorded => throw _privateConstructorUsedError;
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-  AuditEventOutcome? get outcome => throw _privateConstructorUsedError;
+  Code? get outcome => throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;
   String? get outcomeDesc => throw _privateConstructorUsedError;
@@ -73,7 +71,7 @@ abstract class $AuditEventCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -88,16 +86,14 @@ abstract class $AuditEventCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Coding type,
       List<Coding>? subtype,
-      @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-          AuditEventAction? action,
+      Code? action,
       @JsonKey(name: '_action')
           Element? actionElement,
       Period? period,
       Instant? recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-          AuditEventOutcome? outcome,
+      Code? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? outcomeDesc,
@@ -166,7 +162,7 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -214,7 +210,7 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
       action: action == freezed
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
-              as AuditEventAction?,
+              as Code?,
       actionElement: actionElement == freezed
           ? _value.actionElement
           : actionElement // ignore: cast_nullable_to_non_nullable
@@ -234,7 +230,7 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as AuditEventOutcome?,
+              as Code?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -390,7 +386,7 @@ abstract class _$$_AuditEventCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -405,16 +401,14 @@ abstract class _$$_AuditEventCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Coding type,
       List<Coding>? subtype,
-      @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-          AuditEventAction? action,
+      Code? action,
       @JsonKey(name: '_action')
           Element? actionElement,
       Period? period,
       Instant? recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-          AuditEventOutcome? outcome,
+      Code? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? outcomeDesc,
@@ -496,7 +490,7 @@ class __$$_AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -544,7 +538,7 @@ class __$$_AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
       action: action == freezed
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
-              as AuditEventAction?,
+              as Code?,
       actionElement: actionElement == freezed
           ? _value.actionElement
           : actionElement // ignore: cast_nullable_to_non_nullable
@@ -564,7 +558,7 @@ class __$$_AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as AuditEventOutcome?,
+              as Code?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -618,16 +612,14 @@ class _$_AuditEvent extends _AuditEvent {
       final List<FhirExtension>? modifierExtension,
       required this.type,
       final List<Coding>? subtype,
-      @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-          this.action,
+      this.action,
       @JsonKey(name: '_action')
           this.actionElement,
       this.period,
       this.recorded,
       @JsonKey(name: '_recorded')
           this.recordedElement,
-      @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-          this.outcome,
+      this.outcome,
       @JsonKey(name: '_outcome')
           this.outcomeElement,
       this.outcomeDesc,
@@ -653,7 +645,7 @@ class _$_AuditEvent extends _AuditEvent {
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -708,8 +700,7 @@ class _$_AuditEvent extends _AuditEvent {
   }
 
   @override
-  @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-  final AuditEventAction? action;
+  final Code? action;
   @override
   @JsonKey(name: '_action')
   final Element? actionElement;
@@ -721,8 +712,7 @@ class _$_AuditEvent extends _AuditEvent {
   @JsonKey(name: '_recorded')
   final Element? recordedElement;
   @override
-  @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-  final AuditEventOutcome? outcome;
+  final Code? outcome;
   @override
   @JsonKey(name: '_outcome')
   final Element? outcomeElement;
@@ -856,7 +846,7 @@ abstract class _AuditEvent extends AuditEvent {
   factory _AuditEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -871,16 +861,14 @@ abstract class _AuditEvent extends AuditEvent {
       final List<FhirExtension>? modifierExtension,
       required final Coding type,
       final List<Coding>? subtype,
-      @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-          final AuditEventAction? action,
+      final Code? action,
       @JsonKey(name: '_action')
           final Element? actionElement,
       final Period? period,
       final Instant? recorded,
       @JsonKey(name: '_recorded')
           final Element? recordedElement,
-      @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-          final AuditEventOutcome? outcome,
+      final Code? outcome,
       @JsonKey(name: '_outcome')
           final Element? outcomeElement,
       final String? outcomeDesc,
@@ -899,7 +887,7 @@ abstract class _AuditEvent extends AuditEvent {
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -927,8 +915,7 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   List<Coding>? get subtype => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-  AuditEventAction? get action => throw _privateConstructorUsedError;
+  Code? get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_action')
   Element? get actionElement => throw _privateConstructorUsedError;
@@ -940,8 +927,7 @@ abstract class _AuditEvent extends AuditEvent {
   @JsonKey(name: '_recorded')
   Element? get recordedElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-  AuditEventOutcome? get outcome => throw _privateConstructorUsedError;
+  Code? get outcome => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;
@@ -1660,8 +1646,7 @@ mixin _$AuditEventNetwork {
   String? get address => throw _privateConstructorUsedError;
   @JsonKey(name: '_address')
   Element? get addressElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-  AuditEventNetworkType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
@@ -1678,16 +1663,12 @@ abstract class $AuditEventNetworkCopyWith<$Res> {
       _$AuditEventNetworkCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? address,
-      @JsonKey(name: '_address')
-          Element? addressElement,
-      @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-          AuditEventNetworkType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement});
+      @JsonKey(name: '_address') Element? addressElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get addressElement;
   $ElementCopyWith<$Res>? get typeElement;
@@ -1736,7 +1717,7 @@ class _$AuditEventNetworkCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as AuditEventNetworkType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1776,16 +1757,12 @@ abstract class _$$_AuditEventNetworkCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? address,
-      @JsonKey(name: '_address')
-          Element? addressElement,
-      @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-          AuditEventNetworkType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement});
+      @JsonKey(name: '_address') Element? addressElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement});
 
   @override
   $ElementCopyWith<$Res>? get addressElement;
@@ -1838,7 +1815,7 @@ class __$$_AuditEventNetworkCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as AuditEventNetworkType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1856,7 +1833,7 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
       final List<FhirExtension>? modifierExtension,
       this.address,
       @JsonKey(name: '_address') this.addressElement,
-      @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1892,8 +1869,7 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
   @JsonKey(name: '_address')
   final Element? addressElement;
   @override
-  @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-  final AuditEventNetworkType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -1947,17 +1923,14 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
 
 abstract class _AuditEventNetwork extends AuditEventNetwork {
   factory _AuditEventNetwork(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final String? address,
-      @JsonKey(name: '_address')
-          final Element? addressElement,
-      @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-          final AuditEventNetworkType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement}) = _$_AuditEventNetwork;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? address,
+          @JsonKey(name: '_address') final Element? addressElement,
+          final Code? type,
+          @JsonKey(name: '_type') final Element? typeElement}) =
+      _$_AuditEventNetwork;
   _AuditEventNetwork._() : super._();
 
   factory _AuditEventNetwork.fromJson(Map<String, dynamic> json) =
@@ -1977,8 +1950,7 @@ abstract class _AuditEventNetwork extends AuditEventNetwork {
   @JsonKey(name: '_address')
   Element? get addressElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-  AuditEventNetworkType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -3298,7 +3270,7 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
 mixin _$Consent {
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3313,8 +3285,7 @@ mixin _$Consent {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-  ConsentStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept get scope => throw _privateConstructorUsedError;
@@ -3345,7 +3316,7 @@ abstract class $ConsentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3359,8 +3330,7 @@ abstract class $ConsentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-          ConsentStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept scope,
@@ -3438,7 +3408,7 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3482,7 +3452,7 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ConsentStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3680,7 +3650,7 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3694,8 +3664,7 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-          ConsentStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept scope,
@@ -3786,7 +3755,7 @@ class __$$_ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3830,7 +3799,7 @@ class __$$_ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ConsentStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3911,8 +3880,7 @@ class _$_Consent extends _Consent {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.scope,
@@ -3947,7 +3915,7 @@ class _$_Consent extends _Consent {
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -4000,8 +3968,7 @@ class _$_Consent extends _Consent {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-  final ConsentStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -4169,7 +4136,7 @@ abstract class _Consent extends Consent {
   factory _Consent(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4183,8 +4150,7 @@ abstract class _Consent extends Consent {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-          final ConsentStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       required final CodeableConcept scope,
@@ -4209,7 +4175,7 @@ abstract class _Consent extends Consent {
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -4235,8 +4201,7 @@ abstract class _Consent extends Consent {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-  ConsentStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -4978,8 +4943,7 @@ mixin _$ConsentProvision {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-  ConsentProvisionType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
@@ -5007,20 +4971,16 @@ abstract class $ConsentProvisionCopyWith<$Res> {
       _$ConsentProvisionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-          ConsentProvisionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       Period? period,
       List<ConsentActor>? actor,
       List<CodeableConcept>? action,
       List<Coding>? securityLabel,
       List<Coding>? purpose,
-      @JsonKey(name: 'class')
-          List<Coding>? class_,
+      @JsonKey(name: 'class') List<Coding>? class_,
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
@@ -5074,7 +5034,7 @@ class _$ConsentProvisionCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as ConsentProvisionType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5165,20 +5125,16 @@ abstract class _$$_ConsentProvisionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-          ConsentProvisionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       Period? period,
       List<ConsentActor>? actor,
       List<CodeableConcept>? action,
       List<Coding>? securityLabel,
       List<Coding>? purpose,
-      @JsonKey(name: 'class')
-          List<Coding>? class_,
+      @JsonKey(name: 'class') List<Coding>? class_,
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
@@ -5237,7 +5193,7 @@ class __$$_ConsentProvisionCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as ConsentProvisionType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5293,7 +5249,7 @@ class _$_ConsentProvision extends _ConsentProvision {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentProvisionType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.period,
       final List<ConsentActor>? actor,
@@ -5342,8 +5298,7 @@ class _$_ConsentProvision extends _ConsentProvision {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-  final ConsentProvisionType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -5491,20 +5446,16 @@ class _$_ConsentProvision extends _ConsentProvision {
 abstract class _ConsentProvision extends ConsentProvision {
   factory _ConsentProvision(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-          final ConsentProvisionType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final Period? period,
       final List<ConsentActor>? actor,
       final List<CodeableConcept>? action,
       final List<Coding>? securityLabel,
       final List<Coding>? purpose,
-      @JsonKey(name: 'class')
-          final List<Coding>? class_,
+      @JsonKey(name: 'class') final List<Coding>? class_,
       final List<CodeableConcept>? code,
       final Period? dataPeriod,
       final List<ConsentData>? data,
@@ -5523,8 +5474,7 @@ abstract class _ConsentProvision extends ConsentProvision {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-  ConsentProvisionType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -5833,8 +5783,7 @@ mixin _$ConsentData {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-  ConsentDataMeaning? get meaning => throw _privateConstructorUsedError;
+  Code? get meaning => throw _privateConstructorUsedError;
   @JsonKey(name: '_meaning')
   Element? get meaningElement => throw _privateConstructorUsedError;
   Reference get reference => throw _privateConstructorUsedError;
@@ -5852,13 +5801,10 @@ abstract class $ConsentDataCopyWith<$Res> {
       _$ConsentDataCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-          ConsentDataMeaning? meaning,
-      @JsonKey(name: '_meaning')
-          Element? meaningElement,
+      Code? meaning,
+      @JsonKey(name: '_meaning') Element? meaningElement,
       Reference reference});
 
   $ElementCopyWith<$Res>? get meaningElement;
@@ -5898,7 +5844,7 @@ class _$ConsentDataCopyWithImpl<$Res> implements $ConsentDataCopyWith<$Res> {
       meaning: meaning == freezed
           ? _value.meaning
           : meaning // ignore: cast_nullable_to_non_nullable
-              as ConsentDataMeaning?,
+              as Code?,
       meaningElement: meaningElement == freezed
           ? _value.meaningElement
           : meaningElement // ignore: cast_nullable_to_non_nullable
@@ -5938,13 +5884,10 @@ abstract class _$$_ConsentDataCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-          ConsentDataMeaning? meaning,
-      @JsonKey(name: '_meaning')
-          Element? meaningElement,
+      Code? meaning,
+      @JsonKey(name: '_meaning') Element? meaningElement,
       Reference reference});
 
   @override
@@ -5988,7 +5931,7 @@ class __$$_ConsentDataCopyWithImpl<$Res> extends _$ConsentDataCopyWithImpl<$Res>
       meaning: meaning == freezed
           ? _value.meaning
           : meaning // ignore: cast_nullable_to_non_nullable
-              as ConsentDataMeaning?,
+              as Code?,
       meaningElement: meaningElement == freezed
           ? _value.meaningElement
           : meaningElement // ignore: cast_nullable_to_non_nullable
@@ -6008,7 +5951,7 @@ class _$_ConsentData extends _ConsentData {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown) this.meaning,
+      this.meaning,
       @JsonKey(name: '_meaning') this.meaningElement,
       required this.reference})
       : _extension_ = extension_,
@@ -6040,8 +5983,7 @@ class _$_ConsentData extends _ConsentData {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-  final ConsentDataMeaning? meaning;
+  final Code? meaning;
   @override
   @JsonKey(name: '_meaning')
   final Element? meaningElement;
@@ -6094,13 +6036,10 @@ class _$_ConsentData extends _ConsentData {
 abstract class _ConsentData extends ConsentData {
   factory _ConsentData(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-          final ConsentDataMeaning? meaning,
-      @JsonKey(name: '_meaning')
-          final Element? meaningElement,
+      final Code? meaning,
+      @JsonKey(name: '_meaning') final Element? meaningElement,
       required final Reference reference}) = _$_ConsentData;
   _ConsentData._() : super._();
 
@@ -6116,8 +6055,7 @@ abstract class _ConsentData extends ConsentData {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-  ConsentDataMeaning? get meaning => throw _privateConstructorUsedError;
+  Code? get meaning => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_meaning')
   Element? get meaningElement => throw _privateConstructorUsedError;
@@ -6137,7 +6075,7 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
 mixin _$Provenance {
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6183,7 +6121,7 @@ abstract class $ProvenanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6269,7 +6207,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6475,7 +6413,7 @@ abstract class _$$_ProvenanceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6572,7 +6510,7 @@ class __$$_ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6724,7 +6662,7 @@ class _$_Provenance extends _Provenance {
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -6939,7 +6877,7 @@ abstract class _Provenance extends Provenance {
   factory _Provenance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6978,7 +6916,7 @@ abstract class _Provenance extends Provenance {
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -7386,8 +7324,7 @@ mixin _$ProvenanceEntity {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-  ProvenanceEntityRole? get role => throw _privateConstructorUsedError;
+  Code? get role => throw _privateConstructorUsedError;
   @JsonKey(name: '_role')
   Element? get roleElement => throw _privateConstructorUsedError;
   Reference get what => throw _privateConstructorUsedError;
@@ -7406,13 +7343,10 @@ abstract class $ProvenanceEntityCopyWith<$Res> {
       _$ProvenanceEntityCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-          ProvenanceEntityRole? role,
-      @JsonKey(name: '_role')
-          Element? roleElement,
+      Code? role,
+      @JsonKey(name: '_role') Element? roleElement,
       Reference what,
       List<ProvenanceAgent>? agent});
 
@@ -7455,7 +7389,7 @@ class _$ProvenanceEntityCopyWithImpl<$Res>
       role: role == freezed
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as ProvenanceEntityRole?,
+              as Code?,
       roleElement: roleElement == freezed
           ? _value.roleElement
           : roleElement // ignore: cast_nullable_to_non_nullable
@@ -7499,13 +7433,10 @@ abstract class _$$_ProvenanceEntityCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-          ProvenanceEntityRole? role,
-      @JsonKey(name: '_role')
-          Element? roleElement,
+      Code? role,
+      @JsonKey(name: '_role') Element? roleElement,
       Reference what,
       List<ProvenanceAgent>? agent});
 
@@ -7552,7 +7483,7 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
       role: role == freezed
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as ProvenanceEntityRole?,
+              as Code?,
       roleElement: roleElement == freezed
           ? _value.roleElement
           : roleElement // ignore: cast_nullable_to_non_nullable
@@ -7576,7 +7507,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown) this.role,
+      this.role,
       @JsonKey(name: '_role') this.roleElement,
       required this.what,
       final List<ProvenanceAgent>? agent})
@@ -7610,8 +7541,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
   }
 
   @override
-  @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-  final ProvenanceEntityRole? role;
+  final Code? role;
   @override
   @JsonKey(name: '_role')
   final Element? roleElement;
@@ -7674,13 +7604,10 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 abstract class _ProvenanceEntity extends ProvenanceEntity {
   factory _ProvenanceEntity(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-          final ProvenanceEntityRole? role,
-      @JsonKey(name: '_role')
-          final Element? roleElement,
+      final Code? role,
+      @JsonKey(name: '_role') final Element? roleElement,
       required final Reference what,
       final List<ProvenanceAgent>? agent}) = _$_ProvenanceEntity;
   _ProvenanceEntity._() : super._();
@@ -7697,8 +7624,7 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-  ProvenanceEntityRole? get role => throw _privateConstructorUsedError;
+  Code? get role => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_role')
   Element? get roleElement => throw _privateConstructorUsedError;

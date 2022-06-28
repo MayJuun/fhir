@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'conformance.enums.dart';
 part 'conformance.freezed.dart';
 part 'conformance.g.dart';
 
@@ -215,7 +214,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @Default(R4ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -233,8 +232,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
-        CapabilityStatementStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -251,15 +249,13 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-        CapabilityStatementKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     List<Canonical>? instantiates,
     List<Canonical>? imports,
     CapabilityStatementSoftware? software,
     CapabilityStatementImplementation? implementation,
-    @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
-        CapabilityStatementFhirVersion? fhirVersion,
+    Code? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<Code>? format,
     @JsonKey(name: '_format') List<Element?>? formatElement,
@@ -531,8 +527,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
-        CapabilityStatementRestMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -794,8 +789,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
     List<CapabilityStatementInteraction>? interaction,
-    @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-        CapabilityStatementResourceVersioning? versioning,
+    Code? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
     Boolean? readHistory,
     @JsonKey(name: '_readHistory') Element? readHistoryElement,
@@ -803,15 +797,13 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     @JsonKey(name: '_updateCreate') Element? updateCreateElement,
     Boolean? conditionalCreate,
     @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
-    @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-        CapabilityStatementResourceConditionalRead? conditionalRead,
+    Code? conditionalRead,
     @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
     Boolean? conditionalUpdate,
     @JsonKey(name: '_conditionalUpdate') Element? conditionalUpdateElement,
-    @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-        CapabilityStatementResourceConditionalDelete? conditionalDelete,
+    Code? conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
-    List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+    List<Code>? referencePolicy,
     @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
     List<String>? searchInclude,
     @JsonKey(name: '_searchInclude') List<Element?>? searchIncludeElement,
@@ -900,8 +892,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
-        CapabilityStatementInteractionCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -1000,8 +991,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Canonical? definition,
-    @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
-        CapabilityStatementSearchParamType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -1181,8 +1171,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
-        CapabilityStatementInteraction1Code? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -1439,8 +1428,7 @@ class CapabilityStatementSupportedMessage
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
-        CapabilityStatementSupportedMessageMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     required Canonical definition,
   }) = _CapabilityStatementSupportedMessage;
@@ -1515,8 +1503,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
-        CapabilityStatementDocumentMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -1697,7 +1684,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     @Default(R4ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1713,8 +1700,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-        CompartmentDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1728,8 +1714,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     List<UsageContext>? useContext,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
-    @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
-        CompartmentDefinitionCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Boolean? search,
     @JsonKey(name: '_search') Element? searchElement,
@@ -2001,7 +1986,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     @Default(R4ResourceType.ExampleScenario)
     @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2018,8 +2003,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
-        ExampleScenarioStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2119,8 +2103,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
     List<FhirExtension>? modifierExtension,
     String? actorId,
     @JsonKey(name: '_actorId') Element? actorIdElement,
-    @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
-        ExampleScenarioActorType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -2925,7 +2908,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     @Default(R4ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2941,8 +2924,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-        GraphDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -3243,13 +3225,11 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
-        GraphDefinitionCompartmentUse? use,
+    Code? use,
     @JsonKey(name: '_use') Element? useElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-    @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
-        GraphDefinitionCompartmentRule? rule,
+    Code? rule,
     @JsonKey(name: '_rule') Element? ruleElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
@@ -3464,7 +3444,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @Default(R4ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -3482,8 +3462,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-        ImplementationGuideStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -3500,10 +3479,9 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(name: '_copyright') Element? copyrightElement,
     Id? packageId,
     @JsonKey(name: '_packageId') Element? packageIdElement,
-    @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
-        ImplementationGuideLicense? license,
+    Code? license,
     @JsonKey(name: '_license') Element? licenseElement,
-    List<ImplementationGuideFhirVersion>? fhirVersion,
+    List<Code>? fhirVersion,
     @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
     List<ImplementationGuideDependsOn>? dependsOn,
     List<ImplementationGuideGlobal>? global,
@@ -3953,7 +3931,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference reference,
-    List<ImplementationGuideResourceFhirVersion>? fhirVersion,
+    List<Code>? fhirVersion,
     @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -4057,8 +4035,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
     Reference? nameReference,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
-        ImplementationGuidePageGeneration? generation,
+    Code? generation,
     @JsonKey(name: '_generation') Element? generationElement,
     List<ImplementationGuidePage>? page,
   }) = _ImplementationGuidePage;
@@ -4141,8 +4118,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ImplementationGuideParameterCode.unknown)
-        ImplementationGuideParameterCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -4734,7 +4710,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     @Default(R4ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -4754,8 +4730,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     List<Canonical>? replaces,
-    @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-        MessageDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -4777,12 +4752,10 @@ class MessageDefinition with Resource, _$MessageDefinition {
     Coding? eventCoding,
     FhirUri? eventUri,
     @JsonKey(name: '_eventUri') Element? eventUriElement,
-    @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
-        MessageDefinitionCategory? category,
+    Code? category,
     @JsonKey(name: '_category') Element? categoryElement,
     List<MessageDefinitionFocus>? focus,
-    @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
-        MessageDefinitionResponseRequired? responseRequired,
+    Code? responseRequired,
     @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
     List<MessageDefinitionAllowedResponse>? allowedResponse,
     List<Canonical>? graph,
@@ -5175,7 +5148,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @Default(R4ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -5193,11 +5166,9 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-        OperationDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-        OperationDefinitionKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -5347,8 +5318,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     List<FhirExtension>? modifierExtension,
     Code? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
-        OperationDefinitionParameterUse? use,
+    Code? use,
     @JsonKey(name: '_use') Element? useElement,
     Integer? min,
     @JsonKey(name: '_min') Element? minElement,
@@ -5359,8 +5329,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<Canonical>? targetProfile,
-    @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
-        OperationDefinitionParameterSearchType? searchType,
+    Code? searchType,
     @JsonKey(name: '_searchType') Element? searchTypeElement,
     OperationDefinitionBinding? binding,
     List<OperationDefinitionReferencedFrom>? referencedFrom,
@@ -5442,8 +5411,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
-        OperationDefinitionBindingStrength? strength,
+    Code? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     required Canonical valueSet,
   }) = _OperationDefinitionBinding;
@@ -5836,7 +5804,7 @@ class SearchParameter with Resource, _$SearchParameter {
     @Default(R4ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -5853,8 +5821,7 @@ class SearchParameter with Resource, _$SearchParameter {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Canonical? derivedFrom,
-    @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-        SearchParameterStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -5873,15 +5840,13 @@ class SearchParameter with Resource, _$SearchParameter {
     @JsonKey(name: '_code') Element? codeElement,
     List<Code>? base,
     @JsonKey(name: '_base') List<Element?>? baseElement,
-    @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-        SearchParameterType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
     String? xpath,
     @JsonKey(name: '_xpath') Element? xpathElement,
-    @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-        SearchParameterXpathUsage? xpathUsage,
+    Code? xpathUsage,
     @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
     List<Code>? target,
     @JsonKey(name: '_target') List<Element?>? targetElement,
@@ -5889,9 +5854,9 @@ class SearchParameter with Resource, _$SearchParameter {
     @JsonKey(name: '_multipleOr') Element? multipleOrElement,
     Boolean? multipleAnd,
     @JsonKey(name: '_multipleAnd') Element? multipleAndElement,
-    List<SearchParameterComparator>? comparator,
+    List<Code>? comparator,
     @JsonKey(name: '_comparator') List<Element?>? comparatorElement,
-    List<SearchParameterModifier>? modifier,
+    List<Code>? modifier,
     @JsonKey(name: '_modifier') List<Element?>? modifierElement,
     List<String>? chain,
     @JsonKey(name: '_chain') List<Element?>? chainElement,
@@ -6214,7 +6179,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @Default(R4ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -6233,8 +6198,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-        StructureDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -6252,12 +6216,10 @@ class StructureDefinition with Resource, _$StructureDefinition {
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<Coding>? keyword,
-    @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
-        StructureDefinitionFhirVersion? fhirVersion,
+    Code? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<StructureDefinitionMapping>? mapping,
-    @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-        StructureDefinitionKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
@@ -6268,8 +6230,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @JsonKey(name: '_type') Element? typeElement,
     Canonical? baseDefinition,
     @JsonKey(name: '_baseDefinition') Element? baseDefinitionElement,
-    @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
-        StructureDefinitionDerivation? derivation,
+    Code? derivation,
     @JsonKey(name: '_derivation') Element? derivationElement,
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
@@ -6445,8 +6406,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-        StructureDefinitionContextType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
@@ -6785,7 +6745,7 @@ class StructureMap with Resource, _$StructureMap {
     @Default(R4ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -6804,8 +6764,7 @@ class StructureMap with Resource, _$StructureMap {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-        StructureMapStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -6905,8 +6864,7 @@ class StructureMapStructure with _$StructureMapStructure {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Canonical url,
-    @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
-        StructureMapStructureMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? alias,
     @JsonKey(name: '_alias') Element? aliasElement,
@@ -7006,8 +6964,7 @@ class StructureMapGroup with _$StructureMapGroup {
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(name: 'extends') Id? extends_,
     @JsonKey(name: '_extends') Element? extendsElement,
-    @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
-        StructureMapGroupTypeMode? typeMode,
+    Code? typeMode,
     @JsonKey(name: '_typeMode') Element? typeModeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -7100,8 +7057,7 @@ class StructureMapInput with _$StructureMapInput {
     @JsonKey(name: '_name') Element? nameElement,
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
-    @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
-        StructureMapInputMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -7583,8 +7539,7 @@ class StructureMapSource with _$StructureMapSource {
     Meta? defaultValueMeta,
     String? element,
     @JsonKey(name: '_element') Element? elementElement,
-    @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
-        StructureMapSourceListMode? listMode,
+    Code? listMode,
     @JsonKey(name: '_listMode') Element? listModeElement,
     Id? variable,
     @JsonKey(name: '_variable') Element? variableElement,
@@ -7693,19 +7648,17 @@ class StructureMapTarget with _$StructureMapTarget {
     List<FhirExtension>? modifierExtension,
     Id? context,
     @JsonKey(name: '_context') Element? contextElement,
-    @JsonKey(unknownEnumValue: StructureMapTargetContextType.unknown)
-        StructureMapTargetContextType? contextType,
+    Code? contextType,
     @JsonKey(name: '_contextType') Element? contextTypeElement,
     String? element,
     @JsonKey(name: '_element') Element? elementElement,
     Id? variable,
     @JsonKey(name: '_variable') Element? variableElement,
-    List<StructureMapTargetListMode>? listMode,
+    List<Code>? listMode,
     @JsonKey(name: '_listMode') List<Element?>? listModeElement,
     Id? listRuleId,
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-    @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
-        StructureMapTargetTransform? transform,
+    Code? transform,
     @JsonKey(name: '_transform') Element? transformElement,
     List<StructureMapParameter>? parameter,
   }) = _StructureMapTarget;

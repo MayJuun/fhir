@@ -22,7 +22,7 @@ Communication _$CommunicationFromJson(Map<String, dynamic> json) {
 mixin _$Communication {
   @JsonKey(unknownEnumValue: R4ResourceType.Communication)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -86,7 +86,7 @@ abstract class $CommunicationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Communication)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -207,7 +207,7 @@ class _$CommunicationCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -513,7 +513,7 @@ abstract class _$$_CommunicationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Communication)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -649,7 +649,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -881,7 +881,7 @@ class _$_Communication extends _Communication {
   @JsonKey(unknownEnumValue: R4ResourceType.Communication)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -1221,7 +1221,7 @@ abstract class _Communication extends Communication {
   factory _Communication(
       {@JsonKey(unknownEnumValue: R4ResourceType.Communication)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1276,7 +1276,7 @@ abstract class _Communication extends Communication {
   @JsonKey(unknownEnumValue: R4ResourceType.Communication)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -1716,7 +1716,7 @@ CommunicationRequest _$CommunicationRequestFromJson(Map<String, dynamic> json) {
 mixin _$CommunicationRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -1779,7 +1779,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1903,7 +1903,7 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2242,7 +2242,7 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2384,7 +2384,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2612,7 +2612,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -2927,7 +2927,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   factory _CommunicationRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2982,7 +2982,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -3427,7 +3427,7 @@ DeviceRequest _$DeviceRequestFromJson(Map<String, dynamic> json) {
 mixin _$DeviceRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3499,7 +3499,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3637,7 +3637,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4025,7 +4025,7 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4184,7 +4184,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4440,7 +4440,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -4798,7 +4798,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   factory _DeviceRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4859,7 +4859,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -5389,7 +5389,7 @@ DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
 mixin _$DeviceUseStatement {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -5405,8 +5405,7 @@ mixin _$DeviceUseStatement {
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  DeviceUseStatementStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
@@ -5440,7 +5439,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5455,8 +5454,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference subject,
@@ -5540,7 +5538,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5588,7 +5586,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as DeviceUseStatementStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5798,7 +5796,7 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5813,8 +5811,7 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference subject,
@@ -5913,7 +5910,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5961,7 +5958,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as DeviceUseStatementStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6047,8 +6044,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.subject,
@@ -6085,7 +6081,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -6147,8 +6143,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   }
 
   @override
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  final DeviceUseStatementStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -6320,7 +6315,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   factory _DeviceUseStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6335,8 +6330,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          final DeviceUseStatementStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       required final Reference subject,
@@ -6364,7 +6358,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -6392,8 +6386,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @override
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  DeviceUseStatementStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -6441,7 +6434,7 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
 mixin _$GuidanceResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6465,8 +6458,7 @@ mixin _$GuidanceResponse {
   Element? get moduleCanonicalElement => throw _privateConstructorUsedError;
   CodeableConcept? get moduleCodeableConcept =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-  GuidanceResponseStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
@@ -6498,7 +6490,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6520,8 +6512,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -6607,7 +6598,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6675,7 +6666,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as GuidanceResponseStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6908,7 +6899,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6930,8 +6921,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -7034,7 +7024,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7102,7 +7092,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as GuidanceResponseStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7187,8 +7177,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       @JsonKey(name: '_moduleCanonical')
           this.moduleCanonicalElement,
       this.moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.subject,
@@ -7222,7 +7211,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -7289,8 +7278,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   final CodeableConcept? moduleCodeableConcept;
   @override
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-  final GuidanceResponseStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -7472,7 +7460,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   factory _GuidanceResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7494,8 +7482,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       @JsonKey(name: '_moduleCanonical')
           final Element? moduleCanonicalElement,
       final CodeableConcept? moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          final GuidanceResponseStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Reference? subject,
@@ -7520,7 +7507,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -7561,8 +7548,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   CodeableConcept? get moduleCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-  GuidanceResponseStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -7606,7 +7592,7 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
 mixin _$SupplyDelivery {
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -7623,8 +7609,7 @@ mixin _$SupplyDelivery {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  SupplyDeliveryStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get patient => throw _privateConstructorUsedError;
@@ -7654,7 +7639,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7670,8 +7655,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -7747,7 +7731,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7799,7 +7783,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SupplyDeliveryStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8002,7 +7986,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8018,8 +8002,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -8110,7 +8093,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8162,7 +8145,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SupplyDeliveryStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8233,8 +8216,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.patient,
@@ -8264,7 +8246,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -8335,8 +8317,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   }
 
   @override
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  final SupplyDeliveryStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -8468,7 +8449,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   factory _SupplyDelivery(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8484,8 +8465,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          final SupplyDeliveryStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final Reference? patient,
@@ -8508,7 +8488,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -8538,8 +8518,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  SupplyDeliveryStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -8899,7 +8878,7 @@ SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
 mixin _$SupplyRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -8914,8 +8893,7 @@ mixin _$SupplyRequest {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-  SupplyRequestStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get category => throw _privateConstructorUsedError;
@@ -8957,7 +8935,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8971,8 +8949,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          SupplyRequestStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
@@ -9070,7 +9047,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9114,7 +9091,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SupplyRequestStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9392,7 +9369,7 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9406,8 +9383,7 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          SupplyRequestStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
@@ -9524,7 +9500,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9568,7 +9544,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SupplyRequestStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9673,8 +9649,7 @@ class _$_SupplyRequest extends _SupplyRequest {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.category,
@@ -9716,7 +9691,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -9769,8 +9744,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   }
 
   @override
-  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-  final SupplyRequestStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -9965,7 +9939,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   factory _SupplyRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9979,8 +9953,7 @@ abstract class _SupplyRequest extends SupplyRequest {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          final SupplyRequestStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? category,
@@ -10014,7 +9987,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -10040,8 +10013,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-  SupplyRequestStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;

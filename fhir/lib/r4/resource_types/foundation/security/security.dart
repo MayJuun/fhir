@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'security.enums.dart';
 part 'security.freezed.dart';
 part 'security.g.dart';
 
@@ -112,7 +111,7 @@ class AuditEvent with Resource, _$AuditEvent {
     @Default(R4ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -124,14 +123,12 @@ class AuditEvent with Resource, _$AuditEvent {
     List<FhirExtension>? modifierExtension,
     required Coding type,
     List<Coding>? subtype,
-    @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-        AuditEventAction? action,
+    Code? action,
     @JsonKey(name: '_action') Element? actionElement,
     Period? period,
     Instant? recorded,
     @JsonKey(name: '_recorded') Element? recordedElement,
-    @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-        AuditEventOutcome? outcome,
+    Code? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? outcomeDesc,
     @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
@@ -342,8 +339,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
     List<FhirExtension>? modifierExtension,
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
-    @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-        AuditEventNetworkType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _AuditEventNetwork;
 
@@ -770,7 +766,7 @@ class Consent with Resource, _$Consent {
     @Default(R4ResourceType.Consent)
     @JsonKey(unknownEnumValue: R4ResourceType.Consent)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -781,7 +777,7 @@ class Consent with Resource, _$Consent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept scope,
     required List<CodeableConcept> category,
@@ -1064,8 +1060,7 @@ class ConsentProvision with _$ConsentProvision {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-        ConsentProvisionType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
     List<ConsentActor>? actor,
@@ -1232,8 +1227,7 @@ class ConsentData with _$ConsentData {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-        ConsentDataMeaning? meaning,
+    Code? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference reference,
   }) = _ConsentData;
@@ -1377,7 +1371,7 @@ class Provenance with Resource, _$Provenance {
     @Default(R4ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1575,8 +1569,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-        ProvenanceEntityRole? role,
+    Code? role,
     @JsonKey(name: '_role') Element? roleElement,
     required Reference what,
     List<ProvenanceAgent>? agent,

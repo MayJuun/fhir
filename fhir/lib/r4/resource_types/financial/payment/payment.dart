@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'payment.enums.dart';
 part 'payment.freezed.dart';
 part 'payment.g.dart';
 
@@ -111,7 +110,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @Default(R4ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -277,7 +276,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @Default(R4ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -296,8 +295,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     Reference? paymentIssuer,
     Reference? request,
     Reference? requestor,
-    @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-        PaymentReconciliationOutcome? outcome,
+    Code? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
@@ -487,8 +485,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-        PaymentReconciliationProcessNoteType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,

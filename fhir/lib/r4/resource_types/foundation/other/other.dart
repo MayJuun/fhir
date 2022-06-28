@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'other.enums.dart';
 part 'other.freezed.dart';
 part 'other.g.dart';
 
@@ -93,7 +92,7 @@ class Basic with Resource, _$Basic {
     @Default(R4ResourceType.Basic)
     @JsonKey(unknownEnumValue: R4ResourceType.Basic)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -189,7 +188,7 @@ class Binary with Resource, _$Binary {
     @Default(R4ResourceType.Binary)
     @JsonKey(unknownEnumValue: R4ResourceType.Binary)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -285,14 +284,14 @@ class Bundle with Resource, _$Bundle {
     @Default(R4ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Identifier? identifier,
-    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Instant? timestamp,
     @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -552,7 +551,7 @@ class BundleSearch with _$BundleSearch {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
@@ -658,8 +657,7 @@ class BundleRequest with _$BundleRequest {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
-        BundleRequestMethod? method,
+    Code? method,
     @JsonKey(name: '_method') Element? methodElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -881,7 +879,7 @@ class Linkage with Resource, _$Linkage {
     @Default(R4ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -966,7 +964,7 @@ class LinkageItem with _$LinkageItem {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference resource,
   }) = _LinkageItem;
@@ -1114,7 +1112,7 @@ class MessageHeader with Resource, _$MessageHeader {
     @Default(R4ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1409,8 +1407,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
     List<FhirExtension>? modifierExtension,
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
-    @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
-        MessageHeaderResponseCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Reference? details,
   }) = _MessageHeaderResponse;
@@ -1512,7 +1509,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @Default(R4ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1623,11 +1620,9 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
-        OperationOutcomeIssueSeverity? severity,
+    Code? severity,
     @JsonKey(name: '_severity') Element? severityElement,
-    @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
-        OperationOutcomeIssueCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     CodeableConcept? details,
     String? diagnostics,
@@ -1702,7 +1697,7 @@ class Parameters with Resource, _$Parameters {
     @Default(R4ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2122,7 +2117,7 @@ class Subscription with Resource, _$Subscription {
     @Default(R4ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2132,8 +2127,7 @@ class Subscription with Resource, _$Subscription {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-        SubscriptionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<ContactPoint>? contact,
     Instant? end,
@@ -2235,8 +2229,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: SubscriptionChannelType.unknown)
-        SubscriptionChannelType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUrl? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
@@ -2272,6 +2265,741 @@ class SubscriptionChannel with _$SubscriptionChannel {
       return _$SubscriptionChannelFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubscriptionStatus with Resource, _$SubscriptionStatus {
+  SubscriptionStatus._();
+
+  /// [SubscriptionStatus]: The SubscriptionStatus resource describes the state of a Subscription during notifications.
+
+  ///
+  /// [resourceType]: This is a SubscriptionStatus resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [status]: The status of the subscription, which marks the server state for managing the subscription.;
+  ///
+  /// [statusElement] (_status): Extensions for status;
+  ///
+  /// [type]: The type of event being conveyed with this notificaiton.;
+  ///
+  /// [typeElement] (_type): Extensions for type;
+  ///
+  /// [eventsSinceSubscriptionStart]: The total number of actual events which have been generated since the Subscription was created (inclusive of this notification) - regardless of how many have been successfully communicated.  This number is NOT incremented for handshake and heartbeat notifications.;
+  ///
+  /// [eventsSinceSubscriptionStartElement] (_eventsSinceSubscriptionStart): Extensions for eventsSinceSubscriptionStart;
+  ///
+  /// [notificationEvent]: Detailed information about events relevant to this subscription notification.;
+  ///
+  /// [subscription]: The reference to the Subscription which generated this notification.;
+  ///
+  /// [topic]: The reference to the SubscriptionTopic for the Subscription which generated this notification.;
+  ///
+  /// [error]: A record of errors that occurred when the server processed a notification.;
+  factory SubscriptionStatus({
+    @Default(R4ResourceType.SubscriptionStatus) R4ResourceType resourceType,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Integer64? eventsSinceSubscriptionStart,
+    @JsonKey(name: '_eventsSinceSubscriptionStart')
+        Element? eventsSinceSubscriptionStartElement,
+    List<SubscriptionStatusNotificationEvent>? notificationEvent,
+    required Reference subscription,
+    Canonical? topic,
+    List<CodeableConcept>? error,
+  }) = _SubscriptionStatus;
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubscriptionStatus.fromYaml(dynamic yaml) => yaml is String
+      ? SubscriptionStatus.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubscriptionStatus.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionStatus cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubscriptionStatus.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionStatusFromJson(json);
+
+  /// Acts like a constructor, returns a [SubscriptionStatus], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubscriptionStatus.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubscriptionStatusFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubscriptionStatusNotificationEvent
+    with _$SubscriptionStatusNotificationEvent {
+  SubscriptionStatusNotificationEvent._();
+
+  /// [SubscriptionStatusNotificationEvent]: The SubscriptionStatus resource describes the state of a Subscription during notifications.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [eventNumber]: The sequential number of this event in this subscription context.;
+  ///
+  /// [eventNumberElement] (_eventNumber): Extensions for eventNumber;
+  ///
+  /// [timestamp]: The actual time this event occured on the server.;
+  ///
+  /// [timestampElement] (_timestamp): Extensions for timestamp;
+  ///
+  /// [focus]: The focus of this event. While this will usually be a reference to the focus resource of the event, it MAY contain a reference to a non-FHIR object.;
+  ///
+  /// [additionalContext]: Additional context information for this event. Generally, this will contain references to additional resources included with the event (e.g., the Patient relevant to an Encounter), however it MAY refer to non-FHIR objects.;
+  factory SubscriptionStatusNotificationEvent({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Integer64? eventNumber,
+    @JsonKey(name: '_eventNumber') Element? eventNumberElement,
+    Instant? timestamp,
+    @JsonKey(name: '_timestamp') Element? timestampElement,
+    Reference? focus,
+    List<Reference>? additionalContext,
+  }) = _SubscriptionStatusNotificationEvent;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubscriptionStatusNotificationEvent.fromYaml(dynamic yaml) => yaml
+          is String
+      ? SubscriptionStatusNotificationEvent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubscriptionStatusNotificationEvent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionStatusNotificationEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubscriptionStatusNotificationEvent.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubscriptionStatusNotificationEventFromJson(json);
+
+  /// Acts like a constructor, returns a [SubscriptionStatusNotificationEvent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubscriptionStatusNotificationEvent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubscriptionStatusNotificationEventFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubscriptionTopic with Resource, _$SubscriptionTopic {
+  SubscriptionTopic._();
+
+  /// [SubscriptionTopic]: Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
+
+  ///
+  /// [resourceType]: This is a SubscriptionTopic resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [url]: An absolute URI that is used to identify this subscription topic when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this subscription topic is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the subscription topic is stored on different servers.;
+  ///
+  /// [urlElement] (_url): Extensions for url;
+  ///
+  /// [identifier]: Business identifiers assigned to this subscription topic by the performer and/or other systems.  These identifiers remain constant as the resource is updated and propagates from server to server.;
+  ///
+  /// [version]: The identifier that is used to identify this version of the subscription topic when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the Topic author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions are orderable.;
+  ///
+  /// [versionElement] (_version): Extensions for version;
+  ///
+  /// [name]: A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [title]: A short, descriptive, user-friendly title for the SubscriptionTopic, for example, "admission".;
+  ///
+  /// [titleElement] (_title): Extensions for title;
+  ///
+  /// [status]: The current state of the SubscriptionTopic.;
+  ///
+  /// [statusElement] (_status): Extensions for status;
+  ///
+  /// [experimental]: A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.;
+  ///
+  /// [experimentalElement] (_experimental): Extensions for experimental;
+  ///
+  /// [date]: For draft definitions, indicates the date of initial creation.  For active definitions, represents the date of activation.  For withdrawn definitions, indicates the date of withdrawal.;
+  ///
+  /// [dateElement] (_date): Extensions for date;
+  ///
+  /// [publisher]: Helps establish the "authority/credibility" of the SubscriptionTopic.  May also allow for contact.;
+  ///
+  /// [publisherElement] (_publisher): Extensions for publisher;
+  ///
+  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  ///
+  /// [description]: A free text natural language description of the Topic from the consumer's perspective.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching of code system definitions.;
+  ///
+  /// [jurisdiction]: A jurisdiction in which the Topic is intended to be used.;
+  ///
+  /// [purpose]: Explains why this Topic is needed and why it has been designed as it has.;
+  ///
+  /// [purposeElement] (_purpose): Extensions for purpose;
+  ///
+  /// [copyright]: A copyright statement relating to the SubscriptionTopic and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the SubscriptionTopic.;
+  ///
+  /// [copyrightElement] (_copyright): Extensions for copyright;
+  ///
+  /// [derivedFrom]: The canonical URL pointing to another FHIR-defined SubscriptionTopic that is adhered to in whole or in part by this SubscriptionTopic.;
+  ///
+  /// [approvalDate]: The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.;
+  ///
+  /// [approvalDateElement] (_approvalDate): Extensions for approvalDate;
+  ///
+  /// [lastReviewDate]: The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.;
+  ///
+  /// [lastReviewDateElement] (_lastReviewDate): Extensions for lastReviewDate;
+  ///
+  /// [effectivePeriod]: The period during which the SubscriptionTopic content was or is planned to be effective.;
+  ///
+  /// [resourceTrigger]: A definition of a resource-based event that triggers a notification based on the SubscriptionTopic. The criteria may be just a human readable description and/or a full FHIR search string or FHIRPath expression. Multiple triggers are considered OR joined (e.g., a resource update matching ANY of the definitions will trigger a notification).;
+  ///
+  /// [eventTrigger]: Event definition which can be used to trigger the SubscriptionTopic.;
+  ///
+  /// [canFilterBy]: List of properties by which Subscriptions on the SubscriptionTopic can be filtered. May be defined Search Parameters (e.g., Encounter.patient) or parameters defined within this SubscriptionTopic context (e.g., hub.event).;
+  ///
+  /// [notificationShape]: List of properties to describe the shape (e.g., resources) included in notifications from this Subscription Topic.;
+  factory SubscriptionTopic({
+    @Default(R4ResourceType.SubscriptionTopic) R4ResourceType resourceType,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    List<Canonical>? derivedFrom,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<SubscriptionTopicResourceTrigger>? resourceTrigger,
+    List<SubscriptionTopicEventTrigger>? eventTrigger,
+    List<SubscriptionTopicCanFilterBy>? canFilterBy,
+    List<SubscriptionTopicNotificationShape>? notificationShape,
+  }) = _SubscriptionTopic;
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubscriptionTopic.fromYaml(dynamic yaml) => yaml is String
+      ? SubscriptionTopic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubscriptionTopic.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionTopic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubscriptionTopic.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionTopicFromJson(json);
+
+  /// Acts like a constructor, returns a [SubscriptionTopic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubscriptionTopic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubscriptionTopicFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
+  SubscriptionTopicResourceTrigger._();
+
+  /// [SubscriptionTopicResourceTrigger]: Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [description]: The human readable description of this resource trigger for the SubscriptionTopic -  for example, "An Encounter enters the 'in-progress' state".;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [resource]: URL of the Resource that is the type used in this resource trigger.  Relative URLs are relative to the StructureDefinition root of the implemented FHIR version (e.g., http://hl7.org/fhir/StructureDefinition). For example, "Patient" maps to http://hl7.org/fhir/StructureDefinition/Patient.  For more information, see <a href="elementdefinition-definitions.html#ElementDefinition.type.code">ElementDefinition.type.code</a>.;
+  ///
+  /// [resourceElement] (_resource): Extensions for resource;
+  ///
+  /// [supportedInteraction]: The FHIR RESTful interaction which can be used to trigger a notification for the SubscriptionTopic. Multiple values are considered OR joined (e.g., CREATE or UPDATE).;
+  ///
+  /// [supportedInteractionElement] (_supportedInteraction): Extensions for supportedInteraction;
+  ///
+  /// [queryCriteria]: The FHIR query based rules that the server should use to determine when to trigger a notification for this subscription topic.;
+  ///
+  /// [fhirPathCriteria]: The FHIRPath based rules that the server should use to determine when to trigger a notification for this topic.;
+  ///
+  /// [fhirPathCriteriaElement] (_fhirPathCriteria): Extensions for fhirPathCriteria;
+  factory SubscriptionTopicResourceTrigger({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    FhirUri? resource,
+    @JsonKey(name: '_resource') Element? resourceElement,
+    List<Code>? supportedInteraction,
+    @JsonKey(name: '_supportedInteraction')
+        List<Element>? supportedInteractionElement,
+    SubscriptionTopicQueryCriteria? queryCriteria,
+    String? fhirPathCriteria,
+    @JsonKey(name: '_fhirPathCriteria') Element? fhirPathCriteriaElement,
+  }) = _SubscriptionTopicResourceTrigger;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubscriptionTopicResourceTrigger.fromYaml(dynamic yaml) => yaml
+          is String
+      ? SubscriptionTopicResourceTrigger.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubscriptionTopicResourceTrigger.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionTopicResourceTrigger cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubscriptionTopicResourceTrigger.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubscriptionTopicResourceTriggerFromJson(json);
+
+  /// Acts like a constructor, returns a [SubscriptionTopicResourceTrigger], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubscriptionTopicResourceTrigger.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubscriptionTopicResourceTriggerFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
+  SubscriptionTopicQueryCriteria._();
+
+  /// [SubscriptionTopicQueryCriteria]: Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [previous]: The FHIR query based rules are applied to the previous resource state (e.g., state before an update).;
+  ///
+  /// [previousElement] (_previous): Extensions for previous;
+  ///
+  /// [resultForCreate]: For "create" interactions, should the "previous" criteria count as an automatic pass or an automatic fail.;
+  ///
+  /// [resultForCreateElement] (_resultForCreate): Extensions for resultForCreate;
+  ///
+  /// [current]: The FHIR query based rules are applied to the current resource state (e.g., state after an update).;
+  ///
+  /// [currentElement] (_current): Extensions for current;
+  ///
+  /// [resultForDelete]: For "delete" interactions, should the "current" criteria count as an automatic pass or an automatic fail.;
+  ///
+  /// [resultForDeleteElement] (_resultForDelete): Extensions for resultForDelete;
+  ///
+  /// [requireBoth]: If set to true, both current and previous criteria must evaluate true to  trigger a notification for this topic.  Otherwise a notification for this topic will be triggered if either one evaluates to true.;
+  ///
+  /// [requireBothElement] (_requireBoth): Extensions for requireBoth;
+  factory SubscriptionTopicQueryCriteria({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? previous,
+    @JsonKey(name: '_previous') Element? previousElement,
+    Code? resultForCreate,
+    @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
+    String? current,
+    @JsonKey(name: '_current') Element? currentElement,
+    Code? resultForDelete,
+    @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
+    Boolean? requireBoth,
+    @JsonKey(name: '_requireBoth') Element? requireBothElement,
+  }) = _SubscriptionTopicQueryCriteria;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubscriptionTopicQueryCriteria.fromYaml(dynamic yaml) => yaml
+          is String
+      ? SubscriptionTopicQueryCriteria.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubscriptionTopicQueryCriteria.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionTopicQueryCriteria cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubscriptionTopicQueryCriteria.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionTopicQueryCriteriaFromJson(json);
+
+  /// Acts like a constructor, returns a [SubscriptionTopicQueryCriteria], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubscriptionTopicQueryCriteria.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubscriptionTopicQueryCriteriaFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
+  SubscriptionTopicEventTrigger._();
+
+  /// [SubscriptionTopicEventTrigger]: Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [description]: The human readable description of an event to trigger a notification for the SubscriptionTopic - for example, "Patient Admission, as defined in HL7v2 via message ADT^A01". Multiple values are considered OR joined (e.g., matching any single event listed).;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [event]: A well-defined event which can be used to trigger notifications from the SubscriptionTopic.;
+  ///
+  /// [resource]: URL of the Resource that is the focus type used in this event trigger.  Relative URLs are relative to the StructureDefinition root of the implemented FHIR version (e.g., http://hl7.org/fhir/StructureDefinition). For example, "Patient" maps to http://hl7.org/fhir/StructureDefinition/Patient.  For more information, see <a href="elementdefinition-definitions.html#ElementDefinition.type.code">ElementDefinition.type.code</a>.;
+  ///
+  /// [resourceElement] (_resource): Extensions for resource;
+  factory SubscriptionTopicEventTrigger({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required CodeableConcept event,
+    FhirUri? resource,
+    @JsonKey(name: '_resource') Element? resourceElement,
+  }) = _SubscriptionTopicEventTrigger;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubscriptionTopicEventTrigger.fromYaml(dynamic yaml) => yaml is String
+      ? SubscriptionTopicEventTrigger.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubscriptionTopicEventTrigger.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionTopicEventTrigger cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubscriptionTopicEventTrigger.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionTopicEventTriggerFromJson(json);
+
+  /// Acts like a constructor, returns a [SubscriptionTopicEventTrigger], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubscriptionTopicEventTrigger.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubscriptionTopicEventTriggerFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
+  SubscriptionTopicCanFilterBy._();
+
+  /// [SubscriptionTopicCanFilterBy]: Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [description]: Description of how this filtering parameter is intended to be used.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [resource]: URL of the Resource that is the type used in this filter. This is the "focus" of the topic (or one of them if there are more than one). It will be the same, a generality, or a specificity of SubscriptionTopic.resourceTrigger.resource or SubscriptionTopic.eventTrigger.resource when they are present.;
+  ///
+  /// [resourceElement] (_resource): Extensions for resource;
+  ///
+  /// [filterParameter]: Either the canonical URL to a search parameter (like "http://hl7.org/fhir/SearchParameter/encounter-patient") or topic-defined parameter (like "hub.event") which is a label for the filter.;
+  ///
+  /// [filterParameterElement] (_filterParameter): Extensions for filterParameter;
+  ///
+  /// [filterDefinition]: Either the canonical URL to a search parameter (like "http://hl7.org/fhir/SearchParameter/encounter-patient") or the officially-defined URI for a shared filter concept (like "http://example.org/concepts/shared-common-event").;
+  ///
+  /// [filterDefinitionElement] (_filterDefinition): Extensions for filterDefinition;
+  ///
+  /// [modifier]: Allowable operators to apply when determining matches (Search Modifiers).  If the filterParameter is a SearchParameter, this list of modifiers SHALL be a strict subset of the modifiers defined on that SearchParameter.;
+  ///
+  /// [modifierElement] (_modifier): Extensions for modifier;
+  factory SubscriptionTopicCanFilterBy({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    FhirUri? resource,
+    @JsonKey(name: '_resource') Element? resourceElement,
+    String? filterParameter,
+    @JsonKey(name: '_filterParameter') Element? filterParameterElement,
+    FhirUri? filterDefinition,
+    @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
+    List<Code>? modifier,
+    @JsonKey(name: '_modifier') List<Element>? modifierElement,
+  }) = _SubscriptionTopicCanFilterBy;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubscriptionTopicCanFilterBy.fromYaml(dynamic yaml) => yaml is String
+      ? SubscriptionTopicCanFilterBy.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubscriptionTopicCanFilterBy.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionTopicCanFilterBy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubscriptionTopicCanFilterBy.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionTopicCanFilterByFromJson(json);
+
+  /// Acts like a constructor, returns a [SubscriptionTopicCanFilterBy], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubscriptionTopicCanFilterBy.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubscriptionTopicCanFilterByFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubscriptionTopicNotificationShape
+    with _$SubscriptionTopicNotificationShape {
+  SubscriptionTopicNotificationShape._();
+
+  /// [SubscriptionTopicNotificationShape]: Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [resource]: URL of the Resource that is the type used in this shape. This is the "focus" of the topic (or one of them if there are more than one) and the root resource for this shape definition. It will be the same, a generality, or a specificity of SubscriptionTopic.resourceTrigger.resource or SubscriptionTopic.eventTrigger.resource when they are present.;
+  ///
+  /// [resourceElement] (_resource): Extensions for resource;
+  ///
+  /// [include]: Search-style _include directives, rooted in the resource for this shape. Servers SHOULD include resources listed here, if they exist and the user is authorized to receive them.  Clients SHOULD be prepared to receive these additional resources, but SHALL function properly without them.;
+  ///
+  /// [includeElement] (_include): Extensions for include;
+  ///
+  /// [revInclude]: Search-style _revinclude directives, rooted in the resource for this shape. Servers SHOULD include resources listed here, if they exist and the user is authorized to receive them.  Clients SHOULD be prepared to receive these additional resources, but SHALL function properly without them.;
+  ///
+  /// [revIncludeElement] (_revInclude): Extensions for revInclude;
+  factory SubscriptionTopicNotificationShape({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? resource,
+    @JsonKey(name: '_resource') Element? resourceElement,
+    List<String>? include,
+    @JsonKey(name: '_include') List<Element>? includeElement,
+    List<String>? revInclude,
+    @JsonKey(name: '_revInclude') List<Element>? revIncludeElement,
+  }) = _SubscriptionTopicNotificationShape;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubscriptionTopicNotificationShape.fromYaml(dynamic yaml) => yaml
+          is String
+      ? SubscriptionTopicNotificationShape.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubscriptionTopicNotificationShape.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionTopicNotificationShape cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubscriptionTopicNotificationShape.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubscriptionTopicNotificationShapeFromJson(json);
+
+  /// Acts like a constructor, returns a [SubscriptionTopicNotificationShape], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubscriptionTopicNotificationShape.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubscriptionTopicNotificationShapeFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }

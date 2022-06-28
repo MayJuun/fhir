@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'quality_reporting_and_testing.enums.dart';
 part 'quality_reporting_and_testing.freezed.dart';
 part 'quality_reporting_and_testing.g.dart';
 
@@ -283,7 +282,7 @@ class Measure with Resource, _$Measure {
     @Default(R4ResourceType.Measure)
     @JsonKey(unknownEnumValue: R4ResourceType.Measure)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -304,7 +303,7 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_title') Element? titleElement,
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @JsonKey(unknownEnumValue: MeasureStatus.unknown) MeasureStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -929,7 +928,7 @@ class MeasureReport with Resource, _$MeasureReport {
     @Default(R4ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -940,11 +939,9 @@ class MeasureReport with Resource, _$MeasureReport {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-        MeasureReportStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-        MeasureReportType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Canonical measure,
     Reference? subject,
@@ -1578,7 +1575,7 @@ class TestReport with Resource, _$TestReport {
     @Default(R4ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1591,12 +1588,10 @@ class TestReport with Resource, _$TestReport {
     Identifier? identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-        TestReportStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference testScript,
-    @JsonKey(unknownEnumValue: TestReportResult.unknown)
-        TestReportResult? result,
+    Code? result,
     @JsonKey(name: '_result') Element? resultElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
@@ -1684,8 +1679,7 @@ class TestReportParticipant with _$TestReportParticipant {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-        TestReportParticipantType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -1914,8 +1908,7 @@ class TestReportOperation with _$TestReportOperation {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-        TestReportOperationResult? result,
+    Code? result,
     @JsonKey(name: '_result') Element? resultElement,
     Markdown? message,
     @JsonKey(name: '_message') Element? messageElement,
@@ -2000,8 +1993,7 @@ class TestReportAssert with _$TestReportAssert {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-        TestReportAssertResult? result,
+    Code? result,
     @JsonKey(name: '_result') Element? resultElement,
     Markdown? message,
     @JsonKey(name: '_message') Element? messageElement,
@@ -2510,7 +2502,7 @@ class TestScript with Resource, _$TestScript {
     @Default(R4ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2529,8 +2521,7 @@ class TestScript with Resource, _$TestScript {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-        TestScriptStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -3501,8 +3492,7 @@ class TestScriptOperation with _$TestScriptOperation {
     @JsonKey(name: '_destination') Element? destinationElement,
     Boolean? encodeRequestUrl,
     @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-    @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-        TestScriptOperationMethod? method,
+    Code? method,
     @JsonKey(name: '_method') Element? methodElement,
     Integer? origin,
     @JsonKey(name: '_origin') Element? originElement,
@@ -3782,8 +3772,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_label') Element? labelElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-        TestScriptAssertDirection? direction,
+    Code? direction,
     @JsonKey(name: '_direction') Element? directionElement,
     String? compareToSourceId,
     @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
@@ -3802,20 +3791,17 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_minimumId') Element? minimumIdElement,
     Boolean? navigationLinks,
     @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
-    @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-        TestScriptAssertOperator? operator_,
+    @JsonKey(name: 'operator') Code? operator_,
     @JsonKey(name: '_operator') Element? operatorElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-        TestScriptAssertRequestMethod? requestMethod,
+    Code? requestMethod,
     @JsonKey(name: '_requestMethod') Element? requestMethodElement,
     String? requestURL,
     @JsonKey(name: '_requestURL') Element? requestURLElement,
     Code? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
-    @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-        TestScriptAssertResponse? response,
+    Code? response,
     @JsonKey(name: '_response') Element? responseElement,
     String? responseCode,
     @JsonKey(name: '_responseCode') Element? responseCodeElement,

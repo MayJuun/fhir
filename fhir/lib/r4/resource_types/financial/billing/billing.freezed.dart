@@ -22,7 +22,7 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
 mixin _$Claim {
   @JsonKey(unknownEnumValue: R4ResourceType.Claim)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -42,8 +42,7 @@ mixin _$Claim {
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
   CodeableConcept? get subType => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ClaimUse.unknown)
-  ClaimUse? get use => throw _privateConstructorUsedError;
+  Code? get use => throw _privateConstructorUsedError;
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
@@ -84,7 +83,7 @@ abstract class $ClaimCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -103,8 +102,7 @@ abstract class $ClaimCopyWith<$Res> {
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      @JsonKey(unknownEnumValue: ClaimUse.unknown)
-          ClaimUse? use,
+      Code? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -217,7 +215,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -277,7 +275,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       use: use == freezed
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as ClaimUse?,
+              as Code?,
       useElement: useElement == freezed
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -623,7 +621,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -642,8 +640,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      @JsonKey(unknownEnumValue: ClaimUse.unknown)
-          ClaimUse? use,
+      Code? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -780,7 +777,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -840,7 +837,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       use: use == freezed
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as ClaimUse?,
+              as Code?,
       useElement: useElement == freezed
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -966,8 +963,7 @@ class _$_Claim extends _Claim {
           this.statusElement,
       required this.type,
       this.subType,
-      @JsonKey(unknownEnumValue: ClaimUse.unknown)
-          this.use,
+      this.use,
       @JsonKey(name: '_use')
           this.useElement,
       required this.patient,
@@ -1014,7 +1010,7 @@ class _$_Claim extends _Claim {
   @JsonKey(unknownEnumValue: R4ResourceType.Claim)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -1076,8 +1072,7 @@ class _$_Claim extends _Claim {
   @override
   final CodeableConcept? subType;
   @override
-  @JsonKey(unknownEnumValue: ClaimUse.unknown)
-  final ClaimUse? use;
+  final Code? use;
   @override
   @JsonKey(name: '_use')
   final Element? useElement;
@@ -1310,7 +1305,7 @@ abstract class _Claim extends Claim {
   factory _Claim(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1329,8 +1324,7 @@ abstract class _Claim extends Claim {
           final Element? statusElement,
       required final CodeableConcept type,
       final CodeableConcept? subType,
-      @JsonKey(unknownEnumValue: ClaimUse.unknown)
-          final ClaimUse? use,
+      final Code? use,
       @JsonKey(name: '_use')
           final Element? useElement,
       required final Reference patient,
@@ -1365,7 +1359,7 @@ abstract class _Claim extends Claim {
   @JsonKey(unknownEnumValue: R4ResourceType.Claim)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -1400,8 +1394,7 @@ abstract class _Claim extends Claim {
   @override
   CodeableConcept? get subType => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ClaimUse.unknown)
-  ClaimUse? get use => throw _privateConstructorUsedError;
+  Code? get use => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
@@ -7528,7 +7521,7 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
 mixin _$ClaimResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -7600,7 +7593,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7741,7 +7734,7 @@ class _$ClaimResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8154,7 +8147,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8319,7 +8312,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8571,7 +8564,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -8892,7 +8885,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   factory _ClaimResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8953,7 +8946,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -13497,8 +13490,7 @@ mixin _$ClaimResponseProcessNote {
   PositiveInt? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-  ClaimResponseProcessNoteType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   String? get text => throw _privateConstructorUsedError;
@@ -13519,19 +13511,14 @@ abstract class $ClaimResponseProcessNoteCopyWith<$Res> {
       _$ClaimResponseProcessNoteCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number')
-          Element? numberElement,
-      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-          ClaimResponseProcessNoteType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_number') Element? numberElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? text,
-      @JsonKey(name: '_text')
-          Element? textElement,
+      @JsonKey(name: '_text') Element? textElement,
       CodeableConcept? language});
 
   $ElementCopyWith<$Res>? get numberElement;
@@ -13586,7 +13573,7 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as ClaimResponseProcessNoteType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -13661,19 +13648,14 @@ abstract class _$$_ClaimResponseProcessNoteCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number')
-          Element? numberElement,
-      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-          ClaimResponseProcessNoteType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_number') Element? numberElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? text,
-      @JsonKey(name: '_text')
-          Element? textElement,
+      @JsonKey(name: '_text') Element? textElement,
       CodeableConcept? language});
 
   @override
@@ -13735,7 +13717,7 @@ class __$$_ClaimResponseProcessNoteCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as ClaimResponseProcessNoteType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -13761,19 +13743,14 @@ class __$$_ClaimResponseProcessNoteCopyWithImpl<$Res>
 class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
   _$_ClaimResponseProcessNote(
       {this.id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.number,
-      @JsonKey(name: '_number')
-          this.numberElement,
-      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_number') this.numberElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.text,
-      @JsonKey(name: '_text')
-          this.textElement,
+      @JsonKey(name: '_text') this.textElement,
       this.language})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -13809,8 +13786,7 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
   @JsonKey(name: '_number')
   final Element? numberElement;
   @override
-  @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-  final ClaimResponseProcessNoteType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -13879,19 +13855,14 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
 abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   factory _ClaimResponseProcessNote(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final PositiveInt? number,
-      @JsonKey(name: '_number')
-          final Element? numberElement,
-      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-          final ClaimResponseProcessNoteType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_number') final Element? numberElement,
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final String? text,
-      @JsonKey(name: '_text')
-          final Element? textElement,
+      @JsonKey(name: '_text') final Element? textElement,
       final CodeableConcept? language}) = _$_ClaimResponseProcessNote;
   _ClaimResponseProcessNote._() : super._();
 
@@ -13912,8 +13883,7 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-  ClaimResponseProcessNoteType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -14832,7 +14802,7 @@ Invoice _$InvoiceFromJson(Map<String, dynamic> json) {
 mixin _$Invoice {
   @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -14847,8 +14817,7 @@ mixin _$Invoice {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
-  InvoiceStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   String? get cancelledReason => throw _privateConstructorUsedError;
@@ -14886,7 +14855,7 @@ abstract class $InvoiceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -14900,8 +14869,7 @@ abstract class $InvoiceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
-          InvoiceStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       String? cancelledReason,
@@ -14992,7 +14960,7 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -15036,7 +15004,7 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as InvoiceStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15287,7 +15255,7 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)
           R4ResourceType resourceType,
-      Id? id,
+      String? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15301,8 +15269,7 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
-          InvoiceStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       String? cancelledReason,
@@ -15409,7 +15376,7 @@ class __$$_InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as String?,
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -15453,7 +15420,7 @@ class __$$_InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as InvoiceStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15550,8 +15517,7 @@ class _$_Invoice extends _Invoice {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.cancelledReason,
@@ -15591,7 +15557,7 @@ class _$_Invoice extends _Invoice {
   @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
   final R4ResourceType resourceType;
   @override
-  final Id? id;
+  final String? id;
   @override
   final Meta? meta;
   @override
@@ -15644,8 +15610,7 @@ class _$_Invoice extends _Invoice {
   }
 
   @override
-  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
-  final InvoiceStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -15826,7 +15791,7 @@ abstract class _Invoice extends Invoice {
   factory _Invoice(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)
           final R4ResourceType resourceType,
-      final Id? id,
+      final String? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15840,8 +15805,7 @@ abstract class _Invoice extends Invoice {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
-          final InvoiceStatus? status,
+      final Code? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final String? cancelledReason,
@@ -15872,7 +15836,7 @@ abstract class _Invoice extends Invoice {
   @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   Meta? get meta => throw _privateConstructorUsedError;
   @override
@@ -15898,8 +15862,7 @@ abstract class _Invoice extends Invoice {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
-  InvoiceStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -16605,8 +16568,7 @@ mixin _$InvoicePriceComponent {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-  InvoicePriceComponentType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
@@ -16628,17 +16590,13 @@ abstract class $InvoicePriceComponentCopyWith<$Res> {
       _$InvoicePriceComponentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-          InvoicePriceComponentType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? code,
       Decimal? factor,
-      @JsonKey(name: '_factor')
-          Element? factorElement,
+      @JsonKey(name: '_factor') Element? factorElement,
       Money? amount});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -16684,7 +16642,7 @@ class _$InvoicePriceComponentCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as InvoicePriceComponentType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -16762,17 +16720,13 @@ abstract class _$$_InvoicePriceComponentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-          InvoicePriceComponentType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? code,
       Decimal? factor,
-      @JsonKey(name: '_factor')
-          Element? factorElement,
+      @JsonKey(name: '_factor') Element? factorElement,
       Money? amount});
 
   @override
@@ -16825,7 +16779,7 @@ class __$$_InvoicePriceComponentCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as InvoicePriceComponentType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -16857,7 +16811,7 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.code,
       this.factor,
@@ -16892,8 +16846,7 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
   }
 
   @override
-  @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-  final InvoicePriceComponentType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -16961,17 +16914,13 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
 abstract class _InvoicePriceComponent extends InvoicePriceComponent {
   factory _InvoicePriceComponent(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-          final InvoicePriceComponentType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final CodeableConcept? code,
       final Decimal? factor,
-      @JsonKey(name: '_factor')
-          final Element? factorElement,
+      @JsonKey(name: '_factor') final Element? factorElement,
       final Money? amount}) = _$_InvoicePriceComponent;
   _InvoicePriceComponent._() : super._();
 
@@ -16987,8 +16936,7 @@ abstract class _InvoicePriceComponent extends InvoicePriceComponent {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-  InvoicePriceComponentType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
