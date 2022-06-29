@@ -63,9 +63,7 @@
       }
     ]
   },
-  "timingTiming": {
-    "event": [
-      null
+  "timingTiming": { "event": [
     ],
     "_event": [
       {

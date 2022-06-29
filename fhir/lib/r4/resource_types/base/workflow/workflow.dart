@@ -304,7 +304,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
     Reference? actor,
-    Code? required_,
+    @JsonKey(name: 'required') Code? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,

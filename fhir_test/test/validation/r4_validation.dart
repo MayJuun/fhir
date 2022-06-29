@@ -27,6 +27,8 @@ Future<List<String>> r4ValidationYaml() async {
     var resource = r4.Resource.fromYaml(tempResource.toYaml());
     if (!DeepCollectionEquality()
         .equals(resource.toJson(), jsonDecode(contents))) {
+      print(jsonEncode(resource.toJson()));
+      print(contents);
       string.add(file.path);
     }
     if (!DeepCollectionEquality()

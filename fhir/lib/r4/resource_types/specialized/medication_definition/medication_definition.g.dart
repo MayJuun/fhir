@@ -2251,7 +2251,8 @@ _$_PackagedProductDefinitionShelfLifeStorage
           type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
           periodDuration: json['periodDuration'] == null
               ? null
-              : Duration(microseconds: json['periodDuration'] as int),
+              : FhirDuration.fromJson(
+                  json['periodDuration'] as Map<String, dynamic>),
           periodString: json['periodString'] as String?,
           periodStringElement: json['_periodString'] == null
               ? null
@@ -2279,7 +2280,7 @@ Map<String, dynamic> _$$_PackagedProductDefinitionShelfLifeStorageToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
   val['type'] = instance.type.toJson();
-  writeNotNull('periodDuration', instance.periodDuration?.inMicroseconds);
+  writeNotNull('periodDuration', instance.periodDuration?.toJson());
   writeNotNull('periodString', instance.periodString);
   writeNotNull('_periodString', instance.periodStringElement?.toJson());
   writeNotNull('specialPrecautionsForStorage',

@@ -17732,7 +17732,9 @@ mixin _$Specimen {
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   Identifier? get accessionIdentifier => throw _privateConstructorUsedError;
-  Code? get statusElement => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
   FhirDateTime? get receivedTime => throw _privateConstructorUsedError;
@@ -17775,7 +17777,9 @@ abstract class $SpecimenCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
-      Code? statusElement,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
       FhirDateTime? receivedTime,
@@ -17794,6 +17798,7 @@ abstract class $SpecimenCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $IdentifierCopyWith<$Res>? get accessionIdentifier;
+  $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get type;
   $ReferenceCopyWith<$Res>? get subject;
   $ElementCopyWith<$Res>? get receivedTimeElement;
@@ -17823,6 +17828,7 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
     Object? accessionIdentifier = freezed,
+    Object? status = freezed,
     Object? statusElement = freezed,
     Object? type = freezed,
     Object? subject = freezed,
@@ -17889,10 +17895,14 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
           ? _value.accessionIdentifier
           : accessionIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as Element?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -17996,6 +18006,17 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
   }
 
   @override
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
@@ -18064,7 +18085,9 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
-      Code? statusElement,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
       FhirDateTime? receivedTime,
@@ -18088,6 +18111,8 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   @override
   $IdentifierCopyWith<$Res>? get accessionIdentifier;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
   @override
   $CodeableConceptCopyWith<$Res>? get type;
   @override
@@ -18123,6 +18148,7 @@ class __$$_SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
     Object? accessionIdentifier = freezed,
+    Object? status = freezed,
     Object? statusElement = freezed,
     Object? type = freezed,
     Object? subject = freezed,
@@ -18189,10 +18215,14 @@ class __$$_SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
           ? _value.accessionIdentifier
           : accessionIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as Element?,
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -18262,7 +18292,9 @@ class _$_Specimen extends _Specimen {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.accessionIdentifier,
-      this.statusElement,
+      this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
       this.subject,
       this.receivedTime,
@@ -18349,7 +18381,10 @@ class _$_Specimen extends _Specimen {
   @override
   final Identifier? accessionIdentifier;
   @override
-  final Code? statusElement;
+  final Code? status;
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
   @override
   final CodeableConcept? type;
   @override
@@ -18417,7 +18452,7 @@ class _$_Specimen extends _Specimen {
 
   @override
   String toString() {
-    return 'Specimen(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, accessionIdentifier: $accessionIdentifier, statusElement: $statusElement, type: $type, subject: $subject, receivedTime: $receivedTime, receivedTimeElement: $receivedTimeElement, parent: $parent, request: $request, collection: $collection, processing: $processing, container: $container, condition: $condition, note: $note)';
+    return 'Specimen(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, accessionIdentifier: $accessionIdentifier, status: $status, statusElement: $statusElement, type: $type, subject: $subject, receivedTime: $receivedTime, receivedTimeElement: $receivedTimeElement, parent: $parent, request: $request, collection: $collection, processing: $processing, container: $container, condition: $condition, note: $note)';
   }
 
   @override
@@ -18447,6 +18482,7 @@ class _$_Specimen extends _Specimen {
                 .equals(other._identifier, _identifier) &&
             const DeepCollectionEquality()
                 .equals(other.accessionIdentifier, accessionIdentifier) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
@@ -18485,6 +18521,7 @@ class _$_Specimen extends _Specimen {
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(accessionIdentifier),
+        const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(subject),
@@ -18529,7 +18566,9 @@ abstract class _Specimen extends Specimen {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Identifier? accessionIdentifier,
-      final Code? statusElement,
+      final Code? status,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
       final CodeableConcept? type,
       final Reference? subject,
       final FhirDateTime? receivedTime,
@@ -18578,7 +18617,10 @@ abstract class _Specimen extends Specimen {
   @override
   Identifier? get accessionIdentifier => throw _privateConstructorUsedError;
   @override
-  Code? get statusElement => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get type => throw _privateConstructorUsedError;
   @override

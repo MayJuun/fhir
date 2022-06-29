@@ -2485,7 +2485,7 @@ class PackagedProductDefinitionShelfLifeStorage
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     required CodeableConcept type,
-    Duration? periodDuration,
+    FhirDuration? periodDuration,
     String? periodString,
     @JsonKey(name: '_periodString') Element? periodStringElement,
     List<CodeableConcept>? specialPrecautionsForStorage,

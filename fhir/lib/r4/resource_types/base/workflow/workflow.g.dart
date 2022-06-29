@@ -355,7 +355,7 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
           ? null
           : Reference.fromJson(json['actor'] as Map<String, dynamic>),
       required_:
-          json['required_'] == null ? null : Code.fromJson(json['required_']),
+          json['required'] == null ? null : Code.fromJson(json['required']),
       requiredElement: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
@@ -385,7 +385,7 @@ Map<String, dynamic> _$$_AppointmentParticipantToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('actor', instance.actor?.toJson());
-  writeNotNull('required_', instance.required_?.toJson());
+  writeNotNull('required', instance.required_?.toJson());
   writeNotNull('_required', instance.requiredElement?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());

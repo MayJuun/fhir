@@ -1477,6 +1477,7 @@ mixin _$AppointmentParticipant {
       throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   Reference? get actor => throw _privateConstructorUsedError;
+  @JsonKey(name: 'required')
   Code? get required_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
@@ -1502,7 +1503,7 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
-      Code? required_,
+      @JsonKey(name: 'required') Code? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
@@ -1638,7 +1639,7 @@ abstract class _$$_AppointmentParticipantCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
-      Code? required_,
+      @JsonKey(name: 'required') Code? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
@@ -1733,7 +1734,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? type,
       this.actor,
-      this.required_,
+      @JsonKey(name: 'required') this.required_,
       @JsonKey(name: '_required') this.requiredElement,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
@@ -1779,6 +1780,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   @override
   final Reference? actor;
   @override
+  @JsonKey(name: 'required')
   final Code? required_;
   @override
   @JsonKey(name: '_required')
@@ -1851,7 +1853,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? type,
       final Reference? actor,
-      final Code? required_,
+      @JsonKey(name: 'required') final Code? required_,
       @JsonKey(name: '_required') final Element? requiredElement,
       final Code? status,
       @JsonKey(name: '_status') final Element? statusElement,
@@ -1874,6 +1876,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @override
   Reference? get actor => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'required')
   Code? get required_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_required')

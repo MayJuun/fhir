@@ -11400,6 +11400,7 @@ mixin _$Evidence {
       throw _privateConstructorUsedError;
   CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
   CodeableConcept? get studyType => throw _privateConstructorUsedError;
+  List<EvidenceStatistic>? get statistic => throw _privateConstructorUsedError;
   List<EvidenceCertainty>? get certainty => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -11474,6 +11475,7 @@ abstract class $EvidenceCopyWith<$Res> {
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
+      List<EvidenceStatistic>? statistic,
       List<EvidenceCertainty>? certainty});
 
   $MetaCopyWith<$Res>? get meta;
@@ -11552,6 +11554,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
     Object? variableDefinition = freezed,
     Object? synthesisType = freezed,
     Object? studyType = freezed,
+    Object? statistic = freezed,
     Object? certainty = freezed,
   }) {
     return _then(_value.copyWith(
@@ -11739,6 +11742,10 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           ? _value.studyType
           : studyType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      statistic: statistic == freezed
+          ? _value.statistic
+          : statistic // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceStatistic>?,
       certainty: certainty == freezed
           ? _value.certainty
           : certainty // ignore: cast_nullable_to_non_nullable
@@ -12013,6 +12020,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
+      List<EvidenceStatistic>? statistic,
       List<EvidenceCertainty>? certainty});
 
   @override
@@ -12111,6 +12119,7 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
     Object? variableDefinition = freezed,
     Object? synthesisType = freezed,
     Object? studyType = freezed,
+    Object? statistic = freezed,
     Object? certainty = freezed,
   }) {
     return _then(_$_Evidence(
@@ -12298,6 +12307,10 @@ class __$$_EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           ? _value.studyType
           : studyType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      statistic: statistic == freezed
+          ? _value._statistic
+          : statistic // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceStatistic>?,
       certainty: certainty == freezed
           ? _value._certainty
           : certainty // ignore: cast_nullable_to_non_nullable
@@ -12371,6 +12384,7 @@ class _$_Evidence extends _Evidence {
       required final List<EvidenceVariableDefinition> variableDefinition,
       this.synthesisType,
       this.studyType,
+      final List<EvidenceStatistic>? statistic,
       final List<EvidenceCertainty>? certainty})
       : _contained = contained,
         _extension_ = extension_,
@@ -12385,6 +12399,7 @@ class _$_Evidence extends _Evidence {
         _relatedArtifact = relatedArtifact,
         _note = note,
         _variableDefinition = variableDefinition,
+        _statistic = statistic,
         _certainty = certainty,
         super._();
 
@@ -12587,6 +12602,15 @@ class _$_Evidence extends _Evidence {
   final CodeableConcept? synthesisType;
   @override
   final CodeableConcept? studyType;
+  final List<EvidenceStatistic>? _statistic;
+  @override
+  List<EvidenceStatistic>? get statistic {
+    final value = _statistic;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<EvidenceCertainty>? _certainty;
   @override
   List<EvidenceCertainty>? get certainty {
@@ -12598,7 +12622,7 @@ class _$_Evidence extends _Evidence {
 
   @override
   String toString() {
-    return 'Evidence(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, title: $title, titleElement: $titleElement, citeAsReference: $citeAsReference, citAsMarkdown: $citAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, useContext: $useContext, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, description: $description, descriptionElement: $descriptionElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyType: $studyType, certainty: $certainty)';
+    return 'Evidence(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, title: $title, titleElement: $titleElement, citeAsReference: $citeAsReference, citAsMarkdown: $citAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, useContext: $useContext, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, description: $description, descriptionElement: $descriptionElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyType: $studyType, statistic: $statistic, certainty: $certainty)';
   }
 
   @override
@@ -12681,6 +12705,8 @@ class _$_Evidence extends _Evidence {
                 .equals(other.synthesisType, synthesisType) &&
             const DeepCollectionEquality().equals(other.studyType, studyType) &&
             const DeepCollectionEquality()
+                .equals(other._statistic, _statistic) &&
+            const DeepCollectionEquality()
                 .equals(other._certainty, _certainty));
   }
 
@@ -12734,6 +12760,7 @@ class _$_Evidence extends _Evidence {
         const DeepCollectionEquality().hash(_variableDefinition),
         const DeepCollectionEquality().hash(synthesisType),
         const DeepCollectionEquality().hash(studyType),
+        const DeepCollectionEquality().hash(_statistic),
         const DeepCollectionEquality().hash(_certainty)
       ]);
 
@@ -12811,6 +12838,7 @@ abstract class _Evidence extends Evidence {
       required final List<EvidenceVariableDefinition> variableDefinition,
       final CodeableConcept? synthesisType,
       final CodeableConcept? studyType,
+      final List<EvidenceStatistic>? statistic,
       final List<EvidenceCertainty>? certainty}) = _$_Evidence;
   _Evidence._() : super._();
 
@@ -12926,6 +12954,8 @@ abstract class _Evidence extends Evidence {
   CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get studyType => throw _privateConstructorUsedError;
+  @override
+  List<EvidenceStatistic>? get statistic => throw _privateConstructorUsedError;
   @override
   List<EvidenceCertainty>? get certainty => throw _privateConstructorUsedError;
   @override

@@ -2592,6 +2592,7 @@ class Evidence with Resource, _$Evidence {
     required List<EvidenceVariableDefinition> variableDefinition,
     CodeableConcept? synthesisType,
     CodeableConcept? studyType,
+    List<EvidenceStatistic>? statistic,
     List<EvidenceCertainty>? certainty,
   }) = _Evidence;
 

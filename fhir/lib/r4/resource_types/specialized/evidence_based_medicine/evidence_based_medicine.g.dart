@@ -1747,6 +1747,9 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
       studyType: json['studyType'] == null
           ? null
           : CodeableConcept.fromJson(json['studyType'] as Map<String, dynamic>),
+      statistic: (json['statistic'] as List<dynamic>?)
+          ?.map((e) => EvidenceStatistic.fromJson(e as Map<String, dynamic>))
+          .toList(),
       certainty: (json['certainty'] as List<dynamic>?)
           ?.map((e) => EvidenceCertainty.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1815,6 +1818,8 @@ Map<String, dynamic> _$$_EvidenceToJson(_$_Evidence instance) {
       instance.variableDefinition.map((e) => e.toJson()).toList();
   writeNotNull('synthesisType', instance.synthesisType?.toJson());
   writeNotNull('studyType', instance.studyType?.toJson());
+  writeNotNull(
+      'statistic', instance.statistic?.map((e) => e.toJson()).toList());
   writeNotNull(
       'certainty', instance.certainty?.map((e) => e.toJson()).toList());
   return val;

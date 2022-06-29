@@ -15293,7 +15293,7 @@ mixin _$PackagedProductDefinitionShelfLifeStorage {
       throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
-  Duration? get periodDuration => throw _privateConstructorUsedError;
+  FhirDuration? get periodDuration => throw _privateConstructorUsedError;
   String? get periodString => throw _privateConstructorUsedError;
   @JsonKey(name: '_periodString')
   Element? get periodStringElement => throw _privateConstructorUsedError;
@@ -15319,13 +15319,14 @@ abstract class $PackagedProductDefinitionShelfLifeStorageCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       CodeableConcept type,
-      Duration? periodDuration,
+      FhirDuration? periodDuration,
       String? periodString,
       @JsonKey(name: '_periodString') Element? periodStringElement,
       List<CodeableConcept>? specialPrecautionsForStorage});
 
   $IdentifierCopyWith<$Res>? get identifier;
   $CodeableConceptCopyWith<$Res> get type;
+  $FhirDurationCopyWith<$Res>? get periodDuration;
   $ElementCopyWith<$Res>? get periodStringElement;
 }
 
@@ -15375,7 +15376,7 @@ class _$PackagedProductDefinitionShelfLifeStorageCopyWithImpl<$Res>
       periodDuration: periodDuration == freezed
           ? _value.periodDuration
           : periodDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       periodString: periodString == freezed
           ? _value.periodString
           : periodString // ignore: cast_nullable_to_non_nullable
@@ -15410,6 +15411,17 @@ class _$PackagedProductDefinitionShelfLifeStorageCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get periodDuration {
+    if (_value.periodDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.periodDuration!, (value) {
+      return _then(_value.copyWith(periodDuration: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get periodStringElement {
     if (_value.periodStringElement == null) {
       return null;
@@ -15435,7 +15447,7 @@ abstract class _$$_PackagedProductDefinitionShelfLifeStorageCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       CodeableConcept type,
-      Duration? periodDuration,
+      FhirDuration? periodDuration,
       String? periodString,
       @JsonKey(name: '_periodString') Element? periodStringElement,
       List<CodeableConcept>? specialPrecautionsForStorage});
@@ -15444,6 +15456,8 @@ abstract class _$$_PackagedProductDefinitionShelfLifeStorageCopyWith<$Res>
   $IdentifierCopyWith<$Res>? get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $FhirDurationCopyWith<$Res>? get periodDuration;
   @override
   $ElementCopyWith<$Res>? get periodStringElement;
 }
@@ -15498,7 +15512,7 @@ class __$$_PackagedProductDefinitionShelfLifeStorageCopyWithImpl<$Res>
       periodDuration: periodDuration == freezed
           ? _value.periodDuration
           : periodDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       periodString: periodString == freezed
           ? _value.periodString
           : periodString // ignore: cast_nullable_to_non_nullable
@@ -15564,7 +15578,7 @@ class _$_PackagedProductDefinitionShelfLifeStorage
   @override
   final CodeableConcept type;
   @override
-  final Duration? periodDuration;
+  final FhirDuration? periodDuration;
   @override
   final String? periodString;
   @override
@@ -15644,7 +15658,7 @@ abstract class _PackagedProductDefinitionShelfLifeStorage
           final List<FhirExtension>? modifierExtension,
           final Identifier? identifier,
           required final CodeableConcept type,
-          final Duration? periodDuration,
+          final FhirDuration? periodDuration,
           final String? periodString,
           @JsonKey(name: '_periodString') final Element? periodStringElement,
           final List<CodeableConcept>? specialPrecautionsForStorage}) =
@@ -15668,7 +15682,7 @@ abstract class _PackagedProductDefinitionShelfLifeStorage
   @override
   CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Duration? get periodDuration => throw _privateConstructorUsedError;
+  FhirDuration? get periodDuration => throw _privateConstructorUsedError;
   @override
   String? get periodString => throw _privateConstructorUsedError;
   @override
