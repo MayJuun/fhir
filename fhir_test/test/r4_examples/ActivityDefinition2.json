@@ -209,8 +209,7 @@
         ],
         "text": "Referral to service (procedure)"
     },
-    "timingTiming": { "event": [
-        ],
+    "timingTiming": { 
         "_event": [
             {
                 "extension": [
