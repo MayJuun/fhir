@@ -1110,9 +1110,6 @@ _$_NutritionProduct _$$_NutritionProductFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null
-          ? null
-          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
       status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
@@ -1120,6 +1117,9 @@ _$_NutritionProduct _$$_NutritionProductFromJson(Map<String, dynamic> json) =>
       category: (json['category'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
       manufacturer: (json['manufacturer'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1134,7 +1134,7 @@ _$_NutritionProduct _$$_NutritionProductFromJson(Map<String, dynamic> json) =>
       knownAllergen: (json['knownAllergen'] as List<dynamic>?)
           ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      characteristic: (json['characteristic'] as List<dynamic>?)
+      productCharacteristic: (json['productCharacteristic'] as List<dynamic>?)
           ?.map((e) => NutritionProductCharacteristic.fromJson(
               e as Map<String, dynamic>))
           .toList(),
@@ -1171,10 +1171,10 @@ Map<String, dynamic> _$$_NutritionProductToJson(_$_NutritionProduct instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull(
       'manufacturer', instance.manufacturer?.map((e) => e.toJson()).toList());
   writeNotNull('nutrient', instance.nutrient?.map((e) => e.toJson()).toList());
@@ -1182,8 +1182,8 @@ Map<String, dynamic> _$$_NutritionProductToJson(_$_NutritionProduct instance) {
       'ingredient', instance.ingredient?.map((e) => e.toJson()).toList());
   writeNotNull(
       'knownAllergen', instance.knownAllergen?.map((e) => e.toJson()).toList());
-  writeNotNull('characteristic',
-      instance.characteristic?.map((e) => e.toJson()).toList());
+  writeNotNull('productCharacteristic',
+      instance.productCharacteristic?.map((e) => e.toJson()).toList());
   writeNotNull('instance', instance.instance?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;

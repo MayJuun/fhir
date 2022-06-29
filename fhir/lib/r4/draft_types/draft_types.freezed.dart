@@ -410,8 +410,8 @@ mixin _$ProductShelfLife {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
-  CodeableConcept get type => throw _privateConstructorUsedError;
-  Quantity get period => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Quantity? get period => throw _privateConstructorUsedError;
   List<CodeableConcept>? get specialPrecautionsForStorage =>
       throw _privateConstructorUsedError;
 
@@ -431,13 +431,13 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      CodeableConcept type,
-      Quantity period,
+      CodeableConcept? type,
+      Quantity? period,
       List<CodeableConcept>? specialPrecautionsForStorage});
 
   $IdentifierCopyWith<$Res>? get identifier;
-  $CodeableConceptCopyWith<$Res> get type;
-  $QuantityCopyWith<$Res> get period;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $QuantityCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -479,11 +479,11 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+              as CodeableConcept?,
       period: period == freezed
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Quantity,
+              as Quantity?,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
           : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
@@ -503,15 +503,23 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get type {
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get period {
-    return $QuantityCopyWith<$Res>(_value.period, (value) {
+  $QuantityCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.period!, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -529,16 +537,16 @@ abstract class _$$_ProductShelfLifeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      CodeableConcept type,
-      Quantity period,
+      CodeableConcept? type,
+      Quantity? period,
       List<CodeableConcept>? specialPrecautionsForStorage});
 
   @override
   $IdentifierCopyWith<$Res>? get identifier;
   @override
-  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res>? get type;
   @override
-  $QuantityCopyWith<$Res> get period;
+  $QuantityCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -582,11 +590,11 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+              as CodeableConcept?,
       period: period == freezed
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Quantity,
+              as Quantity?,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value._specialPrecautionsForStorage
           : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
@@ -603,8 +611,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.identifier,
-      required this.type,
-      required this.period,
+      this.type,
+      this.period,
       final List<CodeableConcept>? specialPrecautionsForStorage})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -638,9 +646,9 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   @override
   final Identifier? identifier;
   @override
-  final CodeableConcept type;
+  final CodeableConcept? type;
   @override
-  final Quantity period;
+  final Quantity? period;
   final List<CodeableConcept>? _specialPrecautionsForStorage;
   @override
   List<CodeableConcept>? get specialPrecautionsForStorage {
@@ -703,8 +711,8 @@ abstract class _ProductShelfLife extends ProductShelfLife {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final Identifier? identifier,
-          required final CodeableConcept type,
-          required final Quantity period,
+          final CodeableConcept? type,
+          final Quantity? period,
           final List<CodeableConcept>? specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
   _ProductShelfLife._() : super._();
@@ -723,9 +731,9 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   @override
   Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Quantity get period => throw _privateConstructorUsedError;
+  Quantity? get period => throw _privateConstructorUsedError;
   @override
   List<CodeableConcept>? get specialPrecautionsForStorage =>
       throw _privateConstructorUsedError;

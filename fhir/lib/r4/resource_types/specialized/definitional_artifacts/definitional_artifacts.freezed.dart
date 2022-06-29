@@ -10827,6 +10827,9 @@ mixin _$PlanDefinition {
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
   Reference? get subjectReference => throw _privateConstructorUsedError;
+  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_subjectCanonical')
+  Element? get subjectCanonicalElement => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
@@ -10919,6 +10922,9 @@ abstract class $PlanDefinitionCopyWith<$Res> {
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
+      Canonical? subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          Element? subjectCanonicalElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -10972,6 +10978,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res>? get experimentalElement;
   $CodeableConceptCopyWith<$Res>? get subjectCodeableConcept;
   $ReferenceCopyWith<$Res>? get subjectReference;
+  $ElementCopyWith<$Res>? get subjectCanonicalElement;
   $ElementCopyWith<$Res>? get dateElement;
   $ElementCopyWith<$Res>? get publisherElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -11023,6 +11030,8 @@ class _$PlanDefinitionCopyWithImpl<$Res>
     Object? experimentalElement = freezed,
     Object? subjectCodeableConcept = freezed,
     Object? subjectReference = freezed,
+    Object? subjectCanonical = freezed,
+    Object? subjectCanonicalElement = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
     Object? publisher = freezed,
@@ -11170,6 +11179,14 @@ class _$PlanDefinitionCopyWithImpl<$Res>
           ? _value.subjectReference
           : subjectReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      subjectCanonical: subjectCanonical == freezed
+          ? _value.subjectCanonical
+          : subjectCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      subjectCanonicalElement: subjectCanonicalElement == freezed
+          ? _value.subjectCanonicalElement
+          : subjectCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -11445,6 +11462,17 @@ class _$PlanDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get subjectCanonicalElement {
+    if (_value.subjectCanonicalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.subjectCanonicalElement!, (value) {
+      return _then(_value.copyWith(subjectCanonicalElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
@@ -11592,6 +11620,9 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
+      Canonical? subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          Element? subjectCanonicalElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -11660,6 +11691,8 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get subjectReference;
   @override
+  $ElementCopyWith<$Res>? get subjectCanonicalElement;
+  @override
   $ElementCopyWith<$Res>? get dateElement;
   @override
   $ElementCopyWith<$Res>? get publisherElement;
@@ -11721,6 +11754,8 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
     Object? experimentalElement = freezed,
     Object? subjectCodeableConcept = freezed,
     Object? subjectReference = freezed,
+    Object? subjectCanonical = freezed,
+    Object? subjectCanonicalElement = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
     Object? publisher = freezed,
@@ -11868,6 +11903,14 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
           ? _value.subjectReference
           : subjectReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      subjectCanonical: subjectCanonical == freezed
+          ? _value.subjectCanonical
+          : subjectCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      subjectCanonicalElement: subjectCanonicalElement == freezed
+          ? _value.subjectCanonicalElement
+          : subjectCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -12032,6 +12075,9 @@ class _$_PlanDefinition extends _PlanDefinition {
           this.experimentalElement,
       this.subjectCodeableConcept,
       this.subjectReference,
+      this.subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          this.subjectCanonicalElement,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
@@ -12189,6 +12235,11 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final Reference? subjectReference;
   @override
+  final Canonical? subjectCanonical;
+  @override
+  @JsonKey(name: '_subjectCanonical')
+  final Element? subjectCanonicalElement;
+  @override
   final FhirDateTime? date;
   @override
   @JsonKey(name: '_date')
@@ -12341,7 +12392,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   @override
   String toString() {
-    return 'PlanDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, type: $type, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, goal: $goal, action: $action)';
+    return 'PlanDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, type: $type, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, subjectCanonical: $subjectCanonical, subjectCanonicalElement: $subjectCanonicalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, goal: $goal, action: $action)';
   }
 
   @override
@@ -12396,6 +12447,10 @@ class _$_PlanDefinition extends _PlanDefinition {
                 .equals(other.subjectCodeableConcept, subjectCodeableConcept) &&
             const DeepCollectionEquality()
                 .equals(other.subjectReference, subjectReference) &&
+            const DeepCollectionEquality()
+                .equals(other.subjectCanonical, subjectCanonical) &&
+            const DeepCollectionEquality().equals(
+                other.subjectCanonicalElement, subjectCanonicalElement) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality()
                 .equals(other.dateElement, dateElement) &&
@@ -12475,6 +12530,8 @@ class _$_PlanDefinition extends _PlanDefinition {
         const DeepCollectionEquality().hash(experimentalElement),
         const DeepCollectionEquality().hash(subjectCodeableConcept),
         const DeepCollectionEquality().hash(subjectReference),
+        const DeepCollectionEquality().hash(subjectCanonical),
+        const DeepCollectionEquality().hash(subjectCanonicalElement),
         const DeepCollectionEquality().hash(date),
         const DeepCollectionEquality().hash(dateElement),
         const DeepCollectionEquality().hash(publisher),
@@ -12559,6 +12616,9 @@ abstract class _PlanDefinition extends PlanDefinition {
           final Element? experimentalElement,
       final CodeableConcept? subjectCodeableConcept,
       final Reference? subjectReference,
+      final Canonical? subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          final Element? subjectCanonicalElement,
       final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
@@ -12673,6 +12733,11 @@ abstract class _PlanDefinition extends PlanDefinition {
       throw _privateConstructorUsedError;
   @override
   Reference? get subjectReference => throw _privateConstructorUsedError;
+  @override
+  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_subjectCanonical')
+  Element? get subjectCanonicalElement => throw _privateConstructorUsedError;
   @override
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
@@ -13605,6 +13670,10 @@ mixin _$PlanDefinitionAction {
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
   Reference? get subjectReference => throw _privateConstructorUsedError;
+  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_subjectCanonical')
+  List<Element?>? get subjectCanonicalElement =>
+      throw _privateConstructorUsedError;
   List<TriggerDefinition>? get trigger => throw _privateConstructorUsedError;
   List<PlanDefinitionCondition>? get condition =>
       throw _privateConstructorUsedError;
@@ -13688,6 +13757,9 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
+      Canonical? subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          List<Element?>? subjectCanonicalElement,
       List<TriggerDefinition>? trigger,
       List<PlanDefinitionCondition>? condition,
       List<DataRequirement>? input,
@@ -13782,6 +13854,8 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
     Object? goalIdElement = freezed,
     Object? subjectCodeableConcept = freezed,
     Object? subjectReference = freezed,
+    Object? subjectCanonical = freezed,
+    Object? subjectCanonicalElement = freezed,
     Object? trigger = freezed,
     Object? condition = freezed,
     Object? input = freezed,
@@ -13895,6 +13969,14 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           ? _value.subjectReference
           : subjectReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      subjectCanonical: subjectCanonical == freezed
+          ? _value.subjectCanonical
+          : subjectCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      subjectCanonicalElement: subjectCanonicalElement == freezed
+          ? _value.subjectCanonicalElement
+          : subjectCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       trigger: trigger == freezed
           ? _value.trigger
           : trigger // ignore: cast_nullable_to_non_nullable
@@ -14290,6 +14372,9 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
+      Canonical? subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          List<Element?>? subjectCanonicalElement,
       List<TriggerDefinition>? trigger,
       List<PlanDefinitionCondition>? condition,
       List<DataRequirement>? input,
@@ -14407,6 +14492,8 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
     Object? goalIdElement = freezed,
     Object? subjectCodeableConcept = freezed,
     Object? subjectReference = freezed,
+    Object? subjectCanonical = freezed,
+    Object? subjectCanonicalElement = freezed,
     Object? trigger = freezed,
     Object? condition = freezed,
     Object? input = freezed,
@@ -14520,6 +14607,14 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
           ? _value.subjectReference
           : subjectReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      subjectCanonical: subjectCanonical == freezed
+          ? _value.subjectCanonical
+          : subjectCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      subjectCanonicalElement: subjectCanonicalElement == freezed
+          ? _value._subjectCanonicalElement
+          : subjectCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       trigger: trigger == freezed
           ? _value._trigger
           : trigger // ignore: cast_nullable_to_non_nullable
@@ -14653,32 +14748,43 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
 class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   _$_PlanDefinitionAction(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.prefix,
-      @JsonKey(name: '_prefix') this.prefixElement,
+      @JsonKey(name: '_prefix')
+          this.prefixElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.textEquivalent,
-      @JsonKey(name: '_textEquivalent') this.textEquivalentElement,
+      @JsonKey(name: '_textEquivalent')
+          this.textEquivalentElement,
       this.priority,
-      @JsonKey(name: '_priority') this.priorityElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement,
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
       final List<Id>? goalId,
-      @JsonKey(name: '_goalId') final List<Element?>? goalIdElement,
+      @JsonKey(name: '_goalId')
+          final List<Element?>? goalIdElement,
       this.subjectCodeableConcept,
       this.subjectReference,
+      this.subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          final List<Element?>? subjectCanonicalElement,
       final List<TriggerDefinition>? trigger,
       final List<PlanDefinitionCondition>? condition,
       final List<DataRequirement>? input,
       final List<DataRequirement>? output,
       final List<PlanDefinitionRelatedAction>? relatedAction,
       this.timingDateTime,
-      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime')
+          this.timingDateTimeElement,
       this.timingAge,
       this.timingPeriod,
       this.timingDuration,
@@ -14687,19 +14793,26 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       final List<PlanDefinitionParticipant>? participant,
       this.type,
       this.groupingBehavior,
-      @JsonKey(name: '_groupingBehavior') this.groupingBehaviorElement,
+      @JsonKey(name: '_groupingBehavior')
+          this.groupingBehaviorElement,
       this.selectionBehavior,
-      @JsonKey(name: '_selectionBehavior') this.selectionBehaviorElement,
+      @JsonKey(name: '_selectionBehavior')
+          this.selectionBehaviorElement,
       this.requiredBehavior,
-      @JsonKey(name: '_requiredBehavior') this.requiredBehaviorElement,
+      @JsonKey(name: '_requiredBehavior')
+          this.requiredBehaviorElement,
       this.precheckBehavior,
-      @JsonKey(name: '_precheckBehavior') this.precheckBehaviorElement,
+      @JsonKey(name: '_precheckBehavior')
+          this.precheckBehaviorElement,
       this.cardinalityBehavior,
-      @JsonKey(name: '_cardinalityBehavior') this.cardinalityBehaviorElement,
+      @JsonKey(name: '_cardinalityBehavior')
+          this.cardinalityBehaviorElement,
       this.definitionCanonical,
-      @JsonKey(name: '_definitionCanonical') this.definitionCanonicalElement,
+      @JsonKey(name: '_definitionCanonical')
+          this.definitionCanonicalElement,
       this.definitionUri,
-      @JsonKey(name: '_definitionUri') this.definitionUriElement,
+      @JsonKey(name: '_definitionUri')
+          this.definitionUriElement,
       this.transform,
       final List<PlanDefinitionDynamicValue>? dynamicValue,
       final List<PlanDefinitionAction>? action})
@@ -14710,6 +14823,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
         _documentation = documentation,
         _goalId = goalId,
         _goalIdElement = goalIdElement,
+        _subjectCanonicalElement = subjectCanonicalElement,
         _trigger = trigger,
         _condition = condition,
         _input = input,
@@ -14819,6 +14933,18 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   final CodeableConcept? subjectCodeableConcept;
   @override
   final Reference? subjectReference;
+  @override
+  final Canonical? subjectCanonical;
+  final List<Element?>? _subjectCanonicalElement;
+  @override
+  @JsonKey(name: '_subjectCanonical')
+  List<Element?>? get subjectCanonicalElement {
+    final value = _subjectCanonicalElement;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<TriggerDefinition>? _trigger;
   @override
   List<TriggerDefinition>? get trigger {
@@ -14947,7 +15073,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   @override
   String toString() {
-    return 'PlanDefinitionAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, prefixElement: $prefixElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, priority: $priority, priorityElement: $priorityElement, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, goalIdElement: $goalIdElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, trigger: $trigger, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionUri: $definitionUri, definitionUriElement: $definitionUriElement, transform: $transform, dynamicValue: $dynamicValue, action: $action)';
+    return 'PlanDefinitionAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, prefixElement: $prefixElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, priority: $priority, priorityElement: $priorityElement, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, goalIdElement: $goalIdElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, subjectCanonical: $subjectCanonical, subjectCanonicalElement: $subjectCanonicalElement, trigger: $trigger, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingAge: $timingAge, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionUri: $definitionUri, definitionUriElement: $definitionUriElement, transform: $transform, dynamicValue: $dynamicValue, action: $action)';
   }
 
   @override
@@ -14988,6 +15114,10 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
                 .equals(other.subjectCodeableConcept, subjectCodeableConcept) &&
             const DeepCollectionEquality()
                 .equals(other.subjectReference, subjectReference) &&
+            const DeepCollectionEquality()
+                .equals(other.subjectCanonical, subjectCanonical) &&
+            const DeepCollectionEquality().equals(
+                other._subjectCanonicalElement, _subjectCanonicalElement) &&
             const DeepCollectionEquality().equals(other._trigger, _trigger) &&
             const DeepCollectionEquality()
                 .equals(other._condition, _condition) &&
@@ -15069,6 +15199,8 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
         const DeepCollectionEquality().hash(_goalIdElement),
         const DeepCollectionEquality().hash(subjectCodeableConcept),
         const DeepCollectionEquality().hash(subjectReference),
+        const DeepCollectionEquality().hash(subjectCanonical),
+        const DeepCollectionEquality().hash(_subjectCanonicalElement),
         const DeepCollectionEquality().hash(_trigger),
         const DeepCollectionEquality().hash(_condition),
         const DeepCollectionEquality().hash(_input),
@@ -15143,6 +15275,9 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
           final List<Element?>? goalIdElement,
       final CodeableConcept? subjectCodeableConcept,
       final Reference? subjectReference,
+      final Canonical? subjectCanonical,
+      @JsonKey(name: '_subjectCanonical')
+          final List<Element?>? subjectCanonicalElement,
       final List<TriggerDefinition>? trigger,
       final List<PlanDefinitionCondition>? condition,
       final List<DataRequirement>? input,
@@ -15237,6 +15372,12 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       throw _privateConstructorUsedError;
   @override
   Reference? get subjectReference => throw _privateConstructorUsedError;
+  @override
+  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_subjectCanonical')
+  List<Element?>? get subjectCanonicalElement =>
+      throw _privateConstructorUsedError;
   @override
   List<TriggerDefinition>? get trigger => throw _privateConstructorUsedError;
   @override

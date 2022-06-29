@@ -69,8 +69,12 @@ _$_ProductShelfLife _$$_ProductShelfLifeFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      period: Quantity.fromJson(json['period'] as Map<String, dynamic>),
+      type: json['type'] == null
+          ? null
+          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      period: json['period'] == null
+          ? null
+          : Quantity.fromJson(json['period'] as Map<String, dynamic>),
       specialPrecautionsForStorage:
           (json['specialPrecautionsForStorage'] as List<dynamic>?)
               ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
@@ -92,8 +96,8 @@ Map<String, dynamic> _$$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  val['type'] = instance.type.toJson();
-  val['period'] = instance.period.toJson();
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('period', instance.period?.toJson());
   writeNotNull('specialPrecautionsForStorage',
       instance.specialPrecautionsForStorage?.map((e) => e.toJson()).toList());
   return val;

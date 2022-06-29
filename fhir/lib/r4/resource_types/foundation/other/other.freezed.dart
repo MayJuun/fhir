@@ -13468,12 +13468,10 @@ mixin _$SubscriptionTopic {
   String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -13498,7 +13496,6 @@ mixin _$SubscriptionTopic {
   Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
   Date? get approvalDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
@@ -13543,10 +13540,9 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
+      List<Canonical>? derivedFrom,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
@@ -13564,7 +13560,6 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement,
-      List<Canonical>? derivedFrom,
       Date? approvalDate,
       @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       Date? lastReviewDate,
@@ -13581,7 +13576,6 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ElementCopyWith<$Res>? get versionElement;
-  $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get experimentalElement;
@@ -13622,10 +13616,9 @@ class _$SubscriptionTopicCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
-    Object? name = freezed,
-    Object? nameElement = freezed,
     Object? title = freezed,
     Object? titleElement = freezed,
+    Object? derivedFrom = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? experimental = freezed,
@@ -13643,7 +13636,6 @@ class _$SubscriptionTopicCopyWithImpl<$Res>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
-    Object? derivedFrom = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -13719,14 +13711,6 @@ class _$SubscriptionTopicCopyWithImpl<$Res>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameElement: nameElement == freezed
-          ? _value.nameElement
-          : nameElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -13735,6 +13719,10 @@ class _$SubscriptionTopicCopyWithImpl<$Res>
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      derivedFrom: derivedFrom == freezed
+          ? _value.derivedFrom
+          : derivedFrom // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -13803,10 +13791,6 @@ class _$SubscriptionTopicCopyWithImpl<$Res>
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      derivedFrom: derivedFrom == freezed
-          ? _value.derivedFrom
-          : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
       approvalDate: approvalDate == freezed
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
@@ -13909,17 +13893,6 @@ class _$SubscriptionTopicCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
       return _then(_value.copyWith(versionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get nameElement {
-    if (_value.nameElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
     });
   }
 
@@ -14069,10 +14042,9 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
+      List<Canonical>? derivedFrom,
       Code? status,
       @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
@@ -14090,7 +14062,6 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement,
-      List<Canonical>? derivedFrom,
       Date? approvalDate,
       @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       Date? lastReviewDate,
@@ -14113,8 +14084,6 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
   $ElementCopyWith<$Res>? get urlElement;
   @override
   $ElementCopyWith<$Res>? get versionElement;
-  @override
-  $ElementCopyWith<$Res>? get nameElement;
   @override
   $ElementCopyWith<$Res>? get titleElement;
   @override
@@ -14168,10 +14137,9 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
-    Object? name = freezed,
-    Object? nameElement = freezed,
     Object? title = freezed,
     Object? titleElement = freezed,
+    Object? derivedFrom = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? experimental = freezed,
@@ -14189,7 +14157,6 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
-    Object? derivedFrom = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -14265,14 +14232,6 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameElement: nameElement == freezed
-          ? _value.nameElement
-          : nameElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -14281,6 +14240,10 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      derivedFrom: derivedFrom == freezed
+          ? _value._derivedFrom
+          : derivedFrom // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -14349,10 +14312,6 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      derivedFrom: derivedFrom == freezed
-          ? _value._derivedFrom
-          : derivedFrom // ignore: cast_nullable_to_non_nullable
-              as List<Canonical>?,
       approvalDate: approvalDate == freezed
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
@@ -14413,10 +14372,9 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
       final List<Identifier>? identifier,
       this.version,
       @JsonKey(name: '_version') this.versionElement,
-      this.name,
-      @JsonKey(name: '_name') this.nameElement,
       this.title,
       @JsonKey(name: '_title') this.titleElement,
+      final List<Canonical>? derivedFrom,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
       this.experimental,
@@ -14434,7 +14392,6 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
       @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
       @JsonKey(name: '_copyright') this.copyrightElement,
-      final List<Canonical>? derivedFrom,
       this.approvalDate,
       @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
@@ -14448,10 +14405,10 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
+        _derivedFrom = derivedFrom,
         _contact = contact,
         _useContext = useContext,
         _jurisdiction = jurisdiction,
-        _derivedFrom = derivedFrom,
         _resourceTrigger = resourceTrigger,
         _eventTrigger = eventTrigger,
         _canFilterBy = canFilterBy,
@@ -14528,15 +14485,19 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
-  final String? name;
-  @override
-  @JsonKey(name: '_name')
-  final Element? nameElement;
-  @override
   final String? title;
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
+  final List<Canonical>? _derivedFrom;
+  @override
+  List<Canonical>? get derivedFrom {
+    final value = _derivedFrom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? status;
   @override
@@ -14599,15 +14560,6 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
-  final List<Canonical>? _derivedFrom;
-  @override
-  List<Canonical>? get derivedFrom {
-    final value = _derivedFrom;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   @override
   final Date? approvalDate;
   @override
@@ -14658,7 +14610,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   @override
   String toString() {
-    return 'SubscriptionTopic(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, derivedFrom: $derivedFrom, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, resourceTrigger: $resourceTrigger, eventTrigger: $eventTrigger, canFilterBy: $canFilterBy, notificationShape: $notificationShape)';
+    return 'SubscriptionTopic(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, title: $title, titleElement: $titleElement, derivedFrom: $derivedFrom, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, resourceTrigger: $resourceTrigger, eventTrigger: $eventTrigger, canFilterBy: $canFilterBy, notificationShape: $notificationShape)';
   }
 
   @override
@@ -14692,12 +14644,11 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality()
                 .equals(other.versionElement, versionElement) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.nameElement, nameElement) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality()
                 .equals(other.titleElement, titleElement) &&
+            const DeepCollectionEquality()
+                .equals(other._derivedFrom, _derivedFrom) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality()
                 .equals(other.statusElement, statusElement) &&
@@ -14726,8 +14677,6 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
             const DeepCollectionEquality().equals(other.copyright, copyright) &&
             const DeepCollectionEquality()
                 .equals(other.copyrightElement, copyrightElement) &&
-            const DeepCollectionEquality()
-                .equals(other._derivedFrom, _derivedFrom) &&
             const DeepCollectionEquality()
                 .equals(other.approvalDate, approvalDate) &&
             const DeepCollectionEquality()
@@ -14768,10 +14717,9 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
         const DeepCollectionEquality().hash(_identifier),
         const DeepCollectionEquality().hash(version),
         const DeepCollectionEquality().hash(versionElement),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(nameElement),
         const DeepCollectionEquality().hash(title),
         const DeepCollectionEquality().hash(titleElement),
+        const DeepCollectionEquality().hash(_derivedFrom),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(experimental),
@@ -14789,7 +14737,6 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
         const DeepCollectionEquality().hash(purposeElement),
         const DeepCollectionEquality().hash(copyright),
         const DeepCollectionEquality().hash(copyrightElement),
-        const DeepCollectionEquality().hash(_derivedFrom),
         const DeepCollectionEquality().hash(approvalDate),
         const DeepCollectionEquality().hash(approvalDateElement),
         const DeepCollectionEquality().hash(lastReviewDate),
@@ -14831,10 +14778,9 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
       final List<Identifier>? identifier,
       final String? version,
       @JsonKey(name: '_version') final Element? versionElement,
-      final String? name,
-      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
+      final List<Canonical>? derivedFrom,
       final Code? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
@@ -14852,7 +14798,6 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
       @JsonKey(name: '_purpose') final Element? purposeElement,
       final Markdown? copyright,
       @JsonKey(name: '_copyright') final Element? copyrightElement,
-      final List<Canonical>? derivedFrom,
       final Date? approvalDate,
       @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
       final Date? lastReviewDate,
@@ -14907,15 +14852,12 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
-  @override
   String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+  @override
+  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
   @override
   Code? get status => throw _privateConstructorUsedError;
   @override
@@ -14957,8 +14899,6 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  @override
-  List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
   @override
   Date? get approvalDate => throw _privateConstructorUsedError;
   @override

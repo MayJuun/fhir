@@ -1619,6 +1619,12 @@ _$_PlanDefinition _$$_PlanDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(
               json['subjectReference'] as Map<String, dynamic>),
+      subjectCanonical: json['subjectCanonical'] == null
+          ? null
+          : Canonical.fromJson(json['subjectCanonical']),
+      subjectCanonicalElement: json['_subjectCanonical'] == null
+          ? null
+          : Element.fromJson(json['_subjectCanonical'] as Map<String, dynamic>),
       date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
@@ -1745,6 +1751,8 @@ Map<String, dynamic> _$$_PlanDefinitionToJson(_$_PlanDefinition instance) {
   writeNotNull(
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
   writeNotNull('subjectReference', instance.subjectReference?.toJson());
+  writeNotNull('subjectCanonical', instance.subjectCanonical?.toJson());
+  writeNotNull('_subjectCanonical', instance.subjectCanonicalElement?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -1946,6 +1954,13 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
           ? null
           : Reference.fromJson(
               json['subjectReference'] as Map<String, dynamic>),
+      subjectCanonical: json['subjectCanonical'] == null
+          ? null
+          : Canonical.fromJson(json['subjectCanonical']),
+      subjectCanonicalElement: (json['_subjectCanonical'] as List<dynamic>?)
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
       trigger: (json['trigger'] as List<dynamic>?)
           ?.map((e) => TriggerDefinition.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2084,6 +2099,9 @@ Map<String, dynamic> _$$_PlanDefinitionActionToJson(
   writeNotNull(
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
   writeNotNull('subjectReference', instance.subjectReference?.toJson());
+  writeNotNull('subjectCanonical', instance.subjectCanonical?.toJson());
+  writeNotNull('_subjectCanonical',
+      instance.subjectCanonicalElement?.map((e) => e?.toJson()).toList());
   writeNotNull('trigger', instance.trigger?.map((e) => e.toJson()).toList());
   writeNotNull(
       'condition', instance.condition?.map((e) => e.toJson()).toList());

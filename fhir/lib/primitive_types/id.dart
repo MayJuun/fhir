@@ -6,6 +6,8 @@ import 'dart:convert';
 // Package imports:
 import 'package:uuid/uuid.dart' as uuid;
 import 'package:yaml/yaml.dart';
+
+// Project imports:
 import 'primitive_type_exceptions.dart';
 
 /// returns the same resource with a new ID (even if there is already an ID present)
