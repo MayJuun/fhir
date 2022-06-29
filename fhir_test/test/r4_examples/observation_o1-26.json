@@ -1,1 +1,0 @@
-{"resourceType":"Observation","id":"o1-26","status":"final","code":{"coding":[{"system":"http://loinc.org","code":"20507-0","display":"Reagin Ab [Presence] in Serum by RPR"}]},"subject":{"reference":"Patient/6"},"performer":[{"reference":"Organization/1832473e-2fe0-452d-abe9-3cdb9879522f","display":"Acme Laboratory, Inc"}],"valueString":"Non-reactive"}

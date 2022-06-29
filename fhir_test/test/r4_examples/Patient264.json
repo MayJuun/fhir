@@ -1,0 +1,1 @@
+{"resourceType":"Patient","id":"23","text":{"status":"generated","div":"\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eAnonymous Patient\u003c/b\u003e (no stated gender), DoB Unknown ( id: 1234567)\u003c/p\u003e\u003c/div\u003e"},"identifier":[{"system":"http://example.org/ids","value":"1234567"}]}

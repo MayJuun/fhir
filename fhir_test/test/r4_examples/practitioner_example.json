@@ -1,1 +1,0 @@
-{"resourceType":"Practitioner","id":"example","meta":{"lastUpdated":"2013-05-05T16:13:03.000Z"},"text":{"status":"generated","div":"<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n            <p>Dr Adam Careful</p>\n\n          </div>"},"identifier":[{"system":"http://www.acme.org/practitioners","value":"23"}],"name":[{"family":"Careful","given":["Adam"],"prefix":["Dr"]}]}

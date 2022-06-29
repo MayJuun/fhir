@@ -35,7 +35,7 @@ class FhirRequest with _$FhirRequest {
   factory FhirRequest.read({
     required Uri base,
     required R4ResourceType type,
-    required Id id,
+    required String id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
@@ -63,7 +63,7 @@ class FhirRequest with _$FhirRequest {
   factory FhirRequest.vRead({
     required Uri base,
     required R4ResourceType type,
-    required Id id,
+    required String id,
     required Id vid,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
@@ -139,7 +139,7 @@ class FhirRequest with _$FhirRequest {
   factory FhirRequest.delete({
     required Uri base,
     required R4ResourceType type,
-    required Id id,
+    required String id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
@@ -326,7 +326,7 @@ class FhirRequest with _$FhirRequest {
   factory FhirRequest.history({
     required Uri base,
     required R4ResourceType type,
-    required Id id,
+    required String id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
@@ -541,7 +541,7 @@ class FhirRequest with _$FhirRequest {
 
       /// TRANSACTION
       transaction: (m) async {
-        if (m.bundle.type != BundleType.transaction) {
+        if (m.bundle.type.toString() != 'transaction') {
           return _operationOutcome(
               'A Transaction request was made, but no Bundle was included.');
         }
@@ -570,7 +570,7 @@ class FhirRequest with _$FhirRequest {
 
       /// BATCH
       batch: (m) async {
-        if (m.bundle.type != BundleType.batch) {
+        if (m.bundle.type.toString() != 'batch') {
           return _operationOutcome(
               'A Batch request was made, but the included Bundle is not a'
               ' batch type.');
@@ -955,8 +955,8 @@ class FhirRequest with _$FhirRequest {
     if (_errorCodes.containsKey(result.statusCode)) {
       return OperationOutcome(issue: [
         OperationOutcomeIssue(
-          severity: OperationOutcomeIssueSeverity.error,
-          code: OperationOutcomeIssueCode.unknown,
+          severity: Code('error'),
+          code: Code('unknown'),
           details: CodeableConcept(
               text: 'Failed to complete a restful request.\n'
                   'The request was made, and a failing status code of some kind was returned.\n'
@@ -972,7 +972,7 @@ class FhirRequest with _$FhirRequest {
         if (result.statusCode == 200 || result.statusCode == 201) {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
-                code: OperationOutcomeIssueCode.informational,
+                code: Code('informational'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was:'
@@ -989,7 +989,7 @@ class FhirRequest with _$FhirRequest {
         } else {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
-                code: OperationOutcomeIssueCode.informational,
+                code: Code('informational'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was:'
@@ -1009,8 +1009,8 @@ class FhirRequest with _$FhirRequest {
         if (body?['resourceType'] == null) {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
-              severity: OperationOutcomeIssueSeverity.error,
-              code: OperationOutcomeIssueCode.unknown,
+              severity: Code('error'),
+              code: Code('unknown'),
               details: CodeableConcept(
                   text:
                       'Request was made, but the result body had no defined response'),
@@ -1039,8 +1039,8 @@ class FhirRequest with _$FhirRequest {
           if (newResource.resourceType == null) {
             return OperationOutcome(issue: [
               OperationOutcomeIssue(
-                severity: OperationOutcomeIssueSeverity.error,
-                code: OperationOutcomeIssueCode.unknown,
+                severity: Code('error'),
+                code: Code('unknown'),
                 details: CodeableConcept(
                     text: 'Request was made and seemed to return a Resource,\n'
                         'but the ResourceType returned was unrecognized'),
@@ -1063,8 +1063,8 @@ class FhirRequest with _$FhirRequest {
   OperationOutcome _operationOutcome(String issue, {String? diagnostics}) =>
       OperationOutcome(issue: [
         OperationOutcomeIssue(
-          severity: OperationOutcomeIssueSeverity.error,
-          code: OperationOutcomeIssueCode.value,
+          severity: Code('error'),
+          code: Code('value'),
           details: CodeableConcept(text: issue),
           diagnostics: diagnostics,
         )

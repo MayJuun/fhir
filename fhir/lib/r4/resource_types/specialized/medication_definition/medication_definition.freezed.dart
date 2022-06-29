@@ -3874,21 +3874,14 @@ mixin _$IngredientStrength {
       throw _privateConstructorUsedError;
   Ratio? get presentationRatio => throw _privateConstructorUsedError;
   RatioRange? get presentationRatioRange => throw _privateConstructorUsedError;
-  CodeableConcept? get presentationCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Quantity? get presentationQuantity => throw _privateConstructorUsedError;
   String? get textPresentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_textPresentation')
   Element? get textPresentationElement => throw _privateConstructorUsedError;
   Ratio? get concentrationRatio => throw _privateConstructorUsedError;
   RatioRange? get concentrationRatioRange => throw _privateConstructorUsedError;
-  CodeableConcept? get concentrationCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Quantity? get concentrationQuantity => throw _privateConstructorUsedError;
   String? get textConcentration => throw _privateConstructorUsedError;
   @JsonKey(name: '_textConcentration')
   Element? get textConcentrationElement => throw _privateConstructorUsedError;
-  CodeableConcept? get basis => throw _privateConstructorUsedError;
   String? get measurementPoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_measurementPoint')
   Element? get measurementPointElement => throw _privateConstructorUsedError;
@@ -3913,17 +3906,12 @@ abstract class $IngredientStrengthCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Ratio? presentationRatio,
       RatioRange? presentationRatioRange,
-      CodeableConcept? presentationCodeableConcept,
-      Quantity? presentationQuantity,
       String? textPresentation,
       @JsonKey(name: '_textPresentation') Element? textPresentationElement,
       Ratio? concentrationRatio,
       RatioRange? concentrationRatioRange,
-      CodeableConcept? concentrationCodeableConcept,
-      Quantity? concentrationQuantity,
       String? textConcentration,
       @JsonKey(name: '_textConcentration') Element? textConcentrationElement,
-      CodeableConcept? basis,
       String? measurementPoint,
       @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
       List<CodeableConcept>? country,
@@ -3931,15 +3919,10 @@ abstract class $IngredientStrengthCopyWith<$Res> {
 
   $RatioCopyWith<$Res>? get presentationRatio;
   $RatioRangeCopyWith<$Res>? get presentationRatioRange;
-  $CodeableConceptCopyWith<$Res>? get presentationCodeableConcept;
-  $QuantityCopyWith<$Res>? get presentationQuantity;
   $ElementCopyWith<$Res>? get textPresentationElement;
   $RatioCopyWith<$Res>? get concentrationRatio;
   $RatioRangeCopyWith<$Res>? get concentrationRatioRange;
-  $CodeableConceptCopyWith<$Res>? get concentrationCodeableConcept;
-  $QuantityCopyWith<$Res>? get concentrationQuantity;
   $ElementCopyWith<$Res>? get textConcentrationElement;
-  $CodeableConceptCopyWith<$Res>? get basis;
   $ElementCopyWith<$Res>? get measurementPointElement;
 }
 
@@ -3959,17 +3942,12 @@ class _$IngredientStrengthCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? presentationRatio = freezed,
     Object? presentationRatioRange = freezed,
-    Object? presentationCodeableConcept = freezed,
-    Object? presentationQuantity = freezed,
     Object? textPresentation = freezed,
     Object? textPresentationElement = freezed,
     Object? concentrationRatio = freezed,
     Object? concentrationRatioRange = freezed,
-    Object? concentrationCodeableConcept = freezed,
-    Object? concentrationQuantity = freezed,
     Object? textConcentration = freezed,
     Object? textConcentrationElement = freezed,
-    Object? basis = freezed,
     Object? measurementPoint = freezed,
     Object? measurementPointElement = freezed,
     Object? country = freezed,
@@ -3996,14 +3974,6 @@ class _$IngredientStrengthCopyWithImpl<$Res>
           ? _value.presentationRatioRange
           : presentationRatioRange // ignore: cast_nullable_to_non_nullable
               as RatioRange?,
-      presentationCodeableConcept: presentationCodeableConcept == freezed
-          ? _value.presentationCodeableConcept
-          : presentationCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      presentationQuantity: presentationQuantity == freezed
-          ? _value.presentationQuantity
-          : presentationQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
       textPresentation: textPresentation == freezed
           ? _value.textPresentation
           : textPresentation // ignore: cast_nullable_to_non_nullable
@@ -4020,14 +3990,6 @@ class _$IngredientStrengthCopyWithImpl<$Res>
           ? _value.concentrationRatioRange
           : concentrationRatioRange // ignore: cast_nullable_to_non_nullable
               as RatioRange?,
-      concentrationCodeableConcept: concentrationCodeableConcept == freezed
-          ? _value.concentrationCodeableConcept
-          : concentrationCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      concentrationQuantity: concentrationQuantity == freezed
-          ? _value.concentrationQuantity
-          : concentrationQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
       textConcentration: textConcentration == freezed
           ? _value.textConcentration
           : textConcentration // ignore: cast_nullable_to_non_nullable
@@ -4036,10 +3998,6 @@ class _$IngredientStrengthCopyWithImpl<$Res>
           ? _value.textConcentrationElement
           : textConcentrationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      basis: basis == freezed
-          ? _value.basis
-          : basis // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
       measurementPoint: measurementPoint == freezed
           ? _value.measurementPoint
           : measurementPoint // ignore: cast_nullable_to_non_nullable
@@ -4082,29 +4040,6 @@ class _$IngredientStrengthCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get presentationCodeableConcept {
-    if (_value.presentationCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.presentationCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(presentationCodeableConcept: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res>? get presentationQuantity {
-    if (_value.presentationQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.presentationQuantity!, (value) {
-      return _then(_value.copyWith(presentationQuantity: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res>? get textPresentationElement {
     if (_value.textPresentationElement == null) {
       return null;
@@ -4138,29 +4073,6 @@ class _$IngredientStrengthCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get concentrationCodeableConcept {
-    if (_value.concentrationCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.concentrationCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(concentrationCodeableConcept: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res>? get concentrationQuantity {
-    if (_value.concentrationQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.concentrationQuantity!, (value) {
-      return _then(_value.copyWith(concentrationQuantity: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res>? get textConcentrationElement {
     if (_value.textConcentrationElement == null) {
       return null;
@@ -4168,17 +4080,6 @@ class _$IngredientStrengthCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.textConcentrationElement!, (value) {
       return _then(_value.copyWith(textConcentrationElement: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get basis {
-    if (_value.basis == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.basis!, (value) {
-      return _then(_value.copyWith(basis: value));
     });
   }
 
@@ -4207,17 +4108,12 @@ abstract class _$$_IngredientStrengthCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Ratio? presentationRatio,
       RatioRange? presentationRatioRange,
-      CodeableConcept? presentationCodeableConcept,
-      Quantity? presentationQuantity,
       String? textPresentation,
       @JsonKey(name: '_textPresentation') Element? textPresentationElement,
       Ratio? concentrationRatio,
       RatioRange? concentrationRatioRange,
-      CodeableConcept? concentrationCodeableConcept,
-      Quantity? concentrationQuantity,
       String? textConcentration,
       @JsonKey(name: '_textConcentration') Element? textConcentrationElement,
-      CodeableConcept? basis,
       String? measurementPoint,
       @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
       List<CodeableConcept>? country,
@@ -4228,23 +4124,13 @@ abstract class _$$_IngredientStrengthCopyWith<$Res>
   @override
   $RatioRangeCopyWith<$Res>? get presentationRatioRange;
   @override
-  $CodeableConceptCopyWith<$Res>? get presentationCodeableConcept;
-  @override
-  $QuantityCopyWith<$Res>? get presentationQuantity;
-  @override
   $ElementCopyWith<$Res>? get textPresentationElement;
   @override
   $RatioCopyWith<$Res>? get concentrationRatio;
   @override
   $RatioRangeCopyWith<$Res>? get concentrationRatioRange;
   @override
-  $CodeableConceptCopyWith<$Res>? get concentrationCodeableConcept;
-  @override
-  $QuantityCopyWith<$Res>? get concentrationQuantity;
-  @override
   $ElementCopyWith<$Res>? get textConcentrationElement;
-  @override
-  $CodeableConceptCopyWith<$Res>? get basis;
   @override
   $ElementCopyWith<$Res>? get measurementPointElement;
 }
@@ -4267,17 +4153,12 @@ class __$$_IngredientStrengthCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? presentationRatio = freezed,
     Object? presentationRatioRange = freezed,
-    Object? presentationCodeableConcept = freezed,
-    Object? presentationQuantity = freezed,
     Object? textPresentation = freezed,
     Object? textPresentationElement = freezed,
     Object? concentrationRatio = freezed,
     Object? concentrationRatioRange = freezed,
-    Object? concentrationCodeableConcept = freezed,
-    Object? concentrationQuantity = freezed,
     Object? textConcentration = freezed,
     Object? textConcentrationElement = freezed,
-    Object? basis = freezed,
     Object? measurementPoint = freezed,
     Object? measurementPointElement = freezed,
     Object? country = freezed,
@@ -4304,14 +4185,6 @@ class __$$_IngredientStrengthCopyWithImpl<$Res>
           ? _value.presentationRatioRange
           : presentationRatioRange // ignore: cast_nullable_to_non_nullable
               as RatioRange?,
-      presentationCodeableConcept: presentationCodeableConcept == freezed
-          ? _value.presentationCodeableConcept
-          : presentationCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      presentationQuantity: presentationQuantity == freezed
-          ? _value.presentationQuantity
-          : presentationQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
       textPresentation: textPresentation == freezed
           ? _value.textPresentation
           : textPresentation // ignore: cast_nullable_to_non_nullable
@@ -4328,14 +4201,6 @@ class __$$_IngredientStrengthCopyWithImpl<$Res>
           ? _value.concentrationRatioRange
           : concentrationRatioRange // ignore: cast_nullable_to_non_nullable
               as RatioRange?,
-      concentrationCodeableConcept: concentrationCodeableConcept == freezed
-          ? _value.concentrationCodeableConcept
-          : concentrationCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      concentrationQuantity: concentrationQuantity == freezed
-          ? _value.concentrationQuantity
-          : concentrationQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
       textConcentration: textConcentration == freezed
           ? _value.textConcentration
           : textConcentration // ignore: cast_nullable_to_non_nullable
@@ -4344,10 +4209,6 @@ class __$$_IngredientStrengthCopyWithImpl<$Res>
           ? _value.textConcentrationElement
           : textConcentrationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      basis: basis == freezed
-          ? _value.basis
-          : basis // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
       measurementPoint: measurementPoint == freezed
           ? _value.measurementPoint
           : measurementPoint // ignore: cast_nullable_to_non_nullable
@@ -4377,17 +4238,12 @@ class _$_IngredientStrength extends _IngredientStrength {
       final List<FhirExtension>? modifierExtension,
       this.presentationRatio,
       this.presentationRatioRange,
-      this.presentationCodeableConcept,
-      this.presentationQuantity,
       this.textPresentation,
       @JsonKey(name: '_textPresentation') this.textPresentationElement,
       this.concentrationRatio,
       this.concentrationRatioRange,
-      this.concentrationCodeableConcept,
-      this.concentrationQuantity,
       this.textConcentration,
       @JsonKey(name: '_textConcentration') this.textConcentrationElement,
-      this.basis,
       this.measurementPoint,
       @JsonKey(name: '_measurementPoint') this.measurementPointElement,
       final List<CodeableConcept>? country,
@@ -4427,10 +4283,6 @@ class _$_IngredientStrength extends _IngredientStrength {
   @override
   final RatioRange? presentationRatioRange;
   @override
-  final CodeableConcept? presentationCodeableConcept;
-  @override
-  final Quantity? presentationQuantity;
-  @override
   final String? textPresentation;
   @override
   @JsonKey(name: '_textPresentation')
@@ -4440,16 +4292,10 @@ class _$_IngredientStrength extends _IngredientStrength {
   @override
   final RatioRange? concentrationRatioRange;
   @override
-  final CodeableConcept? concentrationCodeableConcept;
-  @override
-  final Quantity? concentrationQuantity;
-  @override
   final String? textConcentration;
   @override
   @JsonKey(name: '_textConcentration')
   final Element? textConcentrationElement;
-  @override
-  final CodeableConcept? basis;
   @override
   final String? measurementPoint;
   @override
@@ -4475,7 +4321,7 @@ class _$_IngredientStrength extends _IngredientStrength {
 
   @override
   String toString() {
-    return 'IngredientStrength(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, presentationRatio: $presentationRatio, presentationRatioRange: $presentationRatioRange, presentationCodeableConcept: $presentationCodeableConcept, presentationQuantity: $presentationQuantity, textPresentation: $textPresentation, textPresentationElement: $textPresentationElement, concentrationRatio: $concentrationRatio, concentrationRatioRange: $concentrationRatioRange, concentrationCodeableConcept: $concentrationCodeableConcept, concentrationQuantity: $concentrationQuantity, textConcentration: $textConcentration, textConcentrationElement: $textConcentrationElement, basis: $basis, measurementPoint: $measurementPoint, measurementPointElement: $measurementPointElement, country: $country, referenceStrength: $referenceStrength)';
+    return 'IngredientStrength(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, presentationRatio: $presentationRatio, presentationRatioRange: $presentationRatioRange, textPresentation: $textPresentation, textPresentationElement: $textPresentationElement, concentrationRatio: $concentrationRatio, concentrationRatioRange: $concentrationRatioRange, textConcentration: $textConcentration, textConcentrationElement: $textConcentrationElement, measurementPoint: $measurementPoint, measurementPointElement: $measurementPointElement, country: $country, referenceStrength: $referenceStrength)';
   }
 
   @override
@@ -4492,11 +4338,6 @@ class _$_IngredientStrength extends _IngredientStrength {
                 .equals(other.presentationRatio, presentationRatio) &&
             const DeepCollectionEquality()
                 .equals(other.presentationRatioRange, presentationRatioRange) &&
-            const DeepCollectionEquality().equals(
-                other.presentationCodeableConcept,
-                presentationCodeableConcept) &&
-            const DeepCollectionEquality()
-                .equals(other.presentationQuantity, presentationQuantity) &&
             const DeepCollectionEquality()
                 .equals(other.textPresentation, textPresentation) &&
             const DeepCollectionEquality().equals(
@@ -4505,16 +4346,10 @@ class _$_IngredientStrength extends _IngredientStrength {
                 .equals(other.concentrationRatio, concentrationRatio) &&
             const DeepCollectionEquality().equals(
                 other.concentrationRatioRange, concentrationRatioRange) &&
-            const DeepCollectionEquality().equals(
-                other.concentrationCodeableConcept,
-                concentrationCodeableConcept) &&
-            const DeepCollectionEquality()
-                .equals(other.concentrationQuantity, concentrationQuantity) &&
             const DeepCollectionEquality()
                 .equals(other.textConcentration, textConcentration) &&
             const DeepCollectionEquality().equals(
                 other.textConcentrationElement, textConcentrationElement) &&
-            const DeepCollectionEquality().equals(other.basis, basis) &&
             const DeepCollectionEquality()
                 .equals(other.measurementPoint, measurementPoint) &&
             const DeepCollectionEquality().equals(
@@ -4526,29 +4361,23 @@ class _$_IngredientStrength extends _IngredientStrength {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(presentationRatio),
-        const DeepCollectionEquality().hash(presentationRatioRange),
-        const DeepCollectionEquality().hash(presentationCodeableConcept),
-        const DeepCollectionEquality().hash(presentationQuantity),
-        const DeepCollectionEquality().hash(textPresentation),
-        const DeepCollectionEquality().hash(textPresentationElement),
-        const DeepCollectionEquality().hash(concentrationRatio),
-        const DeepCollectionEquality().hash(concentrationRatioRange),
-        const DeepCollectionEquality().hash(concentrationCodeableConcept),
-        const DeepCollectionEquality().hash(concentrationQuantity),
-        const DeepCollectionEquality().hash(textConcentration),
-        const DeepCollectionEquality().hash(textConcentrationElement),
-        const DeepCollectionEquality().hash(basis),
-        const DeepCollectionEquality().hash(measurementPoint),
-        const DeepCollectionEquality().hash(measurementPointElement),
-        const DeepCollectionEquality().hash(_country),
-        const DeepCollectionEquality().hash(_referenceStrength)
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(presentationRatio),
+      const DeepCollectionEquality().hash(presentationRatioRange),
+      const DeepCollectionEquality().hash(textPresentation),
+      const DeepCollectionEquality().hash(textPresentationElement),
+      const DeepCollectionEquality().hash(concentrationRatio),
+      const DeepCollectionEquality().hash(concentrationRatioRange),
+      const DeepCollectionEquality().hash(textConcentration),
+      const DeepCollectionEquality().hash(textConcentrationElement),
+      const DeepCollectionEquality().hash(measurementPoint),
+      const DeepCollectionEquality().hash(measurementPointElement),
+      const DeepCollectionEquality().hash(_country),
+      const DeepCollectionEquality().hash(_referenceStrength));
 
   @JsonKey(ignore: true)
   @override
@@ -4570,19 +4399,14 @@ abstract class _IngredientStrength extends IngredientStrength {
           final List<FhirExtension>? modifierExtension,
           final Ratio? presentationRatio,
           final RatioRange? presentationRatioRange,
-          final CodeableConcept? presentationCodeableConcept,
-          final Quantity? presentationQuantity,
           final String? textPresentation,
           @JsonKey(name: '_textPresentation')
               final Element? textPresentationElement,
           final Ratio? concentrationRatio,
           final RatioRange? concentrationRatioRange,
-          final CodeableConcept? concentrationCodeableConcept,
-          final Quantity? concentrationQuantity,
           final String? textConcentration,
           @JsonKey(name: '_textConcentration')
               final Element? textConcentrationElement,
-          final CodeableConcept? basis,
           final String? measurementPoint,
           @JsonKey(name: '_measurementPoint')
               final Element? measurementPointElement,
@@ -4607,11 +4431,6 @@ abstract class _IngredientStrength extends IngredientStrength {
   @override
   RatioRange? get presentationRatioRange => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get presentationCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Quantity? get presentationQuantity => throw _privateConstructorUsedError;
-  @override
   String? get textPresentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_textPresentation')
@@ -4621,17 +4440,10 @@ abstract class _IngredientStrength extends IngredientStrength {
   @override
   RatioRange? get concentrationRatioRange => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get concentrationCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Quantity? get concentrationQuantity => throw _privateConstructorUsedError;
-  @override
   String? get textConcentration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_textConcentration')
   Element? get textConcentrationElement => throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get basis => throw _privateConstructorUsedError;
   @override
   String? get measurementPoint => throw _privateConstructorUsedError;
   @override
@@ -9712,7 +9524,6 @@ mixin _$MedicinalProductDefinition {
       throw _privateConstructorUsedError;
   List<CodeableConcept>? get packagedMedicinalProduct =>
       throw _privateConstructorUsedError;
-  List<Reference>? get comprisedOf => throw _privateConstructorUsedError;
   List<CodeableConcept>? get ingredient => throw _privateConstructorUsedError;
   List<CodeableReference>? get impurity => throw _privateConstructorUsedError;
   List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
@@ -9774,7 +9585,6 @@ abstract class $MedicinalProductDefinitionCopyWith<$Res> {
       List<CodeableConcept>? classification,
       List<MarketingStatus>? marketingStatus,
       List<CodeableConcept>? packagedMedicinalProduct,
-      List<Reference>? comprisedOf,
       List<CodeableConcept>? ingredient,
       List<CodeableReference>? impurity,
       List<Reference>? attachedDocument,
@@ -9847,7 +9657,6 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res>
     Object? classification = freezed,
     Object? marketingStatus = freezed,
     Object? packagedMedicinalProduct = freezed,
-    Object? comprisedOf = freezed,
     Object? ingredient = freezed,
     Object? impurity = freezed,
     Object? attachedDocument = freezed,
@@ -9989,10 +9798,6 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res>
           ? _value.packagedMedicinalProduct
           : packagedMedicinalProduct // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      comprisedOf: comprisedOf == freezed
-          ? _value.comprisedOf
-          : comprisedOf // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       ingredient: ingredient == freezed
           ? _value.ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
@@ -10250,7 +10055,6 @@ abstract class _$$_MedicinalProductDefinitionCopyWith<$Res>
       List<CodeableConcept>? classification,
       List<MarketingStatus>? marketingStatus,
       List<CodeableConcept>? packagedMedicinalProduct,
-      List<Reference>? comprisedOf,
       List<CodeableConcept>? ingredient,
       List<CodeableReference>? impurity,
       List<Reference>? attachedDocument,
@@ -10342,7 +10146,6 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
     Object? classification = freezed,
     Object? marketingStatus = freezed,
     Object? packagedMedicinalProduct = freezed,
-    Object? comprisedOf = freezed,
     Object? ingredient = freezed,
     Object? impurity = freezed,
     Object? attachedDocument = freezed,
@@ -10484,10 +10287,6 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
           ? _value._packagedMedicinalProduct
           : packagedMedicinalProduct // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      comprisedOf: comprisedOf == freezed
-          ? _value._comprisedOf
-          : comprisedOf // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       ingredient: ingredient == freezed
           ? _value._ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
@@ -10572,7 +10371,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
       final List<CodeableConcept>? classification,
       final List<MarketingStatus>? marketingStatus,
       final List<CodeableConcept>? packagedMedicinalProduct,
-      final List<Reference>? comprisedOf,
       final List<CodeableConcept>? ingredient,
       final List<CodeableReference>? impurity,
       final List<Reference>? attachedDocument,
@@ -10593,7 +10391,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
         _classification = classification,
         _marketingStatus = marketingStatus,
         _packagedMedicinalProduct = packagedMedicinalProduct,
-        _comprisedOf = comprisedOf,
         _ingredient = ingredient,
         _impurity = impurity,
         _attachedDocument = attachedDocument,
@@ -10745,15 +10542,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Reference>? _comprisedOf;
-  @override
-  List<Reference>? get comprisedOf {
-    final value = _comprisedOf;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   final List<CodeableConcept>? _ingredient;
   @override
   List<CodeableConcept>? get ingredient {
@@ -10853,7 +10641,7 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   @override
   String toString() {
-    return 'MedicinalProductDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, domain: $domain, version: $version, versionElement: $versionElement, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, description: $description, descriptionElement: $descriptionElement, combinedPharmaceuticalDoseForm: $combinedPharmaceuticalDoseForm, route: $route, indication: $indication, indicationElement: $indicationElement, legalStatusOfSupply: $legalStatusOfSupply, additionalMonitoringIndicator: $additionalMonitoringIndicator, specialMeasures: $specialMeasures, pediatricUseIndicator: $pediatricUseIndicator, classification: $classification, marketingStatus: $marketingStatus, packagedMedicinalProduct: $packagedMedicinalProduct, comprisedOf: $comprisedOf, ingredient: $ingredient, impurity: $impurity, attachedDocument: $attachedDocument, masterFile: $masterFile, contact: $contact, clinicalTrial: $clinicalTrial, code: $code, name: $name, crossReference: $crossReference, operation: $operation, characteristic: $characteristic)';
+    return 'MedicinalProductDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, domain: $domain, version: $version, versionElement: $versionElement, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, description: $description, descriptionElement: $descriptionElement, combinedPharmaceuticalDoseForm: $combinedPharmaceuticalDoseForm, route: $route, indication: $indication, indicationElement: $indicationElement, legalStatusOfSupply: $legalStatusOfSupply, additionalMonitoringIndicator: $additionalMonitoringIndicator, specialMeasures: $specialMeasures, pediatricUseIndicator: $pediatricUseIndicator, classification: $classification, marketingStatus: $marketingStatus, packagedMedicinalProduct: $packagedMedicinalProduct, ingredient: $ingredient, impurity: $impurity, attachedDocument: $attachedDocument, masterFile: $masterFile, contact: $contact, clinicalTrial: $clinicalTrial, code: $code, name: $name, crossReference: $crossReference, operation: $operation, characteristic: $characteristic)';
   }
 
   @override
@@ -10919,8 +10707,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
             const DeepCollectionEquality().equals(
                 other._packagedMedicinalProduct, _packagedMedicinalProduct) &&
             const DeepCollectionEquality()
-                .equals(other._comprisedOf, _comprisedOf) &&
-            const DeepCollectionEquality()
                 .equals(other._ingredient, _ingredient) &&
             const DeepCollectionEquality().equals(other._impurity, _impurity) &&
             const DeepCollectionEquality()
@@ -10976,7 +10762,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
         const DeepCollectionEquality().hash(_classification),
         const DeepCollectionEquality().hash(_marketingStatus),
         const DeepCollectionEquality().hash(_packagedMedicinalProduct),
-        const DeepCollectionEquality().hash(_comprisedOf),
         const DeepCollectionEquality().hash(_ingredient),
         const DeepCollectionEquality().hash(_impurity),
         const DeepCollectionEquality().hash(_attachedDocument),
@@ -11036,7 +10821,6 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
       final List<CodeableConcept>? classification,
       final List<MarketingStatus>? marketingStatus,
       final List<CodeableConcept>? packagedMedicinalProduct,
-      final List<Reference>? comprisedOf,
       final List<CodeableConcept>? ingredient,
       final List<CodeableReference>? impurity,
       final List<Reference>? attachedDocument,
@@ -11134,8 +10918,6 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
   @override
   List<CodeableConcept>? get packagedMedicinalProduct =>
       throw _privateConstructorUsedError;
-  @override
-  List<Reference>? get comprisedOf => throw _privateConstructorUsedError;
   @override
   List<CodeableConcept>? get ingredient => throw _privateConstructorUsedError;
   @override
@@ -13129,13 +12911,7 @@ mixin _$MedicinalProductDefinitionCharacteristic {
   CodeableConcept get type => throw _privateConstructorUsedError;
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
-  Markdown? get valueString => throw _privateConstructorUsedError;
-  @JsonKey(name: '_valueString')
-  Element? get valueStringElement => throw _privateConstructorUsedError;
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
-  Integer? get valueInteger => throw _privateConstructorUsedError;
-  @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   Date? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
@@ -13163,11 +12939,7 @@ abstract class $MedicinalProductDefinitionCharacteristicCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
-      Markdown? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       Boolean? valueBoolean,
@@ -13176,9 +12948,7 @@ abstract class $MedicinalProductDefinitionCharacteristicCopyWith<$Res> {
 
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  $ElementCopyWith<$Res>? get valueStringElement;
   $QuantityCopyWith<$Res>? get valueQuantity;
-  $ElementCopyWith<$Res>? get valueIntegerElement;
   $ElementCopyWith<$Res>? get valueDateElement;
   $ElementCopyWith<$Res>? get valueBooleanElement;
   $AttachmentCopyWith<$Res>? get valueAttachment;
@@ -13201,11 +12971,7 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? type = freezed,
     Object? valueCodeableConcept = freezed,
-    Object? valueString = freezed,
-    Object? valueStringElement = freezed,
     Object? valueQuantity = freezed,
-    Object? valueInteger = freezed,
-    Object? valueIntegerElement = freezed,
     Object? valueDate = freezed,
     Object? valueDateElement = freezed,
     Object? valueBoolean = freezed,
@@ -13233,26 +12999,10 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      valueString: valueString == freezed
-          ? _value.valueString
-          : valueString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
-      valueStringElement: valueStringElement == freezed
-          ? _value.valueStringElement
-          : valueStringElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      valueInteger: valueInteger == freezed
-          ? _value.valueInteger
-          : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      valueIntegerElement: valueIntegerElement == freezed
-          ? _value.valueIntegerElement
-          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       valueDate: valueDate == freezed
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
@@ -13296,17 +13046,6 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res>? get valueStringElement {
-    if (_value.valueStringElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
-      return _then(_value.copyWith(valueStringElement: value));
-    });
-  }
-
-  @override
   $QuantityCopyWith<$Res>? get valueQuantity {
     if (_value.valueQuantity == null) {
       return null;
@@ -13314,17 +13053,6 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
 
     return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
       return _then(_value.copyWith(valueQuantity: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get valueIntegerElement {
-    if (_value.valueIntegerElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
-      return _then(_value.copyWith(valueIntegerElement: value));
     });
   }
 
@@ -13376,11 +13104,7 @@ abstract class _$$_MedicinalProductDefinitionCharacteristicCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
-      Markdown? valueString,
-      @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Integer? valueInteger,
-      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Date? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       Boolean? valueBoolean,
@@ -13392,11 +13116,7 @@ abstract class _$$_MedicinalProductDefinitionCharacteristicCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
-  $ElementCopyWith<$Res>? get valueStringElement;
-  @override
   $QuantityCopyWith<$Res>? get valueQuantity;
-  @override
-  $ElementCopyWith<$Res>? get valueIntegerElement;
   @override
   $ElementCopyWith<$Res>? get valueDateElement;
   @override
@@ -13426,11 +13146,7 @@ class __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? type = freezed,
     Object? valueCodeableConcept = freezed,
-    Object? valueString = freezed,
-    Object? valueStringElement = freezed,
     Object? valueQuantity = freezed,
-    Object? valueInteger = freezed,
-    Object? valueIntegerElement = freezed,
     Object? valueDate = freezed,
     Object? valueDateElement = freezed,
     Object? valueBoolean = freezed,
@@ -13458,26 +13174,10 @@ class __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      valueString: valueString == freezed
-          ? _value.valueString
-          : valueString // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
-      valueStringElement: valueStringElement == freezed
-          ? _value.valueStringElement
-          : valueStringElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      valueInteger: valueInteger == freezed
-          ? _value.valueInteger
-          : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
-      valueIntegerElement: valueIntegerElement == freezed
-          ? _value.valueIntegerElement
-          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       valueDate: valueDate == freezed
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
@@ -13512,11 +13212,7 @@ class _$_MedicinalProductDefinitionCharacteristic
       final List<FhirExtension>? modifierExtension,
       required this.type,
       this.valueCodeableConcept,
-      this.valueString,
-      @JsonKey(name: '_valueString') this.valueStringElement,
       this.valueQuantity,
-      this.valueInteger,
-      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
       this.valueDate,
       @JsonKey(name: '_valueDate') this.valueDateElement,
       this.valueBoolean,
@@ -13556,17 +13252,7 @@ class _$_MedicinalProductDefinitionCharacteristic
   @override
   final CodeableConcept? valueCodeableConcept;
   @override
-  final Markdown? valueString;
-  @override
-  @JsonKey(name: '_valueString')
-  final Element? valueStringElement;
-  @override
   final Quantity? valueQuantity;
-  @override
-  final Integer? valueInteger;
-  @override
-  @JsonKey(name: '_valueInteger')
-  final Element? valueIntegerElement;
   @override
   final Date? valueDate;
   @override
@@ -13582,7 +13268,7 @@ class _$_MedicinalProductDefinitionCharacteristic
 
   @override
   String toString() {
-    return 'MedicinalProductDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueQuantity: $valueQuantity, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueAttachment: $valueAttachment)';
+    return 'MedicinalProductDefinitionCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueCodeableConcept: $valueCodeableConcept, valueQuantity: $valueQuantity, valueDate: $valueDate, valueDateElement: $valueDateElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueAttachment: $valueAttachment)';
   }
 
   @override
@@ -13599,15 +13285,7 @@ class _$_MedicinalProductDefinitionCharacteristic
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
             const DeepCollectionEquality()
-                .equals(other.valueString, valueString) &&
-            const DeepCollectionEquality()
-                .equals(other.valueStringElement, valueStringElement) &&
-            const DeepCollectionEquality()
                 .equals(other.valueQuantity, valueQuantity) &&
-            const DeepCollectionEquality()
-                .equals(other.valueInteger, valueInteger) &&
-            const DeepCollectionEquality()
-                .equals(other.valueIntegerElement, valueIntegerElement) &&
             const DeepCollectionEquality().equals(other.valueDate, valueDate) &&
             const DeepCollectionEquality()
                 .equals(other.valueDateElement, valueDateElement) &&
@@ -13628,11 +13306,7 @@ class _$_MedicinalProductDefinitionCharacteristic
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(valueCodeableConcept),
-      const DeepCollectionEquality().hash(valueString),
-      const DeepCollectionEquality().hash(valueStringElement),
       const DeepCollectionEquality().hash(valueQuantity),
-      const DeepCollectionEquality().hash(valueInteger),
-      const DeepCollectionEquality().hash(valueIntegerElement),
       const DeepCollectionEquality().hash(valueDate),
       const DeepCollectionEquality().hash(valueDateElement),
       const DeepCollectionEquality().hash(valueBoolean),
@@ -13660,11 +13334,7 @@ abstract class _MedicinalProductDefinitionCharacteristic
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept type,
           final CodeableConcept? valueCodeableConcept,
-          final Markdown? valueString,
-          @JsonKey(name: '_valueString') final Element? valueStringElement,
           final Quantity? valueQuantity,
-          final Integer? valueInteger,
-          @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
           final Date? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
           final Boolean? valueBoolean,
@@ -13691,17 +13361,7 @@ abstract class _MedicinalProductDefinitionCharacteristic
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
-  Markdown? get valueString => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_valueString')
-  Element? get valueStringElement => throw _privateConstructorUsedError;
-  @override
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
-  @override
-  Integer? get valueInteger => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
   Date? get valueDate => throw _privateConstructorUsedError;
   @override
@@ -13768,7 +13428,6 @@ mixin _$PackagedProductDefinition {
   @JsonKey(name: '_copackagedIndicator')
   Element? get copackagedIndicatorElement => throw _privateConstructorUsedError;
   List<Reference>? get manufacturer => throw _privateConstructorUsedError;
-  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
   PackagedProductDefinitionPackage? get package =>
       throw _privateConstructorUsedError;
 
@@ -13819,7 +13478,6 @@ abstract class $PackagedProductDefinitionCopyWith<$Res> {
       @JsonKey(name: '_copackagedIndicator')
           Element? copackagedIndicatorElement,
       List<Reference>? manufacturer,
-      List<Reference>? attachedDocument,
       PackagedProductDefinitionPackage? package});
 
   $MetaCopyWith<$Res>? get meta;
@@ -13874,7 +13532,6 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res>
     Object? copackagedIndicator = freezed,
     Object? copackagedIndicatorElement = freezed,
     Object? manufacturer = freezed,
-    Object? attachedDocument = freezed,
     Object? package = freezed,
   }) {
     return _then(_value.copyWith(
@@ -13989,10 +13646,6 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res>
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      attachedDocument: attachedDocument == freezed
-          ? _value.attachedDocument
-          : attachedDocument // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       package: package == freezed
           ? _value.package
@@ -14168,7 +13821,6 @@ abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
       @JsonKey(name: '_copackagedIndicator')
           Element? copackagedIndicatorElement,
       List<Reference>? manufacturer,
-      List<Reference>? attachedDocument,
       PackagedProductDefinitionPackage? package});
 
   @override
@@ -14238,7 +13890,6 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
     Object? copackagedIndicator = freezed,
     Object? copackagedIndicatorElement = freezed,
     Object? manufacturer = freezed,
-    Object? attachedDocument = freezed,
     Object? package = freezed,
   }) {
     return _then(_$_PackagedProductDefinition(
@@ -14354,10 +14005,6 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
           ? _value._manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      attachedDocument: attachedDocument == freezed
-          ? _value._attachedDocument
-          : attachedDocument // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       package: package == freezed
           ? _value.package
           : package // ignore: cast_nullable_to_non_nullable
@@ -14399,7 +14046,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
       this.copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator') this.copackagedIndicatorElement,
       final List<Reference>? manufacturer,
-      final List<Reference>? attachedDocument,
       this.package})
       : _contained = contained,
         _extension_ = extension_,
@@ -14411,7 +14057,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
         _marketingStatus = marketingStatus,
         _characteristic = characteristic,
         _manufacturer = manufacturer,
-        _attachedDocument = attachedDocument,
         super._();
 
   factory _$_PackagedProductDefinition.fromJson(Map<String, dynamic> json) =>
@@ -14552,21 +14197,12 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Reference>? _attachedDocument;
-  @override
-  List<Reference>? get attachedDocument {
-    final value = _attachedDocument;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   @override
   final PackagedProductDefinitionPackage? package;
 
   @override
   String toString() {
-    return 'PackagedProductDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, type: $type, packageFor: $packageFor, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, containedItemQuantity: $containedItemQuantity, description: $description, descriptionElement: $descriptionElement, legalStatusOfSupply: $legalStatusOfSupply, marketingStatus: $marketingStatus, characteristic: $characteristic, copackagedIndicator: $copackagedIndicator, copackagedIndicatorElement: $copackagedIndicatorElement, manufacturer: $manufacturer, attachedDocument: $attachedDocument, package: $package)';
+    return 'PackagedProductDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, type: $type, packageFor: $packageFor, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, containedItemQuantity: $containedItemQuantity, description: $description, descriptionElement: $descriptionElement, legalStatusOfSupply: $legalStatusOfSupply, marketingStatus: $marketingStatus, characteristic: $characteristic, copackagedIndicator: $copackagedIndicator, copackagedIndicatorElement: $copackagedIndicatorElement, manufacturer: $manufacturer, package: $package)';
   }
 
   @override
@@ -14623,8 +14259,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
                 other.copackagedIndicatorElement, copackagedIndicatorElement) &&
             const DeepCollectionEquality()
                 .equals(other._manufacturer, _manufacturer) &&
-            const DeepCollectionEquality()
-                .equals(other._attachedDocument, _attachedDocument) &&
             const DeepCollectionEquality().equals(other.package, package));
   }
 
@@ -14660,7 +14294,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
         const DeepCollectionEquality().hash(copackagedIndicator),
         const DeepCollectionEquality().hash(copackagedIndicatorElement),
         const DeepCollectionEquality().hash(_manufacturer),
-        const DeepCollectionEquality().hash(_attachedDocument),
         const DeepCollectionEquality().hash(package)
       ]);
 
@@ -14707,7 +14340,6 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
       final Boolean? copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator') final Element? copackagedIndicatorElement,
       final List<Reference>? manufacturer,
-      final List<Reference>? attachedDocument,
       final PackagedProductDefinitionPackage? package}) = _$_PackagedProductDefinition;
   _PackagedProductDefinition._() : super._();
 
@@ -14782,8 +14414,6 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   Element? get copackagedIndicatorElement => throw _privateConstructorUsedError;
   @override
   List<Reference>? get manufacturer => throw _privateConstructorUsedError;
-  @override
-  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
   @override
   PackagedProductDefinitionPackage? get package =>
       throw _privateConstructorUsedError;
@@ -15109,7 +14739,7 @@ mixin _$PackagedProductDefinitionPackage {
   List<CodeableConcept>? get material => throw _privateConstructorUsedError;
   List<CodeableConcept>? get alternateMaterial =>
       throw _privateConstructorUsedError;
-  List<ProductShelfLife>? get shelfLifeStorage =>
+  List<PackagedProductDefinitionShelfLifeStorage>? get shelfLifeStorage =>
       throw _privateConstructorUsedError;
   List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   List<PackagedProductDefinitionProperty>? get property =>
@@ -15141,7 +14771,7 @@ abstract class $PackagedProductDefinitionPackageCopyWith<$Res> {
       @JsonKey(name: '_quantity') Element? quantityElement,
       List<CodeableConcept>? material,
       List<CodeableConcept>? alternateMaterial,
-      List<ProductShelfLife>? shelfLifeStorage,
+      List<PackagedProductDefinitionShelfLifeStorage>? shelfLifeStorage,
       List<Reference>? manufacturer,
       List<PackagedProductDefinitionProperty>? property,
       List<PackagedProductDefinitionContainedItem>? containedItem,
@@ -15217,7 +14847,7 @@ class _$PackagedProductDefinitionPackageCopyWithImpl<$Res>
       shelfLifeStorage: shelfLifeStorage == freezed
           ? _value.shelfLifeStorage
           : shelfLifeStorage // ignore: cast_nullable_to_non_nullable
-              as List<ProductShelfLife>?,
+              as List<PackagedProductDefinitionShelfLifeStorage>?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
@@ -15278,7 +14908,7 @@ abstract class _$$_PackagedProductDefinitionPackageCopyWith<$Res>
       @JsonKey(name: '_quantity') Element? quantityElement,
       List<CodeableConcept>? material,
       List<CodeableConcept>? alternateMaterial,
-      List<ProductShelfLife>? shelfLifeStorage,
+      List<PackagedProductDefinitionShelfLifeStorage>? shelfLifeStorage,
       List<Reference>? manufacturer,
       List<PackagedProductDefinitionProperty>? property,
       List<PackagedProductDefinitionContainedItem>? containedItem,
@@ -15360,7 +14990,7 @@ class __$$_PackagedProductDefinitionPackageCopyWithImpl<$Res>
       shelfLifeStorage: shelfLifeStorage == freezed
           ? _value._shelfLifeStorage
           : shelfLifeStorage // ignore: cast_nullable_to_non_nullable
-              as List<ProductShelfLife>?,
+              as List<PackagedProductDefinitionShelfLifeStorage>?,
       manufacturer: manufacturer == freezed
           ? _value._manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
@@ -15395,7 +15025,7 @@ class _$_PackagedProductDefinitionPackage
       @JsonKey(name: '_quantity') this.quantityElement,
       final List<CodeableConcept>? material,
       final List<CodeableConcept>? alternateMaterial,
-      final List<ProductShelfLife>? shelfLifeStorage,
+      final List<PackagedProductDefinitionShelfLifeStorage>? shelfLifeStorage,
       final List<Reference>? manufacturer,
       final List<PackagedProductDefinitionProperty>? property,
       final List<PackagedProductDefinitionContainedItem>? containedItem,
@@ -15471,9 +15101,9 @@ class _$_PackagedProductDefinitionPackage
     return EqualUnmodifiableListView(value);
   }
 
-  final List<ProductShelfLife>? _shelfLifeStorage;
+  final List<PackagedProductDefinitionShelfLifeStorage>? _shelfLifeStorage;
   @override
-  List<ProductShelfLife>? get shelfLifeStorage {
+  List<PackagedProductDefinitionShelfLifeStorage>? get shelfLifeStorage {
     final value = _shelfLifeStorage;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -15585,21 +15215,21 @@ class _$_PackagedProductDefinitionPackage
 abstract class _PackagedProductDefinitionPackage
     extends PackagedProductDefinitionPackage {
   factory _PackagedProductDefinitionPackage(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<Identifier>? identifier,
-          final CodeableConcept? type,
-          final Integer? quantity,
-          @JsonKey(name: '_quantity') final Element? quantityElement,
-          final List<CodeableConcept>? material,
-          final List<CodeableConcept>? alternateMaterial,
-          final List<ProductShelfLife>? shelfLifeStorage,
-          final List<Reference>? manufacturer,
-          final List<PackagedProductDefinitionProperty>? property,
-          final List<PackagedProductDefinitionContainedItem>? containedItem,
-          final List<PackagedProductDefinitionPackage>? package}) =
-      _$_PackagedProductDefinitionPackage;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final CodeableConcept? type,
+      final Integer? quantity,
+      @JsonKey(name: '_quantity') final Element? quantityElement,
+      final List<CodeableConcept>? material,
+      final List<CodeableConcept>? alternateMaterial,
+      final List<PackagedProductDefinitionShelfLifeStorage>? shelfLifeStorage,
+      final List<Reference>? manufacturer,
+      final List<PackagedProductDefinitionProperty>? property,
+      final List<PackagedProductDefinitionContainedItem>? containedItem,
+      final List<PackagedProductDefinitionPackage>?
+          package}) = _$_PackagedProductDefinitionPackage;
   _PackagedProductDefinitionPackage._() : super._();
 
   factory _PackagedProductDefinitionPackage.fromJson(
@@ -15628,7 +15258,7 @@ abstract class _PackagedProductDefinitionPackage
   List<CodeableConcept>? get alternateMaterial =>
       throw _privateConstructorUsedError;
   @override
-  List<ProductShelfLife>? get shelfLifeStorage =>
+  List<PackagedProductDefinitionShelfLifeStorage>? get shelfLifeStorage =>
       throw _privateConstructorUsedError;
   @override
   List<Reference>? get manufacturer => throw _privateConstructorUsedError;
@@ -15645,6 +15275,412 @@ abstract class _PackagedProductDefinitionPackage
   @JsonKey(ignore: true)
   _$$_PackagedProductDefinitionPackageCopyWith<
           _$_PackagedProductDefinitionPackage>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+PackagedProductDefinitionShelfLifeStorage
+    _$PackagedProductDefinitionShelfLifeStorageFromJson(
+        Map<String, dynamic> json) {
+  return _PackagedProductDefinitionShelfLifeStorage.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PackagedProductDefinitionShelfLifeStorage {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Duration? get periodDuration => throw _privateConstructorUsedError;
+  String? get periodString => throw _privateConstructorUsedError;
+  @JsonKey(name: '_periodString')
+  Element? get periodStringElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get specialPrecautionsForStorage =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PackagedProductDefinitionShelfLifeStorageCopyWith<
+          PackagedProductDefinitionShelfLifeStorage>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PackagedProductDefinitionShelfLifeStorageCopyWith<$Res> {
+  factory $PackagedProductDefinitionShelfLifeStorageCopyWith(
+          PackagedProductDefinitionShelfLifeStorage value,
+          $Res Function(PackagedProductDefinitionShelfLifeStorage) then) =
+      _$PackagedProductDefinitionShelfLifeStorageCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      CodeableConcept type,
+      Duration? periodDuration,
+      String? periodString,
+      @JsonKey(name: '_periodString') Element? periodStringElement,
+      List<CodeableConcept>? specialPrecautionsForStorage});
+
+  $IdentifierCopyWith<$Res>? get identifier;
+  $CodeableConceptCopyWith<$Res> get type;
+  $ElementCopyWith<$Res>? get periodStringElement;
+}
+
+/// @nodoc
+class _$PackagedProductDefinitionShelfLifeStorageCopyWithImpl<$Res>
+    implements $PackagedProductDefinitionShelfLifeStorageCopyWith<$Res> {
+  _$PackagedProductDefinitionShelfLifeStorageCopyWithImpl(
+      this._value, this._then);
+
+  final PackagedProductDefinitionShelfLifeStorage _value;
+  // ignore: unused_field
+  final $Res Function(PackagedProductDefinitionShelfLifeStorage) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? type = freezed,
+    Object? periodDuration = freezed,
+    Object? periodString = freezed,
+    Object? periodStringElement = freezed,
+    Object? specialPrecautionsForStorage = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      periodDuration: periodDuration == freezed
+          ? _value.periodDuration
+          : periodDuration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      periodString: periodString == freezed
+          ? _value.periodString
+          : periodString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      periodStringElement: periodStringElement == freezed
+          ? _value.periodStringElement
+          : periodStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
+          ? _value.specialPrecautionsForStorage
+          : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+    ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res>? get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+
+    return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get periodStringElement {
+    if (_value.periodStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.periodStringElement!, (value) {
+      return _then(_value.copyWith(periodStringElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_PackagedProductDefinitionShelfLifeStorageCopyWith<$Res>
+    implements $PackagedProductDefinitionShelfLifeStorageCopyWith<$Res> {
+  factory _$$_PackagedProductDefinitionShelfLifeStorageCopyWith(
+          _$_PackagedProductDefinitionShelfLifeStorage value,
+          $Res Function(_$_PackagedProductDefinitionShelfLifeStorage) then) =
+      __$$_PackagedProductDefinitionShelfLifeStorageCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      CodeableConcept type,
+      Duration? periodDuration,
+      String? periodString,
+      @JsonKey(name: '_periodString') Element? periodStringElement,
+      List<CodeableConcept>? specialPrecautionsForStorage});
+
+  @override
+  $IdentifierCopyWith<$Res>? get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ElementCopyWith<$Res>? get periodStringElement;
+}
+
+/// @nodoc
+class __$$_PackagedProductDefinitionShelfLifeStorageCopyWithImpl<$Res>
+    extends _$PackagedProductDefinitionShelfLifeStorageCopyWithImpl<$Res>
+    implements _$$_PackagedProductDefinitionShelfLifeStorageCopyWith<$Res> {
+  __$$_PackagedProductDefinitionShelfLifeStorageCopyWithImpl(
+      _$_PackagedProductDefinitionShelfLifeStorage _value,
+      $Res Function(_$_PackagedProductDefinitionShelfLifeStorage) _then)
+      : super(_value,
+            (v) => _then(v as _$_PackagedProductDefinitionShelfLifeStorage));
+
+  @override
+  _$_PackagedProductDefinitionShelfLifeStorage get _value =>
+      super._value as _$_PackagedProductDefinitionShelfLifeStorage;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? type = freezed,
+    Object? periodDuration = freezed,
+    Object? periodString = freezed,
+    Object? periodStringElement = freezed,
+    Object? specialPrecautionsForStorage = freezed,
+  }) {
+    return _then(_$_PackagedProductDefinitionShelfLifeStorage(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      periodDuration: periodDuration == freezed
+          ? _value.periodDuration
+          : periodDuration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      periodString: periodString == freezed
+          ? _value.periodString
+          : periodString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      periodStringElement: periodStringElement == freezed
+          ? _value.periodStringElement
+          : periodStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
+          ? _value._specialPrecautionsForStorage
+          : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_PackagedProductDefinitionShelfLifeStorage
+    extends _PackagedProductDefinitionShelfLifeStorage {
+  _$_PackagedProductDefinitionShelfLifeStorage(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.identifier,
+      required this.type,
+      this.periodDuration,
+      this.periodString,
+      @JsonKey(name: '_periodString') this.periodStringElement,
+      final List<CodeableConcept>? specialPrecautionsForStorage})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _specialPrecautionsForStorage = specialPrecautionsForStorage,
+        super._();
+
+  factory _$_PackagedProductDefinitionShelfLifeStorage.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_PackagedProductDefinitionShelfLifeStorageFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Identifier? identifier;
+  @override
+  final CodeableConcept type;
+  @override
+  final Duration? periodDuration;
+  @override
+  final String? periodString;
+  @override
+  @JsonKey(name: '_periodString')
+  final Element? periodStringElement;
+  final List<CodeableConcept>? _specialPrecautionsForStorage;
+  @override
+  List<CodeableConcept>? get specialPrecautionsForStorage {
+    final value = _specialPrecautionsForStorage;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'PackagedProductDefinitionShelfLifeStorage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, periodDuration: $periodDuration, periodString: $periodString, periodStringElement: $periodStringElement, specialPrecautionsForStorage: $specialPrecautionsForStorage)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_PackagedProductDefinitionShelfLifeStorage &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.periodDuration, periodDuration) &&
+            const DeepCollectionEquality()
+                .equals(other.periodString, periodString) &&
+            const DeepCollectionEquality()
+                .equals(other.periodStringElement, periodStringElement) &&
+            const DeepCollectionEquality().equals(
+                other._specialPrecautionsForStorage,
+                _specialPrecautionsForStorage));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(periodDuration),
+      const DeepCollectionEquality().hash(periodString),
+      const DeepCollectionEquality().hash(periodStringElement),
+      const DeepCollectionEquality().hash(_specialPrecautionsForStorage));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_PackagedProductDefinitionShelfLifeStorageCopyWith<
+          _$_PackagedProductDefinitionShelfLifeStorage>
+      get copyWith =>
+          __$$_PackagedProductDefinitionShelfLifeStorageCopyWithImpl<
+              _$_PackagedProductDefinitionShelfLifeStorage>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_PackagedProductDefinitionShelfLifeStorageToJson(this);
+  }
+}
+
+abstract class _PackagedProductDefinitionShelfLifeStorage
+    extends PackagedProductDefinitionShelfLifeStorage {
+  factory _PackagedProductDefinitionShelfLifeStorage(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Identifier? identifier,
+          required final CodeableConcept type,
+          final Duration? periodDuration,
+          final String? periodString,
+          @JsonKey(name: '_periodString') final Element? periodStringElement,
+          final List<CodeableConcept>? specialPrecautionsForStorage}) =
+      _$_PackagedProductDefinitionShelfLifeStorage;
+  _PackagedProductDefinitionShelfLifeStorage._() : super._();
+
+  factory _PackagedProductDefinitionShelfLifeStorage.fromJson(
+          Map<String, dynamic> json) =
+      _$_PackagedProductDefinitionShelfLifeStorage.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  @override
+  Duration? get periodDuration => throw _privateConstructorUsedError;
+  @override
+  String? get periodString => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_periodString')
+  Element? get periodStringElement => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get specialPrecautionsForStorage =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_PackagedProductDefinitionShelfLifeStorageCopyWith<
+          _$_PackagedProductDefinitionShelfLifeStorage>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -16456,7 +16492,6 @@ mixin _$RegulatedAuthorization {
   List<CodeableConcept>? get basis => throw _privateConstructorUsedError;
   Reference? get holder => throw _privateConstructorUsedError;
   Reference? get regulator => throw _privateConstructorUsedError;
-  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
   @JsonKey(name: 'case')
   RegulatedAuthorizationCase? get case_ => throw _privateConstructorUsedError;
 
@@ -16498,7 +16533,6 @@ abstract class $RegulatedAuthorizationCopyWith<$Res> {
       List<CodeableConcept>? basis,
       Reference? holder,
       Reference? regulator,
-      List<Reference>? attachedDocument,
       @JsonKey(name: 'case') RegulatedAuthorizationCase? case_});
 
   $MetaCopyWith<$Res>? get meta;
@@ -16554,7 +16588,6 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res>
     Object? basis = freezed,
     Object? holder = freezed,
     Object? regulator = freezed,
-    Object? attachedDocument = freezed,
     Object? case_ = freezed,
   }) {
     return _then(_value.copyWith(
@@ -16662,10 +16695,6 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res>
           ? _value.regulator
           : regulator // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      attachedDocument: attachedDocument == freezed
-          ? _value.attachedDocument
-          : attachedDocument // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       case_: case_ == freezed
           ? _value.case_
           : case_ // ignore: cast_nullable_to_non_nullable
@@ -16862,7 +16891,6 @@ abstract class _$$_RegulatedAuthorizationCopyWith<$Res>
       List<CodeableConcept>? basis,
       Reference? holder,
       Reference? regulator,
-      List<Reference>? attachedDocument,
       @JsonKey(name: 'case') RegulatedAuthorizationCase? case_});
 
   @override
@@ -16935,7 +16963,6 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
     Object? basis = freezed,
     Object? holder = freezed,
     Object? regulator = freezed,
-    Object? attachedDocument = freezed,
     Object? case_ = freezed,
   }) {
     return _then(_$_RegulatedAuthorization(
@@ -17043,10 +17070,6 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
           ? _value.regulator
           : regulator // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      attachedDocument: attachedDocument == freezed
-          ? _value._attachedDocument
-          : attachedDocument // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       case_: case_ == freezed
           ? _value.case_
           : case_ // ignore: cast_nullable_to_non_nullable
@@ -17085,7 +17108,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
       final List<CodeableConcept>? basis,
       this.holder,
       this.regulator,
-      final List<Reference>? attachedDocument,
       @JsonKey(name: 'case') this.case_})
       : _contained = contained,
         _extension_ = extension_,
@@ -17094,7 +17116,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
         _subject = subject,
         _region = region,
         _basis = basis,
-        _attachedDocument = attachedDocument,
         super._();
 
   factory _$_RegulatedAuthorization.fromJson(Map<String, dynamic> json) =>
@@ -17207,22 +17228,13 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   final Reference? holder;
   @override
   final Reference? regulator;
-  final List<Reference>? _attachedDocument;
-  @override
-  List<Reference>? get attachedDocument {
-    final value = _attachedDocument;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   @override
   @JsonKey(name: 'case')
   final RegulatedAuthorizationCase? case_;
 
   @override
   String toString() {
-    return 'RegulatedAuthorization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, type: $type, description: $description, descriptionElement: $descriptionElement, region: $region, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, validityPeriod: $validityPeriod, indication: $indication, intendedUse: $intendedUse, basis: $basis, holder: $holder, regulator: $regulator, attachedDocument: $attachedDocument, case_: $case_)';
+    return 'RegulatedAuthorization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, type: $type, description: $description, descriptionElement: $descriptionElement, region: $region, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, validityPeriod: $validityPeriod, indication: $indication, intendedUse: $intendedUse, basis: $basis, holder: $holder, regulator: $regulator, case_: $case_)';
   }
 
   @override
@@ -17271,8 +17283,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
             const DeepCollectionEquality().equals(other._basis, _basis) &&
             const DeepCollectionEquality().equals(other.holder, holder) &&
             const DeepCollectionEquality().equals(other.regulator, regulator) &&
-            const DeepCollectionEquality()
-                .equals(other._attachedDocument, _attachedDocument) &&
             const DeepCollectionEquality().equals(other.case_, case_));
   }
 
@@ -17306,7 +17316,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
         const DeepCollectionEquality().hash(_basis),
         const DeepCollectionEquality().hash(holder),
         const DeepCollectionEquality().hash(regulator),
-        const DeepCollectionEquality().hash(_attachedDocument),
         const DeepCollectionEquality().hash(case_)
       ]);
 
@@ -17350,7 +17359,6 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
           final List<CodeableConcept>? basis,
           final Reference? holder,
           final Reference? regulator,
-          final List<Reference>? attachedDocument,
           @JsonKey(name: 'case') final RegulatedAuthorizationCase? case_}) =
       _$_RegulatedAuthorization;
   _RegulatedAuthorization._() : super._();
@@ -17416,8 +17424,6 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
   Reference? get holder => throw _privateConstructorUsedError;
   @override
   Reference? get regulator => throw _privateConstructorUsedError;
-  @override
-  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'case')
   RegulatedAuthorizationCase? get case_ => throw _privateConstructorUsedError;
@@ -17914,7 +17920,6 @@ mixin _$SubstanceDefinition {
       throw _privateConstructorUsedError;
   List<SubstanceDefinitionProperty>? get property =>
       throw _privateConstructorUsedError;
-  Reference? get referenceInformation => throw _privateConstructorUsedError;
   List<SubstanceDefinitionMolecularWeight>? get molecularWeight =>
       throw _privateConstructorUsedError;
   SubstanceDefinitionStructure? get structure =>
@@ -17923,9 +17928,6 @@ mixin _$SubstanceDefinition {
   List<SubstanceDefinitionName>? get name => throw _privateConstructorUsedError;
   List<SubstanceDefinitionRelationship>? get relationship =>
       throw _privateConstructorUsedError;
-  Reference? get nucleicAcid => throw _privateConstructorUsedError;
-  Reference? get polymer => throw _privateConstructorUsedError;
-  Reference? get protein => throw _privateConstructorUsedError;
   SubstanceDefinitionSourceMaterial? get sourceMaterial =>
       throw _privateConstructorUsedError;
 
@@ -17967,15 +17969,11 @@ abstract class $SubstanceDefinitionCopyWith<$Res> {
       List<Reference>? supplier,
       List<SubstanceDefinitionMoiety>? moiety,
       List<SubstanceDefinitionProperty>? property,
-      Reference? referenceInformation,
       List<SubstanceDefinitionMolecularWeight>? molecularWeight,
       SubstanceDefinitionStructure? structure,
       List<SubstanceDefinitionCode>? code,
       List<SubstanceDefinitionName>? name,
       List<SubstanceDefinitionRelationship>? relationship,
-      Reference? nucleicAcid,
-      Reference? polymer,
-      Reference? protein,
       SubstanceDefinitionSourceMaterial? sourceMaterial});
 
   $MetaCopyWith<$Res>? get meta;
@@ -17986,11 +17984,7 @@ abstract class $SubstanceDefinitionCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res>? get status;
   $CodeableConceptCopyWith<$Res>? get domain;
   $ElementCopyWith<$Res>? get descriptionElement;
-  $ReferenceCopyWith<$Res>? get referenceInformation;
   $SubstanceDefinitionStructureCopyWith<$Res>? get structure;
-  $ReferenceCopyWith<$Res>? get nucleicAcid;
-  $ReferenceCopyWith<$Res>? get polymer;
-  $ReferenceCopyWith<$Res>? get protein;
   $SubstanceDefinitionSourceMaterialCopyWith<$Res>? get sourceMaterial;
 }
 
@@ -18031,15 +18025,11 @@ class _$SubstanceDefinitionCopyWithImpl<$Res>
     Object? supplier = freezed,
     Object? moiety = freezed,
     Object? property = freezed,
-    Object? referenceInformation = freezed,
     Object? molecularWeight = freezed,
     Object? structure = freezed,
     Object? code = freezed,
     Object? name = freezed,
     Object? relationship = freezed,
-    Object? nucleicAcid = freezed,
-    Object? polymer = freezed,
-    Object? protein = freezed,
     Object? sourceMaterial = freezed,
   }) {
     return _then(_value.copyWith(
@@ -18147,10 +18137,6 @@ class _$SubstanceDefinitionCopyWithImpl<$Res>
           ? _value.property
           : property // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionProperty>?,
-      referenceInformation: referenceInformation == freezed
-          ? _value.referenceInformation
-          : referenceInformation // ignore: cast_nullable_to_non_nullable
-              as Reference?,
       molecularWeight: molecularWeight == freezed
           ? _value.molecularWeight
           : molecularWeight // ignore: cast_nullable_to_non_nullable
@@ -18171,18 +18157,6 @@ class _$SubstanceDefinitionCopyWithImpl<$Res>
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionRelationship>?,
-      nucleicAcid: nucleicAcid == freezed
-          ? _value.nucleicAcid
-          : nucleicAcid // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      polymer: polymer == freezed
-          ? _value.polymer
-          : polymer // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      protein: protein == freezed
-          ? _value.protein
-          : protein // ignore: cast_nullable_to_non_nullable
-              as Reference?,
       sourceMaterial: sourceMaterial == freezed
           ? _value.sourceMaterial
           : sourceMaterial // ignore: cast_nullable_to_non_nullable
@@ -18279,17 +18253,6 @@ class _$SubstanceDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get referenceInformation {
-    if (_value.referenceInformation == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.referenceInformation!, (value) {
-      return _then(_value.copyWith(referenceInformation: value));
-    });
-  }
-
-  @override
   $SubstanceDefinitionStructureCopyWith<$Res>? get structure {
     if (_value.structure == null) {
       return null;
@@ -18298,39 +18261,6 @@ class _$SubstanceDefinitionCopyWithImpl<$Res>
     return $SubstanceDefinitionStructureCopyWith<$Res>(_value.structure!,
         (value) {
       return _then(_value.copyWith(structure: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get nucleicAcid {
-    if (_value.nucleicAcid == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.nucleicAcid!, (value) {
-      return _then(_value.copyWith(nucleicAcid: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get polymer {
-    if (_value.polymer == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.polymer!, (value) {
-      return _then(_value.copyWith(polymer: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get protein {
-    if (_value.protein == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.protein!, (value) {
-      return _then(_value.copyWith(protein: value));
     });
   }
 
@@ -18381,15 +18311,11 @@ abstract class _$$_SubstanceDefinitionCopyWith<$Res>
       List<Reference>? supplier,
       List<SubstanceDefinitionMoiety>? moiety,
       List<SubstanceDefinitionProperty>? property,
-      Reference? referenceInformation,
       List<SubstanceDefinitionMolecularWeight>? molecularWeight,
       SubstanceDefinitionStructure? structure,
       List<SubstanceDefinitionCode>? code,
       List<SubstanceDefinitionName>? name,
       List<SubstanceDefinitionRelationship>? relationship,
-      Reference? nucleicAcid,
-      Reference? polymer,
-      Reference? protein,
       SubstanceDefinitionSourceMaterial? sourceMaterial});
 
   @override
@@ -18409,15 +18335,7 @@ abstract class _$$_SubstanceDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ReferenceCopyWith<$Res>? get referenceInformation;
-  @override
   $SubstanceDefinitionStructureCopyWith<$Res>? get structure;
-  @override
-  $ReferenceCopyWith<$Res>? get nucleicAcid;
-  @override
-  $ReferenceCopyWith<$Res>? get polymer;
-  @override
-  $ReferenceCopyWith<$Res>? get protein;
   @override
   $SubstanceDefinitionSourceMaterialCopyWith<$Res>? get sourceMaterial;
 }
@@ -18461,15 +18379,11 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
     Object? supplier = freezed,
     Object? moiety = freezed,
     Object? property = freezed,
-    Object? referenceInformation = freezed,
     Object? molecularWeight = freezed,
     Object? structure = freezed,
     Object? code = freezed,
     Object? name = freezed,
     Object? relationship = freezed,
-    Object? nucleicAcid = freezed,
-    Object? polymer = freezed,
-    Object? protein = freezed,
     Object? sourceMaterial = freezed,
   }) {
     return _then(_$_SubstanceDefinition(
@@ -18577,10 +18491,6 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
           ? _value._property
           : property // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionProperty>?,
-      referenceInformation: referenceInformation == freezed
-          ? _value.referenceInformation
-          : referenceInformation // ignore: cast_nullable_to_non_nullable
-              as Reference?,
       molecularWeight: molecularWeight == freezed
           ? _value._molecularWeight
           : molecularWeight // ignore: cast_nullable_to_non_nullable
@@ -18601,18 +18511,6 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
           ? _value._relationship
           : relationship // ignore: cast_nullable_to_non_nullable
               as List<SubstanceDefinitionRelationship>?,
-      nucleicAcid: nucleicAcid == freezed
-          ? _value.nucleicAcid
-          : nucleicAcid // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      polymer: polymer == freezed
-          ? _value.polymer
-          : polymer // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      protein: protein == freezed
-          ? _value.protein
-          : protein // ignore: cast_nullable_to_non_nullable
-              as Reference?,
       sourceMaterial: sourceMaterial == freezed
           ? _value.sourceMaterial
           : sourceMaterial // ignore: cast_nullable_to_non_nullable
@@ -18651,15 +18549,11 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
       final List<Reference>? supplier,
       final List<SubstanceDefinitionMoiety>? moiety,
       final List<SubstanceDefinitionProperty>? property,
-      this.referenceInformation,
       final List<SubstanceDefinitionMolecularWeight>? molecularWeight,
       this.structure,
       final List<SubstanceDefinitionCode>? code,
       final List<SubstanceDefinitionName>? name,
       final List<SubstanceDefinitionRelationship>? relationship,
-      this.nucleicAcid,
-      this.polymer,
-      this.protein,
       this.sourceMaterial})
       : _contained = contained,
         _extension_ = extension_,
@@ -18824,8 +18718,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  @override
-  final Reference? referenceInformation;
   final List<SubstanceDefinitionMolecularWeight>? _molecularWeight;
   @override
   List<SubstanceDefinitionMolecularWeight>? get molecularWeight {
@@ -18865,17 +18757,11 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   }
 
   @override
-  final Reference? nucleicAcid;
-  @override
-  final Reference? polymer;
-  @override
-  final Reference? protein;
-  @override
   final SubstanceDefinitionSourceMaterial? sourceMaterial;
 
   @override
   String toString() {
-    return 'SubstanceDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, version: $version, versionElement: $versionElement, status: $status, classification: $classification, domain: $domain, grade: $grade, description: $description, descriptionElement: $descriptionElement, informationSource: $informationSource, note: $note, manufacturer: $manufacturer, supplier: $supplier, moiety: $moiety, property: $property, referenceInformation: $referenceInformation, molecularWeight: $molecularWeight, structure: $structure, code: $code, name: $name, relationship: $relationship, nucleicAcid: $nucleicAcid, polymer: $polymer, protein: $protein, sourceMaterial: $sourceMaterial)';
+    return 'SubstanceDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, version: $version, versionElement: $versionElement, status: $status, classification: $classification, domain: $domain, grade: $grade, description: $description, descriptionElement: $descriptionElement, informationSource: $informationSource, note: $note, manufacturer: $manufacturer, supplier: $supplier, moiety: $moiety, property: $property, molecularWeight: $molecularWeight, structure: $structure, code: $code, name: $name, relationship: $relationship, sourceMaterial: $sourceMaterial)';
   }
 
   @override
@@ -18924,18 +18810,12 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
             const DeepCollectionEquality().equals(other._moiety, _moiety) &&
             const DeepCollectionEquality().equals(other._property, _property) &&
             const DeepCollectionEquality()
-                .equals(other.referenceInformation, referenceInformation) &&
-            const DeepCollectionEquality()
                 .equals(other._molecularWeight, _molecularWeight) &&
             const DeepCollectionEquality().equals(other.structure, structure) &&
             const DeepCollectionEquality().equals(other._code, _code) &&
             const DeepCollectionEquality().equals(other._name, _name) &&
             const DeepCollectionEquality()
                 .equals(other._relationship, _relationship) &&
-            const DeepCollectionEquality()
-                .equals(other.nucleicAcid, nucleicAcid) &&
-            const DeepCollectionEquality().equals(other.polymer, polymer) &&
-            const DeepCollectionEquality().equals(other.protein, protein) &&
             const DeepCollectionEquality()
                 .equals(other.sourceMaterial, sourceMaterial));
   }
@@ -18970,15 +18850,11 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
         const DeepCollectionEquality().hash(_supplier),
         const DeepCollectionEquality().hash(_moiety),
         const DeepCollectionEquality().hash(_property),
-        const DeepCollectionEquality().hash(referenceInformation),
         const DeepCollectionEquality().hash(_molecularWeight),
         const DeepCollectionEquality().hash(structure),
         const DeepCollectionEquality().hash(_code),
         const DeepCollectionEquality().hash(_name),
         const DeepCollectionEquality().hash(_relationship),
-        const DeepCollectionEquality().hash(nucleicAcid),
-        const DeepCollectionEquality().hash(polymer),
-        const DeepCollectionEquality().hash(protein),
         const DeepCollectionEquality().hash(sourceMaterial)
       ]);
 
@@ -19022,15 +18898,11 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
           final List<Reference>? supplier,
           final List<SubstanceDefinitionMoiety>? moiety,
           final List<SubstanceDefinitionProperty>? property,
-          final Reference? referenceInformation,
           final List<SubstanceDefinitionMolecularWeight>? molecularWeight,
           final SubstanceDefinitionStructure? structure,
           final List<SubstanceDefinitionCode>? code,
           final List<SubstanceDefinitionName>? name,
           final List<SubstanceDefinitionRelationship>? relationship,
-          final Reference? nucleicAcid,
-          final Reference? polymer,
-          final Reference? protein,
           final SubstanceDefinitionSourceMaterial? sourceMaterial}) =
       _$_SubstanceDefinition;
   _SubstanceDefinition._() : super._();
@@ -19100,8 +18972,6 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
   List<SubstanceDefinitionProperty>? get property =>
       throw _privateConstructorUsedError;
   @override
-  Reference? get referenceInformation => throw _privateConstructorUsedError;
-  @override
   List<SubstanceDefinitionMolecularWeight>? get molecularWeight =>
       throw _privateConstructorUsedError;
   @override
@@ -19114,12 +18984,6 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
   @override
   List<SubstanceDefinitionRelationship>? get relationship =>
       throw _privateConstructorUsedError;
-  @override
-  Reference? get nucleicAcid => throw _privateConstructorUsedError;
-  @override
-  Reference? get polymer => throw _privateConstructorUsedError;
-  @override
-  Reference? get protein => throw _privateConstructorUsedError;
   @override
   SubstanceDefinitionSourceMaterial? get sourceMaterial =>
       throw _privateConstructorUsedError;

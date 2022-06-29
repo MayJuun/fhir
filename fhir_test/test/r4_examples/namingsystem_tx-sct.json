@@ -1,1 +1,0 @@
-{"resourceType":"NamingSystem","id":"tx-sct","name":"SNOMED CT (IHTSDO)","status":"draft","kind":"codesystem","date":"2015-08-21","publisher":"HL7, Inc","uniqueId":[{"type":"uri","value":"http://snomed.info/sct","preferred":true},{"type":"oid","value":"2.16.840.1.113883.6.96","preferred":false}]}
