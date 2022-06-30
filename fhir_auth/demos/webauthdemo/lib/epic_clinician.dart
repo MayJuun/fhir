@@ -28,13 +28,13 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
       client: client,
     );
 
-    Id? newId;
+    String? newId;
 
     final response = await request1.request();
     print('Response from upload:\n${response.toJson()}');
     newId = response.id;
 
-    if (newId is! Id) {
+    if (newId is! String) {
       if (response is OperationOutcome &&
           response.issue.isNotEmpty &&
           response.issue.first.location != null &&
@@ -42,8 +42,8 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
         final location = response.issue.first.location!.first;
         final resourceType =
             ResourceUtils.resourceTypeFromStringMap[location.split('/').first];
-        final newId = Id(location.split('/').last);
-        if (resourceType == null || newId.value == null || newId.value == '') {
+        final newId = location.split('/').last;
+        if (resourceType == null || newId == '') {
           print('Cannot attempt to read resource');
         } else {
           final request2 = FhirRequest.read(

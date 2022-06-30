@@ -25,7 +25,7 @@ Future<void> epicPatientRequest(Uri fhirCallback) async {
     final request = FhirRequest.read(
       base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
       type: R4ResourceType.Patient,
-      id: Id('${client.patientId}'),
+      id: '${client.patientId}',
       client: client,
     );
     try {
