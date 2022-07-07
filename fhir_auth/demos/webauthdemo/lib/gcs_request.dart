@@ -24,7 +24,7 @@ Future<void> gcsRequest(Uri fhirCallback) async {
       client: client,
     );
 
-    Id? newId;
+    String? newId;
     try {
       final response = await request1.request();
       newId = response.id;
@@ -33,7 +33,7 @@ Future<void> gcsRequest(Uri fhirCallback) async {
       print(e);
     }
 
-    if (newId is! Id) {
+    if (newId is! String) {
       print(newId);
     } else {
       final request2 = FhirRequest.read(
