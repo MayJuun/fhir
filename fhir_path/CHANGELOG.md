@@ -1,5 +1,12 @@
 # fhir_path
 
+## [0.9.0]
+
+* Updated to FHIR 0.9.0
+* Updated other dependencies
+* Fixed some errors with comparisons
+* Still working on some stack overflow issues with ios web
+
 ## [0.8.0]
 
 * Updated to FHIR 0.8.0

@@ -19,8 +19,7 @@
   "code": {
     "text": "Serum Dengue Virus IgM"
   },
-  "timingTiming": { "event": [
-    ],
+  "timingTiming": { 
     "_event": [
       {
         "extension": [

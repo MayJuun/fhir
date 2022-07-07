@@ -34,8 +34,7 @@
   "code": {
     "text": "Provide Mosquito Prevention Advice"
   },
-  "timingTiming": { "event": [
-    ],
+  "timingTiming": { 
     "_event": [
       {
         "extension": [

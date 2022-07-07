@@ -84,7 +84,7 @@ packages:
       path: "../../../fhir"
       relative: true
     source: path
-    version: "0.8.0"
+    version: "0.9.0"
   fhir_path:
     dependency: "direct main"
     description:
