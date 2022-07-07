@@ -72,6 +72,7 @@ Future<Resource?> request(SmartFhirClient client,
       }
     }
   }
+  return null;
 }
 
 final _newPatient = Patient.fromJson({

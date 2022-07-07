@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_interpolation_to_compose_strings, implementation_imports
+// ignore_for_file: prefer_interpolation_to_compose_strings, implementation_imports, depend_on_referenced_packages
 
 // Dart imports:
 import 'dart:async';
