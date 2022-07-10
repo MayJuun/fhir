@@ -102,7 +102,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
 
 Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -515,7 +515,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
 Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
     _$_CoverageEligibilityRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -880,7 +880,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
 Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
     _$_CoverageEligibilityResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1257,7 +1257,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_EnrollmentRequestToJson(
     _$_EnrollmentRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1361,7 +1361,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
 Map<String, dynamic> _$$_EnrollmentResponseToJson(
     _$_EnrollmentResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

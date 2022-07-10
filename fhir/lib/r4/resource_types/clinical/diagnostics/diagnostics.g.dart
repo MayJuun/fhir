@@ -68,7 +68,7 @@ _$_BodyStructure _$$_BodyStructureFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_BodyStructureToJson(_$_BodyStructure instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -350,7 +350,7 @@ _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -551,7 +551,7 @@ _$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ImagingStudyToJson(_$_ImagingStudy instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -905,7 +905,7 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
 
 Map<String, dynamic> _$$_MediaToJson(_$_Media instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1062,7 +1062,7 @@ _$_MolecularSequence _$$_MolecularSequenceFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_MolecularSequenceToJson(
     _$_MolecularSequence instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1863,7 +1863,7 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2190,7 +2190,7 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
 Map<String, dynamic> _$$_QuestionnaireResponseToJson(
     _$_QuestionnaireResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2481,7 +2481,7 @@ _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
 
 Map<String, dynamic> _$$_SpecimenToJson(_$_Specimen instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

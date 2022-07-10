@@ -80,7 +80,7 @@ _$_AdministrableProductDefinition _$$_AdministrableProductDefinitionFromJson(
 Map<String, dynamic> _$$_AdministrableProductDefinitionToJson(
     _$_AdministrableProductDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -550,7 +550,7 @@ _$_Ingredient _$$_IngredientFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_IngredientToJson(_$_Ingredient instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -878,7 +878,7 @@ _$_ClinicalUseDefinition _$$_ClinicalUseDefinitionFromJson(
 Map<String, dynamic> _$$_ClinicalUseDefinitionToJson(
     _$_ClinicalUseDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1332,7 +1332,7 @@ _$_ManufacturedItemDefinition _$$_ManufacturedItemDefinitionFromJson(
 Map<String, dynamic> _$$_ManufacturedItemDefinitionToJson(
     _$_ManufacturedItemDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1575,7 +1575,7 @@ _$_MedicinalProductDefinition _$$_MedicinalProductDefinitionFromJson(
 Map<String, dynamic> _$$_MedicinalProductDefinitionToJson(
     _$_MedicinalProductDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2060,7 +2060,7 @@ _$_PackagedProductDefinition _$$_PackagedProductDefinitionFromJson(
 Map<String, dynamic> _$$_PackagedProductDefinitionToJson(
     _$_PackagedProductDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2478,7 +2478,7 @@ _$_RegulatedAuthorization _$$_RegulatedAuthorizationFromJson(
 Map<String, dynamic> _$$_RegulatedAuthorizationToJson(
     _$_RegulatedAuthorization instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2687,7 +2687,7 @@ _$_SubstanceDefinition _$$_SubstanceDefinitionFromJson(
 Map<String, dynamic> _$$_SubstanceDefinitionToJson(
     _$_SubstanceDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

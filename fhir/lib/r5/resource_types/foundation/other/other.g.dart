@@ -57,7 +57,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
 
 Map<String, dynamic> _$$_BasicToJson(_$_Basic instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -307,7 +307,7 @@ Map<String, dynamic> _$$_BinaryToJson(_$_Binary instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType];
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -397,7 +397,7 @@ Map<String, dynamic> _$$_BundleToJson(_$_Bundle instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType];
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -722,7 +722,7 @@ _$_Linkage _$$_LinkageFromJson(Map<String, dynamic> json) => _$_Linkage(
 
 Map<String, dynamic> _$$_LinkageToJson(_$_Linkage instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -862,7 +862,7 @@ _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MessageHeaderToJson(_$_MessageHeader instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1093,7 +1093,7 @@ _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_OperationOutcomeToJson(_$_OperationOutcome instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1243,7 +1243,7 @@ Map<String, dynamic> _$$_ParametersToJson(_$_Parameters instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType];
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1705,7 +1705,7 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SubscriptionToJson(_$_Subscription instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1880,7 +1880,7 @@ _$_SubscriptionStatus _$$_SubscriptionStatusFromJson(
 Map<String, dynamic> _$$_SubscriptionStatusToJson(
     _$_SubscriptionStatus instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2108,7 +2108,7 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_SubscriptionTopicToJson(
     _$_SubscriptionTopic instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

@@ -62,7 +62,7 @@ _$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
 
 Map<String, dynamic> _$$_OrderToJson(_$_Order instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -282,7 +282,7 @@ _$_OrderResponse _$$_OrderResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_OrderResponseToJson(_$_OrderResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -307,7 +307,7 @@ Map<String, dynamic> _$$_OrderResponseToJson(_$_OrderResponse instance) {
   val['request'] = instance.request.toJson();
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('who', instance.who?.toJson());
-  val['orderStatus'] = _$OrderResponseOrderStatusEnumMap[instance.orderStatus];
+  val['orderStatus'] = _$OrderResponseOrderStatusEnumMap[instance.orderStatus]!;
   writeNotNull('_orderStatus', instance.orderStatusElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull(
@@ -419,7 +419,7 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
 Map<String, dynamic> _$$_CommunicationRequestToJson(
     _$_CommunicationRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -610,7 +610,7 @@ _$_DeviceUseRequest _$$_DeviceUseRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DeviceUseRequestToJson(_$_DeviceUseRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -758,7 +758,7 @@ _$_DeviceUseStatement _$$_DeviceUseStatementFromJson(
 Map<String, dynamic> _$$_DeviceUseStatementToJson(
     _$_DeviceUseStatement instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

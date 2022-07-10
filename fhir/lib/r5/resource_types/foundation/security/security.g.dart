@@ -91,7 +91,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -695,7 +695,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
 
 Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1069,7 +1069,7 @@ _$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_PermissionToJson(_$_Permission instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1279,7 +1279,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

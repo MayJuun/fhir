@@ -1258,97 +1258,93 @@ abstract class _Patient extends Patient {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: '_id')
-  Element? get idElement => throw _privateConstructorUsedError;
+  Element? get idElement;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  Boolean? get active => throw _privateConstructorUsedError;
+  Boolean? get active;
   @override
   @JsonKey(name: '_active')
-  Element? get activeElement => throw _privateConstructorUsedError;
+  Element? get activeElement;
   @override
-  List<HumanName>? get name => throw _privateConstructorUsedError;
+  List<HumanName>? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(unknownEnumValue: PatientGender.unknown)
-  PatientGender? get gender => throw _privateConstructorUsedError;
+  PatientGender? get gender;
   @override
   @JsonKey(name: '_gender')
-  Element? get genderElement => throw _privateConstructorUsedError;
+  Element? get genderElement;
   @override
-  Date? get birthDate => throw _privateConstructorUsedError;
+  Date? get birthDate;
   @override
   @JsonKey(name: '_birthDate')
-  Element? get birthDateElement => throw _privateConstructorUsedError;
+  Element? get birthDateElement;
   @override
-  Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  Boolean? get deceasedBoolean;
   @override
   @JsonKey(name: '_deceasedBoolean')
-  Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
+  Element? get deceasedBooleanElement;
   @override
-  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get deceasedDateTime;
   @override
   @JsonKey(name: '_deceasedDateTime')
-  Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
+  Element? get deceasedDateTimeElement;
   @override
-  List<Address>? get address => throw _privateConstructorUsedError;
+  List<Address>? get address;
   @override
-  CodeableConcept? get maritalStatus => throw _privateConstructorUsedError;
+  CodeableConcept? get maritalStatus;
   @override
-  Boolean? get multipleBirthBoolean => throw _privateConstructorUsedError;
+  Boolean? get multipleBirthBoolean;
   @override
   @JsonKey(name: '_multipleBirthBoolean')
-  Element? get multipleBirthBooleanElement =>
-      throw _privateConstructorUsedError;
+  Element? get multipleBirthBooleanElement;
   @override
-  Integer? get multipleBirthInteger => throw _privateConstructorUsedError;
+  Integer? get multipleBirthInteger;
   @override
   @JsonKey(name: '_multipleBirthInteger')
-  Element? get multipleBirthIntegerElement =>
-      throw _privateConstructorUsedError;
+  Element? get multipleBirthIntegerElement;
   @override
-  List<Attachment>? get photo => throw _privateConstructorUsedError;
+  List<Attachment>? get photo;
   @override
-  List<PatientContact>? get contact => throw _privateConstructorUsedError;
+  List<PatientContact>? get contact;
   @override
-  PatientAnimal? get animal => throw _privateConstructorUsedError;
+  PatientAnimal? get animal;
   @override
-  List<PatientCommunication>? get communication =>
-      throw _privateConstructorUsedError;
+  List<PatientCommunication>? get communication;
   @override
-  List<Reference>? get careProvider => throw _privateConstructorUsedError;
+  List<Reference>? get careProvider;
   @override
-  Reference? get managingOrganization => throw _privateConstructorUsedError;
+  Reference? get managingOrganization;
   @override
-  List<PatientLink>? get link => throw _privateConstructorUsedError;
+  List<PatientLink>? get link;
   @override
   @JsonKey(ignore: true)
   _$$_PatientCopyWith<_$_Patient> get copyWith =>
@@ -1796,31 +1792,30 @@ abstract class _PatientContact extends PatientContact {
       _$_PatientContact.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<CodeableConcept>? get relationship => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get relationship;
   @override
-  HumanName? get name => throw _privateConstructorUsedError;
+  HumanName? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
-  Address? get address => throw _privateConstructorUsedError;
+  Address? get address;
   @override
   @JsonKey(unknownEnumValue: ContactGender.unknown)
-  ContactGender? get gender => throw _privateConstructorUsedError;
+  ContactGender? get gender;
   @override
   @JsonKey(name: '_gender')
-  Element? get genderElement => throw _privateConstructorUsedError;
+  Element? get genderElement;
   @override
-  Reference? get organization => throw _privateConstructorUsedError;
+  Reference? get organization;
   @override
-  Period? get period => throw _privateConstructorUsedError;
+  Period? get period;
   @override
   @JsonKey(ignore: true)
   _$$_PatientContactCopyWith<_$_PatientContact> get copyWith =>
@@ -2116,19 +2111,18 @@ abstract class _PatientAnimal extends PatientAnimal {
       _$_PatientAnimal.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept get species => throw _privateConstructorUsedError;
+  CodeableConcept get species;
   @override
-  CodeableConcept? get breed => throw _privateConstructorUsedError;
+  CodeableConcept? get breed;
   @override
-  CodeableConcept? get genderStatus => throw _privateConstructorUsedError;
+  CodeableConcept? get genderStatus;
   @override
   @JsonKey(ignore: true)
   _$$_PatientAnimalCopyWith<_$_PatientAnimal> get copyWith =>
@@ -2414,20 +2408,19 @@ abstract class _PatientCommunication extends PatientCommunication {
       _$_PatientCommunication.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept get language => throw _privateConstructorUsedError;
+  CodeableConcept get language;
   @override
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  Boolean? get preferred;
   @override
   @JsonKey(name: '_preferred')
-  Element? get preferredElement => throw _privateConstructorUsedError;
+  Element? get preferredElement;
   @override
   @JsonKey(ignore: true)
   _$$_PatientCommunicationCopyWith<_$_PatientCommunication> get copyWith =>
@@ -2711,21 +2704,20 @@ abstract class _PatientLink extends PatientLink {
       _$_PatientLink.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Reference get other => throw _privateConstructorUsedError;
+  Reference get other;
   @override
   @JsonKey(unknownEnumValue: LinkType.unknown)
-  LinkType get type => throw _privateConstructorUsedError;
+  LinkType get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
   @JsonKey(ignore: true)
   _$$_PatientLinkCopyWith<_$_PatientLink> get copyWith =>
@@ -3580,66 +3572,62 @@ abstract class _Practitioner extends Practitioner {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  Boolean? get active => throw _privateConstructorUsedError;
+  Boolean? get active;
   @override
   @JsonKey(name: '_active')
-  Element? get activeElement => throw _privateConstructorUsedError;
+  Element? get activeElement;
   @override
-  HumanName? get name => throw _privateConstructorUsedError;
+  HumanName? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
-  List<Address>? get address => throw _privateConstructorUsedError;
+  List<Address>? get address;
   @override
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-  PractitionerGender? get gender => throw _privateConstructorUsedError;
+  PractitionerGender? get gender;
   @override
   @JsonKey(name: '_gender')
-  Element? get genderElement => throw _privateConstructorUsedError;
+  Element? get genderElement;
   @override
-  Date? get birthDate => throw _privateConstructorUsedError;
+  Date? get birthDate;
   @override
   @JsonKey(name: '_birthDate')
-  Element? get birthDateElement => throw _privateConstructorUsedError;
+  Element? get birthDateElement;
   @override
-  List<Attachment>? get photo => throw _privateConstructorUsedError;
+  List<Attachment>? get photo;
   @override
-  List<PractitionerPractitionerRole>? get practitionerRole =>
-      throw _privateConstructorUsedError;
+  List<PractitionerPractitionerRole>? get practitionerRole;
   @override
-  List<PractitionerQualification>? get qualification =>
-      throw _privateConstructorUsedError;
+  List<PractitionerQualification>? get qualification;
   @override
-  List<CodeableConcept>? get communication =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get communication;
   @override
   @JsonKey(ignore: true)
   _$$_PractitionerCopyWith<_$_Practitioner> get copyWith =>
@@ -4059,28 +4047,27 @@ abstract class _PractitionerPractitionerRole
       _$_PractitionerPractitionerRole.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Reference? get managingOrganization => throw _privateConstructorUsedError;
+  Reference? get managingOrganization;
   @override
-  CodeableConcept? get role => throw _privateConstructorUsedError;
+  CodeableConcept? get role;
   @override
-  List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get specialty;
   @override
-  Period? get period => throw _privateConstructorUsedError;
+  Period? get period;
   @override
-  List<Reference>? get location => throw _privateConstructorUsedError;
+  List<Reference>? get location;
   @override
-  List<Reference>? get healthcareService => throw _privateConstructorUsedError;
+  List<Reference>? get healthcareService;
   @override
   @JsonKey(ignore: true)
   _$$_PractitionerPractitionerRoleCopyWith<_$_PractitionerPractitionerRole>
@@ -4408,21 +4395,20 @@ abstract class _PractitionerQualification extends PractitionerQualification {
       _$_PractitionerQualification.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  CodeableConcept get code => throw _privateConstructorUsedError;
+  CodeableConcept get code;
   @override
-  Period? get period => throw _privateConstructorUsedError;
+  Period? get period;
   @override
-  Reference? get issuer => throw _privateConstructorUsedError;
+  Reference? get issuer;
   @override
   @JsonKey(ignore: true)
   _$$_PractitionerQualificationCopyWith<_$_PractitionerQualification>
@@ -5229,58 +5215,57 @@ abstract class _RelatedPerson extends RelatedPerson {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  Reference get patient => throw _privateConstructorUsedError;
+  Reference get patient;
   @override
-  CodeableConcept? get relationship => throw _privateConstructorUsedError;
+  CodeableConcept? get relationship;
   @override
-  HumanName? get name => throw _privateConstructorUsedError;
+  HumanName? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-  RelatedPersonGender? get gender => throw _privateConstructorUsedError;
+  RelatedPersonGender? get gender;
   @override
   @JsonKey(name: '_gender')
-  Element? get genderElement => throw _privateConstructorUsedError;
+  Element? get genderElement;
   @override
-  Date? get birthDate => throw _privateConstructorUsedError;
+  Date? get birthDate;
   @override
   @JsonKey(name: '_birthDate')
-  Element? get birthDateElement => throw _privateConstructorUsedError;
+  Element? get birthDateElement;
   @override
-  List<Address>? get address => throw _privateConstructorUsedError;
+  List<Address>? get address;
   @override
-  List<Attachment>? get photo => throw _privateConstructorUsedError;
+  List<Attachment>? get photo;
   @override
-  Period? get period => throw _privateConstructorUsedError;
+  Period? get period;
   @override
   @JsonKey(ignore: true)
   _$$_RelatedPersonCopyWith<_$_RelatedPerson> get copyWith =>

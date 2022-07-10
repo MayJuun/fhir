@@ -69,7 +69,7 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -362,7 +362,7 @@ _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_HealthcareServiceToJson(
     _$_HealthcareService instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -513,7 +513,7 @@ Map<String, dynamic> _$$_HealthcareServiceAvailableTimeToJson(
   writeNotNull(
       'daysOfWeek',
       instance.daysOfWeek
-          ?.map((e) => _$AvailableTimeDaysOfWeekEnumMap[e])
+          ?.map((e) => _$AvailableTimeDaysOfWeekEnumMap[e]!)
           .toList());
   writeNotNull('_daysOfWeek', instance.daysOfWeekElement?.toJson());
   writeNotNull('allDay', instance.allDay?.toJson());
@@ -644,7 +644,7 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
 
 Map<String, dynamic> _$$_GroupToJson(_$_Group instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -668,7 +668,7 @@ Map<String, dynamic> _$$_GroupToJson(_$_Group instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['type'] = _$GroupTypeEnumMap[instance.type];
+  val['type'] = _$GroupTypeEnumMap[instance.type]!;
   writeNotNull('_type', instance.typeElement?.toJson());
   val['actual'] = instance.actual.toJson();
   writeNotNull('_actual', instance.actualElement?.toJson());

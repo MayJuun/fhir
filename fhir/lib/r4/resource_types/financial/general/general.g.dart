@@ -78,7 +78,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
 
 Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -482,7 +482,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ChargeItemToJson(_$_ChargeItem instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -723,7 +723,7 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
 Map<String, dynamic> _$$_ChargeItemDefinitionToJson(
     _$_ChargeItemDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1094,7 +1094,7 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
 
 Map<String, dynamic> _$$_ContractToJson(_$_Contract instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2412,7 +2412,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
 Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
     _$_ExplanationOfBenefit instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -4049,7 +4049,7 @@ _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_InsurancePlanToJson(_$_InsurancePlan instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

@@ -203,13 +203,12 @@ abstract class _BackboneType extends BackboneType {
       _$_BackboneType.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(ignore: true)
   _$$_BackboneTypeCopyWith<_$_BackboneType> get copyWith =>

@@ -164,7 +164,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
 Map<String, dynamic> _$$_CapabilityStatementToJson(
     _$_CapabilityStatement instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -737,7 +737,7 @@ Map<String, dynamic> _$$_CapabilityStatementResourceToJson(
   writeNotNull(
       'referencePolicy',
       instance.referencePolicy
-          ?.map((e) => _$CapabilityStatementResourceReferencePolicyEnumMap[e])
+          ?.map((e) => _$CapabilityStatementResourceReferencePolicyEnumMap[e]!)
           .toList());
   writeNotNull('_referencePolicy',
       instance.referencePolicyElement?.map((e) => e?.toJson()).toList());
@@ -1266,7 +1266,7 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
 Map<String, dynamic> _$$_CompartmentDefinitionToJson(
     _$_CompartmentDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1472,7 +1472,7 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DataElementToJson(_$_DataElement instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1682,7 +1682,7 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_GraphDefinitionToJson(_$_GraphDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1998,7 +1998,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
 Map<String, dynamic> _$$_ImplementationGuideToJson(
     _$_ImplementationGuide instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2420,7 +2420,7 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_MessageDefinitionToJson(
     _$_MessageDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2694,7 +2694,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
 Map<String, dynamic> _$$_OperationDefinitionToJson(
     _$_OperationDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3100,7 +3100,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3166,14 +3166,14 @@ Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull(
       'comparator',
       instance.comparator
-          ?.map((e) => _$SearchParameterComparatorEnumMap[e])
+          ?.map((e) => _$SearchParameterComparatorEnumMap[e]!)
           .toList());
   writeNotNull('_comparator',
       instance.comparatorElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'modifier',
       instance.modifier
-          ?.map((e) => _$SearchParameterModifierEnumMap[e])
+          ?.map((e) => _$SearchParameterModifierEnumMap[e]!)
           .toList());
   writeNotNull(
       '_modifier', instance.modifierElement?.map((e) => e?.toJson()).toList());
@@ -3425,7 +3425,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
 Map<String, dynamic> _$$_StructureDefinitionToJson(
     _$_StructureDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3711,7 +3711,7 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_StructureMapToJson(_$_StructureMap instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -4471,7 +4471,7 @@ Map<String, dynamic> _$$_StructureMapTargetToJson(
   writeNotNull(
       'listMode',
       instance.listMode
-          ?.map((e) => _$StructureMapTargetListModeEnumMap[e])
+          ?.map((e) => _$StructureMapTargetListModeEnumMap[e]!)
           .toList());
   writeNotNull(
       '_listMode', instance.listModeElement?.map((e) => e?.toJson()).toList());

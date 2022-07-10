@@ -96,7 +96,7 @@ _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

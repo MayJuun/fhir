@@ -374,24 +374,22 @@ abstract class _Population extends Population {
       _$_Population.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Range? get ageRange => throw _privateConstructorUsedError;
+  Range? get ageRange;
   @override
-  CodeableConcept? get ageCodeableConcept => throw _privateConstructorUsedError;
+  CodeableConcept? get ageCodeableConcept;
   @override
-  CodeableConcept? get gender => throw _privateConstructorUsedError;
+  CodeableConcept? get gender;
   @override
-  CodeableConcept? get race => throw _privateConstructorUsedError;
+  CodeableConcept? get race;
   @override
-  CodeableConcept? get physiologicalCondition =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get physiologicalCondition;
   @override
   @JsonKey(ignore: true)
   _$$_PopulationCopyWith<_$_Population> get copyWith =>
@@ -744,25 +742,23 @@ abstract class _ProductShelfLife extends ProductShelfLife {
       _$_ProductShelfLife.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  FhirDuration? get periodDuration => throw _privateConstructorUsedError;
+  FhirDuration? get periodDuration;
   @override
-  Markdown? get periodString => throw _privateConstructorUsedError;
+  Markdown? get periodString;
   @override
   @JsonKey(name: '_periodString')
-  Element? get periodStringElement => throw _privateConstructorUsedError;
+  Element? get periodStringElement;
   @override
-  List<CodeableConcept>? get specialPrecautionsForStorage =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get specialPrecautionsForStorage;
   @override
   @JsonKey(ignore: true)
   _$$_ProductShelfLifeCopyWith<_$_ProductShelfLife> get copyWith =>
@@ -1148,26 +1144,25 @@ abstract class _MarketingStatus extends MarketingStatus {
       _$_MarketingStatus.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get country => throw _privateConstructorUsedError;
+  CodeableConcept? get country;
   @override
-  CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
+  CodeableConcept? get jurisdiction;
   @override
-  CodeableConcept get status => throw _privateConstructorUsedError;
+  CodeableConcept get status;
   @override
-  Period? get dateRange => throw _privateConstructorUsedError;
+  Period? get dateRange;
   @override
-  FhirDateTime? get restoreDate => throw _privateConstructorUsedError;
+  FhirDateTime? get restoreDate;
   @override
   @JsonKey(name: '_restoreDate')
-  Element? get restoreDateElement => throw _privateConstructorUsedError;
+  Element? get restoreDateElement;
   @override
   @JsonKey(ignore: true)
   _$$_MarketingStatusCopyWith<_$_MarketingStatus> get copyWith =>

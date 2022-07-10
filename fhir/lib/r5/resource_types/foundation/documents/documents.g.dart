@@ -109,7 +109,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -556,7 +556,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -753,7 +753,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_DocumentReferenceToJson(
     _$_DocumentReference instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

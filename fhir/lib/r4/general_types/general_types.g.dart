@@ -1328,8 +1328,8 @@ Map<String, dynamic> _$$_TimingRepeatToJson(_$_TimingRepeat instance) {
       'timeOfDay', instance.timeOfDay?.map((e) => e.toJson()).toList());
   writeNotNull('_timeOfDay',
       instance.timeOfDayElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'when', instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e]).toList());
+  writeNotNull('when',
+      instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e]!).toList());
   writeNotNull('_when', instance.whenElement?.map((e) => e?.toJson()).toList());
   writeNotNull('offset', instance.offset?.toJson());
   writeNotNull('_offset', instance.offsetElement?.toJson());

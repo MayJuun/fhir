@@ -158,7 +158,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
 Map<String, dynamic> _$$_CapabilityStatementToJson(
     _$_CapabilityStatement instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1227,7 +1227,7 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
 Map<String, dynamic> _$$_CompartmentDefinitionToJson(
     _$_CompartmentDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1433,7 +1433,7 @@ _$_ExampleScenario _$$_ExampleScenarioFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ExampleScenarioToJson(_$_ExampleScenario instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2052,7 +2052,7 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_GraphDefinitionToJson(_$_GraphDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2410,7 +2410,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
 Map<String, dynamic> _$$_ImplementationGuideToJson(
     _$_ImplementationGuide instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3192,7 +3192,7 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_MessageDefinitionToJson(
     _$_MessageDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3498,7 +3498,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
 Map<String, dynamic> _$$_OperationDefinitionToJson(
     _$_OperationDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -3953,7 +3953,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -4229,7 +4229,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
 Map<String, dynamic> _$$_StructureDefinitionToJson(
     _$_StructureDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -4577,7 +4577,7 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_StructureMapToJson(_$_StructureMap instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

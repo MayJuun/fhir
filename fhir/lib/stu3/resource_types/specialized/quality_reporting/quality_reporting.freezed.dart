@@ -2235,180 +2235,175 @@ abstract class _Measure extends Measure {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement => throw _privateConstructorUsedError;
+  Element? get versionElement;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement => throw _privateConstructorUsedError;
+  Element? get titleElement;
   @override
-  MeasureStatus? get status => throw _privateConstructorUsedError;
+  MeasureStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement => throw _privateConstructorUsedError;
+  Element? get experimentalElement;
   @override
-  Date? get date => throw _privateConstructorUsedError;
+  Date? get date;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement => throw _privateConstructorUsedError;
+  Element? get dateElement;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement => throw _privateConstructorUsedError;
+  Element? get publisherElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  String? get purpose => throw _privateConstructorUsedError;
+  String? get purpose;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement => throw _privateConstructorUsedError;
+  Element? get purposeElement;
   @override
-  String? get usage => throw _privateConstructorUsedError;
+  String? get usage;
   @override
   @JsonKey(name: '_usage')
-  Element? get usageElement => throw _privateConstructorUsedError;
+  Element? get usageElement;
   @override
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  Date? get approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
-  Element? get approvalDateElement => throw _privateConstructorUsedError;
+  Element? get approvalDateElement;
   @override
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  Date? get lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
-  Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  Element? get lastReviewDateElement;
   @override
-  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  Period? get effectivePeriod;
   @override
-  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction;
   @override
-  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get topic;
   @override
-  List<Contributor>? get contributor => throw _privateConstructorUsedError;
+  List<Contributor>? get contributor;
   @override
-  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact;
   @override
-  String? get copyright => throw _privateConstructorUsedError;
+  String? get copyright;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement => throw _privateConstructorUsedError;
+  Element? get copyrightElement;
   @override
-  List<RelatedArtifact>? get relatedArtifact =>
-      throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Reference>? get library_ => throw _privateConstructorUsedError;
+  List<Reference>? get library_;
   @override
-  String? get disclaimer => throw _privateConstructorUsedError;
+  String? get disclaimer;
   @override
   @JsonKey(name: '_disclaimer')
-  Element? get disclaimerElement => throw _privateConstructorUsedError;
+  Element? get disclaimerElement;
   @override
-  CodeableConcept? get scoring => throw _privateConstructorUsedError;
+  CodeableConcept? get scoring;
   @override
-  CodeableConcept? get compositeScoring => throw _privateConstructorUsedError;
+  CodeableConcept? get compositeScoring;
   @override
-  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get type;
   @override
-  String? get riskAdjustment => throw _privateConstructorUsedError;
+  String? get riskAdjustment;
   @override
   @JsonKey(name: '_riskAdjustment')
-  Element? get riskAdjustmentElement => throw _privateConstructorUsedError;
+  Element? get riskAdjustmentElement;
   @override
-  String? get rateAggregation => throw _privateConstructorUsedError;
+  String? get rateAggregation;
   @override
   @JsonKey(name: '_rateAggregation')
-  Element? get rateAggregationElement => throw _privateConstructorUsedError;
+  Element? get rateAggregationElement;
   @override
-  String? get rationale => throw _privateConstructorUsedError;
+  String? get rationale;
   @override
   @JsonKey(name: '_rationale')
-  Element? get rationaleElement => throw _privateConstructorUsedError;
+  Element? get rationaleElement;
   @override
-  String? get clinicalRecommendationStatement =>
-      throw _privateConstructorUsedError;
+  String? get clinicalRecommendationStatement;
   @override
   @JsonKey(name: '_clinicalRecommendationStatement')
-  Element? get clinicalRecommendationStatementElement =>
-      throw _privateConstructorUsedError;
+  Element? get clinicalRecommendationStatementElement;
   @override
-  String? get improvementNotation => throw _privateConstructorUsedError;
+  String? get improvementNotation;
   @override
   @JsonKey(name: '_improvementNotation')
-  Element? get improvementNotationElement => throw _privateConstructorUsedError;
+  Element? get improvementNotationElement;
   @override
-  List<String>? get definition => throw _privateConstructorUsedError;
+  List<String>? get definition;
   @override
   @JsonKey(name: '_definition')
-  List<Element?>? get definitionElement => throw _privateConstructorUsedError;
+  List<Element?>? get definitionElement;
   @override
-  String? get guidance => throw _privateConstructorUsedError;
+  String? get guidance;
   @override
   @JsonKey(name: '_guidance')
-  Element? get guidanceElement => throw _privateConstructorUsedError;
+  Element? get guidanceElement;
   @override
   @JsonKey(name: 'set')
-  String? get set_ => throw _privateConstructorUsedError;
+  String? get set_;
   @override
   @JsonKey(name: '_set')
-  Element? get setElement => throw _privateConstructorUsedError;
+  Element? get setElement;
   @override
-  List<MeasureGroup>? get group => throw _privateConstructorUsedError;
+  List<MeasureGroup>? get group;
   @override
-  List<MeasureSupplementalData>? get supplementalData =>
-      throw _privateConstructorUsedError;
+  List<MeasureSupplementalData>? get supplementalData;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureCopyWith<_$_Measure> get copyWith =>
@@ -2725,21 +2720,21 @@ abstract class _MeasureGroup extends MeasureGroup {
       _$_MeasureGroup.fromJson;
 
   @override
-  Identifier get identifier => throw _privateConstructorUsedError;
+  Identifier get identifier;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  List<MeasurePopulation>? get population => throw _privateConstructorUsedError;
+  List<MeasurePopulation>? get population;
   @override
-  List<MeasureStratifier>? get stratifier => throw _privateConstructorUsedError;
+  List<MeasureStratifier>? get stratifier;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureGroupCopyWith<_$_MeasureGroup> get copyWith =>
@@ -3096,24 +3091,24 @@ abstract class _MeasurePopulation extends MeasurePopulation {
       _$_MeasurePopulation.fromJson;
 
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  CodeableConcept? get code => throw _privateConstructorUsedError;
+  CodeableConcept? get code;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  String? get criteria => throw _privateConstructorUsedError;
+  String? get criteria;
   @override
   @JsonKey(name: '_criteria')
-  Element? get criteriaElement => throw _privateConstructorUsedError;
+  Element? get criteriaElement;
   @override
   @JsonKey(ignore: true)
   _$$_MeasurePopulationCopyWith<_$_MeasurePopulation> get copyWith =>
@@ -3381,17 +3376,17 @@ abstract class _MeasureStratifier extends MeasureStratifier {
       _$_MeasureStratifier.fromJson;
 
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  String? get criteria => throw _privateConstructorUsedError;
+  String? get criteria;
   @override
   @JsonKey(name: '_criteria')
-  Element? get criteriaElement => throw _privateConstructorUsedError;
+  Element? get criteriaElement;
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureStratifierCopyWith<_$_MeasureStratifier> get copyWith =>
@@ -3689,19 +3684,19 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
       _$_MeasureSupplementalData.fromJson;
 
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  List<CodeableConcept>? get usage => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get usage;
   @override
-  String? get criteria => throw _privateConstructorUsedError;
+  String? get criteria;
   @override
   @JsonKey(name: '_criteria')
-  Element? get criteriaElement => throw _privateConstructorUsedError;
+  Element? get criteriaElement;
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureSupplementalDataCopyWith<_$_MeasureSupplementalData>
@@ -4543,60 +4538,59 @@ abstract class _MeasureReport extends MeasureReport {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  MeasureReportStatus? get status => throw _privateConstructorUsedError;
+  MeasureReportStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  MeasureReportType? get type => throw _privateConstructorUsedError;
+  MeasureReportType? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  Reference get measure => throw _privateConstructorUsedError;
+  Reference get measure;
   @override
-  Reference? get patient => throw _privateConstructorUsedError;
+  Reference? get patient;
   @override
-  Date? get date => throw _privateConstructorUsedError;
+  Date? get date;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement => throw _privateConstructorUsedError;
+  Element? get dateElement;
   @override
-  Reference? get reportingOrganization => throw _privateConstructorUsedError;
+  Reference? get reportingOrganization;
   @override
-  Period get period => throw _privateConstructorUsedError;
+  Period get period;
   @override
-  List<MeasureReportGroup>? get group => throw _privateConstructorUsedError;
+  List<MeasureReportGroup>? get group;
   @override
-  Reference? get evaluatedResources => throw _privateConstructorUsedError;
+  Reference? get evaluatedResources;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureReportCopyWith<_$_MeasureReport> get copyWith =>
@@ -4862,18 +4856,16 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
       _$_MeasureReportGroup.fromJson;
 
   @override
-  Identifier get identifier => throw _privateConstructorUsedError;
+  Identifier get identifier;
   @override
-  List<MeasureReportPopulation>? get population =>
-      throw _privateConstructorUsedError;
+  List<MeasureReportPopulation>? get population;
   @override
-  Decimal? get measureScore => throw _privateConstructorUsedError;
+  Decimal? get measureScore;
   @override
   @JsonKey(name: '_measureScore')
-  Element? get measureScoreElement => throw _privateConstructorUsedError;
+  Element? get measureScoreElement;
   @override
-  List<MeasureReportStratifier>? get stratifier =>
-      throw _privateConstructorUsedError;
+  List<MeasureReportStratifier>? get stratifier;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureReportGroupCopyWith<_$_MeasureReportGroup> get copyWith =>
@@ -5154,16 +5146,16 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
       _$_MeasureReportPopulation.fromJson;
 
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  CodeableConcept? get code => throw _privateConstructorUsedError;
+  CodeableConcept? get code;
   @override
-  Decimal? get count => throw _privateConstructorUsedError;
+  Decimal? get count;
   @override
   @JsonKey(name: '_count')
-  Element? get countElement => throw _privateConstructorUsedError;
+  Element? get countElement;
   @override
-  Reference? get patients => throw _privateConstructorUsedError;
+  Reference? get patients;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureReportPopulationCopyWith<_$_MeasureReportPopulation>
@@ -5344,9 +5336,9 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
       _$_MeasureReportStratifier.fromJson;
 
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  List<MeasureReportStratum>? get stratum => throw _privateConstructorUsedError;
+  List<MeasureReportStratum>? get stratum;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureReportStratifierCopyWith<_$_MeasureReportStratifier>
@@ -5610,18 +5602,17 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
       _$_MeasureReportStratum.fromJson;
 
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
-  List<MeasureReportPopulation1>? get population =>
-      throw _privateConstructorUsedError;
+  List<MeasureReportPopulation1>? get population;
   @override
-  Decimal? get measureScore => throw _privateConstructorUsedError;
+  Decimal? get measureScore;
   @override
   @JsonKey(name: '_measureScore')
-  Element? get measureScoreElement => throw _privateConstructorUsedError;
+  Element? get measureScoreElement;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureReportStratumCopyWith<_$_MeasureReportStratum> get copyWith =>
@@ -5902,16 +5893,16 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
       _$_MeasureReportPopulation1.fromJson;
 
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  CodeableConcept? get code => throw _privateConstructorUsedError;
+  CodeableConcept? get code;
   @override
-  Decimal? get count => throw _privateConstructorUsedError;
+  Decimal? get count;
   @override
   @JsonKey(name: '_count')
-  Element? get countElement => throw _privateConstructorUsedError;
+  Element? get countElement;
   @override
-  Reference? get patients => throw _privateConstructorUsedError;
+  Reference? get patients;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureReportPopulation1CopyWith<_$_MeasureReportPopulation1>

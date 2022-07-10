@@ -126,7 +126,7 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
 
 Map<String, dynamic> _$$_EncounterToJson(_$_Encounter instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -692,7 +692,7 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -870,7 +870,7 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
 
 Map<String, dynamic> _$$_FlagToJson(_$_Flag instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1062,7 +1062,7 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
 
 Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1220,7 +1220,7 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
 
 Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

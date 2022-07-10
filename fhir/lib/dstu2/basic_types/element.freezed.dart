@@ -199,13 +199,13 @@ abstract class _Element extends Element {
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(ignore: true)
   _$$_ElementCopyWith<_$_Element> get copyWith =>

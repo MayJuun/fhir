@@ -990,74 +990,72 @@ abstract class _TestReport extends TestReport {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  TestReportStatus? get status => throw _privateConstructorUsedError;
+  TestReportStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Reference get testScript => throw _privateConstructorUsedError;
+  Reference get testScript;
   @override
-  TestReportResult? get result => throw _privateConstructorUsedError;
+  TestReportResult? get result;
   @override
   @JsonKey(name: '_result')
-  Element? get resultElement => throw _privateConstructorUsedError;
+  Element? get resultElement;
   @override
-  Decimal? get score => throw _privateConstructorUsedError;
+  Decimal? get score;
   @override
   @JsonKey(name: '_score')
-  Element? get scoreElement => throw _privateConstructorUsedError;
+  Element? get scoreElement;
   @override
-  String? get tester => throw _privateConstructorUsedError;
+  String? get tester;
   @override
   @JsonKey(name: '_tester')
-  Element? get testerElement => throw _privateConstructorUsedError;
+  Element? get testerElement;
   @override
-  String? get issued => throw _privateConstructorUsedError;
+  String? get issued;
   @override
   @JsonKey(name: '_issued')
-  Element? get issuedElement => throw _privateConstructorUsedError;
+  Element? get issuedElement;
   @override
-  List<TestReportParticipant>? get participant =>
-      throw _privateConstructorUsedError;
+  List<TestReportParticipant>? get participant;
   @override
-  TestReportSetup? get setup => throw _privateConstructorUsedError;
+  TestReportSetup? get setup;
   @override
-  List<TestReportTest>? get test => throw _privateConstructorUsedError;
+  List<TestReportTest>? get test;
   @override
-  TestReportTeardown? get teardown => throw _privateConstructorUsedError;
+  TestReportTeardown? get teardown;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportCopyWith<_$_TestReport> get copyWith =>
@@ -1348,20 +1346,20 @@ abstract class _TestReportParticipant extends TestReportParticipant {
       _$_TestReportParticipant.fromJson;
 
   @override
-  TestReportParticipantType? get type => throw _privateConstructorUsedError;
+  TestReportParticipantType? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  String? get uri => throw _privateConstructorUsedError;
+  String? get uri;
   @override
   @JsonKey(name: '_uri')
-  Element? get uriElement => throw _privateConstructorUsedError;
+  Element? get uriElement;
   @override
-  String? get display => throw _privateConstructorUsedError;
+  String? get display;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement => throw _privateConstructorUsedError;
+  Element? get displayElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportParticipantCopyWith<_$_TestReportParticipant> get copyWith =>
@@ -1501,7 +1499,7 @@ abstract class _TestReportSetup extends TestReportSetup {
       _$_TestReportSetup.fromJson;
 
   @override
-  List<TestReportAction> get action => throw _privateConstructorUsedError;
+  List<TestReportAction> get action;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportSetupCopyWith<_$_TestReportSetup> get copyWith =>
@@ -1690,10 +1688,10 @@ abstract class _TestReportAction extends TestReportAction {
       _$_TestReportAction.fromJson;
 
   @override
-  TestReportOperation? get operation => throw _privateConstructorUsedError;
+  TestReportOperation? get operation;
   @override
   @JsonKey(name: 'assert')
-  TestReportAssert? get assert_ => throw _privateConstructorUsedError;
+  TestReportAssert? get assert_;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportActionCopyWith<_$_TestReportAction> get copyWith =>
@@ -1982,20 +1980,20 @@ abstract class _TestReportOperation extends TestReportOperation {
       _$_TestReportOperation.fromJson;
 
   @override
-  TestReportOperationResult? get result => throw _privateConstructorUsedError;
+  TestReportOperationResult? get result;
   @override
   @JsonKey(name: '_result')
-  Element? get resultElement => throw _privateConstructorUsedError;
+  Element? get resultElement;
   @override
-  String? get message => throw _privateConstructorUsedError;
+  String? get message;
   @override
   @JsonKey(name: '_message')
-  Element? get messageElement => throw _privateConstructorUsedError;
+  Element? get messageElement;
   @override
-  String? get detail => throw _privateConstructorUsedError;
+  String? get detail;
   @override
   @JsonKey(name: '_detail')
-  Element? get detailElement => throw _privateConstructorUsedError;
+  Element? get detailElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportOperationCopyWith<_$_TestReportOperation> get copyWith =>
@@ -2283,20 +2281,20 @@ abstract class _TestReportAssert extends TestReportAssert {
       _$_TestReportAssert.fromJson;
 
   @override
-  TestReportAssertResult? get result => throw _privateConstructorUsedError;
+  TestReportAssertResult? get result;
   @override
   @JsonKey(name: '_result')
-  Element? get resultElement => throw _privateConstructorUsedError;
+  Element? get resultElement;
   @override
-  String? get message => throw _privateConstructorUsedError;
+  String? get message;
   @override
   @JsonKey(name: '_message')
-  Element? get messageElement => throw _privateConstructorUsedError;
+  Element? get messageElement;
   @override
-  String? get detail => throw _privateConstructorUsedError;
+  String? get detail;
   @override
   @JsonKey(name: '_detail')
-  Element? get detailElement => throw _privateConstructorUsedError;
+  Element? get detailElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportAssertCopyWith<_$_TestReportAssert> get copyWith =>
@@ -2553,17 +2551,17 @@ abstract class _TestReportTest extends TestReportTest {
       _$_TestReportTest.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  List<TestReportAction1> get action => throw _privateConstructorUsedError;
+  List<TestReportAction1> get action;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportTestCopyWith<_$_TestReportTest> get copyWith =>
@@ -2753,10 +2751,10 @@ abstract class _TestReportAction1 extends TestReportAction1 {
       _$_TestReportAction1.fromJson;
 
   @override
-  TestReportOperation? get operation => throw _privateConstructorUsedError;
+  TestReportOperation? get operation;
   @override
   @JsonKey(name: 'assert')
-  TestReportAssert? get assert_ => throw _privateConstructorUsedError;
+  TestReportAssert? get assert_;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportAction1CopyWith<_$_TestReportAction1> get copyWith =>
@@ -2897,7 +2895,7 @@ abstract class _TestReportTeardown extends TestReportTeardown {
       _$_TestReportTeardown.fromJson;
 
   @override
-  List<TestReportAction2> get action => throw _privateConstructorUsedError;
+  List<TestReportAction2> get action;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportTeardownCopyWith<_$_TestReportTeardown> get copyWith =>
@@ -3044,7 +3042,7 @@ abstract class _TestReportAction2 extends TestReportAction2 {
       _$_TestReportAction2.fromJson;
 
   @override
-  TestReportOperation get operation => throw _privateConstructorUsedError;
+  TestReportOperation get operation;
   @override
   @JsonKey(ignore: true)
   _$$_TestReportAction2CopyWith<_$_TestReportAction2> get copyWith =>
@@ -4572,117 +4570,115 @@ abstract class _TestScript extends TestScript {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement => throw _privateConstructorUsedError;
+  Element? get versionElement;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement => throw _privateConstructorUsedError;
+  Element? get titleElement;
   @override
-  TestScriptStatus? get status => throw _privateConstructorUsedError;
+  TestScriptStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement => throw _privateConstructorUsedError;
+  Element? get experimentalElement;
   @override
-  Date? get date => throw _privateConstructorUsedError;
+  Date? get date;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement => throw _privateConstructorUsedError;
+  Element? get dateElement;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement => throw _privateConstructorUsedError;
+  Element? get publisherElement;
   @override
-  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction;
   @override
-  String? get purpose => throw _privateConstructorUsedError;
+  String? get purpose;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement => throw _privateConstructorUsedError;
+  Element? get purposeElement;
   @override
-  String? get copyright => throw _privateConstructorUsedError;
+  String? get copyright;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement => throw _privateConstructorUsedError;
+  Element? get copyrightElement;
   @override
-  List<TestScriptOrigin>? get origin => throw _privateConstructorUsedError;
+  List<TestScriptOrigin>? get origin;
   @override
-  List<TestScriptDestination>? get destination =>
-      throw _privateConstructorUsedError;
+  List<TestScriptDestination>? get destination;
   @override
-  TestScriptMetadata? get metadata => throw _privateConstructorUsedError;
+  TestScriptMetadata? get metadata;
   @override
-  List<TestScriptFixture>? get fixture => throw _privateConstructorUsedError;
+  List<TestScriptFixture>? get fixture;
   @override
-  List<Reference>? get profile => throw _privateConstructorUsedError;
+  List<Reference>? get profile;
   @override
-  List<TestScriptVariable>? get variable => throw _privateConstructorUsedError;
+  List<TestScriptVariable>? get variable;
   @override
-  List<TestScriptRule>? get rule => throw _privateConstructorUsedError;
+  List<TestScriptRule>? get rule;
   @override
-  List<TestScriptRuleset>? get ruleset => throw _privateConstructorUsedError;
+  List<TestScriptRuleset>? get ruleset;
   @override
-  TestScriptSetup? get setup => throw _privateConstructorUsedError;
+  TestScriptSetup? get setup;
   @override
-  List<TestScriptTest>? get test => throw _privateConstructorUsedError;
+  List<TestScriptTest>? get test;
   @override
-  TestScriptTeardown? get teardown => throw _privateConstructorUsedError;
+  TestScriptTeardown? get teardown;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptCopyWith<_$_TestScript> get copyWith =>
@@ -4888,12 +4884,12 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
       _$_TestScriptOrigin.fromJson;
 
   @override
-  Decimal? get index => throw _privateConstructorUsedError;
+  Decimal? get index;
   @override
   @JsonKey(name: '_index')
-  Element? get indexElement => throw _privateConstructorUsedError;
+  Element? get indexElement;
   @override
-  Coding get profile => throw _privateConstructorUsedError;
+  Coding get profile;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptOriginCopyWith<_$_TestScriptOrigin> get copyWith =>
@@ -5102,12 +5098,12 @@ abstract class _TestScriptDestination extends TestScriptDestination {
       _$_TestScriptDestination.fromJson;
 
   @override
-  Decimal? get index => throw _privateConstructorUsedError;
+  Decimal? get index;
   @override
   @JsonKey(name: '_index')
-  Element? get indexElement => throw _privateConstructorUsedError;
+  Element? get indexElement;
   @override
-  Coding get profile => throw _privateConstructorUsedError;
+  Coding get profile;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptDestinationCopyWith<_$_TestScriptDestination> get copyWith =>
@@ -5280,10 +5276,9 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
       _$_TestScriptMetadata.fromJson;
 
   @override
-  List<TestScriptLink>? get link => throw _privateConstructorUsedError;
+  List<TestScriptLink>? get link;
   @override
-  List<TestScriptCapability> get capability =>
-      throw _privateConstructorUsedError;
+  List<TestScriptCapability> get capability;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
@@ -5517,15 +5512,15 @@ abstract class _TestScriptLink extends TestScriptLink {
       _$_TestScriptLink.fromJson;
 
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptLinkCopyWith<_$_TestScriptLink> get copyWith =>
@@ -6017,37 +6012,37 @@ abstract class _TestScriptCapability extends TestScriptCapability {
 
   @override
   @JsonKey(name: 'required')
-  Boolean? get required_ => throw _privateConstructorUsedError;
+  Boolean? get required_;
   @override
   @JsonKey(name: '_required')
-  Element? get requiredElement => throw _privateConstructorUsedError;
+  Element? get requiredElement;
   @override
-  Boolean? get validated => throw _privateConstructorUsedError;
+  Boolean? get validated;
   @override
   @JsonKey(name: '_validated')
-  Element? get validatedElement => throw _privateConstructorUsedError;
+  Element? get validatedElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  List<Decimal>? get origin => throw _privateConstructorUsedError;
+  List<Decimal>? get origin;
   @override
   @JsonKey(name: '_origin')
-  List<Element?>? get originElement => throw _privateConstructorUsedError;
+  List<Element?>? get originElement;
   @override
-  Decimal? get destination => throw _privateConstructorUsedError;
+  Decimal? get destination;
   @override
   @JsonKey(name: '_destination')
-  Element? get destinationElement => throw _privateConstructorUsedError;
+  Element? get destinationElement;
   @override
-  List<String>? get link => throw _privateConstructorUsedError;
+  List<String>? get link;
   @override
   @JsonKey(name: '_link')
-  List<Element?>? get linkElement => throw _privateConstructorUsedError;
+  List<Element?>? get linkElement;
   @override
-  Reference get capabilities => throw _privateConstructorUsedError;
+  Reference get capabilities;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptCapabilityCopyWith<_$_TestScriptCapability> get copyWith =>
@@ -6315,17 +6310,17 @@ abstract class _TestScriptFixture extends TestScriptFixture {
       _$_TestScriptFixture.fromJson;
 
   @override
-  Boolean? get autocreate => throw _privateConstructorUsedError;
+  Boolean? get autocreate;
   @override
   @JsonKey(name: '_autocreate')
-  Element? get autocreateElement => throw _privateConstructorUsedError;
+  Element? get autocreateElement;
   @override
-  Boolean? get autodelete => throw _privateConstructorUsedError;
+  Boolean? get autodelete;
   @override
   @JsonKey(name: '_autodelete')
-  Element? get autodeleteElement => throw _privateConstructorUsedError;
+  Element? get autodeleteElement;
   @override
-  Reference? get resource => throw _privateConstructorUsedError;
+  Reference? get resource;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptFixtureCopyWith<_$_TestScriptFixture> get copyWith =>
@@ -6893,45 +6888,45 @@ abstract class _TestScriptVariable extends TestScriptVariable {
       _$_TestScriptVariable.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get defaultValue => throw _privateConstructorUsedError;
+  String? get defaultValue;
   @override
   @JsonKey(name: '_defaultValue')
-  Element? get defaultValueElement => throw _privateConstructorUsedError;
+  Element? get defaultValueElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  String? get expression => throw _privateConstructorUsedError;
+  String? get expression;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement => throw _privateConstructorUsedError;
+  Element? get expressionElement;
   @override
-  String? get headerField => throw _privateConstructorUsedError;
+  String? get headerField;
   @override
   @JsonKey(name: '_headerField')
-  Element? get headerFieldElement => throw _privateConstructorUsedError;
+  Element? get headerFieldElement;
   @override
-  String? get hint => throw _privateConstructorUsedError;
+  String? get hint;
   @override
   @JsonKey(name: '_hint')
-  Element? get hintElement => throw _privateConstructorUsedError;
+  Element? get hintElement;
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
-  Id? get sourceId => throw _privateConstructorUsedError;
+  Id? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
-  Element? get sourceIdElement => throw _privateConstructorUsedError;
+  Element? get sourceIdElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptVariableCopyWith<_$_TestScriptVariable> get copyWith =>
@@ -7103,9 +7098,9 @@ abstract class _TestScriptRule extends TestScriptRule {
       _$_TestScriptRule.fromJson;
 
   @override
-  Reference get resource => throw _privateConstructorUsedError;
+  Reference get resource;
   @override
-  List<TestScriptParam>? get param => throw _privateConstructorUsedError;
+  List<TestScriptParam>? get param;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptRuleCopyWith<_$_TestScriptRule> get copyWith =>
@@ -7338,15 +7333,15 @@ abstract class _TestScriptParam extends TestScriptParam {
       _$_TestScriptParam.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptParamCopyWith<_$_TestScriptParam> get copyWith =>
@@ -7517,9 +7512,9 @@ abstract class _TestScriptRuleset extends TestScriptRuleset {
       _$_TestScriptRuleset.fromJson;
 
   @override
-  Reference get resource => throw _privateConstructorUsedError;
+  Reference get resource;
   @override
-  List<TestScriptRule1> get rule => throw _privateConstructorUsedError;
+  List<TestScriptRule1> get rule;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptRulesetCopyWith<_$_TestScriptRuleset> get copyWith =>
@@ -7722,12 +7717,12 @@ abstract class _TestScriptRule1 extends TestScriptRule1 {
       _$_TestScriptRule1.fromJson;
 
   @override
-  Id? get ruleId => throw _privateConstructorUsedError;
+  Id? get ruleId;
   @override
   @JsonKey(name: '_ruleId')
-  Element? get ruleIdElement => throw _privateConstructorUsedError;
+  Element? get ruleIdElement;
   @override
-  List<TestScriptParam1>? get param => throw _privateConstructorUsedError;
+  List<TestScriptParam1>? get param;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptRule1CopyWith<_$_TestScriptRule1> get copyWith =>
@@ -7960,15 +7955,15 @@ abstract class _TestScriptParam1 extends TestScriptParam1 {
       _$_TestScriptParam1.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptParam1CopyWith<_$_TestScriptParam1> get copyWith =>
@@ -8108,7 +8103,7 @@ abstract class _TestScriptSetup extends TestScriptSetup {
       _$_TestScriptSetup.fromJson;
 
   @override
-  List<TestScriptAction> get action => throw _privateConstructorUsedError;
+  List<TestScriptAction> get action;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptSetupCopyWith<_$_TestScriptSetup> get copyWith =>
@@ -8297,10 +8292,10 @@ abstract class _TestScriptAction extends TestScriptAction {
       _$_TestScriptAction.fromJson;
 
   @override
-  TestScriptOperation? get operation => throw _privateConstructorUsedError;
+  TestScriptOperation? get operation;
   @override
   @JsonKey(name: 'assert')
-  TestScriptAssert? get assert_ => throw _privateConstructorUsedError;
+  TestScriptAssert? get assert_;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptActionCopyWith<_$_TestScriptAction> get copyWith =>
@@ -9276,81 +9271,79 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       _$_TestScriptOperation.fromJson;
 
   @override
-  Coding? get type => throw _privateConstructorUsedError;
+  Coding? get type;
   @override
-  String? get resource => throw _privateConstructorUsedError;
+  String? get resource;
   @override
   @JsonKey(name: '_resource')
-  Element? get resourceElement => throw _privateConstructorUsedError;
+  Element? get resourceElement;
   @override
-  String? get label => throw _privateConstructorUsedError;
+  String? get label;
   @override
   @JsonKey(name: '_label')
-  Element? get labelElement => throw _privateConstructorUsedError;
+  Element? get labelElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  TestScriptOperationAccept? get accept => throw _privateConstructorUsedError;
+  TestScriptOperationAccept? get accept;
   @override
   @JsonKey(name: '_accept')
-  Element? get acceptElement => throw _privateConstructorUsedError;
+  Element? get acceptElement;
   @override
-  TestScriptOperationContentType? get contentType =>
-      throw _privateConstructorUsedError;
+  TestScriptOperationContentType? get contentType;
   @override
   @JsonKey(name: '_contentType')
-  Element? get contentTypeElement => throw _privateConstructorUsedError;
+  Element? get contentTypeElement;
   @override
-  Decimal? get destination => throw _privateConstructorUsedError;
+  Decimal? get destination;
   @override
   @JsonKey(name: '_destination')
-  Element? get destinationElement => throw _privateConstructorUsedError;
+  Element? get destinationElement;
   @override
-  Boolean? get encodeRequestUrl => throw _privateConstructorUsedError;
+  Boolean? get encodeRequestUrl;
   @override
   @JsonKey(name: '_encodeRequestUrl')
-  Element? get encodeRequestUrlElement => throw _privateConstructorUsedError;
+  Element? get encodeRequestUrlElement;
   @override
-  Decimal? get origin => throw _privateConstructorUsedError;
+  Decimal? get origin;
   @override
   @JsonKey(name: '_origin')
-  Element? get originElement => throw _privateConstructorUsedError;
+  Element? get originElement;
   @override
-  String? get params => throw _privateConstructorUsedError;
+  String? get params;
   @override
   @JsonKey(name: '_params')
-  Element? get paramsElement => throw _privateConstructorUsedError;
+  Element? get paramsElement;
   @override
-  List<TestScriptRequestHeader>? get requestHeader =>
-      throw _privateConstructorUsedError;
+  List<TestScriptRequestHeader>? get requestHeader;
   @override
-  Id? get requestId => throw _privateConstructorUsedError;
+  Id? get requestId;
   @override
   @JsonKey(name: '_requestId')
-  Element? get requestIdElement => throw _privateConstructorUsedError;
+  Element? get requestIdElement;
   @override
-  Id? get responseId => throw _privateConstructorUsedError;
+  Id? get responseId;
   @override
   @JsonKey(name: '_responseId')
-  Element? get responseIdElement => throw _privateConstructorUsedError;
+  Element? get responseIdElement;
   @override
-  Id? get sourceId => throw _privateConstructorUsedError;
+  Id? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
-  Element? get sourceIdElement => throw _privateConstructorUsedError;
+  Element? get sourceIdElement;
   @override
-  Id? get targetId => throw _privateConstructorUsedError;
+  Id? get targetId;
   @override
   @JsonKey(name: '_targetId')
-  Element? get targetIdElement => throw _privateConstructorUsedError;
+  Element? get targetIdElement;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptOperationCopyWith<_$_TestScriptOperation> get copyWith =>
@@ -9587,15 +9580,15 @@ abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
       _$_TestScriptRequestHeader.fromJson;
 
   @override
-  String? get field => throw _privateConstructorUsedError;
+  String? get field;
   @override
   @JsonKey(name: '_field')
-  Element? get fieldElement => throw _privateConstructorUsedError;
+  Element? get fieldElement;
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptRequestHeaderCopyWith<_$_TestScriptRequestHeader>
@@ -11109,124 +11102,120 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       _$_TestScriptAssert.fromJson;
 
   @override
-  String? get label => throw _privateConstructorUsedError;
+  String? get label;
   @override
   @JsonKey(name: '_label')
-  Element? get labelElement => throw _privateConstructorUsedError;
+  Element? get labelElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  TestScriptAssertDirection? get direction =>
-      throw _privateConstructorUsedError;
+  TestScriptAssertDirection? get direction;
   @override
   @JsonKey(name: '_direction')
-  Element? get directionElement => throw _privateConstructorUsedError;
+  Element? get directionElement;
   @override
-  String? get compareToSourceId => throw _privateConstructorUsedError;
+  String? get compareToSourceId;
   @override
   @JsonKey(name: '_compareToSourceId')
-  Element? get compareToSourceIdElement => throw _privateConstructorUsedError;
+  Element? get compareToSourceIdElement;
   @override
-  String? get compareToSourceExpression => throw _privateConstructorUsedError;
+  String? get compareToSourceExpression;
   @override
   @JsonKey(name: '_compareToSourceExpression')
-  Element? get compareToSourceExpressionElement =>
-      throw _privateConstructorUsedError;
+  Element? get compareToSourceExpressionElement;
   @override
-  String? get compareToSourcePath => throw _privateConstructorUsedError;
+  String? get compareToSourcePath;
   @override
   @JsonKey(name: '_compareToSourcePath')
-  Element? get compareToSourcePathElement => throw _privateConstructorUsedError;
+  Element? get compareToSourcePathElement;
   @override
-  TestScriptAssertContentType? get contentType =>
-      throw _privateConstructorUsedError;
+  TestScriptAssertContentType? get contentType;
   @override
   @JsonKey(name: '_contentType')
-  Element? get contentTypeElement => throw _privateConstructorUsedError;
+  Element? get contentTypeElement;
   @override
-  String? get expression => throw _privateConstructorUsedError;
+  String? get expression;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement => throw _privateConstructorUsedError;
+  Element? get expressionElement;
   @override
-  String? get headerField => throw _privateConstructorUsedError;
+  String? get headerField;
   @override
   @JsonKey(name: '_headerField')
-  Element? get headerFieldElement => throw _privateConstructorUsedError;
+  Element? get headerFieldElement;
   @override
-  String? get minimumId => throw _privateConstructorUsedError;
+  String? get minimumId;
   @override
   @JsonKey(name: '_minimumId')
-  Element? get minimumIdElement => throw _privateConstructorUsedError;
+  Element? get minimumIdElement;
   @override
-  Boolean? get navigationLinks => throw _privateConstructorUsedError;
+  Boolean? get navigationLinks;
   @override
   @JsonKey(name: '_navigationLinks')
-  Element? get navigationLinksElement => throw _privateConstructorUsedError;
+  Element? get navigationLinksElement;
   @override
   @JsonKey(name: 'operator')
-  TestScriptAssertOperator? get operator_ => throw _privateConstructorUsedError;
+  TestScriptAssertOperator? get operator_;
   @override
   @JsonKey(name: '_operator')
-  Element? get operatorElement => throw _privateConstructorUsedError;
+  Element? get operatorElement;
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
-  TestScriptAssertRequestMethod? get requestMethod =>
-      throw _privateConstructorUsedError;
+  TestScriptAssertRequestMethod? get requestMethod;
   @override
   @JsonKey(name: '_requestMethod')
-  Element? get requestMethodElement => throw _privateConstructorUsedError;
+  Element? get requestMethodElement;
   @override
-  String? get requestURL => throw _privateConstructorUsedError;
+  String? get requestURL;
   @override
   @JsonKey(name: '_requestURL')
-  Element? get requestURLElement => throw _privateConstructorUsedError;
+  Element? get requestURLElement;
   @override
-  String? get resource => throw _privateConstructorUsedError;
+  String? get resource;
   @override
   @JsonKey(name: '_resource')
-  Element? get resourceElement => throw _privateConstructorUsedError;
+  Element? get resourceElement;
   @override
-  TestScriptAssertResponse? get response => throw _privateConstructorUsedError;
+  TestScriptAssertResponse? get response;
   @override
   @JsonKey(name: '_response')
-  Element? get responseElement => throw _privateConstructorUsedError;
+  Element? get responseElement;
   @override
-  String? get responseCode => throw _privateConstructorUsedError;
+  String? get responseCode;
   @override
   @JsonKey(name: '_responseCode')
-  Element? get responseCodeElement => throw _privateConstructorUsedError;
+  Element? get responseCodeElement;
   @override
-  TestScriptRule2? get rule => throw _privateConstructorUsedError;
+  TestScriptRule2? get rule;
   @override
-  TestScriptRuleset1? get ruleset => throw _privateConstructorUsedError;
+  TestScriptRuleset1? get ruleset;
   @override
-  Id? get sourceId => throw _privateConstructorUsedError;
+  Id? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
-  Element? get sourceIdElement => throw _privateConstructorUsedError;
+  Element? get sourceIdElement;
   @override
-  Date? get validateProfileId => throw _privateConstructorUsedError;
+  Date? get validateProfileId;
   @override
   @JsonKey(name: '_validateProfileId')
-  Element? get validateProfileIdElement => throw _privateConstructorUsedError;
+  Element? get validateProfileIdElement;
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
-  Boolean? get warningOnly => throw _privateConstructorUsedError;
+  Boolean? get warningOnly;
   @override
   @JsonKey(name: '_warningOnly')
-  Element? get warningOnlyElement => throw _privateConstructorUsedError;
+  Element? get warningOnlyElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptAssertCopyWith<_$_TestScriptAssert> get copyWith =>
@@ -11429,12 +11418,12 @@ abstract class _TestScriptRule2 extends TestScriptRule2 {
       _$_TestScriptRule2.fromJson;
 
   @override
-  Id? get ruleId => throw _privateConstructorUsedError;
+  Id? get ruleId;
   @override
   @JsonKey(name: '_ruleId')
-  Element? get ruleIdElement => throw _privateConstructorUsedError;
+  Element? get ruleIdElement;
   @override
-  List<TestScriptParam2>? get param => throw _privateConstructorUsedError;
+  List<TestScriptParam2>? get param;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptRule2CopyWith<_$_TestScriptRule2> get copyWith =>
@@ -11667,15 +11656,15 @@ abstract class _TestScriptParam2 extends TestScriptParam2 {
       _$_TestScriptParam2.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptParam2CopyWith<_$_TestScriptParam2> get copyWith =>
@@ -11879,12 +11868,12 @@ abstract class _TestScriptRuleset1 extends TestScriptRuleset1 {
       _$_TestScriptRuleset1.fromJson;
 
   @override
-  Id? get rulesetId => throw _privateConstructorUsedError;
+  Id? get rulesetId;
   @override
   @JsonKey(name: '_rulesetId')
-  Element? get rulesetIdElement => throw _privateConstructorUsedError;
+  Element? get rulesetIdElement;
   @override
-  List<TestScriptRule3>? get rule => throw _privateConstructorUsedError;
+  List<TestScriptRule3>? get rule;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptRuleset1CopyWith<_$_TestScriptRuleset1> get copyWith =>
@@ -12087,12 +12076,12 @@ abstract class _TestScriptRule3 extends TestScriptRule3 {
       _$_TestScriptRule3.fromJson;
 
   @override
-  Id? get ruleId => throw _privateConstructorUsedError;
+  Id? get ruleId;
   @override
   @JsonKey(name: '_ruleId')
-  Element? get ruleIdElement => throw _privateConstructorUsedError;
+  Element? get ruleIdElement;
   @override
-  List<TestScriptParam3>? get param => throw _privateConstructorUsedError;
+  List<TestScriptParam3>? get param;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptRule3CopyWith<_$_TestScriptRule3> get copyWith =>
@@ -12325,15 +12314,15 @@ abstract class _TestScriptParam3 extends TestScriptParam3 {
       _$_TestScriptParam3.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptParam3CopyWith<_$_TestScriptParam3> get copyWith =>
@@ -12590,17 +12579,17 @@ abstract class _TestScriptTest extends TestScriptTest {
       _$_TestScriptTest.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  List<TestScriptAction1> get action => throw _privateConstructorUsedError;
+  List<TestScriptAction1> get action;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptTestCopyWith<_$_TestScriptTest> get copyWith =>
@@ -12790,10 +12779,10 @@ abstract class _TestScriptAction1 extends TestScriptAction1 {
       _$_TestScriptAction1.fromJson;
 
   @override
-  TestScriptOperation? get operation => throw _privateConstructorUsedError;
+  TestScriptOperation? get operation;
   @override
   @JsonKey(name: 'assert')
-  TestScriptAssert? get assert_ => throw _privateConstructorUsedError;
+  TestScriptAssert? get assert_;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptAction1CopyWith<_$_TestScriptAction1> get copyWith =>
@@ -12934,7 +12923,7 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
       _$_TestScriptTeardown.fromJson;
 
   @override
-  List<TestScriptAction2> get action => throw _privateConstructorUsedError;
+  List<TestScriptAction2> get action;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptTeardownCopyWith<_$_TestScriptTeardown> get copyWith =>
@@ -13081,7 +13070,7 @@ abstract class _TestScriptAction2 extends TestScriptAction2 {
       _$_TestScriptAction2.fromJson;
 
   @override
-  TestScriptOperation get operation => throw _privateConstructorUsedError;
+  TestScriptOperation get operation;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptAction2CopyWith<_$_TestScriptAction2> get copyWith =>

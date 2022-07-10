@@ -390,29 +390,29 @@ abstract class _Meta extends Meta {
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  Id? get versionId => throw _privateConstructorUsedError;
+  Id? get versionId;
   @override
   @JsonKey(name: '_versionId')
-  Element? get versionIdElement => throw _privateConstructorUsedError;
+  Element? get versionIdElement;
   @override
-  Instant? get lastUpdated => throw _privateConstructorUsedError;
+  Instant? get lastUpdated;
   @override
   @JsonKey(name: '_lastUpdated')
-  Element? get lastUpdatedElement => throw _privateConstructorUsedError;
+  Element? get lastUpdatedElement;
   @override
-  List<FhirUri>? get profile => throw _privateConstructorUsedError;
+  List<FhirUri>? get profile;
   @override
-  List<Coding>? get security => throw _privateConstructorUsedError;
+  List<Coding>? get security;
   @override
-  List<Coding>? get tag => throw _privateConstructorUsedError;
+  List<Coding>? get tag;
   @override
   @JsonKey(ignore: true)
   _$$_MetaCopyWith<_$_Meta> get copyWith => throw _privateConstructorUsedError;
@@ -718,23 +718,23 @@ abstract class _Reference extends Reference {
       _$_Reference.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  String? get reference => throw _privateConstructorUsedError;
+  String? get reference;
   @override
   @JsonKey(name: '_reference')
-  Element? get referenceElement => throw _privateConstructorUsedError;
+  Element? get referenceElement;
   @override
-  String? get display => throw _privateConstructorUsedError;
+  String? get display;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement => throw _privateConstructorUsedError;
+  Element? get displayElement;
   @override
   @JsonKey(ignore: true)
   _$$_ReferenceCopyWith<_$_Reference> get copyWith =>
@@ -11015,804 +11015,784 @@ abstract class _ElementDefinition extends ElementDefinition {
       _$_ElementDefinition.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  String get path => throw _privateConstructorUsedError;
+  String get path;
   @override
-  List<Code>? get representation => throw _privateConstructorUsedError;
+  List<Code>? get representation;
   @override
   @JsonKey(name: '_representation')
-  Element? get representationElement => throw _privateConstructorUsedError;
+  Element? get representationElement;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get label => throw _privateConstructorUsedError;
+  String? get label;
   @override
   @JsonKey(name: '_label')
-  Element? get labelElement => throw _privateConstructorUsedError;
+  Element? get labelElement;
   @override
-  List<Coding>? get code => throw _privateConstructorUsedError;
+  List<Coding>? get code;
   @override
-  ElementDefinitionSlicing? get slicing => throw _privateConstructorUsedError;
+  ElementDefinitionSlicing? get slicing;
   @override
-  String? get short => throw _privateConstructorUsedError;
+  String? get short;
   @override
   @JsonKey(name: '_short')
-  Element? get shortElement => throw _privateConstructorUsedError;
+  Element? get shortElement;
   @override
-  Markdown? get definition => throw _privateConstructorUsedError;
+  Markdown? get definition;
   @override
   @JsonKey(name: '_definition')
-  Element? get definitionElement => throw _privateConstructorUsedError;
+  Element? get definitionElement;
   @override
-  Markdown? get comments => throw _privateConstructorUsedError;
+  Markdown? get comments;
   @override
   @JsonKey(name: '_comments')
-  Element? get commentElement => throw _privateConstructorUsedError;
+  Element? get commentElement;
   @override
-  Markdown? get requirements => throw _privateConstructorUsedError;
+  Markdown? get requirements;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement => throw _privateConstructorUsedError;
+  Element? get requirementsElement;
   @override
-  List<String>? get alias => throw _privateConstructorUsedError;
+  List<String>? get alias;
   @override
   @JsonKey(name: '_alias')
-  Element? get aliasElement => throw _privateConstructorUsedError;
+  Element? get aliasElement;
   @override
-  Integer? get min => throw _privateConstructorUsedError;
+  Integer? get min;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement => throw _privateConstructorUsedError;
+  Element? get minElement;
   @override
-  String? get max => throw _privateConstructorUsedError;
+  String? get max;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement => throw _privateConstructorUsedError;
+  Element? get maxElement;
   @override
-  ElementDefinitionBase? get base => throw _privateConstructorUsedError;
+  ElementDefinitionBase? get base;
   @override
-  List<ElementDefinitionType>? get type => throw _privateConstructorUsedError;
+  List<ElementDefinitionType>? get type;
   @override
-  String? get nameReference => throw _privateConstructorUsedError;
+  String? get nameReference;
   @override
-  Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
+  Boolean? get defaultValueBoolean;
   @override
   @JsonKey(name: '_defaultValueBoolean')
-  Element? get defaultValueBooleanElement => throw _privateConstructorUsedError;
+  Element? get defaultValueBooleanElement;
   @override
-  Integer? get defaultValueInteger => throw _privateConstructorUsedError;
+  Integer? get defaultValueInteger;
   @override
   @JsonKey(name: '_defaultValueInteger')
-  Element? get defaultValueIntegerElement => throw _privateConstructorUsedError;
+  Element? get defaultValueIntegerElement;
   @override
-  Decimal? get defaultValueDecimal => throw _privateConstructorUsedError;
+  Decimal? get defaultValueDecimal;
   @override
   @JsonKey(name: '_defaultValueDecimal')
-  Element? get defaultValueDecimalElement => throw _privateConstructorUsedError;
+  Element? get defaultValueDecimalElement;
   @override
-  Base64Binary? get defaultValueBase64Binary =>
-      throw _privateConstructorUsedError;
+  Base64Binary? get defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
-  Element? get defaultValueBase64BinaryElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueBase64BinaryElement;
   @override
-  Instant? get defaultValueInstant => throw _privateConstructorUsedError;
+  Instant? get defaultValueInstant;
   @override
   @JsonKey(name: '_defaultValueInstant')
-  Element? get defaultValueInstantElement => throw _privateConstructorUsedError;
+  Element? get defaultValueInstantElement;
   @override
-  String? get defaultValueString => throw _privateConstructorUsedError;
+  String? get defaultValueString;
   @override
   @JsonKey(name: '_defaultValueString')
-  Element? get defaultValueStringElement => throw _privateConstructorUsedError;
+  Element? get defaultValueStringElement;
   @override
-  FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
+  FhirUri? get defaultValueUri;
   @override
   @JsonKey(name: '_defaultValueUri')
-  Element? get defaultValueUriElement => throw _privateConstructorUsedError;
+  Element? get defaultValueUriElement;
   @override
-  Date? get defaultValueDate => throw _privateConstructorUsedError;
+  Date? get defaultValueDate;
   @override
   @JsonKey(name: '_defaultValueDate')
-  Element? get defaultValueDateElement => throw _privateConstructorUsedError;
+  Element? get defaultValueDateElement;
   @override
-  FhirDateTime? get defaultValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get defaultValueDateTime;
   @override
   @JsonKey(name: '_defaultValueDateTime')
-  Element? get defaultValueDateTimeElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueDateTimeElement;
   @override
-  Time? get defaultValueTime => throw _privateConstructorUsedError;
+  Time? get defaultValueTime;
   @override
   @JsonKey(name: '_defaultValueTime')
-  Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
+  Element? get defaultValueTimeElement;
   @override
-  Code? get defaultValueCode => throw _privateConstructorUsedError;
+  Code? get defaultValueCode;
   @override
   @JsonKey(name: '_defaultValueCode')
-  Element? get defaultValueCodeElement => throw _privateConstructorUsedError;
+  Element? get defaultValueCodeElement;
   @override
-  Oid? get defaultValueOid => throw _privateConstructorUsedError;
+  Oid? get defaultValueOid;
   @override
   @JsonKey(name: '_defaultValueOid')
-  Element? get defaultValueOidElement => throw _privateConstructorUsedError;
+  Element? get defaultValueOidElement;
   @override
-  Id? get defaultValueId => throw _privateConstructorUsedError;
+  Id? get defaultValueId;
   @override
   @JsonKey(name: '_defaultValueId')
-  Element? get defaultValueIdElement => throw _privateConstructorUsedError;
+  Element? get defaultValueIdElement;
   @override
-  UnsignedInt? get defaultValueUnsignedInt =>
-      throw _privateConstructorUsedError;
+  UnsignedInt? get defaultValueUnsignedInt;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
-  Element? get defaultValueUnsignedIntElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueUnsignedIntElement;
   @override
-  PositiveInt? get defaultValuePositiveInt =>
-      throw _privateConstructorUsedError;
+  PositiveInt? get defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
-  Element? get defaultValuePositiveIntElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValuePositiveIntElement;
   @override
-  Markdown? get defaultValueMarkdown => throw _privateConstructorUsedError;
+  Markdown? get defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkDown')
-  Element? get defaultValueMarkDownElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueMarkDownElement;
   @override
-  Annotation? get defaultValueAnnotation => throw _privateConstructorUsedError;
+  Annotation? get defaultValueAnnotation;
   @override
-  Attachment? get defaultValueAttachment => throw _privateConstructorUsedError;
+  Attachment? get defaultValueAttachment;
   @override
-  Identifier? get defaultValueIdentifier => throw _privateConstructorUsedError;
+  Identifier? get defaultValueIdentifier;
   @override
-  CodeableConcept? get defaultValueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get defaultValueCodeableConcept;
   @override
-  Coding? get defaultValueCoding => throw _privateConstructorUsedError;
+  Coding? get defaultValueCoding;
   @override
-  Quantity? get defaultValueQuantity => throw _privateConstructorUsedError;
+  Quantity? get defaultValueQuantity;
   @override
-  Range? get defaultValueRange => throw _privateConstructorUsedError;
+  Range? get defaultValueRange;
   @override
-  Period? get defaultValuePeriod => throw _privateConstructorUsedError;
+  Period? get defaultValuePeriod;
   @override
-  Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
+  Ratio? get defaultValueRatio;
   @override
-  SampledData? get defaultValueSampledData =>
-      throw _privateConstructorUsedError;
+  SampledData? get defaultValueSampledData;
   @override
-  Signature? get defaultValueSignature => throw _privateConstructorUsedError;
+  Signature? get defaultValueSignature;
   @override
-  HumanName? get defaultValueHumanName => throw _privateConstructorUsedError;
+  HumanName? get defaultValueHumanName;
   @override
-  Address? get defaultValueAddress => throw _privateConstructorUsedError;
+  Address? get defaultValueAddress;
   @override
-  ContactPoint? get defaultValueContactPoint =>
-      throw _privateConstructorUsedError;
+  ContactPoint? get defaultValueContactPoint;
   @override
-  Timing? get defaultValueTiming => throw _privateConstructorUsedError;
+  Timing? get defaultValueTiming;
   @override
-  Reference? get defaultValueReference => throw _privateConstructorUsedError;
+  Reference? get defaultValueReference;
   @override
-  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
+  Meta? get defaultValueMeta;
   @override
-  Markdown? get meaningWhenMissing => throw _privateConstructorUsedError;
+  Markdown? get meaningWhenMissing;
   @override
   @JsonKey(name: '_meaningWhenMissing')
-  Element? get meaningWhenMissingElement => throw _privateConstructorUsedError;
+  Element? get meaningWhenMissingElement;
   @override
-  Boolean? get fixedBoolean => throw _privateConstructorUsedError;
+  Boolean? get fixedBoolean;
   @override
   @JsonKey(name: '_fixedBoolean')
-  Element? get fixedBooleanElement => throw _privateConstructorUsedError;
+  Element? get fixedBooleanElement;
   @override
-  Integer? get fixedInteger => throw _privateConstructorUsedError;
+  Integer? get fixedInteger;
   @override
   @JsonKey(name: '_fixedInteger')
-  Element? get fixedIntegerElement => throw _privateConstructorUsedError;
+  Element? get fixedIntegerElement;
   @override
-  Decimal? get fixedDecimal => throw _privateConstructorUsedError;
+  Decimal? get fixedDecimal;
   @override
   @JsonKey(name: '_fixedDecimal')
-  Element? get fixedDecimalElement => throw _privateConstructorUsedError;
+  Element? get fixedDecimalElement;
   @override
-  Base64Binary? get fixedBase64Binary => throw _privateConstructorUsedError;
+  Base64Binary? get fixedBase64Binary;
   @override
   @JsonKey(name: '_fixedBase64Binary')
-  Element? get fixedBase64BinaryElement => throw _privateConstructorUsedError;
+  Element? get fixedBase64BinaryElement;
   @override
-  Instant? get fixedInstant => throw _privateConstructorUsedError;
+  Instant? get fixedInstant;
   @override
   @JsonKey(name: '_fixedInstant')
-  Element? get fixedInstantElement => throw _privateConstructorUsedError;
+  Element? get fixedInstantElement;
   @override
-  String? get fixedString => throw _privateConstructorUsedError;
+  String? get fixedString;
   @override
   @JsonKey(name: '_fixedString')
-  Element? get fixedStringElement => throw _privateConstructorUsedError;
+  Element? get fixedStringElement;
   @override
-  FhirUri? get fixedUri => throw _privateConstructorUsedError;
+  FhirUri? get fixedUri;
   @override
   @JsonKey(name: '_fixedUri')
-  Element? get fixedUriElement => throw _privateConstructorUsedError;
+  Element? get fixedUriElement;
   @override
-  Date? get fixedDate => throw _privateConstructorUsedError;
+  Date? get fixedDate;
   @override
   @JsonKey(name: '_fixedDate')
-  Element? get fixedDateElement => throw _privateConstructorUsedError;
+  Element? get fixedDateElement;
   @override
-  FhirDateTime? get fixedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get fixedDateTime;
   @override
   @JsonKey(name: '_fixedDateTime')
-  Element? get fixedDateTimeElement => throw _privateConstructorUsedError;
+  Element? get fixedDateTimeElement;
   @override
-  Code? get fixedCode => throw _privateConstructorUsedError;
+  Code? get fixedCode;
   @override
   @JsonKey(name: '_fixedCode')
-  Element? get fixedCodeElement => throw _privateConstructorUsedError;
+  Element? get fixedCodeElement;
   @override
-  Oid? get fixedOid => throw _privateConstructorUsedError;
+  Oid? get fixedOid;
   @override
   @JsonKey(name: '_fixedOid')
-  Element? get fixedOidElement => throw _privateConstructorUsedError;
+  Element? get fixedOidElement;
   @override
-  Id? get fixedId => throw _privateConstructorUsedError;
+  Id? get fixedId;
   @override
   @JsonKey(name: '_fixedId')
-  Element? get fixedIdElement => throw _privateConstructorUsedError;
+  Element? get fixedIdElement;
   @override
-  UnsignedInt? get fixedUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get fixedUnsignedInt;
   @override
   @JsonKey(name: '_fixedUnsignedInt')
-  Element? get fixedUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get fixedUnsignedIntElement;
   @override
-  PositiveInt? get fixedPositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get fixedPositiveInt;
   @override
   @JsonKey(name: '_fixedPositiveInt')
-  Element? get fixedPositiveIntElement => throw _privateConstructorUsedError;
+  Element? get fixedPositiveIntElement;
   @override
-  Markdown? get fixedMarkdown => throw _privateConstructorUsedError;
+  Markdown? get fixedMarkdown;
   @override
   @JsonKey(name: '_fixedMarkdown')
-  Element? get fixedMarkdownElement => throw _privateConstructorUsedError;
+  Element? get fixedMarkdownElement;
   @override
-  Annotation? get fixedAnnotation => throw _privateConstructorUsedError;
+  Annotation? get fixedAnnotation;
   @override
-  Attachment? get fixedAttachment => throw _privateConstructorUsedError;
+  Attachment? get fixedAttachment;
   @override
-  Identifier? get fixedIdentifier => throw _privateConstructorUsedError;
+  Identifier? get fixedIdentifier;
   @override
-  CodeableConcept? get fixedCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get fixedCodeableConcept;
   @override
-  Coding? get fixedCoding => throw _privateConstructorUsedError;
+  Coding? get fixedCoding;
   @override
-  Quantity? get fixedQuantity => throw _privateConstructorUsedError;
+  Quantity? get fixedQuantity;
   @override
-  Range? get fixedRange => throw _privateConstructorUsedError;
+  Range? get fixedRange;
   @override
-  Period? get fixedPeriod => throw _privateConstructorUsedError;
+  Period? get fixedPeriod;
   @override
-  Ratio? get fixedRatio => throw _privateConstructorUsedError;
+  Ratio? get fixedRatio;
   @override
-  SampledData? get fixedSampledData => throw _privateConstructorUsedError;
+  SampledData? get fixedSampledData;
   @override
-  Signature? get fixedSignature => throw _privateConstructorUsedError;
+  Signature? get fixedSignature;
   @override
-  HumanName? get fixedHumanName => throw _privateConstructorUsedError;
+  HumanName? get fixedHumanName;
   @override
-  Address? get fixedAddress => throw _privateConstructorUsedError;
+  Address? get fixedAddress;
   @override
-  ContactPoint? get fixedContactPoint => throw _privateConstructorUsedError;
+  ContactPoint? get fixedContactPoint;
   @override
-  Timing? get fixedTiming => throw _privateConstructorUsedError;
+  Timing? get fixedTiming;
   @override
-  Reference? get fixedReference => throw _privateConstructorUsedError;
+  Reference? get fixedReference;
   @override
-  Meta? get fixedMeta => throw _privateConstructorUsedError;
+  Meta? get fixedMeta;
   @override
-  Boolean? get patternBoolean => throw _privateConstructorUsedError;
+  Boolean? get patternBoolean;
   @override
   @JsonKey(name: '_patternBoolean')
-  Element? get patternBooleanElement => throw _privateConstructorUsedError;
+  Element? get patternBooleanElement;
   @override
-  Integer? get patternInteger => throw _privateConstructorUsedError;
+  Integer? get patternInteger;
   @override
   @JsonKey(name: '_patternInteger')
-  Element? get patternIntegerElement => throw _privateConstructorUsedError;
+  Element? get patternIntegerElement;
   @override
-  Decimal? get patternDecimal => throw _privateConstructorUsedError;
+  Decimal? get patternDecimal;
   @override
   @JsonKey(name: '_patternDecimal')
-  Element? get patternDecimalElement => throw _privateConstructorUsedError;
+  Element? get patternDecimalElement;
   @override
-  Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
+  Base64Binary? get patternBase64Binary;
   @override
   @JsonKey(name: '_patternBase64Binary')
-  Element? get patternBase64BinaryElement => throw _privateConstructorUsedError;
+  Element? get patternBase64BinaryElement;
   @override
-  Instant? get patternInstant => throw _privateConstructorUsedError;
+  Instant? get patternInstant;
   @override
   @JsonKey(name: '_patternInstant')
-  Element? get patternInstantElement => throw _privateConstructorUsedError;
+  Element? get patternInstantElement;
   @override
-  String? get patternString => throw _privateConstructorUsedError;
+  String? get patternString;
   @override
   @JsonKey(name: '_patternString')
-  Element? get patternStringElement => throw _privateConstructorUsedError;
+  Element? get patternStringElement;
   @override
-  FhirUri? get patternUri => throw _privateConstructorUsedError;
+  FhirUri? get patternUri;
   @override
   @JsonKey(name: '_patternUri')
-  Element? get patternUriElement => throw _privateConstructorUsedError;
+  Element? get patternUriElement;
   @override
-  Date? get patternDate => throw _privateConstructorUsedError;
+  Date? get patternDate;
   @override
   @JsonKey(name: '_patternDate')
-  Element? get patternDateElement => throw _privateConstructorUsedError;
+  Element? get patternDateElement;
   @override
-  FhirDateTime? get patternDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get patternDateTime;
   @override
   @JsonKey(name: '_patternDateTime')
-  Element? get patternDateTimeElement => throw _privateConstructorUsedError;
+  Element? get patternDateTimeElement;
   @override
-  Time? get patternTime => throw _privateConstructorUsedError;
+  Time? get patternTime;
   @override
   @JsonKey(name: '_patternTime')
-  Element? get patternTimeElement => throw _privateConstructorUsedError;
+  Element? get patternTimeElement;
   @override
-  Code? get patternCode => throw _privateConstructorUsedError;
+  Code? get patternCode;
   @override
   @JsonKey(name: '_patternCode')
-  Element? get patternCodeElement => throw _privateConstructorUsedError;
+  Element? get patternCodeElement;
   @override
-  Oid? get patternOid => throw _privateConstructorUsedError;
+  Oid? get patternOid;
   @override
   @JsonKey(name: '_patternOid')
-  Element? get patternOidElement => throw _privateConstructorUsedError;
+  Element? get patternOidElement;
   @override
-  Id? get patternId => throw _privateConstructorUsedError;
+  Id? get patternId;
   @override
   @JsonKey(name: '_patternId')
-  Element? get patternIdElement => throw _privateConstructorUsedError;
+  Element? get patternIdElement;
   @override
-  UnsignedInt? get patternUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get patternUnsignedInt;
   @override
   @JsonKey(name: '_patternUnsignedInt')
-  Element? get patternUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get patternUnsignedIntElement;
   @override
-  PositiveInt? get patternPositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get patternPositiveInt;
   @override
   @JsonKey(name: '_patternPositiveInt')
-  Element? get patternPositiveIntElement => throw _privateConstructorUsedError;
+  Element? get patternPositiveIntElement;
   @override
-  Markdown? get patternMarkdown => throw _privateConstructorUsedError;
+  Markdown? get patternMarkdown;
   @override
   @JsonKey(name: '_patternMarkdown')
-  Element? get patternMarkdownElement => throw _privateConstructorUsedError;
+  Element? get patternMarkdownElement;
   @override
-  Annotation? get patternAnnotation => throw _privateConstructorUsedError;
+  Annotation? get patternAnnotation;
   @override
-  Attachment? get patternAttachment => throw _privateConstructorUsedError;
+  Attachment? get patternAttachment;
   @override
-  Identifier? get patternIdentifier => throw _privateConstructorUsedError;
+  Identifier? get patternIdentifier;
   @override
-  CodeableConcept? get patternCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get patternCodeableConcept;
   @override
-  Coding? get patternCoding => throw _privateConstructorUsedError;
+  Coding? get patternCoding;
   @override
-  Quantity? get patternQuantity => throw _privateConstructorUsedError;
+  Quantity? get patternQuantity;
   @override
-  Range? get patternRange => throw _privateConstructorUsedError;
+  Range? get patternRange;
   @override
-  Period? get patternPeriod => throw _privateConstructorUsedError;
+  Period? get patternPeriod;
   @override
-  Ratio? get patternRatio => throw _privateConstructorUsedError;
+  Ratio? get patternRatio;
   @override
-  SampledData? get patternSampledData => throw _privateConstructorUsedError;
+  SampledData? get patternSampledData;
   @override
-  Signature? get patternSignature => throw _privateConstructorUsedError;
+  Signature? get patternSignature;
   @override
-  HumanName? get patternHumanName => throw _privateConstructorUsedError;
+  HumanName? get patternHumanName;
   @override
-  Address? get patternAddress => throw _privateConstructorUsedError;
+  Address? get patternAddress;
   @override
-  ContactPoint? get patternContactPoint => throw _privateConstructorUsedError;
+  ContactPoint? get patternContactPoint;
   @override
-  Timing? get patternTiming => throw _privateConstructorUsedError;
+  Timing? get patternTiming;
   @override
-  Reference? get patternReference => throw _privateConstructorUsedError;
+  Reference? get patternReference;
   @override
-  Meta? get patternMeta => throw _privateConstructorUsedError;
+  Meta? get patternMeta;
   @override
-  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
+  Boolean? get exampleBoolean;
   @override
   @JsonKey(name: '_exampleBoolean')
-  Element? get exampleBooleanElement => throw _privateConstructorUsedError;
+  Element? get exampleBooleanElement;
   @override
-  Integer? get exampleInteger => throw _privateConstructorUsedError;
+  Integer? get exampleInteger;
   @override
   @JsonKey(name: '_exampleInteger')
-  Element? get exampleIntegerElement => throw _privateConstructorUsedError;
+  Element? get exampleIntegerElement;
   @override
-  Decimal? get exampleDecimal => throw _privateConstructorUsedError;
+  Decimal? get exampleDecimal;
   @override
   @JsonKey(name: '_exampleDecimal')
-  Element? get exampleDecimalElement => throw _privateConstructorUsedError;
+  Element? get exampleDecimalElement;
   @override
-  Base64Binary? get exampleBase64Binary => throw _privateConstructorUsedError;
+  Base64Binary? get exampleBase64Binary;
   @override
   @JsonKey(name: '_exampleBase64Binary')
-  Element? get exampleBase64BinaryElement => throw _privateConstructorUsedError;
+  Element? get exampleBase64BinaryElement;
   @override
-  Instant? get exampleInstant => throw _privateConstructorUsedError;
+  Instant? get exampleInstant;
   @override
   @JsonKey(name: '_exampleInstant')
-  Element? get exampleInstantElement => throw _privateConstructorUsedError;
+  Element? get exampleInstantElement;
   @override
-  String? get exampleString => throw _privateConstructorUsedError;
+  String? get exampleString;
   @override
   @JsonKey(name: '_exampleString')
-  Element? get exampleStringElement => throw _privateConstructorUsedError;
+  Element? get exampleStringElement;
   @override
-  FhirUri? get exampleUri => throw _privateConstructorUsedError;
+  FhirUri? get exampleUri;
   @override
   @JsonKey(name: '_exampleUri')
-  Element? get exampleUriElement => throw _privateConstructorUsedError;
+  Element? get exampleUriElement;
   @override
-  Date? get exampleDate => throw _privateConstructorUsedError;
+  Date? get exampleDate;
   @override
   @JsonKey(name: '_exampleDate')
-  Element? get exampleDateElement => throw _privateConstructorUsedError;
+  Element? get exampleDateElement;
   @override
-  FhirDateTime? get exampleDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get exampleDateTime;
   @override
   @JsonKey(name: '_exampleDateTime')
-  Element? get exampleDateTimeElement => throw _privateConstructorUsedError;
+  Element? get exampleDateTimeElement;
   @override
-  Time? get exampleTime => throw _privateConstructorUsedError;
+  Time? get exampleTime;
   @override
   @JsonKey(name: '_exampleTime')
-  Element? get exampleTimeElement => throw _privateConstructorUsedError;
+  Element? get exampleTimeElement;
   @override
-  Code? get exampleCode => throw _privateConstructorUsedError;
+  Code? get exampleCode;
   @override
   @JsonKey(name: '_exampleCode')
-  Element? get exampleCodeElement => throw _privateConstructorUsedError;
+  Element? get exampleCodeElement;
   @override
-  Oid? get exampleOid => throw _privateConstructorUsedError;
+  Oid? get exampleOid;
   @override
   @JsonKey(name: '_exampleOid')
-  Element? get exampleOidElement => throw _privateConstructorUsedError;
+  Element? get exampleOidElement;
   @override
-  Id? get exampleId => throw _privateConstructorUsedError;
+  Id? get exampleId;
   @override
   @JsonKey(name: '_exampleId')
-  Element? get exampleIdElement => throw _privateConstructorUsedError;
+  Element? get exampleIdElement;
   @override
-  UnsignedInt? get exampleUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get exampleUnsignedInt;
   @override
   @JsonKey(name: '_exampleUnsignedInt')
-  Element? get exampleUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get exampleUnsignedIntElement;
   @override
-  PositiveInt? get examplePositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get examplePositiveInt;
   @override
   @JsonKey(name: '_examplePositiveInt')
-  Element? get examplePositiveIntElement => throw _privateConstructorUsedError;
+  Element? get examplePositiveIntElement;
   @override
-  Markdown? get exampleMarkdown => throw _privateConstructorUsedError;
+  Markdown? get exampleMarkdown;
   @override
   @JsonKey(name: '_exampleMarkdown')
-  Element? get exampleMarkdownElement => throw _privateConstructorUsedError;
+  Element? get exampleMarkdownElement;
   @override
-  Annotation? get exampleAnnotation => throw _privateConstructorUsedError;
+  Annotation? get exampleAnnotation;
   @override
-  Attachment? get exampleAttachment => throw _privateConstructorUsedError;
+  Attachment? get exampleAttachment;
   @override
-  Identifier? get exampleIdentifier => throw _privateConstructorUsedError;
+  Identifier? get exampleIdentifier;
   @override
-  CodeableConcept? get exampleCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get exampleCodeableConcept;
   @override
-  Coding? get exampleCoding => throw _privateConstructorUsedError;
+  Coding? get exampleCoding;
   @override
-  Quantity? get exampleQuantity => throw _privateConstructorUsedError;
+  Quantity? get exampleQuantity;
   @override
-  Range? get exampleRange => throw _privateConstructorUsedError;
+  Range? get exampleRange;
   @override
-  Period? get examplePeriod => throw _privateConstructorUsedError;
+  Period? get examplePeriod;
   @override
-  Ratio? get exampleRatio => throw _privateConstructorUsedError;
+  Ratio? get exampleRatio;
   @override
-  SampledData? get exampleSampleData => throw _privateConstructorUsedError;
+  SampledData? get exampleSampleData;
   @override
-  Signature? get exampleSignature => throw _privateConstructorUsedError;
+  Signature? get exampleSignature;
   @override
-  HumanName? get exampleHumanName => throw _privateConstructorUsedError;
+  HumanName? get exampleHumanName;
   @override
-  Address? get exampleAddress => throw _privateConstructorUsedError;
+  Address? get exampleAddress;
   @override
-  ContactPoint? get exampleContactPoint => throw _privateConstructorUsedError;
+  ContactPoint? get exampleContactPoint;
   @override
-  Timing? get exampleTiming => throw _privateConstructorUsedError;
+  Timing? get exampleTiming;
   @override
-  Reference? get exampleReference => throw _privateConstructorUsedError;
+  Reference? get exampleReference;
   @override
-  Meta? get exampleMeta => throw _privateConstructorUsedError;
+  Meta? get exampleMeta;
   @override
-  Boolean? get minValueBoolean => throw _privateConstructorUsedError;
+  Boolean? get minValueBoolean;
   @override
   @JsonKey(name: '_minValueBoolean')
-  Element? get minValueBooleanElement => throw _privateConstructorUsedError;
+  Element? get minValueBooleanElement;
   @override
-  Integer? get minValueInteger => throw _privateConstructorUsedError;
+  Integer? get minValueInteger;
   @override
   @JsonKey(name: '_minValueInteger')
-  Element? get minValueIntegerElement => throw _privateConstructorUsedError;
+  Element? get minValueIntegerElement;
   @override
-  Decimal? get minValueDecimal => throw _privateConstructorUsedError;
+  Decimal? get minValueDecimal;
   @override
   @JsonKey(name: '_minValueDecimal')
-  Element? get minValueDecimalElement => throw _privateConstructorUsedError;
+  Element? get minValueDecimalElement;
   @override
-  Base64Binary? get minValueBase64Binary => throw _privateConstructorUsedError;
+  Base64Binary? get minValueBase64Binary;
   @override
   @JsonKey(name: '_minValueBase64Binary')
-  Element? get minValueBase64BinaryElement =>
-      throw _privateConstructorUsedError;
+  Element? get minValueBase64BinaryElement;
   @override
-  Instant? get minValueInstant => throw _privateConstructorUsedError;
+  Instant? get minValueInstant;
   @override
   @JsonKey(name: '_minValueInstant')
-  Element? get minValueInstantElement => throw _privateConstructorUsedError;
+  Element? get minValueInstantElement;
   @override
-  String? get minValueString => throw _privateConstructorUsedError;
+  String? get minValueString;
   @override
   @JsonKey(name: '_minValueString')
-  Element? get minValueStringElement => throw _privateConstructorUsedError;
+  Element? get minValueStringElement;
   @override
-  FhirUri? get minValueUri => throw _privateConstructorUsedError;
+  FhirUri? get minValueUri;
   @override
   @JsonKey(name: '_minValueUri')
-  Element? get minValueUriElement => throw _privateConstructorUsedError;
+  Element? get minValueUriElement;
   @override
-  Date? get minValueDate => throw _privateConstructorUsedError;
+  Date? get minValueDate;
   @override
   @JsonKey(name: '_minValueDate')
-  Element? get minValueDateElement => throw _privateConstructorUsedError;
+  Element? get minValueDateElement;
   @override
-  FhirDateTime? get minValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get minValueDateTime;
   @override
   @JsonKey(name: '_minValueDateTime')
-  Element? get minValueDateTimeElement => throw _privateConstructorUsedError;
+  Element? get minValueDateTimeElement;
   @override
-  Time? get minValueTime => throw _privateConstructorUsedError;
+  Time? get minValueTime;
   @override
   @JsonKey(name: '_minValueTime')
-  Element? get minValueTimeElement => throw _privateConstructorUsedError;
+  Element? get minValueTimeElement;
   @override
-  Code? get minValueCode => throw _privateConstructorUsedError;
+  Code? get minValueCode;
   @override
   @JsonKey(name: '_minValueCode')
-  Element? get minValueCodeElement => throw _privateConstructorUsedError;
+  Element? get minValueCodeElement;
   @override
-  Oid? get minValueOid => throw _privateConstructorUsedError;
+  Oid? get minValueOid;
   @override
   @JsonKey(name: '_minValueOid')
-  Element? get minValueOidElement => throw _privateConstructorUsedError;
+  Element? get minValueOidElement;
   @override
-  Id? get minValueId => throw _privateConstructorUsedError;
+  Id? get minValueId;
   @override
   @JsonKey(name: '_minValueId')
-  Element? get minValueIdElement => throw _privateConstructorUsedError;
+  Element? get minValueIdElement;
   @override
-  UnsignedInt? get minValueUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get minValueUnsignedInt;
   @override
   @JsonKey(name: '_minValueUnsignedInt')
-  Element? get minValueUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get minValueUnsignedIntElement;
   @override
-  PositiveInt? get minValuePositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get minValuePositiveInt;
   @override
   @JsonKey(name: '_minValuePositiveInt')
-  Element? get minValuePositiveIntElement => throw _privateConstructorUsedError;
+  Element? get minValuePositiveIntElement;
   @override
-  Markdown? get minValueMarkdown => throw _privateConstructorUsedError;
+  Markdown? get minValueMarkdown;
   @override
   @JsonKey(name: '_minValueMarkdown')
-  Element? get minValueMarkdownElement => throw _privateConstructorUsedError;
+  Element? get minValueMarkdownElement;
   @override
-  Annotation? get minValueAnnotation => throw _privateConstructorUsedError;
+  Annotation? get minValueAnnotation;
   @override
-  Attachment? get minValueAttachment => throw _privateConstructorUsedError;
+  Attachment? get minValueAttachment;
   @override
-  Identifier? get minValueIdentifier => throw _privateConstructorUsedError;
+  Identifier? get minValueIdentifier;
   @override
-  CodeableConcept? get minValueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get minValueCodeableConcept;
   @override
-  Coding? get minValueCoding => throw _privateConstructorUsedError;
+  Coding? get minValueCoding;
   @override
-  Quantity? get minValueQuantity => throw _privateConstructorUsedError;
+  Quantity? get minValueQuantity;
   @override
-  Range? get minValueRange => throw _privateConstructorUsedError;
+  Range? get minValueRange;
   @override
-  Period? get minValuePeriod => throw _privateConstructorUsedError;
+  Period? get minValuePeriod;
   @override
-  Ratio? get minValueRatio => throw _privateConstructorUsedError;
+  Ratio? get minValueRatio;
   @override
-  SampledData? get minValueSampledData => throw _privateConstructorUsedError;
+  SampledData? get minValueSampledData;
   @override
-  Signature? get minValueSignature => throw _privateConstructorUsedError;
+  Signature? get minValueSignature;
   @override
-  HumanName? get minValueHumanName => throw _privateConstructorUsedError;
+  HumanName? get minValueHumanName;
   @override
-  Address? get minValueAddress => throw _privateConstructorUsedError;
+  Address? get minValueAddress;
   @override
-  ContactPoint? get minValueContactPoint => throw _privateConstructorUsedError;
+  ContactPoint? get minValueContactPoint;
   @override
-  Timing? get minValueTiming => throw _privateConstructorUsedError;
+  Timing? get minValueTiming;
   @override
-  Reference? get minValueReference => throw _privateConstructorUsedError;
+  Reference? get minValueReference;
   @override
-  Meta? get minValueMeta => throw _privateConstructorUsedError;
+  Meta? get minValueMeta;
   @override
-  Boolean? get maxValueBoolean => throw _privateConstructorUsedError;
+  Boolean? get maxValueBoolean;
   @override
   @JsonKey(name: '_maxValueBoolean')
-  Element? get maxValueBooleanElement => throw _privateConstructorUsedError;
+  Element? get maxValueBooleanElement;
   @override
-  Integer? get maxValueInteger => throw _privateConstructorUsedError;
+  Integer? get maxValueInteger;
   @override
   @JsonKey(name: '_maxValueInteger')
-  Element? get maxValueIntegerElement => throw _privateConstructorUsedError;
+  Element? get maxValueIntegerElement;
   @override
-  Decimal? get maxValueDecimal => throw _privateConstructorUsedError;
+  Decimal? get maxValueDecimal;
   @override
   @JsonKey(name: '_maxValueDecimal')
-  Element? get maxValueDecimalElement => throw _privateConstructorUsedError;
+  Element? get maxValueDecimalElement;
   @override
-  Base64Binary? get maxValueBase64Binary => throw _privateConstructorUsedError;
+  Base64Binary? get maxValueBase64Binary;
   @override
   @JsonKey(name: '_maxValueBase64Binary')
-  Element? get maxValueBase64BinaryElement =>
-      throw _privateConstructorUsedError;
+  Element? get maxValueBase64BinaryElement;
   @override
-  Instant? get maxValueInstant => throw _privateConstructorUsedError;
+  Instant? get maxValueInstant;
   @override
   @JsonKey(name: '_maxValueInstant')
-  Element? get maxValueInstantElement => throw _privateConstructorUsedError;
+  Element? get maxValueInstantElement;
   @override
-  String? get maxValueString => throw _privateConstructorUsedError;
+  String? get maxValueString;
   @override
   @JsonKey(name: '_maxValueString')
-  Element? get maxValueStringElement => throw _privateConstructorUsedError;
+  Element? get maxValueStringElement;
   @override
-  FhirUri? get maxValueUri => throw _privateConstructorUsedError;
+  FhirUri? get maxValueUri;
   @override
   @JsonKey(name: '_maxValueUri')
-  Element? get maxValueUriElement => throw _privateConstructorUsedError;
+  Element? get maxValueUriElement;
   @override
-  Date? get maxValueDate => throw _privateConstructorUsedError;
+  Date? get maxValueDate;
   @override
   @JsonKey(name: '_maxValueDate')
-  Element? get maxValueDateElement => throw _privateConstructorUsedError;
+  Element? get maxValueDateElement;
   @override
-  FhirDateTime? get maxValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get maxValueDateTime;
   @override
   @JsonKey(name: '_maxValueDateTime')
-  Element? get maxValueDateTimeElement => throw _privateConstructorUsedError;
+  Element? get maxValueDateTimeElement;
   @override
-  Time? get maxValueTime => throw _privateConstructorUsedError;
+  Time? get maxValueTime;
   @override
   @JsonKey(name: '_maxValueTime')
-  Element? get maxValueTimeElement => throw _privateConstructorUsedError;
+  Element? get maxValueTimeElement;
   @override
-  Code? get maxValueCode => throw _privateConstructorUsedError;
+  Code? get maxValueCode;
   @override
   @JsonKey(name: '_maxValueCode')
-  Element? get maxValueCodeElement => throw _privateConstructorUsedError;
+  Element? get maxValueCodeElement;
   @override
-  Oid? get maxValueOid => throw _privateConstructorUsedError;
+  Oid? get maxValueOid;
   @override
   @JsonKey(name: '_maxValueOid')
-  Element? get maxValueOidElement => throw _privateConstructorUsedError;
+  Element? get maxValueOidElement;
   @override
-  Id? get maxValueId => throw _privateConstructorUsedError;
+  Id? get maxValueId;
   @override
   @JsonKey(name: '_maxValueId')
-  Element? get maxValueIdElement => throw _privateConstructorUsedError;
+  Element? get maxValueIdElement;
   @override
-  UnsignedInt? get maxValueUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get maxValueUnsignedInt;
   @override
   @JsonKey(name: '_maxValueUnsignedInt')
-  Element? get maxValueUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get maxValueUnsignedIntElement;
   @override
-  PositiveInt? get maxValuePositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get maxValuePositiveInt;
   @override
   @JsonKey(name: '_maxValuePositiveInt')
-  Element? get maxValuePositiveIntElement => throw _privateConstructorUsedError;
+  Element? get maxValuePositiveIntElement;
   @override
-  Markdown? get maxValueMarkdown => throw _privateConstructorUsedError;
+  Markdown? get maxValueMarkdown;
   @override
   @JsonKey(name: '_maxValueMarkdown')
-  Element? get maxValueMarkdownElement => throw _privateConstructorUsedError;
+  Element? get maxValueMarkdownElement;
   @override
-  Annotation? get maxValueAnnotation => throw _privateConstructorUsedError;
+  Annotation? get maxValueAnnotation;
   @override
-  Attachment? get maxValueAttachment => throw _privateConstructorUsedError;
+  Attachment? get maxValueAttachment;
   @override
-  Identifier? get maxValueIdentifier => throw _privateConstructorUsedError;
+  Identifier? get maxValueIdentifier;
   @override
-  CodeableConcept? get maxValueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get maxValueCodeableConcept;
   @override
-  Coding? get maxValueCoding => throw _privateConstructorUsedError;
+  Coding? get maxValueCoding;
   @override
-  Quantity? get maxValueQuantity => throw _privateConstructorUsedError;
+  Quantity? get maxValueQuantity;
   @override
-  Range? get maxValueRange => throw _privateConstructorUsedError;
+  Range? get maxValueRange;
   @override
-  Period? get maxValuePeriod => throw _privateConstructorUsedError;
+  Period? get maxValuePeriod;
   @override
-  Ratio? get maxValueRatio => throw _privateConstructorUsedError;
+  Ratio? get maxValueRatio;
   @override
-  SampledData? get maxValueSampledData => throw _privateConstructorUsedError;
+  SampledData? get maxValueSampledData;
   @override
-  Signature? get maxValueSignature => throw _privateConstructorUsedError;
+  Signature? get maxValueSignature;
   @override
-  HumanName? get maxValueHumanName => throw _privateConstructorUsedError;
+  HumanName? get maxValueHumanName;
   @override
-  Address? get maxValueAddress => throw _privateConstructorUsedError;
+  Address? get maxValueAddress;
   @override
-  ContactPoint? get maxValueContactPoint => throw _privateConstructorUsedError;
+  ContactPoint? get maxValueContactPoint;
   @override
-  Timing? get maxValueTiming => throw _privateConstructorUsedError;
+  Timing? get maxValueTiming;
   @override
-  Reference? get maxValueReference => throw _privateConstructorUsedError;
+  Reference? get maxValueReference;
   @override
-  Meta? get maxValueMeta => throw _privateConstructorUsedError;
+  Meta? get maxValueMeta;
   @override
-  Integer? get maxLength => throw _privateConstructorUsedError;
+  Integer? get maxLength;
   @override
   @JsonKey(name: '_maxLength')
-  Element? get maxLengthElement => throw _privateConstructorUsedError;
+  Element? get maxLengthElement;
   @override
-  List<Id>? get condition => throw _privateConstructorUsedError;
+  List<Id>? get condition;
   @override
   @JsonKey(name: '_condition')
-  Element? get conditionElement => throw _privateConstructorUsedError;
+  Element? get conditionElement;
   @override
-  List<ElementDefinitionConstraint>? get constraint =>
-      throw _privateConstructorUsedError;
+  List<ElementDefinitionConstraint>? get constraint;
   @override
-  Boolean? get mustSupport => throw _privateConstructorUsedError;
+  Boolean? get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  Element? get mustSupportElement => throw _privateConstructorUsedError;
+  Element? get mustSupportElement;
   @override
-  Boolean? get isModifier => throw _privateConstructorUsedError;
+  Boolean? get isModifier;
   @override
   @JsonKey(name: '_isModifier')
-  Element? get isModifierElement => throw _privateConstructorUsedError;
+  Element? get isModifierElement;
   @override
-  Boolean? get isSummary => throw _privateConstructorUsedError;
+  Boolean? get isSummary;
   @override
   @JsonKey(name: '_isSummary')
-  Element? get isSummaryElement => throw _privateConstructorUsedError;
+  Element? get isSummaryElement;
   @override
-  ElementDefinitionBinding? get binding => throw _privateConstructorUsedError;
+  ElementDefinitionBinding? get binding;
   @override
-  List<ElementDefinitionMapping>? get mapping =>
-      throw _privateConstructorUsedError;
+  List<ElementDefinitionMapping>? get mapping;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionCopyWith<_$_ElementDefinition> get copyWith =>
@@ -12097,21 +12077,21 @@ abstract class _Narrative extends Narrative {
       _$_Narrative.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-  NarrativeStatus get status => throw _privateConstructorUsedError;
+  NarrativeStatus get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  String get div => throw _privateConstructorUsedError;
+  String get div;
   @override
   @JsonKey(ignore: true)
   _$$_NarrativeCopyWith<_$_Narrative> get copyWith =>
@@ -12487,28 +12467,28 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
       _$_ElementDefinitionSlicing.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<String>? get discriminator => throw _privateConstructorUsedError;
+  List<String>? get discriminator;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  Boolean? get ordered => throw _privateConstructorUsedError;
+  Boolean? get ordered;
   @override
   @JsonKey(name: '_ordered')
-  Element? get orderedElement => throw _privateConstructorUsedError;
+  Element? get orderedElement;
   @override
   @JsonKey(unknownEnumValue: SlicingRules.unknown)
-  SlicingRules get rules => throw _privateConstructorUsedError;
+  SlicingRules get rules;
   @override
   @JsonKey(name: '_rules')
-  Element? get rulesElement => throw _privateConstructorUsedError;
+  Element? get rulesElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionSlicingCopyWith<_$_ElementDefinitionSlicing>
@@ -12848,25 +12828,25 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
       _$_ElementDefinitionBase.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  String get path => throw _privateConstructorUsedError;
+  String get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
-  Integer get min => throw _privateConstructorUsedError;
+  Integer get min;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement => throw _privateConstructorUsedError;
+  Element? get minElement;
   @override
-  String get max => throw _privateConstructorUsedError;
+  String get max;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement => throw _privateConstructorUsedError;
+  Element? get maxElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionBaseCopyWith<_$_ElementDefinitionBase> get copyWith =>
@@ -13216,25 +13196,25 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       _$_ElementDefinitionType.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  Code? get code => throw _privateConstructorUsedError;
+  Code? get code;
   @override
   @JsonKey(name: '_code')
-  TypeCodeExtension? get codeExtension => throw _privateConstructorUsedError;
+  TypeCodeExtension? get codeExtension;
   @override
-  List<FhirUri>? get profile => throw _privateConstructorUsedError;
+  List<FhirUri>? get profile;
   @override
-  List<TypeAggregation>? get aggregation => throw _privateConstructorUsedError;
+  List<TypeAggregation>? get aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  Element? get aggregationElement => throw _privateConstructorUsedError;
+  Element? get aggregationElement;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirElement => throw _privateConstructorUsedError;
+  List<String>? get fhirElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionTypeCopyWith<_$_ElementDefinitionType> get copyWith =>
@@ -13383,7 +13363,7 @@ abstract class _TypeCodeExtension extends TypeCodeExtension {
 
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(ignore: true)
   _$$_TypeCodeExtensionCopyWith<_$_TypeCodeExtension> get copyWith =>
@@ -13867,36 +13847,36 @@ abstract class _ElementDefinitionConstraint
       _$_ElementDefinitionConstraint.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  Id get key => throw _privateConstructorUsedError;
+  Id get key;
   @override
   @JsonKey(name: '_key')
-  Element? get keyElement => throw _privateConstructorUsedError;
+  Element? get keyElement;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement => throw _privateConstructorUsedError;
+  Element? get requirementsElement;
   @override
   @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
-  ConstraintSeverity get severity => throw _privateConstructorUsedError;
+  ConstraintSeverity get severity;
   @override
   @JsonKey(name: '_severity')
-  Element? get severityElement => throw _privateConstructorUsedError;
+  Element? get severityElement;
   @override
-  String get human => throw _privateConstructorUsedError;
+  String get human;
   @override
   @JsonKey(name: '_human')
-  Element? get humanElement => throw _privateConstructorUsedError;
+  Element? get humanElement;
   @override
-  String get xpath => throw _privateConstructorUsedError;
+  String get xpath;
   @override
   @JsonKey(name: '_xpath')
-  Element? get xpathElement => throw _privateConstructorUsedError;
+  Element? get xpathElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
@@ -14259,28 +14239,27 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
       _$_ElementDefinitionBinding.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(
       required: true,
       unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-  ElementDefinitionBindingStrength get strength =>
-      throw _privateConstructorUsedError;
+  ElementDefinitionBindingStrength get strength;
   @override
   @JsonKey(name: '_strength')
-  Element? get strengthElement => throw _privateConstructorUsedError;
+  Element? get strengthElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  FhirUri? get valueSetUri => throw _privateConstructorUsedError;
+  FhirUri? get valueSetUri;
   @override
-  Reference? get valueSetReference => throw _privateConstructorUsedError;
+  Reference? get valueSetReference;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
@@ -14651,28 +14630,28 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
       _$_ElementDefinitionMapping.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  Id get identity => throw _privateConstructorUsedError;
+  Id get identity;
   @override
   @JsonKey(name: '_identity')
-  Element? get identityElement => throw _privateConstructorUsedError;
+  Element? get identityElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  String get map => throw _privateConstructorUsedError;
+  String get map;
   @override
   @JsonKey(name: '_map')
-  Element? get mapElement => throw _privateConstructorUsedError;
+  Element? get mapElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionMappingCopyWith<_$_ElementDefinitionMapping>

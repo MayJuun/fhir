@@ -153,7 +153,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_CodeSystemToJson(_$_CodeSystem instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -799,7 +799,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ConceptMapToJson(_$_ConceptMap instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1218,7 +1218,7 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_NamingSystemToJson(_$_NamingSystem instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1468,7 +1468,7 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
 Map<String, dynamic> _$$_TerminologyCapabilitiesToJson(
     _$_TerminologyCapabilities instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -2121,7 +2121,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
 
 Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

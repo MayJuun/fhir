@@ -991,82 +991,78 @@ abstract class _Conformance extends Conformance {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-  ConformanceStatus? get status => throw _privateConstructorUsedError;
+  ConformanceStatus? get status;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
-  List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
+  List<ConformanceContact>? get contact;
   @override
-  FhirDateTime get date => throw _privateConstructorUsedError;
+  FhirDateTime get date;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
-  String? get copyright => throw _privateConstructorUsedError;
+  String? get copyright;
   @override
   @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-  ConformanceKind get kind => throw _privateConstructorUsedError;
+  ConformanceKind get kind;
   @override
-  ConformanceSoftware? get software => throw _privateConstructorUsedError;
+  ConformanceSoftware? get software;
   @override
-  ConformanceImplementation? get implementation =>
-      throw _privateConstructorUsedError;
+  ConformanceImplementation? get implementation;
   @override
-  Id get fhirVersion => throw _privateConstructorUsedError;
+  Id get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement => throw _privateConstructorUsedError;
+  Element? get fhirVersionElement;
   @override
   @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-  ConformanceAcceptUnknown get acceptUnknown =>
-      throw _privateConstructorUsedError;
+  ConformanceAcceptUnknown get acceptUnknown;
   @override
   @JsonKey(name: '_acceptUnknown')
-  Element? get acceptUnknownElement => throw _privateConstructorUsedError;
+  Element? get acceptUnknownElement;
   @override
-  List<ConformanceFormat> get format => throw _privateConstructorUsedError;
+  List<ConformanceFormat> get format;
   @override
-  List<Reference>? get profile => throw _privateConstructorUsedError;
+  List<Reference>? get profile;
   @override
-  List<ConformanceRest>? get rest => throw _privateConstructorUsedError;
+  List<ConformanceRest>? get rest;
   @override
-  List<ConformanceMessaging>? get messaging =>
-      throw _privateConstructorUsedError;
+  List<ConformanceMessaging>? get messaging;
   @override
-  List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
+  List<ConformanceDocument>? get document;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceCopyWith<_$_Conformance> get copyWith =>
@@ -2053,82 +2049,78 @@ abstract class _CapabilityStatement extends CapabilityStatement {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-  ConformanceStatus? get status => throw _privateConstructorUsedError;
+  ConformanceStatus? get status;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
-  List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
+  List<ConformanceContact>? get contact;
   @override
-  FhirDateTime get date => throw _privateConstructorUsedError;
+  FhirDateTime get date;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
-  String? get copyright => throw _privateConstructorUsedError;
+  String? get copyright;
   @override
   @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-  ConformanceKind get kind => throw _privateConstructorUsedError;
+  ConformanceKind get kind;
   @override
-  ConformanceSoftware? get software => throw _privateConstructorUsedError;
+  ConformanceSoftware? get software;
   @override
-  ConformanceImplementation? get implementation =>
-      throw _privateConstructorUsedError;
+  ConformanceImplementation? get implementation;
   @override
-  Id get fhirVersion => throw _privateConstructorUsedError;
+  Id get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement => throw _privateConstructorUsedError;
+  Element? get fhirVersionElement;
   @override
   @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-  ConformanceAcceptUnknown get acceptUnknown =>
-      throw _privateConstructorUsedError;
+  ConformanceAcceptUnknown get acceptUnknown;
   @override
   @JsonKey(name: '_acceptUnknown')
-  Element? get acceptUnknownElement => throw _privateConstructorUsedError;
+  Element? get acceptUnknownElement;
   @override
-  List<ConformanceFormat> get format => throw _privateConstructorUsedError;
+  List<ConformanceFormat> get format;
   @override
-  List<Reference>? get profile => throw _privateConstructorUsedError;
+  List<Reference>? get profile;
   @override
-  List<ConformanceRest>? get rest => throw _privateConstructorUsedError;
+  List<ConformanceRest>? get rest;
   @override
-  List<ConformanceMessaging>? get messaging =>
-      throw _privateConstructorUsedError;
+  List<ConformanceMessaging>? get messaging;
   @override
-  List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
+  List<ConformanceDocument>? get document;
   @override
   @JsonKey(ignore: true)
   _$$_CapabilityStatementCopyWith<_$_CapabilityStatement> get copyWith =>
@@ -2372,17 +2364,16 @@ abstract class _ConformanceContact extends ConformanceContact {
       _$_ConformanceContact.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceContactCopyWith<_$_ConformanceContact> get copyWith =>
@@ -2639,19 +2630,18 @@ abstract class _ConformanceSoftware extends ConformanceSoftware {
       _$_ConformanceSoftware.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceSoftwareCopyWith<_$_ConformanceSoftware> get copyWith =>
@@ -2893,17 +2883,16 @@ abstract class _ConformanceImplementation extends ConformanceImplementation {
       _$_ConformanceImplementation.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String get description => throw _privateConstructorUsedError;
+  String get description;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceImplementationCopyWith<_$_ConformanceImplementation>
@@ -3426,44 +3415,38 @@ abstract class _ConformanceRest extends ConformanceRest {
       _$_ConformanceRest.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: RestMode.unknown)
-  RestMode get mode => throw _privateConstructorUsedError;
+  RestMode get mode;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement => throw _privateConstructorUsedError;
+  Element? get modeElement;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  ConformanceRestSecurity? get security => throw _privateConstructorUsedError;
+  ConformanceRestSecurity? get security;
   @override
-  List<ConformanceRestResource> get resource =>
-      throw _privateConstructorUsedError;
+  List<ConformanceRestResource> get resource;
   @override
-  List<ConformanceRestInteraction>? get interaction =>
-      throw _privateConstructorUsedError;
+  List<ConformanceRestInteraction>? get interaction;
   @override
   @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-  RestTransactionMode? get transactionMode =>
-      throw _privateConstructorUsedError;
+  RestTransactionMode? get transactionMode;
   @override
-  List<ConformanceResourceSearchParam>? get searchParam =>
-      throw _privateConstructorUsedError;
+  List<ConformanceResourceSearchParam>? get searchParam;
   @override
-  List<ConformanceRestOperation>? get operation =>
-      throw _privateConstructorUsedError;
+  List<ConformanceRestOperation>? get operation;
   @override
-  List<FhirUri>? get compartment => throw _privateConstructorUsedError;
+  List<FhirUri>? get compartment;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceRestCopyWith<_$_ConformanceRest> get copyWith =>
@@ -3786,26 +3769,23 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
       _$_ConformanceMessaging.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  List<ConformanceMessagingEndpoint>? get endpoint =>
-      throw _privateConstructorUsedError;
+  List<ConformanceMessagingEndpoint>? get endpoint;
   @override
-  UnsignedInt? get reliableCache => throw _privateConstructorUsedError;
+  UnsignedInt? get reliableCache;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  List<ConformanceMessagingEvent> get event =>
-      throw _privateConstructorUsedError;
+  List<ConformanceMessagingEvent> get event;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceMessagingCopyWith<_$_ConformanceMessaging> get copyWith =>
@@ -4109,23 +4089,22 @@ abstract class _ConformanceDocument extends ConformanceDocument {
       _$_ConformanceDocument.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: DocumentMode.unknown)
-  DocumentMode get mode => throw _privateConstructorUsedError;
+  DocumentMode get mode;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  Reference get profile => throw _privateConstructorUsedError;
+  Reference get profile;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceDocumentCopyWith<_$_ConformanceDocument> get copyWith =>
@@ -4460,25 +4439,23 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
       _$_ConformanceRestSecurity.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Boolean? get cors => throw _privateConstructorUsedError;
+  Boolean? get cors;
   @override
   @JsonKey(name: '_cors')
-  Element? get corsElement => throw _privateConstructorUsedError;
+  Element? get corsElement;
   @override
-  List<CodeableConcept>? get service => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get service;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  List<ConformanceSecurityCertificate>? get certificate =>
-      throw _privateConstructorUsedError;
+  List<ConformanceSecurityCertificate>? get certificate;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceRestSecurityCopyWith<_$_ConformanceRestSecurity>
@@ -5184,58 +5161,54 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
       _$_ConformanceRestResource.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  Code get type => throw _privateConstructorUsedError;
+  Code get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  Reference? get profile => throw _privateConstructorUsedError;
+  Reference? get profile;
   @override
   @JsonKey(required: true)
-  List<ConformanceResourceInteraction> get interaction =>
-      throw _privateConstructorUsedError;
+  List<ConformanceResourceInteraction> get interaction;
   @override
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-  ResourceVersioning? get versioning => throw _privateConstructorUsedError;
+  ResourceVersioning? get versioning;
   @override
-  Boolean? get readHistory => throw _privateConstructorUsedError;
+  Boolean? get readHistory;
   @override
-  Boolean? get updateCreate => throw _privateConstructorUsedError;
+  Boolean? get updateCreate;
   @override
   @JsonKey(name: '_updateCreate')
-  Element? get updateCreateElement => throw _privateConstructorUsedError;
+  Element? get updateCreateElement;
   @override
-  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
+  Boolean? get conditionalCreate;
   @override
   @JsonKey(name: '_conditionalCreate')
-  Element? get conditionalCreateElement => throw _privateConstructorUsedError;
+  Element? get conditionalCreateElement;
   @override
-  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
+  Boolean? get conditionalUpdate;
   @override
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-  ResourceConditionalDelete? get conditionalDelete =>
-      throw _privateConstructorUsedError;
+  ResourceConditionalDelete? get conditionalDelete;
   @override
   @JsonKey(name: '_conditionalDelete')
-  Element? get conditionalDeleteElement => throw _privateConstructorUsedError;
+  Element? get conditionalDeleteElement;
   @override
-  List<String>? get searchInclude => throw _privateConstructorUsedError;
+  List<String>? get searchInclude;
   @override
-  List<String>? get searchRevInclude => throw _privateConstructorUsedError;
+  List<String>? get searchRevInclude;
   @override
-  List<ConformanceResourceSearchParam>? get searchParam =>
-      throw _privateConstructorUsedError;
+  List<ConformanceResourceSearchParam>? get searchParam;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceRestResourceCopyWith<_$_ConformanceRestResource>
@@ -5491,18 +5464,17 @@ abstract class _ConformanceResourceInteraction
       _$_ConformanceResourceInteraction.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-  ResourceInteractionCode get code => throw _privateConstructorUsedError;
+  ResourceInteractionCode get code;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceResourceInteractionCopyWith<_$_ConformanceResourceInteraction>
@@ -5785,20 +5757,19 @@ abstract class _ConformanceRestOperation extends ConformanceRestOperation {
       _$_ConformanceRestOperation.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  Reference get definition => throw _privateConstructorUsedError;
+  Reference get definition;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceRestOperationCopyWith<_$_ConformanceRestOperation>
@@ -6090,20 +6061,19 @@ abstract class _ConformanceMessagingEndpoint
       _$_ConformanceMessagingEndpoint.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Coding get protocol => throw _privateConstructorUsedError;
+  Coding get protocol;
   @override
-  FhirUri get address => throw _privateConstructorUsedError;
+  FhirUri get address;
   @override
   @JsonKey(name: '_address')
-  Element? get addressElement => throw _privateConstructorUsedError;
+  Element? get addressElement;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceMessagingEndpointCopyWith<_$_ConformanceMessagingEndpoint>
@@ -6516,32 +6486,31 @@ abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
       _$_ConformanceMessagingEvent.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Coding get code => throw _privateConstructorUsedError;
+  Coding get code;
   @override
   @JsonKey(unknownEnumValue: EventCategory.unknown)
-  EventCategory? get category => throw _privateConstructorUsedError;
+  EventCategory? get category;
   @override
   @JsonKey(unknownEnumValue: EventMode.unknown)
-  EventMode get mode => throw _privateConstructorUsedError;
+  EventMode get mode;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement => throw _privateConstructorUsedError;
+  Element? get modeElement;
   @override
-  Code get focus => throw _privateConstructorUsedError;
+  Code get focus;
   @override
-  Reference get request => throw _privateConstructorUsedError;
+  Reference get request;
   @override
-  Reference get response => throw _privateConstructorUsedError;
+  Reference get response;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceMessagingEventCopyWith<_$_ConformanceMessagingEvent>
@@ -6825,20 +6794,19 @@ abstract class _ConformanceSecurityCertificate
       _$_ConformanceSecurityCertificate.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  Code? get type;
   @override
-  Base64Binary? get blob => throw _privateConstructorUsedError;
+  Base64Binary? get blob;
   @override
   @JsonKey(name: '_blob')
-  Element? get blobElement => throw _privateConstructorUsedError;
+  Element? get blobElement;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceSecurityCertificateCopyWith<_$_ConformanceSecurityCertificate>
@@ -7090,18 +7058,17 @@ abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
       _$_ConformanceRestInteraction.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-  RestInteractionCode get code => throw _privateConstructorUsedError;
+  RestInteractionCode get code;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceRestInteractionCopyWith<_$_ConformanceRestInteraction>
@@ -7501,31 +7468,30 @@ abstract class _ConformanceResourceSearchParam
       _$_ConformanceResourceSearchParam.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  FhirUri? get definition => throw _privateConstructorUsedError;
+  FhirUri? get definition;
   @override
   @JsonKey(unknownEnumValue: SearchParamType.unknown)
-  SearchParamType get type => throw _privateConstructorUsedError;
+  SearchParamType get type;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  List<Code>? get target => throw _privateConstructorUsedError;
+  List<Code>? get target;
   @override
-  List<SearchParamModifier>? get modifier => throw _privateConstructorUsedError;
+  List<SearchParamModifier>? get modifier;
   @override
-  List<String>? get chain => throw _privateConstructorUsedError;
+  List<String>? get chain;
   @override
   @JsonKey(ignore: true)
   _$$_ConformanceResourceSearchParamCopyWith<_$_ConformanceResourceSearchParam>
@@ -8308,67 +8274,64 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-  OperationDefinitionStatus get status => throw _privateConstructorUsedError;
+  OperationDefinitionStatus get status;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-  OperationDefinitionKind get kind => throw _privateConstructorUsedError;
+  OperationDefinitionKind get kind;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
-  List<OperationDefinitionContact>? get contact =>
-      throw _privateConstructorUsedError;
+  List<OperationDefinitionContact>? get contact;
   @override
-  FhirDateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
-  Boolean? get idempotent => throw _privateConstructorUsedError;
+  Boolean? get idempotent;
   @override
-  Code get code => throw _privateConstructorUsedError;
+  Code get code;
   @override
-  String? get notes => throw _privateConstructorUsedError;
+  String? get notes;
   @override
-  Reference? get base => throw _privateConstructorUsedError;
+  Reference? get base;
   @override
-  Boolean get system => throw _privateConstructorUsedError;
+  Boolean get system;
   @override
-  List<Code>? get type => throw _privateConstructorUsedError;
+  List<Code>? get type;
   @override
-  Boolean get instance => throw _privateConstructorUsedError;
+  Boolean get instance;
   @override
-  List<OperationDefinitionParameter>? get parameter =>
-      throw _privateConstructorUsedError;
+  List<OperationDefinitionParameter>? get parameter;
   @override
   @JsonKey(ignore: true)
   _$$_OperationDefinitionCopyWith<_$_OperationDefinition> get copyWith =>
@@ -8616,17 +8579,16 @@ abstract class _OperationDefinitionContact extends OperationDefinitionContact {
       _$_OperationDefinitionContact.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$$_OperationDefinitionContactCopyWith<_$_OperationDefinitionContact>
@@ -9082,38 +9044,35 @@ abstract class _OperationDefinitionParameter
       _$_OperationDefinitionParameter.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  Code get name => throw _privateConstructorUsedError;
+  Code get name;
   @override
   @JsonKey(unknownEnumValue: ParameterUse.unknown)
-  ParameterUse get use => throw _privateConstructorUsedError;
+  ParameterUse get use;
   @override
-  Integer get min => throw _privateConstructorUsedError;
+  Integer get min;
   @override
-  String get max => throw _privateConstructorUsedError;
+  String get max;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  Code? get type;
   @override
-  Reference? get profile => throw _privateConstructorUsedError;
+  Reference? get profile;
   @override
-  OperationDefinitionParameterBinding? get binding =>
-      throw _privateConstructorUsedError;
+  OperationDefinitionParameterBinding? get binding;
   @override
   @JsonKey(name: 'part')
-  List<OperationDefinitionParameter>? get part_ =>
-      throw _privateConstructorUsedError;
+  List<OperationDefinitionParameter>? get part_;
   @override
   @JsonKey(ignore: true)
   _$$_OperationDefinitionParameterCopyWith<_$_OperationDefinitionParameter>
@@ -9429,24 +9388,22 @@ abstract class _OperationDefinitionParameterBinding
       _$_OperationDefinitionParameterBinding.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(
       required: true,
       unknownEnumValue: OperationDefinitionBindingStrength.unknown)
   @JsonKey(required: true)
-  OperationDefinitionBindingStrength get strength =>
-      throw _privateConstructorUsedError;
+  OperationDefinitionBindingStrength get strength;
   @override
-  FhirUri? get valueSetUri => throw _privateConstructorUsedError;
+  FhirUri? get valueSetUri;
   @override
-  Reference? get valueSetReference => throw _privateConstructorUsedError;
+  Reference? get valueSetReference;
   @override
   @JsonKey(ignore: true)
   _$$_OperationDefinitionParameterBindingCopyWith<
@@ -10176,63 +10133,60 @@ abstract class _SearchParameter extends SearchParameter {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri get url => throw _privateConstructorUsedError;
+  FhirUri get url;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  SearchParameterStatus? get status => throw _privateConstructorUsedError;
+  SearchParameterStatus? get status;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
-  List<SearchParameterContact>? get contact =>
-      throw _privateConstructorUsedError;
+  List<SearchParameterContact>? get contact;
   @override
-  FhirDateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement => throw _privateConstructorUsedError;
+  Element? get requirementsElement;
   @override
-  Code get code => throw _privateConstructorUsedError;
+  Code get code;
   @override
-  Code? get base => throw _privateConstructorUsedError;
+  Code? get base;
   @override
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  SearchParameterType get type => throw _privateConstructorUsedError;
+  SearchParameterType get type;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get xpath => throw _privateConstructorUsedError;
+  String? get xpath;
   @override
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-  SearchParameterXpathUsage? get xpathUsage =>
-      throw _privateConstructorUsedError;
+  SearchParameterXpathUsage? get xpathUsage;
   @override
-  List<Code>? get target => throw _privateConstructorUsedError;
+  List<Code>? get target;
   @override
   @JsonKey(ignore: true)
   _$$_SearchParameterCopyWith<_$_SearchParameter> get copyWith =>
@@ -10478,17 +10432,16 @@ abstract class _SearchParameterContact extends SearchParameterContact {
       _$_SearchParameterContact.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$$_SearchParameterContactCopyWith<_$_SearchParameterContact> get copyWith =>

@@ -79,7 +79,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
 
 Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -346,7 +346,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
 
 Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -368,7 +368,7 @@ Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = _$ClaimTypeEnumMap[instance.type];
+  val['type'] = _$ClaimTypeEnumMap[instance.type]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('ruleset', instance.ruleset?.toJson());
@@ -996,7 +996,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ClaimResponseToJson(_$_ClaimResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

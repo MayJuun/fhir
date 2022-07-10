@@ -1788,7 +1788,7 @@ Map<String, dynamic> _$$_ElementDefinitionToJson(
   writeNotNull(
       'representation',
       instance.representation
-          ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e])
+          ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e]!)
           .toList());
   writeNotNull('_representation',
       instance.representationElement?.map((e) => e.toJson()).toList());
@@ -2381,7 +2381,7 @@ Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
   writeNotNull(
       'aggregation',
       instance.aggregation
-          ?.map((e) => _$ElementDefinitionTypeAggregationEnumMap[e])
+          ?.map((e) => _$ElementDefinitionTypeAggregationEnumMap[e]!)
           .toList());
   writeNotNull('_aggregation',
       instance.aggregationElement?.map((e) => e.toJson()).toList());

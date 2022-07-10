@@ -88,7 +88,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -117,7 +117,7 @@ Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
   writeNotNull('class', instance.class_?.toJson());
   val['title'] = instance.title;
   writeNotNull('_title', instance.titleElement?.toJson());
-  val['status'] = _$CompositionStatusEnumMap[instance.status];
+  val['status'] = _$CompositionStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('confidentiality', instance.confidentiality?.toJson());
   writeNotNull('_confidentiality', instance.confidentialityElement?.toJson());
@@ -277,7 +277,7 @@ Map<String, dynamic> _$$_CompositionAttesterToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['mode'] = instance.mode.map((e) => _$AttesterModeEnumMap[e]).toList();
+  val['mode'] = instance.mode.map((e) => _$AttesterModeEnumMap[e]!).toList();
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('_time', instance.timeElement?.toJson());
@@ -495,7 +495,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -529,7 +529,7 @@ Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('_source', instance.sourceElement?.toJson());
-  val['status'] = _$DocumentManifestStatusEnumMap[instance.status];
+  val['status'] = _$DocumentManifestStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
@@ -716,7 +716,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_DocumentReferenceToJson(
     _$_DocumentReference instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -749,7 +749,7 @@ Map<String, dynamic> _$$_DocumentReferenceToJson(
   writeNotNull('authenticator', instance.authenticator?.toJson());
   writeNotNull('created', instance.created?.toJson());
   val['indexed'] = instance.indexed.toJson();
-  val['status'] = _$DocumentReferenceStatusEnumMap[instance.status];
+  val['status'] = _$DocumentReferenceStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('docStatus', instance.docStatus?.toJson());
   writeNotNull('_docStatus', instance.docStatusElement?.toJson());
@@ -804,7 +804,7 @@ Map<String, dynamic> _$$_DocumentReferenceRelatesToToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['code'] = _$RelatesToCodeEnumMap[instance.code];
+  val['code'] = _$RelatesToCodeEnumMap[instance.code]!;
   writeNotNull('_code', instance.codeElement?.toJson());
   val['target'] = instance.target.toJson();
   return val;
@@ -1035,7 +1035,7 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
 
 Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1065,12 +1065,12 @@ Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
-  val['status'] = _$ListStatusEnumMap[instance.status];
+  val['status'] = _$ListStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('orderedBy', instance.orderedBy?.toJson());
-  val['mode'] = _$ListModeEnumMap[instance.mode];
+  val['mode'] = _$ListModeEnumMap[instance.mode]!;
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('note', instance.note);
   writeNotNull('entry', instance.entry?.map((e) => e.toJson()).toList());

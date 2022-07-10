@@ -109,7 +109,7 @@ _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_CommunicationToJson(_$_Communication instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -429,7 +429,7 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
 Map<String, dynamic> _$$_CommunicationRequestToJson(
     _$_CommunicationRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -659,7 +659,7 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -825,7 +825,7 @@ _$_DeviceUseStatement _$$_DeviceUseStatementFromJson(
 Map<String, dynamic> _$$_DeviceUseStatementToJson(
     _$_DeviceUseStatement instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -961,7 +961,7 @@ _$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1133,7 +1133,7 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SupplyRequestToJson(_$_SupplyRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

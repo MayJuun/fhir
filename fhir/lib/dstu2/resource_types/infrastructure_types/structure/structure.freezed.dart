@@ -960,72 +960,71 @@ abstract class _Media extends Media {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: MediaType.unknown)
-  MediaType get type => throw _privateConstructorUsedError;
+  MediaType get type;
   @override
-  CodeableConcept? get subtype => throw _privateConstructorUsedError;
+  CodeableConcept? get subtype;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get subject;
   @override
   @JsonKey(name: 'operator')
-  Reference? get operator_ => throw _privateConstructorUsedError;
+  Reference? get operator_;
   @override
-  CodeableConcept? get view => throw _privateConstructorUsedError;
+  CodeableConcept? get view;
   @override
-  String? get deviceName => throw _privateConstructorUsedError;
+  String? get deviceName;
   @override
   @JsonKey(name: '_deviceName')
-  Element? get deviceNameElement => throw _privateConstructorUsedError;
+  Element? get deviceNameElement;
   @override
-  PositiveInt? get height => throw _privateConstructorUsedError;
+  PositiveInt? get height;
   @override
   @JsonKey(name: '_height')
-  Element? get heightElement => throw _privateConstructorUsedError;
+  Element? get heightElement;
   @override
-  PositiveInt? get width => throw _privateConstructorUsedError;
+  PositiveInt? get width;
   @override
   @JsonKey(name: '_width')
-  Element? get widthElement => throw _privateConstructorUsedError;
+  Element? get widthElement;
   @override
-  PositiveInt? get frames => throw _privateConstructorUsedError;
+  PositiveInt? get frames;
   @override
   @JsonKey(name: '_frames')
-  Element? get framesElement => throw _privateConstructorUsedError;
+  Element? get framesElement;
   @override
-  UnsignedInt? get duration => throw _privateConstructorUsedError;
+  UnsignedInt? get duration;
   @override
   @JsonKey(name: '_duration')
-  Element? get durationElement => throw _privateConstructorUsedError;
+  Element? get durationElement;
   @override
-  Attachment get content => throw _privateConstructorUsedError;
+  Attachment get content;
   @override
   @JsonKey(ignore: true)
   _$$_MediaCopyWith<_$_Media> get copyWith =>
@@ -1416,28 +1415,28 @@ abstract class _Binary extends Binary {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Code? get contentType => throw _privateConstructorUsedError;
+  Code? get contentType;
   @override
   @JsonKey(name: '_contentType')
-  Element? get contentTypeElement => throw _privateConstructorUsedError;
+  Element? get contentTypeElement;
   @override
-  Base64Binary? get content => throw _privateConstructorUsedError;
+  Base64Binary? get content;
   @override
   @JsonKey(ignore: true)
   _$$_BinaryCopyWith<_$_Binary> get copyWith =>
@@ -1960,38 +1959,38 @@ abstract class _Bundle extends Bundle {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
   @JsonKey(unknownEnumValue: BundleType.unknown)
-  BundleType get type => throw _privateConstructorUsedError;
+  BundleType get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  UnsignedInt? get total => throw _privateConstructorUsedError;
+  UnsignedInt? get total;
   @override
   @JsonKey(name: '_total')
-  Element? get totalElement => throw _privateConstructorUsedError;
+  Element? get totalElement;
   @override
-  List<BundleLink>? get link => throw _privateConstructorUsedError;
+  List<BundleLink>? get link;
   @override
-  List<BundleEntry>? get entry => throw _privateConstructorUsedError;
+  List<BundleEntry>? get entry;
   @override
-  Signature? get signature => throw _privateConstructorUsedError;
+  Signature? get signature;
   @override
   @JsonKey(ignore: true)
   _$$_BundleCopyWith<_$_Bundle> get copyWith =>
@@ -2329,26 +2328,25 @@ abstract class _BundleLink extends BundleLink {
       _$_BundleLink.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  String get relation => throw _privateConstructorUsedError;
+  String get relation;
   @override
   @JsonKey(name: '_relation')
-  Element? get relationElement => throw _privateConstructorUsedError;
+  Element? get relationElement;
   @override
-  FhirUri get url => throw _privateConstructorUsedError;
+  FhirUri get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
   @JsonKey(ignore: true)
   _$$_BundleLinkCopyWith<_$_BundleLink> get copyWith =>
@@ -2776,31 +2774,30 @@ abstract class _BundleEntry extends BundleEntry {
       _$_BundleEntry.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  List<BundleLink>? get link => throw _privateConstructorUsedError;
+  List<BundleLink>? get link;
   @override
-  FhirUri? get fullUrl => throw _privateConstructorUsedError;
+  FhirUri? get fullUrl;
   @override
   @JsonKey(name: '_fullUrl')
-  Element? get fullUrlElement => throw _privateConstructorUsedError;
+  Element? get fullUrlElement;
   @override
-  Resource? get resource => throw _privateConstructorUsedError;
+  Resource? get resource;
   @override
-  BundleEntrySearch? get search => throw _privateConstructorUsedError;
+  BundleEntrySearch? get search;
   @override
-  BundleEntryRequest? get request => throw _privateConstructorUsedError;
+  BundleEntryRequest? get request;
   @override
-  BundleEntryResponse? get response => throw _privateConstructorUsedError;
+  BundleEntryResponse? get response;
   @override
   @JsonKey(ignore: true)
   _$$_BundleEntryCopyWith<_$_BundleEntry> get copyWith =>
@@ -3144,27 +3141,26 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
       _$_BundleEntrySearch.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: SearchMode.unknown)
-  SearchMode? get mode => throw _privateConstructorUsedError;
+  SearchMode? get mode;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement => throw _privateConstructorUsedError;
+  Element? get modeElement;
   @override
-  Decimal? get score => throw _privateConstructorUsedError;
+  Decimal? get score;
   @override
   @JsonKey(name: '_score')
-  Element? get scoreElement => throw _privateConstructorUsedError;
+  Element? get scoreElement;
   @override
   @JsonKey(ignore: true)
   _$$_BundleEntrySearchCopyWith<_$_BundleEntrySearch> get copyWith =>
@@ -3739,47 +3735,46 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
       _$_BundleEntryRequest.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: RequestMethod.unknown)
-  RequestMethod get method => throw _privateConstructorUsedError;
+  RequestMethod get method;
   @override
   @JsonKey(name: '_method')
-  Element? get methodElement => throw _privateConstructorUsedError;
+  Element? get methodElement;
   @override
-  FhirUri get url => throw _privateConstructorUsedError;
+  FhirUri get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  String? get ifNoneMatch => throw _privateConstructorUsedError;
+  String? get ifNoneMatch;
   @override
   @JsonKey(name: '_ifNoneMatch')
-  Element? get ifNoneMatchElement => throw _privateConstructorUsedError;
+  Element? get ifNoneMatchElement;
   @override
-  Instant? get ifModifiedSince => throw _privateConstructorUsedError;
+  Instant? get ifModifiedSince;
   @override
   @JsonKey(name: '_ifModifiedSince')
-  Element? get ifModifiedSinceElement => throw _privateConstructorUsedError;
+  Element? get ifModifiedSinceElement;
   @override
-  String? get ifMatch => throw _privateConstructorUsedError;
+  String? get ifMatch;
   @override
   @JsonKey(name: '_ifMatch')
-  Element? get ifMatchElement => throw _privateConstructorUsedError;
+  Element? get ifMatchElement;
   @override
-  String? get ifNoneExist => throw _privateConstructorUsedError;
+  String? get ifNoneExist;
   @override
   @JsonKey(name: '_ifNoneExist')
-  Element? get ifNoneExistElement => throw _privateConstructorUsedError;
+  Element? get ifNoneExistElement;
   @override
   @JsonKey(ignore: true)
   _$$_BundleEntryRequestCopyWith<_$_BundleEntryRequest> get copyWith =>
@@ -4232,36 +4227,35 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
       _$_BundleEntryResponse.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  String get status => throw _privateConstructorUsedError;
+  String get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  FhirUri? get location => throw _privateConstructorUsedError;
+  FhirUri? get location;
   @override
   @JsonKey(name: '_location')
-  Element? get locationElement => throw _privateConstructorUsedError;
+  Element? get locationElement;
   @override
-  String? get etag => throw _privateConstructorUsedError;
+  String? get etag;
   @override
   @JsonKey(name: '_etag')
-  Element? get etagElement => throw _privateConstructorUsedError;
+  Element? get etagElement;
   @override
-  Instant? get lastModified => throw _privateConstructorUsedError;
+  Instant? get lastModified;
   @override
   @JsonKey(name: '_lastModified')
-  Element? get lastModifiedElement => throw _privateConstructorUsedError;
+  Element? get lastModifiedElement;
   @override
   @JsonKey(ignore: true)
   _$$_BundleEntryResponseCopyWith<_$_BundleEntryResponse> get copyWith =>
@@ -4879,44 +4873,43 @@ abstract class _Basic extends Basic {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  CodeableConcept get code => throw _privateConstructorUsedError;
+  CodeableConcept get code;
   @override
-  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get subject;
   @override
-  Reference? get author => throw _privateConstructorUsedError;
+  Reference? get author;
   @override
-  Date? get created => throw _privateConstructorUsedError;
+  Date? get created;
   @override
   @JsonKey(name: '_created')
-  Element? get createdElement => throw _privateConstructorUsedError;
+  Element? get createdElement;
   @override
   @JsonKey(ignore: true)
   _$$_BasicCopyWith<_$_Basic> get copyWith =>

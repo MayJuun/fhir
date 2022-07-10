@@ -90,7 +90,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -293,7 +293,7 @@ Map<String, dynamic> _$$_CompositionAttesterToJson(
   }
 
   writeNotNull('mode',
-      instance.mode?.map((e) => _$CompositionAttesterModeEnumMap[e]).toList());
+      instance.mode?.map((e) => _$CompositionAttesterModeEnumMap[e]!).toList());
   writeNotNull('_mode', instance.modeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('_time', instance.timeElement?.toJson());
@@ -506,7 +506,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -705,7 +705,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_DocumentReferenceToJson(
     _$_DocumentReference instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

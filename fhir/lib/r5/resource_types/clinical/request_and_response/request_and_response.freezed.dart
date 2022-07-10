@@ -1223,92 +1223,89 @@ abstract class _Communication extends Communication {
       _$_Communication.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Canonical>? get instantiatesCanonical =>
-      throw _privateConstructorUsedError;
+  List<Canonical>? get instantiatesCanonical;
   @override
-  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement =>
-      throw _privateConstructorUsedError;
+  List<Element>? get instantiatesUriElement;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  List<Reference>? get partOf;
   @override
-  List<Reference>? get inResponseTo => throw _privateConstructorUsedError;
+  List<Reference>? get inResponseTo;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  CodeableConcept? get statusReason;
   @override
-  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category;
   @override
-  Code? get priority => throw _privateConstructorUsedError;
+  Code? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  Element? get priorityElement;
   @override
-  List<CodeableConcept>? get medium => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get medium;
   @override
-  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get subject;
   @override
-  CodeableConcept? get topic => throw _privateConstructorUsedError;
+  CodeableConcept? get topic;
   @override
-  List<Reference>? get about => throw _privateConstructorUsedError;
+  List<Reference>? get about;
   @override
-  Reference? get encounter => throw _privateConstructorUsedError;
+  Reference? get encounter;
   @override
-  FhirDateTime? get sent => throw _privateConstructorUsedError;
+  FhirDateTime? get sent;
   @override
   @JsonKey(name: '_sent')
-  Element? get sentElement => throw _privateConstructorUsedError;
+  Element? get sentElement;
   @override
-  FhirDateTime? get received => throw _privateConstructorUsedError;
+  FhirDateTime? get received;
   @override
   @JsonKey(name: '_received')
-  Element? get receivedElement => throw _privateConstructorUsedError;
+  Element? get receivedElement;
   @override
-  List<Reference>? get recipient => throw _privateConstructorUsedError;
+  List<Reference>? get recipient;
   @override
-  Reference? get sender => throw _privateConstructorUsedError;
+  Reference? get sender;
   @override
-  List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+  List<CodeableReference>? get reason;
   @override
-  List<CommunicationPayload>? get payload => throw _privateConstructorUsedError;
+  List<CommunicationPayload>? get payload;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
   _$$_CommunicationCopyWith<_$_Communication> get copyWith =>
@@ -1613,20 +1610,18 @@ abstract class _CommunicationPayload extends CommunicationPayload {
       _$_CommunicationPayload.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Attachment? get contentAttachment => throw _privateConstructorUsedError;
+  Attachment? get contentAttachment;
   @override
-  Reference? get contentReference => throw _privateConstructorUsedError;
+  Reference? get contentReference;
   @override
-  CodeableConcept? get contentCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get contentCodeableConcept;
   @override
   @JsonKey(ignore: true)
   _$$_CommunicationPayloadCopyWith<_$_CommunicationPayload> get copyWith =>
@@ -2898,97 +2893,94 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       _$_CommunicationRequest.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get replaces => throw _privateConstructorUsedError;
+  List<Reference>? get replaces;
   @override
-  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
+  Identifier? get groupIdentifier;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  CodeableConcept? get statusReason;
   @override
-  Code? get intent => throw _privateConstructorUsedError;
+  Code? get intent;
   @override
   @JsonKey(name: '_intent')
-  Element? get intentElement => throw _privateConstructorUsedError;
+  Element? get intentElement;
   @override
-  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category;
   @override
-  Code? get priority => throw _privateConstructorUsedError;
+  Code? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  Element? get priorityElement;
   @override
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  Boolean? get doNotPerform;
   @override
   @JsonKey(name: '_doNotPerform')
-  Element? get doNotPerformElement => throw _privateConstructorUsedError;
+  Element? get doNotPerformElement;
   @override
-  List<CodeableConcept>? get medium => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get medium;
   @override
-  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get subject;
   @override
-  List<Reference>? get about => throw _privateConstructorUsedError;
+  List<Reference>? get about;
   @override
-  Reference? get encounter => throw _privateConstructorUsedError;
+  Reference? get encounter;
   @override
-  List<CommunicationRequestPayload>? get payload =>
-      throw _privateConstructorUsedError;
+  List<CommunicationRequestPayload>? get payload;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Period? get occurrencePeriod => throw _privateConstructorUsedError;
+  Period? get occurrencePeriod;
   @override
-  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
-  Element? get authoredOnElement => throw _privateConstructorUsedError;
+  Element? get authoredOnElement;
   @override
-  Reference? get requester => throw _privateConstructorUsedError;
+  Reference? get requester;
   @override
-  List<Reference>? get recipient => throw _privateConstructorUsedError;
+  List<Reference>? get recipient;
   @override
-  List<Reference>? get informationProvider =>
-      throw _privateConstructorUsedError;
+  List<Reference>? get informationProvider;
   @override
-  List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+  List<CodeableReference>? get reason;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
   _$$_CommunicationRequestCopyWith<_$_CommunicationRequest> get copyWith =>
@@ -3300,20 +3292,18 @@ abstract class _CommunicationRequestPayload
       _$_CommunicationRequestPayload.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Attachment? get contentAttachment => throw _privateConstructorUsedError;
+  Attachment? get contentAttachment;
   @override
-  Reference? get contentReference => throw _privateConstructorUsedError;
+  Reference? get contentReference;
   @override
-  CodeableConcept? get contentCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get contentCodeableConcept;
   @override
   @JsonKey(ignore: true)
   _$$_CommunicationRequestPayloadCopyWith<_$_CommunicationRequestPayload>
@@ -4780,112 +4770,108 @@ abstract class _DeviceRequest extends DeviceRequest {
       _$_DeviceRequest.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Canonical>? get instantiatesCanonical =>
-      throw _privateConstructorUsedError;
+  List<Canonical>? get instantiatesCanonical;
   @override
-  List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
+  List<FhirUri>? get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement =>
-      throw _privateConstructorUsedError;
+  List<Element>? get instantiatesUriElement;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get priorRequest => throw _privateConstructorUsedError;
+  List<Reference>? get priorRequest;
   @override
-  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
+  Identifier? get groupIdentifier;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Code? get intent => throw _privateConstructorUsedError;
+  Code? get intent;
   @override
   @JsonKey(name: '_intent')
-  Element? get intentElement => throw _privateConstructorUsedError;
+  Element? get intentElement;
   @override
-  Code? get priority => throw _privateConstructorUsedError;
+  Code? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  Element? get priorityElement;
   @override
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  Boolean? get doNotPerform;
   @override
   @JsonKey(name: '_doNotPerform')
-  Element? get doNotPerformElement => throw _privateConstructorUsedError;
+  Element? get doNotPerformElement;
   @override
-  CodeableReference get code => throw _privateConstructorUsedError;
+  CodeableReference get code;
   @override
-  Integer? get quantity => throw _privateConstructorUsedError;
+  Integer? get quantity;
   @override
   @JsonKey(name: '_quantity')
-  Element? get quantityElement => throw _privateConstructorUsedError;
+  Element? get quantityElement;
   @override
-  List<DeviceRequestParameter>? get parameter =>
-      throw _privateConstructorUsedError;
+  List<DeviceRequestParameter>? get parameter;
   @override
-  Reference get subject => throw _privateConstructorUsedError;
+  Reference get subject;
   @override
-  Reference? get encounter => throw _privateConstructorUsedError;
+  Reference? get encounter;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Period? get occurrencePeriod => throw _privateConstructorUsedError;
+  Period? get occurrencePeriod;
   @override
-  Timing? get occurrenceTiming => throw _privateConstructorUsedError;
+  Timing? get occurrenceTiming;
   @override
-  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
-  Element? get authoredOnElement => throw _privateConstructorUsedError;
+  Element? get authoredOnElement;
   @override
-  Reference? get requester => throw _privateConstructorUsedError;
+  Reference? get requester;
   @override
-  CodeableConcept? get performerType => throw _privateConstructorUsedError;
+  CodeableConcept? get performerType;
   @override
-  Reference? get performer => throw _privateConstructorUsedError;
+  Reference? get performer;
   @override
-  List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+  List<CodeableReference>? get reason;
   @override
-  List<Reference>? get insurance => throw _privateConstructorUsedError;
+  List<Reference>? get insurance;
   @override
-  List<Reference>? get supportingInfo => throw _privateConstructorUsedError;
+  List<Reference>? get supportingInfo;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
-  List<Reference>? get relevantHistory => throw _privateConstructorUsedError;
+  List<Reference>? get relevantHistory;
   @override
   @JsonKey(ignore: true)
   _$$_DeviceRequestCopyWith<_$_DeviceRequest> get copyWith =>
@@ -5282,27 +5268,25 @@ abstract class _DeviceRequestParameter extends DeviceRequestParameter {
       _$_DeviceRequestParameter.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get code => throw _privateConstructorUsedError;
+  CodeableConcept? get code;
   @override
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept;
   @override
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity;
   @override
-  Range? get valueRange => throw _privateConstructorUsedError;
+  Range? get valueRange;
   @override
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Element? get valueBooleanElement;
   @override
   @JsonKey(ignore: true)
   _$$_DeviceRequestParameterCopyWith<_$_DeviceRequestParameter> get copyWith =>
@@ -6438,85 +6422,82 @@ abstract class _DeviceDispense extends DeviceDispense {
       _$_DeviceDispense.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  List<Reference>? get partOf;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  CodeableReference? get statusReason => throw _privateConstructorUsedError;
+  CodeableReference? get statusReason;
   @override
-  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category;
   @override
-  CodeableReference get device => throw _privateConstructorUsedError;
+  CodeableReference get device;
   @override
-  Reference get subject => throw _privateConstructorUsedError;
+  Reference get subject;
   @override
-  Reference? get encounter => throw _privateConstructorUsedError;
+  Reference? get encounter;
   @override
-  List<Reference>? get supportingInformation =>
-      throw _privateConstructorUsedError;
+  List<Reference>? get supportingInformation;
   @override
-  List<DeviceDispensePerformer>? get performer =>
-      throw _privateConstructorUsedError;
+  List<DeviceDispensePerformer>? get performer;
   @override
-  Reference? get location => throw _privateConstructorUsedError;
+  Reference? get location;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  Quantity? get quantity => throw _privateConstructorUsedError;
+  Quantity? get quantity;
   @override
-  FhirDateTime? get preparedDate => throw _privateConstructorUsedError;
+  FhirDateTime? get preparedDate;
   @override
   @JsonKey(name: '_preparedDate')
-  Element? get preparedDateElement => throw _privateConstructorUsedError;
+  Element? get preparedDateElement;
   @override
-  FhirDateTime? get whenHandedOver => throw _privateConstructorUsedError;
+  FhirDateTime? get whenHandedOver;
   @override
   @JsonKey(name: '_whenHandedOver')
-  Element? get whenHandedOverElement => throw _privateConstructorUsedError;
+  Element? get whenHandedOverElement;
   @override
-  Reference? get destination => throw _privateConstructorUsedError;
+  Reference? get destination;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
-  String? get usageInstruction => throw _privateConstructorUsedError;
+  String? get usageInstruction;
   @override
   @JsonKey(name: '_usageInstruction')
-  Element? get usageInstructionElement => throw _privateConstructorUsedError;
+  Element? get usageInstructionElement;
   @override
-  List<Reference>? get eventHistory => throw _privateConstructorUsedError;
+  List<Reference>? get eventHistory;
   @override
   @JsonKey(ignore: true)
   _$$_DeviceDispenseCopyWith<_$_DeviceDispense> get copyWith =>
@@ -6782,17 +6763,16 @@ abstract class _DeviceDispensePerformer extends DeviceDispensePerformer {
       _$_DeviceDispensePerformer.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get function => throw _privateConstructorUsedError;
+  CodeableConcept? get function;
   @override
-  Reference get actor => throw _privateConstructorUsedError;
+  Reference get actor;
   @override
   @JsonKey(ignore: true)
   _$$_DeviceDispensePerformerCopyWith<_$_DeviceDispensePerformer>
@@ -7835,76 +7815,75 @@ abstract class _DeviceUsage extends DeviceUsage {
       _$_DeviceUsage.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category;
   @override
-  Reference get patient => throw _privateConstructorUsedError;
+  Reference get patient;
   @override
-  List<Reference>? get derivedFrom => throw _privateConstructorUsedError;
+  List<Reference>? get derivedFrom;
   @override
-  Reference? get context => throw _privateConstructorUsedError;
+  Reference? get context;
   @override
-  Timing? get timingTiming => throw _privateConstructorUsedError;
+  Timing? get timingTiming;
   @override
-  Period? get timingPeriod => throw _privateConstructorUsedError;
+  Period? get timingPeriod;
   @override
-  FhirDateTime? get timingDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get timingDateTime;
   @override
   @JsonKey(name: '_timingDateTime')
-  Element? get timingDateTimeElement => throw _privateConstructorUsedError;
+  Element? get timingDateTimeElement;
   @override
-  FhirDateTime? get dateAsserted => throw _privateConstructorUsedError;
+  FhirDateTime? get dateAsserted;
   @override
   @JsonKey(name: '_dateAsserted')
-  Element? get dateAssertedElement => throw _privateConstructorUsedError;
+  Element? get dateAssertedElement;
   @override
-  CodeableConcept? get usageStatus => throw _privateConstructorUsedError;
+  CodeableConcept? get usageStatus;
   @override
-  List<CodeableConcept>? get usageReason => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get usageReason;
   @override
-  Reference? get informationSource => throw _privateConstructorUsedError;
+  Reference? get informationSource;
   @override
-  CodeableReference get device => throw _privateConstructorUsedError;
+  CodeableReference get device;
   @override
-  List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+  List<CodeableReference>? get reason;
   @override
-  CodeableReference? get bodySite => throw _privateConstructorUsedError;
+  CodeableReference? get bodySite;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
   _$$_DeviceUsageCopyWith<_$_DeviceUsage> get copyWith =>
@@ -8934,77 +8913,74 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       _$_GuidanceResponse.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Identifier? get requestIdentifier => throw _privateConstructorUsedError;
+  Identifier? get requestIdentifier;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  FhirUri? get moduleUri => throw _privateConstructorUsedError;
+  FhirUri? get moduleUri;
   @override
   @JsonKey(name: '_moduleUri')
-  Element? get moduleUriElement => throw _privateConstructorUsedError;
+  Element? get moduleUriElement;
   @override
-  Canonical? get moduleCanonical => throw _privateConstructorUsedError;
+  Canonical? get moduleCanonical;
   @override
   @JsonKey(name: '_moduleCanonical')
-  Element? get moduleCanonicalElement => throw _privateConstructorUsedError;
+  Element? get moduleCanonicalElement;
   @override
-  CodeableConcept? get moduleCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get moduleCodeableConcept;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get subject;
   @override
-  Reference? get encounter => throw _privateConstructorUsedError;
+  Reference? get encounter;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Reference? get performer => throw _privateConstructorUsedError;
+  Reference? get performer;
   @override
-  List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+  List<CodeableReference>? get reason;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
-  List<Reference>? get evaluationMessage => throw _privateConstructorUsedError;
+  List<Reference>? get evaluationMessage;
   @override
-  Reference? get outputParameters => throw _privateConstructorUsedError;
+  Reference? get outputParameters;
   @override
-  Reference? get result => throw _privateConstructorUsedError;
+  Reference? get result;
   @override
-  List<DataRequirement>? get dataRequirement =>
-      throw _privateConstructorUsedError;
+  List<DataRequirement>? get dataRequirement;
   @override
   @JsonKey(ignore: true)
   _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
@@ -9829,62 +9805,59 @@ abstract class _InventoryReport extends InventoryReport {
       _$_InventoryReport.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Code? get countType => throw _privateConstructorUsedError;
+  Code? get countType;
   @override
   @JsonKey(name: '_countType')
-  Element? get countTypeElement => throw _privateConstructorUsedError;
+  Element? get countTypeElement;
   @override
-  CodeableConcept? get operationType => throw _privateConstructorUsedError;
+  CodeableConcept? get operationType;
   @override
-  CodeableConcept? get operationTypeReason =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get operationTypeReason;
   @override
-  FhirDateTime? get reportedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get reportedDateTime;
   @override
   @JsonKey(name: '_reportedDateTime')
-  Element? get reportedDateTimeElement => throw _privateConstructorUsedError;
+  Element? get reportedDateTimeElement;
   @override
-  Reference? get reporter => throw _privateConstructorUsedError;
+  Reference? get reporter;
   @override
-  Period? get reportingPeriod => throw _privateConstructorUsedError;
+  Period? get reportingPeriod;
   @override
-  List<InventoryReportInventoryListing>? get inventoryListing =>
-      throw _privateConstructorUsedError;
+  List<InventoryReportInventoryListing>? get inventoryListing;
   @override
-  Annotation? get note => throw _privateConstructorUsedError;
+  Annotation? get note;
   @override
   @JsonKey(ignore: true)
   _$$_InventoryReportCopyWith<_$_InventoryReport> get copyWith =>
@@ -10246,24 +10219,23 @@ abstract class _InventoryReportInventoryListing
       _$_InventoryReportInventoryListing.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Reference? get location => throw _privateConstructorUsedError;
+  Reference? get location;
   @override
-  CodeableConcept? get itemStatus => throw _privateConstructorUsedError;
+  CodeableConcept? get itemStatus;
   @override
-  FhirDateTime? get countingDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get countingDateTime;
   @override
   @JsonKey(name: '_countingDateTime')
-  Element? get countingDateTimeElement => throw _privateConstructorUsedError;
+  Element? get countingDateTimeElement;
   @override
-  List<InventoryReportItems>? get items => throw _privateConstructorUsedError;
+  List<InventoryReportItems>? get items;
   @override
   @JsonKey(ignore: true)
   _$$_InventoryReportInventoryListingCopyWith<
@@ -10782,39 +10754,38 @@ abstract class _InventoryReportItems extends InventoryReportItems {
       _$_InventoryReportItems.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get category => throw _privateConstructorUsedError;
+  CodeableConcept? get category;
   @override
-  Quantity get quantity => throw _privateConstructorUsedError;
+  Quantity get quantity;
   @override
-  CodeableReference get item => throw _privateConstructorUsedError;
+  CodeableReference get item;
   @override
-  String? get lot => throw _privateConstructorUsedError;
+  String? get lot;
   @override
   @JsonKey(name: '_lot')
-  Element? get lotElement => throw _privateConstructorUsedError;
+  Element? get lotElement;
   @override
-  String? get serial => throw _privateConstructorUsedError;
+  String? get serial;
   @override
   @JsonKey(name: '_serial')
-  Element? get serialElement => throw _privateConstructorUsedError;
+  Element? get serialElement;
   @override
-  FhirDateTime? get expiry => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry;
   @override
   @JsonKey(name: '_expiry')
-  Element? get expiryElement => throw _privateConstructorUsedError;
+  Element? get expiryElement;
   @override
-  FhirDateTime? get manufacturingDate => throw _privateConstructorUsedError;
+  FhirDateTime? get manufacturingDate;
   @override
   @JsonKey(name: '_manufacturingDate')
-  Element? get manufacturingDateElement => throw _privateConstructorUsedError;
+  Element? get manufacturingDateElement;
   @override
   @JsonKey(ignore: true)
   _$$_InventoryReportItemsCopyWith<_$_InventoryReportItems> get copyWith =>
@@ -11702,64 +11673,62 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       _$_SupplyDelivery.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  List<Reference>? get partOf;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Reference? get patient => throw _privateConstructorUsedError;
+  Reference? get patient;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  SupplyDeliverySuppliedItem? get suppliedItem =>
-      throw _privateConstructorUsedError;
+  SupplyDeliverySuppliedItem? get suppliedItem;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Period? get occurrencePeriod => throw _privateConstructorUsedError;
+  Period? get occurrencePeriod;
   @override
-  Timing? get occurrenceTiming => throw _privateConstructorUsedError;
+  Timing? get occurrenceTiming;
   @override
-  Reference? get supplier => throw _privateConstructorUsedError;
+  Reference? get supplier;
   @override
-  Reference? get destination => throw _privateConstructorUsedError;
+  Reference? get destination;
   @override
-  List<Reference>? get receiver => throw _privateConstructorUsedError;
+  List<Reference>? get receiver;
   @override
   @JsonKey(ignore: true)
   _$$_SupplyDeliveryCopyWith<_$_SupplyDelivery> get copyWith =>
@@ -12066,20 +12035,18 @@ abstract class _SupplyDeliverySuppliedItem extends SupplyDeliverySuppliedItem {
       _$_SupplyDeliverySuppliedItem.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Quantity? get quantity => throw _privateConstructorUsedError;
+  Quantity? get quantity;
   @override
-  CodeableConcept? get itemCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get itemCodeableConcept;
   @override
-  Reference? get itemReference => throw _privateConstructorUsedError;
+  Reference? get itemReference;
   @override
   @JsonKey(ignore: true)
   _$$_SupplyDeliverySuppliedItemCopyWith<_$_SupplyDeliverySuppliedItem>
@@ -13132,78 +13099,76 @@ abstract class _SupplyRequest extends SupplyRequest {
       _$_SupplyRequest.fromJson;
 
   @override
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  CodeableConcept? get category => throw _privateConstructorUsedError;
+  CodeableConcept? get category;
   @override
-  Code? get priority => throw _privateConstructorUsedError;
+  Code? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  Element? get priorityElement;
   @override
-  CodeableReference get item => throw _privateConstructorUsedError;
+  CodeableReference get item;
   @override
-  Quantity get quantity => throw _privateConstructorUsedError;
+  Quantity get quantity;
   @override
-  List<SupplyRequestParameter>? get parameter =>
-      throw _privateConstructorUsedError;
+  List<SupplyRequestParameter>? get parameter;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Period? get occurrencePeriod => throw _privateConstructorUsedError;
+  Period? get occurrencePeriod;
   @override
-  Timing? get occurrenceTiming => throw _privateConstructorUsedError;
+  Timing? get occurrenceTiming;
   @override
-  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
-  Element? get authoredOnElement => throw _privateConstructorUsedError;
+  Element? get authoredOnElement;
   @override
-  Reference? get requester => throw _privateConstructorUsedError;
+  Reference? get requester;
   @override
-  List<Reference>? get supplier => throw _privateConstructorUsedError;
+  List<Reference>? get supplier;
   @override
-  List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+  List<CodeableReference>? get reason;
   @override
-  Reference? get deliverFrom => throw _privateConstructorUsedError;
+  Reference? get deliverFrom;
   @override
-  Reference? get deliverTo => throw _privateConstructorUsedError;
+  Reference? get deliverTo;
   @override
   @JsonKey(ignore: true)
   _$$_SupplyRequestCopyWith<_$_SupplyRequest> get copyWith =>
@@ -13600,27 +13565,25 @@ abstract class _SupplyRequestParameter extends SupplyRequestParameter {
       _$_SupplyRequestParameter.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get code => throw _privateConstructorUsedError;
+  CodeableConcept? get code;
   @override
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept;
   @override
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity;
   @override
-  Range? get valueRange => throw _privateConstructorUsedError;
+  Range? get valueRange;
   @override
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Element? get valueBooleanElement;
   @override
   @JsonKey(ignore: true)
   _$$_SupplyRequestParameterCopyWith<_$_SupplyRequestParameter> get copyWith =>

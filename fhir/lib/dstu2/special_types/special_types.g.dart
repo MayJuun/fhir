@@ -1564,7 +1564,7 @@ Map<String, dynamic> _$$_NarrativeToJson(_$_Narrative instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  val['status'] = _$NarrativeStatusEnumMap[instance.status];
+  val['status'] = _$NarrativeStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   val['div'] = instance.div;
   return val;
@@ -1622,7 +1622,7 @@ Map<String, dynamic> _$$_ElementDefinitionSlicingToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('ordered', instance.ordered?.toJson());
   writeNotNull('_ordered', instance.orderedElement?.toJson());
-  val['rules'] = _$SlicingRulesEnumMap[instance.rules];
+  val['rules'] = _$SlicingRulesEnumMap[instance.rules]!;
   writeNotNull('_rules', instance.rulesElement?.toJson());
   return val;
 }
@@ -1719,7 +1719,7 @@ Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
   writeNotNull('_code', instance.codeExtension?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
   writeNotNull('aggregation',
-      instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e]).toList());
+      instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e]!).toList());
   writeNotNull('_aggregation', instance.aggregationElement?.toJson());
   writeNotNull('fhir_comments', instance.fhirElement);
   return val;
@@ -1801,7 +1801,7 @@ Map<String, dynamic> _$$_ElementDefinitionConstraintToJson(
   writeNotNull('_key', instance.keyElement?.toJson());
   writeNotNull('requirements', instance.requirements);
   writeNotNull('_requirements', instance.requirementsElement?.toJson());
-  val['severity'] = _$ConstraintSeverityEnumMap[instance.severity];
+  val['severity'] = _$ConstraintSeverityEnumMap[instance.severity]!;
   writeNotNull('_severity', instance.severityElement?.toJson());
   val['human'] = instance.human;
   writeNotNull('_human', instance.humanElement?.toJson());
@@ -1860,7 +1860,7 @@ Map<String, dynamic> _$$_ElementDefinitionBindingToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   val['strength'] =
-      _$ElementDefinitionBindingStrengthEnumMap[instance.strength];
+      _$ElementDefinitionBindingStrengthEnumMap[instance.strength]!;
   writeNotNull('_strength', instance.strengthElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());

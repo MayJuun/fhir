@@ -83,7 +83,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
 Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
     _$_ExplanationOfBenefit instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

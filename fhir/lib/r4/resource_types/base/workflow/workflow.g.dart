@@ -128,7 +128,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -462,7 +462,7 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
 Map<String, dynamic> _$$_AppointmentResponseToJson(
     _$_AppointmentResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -564,7 +564,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
 
 Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -678,7 +678,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
 
 Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -871,7 +871,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
 
 Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1711,7 +1711,7 @@ _$_VerificationResult _$$_VerificationResultFromJson(
 Map<String, dynamic> _$$_VerificationResultToJson(
     _$_VerificationResult instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

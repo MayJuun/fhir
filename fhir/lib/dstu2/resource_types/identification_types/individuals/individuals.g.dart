@@ -123,7 +123,7 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
 
 Map<String, dynamic> _$$_PatientToJson(_$_Patient instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -465,7 +465,7 @@ Map<String, dynamic> _$$_PatientLinkToJson(_$_PatientLink instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['other'] = instance.other.toJson();
-  val['type'] = _$LinkTypeEnumMap[instance.type];
+  val['type'] = _$LinkTypeEnumMap[instance.type]!;
   writeNotNull('_type', instance.typeElement?.toJson());
   return val;
 }
@@ -554,7 +554,7 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_PractitionerToJson(_$_Practitioner instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -780,7 +780,7 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_RelatedPersonToJson(_$_RelatedPerson instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
