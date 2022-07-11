@@ -10,7 +10,7 @@ environment:
 dependencies:
   crypto: ^3.0.2
   encrypt: ^5.0.1
-  fhir: ^0.8.0
+  fhir: ^0.9.0
   flutter:
     sdk: flutter
   get_storage: ^2.0.3
@@ -18,10 +18,10 @@ dependencies:
   path_provider: ^2.0.11
   sembast: ^3.2.0+1
   sembast_sqflite: ^2.0.1
-  sqflite: ^2.0.2+1
+  sqflite: ^2.0.3
   sqflite_common_ffi: ^2.1.1+1
 
 dev_dependencies:
   flutter_lints: ^2.0.1
   import_sorter: ^4.6.0
-  test: ^1.21.3
+  test: ^1.21.4

@@ -1,7 +1,7 @@
 import 'package:http/http.dart';
 import 'package:fhir/r4.dart';
 
-import '../../fhir_us_core.dart';
+import '../../fhir_uscore.dart';
 
 Future<Resource?> conditionRequest(
   UsCoreRequestType requestType,
