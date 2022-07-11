@@ -430,57 +430,57 @@ abstract class _Scopes extends Scopes {
   @override
 
   /// see the clinical scopes class for details
-  List<ClinicalScope>? get clinicalScopes => throw _privateConstructorUsedError;
+  List<ClinicalScope>? get clinicalScopes;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  bool? get openid => throw _privateConstructorUsedError;
+  bool? get openid;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  bool? get fhirUser => throw _privateConstructorUsedError;
+  bool? get fhirUser;
   @override
 
   /// this is being deprecated but still commonly required
-  bool? get profile => throw _privateConstructorUsedError;
+  bool? get profile;
   @override
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  bool? get offlineAccess => throw _privateConstructorUsedError;
+  bool? get offlineAccess;
   @override
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  bool? get onlineAccess => throw _privateConstructorUsedError;
+  bool? get onlineAccess;
   @override
 
   ///if this app is going to be launched from within an EHR
-  bool? get ehrLaunch => throw _privateConstructorUsedError;
+  bool? get ehrLaunch;
   @override
 
   /// if the context of this app is about a specific patient
-  bool? get patientLaunch => throw _privateConstructorUsedError;
+  bool? get patientLaunch;
   @override
 
   /// if the context of this app is in regards to a specific encounter
-  bool? get encounterLaunch => throw _privateConstructorUsedError;
+  bool? get encounterLaunch;
   @override
 
   /// does this request need a patient banner
-  bool? get needPatientBanner => throw _privateConstructorUsedError;
+  bool? get needPatientBanner;
   @override
 
   /// I'm not actually sure what this does
-  bool? get smartOrchestrateLaunch => throw _privateConstructorUsedError;
+  bool? get smartOrchestrateLaunch;
   @override
 
   /// String value describing the intent of the application launch
-  String? get intent => throw _privateConstructorUsedError;
+  String? get intent;
   @override
-  List<String>? get additional => throw _privateConstructorUsedError;
+  List<String>? get additional;
   @override
   @JsonKey(ignore: true)
   _$$_ScopesCopyWith<_$_Scopes> get copyWith =>

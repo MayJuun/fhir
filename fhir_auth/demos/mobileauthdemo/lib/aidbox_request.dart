@@ -26,7 +26,7 @@ Future aidboxRequest() async {
       client: client,
     );
 
-    Id? newId;
+    String? newId;
     try {
       final response = await request1.request(headers: {});
       print('Response from upload:\n${response.toJson()}');
@@ -34,7 +34,7 @@ Future aidboxRequest() async {
     } catch (e) {
       print(e);
     }
-    if (newId is! Id) {
+    if (newId is! String) {
       print(newId);
     } else {
       final request2 = FhirRequest.read(

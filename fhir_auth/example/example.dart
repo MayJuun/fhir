@@ -38,7 +38,7 @@ Future<void> main() async {
         client: client,
       );
 
-      Id? newId;
+      String? newId;
       try {
         final response = await request1.request();
         log('Response from upload:\n${response.toJson()}');
@@ -73,7 +73,7 @@ Future<void> main() async {
 class FhirRequest {
   Uri? base;
   R4ResourceType? type;
-  Id? id;
+  String? id;
   FhirClient? client;
   Resource? resource;
 
@@ -84,7 +84,7 @@ class FhirRequest {
   factory FhirRequest.read({
     Uri? base,
     R4ResourceType? type,
-    Id? id,
+    String? id,
     FhirClient? client,
   }) =>
       FhirRequest(base, type, id, client, null);
