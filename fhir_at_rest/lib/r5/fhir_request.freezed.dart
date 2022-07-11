@@ -1594,23 +1594,23 @@ abstract class FhirReadRequest extends FhirRequest {
   FhirReadRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R5ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R5ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirReadRequestCopyWith<_$FhirReadRequest> get copyWith =>
@@ -2489,24 +2489,24 @@ abstract class FhirVReadRequest extends FhirRequest {
   FhirVReadRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R5ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
-  Id get vid => throw _privateConstructorUsedError;
+  Uri get base;
+  R5ResourceType get type;
+  Id get id;
+  Id get vid;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirVReadRequestCopyWith<_$FhirVReadRequest> get copyWith =>
@@ -3361,22 +3361,22 @@ abstract class FhirUpdateRequest extends FhirRequest {
   FhirUpdateRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirUpdateRequestCopyWith<_$FhirUpdateRequest> get copyWith =>
@@ -4231,22 +4231,22 @@ abstract class FhirPatchRequest extends FhirRequest {
   FhirPatchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirPatchRequestCopyWith<_$FhirPatchRequest> get copyWith =>
@@ -5113,23 +5113,23 @@ abstract class FhirDeleteRequest extends FhirRequest {
   FhirDeleteRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R5ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R5ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirDeleteRequestCopyWith<_$FhirDeleteRequest> get copyWith =>
@@ -5984,22 +5984,22 @@ abstract class FhirCreateRequest extends FhirRequest {
   FhirCreateRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirCreateRequestCopyWith<_$FhirCreateRequest> get copyWith =>
@@ -6881,24 +6881,24 @@ abstract class FhirSearchRequest extends FhirRequest {
   FhirSearchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R5ResourceType get type => throw _privateConstructorUsedError;
+  Uri get base;
+  R5ResourceType get type;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  bool get usePost => throw _privateConstructorUsedError;
-  RestfulRequest get restfulRequest => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  bool get usePost;
+  RestfulRequest get restfulRequest;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirSearchRequestCopyWith<_$FhirSearchRequest> get copyWith =>
@@ -7742,21 +7742,21 @@ abstract class FhirSearchAllRequest extends FhirRequest {
   FhirSearchAllRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirSearchAllRequestCopyWith<_$FhirSearchAllRequest> get copyWith =>
@@ -8614,22 +8614,22 @@ abstract class FhirCapabilitiesRequest extends FhirRequest {
   FhirCapabilitiesRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Mode get mode => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Mode get mode;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirCapabilitiesRequestCopyWith<_$FhirCapabilitiesRequest> get copyWith =>
@@ -9495,22 +9495,22 @@ abstract class FhirTransactionRequest extends FhirRequest {
   FhirTransactionRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Bundle get bundle => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Bundle get bundle;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirTransactionRequestCopyWith<_$FhirTransactionRequest> get copyWith =>
@@ -10374,22 +10374,22 @@ abstract class FhirBatchRequest extends FhirRequest {
   FhirBatchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Bundle get bundle => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Bundle get bundle;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirBatchRequestCopyWith<_$FhirBatchRequest> get copyWith =>
@@ -11305,27 +11305,27 @@ abstract class FhirHistoryRequest extends FhirRequest {
   FhirHistoryRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R5ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R5ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirHistoryRequestCopyWith<_$FhirHistoryRequest> get copyWith =>
@@ -12230,26 +12230,26 @@ abstract class FhirHistoryTypeRequest extends FhirRequest {
   FhirHistoryTypeRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R5ResourceType get type => throw _privateConstructorUsedError;
+  Uri get base;
+  R5ResourceType get type;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirHistoryTypeRequestCopyWith<_$FhirHistoryTypeRequest> get copyWith =>
@@ -13141,25 +13141,25 @@ abstract class FhirHistoryAllRequest extends FhirRequest {
   FhirHistoryAllRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirHistoryAllRequestCopyWith<_$FhirHistoryAllRequest> get copyWith =>
@@ -14125,27 +14125,27 @@ abstract class FhirOperationRequest extends FhirRequest {
   FhirOperationRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R5ResourceType? get type => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R5ResourceType? get type;
+  Id? get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Map<String, dynamic> get fhirParameter => throw _privateConstructorUsedError;
-  String get operation => throw _privateConstructorUsedError;
-  bool get usePost => throw _privateConstructorUsedError;
-  bool get useFormData => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Map<String, dynamic> get fhirParameter;
+  String get operation;
+  bool get usePost;
+  bool get useFormData;
   @override
-  MimeType? get mimeType => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$FhirOperationRequestCopyWith<_$FhirOperationRequest> get copyWith =>

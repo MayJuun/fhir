@@ -144,16 +144,16 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "../fhir"
-      relative: true
-    source: path
+      name: fhir
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.9.0"
   fhir_at_rest:
     dependency: "direct main"
     description:
-      path: "../fhir_at_rest"
-      relative: true
-    source: path
+      name: fhir_at_rest
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.9.0"
   fhir_yaml:
     dependency: transitive
@@ -161,7 +161,7 @@ packages:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.8.0"
+    version: "0.9.0"
   file:
     dependency: transitive
     description:
@@ -182,7 +182,7 @@ packages:
       name: freezed
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.3+1"
+    version: "2.0.4"
   freezed_annotation:
     dependency: "direct main"
     description:
@@ -252,14 +252,14 @@ packages:
       name: json_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.5.0"
+    version: "4.6.0"
   json_serializable:
     dependency: "direct dev"
     description:
       name: json_serializable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.2.0"
+    version: "6.3.1"
   lint:
     dependency: "direct dev"
     description:
@@ -441,21 +441,21 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.21.3"
+    version: "1.21.4"
   test_api:
     dependency: transitive
     description:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.11"
+    version: "0.4.12"
   test_core:
     dependency: transitive
     description:
       name: test_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.15"
+    version: "0.4.16"
   timing:
     dependency: transitive
     description:
