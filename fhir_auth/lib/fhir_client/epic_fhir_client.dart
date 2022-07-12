@@ -108,13 +108,6 @@ class EpicFhirClient extends SmartFhirClient {
   @override
   Future<http.Response> post(Uri url,
       {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-    // await http.post(
-    //   url,
-    //   headers: await newHeaders(headers),
-    //   body: body,
-    //   encoding: encoding,
-    // );
-
     var request = http.Request('POST', url);
     if (headers != null) request.headers.addAll(await newHeaders(headers));
     if (body != null) {
@@ -124,33 +117,21 @@ class EpicFhirClient extends SmartFhirClient {
         request.bodyFields = body;
       }
     }
-    http.Client? httpClient;
-    final stream = await httpClient?.send(request);
-    final response2 =
-        stream == null ? null : await http.Response.fromStream(stream);
-    final newBody = response2?.body;
-    final newHeader = response2?.headers;
-    print(newBody);
-    newHeader?.forEach((key, value) {
-      print('$key: $value');
-    });
-    if (newBody != null) {
-      final newBodyJson = jsonDecode(newBody);
-      final accessToken = newBodyJson['access_token'];
-      final idToken = newBodyJson['id_token'];
-      if (accessToken != null) {
-        print('ACCESS TOKEN');
-        JwtDecoder.decode(accessToken).forEach((key, value) {
-          print('$key: $value');
-        });
-      }
-      if (idToken != null) {
-        print('ID TOKEN');
-        JwtDecoder.decode(idToken).forEach((key, value) {
-          print('$key: $value');
-        });
-      }
-    }
-    return response2 ?? http.Response('', 201);
+    http.Client? httpClient = http.Client();
+    final stream = await httpClient.send(request);
+    final responseBytes = await stream.stream.toBytes();
+
+    print(stream.headers);
+    print(stream.toString());
+
+    final response = http.Response.bytes(
+        responseBytes.toList(), stream.statusCode,
+        request: stream.request,
+        headers: stream.headers,
+        isRedirect: stream.isRedirect,
+        persistentConnection: stream.persistentConnection,
+        reasonPhrase: stream.reasonPhrase);
+
+    return response;
   }
 }

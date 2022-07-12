@@ -103,7 +103,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   final String _delimiter;
 
   /// The HTTP client used to make HTTP requests.
-  http.Client? _httpClient;
+  final http.Client _httpClient;
 
   /// The URL to which the resource owner will be redirected after they
   /// authorize this client with the authorization server.
@@ -276,7 +276,6 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
           '"$authorizationEndpoint": did not contain required parameter '
           '"code".');
     }
-
     return await _handleAuthorizationCode(parameters['code']);
   }
 
@@ -334,30 +333,28 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
     var request = http.Request('POST', tokenEndpoint);
     request.headers.addAll(headers);
     request.bodyFields = body.cast<String, String>();
-    final stream = await _httpClient?.send(request);
-    final response =
-        stream == null ? null : await http.Response.fromStream(stream);
-    final newBody = response?.body;
-    if (newBody != null) {
-      final newBodyJson = jsonDecode(newBody);
-      final accessToken = newBodyJson['access_token'];
-      final idToken = newBodyJson['id_token'];
-      // if (accessToken != null) {
-      //   print('ACCESS TOKEN');
-      //   JwtDecoder.decode(accessToken).forEach((key, value) {
-      //     print('$key: $value');
-      //   });
-      // }
-      // if (idToken != null) {
-      //   print('ID TOKEN');
-      //   JwtDecoder.decode(idToken).forEach((key, value) {
-      //     print('$key: $value');
-      //   });
-      // }
-    }
+    final stream = await _httpClient.send(request);
+    final responseBytes = await stream.stream.toBytes();
+    String responseString = String.fromCharCodes(responseBytes);
+    final Map<String, dynamic> newBody = jsonDecode(responseString);
+    fhirParameters = newBody;
 
-    // ***********************************
-    if (response == null) throw Exception('Did you make it work?');
+    final response = http.Response.bytes(
+        responseBytes.toList(), stream.statusCode,
+        request: stream.request,
+        headers: stream.headers,
+        isRedirect: stream.isRedirect,
+        persistentConnection: stream.persistentConnection,
+        reasonPhrase: stream.reasonPhrase);
+
+    final accessToken = newBody['access_token'];
+    final idToken = newBody['id_token'];
+    if (accessToken != null) {
+      fhirParameters = JwtDecoder.decode(accessToken);
+    }
+    if (idToken != null) {
+      fhirParameters = JwtDecoder.decode(idToken);
+    }
 
     var credentials = handleAccessTokenResponse(
         response, tokenEndpoint, startTime, _scopes, _delimiter,
@@ -373,6 +370,28 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
     );
   }
 
+  set fhirParameters(Map<String, dynamic> parameters) {
+    fhirParameters['patient'] =
+        parameters['patient'] ?? fhirParameters['patient'];
+    fhirParameters['encounter'] =
+        parameters['encounter'] ?? fhirParameters['encounter'];
+    fhirParameters['need_patient_banner'] = parameters['need_patient_banner'] ??
+        fhirParameters['need_patient_banner'];
+    fhirParameters['smart_style_url'] =
+        parameters['smart_style_url'] ?? fhirParameters['smart_style_url'];
+    fhirParameters['fhirUser'] =
+        parameters['fhirUser'] ?? fhirParameters['fhirUser'];
+    fhirParameters['intent'] = parameters['intent'] ?? fhirParameters['intent'];
+    fhirParameters['tenant'] = parameters['tenant'] ?? fhirParameters['tenant'];
+    fhirParameters['displayName'] =
+        parameters['displayName'] ?? fhirParameters['displayName'];
+    fhirParameters['email'] = parameters['email'] ?? fhirParameters['email'];
+    fhirParameters['profile'] =
+        parameters['profile'] ?? fhirParameters['profile'];
+    fhirParameters['fhirContext'] =
+        parameters['fhirContext'] ?? fhirParameters['fhirContext'];
+  }
+
   /// Randomly generate a 128 character string to be used as the PKCE code verifier
   static String _createCodeVerifier() {
     return List.generate(
@@ -386,8 +405,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// continue using the client.\
   @override
   void close() {
-    _httpClient?.close();
-    _httpClient = null;
+    _httpClient.close();
   }
 }
 
