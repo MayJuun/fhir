@@ -1,6 +1,9 @@
 // Package imports:
+import 'dart:convert';
+
 import 'package:fhir/r4.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
+import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'smart_fhir_client.dart';
@@ -101,4 +104,53 @@ class EpicFhirClient extends SmartFhirClient {
 
   /// The provider's FHIR ID number.
   String? userProviderNumber;
+
+  @override
+  Future<http.Response> post(Uri url,
+      {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
+    // await http.post(
+    //   url,
+    //   headers: await newHeaders(headers),
+    //   body: body,
+    //   encoding: encoding,
+    // );
+
+    var request = http.Request('POST', url);
+    if (headers != null) request.headers.addAll(await newHeaders(headers));
+    if (body != null) {
+      if (body is String) {
+        request.body = body;
+      } else if (body is Map<String, String>) {
+        request.bodyFields = body;
+      }
+    }
+    http.Client? httpClient;
+    final stream = await httpClient?.send(request);
+    final response2 =
+        stream == null ? null : await http.Response.fromStream(stream);
+    final newBody = response2?.body;
+    final newHeader = response2?.headers;
+    print(newBody);
+    newHeader?.forEach((key, value) {
+      print('$key: $value');
+    });
+    if (newBody != null) {
+      final newBodyJson = jsonDecode(newBody);
+      final accessToken = newBodyJson['access_token'];
+      final idToken = newBodyJson['id_token'];
+      if (accessToken != null) {
+        print('ACCESS TOKEN');
+        JwtDecoder.decode(accessToken).forEach((key, value) {
+          print('$key: $value');
+        });
+      }
+      if (idToken != null) {
+        print('ID TOKEN');
+        JwtDecoder.decode(idToken).forEach((key, value) {
+          print('$key: $value');
+        });
+      }
+    }
+    return response2 ?? http.Response('', 201);
+  }
 }

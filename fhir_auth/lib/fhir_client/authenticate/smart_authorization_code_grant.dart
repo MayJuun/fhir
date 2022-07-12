@@ -331,47 +331,46 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
       if (secret != null) body['client_secret'] = secret;
     }
 
-    var response =
-        await _httpClient!.post(tokenEndpoint, headers: headers, body: body);
-    fhirParameters.addAll(jsonDecode(response.body));
-    print(response.headers);
-    print(response.body);
-
-    // ***********************
-    // var request = http.Request('POST', tokenEndpoint);
-    // if (headers != null) request.headers.addAll(headers);
-    // request.bodyFields = body.cast<String, String>();
-    // final stream = await _httpClient?.send(request);
-    // final response2 =
-    //     stream == null ? null : await http.Response.fromStream(stream);
-    // print(response2?.headers);
-    // print(response2?.body);
-    // final newBody = response2?.body;
-    // if (newBody != null) {
-    //   final newBodyJson = jsonDecode(newBody);
-    //   final accessToken = newBodyJson['access_token'];
-    //   final idToken = newBodyJson['id_token'];
-    //   if (accessToken != null) {
-    //     print(JwtDecoder.decode(accessToken));
-    //   }
-    //   if (idToken != null) {
-    //     print(JwtDecoder.decode(idToken));
-    //   }
-    // }
-
-    throw Exception('Did you make it work?');
+    var request = http.Request('POST', tokenEndpoint);
+    request.headers.addAll(headers);
+    request.bodyFields = body.cast<String, String>();
+    final stream = await _httpClient?.send(request);
+    final response =
+        stream == null ? null : await http.Response.fromStream(stream);
+    final newBody = response?.body;
+    if (newBody != null) {
+      final newBodyJson = jsonDecode(newBody);
+      final accessToken = newBodyJson['access_token'];
+      final idToken = newBodyJson['id_token'];
+      // if (accessToken != null) {
+      //   print('ACCESS TOKEN');
+      //   JwtDecoder.decode(accessToken).forEach((key, value) {
+      //     print('$key: $value');
+      //   });
+      // }
+      // if (idToken != null) {
+      //   print('ID TOKEN');
+      //   JwtDecoder.decode(idToken).forEach((key, value) {
+      //     print('$key: $value');
+      //   });
+      // }
+    }
 
     // ***********************************
+    if (response == null) throw Exception('Did you make it work?');
 
-    // var credentials = handleAccessTokenResponse(
-    //     response, tokenEndpoint, startTime, _scopes, _delimiter,
-    //     getParameters: _getParameters);
-    // return Client(credentials,
-    //     identifier: identifier,
-    //     secret: secret,
-    //     basicAuth: _basicAuth,
-    //     httpClient: _httpClient,
-    //     onCredentialsRefreshed: _onCredentialsRefreshed);
+    var credentials = handleAccessTokenResponse(
+        response, tokenEndpoint, startTime, _scopes, _delimiter,
+        getParameters: _getParameters);
+
+    return Client(
+      credentials,
+      identifier: identifier,
+      secret: secret,
+      basicAuth: _basicAuth,
+      httpClient: _httpClient,
+      onCredentialsRefreshed: _onCredentialsRefreshed,
+    );
   }
 
   /// Randomly generate a 128 character string to be used as the PKCE code verifier
