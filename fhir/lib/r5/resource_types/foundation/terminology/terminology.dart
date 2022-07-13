@@ -16,118 +16,118 @@ part 'terminology.g.dart';
 class CodeSystem with Resource, _$CodeSystem {
   CodeSystem._();
 
-  /// [CodeSystem]: The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+  /// [CodeSystem] The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
 
   ///
-  /// [resourceType]: This is a CodeSystem resource;
+  /// [resourceType] This is a CodeSystem resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: An absolute URI that is used to identify this code system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this code system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the code system is stored on different servers. This is used in [Coding](datatypes.html#Coding).system.;
+  /// [url] An absolute URI that is used to identify this code system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this code system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the code system is stored on different servers. This is used in [Coding](datatypes.html#Coding).system.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: A formal identifier that is used to identify this code system when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this code system when it is represented in other formats, or referenced in a specification, model, design or an instance.;
   ///
-  /// [version]: The identifier that is used to identify this version of the code system when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the code system author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. This is used in [Coding](datatypes.html#Coding).version.;
+  /// [version] The identifier that is used to identify this version of the code system when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the code system author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. This is used in [Coding](datatypes.html#Coding).version.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [name]: A natural language name identifying the code system. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the code system. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for the code system.;
+  /// [title] A short, descriptive, user-friendly title for the code system.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [status]: The date (and optionally time) when the code system resource was created or revised.;
+  /// [status] The date (and optionally time) when the code system resource was created or revised.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [experimental]: A Boolean value to indicate that this code system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this code system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
   ///
   /// [experimentalElement] (_experimental): Extensions for experimental;
   ///
-  /// [date]: The date  (and optionally time) when the code system was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the code system changes.;
+  /// [date] The date  (and optionally time) when the code system was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the code system changes.;
   ///
   /// [dateElement] (_date): Extensions for date;
   ///
-  /// [publisher]: The name of the organization or individual that published the code system.;
+  /// [publisher] The name of the organization or individual that published the code system.;
   ///
   /// [publisherElement] (_publisher): Extensions for publisher;
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
   ///
-  /// [description]: A free text natural language description of the code system from a consumer's perspective.;
+  /// [description] A free text natural language description of the code system from a consumer's perspective.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate code system instances.;
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate code system instances.;
   ///
-  /// [jurisdiction]: A legal or geographic region in which the code system is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the code system is intended to be used.;
   ///
-  /// [purpose]: Explanation of why this code system is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this code system is needed and why it has been designed as it has.;
   ///
   /// [purposeElement] (_purpose): Extensions for purpose;
   ///
-  /// [copyright]: A copyright statement relating to the code system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the code system.;
+  /// [copyright] A copyright statement relating to the code system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the code system.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   ///
-  /// [caseSensitive]: If code comparison is case sensitive when codes within this system are compared to each other.;
+  /// [caseSensitive] If code comparison is case sensitive when codes within this system are compared to each other.;
   ///
   /// [caseSensitiveElement] (_caseSensitive): Extensions for caseSensitive;
   ///
-  /// [valueSet]: Canonical reference to the value set that contains the entire code system.;
+  /// [valueSet] Canonical reference to the value set that contains the entire code system.;
   ///
-  /// [hierarchyMeaning]: The meaning of the hierarchy of concepts as represented in this resource.;
+  /// [hierarchyMeaning] The meaning of the hierarchy of concepts as represented in this resource.;
   ///
   /// [hierarchyMeaningElement] (_hierarchyMeaning): Extensions for hierarchyMeaning;
   ///
-  /// [compositional]: The code system defines a compositional (post-coordination) grammar.;
+  /// [compositional] The code system defines a compositional (post-coordination) grammar.;
   ///
   /// [compositionalElement] (_compositional): Extensions for compositional;
   ///
-  /// [versionNeeded]: This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.;
+  /// [versionNeeded] This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.;
   ///
   /// [versionNeededElement] (_versionNeeded): Extensions for versionNeeded;
   ///
-  /// [content]: The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.;
+  /// [content] The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.;
   ///
   /// [contentElement] (_content): Extensions for content;
   ///
-  /// [supplements]: The canonical URL of the code system that this code system supplement is adding designations and properties to.;
+  /// [supplements] The canonical URL of the code system that this code system supplement is adding designations and properties to.;
   ///
-  /// [count]: The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.;
+  /// [count] The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.;
   ///
   /// [countElement] (_count): Extensions for count;
   ///
-  /// [filter]: A filter that can be used in a value set compose statement when selecting concepts using a filter.;
+  /// [filter] A filter that can be used in a value set compose statement when selecting concepts using a filter.;
   ///
-  /// [property]: A property defines an additional slot through which additional information can be provided about a concept.;
+  /// [property] A property defines an additional slot through which additional information can be provided about a concept.;
   ///
-  /// [concept]: Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meanings of the hierarchical relationships are.;
+  /// [concept] Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meanings of the hierarchical relationships are.;
   factory CodeSystem({
     @Default(R5ResourceType.CodeSystem) R5ResourceType resourceType,
     Id? id,
@@ -217,30 +217,30 @@ class CodeSystem with Resource, _$CodeSystem {
 class CodeSystemFilter with _$CodeSystemFilter {
   CodeSystemFilter._();
 
-  /// [CodeSystemFilter]: The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+  /// [CodeSystemFilter] The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: The code that identifies this filter when it is used as a filter in [ValueSet](valueset.html#).compose.include.filter.;
+  /// [code] The code that identifies this filter when it is used as a filter in [ValueSet](valueset.html#).compose.include.filter.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [description]: A description of how or why the filter is used.;
+  /// [description] A description of how or why the filter is used.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [operator]: A list of operators that can be used with the filter.;
+  /// [operator] A list of operators that can be used with the filter.;
   ///
   /// [operatorElement] (_operator): Extensions for operator;
   ///
-  /// [value]: A description of what the value for the filter should be.;
+  /// [value] A description of what the value for the filter should be.;
   ///
   /// [valueElement] (_value): Extensions for value;
   factory CodeSystemFilter({
@@ -292,30 +292,30 @@ class CodeSystemFilter with _$CodeSystemFilter {
 class CodeSystemProperty with _$CodeSystemProperty {
   CodeSystemProperty._();
 
-  /// [CodeSystemProperty]: The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+  /// [CodeSystemProperty] The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: A code that is used to identify the property. The code is used internally (in CodeSystem.concept.property.code) and also externally, such as in property filters.;
+  /// [code] A code that is used to identify the property. The code is used internally (in CodeSystem.concept.property.code) and also externally, such as in property filters.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [uri]: Reference to the formal meaning of the property. One possible source of meaning is the [Concept Properties](codesystem-concept-properties.html) code system.;
+  /// [uri] Reference to the formal meaning of the property. One possible source of meaning is the [Concept Properties](codesystem-concept-properties.html) code system.;
   ///
   /// [uriElement] (_uri): Extensions for uri;
   ///
-  /// [description]: A description of the property- why it is defined, and how its value might be used.;
+  /// [description] A description of the property- why it is defined, and how its value might be used.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [type]: The type of the property value. Properties of type "code" contain a code defined by the code system (e.g. a reference to another defined concept).;
+  /// [type] The type of the property value. Properties of type "code" contain a code defined by the code system (e.g. a reference to another defined concept).;
   ///
   /// [typeElement] (_type): Extensions for type;
   factory CodeSystemProperty({
@@ -367,34 +367,34 @@ class CodeSystemProperty with _$CodeSystemProperty {
 class CodeSystemConcept with _$CodeSystemConcept {
   CodeSystemConcept._();
 
-  /// [CodeSystemConcept]: The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+  /// [CodeSystemConcept] The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: A code - a text symbol - that uniquely identifies the concept within the code system.;
+  /// [code] A code - a text symbol - that uniquely identifies the concept within the code system.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: A human readable string that is the recommended default way to present this concept to a user.;
+  /// [display] A human readable string that is the recommended default way to present this concept to a user.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [definition]: The formal definition of the concept. The code system resource does not make formal definitions required, because of the prevalence of legacy systems. However, they are highly recommended, as without them there is no formal meaning associated with the concept.;
+  /// [definition] The formal definition of the concept. The code system resource does not make formal definitions required, because of the prevalence of legacy systems. However, they are highly recommended, as without them there is no formal meaning associated with the concept.;
   ///
   /// [definitionElement] (_definition): Extensions for definition;
   ///
-  /// [designation]: Additional representations for the concept - other languages, aliases, specialized purposes, used for particular purposes, etc.;
+  /// [designation] Additional representations for the concept - other languages, aliases, specialized purposes, used for particular purposes, etc.;
   ///
-  /// [property]: A property value for this concept.;
+  /// [property] A property value for this concept.;
   ///
-  /// [concept]: Defines children of a concept to produce a hierarchy of concepts. The nature of the relationships is variable (is-a/contains/categorizes) - see hierarchyMeaning.;
+  /// [concept] Defines children of a concept to produce a hierarchy of concepts. The nature of the relationships is variable (is-a/contains/categorizes) - see hierarchyMeaning.;
   factory CodeSystemConcept({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -445,24 +445,24 @@ class CodeSystemConcept with _$CodeSystemConcept {
 class CodeSystemDesignation with _$CodeSystemDesignation {
   CodeSystemDesignation._();
 
-  /// [CodeSystemDesignation]: The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+  /// [CodeSystemDesignation] The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [language]: The language this designation is defined for.;
+  /// [language] The language this designation is defined for.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [use]: A code that details how this designation would be used.;
+  /// [use] A code that details how this designation would be used.;
   ///
-  /// [value]: The text value for this designation.;
+  /// [value] The text value for this designation.;
   ///
   /// [valueElement] (_value): Extensions for value;
   factory CodeSystemDesignation({
@@ -511,44 +511,44 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
 class CodeSystemProperty1 with _$CodeSystemProperty1 {
   CodeSystemProperty1._();
 
-  /// [CodeSystemProperty1]: The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
+  /// [CodeSystemProperty1] The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: A code that is a reference to CodeSystem.property.code.;
+  /// [code] A code that is a reference to CodeSystem.property.code.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [valueCode]: The value of this property.;
+  /// [valueCode] The value of this property.;
   ///
   /// [valueCodeElement] (_valueCode): Extensions for valueCode;
   ///
-  /// [valueCoding]: The value of this property.;
+  /// [valueCoding] The value of this property.;
   ///
-  /// [valueString]: The value of this property.;
+  /// [valueString] The value of this property.;
   ///
   /// [valueStringElement] (_valueString): Extensions for valueString;
   ///
-  /// [valueInteger]: The value of this property.;
+  /// [valueInteger] The value of this property.;
   ///
   /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
   ///
-  /// [valueBoolean]: The value of this property.;
+  /// [valueBoolean] The value of this property.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
-  /// [valueDateTime]: The value of this property.;
+  /// [valueDateTime] The value of this property.;
   ///
   /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
   ///
-  /// [valueDecimal]: The value of this property.;
+  /// [valueDecimal] The value of this property.;
   ///
   /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal;
   factory CodeSystemProperty1({
@@ -607,102 +607,102 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
 class ConceptMap with Resource, _$ConceptMap {
   ConceptMap._();
 
-  /// [ConceptMap]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMap] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
 
   ///
-  /// [resourceType]: This is a ConceptMap resource;
+  /// [resourceType] This is a ConceptMap resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: An absolute URI that is used to identify this concept map when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this concept map is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the concept map is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this concept map when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this concept map is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the concept map is stored on different servers.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: A formal identifier that is used to identify this concept map when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this concept map when it is represented in other formats, or referenced in a specification, model, design or an instance.;
   ///
-  /// [version]: The identifier that is used to identify this version of the concept map when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the concept map author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the concept map when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the concept map author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [name]: A natural language name identifying the concept map. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the concept map. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for the concept map.;
+  /// [title] A short, descriptive, user-friendly title for the concept map.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [status]: The status of this concept map. Enables tracking the life-cycle of the content.;
+  /// [status] The status of this concept map. Enables tracking the life-cycle of the content.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [experimental]: A Boolean value to indicate that this concept map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this concept map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
   ///
   /// [experimentalElement] (_experimental): Extensions for experimental;
   ///
-  /// [date]: The date  (and optionally time) when the concept map was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the concept map changes.;
+  /// [date] The date  (and optionally time) when the concept map was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the concept map changes.;
   ///
   /// [dateElement] (_date): Extensions for date;
   ///
-  /// [publisher]: The name of the organization or individual that published the concept map.;
+  /// [publisher] The name of the organization or individual that published the concept map.;
   ///
   /// [publisherElement] (_publisher): Extensions for publisher;
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
   ///
-  /// [description]: A free text natural language description of the concept map from a consumer's perspective.;
+  /// [description] A free text natural language description of the concept map from a consumer's perspective.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate concept map instances.;
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate concept map instances.;
   ///
-  /// [jurisdiction]: A legal or geographic region in which the concept map is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the concept map is intended to be used.;
   ///
-  /// [purpose]: Explanation of why this concept map is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this concept map is needed and why it has been designed as it has.;
   ///
   /// [purposeElement] (_purpose): Extensions for purpose;
   ///
-  /// [copyright]: A copyright statement relating to the concept map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the concept map.;
+  /// [copyright] A copyright statement relating to the concept map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the concept map.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   ///
-  /// [sourceUri]: Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.;
+  /// [sourceUri] Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.;
   ///
   /// [sourceUriElement] (_sourceUri): Extensions for sourceUri;
   ///
-  /// [sourceCanonical]: Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.;
+  /// [sourceCanonical] Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.;
   ///
   /// [sourceCanonicalElement] (_sourceCanonical): Extensions for sourceCanonical;
   ///
-  /// [targetUri]: The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.;
+  /// [targetUri] The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.;
   ///
   /// [targetUriElement] (_targetUri): Extensions for targetUri;
   ///
-  /// [targetCanonical]: The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.;
+  /// [targetCanonical] The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.;
   ///
   /// [targetCanonicalElement] (_targetCanonical): Extensions for targetCanonical;
   ///
-  /// [group]: A group of mappings that all have the same source and target system.;
+  /// [group] A group of mappings that all have the same source and target system.;
   factory ConceptMap({
     @Default(R5ResourceType.ConceptMap) R5ResourceType resourceType,
     Id? id,
@@ -784,24 +784,24 @@ class ConceptMap with Resource, _$ConceptMap {
 class ConceptMapGroup with _$ConceptMapGroup {
   ConceptMapGroup._();
 
-  /// [ConceptMapGroup]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMapGroup] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [source]: An absolute URI that identifies the source system where the concepts to be mapped are defined.;
+  /// [source] An absolute URI that identifies the source system where the concepts to be mapped are defined.;
   ///
-  /// [target]: An absolute URI that identifies the target system that the concepts will be mapped to.;
+  /// [target] An absolute URI that identifies the target system that the concepts will be mapped to.;
   ///
-  /// [element]: Mappings for an individual concept in the source to one or more concepts in the target.;
+  /// [element] Mappings for an individual concept in the source to one or more concepts in the target.;
   ///
-  /// [unmapped]: What to do when there is no mapping to a target concept from the source concept.  This provides the "default" to be applied when there is no target concept mapping specified.  The 'unmapped' element is ignored if a code is specified to have relationship = not-related-to.;
+  /// [unmapped] What to do when there is no mapping to a target concept from the source concept.  This provides the "default" to be applied when there is no target concept mapping specified.  The 'unmapped' element is ignored if a code is specified to have relationship = not-related-to.;
   factory ConceptMapGroup({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -847,30 +847,30 @@ class ConceptMapGroup with _$ConceptMapGroup {
 class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
 
-  /// [ConceptMapElement]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMapElement] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: Identity (code or path) or the element/item being mapped.;
+  /// [code] Identity (code or path) or the element/item being mapped.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: The display for the code. The display is only provided to help editors when editing the concept map.;
+  /// [display] The display for the code. The display is only provided to help editors when editing the concept map.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [noMap]: If noMap = true this indicates that no mapping to a target concept exists for this source concept.;
+  /// [noMap] If noMap = true this indicates that no mapping to a target concept exists for this source concept.;
   ///
   /// [noMapElement] (_noMap): Extensions for noMap;
   ///
-  /// [target]: A concept from the target value set that this concept maps to.;
+  /// [target] A concept from the target value set that this concept maps to.;
   factory ConceptMapElement({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -919,36 +919,36 @@ class ConceptMapElement with _$ConceptMapElement {
 class ConceptMapTarget with _$ConceptMapTarget {
   ConceptMapTarget._();
 
-  /// [ConceptMapTarget]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMapTarget] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: Identity (code or path) or the element/item that the map refers to.;
+  /// [code] Identity (code or path) or the element/item that the map refers to.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: The display for the code. The display is only provided to help editors when editing the concept map.;
+  /// [display] The display for the code. The display is only provided to help editors when editing the concept map.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [relationship]: The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target).;
+  /// [relationship] The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target).;
   ///
   /// [relationshipElement] (_relationship): Extensions for relationship;
   ///
-  /// [comment]: A description of status/issues in mapping that conveys additional information not represented in  the structured data.;
+  /// [comment] A description of status/issues in mapping that conveys additional information not represented in  the structured data.;
   ///
   /// [commentElement] (_comment): Extensions for comment;
   ///
-  /// [dependsOn]: A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.;
+  /// [dependsOn] A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.;
   ///
-  /// [product]: A set of additional outcomes from this mapping to other elements. To properly execute this mapping, the specified element must be mapped to some data element or source that is in context. The mapping may still be useful without a place for the additional data elements, but the relationship (e.g., equivalent) cannot be relied on.;
+  /// [product] A set of additional outcomes from this mapping to other elements. To properly execute this mapping, the specified element must be mapped to some data element or source that is in context. The mapping may still be useful without a place for the additional data elements, but the relationship (e.g., equivalent) cannot be relied on.;
   factory ConceptMapTarget({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1000,28 +1000,28 @@ class ConceptMapTarget with _$ConceptMapTarget {
 class ConceptMapDependsOn with _$ConceptMapDependsOn {
   ConceptMapDependsOn._();
 
-  /// [ConceptMapDependsOn]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMapDependsOn] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [property]: A reference to an element that holds a coded value that corresponds to a code system property. The idea is that the information model carries an element somewhere that is labeled to correspond with a code system property.;
+  /// [property] A reference to an element that holds a coded value that corresponds to a code system property. The idea is that the information model carries an element somewhere that is labeled to correspond with a code system property.;
   ///
   /// [propertyElement] (_property): Extensions for property;
   ///
-  /// [system]: An absolute URI that identifies the code system of the dependency code (if the source/dependency is a value set that crosses code systems).;
+  /// [system] An absolute URI that identifies the code system of the dependency code (if the source/dependency is a value set that crosses code systems).;
   ///
-  /// [value]: Identity (code or path) or the element/item/ValueSet/text that the map depends on / refers to.;
+  /// [value] Identity (code or path) or the element/item/ValueSet/text that the map depends on / refers to.;
   ///
   /// [valueElement] (_value): Extensions for value;
   ///
-  /// [display]: The display for the code. The display is only provided to help editors when editing the concept map.;
+  /// [display] The display for the code. The display is only provided to help editors when editing the concept map.;
   ///
   /// [displayElement] (_display): Extensions for display;
   factory ConceptMapDependsOn({
@@ -1072,30 +1072,30 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
 class ConceptMapUnmapped with _$ConceptMapUnmapped {
   ConceptMapUnmapped._();
 
-  /// [ConceptMapUnmapped]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMapUnmapped] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [mode]: Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).;
+  /// [mode] Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).;
   ///
   /// [modeElement] (_mode): Extensions for mode;
   ///
-  /// [code]: The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.;
+  /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: The display for the code. The display is only provided to help editors when editing the concept map.;
+  /// [display] The display for the code. The display is only provided to help editors when editing the concept map.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [url]: The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.;
+  /// [url] The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.;
   factory ConceptMapUnmapped({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1144,123 +1144,123 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
 class ConceptMap2 with Resource, _$ConceptMap2 {
   ConceptMap2._();
 
-  /// [ConceptMap2]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMap2] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
 
   ///
-  /// [resourceType]: This is a ConceptMap2 resource;
+  /// [resourceType] This is a ConceptMap2 resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: An absolute URI that is used to identify this concept map when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this concept map is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the concept map is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this concept map when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this concept map is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the concept map is stored on different servers.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: A formal identifier that is used to identify this concept map when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this concept map when it is represented in other formats, or referenced in a specification, model, design or an instance.;
   ///
-  /// [version]: The identifier that is used to identify this version of the concept map when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the concept map author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the concept map when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the concept map author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [name]: A natural language name identifying the concept map. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the concept map. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for the concept map.;
+  /// [title] A short, descriptive, user-friendly title for the concept map.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [status]: The status of this concept map. Enables tracking the life-cycle of the content.;
+  /// [status] The status of this concept map. Enables tracking the life-cycle of the content.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [experimental]: A Boolean value to indicate that this concept map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this concept map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
   ///
   /// [experimentalElement] (_experimental): Extensions for experimental;
   ///
-  /// [date]: The date  (and optionally time) when the concept map was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the concept map changes.;
+  /// [date] The date  (and optionally time) when the concept map was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the concept map changes.;
   ///
   /// [dateElement] (_date): Extensions for date;
   ///
-  /// [publisher]: The name of the organization or individual that published the concept map.;
+  /// [publisher] The name of the organization or individual that published the concept map.;
   ///
   /// [publisherElement] (_publisher): Extensions for publisher;
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
   ///
-  /// [description]: A free text natural language description of the concept map from a consumer's perspective.;
+  /// [description] A free text natural language description of the concept map from a consumer's perspective.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate concept map instances.;
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate concept map instances.;
   ///
-  /// [jurisdiction]: A legal or geographic region in which the concept map is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the concept map is intended to be used.;
   ///
-  /// [purpose]: Explanation of why this concept map is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this concept map is needed and why it has been designed as it has.;
   ///
   /// [purposeElement] (_purpose): Extensions for purpose;
   ///
-  /// [copyright]: A copyright statement relating to the concept map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the concept map.;
+  /// [copyright] A copyright statement relating to the concept map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the concept map.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   ///
   /// [approvalDateElement] (_approvalDate): Extensions for approvalDate
   ///
-  /// [lastReviewDate]: The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   ///
   /// [lastReviewDateElement] (_lastReviewDate): Extensions for lastReviewDate
   ///
-  /// [effectivePeriod]: The period during which the {{title}} content was or is planned to be in active use.
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
   ///
-  /// [topic]: Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.
   ///
-  /// [author]: An individiual or organization primarily involved in the creation and maintenance of the {{title}}.
+  /// [author] An individiual or organization primarily involved in the creation and maintenance of the {{title}}.
   ///
-  /// [editor]: An individual or organization primarily responsible for internal coherence of the {{title}}.
+  /// [editor] An individual or organization primarily responsible for internal coherence of the {{title}}.
   ///
-  /// [reviewer]: An individual or organization primarily responsible for review of some aspect of the {{title}}.
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the {{title}}.
   ///
-  /// [endorser]: An individual or organization responsible for officially endorsing the {{title}} for use in some setting.
+  /// [endorser] An individual or organization responsible for officially endorsing the {{title}} for use in some setting.
   ///
-  /// [relatedArtifact]: Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.
   ///
-  /// [sourceUri]: Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.;
+  /// [sourceUri] Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.;
   ///
   /// [sourceUriElement] (_sourceUri): Extensions for sourceUri;
   ///
-  /// [sourceCanonical]: Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.;
+  /// [sourceCanonical] Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.;
   ///
   /// [sourceCanonicalElement] (_sourceCanonical): Extensions for sourceCanonical;
   ///
-  /// [targetUri]: The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.;
+  /// [targetUri] The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.;
   ///
   /// [targetUriElement] (_targetUri): Extensions for targetUri;
   ///
-  /// [targetCanonical]: The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.;
+  /// [targetCanonical] The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.;
   ///
   /// [targetCanonicalElement] (_targetCanonical): Extensions for targetCanonical;
   ///
-  /// [group]: A group of mappings that all have the same source and target system.;
+  /// [group] A group of mappings that all have the same source and target system.;
   factory ConceptMap2({
     @Default(R5ResourceType.ConceptMap2) R5ResourceType resourceType,
     Id? id,
@@ -1353,22 +1353,22 @@ class ConceptMap2 with Resource, _$ConceptMap2 {
 class ConceptMap2Group with _$ConceptMap2Group {
   ConceptMap2Group._();
 
-  /// [ConceptMap2Group]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMap2Group] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [source]: An absolute URI that identifies the source system where the concepts to be mapped are defined.;
+  /// [source] An absolute URI that identifies the source system where the concepts to be mapped are defined.;
   ///
-  /// [target]: An absolute URI that identifies the target system that the concepts will be mapped to.;
+  /// [target] An absolute URI that identifies the target system that the concepts will be mapped to.;
   ///
-  /// [element]: Mappings for an individual concept in the source to one or more concepts in the target.;
+  /// [element] Mappings for an individual concept in the source to one or more concepts in the target.;
   ///
-  /// [unmapped]: What to do when there is no mapping to a target concept from the source concept.  This provides the "default" to be applied when there is no target concept mapping specified.  The 'unmapped' element is ignored if a code is specified to have relationship = not-related-to.;
+  /// [unmapped] What to do when there is no mapping to a target concept from the source concept.  This provides the "default" to be applied when there is no target concept mapping specified.  The 'unmapped' element is ignored if a code is specified to have relationship = not-related-to.;
   factory ConceptMap2Group({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1414,29 +1414,29 @@ class ConceptMap2Group with _$ConceptMap2Group {
 class ConceptMap2Element with _$ConceptMap2Element {
   ConceptMap2Element._();
 
-  /// [ConceptMap2Element]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMap2Element] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: Identity (code or path) or the element/item being mapped.;
+  /// [code] Identity (code or path) or the element/item being mapped.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: The display for the code. The display is only provided to help editors when editing the concept map.;
+  /// [display] The display for the code. The display is only provided to help editors when editing the concept map.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [valueSet]: The set of codes being mapped.
+  /// [valueSet] The set of codes being mapped.
   ///
-  /// [noMap]: If noMap = true this indicates that no mapping to a target concept exists for this source concept.;
+  /// [noMap] If noMap = true this indicates that no mapping to a target concept exists for this source concept.;
   ///
   /// [noMapElement] (_noMap): Extensions for noMap;
   ///
-  /// [target]: A concept from the target value set that this concept maps to.;
+  /// [target] A concept from the target value set that this concept maps to.;
   factory ConceptMap2Element({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1486,35 +1486,35 @@ class ConceptMap2Element with _$ConceptMap2Element {
 class ConceptMap2Target with _$ConceptMap2Target {
   ConceptMap2Target._();
 
-  /// [ConceptMap2Target]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMap2Target] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: Identity (code or path) or the element/item that the map refers to.;
+  /// [code] Identity (code or path) or the element/item that the map refers to.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: The display for the code. The display is only provided to help editors when editing the concept map.;
+  /// [display] The display for the code. The display is only provided to help editors when editing the concept map.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [valueSet]: The set of codes being that the map refers to.
+  /// [valueSet] The set of codes being that the map refers to.
   ///
-  /// [relationship]: The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target).;
+  /// [relationship] The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target).;
   ///
   /// [relationshipElement] (_relationship): Extensions for relationship;
   ///
-  /// [comment]: A description of status/issues in mapping that conveys additional information not represented in  the structured data.;
+  /// [comment] A description of status/issues in mapping that conveys additional information not represented in  the structured data.;
   ///
   /// [commentElement] (_comment): Extensions for comment;
   ///
-  /// [dependsOn]: A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.;
+  /// [dependsOn] A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.;
   ///
-  /// [product]:Product is the output of a ConceptMap that provides additional values relevant to the interpretation of the mapping target.
+  /// [product]Product is the output of a ConceptMap that provides additional values relevant to the interpretation of the mapping target.
   factory ConceptMap2Target({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1567,49 +1567,49 @@ class ConceptMap2Target with _$ConceptMap2Target {
 class ConceptMap2DependsOn with _$ConceptMap2DependsOn {
   ConceptMap2DependsOn._();
 
-  /// [ConceptMap2DependsOn]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMap2DependsOn] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [property]: A reference to a property that holds a value the map depends on. This value can be supplied to the $translate operation to select the appropriate targets.
+  /// [property] A reference to a property that holds a value the map depends on. This value can be supplied to the $translate operation to select the appropriate targets.
   ///
   /// [propertyElement] (_property): Extensions for property;
   ///
-  /// [valueCode]: Property value that the map depends on.
+  /// [valueCode] Property value that the map depends on.
   ///
   /// [valueCodeElement] (_valueCode): Extensions for valueCode
   ///
-  /// [valueCoding]: Property value that the map depends on.
+  /// [valueCoding] Property value that the map depends on.
   ///
-  /// [valueString]: Property value that the map depends on.
+  /// [valueString] Property value that the map depends on.
   ///
   /// [valueStringElement] (_valueString): Extensions for valueString
   ///
-  /// [valueInteger]: Property value that the map depends on.
+  /// [valueInteger] Property value that the map depends on.
   ///
   /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger
   ///
-  /// [valueBoolean]: Property value that the map depends on.
+  /// [valueBoolean] Property value that the map depends on.
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean
   ///
-  /// [valueDateTime]: Property value that the map depends on.
+  /// [valueDateTime] Property value that the map depends on.
   ///
   /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime
   ///
-  /// [valueDecimal]: Property value that the map depends on.
+  /// [valueDecimal] Property value that the map depends on.
   ///
   /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal
   ///
-  /// [valueUri]: Property value that the map depends on.
+  /// [valueUri] Property value that the map depends on.
   ///
   /// [valueUriElement] (_valueUri): Extensions for valueUri
   ///
-  /// [valueId]: Property value that the map depends on.
+  /// [valueId] Property value that the map depends on.
   ///
   /// [valueIdElement] (_valueId): Extensions for valueId
   factory ConceptMap2DependsOn({
@@ -1672,29 +1672,29 @@ class ConceptMap2DependsOn with _$ConceptMap2DependsOn {
 class ConceptMap2Unmapped with _$ConceptMap2Unmapped {
   ConceptMap2Unmapped._();
 
-  /// [ConceptMap2Unmapped]: A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
+  /// [ConceptMap2Unmapped] A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [mode]: Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).;
+  /// [mode] Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).;
   ///
   /// [modeElement] (_mode): Extensions for mode;
   ///
-  /// [code]: The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.;
+  /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: The display for the code. The display is only provided to help editors when editing the concept map.;
+  /// [display] The display for the code. The display is only provided to help editors when editing the concept map.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [valueSet]: The set of fixed codes to use when the mode \u003d \u0027fixed\u0027  - all unmapped codes are mapped to a each of the fixed codes.
+  /// [valueSet] The set of fixed codes to use when the mode \u003d \u0027fixed\u0027  - all unmapped codes are mapped to a each of the fixed codes.
   ///
-  /// [url]: The canonical reference to an additional ConceptMap2 resource instance to use for mapping if this ConceptMap2 resource contains no matching mapping for the source concept.;
+  /// [url] The canonical reference to an additional ConceptMap2 resource instance to use for mapping if this ConceptMap2 resource contains no matching mapping for the source concept.;
   factory ConceptMap2Unmapped({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1744,122 +1744,122 @@ class ConceptMap2Unmapped with _$ConceptMap2Unmapped {
 class NamingSystem with Resource, _$NamingSystem {
   NamingSystem._();
 
-  /// [NamingSystem]: A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
+  /// [NamingSystem] A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
 
   ///
-  /// [resourceType]: This is a NamingSystem resource;
+  /// [resourceType] This is a NamingSystem resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: An absolute URI that is used to identify this naming system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this naming system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the naming system is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this naming system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this naming system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the naming system is stored on different servers.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
   ///
-  /// [version]: The identifier that is used to identify this version of the naming system when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the naming system author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the naming system when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the naming system author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [name]: A natural language name identifying the naming system. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the naming system. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for the naming system.;
+  /// [title] A short, descriptive, user-friendly title for the naming system.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [status]: The status of this naming system. Enables tracking the life-cycle of the content.;
+  /// [status] The status of this naming system. Enables tracking the life-cycle of the content.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [experimental]: A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
   ///
   /// [experimentalElement] (_experimental): Extensions for experimental;
   ///
-  /// [date]: The date  (and optionally time) when the naming system was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the naming system changes.;
+  /// [date] The date  (and optionally time) when the naming system was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the naming system changes.;
   ///
   /// [dateElement] (_date): Extensions for date;
   ///
-  /// [publisher]: The name of the organization or individual that published the naming system.;
+  /// [publisher] The name of the organization or individual that published the naming system.;
   ///
   /// [publisherElement] (_publisher): Extensions for publisher;
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
   ///
-  /// [description]: A free text natural language description of the naming system from a consumer's perspective. Details about what the namespace identifies including scope, granularity, version labeling, etc.;
+  /// [description] A free text natural language description of the naming system from a consumer's perspective. Details about what the namespace identifies including scope, granularity, version labeling, etc.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate naming system instances.;
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate naming system instances.;
   ///
-  /// [jurisdiction]: A legal or geographic region in which the naming system is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the naming system is intended to be used.;
   ///
-  /// [purpose]: Explanation of why this {{title}} is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.;
   ///
   /// [purposeElement] (_purpose): Extensions for purpose;
   ///
-  /// [copyright]: A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.;
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   ///
-  /// [approvalDate]: The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.;
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.;
   ///
   /// [approvalDateElement] (_approvalDate): Extensions for approvalDate;
   ///
-  /// [lastReviewDate]: The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.;
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.;
   ///
   /// [lastReviewDateElement] (_lastReviewDate): Extensions for lastReviewDate;
   ///
-  /// [effectivePeriod]: The period during which the {{title}} content was or is planned to be in active use.;
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.;
   ///
-  /// [topic]: Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.;
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization of the {{title}} that can be useful for filtering and searching.;
   ///
-  /// [author]: An individiual or organization primarily involved in the creation and maintenance of the {{title}}.;
+  /// [author] An individiual or organization primarily involved in the creation and maintenance of the {{title}}.;
   ///
-  /// [editor]: An individual or organization primarily responsible for internal coherence of the {{title}}.;
+  /// [editor] An individual or organization primarily responsible for internal coherence of the {{title}}.;
   ///
-  /// [reviewer]: An individual or organization primarily responsible for review of some aspect of the {{title}}.;
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the {{title}}.;
   ///
-  /// [endorser]: An individual or organization responsible for officially endorsing the {{title}} for use in some setting.;
+  /// [endorser] An individual or organization responsible for officially endorsing the {{title}} for use in some setting.;
   ///
-  /// [relatedArtifact]: Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.;
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.;
   ///
-  /// [kind]: Indicates the purpose for the naming system - what kinds of things does it make unique?;
+  /// [kind] Indicates the purpose for the naming system - what kinds of things does it make unique?;
   ///
   /// [kindElement] (_kind): Extensions for kind;
   ///
-  /// [responsible]: The name of the organization that is responsible for issuing identifiers or codes for this namespace and ensuring their non-collision.;
+  /// [responsible] The name of the organization that is responsible for issuing identifiers or codes for this namespace and ensuring their non-collision.;
   ///
   /// [responsibleElement] (_responsible): Extensions for responsible;
   ///
-  /// [type]: Categorizes a naming system for easier search by grouping related naming systems.;
+  /// [type] Categorizes a naming system for easier search by grouping related naming systems.;
   ///
-  /// [usage]: Provides guidance on the use of the namespace, including the handling of formatting characters, use of upper vs. lower case, etc.;
+  /// [usage] Provides guidance on the use of the namespace, including the handling of formatting characters, use of upper vs. lower case, etc.;
   ///
   /// [usageElement] (_usage): Extensions for usage;
   ///
-  /// [uniqueId]: Indicates how the system may be identified when referenced in electronic exchange.;
+  /// [uniqueId] Indicates how the system may be identified when referenced in electronic exchange.;
   factory NamingSystem({
     @Default(R5ResourceType.NamingSystem) R5ResourceType resourceType,
     Id? id,
@@ -1951,36 +1951,36 @@ class NamingSystem with Resource, _$NamingSystem {
 class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
 
-  /// [NamingSystemUniqueId]: A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
+  /// [NamingSystemUniqueId] A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [type]: Identifies the unique identifier scheme used for this particular identifier.;
+  /// [type] Identifies the unique identifier scheme used for this particular identifier.;
   ///
   /// [typeElement] (_type): Extensions for type;
   ///
-  /// [value]: The string that should be sent over the wire to identify the code system or identifier system.;
+  /// [value] The string that should be sent over the wire to identify the code system or identifier system.;
   ///
   /// [valueElement] (_value): Extensions for value;
   ///
-  /// [preferred]: Indicates whether this identifier is the "preferred" identifier of this type.;
+  /// [preferred] Indicates whether this identifier is the "preferred" identifier of this type.;
   ///
   /// [preferredElement] (_preferred): Extensions for preferred;
   ///
-  /// [comment]: Notes about the past or intended usage of this identifier.;
+  /// [comment] Notes about the past or intended usage of this identifier.;
   ///
   /// [commentElement] (_comment): Extensions for comment;
   ///
-  /// [period]: Identifies the period of time over which this identifier is considered appropriate to refer to the naming system.  Outside of this window, the identifier might be non-deterministic.;
+  /// [period] Identifies the period of time over which this identifier is considered appropriate to refer to the naming system.  Outside of this window, the identifier might be non-deterministic.;
   ///
-  /// [authoritative]: Indicates whether this identifier ie endorsed by the official owner of the associated naming system.;
+  /// [authoritative] Indicates whether this identifier ie endorsed by the official owner of the associated naming system.;
   ///
   /// [authoritativeElement] (_authoritative): Extensions for authoritative;
   factory NamingSystemUniqueId({
@@ -2035,110 +2035,110 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   TerminologyCapabilities._();
 
-  /// [TerminologyCapabilities]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [resourceType]: This is a TerminologyCapabilities resource;
+  /// [resourceType] This is a TerminologyCapabilities resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: An absolute URI that is used to identify this terminology capabilities when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this terminology capabilities is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the terminology capabilities is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this terminology capabilities when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this terminology capabilities is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the terminology capabilities is stored on different servers.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: A formal identifier that is used to identify this terminology capabilities when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this terminology capabilities when it is represented in other formats, or referenced in a specification, model, design or an instance.;
   ///
-  /// [version]: The identifier that is used to identify this version of the terminology capabilities when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the terminology capabilities author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the terminology capabilities when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the terminology capabilities author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [name]: A natural language name identifying the terminology capabilities. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the terminology capabilities. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for the terminology capabilities.;
+  /// [title] A short, descriptive, user-friendly title for the terminology capabilities.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [status]: The status of this terminology capabilities. Enables tracking the life-cycle of the content.;
+  /// [status] The status of this terminology capabilities. Enables tracking the life-cycle of the content.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [experimental]: A Boolean value to indicate that this terminology capabilities is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this terminology capabilities is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
   ///
   /// [experimentalElement] (_experimental): Extensions for experimental;
   ///
-  /// [date]: The date  (and optionally time) when the terminology capabilities was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the terminology capabilities changes.;
+  /// [date] The date  (and optionally time) when the terminology capabilities was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the terminology capabilities changes.;
   ///
   /// [dateElement] (_date): Extensions for date;
   ///
-  /// [publisher]: The name of the organization or individual that published the terminology capabilities.;
+  /// [publisher] The name of the organization or individual that published the terminology capabilities.;
   ///
   /// [publisherElement] (_publisher): Extensions for publisher;
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
   ///
-  /// [description]: A free text natural language description of the terminology capabilities from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.;
+  /// [description] A free text natural language description of the terminology capabilities from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate terminology capabilities instances.;
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate terminology capabilities instances.;
   ///
-  /// [jurisdiction]: A legal or geographic region in which the terminology capabilities is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the terminology capabilities is intended to be used.;
   ///
-  /// [purpose]: Explanation of why this terminology capabilities is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this terminology capabilities is needed and why it has been designed as it has.;
   ///
   /// [purposeElement] (_purpose): Extensions for purpose;
   ///
-  /// [copyright]: A copyright statement relating to the terminology capabilities and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the terminology capabilities.;
+  /// [copyright] A copyright statement relating to the terminology capabilities and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the terminology capabilities.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   ///
-  /// [kind]: The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).;
+  /// [kind] The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).;
   ///
   /// [kindElement] (_kind): Extensions for kind;
   ///
-  /// [software]: Software that is covered by this terminology capability statement.  It is used when the statement describes the capabilities of a particular software version, independent of an installation.;
+  /// [software] Software that is covered by this terminology capability statement.  It is used when the statement describes the capabilities of a particular software version, independent of an installation.;
   ///
-  /// [implementation]: Identifies a specific implementation instance that is described by the terminology capability statement - i.e. a particular installation, rather than the capabilities of a software program.;
+  /// [implementation] Identifies a specific implementation instance that is described by the terminology capability statement - i.e. a particular installation, rather than the capabilities of a software program.;
   ///
-  /// [lockedDate]: Whether the server supports lockedDate.;
+  /// [lockedDate] Whether the server supports lockedDate.;
   ///
   /// [lockedDateElement] (_lockedDate): Extensions for lockedDate;
   ///
-  /// [codeSystem]: Identifies a code system that is supported by the server. If there is a no code system URL, then this declares the general assumptions a client can make about support for any CodeSystem resource.;
+  /// [codeSystem] Identifies a code system that is supported by the server. If there is a no code system URL, then this declares the general assumptions a client can make about support for any CodeSystem resource.;
   ///
-  /// [expansion]: Information about the [ValueSet/$expand](valueset-operation-expand.html) operation.;
+  /// [expansion] Information about the [ValueSet/$expand](valueset-operation-expand.html) operation.;
   ///
-  /// [codeSearch]: The degree to which the server supports the code search parameter on ValueSet, if it is supported.;
+  /// [codeSearch] The degree to which the server supports the code search parameter on ValueSet, if it is supported.;
   ///
   /// [codeSearchElement] (_codeSearch): Extensions for codeSearch;
   ///
-  /// [validateCode]: Information about the [ValueSet/$validate-code](valueset-operation-validate-code.html) operation.;
+  /// [validateCode] Information about the [ValueSet/$validate-code](valueset-operation-validate-code.html) operation.;
   ///
-  /// [translation]: Information about the [ConceptMap/$translate](conceptmap-operation-translate.html) operation.;
+  /// [translation] Information about the [ConceptMap/$translate](conceptmap-operation-translate.html) operation.;
   ///
-  /// [closure]: Whether the $closure operation is supported.;
+  /// [closure] Whether the $closure operation is supported.;
   factory TerminologyCapabilities({
     @Default(R5ResourceType.TerminologyCapabilities)
         R5ResourceType resourceType,
@@ -2225,22 +2225,22 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
 class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   TerminologyCapabilitiesSoftware._();
 
-  /// [TerminologyCapabilitiesSoftware]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [name]: Name the software is known by.;
+  /// [name] Name the software is known by.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [version]: The version identifier for the software covered by this statement.;
+  /// [version] The version identifier for the software covered by this statement.;
   ///
   /// [versionElement] (_version): Extensions for version;
   factory TerminologyCapabilitiesSoftware({
@@ -2290,22 +2290,22 @@ class TerminologyCapabilitiesImplementation
     with _$TerminologyCapabilitiesImplementation {
   TerminologyCapabilitiesImplementation._();
 
-  /// [TerminologyCapabilitiesImplementation]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesImplementation] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [description]: Information about the specific installation that this terminology capability statement relates to.;
+  /// [description] Information about the specific installation that this terminology capability statement relates to.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [url]: An absolute base URL for the implementation.;
+  /// [url] An absolute base URL for the implementation.;
   ///
   /// [urlElement] (_url): Extensions for url;
   factory TerminologyCapabilitiesImplementation({
@@ -2356,22 +2356,22 @@ class TerminologyCapabilitiesCodeSystem
     with _$TerminologyCapabilitiesCodeSystem {
   TerminologyCapabilitiesCodeSystem._();
 
-  /// [TerminologyCapabilitiesCodeSystem]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesCodeSystem] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [uri]: Canonical identifier for the code system, represented as a URI.;
+  /// [uri] Canonical identifier for the code system, represented as a URI.;
   ///
-  /// [version]: For the code system, a list of versions that are supported by the server.;
+  /// [version] For the code system, a list of versions that are supported by the server.;
   ///
-  /// [subsumption]: True if subsumption is supported for this version of the code system.;
+  /// [subsumption] True if subsumption is supported for this version of the code system.;
   ///
   /// [subsumptionElement] (_subsumption): Extensions for subsumption;
   factory TerminologyCapabilitiesCodeSystem({
@@ -2421,36 +2421,36 @@ class TerminologyCapabilitiesCodeSystem
 class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   TerminologyCapabilitiesVersion._();
 
-  /// [TerminologyCapabilitiesVersion]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: For version-less code systems, there should be a single version with no identifier.;
+  /// [code] For version-less code systems, there should be a single version with no identifier.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [isDefault]: If this is the default version for this code system.;
+  /// [isDefault] If this is the default version for this code system.;
   ///
   /// [isDefaultElement] (_isDefault): Extensions for isDefault;
   ///
-  /// [compositional]: If the compositional grammar defined by the code system is supported.;
+  /// [compositional] If the compositional grammar defined by the code system is supported.;
   ///
   /// [compositionalElement] (_compositional): Extensions for compositional;
   ///
-  /// [language]: Language Displays supported.;
+  /// [language] Language Displays supported.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [filter]: Filter Properties supported.;
+  /// [filter] Filter Properties supported.;
   ///
-  /// [property]: Properties supported for $lookup.;
+  /// [property] Properties supported for $lookup.;
   ///
   /// [propertyElement] (_property): Extensions for property;
   factory TerminologyCapabilitiesVersion({
@@ -2506,22 +2506,22 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
 class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   TerminologyCapabilitiesFilter._();
 
-  /// [TerminologyCapabilitiesFilter]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: Code of the property supported.;
+  /// [code] Code of the property supported.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [op]: Operations supported for the property.;
+  /// [op] Operations supported for the property.;
   ///
   /// [opElement] (_op): Extensions for op;
   factory TerminologyCapabilitiesFilter({
@@ -2569,32 +2569,32 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
 class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   TerminologyCapabilitiesExpansion._();
 
-  /// [TerminologyCapabilitiesExpansion]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [hierarchical]: Whether the server can return nested value sets.;
+  /// [hierarchical] Whether the server can return nested value sets.;
   ///
   /// [hierarchicalElement] (_hierarchical): Extensions for hierarchical;
   ///
-  /// [paging]: Whether the server supports paging on expansion.;
+  /// [paging] Whether the server supports paging on expansion.;
   ///
   /// [pagingElement] (_paging): Extensions for paging;
   ///
-  /// [incomplete]: True if requests for incomplete expansions are allowed.;
+  /// [incomplete] True if requests for incomplete expansions are allowed.;
   ///
   /// [incompleteElement] (_incomplete): Extensions for incomplete;
   ///
-  /// [parameter]: Supported expansion parameter.;
+  /// [parameter] Supported expansion parameter.;
   ///
-  /// [textFilter]: Documentation about text searching works.;
+  /// [textFilter] Documentation about text searching works.;
   ///
   /// [textFilterElement] (_textFilter): Extensions for textFilter;
   factory TerminologyCapabilitiesExpansion({
@@ -2649,22 +2649,22 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
 class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   TerminologyCapabilitiesParameter._();
 
-  /// [TerminologyCapabilitiesParameter]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [name]: Name of the supported expansion parameter.;
+  /// [name] Name of the supported expansion parameter.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [documentation]: Description of support for parameter.;
+  /// [documentation] Description of support for parameter.;
   ///
   /// [documentationElement] (_documentation): Extensions for documentation;
   factory TerminologyCapabilitiesParameter({
@@ -2715,18 +2715,18 @@ class TerminologyCapabilitiesValidateCode
     with _$TerminologyCapabilitiesValidateCode {
   TerminologyCapabilitiesValidateCode._();
 
-  /// [TerminologyCapabilitiesValidateCode]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesValidateCode] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [translations]: Whether translations are validated.;
+  /// [translations] Whether translations are validated.;
   ///
   /// [translationsElement] (_translations): Extensions for translations;
   factory TerminologyCapabilitiesValidateCode({
@@ -2775,18 +2775,18 @@ class TerminologyCapabilitiesTranslation
     with _$TerminologyCapabilitiesTranslation {
   TerminologyCapabilitiesTranslation._();
 
-  /// [TerminologyCapabilitiesTranslation]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesTranslation] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [needsMap]: Whether the client must identify the map.;
+  /// [needsMap] Whether the client must identify the map.;
   ///
   /// [needsMapElement] (_needsMap): Extensions for needsMap;
   factory TerminologyCapabilitiesTranslation({
@@ -2834,18 +2834,18 @@ class TerminologyCapabilitiesTranslation
 class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   TerminologyCapabilitiesClosure._();
 
-  /// [TerminologyCapabilitiesClosure]: A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+  /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [translation]: If cross-system closure is supported.;
+  /// [translation] If cross-system closure is supported.;
   ///
   /// [translationElement] (_translation): Extensions for translation;
   factory TerminologyCapabilitiesClosure({
@@ -2892,94 +2892,94 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
 class ValueSet with Resource, _$ValueSet {
   ValueSet._();
 
-  /// [ValueSet]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [resourceType]: This is a ValueSet resource;
+  /// [resourceType] This is a ValueSet resource;
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   ///
-  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   ///
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   ///
-  /// [language]: The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   ///
-  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [url]: An absolute URI that is used to identify this value set when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this value set is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the value set is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this value set when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this value set is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the value set is stored on different servers.;
   ///
   /// [urlElement] (_url): Extensions for url;
   ///
-  /// [identifier]: A formal identifier that is used to identify this value set when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this value set when it is represented in other formats, or referenced in a specification, model, design or an instance.;
   ///
-  /// [version]: The identifier that is used to identify this version of the value set when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the value set author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the value set when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the value set author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [name]: A natural language name identifying the value set. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [name] A natural language name identifying the value set. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [title]: A short, descriptive, user-friendly title for the value set.;
+  /// [title] A short, descriptive, user-friendly title for the value set.;
   ///
   /// [titleElement] (_title): Extensions for title;
   ///
-  /// [status]: The status of this value set. Enables tracking the life-cycle of the content. The status of the value set applies to the value set definition (ValueSet.compose) and the associated ValueSet metadata. Expansions do not have a state.;
+  /// [status] The status of this value set. Enables tracking the life-cycle of the content. The status of the value set applies to the value set definition (ValueSet.compose) and the associated ValueSet metadata. Expansions do not have a state.;
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  /// [experimental]: A Boolean value to indicate that this value set is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [experimental] A Boolean value to indicate that this value set is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
   ///
   /// [experimentalElement] (_experimental): Extensions for experimental;
   ///
-  /// [date]: The date (and optionally time) when the value set metadata or content logical definition (.compose) was created or revised.;
+  /// [date] The date (and optionally time) when the value set metadata or content logical definition (.compose) was created or revised.;
   ///
   /// [dateElement] (_date): Extensions for date;
   ///
-  /// [publisher]: The name of the organization or individual that published the value set.;
+  /// [publisher] The name of the organization or individual that published the value set.;
   ///
   /// [publisherElement] (_publisher): Extensions for publisher;
   ///
-  /// [contact]: Contact details to assist a user in finding and communicating with the publisher.;
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
   ///
-  /// [description]: A free text natural language description of the value set from a consumer's perspective. The textual description specifies the span of meanings for concepts to be included within the Value Set Expansion, and also may specify the intended use and limitations of the Value Set.;
+  /// [description] A free text natural language description of the value set from a consumer's perspective. The textual description specifies the span of meanings for concepts to be included within the Value Set Expansion, and also may specify the intended use and limitations of the Value Set.;
   ///
   /// [descriptionElement] (_description): Extensions for description;
   ///
-  /// [useContext]: The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate value set instances.;
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate value set instances.;
   ///
-  /// [jurisdiction]: A legal or geographic region in which the value set is intended to be used.;
+  /// [jurisdiction] A legal or geographic region in which the value set is intended to be used.;
   ///
-  /// [purpose]: Explanation of why this value set is needed and why it has been designed as it has.;
+  /// [purpose] Explanation of why this value set is needed and why it has been designed as it has.;
   ///
   /// [purposeElement] (_purpose): Extensions for purpose;
   ///
-  /// [copyright]: A copyright statement relating to the value set and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the value set.;
+  /// [copyright] A copyright statement relating to the value set and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the value set.;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   ///
-  /// [immutable]: If this is set to 'true', then no new versions of the content logical definition can be created.  Note: Other metadata might still change.;
+  /// [immutable] If this is set to 'true', then no new versions of the content logical definition can be created.  Note: Other metadata might still change.;
   ///
   /// [immutableElement] (_immutable): Extensions for immutable;
   ///
-  /// [compose]: A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).;
+  /// [compose] A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).;
   ///
-  /// [expansion]: A value set can also be "expanded", where the value set is turned into a simple collection of enumerated codes. This element holds the expansion, if it has been performed.;
+  /// [expansion] A value set can also be "expanded", where the value set is turned into a simple collection of enumerated codes. This element holds the expansion, if it has been performed.;
   ///
-  /// [scope]: Description of the semantic space the Value Set Expansion is intended to cover and should further clarify the text in ValueSet.description.;
+  /// [scope] Description of the semantic space the Value Set Expansion is intended to cover and should further clarify the text in ValueSet.description.;
   factory ValueSet({
     @Default(R5ResourceType.ValueSet) R5ResourceType resourceType,
     Id? id,
@@ -3057,30 +3057,30 @@ class ValueSet with Resource, _$ValueSet {
 class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
 
-  /// [ValueSetCompose]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [lockedDate]: The Locked Date is  the effective date that is used to determine the version of all referenced Code Systems and Value Set Definitions included in the compose that are not already tied to a specific version.;
+  /// [lockedDate] The Locked Date is  the effective date that is used to determine the version of all referenced Code Systems and Value Set Definitions included in the compose that are not already tied to a specific version.;
   ///
   /// [lockedDateElement] (_lockedDate): Extensions for lockedDate;
   ///
-  /// [inactive]: Whether inactive codes - codes that are not approved for current use - are in the value set. If inactive = true, inactive codes are to be included in the expansion, if inactive = false, the inactive codes will not be included in the expansion. If absent, the behavior is determined by the implementation, or by the applicable $expand parameters (but generally, inactive codes would be expected to be included).;
+  /// [inactive] Whether inactive codes - codes that are not approved for current use - are in the value set. If inactive = true, inactive codes are to be included in the expansion, if inactive = false, the inactive codes will not be included in the expansion. If absent, the behavior is determined by the implementation, or by the applicable $expand parameters (but generally, inactive codes would be expected to be included).;
   ///
   /// [inactiveElement] (_inactive): Extensions for inactive;
   ///
-  /// [include]: Include one or more codes from a code system or other value set(s).;
+  /// [include] Include one or more codes from a code system or other value set(s).;
   ///
-  /// [exclude]: Exclude one or more codes from the value set based on code system filters and/or other value sets.;
+  /// [exclude] Exclude one or more codes from the value set based on code system filters and/or other value sets.;
   ///
-  /// [property]: A property to return in the expansion, if the client doesn't ask for any particular properties. May be either a code from the code system definition (convenient) or a the formal URI that refers to the property. The special value '*' means all properties known to the server.;
+  /// [property] A property to return in the expansion, if the client doesn't ask for any particular properties. May be either a code from the code system definition (convenient) or a the formal URI that refers to the property. The special value '*' means all properties known to the server.;
   ///
   /// [propertyElement] (_property): Extensions for property;
   factory ValueSetCompose({
@@ -3132,32 +3132,32 @@ class ValueSetCompose with _$ValueSetCompose {
 class ValueSetInclude with _$ValueSetInclude {
   ValueSetInclude._();
 
-  /// [ValueSetInclude]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [system]: An absolute URI which is the code system from which the selected codes come from.;
+  /// [system] An absolute URI which is the code system from which the selected codes come from.;
   ///
   /// [systemElement] (_system): Extensions for system;
   ///
-  /// [version]: The version of the code system that the codes are selected from, or the special version '*' for all versions.;
+  /// [version] The version of the code system that the codes are selected from, or the special version '*' for all versions.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [concept]: Specifies a concept to be included or excluded.;
+  /// [concept] Specifies a concept to be included or excluded.;
   ///
-  /// [filter]: Select concepts by specify a matching criterion based on the properties (including relationships) defined by the system, or on filters defined by the system. If multiple filters are specified, they SHALL all be true.;
+  /// [filter] Select concepts by specify a matching criterion based on the properties (including relationships) defined by the system, or on filters defined by the system. If multiple filters are specified, they SHALL all be true.;
   ///
-  /// [valueSet]: Selects the concepts found in this value set (based on its value set definition). This is an absolute URI that is a reference to ValueSet.url.  If multiple value sets are specified this includes the intersection of the contents of all of the referenced value sets.;
+  /// [valueSet] Selects the concepts found in this value set (based on its value set definition). This is an absolute URI that is a reference to ValueSet.url.  If multiple value sets are specified this includes the intersection of the contents of all of the referenced value sets.;
   ///
-  /// [copyright]: A copyright statement for the specific code system asserted by the containing ValueSet.compose.include element's system value (if the associated ValueSet.compose.include.version element is not present); or the code system and version combination (if the associated ValueSet.compose.include.version element is present).;
+  /// [copyright] A copyright statement for the specific code system asserted by the containing ValueSet.compose.include element's system value (if the associated ValueSet.compose.include.version element is not present); or the code system and version combination (if the associated ValueSet.compose.include.version element is present).;
   ///
   /// [copyrightElement] (_copyright): Extensions for copyright;
   factory ValueSetInclude({
@@ -3210,26 +3210,26 @@ class ValueSetInclude with _$ValueSetInclude {
 class ValueSetConcept with _$ValueSetConcept {
   ValueSetConcept._();
 
-  /// [ValueSetConcept]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: Specifies a code for the concept to be included or excluded.;
+  /// [code] Specifies a code for the concept to be included or excluded.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: The text to display to the user for this concept in the context of this valueset. If no display is provided, then applications using the value set use the display specified for the code by the system.;
+  /// [display] The text to display to the user for this concept in the context of this valueset. If no display is provided, then applications using the value set use the display specified for the code by the system.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [designation]: Additional representations for this concept when used in this value set - other languages, aliases, specialized purposes, used for particular purposes, etc.;
+  /// [designation] Additional representations for this concept when used in this value set - other languages, aliases, specialized purposes, used for particular purposes, etc.;
   factory ValueSetConcept({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3276,24 +3276,24 @@ class ValueSetConcept with _$ValueSetConcept {
 class ValueSetDesignation with _$ValueSetDesignation {
   ValueSetDesignation._();
 
-  /// [ValueSetDesignation]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetDesignation] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [language]: The language this designation is defined for.;
+  /// [language] The language this designation is defined for.;
   ///
   /// [languageElement] (_language): Extensions for language;
   ///
-  /// [use]: A code that represents types of uses of designations.;
+  /// [use] A code that represents types of uses of designations.;
   ///
-  /// [value]: The text value for this designation.;
+  /// [value] The text value for this designation.;
   ///
   /// [valueElement] (_value): Extensions for value;
   factory ValueSetDesignation({
@@ -3342,26 +3342,26 @@ class ValueSetDesignation with _$ValueSetDesignation {
 class ValueSetFilter with _$ValueSetFilter {
   ValueSetFilter._();
 
-  /// [ValueSetFilter]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [property]: A code that identifies a property or a filter defined in the code system.;
+  /// [property] A code that identifies a property or a filter defined in the code system.;
   ///
   /// [propertyElement] (_property): Extensions for property;
   ///
-  /// [op]: The kind of operation to perform as a part of the filter criteria.;
+  /// [op] The kind of operation to perform as a part of the filter criteria.;
   ///
   /// [opElement] (_op): Extensions for op;
   ///
-  /// [value]: The match value may be either a code defined by the system, or a string value, which is a regex match on the literal string of the property value  (if the filter represents a property defined in CodeSystem) or of the system filter value (if the filter represents a filter defined in CodeSystem) when the operation is 'regex', or one of the values (true and false), when the operation is 'exists'.;
+  /// [value] The match value may be either a code defined by the system, or a string value, which is a regex match on the literal string of the property value  (if the filter represents a property defined in CodeSystem) or of the system filter value (if the filter represents a filter defined in CodeSystem) when the operation is 'regex', or one of the values (true and false), when the operation is 'exists'.;
   ///
   /// [valueElement] (_value): Extensions for value;
   factory ValueSetFilter({
@@ -3411,38 +3411,38 @@ class ValueSetFilter with _$ValueSetFilter {
 class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
 
-  /// [ValueSetExpansion]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetExpansion] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [identifier]: An identifier that uniquely identifies this expansion of the valueset, based on a unique combination of the provided parameters, the system default parameters, and the underlying system code system versions etc. Systems may re-use the same identifier as long as those factors remain the same, and the expansion is the same, but are not required to do so. This is a business identifier.;
+  /// [identifier] An identifier that uniquely identifies this expansion of the valueset, based on a unique combination of the provided parameters, the system default parameters, and the underlying system code system versions etc. Systems may re-use the same identifier as long as those factors remain the same, and the expansion is the same, but are not required to do so. This is a business identifier.;
   ///
   /// [identifierElement] (_identifier): Extensions for identifier;
   ///
-  /// [timestamp]: The time at which the expansion was produced by the expanding system.;
+  /// [timestamp] The time at which the expansion was produced by the expanding system.;
   ///
   /// [timestampElement] (_timestamp): Extensions for timestamp;
   ///
-  /// [total]: The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.;
+  /// [total] The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.;
   ///
   /// [totalElement] (_total): Extensions for total;
   ///
-  /// [offset]: If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL NOT be present.;
+  /// [offset] If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL NOT be present.;
   ///
   /// [offsetElement] (_offset): Extensions for offset;
   ///
-  /// [parameter]: A parameter that controlled the expansion process. These parameters may be used by users of expanded value sets to check whether the expansion is suitable for a particular purpose, or to pick the correct expansion.;
+  /// [parameter] A parameter that controlled the expansion process. These parameters may be used by users of expanded value sets to check whether the expansion is suitable for a particular purpose, or to pick the correct expansion.;
   ///
-  /// [property]: A property defines an additional slot through which additional information can be provided about a concept.;
+  /// [property] A property defines an additional slot through which additional information can be provided about a concept.;
   ///
-  /// [contains]: The codes that are contained in the value set expansion.;
+  /// [contains] The codes that are contained in the value set expansion.;
   factory ValueSetExpansion({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3495,46 +3495,46 @@ class ValueSetExpansion with _$ValueSetExpansion {
 class ValueSetParameter with _$ValueSetParameter {
   ValueSetParameter._();
 
-  /// [ValueSetParameter]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetParameter] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [name]: Name of the input parameter to the $expand operation; may be a server-assigned name for additional default or other server-supplied parameters used to control the expansion process.;
+  /// [name] Name of the input parameter to the $expand operation; may be a server-assigned name for additional default or other server-supplied parameters used to control the expansion process.;
   ///
   /// [nameElement] (_name): Extensions for name;
   ///
-  /// [valueString]: The value of the parameter.;
+  /// [valueString] The value of the parameter.;
   ///
   /// [valueStringElement] (_valueString): Extensions for valueString;
   ///
-  /// [valueBoolean]: The value of the parameter.;
+  /// [valueBoolean] The value of the parameter.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
-  /// [valueInteger]: The value of the parameter.;
+  /// [valueInteger] The value of the parameter.;
   ///
   /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
   ///
-  /// [valueDecimal]: The value of the parameter.;
+  /// [valueDecimal] The value of the parameter.;
   ///
   /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal;
   ///
-  /// [valueUri]: The value of the parameter.;
+  /// [valueUri] The value of the parameter.;
   ///
   /// [valueUriElement] (_valueUri): Extensions for valueUri;
   ///
-  /// [valueCode]: The value of the parameter.;
+  /// [valueCode] The value of the parameter.;
   ///
   /// [valueCodeElement] (_valueCode): Extensions for valueCode;
   ///
-  /// [valueDateTime]: The value of the parameter.;
+  /// [valueDateTime] The value of the parameter.;
   ///
   /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
   factory ValueSetParameter({
@@ -3594,22 +3594,22 @@ class ValueSetParameter with _$ValueSetParameter {
 class ValueSetProperty with _$ValueSetProperty {
   ValueSetProperty._();
 
-  /// [ValueSetProperty]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetProperty] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: A code that is used to identify the property. The code is used in ValueSet.expansion.contains.property.code.;
+  /// [code] A code that is used to identify the property. The code is used in ValueSet.expansion.contains.property.code.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [uri]: Reference to the formal meaning of the property. One possible source of meaning is the [Concept Properties](codesystem-concept-properties.html) code system.;
+  /// [uri] Reference to the formal meaning of the property. One possible source of meaning is the [Concept Properties](codesystem-concept-properties.html) code system.;
   ///
   /// [uriElement] (_uri): Extensions for uri;
   factory ValueSetProperty({
@@ -3657,46 +3657,46 @@ class ValueSetProperty with _$ValueSetProperty {
 class ValueSetContains with _$ValueSetContains {
   ValueSetContains._();
 
-  /// [ValueSetContains]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetContains] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [system]: An absolute URI which is the code system in which the code for this item in the expansion is defined.;
+  /// [system] An absolute URI which is the code system in which the code for this item in the expansion is defined.;
   ///
   /// [systemElement] (_system): Extensions for system;
   ///
-  /// [abstract]: If true, this entry is included in the expansion for navigational purposes, and the user cannot select the code directly as a proper value.;
+  /// [abstract] If true, this entry is included in the expansion for navigational purposes, and the user cannot select the code directly as a proper value.;
   ///
   /// [abstractElement] (_abstract): Extensions for abstract;
   ///
-  /// [inactive]: If the concept is inactive in the code system that defines it. Inactive codes are those that are no longer to be used, but are maintained by the code system for understanding legacy data. It might not be known or specified whether an concept is inactive (and it may depend on the context of use).;
+  /// [inactive] If the concept is inactive in the code system that defines it. Inactive codes are those that are no longer to be used, but are maintained by the code system for understanding legacy data. It might not be known or specified whether an concept is inactive (and it may depend on the context of use).;
   ///
   /// [inactiveElement] (_inactive): Extensions for inactive;
   ///
-  /// [version]: The version of the code system from this code was taken. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.;
+  /// [version] The version of the code system from this code was taken. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.;
   ///
   /// [versionElement] (_version): Extensions for version;
   ///
-  /// [code]: The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.;
+  /// [code] The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [display]: The recommended display for this item in the expansion.;
+  /// [display] The recommended display for this item in the expansion.;
   ///
   /// [displayElement] (_display): Extensions for display;
   ///
-  /// [designation]: Additional representations for this item - other languages, aliases, specialized purposes, used for particular purposes, etc. These are relevant when the conditions of the expansion do not fix to a single correct representation.;
+  /// [designation] Additional representations for this item - other languages, aliases, specialized purposes, used for particular purposes, etc. These are relevant when the conditions of the expansion do not fix to a single correct representation.;
   ///
-  /// [property]: A property value for this concept.;
+  /// [property] A property value for this concept.;
   ///
-  /// [contains]: Other codes and entries contained under this entry in the hierarchy.;
+  /// [contains] Other codes and entries contained under this entry in the hierarchy.;
   factory ValueSetContains({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3753,44 +3753,44 @@ class ValueSetContains with _$ValueSetContains {
 class ValueSetProperty1 with _$ValueSetProperty1 {
   ValueSetProperty1._();
 
-  /// [ValueSetProperty1]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetProperty1] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [code]: A code that is a reference to ValueSet.expansion.property.code.;
+  /// [code] A code that is a reference to ValueSet.expansion.property.code.;
   ///
   /// [codeElement] (_code): Extensions for code;
   ///
-  /// [valueCode]: The value of this property.;
+  /// [valueCode] The value of this property.;
   ///
   /// [valueCodeElement] (_valueCode): Extensions for valueCode;
   ///
-  /// [valueCoding]: The value of this property.;
+  /// [valueCoding] The value of this property.;
   ///
-  /// [valueString]: The value of this property.;
+  /// [valueString] The value of this property.;
   ///
   /// [valueStringElement] (_valueString): Extensions for valueString;
   ///
-  /// [valueInteger]: The value of this property.;
+  /// [valueInteger] The value of this property.;
   ///
   /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
   ///
-  /// [valueBoolean]: The value of this property.;
+  /// [valueBoolean] The value of this property.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
-  /// [valueDateTime]: The value of this property.;
+  /// [valueDateTime] The value of this property.;
   ///
   /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
   ///
-  /// [valueDecimal]: The value of this property.;
+  /// [valueDecimal] The value of this property.;
   ///
   /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal;
   factory ValueSetProperty1({
@@ -3849,26 +3849,26 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
 class ValueSetScope with _$ValueSetScope {
   ValueSetScope._();
 
-  /// [ValueSetScope]: A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
+  /// [ValueSetScope] A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
 
   ///
-  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
-  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
-  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
-  /// [focus]: The general focus of the Value Set as it relates to the intended semantic space. This can be the information about clinical relevancy or the statement about the general focus of the Value Set, such as a description of types of messages, payment options, geographic locations, etc.;
+  /// [focus] The general focus of the Value Set as it relates to the intended semantic space. This can be the information about clinical relevancy or the statement about the general focus of the Value Set, such as a description of types of messages, payment options, geographic locations, etc.;
   ///
   /// [focusElement] (_focus): Extensions for focus;
   ///
-  /// [inclusionCriteria]: Criteria describing which concepts or codes should be included and why.;
+  /// [inclusionCriteria] Criteria describing which concepts or codes should be included and why.;
   ///
   /// [inclusionCriteriaElement] (_inclusionCriteria): Extensions for inclusionCriteria;
   ///
-  /// [exclusionCriteria]: Criteria describing which concepts or codes should be excluded and why.;
+  /// [exclusionCriteria] Criteria describing which concepts or codes should be excluded and why.;
   ///
   /// [exclusionCriteriaElement] (_exclusionCriteria): Extensions for exclusionCriteria;
   factory ValueSetScope({

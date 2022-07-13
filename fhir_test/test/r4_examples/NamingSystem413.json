@@ -1,0 +1,1 @@
+{"resourceType":"NamingSystem","id":"v3-mime","name":"Mime","status":"retired","kind":"codesystem","date":"2021-11-09T11:00:00+11:00","publisher":"TBD - External Body","description":"IETF MIME media types","uniqueId":[{"type":"uri","value":"http://www.iana.org/assignments/media-types","preferred":true},{"type":"oid","value":"2.16.840.1.113883.6.10","preferred":false}]}

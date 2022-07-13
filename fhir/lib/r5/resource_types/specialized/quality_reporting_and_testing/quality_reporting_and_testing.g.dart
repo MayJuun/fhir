@@ -225,7 +225,7 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
 
 Map<String, dynamic> _$$_MeasureToJson(_$_Measure instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -824,7 +824,7 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MeasureReportToJson(_$_MeasureReport instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1312,7 +1312,7 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_TestReportToJson(_$_TestReport instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1849,7 +1849,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_TestScriptToJson(_$_TestScript instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

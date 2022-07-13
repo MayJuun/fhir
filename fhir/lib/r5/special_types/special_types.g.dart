@@ -1788,7 +1788,7 @@ Map<String, dynamic> _$$_ElementDefinitionToJson(
   writeNotNull(
       'representation',
       instance.representation
-          ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e])
+          ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e]!)
           .toList());
   writeNotNull('_representation',
       instance.representationElement?.map((e) => e.toJson()).toList());
@@ -2381,7 +2381,7 @@ Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
   writeNotNull(
       'aggregation',
       instance.aggregation
-          ?.map((e) => _$ElementDefinitionTypeAggregationEnumMap[e])
+          ?.map((e) => _$ElementDefinitionTypeAggregationEnumMap[e]!)
           .toList());
   writeNotNull('_aggregation',
       instance.aggregationElement?.map((e) => e.toJson()).toList());
@@ -2545,6 +2545,10 @@ _$_ElementDefinitionExample _$$_ElementDefinitionExampleFromJson(
           ? null
           : CodeableConcept.fromJson(
               json['valueCodeableConcept'] as Map<String, dynamic>),
+      valueCodeableReference: json['valueCodeableReference'] == null
+          ? null
+          : CodeableReference.fromJson(
+              json['valueCodeableReference'] as Map<String, dynamic>),
       valueCoding: json['valueCoding'] == null
           ? null
           : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
@@ -2584,6 +2588,10 @@ _$_ElementDefinitionExample _$$_ElementDefinitionExampleFromJson(
       valueRatio: json['valueRatio'] == null
           ? null
           : Ratio.fromJson(json['valueRatio'] as Map<String, dynamic>),
+      valueRatioRange: json['valueRatioRange'] == null
+          ? null
+          : RatioRange.fromJson(
+              json['valueRatioRange'] as Map<String, dynamic>),
       valueReference: json['valueReference'] == null
           ? null
           : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
@@ -2632,9 +2640,6 @@ _$_ElementDefinitionExample _$$_ElementDefinitionExampleFromJson(
       valueDosage: json['valueDosage'] == null
           ? null
           : Dosage.fromJson(json['valueDosage'] as Map<String, dynamic>),
-      valueMeta: json['valueMeta'] == null
-          ? null
-          : Meta.fromJson(json['valueMeta'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ElementDefinitionExampleToJson(
@@ -2700,6 +2705,8 @@ Map<String, dynamic> _$$_ElementDefinitionExampleToJson(
   writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull(
+      'valueCodeableReference', instance.valueCodeableReference?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
   writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
   writeNotNull('valueCount', instance.valueCount?.toJson());
@@ -2712,6 +2719,7 @@ Map<String, dynamic> _$$_ElementDefinitionExampleToJson(
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueRange', instance.valueRange?.toJson());
   writeNotNull('valueRatio', instance.valueRatio?.toJson());
+  writeNotNull('valueRatioRange', instance.valueRatioRange?.toJson());
   writeNotNull('valueReference', instance.valueReference?.toJson());
   writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
   writeNotNull('valueSignature', instance.valueSignature?.toJson());
@@ -2727,7 +2735,6 @@ Map<String, dynamic> _$$_ElementDefinitionExampleToJson(
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
   writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
   writeNotNull('valueDosage', instance.valueDosage?.toJson());
-  writeNotNull('valueMeta', instance.valueMeta?.toJson());
   return val;
 }
 

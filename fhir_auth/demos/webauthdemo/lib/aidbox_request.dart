@@ -24,13 +24,13 @@ Future<void> aidboxRequest(Uri fhirCallback) async {
       client: client,
     );
 
-    Id? newId;
+    String? newId;
 
     final response = await request1.request();
     print('Response from upload:\n${response.toJson()}');
     newId = response.id;
 
-    if (newId is! Id) {
+    if (newId is! String) {
       print(newId);
     } else {
       final request2 = FhirRequest.read(

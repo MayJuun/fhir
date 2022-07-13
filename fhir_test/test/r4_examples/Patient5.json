@@ -1,0 +1,1 @@
+{"resourceType":"Patient","id":"a2","meta":{"lastUpdated":"2013-07-01T13:11:33Z"},"text":{"status":"generated","div":"\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003ePerson DOE, John, M, dob: 27/05/1956\u003c/div\u003e"},"identifier":[{"use":"usual","value":"MRN"}],"name":[{"use":"usual","text":"DOE, John","family":"Doe","given":["John"]}],"birthDate":"1956-05-27"}

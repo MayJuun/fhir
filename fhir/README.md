@@ -4,13 +4,13 @@ A Dart/Flutter package for working with FHIR® resources. FHIR® is the register
 
 It contains packages for the 3 released FHIR versions:
 
-- [R4 v4.0.1](https://hl7.org/fhir/R4/)
-- [Stu3 v3.0.2](https://www.hl7.org/fhir/stu3/)
-- [Dstu2 v1.0.2](https://www.hl7.org/fhir/DSTU2/)
+- [R4 v4.3.0 - FHIR Release #4B](https://hl7.org/fhir/R4B/)
+- [Stu3 v3.0.2 - FHIR Release 3 (STU) with 2 technical errata (Permanent Home)](https://hl7.org/fhir/STU3/)
+- [Dstu2 v1.0.2 - DSTU 2 (Official version) with 1 technical errata (Permanent home)](https://hl7.org/fhir/DSTU2/)
 
-As well as the R5 Preview #3:
+As well as the R5 (constantly in flux as it's actively being balloted):
 
-- [v4.5.0: R5 Preview #3](https://hl7.org/fhir/2020Feb/)
+- [R5 v4.6.0 - 	FHIR Release #5: Snapshot #1 (Jan 2022 Connectathon)](https://hl7.org/fhir/2021May/)
 
 ## Say Hello
 
@@ -28,7 +28,7 @@ In order to use this package in your app, you must include the following in your
 
 ```yaml
 dependencies:
-  fhir: ^0.6.2
+  fhir: ^0.9.0
 ```
 
 Or if you want to include the most recent unreleased version from Github
@@ -128,7 +128,14 @@ It will be false, because it will use the DateTime ```==``` instead.
 - For validation testing, I run all of the sample files from hl7 through a tester. There is an errors.txt file in the test folder where all of the errors are reported (the file name and then the specific field). Currently the only errors involve Codes and IDs. The Codes have to due with the fact that [code is not supposed to have leading or trailing white space](https://www.hl7.org/fhir/datatypes.html#code). The issues with the IDs are that [IDs are not supposed to be more than 64 characters](https://www.hl7.org/fhir/datatypes.html#id), and these are 65. However, if it turns out that no one wants to enforce these as strictly as I do, I may relax them. Also, for r5, there are some fields that I'm not sure if they're supposed to be lists or not, and there are a number of reference I'm not sure if I have the correct name (because the names differe on the website vs. the downloadable schema). I've kept whichever one seemed to be present in the examples.
 - For validating the toYaml() functions, I first read the map into a Resource, convert it into Yaml, convert it back into a Resource, and then use that in the validation function above.
 - There are two files that seem to have random nulls in the middle, I'm not sure why, they don't seem to serve any purpose, and they don't currently transfer into Yaml at this point.
-
+- Exceptions: this package does not support input such as the following, and will throw an error:
+```json
+"timingTiming": {
+  "event": [
+    null
+  ]
+}
+```
 ## Code Generation
 
 I think it's the new compiling. It's actually great though, [json_serializable](https://pub.dev/packages/json_serializable) and [freezed](https://pub.dev/packages/freezed) are used extensively throughout. In order to allow a field to contain any resource, it is passed to the resource class and is passed to a switch case statement (which feels a little clunky, but I haven't managed a better way yet). I've removed the resource.g.dart files for all versions. It didn't appear to ever be used, but did lose me points on pub.dev. But if it changes your functionality, please let me know. It will state that there's an error when you run code generation however.

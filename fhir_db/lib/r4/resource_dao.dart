@@ -153,7 +153,7 @@ class ResourceDao {
     String? password, {
     Resource? resource,
     R4ResourceType? resourceType,
-    Id? id,
+    String? id,
     String? field,
     String? value,
   }) async {
@@ -164,7 +164,7 @@ class ResourceDao {
       if (resource != null) {
         finder = Finder(filter: Filter.equals('id', '${resource.id}'));
       } else if (resourceType != null && id != null) {
-        finder = Finder(filter: Filter.equals('id', '$id'));
+        finder = Finder(filter: Filter.equals('id', id));
       } else {
         finder = Finder(filter: Filter.equals(field!, value));
       }
@@ -229,7 +229,7 @@ class ResourceDao {
     String? password,
     Resource? resource,
     R4ResourceType? resourceType,
-    Id? id,
+    String? id,
     String? field,
     String? value,
   ) async {
@@ -240,7 +240,7 @@ class ResourceDao {
       if (resource != null) {
         finder = Finder(filter: Filter.equals('id', '${resource.id}'));
       } else if (resourceType != null && id != null) {
-        finder = Finder(filter: Filter.equals('id', '$id'));
+        finder = Finder(filter: Filter.equals('id', id));
       } else {
         finder = Finder(filter: Filter.equals(field!, value));
       }

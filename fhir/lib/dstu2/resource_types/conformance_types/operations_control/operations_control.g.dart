@@ -91,7 +91,7 @@ _$_Conformance _$$_ConformanceFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ConformanceToJson(_$_Conformance instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -123,16 +123,16 @@ Map<String, dynamic> _$$_ConformanceToJson(_$_Conformance instance) {
   writeNotNull('description', instance.description);
   writeNotNull('requirements', instance.requirements);
   writeNotNull('copyright', instance.copyright);
-  val['kind'] = _$ConformanceKindEnumMap[instance.kind];
+  val['kind'] = _$ConformanceKindEnumMap[instance.kind]!;
   writeNotNull('software', instance.software?.toJson());
   writeNotNull('implementation', instance.implementation?.toJson());
   val['fhirVersion'] = instance.fhirVersion.toJson();
   writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   val['acceptUnknown'] =
-      _$ConformanceAcceptUnknownEnumMap[instance.acceptUnknown];
+      _$ConformanceAcceptUnknownEnumMap[instance.acceptUnknown]!;
   writeNotNull('_acceptUnknown', instance.acceptUnknownElement?.toJson());
   val['format'] =
-      instance.format.map((e) => _$ConformanceFormatEnumMap[e]).toList();
+      instance.format.map((e) => _$ConformanceFormatEnumMap[e]!).toList();
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
   writeNotNull('rest', instance.rest?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -359,7 +359,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
 Map<String, dynamic> _$$_CapabilityStatementToJson(
     _$_CapabilityStatement instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -391,16 +391,16 @@ Map<String, dynamic> _$$_CapabilityStatementToJson(
   writeNotNull('description', instance.description);
   writeNotNull('requirements', instance.requirements);
   writeNotNull('copyright', instance.copyright);
-  val['kind'] = _$ConformanceKindEnumMap[instance.kind];
+  val['kind'] = _$ConformanceKindEnumMap[instance.kind]!;
   writeNotNull('software', instance.software?.toJson());
   writeNotNull('implementation', instance.implementation?.toJson());
   val['fhirVersion'] = instance.fhirVersion.toJson();
   writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   val['acceptUnknown'] =
-      _$ConformanceAcceptUnknownEnumMap[instance.acceptUnknown];
+      _$ConformanceAcceptUnknownEnumMap[instance.acceptUnknown]!;
   writeNotNull('_acceptUnknown', instance.acceptUnknownElement?.toJson());
   val['format'] =
-      instance.format.map((e) => _$ConformanceFormatEnumMap[e]).toList();
+      instance.format.map((e) => _$ConformanceFormatEnumMap[e]!).toList();
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
   writeNotNull('rest', instance.rest?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -578,7 +578,7 @@ Map<String, dynamic> _$$_ConformanceRestToJson(_$_ConformanceRest instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  val['mode'] = _$RestModeEnumMap[instance.mode];
+  val['mode'] = _$RestModeEnumMap[instance.mode]!;
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('documentation', instance.documentation);
   writeNotNull('security', instance.security?.toJson());
@@ -695,7 +695,7 @@ Map<String, dynamic> _$$_ConformanceDocumentToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  val['mode'] = _$DocumentModeEnumMap[instance.mode];
+  val['mode'] = _$DocumentModeEnumMap[instance.mode]!;
   writeNotNull('documentation', instance.documentation);
   val['profile'] = instance.profile.toJson();
   return val;
@@ -906,7 +906,7 @@ Map<String, dynamic> _$$_ConformanceResourceInteractionToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['code'] = _$ResourceInteractionCodeEnumMap[instance.code];
+  val['code'] = _$ResourceInteractionCodeEnumMap[instance.code]!;
   writeNotNull('documentation', instance.documentation);
   return val;
 }
@@ -1042,7 +1042,7 @@ Map<String, dynamic> _$$_ConformanceMessagingEventToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
   writeNotNull('category', _$EventCategoryEnumMap[instance.category]);
-  val['mode'] = _$EventModeEnumMap[instance.mode];
+  val['mode'] = _$EventModeEnumMap[instance.mode]!;
   writeNotNull('_mode', instance.modeElement?.toJson());
   val['focus'] = instance.focus.toJson();
   val['request'] = instance.request.toJson();
@@ -1132,7 +1132,7 @@ Map<String, dynamic> _$$_ConformanceRestInteractionToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['code'] = _$RestInteractionCodeEnumMap[instance.code];
+  val['code'] = _$RestInteractionCodeEnumMap[instance.code]!;
   writeNotNull('documentation', instance.documentation);
   return val;
 }
@@ -1192,11 +1192,11 @@ Map<String, dynamic> _$$_ConformanceResourceSearchParamToJson(
   writeNotNull('fhir_comments', instance.fhirComments);
   val['name'] = instance.name;
   writeNotNull('definition', instance.definition?.toJson());
-  val['type'] = _$SearchParamTypeEnumMap[instance.type];
+  val['type'] = _$SearchParamTypeEnumMap[instance.type]!;
   writeNotNull('documentation', instance.documentation);
   writeNotNull('target', instance.target?.map((e) => e.toJson()).toList());
   writeNotNull('modifier',
-      instance.modifier?.map((e) => _$SearchParamModifierEnumMap[e]).toList());
+      instance.modifier?.map((e) => _$SearchParamModifierEnumMap[e]!).toList());
   writeNotNull('chain', instance.chain);
   return val;
 }
@@ -1298,7 +1298,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
 Map<String, dynamic> _$$_OperationDefinitionToJson(
     _$_OperationDefinition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1321,8 +1321,8 @@ Map<String, dynamic> _$$_OperationDefinitionToJson(
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
   val['name'] = instance.name;
-  val['status'] = _$OperationDefinitionStatusEnumMap[instance.status];
-  val['kind'] = _$OperationDefinitionKindEnumMap[instance.kind];
+  val['status'] = _$OperationDefinitionStatusEnumMap[instance.status]!;
+  val['kind'] = _$OperationDefinitionKindEnumMap[instance.kind]!;
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
@@ -1440,7 +1440,7 @@ Map<String, dynamic> _$$_OperationDefinitionParameterToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
   val['name'] = instance.name.toJson();
-  val['use'] = _$ParameterUseEnumMap[instance.use];
+  val['use'] = _$ParameterUseEnumMap[instance.use]!;
   val['min'] = instance.min.toJson();
   val['max'] = instance.max;
   writeNotNull('documentation', instance.documentation);
@@ -1499,7 +1499,7 @@ Map<String, dynamic> _$$_OperationDefinitionParameterBindingToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['strength'] =
-      _$OperationDefinitionBindingStrengthEnumMap[instance.strength];
+      _$OperationDefinitionBindingStrengthEnumMap[instance.strength]!;
   writeNotNull('valueSetUri', instance.valueSetUri?.toJson());
   writeNotNull('valueSetReference', instance.valueSetReference?.toJson());
   return val;
@@ -1574,7 +1574,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1605,7 +1605,7 @@ Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('_requirements', instance.requirementsElement?.toJson());
   val['code'] = instance.code.toJson();
   writeNotNull('base', instance.base?.toJson());
-  val['type'] = _$SearchParameterTypeEnumMap[instance.type];
+  val['type'] = _$SearchParameterTypeEnumMap[instance.type]!;
   writeNotNull('description', instance.description);
   writeNotNull('xpath', instance.xpath);
   writeNotNull(

@@ -100,6 +100,10 @@ class SmartFhirClient extends SecureFhirClient {
   /// in the context of FHIR Encounter 123.
   String? encounterId;
 
+  /// String value with an encounter id, indicating that the app was launched
+  /// in the context of FHIR Encounter 123.
+  String? practitionerId;
+
   /// Boolean value indicating whether the app was launched in a UX context
   /// where a patient banner is required (when true) or not required (when
   /// false). An app receiving a value of false should not take up screen real
@@ -117,6 +121,18 @@ class SmartFhirClient extends SecureFhirClient {
   /// Reference to a given type of resource.
 
   List<String>? fhirContext;
+
+  /// Local reference for the fhirUser
+  String? fhirUser;
+
+  /// DisplayName for the fhirUser
+  String? displayName;
+
+  /// Email for fhirUser
+  String? email;
+
+  /// Profile (which is generally the same as the fhirUser reference)
+  String? profile;
 
   ///String value describing the intent of the application launch (see notes below)
 
@@ -189,6 +205,10 @@ class SmartFhirClient extends SecureFhirClient {
       fhirContext = grant.fhirParameters['fhirContext'];
       intent = grant.fhirParameters['intent'];
       tenant = grant.fhirParameters['tenant'];
+      fhirUser = grant.fhirParameters['fhirUser'];
+      displayName = grant.fhirParameters['displayName'];
+      email = grant.fhirParameters['email'];
+      profile = grant.fhirParameters['profile'];
     } catch (e, stack) {
       log('Exception: $e');
       log('Stack: $stack');

@@ -12,19 +12,17 @@ import 'fhir_client.dart';
 
 class SecureFhirClient extends FhirClient {
   SecureFhirClient({
-    required FhirUri fhirUri,
+    required super.fhirUri,
     this.clientId,
     this.redirectUri,
     List<String>? scopes,
-    String? launch,
+    super.launch,
     this.authHeaders,
     this.secret,
   }) : super(
-          fhirUri: fhirUri,
           scopes: ['openid', 'profile', if (scopes != null) ...scopes]
               .toSet()
               .toList(),
-          launch: launch,
         );
 
   String? clientId;

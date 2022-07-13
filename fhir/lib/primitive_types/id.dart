@@ -6,10 +6,14 @@ import 'dart:convert';
 // Package imports:
 import 'package:uuid/uuid.dart' as uuid;
 import 'package:yaml/yaml.dart';
+
+// Project imports:
 import 'primitive_type_exceptions.dart';
 
 /// returns the same resource with a new ID (even if there is already an ID present)
 Id newId() => Id(const uuid.Uuid().v4());
+
+String newIdString() => const uuid.Uuid().v4();
 
 class Id {
   const Id._(this._valueString, this._valueId, this._isValid);

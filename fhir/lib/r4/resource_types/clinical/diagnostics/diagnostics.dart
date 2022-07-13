@@ -9,7 +9,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../../../r4.dart';
 
-part 'diagnostics.enums.dart';
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
@@ -17,50 +16,50 @@ part 'diagnostics.g.dart';
 class BodyStructure with Resource, _$BodyStructure {
   BodyStructure._();
 
-  /// [BodyStructure]: Record details about an anatomical structure.  This
+  /// [BodyStructure] Record details about an anatomical structure.  This
   /// resource may be used when a coded concept does not provide the necessary
   ///  detail needed for the use case.
   ///
-  /// [resourceType]: This is a BodyStructure resource
+  /// [resourceType] This is a BodyStructure resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -74,36 +73,36 @@ class BodyStructure with Resource, _$BodyStructure {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: Identifier for this instance of the anatomical structure.
+  /// [identifier] Identifier for this instance of the anatomical structure.
   ///
-  /// [active]: Whether this body site is in active use.
+  /// [active] Whether this body site is in active use.
   ///
-  /// [activeElement]: Extensions for active
+  /// [activeElement] Extensions for active
   ///
-  /// [morphology]: The kind of structure being represented by the body
+  /// [morphology] The kind of structure being represented by the body
   /// structure at `BodyStructure.location`.  This can define both normal and
   ///  abnormal morphologies.
   ///
-  /// [location]: The anatomical location or region of the specimen, lesion, or
+  /// [location] The anatomical location or region of the specimen, lesion, or
   ///  body structure.
   ///
-  /// [locationQualifier]: Qualifier to refine the anatomical location.  These
+  /// [locationQualifier] Qualifier to refine the anatomical location.  These
   /// include qualifiers for laterality, relative location, directionality,
   ///  number, and plane.
   ///
-  /// [description]: A summary, characterization or explanation of the body
+  /// [description] A summary, characterization or explanation of the body
   ///  structure.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [image]: Image or images used to identify a location.
+  /// [image] Image or images used to identify a location.
   ///
-  /// [patient]: The person to which the body site belongs.
+  /// [patient] The person to which the body site belongs.
   factory BodyStructure({
     @Default(R4ResourceType.BodyStructure)
     @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -157,53 +156,53 @@ class BodyStructure with Resource, _$BodyStructure {
 class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
 
-  /// [DiagnosticReport]: The findings and interpretation of diagnostic  tests
+  /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
   /// performed on patients, groups of patients, devices, and locations, and/or
   /// specimens derived from these. The report includes clinical context such as
   /// requesting and provider information, and some mix of atomic results,
   /// images, textual and coded interpretations, and formatted representation of
   ///  diagnostic reports.
   ///
-  /// [resourceType]: This is a DiagnosticReport resource
+  /// [resourceType] This is a DiagnosticReport resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -217,86 +216,86 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: Identifiers assigned to this report by the performer or
+  /// [identifier] Identifiers assigned to this report by the performer or
   ///  other systems.
   ///
-  /// [basedOn]: Details concerning a service requested.
+  /// [basedOn] Details concerning a service requested.
   ///
-  /// [status]: The status of the diagnostic report.
+  /// [status] The status of the diagnostic report.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [category]: A code that classifies the clinical discipline, department or
+  /// [category] A code that classifies the clinical discipline, department or
   /// diagnostic service that created the report (e.g. cardiology, biochemistry,
   /// hematology, MRI). This is used for searching, sorting and display
   ///  purposes.
   ///
-  /// [code]: A code or name that describes this diagnostic report.
+  /// [code] A code or name that describes this diagnostic report.
   ///
-  /// [subject]: The subject of the report. Usually, but not always, this is a
+  /// [subject] The subject of the report. Usually, but not always, this is a
   /// patient. However, diagnostic services also perform analyses on specimens
   ///  collected from a variety of other sources.
   ///
-  /// [encounter]: The healthcare event  (e.g. a patient and healthcare provider
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
   ///  interaction) which this DiagnosticReport is about.
   ///
-  /// [effectiveDateTime]: The time or time-period the observed values are
+  /// [effectiveDateTime] The time or time-period the observed values are
   /// related to. When the subject of the report is a patient, this is usually
   /// either the time of the procedure or of specimen collection(s), but very
   /// often the source of the date/time is not known, only the date/time
   ///  itself.
   ///
-  /// [effectiveDateTimeElement]: Extensions for effectiveDateTime
+  /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   ///
-  /// [effectivePeriod]: The time or time-period the observed values are related
+  /// [effectivePeriod] The time or time-period the observed values are related
   /// to. When the subject of the report is a patient, this is usually either
   /// the time of the procedure or of specimen collection(s), but very often the
   ///  source of the date/time is not known, only the date/time itself.
   ///
-  /// [issued]: The date and time that this version of the report was made
+  /// [issued] The date and time that this version of the report was made
   /// available to providers, typically after the report was reviewed and
   ///  verified.
   ///
-  /// [issuedElement]: Extensions for issued
+  /// [issuedElement] Extensions for issued
   ///
-  /// [performer]: The diagnostic service that is responsible for issuing the
+  /// [performer] The diagnostic service that is responsible for issuing the
   ///  report.
   ///
-  /// [resultsInterpreter]: The practitioner or organization that is responsible
+  /// [resultsInterpreter] The practitioner or organization that is responsible
   ///  for the report's conclusions and interpretations.
   ///
-  /// [specimen]: Details about the specimens on which this diagnostic report is
+  /// [specimen] Details about the specimens on which this diagnostic report is
   ///  based.
   ///
-  /// [result]: [Observations](observation.html)  that are part of this
+  /// [result] [Observations](observation.html)  that are part of this
   ///  diagnostic report.
   ///
-  /// [imagingStudy]: One or more links to full details of any imaging performed
+  /// [imagingStudy] One or more links to full details of any imaging performed
   /// during the diagnostic investigation. Typically, this is imaging performed
   /// by DICOM enabled modalities, but this is not required. A fully enabled
   /// PACS viewer can use this information to provide views of the source
   ///  images.
   ///
-  /// [media]: A list of key images associated with this report. The images are
+  /// [media] A list of key images associated with this report. The images are
   /// generally created during the diagnostic process, and may be directly of
   ///  the patient, or of treated specimens (i.e. slides of interest).
   ///
-  /// [conclusion]: Concise and clinically contextualized summary conclusion
+  /// [conclusion] Concise and clinically contextualized summary conclusion
   ///  (interpretation/impression) of the diagnostic report.
   ///
-  /// [conclusionElement]: Extensions for conclusion
+  /// [conclusionElement] Extensions for conclusion
   ///
-  /// [conclusionCode]: One or more codes that represent the summary conclusion
+  /// [conclusionCode] One or more codes that represent the summary conclusion
   ///  (interpretation/impression) of the diagnostic report.
   ///
-  /// [presentedForm]: Rich text representation of the entire result as issued
+  /// [presentedForm] Rich text representation of the entire result as issued
   /// by the diagnostic service. Multiple formats are allowed but they SHALL be
   ///  semantically equivalent.
   factory DiagnosticReport({
     @Default(R4ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -308,8 +307,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<Reference>? basedOn,
-    @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-        DiagnosticReportStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
@@ -364,24 +362,24 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 class DiagnosticReportMedia with _$DiagnosticReportMedia {
   DiagnosticReportMedia._();
 
-  /// [DiagnosticReportMedia]: The findings and interpretation of diagnostic
+  /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
   /// tests performed on patients, groups of patients, devices, and locations,
   /// and/or specimens derived from these. The report includes clinical context
   /// such as requesting and provider information, and some mix of atomic
   /// results, images, textual and coded interpretations, and formatted
   ///  representation of diagnostic reports.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -395,13 +393,13 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [comment]: A comment about the image. Typically, this is used to provide
+  /// [comment] A comment about the image. Typically, this is used to provide
   /// an explanation for why the image is included, or to draw the viewer's
   ///  attention to important features.
   ///
-  /// [commentElement]: Extensions for comment
+  /// [commentElement] Extensions for comment
   ///
-  /// [link]: Reference to the image source.
+  /// [link] Reference to the image source.
   factory DiagnosticReportMedia({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -446,53 +444,53 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
 class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
 
-  /// [ImagingStudy]: Representation of the content produced in a DICOM imaging
+  /// [ImagingStudy] Representation of the content produced in a DICOM imaging
   /// study. A study comprises a set of series, each of which includes a set of
   /// Service-Object Pair Instances (SOP Instances - images or other data)
   /// acquired or produced in a common context.  A series is of only one
   /// modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
   ///  series of different modalities.
   ///
-  /// [resourceType]: This is a ImagingStudy resource
+  /// [resourceType] This is a ImagingStudy resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -506,84 +504,84 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: Identifiers for the ImagingStudy such as DICOM Study
+  /// [identifier] Identifiers for the ImagingStudy such as DICOM Study
   ///  Instance UID, and Accession Number.
   ///
-  /// [status]: The current state of the ImagingStudy.
+  /// [status] The current state of the ImagingStudy.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [modality]: A list of all the series.modality values that are actual
+  /// [modality] A list of all the series.modality values that are actual
   /// acquisition modalities, i.e. those in the DICOM Context Group 29 (value
   ///  set OID 1.2.840.10008.6.1.19).
   ///
-  /// [subject]: The subject, typically a patient, of the imaging study.
+  /// [subject] The subject, typically a patient, of the imaging study.
   ///
-  /// [encounter]: The healthcare event (e.g. a patient and healthcare provider
+  /// [encounter] The healthcare event (e.g. a patient and healthcare provider
   ///  interaction) during which this ImagingStudy is made.
   ///
-  /// [started]: Date and time the study started.
+  /// [started] Date and time the study started.
   ///
-  /// [startedElement]: Extensions for started
+  /// [startedElement] Extensions for started
   ///
-  /// [basedOn]: A list of the diagnostic requests that resulted in this imaging
+  /// [basedOn] A list of the diagnostic requests that resulted in this imaging
   ///  study being performed.
   ///
-  /// [referrer]: The requesting/referring physician.
+  /// [referrer] The requesting/referring physician.
   ///
-  /// [interpreter]: Who read the study and interpreted the images or other
+  /// [interpreter] Who read the study and interpreted the images or other
   ///  content.
   ///
-  /// [endpoint]: The network service providing access (e.g., query, view, or
+  /// [endpoint] The network service providing access (e.g., query, view, or
   /// retrieval) for the study. See implementation notes for information about
   /// using DICOM endpoints. A study-level endpoint applies to each series in
   /// the study, unless overridden by a series-level endpoint with the same
   ///  Endpoint.connectionType.
   ///
-  /// [numberOfSeries]: Number of Series in the Study. This value given may be
+  /// [numberOfSeries] Number of Series in the Study. This value given may be
   /// larger than the number of series elements this Resource contains due to
   /// resource availability, security, or other factors. This element should be
   ///  present if any series elements are present.
   ///
-  /// [numberOfSeriesElement]: Extensions for numberOfSeries
+  /// [numberOfSeriesElement] Extensions for numberOfSeries
   ///
-  /// [numberOfInstances]: Number of SOP Instances in Study. This value given
+  /// [numberOfInstances] Number of SOP Instances in Study. This value given
   /// may be larger than the number of instance elements this resource contains
   /// due to resource availability, security, or other factors. This element
   ///  should be present if any instance elements are present.
   ///
-  /// [numberOfInstancesElement]: Extensions for numberOfInstances
+  /// [numberOfInstancesElement] Extensions for numberOfInstances
   ///
-  /// [procedureReference]: The procedure which this ImagingStudy was part of.
+  /// [procedureReference] The procedure which this ImagingStudy was part of.
   ///
-  /// [procedureCode]: The code for the performed procedure type.
+  /// [procedureCode] The code for the performed procedure type.
   ///
-  /// [location]: The principal physical location where the ImagingStudy was
+  /// [location] The principal physical location where the ImagingStudy was
   ///  performed.
   ///
-  /// [reasonCode]: Description of clinical condition indicating why the
+  /// [reasonCode] Description of clinical condition indicating why the
   ///  ImagingStudy was requested.
   ///
-  /// [reasonReference]: Indicates another resource whose existence justifies
+  /// [reasonReference] Indicates another resource whose existence justifies
   ///  this Study.
   ///
-  /// [note]: Per the recommended DICOM mapping, this element is derived from
+  /// [note] Per the recommended DICOM mapping, this element is derived from
   /// the Study Description attribute (0008,1030). Observations or findings
   /// about the imaging study should be recorded in another resource, e.g.
   ///  Observation, and not in this element.
   ///
-  /// [description]: The Imaging Manager description of the study.
+  /// [description] The Imaging Manager description of the study.
   /// Institution-generated description or classification of the Study
   ///  (component) performed.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [series]: Each study has one or more series of images or other content.
+  /// [series] Each study has one or more series of images or other content.
   factory ImagingStudy({
     @Default(R4ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -594,8 +592,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-        ImagingStudyStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Coding>? modality,
     required Reference subject,
@@ -653,24 +650,24 @@ class ImagingStudy with Resource, _$ImagingStudy {
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
 
-  /// [ImagingStudySeries]: Representation of the content produced in a DICOM
+  /// [ImagingStudySeries] Representation of the content produced in a DICOM
   /// imaging study. A study comprises a set of series, each of which includes a
   /// set of Service-Object Pair Instances (SOP Instances - images or other
   /// data) acquired or produced in a common context.  A series is of only one
   /// modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
   ///  series of different modalities.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -684,54 +681,54 @@ class ImagingStudySeries with _$ImagingStudySeries {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [uid]: The DICOM Series Instance UID for the series.
+  /// [uid] The DICOM Series Instance UID for the series.
   ///
-  /// [uidElement]: Extensions for uid
+  /// [uidElement] Extensions for uid
   ///
-  /// [number]: The numeric identifier of this series in the study.
+  /// [number] The numeric identifier of this series in the study.
   ///
-  /// [numberElement]: Extensions for number
+  /// [numberElement] Extensions for number
   ///
-  /// [modality]: The modality of this series sequence.
+  /// [modality] The modality of this series sequence.
   ///
-  /// [description]: A description of the series.
+  /// [description] A description of the series.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [numberOfInstances]: Number of SOP Instances in the Study. The value given
+  /// [numberOfInstances] Number of SOP Instances in the Study. The value given
   /// may be larger than the number of instance elements this resource contains
   /// due to resource availability, security, or other factors. This element
   ///  should be present if any instance elements are present.
   ///
-  /// [numberOfInstancesElement]: Extensions for numberOfInstances
+  /// [numberOfInstancesElement] Extensions for numberOfInstances
   ///
-  /// [endpoint]: The network service providing access (e.g., query, view, or
+  /// [endpoint] The network service providing access (e.g., query, view, or
   /// retrieval) for this series. See implementation notes for information about
   /// using DICOM endpoints. A series-level endpoint, if present, has precedence
   ///  over a study-level endpoint with the same Endpoint.connectionType.
   ///
-  /// [bodySite]: The anatomic structures examined. See DICOM Part 16 Annex L
+  /// [bodySite] The anatomic structures examined. See DICOM Part 16 Annex L
   /// (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM
   /// to SNOMED-CT mappings. The bodySite may indicate the laterality of body
   /// part imaged; if so, it shall be consistent with any content of
   ///  ImagingStudy.series.laterality.
   ///
-  /// [laterality]: The laterality of the (possibly paired) anatomic structures
+  /// [laterality] The laterality of the (possibly paired) anatomic structures
   /// examined. E.g., the left knee, both lungs, or unpaired abdomen. If
   /// present, shall be consistent with any laterality information indicated in
   ///  ImagingStudy.series.bodySite.
   ///
-  /// [specimen]: The specimen imaged, e.g., for whole slide imaging of a
+  /// [specimen] The specimen imaged, e.g., for whole slide imaging of a
   ///  biopsy.
   ///
-  /// [started]: The date and time the series was started.
+  /// [started] The date and time the series was started.
   ///
-  /// [startedElement]: Extensions for started
+  /// [startedElement] Extensions for started
   ///
-  /// [performer]: Indicates who or what performed the series and how they were
+  /// [performer] Indicates who or what performed the series and how they were
   ///  involved.
   ///
-  /// [instance]: A single SOP instance within the series, e.g. an image, or
+  /// [instance] A single SOP instance within the series, e.g. an image, or
   ///  presentation state.
   factory ImagingStudySeries({
     String? id,
@@ -791,24 +788,24 @@ class ImagingStudySeries with _$ImagingStudySeries {
 class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ImagingStudyPerformer._();
 
-  /// [ImagingStudyPerformer]: Representation of the content produced in a
+  /// [ImagingStudyPerformer] Representation of the content produced in a
   /// DICOM imaging study. A study comprises a set of series, each of which
   /// includes a set of Service-Object Pair Instances (SOP Instances - images or
   /// other data) acquired or produced in a common context.  A series is of only
   /// one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have
   ///  multiple series of different modalities.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -822,10 +819,10 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [function]: Distinguishes the type of involvement of the performer in the
+  /// [function] Distinguishes the type of involvement of the performer in the
   ///  series.
   ///
-  /// [actor]: Indicates who or what performed the series.
+  /// [actor] Indicates who or what performed the series.
   factory ImagingStudyPerformer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -869,24 +866,24 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
 class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
 
-  /// [ImagingStudyInstance]: Representation of the content produced in a DICOM
+  /// [ImagingStudyInstance] Representation of the content produced in a DICOM
   /// imaging study. A study comprises a set of series, each of which includes a
   /// set of Service-Object Pair Instances (SOP Instances - images or other
   /// data) acquired or produced in a common context.  A series is of only one
   /// modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
   ///  series of different modalities.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -900,19 +897,19 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [uid]: The DICOM SOP Instance UID for this image or other DICOM content.
+  /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
   ///
-  /// [uidElement]: Extensions for uid
+  /// [uidElement] Extensions for uid
   ///
-  /// [sopClass]: DICOM instance  type.
+  /// [sopClass] DICOM instance  type.
   ///
-  /// [number]: The number of instance in the series.
+  /// [number] The number of instance in the series.
   ///
-  /// [numberElement]: Extensions for number
+  /// [numberElement] Extensions for number
   ///
-  /// [title]: The description of the instance.
+  /// [title] The description of the instance.
   ///
-  /// [titleElement]: Extensions for title
+  /// [titleElement] Extensions for title
   factory ImagingStudyInstance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -961,50 +958,50 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
 class Media with Resource, _$Media {
   Media._();
 
-  /// [Media]: A photo, video, or audio recording acquired or used in
+  /// [Media] A photo, video, or audio recording acquired or used in
   /// healthcare. The actual content may be inline or provided by direct
   ///  reference.
   ///
-  /// [resourceType]: This is a Media resource
+  /// [resourceType] This is a Media resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -1018,91 +1015,91 @@ class Media with Resource, _$Media {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: Identifiers associated with the image - these may include
+  /// [identifier] Identifiers associated with the image - these may include
   /// identifiers for the image itself, identifiers for the context of its
   /// collection (e.g. series ids) and context ids such as accession numbers or
   ///  other workflow identifiers.
   ///
-  /// [basedOn]: A procedure that is fulfilled in whole or in part by the
+  /// [basedOn] A procedure that is fulfilled in whole or in part by the
   ///  creation of this media.
   ///
-  /// [partOf]: A larger event of which this particular event is a component or
+  /// [partOf] A larger event of which this particular event is a component or
   ///  step.
   ///
-  /// [status]: The current state of the {{title}}.
+  /// [status] The current state of the {{title}}.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [type]: A code that classifies whether the media is an image, video or
+  /// [type] A code that classifies whether the media is an image, video or
   ///  audio recording or some other media category.
   ///
-  /// [modality]: Details of the type of the media - usually, how it was
+  /// [modality] Details of the type of the media - usually, how it was
   /// acquired (what type of device). If images sourced from a DICOM system, are
   ///  wrapped in a Media resource, then this is the modality.
   ///
-  /// [view]: The name of the imaging view e.g. Lateral or Antero-posterior
+  /// [view] The name of the imaging view e.g. Lateral or Antero-posterior
   ///  (AP).
   ///
-  /// [subject]: Who/What this Media is a record of.
+  /// [subject] Who/What this Media is a record of.
   ///
-  /// [encounter]: The encounter that establishes the context for this media.
+  /// [encounter] The encounter that establishes the context for this media.
   ///
-  /// [createdDateTime]: The date and time(s) at which the media was collected.
+  /// [createdDateTime] The date and time(s) at which the media was collected.
   ///
-  /// [createdDateTimeElement]: Extensions for createdDateTime
+  /// [createdDateTimeElement] Extensions for createdDateTime
   ///
-  /// [createdPeriod]: The date and time(s) at which the media was collected.
+  /// [createdPeriod] The date and time(s) at which the media was collected.
   ///
-  /// [issued]: The date and time this version of the media was made available
+  /// [issued] The date and time this version of the media was made available
   ///  to providers, typically after having been reviewed.
   ///
-  /// [issuedElement]: Extensions for issued
+  /// [issuedElement] Extensions for issued
   ///
-  /// [operator]: The person who administered the collection of the image.
+  /// [operator] The person who administered the collection of the image.
   ///
-  /// [reasonCode]: Describes why the event occurred in coded or textual form.
+  /// [reasonCode] Describes why the event occurred in coded or textual form.
   ///
-  /// [bodySite]: Indicates the site on the subject's body where the observation
+  /// [bodySite] Indicates the site on the subject's body where the observation
   ///  was made (i.e. the target site).
   ///
-  /// [deviceName]: The name of the device / manufacturer of the device  that
+  /// [deviceName] The name of the device / manufacturer of the device  that
   ///  was used to make the recording.
   ///
-  /// [deviceNameElement]: Extensions for deviceName
+  /// [deviceNameElement] Extensions for deviceName
   ///
-  /// [device]: The device used to collect the media.
+  /// [device] The device used to collect the media.
   ///
-  /// [height]: Height of the image in pixels (photo/video).
+  /// [height] Height of the image in pixels (photo/video).
   ///
-  /// [heightElement]: Extensions for height
+  /// [heightElement] Extensions for height
   ///
-  /// [width]: Width of the image in pixels (photo/video).
+  /// [width] Width of the image in pixels (photo/video).
   ///
-  /// [widthElement]: Extensions for width
+  /// [widthElement] Extensions for width
   ///
-  /// [frames]: The number of frames in a photo. This is used with a multi-page
+  /// [frames] The number of frames in a photo. This is used with a multi-page
   /// fax, or an imaging acquisition context that takes multiple slices in a
   /// single image, or an animated gif. If there is more than one frame, this
   /// SHALL have a value in order to alert interface software that a multi-frame
   ///  capable rendering widget is required.
   ///
-  /// [framesElement]: Extensions for frames
+  /// [framesElement] Extensions for frames
   ///
-  /// [duration]: The duration of the recording in seconds - for audio and
+  /// [duration] The duration of the recording in seconds - for audio and
   ///  video.
   ///
-  /// [durationElement]: Extensions for duration
+  /// [durationElement] Extensions for duration
   ///
-  /// [content]: The actual content of the media - inline or by direct reference
+  /// [content] The actual content of the media - inline or by direct reference
   ///  to the media source file.
   ///
-  /// [note]: Comments made about the media by the performer, subject or other
+  /// [note] Comments made about the media by the performer, subject or other
   ///  participants.
   factory Media({
     @Default(R4ResourceType.Media)
     @JsonKey(unknownEnumValue: R4ResourceType.Media)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1175,48 +1172,48 @@ class Media with Resource, _$Media {
 class MolecularSequence with Resource, _$MolecularSequence {
   MolecularSequence._();
 
-  /// [MolecularSequence]: Raw data describing a biological sequence.
+  /// [MolecularSequence] Raw data describing a biological sequence.
   ///
-  /// [resourceType]: This is a MolecularSequence resource
+  /// [resourceType] This is a MolecularSequence resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -1230,69 +1227,69 @@ class MolecularSequence with Resource, _$MolecularSequence {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: A unique identifier for this particular sequence instance.
+  /// [identifier] A unique identifier for this particular sequence instance.
   ///  This is a FHIR-defined id.
   ///
-  /// [type]: Amino Acid Sequence/ DNA Sequence / RNA Sequence.
+  /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [coordinateSystem]: Whether the sequence is numbered starting at 0
+  /// [coordinateSystem] Whether the sequence is numbered starting at 0
   /// (0-based numbering or coordinates, inclusive start, exclusive end) or
   ///  starting at 1 (1-based numbering, inclusive start and inclusive end).
   ///
-  /// [coordinateSystemElement]: Extensions for coordinateSystem
+  /// [coordinateSystemElement] Extensions for coordinateSystem
   ///
-  /// [patient]: The patient whose sequencing results are described by this
+  /// [patient] The patient whose sequencing results are described by this
   ///  resource.
   ///
-  /// [specimen]: Specimen used for sequencing.
+  /// [specimen] Specimen used for sequencing.
   ///
-  /// [device]: The method for sequencing, for example, chip information.
+  /// [device] The method for sequencing, for example, chip information.
   ///
-  /// [performer]: The organization or lab that should be responsible for this
+  /// [performer] The organization or lab that should be responsible for this
   ///  result.
   ///
-  /// [quantity]: The number of copies of the sequence of interest. (RNASeq).
+  /// [quantity] The number of copies of the sequence of interest. (RNASeq).
   ///
-  /// [referenceSeq]: A sequence that is used as a reference to describe
+  /// [referenceSeq] A sequence that is used as a reference to describe
   ///  variants that are present in a sequence analyzed.
   ///
-  /// [variant]: The definition of variant here originates from Sequence
+  /// [variant] The definition of variant here originates from Sequence
   /// ontology
   /// ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This
   /// element can represent amino acid or nucleic sequence change(including
   /// insertion,deletion,SNP,etc.)  It can represent some complex mutation or
   ///  segment variation with the assist of CIGAR string.
   ///
-  /// [observedSeq]: Sequence that was observed. It is the result marked by
+  /// [observedSeq] Sequence that was observed. It is the result marked by
   /// referenceSeq along with variant records on referenceSeq. This shall start
   ///  from referenceSeq.windowStart and end by referenceSeq.windowEnd.
   ///
-  /// [observedSeqElement]: Extensions for observedSeq
+  /// [observedSeqElement] Extensions for observedSeq
   ///
-  /// [quality]: An experimental feature attribute that defines the quality of
+  /// [quality] An experimental feature attribute that defines the quality of
   /// the feature in a quantitative way, such as a phred quality score
   /// ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
   ///
-  /// [readCoverage]: Coverage (read depth or depth) is the average number of
+  /// [readCoverage] Coverage (read depth or depth) is the average number of
   ///  reads representing a given nucleotide in the reconstructed sequence.
   ///
-  /// [readCoverageElement]: Extensions for readCoverage
+  /// [readCoverageElement] Extensions for readCoverage
   ///
-  /// [repository]: Configurations of the external repository. The repository
+  /// [repository] Configurations of the external repository. The repository
   /// shall store target's observedSeq or records related with target's
   ///  observedSeq.
   ///
-  /// [pointer]: Pointer to next atomic sequence which at most contains one
+  /// [pointer] Pointer to next atomic sequence which at most contains one
   ///  variant.
   ///
-  /// [structureVariant]: Information about chromosome structure variation.
+  /// [structureVariant] Information about chromosome structure variation.
   factory MolecularSequence({
     @Default(R4ResourceType.MolecularSequence)
     @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1303,8 +1300,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-        MolecularSequenceType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Integer? coordinateSystem,
     @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,
@@ -1357,20 +1353,20 @@ class MolecularSequence with Resource, _$MolecularSequence {
 class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   MolecularSequenceReferenceSeq._();
 
-  /// [MolecularSequenceReferenceSeq]: Raw data describing a biological
+  /// [MolecularSequenceReferenceSeq] Raw data describing a biological
   ///  sequence.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1384,54 +1380,54 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [chromosome]: Structural unit composed of a nucleic acid molecule which
+  /// [chromosome] Structural unit composed of a nucleic acid molecule which
   /// controls its own replication through the interaction of specific proteins
   /// at one or more origins of replication
   /// ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).
   ///
-  /// [genomeBuild]: The Genome Build used for reference, following GRCh build
+  /// [genomeBuild] The Genome Build used for reference, following GRCh build
   /// versions e.g. 'GRCh 37'.  Version number must be included if a versioned
   ///  release of a primary build was used.
   ///
-  /// [genomeBuildElement]: Extensions for genomeBuild
+  /// [genomeBuildElement] Extensions for genomeBuild
   ///
-  /// [orientation]: A relative reference to a DNA strand based on gene
+  /// [orientation] A relative reference to a DNA strand based on gene
   /// orientation. The strand that contains the open reading frame of the gene
   /// is the "sense" strand, and the opposite complementary strand is the
   ///  "antisense" strand.
   ///
-  /// [orientationElement]: Extensions for orientation
+  /// [orientationElement] Extensions for orientation
   ///
-  /// [referenceSeqId]: Reference identifier of reference sequence submitted to
+  /// [referenceSeqId] Reference identifier of reference sequence submitted to
   /// NCBI. It must match the type in the MolecularSequence.type field. For
   /// example, the prefix, “NG_” identifies reference sequence for genes, “NM_”
   ///  for messenger RNA transcripts, and “NP_” for amino acid sequences.
   ///
-  /// [referenceSeqPointer]: A pointer to another MolecularSequence entity as
+  /// [referenceSeqPointer] A pointer to another MolecularSequence entity as
   ///  reference sequence.
   ///
-  /// [referenceSeqString]: A string like "ACGT".
+  /// [referenceSeqString] A string like "ACGT".
   ///
-  /// [referenceSeqStringElement]: Extensions for referenceSeqString
+  /// [referenceSeqStringElement] Extensions for referenceSeqString
   ///
-  /// [strand]: An absolute reference to a strand. The Watson strand is the
+  /// [strand] An absolute reference to a strand. The Watson strand is the
   /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
   ///  strand as the one whose 5'-end is on the long arm.
   ///
-  /// [strandElement]: Extensions for strand
+  /// [strandElement] Extensions for strand
   ///
-  /// [windowStart]: Start position of the window on the reference sequence. If
+  /// [windowStart] Start position of the window on the reference sequence. If
   /// the coordinate system is either 0-based or 1-based, then start position is
   ///  inclusive.
   ///
-  /// [windowStartElement]: Extensions for windowStart
+  /// [windowStartElement] Extensions for windowStart
   ///
-  /// [windowEnd]: End position of the window on the reference sequence. If the
+  /// [windowEnd] End position of the window on the reference sequence. If the
   /// coordinate system is 0-based then end is exclusive and does not include
   /// the last position. If the coordinate system is 1-base, then end is
   ///  inclusive and includes the last position.
   ///
-  /// [windowEndElement]: Extensions for windowEnd
+  /// [windowEndElement] Extensions for windowEnd
   factory MolecularSequenceReferenceSeq({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1439,15 +1435,13 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     CodeableConcept? chromosome,
     String? genomeBuild,
     @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
-    @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-        MolecularSequenceReferenceSeqOrientation? orientation,
+    Code? orientation,
     @JsonKey(name: '_orientation') Element? orientationElement,
     CodeableConcept? referenceSeqId,
     Reference? referenceSeqPointer,
     String? referenceSeqString,
     @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
-    @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-        MolecularSequenceReferenceSeqStrand? strand,
+    Code? strand,
     @JsonKey(name: '_strand') Element? strandElement,
     Integer? windowStart,
     @JsonKey(name: '_windowStart') Element? windowStartElement,
@@ -1490,19 +1484,19 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
 class MolecularSequenceVariant with _$MolecularSequenceVariant {
   MolecularSequenceVariant._();
 
-  /// [MolecularSequenceVariant]: Raw data describing a biological sequence.
+  /// [MolecularSequenceVariant] Raw data describing a biological sequence.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1516,20 +1510,20 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [start]: Start position of the variant on the  reference sequence. If the
+  /// [start] Start position of the variant on the  reference sequence. If the
   /// coordinate system is either 0-based or 1-based, then start position is
   ///  inclusive.
   ///
-  /// [startElement]: Extensions for start
+  /// [startElement] Extensions for start
   ///
-  /// [end]: End position of the variant on the reference sequence. If the
+  /// [end] End position of the variant on the reference sequence. If the
   /// coordinate system is 0-based then end is exclusive and does not include
   /// the last position. If the coordinate system is 1-base, then end is
   ///  inclusive and includes the last position.
   ///
-  /// [endElement]: Extensions for end
+  /// [endElement] Extensions for end
   ///
-  /// [observedAllele]: An allele is one of a set of coexisting sequence
+  /// [observedAllele] An allele is one of a set of coexisting sequence
   /// variants of a gene
   /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
   /// Nucleotide(s)/amino acids from start position of sequence to stop position
@@ -1537,9 +1531,9 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   /// sequence  type is DNA, it should be the sequence on the positive (+)
   ///  strand. This will lay in the range between variant.start and variant.end.
   ///
-  /// [observedAlleleElement]: Extensions for observedAllele
+  /// [observedAlleleElement] Extensions for observedAllele
   ///
-  /// [referenceAllele]: An allele is one of a set of coexisting sequence
+  /// [referenceAllele] An allele is one of a set of coexisting sequence
   /// variants of a gene
   /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
   /// Nucleotide(s)/amino acids from start position of sequence to stop position
@@ -1547,15 +1541,15 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   /// sequence  type is DNA, it should be the sequence on the positive (+)
   ///  strand. This will lay in the range between variant.start and variant.end.
   ///
-  /// [referenceAlleleElement]: Extensions for referenceAllele
+  /// [referenceAlleleElement] Extensions for referenceAllele
   ///
-  /// [cigar]: Extended CIGAR string for aligning the sequence with reference
+  /// [cigar] Extended CIGAR string for aligning the sequence with reference
   /// bases. See detailed documentation
   /// [here](http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).
   ///
-  /// [cigarElement]: Extensions for cigar
+  /// [cigarElement] Extensions for cigar
   ///
-  /// [variantPointer]: A pointer to an Observation containing variant
+  /// [variantPointer] A pointer to an Observation containing variant
   ///  information.
   factory MolecularSequenceVariant({
     String? id,
@@ -1609,19 +1603,19 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
 class MolecularSequenceQuality with _$MolecularSequenceQuality {
   MolecularSequenceQuality._();
 
-  /// [MolecularSequenceQuality]: Raw data describing a biological sequence.
+  /// [MolecularSequenceQuality] Raw data describing a biological sequence.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1635,87 +1629,86 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [type]: INDEL / SNP / Undefined variant.
+  /// [type] INDEL / SNP / Undefined variant.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [standardSequence]: Gold standard sequence used for comparing against.
+  /// [standardSequence] Gold standard sequence used for comparing against.
   ///
-  /// [start]: Start position of the sequence. If the coordinate system is
+  /// [start] Start position of the sequence. If the coordinate system is
   ///  either 0-based or 1-based, then start position is inclusive.
   ///
-  /// [startElement]: Extensions for start
+  /// [startElement] Extensions for start
   ///
-  /// [end]: End position of the sequence. If the coordinate system is 0-based
+  /// [end] End position of the sequence. If the coordinate system is 0-based
   /// then end is exclusive and does not include the last position. If the
   /// coordinate system is 1-base, then end is inclusive and includes the last
   ///  position.
   ///
-  /// [endElement]: Extensions for end
+  /// [endElement] Extensions for end
   ///
-  /// [score]: The score of an experimentally derived feature such as a p-value
+  /// [score] The score of an experimentally derived feature such as a p-value
   /// ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
   ///
-  /// [method]: Which method is used to get sequence quality.
+  /// [method] Which method is used to get sequence quality.
   ///
-  /// [truthTP]: True positives, from the perspective of the truth data, i.e.
+  /// [truthTP] True positives, from the perspective of the truth data, i.e.
   /// the number of sites in the Truth Call Set for which there are paths
   /// through the Query Call Set that are consistent with all of the alleles at
   /// this site, and for which there is an accurate genotype call for the
   ///  event.
   ///
-  /// [truthTPElement]: Extensions for truthTP
+  /// [truthTPElement] Extensions for truthTP
   ///
-  /// [queryTP]: True positives, from the perspective of the query data, i.e.
+  /// [queryTP] True positives, from the perspective of the query data, i.e.
   /// the number of sites in the Query Call Set for which there are paths
   /// through the Truth Call Set that are consistent with all of the alleles at
   /// this site, and for which there is an accurate genotype call for the
   ///  event.
   ///
-  /// [queryTPElement]: Extensions for queryTP
+  /// [queryTPElement] Extensions for queryTP
   ///
-  /// [truthFN]: False negatives, i.e. the number of sites in the Truth Call Set
+  /// [truthFN] False negatives, i.e. the number of sites in the Truth Call Set
   /// for which there is no path through the Query Call Set that is consistent
   /// with all of the alleles at this site, or sites for which there is an
   /// inaccurate genotype call for the event. Sites with correct variant but
   ///  incorrect genotype are counted here.
   ///
-  /// [truthFNElement]: Extensions for truthFN
+  /// [truthFNElement] Extensions for truthFN
   ///
-  /// [queryFP]: False positives, i.e. the number of sites in the Query Call Set
+  /// [queryFP] False positives, i.e. the number of sites in the Query Call Set
   /// for which there is no path through the Truth Call Set that is consistent
   /// with this site. Sites with correct variant but incorrect genotype are
   ///  counted here.
   ///
-  /// [queryFPElement]: Extensions for queryFP
+  /// [queryFPElement] Extensions for queryFP
   ///
-  /// [gtFP]: The number of false positives where the non-REF alleles in the
+  /// [gtFP] The number of false positives where the non-REF alleles in the
   /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
   ///  query is 0/1 or similar).
   ///
-  /// [gtFPElement]: Extensions for gtFP
+  /// [gtFPElement] Extensions for gtFP
   ///
-  /// [precision]: QUERY.TP / (QUERY.TP + QUERY.FP).
+  /// [precision] QUERY.TP / (QUERY.TP + QUERY.FP).
   ///
-  /// [precisionElement]: Extensions for precision
+  /// [precisionElement] Extensions for precision
   ///
-  /// [recall]: TRUTH.TP / (TRUTH.TP + TRUTH.FN).
+  /// [recall] TRUTH.TP / (TRUTH.TP + TRUTH.FN).
   ///
-  /// [recallElement]: Extensions for recall
+  /// [recallElement] Extensions for recall
   ///
-  /// [fScore]: Harmonic mean of Recall and Precision, computed as: 2 *
+  /// [fScore] Harmonic mean of Recall and Precision, computed as: 2 *
   ///  precision * recall / (precision + recall).
   ///
-  /// [fScoreElement]: Extensions for fScore
+  /// [fScoreElement] Extensions for fScore
   ///
-  /// [roc]: Receiver Operator Characteristic (ROC) Curve  to give
+  /// [roc] Receiver Operator Characteristic (ROC) Curve  to give
   ///  sensitivity/specificity tradeoff.
   factory MolecularSequenceQuality({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-        MolecularSequenceQualityType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? standardSequence,
     Integer? start,
@@ -1778,19 +1771,19 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
 class MolecularSequenceRoc with _$MolecularSequenceRoc {
   MolecularSequenceRoc._();
 
-  /// [MolecularSequenceRoc]: Raw data describing a biological sequence.
+  /// [MolecularSequenceRoc] Raw data describing a biological sequence.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1804,40 +1797,40 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [score]: Invidual data point representing the GQ (genotype quality) score
+  /// [score] Invidual data point representing the GQ (genotype quality) score
   ///  threshold.
   ///
-  /// [scoreElement]: Extensions for score
+  /// [scoreElement] Extensions for score
   ///
-  /// [numTP]: The number of true positives if the GQ score threshold was set to
+  /// [numTP] The number of true positives if the GQ score threshold was set to
   ///  "score" field value.
   ///
-  /// [numTPElement]: Extensions for numTP
+  /// [numTPElement] Extensions for numTP
   ///
-  /// [numFP]: The number of false positives if the GQ score threshold was set
+  /// [numFP] The number of false positives if the GQ score threshold was set
   ///  to "score" field value.
   ///
-  /// [numFPElement]: Extensions for numFP
+  /// [numFPElement] Extensions for numFP
   ///
-  /// [numFN]: The number of false negatives if the GQ score threshold was set
+  /// [numFN] The number of false negatives if the GQ score threshold was set
   ///  to "score" field value.
   ///
-  /// [numFNElement]: Extensions for numFN
+  /// [numFNElement] Extensions for numFN
   ///
-  /// [precision]: Calculated precision if the GQ score threshold was set to
+  /// [precision] Calculated precision if the GQ score threshold was set to
   ///  "score" field value.
   ///
-  /// [precisionElement]: Extensions for precision
+  /// [precisionElement] Extensions for precision
   ///
-  /// [sensitivity]: Calculated sensitivity if the GQ score threshold was set to
+  /// [sensitivity] Calculated sensitivity if the GQ score threshold was set to
   ///  "score" field value.
   ///
-  /// [sensitivityElement]: Extensions for sensitivity
+  /// [sensitivityElement] Extensions for sensitivity
   ///
-  /// [fMeasure]: Calculated fScore if the GQ score threshold was set to "score"
+  /// [fMeasure] Calculated fScore if the GQ score threshold was set to "score"
   ///  field value.
   ///
-  /// [fMeasureElement]: Extensions for fMeasure
+  /// [fMeasureElement] Extensions for fMeasure
   factory MolecularSequenceRoc({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1893,19 +1886,19 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
 class MolecularSequenceRepository with _$MolecularSequenceRepository {
   MolecularSequenceRepository._();
 
-  /// [MolecularSequenceRepository]: Raw data describing a biological sequence.
+  /// [MolecularSequenceRepository] Raw data describing a biological sequence.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1919,42 +1912,41 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [type]: Click and see / RESTful API / Need login to see / RESTful API with
+  /// [type] Click and see / RESTful API / Need login to see / RESTful API with
   ///  authentication / Other ways to see resource.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [url]: URI of an external repository which contains further details about
+  /// [url] URI of an external repository which contains further details about
   ///  the genetics data.
   ///
-  /// [urlElement]: Extensions for url
+  /// [urlElement] Extensions for url
   ///
-  /// [name]: URI of an external repository which contains further details about
+  /// [name] URI of an external repository which contains further details about
   ///  the genetics data.
   ///
-  /// [nameElement]: Extensions for name
+  /// [nameElement] Extensions for name
   ///
-  /// [datasetId]: Id of the variant in this external repository. The server
+  /// [datasetId] Id of the variant in this external repository. The server
   /// will understand how to use this id to call for more info about datasets in
   ///  external repository.
   ///
-  /// [datasetIdElement]: Extensions for datasetId
+  /// [datasetIdElement] Extensions for datasetId
   ///
-  /// [variantsetId]: Id of the variantset in this external repository. The
+  /// [variantsetId] Id of the variantset in this external repository. The
   /// server will understand how to use this id to call for more info about
   ///  variantsets in external repository.
   ///
-  /// [variantsetIdElement]: Extensions for variantsetId
+  /// [variantsetIdElement] Extensions for variantsetId
   ///
-  /// [readsetId]: Id of the read in this external repository.
+  /// [readsetId] Id of the read in this external repository.
   ///
-  /// [readsetIdElement]: Extensions for readsetId
+  /// [readsetIdElement] Extensions for readsetId
   factory MolecularSequenceRepository({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-        MolecularSequenceRepositoryType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -2004,20 +1996,20 @@ class MolecularSequenceStructureVariant
     with _$MolecularSequenceStructureVariant {
   MolecularSequenceStructureVariant._();
 
-  /// [MolecularSequenceStructureVariant]: Raw data describing a biological
+  /// [MolecularSequenceStructureVariant] Raw data describing a biological
   ///  sequence.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -2031,21 +2023,21 @@ class MolecularSequenceStructureVariant
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [variantType]: Information about chromosome structure variation DNA change
+  /// [variantType] Information about chromosome structure variation DNA change
   ///  type.
   ///
-  /// [exact]: Used to indicate if the outer and inner start-end values have the
+  /// [exact] Used to indicate if the outer and inner start-end values have the
   ///  same meaning.
   ///
-  /// [exactElement]: Extensions for exact
+  /// [exactElement] Extensions for exact
   ///
-  /// [length]: Length of the variant chromosome.
+  /// [length] Length of the variant chromosome.
   ///
-  /// [lengthElement]: Extensions for length
+  /// [lengthElement] Extensions for length
   ///
-  /// [outer]: Structural variant outer.
+  /// [outer] Structural variant outer.
   ///
-  /// [inner]: Structural variant inner.
+  /// [inner] Structural variant inner.
   factory MolecularSequenceStructureVariant({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2083,19 +2075,19 @@ class MolecularSequenceStructureVariant
 class MolecularSequenceOuter with _$MolecularSequenceOuter {
   MolecularSequenceOuter._();
 
-  /// [MolecularSequenceOuter]: Raw data describing a biological sequence.
+  /// [MolecularSequenceOuter] Raw data describing a biological sequence.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -2109,17 +2101,17 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [start]: Structural variant outer start. If the coordinate system is
+  /// [start] Structural variant outer start. If the coordinate system is
   ///  either 0-based or 1-based, then start position is inclusive.
   ///
-  /// [startElement]: Extensions for start
+  /// [startElement] Extensions for start
   ///
-  /// [end]: Structural variant outer end. If the coordinate system is 0-based
+  /// [end] Structural variant outer end. If the coordinate system is 0-based
   /// then end is exclusive and does not include the last position. If the
   /// coordinate system is 1-base, then end is inclusive and includes the last
   ///  position.
   ///
-  /// [endElement]: Extensions for end
+  /// [endElement] Extensions for end
   factory MolecularSequenceOuter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2165,19 +2157,19 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
 class MolecularSequenceInner with _$MolecularSequenceInner {
   MolecularSequenceInner._();
 
-  /// [MolecularSequenceInner]: Raw data describing a biological sequence.
+  /// [MolecularSequenceInner] Raw data describing a biological sequence.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -2191,17 +2183,17 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [start]: Structural variant inner start. If the coordinate system is
+  /// [start] Structural variant inner start. If the coordinate system is
   ///  either 0-based or 1-based, then start position is inclusive.
   ///
-  /// [startElement]: Extensions for start
+  /// [startElement] Extensions for start
   ///
-  /// [end]: Structural variant inner end. If the coordinate system is 0-based
+  /// [end] Structural variant inner end. If the coordinate system is 0-based
   /// then end is exclusive and does not include the last position. If the
   /// coordinate system is 1-base, then end is inclusive and includes the last
   ///  position.
   ///
-  /// [endElement]: Extensions for end
+  /// [endElement] Extensions for end
   factory MolecularSequenceInner({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2247,49 +2239,49 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
 class Observation with Resource, _$Observation {
   Observation._();
 
-  /// [Observation]: Measurements and simple assertions made about a patient,
+  /// [Observation] Measurements and simple assertions made about a patient,
   ///  device or other subject.
   ///
-  /// [resourceType]: This is a Observation resource
+  /// [resourceType] This is a Observation resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -2303,32 +2295,32 @@ class Observation with Resource, _$Observation {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: A unique identifier assigned to this observation.
+  /// [identifier] A unique identifier assigned to this observation.
   ///
-  /// [basedOn]: A plan, proposal or order that is fulfilled in whole or in part
+  /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   /// by this event.  For example, a MedicationRequest may require a patient to
   ///  have laboratory test performed before  it is dispensed.
   ///
-  /// [partOf]: A larger event of which this particular Observation is a
+  /// [partOf] A larger event of which this particular Observation is a
   ///  component or step.  For example,  an observation as part of a procedure.
   ///
-  /// [status]: The status of the result value.
+  /// [status] The status of the result value.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [category]: A code that classifies the general type of observation being
+  /// [category] A code that classifies the general type of observation being
   ///  made.
   ///
-  /// [code]: Describes what was observed. Sometimes this is called the
+  /// [code] Describes what was observed. Sometimes this is called the
   ///  observation "name".
   ///
-  /// [subject]: The patient, or group of patients, location, or device this
+  /// [subject] The patient, or group of patients, location, or device this
   /// observation is about and into whose record the observation is placed. If
   /// the actual focus of the observation is different from the subject (or a
   /// sample of, part, or region of the subject), the `focus` element or the
   ///  `code` itself specifies the actual focus of the observation.
   ///
-  /// [focus]: The actual focus of an observation when it is not the patient of
+  /// [focus] The actual focus of an observation when it is not the patient of
   /// record representing something or someone associated with the patient such
   /// as a spouse, parent, fetus, or donor. For example, fetus observations in a
   /// mother's record.  The focus of an observation could also be an existing
@@ -2339,121 +2331,121 @@ class Observation with Resource, _$Observation {
   /// this example, the child is the patient of record and the mother is the
   ///  focus.
   ///
-  /// [encounter]: The healthcare event  (e.g. a patient and healthcare provider
+  /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
   ///  interaction) during which this observation is made.
   ///
-  /// [effectiveDateTime]: The time or time-period the observed value is
+  /// [effectiveDateTime] The time or time-period the observed value is
   /// asserted as being true. For biological subjects - e.g. human patients -
   /// this is usually called the "physiologically relevant time". This is
   /// usually either the time of the procedure or of specimen collection, but
   /// very often the source of the date/time is not known, only the date/time
   ///  itself.
   ///
-  /// [effectiveDateTimeElement]: Extensions for effectiveDateTime
+  /// [effectiveDateTimeElement] Extensions for effectiveDateTime
   ///
-  /// [effectivePeriod]: The time or time-period the observed value is asserted
+  /// [effectivePeriod] The time or time-period the observed value is asserted
   /// as being true. For biological subjects - e.g. human patients - this is
   /// usually called the "physiologically relevant time". This is usually either
   /// the time of the procedure or of specimen collection, but very often the
   ///  source of the date/time is not known, only the date/time itself.
   ///
-  /// [effectiveTiming]: The time or time-period the observed value is asserted
+  /// [effectiveTiming] The time or time-period the observed value is asserted
   /// as being true. For biological subjects - e.g. human patients - this is
   /// usually called the "physiologically relevant time". This is usually either
   /// the time of the procedure or of specimen collection, but very often the
   ///  source of the date/time is not known, only the date/time itself.
   ///
-  /// [effectiveInstant]: The time or time-period the observed value is asserted
+  /// [effectiveInstant] The time or time-period the observed value is asserted
   /// as being true. For biological subjects - e.g. human patients - this is
   /// usually called the "physiologically relevant time". This is usually either
   /// the time of the procedure or of specimen collection, but very often the
   ///  source of the date/time is not known, only the date/time itself.
   ///
-  /// [effectiveInstantElement]: Extensions for effectiveInstant
+  /// [effectiveInstantElement] Extensions for effectiveInstant
   ///
-  /// [issued]: The date and time this version of the observation was made
+  /// [issued] The date and time this version of the observation was made
   /// available to providers, typically after the results have been reviewed and
   ///  verified.
   ///
-  /// [issuedElement]: Extensions for issued
+  /// [issuedElement] Extensions for issued
   ///
-  /// [performer]: Who was responsible for asserting the observed value as
+  /// [performer] Who was responsible for asserting the observed value as
   ///  "true".
   ///
-  /// [valueQuantity]: The information determined as a result of making the
+  /// [valueQuantity] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueCodeableConcept]: The information determined as a result of making
+  /// [valueCodeableConcept] The information determined as a result of making
   ///  the observation, if the information has a simple value.
   ///
-  /// [valueString]: The information determined as a result of making the
+  /// [valueString] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueStringElement]: Extensions for valueString
+  /// [valueStringElement] Extensions for valueString
   ///
-  /// [valueBoolean]: The information determined as a result of making the
+  /// [valueBoolean] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueBooleanElement]: Extensions for valueBoolean
+  /// [valueBooleanElement] Extensions for valueBoolean
   ///
-  /// [valueInteger]: The information determined as a result of making the
+  /// [valueInteger] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueIntegerElement]: Extensions for valueInteger
+  /// [valueIntegerElement] Extensions for valueInteger
   ///
-  /// [valueRange]: The information determined as a result of making the
+  /// [valueRange] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueRatio]: The information determined as a result of making the
+  /// [valueRatio] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueSampledData]: The information determined as a result of making the
+  /// [valueSampledData] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueTime]: The information determined as a result of making the
+  /// [valueTime] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueTimeElement]: Extensions for valueTime
+  /// [valueTimeElement] Extensions for valueTime
   ///
-  /// [valueDateTime]: The information determined as a result of making the
+  /// [valueDateTime] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueDateTimeElement]: Extensions for valueDateTime
+  /// [valueDateTimeElement] Extensions for valueDateTime
   ///
-  /// [valuePeriod]: The information determined as a result of making the
+  /// [valuePeriod] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [dataAbsentReason]: Provides a reason why the expected value in the
+  /// [dataAbsentReason] Provides a reason why the expected value in the
   ///  element Observation.value[x] is missing.
   ///
-  /// [interpretation]: A categorical assessment of an observation value.  For
+  /// [interpretation] A categorical assessment of an observation value.  For
   ///  example, high, low, normal.
   ///
-  /// [note]: Comments about the observation or the results.
+  /// [note] Comments about the observation or the results.
   ///
-  /// [bodySite]: Indicates the site on the subject's body where the observation
+  /// [bodySite] Indicates the site on the subject's body where the observation
   ///  was made (i.e. the target site).
   ///
-  /// [method]: Indicates the mechanism used to perform the observation.
+  /// [method] Indicates the mechanism used to perform the observation.
   ///
-  /// [specimen]: The specimen that was used when this observation was made.
+  /// [specimen] The specimen that was used when this observation was made.
   ///
-  /// [device]: The device used to generate the observation data.
+  /// [device] The device used to generate the observation data.
   ///
-  /// [referenceRange]: Guidance on how to interpret the value by comparison to
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
   /// a normal or recommended range.  Multiple reference ranges are interpreted
   /// as an "OR".   In other words, to represent two distinct target
   ///  populations, two `referenceRange` elements would be used.
   ///
-  /// [hasMember]: This observation is a group observation (e.g. a battery, a
+  /// [hasMember] This observation is a group observation (e.g. a battery, a
   /// panel of tests, a set of vital sign measurements) that includes the target
   ///  as a member of the group.
   ///
-  /// [derivedFrom]: The target resource that represents a measurement from
+  /// [derivedFrom] The target resource that represents a measurement from
   /// which this observation value is derived. For example, a calculated anion
   ///  gap or a fetal measurement based on an ultrasound image.
   ///
-  /// [component]: Some observations have multiple component observations.
+  /// [component] Some observations have multiple component observations.
   /// These component observations are expressed as separate code value pairs
   /// that share the same attributes.  Examples include systolic and diastolic
   /// component observations for blood pressure measurement and multiple
@@ -2462,7 +2454,7 @@ class Observation with Resource, _$Observation {
     @Default(R4ResourceType.Observation)
     @JsonKey(unknownEnumValue: R4ResourceType.Observation)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2475,8 +2467,7 @@ class Observation with Resource, _$Observation {
     List<Identifier>? identifier,
     List<Reference>? basedOn,
     List<Reference>? partOf,
-    @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-        ObservationStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
@@ -2553,20 +2544,20 @@ class Observation with Resource, _$Observation {
 class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
 
-  /// [ObservationReferenceRange]: Measurements and simple assertions made
+  /// [ObservationReferenceRange] Measurements and simple assertions made
   ///  about a patient, device or other subject.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -2580,35 +2571,35 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [low]: The value of the low bound of the reference range.  The low bound
+  /// [low] The value of the low bound of the reference range.  The low bound
   /// of the reference range endpoint is inclusive of the value (e.g.  reference
   /// range is >=5 - <=9). If the low bound is omitted,  it is assumed to be
   ///  meaningless (e.g. reference range is <=2.3).
   ///
-  /// [high]: The value of the high bound of the reference range.  The high
+  /// [high] The value of the high bound of the reference range.  The high
   /// bound of the reference range endpoint is inclusive of the value (e.g.
   /// reference range is >=5 - <=9). If the high bound is omitted,  it is
   ///  assumed to be meaningless (e.g. reference range is >= 2.3).
   ///
-  /// [type]: Codes to indicate the what part of the targeted reference
+  /// [type] Codes to indicate the what part of the targeted reference
   ///  population it applies to. For example, the normal or therapeutic range.
   ///
-  /// [appliesTo]: Codes to indicate the target population this reference range
+  /// [appliesTo] Codes to indicate the target population this reference range
   /// applies to.  For example, a reference range may be based on the normal
   /// population or a particular sex or race.  Multiple `appliesTo`  are
   /// interpreted as an "AND" of the target populations.  For example, to
   /// represent a target population of African American females, both a code of
   ///  female and a code for African American would be used.
   ///
-  /// [age]: The age at which this reference range is applicable. This is a
+  /// [age] The age at which this reference range is applicable. This is a
   ///  neonatal age (e.g. number of weeks at term) if the meaning says so.
   ///
-  /// [text]: Text based reference range in an observation which may be used
+  /// [text] Text based reference range in an observation which may be used
   /// when a quantitative range is not appropriate for an observation.  An
   /// example would be a reference value of "Negative" or a list or table of
   ///  "normals".
   ///
-  /// [textElement]: Extensions for text
+  /// [textElement] Extensions for text
   factory ObservationReferenceRange({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2657,20 +2648,20 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
 
-  /// [ObservationComponent]: Measurements and simple assertions made about a
+  /// [ObservationComponent] Measurements and simple assertions made about a
   ///  patient, device or other subject.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -2684,59 +2675,59 @@ class ObservationComponent with _$ObservationComponent {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [code]: Describes what was observed. Sometimes this is called the
+  /// [code] Describes what was observed. Sometimes this is called the
   ///  observation "code".
   ///
-  /// [valueQuantity]: The information determined as a result of making the
+  /// [valueQuantity] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueCodeableConcept]: The information determined as a result of making
+  /// [valueCodeableConcept] The information determined as a result of making
   ///  the observation, if the information has a simple value.
   ///
-  /// [valueString]: The information determined as a result of making the
+  /// [valueString] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueStringElement]: Extensions for valueString
+  /// [valueStringElement] Extensions for valueString
   ///
-  /// [valueBoolean]: The information determined as a result of making the
+  /// [valueBoolean] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueBooleanElement]: Extensions for valueBoolean
+  /// [valueBooleanElement] Extensions for valueBoolean
   ///
-  /// [valueInteger]: The information determined as a result of making the
+  /// [valueInteger] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueIntegerElement]: Extensions for valueInteger
+  /// [valueIntegerElement] Extensions for valueInteger
   ///
-  /// [valueRange]: The information determined as a result of making the
+  /// [valueRange] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueRatio]: The information determined as a result of making the
+  /// [valueRatio] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueSampledData]: The information determined as a result of making the
+  /// [valueSampledData] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueTime]: The information determined as a result of making the
+  /// [valueTime] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueTimeElement]: Extensions for valueTime
+  /// [valueTimeElement] Extensions for valueTime
   ///
-  /// [valueDateTime]: The information determined as a result of making the
+  /// [valueDateTime] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [valueDateTimeElement]: Extensions for valueDateTime
+  /// [valueDateTimeElement] Extensions for valueDateTime
   ///
-  /// [valuePeriod]: The information determined as a result of making the
+  /// [valuePeriod] The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [dataAbsentReason]: Provides a reason why the expected value in the
+  /// [dataAbsentReason] Provides a reason why the expected value in the
   ///  element Observation.component.value[x] is missing.
   ///
-  /// [interpretation]: A categorical assessment of an observation value.  For
+  /// [interpretation] A categorical assessment of an observation value.  For
   ///  example, high, low, normal.
   ///
-  /// [referenceRange]: Guidance on how to interpret the value by comparison to
+  /// [referenceRange] Guidance on how to interpret the value by comparison to
   ///  a normal or recommended range.
   factory ObservationComponent({
     String? id,
@@ -2799,50 +2790,50 @@ class ObservationComponent with _$ObservationComponent {
 class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
 
-  /// [QuestionnaireResponse]: A structured set of questions and their answers.
+  /// [QuestionnaireResponse] A structured set of questions and their answers.
   /// The questions are ordered and grouped into coherent subsets, corresponding
   ///  to the structure of the grouping of the questionnaire being responded to.
   ///
-  /// [resourceType]: This is a QuestionnaireResponse resource
+  /// [resourceType] This is a QuestionnaireResponse resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -2856,52 +2847,52 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: A business identifier assigned to a particular completed (or
+  /// [identifier] A business identifier assigned to a particular completed (or
   ///  partially completed) questionnaire.
   ///
-  /// [basedOn]: The order, proposal or plan that is fulfilled in whole or in
+  /// [basedOn] The order, proposal or plan that is fulfilled in whole or in
   /// part by this QuestionnaireResponse.  For example, a ServiceRequest seeking
   /// an intake assessment or a decision support recommendation to assess for
   ///  post-partum depression.
   ///
-  /// [partOf]: A procedure or observation that this questionnaire was performed
+  /// [partOf] A procedure or observation that this questionnaire was performed
   /// as part of the execution of.  For example, the surgery a checklist was
   ///  executed as part of.
   ///
-  /// [questionnaire]: The Questionnaire that defines and organizes the
+  /// [questionnaire] The Questionnaire that defines and organizes the
   ///  questions for which answers are being provided.
   ///
-  /// [questionnaireElement]: Extensions for [questionnaire].
+  /// [questionnaireElement] Extensions for [questionnaire].
   ///
-  /// [status]: The position of the questionnaire response within its overall
+  /// [status] The position of the questionnaire response within its overall
   ///  lifecycle.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [subject]: The subject of the questionnaire response.  This could be a
+  /// [subject] The subject of the questionnaire response.  This could be a
   /// patient, organization, practitioner, device, etc.  This is who/what the
   ///  answers apply to, but is not necessarily the source of information.
   ///
-  /// [encounter]: The Encounter during which this questionnaire response was
+  /// [encounter] The Encounter during which this questionnaire response was
   ///  created or to which the creation of this record is tightly associated.
   ///
-  /// [authored]: The date and/or time that this set of answers were last
+  /// [authored] The date and/or time that this set of answers were last
   ///  changed.
   ///
-  /// [authoredElement]: Extensions for authored
+  /// [authoredElement] Extensions for authored
   ///
-  /// [author]: Person who received the answers to the questions in the
+  /// [author] Person who received the answers to the questions in the
   ///  QuestionnaireResponse and recorded them in the system.
   ///
-  /// [source]: The person who answered the questions about the subject.
+  /// [source] The person who answered the questions about the subject.
   ///
-  /// [item]: A group or question item from the original questionnaire for which
+  /// [item] A group or question item from the original questionnaire for which
   ///  answers are provided.
   factory QuestionnaireResponse({
     @Default(R4ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2916,8 +2907,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     List<Reference>? partOf,
     Canonical? questionnaire,
     @JsonKey(name: '_questionnaire') Element? questionnaireElement,
-    @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-        QuestionnaireResponseStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,
@@ -2960,22 +2950,22 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
 
-  /// [QuestionnaireResponseItem]: A structured set of questions and their
+  /// [QuestionnaireResponseItem] A structured set of questions and their
   /// answers. The questions are ordered and grouped into coherent subsets,
   /// corresponding to the structure of the grouping of the questionnaire being
   ///  responded to.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -2989,24 +2979,24 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [linkId]: The item from the Questionnaire that corresponds to this item in
+  /// [linkId] The item from the Questionnaire that corresponds to this item in
   ///  the QuestionnaireResponse resource.
   ///
-  /// [linkIdElement]: Extensions for linkId
+  /// [linkIdElement] Extensions for linkId
   ///
-  /// [definition]: A reference to an [[[ElementDefinition]]] that provides the
+  /// [definition] A reference to an [[[ElementDefinition]]] that provides the
   ///  details for the item.
   ///
-  /// [definitionElement]: Extensions for definition
+  /// [definitionElement] Extensions for definition
   ///
-  /// [text]: Text that is displayed above the contents of the group or as the
+  /// [text] Text that is displayed above the contents of the group or as the
   ///  text of the question being answered.
   ///
-  /// [textElement]: Extensions for text
+  /// [textElement] Extensions for text
   ///
-  /// [answer]: The respondent's answer(s) to the question.
+  /// [answer] The respondent's answer(s) to the question.
   ///
-  /// [item]: Questions or sub-groups nested beneath a question or group.
+  /// [item] Questions or sub-groups nested beneath a question or group.
   factory QuestionnaireResponseItem({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3056,22 +3046,22 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
 
-  /// [QuestionnaireResponseAnswer]: A structured set of questions and their
+  /// [QuestionnaireResponseAnswer] A structured set of questions and their
   /// answers. The questions are ordered and grouped into coherent subsets,
   /// corresponding to the structure of the grouping of the questionnaire being
   ///  responded to.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -3085,59 +3075,59 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [valueBoolean]: The answer (or one of the answers) provided by the
+  /// [valueBoolean] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [valueBooleanElement]: Extensions for valueBoolean
+  /// [valueBooleanElement] Extensions for valueBoolean
   ///
-  /// [valueDecimal]: The answer (or one of the answers) provided by the
+  /// [valueDecimal] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [valueDecimalElement]: Extensions for valueDecimal
+  /// [valueDecimalElement] Extensions for valueDecimal
   ///
-  /// [valueInteger]: The answer (or one of the answers) provided by the
+  /// [valueInteger] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [valueIntegerElement]: Extensions for valueInteger
+  /// [valueIntegerElement] Extensions for valueInteger
   ///
-  /// [valueDate]: The answer (or one of the answers) provided by the respondent
+  /// [valueDate] The answer (or one of the answers) provided by the respondent
   ///  to the question.
   ///
-  /// [valueDateElement]: Extensions for valueDate
+  /// [valueDateElement] Extensions for valueDate
   ///
-  /// [valueDateTime]: The answer (or one of the answers) provided by the
+  /// [valueDateTime] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [valueDateTimeElement]: Extensions for valueDateTime
+  /// [valueDateTimeElement] Extensions for valueDateTime
   ///
-  /// [valueTime]: The answer (or one of the answers) provided by the respondent
+  /// [valueTime] The answer (or one of the answers) provided by the respondent
   ///  to the question.
   ///
-  /// [valueTimeElement]: Extensions for valueTime
+  /// [valueTimeElement] Extensions for valueTime
   ///
-  /// [valueString]: The answer (or one of the answers) provided by the
+  /// [valueString] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [valueStringElement]: Extensions for valueString
+  /// [valueStringElement] Extensions for valueString
   ///
-  /// [valueUri]: The answer (or one of the answers) provided by the respondent
+  /// [valueUri] The answer (or one of the answers) provided by the respondent
   ///  to the question.
   ///
-  /// [valueUriElement]: Extensions for valueUri
+  /// [valueUriElement] Extensions for valueUri
   ///
-  /// [valueAttachment]: The answer (or one of the answers) provided by the
+  /// [valueAttachment] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [valueCoding]: The answer (or one of the answers) provided by the
+  /// [valueCoding] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [valueQuantity]: The answer (or one of the answers) provided by the
+  /// [valueQuantity] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [valueReference]: The answer (or one of the answers) provided by the
+  /// [valueReference] The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [item]: Nested groups and/or questions found within this particular
+  /// [item] Nested groups and/or questions found within this particular
   ///  answer.
   factory QuestionnaireResponseAnswer({
     String? id,
@@ -3201,48 +3191,48 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 class Specimen with Resource, _$Specimen {
   Specimen._();
 
-  /// [Specimen]: A sample to be used for analysis.
+  /// [Specimen] A sample to be used for analysis.
   ///
-  /// [resourceType]: This is a Specimen resource
+  /// [resourceType] This is a Specimen resource
   ///
-  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta]: The metadata about the resource. This is content that is
+  /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   ///
-  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement]: Extensions for implicitRules
+  /// [implicitRulesElement] Extensions for implicitRules
   ///
-  /// [language]: The base language in which the resource is written.
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// [text] A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
   /// narrative need not encode all the structured data, but is required to
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained]: These resources do not have an independent existence apart
+  /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the resource and that modifies the
   /// understanding of the element that contains it and/or the understanding of
   /// the containing element's descendants. Usually modifier elements provide
@@ -3256,51 +3246,51 @@ class Specimen with Resource, _$Specimen {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: Id for specimen.
+  /// [identifier] Id for specimen.
   ///
-  /// [accessionIdentifier]: The identifier assigned by the lab when
+  /// [accessionIdentifier] The identifier assigned by the lab when
   /// accessioning specimen(s). This is not necessarily the same as the specimen
   ///  identifier, depending on local lab procedures.
   ///
-  /// [status]: The availability of the specimen.
+  /// [status] The availability of the specimen.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [type]: The kind of material that forms the specimen.
+  /// [type] The kind of material that forms the specimen.
   ///
-  /// [subject]: Where the specimen came from. This may be from patient(s), from
+  /// [subject] Where the specimen came from. This may be from patient(s), from
   /// a location (e.g., the source of an environmental sample), or a sampling of
   ///  a substance or a device.
   ///
-  /// [receivedTime]: Time when specimen was received for processing or testing.
+  /// [receivedTime] Time when specimen was received for processing or testing.
   ///
-  /// [receivedTimeElement]: Extensions for receivedTime
+  /// [receivedTimeElement] Extensions for receivedTime
   ///
-  /// [parent]: Reference to the parent (source) specimen which is used when the
+  /// [parent] Reference to the parent (source) specimen which is used when the
   ///  specimen was either derived from or a component of another specimen.
   ///
-  /// [request]: Details concerning a service request that required a specimen
+  /// [request] Details concerning a service request that required a specimen
   ///  to be collected.
   ///
-  /// [collection]: Details concerning the specimen collection.
+  /// [collection] Details concerning the specimen collection.
   ///
-  /// [processing]: Details concerning processing and processing steps for the
+  /// [processing] Details concerning processing and processing steps for the
   ///  specimen.
   ///
-  /// [container]: The container holding the specimen.  The recursive nature of
+  /// [container] The container holding the specimen.  The recursive nature of
   ///  containers; i.e. blood in tube in tray in rack is not addressed here.
   ///
-  /// [condition]: A mode or state of being that describes the nature of the
+  /// [condition] A mode or state of being that describes the nature of the
   ///  specimen.
   ///
-  /// [note]: To communicate any details or issues about the specimen or during
+  /// [note] To communicate any details or issues about the specimen or during
   /// the specimen collection. (for example: broken vial, sent with patient,
   ///  frozen).
   factory Specimen({
     @Default(R4ResourceType.Specimen)
     @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
         R4ResourceType resourceType,
-    Id? id,
+    String? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -3312,7 +3302,7 @@ class Specimen with Resource, _$Specimen {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     Identifier? accessionIdentifier,
-    @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     Reference? subject,
@@ -3359,19 +3349,19 @@ class Specimen with Resource, _$Specimen {
 class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
 
-  /// [SpecimenCollection]: A sample to be used for analysis.
+  /// [SpecimenCollection] A sample to be used for analysis.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -3385,34 +3375,34 @@ class SpecimenCollection with _$SpecimenCollection {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [collector]: Person who collected the specimen.
+  /// [collector] Person who collected the specimen.
   ///
-  /// [collectedDateTime]: Time when specimen was collected from subject - the
+  /// [collectedDateTime] Time when specimen was collected from subject - the
   ///  physiologically relevant time.
   ///
-  /// [collectedDateTimeElement]: Extensions for collectedDateTime
+  /// [collectedDateTimeElement] Extensions for collectedDateTime
   ///
-  /// [collectedPeriod]: Time when specimen was collected from subject - the
+  /// [collectedPeriod] Time when specimen was collected from subject - the
   ///  physiologically relevant time.
   ///
-  /// [duration]: The span of time over which the collection of a specimen
+  /// [duration] The span of time over which the collection of a specimen
   ///  occurred.
   ///
-  /// [quantity]: The quantity of specimen collected; for instance the volume of
+  /// [quantity] The quantity of specimen collected; for instance the volume of
   /// a blood sample, or the physical measurement of an anatomic pathology
   ///  sample.
   ///
-  /// [method]: A coded value specifying the technique that is used to perform
+  /// [method] A coded value specifying the technique that is used to perform
   ///  the procedure.
   ///
-  /// [bodySite]: Anatomical location from which the specimen was collected (if
+  /// [bodySite] Anatomical location from which the specimen was collected (if
   /// subject is a patient). This is the target site.  This element is not used
   ///  for environmental specimens.
   ///
-  /// [fastingStatusCodeableConcept]: Abstinence or reduction from some or all
+  /// [fastingStatusCodeableConcept] Abstinence or reduction from some or all
   ///  food, drink, or both, for a period of time prior to sample collection.
   ///
-  /// [fastingStatusDuration]: Abstinence or reduction from some or all food,
+  /// [fastingStatusDuration] Abstinence or reduction from some or all food,
   ///  drink, or both, for a period of time prior to sample collection.
   factory SpecimenCollection({
     String? id,
@@ -3465,19 +3455,19 @@ class SpecimenCollection with _$SpecimenCollection {
 class SpecimenProcessing with _$SpecimenProcessing {
   SpecimenProcessing._();
 
-  /// [SpecimenProcessing]: A sample to be used for analysis.
+  /// [SpecimenProcessing] A sample to be used for analysis.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -3491,22 +3481,22 @@ class SpecimenProcessing with _$SpecimenProcessing {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [description]: Textual description of procedure.
+  /// [description] Textual description of procedure.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [procedure]: A coded value specifying the procedure used to process the
+  /// [procedure] A coded value specifying the procedure used to process the
   ///  specimen.
   ///
-  /// [additive]: Material used in the processing step.
+  /// [additive] Material used in the processing step.
   ///
-  /// [timeDateTime]: A record of the time or period when the specimen
+  /// [timeDateTime] A record of the time or period when the specimen
   /// processing occurred.  For example the time of sample fixation or the
   ///  period of time the sample was in formalin.
   ///
-  /// [timeDateTimeElement]: Extensions for timeDateTime
+  /// [timeDateTimeElement] Extensions for timeDateTime
   ///
-  /// [timePeriod]: A record of the time or period when the specimen processing
+  /// [timePeriod] A record of the time or period when the specimen processing
   /// occurred.  For example the time of sample fixation or the period of time
   ///  the sample was in formalin.
   factory SpecimenProcessing({
@@ -3557,19 +3547,19 @@ class SpecimenProcessing with _$SpecimenProcessing {
 class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
 
-  /// [SpecimenContainer]: A sample to be used for analysis.
+  /// [SpecimenContainer] A sample to be used for analysis.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -3583,28 +3573,28 @@ class SpecimenContainer with _$SpecimenContainer {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [identifier]: Id for container. There may be multiple; a manufacturer's
+  /// [identifier] Id for container. There may be multiple; a manufacturer's
   /// bar code, lab assigned identifier, etc. The container ID may differ from
   ///  the specimen id in some circumstances.
   ///
-  /// [description]: Textual description of the container.
+  /// [description] Textual description of the container.
   ///
-  /// [descriptionElement]: Extensions for description
+  /// [descriptionElement] Extensions for description
   ///
-  /// [type]: The type of container associated with the specimen (e.g. slide,
+  /// [type] The type of container associated with the specimen (e.g. slide,
   ///  aliquot, etc.).
   ///
-  /// [capacity]: The capacity (volume or other measure) the container may
+  /// [capacity] The capacity (volume or other measure) the container may
   ///  contain.
   ///
-  /// [specimenQuantity]: The quantity of specimen in the container; may be
+  /// [specimenQuantity] The quantity of specimen in the container; may be
   /// volume, dimensions, or other appropriate measurements, depending on the
   ///  specimen type.
   ///
-  /// [additiveCodeableConcept]: Introduced substance to preserve, maintain or
+  /// [additiveCodeableConcept] Introduced substance to preserve, maintain or
   ///  enhance the specimen. Examples: Formalin, Citrate, EDTA.
   ///
-  /// [additiveReference]: Introduced substance to preserve, maintain or enhance
+  /// [additiveReference] Introduced substance to preserve, maintain or enhance
   ///  the specimen. Examples: Formalin, Citrate, EDTA.
   factory SpecimenContainer({
     String? id,

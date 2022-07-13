@@ -84,7 +84,7 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
 
 Map<String, dynamic> _$$_GroupToJson(_$_Group instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -502,7 +502,7 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
 
 Map<String, dynamic> _$$_PatientToJson(_$_Patient instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -782,7 +782,7 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
 
 Map<String, dynamic> _$$_PersonToJson(_$_Person instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -989,7 +989,7 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_PractitionerToJson(_$_Practitioner instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1166,7 +1166,7 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_PractitionerRoleToJson(_$_PractitionerRole instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1393,7 +1393,7 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_RelatedPersonToJson(_$_RelatedPerson instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

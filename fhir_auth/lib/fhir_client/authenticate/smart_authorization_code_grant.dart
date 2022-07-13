@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_interpolation_to_compose_strings, implementation_imports
+// ignore_for_file: prefer_interpolation_to_compose_strings, implementation_imports, depend_on_referenced_packages
 
 // Dart imports:
 import 'dart:async';
@@ -39,7 +39,7 @@ import 'package:oauth2/src/utils.dart';
 /// [handleAuthorizationCode] to process the authorization server's response and
 /// construct a [Client].
 ///
-/// [authorization code grant]: http://tools.ietf.org/html/draft-ietf-oauth-v2-31#section-4.1
+/// [authorization code grant] http://tools.ietf.org/html/draft-ietf-oauth-v2-31#section-4.1
 class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// FhirParameters
   final Map<String, dynamic> fhirParameters = {};
@@ -103,7 +103,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   final String _delimiter;
 
   /// The HTTP client used to make HTTP requests.
-  http.Client? _httpClient;
+  final http.Client _httpClient;
 
   /// The URL to which the resource owner will be redirected after they
   /// authorize this client with the authorization server.
@@ -134,7 +134,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// is not recommended by the OAuth 2.0 spec, and should only be used if the
   /// server doesn't support Basic authentication.
   ///
-  /// [RFC 2617]: https://tools.ietf.org/html/rfc2617
+  /// [RFC 2617] https://tools.ietf.org/html/rfc2617
   ///
   /// [httpClient] is used for all HTTP requests made by this grant, as well as
   /// those of the [Client] is constructs.
@@ -146,7 +146,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// random codeVerifier will be generated.
   /// The codeVerifier must meet requirements specified in [RFC 7636].
   ///
-  /// [RFC 7636]: https://tools.ietf.org/html/rfc7636#section-4.1
+  /// [RFC 7636] https://tools.ietf.org/html/rfc7636#section-4.1
   ///
   /// The scope strings will be separated by the provided [delimiter]. This
   /// defaults to `" "`, the OAuth2 standard, but some APIs (such as Facebook's)
@@ -160,7 +160,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// as its body as a UTF-8-decoded string. It should return a map in the same
   /// format as the [standard JSON response][].
   ///
-  /// [standard JSON response]: https://tools.ietf.org/html/rfc6749#section-5.1
+  /// [standard JSON response] https://tools.ietf.org/html/rfc6749#section-5.1
   SmartAuthorizationCodeGrant(
       this.identifier, this.authorizationEndpoint, this.tokenEndpoint,
       {this.secret,
@@ -276,7 +276,6 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
           '"$authorizationEndpoint": did not contain required parameter '
           '"code".');
     }
-
     return await _handleAuthorizationCode(parameters['code']);
   }
 
@@ -331,47 +330,69 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
       if (secret != null) body['client_secret'] = secret;
     }
 
-    var response =
-        await _httpClient!.post(tokenEndpoint, headers: headers, body: body);
-    fhirParameters.addAll(jsonDecode(response.body));
-    print(response.headers);
-    print(response.body);
+    var request = http.Request('POST', tokenEndpoint);
+    request.headers.addAll(headers);
+    request.bodyFields = body.cast<String, String>();
+    final stream = await _httpClient.send(request);
+    final responseBytes = await stream.stream.toBytes();
+    String responseString = String.fromCharCodes(responseBytes);
+    final Map<String, dynamic> newBody = jsonDecode(responseString);
+    print(newBody);
+    fhirParameters = newBody;
 
-    // ***********************
-    // var request = http.Request('POST', tokenEndpoint);
-    // if (headers != null) request.headers.addAll(headers);
-    // request.bodyFields = body.cast<String, String>();
-    // final stream = await _httpClient?.send(request);
-    // final response2 =
-    //     stream == null ? null : await http.Response.fromStream(stream);
-    // print(response2?.headers);
-    // print(response2?.body);
-    // final newBody = response2?.body;
-    // if (newBody != null) {
-    //   final newBodyJson = jsonDecode(newBody);
-    //   final accessToken = newBodyJson['access_token'];
-    //   final idToken = newBodyJson['id_token'];
-    //   if (accessToken != null) {
-    //     print(JwtDecoder.decode(accessToken));
-    //   }
-    //   if (idToken != null) {
-    //     print(JwtDecoder.decode(idToken));
-    //   }
-    // }
+    final response = http.Response.bytes(
+        responseBytes.toList(), stream.statusCode,
+        request: stream.request,
+        headers: stream.headers,
+        isRedirect: stream.isRedirect,
+        persistentConnection: stream.persistentConnection,
+        reasonPhrase: stream.reasonPhrase);
 
-    throw Exception('Did you make it work?');
+    final accessToken = newBody['access_token'];
+    final idToken = newBody['id_token'];
+    if (accessToken != null) {
+      fhirParameters = JwtDecoder.decode(accessToken);
+    }
+    if (idToken != null) {
+      fhirParameters = JwtDecoder.decode(idToken);
+    }
 
-    // ***********************************
+    print(fhirParameters);
 
-    // var credentials = handleAccessTokenResponse(
-    //     response, tokenEndpoint, startTime, _scopes, _delimiter,
-    //     getParameters: _getParameters);
-    // return Client(credentials,
-    //     identifier: identifier,
-    //     secret: secret,
-    //     basicAuth: _basicAuth,
-    //     httpClient: _httpClient,
-    //     onCredentialsRefreshed: _onCredentialsRefreshed);
+    var credentials = handleAccessTokenResponse(
+        response, tokenEndpoint, startTime, _scopes, _delimiter,
+        getParameters: _getParameters);
+
+    return Client(
+      credentials,
+      identifier: identifier,
+      secret: secret,
+      basicAuth: _basicAuth,
+      httpClient: _httpClient,
+      onCredentialsRefreshed: _onCredentialsRefreshed,
+    );
+  }
+
+  set fhirParameters(Map<String, dynamic> parameters) {
+    fhirParameters['patient'] =
+        parameters['patient'] ?? fhirParameters['patient'];
+    fhirParameters['encounter'] =
+        parameters['encounter'] ?? fhirParameters['encounter'];
+    fhirParameters['need_patient_banner'] = parameters['need_patient_banner'] ??
+        fhirParameters['need_patient_banner'];
+    fhirParameters['smart_style_url'] =
+        parameters['smart_style_url'] ?? fhirParameters['smart_style_url'];
+    fhirParameters['fhirUser'] =
+        parameters['fhirUser'] ?? fhirParameters['fhirUser'];
+    fhirParameters['intent'] = parameters['intent'] ?? fhirParameters['intent'];
+    fhirParameters['tenant'] = parameters['tenant'] ?? fhirParameters['tenant'];
+    fhirParameters['displayName'] =
+        parameters['displayName'] ?? fhirParameters['displayName'];
+    fhirParameters['email'] = parameters['email'] ?? fhirParameters['email'];
+    fhirParameters['profile'] =
+        parameters['profile'] ?? fhirParameters['profile'];
+    fhirParameters['fhirContext'] =
+        parameters['fhirContext'] ?? fhirParameters['fhirContext'];
   }
 
   /// Randomly generate a 128 character string to be used as the PKCE code verifier
@@ -387,8 +408,7 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
   /// continue using the client.\
   @override
   void close() {
-    _httpClient?.close();
-    _httpClient = null;
+    _httpClient.close();
   }
 }
 

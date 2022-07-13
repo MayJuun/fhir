@@ -13,30 +13,30 @@ Future<void> main() async {
 
   group('Playing with passwords', () {
     test('Playing with Passwords', () async {
-      final patient = Patient(id: Id('1'));
+      final patient = Patient(id: '1');
 
       final saved = await resourceDao.save(null, patient);
 
       await resourceDao.updatePw(null, 'newPw');
       final search1 = await resourceDao.find('newPw',
-          resourceType: R4ResourceType.Patient, id: Id('1'));
+          resourceType: R4ResourceType.Patient, id: '1');
       expect(saved, search1[0]);
 
       await resourceDao.updatePw('newPw', 'newerPw');
       final search2 = await resourceDao.find('newerPw',
-          resourceType: R4ResourceType.Patient, id: Id('1'));
+          resourceType: R4ResourceType.Patient, id: '1');
       expect(saved, search2[0]);
 
       await resourceDao.updatePw('newerPw', null);
       final search3 = await resourceDao.find(null,
-          resourceType: R4ResourceType.Patient, id: Id('1'));
+          resourceType: R4ResourceType.Patient, id: '1');
       expect(saved, search3[0]);
 
       await resourceDao.deleteAllResources(null);
     });
   });
 
-  final id = Id('12345');
+  final id = '12345';
   group('Saving Things:', () {
     test('Save Patient', () async {
       final humanName = HumanName(family: 'Atreides', given: ['Duke']);
@@ -59,52 +59,51 @@ Future<void> main() async {
 
     test('Save Observation1', () async {
       final observation1 = Observation(
-        id: Id('obs1'),
+        id: 'obs1',
         code: CodeableConcept(text: 'Observation #1'),
         effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
       );
       final saved = await resourceDao.save(null, observation1);
 
-      expect(saved.id, Id('obs1'));
+      expect(saved.id, 'obs1');
 
       expect((saved as Observation).code.text, 'Observation #1');
     });
 
     test('Save Observation1 Again', () async {
       final observation1 = Observation(
-          id: Id('obs1'),
-          code: CodeableConcept(text: 'Observation #1 - Updated'));
+          id: 'obs1', code: CodeableConcept(text: 'Observation #1 - Updated'));
       final saved = await resourceDao.save(null, observation1);
 
-      expect(saved.id, Id('obs1'));
+      expect(saved.id, 'obs1');
 
       expect((saved as Observation).code.text, 'Observation #1 - Updated');
 
-      expect(saved.meta?.versionId, Id('2'));
+      expect(saved.meta?.versionId, '2');
     });
 
     test('Save Observation2', () async {
       final observation2 = Observation(
-        id: Id('obs2'),
+        id: 'obs2',
         code: CodeableConcept(text: 'Observation #2'),
         effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
       );
       final saved = await resourceDao.save(null, observation2);
 
-      expect(saved.id, Id('obs2'));
+      expect(saved.id, 'obs2');
 
       expect((saved as Observation).code.text, 'Observation #2');
     });
 
     test('Save Observation3', () async {
       final observation3 = Observation(
-        id: Id('obs3'),
+        id: 'obs3',
         code: CodeableConcept(text: 'Observation #3'),
         effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
       );
       final saved = await resourceDao.save(null, observation3);
 
-      expect(saved.id, Id('obs3'));
+      expect(saved.id, 'obs3');
 
       expect((saved as Observation).code.text, 'Observation #3');
     });
@@ -123,11 +122,11 @@ Future<void> main() async {
 
     test('Find 3rd Observation', () async {
       final search = await resourceDao.find(null,
-          resourceType: R4ResourceType.Observation, id: Id('obs3'));
+          resourceType: R4ResourceType.Observation, id: 'obs3');
 
       expect(search.length, 1);
 
-      expect(search[0].id, Id('obs3'));
+      expect(search[0].id, 'obs3');
 
       expect((search[0] as Observation).code.text, 'Observation #3');
     });
@@ -177,7 +176,7 @@ Future<void> main() async {
   group('Deleting Things:', () {
     test('Delete 2nd Observation', () async {
       await resourceDao.delete(
-          null, null, R4ResourceType.Observation, Id('obs2'), null, null);
+          null, null, R4ResourceType.Observation, 'obs2', null, null);
 
       final search = await resourceDao.getResourceType(
         null,
@@ -250,52 +249,51 @@ Future<void> main() async {
 
     test('Save Observation1', () async {
       final observation1 = Observation(
-        id: Id('obs1'),
+        id: 'obs1',
         code: CodeableConcept(text: 'Observation #1'),
         effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
       );
       final saved = await resourceDao.save('newPw', observation1);
 
-      expect(saved.id, Id('obs1'));
+      expect(saved.id, 'obs1');
 
       expect((saved as Observation).code.text, 'Observation #1');
     });
 
     test('Save Observation1 Again', () async {
       final observation1 = Observation(
-          id: Id('obs1'),
-          code: CodeableConcept(text: 'Observation #1 - Updated'));
+          id: 'obs1', code: CodeableConcept(text: 'Observation #1 - Updated'));
       final saved = await resourceDao.save('newPw', observation1);
 
-      expect(saved.id, Id('obs1'));
+      expect(saved.id, 'obs1');
 
       expect((saved as Observation).code.text, 'Observation #1 - Updated');
 
-      expect(saved.meta?.versionId, Id('2'));
+      expect(saved.meta?.versionId, '2');
     });
 
     test('Save Observation2', () async {
       final observation2 = Observation(
-        id: Id('obs2'),
+        id: 'obs2',
         code: CodeableConcept(text: 'Observation #2'),
         effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
       );
       final saved = await resourceDao.save('newPw', observation2);
 
-      expect(saved.id, Id('obs2'));
+      expect(saved.id, 'obs2');
 
       expect((saved as Observation).code.text, 'Observation #2');
     });
 
     test('Save Observation3', () async {
       final observation3 = Observation(
-        id: Id('obs3'),
+        id: 'obs3',
         code: CodeableConcept(text: 'Observation #3'),
         effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
       );
       final saved = await resourceDao.save('newPw', observation3);
 
-      expect(saved.id, Id('obs3'));
+      expect(saved.id, 'obs3');
 
       expect((saved as Observation).code.text, 'Observation #3');
     });
@@ -314,11 +312,11 @@ Future<void> main() async {
 
     test('Find 3rd Observation', () async {
       final search = await resourceDao.find('newPw',
-          resourceType: R4ResourceType.Observation, id: Id('obs3'));
+          resourceType: R4ResourceType.Observation, id: 'obs3');
 
       expect(search.length, 1);
 
-      expect(search[0].id, Id('obs3'));
+      expect(search[0].id, 'obs3');
 
       expect((search[0] as Observation).code.text, 'Observation #3');
     });
@@ -368,7 +366,7 @@ Future<void> main() async {
   group('Password - Deleting Things:', () {
     test('Delete 2nd Observation', () async {
       await resourceDao.delete(
-          'newPw', null, R4ResourceType.Observation, Id('obs2'), null, null);
+          'newPw', null, R4ResourceType.Observation, 'obs2', null, null);
 
       final search = await resourceDao.getResourceType(
         'newPw',

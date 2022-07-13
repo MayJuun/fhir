@@ -1,1 +1,0 @@
-{"resourceType":"NamingSystem","id":"extra-activity-type","name":"ExtraActivityType","status":"draft","kind":"codesystem","date":"2019-10-31T22:29:23.000Z","description":"This value set includes coded concepts not well covered in any of the included valuesets.","uniqueId":[{"type":"uri","value":"http://hl7.org/fhir/extra-activity-type","preferred":true}]}

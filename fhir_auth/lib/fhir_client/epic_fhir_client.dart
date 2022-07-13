@@ -1,6 +1,9 @@
 // Package imports:
+import 'dart:convert';
+
 import 'package:fhir/r4.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
+import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'smart_fhir_client.dart';
@@ -101,4 +104,34 @@ class EpicFhirClient extends SmartFhirClient {
 
   /// The provider's FHIR ID number.
   String? userProviderNumber;
+
+  @override
+  Future<http.Response> post(Uri url,
+      {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
+    var request = http.Request('POST', url);
+    if (headers != null) request.headers.addAll(await newHeaders(headers));
+    if (body != null) {
+      if (body is String) {
+        request.body = body;
+      } else if (body is Map<String, String>) {
+        request.bodyFields = body;
+      }
+    }
+    http.Client? httpClient = http.Client();
+    final stream = await httpClient.send(request);
+    final responseBytes = await stream.stream.toBytes();
+
+    print(stream.headers);
+    print(stream.toString());
+
+    final response = http.Response.bytes(
+        responseBytes.toList(), stream.statusCode,
+        request: stream.request,
+        headers: stream.headers,
+        isRedirect: stream.isRedirect,
+        persistentConnection: stream.persistentConnection,
+        reasonPhrase: stream.reasonPhrase);
+
+    return response;
+  }
 }

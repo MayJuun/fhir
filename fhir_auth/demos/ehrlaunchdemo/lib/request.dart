@@ -13,7 +13,7 @@ Future<Resource?> request(SmartFhirClient client,
         final request2 = FhirRequest.read(
           base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
           type: R4ResourceType.Patient,
-          id: Id(client.patientId!),
+          id: client.patientId!,
           client: client,
         );
 
@@ -28,13 +28,13 @@ Future<Resource?> request(SmartFhirClient client,
         client: client,
       );
 
-      Id? newId;
+      String? newId;
 
       final response = await request1.request();
       print('Response from upload:\n${response.toJson()}');
       newId = response.id;
 
-      if (newId is! Id) {
+      if (newId is! String) {
         if (response is OperationOutcome &&
             response.issue.isNotEmpty &&
             response.issue.first.location != null &&
@@ -42,10 +42,8 @@ Future<Resource?> request(SmartFhirClient client,
           final location = response.issue.first.location!.first;
           final resourceType = ResourceUtils
               .resourceTypeFromStringMap[location.split('/').first];
-          final newId = Id(location.split('/').last);
-          if (resourceType == null ||
-              newId.value == null ||
-              newId.value == '') {
+          final newId = location.split('/').last;
+          if (resourceType == null || newId == '') {
             print('Cannot attempt to read resource');
           } else {
             final request2 = FhirRequest.read(
@@ -72,6 +70,7 @@ Future<Resource?> request(SmartFhirClient client,
       }
     }
   }
+  return null;
 }
 
 final _newPatient = Patient.fromJson({

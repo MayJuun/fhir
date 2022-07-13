@@ -9,6 +9,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Account.fromJson(json);
     case 'ActivityDefinition':
       return ActivityDefinition.fromJson(json);
+    case 'AdministrableProductDefinition':
+      return AdministrableProductDefinition.fromJson(json);
     case 'AdverseEvent':
       return AdverseEvent.fromJson(json);
     case 'AllergyIntolerance':
@@ -41,12 +43,16 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return ChargeItem.fromJson(json);
     case 'ChargeItemDefinition':
       return ChargeItemDefinition.fromJson(json);
+    case 'Citation':
+      return Citation.fromJson(json);
     case 'Claim':
       return Claim.fromJson(json);
     case 'ClaimResponse':
       return ClaimResponse.fromJson(json);
     case 'ClinicalImpression':
       return ClinicalImpression.fromJson(json);
+    case 'ClinicalUseDefinition':
+      return ClinicalUseDefinition.fromJson(json);
     case 'CodeSystem':
       return CodeSystem.fromJson(json);
     case 'Communication':
@@ -89,8 +95,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return DocumentManifest.fromJson(json);
     case 'DocumentReference':
       return DocumentReference.fromJson(json);
-    case 'EffectEvidenceSynthesis':
-      return EffectEvidenceSynthesis.fromJson(json);
     case 'Encounter':
       return Encounter.fromJson(json);
     case 'Endpoint':
@@ -105,6 +109,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return EventDefinition.fromJson(json);
     case 'Evidence':
       return Evidence.fromJson(json);
+    case 'EvidenceReport':
+      return EvidenceReport.fromJson(json);
     case 'EvidenceVariable':
       return EvidenceVariable.fromJson(json);
     case 'ExampleScenario':
@@ -135,6 +141,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return ImmunizationRecommendation.fromJson(json);
     case 'ImplementationGuide':
       return ImplementationGuide.fromJson(json);
+    case 'Ingredient':
+      return Ingredient.fromJson(json);
     case 'InsurancePlan':
       return InsurancePlan.fromJson(json);
     case 'Invoice':
@@ -147,6 +155,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return List_.fromJson(json);
     case 'Location':
       return Location.fromJson(json);
+    case 'ManufacturedItemDefinition':
+      return ManufacturedItemDefinition.fromJson(json);
     case 'Measure':
       return Measure.fromJson(json);
     case 'MeasureReport':
@@ -165,26 +175,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return MedicationRequest.fromJson(json);
     case 'MedicationStatement':
       return MedicationStatement.fromJson(json);
-    case 'MedicinalProduct':
-      return MedicinalProduct.fromJson(json);
-    case 'MedicinalProductAuthorization':
-      return MedicinalProductAuthorization.fromJson(json);
-    case 'MedicinalProductContraindication':
-      return MedicinalProductContraindication.fromJson(json);
-    case 'MedicinalProductIndication':
-      return MedicinalProductIndication.fromJson(json);
-    case 'MedicinalProductIngredient':
-      return MedicinalProductIngredient.fromJson(json);
-    case 'MedicinalProductInteraction':
-      return MedicinalProductInteraction.fromJson(json);
-    case 'MedicinalProductManufactured':
-      return MedicinalProductManufactured.fromJson(json);
-    case 'MedicinalProductPackaged':
-      return MedicinalProductPackaged.fromJson(json);
-    case 'MedicinalProductPharmaceutical':
-      return MedicinalProductPharmaceutical.fromJson(json);
-    case 'MedicinalProductUndesirableEffect':
-      return MedicinalProductUndesirableEffect.fromJson(json);
+    case 'MedicinalProductDefinition':
+      return MedicinalProductDefinition.fromJson(json);
     case 'MessageDefinition':
       return MessageDefinition.fromJson(json);
     case 'MessageHeader':
@@ -195,6 +187,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return NamingSystem.fromJson(json);
     case 'NutritionOrder':
       return NutritionOrder.fromJson(json);
+    case 'NutritionProduct':
+      return NutritionProduct.fromJson(json);
     case 'Observation':
       return Observation.fromJson(json);
     case 'ObservationDefinition':
@@ -207,6 +201,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Organization.fromJson(json);
     case 'OrganizationAffiliation':
       return OrganizationAffiliation.fromJson(json);
+    case 'PackagedProductDefinition':
+      return PackagedProductDefinition.fromJson(json);
     case 'Parameters':
       return Parameters.fromJson(json);
     case 'Patient':
@@ -231,6 +227,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Questionnaire.fromJson(json);
     case 'QuestionnaireResponse':
       return QuestionnaireResponse.fromJson(json);
+    case 'RegulatedAuthorization':
+      return RegulatedAuthorization.fromJson(json);
     case 'RelatedPerson':
       return RelatedPerson.fromJson(json);
     case 'RequestGroup':
@@ -245,8 +243,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return ResearchSubject.fromJson(json);
     case 'RiskAssessment':
       return RiskAssessment.fromJson(json);
-    case 'RiskEvidenceSynthesis':
-      return RiskEvidenceSynthesis.fromJson(json);
     case 'Schedule':
       return Schedule.fromJson(json);
     case 'SearchParameter':
@@ -265,20 +261,14 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return StructureMap.fromJson(json);
     case 'Subscription':
       return Subscription.fromJson(json);
+    case 'SubscriptionStatus':
+      return SubscriptionStatus.fromJson(json);
+    case 'SubscriptionTopic':
+      return SubscriptionTopic.fromJson(json);
     case 'Substance':
       return Substance.fromJson(json);
-    case 'SubstanceNucleicAcid':
-      return SubstanceNucleicAcid.fromJson(json);
-    case 'SubstancePolymer':
-      return SubstancePolymer.fromJson(json);
-    case 'SubstanceProtein':
-      return SubstanceProtein.fromJson(json);
-    case 'SubstanceReferenceInformation':
-      return SubstanceReferenceInformation.fromJson(json);
-    case 'SubstanceSourceMaterial':
-      return SubstanceSourceMaterial.fromJson(json);
-    case 'SubstanceSpecification':
-      return SubstanceSpecification.fromJson(json);
+    case 'SubstanceDefinition':
+      return SubstanceDefinition.fromJson(json);
     case 'SupplyDelivery':
       return SupplyDelivery.fromJson(json);
     case 'SupplyRequest':

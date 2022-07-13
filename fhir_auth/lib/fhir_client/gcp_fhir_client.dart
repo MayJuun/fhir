@@ -4,7 +4,6 @@
 import 'dart:developer';
 
 // Package imports:
-import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 // Project imports:
@@ -12,30 +11,22 @@ import 'secure_fhir_client.dart';
 
 class GcpFhirClient extends SecureFhirClient {
   GcpFhirClient({
-    FhirUri? redirectUri,
-    required FhirUri fhirUri,
-    String? clientId,
-    List<String> scopes = const [
+    super.redirectUri,
+    required super.fhirUri,
+    super.clientId,
+    super.scopes = const [
       'openid',
       'profile',
       'email',
       'https://www.googleapis.com/auth/cloud-platform',
     ],
-    String? launch,
-  }) : super(
-          fhirUri: fhirUri,
+    super.launch,
+  }) : _googleSignIn = GoogleSignIn(
+          scopes: scopes ?? [],
           clientId: clientId,
-          redirectUri: redirectUri,
-          scopes: scopes,
-          launch: launch,
-        ) {
-    _googleSignIn = GoogleSignIn(
-      scopes: scopes,
-      clientId: clientId,
-    );
-  }
+        );
 
-  late GoogleSignIn _googleSignIn;
+  final GoogleSignIn _googleSignIn;
 
   @override
   Future<void> login() async {

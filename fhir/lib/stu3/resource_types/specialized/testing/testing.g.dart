@@ -86,7 +86,7 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_TestReportToJson(_$_TestReport instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -652,7 +652,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_TestScriptToJson(_$_TestScript instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

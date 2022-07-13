@@ -7,21 +7,13 @@ import 'package:fhir/r4.dart';
 // Project imports:
 import 'package:fhir_path/fhir_path.dart';
 
-import 'crafft1.dart';
-import 'crafft3.dart';
-
 void main() {
   final crafft =
       r"(iif(%resource.entry.resource.ofType(QuestionnaireResponse).item.where(linkId.contains('/crafft')).answer.where(exists()).valueCoding.extension.valueDecimal.aggregate($this + $total, 0).exists(), %resource.entry.resource.ofType(QuestionnaireResponse).item.where(linkId.contains('/crafft')).answer.where(exists()).valueCoding.extension.valueDecimal.aggregate($this + $total, 0), 0) + iif(%resource.entry.resource.ofType(QuestionnaireResponse).item.item.where(linkId.contains('/crafft')).answer.where(exists()).valueCoding.extension.valueDecimal.aggregate($this + $total, 0).exists(), %resource.entry.resource.ofType(QuestionnaireResponse).item.item.where(linkId.contains('/crafft')).answer.where(exists()).valueCoding.extension.valueDecimal.aggregate($this + $total, 0), 0)).select(iif($this > 1, $this.toString() + ';high;Serious Problem, needs more assessment', iif($this < 2, $this.toString() + ';low', $this)))"; //select())";
 
   print(walkFhirPath(
-      resource: crafft1, context: crafft2, pathExpression: crafft));
-
-  print(walkFhirPath(
       resource: crafft2, context: crafft2, pathExpression: crafft));
 
-  print(walkFhirPath(
-      resource: crafft3, context: crafft2, pathExpression: crafft));
   // print(parseFhirPath(r"Patient.name.given.first() = 'P\u0065ter'"));
   // print(walkFhirPath(context: ozair, pathExpression: r"'P\u0065ter'"));
   // print(jsonEncode(r'P\u0065ter'));

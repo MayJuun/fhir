@@ -22,7 +22,7 @@ Future gcsRequest() async {
       client: client,
     );
 
-    Id? newId;
+    String? newId;
     try {
       final response = await request1.request(headers: {});
       newId = response.id;
@@ -31,7 +31,7 @@ Future gcsRequest() async {
       print(e);
     }
 
-    if (newId is! Id) {
+    if (newId is! String) {
       print(newId);
     } else {
       final request2 = FhirRequest.read(

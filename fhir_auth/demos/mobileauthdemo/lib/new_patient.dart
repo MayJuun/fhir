@@ -11,7 +11,7 @@ Patient newPatient() => Patient(
         ),
       ],
       address: [Address(postalCode: zipCode())],
-      gender: random(10) < 5 ? PatientGender.male : PatientGender.female,
+      gender: random(10) < 5 ? Code('male') : Code('female'),
       birthDate: Date(
           '${1900 + random(120)}-0${random(8) + 1}-${(random(27) + 1).toString().padLeft(2, '0')}'),
     );

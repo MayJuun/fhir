@@ -259,21 +259,266 @@ abstract class _Narrative extends Narrative {
       _$_Narrative.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-  NarrativeStatus? get status => throw _privateConstructorUsedError;
+  NarrativeStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  String get div => throw _privateConstructorUsedError;
+  String get div;
   @override
   @JsonKey(ignore: true)
   _$$_NarrativeCopyWith<_$_Narrative> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CodeableReference _$CodeableReferenceFromJson(Map<String, dynamic> json) {
+  return _CodeableReference.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CodeableReference {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  CodeableConcept? get concept => throw _privateConstructorUsedError;
+  Reference? get reference => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CodeableReferenceCopyWith<CodeableReference> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CodeableReferenceCopyWith<$Res> {
+  factory $CodeableReferenceCopyWith(
+          CodeableReference value, $Res Function(CodeableReference) then) =
+      _$CodeableReferenceCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? concept,
+      Reference? reference});
+
+  $CodeableConceptCopyWith<$Res>? get concept;
+  $ReferenceCopyWith<$Res>? get reference;
+}
+
+/// @nodoc
+class _$CodeableReferenceCopyWithImpl<$Res>
+    implements $CodeableReferenceCopyWith<$Res> {
+  _$CodeableReferenceCopyWithImpl(this._value, this._then);
+
+  final CodeableReference _value;
+  // ignore: unused_field
+  final $Res Function(CodeableReference) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? concept = freezed,
+    Object? reference = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      concept: concept == freezed
+          ? _value.concept
+          : concept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get concept {
+    if (_value.concept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.concept!, (value) {
+      return _then(_value.copyWith(concept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get reference {
+    if (_value.reference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reference!, (value) {
+      return _then(_value.copyWith(reference: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CodeableReferenceCopyWith<$Res>
+    implements $CodeableReferenceCopyWith<$Res> {
+  factory _$$_CodeableReferenceCopyWith(_$_CodeableReference value,
+          $Res Function(_$_CodeableReference) then) =
+      __$$_CodeableReferenceCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? concept,
+      Reference? reference});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get concept;
+  @override
+  $ReferenceCopyWith<$Res>? get reference;
+}
+
+/// @nodoc
+class __$$_CodeableReferenceCopyWithImpl<$Res>
+    extends _$CodeableReferenceCopyWithImpl<$Res>
+    implements _$$_CodeableReferenceCopyWith<$Res> {
+  __$$_CodeableReferenceCopyWithImpl(
+      _$_CodeableReference _value, $Res Function(_$_CodeableReference) _then)
+      : super(_value, (v) => _then(v as _$_CodeableReference));
+
+  @override
+  _$_CodeableReference get _value => super._value as _$_CodeableReference;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? concept = freezed,
+    Object? reference = freezed,
+  }) {
+    return _then(_$_CodeableReference(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      concept: concept == freezed
+          ? _value.concept
+          : concept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CodeableReference extends _CodeableReference {
+  _$_CodeableReference(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.concept,
+      this.reference})
+      : _extension_ = extension_,
+        super._();
+
+  factory _$_CodeableReference.fromJson(Map<String, dynamic> json) =>
+      _$$_CodeableReferenceFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept? concept;
+  @override
+  final Reference? reference;
+
+  @override
+  String toString() {
+    return 'CodeableReference(id: $id, extension_: $extension_, concept: $concept, reference: $reference)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CodeableReference &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality().equals(other.concept, concept) &&
+            const DeepCollectionEquality().equals(other.reference, reference));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(concept),
+      const DeepCollectionEquality().hash(reference));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CodeableReferenceCopyWith<_$_CodeableReference> get copyWith =>
+      __$$_CodeableReferenceCopyWithImpl<_$_CodeableReference>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CodeableReferenceToJson(this);
+  }
+}
+
+abstract class _CodeableReference extends CodeableReference {
+  factory _CodeableReference(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final CodeableConcept? concept,
+      final Reference? reference}) = _$_CodeableReference;
+  _CodeableReference._() : super._();
+
+  factory _CodeableReference.fromJson(Map<String, dynamic> json) =
+      _$_CodeableReference.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  CodeableConcept? get concept;
+  @override
+  Reference? get reference;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CodeableReferenceCopyWith<_$_CodeableReference> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -636,27 +881,27 @@ abstract class _Reference extends Reference {
       _$_Reference.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  String? get reference => throw _privateConstructorUsedError;
+  String? get reference;
   @override
   @JsonKey(name: '_reference')
-  Element? get referenceElement => throw _privateConstructorUsedError;
+  Element? get referenceElement;
   @override
-  FhirUri? get type => throw _privateConstructorUsedError;
+  FhirUri? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  String? get display => throw _privateConstructorUsedError;
+  String? get display;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement => throw _privateConstructorUsedError;
+  Element? get displayElement;
   @override
   @JsonKey(ignore: true)
   _$$_ReferenceCopyWith<_$_Reference> get copyWith =>
@@ -1064,31 +1309,31 @@ abstract class _Meta extends Meta {
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  Id? get versionId => throw _privateConstructorUsedError;
+  Id? get versionId;
   @override
   @JsonKey(name: '_versionId')
-  Element? get versionIdElement => throw _privateConstructorUsedError;
+  Element? get versionIdElement;
   @override
-  Instant? get lastUpdated => throw _privateConstructorUsedError;
+  Instant? get lastUpdated;
   @override
   @JsonKey(name: '_lastUpdated')
-  Element? get lastUpdatedElement => throw _privateConstructorUsedError;
+  Element? get lastUpdatedElement;
   @override
-  FhirUri? get source => throw _privateConstructorUsedError;
+  FhirUri? get source;
   @override
   @JsonKey(name: '_source')
-  Element? get sourceElement => throw _privateConstructorUsedError;
+  Element? get sourceElement;
   @override
-  List<Canonical>? get profile => throw _privateConstructorUsedError;
+  List<Canonical>? get profile;
   @override
-  List<Coding>? get security => throw _privateConstructorUsedError;
+  List<Coding>? get security;
   @override
-  List<Coding>? get tag => throw _privateConstructorUsedError;
+  List<Coding>? get tag;
   @override
   @JsonKey(ignore: true)
   _$$_MetaCopyWith<_$_Meta> get copyWith => throw _privateConstructorUsedError;
@@ -1835,56 +2080,52 @@ abstract class _Dosage extends Dosage {
   factory _Dosage.fromJson(Map<String, dynamic> json) = _$_Dosage.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Integer? get sequence => throw _privateConstructorUsedError;
+  Integer? get sequence;
   @override
   @JsonKey(name: '_sequence')
-  Element? get sequenceElement => throw _privateConstructorUsedError;
+  Element? get sequenceElement;
   @override
-  String? get text => throw _privateConstructorUsedError;
+  String? get text;
   @override
   @JsonKey(name: '_text')
-  Element? get textElement => throw _privateConstructorUsedError;
+  Element? get textElement;
   @override
-  List<CodeableConcept>? get additionalInstruction =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get additionalInstruction;
   @override
-  String? get patientInstruction => throw _privateConstructorUsedError;
+  String? get patientInstruction;
   @override
   @JsonKey(name: '_patientInstruction')
-  Element? get patientInstructionElement => throw _privateConstructorUsedError;
+  Element? get patientInstructionElement;
   @override
-  Timing? get timing => throw _privateConstructorUsedError;
+  Timing? get timing;
   @override
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  Boolean? get asNeededBoolean;
   @override
   @JsonKey(name: '_asNeededBoolean')
-  Element? get asNeededBooleanElement => throw _privateConstructorUsedError;
+  Element? get asNeededBooleanElement;
   @override
-  CodeableConcept? get asNeededCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get asNeededCodeableConcept;
   @override
-  CodeableConcept? get site => throw _privateConstructorUsedError;
+  CodeableConcept? get site;
   @override
-  CodeableConcept? get route => throw _privateConstructorUsedError;
+  CodeableConcept? get route;
   @override
-  CodeableConcept? get method => throw _privateConstructorUsedError;
+  CodeableConcept? get method;
   @override
-  List<DosageDoseAndRate>? get doseAndRate =>
-      throw _privateConstructorUsedError;
+  List<DosageDoseAndRate>? get doseAndRate;
   @override
-  Ratio? get maxDosePerPeriod => throw _privateConstructorUsedError;
+  Ratio? get maxDosePerPeriod;
   @override
-  Quantity? get maxDosePerAdministration => throw _privateConstructorUsedError;
+  Quantity? get maxDosePerAdministration;
   @override
-  Quantity? get maxDosePerLifetime => throw _privateConstructorUsedError;
+  Quantity? get maxDosePerLifetime;
   @override
   @JsonKey(ignore: true)
   _$$_DosageCopyWith<_$_Dosage> get copyWith =>
@@ -2285,25 +2526,24 @@ abstract class _DosageDoseAndRate extends DosageDoseAndRate {
       _$_DosageDoseAndRate.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  Range? get doseRange => throw _privateConstructorUsedError;
+  Range? get doseRange;
   @override
-  Quantity? get doseQuantity => throw _privateConstructorUsedError;
+  Quantity? get doseQuantity;
   @override
-  Ratio? get rateRatio => throw _privateConstructorUsedError;
+  Ratio? get rateRatio;
   @override
-  Range? get rateRange => throw _privateConstructorUsedError;
+  Range? get rateRange;
   @override
-  Quantity? get rateQuantity => throw _privateConstructorUsedError;
+  Quantity? get rateQuantity;
   @override
   @JsonKey(ignore: true)
   _$$_DosageDoseAndRateCopyWith<_$_DosageDoseAndRate> get copyWith =>
@@ -2438,6 +2678,8 @@ mixin _$ElementDefinition {
   Attachment? get defaultValueAttachment => throw _privateConstructorUsedError;
   CodeableConcept? get defaultValueCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get defaultValueCodeableReference =>
+      throw _privateConstructorUsedError;
   Coding? get defaultValueCoding => throw _privateConstructorUsedError;
   ContactPoint? get defaultValueContactPoint =>
       throw _privateConstructorUsedError;
@@ -2451,6 +2693,7 @@ mixin _$ElementDefinition {
   Quantity? get defaultValueQuantity => throw _privateConstructorUsedError;
   Range? get defaultValueRange => throw _privateConstructorUsedError;
   Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
+  RatioRange? get defaultValueRatioRange => throw _privateConstructorUsedError;
   Reference? get defaultValueReference => throw _privateConstructorUsedError;
   SampledData? get defaultValueSampledData =>
       throw _privateConstructorUsedError;
@@ -2472,7 +2715,6 @@ mixin _$ElementDefinition {
   UsageContext? get defaultValueUsageContext =>
       throw _privateConstructorUsedError;
   Dosage? get defaultValueDosage => throw _privateConstructorUsedError;
-  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
   Markdown? get meaningWhenMissing => throw _privateConstructorUsedError;
   @JsonKey(name: '_meaningWhenMissing')
   Element? get meaningWhenMissingElement => throw _privateConstructorUsedError;
@@ -2542,6 +2784,8 @@ mixin _$ElementDefinition {
   Attachment? get fixedAttachment => throw _privateConstructorUsedError;
   CodeableConcept? get fixedCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get fixedCodeableReference =>
+      throw _privateConstructorUsedError;
   Coding? get fixedCoding => throw _privateConstructorUsedError;
   ContactPoint? get fixedContactPoint => throw _privateConstructorUsedError;
   Count? get fixedCount => throw _privateConstructorUsedError;
@@ -2554,6 +2798,7 @@ mixin _$ElementDefinition {
   Quantity? get fixedQuantity => throw _privateConstructorUsedError;
   Range? get fixedRange => throw _privateConstructorUsedError;
   Ratio? get fixedRatio => throw _privateConstructorUsedError;
+  RatioRange? get fixedRatioRange => throw _privateConstructorUsedError;
   Reference? get fixedReference => throw _privateConstructorUsedError;
   SampledData? get fixedSampledData => throw _privateConstructorUsedError;
   Signature? get fixedSignature => throw _privateConstructorUsedError;
@@ -2571,7 +2816,6 @@ mixin _$ElementDefinition {
       throw _privateConstructorUsedError;
   UsageContext? get fixedUsageContext => throw _privateConstructorUsedError;
   Dosage? get fixedDosage => throw _privateConstructorUsedError;
-  Meta? get fixedMeta => throw _privateConstructorUsedError;
   Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_patternBase64Binary')
   Element? get patternBase64BinaryElement => throw _privateConstructorUsedError;
@@ -2635,6 +2879,8 @@ mixin _$ElementDefinition {
   Attachment? get patternAttachment => throw _privateConstructorUsedError;
   CodeableConcept? get patternCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get patternCodeableReference =>
+      throw _privateConstructorUsedError;
   Coding? get patternCoding => throw _privateConstructorUsedError;
   ContactPoint? get patternContactPoint => throw _privateConstructorUsedError;
   Count? get patternCount => throw _privateConstructorUsedError;
@@ -2647,6 +2893,7 @@ mixin _$ElementDefinition {
   Quantity? get patternQuantity => throw _privateConstructorUsedError;
   Range? get patternRange => throw _privateConstructorUsedError;
   Ratio? get patternRatio => throw _privateConstructorUsedError;
+  RatioRange? get patternRatioRange => throw _privateConstructorUsedError;
   Reference? get patternReference => throw _privateConstructorUsedError;
   SampledData? get patternSampledData => throw _privateConstructorUsedError;
   Signature? get patternSignature => throw _privateConstructorUsedError;
@@ -2664,7 +2911,6 @@ mixin _$ElementDefinition {
       throw _privateConstructorUsedError;
   UsageContext? get patternUsageContext => throw _privateConstructorUsedError;
   Dosage? get patternDosage => throw _privateConstructorUsedError;
-  Meta? get patternMeta => throw _privateConstructorUsedError;
   List<ElementDefinitionExample>? get example =>
       throw _privateConstructorUsedError;
   Date? get minValueDate => throw _privateConstructorUsedError;
@@ -2862,6 +3108,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? defaultValueAnnotation,
       Attachment? defaultValueAttachment,
       CodeableConcept? defaultValueCodeableConcept,
+      CodeableReference? defaultValueCodeableReference,
       Coding? defaultValueCoding,
       ContactPoint? defaultValueContactPoint,
       Count? defaultValueCount,
@@ -2874,6 +3121,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? defaultValueQuantity,
       Range? defaultValueRange,
       Ratio? defaultValueRatio,
+      RatioRange? defaultValueRatioRange,
       Reference? defaultValueReference,
       SampledData? defaultValueSampledData,
       Signature? defaultValueSignature,
@@ -2887,7 +3135,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? defaultValueTriggerDefinition,
       UsageContext? defaultValueUsageContext,
       Dosage? defaultValueDosage,
-      Meta? defaultValueMeta,
       Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           Element? meaningWhenMissingElement,
@@ -2956,6 +3203,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? fixedAnnotation,
       Attachment? fixedAttachment,
       CodeableConcept? fixedCodeableConcept,
+      CodeableReference? fixedCodeableReference,
       Coding? fixedCoding,
       ContactPoint? fixedContactPoint,
       Count? fixedCount,
@@ -2968,6 +3216,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? fixedQuantity,
       Range? fixedRange,
       Ratio? fixedRatio,
+      RatioRange? fixedRatioRange,
       Reference? fixedReference,
       SampledData? fixedSampledData,
       Signature? fixedSignature,
@@ -2981,7 +3230,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-      Meta? fixedMeta,
       Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
@@ -3044,6 +3292,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Annotation? patternAnnotation,
       Attachment? patternAttachment,
       CodeableConcept? patternCodeableConcept,
+      CodeableReference? patternCodeableReference,
       Coding? patternCoding,
       ContactPoint? patternContactPoint,
       Count? patternCount,
@@ -3056,6 +3305,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Quantity? patternQuantity,
       Range? patternRange,
       Ratio? patternRatio,
+      RatioRange? patternRatioRange,
       Reference? patternReference,
       SampledData? patternSampledData,
       Signature? patternSignature,
@@ -3069,7 +3319,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? patternTriggerDefinition,
       UsageContext? patternUsageContext,
       Dosage? patternDosage,
-      Meta? patternMeta,
       List<ElementDefinitionExample>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -3180,6 +3429,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get defaultValueAnnotation;
   $AttachmentCopyWith<$Res>? get defaultValueAttachment;
   $CodeableConceptCopyWith<$Res>? get defaultValueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference;
   $CodingCopyWith<$Res>? get defaultValueCoding;
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint;
   $CountCopyWith<$Res>? get defaultValueCount;
@@ -3192,6 +3442,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get defaultValueQuantity;
   $RangeCopyWith<$Res>? get defaultValueRange;
   $RatioCopyWith<$Res>? get defaultValueRatio;
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange;
   $ReferenceCopyWith<$Res>? get defaultValueReference;
   $SampledDataCopyWith<$Res>? get defaultValueSampledData;
   $SignatureCopyWith<$Res>? get defaultValueSignature;
@@ -3205,7 +3456,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get defaultValueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get defaultValueUsageContext;
   $DosageCopyWith<$Res>? get defaultValueDosage;
-  $MetaCopyWith<$Res>? get defaultValueMeta;
   $ElementCopyWith<$Res>? get meaningWhenMissingElement;
   $ElementCopyWith<$Res>? get orderMeaningElement;
   $ElementCopyWith<$Res>? get fixedBase64BinaryElement;
@@ -3232,6 +3482,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get fixedAnnotation;
   $AttachmentCopyWith<$Res>? get fixedAttachment;
   $CodeableConceptCopyWith<$Res>? get fixedCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference;
   $CodingCopyWith<$Res>? get fixedCoding;
   $ContactPointCopyWith<$Res>? get fixedContactPoint;
   $CountCopyWith<$Res>? get fixedCount;
@@ -3244,6 +3495,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get fixedQuantity;
   $RangeCopyWith<$Res>? get fixedRange;
   $RatioCopyWith<$Res>? get fixedRatio;
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange;
   $ReferenceCopyWith<$Res>? get fixedReference;
   $SampledDataCopyWith<$Res>? get fixedSampledData;
   $SignatureCopyWith<$Res>? get fixedSignature;
@@ -3257,7 +3509,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get fixedTriggerDefinition;
   $UsageContextCopyWith<$Res>? get fixedUsageContext;
   $DosageCopyWith<$Res>? get fixedDosage;
-  $MetaCopyWith<$Res>? get fixedMeta;
   $ElementCopyWith<$Res>? get patternBase64BinaryElement;
   $ElementCopyWith<$Res>? get patternBooleanElement;
   $ElementCopyWith<$Res>? get patternCanonicalElement;
@@ -3282,6 +3533,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get patternAnnotation;
   $AttachmentCopyWith<$Res>? get patternAttachment;
   $CodeableConceptCopyWith<$Res>? get patternCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference;
   $CodingCopyWith<$Res>? get patternCoding;
   $ContactPointCopyWith<$Res>? get patternContactPoint;
   $CountCopyWith<$Res>? get patternCount;
@@ -3294,6 +3546,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get patternQuantity;
   $RangeCopyWith<$Res>? get patternRange;
   $RatioCopyWith<$Res>? get patternRatio;
+  $RatioRangeCopyWith<$Res>? get patternRatioRange;
   $ReferenceCopyWith<$Res>? get patternReference;
   $SampledDataCopyWith<$Res>? get patternSampledData;
   $SignatureCopyWith<$Res>? get patternSignature;
@@ -3307,7 +3560,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get patternTriggerDefinition;
   $UsageContextCopyWith<$Res>? get patternUsageContext;
   $DosageCopyWith<$Res>? get patternDosage;
-  $MetaCopyWith<$Res>? get patternMeta;
   $ElementCopyWith<$Res>? get minValueDateElement;
   $ElementCopyWith<$Res>? get minValueDateTimeElement;
   $ElementCopyWith<$Res>? get minValueInstantElement;
@@ -3421,6 +3673,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueAnnotation = freezed,
     Object? defaultValueAttachment = freezed,
     Object? defaultValueCodeableConcept = freezed,
+    Object? defaultValueCodeableReference = freezed,
     Object? defaultValueCoding = freezed,
     Object? defaultValueContactPoint = freezed,
     Object? defaultValueCount = freezed,
@@ -3433,6 +3686,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueQuantity = freezed,
     Object? defaultValueRange = freezed,
     Object? defaultValueRatio = freezed,
+    Object? defaultValueRatioRange = freezed,
     Object? defaultValueReference = freezed,
     Object? defaultValueSampledData = freezed,
     Object? defaultValueSignature = freezed,
@@ -3446,7 +3700,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueTriggerDefinition = freezed,
     Object? defaultValueUsageContext = freezed,
     Object? defaultValueDosage = freezed,
-    Object? defaultValueMeta = freezed,
     Object? meaningWhenMissing = freezed,
     Object? meaningWhenMissingElement = freezed,
     Object? orderMeaning = freezed,
@@ -3494,6 +3747,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedAnnotation = freezed,
     Object? fixedAttachment = freezed,
     Object? fixedCodeableConcept = freezed,
+    Object? fixedCodeableReference = freezed,
     Object? fixedCoding = freezed,
     Object? fixedContactPoint = freezed,
     Object? fixedCount = freezed,
@@ -3506,6 +3760,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedQuantity = freezed,
     Object? fixedRange = freezed,
     Object? fixedRatio = freezed,
+    Object? fixedRatioRange = freezed,
     Object? fixedReference = freezed,
     Object? fixedSampledData = freezed,
     Object? fixedSignature = freezed,
@@ -3519,7 +3774,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? fixedTriggerDefinition = freezed,
     Object? fixedUsageContext = freezed,
     Object? fixedDosage = freezed,
-    Object? fixedMeta = freezed,
     Object? patternBase64Binary = freezed,
     Object? patternBase64BinaryElement = freezed,
     Object? patternBoolean = freezed,
@@ -3563,6 +3817,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternAnnotation = freezed,
     Object? patternAttachment = freezed,
     Object? patternCodeableConcept = freezed,
+    Object? patternCodeableReference = freezed,
     Object? patternCoding = freezed,
     Object? patternContactPoint = freezed,
     Object? patternCount = freezed,
@@ -3575,6 +3830,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternQuantity = freezed,
     Object? patternRange = freezed,
     Object? patternRatio = freezed,
+    Object? patternRatioRange = freezed,
     Object? patternReference = freezed,
     Object? patternSampledData = freezed,
     Object? patternSignature = freezed,
@@ -3588,7 +3844,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object? patternTriggerDefinition = freezed,
     Object? patternUsageContext = freezed,
     Object? patternDosage = freezed,
-    Object? patternMeta = freezed,
     Object? example = freezed,
     Object? minValueDate = freezed,
     Object? minValueDateElement = freezed,
@@ -3946,6 +4201,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueCodeableConcept
           : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      defaultValueCodeableReference: defaultValueCodeableReference == freezed
+          ? _value.defaultValueCodeableReference
+          : defaultValueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       defaultValueCoding: defaultValueCoding == freezed
           ? _value.defaultValueCoding
           : defaultValueCoding // ignore: cast_nullable_to_non_nullable
@@ -3994,6 +4253,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueRatio
           : defaultValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      defaultValueRatioRange: defaultValueRatioRange == freezed
+          ? _value.defaultValueRatioRange
+          : defaultValueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       defaultValueReference: defaultValueReference == freezed
           ? _value.defaultValueReference
           : defaultValueReference // ignore: cast_nullable_to_non_nullable
@@ -4047,10 +4310,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueDosage
           : defaultValueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      defaultValueMeta: defaultValueMeta == freezed
-          ? _value.defaultValueMeta
-          : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       meaningWhenMissing: meaningWhenMissing == freezed
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
@@ -4239,6 +4498,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedCodeableConcept
           : fixedCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      fixedCodeableReference: fixedCodeableReference == freezed
+          ? _value.fixedCodeableReference
+          : fixedCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       fixedCoding: fixedCoding == freezed
           ? _value.fixedCoding
           : fixedCoding // ignore: cast_nullable_to_non_nullable
@@ -4287,6 +4550,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedRatio
           : fixedRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      fixedRatioRange: fixedRatioRange == freezed
+          ? _value.fixedRatioRange
+          : fixedRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       fixedReference: fixedReference == freezed
           ? _value.fixedReference
           : fixedReference // ignore: cast_nullable_to_non_nullable
@@ -4339,10 +4606,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedDosage
           : fixedDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      fixedMeta: fixedMeta == freezed
-          ? _value.fixedMeta
-          : fixedMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       patternBase64Binary: patternBase64Binary == freezed
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
@@ -4515,6 +4778,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternCodeableConcept
           : patternCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      patternCodeableReference: patternCodeableReference == freezed
+          ? _value.patternCodeableReference
+          : patternCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       patternCoding: patternCoding == freezed
           ? _value.patternCoding
           : patternCoding // ignore: cast_nullable_to_non_nullable
@@ -4563,6 +4830,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternRatio
           : patternRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      patternRatioRange: patternRatioRange == freezed
+          ? _value.patternRatioRange
+          : patternRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       patternReference: patternReference == freezed
           ? _value.patternReference
           : patternReference // ignore: cast_nullable_to_non_nullable
@@ -4615,10 +4886,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternDosage
           : patternDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      patternMeta: patternMeta == freezed
-          ? _value.patternMeta
-          : patternMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       example: example == freezed
           ? _value.example
           : example // ignore: cast_nullable_to_non_nullable
@@ -5235,6 +5502,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference {
+    if (_value.defaultValueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(
+        _value.defaultValueCodeableReference!, (value) {
+      return _then(_value.copyWith(defaultValueCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get defaultValueCoding {
     if (_value.defaultValueCoding == null) {
       return null;
@@ -5364,6 +5643,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.defaultValueRatio!, (value) {
       return _then(_value.copyWith(defaultValueRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange {
+    if (_value.defaultValueRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.defaultValueRatioRange!, (value) {
+      return _then(_value.copyWith(defaultValueRatioRange: value));
     });
   }
 
@@ -5513,17 +5803,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.defaultValueDosage!, (value) {
       return _then(_value.copyWith(defaultValueDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get defaultValueMeta {
-    if (_value.defaultValueMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.defaultValueMeta!, (value) {
-      return _then(_value.copyWith(defaultValueMeta: value));
     });
   }
 
@@ -5815,6 +6094,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference {
+    if (_value.fixedCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.fixedCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(fixedCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get fixedCoding {
     if (_value.fixedCoding == null) {
       return null;
@@ -5943,6 +6234,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.fixedRatio!, (value) {
       return _then(_value.copyWith(fixedRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange {
+    if (_value.fixedRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.fixedRatioRange!, (value) {
+      return _then(_value.copyWith(fixedRatioRange: value));
     });
   }
 
@@ -6090,17 +6392,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.fixedDosage!, (value) {
       return _then(_value.copyWith(fixedDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get fixedMeta {
-    if (_value.fixedMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.fixedMeta!, (value) {
-      return _then(_value.copyWith(fixedMeta: value));
     });
   }
 
@@ -6370,6 +6661,18 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference {
+    if (_value.patternCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.patternCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(patternCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get patternCoding {
     if (_value.patternCoding == null) {
       return null;
@@ -6498,6 +6801,17 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.patternRatio!, (value) {
       return _then(_value.copyWith(patternRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get patternRatioRange {
+    if (_value.patternRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.patternRatioRange!, (value) {
+      return _then(_value.copyWith(patternRatioRange: value));
     });
   }
 
@@ -6645,17 +6959,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
 
     return $DosageCopyWith<$Res>(_value.patternDosage!, (value) {
       return _then(_value.copyWith(patternDosage: value));
-    });
-  }
-
-  @override
-  $MetaCopyWith<$Res>? get patternMeta {
-    if (_value.patternMeta == null) {
-      return null;
-    }
-
-    return $MetaCopyWith<$Res>(_value.patternMeta!, (value) {
-      return _then(_value.copyWith(patternMeta: value));
     });
   }
 
@@ -7041,6 +7344,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Annotation? defaultValueAnnotation,
       Attachment? defaultValueAttachment,
       CodeableConcept? defaultValueCodeableConcept,
+      CodeableReference? defaultValueCodeableReference,
       Coding? defaultValueCoding,
       ContactPoint? defaultValueContactPoint,
       Count? defaultValueCount,
@@ -7053,6 +7357,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Quantity? defaultValueQuantity,
       Range? defaultValueRange,
       Ratio? defaultValueRatio,
+      RatioRange? defaultValueRatioRange,
       Reference? defaultValueReference,
       SampledData? defaultValueSampledData,
       Signature? defaultValueSignature,
@@ -7066,7 +7371,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       TriggerDefinition? defaultValueTriggerDefinition,
       UsageContext? defaultValueUsageContext,
       Dosage? defaultValueDosage,
-      Meta? defaultValueMeta,
       Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           Element? meaningWhenMissingElement,
@@ -7135,6 +7439,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Annotation? fixedAnnotation,
       Attachment? fixedAttachment,
       CodeableConcept? fixedCodeableConcept,
+      CodeableReference? fixedCodeableReference,
       Coding? fixedCoding,
       ContactPoint? fixedContactPoint,
       Count? fixedCount,
@@ -7147,6 +7452,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Quantity? fixedQuantity,
       Range? fixedRange,
       Ratio? fixedRatio,
+      RatioRange? fixedRatioRange,
       Reference? fixedReference,
       SampledData? fixedSampledData,
       Signature? fixedSignature,
@@ -7160,7 +7466,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-      Meta? fixedMeta,
       Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
@@ -7223,6 +7528,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Annotation? patternAnnotation,
       Attachment? patternAttachment,
       CodeableConcept? patternCodeableConcept,
+      CodeableReference? patternCodeableReference,
       Coding? patternCoding,
       ContactPoint? patternContactPoint,
       Count? patternCount,
@@ -7235,6 +7541,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Quantity? patternQuantity,
       Range? patternRange,
       Ratio? patternRatio,
+      RatioRange? patternRatioRange,
       Reference? patternReference,
       SampledData? patternSampledData,
       Signature? patternSignature,
@@ -7248,7 +7555,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       TriggerDefinition? patternTriggerDefinition,
       UsageContext? patternUsageContext,
       Dosage? patternDosage,
-      Meta? patternMeta,
       List<ElementDefinitionExample>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -7397,6 +7703,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get defaultValueCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get defaultValueCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get defaultValueCoding;
   @override
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint;
@@ -7420,6 +7728,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get defaultValueRange;
   @override
   $RatioCopyWith<$Res>? get defaultValueRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get defaultValueRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get defaultValueReference;
   @override
@@ -7446,8 +7756,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get defaultValueUsageContext;
   @override
   $DosageCopyWith<$Res>? get defaultValueDosage;
-  @override
-  $MetaCopyWith<$Res>? get defaultValueMeta;
   @override
   $ElementCopyWith<$Res>? get meaningWhenMissingElement;
   @override
@@ -7501,6 +7809,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get fixedCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get fixedCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get fixedCoding;
   @override
   $ContactPointCopyWith<$Res>? get fixedContactPoint;
@@ -7524,6 +7834,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get fixedRange;
   @override
   $RatioCopyWith<$Res>? get fixedRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get fixedRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get fixedReference;
   @override
@@ -7550,8 +7862,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get fixedUsageContext;
   @override
   $DosageCopyWith<$Res>? get fixedDosage;
-  @override
-  $MetaCopyWith<$Res>? get fixedMeta;
   @override
   $ElementCopyWith<$Res>? get patternBase64BinaryElement;
   @override
@@ -7601,6 +7911,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get patternCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get patternCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get patternCoding;
   @override
   $ContactPointCopyWith<$Res>? get patternContactPoint;
@@ -7624,6 +7936,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $RangeCopyWith<$Res>? get patternRange;
   @override
   $RatioCopyWith<$Res>? get patternRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get patternRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get patternReference;
   @override
@@ -7650,8 +7964,6 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   $UsageContextCopyWith<$Res>? get patternUsageContext;
   @override
   $DosageCopyWith<$Res>? get patternDosage;
-  @override
-  $MetaCopyWith<$Res>? get patternMeta;
   @override
   $ElementCopyWith<$Res>? get minValueDateElement;
   @override
@@ -7791,6 +8103,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueAnnotation = freezed,
     Object? defaultValueAttachment = freezed,
     Object? defaultValueCodeableConcept = freezed,
+    Object? defaultValueCodeableReference = freezed,
     Object? defaultValueCoding = freezed,
     Object? defaultValueContactPoint = freezed,
     Object? defaultValueCount = freezed,
@@ -7803,6 +8116,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueQuantity = freezed,
     Object? defaultValueRange = freezed,
     Object? defaultValueRatio = freezed,
+    Object? defaultValueRatioRange = freezed,
     Object? defaultValueReference = freezed,
     Object? defaultValueSampledData = freezed,
     Object? defaultValueSignature = freezed,
@@ -7816,7 +8130,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? defaultValueTriggerDefinition = freezed,
     Object? defaultValueUsageContext = freezed,
     Object? defaultValueDosage = freezed,
-    Object? defaultValueMeta = freezed,
     Object? meaningWhenMissing = freezed,
     Object? meaningWhenMissingElement = freezed,
     Object? orderMeaning = freezed,
@@ -7864,6 +8177,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? fixedAnnotation = freezed,
     Object? fixedAttachment = freezed,
     Object? fixedCodeableConcept = freezed,
+    Object? fixedCodeableReference = freezed,
     Object? fixedCoding = freezed,
     Object? fixedContactPoint = freezed,
     Object? fixedCount = freezed,
@@ -7876,6 +8190,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? fixedQuantity = freezed,
     Object? fixedRange = freezed,
     Object? fixedRatio = freezed,
+    Object? fixedRatioRange = freezed,
     Object? fixedReference = freezed,
     Object? fixedSampledData = freezed,
     Object? fixedSignature = freezed,
@@ -7889,7 +8204,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? fixedTriggerDefinition = freezed,
     Object? fixedUsageContext = freezed,
     Object? fixedDosage = freezed,
-    Object? fixedMeta = freezed,
     Object? patternBase64Binary = freezed,
     Object? patternBase64BinaryElement = freezed,
     Object? patternBoolean = freezed,
@@ -7933,6 +8247,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? patternAnnotation = freezed,
     Object? patternAttachment = freezed,
     Object? patternCodeableConcept = freezed,
+    Object? patternCodeableReference = freezed,
     Object? patternCoding = freezed,
     Object? patternContactPoint = freezed,
     Object? patternCount = freezed,
@@ -7945,6 +8260,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? patternQuantity = freezed,
     Object? patternRange = freezed,
     Object? patternRatio = freezed,
+    Object? patternRatioRange = freezed,
     Object? patternReference = freezed,
     Object? patternSampledData = freezed,
     Object? patternSignature = freezed,
@@ -7958,7 +8274,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? patternTriggerDefinition = freezed,
     Object? patternUsageContext = freezed,
     Object? patternDosage = freezed,
-    Object? patternMeta = freezed,
     Object? example = freezed,
     Object? minValueDate = freezed,
     Object? minValueDateElement = freezed,
@@ -8316,6 +8631,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueCodeableConcept
           : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      defaultValueCodeableReference: defaultValueCodeableReference == freezed
+          ? _value.defaultValueCodeableReference
+          : defaultValueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       defaultValueCoding: defaultValueCoding == freezed
           ? _value.defaultValueCoding
           : defaultValueCoding // ignore: cast_nullable_to_non_nullable
@@ -8364,6 +8683,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueRatio
           : defaultValueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      defaultValueRatioRange: defaultValueRatioRange == freezed
+          ? _value.defaultValueRatioRange
+          : defaultValueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       defaultValueReference: defaultValueReference == freezed
           ? _value.defaultValueReference
           : defaultValueReference // ignore: cast_nullable_to_non_nullable
@@ -8417,10 +8740,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.defaultValueDosage
           : defaultValueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      defaultValueMeta: defaultValueMeta == freezed
-          ? _value.defaultValueMeta
-          : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       meaningWhenMissing: meaningWhenMissing == freezed
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
@@ -8609,6 +8928,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedCodeableConcept
           : fixedCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      fixedCodeableReference: fixedCodeableReference == freezed
+          ? _value.fixedCodeableReference
+          : fixedCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       fixedCoding: fixedCoding == freezed
           ? _value.fixedCoding
           : fixedCoding // ignore: cast_nullable_to_non_nullable
@@ -8657,6 +8980,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedRatio
           : fixedRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      fixedRatioRange: fixedRatioRange == freezed
+          ? _value.fixedRatioRange
+          : fixedRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       fixedReference: fixedReference == freezed
           ? _value.fixedReference
           : fixedReference // ignore: cast_nullable_to_non_nullable
@@ -8709,10 +9036,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.fixedDosage
           : fixedDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      fixedMeta: fixedMeta == freezed
-          ? _value.fixedMeta
-          : fixedMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       patternBase64Binary: patternBase64Binary == freezed
           ? _value.patternBase64Binary
           : patternBase64Binary // ignore: cast_nullable_to_non_nullable
@@ -8885,6 +9208,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternCodeableConcept
           : patternCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      patternCodeableReference: patternCodeableReference == freezed
+          ? _value.patternCodeableReference
+          : patternCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       patternCoding: patternCoding == freezed
           ? _value.patternCoding
           : patternCoding // ignore: cast_nullable_to_non_nullable
@@ -8933,6 +9260,10 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternRatio
           : patternRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      patternRatioRange: patternRatioRange == freezed
+          ? _value.patternRatioRange
+          : patternRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       patternReference: patternReference == freezed
           ? _value.patternReference
           : patternReference // ignore: cast_nullable_to_non_nullable
@@ -8985,10 +9316,6 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           ? _value.patternDosage
           : patternDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      patternMeta: patternMeta == freezed
-          ? _value.patternMeta
-          : patternMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
       example: example == freezed
           ? _value._example
           : example // ignore: cast_nullable_to_non_nullable
@@ -9306,6 +9633,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueAnnotation,
       this.defaultValueAttachment,
       this.defaultValueCodeableConcept,
+      this.defaultValueCodeableReference,
       this.defaultValueCoding,
       this.defaultValueContactPoint,
       this.defaultValueCount,
@@ -9318,6 +9646,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueQuantity,
       this.defaultValueRange,
       this.defaultValueRatio,
+      this.defaultValueRatioRange,
       this.defaultValueReference,
       this.defaultValueSampledData,
       this.defaultValueSignature,
@@ -9331,7 +9660,6 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueTriggerDefinition,
       this.defaultValueUsageContext,
       this.defaultValueDosage,
-      this.defaultValueMeta,
       this.meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           this.meaningWhenMissingElement,
@@ -9400,6 +9728,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedAnnotation,
       this.fixedAttachment,
       this.fixedCodeableConcept,
+      this.fixedCodeableReference,
       this.fixedCoding,
       this.fixedContactPoint,
       this.fixedCount,
@@ -9412,6 +9741,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedQuantity,
       this.fixedRange,
       this.fixedRatio,
+      this.fixedRatioRange,
       this.fixedReference,
       this.fixedSampledData,
       this.fixedSignature,
@@ -9425,7 +9755,6 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedTriggerDefinition,
       this.fixedUsageContext,
       this.fixedDosage,
-      this.fixedMeta,
       this.patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           this.patternBase64BinaryElement,
@@ -9488,6 +9817,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternAnnotation,
       this.patternAttachment,
       this.patternCodeableConcept,
+      this.patternCodeableReference,
       this.patternCoding,
       this.patternContactPoint,
       this.patternCount,
@@ -9500,6 +9830,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternQuantity,
       this.patternRange,
       this.patternRatio,
+      this.patternRatioRange,
       this.patternReference,
       this.patternSampledData,
       this.patternSignature,
@@ -9513,7 +9844,6 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternTriggerDefinition,
       this.patternUsageContext,
       this.patternDosage,
-      this.patternMeta,
       final List<ElementDefinitionExample>? example,
       this.minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -9846,6 +10176,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final CodeableConcept? defaultValueCodeableConcept;
   @override
+  final CodeableReference? defaultValueCodeableReference;
+  @override
   final Coding? defaultValueCoding;
   @override
   final ContactPoint? defaultValueContactPoint;
@@ -9869,6 +10201,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Range? defaultValueRange;
   @override
   final Ratio? defaultValueRatio;
+  @override
+  final RatioRange? defaultValueRatioRange;
   @override
   final Reference? defaultValueReference;
   @override
@@ -9895,8 +10229,6 @@ class _$_ElementDefinition extends _ElementDefinition {
   final UsageContext? defaultValueUsageContext;
   @override
   final Dosage? defaultValueDosage;
-  @override
-  final Meta? defaultValueMeta;
   @override
   final Markdown? meaningWhenMissing;
   @override
@@ -10013,6 +10345,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final CodeableConcept? fixedCodeableConcept;
   @override
+  final CodeableReference? fixedCodeableReference;
+  @override
   final Coding? fixedCoding;
   @override
   final ContactPoint? fixedContactPoint;
@@ -10036,6 +10370,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Range? fixedRange;
   @override
   final Ratio? fixedRatio;
+  @override
+  final RatioRange? fixedRatioRange;
   @override
   final Reference? fixedReference;
   @override
@@ -10062,8 +10398,6 @@ class _$_ElementDefinition extends _ElementDefinition {
   final UsageContext? fixedUsageContext;
   @override
   final Dosage? fixedDosage;
-  @override
-  final Meta? fixedMeta;
   @override
   final Base64Binary? patternBase64Binary;
   @override
@@ -10170,6 +10504,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final CodeableConcept? patternCodeableConcept;
   @override
+  final CodeableReference? patternCodeableReference;
+  @override
   final Coding? patternCoding;
   @override
   final ContactPoint? patternContactPoint;
@@ -10193,6 +10529,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Range? patternRange;
   @override
   final Ratio? patternRatio;
+  @override
+  final RatioRange? patternRatioRange;
   @override
   final Reference? patternReference;
   @override
@@ -10219,8 +10557,6 @@ class _$_ElementDefinition extends _ElementDefinition {
   final UsageContext? patternUsageContext;
   @override
   final Dosage? patternDosage;
-  @override
-  final Meta? patternMeta;
   final List<ElementDefinitionExample>? _example;
   @override
   List<ElementDefinitionExample>? get example {
@@ -10380,7 +10716,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, pathElement: $pathElement, representation: $representation, representationElement: $representationElement, sliceName: $sliceName, sliceNameElement: $sliceNameElement, sliceIsConstraining: $sliceIsConstraining, sliceIsConstrainingElement: $sliceIsConstrainingElement, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comment: $comment, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, contentReference: $contentReference, contentReferenceElement: $contentReferenceElement, type: $type, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonical: $defaultValueCanonical, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueUrl: $defaultValueUrl, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, defaultValueMeta: $defaultValueMeta, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaning: $orderMeaning, orderMeaningElement: $orderMeaningElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedCanonical: $fixedCanonical, fixedCanonicalElement: $fixedCanonicalElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedTime: $fixedTime, fixedTimeElement: $fixedTimeElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedUrl: $fixedUrl, fixedUrlElement: $fixedUrlElement, fixedUuid: $fixedUuid, fixedUuidElement: $fixedUuidElement, fixedAddress: $fixedAddress, fixedAge: $fixedAge, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedContactPoint: $fixedContactPoint, fixedCount: $fixedCount, fixedDistance: $fixedDistance, fixedDuration: $fixedDuration, fixedHumanName: $fixedHumanName, fixedIdentifier: $fixedIdentifier, fixedMoney: $fixedMoney, fixedPeriod: $fixedPeriod, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedRatio: $fixedRatio, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedTiming: $fixedTiming, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDataRequirement: $fixedDataRequirement, fixedExpression: $fixedExpression, fixedParameterDefinition: $fixedParameterDefinition, fixedRelatedArtifact: $fixedRelatedArtifact, fixedTriggerDefinition: $fixedTriggerDefinition, fixedUsageContext: $fixedUsageContext, fixedDosage: $fixedDosage, fixedMeta: $fixedMeta, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternCanonical: $patternCanonical, patternCanonicalElement: $patternCanonicalElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternId: $patternId, patternIdElement: $patternIdElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternString: $patternString, patternStringElement: $patternStringElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternUrl: $patternUrl, patternUrlElement: $patternUrlElement, patternUuid: $patternUuid, patternUuidElement: $patternUuidElement, patternAddress: $patternAddress, patternAge: $patternAge, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternContactPoint: $patternContactPoint, patternCount: $patternCount, patternDistance: $patternDistance, patternDuration: $patternDuration, patternHumanName: $patternHumanName, patternIdentifier: $patternIdentifier, patternMoney: $patternMoney, patternPeriod: $patternPeriod, patternQuantity: $patternQuantity, patternRange: $patternRange, patternRatio: $patternRatio, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternTiming: $patternTiming, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDataRequirement: $patternDataRequirement, patternExpression: $patternExpression, patternParameterDefinition: $patternParameterDefinition, patternRelatedArtifact: $patternRelatedArtifact, patternTriggerDefinition: $patternTriggerDefinition, patternUsageContext: $patternUsageContext, patternDosage: $patternDosage, patternMeta: $patternMeta, example: $example, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isModifierReason: $isModifierReason, isModifierReasonElement: $isModifierReasonElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
+    return 'ElementDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, pathElement: $pathElement, representation: $representation, representationElement: $representationElement, sliceName: $sliceName, sliceNameElement: $sliceNameElement, sliceIsConstraining: $sliceIsConstraining, sliceIsConstrainingElement: $sliceIsConstrainingElement, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comment: $comment, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, contentReference: $contentReference, contentReferenceElement: $contentReferenceElement, type: $type, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonical: $defaultValueCanonical, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueUrl: $defaultValueUrl, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuid: $defaultValueUuid, defaultValueUuidElement: $defaultValueUuidElement, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCodeableReference: $defaultValueCodeableReference, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueRatioRange: $defaultValueRatioRange, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaning: $orderMeaning, orderMeaningElement: $orderMeaningElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedCanonical: $fixedCanonical, fixedCanonicalElement: $fixedCanonicalElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedTime: $fixedTime, fixedTimeElement: $fixedTimeElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedUrl: $fixedUrl, fixedUrlElement: $fixedUrlElement, fixedUuid: $fixedUuid, fixedUuidElement: $fixedUuidElement, fixedAddress: $fixedAddress, fixedAge: $fixedAge, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedCodeableConcept: $fixedCodeableConcept, fixedCodeableReference: $fixedCodeableReference, fixedCoding: $fixedCoding, fixedContactPoint: $fixedContactPoint, fixedCount: $fixedCount, fixedDistance: $fixedDistance, fixedDuration: $fixedDuration, fixedHumanName: $fixedHumanName, fixedIdentifier: $fixedIdentifier, fixedMoney: $fixedMoney, fixedPeriod: $fixedPeriod, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedRatio: $fixedRatio, fixedRatioRange: $fixedRatioRange, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedTiming: $fixedTiming, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDataRequirement: $fixedDataRequirement, fixedExpression: $fixedExpression, fixedParameterDefinition: $fixedParameterDefinition, fixedRelatedArtifact: $fixedRelatedArtifact, fixedTriggerDefinition: $fixedTriggerDefinition, fixedUsageContext: $fixedUsageContext, fixedDosage: $fixedDosage, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternCanonical: $patternCanonical, patternCanonicalElement: $patternCanonicalElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternId: $patternId, patternIdElement: $patternIdElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternString: $patternString, patternStringElement: $patternStringElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternUrl: $patternUrl, patternUrlElement: $patternUrlElement, patternUuid: $patternUuid, patternUuidElement: $patternUuidElement, patternAddress: $patternAddress, patternAge: $patternAge, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternCodeableConcept: $patternCodeableConcept, patternCodeableReference: $patternCodeableReference, patternCoding: $patternCoding, patternContactPoint: $patternContactPoint, patternCount: $patternCount, patternDistance: $patternDistance, patternDuration: $patternDuration, patternHumanName: $patternHumanName, patternIdentifier: $patternIdentifier, patternMoney: $patternMoney, patternPeriod: $patternPeriod, patternQuantity: $patternQuantity, patternRange: $patternRange, patternRatio: $patternRatio, patternRatioRange: $patternRatioRange, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternTiming: $patternTiming, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDataRequirement: $patternDataRequirement, patternExpression: $patternExpression, patternParameterDefinition: $patternParameterDefinition, patternRelatedArtifact: $patternRelatedArtifact, patternTriggerDefinition: $patternTriggerDefinition, patternUsageContext: $patternUsageContext, patternDosage: $patternDosage, example: $example, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isModifierReason: $isModifierReason, isModifierReasonElement: $isModifierReasonElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
   }
 
   @override
@@ -10505,6 +10841,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueAnnotation, defaultValueAnnotation) &&
             const DeepCollectionEquality().equals(other.defaultValueAttachment, defaultValueAttachment) &&
             const DeepCollectionEquality().equals(other.defaultValueCodeableConcept, defaultValueCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.defaultValueCodeableReference, defaultValueCodeableReference) &&
             const DeepCollectionEquality().equals(other.defaultValueCoding, defaultValueCoding) &&
             const DeepCollectionEquality().equals(other.defaultValueContactPoint, defaultValueContactPoint) &&
             const DeepCollectionEquality().equals(other.defaultValueCount, defaultValueCount) &&
@@ -10517,6 +10854,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueQuantity, defaultValueQuantity) &&
             const DeepCollectionEquality().equals(other.defaultValueRange, defaultValueRange) &&
             const DeepCollectionEquality().equals(other.defaultValueRatio, defaultValueRatio) &&
+            const DeepCollectionEquality().equals(other.defaultValueRatioRange, defaultValueRatioRange) &&
             const DeepCollectionEquality().equals(other.defaultValueReference, defaultValueReference) &&
             const DeepCollectionEquality().equals(other.defaultValueSampledData, defaultValueSampledData) &&
             const DeepCollectionEquality().equals(other.defaultValueSignature, defaultValueSignature) &&
@@ -10530,7 +10868,6 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.defaultValueTriggerDefinition, defaultValueTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.defaultValueUsageContext, defaultValueUsageContext) &&
             const DeepCollectionEquality().equals(other.defaultValueDosage, defaultValueDosage) &&
-            const DeepCollectionEquality().equals(other.defaultValueMeta, defaultValueMeta) &&
             const DeepCollectionEquality().equals(other.meaningWhenMissing, meaningWhenMissing) &&
             const DeepCollectionEquality().equals(other.meaningWhenMissingElement, meaningWhenMissingElement) &&
             const DeepCollectionEquality().equals(other.orderMeaning, orderMeaning) &&
@@ -10578,6 +10915,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedAnnotation, fixedAnnotation) &&
             const DeepCollectionEquality().equals(other.fixedAttachment, fixedAttachment) &&
             const DeepCollectionEquality().equals(other.fixedCodeableConcept, fixedCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.fixedCodeableReference, fixedCodeableReference) &&
             const DeepCollectionEquality().equals(other.fixedCoding, fixedCoding) &&
             const DeepCollectionEquality().equals(other.fixedContactPoint, fixedContactPoint) &&
             const DeepCollectionEquality().equals(other.fixedCount, fixedCount) &&
@@ -10590,6 +10928,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedQuantity, fixedQuantity) &&
             const DeepCollectionEquality().equals(other.fixedRange, fixedRange) &&
             const DeepCollectionEquality().equals(other.fixedRatio, fixedRatio) &&
+            const DeepCollectionEquality().equals(other.fixedRatioRange, fixedRatioRange) &&
             const DeepCollectionEquality().equals(other.fixedReference, fixedReference) &&
             const DeepCollectionEquality().equals(other.fixedSampledData, fixedSampledData) &&
             const DeepCollectionEquality().equals(other.fixedSignature, fixedSignature) &&
@@ -10603,7 +10942,6 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.fixedTriggerDefinition, fixedTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.fixedUsageContext, fixedUsageContext) &&
             const DeepCollectionEquality().equals(other.fixedDosage, fixedDosage) &&
-            const DeepCollectionEquality().equals(other.fixedMeta, fixedMeta) &&
             const DeepCollectionEquality().equals(other.patternBase64Binary, patternBase64Binary) &&
             const DeepCollectionEquality().equals(other.patternBase64BinaryElement, patternBase64BinaryElement) &&
             const DeepCollectionEquality().equals(other.patternBoolean, patternBoolean) &&
@@ -10647,6 +10985,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternAnnotation, patternAnnotation) &&
             const DeepCollectionEquality().equals(other.patternAttachment, patternAttachment) &&
             const DeepCollectionEquality().equals(other.patternCodeableConcept, patternCodeableConcept) &&
+            const DeepCollectionEquality().equals(other.patternCodeableReference, patternCodeableReference) &&
             const DeepCollectionEquality().equals(other.patternCoding, patternCoding) &&
             const DeepCollectionEquality().equals(other.patternContactPoint, patternContactPoint) &&
             const DeepCollectionEquality().equals(other.patternCount, patternCount) &&
@@ -10659,6 +10998,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternQuantity, patternQuantity) &&
             const DeepCollectionEquality().equals(other.patternRange, patternRange) &&
             const DeepCollectionEquality().equals(other.patternRatio, patternRatio) &&
+            const DeepCollectionEquality().equals(other.patternRatioRange, patternRatioRange) &&
             const DeepCollectionEquality().equals(other.patternReference, patternReference) &&
             const DeepCollectionEquality().equals(other.patternSampledData, patternSampledData) &&
             const DeepCollectionEquality().equals(other.patternSignature, patternSignature) &&
@@ -10672,7 +11012,6 @@ class _$_ElementDefinition extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.patternTriggerDefinition, patternTriggerDefinition) &&
             const DeepCollectionEquality().equals(other.patternUsageContext, patternUsageContext) &&
             const DeepCollectionEquality().equals(other.patternDosage, patternDosage) &&
-            const DeepCollectionEquality().equals(other.patternMeta, patternMeta) &&
             const DeepCollectionEquality().equals(other._example, _example) &&
             const DeepCollectionEquality().equals(other.minValueDate, minValueDate) &&
             const DeepCollectionEquality().equals(other.minValueDateElement, minValueDateElement) &&
@@ -10805,6 +11144,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueAnnotation),
         const DeepCollectionEquality().hash(defaultValueAttachment),
         const DeepCollectionEquality().hash(defaultValueCodeableConcept),
+        const DeepCollectionEquality().hash(defaultValueCodeableReference),
         const DeepCollectionEquality().hash(defaultValueCoding),
         const DeepCollectionEquality().hash(defaultValueContactPoint),
         const DeepCollectionEquality().hash(defaultValueCount),
@@ -10817,6 +11157,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueQuantity),
         const DeepCollectionEquality().hash(defaultValueRange),
         const DeepCollectionEquality().hash(defaultValueRatio),
+        const DeepCollectionEquality().hash(defaultValueRatioRange),
         const DeepCollectionEquality().hash(defaultValueReference),
         const DeepCollectionEquality().hash(defaultValueSampledData),
         const DeepCollectionEquality().hash(defaultValueSignature),
@@ -10830,7 +11171,6 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(defaultValueTriggerDefinition),
         const DeepCollectionEquality().hash(defaultValueUsageContext),
         const DeepCollectionEquality().hash(defaultValueDosage),
-        const DeepCollectionEquality().hash(defaultValueMeta),
         const DeepCollectionEquality().hash(meaningWhenMissing),
         const DeepCollectionEquality().hash(meaningWhenMissingElement),
         const DeepCollectionEquality().hash(orderMeaning),
@@ -10878,6 +11218,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedAnnotation),
         const DeepCollectionEquality().hash(fixedAttachment),
         const DeepCollectionEquality().hash(fixedCodeableConcept),
+        const DeepCollectionEquality().hash(fixedCodeableReference),
         const DeepCollectionEquality().hash(fixedCoding),
         const DeepCollectionEquality().hash(fixedContactPoint),
         const DeepCollectionEquality().hash(fixedCount),
@@ -10890,6 +11231,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedQuantity),
         const DeepCollectionEquality().hash(fixedRange),
         const DeepCollectionEquality().hash(fixedRatio),
+        const DeepCollectionEquality().hash(fixedRatioRange),
         const DeepCollectionEquality().hash(fixedReference),
         const DeepCollectionEquality().hash(fixedSampledData),
         const DeepCollectionEquality().hash(fixedSignature),
@@ -10903,7 +11245,6 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(fixedTriggerDefinition),
         const DeepCollectionEquality().hash(fixedUsageContext),
         const DeepCollectionEquality().hash(fixedDosage),
-        const DeepCollectionEquality().hash(fixedMeta),
         const DeepCollectionEquality().hash(patternBase64Binary),
         const DeepCollectionEquality().hash(patternBase64BinaryElement),
         const DeepCollectionEquality().hash(patternBoolean),
@@ -10947,6 +11288,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternAnnotation),
         const DeepCollectionEquality().hash(patternAttachment),
         const DeepCollectionEquality().hash(patternCodeableConcept),
+        const DeepCollectionEquality().hash(patternCodeableReference),
         const DeepCollectionEquality().hash(patternCoding),
         const DeepCollectionEquality().hash(patternContactPoint),
         const DeepCollectionEquality().hash(patternCount),
@@ -10959,6 +11301,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternQuantity),
         const DeepCollectionEquality().hash(patternRange),
         const DeepCollectionEquality().hash(patternRatio),
+        const DeepCollectionEquality().hash(patternRatioRange),
         const DeepCollectionEquality().hash(patternReference),
         const DeepCollectionEquality().hash(patternSampledData),
         const DeepCollectionEquality().hash(patternSignature),
@@ -10972,7 +11315,6 @@ class _$_ElementDefinition extends _ElementDefinition {
         const DeepCollectionEquality().hash(patternTriggerDefinition),
         const DeepCollectionEquality().hash(patternUsageContext),
         const DeepCollectionEquality().hash(patternDosage),
-        const DeepCollectionEquality().hash(patternMeta),
         const DeepCollectionEquality().hash(_example),
         const DeepCollectionEquality().hash(minValueDate),
         const DeepCollectionEquality().hash(minValueDateElement),
@@ -11148,6 +11490,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Annotation? defaultValueAnnotation,
       final Attachment? defaultValueAttachment,
       final CodeableConcept? defaultValueCodeableConcept,
+      final CodeableReference? defaultValueCodeableReference,
       final Coding? defaultValueCoding,
       final ContactPoint? defaultValueContactPoint,
       final Count? defaultValueCount,
@@ -11160,6 +11503,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Quantity? defaultValueQuantity,
       final Range? defaultValueRange,
       final Ratio? defaultValueRatio,
+      final RatioRange? defaultValueRatioRange,
       final Reference? defaultValueReference,
       final SampledData? defaultValueSampledData,
       final Signature? defaultValueSignature,
@@ -11173,7 +11517,6 @@ abstract class _ElementDefinition extends ElementDefinition {
       final TriggerDefinition? defaultValueTriggerDefinition,
       final UsageContext? defaultValueUsageContext,
       final Dosage? defaultValueDosage,
-      final Meta? defaultValueMeta,
       final Markdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           final Element? meaningWhenMissingElement,
@@ -11242,6 +11585,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Annotation? fixedAnnotation,
       final Attachment? fixedAttachment,
       final CodeableConcept? fixedCodeableConcept,
+      final CodeableReference? fixedCodeableReference,
       final Coding? fixedCoding,
       final ContactPoint? fixedContactPoint,
       final Count? fixedCount,
@@ -11254,6 +11598,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Quantity? fixedQuantity,
       final Range? fixedRange,
       final Ratio? fixedRatio,
+      final RatioRange? fixedRatioRange,
       final Reference? fixedReference,
       final SampledData? fixedSampledData,
       final Signature? fixedSignature,
@@ -11267,7 +11612,6 @@ abstract class _ElementDefinition extends ElementDefinition {
       final TriggerDefinition? fixedTriggerDefinition,
       final UsageContext? fixedUsageContext,
       final Dosage? fixedDosage,
-      final Meta? fixedMeta,
       final Base64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           final Element? patternBase64BinaryElement,
@@ -11330,6 +11674,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Annotation? patternAnnotation,
       final Attachment? patternAttachment,
       final CodeableConcept? patternCodeableConcept,
+      final CodeableReference? patternCodeableReference,
       final Coding? patternCoding,
       final ContactPoint? patternContactPoint,
       final Count? patternCount,
@@ -11342,6 +11687,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Quantity? patternQuantity,
       final Range? patternRange,
       final Ratio? patternRatio,
+      final RatioRange? patternRatioRange,
       final Reference? patternReference,
       final SampledData? patternSampledData,
       final Signature? patternSignature,
@@ -11355,7 +11701,6 @@ abstract class _ElementDefinition extends ElementDefinition {
       final TriggerDefinition? patternTriggerDefinition,
       final UsageContext? patternUsageContext,
       final Dosage? patternDosage,
-      final Meta? patternMeta,
       final List<ElementDefinitionExample>? example,
       final Date? minValueDate,
       @JsonKey(name: '_minValueDate')
@@ -11434,723 +11779,694 @@ abstract class _ElementDefinition extends ElementDefinition {
       _$_ElementDefinition.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
-  List<ElementDefinitionRepresentation>? get representation =>
-      throw _privateConstructorUsedError;
+  List<ElementDefinitionRepresentation>? get representation;
   @override
   @JsonKey(name: '_representation')
-  List<Element?>? get representationElement =>
-      throw _privateConstructorUsedError;
+  List<Element?>? get representationElement;
   @override
-  String? get sliceName => throw _privateConstructorUsedError;
+  String? get sliceName;
   @override
   @JsonKey(name: '_sliceName')
-  Element? get sliceNameElement => throw _privateConstructorUsedError;
+  Element? get sliceNameElement;
   @override
-  Boolean? get sliceIsConstraining => throw _privateConstructorUsedError;
+  Boolean? get sliceIsConstraining;
   @override
   @JsonKey(name: '_sliceIsConstraining')
-  Element? get sliceIsConstrainingElement => throw _privateConstructorUsedError;
+  Element? get sliceIsConstrainingElement;
   @override
-  String? get label => throw _privateConstructorUsedError;
+  String? get label;
   @override
   @JsonKey(name: '_label')
-  Element? get labelElement => throw _privateConstructorUsedError;
+  Element? get labelElement;
   @override
-  List<Coding>? get code => throw _privateConstructorUsedError;
+  List<Coding>? get code;
   @override
-  ElementDefinitionSlicing? get slicing => throw _privateConstructorUsedError;
+  ElementDefinitionSlicing? get slicing;
   @override
-  String? get short => throw _privateConstructorUsedError;
+  String? get short;
   @override
   @JsonKey(name: '_short')
-  Element? get shortElement => throw _privateConstructorUsedError;
+  Element? get shortElement;
   @override
-  Markdown? get definition => throw _privateConstructorUsedError;
+  Markdown? get definition;
   @override
   @JsonKey(name: '_definition')
-  Element? get definitionElement => throw _privateConstructorUsedError;
+  Element? get definitionElement;
   @override
-  Markdown? get comment => throw _privateConstructorUsedError;
+  Markdown? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement => throw _privateConstructorUsedError;
+  Element? get commentElement;
   @override
-  Markdown? get requirements => throw _privateConstructorUsedError;
+  Markdown? get requirements;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement => throw _privateConstructorUsedError;
+  Element? get requirementsElement;
   @override
-  List<String>? get alias => throw _privateConstructorUsedError;
+  List<String>? get alias;
   @override
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element?>? get aliasElement;
   @override
-  UnsignedInt? get min => throw _privateConstructorUsedError;
+  UnsignedInt? get min;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement => throw _privateConstructorUsedError;
+  Element? get minElement;
   @override
-  String? get max => throw _privateConstructorUsedError;
+  String? get max;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement => throw _privateConstructorUsedError;
+  Element? get maxElement;
   @override
-  ElementDefinitionBase? get base => throw _privateConstructorUsedError;
+  ElementDefinitionBase? get base;
   @override
-  FhirUri? get contentReference => throw _privateConstructorUsedError;
+  FhirUri? get contentReference;
   @override
   @JsonKey(name: '_contentReference')
-  Element? get contentReferenceElement => throw _privateConstructorUsedError;
+  Element? get contentReferenceElement;
   @override
-  List<ElementDefinitionType>? get type => throw _privateConstructorUsedError;
+  List<ElementDefinitionType>? get type;
   @override
-  Base64Binary? get defaultValueBase64Binary =>
-      throw _privateConstructorUsedError;
+  Base64Binary? get defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
-  Element? get defaultValueBase64BinaryElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueBase64BinaryElement;
   @override
-  Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
+  Boolean? get defaultValueBoolean;
   @override
   @JsonKey(name: '_defaultValueBoolean')
-  Element? get defaultValueBooleanElement => throw _privateConstructorUsedError;
+  Element? get defaultValueBooleanElement;
   @override
-  Canonical? get defaultValueCanonical => throw _privateConstructorUsedError;
+  Canonical? get defaultValueCanonical;
   @override
   @JsonKey(name: '_defaultValueCanonical')
-  Element? get defaultValueCanonicalElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueCanonicalElement;
   @override
-  Code? get defaultValueCode => throw _privateConstructorUsedError;
+  Code? get defaultValueCode;
   @override
   @JsonKey(name: '_defaultValueCode')
-  Element? get defaultValueCodeElement => throw _privateConstructorUsedError;
+  Element? get defaultValueCodeElement;
   @override
-  Date? get defaultValueDate => throw _privateConstructorUsedError;
+  Date? get defaultValueDate;
   @override
   @JsonKey(name: '_defaultValueDate')
-  Element? get defaultValueDateElement => throw _privateConstructorUsedError;
+  Element? get defaultValueDateElement;
   @override
-  FhirDateTime? get defaultValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get defaultValueDateTime;
   @override
   @JsonKey(name: '_defaultValueDateTime')
-  Element? get defaultValueDateTimeElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueDateTimeElement;
   @override
-  Decimal? get defaultValueDecimal => throw _privateConstructorUsedError;
+  Decimal? get defaultValueDecimal;
   @override
   @JsonKey(name: '_defaultValueDecimal')
-  Element? get defaultValueDecimalElement => throw _privateConstructorUsedError;
+  Element? get defaultValueDecimalElement;
   @override
-  Id? get defaultValueId => throw _privateConstructorUsedError;
+  Id? get defaultValueId;
   @override
   @JsonKey(name: '_defaultValueId')
-  Element? get defaultValueIdElement => throw _privateConstructorUsedError;
+  Element? get defaultValueIdElement;
   @override
-  Instant? get defaultValueInstant => throw _privateConstructorUsedError;
+  Instant? get defaultValueInstant;
   @override
   @JsonKey(name: '_defaultValueInstant')
-  Element? get defaultValueInstantElement => throw _privateConstructorUsedError;
+  Element? get defaultValueInstantElement;
   @override
-  Integer? get defaultValueInteger => throw _privateConstructorUsedError;
+  Integer? get defaultValueInteger;
   @override
   @JsonKey(name: '_defaultValueInteger')
-  Element? get defaultValueIntegerElement => throw _privateConstructorUsedError;
+  Element? get defaultValueIntegerElement;
   @override
-  Markdown? get defaultValueMarkdown => throw _privateConstructorUsedError;
+  Markdown? get defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkdown')
-  Element? get defaultValueMarkdownElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueMarkdownElement;
   @override
-  Oid? get defaultValueOid => throw _privateConstructorUsedError;
+  Oid? get defaultValueOid;
   @override
   @JsonKey(name: '_defaultValueOid')
-  Element? get defaultValueOidElement => throw _privateConstructorUsedError;
+  Element? get defaultValueOidElement;
   @override
-  PositiveInt? get defaultValuePositiveInt =>
-      throw _privateConstructorUsedError;
+  PositiveInt? get defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
-  Element? get defaultValuePositiveIntElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValuePositiveIntElement;
   @override
-  String? get defaultValueString => throw _privateConstructorUsedError;
+  String? get defaultValueString;
   @override
   @JsonKey(name: '_defaultValueString')
-  Element? get defaultValueStringElement => throw _privateConstructorUsedError;
+  Element? get defaultValueStringElement;
   @override
-  Time? get defaultValueTime => throw _privateConstructorUsedError;
+  Time? get defaultValueTime;
   @override
   @JsonKey(name: '_defaultValueTime')
-  Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
+  Element? get defaultValueTimeElement;
   @override
-  UnsignedInt? get defaultValueUnsignedInt =>
-      throw _privateConstructorUsedError;
+  UnsignedInt? get defaultValueUnsignedInt;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
-  Element? get defaultValueUnsignedIntElement =>
-      throw _privateConstructorUsedError;
+  Element? get defaultValueUnsignedIntElement;
   @override
-  FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
+  FhirUri? get defaultValueUri;
   @override
   @JsonKey(name: '_defaultValueUri')
-  Element? get defaultValueUriElement => throw _privateConstructorUsedError;
+  Element? get defaultValueUriElement;
   @override
-  FhirUrl? get defaultValueUrl => throw _privateConstructorUsedError;
+  FhirUrl? get defaultValueUrl;
   @override
   @JsonKey(name: '_defaultValueUrl')
-  Element? get defaultValueUrlElement => throw _privateConstructorUsedError;
+  Element? get defaultValueUrlElement;
   @override
-  Uuid? get defaultValueUuid => throw _privateConstructorUsedError;
+  Uuid? get defaultValueUuid;
   @override
   @JsonKey(name: '_defaultValueUuid')
-  Element? get defaultValueUuidElement => throw _privateConstructorUsedError;
+  Element? get defaultValueUuidElement;
   @override
-  Address? get defaultValueAddress => throw _privateConstructorUsedError;
+  Address? get defaultValueAddress;
   @override
-  Age? get defaultValueAge => throw _privateConstructorUsedError;
+  Age? get defaultValueAge;
   @override
-  Annotation? get defaultValueAnnotation => throw _privateConstructorUsedError;
+  Annotation? get defaultValueAnnotation;
   @override
-  Attachment? get defaultValueAttachment => throw _privateConstructorUsedError;
+  Attachment? get defaultValueAttachment;
   @override
-  CodeableConcept? get defaultValueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get defaultValueCodeableConcept;
   @override
-  Coding? get defaultValueCoding => throw _privateConstructorUsedError;
+  CodeableReference? get defaultValueCodeableReference;
   @override
-  ContactPoint? get defaultValueContactPoint =>
-      throw _privateConstructorUsedError;
+  Coding? get defaultValueCoding;
   @override
-  Count? get defaultValueCount => throw _privateConstructorUsedError;
+  ContactPoint? get defaultValueContactPoint;
   @override
-  Distance? get defaultValueDistance => throw _privateConstructorUsedError;
+  Count? get defaultValueCount;
   @override
-  FhirDuration? get defaultValueDuration => throw _privateConstructorUsedError;
+  Distance? get defaultValueDistance;
   @override
-  HumanName? get defaultValueHumanName => throw _privateConstructorUsedError;
+  FhirDuration? get defaultValueDuration;
   @override
-  Identifier? get defaultValueIdentifier => throw _privateConstructorUsedError;
+  HumanName? get defaultValueHumanName;
   @override
-  Money? get defaultValueMoney => throw _privateConstructorUsedError;
+  Identifier? get defaultValueIdentifier;
   @override
-  Period? get defaultValuePeriod => throw _privateConstructorUsedError;
+  Money? get defaultValueMoney;
   @override
-  Quantity? get defaultValueQuantity => throw _privateConstructorUsedError;
+  Period? get defaultValuePeriod;
   @override
-  Range? get defaultValueRange => throw _privateConstructorUsedError;
+  Quantity? get defaultValueQuantity;
   @override
-  Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
+  Range? get defaultValueRange;
   @override
-  Reference? get defaultValueReference => throw _privateConstructorUsedError;
+  Ratio? get defaultValueRatio;
   @override
-  SampledData? get defaultValueSampledData =>
-      throw _privateConstructorUsedError;
+  RatioRange? get defaultValueRatioRange;
   @override
-  Signature? get defaultValueSignature => throw _privateConstructorUsedError;
+  Reference? get defaultValueReference;
   @override
-  Timing? get defaultValueTiming => throw _privateConstructorUsedError;
+  SampledData? get defaultValueSampledData;
   @override
-  ContactDetail? get defaultValueContactDetail =>
-      throw _privateConstructorUsedError;
+  Signature? get defaultValueSignature;
   @override
-  Contributor? get defaultValueContributor =>
-      throw _privateConstructorUsedError;
+  Timing? get defaultValueTiming;
   @override
-  DataRequirement? get defaultValueDataRequirement =>
-      throw _privateConstructorUsedError;
+  ContactDetail? get defaultValueContactDetail;
   @override
-  Expression? get defaultValueExpression => throw _privateConstructorUsedError;
+  Contributor? get defaultValueContributor;
   @override
-  ParameterDefinition? get defaultValueParameterDefinition =>
-      throw _privateConstructorUsedError;
+  DataRequirement? get defaultValueDataRequirement;
   @override
-  RelatedArtifact? get defaultValueRelatedArtifact =>
-      throw _privateConstructorUsedError;
+  Expression? get defaultValueExpression;
   @override
-  TriggerDefinition? get defaultValueTriggerDefinition =>
-      throw _privateConstructorUsedError;
+  ParameterDefinition? get defaultValueParameterDefinition;
   @override
-  UsageContext? get defaultValueUsageContext =>
-      throw _privateConstructorUsedError;
+  RelatedArtifact? get defaultValueRelatedArtifact;
   @override
-  Dosage? get defaultValueDosage => throw _privateConstructorUsedError;
+  TriggerDefinition? get defaultValueTriggerDefinition;
   @override
-  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
+  UsageContext? get defaultValueUsageContext;
   @override
-  Markdown? get meaningWhenMissing => throw _privateConstructorUsedError;
+  Dosage? get defaultValueDosage;
+  @override
+  Markdown? get meaningWhenMissing;
   @override
   @JsonKey(name: '_meaningWhenMissing')
-  Element? get meaningWhenMissingElement => throw _privateConstructorUsedError;
+  Element? get meaningWhenMissingElement;
   @override
-  String? get orderMeaning => throw _privateConstructorUsedError;
+  String? get orderMeaning;
   @override
   @JsonKey(name: '_orderMeaning')
-  Element? get orderMeaningElement => throw _privateConstructorUsedError;
+  Element? get orderMeaningElement;
   @override
-  Base64Binary? get fixedBase64Binary => throw _privateConstructorUsedError;
+  Base64Binary? get fixedBase64Binary;
   @override
   @JsonKey(name: '_fixedBase64Binary')
-  Element? get fixedBase64BinaryElement => throw _privateConstructorUsedError;
+  Element? get fixedBase64BinaryElement;
   @override
-  Boolean? get fixedBoolean => throw _privateConstructorUsedError;
+  Boolean? get fixedBoolean;
   @override
   @JsonKey(name: '_fixedBoolean')
-  Element? get fixedBooleanElement => throw _privateConstructorUsedError;
+  Element? get fixedBooleanElement;
   @override
-  Canonical? get fixedCanonical => throw _privateConstructorUsedError;
+  Canonical? get fixedCanonical;
   @override
   @JsonKey(name: '_fixedCanonical')
-  Element? get fixedCanonicalElement => throw _privateConstructorUsedError;
+  Element? get fixedCanonicalElement;
   @override
-  Code? get fixedCode => throw _privateConstructorUsedError;
+  Code? get fixedCode;
   @override
   @JsonKey(name: '_fixedCode')
-  Element? get fixedCodeElement => throw _privateConstructorUsedError;
+  Element? get fixedCodeElement;
   @override
-  Date? get fixedDate => throw _privateConstructorUsedError;
+  Date? get fixedDate;
   @override
   @JsonKey(name: '_fixedDate')
-  Element? get fixedDateElement => throw _privateConstructorUsedError;
+  Element? get fixedDateElement;
   @override
-  FhirDateTime? get fixedDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get fixedDateTime;
   @override
   @JsonKey(name: '_fixedDateTime')
-  Element? get fixedDateTimeElement => throw _privateConstructorUsedError;
+  Element? get fixedDateTimeElement;
   @override
-  Decimal? get fixedDecimal => throw _privateConstructorUsedError;
+  Decimal? get fixedDecimal;
   @override
   @JsonKey(name: '_fixedDecimal')
-  Element? get fixedDecimalElement => throw _privateConstructorUsedError;
+  Element? get fixedDecimalElement;
   @override
-  Id? get fixedId => throw _privateConstructorUsedError;
+  Id? get fixedId;
   @override
   @JsonKey(name: '_fixedId')
-  Element? get fixedIdElement => throw _privateConstructorUsedError;
+  Element? get fixedIdElement;
   @override
-  Instant? get fixedInstant => throw _privateConstructorUsedError;
+  Instant? get fixedInstant;
   @override
   @JsonKey(name: '_fixedInstant')
-  Element? get fixedInstantElement => throw _privateConstructorUsedError;
+  Element? get fixedInstantElement;
   @override
-  Integer? get fixedInteger => throw _privateConstructorUsedError;
+  Integer? get fixedInteger;
   @override
   @JsonKey(name: '_fixedInteger')
-  Element? get fixedIntegerElement => throw _privateConstructorUsedError;
+  Element? get fixedIntegerElement;
   @override
-  Markdown? get fixedMarkdown => throw _privateConstructorUsedError;
+  Markdown? get fixedMarkdown;
   @override
   @JsonKey(name: '_fixedMarkdown')
-  Element? get fixedMarkdownElement => throw _privateConstructorUsedError;
+  Element? get fixedMarkdownElement;
   @override
-  Oid? get fixedOid => throw _privateConstructorUsedError;
+  Oid? get fixedOid;
   @override
   @JsonKey(name: '_fixedOid')
-  Element? get fixedOidElement => throw _privateConstructorUsedError;
+  Element? get fixedOidElement;
   @override
-  PositiveInt? get fixedPositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get fixedPositiveInt;
   @override
   @JsonKey(name: '_fixedPositiveInt')
-  Element? get fixedPositiveIntElement => throw _privateConstructorUsedError;
+  Element? get fixedPositiveIntElement;
   @override
-  String? get fixedString => throw _privateConstructorUsedError;
+  String? get fixedString;
   @override
   @JsonKey(name: '_fixedString')
-  Element? get fixedStringElement => throw _privateConstructorUsedError;
+  Element? get fixedStringElement;
   @override
-  Time? get fixedTime => throw _privateConstructorUsedError;
+  Time? get fixedTime;
   @override
   @JsonKey(name: '_fixedTime')
-  Element? get fixedTimeElement => throw _privateConstructorUsedError;
+  Element? get fixedTimeElement;
   @override
-  UnsignedInt? get fixedUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get fixedUnsignedInt;
   @override
   @JsonKey(name: '_fixedUnsignedInt')
-  Element? get fixedUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get fixedUnsignedIntElement;
   @override
-  FhirUri? get fixedUri => throw _privateConstructorUsedError;
+  FhirUri? get fixedUri;
   @override
   @JsonKey(name: '_fixedUri')
-  Element? get fixedUriElement => throw _privateConstructorUsedError;
+  Element? get fixedUriElement;
   @override
-  FhirUrl? get fixedUrl => throw _privateConstructorUsedError;
+  FhirUrl? get fixedUrl;
   @override
   @JsonKey(name: '_fixedUrl')
-  Element? get fixedUrlElement => throw _privateConstructorUsedError;
+  Element? get fixedUrlElement;
   @override
-  Uuid? get fixedUuid => throw _privateConstructorUsedError;
+  Uuid? get fixedUuid;
   @override
   @JsonKey(name: '_fixedUuid')
-  Element? get fixedUuidElement => throw _privateConstructorUsedError;
+  Element? get fixedUuidElement;
   @override
-  Address? get fixedAddress => throw _privateConstructorUsedError;
+  Address? get fixedAddress;
   @override
-  Age? get fixedAge => throw _privateConstructorUsedError;
+  Age? get fixedAge;
   @override
-  Annotation? get fixedAnnotation => throw _privateConstructorUsedError;
+  Annotation? get fixedAnnotation;
   @override
-  Attachment? get fixedAttachment => throw _privateConstructorUsedError;
+  Attachment? get fixedAttachment;
   @override
-  CodeableConcept? get fixedCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get fixedCodeableConcept;
   @override
-  Coding? get fixedCoding => throw _privateConstructorUsedError;
+  CodeableReference? get fixedCodeableReference;
   @override
-  ContactPoint? get fixedContactPoint => throw _privateConstructorUsedError;
+  Coding? get fixedCoding;
   @override
-  Count? get fixedCount => throw _privateConstructorUsedError;
+  ContactPoint? get fixedContactPoint;
   @override
-  Distance? get fixedDistance => throw _privateConstructorUsedError;
+  Count? get fixedCount;
   @override
-  FhirDuration? get fixedDuration => throw _privateConstructorUsedError;
+  Distance? get fixedDistance;
   @override
-  HumanName? get fixedHumanName => throw _privateConstructorUsedError;
+  FhirDuration? get fixedDuration;
   @override
-  Identifier? get fixedIdentifier => throw _privateConstructorUsedError;
+  HumanName? get fixedHumanName;
   @override
-  Money? get fixedMoney => throw _privateConstructorUsedError;
+  Identifier? get fixedIdentifier;
   @override
-  Period? get fixedPeriod => throw _privateConstructorUsedError;
+  Money? get fixedMoney;
   @override
-  Quantity? get fixedQuantity => throw _privateConstructorUsedError;
+  Period? get fixedPeriod;
   @override
-  Range? get fixedRange => throw _privateConstructorUsedError;
+  Quantity? get fixedQuantity;
   @override
-  Ratio? get fixedRatio => throw _privateConstructorUsedError;
+  Range? get fixedRange;
   @override
-  Reference? get fixedReference => throw _privateConstructorUsedError;
+  Ratio? get fixedRatio;
   @override
-  SampledData? get fixedSampledData => throw _privateConstructorUsedError;
+  RatioRange? get fixedRatioRange;
   @override
-  Signature? get fixedSignature => throw _privateConstructorUsedError;
+  Reference? get fixedReference;
   @override
-  Timing? get fixedTiming => throw _privateConstructorUsedError;
+  SampledData? get fixedSampledData;
   @override
-  ContactDetail? get fixedContactDetail => throw _privateConstructorUsedError;
+  Signature? get fixedSignature;
   @override
-  Contributor? get fixedContributor => throw _privateConstructorUsedError;
+  Timing? get fixedTiming;
   @override
-  DataRequirement? get fixedDataRequirement =>
-      throw _privateConstructorUsedError;
+  ContactDetail? get fixedContactDetail;
   @override
-  Expression? get fixedExpression => throw _privateConstructorUsedError;
+  Contributor? get fixedContributor;
   @override
-  ParameterDefinition? get fixedParameterDefinition =>
-      throw _privateConstructorUsedError;
+  DataRequirement? get fixedDataRequirement;
   @override
-  RelatedArtifact? get fixedRelatedArtifact =>
-      throw _privateConstructorUsedError;
+  Expression? get fixedExpression;
   @override
-  TriggerDefinition? get fixedTriggerDefinition =>
-      throw _privateConstructorUsedError;
+  ParameterDefinition? get fixedParameterDefinition;
   @override
-  UsageContext? get fixedUsageContext => throw _privateConstructorUsedError;
+  RelatedArtifact? get fixedRelatedArtifact;
   @override
-  Dosage? get fixedDosage => throw _privateConstructorUsedError;
+  TriggerDefinition? get fixedTriggerDefinition;
   @override
-  Meta? get fixedMeta => throw _privateConstructorUsedError;
+  UsageContext? get fixedUsageContext;
   @override
-  Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
+  Dosage? get fixedDosage;
+  @override
+  Base64Binary? get patternBase64Binary;
   @override
   @JsonKey(name: '_patternBase64Binary')
-  Element? get patternBase64BinaryElement => throw _privateConstructorUsedError;
+  Element? get patternBase64BinaryElement;
   @override
-  Boolean? get patternBoolean => throw _privateConstructorUsedError;
+  Boolean? get patternBoolean;
   @override
   @JsonKey(name: '_patternBoolean')
-  Element? get patternBooleanElement => throw _privateConstructorUsedError;
+  Element? get patternBooleanElement;
   @override
-  Canonical? get patternCanonical => throw _privateConstructorUsedError;
+  Canonical? get patternCanonical;
   @override
   @JsonKey(name: '_patternCanonical')
-  Element? get patternCanonicalElement => throw _privateConstructorUsedError;
+  Element? get patternCanonicalElement;
   @override
-  Code? get patternCode => throw _privateConstructorUsedError;
+  Code? get patternCode;
   @override
   @JsonKey(name: '_patternCode')
-  Element? get patternCodeElement => throw _privateConstructorUsedError;
+  Element? get patternCodeElement;
   @override
-  Date? get patternDate => throw _privateConstructorUsedError;
+  Date? get patternDate;
   @override
   @JsonKey(name: '_patternDate')
-  Element? get patternDateElement => throw _privateConstructorUsedError;
+  Element? get patternDateElement;
   @override
-  FhirDateTime? get patternDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get patternDateTime;
   @override
   @JsonKey(name: '_patternDateTime')
-  Element? get patternDateTimeElement => throw _privateConstructorUsedError;
+  Element? get patternDateTimeElement;
   @override
-  Decimal? get patternDecimal => throw _privateConstructorUsedError;
+  Decimal? get patternDecimal;
   @override
   @JsonKey(name: '_patternDecimal')
-  Element? get patternDecimalElement => throw _privateConstructorUsedError;
+  Element? get patternDecimalElement;
   @override
-  Id? get patternId => throw _privateConstructorUsedError;
+  Id? get patternId;
   @override
   @JsonKey(name: '_patternId')
-  Element? get patternIdElement => throw _privateConstructorUsedError;
+  Element? get patternIdElement;
   @override
-  Instant? get patternInstant => throw _privateConstructorUsedError;
+  Instant? get patternInstant;
   @override
   @JsonKey(name: '_patternInstant')
-  Element? get patternInstantElement => throw _privateConstructorUsedError;
+  Element? get patternInstantElement;
   @override
-  Integer? get patternInteger => throw _privateConstructorUsedError;
+  Integer? get patternInteger;
   @override
   @JsonKey(name: '_patternInteger')
-  Element? get patternIntegerElement => throw _privateConstructorUsedError;
+  Element? get patternIntegerElement;
   @override
-  Markdown? get patternMarkdown => throw _privateConstructorUsedError;
+  Markdown? get patternMarkdown;
   @override
   @JsonKey(name: '_patternMarkdown')
-  Element? get patternMarkdownElement => throw _privateConstructorUsedError;
+  Element? get patternMarkdownElement;
   @override
-  Oid? get patternOid => throw _privateConstructorUsedError;
+  Oid? get patternOid;
   @override
   @JsonKey(name: '_patternOid')
-  Element? get patternOidElement => throw _privateConstructorUsedError;
+  Element? get patternOidElement;
   @override
-  PositiveInt? get patternPositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get patternPositiveInt;
   @override
   @JsonKey(name: '_patternPositiveInt')
-  Element? get patternPositiveIntElement => throw _privateConstructorUsedError;
+  Element? get patternPositiveIntElement;
   @override
-  String? get patternString => throw _privateConstructorUsedError;
+  String? get patternString;
   @override
   @JsonKey(name: '_patternString')
-  Element? get patternStringElement => throw _privateConstructorUsedError;
+  Element? get patternStringElement;
   @override
-  Time? get patternTime => throw _privateConstructorUsedError;
+  Time? get patternTime;
   @override
   @JsonKey(name: '_patternTime')
-  Element? get patternTimeElement => throw _privateConstructorUsedError;
+  Element? get patternTimeElement;
   @override
-  UnsignedInt? get patternUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get patternUnsignedInt;
   @override
   @JsonKey(name: '_patternUnsignedInt')
-  Element? get patternUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get patternUnsignedIntElement;
   @override
-  FhirUri? get patternUri => throw _privateConstructorUsedError;
+  FhirUri? get patternUri;
   @override
   @JsonKey(name: '_patternUri')
-  Element? get patternUriElement => throw _privateConstructorUsedError;
+  Element? get patternUriElement;
   @override
-  FhirUrl? get patternUrl => throw _privateConstructorUsedError;
+  FhirUrl? get patternUrl;
   @override
   @JsonKey(name: '_patternUrl')
-  Element? get patternUrlElement => throw _privateConstructorUsedError;
+  Element? get patternUrlElement;
   @override
-  Uuid? get patternUuid => throw _privateConstructorUsedError;
+  Uuid? get patternUuid;
   @override
   @JsonKey(name: '_patternUuid')
-  Element? get patternUuidElement => throw _privateConstructorUsedError;
+  Element? get patternUuidElement;
   @override
-  Address? get patternAddress => throw _privateConstructorUsedError;
+  Address? get patternAddress;
   @override
-  Age? get patternAge => throw _privateConstructorUsedError;
+  Age? get patternAge;
   @override
-  Annotation? get patternAnnotation => throw _privateConstructorUsedError;
+  Annotation? get patternAnnotation;
   @override
-  Attachment? get patternAttachment => throw _privateConstructorUsedError;
+  Attachment? get patternAttachment;
   @override
-  CodeableConcept? get patternCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get patternCodeableConcept;
   @override
-  Coding? get patternCoding => throw _privateConstructorUsedError;
+  CodeableReference? get patternCodeableReference;
   @override
-  ContactPoint? get patternContactPoint => throw _privateConstructorUsedError;
+  Coding? get patternCoding;
   @override
-  Count? get patternCount => throw _privateConstructorUsedError;
+  ContactPoint? get patternContactPoint;
   @override
-  Distance? get patternDistance => throw _privateConstructorUsedError;
+  Count? get patternCount;
   @override
-  FhirDuration? get patternDuration => throw _privateConstructorUsedError;
+  Distance? get patternDistance;
   @override
-  HumanName? get patternHumanName => throw _privateConstructorUsedError;
+  FhirDuration? get patternDuration;
   @override
-  Identifier? get patternIdentifier => throw _privateConstructorUsedError;
+  HumanName? get patternHumanName;
   @override
-  Money? get patternMoney => throw _privateConstructorUsedError;
+  Identifier? get patternIdentifier;
   @override
-  Period? get patternPeriod => throw _privateConstructorUsedError;
+  Money? get patternMoney;
   @override
-  Quantity? get patternQuantity => throw _privateConstructorUsedError;
+  Period? get patternPeriod;
   @override
-  Range? get patternRange => throw _privateConstructorUsedError;
+  Quantity? get patternQuantity;
   @override
-  Ratio? get patternRatio => throw _privateConstructorUsedError;
+  Range? get patternRange;
   @override
-  Reference? get patternReference => throw _privateConstructorUsedError;
+  Ratio? get patternRatio;
   @override
-  SampledData? get patternSampledData => throw _privateConstructorUsedError;
+  RatioRange? get patternRatioRange;
   @override
-  Signature? get patternSignature => throw _privateConstructorUsedError;
+  Reference? get patternReference;
   @override
-  Timing? get patternTiming => throw _privateConstructorUsedError;
+  SampledData? get patternSampledData;
   @override
-  ContactDetail? get patternContactDetail => throw _privateConstructorUsedError;
+  Signature? get patternSignature;
   @override
-  Contributor? get patternContributor => throw _privateConstructorUsedError;
+  Timing? get patternTiming;
   @override
-  DataRequirement? get patternDataRequirement =>
-      throw _privateConstructorUsedError;
+  ContactDetail? get patternContactDetail;
   @override
-  Expression? get patternExpression => throw _privateConstructorUsedError;
+  Contributor? get patternContributor;
   @override
-  ParameterDefinition? get patternParameterDefinition =>
-      throw _privateConstructorUsedError;
+  DataRequirement? get patternDataRequirement;
   @override
-  RelatedArtifact? get patternRelatedArtifact =>
-      throw _privateConstructorUsedError;
+  Expression? get patternExpression;
   @override
-  TriggerDefinition? get patternTriggerDefinition =>
-      throw _privateConstructorUsedError;
+  ParameterDefinition? get patternParameterDefinition;
   @override
-  UsageContext? get patternUsageContext => throw _privateConstructorUsedError;
+  RelatedArtifact? get patternRelatedArtifact;
   @override
-  Dosage? get patternDosage => throw _privateConstructorUsedError;
+  TriggerDefinition? get patternTriggerDefinition;
   @override
-  Meta? get patternMeta => throw _privateConstructorUsedError;
+  UsageContext? get patternUsageContext;
   @override
-  List<ElementDefinitionExample>? get example =>
-      throw _privateConstructorUsedError;
+  Dosage? get patternDosage;
   @override
-  Date? get minValueDate => throw _privateConstructorUsedError;
+  List<ElementDefinitionExample>? get example;
+  @override
+  Date? get minValueDate;
   @override
   @JsonKey(name: '_minValueDate')
-  Element? get minValueDateElement => throw _privateConstructorUsedError;
+  Element? get minValueDateElement;
   @override
-  FhirDateTime? get minValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get minValueDateTime;
   @override
   @JsonKey(name: '_minValueDateTime')
-  Element? get minValueDateTimeElement => throw _privateConstructorUsedError;
+  Element? get minValueDateTimeElement;
   @override
-  Instant? get minValueInstant => throw _privateConstructorUsedError;
+  Instant? get minValueInstant;
   @override
   @JsonKey(name: '_minValueInstant')
-  Element? get minValueInstantElement => throw _privateConstructorUsedError;
+  Element? get minValueInstantElement;
   @override
-  Time? get minValueTime => throw _privateConstructorUsedError;
+  Time? get minValueTime;
   @override
   @JsonKey(name: '_minValueTime')
-  Element? get minValueTimeElement => throw _privateConstructorUsedError;
+  Element? get minValueTimeElement;
   @override
-  Decimal? get minValueDecimal => throw _privateConstructorUsedError;
+  Decimal? get minValueDecimal;
   @override
   @JsonKey(name: '_minValueDecimal')
-  Element? get minValueDecimalElement => throw _privateConstructorUsedError;
+  Element? get minValueDecimalElement;
   @override
-  Integer? get minValueInteger => throw _privateConstructorUsedError;
+  Integer? get minValueInteger;
   @override
   @JsonKey(name: '_minValueInteger')
-  Element? get minValueIntegerElement => throw _privateConstructorUsedError;
+  Element? get minValueIntegerElement;
   @override
-  PositiveInt? get minValuePositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get minValuePositiveInt;
   @override
   @JsonKey(name: '_minValuePositiveInt')
-  Element? get minValuePositiveIntElement => throw _privateConstructorUsedError;
+  Element? get minValuePositiveIntElement;
   @override
-  UnsignedInt? get minValueUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get minValueUnsignedInt;
   @override
   @JsonKey(name: '_minValueUnsignedInt')
-  Element? get minValueUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get minValueUnsignedIntElement;
   @override
-  Quantity? get minValueQuantity => throw _privateConstructorUsedError;
+  Quantity? get minValueQuantity;
   @override
-  Date? get maxValueDate => throw _privateConstructorUsedError;
+  Date? get maxValueDate;
   @override
   @JsonKey(name: '_maxValueDate')
-  Element? get maxValueDateElement => throw _privateConstructorUsedError;
+  Element? get maxValueDateElement;
   @override
-  FhirDateTime? get maxValueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get maxValueDateTime;
   @override
   @JsonKey(name: '_maxValueDateTime')
-  Element? get maxValueDateTimeElement => throw _privateConstructorUsedError;
+  Element? get maxValueDateTimeElement;
   @override
-  Instant? get maxValueInstant => throw _privateConstructorUsedError;
+  Instant? get maxValueInstant;
   @override
   @JsonKey(name: '_maxValueInstant')
-  Element? get maxValueInstantElement => throw _privateConstructorUsedError;
+  Element? get maxValueInstantElement;
   @override
-  Time? get maxValueTime => throw _privateConstructorUsedError;
+  Time? get maxValueTime;
   @override
   @JsonKey(name: '_maxValueTime')
-  Element? get maxValueTimeElement => throw _privateConstructorUsedError;
+  Element? get maxValueTimeElement;
   @override
-  Decimal? get maxValueDecimal => throw _privateConstructorUsedError;
+  Decimal? get maxValueDecimal;
   @override
   @JsonKey(name: '_maxValueDecimal')
-  Element? get maxValueDecimalElement => throw _privateConstructorUsedError;
+  Element? get maxValueDecimalElement;
   @override
-  Integer? get maxValueInteger => throw _privateConstructorUsedError;
+  Integer? get maxValueInteger;
   @override
   @JsonKey(name: '_maxValueInteger')
-  Element? get maxValueIntegerElement => throw _privateConstructorUsedError;
+  Element? get maxValueIntegerElement;
   @override
-  PositiveInt? get maxValuePositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get maxValuePositiveInt;
   @override
   @JsonKey(name: '_maxValuePositiveInt')
-  Element? get maxValuePositiveIntElement => throw _privateConstructorUsedError;
+  Element? get maxValuePositiveIntElement;
   @override
-  UnsignedInt? get maxValueUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get maxValueUnsignedInt;
   @override
   @JsonKey(name: '_maxValueUnsignedInt')
-  Element? get maxValueUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get maxValueUnsignedIntElement;
   @override
-  Quantity? get maxValueQuantity => throw _privateConstructorUsedError;
+  Quantity? get maxValueQuantity;
   @override
-  Integer? get maxLength => throw _privateConstructorUsedError;
+  Integer? get maxLength;
   @override
   @JsonKey(name: '_maxLength')
-  Element? get maxLengthElement => throw _privateConstructorUsedError;
+  Element? get maxLengthElement;
   @override
-  List<Id>? get condition => throw _privateConstructorUsedError;
+  List<Id>? get condition;
   @override
   @JsonKey(name: '_condition')
-  List<Element?>? get conditionElement => throw _privateConstructorUsedError;
+  List<Element?>? get conditionElement;
   @override
-  List<ElementDefinitionConstraint>? get constraint =>
-      throw _privateConstructorUsedError;
+  List<ElementDefinitionConstraint>? get constraint;
   @override
-  Boolean? get mustSupport => throw _privateConstructorUsedError;
+  Boolean? get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  Element? get mustSupportElement => throw _privateConstructorUsedError;
+  Element? get mustSupportElement;
   @override
-  Boolean? get isModifier => throw _privateConstructorUsedError;
+  Boolean? get isModifier;
   @override
   @JsonKey(name: '_isModifier')
-  Element? get isModifierElement => throw _privateConstructorUsedError;
+  Element? get isModifierElement;
   @override
-  String? get isModifierReason => throw _privateConstructorUsedError;
+  String? get isModifierReason;
   @override
   @JsonKey(name: '_isModifierReason')
-  Element? get isModifierReasonElement => throw _privateConstructorUsedError;
+  Element? get isModifierReasonElement;
   @override
-  Boolean? get isSummary => throw _privateConstructorUsedError;
+  Boolean? get isSummary;
   @override
   @JsonKey(name: '_isSummary')
-  Element? get isSummaryElement => throw _privateConstructorUsedError;
+  Element? get isSummaryElement;
   @override
-  ElementDefinitionBinding? get binding => throw _privateConstructorUsedError;
+  ElementDefinitionBinding? get binding;
   @override
-  List<ElementDefinitionMapping>? get mapping =>
-      throw _privateConstructorUsedError;
+  List<ElementDefinitionMapping>? get mapping;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionCopyWith<_$_ElementDefinition> get copyWith =>
@@ -12572,33 +12888,30 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
       _$_ElementDefinitionSlicing.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<ElementDefinitionDiscriminator>? get discriminator =>
-      throw _privateConstructorUsedError;
+  List<ElementDefinitionDiscriminator>? get discriminator;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  Boolean? get ordered => throw _privateConstructorUsedError;
+  Boolean? get ordered;
   @override
   @JsonKey(name: '_ordered')
-  Element? get orderedElement => throw _privateConstructorUsedError;
+  Element? get orderedElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-  ElementDefinitionSlicingRules? get rules =>
-      throw _privateConstructorUsedError;
+  ElementDefinitionSlicingRules? get rules;
   @override
   @JsonKey(name: '_rules')
-  Element? get rulesElement => throw _privateConstructorUsedError;
+  Element? get rulesElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionSlicingCopyWith<_$_ElementDefinitionSlicing>
@@ -12936,25 +13249,23 @@ abstract class _ElementDefinitionDiscriminator
       _$_ElementDefinitionDiscriminator.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-  ElementDefinitionDiscriminatorType? get type =>
-      throw _privateConstructorUsedError;
+  ElementDefinitionDiscriminatorType? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionDiscriminatorCopyWith<_$_ElementDefinitionDiscriminator>
@@ -13323,28 +13634,27 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
       _$_ElementDefinitionBase.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
-  UnsignedInt? get min => throw _privateConstructorUsedError;
+  UnsignedInt? get min;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement => throw _privateConstructorUsedError;
+  Element? get minElement;
   @override
-  String? get max => throw _privateConstructorUsedError;
+  String? get max;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement => throw _privateConstructorUsedError;
+  Element? get maxElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionBaseCopyWith<_$_ElementDefinitionBase> get copyWith =>
@@ -13829,38 +14139,35 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       _$_ElementDefinitionType.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get code => throw _privateConstructorUsedError;
+  FhirUri? get code;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement => throw _privateConstructorUsedError;
+  Element? get codeElement;
   @override
-  List<Canonical>? get profile => throw _privateConstructorUsedError;
+  List<Canonical>? get profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element?>? get profileElement => throw _privateConstructorUsedError;
+  List<Element?>? get profileElement;
   @override
-  List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
+  List<Canonical>? get targetProfile;
   @override
-  List<ElementDefinitionTypeAggregation>? get aggregation =>
-      throw _privateConstructorUsedError;
+  List<ElementDefinitionTypeAggregation>? get aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  List<Element?>? get aggregationElement => throw _privateConstructorUsedError;
+  List<Element?>? get aggregationElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-  ElementDefinitionTypeVersioning? get versioning =>
-      throw _privateConstructorUsedError;
+  ElementDefinitionTypeVersioning? get versioning;
   @override
   @JsonKey(name: '_versioning')
-  Element? get versioningElement => throw _privateConstructorUsedError;
+  Element? get versioningElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionTypeCopyWith<_$_ElementDefinitionType> get copyWith =>
@@ -13945,6 +14252,8 @@ mixin _$ElementDefinitionExample {
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
   Coding? get valueCoding => throw _privateConstructorUsedError;
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Count? get valueCount => throw _privateConstructorUsedError;
@@ -13957,6 +14266,7 @@ mixin _$ElementDefinitionExample {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
   Range? get valueRange => throw _privateConstructorUsedError;
   Ratio? get valueRatio => throw _privateConstructorUsedError;
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
   Reference? get valueReference => throw _privateConstructorUsedError;
   SampledData? get valueSampledData => throw _privateConstructorUsedError;
   Signature? get valueSignature => throw _privateConstructorUsedError;
@@ -14036,6 +14346,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       Annotation? valueAnnotation,
       Attachment? valueAttachment,
       CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
       Coding? valueCoding,
       ContactPoint? valueContactPoint,
       Count? valueCount,
@@ -14048,6 +14359,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       Quantity? valueQuantity,
       Range? valueRange,
       Ratio? valueRatio,
+      RatioRange? valueRatioRange,
       Reference? valueReference,
       SampledData? valueSampledData,
       Signature? valueSignature,
@@ -14088,6 +14400,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $AnnotationCopyWith<$Res>? get valueAnnotation;
   $AttachmentCopyWith<$Res>? get valueAttachment;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
   $CodingCopyWith<$Res>? get valueCoding;
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
@@ -14100,6 +14413,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $QuantityCopyWith<$Res>? get valueQuantity;
   $RangeCopyWith<$Res>? get valueRange;
   $RatioCopyWith<$Res>? get valueRatio;
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
   $ReferenceCopyWith<$Res>? get valueReference;
   $SampledDataCopyWith<$Res>? get valueSampledData;
   $SignatureCopyWith<$Res>? get valueSignature;
@@ -14175,6 +14489,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueAnnotation = freezed,
     Object? valueAttachment = freezed,
     Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
     Object? valueCoding = freezed,
     Object? valueContactPoint = freezed,
     Object? valueCount = freezed,
@@ -14187,6 +14502,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
     Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
     Object? valueReference = freezed,
     Object? valueSampledData = freezed,
     Object? valueSignature = freezed,
@@ -14395,6 +14711,10 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
@@ -14443,6 +14763,10 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueRatio
           : valueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference // ignore: cast_nullable_to_non_nullable
@@ -14779,6 +15103,18 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
   }
 
   @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference {
+    if (_value.valueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.valueCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableReference: value));
+    });
+  }
+
+  @override
   $CodingCopyWith<$Res>? get valueCoding {
     if (_value.valueCoding == null) {
       return null;
@@ -14907,6 +15243,17 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
 
     return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
       return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange {
+    if (_value.valueRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.valueRatioRange!, (value) {
+      return _then(_value.copyWith(valueRatioRange: value));
     });
   }
 
@@ -15126,6 +15473,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       Annotation? valueAnnotation,
       Attachment? valueAttachment,
       CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
       Coding? valueCoding,
       ContactPoint? valueContactPoint,
       Count? valueCount,
@@ -15138,6 +15486,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       Quantity? valueQuantity,
       Range? valueRange,
       Ratio? valueRatio,
+      RatioRange? valueRatioRange,
       Reference? valueReference,
       SampledData? valueSampledData,
       Signature? valueSignature,
@@ -15204,6 +15553,8 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
+  @override
   $CodingCopyWith<$Res>? get valueCoding;
   @override
   $ContactPointCopyWith<$Res>? get valueContactPoint;
@@ -15227,6 +15578,8 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
   $RangeCopyWith<$Res>? get valueRange;
   @override
   $RatioCopyWith<$Res>? get valueRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
   @override
   $ReferenceCopyWith<$Res>? get valueReference;
   @override
@@ -15319,6 +15672,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueAnnotation = freezed,
     Object? valueAttachment = freezed,
     Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
     Object? valueCoding = freezed,
     Object? valueContactPoint = freezed,
     Object? valueCount = freezed,
@@ -15331,6 +15685,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
     Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
     Object? valueReference = freezed,
     Object? valueSampledData = freezed,
     Object? valueSignature = freezed,
@@ -15539,6 +15894,10 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
@@ -15587,6 +15946,10 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueRatio
           : valueRatio // ignore: cast_nullable_to_non_nullable
               as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference // ignore: cast_nullable_to_non_nullable
@@ -15699,6 +16062,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueAnnotation,
       this.valueAttachment,
       this.valueCodeableConcept,
+      this.valueCodeableReference,
       this.valueCoding,
       this.valueContactPoint,
       this.valueCount,
@@ -15711,6 +16075,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueQuantity,
       this.valueRange,
       this.valueRatio,
+      this.valueRatioRange,
       this.valueReference,
       this.valueSampledData,
       this.valueSignature,
@@ -15864,6 +16229,8 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   @override
   final CodeableConcept? valueCodeableConcept;
   @override
+  final CodeableReference? valueCodeableReference;
+  @override
   final Coding? valueCoding;
   @override
   final ContactPoint? valueContactPoint;
@@ -15887,6 +16254,8 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   final Range? valueRange;
   @override
   final Ratio? valueRatio;
+  @override
+  final RatioRange? valueRatioRange;
   @override
   final Reference? valueReference;
   @override
@@ -15918,7 +16287,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
   @override
   String toString() {
-    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCodeableReference: $valueCodeableReference, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueRatioRange: $valueRatioRange, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
   }
 
   @override
@@ -16012,6 +16381,8 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
             const DeepCollectionEquality()
                 .equals(other.valueCodeableConcept, valueCodeableConcept) &&
             const DeepCollectionEquality()
+                .equals(other.valueCodeableReference, valueCodeableReference) &&
+            const DeepCollectionEquality()
                 .equals(other.valueCoding, valueCoding) &&
             const DeepCollectionEquality()
                 .equals(other.valueContactPoint, valueContactPoint) &&
@@ -16021,14 +16392,14 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
                 .equals(other.valueDistance, valueDistance) &&
             const DeepCollectionEquality()
                 .equals(other.valueDuration, valueDuration) &&
-            const DeepCollectionEquality()
-                .equals(other.valueHumanName, valueHumanName) &&
+            const DeepCollectionEquality().equals(other.valueHumanName, valueHumanName) &&
             const DeepCollectionEquality().equals(other.valueIdentifier, valueIdentifier) &&
             const DeepCollectionEquality().equals(other.valueMoney, valueMoney) &&
             const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod) &&
             const DeepCollectionEquality().equals(other.valueQuantity, valueQuantity) &&
             const DeepCollectionEquality().equals(other.valueRange, valueRange) &&
             const DeepCollectionEquality().equals(other.valueRatio, valueRatio) &&
+            const DeepCollectionEquality().equals(other.valueRatioRange, valueRatioRange) &&
             const DeepCollectionEquality().equals(other.valueReference, valueReference) &&
             const DeepCollectionEquality().equals(other.valueSampledData, valueSampledData) &&
             const DeepCollectionEquality().equals(other.valueSignature, valueSignature) &&
@@ -16097,6 +16468,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
         const DeepCollectionEquality().hash(valueAnnotation),
         const DeepCollectionEquality().hash(valueAttachment),
         const DeepCollectionEquality().hash(valueCodeableConcept),
+        const DeepCollectionEquality().hash(valueCodeableReference),
         const DeepCollectionEquality().hash(valueCoding),
         const DeepCollectionEquality().hash(valueContactPoint),
         const DeepCollectionEquality().hash(valueCount),
@@ -16109,6 +16481,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
         const DeepCollectionEquality().hash(valueQuantity),
         const DeepCollectionEquality().hash(valueRange),
         const DeepCollectionEquality().hash(valueRatio),
+        const DeepCollectionEquality().hash(valueRatioRange),
         const DeepCollectionEquality().hash(valueReference),
         const DeepCollectionEquality().hash(valueSampledData),
         const DeepCollectionEquality().hash(valueSignature),
@@ -16208,6 +16581,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final Annotation? valueAnnotation,
       final Attachment? valueAttachment,
       final CodeableConcept? valueCodeableConcept,
+      final CodeableReference? valueCodeableReference,
       final Coding? valueCoding,
       final ContactPoint? valueContactPoint,
       final Count? valueCount,
@@ -16220,6 +16594,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final Quantity? valueQuantity,
       final Range? valueRange,
       final Ratio? valueRatio,
+      final RatioRange? valueRatioRange,
       final Reference? valueReference,
       final SampledData? valueSampledData,
       final Signature? valueSignature,
@@ -16240,180 +16615,178 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       _$_ElementDefinitionExample.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get label => throw _privateConstructorUsedError;
+  String? get label;
   @override
   @JsonKey(name: '_label')
-  Element? get labelElement => throw _privateConstructorUsedError;
+  Element? get labelElement;
   @override
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  Base64Binary? get valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+  Element? get valueBase64BinaryElement;
   @override
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Element? get valueBooleanElement;
   @override
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  Canonical? get valueCanonical;
   @override
   @JsonKey(name: '_valueCanonical')
-  Element? get valueCanonicalElement => throw _privateConstructorUsedError;
+  Element? get valueCanonicalElement;
   @override
-  Code? get valueCode => throw _privateConstructorUsedError;
+  Code? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  Element? get valueCodeElement => throw _privateConstructorUsedError;
+  Element? get valueCodeElement;
   @override
-  Date? get valueDate => throw _privateConstructorUsedError;
+  Date? get valueDate;
   @override
   @JsonKey(name: '_valueDate')
-  Element? get valueDateElement => throw _privateConstructorUsedError;
+  Element? get valueDateElement;
   @override
-  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  Element? get valueDateTimeElement;
   @override
-  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  Decimal? get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+  Element? get valueDecimalElement;
   @override
-  Id? get valueId => throw _privateConstructorUsedError;
+  Id? get valueId;
   @override
   @JsonKey(name: '_valueId')
-  Element? get valueIdElement => throw _privateConstructorUsedError;
+  Element? get valueIdElement;
   @override
-  Instant? get valueInstant => throw _privateConstructorUsedError;
+  Instant? get valueInstant;
   @override
   @JsonKey(name: '_valueInstant')
-  Element? get valueInstantElement => throw _privateConstructorUsedError;
+  Element? get valueInstantElement;
   @override
-  Integer? get valueInteger => throw _privateConstructorUsedError;
+  Integer? get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  Element? get valueIntegerElement;
   @override
-  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  Markdown? get valueMarkdown;
   @override
   @JsonKey(name: '_valueMarkdown')
-  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
+  Element? get valueMarkdownElement;
   @override
-  Oid? get valueOid => throw _privateConstructorUsedError;
+  Oid? get valueOid;
   @override
   @JsonKey(name: '_valueOid')
-  Element? get valueOidElement => throw _privateConstructorUsedError;
+  Element? get valueOidElement;
   @override
-  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  PositiveInt? get valuePositiveInt;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
+  Element? get valuePositiveIntElement;
   @override
-  String? get valueString => throw _privateConstructorUsedError;
+  String? get valueString;
   @override
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement => throw _privateConstructorUsedError;
+  Element? get valueStringElement;
   @override
-  Time? get valueTime => throw _privateConstructorUsedError;
+  Time? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
-  Element? get valueTimeElement => throw _privateConstructorUsedError;
+  Element? get valueTimeElement;
   @override
-  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  UnsignedInt? get valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
+  Element? get valueUnsignedIntElement;
   @override
-  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  FhirUri? get valueUri;
   @override
   @JsonKey(name: '_valueUri')
-  Element? get valueUriElement => throw _privateConstructorUsedError;
+  Element? get valueUriElement;
   @override
-  FhirUrl? get valueUrl => throw _privateConstructorUsedError;
+  FhirUrl? get valueUrl;
   @override
   @JsonKey(name: '_valueUrl')
-  Element? get valueUrlElement => throw _privateConstructorUsedError;
+  Element? get valueUrlElement;
   @override
-  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  Uuid? get valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
-  Element? get valueUuidElement => throw _privateConstructorUsedError;
+  Element? get valueUuidElement;
   @override
-  Address? get valueAddress => throw _privateConstructorUsedError;
+  Address? get valueAddress;
   @override
-  Age? get valueAge => throw _privateConstructorUsedError;
+  Age? get valueAge;
   @override
-  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
+  Annotation? get valueAnnotation;
   @override
-  Attachment? get valueAttachment => throw _privateConstructorUsedError;
+  Attachment? get valueAttachment;
   @override
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept;
   @override
-  Coding? get valueCoding => throw _privateConstructorUsedError;
+  CodeableReference? get valueCodeableReference;
   @override
-  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
+  Coding? get valueCoding;
   @override
-  Count? get valueCount => throw _privateConstructorUsedError;
+  ContactPoint? get valueContactPoint;
   @override
-  Distance? get valueDistance => throw _privateConstructorUsedError;
+  Count? get valueCount;
   @override
-  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
+  Distance? get valueDistance;
   @override
-  HumanName? get valueHumanName => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration;
   @override
-  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
+  HumanName? get valueHumanName;
   @override
-  Money? get valueMoney => throw _privateConstructorUsedError;
+  Identifier? get valueIdentifier;
   @override
-  Period? get valuePeriod => throw _privateConstructorUsedError;
+  Money? get valueMoney;
   @override
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Period? get valuePeriod;
   @override
-  Range? get valueRange => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity;
   @override
-  Ratio? get valueRatio => throw _privateConstructorUsedError;
+  Range? get valueRange;
   @override
-  Reference? get valueReference => throw _privateConstructorUsedError;
+  Ratio? get valueRatio;
   @override
-  SampledData? get valueSampledData => throw _privateConstructorUsedError;
+  RatioRange? get valueRatioRange;
   @override
-  Signature? get valueSignature => throw _privateConstructorUsedError;
+  Reference? get valueReference;
   @override
-  Timing? get valueTiming => throw _privateConstructorUsedError;
+  SampledData? get valueSampledData;
   @override
-  ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
+  Signature? get valueSignature;
   @override
-  Contributor? get valueContributor => throw _privateConstructorUsedError;
+  Timing? get valueTiming;
   @override
-  DataRequirement? get valueDataRequirement =>
-      throw _privateConstructorUsedError;
+  ContactDetail? get valueContactDetail;
   @override
-  Expression? get valueExpression => throw _privateConstructorUsedError;
+  Contributor? get valueContributor;
   @override
-  ParameterDefinition? get valueParameterDefinition =>
-      throw _privateConstructorUsedError;
+  DataRequirement? get valueDataRequirement;
   @override
-  RelatedArtifact? get valueRelatedArtifact =>
-      throw _privateConstructorUsedError;
+  Expression? get valueExpression;
   @override
-  TriggerDefinition? get valueTriggerDefinition =>
-      throw _privateConstructorUsedError;
+  ParameterDefinition? get valueParameterDefinition;
   @override
-  UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
+  RelatedArtifact? get valueRelatedArtifact;
   @override
-  Dosage? get valueDosage => throw _privateConstructorUsedError;
+  TriggerDefinition? get valueTriggerDefinition;
   @override
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  UsageContext? get valueUsageContext;
+  @override
+  Dosage? get valueDosage;
+  @override
+  Meta? get valueMeta;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionExampleCopyWith<_$_ElementDefinitionExample>
@@ -17006,47 +17379,45 @@ abstract class _ElementDefinitionConstraint
       _$_ElementDefinitionConstraint.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Id? get key => throw _privateConstructorUsedError;
+  Id? get key;
   @override
   @JsonKey(name: '_key')
-  Element? get keyElement => throw _privateConstructorUsedError;
+  Element? get keyElement;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement => throw _privateConstructorUsedError;
+  Element? get requirementsElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-  ElementDefinitionConstraintSeverity? get severity =>
-      throw _privateConstructorUsedError;
+  ElementDefinitionConstraintSeverity? get severity;
   @override
   @JsonKey(name: '_severity')
-  Element? get severityElement => throw _privateConstructorUsedError;
+  Element? get severityElement;
   @override
-  String? get human => throw _privateConstructorUsedError;
+  String? get human;
   @override
   @JsonKey(name: '_human')
-  Element? get humanElement => throw _privateConstructorUsedError;
+  Element? get humanElement;
   @override
-  String? get expression => throw _privateConstructorUsedError;
+  String? get expression;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement => throw _privateConstructorUsedError;
+  Element? get expressionElement;
   @override
-  String? get xpath => throw _privateConstructorUsedError;
+  String? get xpath;
   @override
   @JsonKey(name: '_xpath')
-  Element? get xpathElement => throw _privateConstructorUsedError;
+  Element? get xpathElement;
   @override
-  Canonical? get source => throw _privateConstructorUsedError;
+  Canonical? get source;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
@@ -17399,27 +17770,25 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
       _$_ElementDefinitionBinding.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-  ElementDefinitionBindingStrength? get strength =>
-      throw _privateConstructorUsedError;
+  ElementDefinitionBindingStrength? get strength;
   @override
   @JsonKey(name: '_strength')
-  Element? get strengthElement => throw _privateConstructorUsedError;
+  Element? get strengthElement;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  Canonical? get valueSet;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
@@ -17844,33 +18213,32 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
       _$_ElementDefinitionMapping.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Id? get identity => throw _privateConstructorUsedError;
+  Id? get identity;
   @override
   @JsonKey(name: '_identity')
-  Element? get identityElement => throw _privateConstructorUsedError;
+  Element? get identityElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  String? get map => throw _privateConstructorUsedError;
+  String? get map;
   @override
   @JsonKey(name: '_map')
-  Element? get mapElement => throw _privateConstructorUsedError;
+  Element? get mapElement;
   @override
-  String? get comment => throw _privateConstructorUsedError;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement => throw _privateConstructorUsedError;
+  Element? get commentElement;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionMappingCopyWith<_$_ElementDefinitionMapping>

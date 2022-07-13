@@ -17,32 +17,32 @@ part 'general_types.g.dart';
 class Annotation with _$Annotation {
   Annotation._();
 
-  /// [Annotation]: A  text note which also  contains information about who made
+  /// [Annotation] A  text note which also  contains information about who made
   ///  the statement and when.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [authorReference]: The individual responsible for making the annotation.
+  /// [authorReference] The individual responsible for making the annotation.
   ///
-  /// [authorString]: The individual responsible for making the annotation.
+  /// [authorString] The individual responsible for making the annotation.
   ///
-  /// [authorStringElement]: Extensions for authorString
+  /// [authorStringElement] Extensions for authorString
   ///
-  /// [time]: Indicates when this particular annotation was made.
+  /// [time] Indicates when this particular annotation was made.
   ///
-  /// [timeElement]: Extensions for time
+  /// [timeElement] Extensions for time
   ///
-  /// [text]: The text of the annotation in markdown format.
+  /// [text] The text of the annotation in markdown format.
   ///
-  /// [textElement]: Extensions for text
+  /// [textElement] Extensions for text
   factory Annotation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -90,55 +90,55 @@ class Annotation with _$Annotation {
 class Attachment with _$Attachment {
   Attachment._();
 
-  /// [Attachment]: For referring to data content defined in other formats.
+  /// [Attachment] For referring to data content defined in other formats.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [contentType]: Identifies the type of the data in the attachment and
+  /// [contentType] Identifies the type of the data in the attachment and
   /// allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
   ///
-  /// [contentTypeElement]: Extensions for contentType
+  /// [contentTypeElement] Extensions for contentType
   ///
-  /// [language]: The human language of the content. The value can be any valid
+  /// [language] The human language of the content. The value can be any valid
   ///  value according to BCP 47.
   ///
-  /// [languageElement]: Extensions for language
+  /// [languageElement] Extensions for language
   ///
-  /// [data]: The actual data of the attachment - a sequence of bytes, base64
+  /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
   ///
-  /// [dataElement]: Extensions for data
+  /// [dataElement] Extensions for data
   ///
-  /// [url]: A location where the data can be accessed.
+  /// [url] A location where the data can be accessed.
   ///
-  /// [urlElement]: Extensions for url
+  /// [urlElement] Extensions for url
   ///
-  /// [size]: The number of bytes of data that make up this attachment (before
+  /// [size] The number of bytes of data that make up this attachment (before
   ///  base64 encoding, if that is done).
   ///
-  /// [sizeElement]: Extensions for size
+  /// [sizeElement] Extensions for size
   ///
-  /// [hash]: The calculated hash of the data using SHA-1. Represented using
+  /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
   ///
-  /// [hashElement]: Extensions for hash
+  /// [hashElement] Extensions for hash
   ///
-  /// [title]: A label or set of text to display in place of the data.
+  /// [title] A label or set of text to display in place of the data.
   ///
-  /// [titleElement]: Extensions for title
+  /// [titleElement] Extensions for title
   ///
-  /// [creation]: The date that the attachment was first created.
+  /// [creation] The date that the attachment was first created.
   ///
-  /// [creationElement]: Extensions for creation
+  /// [creationElement] Extensions for creation
   factory Attachment({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -195,39 +195,39 @@ class Attachment with _$Attachment {
 class Identifier with _$Identifier {
   Identifier._();
 
-  /// [Identifier]: An identifier - identifies some entity uniquely and
+  /// [Identifier] An identifier - identifies some entity uniquely and
   ///  unambiguously. Typically this is used for business identifiers.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [use]: The purpose of this identifier.
+  /// [use] The purpose of this identifier.
   ///
-  /// [useElement]: Extensions for use
+  /// [useElement] Extensions for use
   ///
-  /// [type]: A coded type for the identifier that can be used to determine
+  /// [type] A coded type for the identifier that can be used to determine
   ///  which identifier to use for a specific purpose.
   ///
-  /// [system]: Establishes the namespace for the value - that is, a URL that
+  /// [system] Establishes the namespace for the value - that is, a URL that
   ///  describes a set values that are unique.
   ///
-  /// [systemElement]: Extensions for system
+  /// [systemElement] Extensions for system
   ///
-  /// [value]: The portion of the identifier typically relevant to the user and
+  /// [value] The portion of the identifier typically relevant to the user and
   ///  which is unique within the context of the system.
   ///
-  /// [valueElement]: Extensions for value
+  /// [valueElement] Extensions for value
   ///
-  /// [period]: Time period during which identifier is/was valid for use.
+  /// [period] Time period during which identifier is/was valid for use.
   ///
-  /// [assigner]: Organization that issued/manages the identifier.
+  /// [assigner] Organization that issued/manages the identifier.
   factory Identifier({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -277,26 +277,26 @@ class Identifier with _$Identifier {
 class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
 
-  /// [CodeableConcept]: A concept that may be defined by a formal reference to
+  /// [CodeableConcept] A concept that may be defined by a formal reference to
   ///  a terminology or ontology or may be provided by text.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [coding]: A reference to a code defined by a terminology system.
+  /// [coding] A reference to a code defined by a terminology system.
   ///
-  /// [text]: A human language representation of the concept as
+  /// [text] A human language representation of the concept as
   /// seen/selected/uttered by the user who entered the data and/or which
   ///  represents the intended meaning of the user.
   ///
-  /// [textElement]: Extensions for text
+  /// [textElement] Extensions for text
   factory CodeableConcept({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -340,47 +340,47 @@ class CodeableConcept with _$CodeableConcept {
 class Coding with _$Coding {
   Coding._();
 
-  /// [Coding]: A reference to a code defined by a terminology system.
+  /// [Coding] A reference to a code defined by a terminology system.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [system]: The identification of the code system that defines the meaning
+  /// [system] The identification of the code system that defines the meaning
   ///  of the symbol in the code.
   ///
-  /// [systemElement]: Extensions for system
+  /// [systemElement] Extensions for system
   ///
-  /// [version]: The version of the code system which was used when choosing
+  /// [version] The version of the code system which was used when choosing
   /// this code. Note that a well-maintained code system does not need the
   /// version reported, because the meaning of codes is consistent across
   /// versions. However this cannot consistently be assured, and when the
   /// meaning is not guaranteed to be consistent, the version SHOULD be
   ///  exchanged.
   ///
-  /// [versionElement]: Extensions for version
+  /// [versionElement] Extensions for version
   ///
-  /// [code]: A symbol in syntax defined by the system. The symbol may be a
+  /// [code] A symbol in syntax defined by the system. The symbol may be a
   /// predefined code or an expression in a syntax defined by the coding system
   ///  (e.g. post-coordination).
   ///
-  /// [codeElement]: Extensions for code
+  /// [codeElement] Extensions for code
   ///
-  /// [display]: A representation of the meaning of the code in the system,
+  /// [display] A representation of the meaning of the code in the system,
   ///  following the rules of the system.
   ///
-  /// [displayElement]: Extensions for display
+  /// [displayElement] Extensions for display
   ///
-  /// [userSelected]: Indicates that this coding was chosen by a user directly -
+  /// [userSelected] Indicates that this coding was chosen by a user directly -
   ///  e.g. off a pick list of available items (codes or displays).
   ///
-  /// [userSelectedElement]: Extensions for userSelected
+  /// [userSelectedElement] Extensions for userSelected
   factory Coding({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -430,46 +430,46 @@ class Coding with _$Coding {
 class Quantity with _$Quantity {
   Quantity._();
 
-  /// [Quantity]: A measured amount (or an amount that can potentially be
+  /// [Quantity] A measured amount (or an amount that can potentially be
   /// measured). Note that measured amounts include amounts that are not
   /// precisely quantified, including amounts involving arbitrary units and
   ///  floating currencies.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [value]: The value of the measured amount. The value includes an implicit
+  /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [valueElement]: Extensions for value
+  /// [valueElement] Extensions for value
   ///
-  /// [comparator]: How the value should be understood and represented - whether
+  /// [comparator] How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [comparatorElement]: Extensions for comparator
+  /// [comparatorElement] Extensions for comparator
   ///
-  /// [unit]: A human-readable form of the unit.
+  /// [unit] A human-readable form of the unit.
   ///
-  /// [unitElement]: Extensions for unit
+  /// [unitElement] Extensions for unit
   ///
-  /// [system]: The identification of the system that provides the coded form of
+  /// [system] The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [systemElement]: Extensions for system
+  /// [systemElement] Extensions for system
   ///
-  /// [code]: A computer processable form of the unit in some unit
+  /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [codeElement]: Extensions for code
+  /// [codeElement] Extensions for code
   factory Quantity({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -521,43 +521,43 @@ class Quantity with _$Quantity {
 class FhirDuration with _$FhirDuration {
   FhirDuration._();
 
-  /// [Duration]: A length of time.
+  /// [Duration] A length of time.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [value]: The value of the measured amount. The value includes an implicit
+  /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [valueElement]: Extensions for value
+  /// [valueElement] Extensions for value
   ///
-  /// [comparator]: How the value should be understood and represented - whether
+  /// [comparator] How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [comparatorElement]: Extensions for comparator
+  /// [comparatorElement] Extensions for comparator
   ///
-  /// [unit]: A human-readable form of the unit.
+  /// [unit] A human-readable form of the unit.
   ///
-  /// [unitElement]: Extensions for unit
+  /// [unitElement] Extensions for unit
   ///
-  /// [system]: The identification of the system that provides the coded form of
+  /// [system] The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [systemElement]: Extensions for system
+  /// [systemElement] Extensions for system
   ///
-  /// [code]: A computer processable form of the unit in some unit
+  /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [codeElement]: Extensions for code
+  /// [codeElement] Extensions for code
   factory FhirDuration({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -609,43 +609,43 @@ class FhirDuration with _$FhirDuration {
 class Distance with _$Distance {
   Distance._();
 
-  /// [Distance]: A length - a value with a unit that is a physical distance.
+  /// [Distance] A length - a value with a unit that is a physical distance.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [value]: The value of the measured amount. The value includes an implicit
+  /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [valueElement]: Extensions for value
+  /// [valueElement] Extensions for value
   ///
-  /// [comparator]: How the value should be understood and represented - whether
+  /// [comparator] How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [comparatorElement]: Extensions for comparator
+  /// [comparatorElement] Extensions for comparator
   ///
-  /// [unit]: A human-readable form of the unit.
+  /// [unit] A human-readable form of the unit.
   ///
-  /// [unitElement]: Extensions for unit
+  /// [unitElement] Extensions for unit
   ///
-  /// [system]: The identification of the system that provides the coded form of
+  /// [system] The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [systemElement]: Extensions for system
+  /// [systemElement] Extensions for system
   ///
-  /// [code]: A computer processable form of the unit in some unit
+  /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [codeElement]: Extensions for code
+  /// [codeElement] Extensions for code
   factory Distance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -697,46 +697,46 @@ class Distance with _$Distance {
 class Count with _$Count {
   Count._();
 
-  /// [Count]: A measured amount (or an amount that can potentially be
+  /// [Count] A measured amount (or an amount that can potentially be
   /// measured). Note that measured amounts include amounts that are not
   /// precisely quantified, including amounts involving arbitrary units and
   ///  floating currencies.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [value]: The value of the measured amount. The value includes an implicit
+  /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [valueElement]: Extensions for value
+  /// [valueElement] Extensions for value
   ///
-  /// [comparator]: How the value should be understood and represented - whether
+  /// [comparator] How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [comparatorElement]: Extensions for comparator
+  /// [comparatorElement] Extensions for comparator
   ///
-  /// [unit]: A human-readable form of the unit.
+  /// [unit] A human-readable form of the unit.
   ///
-  /// [unitElement]: Extensions for unit
+  /// [unitElement] Extensions for unit
   ///
-  /// [system]: The identification of the system that provides the coded form of
+  /// [system] The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [systemElement]: Extensions for system
+  /// [systemElement] Extensions for system
   ///
-  /// [code]: A computer processable form of the unit in some unit
+  /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [codeElement]: Extensions for code
+  /// [codeElement] Extensions for code
   factory Count({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -786,25 +786,25 @@ class Count with _$Count {
 class Money with _$Money {
   Money._();
 
-  /// [Money]: An amount of economic utility in some recognized currency.
+  /// [Money] An amount of economic utility in some recognized currency.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [value]: Numerical value (with implicit precision).
+  /// [value] Numerical value (with implicit precision).
   ///
-  /// [valueElement]: Extensions for value
+  /// [valueElement] Extensions for value
   ///
-  /// [currency]: ISO 4217 Currency Code.
+  /// [currency] ISO 4217 Currency Code.
   ///
-  /// [currencyElement]: Extensions for currency
+  /// [currencyElement] Extensions for currency
   factory Money({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -847,44 +847,44 @@ class Money with _$Money {
 class Age with _$Age {
   Age._();
 
-  /// [Age]: A duration of time during which an organism (or a process) has
+  /// [Age] A duration of time during which an organism (or a process) has
   ///  existed.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [value]: The value of the measured amount. The value includes an implicit
+  /// [value] The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [valueElement]: Extensions for value
+  /// [valueElement] Extensions for value
   ///
-  /// [comparator]: How the value should be understood and represented - whether
+  /// [comparator] How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [comparatorElement]: Extensions for comparator
+  /// [comparatorElement] Extensions for comparator
   ///
-  /// [unit]: A human-readable form of the unit.
+  /// [unit] A human-readable form of the unit.
   ///
-  /// [unitElement]: Extensions for unit
+  /// [unitElement] Extensions for unit
   ///
-  /// [system]: The identification of the system that provides the coded form of
+  /// [system] The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [systemElement]: Extensions for system
+  /// [systemElement] Extensions for system
   ///
-  /// [code]: A computer processable form of the unit in some unit
+  /// [code] A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [codeElement]: Extensions for code
+  /// [codeElement] Extensions for code
   factory Age({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -932,21 +932,21 @@ class Age with _$Age {
 class Range with _$Range {
   Range._();
 
-  /// [Range]: A set of ordered Quantities defined by a low and high limit.
+  /// [Range] A set of ordered Quantities defined by a low and high limit.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [low]: The low limit. The boundary is inclusive.
+  /// [low] The low limit. The boundary is inclusive.
   ///
-  /// [high]: The high limit. The boundary is inclusive.
+  /// [high] The high limit. The boundary is inclusive.
   factory Range({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -987,29 +987,29 @@ class Range with _$Range {
 class Period with _$Period {
   Period._();
 
-  /// [Period]: A time period defined by a start and end date and optionally
+  /// [Period] A time period defined by a start and end date and optionally
   ///  time.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [start]: The start of the period. The boundary is inclusive.
+  /// [start] The start of the period. The boundary is inclusive.
   ///
-  /// [startElement]: Extensions for start
+  /// [startElement] Extensions for start
   ///
-  /// [end]: The end of the period. If the end of the period is missing, it
+  /// [end] The end of the period. If the end of the period is missing, it
   /// means no end was known or planned at the time the instance was created.
   /// The start may be in the past, and the end date in the future, which means
   ///  that period is expected/planned to end at that time.
   ///
-  /// [endElement]: Extensions for end
+  /// [endElement] Extensions for end
   factory Period({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1053,22 +1053,22 @@ class Period with _$Period {
 class Ratio with _$Ratio {
   Ratio._();
 
-  /// [Ratio]: A relationship of two Quantity values - expressed as a numerator
+  /// [Ratio] A relationship of two Quantity values - expressed as a numerator
   ///  and a denominator.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [numerator]: The value of the numerator.
+  /// [numerator] The value of the numerator.
   ///
-  /// [denominator]: The value of the denominator.
+  /// [denominator] The value of the denominator.
   factory Ratio({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1106,59 +1106,109 @@ class Ratio with _$Ratio {
 }
 
 @freezed
+class RatioRange with _$RatioRange {
+  RatioRange._();
+
+  /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
+  /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  /// [extension] "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+  /// [lowNumerator] "The value of the low limit numerator."
+  /// [highNumerator] "The value of the high limit numerator."
+  /// [denominator] "The value of the denominator."
+
+  factory RatioRange({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    Quantity? lowNumerator,
+    Quantity? highNumerator,
+    Quantity? denominator,
+  }) = _RatioRange;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory RatioRange.fromYaml(dynamic yaml) => yaml is String
+      ? RatioRange.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? RatioRange.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'RatioRange cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory RatioRange.fromJson(Map<String, dynamic> json) =>
+      _$RatioRangeFromJson(json);
+
+  /// Acts like a constructor, returns a [RatioRange], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RatioRange.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RatioRangeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
 class SampledData with _$SampledData {
   SampledData._();
 
-  /// [SampledData]: A series of measurements taken by a device, with upper and
+  /// [SampledData] A series of measurements taken by a device, with upper and
   ///  lower limits. There may be more than one dimension in the data.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [origin]: The base quantity that a measured value of zero represents. In
+  /// [origin] The base quantity that a measured value of zero represents. In
   ///  addition, this provides the units of the entire measurement series.
   ///
-  /// [period]: The length of time between sampling times, measured in
+  /// [period] The length of time between sampling times, measured in
   ///  milliseconds.
   ///
-  /// [periodElement]: Extensions for period
+  /// [periodElement] Extensions for period
   ///
-  /// [factor]: A correction factor that is applied to the sampled data points
+  /// [factor] A correction factor that is applied to the sampled data points
   ///  before they are added to the origin.
   ///
-  /// [factorElement]: Extensions for factor
+  /// [factorElement] Extensions for factor
   ///
-  /// [lowerLimit]: The lower limit of detection of the measured points. This is
+  /// [lowerLimit] The lower limit of detection of the measured points. This is
   /// needed if any of the data points have the value "L" (lower than detection
   ///  limit).
   ///
-  /// [lowerLimitElement]: Extensions for lowerLimit
+  /// [lowerLimitElement] Extensions for lowerLimit
   ///
-  /// [upperLimit]: The upper limit of detection of the measured points. This is
+  /// [upperLimit] The upper limit of detection of the measured points. This is
   /// needed if any of the data points have the value "U" (higher than detection
   ///  limit).
   ///
-  /// [upperLimitElement]: Extensions for upperLimit
+  /// [upperLimitElement] Extensions for upperLimit
   ///
-  /// [dimensions]: The number of sample points at each time point. If this
+  /// [dimensions] The number of sample points at each time point. If this
   /// value is greater than one, then the dimensions will be interlaced - all
   ///  the sample points for a point in time will be recorded at once.
   ///
-  /// [dimensionsElement]: Extensions for dimensions
+  /// [dimensionsElement] Extensions for dimensions
   ///
-  /// [data]: A series of data points which are decimal values separated by a
+  /// [data] A series of data points which are decimal values separated by a
   /// single space (character u20). The special values "E" (error), "L" (below
   /// detection limit) and "U" (above detection limit) can also be used in place
   ///  of a decimal value.
   ///
-  /// [dataElement]: Extensions for data
+  /// [dataElement] Extensions for data
   factory SampledData({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1212,53 +1262,53 @@ class SampledData with _$SampledData {
 class Signature with _$Signature {
   Signature._();
 
-  /// [Signature]: A signature along with supporting context. The signature may
+  /// [Signature] A signature along with supporting context. The signature may
   /// be a digital signature that is cryptographic in nature, or some other
   /// signature acceptable to the domain. This other signature may be as simple
   /// as a graphical image representing a hand-written signature, or a signature
   ///  ceremony Different signature approaches have different utilities.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [type]: An indication of the reason that the entity signed this document.
+  /// [type] An indication of the reason that the entity signed this document.
   /// This may be explicitly included as part of the signature information and
   /// can be used when determining accountability for various actions concerning
   ///  the document.
   ///
-  /// [when]: When the digital signature was signed.
+  /// [when] When the digital signature was signed.
   ///
-  /// [whenElement]: Extensions for when
+  /// [whenElement] Extensions for when
   ///
-  /// [who]: A reference to an application-usable description of the identity
+  /// [who] A reference to an application-usable description of the identity
   ///  that signed  (e.g. the signature used their private key).
   ///
-  /// [onBehalfOf]: A reference to an application-usable description of the
+  /// [onBehalfOf] A reference to an application-usable description of the
   ///  identity that is represented by the signature.
   ///
-  /// [targetFormat]: A mime type that indicates the technical format of the
+  /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
   ///
-  /// [targetFormatElement]: Extensions for targetFormat
+  /// [targetFormatElement] Extensions for targetFormat
   ///
-  /// [sigFormat]: A mime type that indicates the technical format of the
+  /// [sigFormat] A mime type that indicates the technical format of the
   /// signature. Important mime types are application/signature+xml for X ML
   /// DigSig, application/jose for JWS, and image/* for a graphical image of a
   ///  signature, etc.
   ///
-  /// [sigFormatElement]: Extensions for sigFormat
+  /// [sigFormatElement] Extensions for sigFormat
   ///
-  /// [data]: The base64 encoding of the Signature content. When signature is
+  /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
   ///
-  /// [dataElement]: Extensions for data
+  /// [dataElement] Extensions for data
   factory Signature({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1310,50 +1360,50 @@ class Signature with _$Signature {
 class HumanName with _$HumanName {
   HumanName._();
 
-  /// [HumanName]: A human's name with the ability to identify parts and usage.
+  /// [HumanName] A human's name with the ability to identify parts and usage.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [use]: Identifies the purpose for this name.
+  /// [use] Identifies the purpose for this name.
   ///
-  /// [useElement]: Extensions for use
+  /// [useElement] Extensions for use
   ///
-  /// [text]: Specifies the entire name as it should be displayed e.g. on an
+  /// [text] Specifies the entire name as it should be displayed e.g. on an
   /// application UI. This may be provided instead of or as well as the specific
   ///  parts.
   ///
-  /// [textElement]: Extensions for text
+  /// [textElement] Extensions for text
   ///
-  /// [family]: The part of a name that links to the genealogy. In some cultures
+  /// [family] The part of a name that links to the genealogy. In some cultures
   ///  (e.g. Eritrea) the family name of a son is the first name of his father.
   ///
-  /// [familyElement]: Extensions for family
+  /// [familyElement] Extensions for family
   ///
-  /// [given]: Given name.
+  /// [given] Given name.
   ///
-  /// [givenElement]: Extensions for given
+  /// [givenElement] Extensions for given
   ///
-  /// [prefix]: Part of the name that is acquired as a title due to academic,
+  /// [prefix] Part of the name that is acquired as a title due to academic,
   /// legal, employment or nobility status, etc. and that appears at the start
   ///  of the name.
   ///
-  /// [prefixElement]: Extensions for prefix
+  /// [prefixElement] Extensions for prefix
   ///
-  /// [suffix]: Part of the name that is acquired as a title due to academic,
+  /// [suffix] Part of the name that is acquired as a title due to academic,
   /// legal, employment or nobility status, etc. and that appears at the end of
   ///  the name.
   ///
-  /// [suffixElement]: Extensions for suffix
+  /// [suffixElement] Extensions for suffix
   ///
-  /// [period]: Indicates the period of time when this name was valid for the
+  /// [period] Indicates the period of time when this name was valid for the
   ///  named person.
   factory HumanName({
     String? id,
@@ -1408,70 +1458,70 @@ class HumanName with _$HumanName {
 class Address with _$Address {
   Address._();
 
-  /// [Address]: An address expressed using postal conventions (as opposed to
+  /// [Address] An address expressed using postal conventions (as opposed to
   /// GPS or other location definition formats).  This data type may be used to
   /// convey addresses for use in delivering mail as well as for visiting
   /// locations which might not be valid for mail delivery.  There are a variety
   ///  of postal address formats defined around the world.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [use]: The purpose of this address.
+  /// [use] The purpose of this address.
   ///
-  /// [useElement]: Extensions for use
+  /// [useElement] Extensions for use
   ///
-  /// [type]: Distinguishes between physical addresses (those you can visit) and
+  /// [type] Distinguishes between physical addresses (those you can visit) and
   /// mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses
   ///  are both.
   ///
-  /// [typeElement]: Extensions for type
+  /// [typeElement] Extensions for type
   ///
-  /// [text]: Specifies the entire address as it should be displayed e.g. on a
+  /// [text] Specifies the entire address as it should be displayed e.g. on a
   /// postal label. This may be provided instead of or as well as the specific
   ///  parts.
   ///
-  /// [textElement]: Extensions for text
+  /// [textElement] Extensions for text
   ///
-  /// [line]: This component contains the house number, apartment number, street
+  /// [line] This component contains the house number, apartment number, street
   /// name, street direction,  P.O. Box number, delivery hints, and similar
   ///  address information.
   ///
-  /// [lineElement]: Extensions for line
+  /// [lineElement] Extensions for line
   ///
-  /// [city]: The name of the city, town, suburb, village or other community or
+  /// [city] The name of the city, town, suburb, village or other community or
   ///  delivery center.
   ///
-  /// [cityElement]: Extensions for city
+  /// [cityElement] Extensions for city
   ///
-  /// [district]: The name of the administrative area (county).
+  /// [district] The name of the administrative area (county).
   ///
-  /// [districtElement]: Extensions for district
+  /// [districtElement] Extensions for district
   ///
-  /// [state]: Sub-unit of a country with limited sovereignty in a federally
+  /// [state] Sub-unit of a country with limited sovereignty in a federally
   /// organized country. A code may be used if codes are in common use (e.g. US
   ///  2 letter state codes).
   ///
-  /// [stateElement]: Extensions for state
+  /// [stateElement] Extensions for state
   ///
-  /// [postalCode]: A postal code designating a region defined by the postal
+  /// [postalCode] A postal code designating a region defined by the postal
   ///  service.
   ///
-  /// [postalCodeElement]: Extensions for postalCode
+  /// [postalCodeElement] Extensions for postalCode
   ///
-  /// [country]: Country - a nation as commonly understood or generally
+  /// [country] Country - a nation as commonly understood or generally
   ///  accepted.
   ///
-  /// [countryElement]: Extensions for country
+  /// [countryElement] Extensions for country
   ///
-  /// [period]: Time period when address was/is in use.
+  /// [period] Time period when address was/is in use.
   factory Address({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1531,40 +1581,40 @@ class Address with _$Address {
 class ContactPoint with _$ContactPoint {
   ContactPoint._();
 
-  /// [ContactPoint]: Details for all kinds of technology mediated contact
+  /// [ContactPoint] Details for all kinds of technology mediated contact
   ///  points for a person or organization, including telephone, email, etc.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [system]: Telecommunications form for contact point - what communications
+  /// [system] Telecommunications form for contact point - what communications
   ///  system is required to make use of the contact.
   ///
-  /// [systemElement]: Extensions for system
+  /// [systemElement] Extensions for system
   ///
-  /// [value]: The actual contact point details, in a form that is meaningful to
+  /// [value] The actual contact point details, in a form that is meaningful to
   ///  the designated communication system (i.e. phone number or email address).
   ///
-  /// [valueElement]: Extensions for value
+  /// [valueElement] Extensions for value
   ///
-  /// [use]: Identifies the purpose for the contact point.
+  /// [use] Identifies the purpose for the contact point.
   ///
-  /// [useElement]: Extensions for use
+  /// [useElement] Extensions for use
   ///
-  /// [rank]: Specifies a preferred order in which to use a set of contacts.
+  /// [rank] Specifies a preferred order in which to use a set of contacts.
   /// ContactPoints with lower rank values are more preferred than those with
   ///  higher rank values.
   ///
-  /// [rankElement]: Extensions for rank
+  /// [rankElement] Extensions for rank
   ///
-  /// [period]: Time period when the contact point was/is in use.
+  /// [period] Time period when the contact point was/is in use.
   factory ContactPoint({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1615,24 +1665,24 @@ class ContactPoint with _$ContactPoint {
 class Timing with _$Timing {
   Timing._();
 
-  /// [Timing]: Specifies an event that may occur multiple times. Timing
+  /// [Timing] Specifies an event that may occur multiple times. Timing
   /// schedules are used to record when things are planned, expected or
   /// requested to occur. The most common usage is in dosage instructions for
   /// medications. They are also used when planning care of various kinds, and
   /// may be used for reporting the schedule to which past regular activities
   ///  were carried out.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1646,13 +1696,13 @@ class Timing with _$Timing {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [event]: Identifies specific times when the event occurs.
+  /// [event] Identifies specific times when the event occurs.
   ///
-  /// [eventElement]: Extensions for event
+  /// [eventElement] Extensions for event
   ///
-  /// [repeat]: A set of rules that describe when the event is scheduled.
+  /// [repeat] A set of rules that describe when the event is scheduled.
   ///
-  /// [code]: A code for the timing schedule (or just text in code.text). Some
+  /// [code] A code for the timing schedule (or just text in code.text). Some
   /// codes such as BID are ubiquitous, but many institutions define their own
   /// additional codes. If a code is provided, the code is understood to be a
   /// complete statement of whatever is specified in the structured timing data,
@@ -1703,24 +1753,24 @@ class Timing with _$Timing {
 class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
 
-  /// [TimingRepeat]: Specifies an event that may occur multiple times. Timing
+  /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
   /// schedules are used to record when things are planned, expected or
   /// requested to occur. The most common usage is in dosage instructions for
   /// medications. They are also used when planning care of various kinds, and
   /// may be used for reporting the schedule to which past regular activities
   ///  were carried out.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [modifierExtension]: May be used to represent additional information that
+  /// [modifierExtension] May be used to represent additional information that
   /// is not part of the basic definition of the element and that modifies the
   /// understanding of the element in which it is contained and/or the
   /// understanding of the containing element's descendants. Usually modifier
@@ -1734,93 +1784,93 @@ class TimingRepeat with _$TimingRepeat {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [boundsDuration]: Either a duration for the length of the timing schedule,
+  /// [boundsDuration] Either a duration for the length of the timing schedule,
   /// a range of possible length, or outer bounds for start and/or end limits of
   ///  the timing schedule.
   ///
-  /// [boundsRange]: Either a duration for the length of the timing schedule, a
+  /// [boundsRange] Either a duration for the length of the timing schedule, a
   /// range of possible length, or outer bounds for start and/or end limits of
   ///  the timing schedule.
   ///
-  /// [boundsPeriod]: Either a duration for the length of the timing schedule, a
+  /// [boundsPeriod] Either a duration for the length of the timing schedule, a
   /// range of possible length, or outer bounds for start and/or end limits of
   ///  the timing schedule.
   ///
-  /// [count]: A total count of the desired number of repetitions across the
+  /// [count] A total count of the desired number of repetitions across the
   /// duration of the entire timing specification. If countMax is present, this
   ///  element indicates the lower bound of the allowed range of count values.
   ///
-  /// [countElement]: Extensions for count
+  /// [countElement] Extensions for count
   ///
-  /// [countMax]: If present, indicates that the count is a range - so to
+  /// [countMax] If present, indicates that the count is a range - so to
   ///  perform the action between [count] and [countMax] times.
   ///
-  /// [countMaxElement]: Extensions for countMax
+  /// [countMaxElement] Extensions for countMax
   ///
-  /// [duration]: How long this thing happens for when it happens. If
+  /// [duration] How long this thing happens for when it happens. If
   /// durationMax is present, this element indicates the lower bound of the
   ///  allowed range of the duration.
   ///
-  /// [durationElement]: Extensions for duration
+  /// [durationElement] Extensions for duration
   ///
-  /// [durationMax]: If present, indicates that the duration is a range - so to
+  /// [durationMax] If present, indicates that the duration is a range - so to
   ///  perform the action between [duration] and [durationMax] time length.
   ///
-  /// [durationMaxElement]: Extensions for durationMax
+  /// [durationMaxElement] Extensions for durationMax
   ///
-  /// [durationUnit]: The units of time for the duration, in UCUM units.
+  /// [durationUnit] The units of time for the duration, in UCUM units.
   ///
-  /// [durationUnitElement]: Extensions for durationUnit
+  /// [durationUnitElement] Extensions for durationUnit
   ///
-  /// [frequency]: The number of times to repeat the action within the specified
+  /// [frequency] The number of times to repeat the action within the specified
   /// period. If frequencyMax is present, this element indicates the lower bound
   ///  of the allowed range of the frequency.
   ///
-  /// [frequencyElement]: Extensions for frequency
+  /// [frequencyElement] Extensions for frequency
   ///
-  /// [frequencyMax]: If present, indicates that the frequency is a range - so
+  /// [frequencyMax] If present, indicates that the frequency is a range - so
   /// to repeat between [frequency] and [frequencyMax] times within the period
   ///  or period range.
   ///
-  /// [frequencyMaxElement]: Extensions for frequencyMax
+  /// [frequencyMaxElement] Extensions for frequencyMax
   ///
-  /// [period]: Indicates the duration of time over which repetitions are to
+  /// [period] Indicates the duration of time over which repetitions are to
   /// occur; e.g. to express "3 times per day", 3 would be the frequency and "1
   /// day" would be the period. If periodMax is present, this element indicates
   ///  the lower bound of the allowed range of the period length.
   ///
-  /// [periodElement]: Extensions for period
+  /// [periodElement] Extensions for period
   ///
-  /// [periodMax]: If present, indicates that the period is a range from
+  /// [periodMax] If present, indicates that the period is a range from
   ///
   /// [period] to [periodMax], allowing expressing concepts such as "do this
   ///  once every 3-5 days.
   ///
-  /// [periodMaxElement]: Extensions for periodMax
+  /// [periodMaxElement] Extensions for periodMax
   ///
-  /// [periodUnit]: The units of time for the period in UCUM units.
+  /// [periodUnit] The units of time for the period in UCUM units.
   ///
-  /// [periodUnitElement]: Extensions for periodUnit
+  /// [periodUnitElement] Extensions for periodUnit
   ///
-  /// [dayOfWeek]: If one or more days of week is provided, then the action
+  /// [dayOfWeek] If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
   ///
-  /// [dayOfWeekElement]: Extensions for dayOfWeek
+  /// [dayOfWeekElement] Extensions for dayOfWeek
   ///
-  /// [timeOfDay]: Specified time of day for action to take place.
+  /// [timeOfDay] Specified time of day for action to take place.
   ///
-  /// [timeOfDayElement]: Extensions for timeOfDay
+  /// [timeOfDayElement] Extensions for timeOfDay
   ///
-  /// [when]: An approximate time period during the day, potentially linked to
+  /// [when] An approximate time period during the day, potentially linked to
   ///  an event of daily living that indicates when the action should occur.
   ///
-  /// [whenElement]: Extensions for when
+  /// [whenElement] Extensions for when
   ///
-  /// [offset]: The number of minutes from the event. If the event code does not
+  /// [offset] The number of minutes from the event. If the event code does not
   /// indicate whether the minutes is before or after the event, then the offset
   ///  is assumed to be after the event.
   ///
-  /// [offsetElement]: Extensions for offset
+  /// [offsetElement] Extensions for offset
   factory TimingRepeat({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

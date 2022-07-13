@@ -1,5 +1,10 @@
 # fhir_at_rest
 
+## [0.9.0]
+
+* Improved exception throwing
+* Better checking on return values
+
 ## [0.8.4]
 
 * Epic passes responds to successful queries with an empty body, but puts a location (which is a reference) to the resource involved

@@ -9,4 +9,4 @@ dependencies:
     path: ../fhir
 
 dev_dependencies:
-  test: ^1.21.1
+  test: ^1.21.4

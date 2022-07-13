@@ -342,13 +342,13 @@ abstract class _BulkPatientRequest extends BulkRequest {
   _BulkPatientRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  FhirDateTime? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get since;
   @override
-  List<WhichResource>? get types => throw _privateConstructorUsedError;
+  List<WhichResource>? get types;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$_BulkPatientRequestCopyWith<_$_BulkPatientRequest> get copyWith =>
@@ -572,14 +572,14 @@ abstract class _BulkGroupRequest extends BulkRequest {
   _BulkGroupRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  Id get id;
   @override
-  FhirDateTime? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get since;
   @override
-  List<WhichResource>? get types => throw _privateConstructorUsedError;
+  List<WhichResource>? get types;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$_BulkGroupRequestCopyWith<_$_BulkGroupRequest> get copyWith =>
@@ -792,13 +792,13 @@ abstract class _BulkSystemRequest extends BulkRequest {
   _BulkSystemRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  FhirDateTime? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get since;
   @override
-  List<WhichResource>? get types => throw _privateConstructorUsedError;
+  List<WhichResource>? get types;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$$_BulkSystemRequestCopyWith<_$_BulkSystemRequest> get copyWith =>
