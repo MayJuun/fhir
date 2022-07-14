@@ -32,6 +32,7 @@ class SmartFhirClient extends SecureFhirClient {
     this.tokenUrl,
     super.launch,
     super.secret,
+    this.isDemo = false,
   });
 
   factory SmartFhirClient.fromLaunchParameters(
@@ -48,9 +49,6 @@ class SmartFhirClient extends SecureFhirClient {
     String? secret,
     String redirectPath = '/redirect.html',
   }) {
-    // final launchParameters =
-    //     launch == null ? null : utf8.decode(base64.decode(launch));
-    // print(launchParameters);
     fhirUri ??= queryParameters['iss'] == null
         ? throw Exception('no fhirUri was passed for SMART launch')
         : FhirUri(queryParameters['iss']);
@@ -75,6 +73,7 @@ class SmartFhirClient extends SecureFhirClient {
       tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
       launch: launch,
       secret: secret,
+      isDemo: queryParameters['demo'] == 'true',
     );
   }
 
@@ -84,6 +83,7 @@ class SmartFhirClient extends SecureFhirClient {
   Uri? responseUrl;
   BaseAuthentication authClient = createAuthentication();
   Client? client;
+  bool isDemo;
 
   /// https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html#launch-context-arrives-with-your-access_token
   /// Once an app is authorized, the token response will include any context
@@ -172,6 +172,10 @@ class SmartFhirClient extends SecureFhirClient {
 
     /// Add the aud in
     params['aud'] = '$fhirUri';
+
+    if (launch != null) {
+      params['launch'] = launch!;
+    }
 
     /// Replace those params as part of the authorizationUrl
     authorizationUrl = authorizationUrl.replace(queryParameters: params);
