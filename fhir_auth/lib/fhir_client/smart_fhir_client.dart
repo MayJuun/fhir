@@ -145,83 +145,86 @@ class SmartFhirClient extends SecureFhirClient {
 
   @override
   Future<void> login() async {
-    /// if no authorizeUrl or tokenUrl, go find them
-    if (authorizeUrl == null || tokenUrl == null) {
-      final capabilityStatement = await _getCapabilityStatement();
-      authorizeUrl = _getUri(capabilityStatement, 'authorize');
-      tokenUrl = _getUri(capabilityStatement, 'token');
-    }
+    if (!(await isLoggedIn())) {
+      /// if no authorizeUrl or tokenUrl, go find them
+      if (authorizeUrl == null || tokenUrl == null) {
+        final capabilityStatement = await _getCapabilityStatement();
+        authorizeUrl = _getUri(capabilityStatement, 'authorize');
+        tokenUrl = _getUri(capabilityStatement, 'token');
+      }
 
-    /// Create a new code grant (had to extend it, because FHIR uses
-    /// non-standard parameters)
-    final grant = SmartAuthorizationCodeGrant(
-      clientId!,
-      authorizeUrl!.value!,
-      tokenUrl!.value!,
-      secret: secret,
-    );
-
-    /// Get the authorizationUrl
-    var authorizationUrl = grant.getAuthorizationUrl(
-      redirectUri!.value!,
-      scopes: scopes,
-    );
-
-    /// Create a map from the parameters
-    final params = Map.of(authorizationUrl.queryParameters);
-
-    /// Add the aud in
-    params['aud'] = '$fhirUri';
-
-    if (launch != null) {
-      params['launch'] = launch!;
-    }
-
-    /// Replace those params as part of the authorizationUrl
-    authorizationUrl = authorizationUrl.replace(queryParameters: params);
-
-    try {
-      /// Attempt to authenticate
-      final returnValue = await authClient.authenticate(
-        authorizationUrl: authorizationUrl,
-        redirectUri: redirectUri!,
+      /// Create a new code grant (had to extend it, because FHIR uses
+      /// non-standard parameters)
+      final grant = SmartAuthorizationCodeGrant(
+        clientId!,
+        authorizeUrl!.value!,
+        tokenUrl!.value!,
+        secret: secret,
       );
 
-      /// Use the returnValue's parameters to handle Authorization
-      /// NOTE: as part of the authorization, we will also get other fhir
-      /// parameters that may be passed that are not officially part of an
-      /// oauth2 workflow
-      client = await grant
-          .handleAuthorizationResponse(Uri.parse(returnValue).queryParameters);
+      /// Get the authorizationUrl
+      var authorizationUrl = grant.getAuthorizationUrl(
+        redirectUri!.value!,
+        scopes: scopes,
+      );
 
-      /// assign context values if available
-      patientId = grant.fhirParameters['patient'];
-      encounterId = grant.fhirParameters['encounter'];
-      needPatientBanner = grant.fhirParameters['need_patient_banner'] == null
-          ? null
-          : grant.fhirParameters['need_patient_banner'].toString() == 'true'
-              ? true
-              : grant.fhirParameters['need_patient_banner'].toString() ==
-                      'false'
-                  ? false
-                  : null;
-      smartStyleUrl = grant.fhirParameters['smart_style_url'];
-      fhirContext = grant.fhirParameters['fhirContext'];
-      intent = grant.fhirParameters['intent'];
-      tenant = grant.fhirParameters['tenant'];
-      fhirUser = grant.fhirParameters['fhirUser'];
-      displayName = grant.fhirParameters['displayName'];
-      email = grant.fhirParameters['email'];
-      profile = grant.fhirParameters['profile'];
-    } catch (e, stack) {
-      log('Exception: $e');
-      log('Stack: $stack');
+      /// Create a map from the parameters
+      final params = Map.of(authorizationUrl.queryParameters);
+
+      /// Add the aud in
+      params['aud'] = '$fhirUri';
+
+      if (launch != null) {
+        params['launch'] = launch!;
+      }
+
+      /// Replace those params as part of the authorizationUrl
+      authorizationUrl = authorizationUrl.replace(queryParameters: params);
+
+      try {
+        /// Attempt to authenticate
+        final returnValue = await authClient.authenticate(
+          authorizationUrl: authorizationUrl,
+          redirectUri: redirectUri!,
+        );
+
+        /// Use the returnValue's parameters to handle Authorization
+        /// NOTE: as part of the authorization, we will also get other fhir
+        /// parameters that may be passed that are not officially part of an
+        /// oauth2 workflow
+        client = await grant.handleAuthorizationResponse(
+            Uri.parse(returnValue).queryParameters);
+
+        /// assign context values if available
+        patientId = grant.fhirParameters['patient'];
+        encounterId = grant.fhirParameters['encounter'];
+        needPatientBanner = grant.fhirParameters['need_patient_banner'] == null
+            ? null
+            : grant.fhirParameters['need_patient_banner'].toString() == 'true'
+                ? true
+                : grant.fhirParameters['need_patient_banner'].toString() ==
+                        'false'
+                    ? false
+                    : null;
+        smartStyleUrl = grant.fhirParameters['smart_style_url'];
+        fhirContext = grant.fhirParameters['fhirContext'];
+        intent = grant.fhirParameters['intent'];
+        tenant = grant.fhirParameters['tenant'];
+        fhirUser = grant.fhirParameters['fhirUser'];
+        displayName = grant.fhirParameters['displayName'];
+        email = grant.fhirParameters['email'];
+        profile = grant.fhirParameters['profile'];
+      } catch (e, stack) {
+        log('Exception: $e');
+        log('Stack: $stack');
+      }
     }
   }
 
   Future<void> logout() async {
     client?.close();
     client = null;
+    authHeaders = null;
   }
 
   @override

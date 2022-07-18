@@ -337,7 +337,6 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
     final responseBytes = await stream.stream.toBytes();
     String responseString = String.fromCharCodes(responseBytes);
     final Map<String, dynamic> newBody = jsonDecode(responseString);
-    print(newBody);
     fhirParameters = newBody;
 
     final response = http.Response.bytes(
@@ -356,8 +355,6 @@ class SmartAuthorizationCodeGrant implements AuthorizationCodeGrant {
     if (idToken != null) {
       fhirParameters = JwtDecoder.decode(idToken);
     }
-
-    print(fhirParameters);
 
     var credentials = handleAccessTokenResponse(
         response, tokenEndpoint, startTime, _scopes, _delimiter,

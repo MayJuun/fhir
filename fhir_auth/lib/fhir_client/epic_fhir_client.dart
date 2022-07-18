@@ -121,8 +121,8 @@ class EpicFhirClient extends SmartFhirClient {
     final stream = await httpClient.send(request);
     final responseBytes = await stream.stream.toBytes();
 
-    print(stream.headers);
-    print(stream.toString());
+    // print(stream.headers);
+    // print(stream.toString());
 
     final response = http.Response.bytes(
         responseBytes.toList(), stream.statusCode,
