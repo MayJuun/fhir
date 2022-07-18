@@ -221,6 +221,12 @@ class SmartFhirClient extends SecureFhirClient {
     }
   }
 
+  @override
+  Future<bool> isSignedIn() async => client?.credentials.accessToken != null;
+
+  @override
+  Future<bool> isLoggedIn() async => client?.credentials.accessToken != null;
+
   Future<void> logout() async {
     client?.close();
     client = null;
