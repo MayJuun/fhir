@@ -36,6 +36,10 @@ class SecureFhirClient extends FhirClient {
 
   Future<bool> isLoggedIn() async => authHeaders != null;
 
+  Future<void> logout() async {
+    authHeaders = null;
+  }
+
   Future<Map<String, String>> newHeaders(Map<String, String>? headers) async {
     headers ??= <String, String>{};
     headers.addAll(authHeaders ?? <String, String>{});
