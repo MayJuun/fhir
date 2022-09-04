@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FHIRPath Web Test - Dates'),
+        title: const Text('FHIRPath Web Test'),
       ),
       body: Center(
         child: Column(

@@ -1,5 +1,11 @@
 # fhir_auth
 
+## [0.9.0]
+
+* Successfully does external and internal web launches to Epic for patients
+* Launches externally into Epic, but headers aren't complete
+* Cerner?
+
 ## [0.8.1]
 
 * Added demos

@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=/opt/homebrew/Caskroom/flutter/3.0.5/flutter
-FLUTTER_APPLICATION_PATH=/Users/juun/workspace/fhir/fhir_path/test/webtest
+FLUTTER_ROOT=/home/grey/snap/flutter/common/flutter
+FLUTTER_APPLICATION_PATH=/home/grey/dev/fhir/fhir_path/test/webtest
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_BUILD_DIR=build
 FLUTTER_BUILD_NAME=1.0.0

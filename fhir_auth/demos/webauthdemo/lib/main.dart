@@ -45,14 +45,14 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/hapi.png'),
                   onPressed: () async => await hapiRequest()),
-              ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white),
-                    side: MaterialStateProperty.all(
-                        const BorderSide(color: Colors.black)),
-                  ),
-                  child: Image.asset('assets/aidbox.png'),
-                  onPressed: () async => await aidboxRequest(fhirCallback)),
+              // ElevatedButton(
+              //     style: ButtonStyle(
+              //       backgroundColor: MaterialStateProperty.all(Colors.white),
+              //       side: MaterialStateProperty.all(
+              //           const BorderSide(color: Colors.black)),
+              //     ),
+              //     child: Image.asset('assets/aidbox.png'),
+              //     onPressed: () async => await aidboxRequest(fhirCallback)),
               ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -61,14 +61,14 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/meld.png'),
                   onPressed: () async => await meldRequest(fhirCallback)),
-              ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white),
-                    side: MaterialStateProperty.all(
-                        const BorderSide(color: Colors.black)),
-                  ),
-                  child: Image.asset('assets/azure.png'),
-                  onPressed: () {}),
+              // ElevatedButton(
+              //     style: ButtonStyle(
+              //       backgroundColor: MaterialStateProperty.all(Colors.white),
+              //       side: MaterialStateProperty.all(
+              //           const BorderSide(color: Colors.black)),
+              //     ),
+              //     child: Image.asset('assets/azure.png'),
+              //     onPressed: () {}),
               ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),

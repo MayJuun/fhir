@@ -117,12 +117,23 @@ class EpicFhirClient extends SmartFhirClient {
         request.bodyFields = body;
       }
     }
+    print(request.url);
+    print(request.headers);
+    // throw Exception();
     http.Client? httpClient = http.Client();
     final stream = await httpClient.send(request);
     final responseBytes = await stream.stream.toBytes();
 
-    // print(stream.headers);
-    // print(stream.toString());
+    print('*************************************************');
+    print(stream.headers);
+    print(stream.statusCode);
+    print(stream.request);
+    print(stream.headers);
+    print(stream.isRedirect);
+    print(stream.persistentConnection);
+    print(stream.reasonPhrase);
+    print(stream.reasonPhrase);
+    print('*************************************************');
 
     final response = http.Response.bytes(
         responseBytes.toList(), stream.statusCode,
@@ -131,6 +142,8 @@ class EpicFhirClient extends SmartFhirClient {
         isRedirect: stream.isRedirect,
         persistentConnection: stream.persistentConnection,
         reasonPhrase: stream.reasonPhrase);
+
+    // print(response);
 
     return response;
   }

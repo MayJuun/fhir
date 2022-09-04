@@ -1,8 +1,7 @@
 #!/bin/bash
 
 projectId="demos-322021"
-# projectName="fhir-path-test-sin-paren-fxns-ws-simple-word-symbol-special-datetimes"
-projectName="fhir-path-trying-dates"
+projectName="fhir-path9"
 
 gcloud config set project $projectId
 # gcloud auth login

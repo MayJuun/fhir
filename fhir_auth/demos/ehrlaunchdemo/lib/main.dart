@@ -29,6 +29,9 @@ class DemoPage extends StatelessWidget {
             base: Uri.base,
             queryParameters: queryParameters,
             scopes: epicUserScopes.scopesList());
+      } else if (queryParameters['iss']?.contains('cerner') ?? false) {
+        client = SmartFhirClient.fromLaunchParameters(Uri.base, queryParameters,
+            scopes: cernerScopes.scopesList());
       } else {
         client = SmartFhirClient.fromLaunchParameters(Uri.base, queryParameters,
             scopes: scopes.scopesList());
