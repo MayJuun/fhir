@@ -13,13 +13,6 @@ class FhirClient implements http.Client {
     this.launch,
   });
 
-  factory FhirClient.factory({
-    required FhirUri fhirUri,
-    List<String>? scopes,
-    String? launch,
-  }) =>
-      FhirClient(fhirUri: fhirUri, scopes: scopes, launch: launch);
-
   FhirUri fhirUri;
   List<String>? scopes;
   String? launch;

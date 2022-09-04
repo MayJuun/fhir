@@ -1,7 +1,7 @@
 #!/bin/bash
 
 projectId="demos-322021"
-projectName="fhir-path11"
+projectName="fhir-path12"
 
 gcloud config set project $projectId
 # gcloud auth login
