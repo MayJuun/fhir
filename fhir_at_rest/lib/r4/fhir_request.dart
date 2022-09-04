@@ -720,7 +720,6 @@ class FhirRequest with _$FhirRequest {
     String? formData,
     MimeType? mimeType,
   }) async {
-    print('_REQUEST');
     try {
       final result = await _makeRequest(
         type: type,
@@ -940,8 +939,6 @@ class FhirRequest with _$FhirRequest {
                 : mimeType == null || MimeTypeEnumMap[mimeType] == null
                     ? 'application/fhir+json'
                     : MimeTypeEnumMap[mimeType]!;
-            print('REQUEST: $thisRequest');
-            print('HEADERS: $headers');
             result = await client.post(
               Uri.parse(thisRequest),
               headers: headers,
