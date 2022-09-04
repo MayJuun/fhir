@@ -940,9 +940,6 @@ class FhirRequest with _$FhirRequest {
                 : mimeType == null || MimeTypeEnumMap[mimeType] == null
                     ? 'application/fhir+json'
                     : MimeTypeEnumMap[mimeType]!;
-            print('ThisRequest: $thisRequest');
-            print('Headers: $headers');
-            print('${formData ?? jsonEncode(resource)}');
             result = await client.post(
               Uri.parse(thisRequest),
               headers: headers,

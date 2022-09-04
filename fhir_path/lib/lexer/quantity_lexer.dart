@@ -26,8 +26,8 @@ final durationLexer = (string('milliseconds') |
 // any code in curly braces is a valid UCUM comment
 final unitLexer =
 // (string("'{") & (char('}').neg()).plus() & string("}'")) |
-    // (string("'1'") |
-    (string("'m'") |
+    (string("'1'") |
+        string("'m'") |
         string("'s'") |
         string("'g'") |
         string("'rad'") |
