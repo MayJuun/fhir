@@ -11,12 +11,16 @@ import '../enums/enums.dart';
 import '../globals.dart' as globals;
 
 part 'fhir_request.freezed.dart';
+part 'fhir_request.json.dart';
 
 @freezed
 
 /// The class for making requests to a FHIR server
 class FhirRequest with _$FhirRequest {
   FhirRequest._();
+
+  factory FhirRequest.fromJson(Map<String, dynamic> json, [Client? client]) =>
+      _$FhirRequestFromJson(json, client);
 
   /// READ constructor
   /// [base] - the base URI for the FHIR server
@@ -716,6 +720,7 @@ class FhirRequest with _$FhirRequest {
     String? formData,
     MimeType? mimeType,
   }) async {
+    print('_REQUEST');
     try {
       final result = await _makeRequest(
         type: type,
@@ -935,6 +940,9 @@ class FhirRequest with _$FhirRequest {
                 : mimeType == null || MimeTypeEnumMap[mimeType] == null
                     ? 'application/fhir+json'
                     : MimeTypeEnumMap[mimeType]!;
+            print('ThisRequest: $thisRequest');
+            print('Headers: $headers');
+            print('${formData ?? jsonEncode(resource)}');
             result = await client.post(
               Uri.parse(thisRequest),
               headers: headers,

@@ -14,6 +14,45 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+FhirRequest _$FhirRequestFromJson(Map<String, dynamic> json, [Client? client]) {
+  switch (json['runtimeType']) {
+    case 'read':
+      return FhirReadRequest.fromJson(json, client);
+    case 'vRead':
+      return FhirVReadRequest.fromJson(json, client);
+    case 'update':
+      return FhirUpdateRequest.fromJson(json, client);
+    case 'patch':
+      return FhirPatchRequest.fromJson(json, client);
+    case 'delete':
+      return FhirDeleteRequest.fromJson(json, client);
+    case 'create':
+      return FhirCreateRequest.fromJson(json, client);
+    case 'search':
+      return FhirSearchRequest.fromJson(json, client);
+    case 'searchAll':
+      return FhirSearchAllRequest.fromJson(json, client);
+    case 'capabilities':
+      return FhirCapabilitiesRequest.fromJson(json, client);
+    case 'transaction':
+      return FhirTransactionRequest.fromJson(json, client);
+    case 'batch':
+      return FhirBatchRequest.fromJson(json, client);
+    case 'history':
+      return FhirHistoryRequest.fromJson(json, client);
+    case 'historyType':
+      return FhirHistoryTypeRequest.fromJson(json, client);
+    case 'historyAll':
+      return FhirHistoryAllRequest.fromJson(json, client);
+    case 'operation':
+      return FhirOperationRequest.fromJson(json, client);
+
+    default:
+      throw CheckedFromJsonException(json, 'runtimeType', 'FhirRequest',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
+}
+
 /// @nodoc
 mixin _$FhirRequest {
   Uri get base => throw _privateConstructorUsedError;
@@ -656,7 +695,7 @@ mixin _$FhirRequest {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $FhirRequestCopyWith<FhirRequest> get copyWith =>
       throw _privateConstructorUsedError;
@@ -824,7 +863,7 @@ class __$$FhirReadRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirReadRequest extends FhirReadRequest {
   _$FhirReadRequest(
       {required this.base,
@@ -836,10 +875,16 @@ class _$FhirReadRequest extends FhirReadRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'read',
         super._();
+
+  factory _$FhirReadRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirReadRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -877,6 +922,9 @@ class _$FhirReadRequest extends FhirReadRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.read(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
@@ -900,6 +948,7 @@ class _$FhirReadRequest extends FhirReadRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1577,6 +1626,11 @@ class _$FhirReadRequest extends FhirReadRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirReadRequestToJson(this);
+  }
 }
 
 abstract class FhirReadRequest extends FhirRequest {
@@ -1592,6 +1646,9 @@ abstract class FhirReadRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirReadRequest;
   FhirReadRequest._() : super._();
+
+  factory FhirReadRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirReadRequest.fromJson;
 
   @override
   Uri get base;
@@ -1713,7 +1770,7 @@ class __$$FhirVReadRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirVReadRequest extends FhirVReadRequest {
   _$FhirVReadRequest(
       {required this.base,
@@ -1726,10 +1783,16 @@ class _$FhirVReadRequest extends FhirVReadRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'vRead',
         super._();
+
+  factory _$FhirVReadRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirVReadRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -1769,6 +1832,9 @@ class _$FhirVReadRequest extends FhirVReadRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.vRead(base: $base, type: $type, id: $id, vid: $vid, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
@@ -1793,6 +1859,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2471,6 +2538,11 @@ class _$FhirVReadRequest extends FhirVReadRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirVReadRequestToJson(this);
+  }
 }
 
 abstract class FhirVReadRequest extends FhirRequest {
@@ -2487,6 +2559,9 @@ abstract class FhirVReadRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirVReadRequest;
   FhirVReadRequest._() : super._();
+
+  factory FhirVReadRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirVReadRequest.fromJson;
 
   @override
   Uri get base;
@@ -2597,7 +2672,7 @@ class __$$FhirUpdateRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirUpdateRequest extends FhirUpdateRequest {
   _$FhirUpdateRequest(
       {required this.base,
@@ -2608,10 +2683,16 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'update',
         super._();
+
+  factory _$FhirUpdateRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirUpdateRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -2647,6 +2728,9 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.update(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
@@ -2669,6 +2753,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3345,6 +3430,11 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirUpdateRequestToJson(this);
+  }
 }
 
 abstract class FhirUpdateRequest extends FhirRequest {
@@ -3359,6 +3449,9 @@ abstract class FhirUpdateRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirUpdateRequest;
   FhirUpdateRequest._() : super._();
+
+  factory FhirUpdateRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirUpdateRequest.fromJson;
 
   @override
   Uri get base;
@@ -3467,7 +3560,7 @@ class __$$FhirPatchRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirPatchRequest extends FhirPatchRequest {
   _$FhirPatchRequest(
       {required this.base,
@@ -3478,10 +3571,16 @@ class _$FhirPatchRequest extends FhirPatchRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'patch',
         super._();
+
+  factory _$FhirPatchRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirPatchRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -3517,6 +3616,9 @@ class _$FhirPatchRequest extends FhirPatchRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.patch(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
@@ -3539,6 +3641,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4215,6 +4318,11 @@ class _$FhirPatchRequest extends FhirPatchRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirPatchRequestToJson(this);
+  }
 }
 
 abstract class FhirPatchRequest extends FhirRequest {
@@ -4229,6 +4337,9 @@ abstract class FhirPatchRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirPatchRequest;
   FhirPatchRequest._() : super._();
+
+  factory FhirPatchRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirPatchRequest.fromJson;
 
   @override
   Uri get base;
@@ -4343,7 +4454,7 @@ class __$$FhirDeleteRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirDeleteRequest extends FhirDeleteRequest {
   _$FhirDeleteRequest(
       {required this.base,
@@ -4355,10 +4466,16 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'delete',
         super._();
+
+  factory _$FhirDeleteRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirDeleteRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -4396,6 +4513,9 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.delete(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
@@ -4419,6 +4539,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5096,6 +5217,11 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirDeleteRequestToJson(this);
+  }
 }
 
 abstract class FhirDeleteRequest extends FhirRequest {
@@ -5111,6 +5237,9 @@ abstract class FhirDeleteRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirDeleteRequest;
   FhirDeleteRequest._() : super._();
+
+  factory FhirDeleteRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirDeleteRequest.fromJson;
 
   @override
   Uri get base;
@@ -5220,7 +5349,7 @@ class __$$FhirCreateRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirCreateRequest extends FhirCreateRequest {
   _$FhirCreateRequest(
       {required this.base,
@@ -5231,10 +5360,16 @@ class _$FhirCreateRequest extends FhirCreateRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'create',
         super._();
+
+  factory _$FhirCreateRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirCreateRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -5270,6 +5405,9 @@ class _$FhirCreateRequest extends FhirCreateRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.create(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
@@ -5292,6 +5430,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5968,6 +6107,11 @@ class _$FhirCreateRequest extends FhirCreateRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirCreateRequestToJson(this);
+  }
 }
 
 abstract class FhirCreateRequest extends FhirRequest {
@@ -5982,6 +6126,9 @@ abstract class FhirCreateRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirCreateRequest;
   FhirCreateRequest._() : super._();
+
+  factory FhirCreateRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirCreateRequest.fromJson;
 
   @override
   Uri get base;
@@ -6102,7 +6249,7 @@ class __$$FhirSearchRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirSearchRequest extends FhirSearchRequest {
   _$FhirSearchRequest(
       {required this.base,
@@ -6115,10 +6262,16 @@ class _$FhirSearchRequest extends FhirSearchRequest {
       this.usePost = false,
       this.restfulRequest = RestfulRequest.get_,
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'search',
         super._();
+
+  factory _$FhirSearchRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirSearchRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -6160,6 +6313,9 @@ class _$FhirSearchRequest extends FhirSearchRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.search(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, usePost: $usePost, restfulRequest: $restfulRequest, mimeType: $mimeType, client: $client)';
@@ -6185,6 +6341,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6863,6 +7020,11 @@ class _$FhirSearchRequest extends FhirSearchRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirSearchRequestToJson(this);
+  }
 }
 
 abstract class FhirSearchRequest extends FhirRequest {
@@ -6879,6 +7041,9 @@ abstract class FhirSearchRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirSearchRequest;
   FhirSearchRequest._() : super._();
+
+  factory FhirSearchRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirSearchRequest.fromJson;
 
   @override
   Uri get base;
@@ -6983,7 +7148,7 @@ class __$$FhirSearchAllRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirSearchAllRequest extends FhirSearchAllRequest {
   _$FhirSearchAllRequest(
       {required this.base,
@@ -6993,10 +7158,16 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'searchAll',
         super._();
+
+  factory _$FhirSearchAllRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirSearchAllRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -7030,6 +7201,9 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.searchAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
@@ -7051,6 +7225,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7727,6 +7902,11 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirSearchAllRequestToJson(this);
+  }
 }
 
 abstract class FhirSearchAllRequest extends FhirRequest {
@@ -7740,6 +7920,9 @@ abstract class FhirSearchAllRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirSearchAllRequest;
   FhirSearchAllRequest._() : super._();
+
+  factory FhirSearchAllRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirSearchAllRequest.fromJson;
 
   @override
   Uri get base;
@@ -7848,7 +8031,7 @@ class __$$FhirCapabilitiesRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
   _$FhirCapabilitiesRequest(
       {required this.base,
@@ -7859,10 +8042,16 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
       final List<String> parameters = const <String>[],
       this.mode = Mode.full,
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'capabilities',
         super._();
+
+  factory _$FhirCapabilitiesRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirCapabilitiesRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -7899,6 +8088,9 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.capabilities(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mode: $mode, mimeType: $mimeType, client: $client)';
@@ -7921,6 +8113,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8598,6 +8791,11 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirCapabilitiesRequestToJson(this);
+  }
 }
 
 abstract class FhirCapabilitiesRequest extends FhirRequest {
@@ -8612,6 +8810,9 @@ abstract class FhirCapabilitiesRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirCapabilitiesRequest;
   FhirCapabilitiesRequest._() : super._();
+
+  factory FhirCapabilitiesRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirCapabilitiesRequest.fromJson;
 
   @override
   Uri get base;
@@ -8730,7 +8931,7 @@ class __$$FhirTransactionRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirTransactionRequest extends FhirTransactionRequest {
   _$FhirTransactionRequest(
       {required this.base,
@@ -8741,10 +8942,16 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
       final List<String> parameters = const <String>[],
       required this.bundle,
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'transaction',
         super._();
+
+  factory _$FhirTransactionRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirTransactionRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -8780,6 +8987,9 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.transaction(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, client: $client)';
@@ -8802,6 +9012,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -9479,6 +9690,11 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirTransactionRequestToJson(this);
+  }
 }
 
 abstract class FhirTransactionRequest extends FhirRequest {
@@ -9493,6 +9709,9 @@ abstract class FhirTransactionRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirTransactionRequest;
   FhirTransactionRequest._() : super._();
+
+  factory FhirTransactionRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirTransactionRequest.fromJson;
 
   @override
   Uri get base;
@@ -9610,7 +9829,7 @@ class __$$FhirBatchRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirBatchRequest extends FhirBatchRequest {
   _$FhirBatchRequest(
       {required this.base,
@@ -9621,10 +9840,16 @@ class _$FhirBatchRequest extends FhirBatchRequest {
       final List<String> parameters = const <String>[],
       required this.bundle,
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'batch',
         super._();
+
+  factory _$FhirBatchRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirBatchRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -9660,6 +9885,9 @@ class _$FhirBatchRequest extends FhirBatchRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.batch(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, client: $client)';
@@ -9682,6 +9910,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -10358,6 +10587,11 @@ class _$FhirBatchRequest extends FhirBatchRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirBatchRequestToJson(this);
+  }
 }
 
 abstract class FhirBatchRequest extends FhirRequest {
@@ -10372,6 +10606,9 @@ abstract class FhirBatchRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirBatchRequest;
   FhirBatchRequest._() : super._();
+
+  factory FhirBatchRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirBatchRequest.fromJson;
 
   @override
   Uri get base;
@@ -10510,7 +10747,7 @@ class __$$FhirHistoryRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirHistoryRequest extends FhirHistoryRequest {
   _$FhirHistoryRequest(
       {required this.base,
@@ -10526,10 +10763,16 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
       this.at,
       this.reference,
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'history',
         super._();
+
+  factory _$FhirHistoryRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirHistoryRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -10575,6 +10818,9 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.history(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
@@ -10602,6 +10848,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -11284,6 +11531,11 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirHistoryRequestToJson(this);
+  }
 }
 
 abstract class FhirHistoryRequest extends FhirRequest {
@@ -11303,6 +11555,9 @@ abstract class FhirHistoryRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirHistoryRequest;
   FhirHistoryRequest._() : super._();
+
+  factory FhirHistoryRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirHistoryRequest.fromJson;
 
   @override
   Uri get base;
@@ -11441,7 +11696,7 @@ class __$$FhirHistoryTypeRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
   _$FhirHistoryTypeRequest(
       {required this.base,
@@ -11456,10 +11711,16 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
       this.at,
       this.reference,
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'historyType',
         super._();
+
+  factory _$FhirHistoryTypeRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirHistoryTypeRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -11503,6 +11764,9 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.historyType(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
@@ -11529,6 +11793,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -12210,6 +12475,11 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirHistoryTypeRequestToJson(this);
+  }
 }
 
 abstract class FhirHistoryTypeRequest extends FhirRequest {
@@ -12228,6 +12498,9 @@ abstract class FhirHistoryTypeRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirHistoryTypeRequest;
   FhirHistoryTypeRequest._() : super._();
+
+  factory FhirHistoryTypeRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirHistoryTypeRequest.fromJson;
 
   @override
   Uri get base;
@@ -12358,7 +12631,7 @@ class __$$FhirHistoryAllRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
   _$FhirHistoryAllRequest(
       {required this.base,
@@ -12372,10 +12645,16 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
       this.at,
       this.reference,
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
+        $type = $type ?? 'historyAll',
         super._();
+
+  factory _$FhirHistoryAllRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirHistoryAllRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -12417,6 +12696,9 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.historyAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
@@ -12442,6 +12724,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13122,6 +13405,11 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirHistoryAllRequestToJson(this);
+  }
 }
 
 abstract class FhirHistoryAllRequest extends FhirRequest {
@@ -13139,6 +13427,9 @@ abstract class FhirHistoryAllRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirHistoryAllRequest;
   FhirHistoryAllRequest._() : super._();
+
+  factory FhirHistoryAllRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirHistoryAllRequest.fromJson;
 
   @override
   Uri get base;
@@ -13280,7 +13571,7 @@ class __$$FhirOperationRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$FhirOperationRequest extends FhirOperationRequest {
   _$FhirOperationRequest(
       {required this.base,
@@ -13296,11 +13587,17 @@ class _$FhirOperationRequest extends FhirOperationRequest {
       this.usePost = false,
       this.useFormData = false,
       this.mimeType,
-      this.client})
+      this.client,
+      final String? $type})
       : _elements = elements,
         _parameters = parameters,
         _fhirParameter = fhirParameter,
+        $type = $type ?? 'operation',
         super._();
+
+  factory _$FhirOperationRequest.fromJson(Map<String, dynamic> json,
+          [Client? client]) =>
+      _$$FhirOperationRequestFromJson(json, client);
 
   @override
   final Uri base;
@@ -13354,6 +13651,9 @@ class _$FhirOperationRequest extends FhirOperationRequest {
   @override
   final Client? client;
 
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
   @override
   String toString() {
     return 'FhirRequest.operation(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirParameter: $fhirParameter, operation: $operation, usePost: $usePost, useFormData: $useFormData, mimeType: $mimeType, client: $client)';
@@ -13383,6 +13683,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
             const DeepCollectionEquality().equals(other.client, client));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -14104,6 +14405,11 @@ class _$FhirOperationRequest extends FhirOperationRequest {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FhirOperationRequestToJson(this);
+  }
 }
 
 abstract class FhirOperationRequest extends FhirRequest {
@@ -14123,6 +14429,9 @@ abstract class FhirOperationRequest extends FhirRequest {
       final MimeType? mimeType,
       final Client? client}) = _$FhirOperationRequest;
   FhirOperationRequest._() : super._();
+
+  factory FhirOperationRequest.fromJson(Map<String, dynamic> json,
+      [Client? client]) = _$FhirOperationRequest.fromJson;
 
   @override
   Uri get base;
