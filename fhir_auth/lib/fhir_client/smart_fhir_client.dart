@@ -222,10 +222,14 @@ class SmartFhirClient extends SecureFhirClient {
   }
 
   @override
-  Future<bool> isSignedIn() async => client?.credentials.accessToken != null;
+  Future<bool> isSignedIn() async =>
+      client?.credentials.accessToken != null &&
+      (client!.credentials.expiration?.isAfter(DateTime.now()) ?? false);
 
   @override
-  Future<bool> isLoggedIn() async => client?.credentials.accessToken != null;
+  Future<bool> isLoggedIn() async =>
+      client?.credentials.accessToken != null &&
+      (client!.credentials.expiration?.isAfter(DateTime.now()) ?? false);
 
   Future<void> logout() async {
     client?.close();
@@ -242,6 +246,96 @@ class SmartFhirClient extends SecureFhirClient {
     headers.addAll(authHeaders ?? <String, String>{});
     return headers;
   }
+
+  @override
+  Future<http.Response> get(Uri url, {Map<String, String>? headers}) async =>
+      client == null
+          ? await http.get(
+              url,
+              headers: await newHeaders(headers),
+            )
+          : await client!.get(
+              url,
+              headers: headers,
+            );
+
+  @override
+  Future<http.Response> put(Uri url,
+          {Map<String, String>? headers,
+          Object? body,
+          Encoding? encoding}) async =>
+      client == null
+          ? await http.put(
+              url,
+              headers: await newHeaders(headers),
+              body: body,
+              encoding: encoding,
+            )
+          : await client!.put(
+              url,
+              headers: headers,
+              body: body,
+              encoding: encoding,
+            );
+
+  @override
+  Future<http.Response> post(Uri url,
+      {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
+    final response = client == null
+        ? await http.post(
+            url,
+            headers: await newHeaders(headers),
+            body: body,
+            encoding: encoding,
+          )
+        : await client!.post(
+            url,
+            headers: headers,
+            body: body,
+            encoding: encoding,
+          );
+    print(response.headers['location']);
+    print(response.headers['Location']);
+    return response;
+  }
+
+  @override
+  Future<http.Response> delete(Uri url,
+          {Map<String, String>? headers,
+          Object? body,
+          Encoding? encoding}) async =>
+      client == null
+          ? await http.delete(
+              url,
+              headers: await newHeaders(headers),
+              body: body,
+              encoding: encoding,
+            )
+          : await client!.delete(
+              url,
+              headers: headers,
+              body: body,
+              encoding: encoding,
+            );
+
+  @override
+  Future<http.Response> patch(Uri url,
+          {Map<String, String>? headers,
+          Object? body,
+          Encoding? encoding}) async =>
+      client == null
+          ? await http.patch(
+              url,
+              headers: await newHeaders(headers),
+              body: body,
+              encoding: encoding,
+            )
+          : await client!.patch(
+              url,
+              headers: headers,
+              body: body,
+              encoding: encoding,
+            );
 
   Future<Map<String, dynamic>> _getCapabilityStatement() async {
     /// Request for the CapabilityStatement (or Conformance)

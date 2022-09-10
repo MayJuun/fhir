@@ -105,46 +105,50 @@ class EpicFhirClient extends SmartFhirClient {
   /// The provider's FHIR ID number.
   String? userProviderNumber;
 
-  @override
-  Future<http.Response> post(Uri url,
-      {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-    var request = http.Request('POST', url);
-    if (headers != null) request.headers.addAll(await newHeaders(headers));
-    if (body != null) {
-      if (body is String) {
-        request.body = body;
-      } else if (body is Map<String, String>) {
-        request.bodyFields = body;
-      }
-    }
-    print(request.url);
-    print(request.headers);
-    // throw Exception();
-    http.Client? httpClient = http.Client();
-    final stream = await httpClient.send(request);
-    final responseBytes = await stream.stream.toBytes();
+  // @override
+  // Future<http.Response> post(Uri url,
+  //     {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
+  //   if (client != null) {
+  //     var stream = await http
+  //         .post(
+  //           url,
+  //           headers: await newHeaders(headers),
+  //           body: body,
+  //         )
+  //         .asStream();
 
-    print('*************************************************');
-    print(stream.headers);
-    print(stream.statusCode);
-    print(stream.request);
-    print(stream.headers);
-    print(stream.isRedirect);
-    print(stream.persistentConnection);
-    print(stream.reasonPhrase);
-    print(stream.reasonPhrase);
-    print('*************************************************');
+  //     // request.followRedirects = false;
+  //     // final stream = await client!.send(request);
+  //     final responseBytes = await stream?.listen((event) {
+  //       print(event.headers);
+  //       print(event.body);
+  //     });
 
-    final response = http.Response.bytes(
-        responseBytes.toList(), stream.statusCode,
-        request: stream.request,
-        headers: stream.headers,
-        isRedirect: stream.isRedirect,
-        persistentConnection: stream.persistentConnection,
-        reasonPhrase: stream.reasonPhrase);
+  //     // print('*************************************************');
+  //     // print(stream.headers);
+  //     // print(stream.statusCode);
+  //     // print(stream.request);
+  //     // print(stream.headers);
+  //     // print(stream.isRedirect);
+  //     // print(stream.persistentConnection);
+  //     // print(stream.reasonPhrase);
+  //     // print(stream.reasonPhrase);
+  //     // print('*************************************************');
 
-    // print(response);
+  //     // final response = http.Response.bytes(
+  //     //   responseBytes.toList(),
+  //     //   stream.statusCode,
+  //     //   request: stream.request,
+  //     //   headers: stream.headers,
+  //     //   isRedirect: false,
+  //     //   persistentConnection: stream.persistentConnection,
+  //     //   reasonPhrase: stream.reasonPhrase,
+  //     // );
 
-    return response;
-  }
+  //     // print(response);
+
+  //     // return response;
+  //   }
+  //   return http.Response('No Client', 400);
+  // }
 }
