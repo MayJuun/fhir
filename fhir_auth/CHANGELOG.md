@@ -1,10 +1,9 @@
 # fhir_auth
 
-## [0.9.0]
+## [0.9.0-1]
 
 * Successfully does external and internal web launches to Epic for patients
-* Launches externally into Epic, but headers aren't complete
-* Cerner?
+* For users, successfully logs in externally, doesn't return all needed headers
 
 ## [0.8.1]
 

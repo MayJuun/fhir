@@ -70,7 +70,7 @@ packages:
       path: "../.."
       relative: true
     source: path
-    version: "0.9.0"
+    version: "0.9.0-1"
   fhir_yaml:
     dependency: transitive
     description:
@@ -113,7 +113,7 @@ packages:
       name: google_sign_in
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.4.0"
+    version: "5.4.1"
   google_sign_in_android:
     dependency: transitive
     description:
@@ -148,7 +148,7 @@ packages:
       name: http
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.13.4"
+    version: "0.13.5"
   http_parser:
     dependency: transitive
     description:
@@ -293,7 +293,7 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.1.4"
+    version: "6.1.5"
   url_launcher_android:
     dependency: transitive
     description:
