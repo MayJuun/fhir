@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:fhir/r4.dart';
 
+// Project imports:
 import 'document_reference.enums.dart';
 
 class DocumentReferenceUsCore extends Resource {

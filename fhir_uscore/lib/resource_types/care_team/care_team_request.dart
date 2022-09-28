@@ -1,6 +1,8 @@
-import 'package:http/http.dart';
+// Package imports:
 import 'package:fhir/r4.dart';
+import 'package:http/http.dart';
 
+// Project imports:
 import '../../fhir_uscore.dart';
 
 Future<Resource?> careTeamRequest(

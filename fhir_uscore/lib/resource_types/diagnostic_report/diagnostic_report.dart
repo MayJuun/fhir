@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:fhir/r4.dart';
 
+// Project imports:
 import 'diagnostic_report.enums.dart';
 
 class DiagnosticReportUsCore extends Resource {

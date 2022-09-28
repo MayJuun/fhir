@@ -1,3 +1,4 @@
+// Package imports:
 import 'package:fhir/r4.dart';
 
 class EndpointUsCore extends Resource {

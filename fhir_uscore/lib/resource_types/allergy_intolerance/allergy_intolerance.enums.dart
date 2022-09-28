@@ -1,3 +1,4 @@
+// Package imports:
 import 'package:fhir/r4.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -36,6 +37,7 @@ final codeableConceptFromAllergyIntoleranceClinicalStatus = {
         code: Code('resolved'))
   ]),
 };
+
 enum AllergyIntoleranceVerificationStatus {
   @JsonValue('Unconfirmed')
   unconfirmed,

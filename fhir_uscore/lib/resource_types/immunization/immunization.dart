@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:fhir/r4.dart';
 
+// Project imports:
 import 'immunization.enums.dart';
 
 class ImmunizationUsCore extends Resource {

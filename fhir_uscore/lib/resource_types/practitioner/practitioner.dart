@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:fhir/r4.dart';
 
+// Project imports:
 import 'practitioner.enums.dart';
 
 class PractitionerUsCore extends Resource {
