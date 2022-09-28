@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
+/// [BodyStructure] Record details about an anatomical structure.  This
 @freezed
 class BodyStructure with Resource, _$BodyStructure {
+  /// [BodyStructure] Record details about an anatomical structure.  This
   BodyStructure._();
 
   /// [BodyStructure] Record details about an anatomical structure.  This
@@ -152,8 +154,10 @@ class BodyStructure with Resource, _$BodyStructure {
   }
 }
 
+/// [DiagnosticReport] The findings and interpretation of diagnostic  tests
 @freezed
 class DiagnosticReport with Resource, _$DiagnosticReport {
+  /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
   DiagnosticReport._();
 
   /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
@@ -358,8 +362,10 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   }
 }
 
+/// [DiagnosticReportMedia] The findings and interpretation of diagnostic
 @freezed
 class DiagnosticReportMedia with _$DiagnosticReportMedia {
+  /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
   DiagnosticReportMedia._();
 
   /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
@@ -440,8 +446,10 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   }
 }
 
+/// [ImagingStudy] Representation of the content produced in a DICOM imaging
 @freezed
 class ImagingStudy with Resource, _$ImagingStudy {
+  /// [ImagingStudy] Representation of the content produced in a DICOM imaging
   ImagingStudy._();
 
   /// [ImagingStudy] Representation of the content produced in a DICOM imaging
@@ -646,8 +654,10 @@ class ImagingStudy with Resource, _$ImagingStudy {
   }
 }
 
+/// [ImagingStudySeries] Representation of the content produced in a DICOM
 @freezed
 class ImagingStudySeries with _$ImagingStudySeries {
+  /// [ImagingStudySeries] Representation of the content produced in a DICOM
   ImagingStudySeries._();
 
   /// [ImagingStudySeries] Representation of the content produced in a DICOM
@@ -784,8 +794,10 @@ class ImagingStudySeries with _$ImagingStudySeries {
   }
 }
 
+/// [ImagingStudyPerformer] Representation of the content produced in a
 @freezed
 class ImagingStudyPerformer with _$ImagingStudyPerformer {
+  /// [ImagingStudyPerformer] Representation of the content produced in a
   ImagingStudyPerformer._();
 
   /// [ImagingStudyPerformer] Representation of the content produced in a
@@ -862,8 +874,10 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   }
 }
 
+/// [ImagingStudyInstance] Representation of the content produced in a DICOM
 @freezed
 class ImagingStudyInstance with _$ImagingStudyInstance {
+  /// [ImagingStudyInstance] Representation of the content produced in a DICOM
   ImagingStudyInstance._();
 
   /// [ImagingStudyInstance] Representation of the content produced in a DICOM
@@ -954,8 +968,10 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   }
 }
 
+/// [Media] A photo, video, or audio recording acquired or used in
 @freezed
 class Media with Resource, _$Media {
+  /// [Media] A photo, video, or audio recording acquired or used in
   Media._();
 
   /// [Media] A photo, video, or audio recording acquired or used in
@@ -1168,8 +1184,10 @@ class Media with Resource, _$Media {
   }
 }
 
+/// [MolecularSequence] Raw data describing a biological sequence.
 @freezed
 class MolecularSequence with Resource, _$MolecularSequence {
+  /// [MolecularSequence] Raw data describing a biological sequence.
   MolecularSequence._();
 
   /// [MolecularSequence] Raw data describing a biological sequence.
@@ -1349,8 +1367,10 @@ class MolecularSequence with Resource, _$MolecularSequence {
   }
 }
 
+/// [MolecularSequenceReferenceSeq] Raw data describing a biological
 @freezed
 class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
+  /// [MolecularSequenceReferenceSeq] Raw data describing a biological
   MolecularSequenceReferenceSeq._();
 
   /// [MolecularSequenceReferenceSeq] Raw data describing a biological
@@ -1480,8 +1500,10 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   }
 }
 
+/// [MolecularSequenceVariant] Raw data describing a biological sequence.
 @freezed
 class MolecularSequenceVariant with _$MolecularSequenceVariant {
+  /// [MolecularSequenceVariant] Raw data describing a biological sequence.
   MolecularSequenceVariant._();
 
   /// [MolecularSequenceVariant] Raw data describing a biological sequence.
@@ -1599,8 +1621,10 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   }
 }
 
+/// [MolecularSequenceQuality] Raw data describing a biological sequence.
 @freezed
 class MolecularSequenceQuality with _$MolecularSequenceQuality {
+  /// [MolecularSequenceQuality] Raw data describing a biological sequence.
   MolecularSequenceQuality._();
 
   /// [MolecularSequenceQuality] Raw data describing a biological sequence.
@@ -1767,8 +1791,10 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
   }
 }
 
+/// [MolecularSequenceRoc] Raw data describing a biological sequence.
 @freezed
 class MolecularSequenceRoc with _$MolecularSequenceRoc {
+  /// [MolecularSequenceRoc] Raw data describing a biological sequence.
   MolecularSequenceRoc._();
 
   /// [MolecularSequenceRoc] Raw data describing a biological sequence.
@@ -1882,8 +1908,10 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
   }
 }
 
+/// [MolecularSequenceRepository] Raw data describing a biological sequence.
 @freezed
 class MolecularSequenceRepository with _$MolecularSequenceRepository {
+  /// [MolecularSequenceRepository] Raw data describing a biological sequence.
   MolecularSequenceRepository._();
 
   /// [MolecularSequenceRepository] Raw data describing a biological sequence.
@@ -2071,8 +2099,10 @@ class MolecularSequenceStructureVariant
       _$MolecularSequenceStructureVariantFromJson(json);
 }
 
+/// [MolecularSequenceOuter] Raw data describing a biological sequence.
 @freezed
 class MolecularSequenceOuter with _$MolecularSequenceOuter {
+  /// [MolecularSequenceOuter] Raw data describing a biological sequence.
   MolecularSequenceOuter._();
 
   /// [MolecularSequenceOuter] Raw data describing a biological sequence.
@@ -2153,8 +2183,10 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
   }
 }
 
+/// [MolecularSequenceInner] Raw data describing a biological sequence.
 @freezed
 class MolecularSequenceInner with _$MolecularSequenceInner {
+  /// [MolecularSequenceInner] Raw data describing a biological sequence.
   MolecularSequenceInner._();
 
   /// [MolecularSequenceInner] Raw data describing a biological sequence.
@@ -2235,8 +2267,10 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
   }
 }
 
+/// [Observation] Measurements and simple assertions made about a patient,
 @freezed
 class Observation with Resource, _$Observation {
+  /// [Observation] Measurements and simple assertions made about a patient,
   Observation._();
 
   /// [Observation] Measurements and simple assertions made about a patient,
@@ -2540,8 +2574,10 @@ class Observation with Resource, _$Observation {
   }
 }
 
+/// [ObservationReferenceRange] Measurements and simple assertions made
 @freezed
 class ObservationReferenceRange with _$ObservationReferenceRange {
+  /// [ObservationReferenceRange] Measurements and simple assertions made
   ObservationReferenceRange._();
 
   /// [ObservationReferenceRange] Measurements and simple assertions made
@@ -2644,8 +2680,10 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
   }
 }
 
+/// [ObservationComponent] Measurements and simple assertions made about a
 @freezed
 class ObservationComponent with _$ObservationComponent {
+  /// [ObservationComponent] Measurements and simple assertions made about a
   ObservationComponent._();
 
   /// [ObservationComponent] Measurements and simple assertions made about a
@@ -2786,8 +2824,10 @@ class ObservationComponent with _$ObservationComponent {
   }
 }
 
+/// [QuestionnaireResponse] A structured set of questions and their answers.
 @freezed
 class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
+  /// [QuestionnaireResponse] A structured set of questions and their answers.
   QuestionnaireResponse._();
 
   /// [QuestionnaireResponse] A structured set of questions and their answers.
@@ -2946,8 +2986,10 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   }
 }
 
+/// [QuestionnaireResponseItem] A structured set of questions and their
 @freezed
 class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
+  /// [QuestionnaireResponseItem] A structured set of questions and their
   QuestionnaireResponseItem._();
 
   /// [QuestionnaireResponseItem] A structured set of questions and their
@@ -3042,8 +3084,10 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   }
 }
 
+/// [QuestionnaireResponseAnswer] A structured set of questions and their
 @freezed
 class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
+  /// [QuestionnaireResponseAnswer] A structured set of questions and their
   QuestionnaireResponseAnswer._();
 
   /// [QuestionnaireResponseAnswer] A structured set of questions and their
@@ -3187,8 +3231,10 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   }
 }
 
+/// [Specimen] A sample to be used for analysis.
 @freezed
 class Specimen with Resource, _$Specimen {
+  /// [Specimen] A sample to be used for analysis.
   Specimen._();
 
   /// [Specimen] A sample to be used for analysis.
@@ -3345,8 +3391,10 @@ class Specimen with Resource, _$Specimen {
   }
 }
 
+/// [SpecimenCollection] A sample to be used for analysis.
 @freezed
 class SpecimenCollection with _$SpecimenCollection {
+  /// [SpecimenCollection] A sample to be used for analysis.
   SpecimenCollection._();
 
   /// [SpecimenCollection] A sample to be used for analysis.
@@ -3451,8 +3499,10 @@ class SpecimenCollection with _$SpecimenCollection {
   }
 }
 
+/// [SpecimenProcessing] A sample to be used for analysis.
 @freezed
 class SpecimenProcessing with _$SpecimenProcessing {
+  /// [SpecimenProcessing] A sample to be used for analysis.
   SpecimenProcessing._();
 
   /// [SpecimenProcessing] A sample to be used for analysis.
@@ -3543,8 +3593,10 @@ class SpecimenProcessing with _$SpecimenProcessing {
   }
 }
 
+/// [SpecimenContainer] A sample to be used for analysis.
 @freezed
 class SpecimenContainer with _$SpecimenContainer {
+  /// [SpecimenContainer] A sample to be used for analysis.
   SpecimenContainer._();
 
   /// [SpecimenContainer] A sample to be used for analysis.

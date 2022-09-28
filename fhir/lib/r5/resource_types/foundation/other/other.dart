@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'other.freezed.dart';
 part 'other.g.dart';
 
+/// [Basic] Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.
 @freezed
 class Basic with Resource, _$Basic {
   Basic._();
@@ -100,6 +101,7 @@ class Basic with Resource, _$Basic {
   }
 }
 
+/// [Binary] A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.
 @freezed
 class Binary with Resource, _$Binary {
   Binary._();
@@ -172,6 +174,7 @@ class Binary with Resource, _$Binary {
   }
 }
 
+/// [Bundle] A container for a collection of resources.
 @freezed
 class Bundle with Resource, _$Bundle {
   Bundle._();
@@ -259,6 +262,7 @@ class Bundle with Resource, _$Bundle {
   }
 }
 
+/// [BundleLink] A container for a collection of resources.
 @freezed
 class BundleLink with _$BundleLink {
   BundleLink._();
@@ -322,6 +326,7 @@ class BundleLink with _$BundleLink {
   }
 }
 
+/// [BundleEntry] A container for a collection of resources.
 @freezed
 class BundleEntry with _$BundleEntry {
   BundleEntry._();
@@ -396,6 +401,7 @@ class BundleEntry with _$BundleEntry {
   }
 }
 
+/// [BundleSearch] A container for a collection of resources.
 @freezed
 class BundleSearch with _$BundleSearch {
   BundleSearch._();
@@ -459,6 +465,7 @@ class BundleSearch with _$BundleSearch {
   }
 }
 
+/// [BundleRequest] A container for a collection of resources.
 @freezed
 class BundleRequest with _$BundleRequest {
   BundleRequest._();
@@ -546,6 +553,7 @@ class BundleRequest with _$BundleRequest {
   }
 }
 
+/// [BundleResponse] A container for a collection of resources.
 @freezed
 class BundleResponse with _$BundleResponse {
   BundleResponse._();
@@ -624,6 +632,7 @@ class BundleResponse with _$BundleResponse {
   }
 }
 
+/// [Linkage] Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
 @freezed
 class Linkage with Resource, _$Linkage {
   Linkage._();
@@ -708,6 +717,7 @@ class Linkage with Resource, _$Linkage {
   }
 }
 
+/// [LinkageItem] Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
 @freezed
 class LinkageItem with _$LinkageItem {
   LinkageItem._();
@@ -768,6 +778,7 @@ class LinkageItem with _$LinkageItem {
   }
 }
 
+/// [MessageHeader] The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
 @freezed
 class MessageHeader with Resource, _$MessageHeader {
   MessageHeader._();
@@ -879,6 +890,7 @@ class MessageHeader with Resource, _$MessageHeader {
   }
 }
 
+/// [MessageHeaderDestination] The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
 @freezed
 class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
@@ -948,6 +960,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   }
 }
 
+/// [MessageHeaderSource] The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
 @freezed
 class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
@@ -1026,6 +1039,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   }
 }
 
+/// [MessageHeaderResponse] The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
 @freezed
 class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
@@ -1089,6 +1103,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   }
 }
 
+/// [OperationOutcome] A collection of error, warning, or information messages that result from a system action.
 @freezed
 class OperationOutcome with Resource, _$OperationOutcome {
   OperationOutcome._();
@@ -1164,6 +1179,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   }
 }
 
+/// [OperationOutcomeIssue] A collection of error, warning, or information messages that result from a system action.
 @freezed
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
@@ -1250,6 +1266,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   }
 }
 
+/// [Parameters] This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
 @freezed
 class Parameters with Resource, _$Parameters {
   Parameters._();
@@ -1311,6 +1328,7 @@ class Parameters with Resource, _$Parameters {
   }
 }
 
+/// [ParametersParameter] This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
 @freezed
 class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
@@ -1593,6 +1611,7 @@ class ParametersParameter with _$ParametersParameter {
   }
 }
 
+/// [Subscription] The subscription resource describes a particular client's request to be notified about a SubscriptionTopic.
 @freezed
 class Subscription with Resource, _$Subscription {
   Subscription._();
@@ -1746,6 +1765,7 @@ class Subscription with Resource, _$Subscription {
   }
 }
 
+/// [SubscriptionFilterBy] The subscription resource describes a particular client's request to be notified about a SubscriptionTopic.
 @freezed
 class SubscriptionFilterBy with _$SubscriptionFilterBy {
   SubscriptionFilterBy._();
@@ -1821,6 +1841,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
   }
 }
 
+/// [SubscriptionStatus] The SubscriptionStatus resource describes the state of a Subscription during notifications.
 @freezed
 class SubscriptionStatus with Resource, _$SubscriptionStatus {
   SubscriptionStatus._();
@@ -1994,6 +2015,7 @@ class SubscriptionStatusNotificationEvent
   }
 }
 
+/// [SubscriptionTopic] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
 class SubscriptionTopic with Resource, _$SubscriptionTopic {
   SubscriptionTopic._();
@@ -2174,6 +2196,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   }
 }
 
+/// [SubscriptionTopicResourceTrigger] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
 class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   SubscriptionTopicResourceTrigger._();
@@ -2255,6 +2278,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   }
 }
 
+/// [SubscriptionTopicQueryCriteria] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
 class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   SubscriptionTopicQueryCriteria._();
@@ -2337,6 +2361,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   }
 }
 
+/// [SubscriptionTopicEventTrigger] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
 class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   SubscriptionTopicEventTrigger._();
@@ -2403,6 +2428,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   }
 }
 
+/// [SubscriptionTopicCanFilterBy] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
 class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   SubscriptionTopicCanFilterBy._();

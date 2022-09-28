@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
+/// [CodeSystem] The CodeSystem resource is used to declare the existence of
 @freezed
 class CodeSystem with Resource, _$CodeSystem {
+  /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   CodeSystem._();
 
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
@@ -293,8 +295,10 @@ class CodeSystem with Resource, _$CodeSystem {
   }
 }
 
+/// [CodeSystemFilter] The CodeSystem resource is used to declare the
 @freezed
 class CodeSystemFilter with _$CodeSystemFilter {
+  /// [CodeSystemFilter] The CodeSystem resource is used to declare the
   CodeSystemFilter._();
 
   /// [CodeSystemFilter] The CodeSystem resource is used to declare the
@@ -386,8 +390,10 @@ class CodeSystemFilter with _$CodeSystemFilter {
   }
 }
 
+/// [CodeSystemProperty] The CodeSystem resource is used to declare the
 @freezed
 class CodeSystemProperty with _$CodeSystemProperty {
+  /// [CodeSystemProperty] The CodeSystem resource is used to declare the
   CodeSystemProperty._();
 
   /// [CodeSystemProperty] The CodeSystem resource is used to declare the
@@ -485,8 +491,10 @@ class CodeSystemProperty with _$CodeSystemProperty {
   }
 }
 
+/// [CodeSystemConcept] The CodeSystem resource is used to declare the
 @freezed
 class CodeSystemConcept with _$CodeSystemConcept {
+  /// [CodeSystemConcept] The CodeSystem resource is used to declare the
   CodeSystemConcept._();
 
   /// [CodeSystemConcept] The CodeSystem resource is used to declare the
@@ -589,8 +597,10 @@ class CodeSystemConcept with _$CodeSystemConcept {
   }
 }
 
+/// [CodeSystemDesignation] The CodeSystem resource is used to declare the
 @freezed
 class CodeSystemDesignation with _$CodeSystemDesignation {
+  /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
   CodeSystemDesignation._();
 
   /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
@@ -672,8 +682,10 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
   }
 }
 
+/// [CodeSystemProperty1] The CodeSystem resource is used to declare the
 @freezed
 class CodeSystemProperty1 with _$CodeSystemProperty1 {
+  /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
   CodeSystemProperty1._();
 
   /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
@@ -785,8 +797,10 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
   }
 }
 
+/// [ConceptMap] A statement of relationships from one set of concepts to one
 @freezed
 class ConceptMap with Resource, _$ConceptMap {
+  /// [ConceptMap] A statement of relationships from one set of concepts to one
   ConceptMap._();
 
   /// [ConceptMap] A statement of relationships from one set of concepts to one
@@ -1036,8 +1050,10 @@ class ConceptMap with Resource, _$ConceptMap {
   }
 }
 
+/// [ConceptMapGroup] A statement of relationships from one set of concepts
 @freezed
 class ConceptMapGroup with _$ConceptMapGroup {
+  /// [ConceptMapGroup] A statement of relationships from one set of concepts
   ConceptMapGroup._();
 
   /// [ConceptMapGroup] A statement of relationships from one set of concepts
@@ -1142,8 +1158,10 @@ class ConceptMapGroup with _$ConceptMapGroup {
   }
 }
 
+/// [ConceptMapElement] A statement of relationships from one set of
 @freezed
 class ConceptMapElement with _$ConceptMapElement {
+  /// [ConceptMapElement] A statement of relationships from one set of
   ConceptMapElement._();
 
   /// [ConceptMapElement] A statement of relationships from one set of
@@ -1226,8 +1244,10 @@ class ConceptMapElement with _$ConceptMapElement {
   }
 }
 
+/// [ConceptMapTarget] A statement of relationships from one set of concepts
 @freezed
 class ConceptMapTarget with _$ConceptMapTarget {
+  /// [ConceptMapTarget] A statement of relationships from one set of concepts
   ConceptMapTarget._();
 
   /// [ConceptMapTarget] A statement of relationships from one set of concepts
@@ -1335,8 +1355,10 @@ class ConceptMapTarget with _$ConceptMapTarget {
   }
 }
 
+/// [ConceptMapDependsOn] A statement of relationships from one set of
 @freezed
 class ConceptMapDependsOn with _$ConceptMapDependsOn {
+  /// [ConceptMapDependsOn] A statement of relationships from one set of
   ConceptMapDependsOn._();
 
   /// [ConceptMapDependsOn] A statement of relationships from one set of
@@ -1431,8 +1453,10 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
   }
 }
 
+/// [ConceptMapUnmapped] A statement of relationships from one set of
 @freezed
 class ConceptMapUnmapped with _$ConceptMapUnmapped {
+  /// [ConceptMapUnmapped] A statement of relationships from one set of
   ConceptMapUnmapped._();
 
   /// [ConceptMapUnmapped] A statement of relationships from one set of
@@ -1529,8 +1553,10 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
   }
 }
 
+/// [NamingSystem] A curated namespace that issues unique symbols within that
 @freezed
 class NamingSystem with Resource, _$NamingSystem {
+  /// [NamingSystem] A curated namespace that issues unique symbols within that
   NamingSystem._();
 
   /// [NamingSystem] A curated namespace that issues unique symbols within that
@@ -1717,8 +1743,10 @@ class NamingSystem with Resource, _$NamingSystem {
   }
 }
 
+/// [NamingSystemUniqueId] A curated namespace that issues unique symbols
 @freezed
 class NamingSystemUniqueId with _$NamingSystemUniqueId {
+  /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
   NamingSystemUniqueId._();
 
   /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
@@ -1818,8 +1846,10 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
   }
 }
 
+/// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
 @freezed
 class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
+  /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   TerminologyCapabilities._();
 
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
@@ -2080,8 +2110,10 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   }
 }
 
+/// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
 @freezed
 class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
+  /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
   TerminologyCapabilitiesSoftware._();
 
   /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
@@ -2309,8 +2341,10 @@ class TerminologyCapabilitiesCodeSystem
       _$TerminologyCapabilitiesCodeSystemFromJson(json);
 }
 
+/// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
 @freezed
 class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
+  /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
   TerminologyCapabilitiesVersion._();
 
   /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
@@ -2414,8 +2448,10 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   }
 }
 
+/// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
 @freezed
 class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
+  /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
   TerminologyCapabilitiesFilter._();
 
   /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
@@ -2495,8 +2531,10 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   }
 }
 
+/// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
 @freezed
 class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
+  /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
   TerminologyCapabilitiesExpansion._();
 
   /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
@@ -2580,8 +2618,10 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
       _$TerminologyCapabilitiesExpansionFromJson(json);
 }
 
+/// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
 @freezed
 class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
+  /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
   TerminologyCapabilitiesParameter._();
 
   /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
@@ -2780,8 +2820,10 @@ class TerminologyCapabilitiesTranslation
       _$TerminologyCapabilitiesTranslationFromJson(json);
 }
 
+/// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
 @freezed
 class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
+  /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
   TerminologyCapabilitiesClosure._();
 
   /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
@@ -2856,8 +2898,10 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   }
 }
 
+/// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
 @freezed
 class ValueSet with Resource, _$ValueSet {
+  /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
   ValueSet._();
 
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
@@ -3093,8 +3137,10 @@ class ValueSet with Resource, _$ValueSet {
   }
 }
 
+/// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
 @freezed
 class ValueSetCompose with _$ValueSetCompose {
+  /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
   ValueSetCompose._();
 
   /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
@@ -3190,8 +3236,10 @@ class ValueSetCompose with _$ValueSetCompose {
   }
 }
 
+/// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
 @freezed
 class ValueSetInclude with _$ValueSetInclude {
+  /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
   ValueSetInclude._();
 
   /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
@@ -3288,8 +3336,10 @@ class ValueSetInclude with _$ValueSetInclude {
   }
 }
 
+/// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
 @freezed
 class ValueSetConcept with _$ValueSetConcept {
+  /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
   ValueSetConcept._();
 
   /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
@@ -3376,8 +3426,10 @@ class ValueSetConcept with _$ValueSetConcept {
   }
 }
 
+/// [ValueSetDesignation] A ValueSet resource instance specifies a set of
 @freezed
 class ValueSetDesignation with _$ValueSetDesignation {
+  /// [ValueSetDesignation] A ValueSet resource instance specifies a set of
   ValueSetDesignation._();
 
   /// [ValueSetDesignation] A ValueSet resource instance specifies a set of
@@ -3460,8 +3512,10 @@ class ValueSetDesignation with _$ValueSetDesignation {
   }
 }
 
+/// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
 @freezed
 class ValueSetFilter with _$ValueSetFilter {
+  /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
   ValueSetFilter._();
 
   /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
@@ -3553,8 +3607,10 @@ class ValueSetFilter with _$ValueSetFilter {
   }
 }
 
+/// [ValueSetExpansion] A ValueSet resource instance specifies a set of
 @freezed
 class ValueSetExpansion with _$ValueSetExpansion {
+  /// [ValueSetExpansion] A ValueSet resource instance specifies a set of
   ValueSetExpansion._();
 
   /// [ValueSetExpansion] A ValueSet resource instance specifies a set of
@@ -3665,8 +3721,10 @@ class ValueSetExpansion with _$ValueSetExpansion {
   }
 }
 
+/// [ValueSetParameter] A ValueSet resource instance specifies a set of
 @freezed
 class ValueSetParameter with _$ValueSetParameter {
+  /// [ValueSetParameter] A ValueSet resource instance specifies a set of
   ValueSetParameter._();
 
   /// [ValueSetParameter] A ValueSet resource instance specifies a set of
@@ -3784,8 +3842,10 @@ class ValueSetParameter with _$ValueSetParameter {
   }
 }
 
+/// [ValueSetContains] A ValueSet resource instance specifies a set of codes
 @freezed
 class ValueSetContains with _$ValueSetContains {
+  /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
   ValueSetContains._();
 
   /// [ValueSetContains] A ValueSet resource instance specifies a set of codes

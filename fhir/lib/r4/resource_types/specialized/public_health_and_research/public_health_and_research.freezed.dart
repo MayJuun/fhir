@@ -1184,7 +1184,9 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyToJson(this);
+    return _$$_ResearchStudyToJson(
+      this,
+    );
   }
 }
 
@@ -1646,7 +1648,9 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyArmToJson(this);
+    return _$$_ResearchStudyArmToJson(
+      this,
+    );
   }
 }
 
@@ -1957,7 +1961,9 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyObjectiveToJson(this);
+    return _$$_ResearchStudyObjectiveToJson(
+      this,
+    );
   }
 }
 
@@ -2721,7 +2727,9 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchSubjectToJson(this);
+    return _$$_ResearchSubjectToJson(
+      this,
+    );
   }
 }
 

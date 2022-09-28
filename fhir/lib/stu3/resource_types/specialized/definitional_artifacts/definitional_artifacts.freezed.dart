@@ -1980,7 +1980,9 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityDefinitionToJson(this);
+    return _$$_ActivityDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -2428,7 +2430,9 @@ class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityDefinitionParticipantToJson(this);
+    return _$$_ActivityDefinitionParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -2781,7 +2785,9 @@ class _$_ActivityDefinitionDynamicValue
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityDefinitionDynamicValueToJson(this);
+    return _$$_ActivityDefinitionDynamicValueToJson(
+      this,
+    );
   }
 }
 
@@ -4361,7 +4367,9 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionToJson(this);
+    return _$$_PlanDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -4878,7 +4886,9 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionGoalToJson(this);
+    return _$$_PlanDefinitionGoalToJson(
+      this,
+    );
   }
 }
 
@@ -5185,7 +5195,9 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionTargetToJson(this);
+    return _$$_PlanDefinitionTargetToJson(
+      this,
+    );
   }
 }
 
@@ -6468,7 +6480,9 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionActionToJson(this);
+    return _$$_PlanDefinitionActionToJson(
+      this,
+    );
   }
 }
 
@@ -6948,7 +6962,9 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionConditionToJson(this);
+    return _$$_PlanDefinitionConditionToJson(
+      this,
+    );
   }
 }
 
@@ -7277,7 +7293,9 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionRelatedActionToJson(this);
+    return _$$_PlanDefinitionRelatedActionToJson(
+      this,
+    );
   }
 }
 
@@ -7506,7 +7524,9 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionParticipantToJson(this);
+    return _$$_PlanDefinitionParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -7855,7 +7875,9 @@ class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionDynamicValueToJson(this);
+    return _$$_PlanDefinitionDynamicValueToJson(
+      this,
+    );
   }
 }
 
@@ -9293,7 +9315,9 @@ class _$_Questionnaire extends _Questionnaire {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireToJson(this);
+    return _$$_QuestionnaireToJson(
+      this,
+    );
   }
 }
 
@@ -10799,7 +10823,9 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireItemToJson(this);
+    return _$$_QuestionnaireItemToJson(
+      this,
+    );
   }
 }
 
@@ -11744,7 +11770,9 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireEnableWhenToJson(this);
+    return _$$_QuestionnaireEnableWhenToJson(
+      this,
+    );
   }
 }
 
@@ -12194,7 +12222,9 @@ class _$_QuestionnaireOption extends _QuestionnaireOption {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireOptionToJson(this);
+    return _$$_QuestionnaireOptionToJson(
+      this,
+    );
   }
 }
 
@@ -13749,7 +13779,9 @@ class _$_ServiceDefinition extends _ServiceDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ServiceDefinitionToJson(this);
+    return _$$_ServiceDefinitionToJson(
+      this,
+    );
   }
 }
 

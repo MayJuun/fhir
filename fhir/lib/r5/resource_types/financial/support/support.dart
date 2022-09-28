@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'support.freezed.dart';
 part 'support.g.dart';
 
+/// [Coverage]: Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
 @freezed
 class Coverage with Resource, _$Coverage {
   Coverage._();
@@ -150,6 +151,7 @@ class Coverage with Resource, _$Coverage {
   }
 }
 
+/// [CoverageClass]: Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
 @freezed
 class CoverageClass with _$CoverageClass {
   CoverageClass._();
@@ -216,6 +218,7 @@ class CoverageClass with _$CoverageClass {
   }
 }
 
+/// [CoverageCostToBeneficiary]: Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
 @freezed
 class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   CoverageCostToBeneficiary._();
@@ -279,6 +282,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   }
 }
 
+/// [CoverageException]: Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
 @freezed
 class CoverageException with _$CoverageException {
   CoverageException._();
@@ -336,6 +340,7 @@ class CoverageException with _$CoverageException {
   }
 }
 
+/// [CoverageEligibilityRequest]: The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
 @freezed
 class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   CoverageEligibilityRequest._();
@@ -605,6 +610,7 @@ class CoverageEligibilityRequestInsurance
   }
 }
 
+/// [CoverageEligibilityRequestItem]: The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
 @freezed
 class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   CoverageEligibilityRequestItem._();
@@ -751,6 +757,7 @@ class CoverageEligibilityRequestDiagnosis
   }
 }
 
+/// [CoverageEligibilityResponse]: This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
 @freezed
 class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   CoverageEligibilityResponse._();
@@ -962,6 +969,7 @@ class CoverageEligibilityResponseInsurance
   }
 }
 
+/// [CoverageEligibilityResponseItem]: This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
 @freezed
 class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   CoverageEligibilityResponseItem._();
@@ -1159,6 +1167,7 @@ class CoverageEligibilityResponseBenefit
   }
 }
 
+/// [CoverageEligibilityResponseError]: This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
 @freezed
 class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   CoverageEligibilityResponseError._();
@@ -1215,6 +1224,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   }
 }
 
+/// [EnrollmentRequest]: This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
 @freezed
 class EnrollmentRequest with Resource, _$EnrollmentRequest {
   EnrollmentRequest._();
@@ -1314,6 +1324,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   }
 }
 
+/// [EnrollmentResponse]: This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.
 @freezed
 class EnrollmentResponse with Resource, _$EnrollmentResponse {
   EnrollmentResponse._();

@@ -96,8 +96,10 @@ class CodeableReference with _$CodeableReference {
   }
 }
 
+/// [Reference] A reference from one resource to another.
 @freezed
 class Reference with _$Reference {
+  /// [Reference] A reference from one resource to another.
   Reference._();
 
   /// [Reference] A reference from one resource to another.
@@ -191,8 +193,10 @@ class Reference with _$Reference {
   }
 }
 
+/// [Meta] The metadata about a resource. This is content in the resource
 @freezed
 class Meta with _$Meta {
+  /// [Meta] The metadata about a resource. This is content in the resource
   Meta._();
 
   /// [Meta] The metadata about a resource. This is content in the resource
@@ -282,8 +286,10 @@ class Meta with _$Meta {
   }
 }
 
+/// [Dosage] Indicates how the medication is/was taken or should be taken by
 @freezed
 class Dosage with _$Dosage {
+  /// [Dosage] Indicates how the medication is/was taken or should be taken by
   Dosage._();
 
   /// [Dosage] Indicates how the medication is/was taken or should be taken by
@@ -412,8 +418,10 @@ class Dosage with _$Dosage {
   }
 }
 
+/// [DosageDoseAndRate] Indicates how the medication is/was taken or should
 @freezed
 class DosageDoseAndRate with _$DosageDoseAndRate {
+  /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
   DosageDoseAndRate._();
 
   /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
@@ -498,8 +506,10 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   }
 }
 
+/// [ElementDefinition] Captures constraints on each element within the
 @freezed
 class ElementDefinition with _$ElementDefinition {
+  /// [ElementDefinition] Captures constraints on each element within the
   ElementDefinition._();
 
   /// [ElementDefinition] Captures constraints on each element within the
@@ -2512,8 +2522,10 @@ class ElementDefinition with _$ElementDefinition {
   }
 }
 
+/// [ElementDefinitionSlicing] Captures constraints on each element within
 @freezed
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
+  /// [ElementDefinitionSlicing] Captures constraints on each element within
   ElementDefinitionSlicing._();
 
   /// [ElementDefinitionSlicing] Captures constraints on each element within
@@ -2612,8 +2624,10 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   }
 }
 
+/// [ElementDefinitionDiscriminator] Captures constraints on each element
 @freezed
 class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
+  /// [ElementDefinitionDiscriminator] Captures constraints on each element
   ElementDefinitionDiscriminator._();
 
   /// [ElementDefinitionDiscriminator] Captures constraints on each element
@@ -2696,8 +2710,10 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   }
 }
 
+/// [ElementDefinitionBase] Captures constraints on each element within the
 @freezed
 class ElementDefinitionBase with _$ElementDefinitionBase {
+  /// [ElementDefinitionBase] Captures constraints on each element within the
   ElementDefinitionBase._();
 
   /// [ElementDefinitionBase] Captures constraints on each element within the
@@ -2784,8 +2800,10 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   }
 }
 
+/// [ElementDefinitionType] Captures constraints on each element within the
 @freezed
 class ElementDefinitionType with _$ElementDefinitionType {
+  /// [ElementDefinitionType] Captures constraints on each element within the
   ElementDefinitionType._();
 
   /// [ElementDefinitionType] Captures constraints on each element within the
@@ -2898,8 +2916,10 @@ class ElementDefinitionType with _$ElementDefinitionType {
   }
 }
 
+/// [ElementDefinitionExample] Captures constraints on each element within
 @freezed
 class ElementDefinitionExample with _$ElementDefinitionExample {
+  /// [ElementDefinitionExample] Captures constraints on each element within
   ElementDefinitionExample._();
 
   /// [ElementDefinitionExample] Captures constraints on each element within
@@ -3230,8 +3250,10 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   }
 }
 
+/// [ElementDefinitionConstraint] Captures constraints on each element
 @freezed
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
+  /// [ElementDefinitionConstraint] Captures constraints on each element
   ElementDefinitionConstraint._();
 
   /// [ElementDefinitionConstraint] Captures constraints on each element
@@ -3345,8 +3367,10 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   }
 }
 
+/// [ElementDefinitionBinding] Captures constraints on each element within
 @freezed
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
+  /// [ElementDefinitionBinding] Captures constraints on each element within
   ElementDefinitionBinding._();
 
   /// [ElementDefinitionBinding] Captures constraints on each element within
@@ -3431,8 +3455,10 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   }
 }
 
+/// [ElementDefinitionMapping] Captures constraints on each element within
 @freezed
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
+  /// [ElementDefinitionMapping] Captures constraints on each element within
   ElementDefinitionMapping._();
 
   /// [ElementDefinitionMapping] Captures constraints on each element within

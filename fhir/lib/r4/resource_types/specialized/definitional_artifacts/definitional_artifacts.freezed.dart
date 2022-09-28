@@ -2551,7 +2551,9 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityDefinitionToJson(this);
+    return _$$_ActivityDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -3149,7 +3151,9 @@ class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityDefinitionParticipantToJson(this);
+    return _$$_ActivityDefinitionParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -3455,7 +3459,9 @@ class _$_ActivityDefinitionDynamicValue
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityDefinitionDynamicValueToJson(this);
+    return _$$_ActivityDefinitionDynamicValueToJson(
+      this,
+    );
   }
 }
 
@@ -4711,7 +4717,9 @@ class _$_DeviceDefinition extends _DeviceDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceDefinitionToJson(this);
+    return _$$_DeviceDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -5213,7 +5221,9 @@ class _$_DeviceDefinitionUdiDeviceIdentifier
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceDefinitionUdiDeviceIdentifierToJson(this);
+    return _$$_DeviceDefinitionUdiDeviceIdentifierToJson(
+      this,
+    );
   }
 }
 
@@ -5558,7 +5568,9 @@ class _$_DeviceDefinitionDeviceName extends _DeviceDefinitionDeviceName {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceDefinitionDeviceNameToJson(this);
+    return _$$_DeviceDefinitionDeviceNameToJson(
+      this,
+    );
   }
 }
 
@@ -5893,7 +5905,9 @@ class _$_DeviceDefinitionSpecialization
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceDefinitionSpecializationToJson(this);
+    return _$$_DeviceDefinitionSpecializationToJson(
+      this,
+    );
   }
 }
 
@@ -6173,7 +6187,9 @@ class _$_DeviceDefinitionCapability extends _DeviceDefinitionCapability {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceDefinitionCapabilityToJson(this);
+    return _$$_DeviceDefinitionCapabilityToJson(
+      this,
+    );
   }
 }
 
@@ -6470,7 +6486,9 @@ class _$_DeviceDefinitionProperty extends _DeviceDefinitionProperty {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceDefinitionPropertyToJson(this);
+    return _$$_DeviceDefinitionPropertyToJson(
+      this,
+    );
   }
 }
 
@@ -6829,7 +6847,9 @@ class _$_DeviceDefinitionMaterial extends _DeviceDefinitionMaterial {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceDefinitionMaterialToJson(this);
+    return _$$_DeviceDefinitionMaterialToJson(
+      this,
+    );
   }
 }
 
@@ -8520,7 +8540,9 @@ class _$_EventDefinition extends _EventDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EventDefinitionToJson(this);
+    return _$$_EventDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -9641,7 +9663,9 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationDefinitionToJson(this);
+    return _$$_ObservationDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -10117,7 +10141,9 @@ class _$_ObservationDefinitionQuantitativeDetails
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationDefinitionQuantitativeDetailsToJson(this);
+    return _$$_ObservationDefinitionQuantitativeDetailsToJson(
+      this,
+    );
   }
 }
 
@@ -10676,7 +10702,9 @@ class _$_ObservationDefinitionQualifiedInterval
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationDefinitionQualifiedIntervalToJson(this);
+    return _$$_ObservationDefinitionQualifiedIntervalToJson(
+      this,
+    );
   }
 }
 
@@ -12534,7 +12562,9 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionToJson(this);
+    return _$$_PlanDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -13157,7 +13187,9 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionGoalToJson(this);
+    return _$$_PlanDefinitionGoalToJson(
+      this,
+    );
   }
 }
 
@@ -13549,7 +13581,9 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionTargetToJson(this);
+    return _$$_PlanDefinitionTargetToJson(
+      this,
+    );
   }
 }
 
@@ -15199,7 +15233,9 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionActionToJson(this);
+    return _$$_PlanDefinitionActionToJson(
+      this,
+    );
   }
 }
 
@@ -15675,7 +15711,9 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionConditionToJson(this);
+    return _$$_PlanDefinitionConditionToJson(
+      this,
+    );
   }
 }
 
@@ -16069,7 +16107,9 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionRelatedActionToJson(this);
+    return _$$_PlanDefinitionRelatedActionToJson(
+      this,
+    );
   }
 }
 
@@ -16385,7 +16425,9 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionParticipantToJson(this);
+    return _$$_PlanDefinitionParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -16691,7 +16733,9 @@ class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlanDefinitionDynamicValueToJson(this);
+    return _$$_PlanDefinitionDynamicValueToJson(
+      this,
+    );
   }
 }
 
@@ -18147,7 +18191,9 @@ class _$_Questionnaire extends _Questionnaire {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireToJson(this);
+    return _$$_QuestionnaireToJson(
+      this,
+    );
   }
 }
 
@@ -19207,7 +19253,9 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireItemToJson(this);
+    return _$$_QuestionnaireItemToJson(
+      this,
+    );
   }
 }
 
@@ -20091,7 +20139,9 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireEnableWhenToJson(this);
+    return _$$_QuestionnaireEnableWhenToJson(
+      this,
+    );
   }
 }
 
@@ -20708,7 +20758,9 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireAnswerOptionToJson(this);
+    return _$$_QuestionnaireAnswerOptionToJson(
+      this,
+    );
   }
 }
 
@@ -21524,7 +21576,9 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireInitialToJson(this);
+    return _$$_QuestionnaireInitialToJson(
+      this,
+    );
   }
 }
 
@@ -22234,7 +22288,9 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenDefinitionToJson(this);
+    return _$$_SpecimenDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -22814,7 +22870,9 @@ class _$_SpecimenDefinitionTypeTested extends _SpecimenDefinitionTypeTested {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenDefinitionTypeTestedToJson(this);
+    return _$$_SpecimenDefinitionTypeTestedToJson(
+      this,
+    );
   }
 }
 
@@ -23421,7 +23479,9 @@ class _$_SpecimenDefinitionContainer extends _SpecimenDefinitionContainer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenDefinitionContainerToJson(this);
+    return _$$_SpecimenDefinitionContainerToJson(
+      this,
+    );
   }
 }
 
@@ -23743,7 +23803,9 @@ class _$_SpecimenDefinitionAdditive extends _SpecimenDefinitionAdditive {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenDefinitionAdditiveToJson(this);
+    return _$$_SpecimenDefinitionAdditiveToJson(
+      this,
+    );
   }
 }
 
@@ -24114,7 +24176,9 @@ class _$_SpecimenDefinitionHandling extends _SpecimenDefinitionHandling {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenDefinitionHandlingToJson(this);
+    return _$$_SpecimenDefinitionHandlingToJson(
+      this,
+    );
   }
 }
 

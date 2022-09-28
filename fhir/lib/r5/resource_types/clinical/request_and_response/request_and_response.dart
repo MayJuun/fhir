@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
+/// [Communication] A clinical or business level record of information being transmitted or shared; e.g. an alert that was sent to a responsible provider, a public health agency communication to a provider/reporter in response to a case report for a reportable condition.
 @freezed
 class Communication with Resource, _$Communication {
   Communication._();
@@ -165,6 +166,7 @@ class Communication with Resource, _$Communication {
   }
 }
 
+/// [CommunicationPayload] A clinical or business level record of information being transmitted or shared; e.g. an alert that was sent to a responsible provider, a public health agency communication to a provider/reporter in response to a case report for a reportable condition.
 @freezed
 class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
@@ -225,6 +227,7 @@ class CommunicationPayload with _$CommunicationPayload {
   }
 }
 
+/// [CommunicationRequest] A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.
 @freezed
 class CommunicationRequest with Resource, _$CommunicationRequest {
   CommunicationRequest._();
@@ -384,6 +387,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   }
 }
 
+/// [CommunicationRequestPayload] A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.
 @freezed
 class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
@@ -444,6 +448,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   }
 }
 
+/// [DeviceRequest] Represents a request for a patient to employ a medical device. The device may be an implantable device, or an external assistive device, such as a walker.
 @freezed
 class DeviceRequest with Resource, _$DeviceRequest {
   DeviceRequest._();
@@ -621,6 +626,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   }
 }
 
+/// [DeviceRequestParameter] Represents a request for a patient to employ a medical device. The device may be an implantable device, or an external assistive device, such as a walker.
 @freezed
 class DeviceRequestParameter with _$DeviceRequestParameter {
   DeviceRequestParameter._();
@@ -690,6 +696,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   }
 }
 
+/// [DeviceDispense] A record of dispensation of a device.
 @freezed
 class DeviceDispense with Resource, _$DeviceDispense {
   DeviceDispense._();
@@ -832,6 +839,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
   }
 }
 
+/// [DeviceDispensePerformer] A record of dispensation of a device.
 @freezed
 class DeviceDispensePerformer with _$DeviceDispensePerformer {
   DeviceDispensePerformer._();
@@ -887,6 +895,7 @@ class DeviceDispensePerformer with _$DeviceDispensePerformer {
   }
 }
 
+/// [DeviceUsage] A record of a device being used by a patient where the record is the result of a report from the patient or a clinician.
 @freezed
 class DeviceUsage with Resource, _$DeviceUsage {
   DeviceUsage._();
@@ -1022,6 +1031,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
   }
 }
 
+/// [GuidanceResponse] A guidance response is the formal response to a guidance request, including any output parameters returned by the evaluation, as well as the description of any proposed actions to be taken.
 @freezed
 class GuidanceResponse with Resource, _$GuidanceResponse {
   GuidanceResponse._();
@@ -1154,6 +1164,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   }
 }
 
+/// [InventoryReport] A report of inventory or stock items.
 @freezed
 class InventoryReport with Resource, _$InventoryReport {
   InventoryReport._();
@@ -1265,6 +1276,7 @@ class InventoryReport with Resource, _$InventoryReport {
   }
 }
 
+/// [InventoryReportInventoryListing] A report of inventory or stock items.
 @freezed
 class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
   InventoryReportInventoryListing._();
@@ -1332,6 +1344,7 @@ class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
   }
 }
 
+/// [InventoryReportItems] A report of inventory or stock items.
 @freezed
 class InventoryReportItems with _$InventoryReportItems {
   InventoryReportItems._();
@@ -1416,6 +1429,7 @@ class InventoryReportItems with _$InventoryReportItems {
   }
 }
 
+/// [SupplyDelivery] Record of delivery of what is supplied.
 @freezed
 class SupplyDelivery with Resource, _$SupplyDelivery {
   SupplyDelivery._();
@@ -1533,6 +1547,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   }
 }
 
+/// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
 @freezed
 class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   SupplyDeliverySuppliedItem._();
@@ -1593,6 +1608,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   }
 }
 
+/// [SupplyRequest] A record of a request for a medication, substance or device used in the healthcare setting.
 @freezed
 class SupplyRequest with Resource, _$SupplyRequest {
   SupplyRequest._();
@@ -1728,6 +1744,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   }
 }
 
+/// [SupplyRequestParameter] A record of a request for a medication, substance or device used in the healthcare setting.
 @freezed
 class SupplyRequestParameter with _$SupplyRequestParameter {
   SupplyRequestParameter._();

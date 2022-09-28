@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
+/// [Population]: A population people with some set of grouping criteria.
 @freezed
 class Population with _$Population {
   Population._();
@@ -78,6 +79,7 @@ class Population with _$Population {
   }
 }
 
+/// [ProductShelfLife]: The shelf-life and storage information for a medicinal product item or container can be described using this class.
 @freezed
 class ProductShelfLife with _$ProductShelfLife {
   ProductShelfLife._();
@@ -144,6 +146,7 @@ class ProductShelfLife with _$ProductShelfLife {
   }
 }
 
+/// [MarketingStatus]: The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
 @freezed
 class MarketingStatus with _$MarketingStatus {
   MarketingStatus._();

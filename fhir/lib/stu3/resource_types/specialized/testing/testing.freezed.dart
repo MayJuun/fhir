@@ -938,7 +938,9 @@ class _$_TestReport extends _TestReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportToJson(this);
+    return _$$_TestReportToJson(
+      this,
+    );
   }
 }
 
@@ -1327,7 +1329,9 @@ class _$_TestReportParticipant extends _TestReportParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportParticipantToJson(this);
+    return _$$_TestReportParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -1486,7 +1490,9 @@ class _$_TestReportSetup extends _TestReportSetup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportSetupToJson(this);
+    return _$$_TestReportSetupToJson(
+      this,
+    );
   }
 }
 
@@ -1673,7 +1679,9 @@ class _$_TestReportAction extends _TestReportAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportActionToJson(this);
+    return _$$_TestReportActionToJson(
+      this,
+    );
   }
 }
 
@@ -1961,7 +1969,9 @@ class _$_TestReportOperation extends _TestReportOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportOperationToJson(this);
+    return _$$_TestReportOperationToJson(
+      this,
+    );
   }
 }
 
@@ -2262,7 +2272,9 @@ class _$_TestReportAssert extends _TestReportAssert {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportAssertToJson(this);
+    return _$$_TestReportAssertToJson(
+      this,
+    );
   }
 }
 
@@ -2534,7 +2546,9 @@ class _$_TestReportTest extends _TestReportTest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportTestToJson(this);
+    return _$$_TestReportTestToJson(
+      this,
+    );
   }
 }
 
@@ -2736,7 +2750,9 @@ class _$_TestReportAction1 extends _TestReportAction1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportAction1ToJson(this);
+    return _$$_TestReportAction1ToJson(
+      this,
+    );
   }
 }
 
@@ -2882,7 +2898,9 @@ class _$_TestReportTeardown extends _TestReportTeardown {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportTeardownToJson(this);
+    return _$$_TestReportTeardownToJson(
+      this,
+    );
   }
 }
 
@@ -3029,7 +3047,9 @@ class _$_TestReportAction2 extends _TestReportAction2 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestReportAction2ToJson(this);
+    return _$$_TestReportAction2ToJson(
+      this,
+    );
   }
 }
 
@@ -4494,7 +4514,9 @@ class _$_TestScript extends _TestScript {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptToJson(this);
+    return _$$_TestScriptToJson(
+      this,
+    );
   }
 }
 
@@ -4869,7 +4891,9 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptOriginToJson(this);
+    return _$$_TestScriptOriginToJson(
+      this,
+    );
   }
 }
 
@@ -5083,7 +5107,9 @@ class _$_TestScriptDestination extends _TestScriptDestination {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptDestinationToJson(this);
+    return _$$_TestScriptDestinationToJson(
+      this,
+    );
   }
 }
 
@@ -5261,7 +5287,9 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptMetadataToJson(this);
+    return _$$_TestScriptMetadataToJson(
+      this,
+    );
   }
 }
 
@@ -5495,7 +5523,9 @@ class _$_TestScriptLink extends _TestScriptLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptLinkToJson(this);
+    return _$$_TestScriptLinkToJson(
+      this,
+    );
   }
 }
 
@@ -5986,7 +6016,9 @@ class _$_TestScriptCapability extends _TestScriptCapability {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptCapabilityToJson(this);
+    return _$$_TestScriptCapabilityToJson(
+      this,
+    );
   }
 }
 
@@ -6293,7 +6325,9 @@ class _$_TestScriptFixture extends _TestScriptFixture {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptFixtureToJson(this);
+    return _$$_TestScriptFixtureToJson(
+      this,
+    );
   }
 }
 
@@ -6859,7 +6893,9 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptVariableToJson(this);
+    return _$$_TestScriptVariableToJson(
+      this,
+    );
   }
 }
 
@@ -7084,7 +7120,9 @@ class _$_TestScriptRule extends _TestScriptRule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptRuleToJson(this);
+    return _$$_TestScriptRuleToJson(
+      this,
+    );
   }
 }
 
@@ -7316,7 +7354,9 @@ class _$_TestScriptParam extends _TestScriptParam {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptParamToJson(this);
+    return _$$_TestScriptParamToJson(
+      this,
+    );
   }
 }
 
@@ -7498,7 +7538,9 @@ class _$_TestScriptRuleset extends _TestScriptRuleset {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptRulesetToJson(this);
+    return _$$_TestScriptRulesetToJson(
+      this,
+    );
   }
 }
 
@@ -7702,7 +7744,9 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptRule1ToJson(this);
+    return _$$_TestScriptRule1ToJson(
+      this,
+    );
   }
 }
 
@@ -7938,7 +7982,9 @@ class _$_TestScriptParam1 extends _TestScriptParam1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptParam1ToJson(this);
+    return _$$_TestScriptParam1ToJson(
+      this,
+    );
   }
 }
 
@@ -8090,7 +8136,9 @@ class _$_TestScriptSetup extends _TestScriptSetup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptSetupToJson(this);
+    return _$$_TestScriptSetupToJson(
+      this,
+    );
   }
 }
 
@@ -8277,7 +8325,9 @@ class _$_TestScriptAction extends _TestScriptAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptActionToJson(this);
+    return _$$_TestScriptActionToJson(
+      this,
+    );
   }
 }
 
@@ -9215,7 +9265,9 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptOperationToJson(this);
+    return _$$_TestScriptOperationToJson(
+      this,
+    );
   }
 }
 
@@ -9563,7 +9615,9 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptRequestHeaderToJson(this);
+    return _$$_TestScriptRequestHeaderToJson(
+      this,
+    );
   }
 }
 
@@ -11021,7 +11075,9 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptAssertToJson(this);
+    return _$$_TestScriptAssertToJson(
+      this,
+    );
   }
 }
 
@@ -11403,7 +11459,9 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptRule2ToJson(this);
+    return _$$_TestScriptRule2ToJson(
+      this,
+    );
   }
 }
 
@@ -11639,7 +11697,9 @@ class _$_TestScriptParam2 extends _TestScriptParam2 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptParam2ToJson(this);
+    return _$$_TestScriptParam2ToJson(
+      this,
+    );
   }
 }
 
@@ -11853,7 +11913,9 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptRuleset1ToJson(this);
+    return _$$_TestScriptRuleset1ToJson(
+      this,
+    );
   }
 }
 
@@ -12061,7 +12123,9 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptRule3ToJson(this);
+    return _$$_TestScriptRule3ToJson(
+      this,
+    );
   }
 }
 
@@ -12297,7 +12361,9 @@ class _$_TestScriptParam3 extends _TestScriptParam3 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptParam3ToJson(this);
+    return _$$_TestScriptParam3ToJson(
+      this,
+    );
   }
 }
 
@@ -12562,7 +12628,9 @@ class _$_TestScriptTest extends _TestScriptTest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptTestToJson(this);
+    return _$$_TestScriptTestToJson(
+      this,
+    );
   }
 }
 
@@ -12764,7 +12832,9 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptAction1ToJson(this);
+    return _$$_TestScriptAction1ToJson(
+      this,
+    );
   }
 }
 
@@ -12910,7 +12980,9 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptTeardownToJson(this);
+    return _$$_TestScriptTeardownToJson(
+      this,
+    );
   }
 }
 
@@ -13057,7 +13129,9 @@ class _$_TestScriptAction2 extends _TestScriptAction2 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptAction2ToJson(this);
+    return _$$_TestScriptAction2ToJson(
+      this,
+    );
   }
 }
 

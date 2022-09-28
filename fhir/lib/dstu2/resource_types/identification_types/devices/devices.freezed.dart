@@ -1017,7 +1017,9 @@ class _$_Device extends _Device {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceToJson(this);
+    return _$$_DeviceToJson(
+      this,
+    );
   }
 }
 
@@ -1813,7 +1815,9 @@ class _$_DeviceComponent extends _DeviceComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceComponentToJson(this);
+    return _$$_DeviceComponentToJson(
+      this,
+    );
   }
 }
 
@@ -2173,7 +2177,9 @@ class _$_DeviceComponentProductionSpecification
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceComponentProductionSpecificationToJson(this);
+    return _$$_DeviceComponentProductionSpecificationToJson(
+      this,
+    );
   }
 }
 
@@ -3020,7 +3026,9 @@ class _$_DeviceMetric extends _DeviceMetric {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceMetricToJson(this);
+    return _$$_DeviceMetricToJson(
+      this,
+    );
   }
 }
 
@@ -3486,7 +3494,9 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceMetricCalibrationToJson(this);
+    return _$$_DeviceMetricCalibrationToJson(
+      this,
+    );
   }
 }
 

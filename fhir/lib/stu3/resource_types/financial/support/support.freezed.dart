@@ -1063,7 +1063,9 @@ class _$_Coverage extends _Coverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageToJson(this);
+    return _$$_CoverageToJson(
+      this,
+    );
   }
 }
 
@@ -1946,7 +1948,9 @@ class _$_CoverageGrouping extends _CoverageGrouping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageGroupingToJson(this);
+    return _$$_CoverageGroupingToJson(
+      this,
+    );
   }
 }
 
@@ -3081,7 +3085,9 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityRequestToJson(this);
+    return _$$_EligibilityRequestToJson(
+      this,
+    );
   }
 }
 
@@ -4118,7 +4124,9 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseToJson(this);
+    return _$$_EligibilityResponseToJson(
+      this,
+    );
   }
 }
 
@@ -4435,7 +4443,9 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseInsuranceToJson(this);
+    return _$$_EligibilityResponseInsuranceToJson(
+      this,
+    );
   }
 }
 
@@ -4919,7 +4929,9 @@ class _$_EligibilityResponseBenefitBalance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseBenefitBalanceToJson(this);
+    return _$$_EligibilityResponseBenefitBalanceToJson(
+      this,
+    );
   }
 }
 
@@ -5343,7 +5355,9 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseFinancialToJson(this);
+    return _$$_EligibilityResponseFinancialToJson(
+      this,
+    );
   }
 }
 
@@ -5524,7 +5538,9 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseErrorToJson(this);
+    return _$$_EligibilityResponseErrorToJson(
+      this,
+    );
   }
 }
 
@@ -6255,7 +6271,9 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EnrollmentRequestToJson(this);
+    return _$$_EnrollmentRequestToJson(
+      this,
+    );
   }
 }
 
@@ -7117,7 +7135,9 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EnrollmentResponseToJson(this);
+    return _$$_EnrollmentResponseToJson(
+      this,
+    );
   }
 }
 

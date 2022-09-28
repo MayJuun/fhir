@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'payment.freezed.dart';
 part 'payment.g.dart';
 
+/// [PaymentNotice]: This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
 @freezed
 class PaymentNotice with Resource, _$PaymentNotice {
   PaymentNotice._();
@@ -129,6 +130,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   }
 }
 
+/// [PaymentReconciliation]: This resource provides the details including amount of a payment and allocates the payment items being paid.
 @freezed
 class PaymentReconciliation with Resource, _$PaymentReconciliation {
   PaymentReconciliation._();
@@ -261,6 +263,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   }
 }
 
+/// [PaymentReconciliationDetail]: This resource provides the details including amount of a payment and allocates the payment items being paid.
 @freezed
 class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
@@ -345,6 +348,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   }
 }
 
+/// [PaymentReconciliationProcessNote]: This resource provides the details including amount of a payment and allocates the payment items being paid.
 @freezed
 class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   PaymentReconciliationProcessNote._();

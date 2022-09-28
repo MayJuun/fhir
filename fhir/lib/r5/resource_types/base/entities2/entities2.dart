@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
+/// [BiologicallyDerivedProduct] This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused /// into another (possibly the same) biological entity.
 @freezed
 class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   BiologicallyDerivedProduct._();
@@ -289,6 +290,7 @@ class BiologicallyDerivedProductProperty
   }
 }
 
+/// [Device] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
 @freezed
 class Device with Resource, _$Device {
   Device._();
@@ -481,6 +483,7 @@ class Device with Resource, _$Device {
   }
 }
 
+/// [id] "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.",
 @freezed
 class DeviceOperationalState with _$DeviceOperationalState {
   DeviceOperationalState._();
@@ -544,6 +547,7 @@ class DeviceOperationalState with _$DeviceOperationalState {
   }
 }
 
+/// [Device_AssociationState] "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.",
 @freezed
 class DeviceAssociationState with _$DeviceAssociationState {
   DeviceAssociationState._();
@@ -602,6 +606,7 @@ class DeviceAssociationState with _$DeviceAssociationState {
   }
 }
 
+/// [DeviceUdiCarrier] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceUdiCarrier with _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
@@ -690,6 +695,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   }
 }
 
+/// [DeviceDeviceName] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceDeviceName with _$DeviceDeviceName {
   DeviceDeviceName._();
@@ -754,6 +760,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
   }
 }
 
+/// [DeviceVersion] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceVersion with _$DeviceVersion {
   DeviceVersion._();
@@ -820,6 +827,7 @@ class DeviceVersion with _$DeviceVersion {
   }
 }
 
+/// [DeviceSpecialization] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceSpecialization with _$DeviceSpecialization {
   DeviceSpecialization._();
@@ -883,6 +891,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
   }
 }
 
+/// [DeviceProperty] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceProperty with _$DeviceProperty {
   DeviceProperty._();
@@ -967,6 +976,7 @@ class DeviceProperty with _$DeviceProperty {
   }
 }
 
+/// [DeviceMetric] Describes a measurement, calculation or setting capability of a medical device.
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
@@ -1078,6 +1088,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   }
 }
 
+/// [DeviceMetricCalibration] Describes a measurement, calculation or setting capability of a medical device.
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
@@ -1147,6 +1158,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   }
 }
 
+/// [DeviceLink] A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
 @freezed
 class DeviceLink with _$DeviceLink {
   DeviceLink._();
@@ -1202,6 +1214,7 @@ class DeviceLink with _$DeviceLink {
   }
 }
 
+/// [NutritionProduct] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProduct with Resource, _$NutritionProduct {
   NutritionProduct._();
@@ -1307,6 +1320,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
   }
 }
 
+/// [NutritionProductNutrient] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProductNutrient with _$NutritionProductNutrient {
   NutritionProductNutrient._();
@@ -1364,6 +1378,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   }
 }
 
+/// [NutritionProductIngredient] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProductIngredient with _$NutritionProductIngredient {
   NutritionProductIngredient._();
@@ -1420,6 +1435,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   }
 }
 
+/// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   NutritionProductCharacteristic._();
@@ -1500,6 +1516,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   }
 }
 
+/// [NutritionProductInstance] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProductInstance with _$NutritionProductInstance {
   NutritionProductInstance._();
@@ -1584,6 +1601,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
   }
 }
 
+/// [Substance] A homogeneous material with a definite composition.
 @freezed
 class Substance with Resource, _$Substance {
   Substance._();
@@ -1695,6 +1713,7 @@ class Substance with Resource, _$Substance {
   }
 }
 
+/// [SubstanceIngredient] A homogeneous material with a definite composition.
 @freezed
 class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();

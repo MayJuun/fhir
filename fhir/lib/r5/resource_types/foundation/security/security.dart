@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'security.freezed.dart';
 part 'security.g.dart';
 
+/// [AuditEvent] A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
 @freezed
 class AuditEvent with Resource, _$AuditEvent {
   AuditEvent._();
@@ -141,6 +142,7 @@ class AuditEvent with Resource, _$AuditEvent {
   }
 }
 
+/// [AuditEventOutcome] A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
 @freezed
 class AuditEventOutcome with _$AuditEventOutcome {
   AuditEventOutcome._();
@@ -196,6 +198,7 @@ class AuditEventOutcome with _$AuditEventOutcome {
   }
 }
 
+/// [AuditEventAgent] A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
 @freezed
 class AuditEventAgent with _$AuditEventAgent {
   AuditEventAgent._();
@@ -289,6 +292,7 @@ class AuditEventAgent with _$AuditEventAgent {
   }
 }
 
+/// [AuditEventSource] A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
 @freezed
 class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
@@ -349,6 +353,7 @@ class AuditEventSource with _$AuditEventSource {
   }
 }
 
+/// [AuditEventEntity] A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
 @freezed
 class AuditEventEntity with _$AuditEventEntity {
   AuditEventEntity._();
@@ -421,6 +426,7 @@ class AuditEventEntity with _$AuditEventEntity {
   }
 }
 
+/// [AuditEventDetail] A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
 @freezed
 class AuditEventDetail with _$AuditEventDetail {
   AuditEventDetail._();
@@ -526,6 +532,7 @@ class AuditEventDetail with _$AuditEventDetail {
   }
 }
 
+/// [Consent] A record of a healthcare consumer’s  choices  or choices made on their behalf by a third party, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
 @freezed
 class Consent with Resource, _$Consent {
   Consent._();
@@ -652,6 +659,7 @@ class Consent with Resource, _$Consent {
   }
 }
 
+/// [ConsentPolicyBasis] A record of a healthcare consumer’s  choices  or choices made on their behalf by a third party, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
 @freezed
 class ConsentPolicyBasis with _$ConsentPolicyBasis {
   ConsentPolicyBasis._();
@@ -712,6 +720,7 @@ class ConsentPolicyBasis with _$ConsentPolicyBasis {
   }
 }
 
+/// [ConsentVerification] A record of a healthcare consumer’s  choices  or choices made on their behalf by a third party, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
 @freezed
 class ConsentVerification with _$ConsentVerification {
   ConsentVerification._();
@@ -784,6 +793,7 @@ class ConsentVerification with _$ConsentVerification {
   }
 }
 
+/// [ConsentProvision] A record of a healthcare consumer’s  choices  or choices made on their behalf by a third party, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
 @freezed
 class ConsentProvision with _$ConsentProvision {
   ConsentProvision._();
@@ -874,6 +884,7 @@ class ConsentProvision with _$ConsentProvision {
   }
 }
 
+/// [ConsentActor] A record of a healthcare consumer’s  choices  or choices made on their behalf by a third party, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
 @freezed
 class ConsentActor with _$ConsentActor {
   ConsentActor._();
@@ -931,6 +942,7 @@ class ConsentActor with _$ConsentActor {
   }
 }
 
+/// [ConsentData] A record of a healthcare consumer’s  choices  or choices made on their behalf by a third party, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
 @freezed
 class ConsentData with _$ConsentData {
   ConsentData._();
@@ -991,6 +1003,7 @@ class ConsentData with _$ConsentData {
   }
 }
 
+/// [Permission] Permission.
 @freezed
 class Permission with Resource, _$Permission {
   Permission._();
@@ -1099,6 +1112,7 @@ class Permission with Resource, _$Permission {
   }
 }
 
+/// [PermissionProcessingActivity] Permission.
 @freezed
 class PermissionProcessingActivity with _$PermissionProcessingActivity {
   PermissionProcessingActivity._();
@@ -1160,6 +1174,7 @@ class PermissionProcessingActivity with _$PermissionProcessingActivity {
   }
 }
 
+/// [PermissionJustification] Permission.
 @freezed
 class PermissionJustification with _$PermissionJustification {
   PermissionJustification._();
@@ -1217,6 +1232,7 @@ class PermissionJustification with _$PermissionJustification {
   }
 }
 
+/// [Provenance] Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
 @freezed
 class Provenance with Resource, _$Provenance {
   Provenance._();
@@ -1340,6 +1356,7 @@ class Provenance with Resource, _$Provenance {
   }
 }
 
+/// [ProvenanceAgent] Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
 @freezed
 class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
@@ -1403,6 +1420,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   }
 }
 
+/// [ProvenanceEntity] Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
 @freezed
 class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();

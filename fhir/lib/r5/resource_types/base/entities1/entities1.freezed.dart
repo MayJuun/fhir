@@ -855,7 +855,9 @@ class _$_Endpoint extends _Endpoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EndpointToJson(this);
+    return _$$_EndpointToJson(
+      this,
+    );
   }
 }
 
@@ -2241,7 +2243,9 @@ class _$_HealthcareService extends _HealthcareService {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceToJson(this);
+    return _$$_HealthcareServiceToJson(
+      this,
+    );
   }
 }
 
@@ -2671,7 +2675,9 @@ class _$_HealthcareServiceEligibility extends _HealthcareServiceEligibility {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceEligibilityToJson(this);
+    return _$$_HealthcareServiceEligibilityToJson(
+      this,
+    );
   }
 }
 
@@ -3113,7 +3119,9 @@ class _$_HealthcareServiceAvailableTime
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceAvailableTimeToJson(this);
+    return _$$_HealthcareServiceAvailableTimeToJson(
+      this,
+    );
   }
 }
 
@@ -3446,7 +3454,9 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceNotAvailableToJson(this);
+    return _$$_HealthcareServiceNotAvailableToJson(
+      this,
+    );
   }
 }
 
@@ -4583,7 +4593,9 @@ class _$_Location extends _Location {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationToJson(this);
+    return _$$_LocationToJson(
+      this,
+    );
   }
 }
 
@@ -5059,7 +5071,9 @@ class _$_LocationPosition extends _LocationPosition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationPositionToJson(this);
+    return _$$_LocationPositionToJson(
+      this,
+    );
   }
 }
 
@@ -5507,7 +5521,9 @@ class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationHoursOfOperationToJson(this);
+    return _$$_LocationHoursOfOperationToJson(
+      this,
+    );
   }
 }
 
@@ -6363,7 +6379,9 @@ class _$_Organization extends _Organization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrganizationToJson(this);
+    return _$$_OrganizationToJson(
+      this,
+    );
   }
 }
 
@@ -7228,7 +7246,9 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrganizationAffiliationToJson(this);
+    return _$$_OrganizationAffiliationToJson(
+      this,
+    );
   }
 }
 

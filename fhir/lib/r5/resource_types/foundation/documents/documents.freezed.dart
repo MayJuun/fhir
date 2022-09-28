@@ -1145,7 +1145,9 @@ class _$_Composition extends _Composition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionToJson(this);
+    return _$$_CompositionToJson(
+      this,
+    );
   }
 }
 
@@ -1578,7 +1580,9 @@ class _$_CompositionAttester extends _CompositionAttester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionAttesterToJson(this);
+    return _$$_CompositionAttesterToJson(
+      this,
+    );
   }
 }
 
@@ -1879,7 +1883,9 @@ class _$_CompositionEvent extends _CompositionEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionEventToJson(this);
+    return _$$_CompositionEventToJson(
+      this,
+    );
   }
 }
 
@@ -2438,7 +2444,9 @@ class _$_CompositionSection extends _CompositionSection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionSectionToJson(this);
+    return _$$_CompositionSectionToJson(
+      this,
+    );
   }
 }
 
@@ -3340,7 +3348,9 @@ class _$_DocumentManifest extends _DocumentManifest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentManifestToJson(this);
+    return _$$_DocumentManifestToJson(
+      this,
+    );
   }
 }
 
@@ -3692,7 +3702,9 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentManifestRelatedToJson(this);
+    return _$$_DocumentManifestRelatedToJson(
+      this,
+    );
   }
 }
 
@@ -4853,7 +4865,9 @@ class _$_DocumentReference extends _DocumentReference {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceToJson(this);
+    return _$$_DocumentReferenceToJson(
+      this,
+    );
   }
 }
 
@@ -5309,7 +5323,9 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceAttesterToJson(this);
+    return _$$_DocumentReferenceAttesterToJson(
+      this,
+    );
   }
 }
 
@@ -5592,7 +5608,9 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceRelatesToToJson(this);
+    return _$$_DocumentReferenceRelatesToToJson(
+      this,
+    );
   }
 }
 
@@ -5896,7 +5914,9 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceContentToJson(this);
+    return _$$_DocumentReferenceContentToJson(
+      this,
+    );
   }
 }
 
@@ -6254,7 +6274,9 @@ class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceProfileToJson(this);
+    return _$$_DocumentReferenceProfileToJson(
+      this,
+    );
   }
 }
 

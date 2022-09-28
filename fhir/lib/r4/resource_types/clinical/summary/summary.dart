@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'summary.freezed.dart';
 part 'summary.g.dart';
 
+/// [AdverseEvent] Actual or  potential/avoided event causing unintended
 @freezed
 class AdverseEvent with Resource, _$AdverseEvent {
+  /// [AdverseEvent] Actual or  potential/avoided event causing unintended
   AdverseEvent._();
 
   /// [AdverseEvent] Actual or  potential/avoided event causing unintended
@@ -211,8 +213,10 @@ class AdverseEvent with Resource, _$AdverseEvent {
   }
 }
 
+/// [AdverseEventSuspectEntity] Actual or  potential/avoided event causing
 @freezed
 class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
+  /// [AdverseEventSuspectEntity] Actual or  potential/avoided event causing
   AdverseEventSuspectEntity._();
 
   /// [AdverseEventSuspectEntity] Actual or  potential/avoided event causing
@@ -289,8 +293,10 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   }
 }
 
+/// [AdverseEventCausality] Actual or  potential/avoided event causing
 @freezed
 class AdverseEventCausality with _$AdverseEventCausality {
+  /// [AdverseEventCausality] Actual or  potential/avoided event causing
   AdverseEventCausality._();
 
   /// [AdverseEventCausality] Actual or  potential/avoided event causing
@@ -375,8 +381,10 @@ class AdverseEventCausality with _$AdverseEventCausality {
   }
 }
 
+/// [AllergyIntolerance] Risk of harmful or undesirable, physiological
 @freezed
 class AllergyIntolerance with Resource, _$AllergyIntolerance {
+  /// [AllergyIntolerance] Risk of harmful or undesirable, physiological
   AllergyIntolerance._();
 
   /// [AllergyIntolerance] Risk of harmful or undesirable, physiological
@@ -593,8 +601,10 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   }
 }
 
+/// [AllergyIntoleranceReaction] Risk of harmful or undesirable,
 @freezed
 class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
+  /// [AllergyIntoleranceReaction] Risk of harmful or undesirable,
   AllergyIntoleranceReaction._();
 
   /// [AllergyIntoleranceReaction] Risk of harmful or undesirable,
@@ -706,8 +716,10 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   }
 }
 
+/// [ClinicalImpression] A record of a clinical assessment performed to
 @freezed
 class ClinicalImpression with Resource, _$ClinicalImpression {
+  /// [ClinicalImpression] A record of a clinical assessment performed to
   ClinicalImpression._();
 
   /// [ClinicalImpression] A record of a clinical assessment performed to
@@ -916,8 +928,10 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   }
 }
 
+/// [ClinicalImpressionInvestigation] A record of a clinical assessment
 @freezed
 class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
+  /// [ClinicalImpressionInvestigation] A record of a clinical assessment
   ClinicalImpressionInvestigation._();
 
   /// [ClinicalImpressionInvestigation] A record of a clinical assessment
@@ -999,8 +1013,10 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   }
 }
 
+/// [ClinicalImpressionFinding] A record of a clinical assessment performed
 @freezed
 class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
+  /// [ClinicalImpressionFinding] A record of a clinical assessment performed
   ClinicalImpressionFinding._();
 
   /// [ClinicalImpressionFinding] A record of a clinical assessment performed
@@ -1086,8 +1102,10 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   }
 }
 
+/// [Condition] A clinical condition, problem, diagnosis, or other event,
 @freezed
 class Condition with Resource, _$Condition {
+  /// [Condition] A clinical condition, problem, diagnosis, or other event,
   Condition._();
 
   /// [Condition] A clinical condition, problem, diagnosis, or other event,
@@ -1313,8 +1331,10 @@ class Condition with Resource, _$Condition {
   }
 }
 
+/// [ConditionStage] A clinical condition, problem, diagnosis, or other
 @freezed
 class ConditionStage with _$ConditionStage {
+  /// [ConditionStage] A clinical condition, problem, diagnosis, or other
   ConditionStage._();
 
   /// [ConditionStage] A clinical condition, problem, diagnosis, or other
@@ -1392,8 +1412,10 @@ class ConditionStage with _$ConditionStage {
   }
 }
 
+/// [ConditionEvidence] A clinical condition, problem, diagnosis, or other
 @freezed
 class ConditionEvidence with _$ConditionEvidence {
+  /// [ConditionEvidence] A clinical condition, problem, diagnosis, or other
   ConditionEvidence._();
 
   /// [ConditionEvidence] A clinical condition, problem, diagnosis, or other
@@ -1468,8 +1490,10 @@ class ConditionEvidence with _$ConditionEvidence {
   }
 }
 
+/// [DetectedIssue] Indicates an actual or potential clinical issue with or
 @freezed
 class DetectedIssue with Resource, _$DetectedIssue {
+  /// [DetectedIssue] Indicates an actual or potential clinical issue with or
   DetectedIssue._();
 
   /// [DetectedIssue] Indicates an actual or potential clinical issue with or
@@ -1641,8 +1665,10 @@ class DetectedIssue with Resource, _$DetectedIssue {
   }
 }
 
+/// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
 @freezed
 class DetectedIssueEvidence with _$DetectedIssueEvidence {
+  /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
   DetectedIssueEvidence._();
 
   /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
@@ -1717,8 +1743,10 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
   }
 }
 
+/// [DetectedIssueMitigation] Indicates an actual or potential clinical
 @freezed
 class DetectedIssueMitigation with _$DetectedIssueMitigation {
+  /// [DetectedIssueMitigation] Indicates an actual or potential clinical
   DetectedIssueMitigation._();
 
   /// [DetectedIssueMitigation] Indicates an actual or potential clinical
@@ -1801,8 +1829,10 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   }
 }
 
+/// [FamilyMemberHistory] Significant health conditions for a person related
 @freezed
 class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
+  /// [FamilyMemberHistory] Significant health conditions for a person related
   FamilyMemberHistory._();
 
   /// [FamilyMemberHistory] Significant health conditions for a person related
@@ -2042,8 +2072,10 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   }
 }
 
+/// [FamilyMemberHistoryCondition] Significant health conditions for a
 @freezed
 class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
+  /// [FamilyMemberHistoryCondition] Significant health conditions for a
   FamilyMemberHistoryCondition._();
 
   /// [FamilyMemberHistoryCondition] Significant health conditions for a
@@ -2155,8 +2187,10 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   }
 }
 
+/// [Procedure] An action that is or was performed on or for a patient. This
 @freezed
 class Procedure with Resource, _$Procedure {
+  /// [Procedure] An action that is or was performed on or for a patient. This
   Procedure._();
 
   /// [Procedure] An action that is or was performed on or for a patient. This
@@ -2415,8 +2449,10 @@ class Procedure with Resource, _$Procedure {
   }
 }
 
+/// [ProcedurePerformer] An action that is or was performed on or for a
 @freezed
 class ProcedurePerformer with _$ProcedurePerformer {
+  /// [ProcedurePerformer] An action that is or was performed on or for a
   ProcedurePerformer._();
 
   /// [ProcedurePerformer] An action that is or was performed on or for a
@@ -2494,8 +2530,10 @@ class ProcedurePerformer with _$ProcedurePerformer {
   }
 }
 
+/// [ProcedureFocalDevice] An action that is or was performed on or for a
 @freezed
 class ProcedureFocalDevice with _$ProcedureFocalDevice {
+  /// [ProcedureFocalDevice] An action that is or was performed on or for a
   ProcedureFocalDevice._();
 
   /// [ProcedureFocalDevice] An action that is or was performed on or for a

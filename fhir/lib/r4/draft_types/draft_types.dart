@@ -12,8 +12,10 @@ import '../../r4.dart';
 part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
+/// [Population] A populatioof people with some set of grouping criteria.
 @freezed
 class Population with _$Population {
+  /// [Population] A populatioof people with some set of grouping criteria.
   Population._();
 
   /// [Population] A populatioof people with some set of grouping criteria.
@@ -94,8 +96,10 @@ class Population with _$Population {
   }
 }
 
+/// [ProductShelfLife]: The shelf-life and storage information for a medicinal product item or container can be described using this class.
 @freezed
 class ProductShelfLife with _$ProductShelfLife {
+  /// [ProductShelfLife]: The shelf-life and storage information for a medicinal product item or container can be described using this class.
   ProductShelfLife._();
 
   /// [ProductShelfLife]: The shelf-life and storage information for a medicinal product item or container can be described using this class.
@@ -159,8 +163,10 @@ class ProductShelfLife with _$ProductShelfLife {
   }
 }
 
+/// [ProdCharacteristic] The marketing status describes the date when a
 @freezed
 class ProdCharacteristic with _$ProdCharacteristic {
+  /// [ProdCharacteristic] The marketing status describes the date when a
   ProdCharacteristic._();
 
   /// [ProdCharacteristic] The marketing status describes the date when a
@@ -294,8 +300,10 @@ class ProdCharacteristic with _$ProdCharacteristic {
   }
 }
 
+/// [MarketingStatus] The marketing status describes the date when a
 @freezed
 class MarketingStatus with _$MarketingStatus {
+  /// [MarketingStatus] The marketing status describes the date when a
   MarketingStatus._();
 
   /// [MarketingStatus] The marketing status describes the date when a

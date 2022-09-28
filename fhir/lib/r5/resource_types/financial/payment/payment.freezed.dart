@@ -843,7 +843,9 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentNoticeToJson(this);
+    return _$$_PaymentNoticeToJson(
+      this,
+    );
   }
 }
 
@@ -1915,7 +1917,9 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationToJson(this);
+    return _$$_PaymentReconciliationToJson(
+      this,
+    );
   }
 }
 
@@ -2558,7 +2562,9 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationDetailToJson(this);
+    return _$$_PaymentReconciliationDetailToJson(
+      this,
+    );
   }
 }
 
@@ -2913,7 +2919,9 @@ class _$_PaymentReconciliationProcessNote
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationProcessNoteToJson(this);
+    return _$$_PaymentReconciliationProcessNoteToJson(
+      this,
+    );
   }
 }
 

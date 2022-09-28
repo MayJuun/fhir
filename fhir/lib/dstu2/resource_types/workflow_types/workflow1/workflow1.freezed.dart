@@ -604,7 +604,9 @@ class _$_Order extends _Order {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrderToJson(this);
+    return _$$_OrderToJson(
+      this,
+    );
   }
 }
 
@@ -945,7 +947,9 @@ class _$_OrderWhen extends _OrderWhen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrderWhenToJson(this);
+    return _$$_OrderWhenToJson(
+      this,
+    );
   }
 }
 
@@ -1528,7 +1532,9 @@ class _$_OrderResponse extends _OrderResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrderResponseToJson(this);
+    return _$$_OrderResponseToJson(
+      this,
+    );
   }
 }
 
@@ -2516,7 +2522,9 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestToJson(this);
+    return _$$_CommunicationRequestToJson(
+      this,
+    );
   }
 }
 
@@ -2935,7 +2943,9 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestPayloadToJson(this);
+    return _$$_CommunicationRequestPayloadToJson(
+      this,
+    );
   }
 }
 
@@ -3885,7 +3895,9 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceUseRequestToJson(this);
+    return _$$_DeviceUseRequestToJson(
+      this,
+    );
   }
 }
 
@@ -4832,7 +4844,9 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceUseStatementToJson(this);
+    return _$$_DeviceUseStatementToJson(
+      this,
+    );
   }
 }
 

@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'billing.freezed.dart';
 part 'billing.g.dart';
 
+/// [Claim] A provider issued list of professional services and products
 @freezed
 class Claim with Resource, _$Claim {
+  /// [Claim] A provider issued list of professional services and products
   Claim._();
 
   /// [Claim] A provider issued list of professional services and products
@@ -229,8 +231,10 @@ class Claim with Resource, _$Claim {
   }
 }
 
+/// [ClaimRelated] A provider issued list of professional services and
 @freezed
 class ClaimRelated with _$ClaimRelated {
+  /// [ClaimRelated] A provider issued list of professional services and
   ClaimRelated._();
 
   /// [ClaimRelated] A provider issued list of professional services and
@@ -307,8 +311,10 @@ class ClaimRelated with _$ClaimRelated {
   }
 }
 
+/// [ClaimPayee] A provider issued list of professional services and
 @freezed
 class ClaimPayee with _$ClaimPayee {
+  /// [ClaimPayee] A provider issued list of professional services and
   ClaimPayee._();
 
   /// [ClaimPayee] A provider issued list of professional services and
@@ -382,8 +388,10 @@ class ClaimPayee with _$ClaimPayee {
   }
 }
 
+/// [ClaimCareTeam] A provider issued list of professional services and
 @freezed
 class ClaimCareTeam with _$ClaimCareTeam {
+  /// [ClaimCareTeam] A provider issued list of professional services and
   ClaimCareTeam._();
 
   /// [ClaimCareTeam] A provider issued list of professional services and
@@ -474,8 +482,10 @@ class ClaimCareTeam with _$ClaimCareTeam {
   }
 }
 
+/// [ClaimSupportingInfo] A provider issued list of professional services
 @freezed
 class ClaimSupportingInfo with _$ClaimSupportingInfo {
+  /// [ClaimSupportingInfo] A provider issued list of professional services
   ClaimSupportingInfo._();
 
   /// [ClaimSupportingInfo] A provider issued list of professional services
@@ -601,8 +611,10 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
   }
 }
 
+/// [ClaimDiagnosis] A provider issued list of professional services and
 @freezed
 class ClaimDiagnosis with _$ClaimDiagnosis {
+  /// [ClaimDiagnosis] A provider issued list of professional services and
   ClaimDiagnosis._();
 
   /// [ClaimDiagnosis] A provider issued list of professional services and
@@ -695,8 +707,10 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
   }
 }
 
+/// [ClaimProcedure] A provider issued list of professional services and
 @freezed
 class ClaimProcedure with _$ClaimProcedure {
+  /// [ClaimProcedure] A provider issued list of professional services and
   ClaimProcedure._();
 
   /// [ClaimProcedure] A provider issued list of professional services and
@@ -789,8 +803,10 @@ class ClaimProcedure with _$ClaimProcedure {
   }
 }
 
+/// [ClaimInsurance] A provider issued list of professional services and
 @freezed
 class ClaimInsurance with _$ClaimInsurance {
+  /// [ClaimInsurance] A provider issued list of professional services and
   ClaimInsurance._();
 
   /// [ClaimInsurance] A provider issued list of professional services and
@@ -900,8 +916,10 @@ class ClaimInsurance with _$ClaimInsurance {
   }
 }
 
+/// [ClaimAccident] A provider issued list of professional services and
 @freezed
 class ClaimAccident with _$ClaimAccident {
+  /// [ClaimAccident] A provider issued list of professional services and
   ClaimAccident._();
 
   /// [ClaimAccident] A provider issued list of professional services and
@@ -986,8 +1004,10 @@ class ClaimAccident with _$ClaimAccident {
   }
 }
 
+/// [ClaimItem] A provider issued list of professional services and products
 @freezed
 class ClaimItem with _$ClaimItem {
+  /// [ClaimItem] A provider issued list of professional services and products
   ClaimItem._();
 
   /// [ClaimItem] A provider issued list of professional services and products
@@ -1167,8 +1187,10 @@ class ClaimItem with _$ClaimItem {
   }
 }
 
+/// [ClaimDetail] A provider issued list of professional services and
 @freezed
 class ClaimDetail with _$ClaimDetail {
+  /// [ClaimDetail] A provider issued list of professional services and
   ClaimDetail._();
 
   /// [ClaimDetail] A provider issued list of professional services and
@@ -1289,8 +1311,10 @@ class ClaimDetail with _$ClaimDetail {
   }
 }
 
+/// [ClaimSubDetail] A provider issued list of professional services and
 @freezed
 class ClaimSubDetail with _$ClaimSubDetail {
+  /// [ClaimSubDetail] A provider issued list of professional services and
   ClaimSubDetail._();
 
   /// [ClaimSubDetail] A provider issued list of professional services and
@@ -1407,8 +1431,10 @@ class ClaimSubDetail with _$ClaimSubDetail {
   }
 }
 
+/// [ClaimResponse] This resource provides the adjudication details from the
 @freezed
 class ClaimResponse with Resource, _$ClaimResponse {
+  /// [ClaimResponse] This resource provides the adjudication details from the
   ClaimResponse._();
 
   /// [ClaimResponse] This resource provides the adjudication details from the
@@ -1633,8 +1659,10 @@ class ClaimResponse with Resource, _$ClaimResponse {
   }
 }
 
+/// [ClaimResponseItem] This resource provides the adjudication details from
 @freezed
 class ClaimResponseItem with _$ClaimResponseItem {
+  /// [ClaimResponseItem] This resource provides the adjudication details from
   ClaimResponseItem._();
 
   /// [ClaimResponseItem] This resource provides the adjudication details from
@@ -1722,8 +1750,10 @@ class ClaimResponseItem with _$ClaimResponseItem {
   }
 }
 
+/// [ClaimResponseAdjudication] This resource provides the adjudication
 @freezed
 class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
+  /// [ClaimResponseAdjudication] This resource provides the adjudication
   ClaimResponseAdjudication._();
 
   /// [ClaimResponseAdjudication] This resource provides the adjudication
@@ -1810,8 +1840,10 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   }
 }
 
+/// [ClaimResponseDetail] This resource provides the adjudication details
 @freezed
 class ClaimResponseDetail with _$ClaimResponseDetail {
+  /// [ClaimResponseDetail] This resource provides the adjudication details
   ClaimResponseDetail._();
 
   /// [ClaimResponseDetail] This resource provides the adjudication details
@@ -1896,8 +1928,10 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
   }
 }
 
+/// [ClaimResponseSubDetail] This resource provides the adjudication details
 @freezed
 class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
+  /// [ClaimResponseSubDetail] This resource provides the adjudication details
   ClaimResponseSubDetail._();
 
   /// [ClaimResponseSubDetail] This resource provides the adjudication details
@@ -1980,8 +2014,10 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   }
 }
 
+/// [ClaimResponseAddItem] This resource provides the adjudication details
 @freezed
 class ClaimResponseAddItem with _$ClaimResponseAddItem {
+  /// [ClaimResponseAddItem] This resource provides the adjudication details
   ClaimResponseAddItem._();
 
   /// [ClaimResponseAddItem] This resource provides the adjudication details
@@ -2146,8 +2182,10 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   }
 }
 
+/// [ClaimResponseDetail1] This resource provides the adjudication details
 @freezed
 class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
+  /// [ClaimResponseDetail1] This resource provides the adjudication details
   ClaimResponseDetail1._();
 
   /// [ClaimResponseDetail1] This resource provides the adjudication details
@@ -2257,8 +2295,10 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   }
 }
 
+/// [ClaimResponseSubDetail1] This resource provides the adjudication
 @freezed
 class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
+  /// [ClaimResponseSubDetail1] This resource provides the adjudication
   ClaimResponseSubDetail1._();
 
   /// [ClaimResponseSubDetail1] This resource provides the adjudication
@@ -2364,8 +2404,10 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   }
 }
 
+/// [ClaimResponseTotal] This resource provides the adjudication details
 @freezed
 class ClaimResponseTotal with _$ClaimResponseTotal {
+  /// [ClaimResponseTotal] This resource provides the adjudication details
   ClaimResponseTotal._();
 
   /// [ClaimResponseTotal] This resource provides the adjudication details
@@ -2441,8 +2483,10 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
   }
 }
 
+/// [ClaimResponsePayment] This resource provides the adjudication details
 @freezed
 class ClaimResponsePayment with _$ClaimResponsePayment {
+  /// [ClaimResponsePayment] This resource provides the adjudication details
   ClaimResponsePayment._();
 
   /// [ClaimResponsePayment] This resource provides the adjudication details
@@ -2532,8 +2576,10 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
   }
 }
 
+/// [ClaimResponseProcessNote] This resource provides the adjudication
 @freezed
 class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
+  /// [ClaimResponseProcessNote] This resource provides the adjudication
   ClaimResponseProcessNote._();
 
   /// [ClaimResponseProcessNote] This resource provides the adjudication
@@ -2620,8 +2666,10 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   }
 }
 
+/// [ClaimResponseInsurance] This resource provides the adjudication details
 @freezed
 class ClaimResponseInsurance with _$ClaimResponseInsurance {
+  /// [ClaimResponseInsurance] This resource provides the adjudication details
   ClaimResponseInsurance._();
 
   /// [ClaimResponseInsurance] This resource provides the adjudication details
@@ -2718,8 +2766,10 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
   }
 }
 
+/// [ClaimResponseError] This resource provides the adjudication details
 @freezed
 class ClaimResponseError with _$ClaimResponseError {
+  /// [ClaimResponseError] This resource provides the adjudication details
   ClaimResponseError._();
 
   /// [ClaimResponseError] This resource provides the adjudication details
@@ -2813,8 +2863,10 @@ class ClaimResponseError with _$ClaimResponseError {
   }
 }
 
+/// [Invoice] Invoice containing collected ChargeItems from an Account with
 @freezed
 class Invoice with Resource, _$Invoice {
+  /// [Invoice] Invoice containing collected ChargeItems from an Account with
   Invoice._();
 
   /// [Invoice] Invoice containing collected ChargeItems from an Account with
@@ -2990,8 +3042,10 @@ class Invoice with Resource, _$Invoice {
   }
 }
 
+/// [InvoiceParticipant] Invoice containing collected ChargeItems from an
 @freezed
 class InvoiceParticipant with _$InvoiceParticipant {
+  /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
   InvoiceParticipant._();
 
   /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
@@ -3066,8 +3120,10 @@ class InvoiceParticipant with _$InvoiceParticipant {
   }
 }
 
+/// [InvoiceLineItem] Invoice containing collected ChargeItems from an
 @freezed
 class InvoiceLineItem with _$InvoiceLineItem {
+  /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
   InvoiceLineItem._();
 
   /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
@@ -3159,8 +3215,10 @@ class InvoiceLineItem with _$InvoiceLineItem {
   }
 }
 
+/// [InvoicePriceComponent] Invoice containing collected ChargeItems from an
 @freezed
 class InvoicePriceComponent with _$InvoicePriceComponent {
+  /// [InvoicePriceComponent] Invoice containing collected ChargeItems from an
   InvoicePriceComponent._();
 
   /// [InvoicePriceComponent] Invoice containing collected ChargeItems from an

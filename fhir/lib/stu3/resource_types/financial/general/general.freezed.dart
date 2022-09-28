@@ -858,7 +858,9 @@ class _$_Account extends _Account {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AccountToJson(this);
+    return _$$_AccountToJson(
+      this,
+    );
   }
 }
 
@@ -1150,7 +1152,9 @@ class _$_AccountCoverage extends _AccountCoverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AccountCoverageToJson(this);
+    return _$$_AccountCoverageToJson(
+      this,
+    );
   }
 }
 
@@ -1394,7 +1398,9 @@ class _$_AccountGuarantor extends _AccountGuarantor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AccountGuarantorToJson(this);
+    return _$$_AccountGuarantorToJson(
+      this,
+    );
   }
 }
 
@@ -2736,7 +2742,9 @@ class _$_ChargeItem extends _ChargeItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChargeItemToJson(this);
+    return _$$_ChargeItemToJson(
+      this,
+    );
   }
 }
 
@@ -3058,7 +3066,9 @@ class _$_ChargeItemParticipant extends _ChargeItemParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChargeItemParticipantToJson(this);
+    return _$$_ChargeItemParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -4222,7 +4232,9 @@ class _$_Contract extends _Contract {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractToJson(this);
+    return _$$_ContractToJson(
+      this,
+    );
   }
 }
 
@@ -4511,7 +4523,9 @@ class _$_ContractAgent extends _ContractAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractAgentToJson(this);
+    return _$$_ContractAgentToJson(
+      this,
+    );
   }
 }
 
@@ -4711,7 +4725,9 @@ class _$_ContractSigner extends _ContractSigner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractSignerToJson(this);
+    return _$$_ContractSignerToJson(
+      this,
+    );
   }
 }
 
@@ -5198,7 +5214,9 @@ class _$_ContractValuedItem extends _ContractValuedItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractValuedItemToJson(this);
+    return _$$_ContractValuedItemToJson(
+      this,
+    );
   }
 }
 
@@ -5776,7 +5794,9 @@ class _$_ContractTerm extends _ContractTerm {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractTermToJson(this);
+    return _$$_ContractTermToJson(
+      this,
+    );
   }
 }
 
@@ -5990,7 +6010,9 @@ class _$_ContractAgent1 extends _ContractAgent1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractAgent1ToJson(this);
+    return _$$_ContractAgent1ToJson(
+      this,
+    );
   }
 }
 
@@ -6474,7 +6496,9 @@ class _$_ContractValuedItem1 extends _ContractValuedItem1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractValuedItem1ToJson(this);
+    return _$$_ContractValuedItem1ToJson(
+      this,
+    );
   }
 }
 
@@ -6693,7 +6717,9 @@ class _$_ContractFriendly extends _ContractFriendly {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractFriendlyToJson(this);
+    return _$$_ContractFriendlyToJson(
+      this,
+    );
   }
 }
 
@@ -6878,7 +6904,9 @@ class _$_ContractLegal extends _ContractLegal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractLegalToJson(this);
+    return _$$_ContractLegalToJson(
+      this,
+    );
   }
 }
 
@@ -7062,7 +7090,9 @@ class _$_ContractRule extends _ContractRule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContractRuleToJson(this);
+    return _$$_ContractRuleToJson(
+      this,
+    );
   }
 }
 
@@ -8804,7 +8834,9 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitToJson(this);
+    return _$$_ExplanationOfBenefitToJson(
+      this,
+    );
   }
 }
 
@@ -9200,7 +9232,9 @@ class _$_ExplanationOfBenefitRelated extends _ExplanationOfBenefitRelated {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitRelatedToJson(this);
+    return _$$_ExplanationOfBenefitRelatedToJson(
+      this,
+    );
   }
 }
 
@@ -9392,7 +9426,9 @@ class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitPayeeToJson(this);
+    return _$$_ExplanationOfBenefitPayeeToJson(
+      this,
+    );
   }
 }
 
@@ -9912,7 +9948,9 @@ class _$_ExplanationOfBenefitInformation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitInformationToJson(this);
+    return _$$_ExplanationOfBenefitInformationToJson(
+      this,
+    );
   }
 }
 
@@ -10282,7 +10320,9 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitCareTeamToJson(this);
+    return _$$_ExplanationOfBenefitCareTeamToJson(
+      this,
+    );
   }
 }
 
@@ -10613,7 +10653,9 @@ class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitDiagnosisToJson(this);
+    return _$$_ExplanationOfBenefitDiagnosisToJson(
+      this,
+    );
   }
 }
 
@@ -10934,7 +10976,9 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitProcedureToJson(this);
+    return _$$_ExplanationOfBenefitProcedureToJson(
+      this,
+    );
   }
 }
 
@@ -11169,7 +11213,9 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitInsuranceToJson(this);
+    return _$$_ExplanationOfBenefitInsuranceToJson(
+      this,
+    );
   }
 }
 
@@ -11459,7 +11505,9 @@ class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitAccidentToJson(this);
+    return _$$_ExplanationOfBenefitAccidentToJson(
+      this,
+    );
   }
 }
 
@@ -12614,7 +12662,9 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitItemToJson(this);
+    return _$$_ExplanationOfBenefitItemToJson(
+      this,
+    );
   }
 }
 
@@ -13007,7 +13057,9 @@ class _$_ExplanationOfBenefitAdjudication
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitAdjudicationToJson(this);
+    return _$$_ExplanationOfBenefitAdjudicationToJson(
+      this,
+    );
   }
 }
 
@@ -13667,7 +13719,9 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitDetailToJson(this);
+    return _$$_ExplanationOfBenefitDetailToJson(
+      this,
+    );
   }
 }
 
@@ -14340,7 +14394,9 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitSubDetailToJson(this);
+    return _$$_ExplanationOfBenefitSubDetailToJson(
+      this,
+    );
   }
 }
 
@@ -14845,7 +14901,9 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitAddItemToJson(this);
+    return _$$_ExplanationOfBenefitAddItemToJson(
+      this,
+    );
   }
 }
 
@@ -15247,7 +15305,9 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitDetail1ToJson(this);
+    return _$$_ExplanationOfBenefitDetail1ToJson(
+      this,
+    );
   }
 }
 
@@ -15616,7 +15676,9 @@ class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitPaymentToJson(this);
+    return _$$_ExplanationOfBenefitPaymentToJson(
+      this,
+    );
   }
 }
 
@@ -15938,7 +16000,9 @@ class _$_ExplanationOfBenefitProcessNote
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitProcessNoteToJson(this);
+    return _$$_ExplanationOfBenefitProcessNoteToJson(
+      this,
+    );
   }
 }
 
@@ -16434,7 +16498,9 @@ class _$_ExplanationOfBenefitBenefitBalance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitBenefitBalanceToJson(this);
+    return _$$_ExplanationOfBenefitBenefitBalanceToJson(
+      this,
+    );
   }
 }
 
@@ -16859,7 +16925,9 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitFinancialToJson(this);
+    return _$$_ExplanationOfBenefitFinancialToJson(
+      this,
+    );
   }
 }
 

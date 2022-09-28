@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 
+/// [ResearchStudy] A process where a researcher or organization plans and
 @freezed
 class ResearchStudy with Resource, _$ResearchStudy {
+  /// [ResearchStudy] A process where a researcher or organization plans and
   ResearchStudy._();
 
   /// [ResearchStudy] A process where a researcher or organization plans and
@@ -228,8 +230,10 @@ class ResearchStudy with Resource, _$ResearchStudy {
   }
 }
 
+/// [ResearchStudyArm] A process where a researcher or organization plans
 @freezed
 class ResearchStudyArm with _$ResearchStudyArm {
+  /// [ResearchStudyArm] A process where a researcher or organization plans
   ResearchStudyArm._();
 
   /// [ResearchStudyArm] A process where a researcher or organization plans
@@ -317,8 +321,10 @@ class ResearchStudyArm with _$ResearchStudyArm {
   }
 }
 
+/// [ResearchStudyObjective] A process where a researcher or organization
 @freezed
 class ResearchStudyObjective with _$ResearchStudyObjective {
+  /// [ResearchStudyObjective] A process where a researcher or organization
   ResearchStudyObjective._();
 
   /// [ResearchStudyObjective] A process where a researcher or organization
@@ -398,8 +404,10 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   }
 }
 
+/// [ResearchSubject] A physical entity which is the primary unit of
 @freezed
 class ResearchSubject with Resource, _$ResearchSubject {
+  /// [ResearchSubject] A physical entity which is the primary unit of
   ResearchSubject._();
 
   /// [ResearchSubject] A physical entity which is the primary unit of

@@ -849,7 +849,9 @@ class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VisionPrescriptionDispenseToJson(this);
+    return _$$_VisionPrescriptionDispenseToJson(
+      this,
+    );
   }
 }
 
@@ -2023,7 +2025,9 @@ class _$_CarePlan extends _CarePlan {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CarePlanToJson(this);
+    return _$$_CarePlanToJson(
+      this,
+    );
   }
 }
 
@@ -2408,7 +2412,9 @@ class _$_CarePlanActivity extends _CarePlanActivity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CarePlanActivityToJson(this);
+    return _$$_CarePlanActivityToJson(
+      this,
+    );
   }
 }
 
@@ -3248,7 +3254,9 @@ class _$_CarePlanDetail extends _CarePlanDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CarePlanDetailToJson(this);
+    return _$$_CarePlanDetailToJson(
+      this,
+    );
   }
 }
 
@@ -4149,7 +4157,9 @@ class _$_CareTeam extends _CareTeam {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CareTeamToJson(this);
+    return _$$_CareTeamToJson(
+      this,
+    );
   }
 }
 
@@ -4481,7 +4491,9 @@ class _$_CareTeamParticipant extends _CareTeamParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CareTeamParticipantToJson(this);
+    return _$$_CareTeamParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -5490,7 +5502,9 @@ class _$_Goal extends _Goal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoalToJson(this);
+    return _$$_GoalToJson(
+      this,
+    );
   }
 }
 
@@ -5934,7 +5948,9 @@ class _$_GoalTarget extends _GoalTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoalTargetToJson(this);
+    return _$$_GoalTargetToJson(
+      this,
+    );
   }
 }
 
@@ -6792,7 +6808,9 @@ class _$_NutritionOrder extends _NutritionOrder {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderToJson(this);
+    return _$$_NutritionOrderToJson(
+      this,
+    );
   }
 }
 
@@ -7190,7 +7208,9 @@ class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderOralDietToJson(this);
+    return _$$_NutritionOrderOralDietToJson(
+      this,
+    );
   }
 }
 
@@ -7393,7 +7413,9 @@ class _$_NutritionOrderNutrient extends _NutritionOrderNutrient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderNutrientToJson(this);
+    return _$$_NutritionOrderNutrientToJson(
+      this,
+    );
   }
 }
 
@@ -7579,7 +7601,9 @@ class _$_NutritionOrderTexture extends _NutritionOrderTexture {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderTextureToJson(this);
+    return _$$_NutritionOrderTextureToJson(
+      this,
+    );
   }
 }
 
@@ -7907,7 +7931,9 @@ class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderSupplementToJson(this);
+    return _$$_NutritionOrderSupplementToJson(
+      this,
+    );
   }
 }
 
@@ -8431,7 +8457,9 @@ class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderEnteralFormulaToJson(this);
+    return _$$_NutritionOrderEnteralFormulaToJson(
+      this,
+    );
   }
 }
 
@@ -8727,7 +8755,9 @@ class _$_NutritionOrderAdministration extends _NutritionOrderAdministration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderAdministrationToJson(this);
+    return _$$_NutritionOrderAdministrationToJson(
+      this,
+    );
   }
 }
 
@@ -10200,7 +10230,9 @@ class _$_ProcedureRequest extends _ProcedureRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcedureRequestToJson(this);
+    return _$$_ProcedureRequestToJson(
+      this,
+    );
   }
 }
 
@@ -10543,7 +10575,9 @@ class _$_ProcedureRequestRequester extends _ProcedureRequestRequester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcedureRequestRequesterToJson(this);
+    return _$$_ProcedureRequestRequesterToJson(
+      this,
+    );
   }
 }
 
@@ -11831,7 +11865,9 @@ class _$_ReferralRequest extends _ReferralRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReferralRequestToJson(this);
+    return _$$_ReferralRequestToJson(
+      this,
+    );
   }
 }
 
@@ -12153,7 +12189,9 @@ class _$_ReferralRequestRequester extends _ReferralRequestRequester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReferralRequestRequesterToJson(this);
+    return _$$_ReferralRequestRequesterToJson(
+      this,
+    );
   }
 }
 
@@ -13256,7 +13294,9 @@ class _$_RiskAssessment extends _RiskAssessment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RiskAssessmentToJson(this);
+    return _$$_RiskAssessmentToJson(
+      this,
+    );
   }
 }
 
@@ -13815,7 +13855,9 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RiskAssessmentPredictionToJson(this);
+    return _$$_RiskAssessmentPredictionToJson(
+      this,
+    );
   }
 }
 
@@ -14613,7 +14655,9 @@ class _$_VisionPrescription extends _VisionPrescription {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VisionPrescriptionToJson(this);
+    return _$$_VisionPrescriptionToJson(
+      this,
+    );
   }
 }
 

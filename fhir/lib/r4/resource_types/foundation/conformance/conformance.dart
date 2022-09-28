@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'conformance.freezed.dart';
 part 'conformance.g.dart';
 
+/// [CapabilityStatement] A Capability Statement documents a set of
 @freezed
 class CapabilityStatement with Resource, _$CapabilityStatement {
+  /// [CapabilityStatement] A Capability Statement documents a set of
   CapabilityStatement._();
 
   /// [CapabilityStatement] A Capability Statement documents a set of
@@ -295,8 +297,10 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   }
 }
 
+/// [CapabilityStatementSoftware] A Capability Statement documents a set of
 @freezed
 class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
+  /// [CapabilityStatementSoftware] A Capability Statement documents a set of
   CapabilityStatementSoftware._();
 
   /// [CapabilityStatementSoftware] A Capability Statement documents a set of
@@ -460,8 +464,10 @@ class CapabilityStatementImplementation
       _$CapabilityStatementImplementationFromJson(json);
 }
 
+/// [CapabilityStatementRest] A Capability Statement documents a set of
 @freezed
 class CapabilityStatementRest with _$CapabilityStatementRest {
+  /// [CapabilityStatementRest] A Capability Statement documents a set of
   CapabilityStatementRest._();
 
   /// [CapabilityStatementRest] A Capability Statement documents a set of
@@ -570,8 +576,10 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   }
 }
 
+/// [CapabilityStatementSecurity] A Capability Statement documents a set of
 @freezed
 class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
+  /// [CapabilityStatementSecurity] A Capability Statement documents a set of
   CapabilityStatementSecurity._();
 
   /// [CapabilityStatementSecurity] A Capability Statement documents a set of
@@ -656,8 +664,10 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   }
 }
 
+/// [CapabilityStatementResource] A Capability Statement documents a set of
 @freezed
 class CapabilityStatementResource with _$CapabilityStatementResource {
+  /// [CapabilityStatementResource] A Capability Statement documents a set of
   CapabilityStatementResource._();
 
   /// [CapabilityStatementResource] A Capability Statement documents a set of
@@ -844,8 +854,10 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   }
 }
 
+/// [CapabilityStatementInteraction] A Capability Statement documents a set
 @freezed
 class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
+  /// [CapabilityStatementInteraction] A Capability Statement documents a set
   CapabilityStatementInteraction._();
 
   /// [CapabilityStatementInteraction] A Capability Statement documents a set
@@ -930,8 +942,10 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   }
 }
 
+/// [CapabilityStatementSearchParam] A Capability Statement documents a set
 @freezed
 class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
+  /// [CapabilityStatementSearchParam] A Capability Statement documents a set
   CapabilityStatementSearchParam._();
 
   /// [CapabilityStatementSearchParam] A Capability Statement documents a set
@@ -1029,8 +1043,10 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   }
 }
 
+/// [CapabilityStatementOperation] A Capability Statement documents a set of
 @freezed
 class CapabilityStatementOperation with _$CapabilityStatementOperation {
+  /// [CapabilityStatementOperation] A Capability Statement documents a set of
   CapabilityStatementOperation._();
 
   /// [CapabilityStatementOperation] A Capability Statement documents a set of
@@ -1125,8 +1141,10 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   }
 }
 
+/// [CapabilityStatementInteraction1] A Capability Statement documents a set
 @freezed
 class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
+  /// [CapabilityStatementInteraction1] A Capability Statement documents a set
   CapabilityStatementInteraction1._();
 
   /// [CapabilityStatementInteraction1] A Capability Statement documents a set
@@ -1209,8 +1227,10 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   }
 }
 
+/// [CapabilityStatementMessaging] A Capability Statement documents a set of
 @freezed
 class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
+  /// [CapabilityStatementMessaging] A Capability Statement documents a set of
   CapabilityStatementMessaging._();
 
   /// [CapabilityStatementMessaging] A Capability Statement documents a set of
@@ -1303,8 +1323,10 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   }
 }
 
+/// [CapabilityStatementEndpoint] A Capability Statement documents a set of
 @freezed
 class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
+  /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
   CapabilityStatementEndpoint._();
 
   /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
@@ -1453,8 +1475,10 @@ class CapabilityStatementSupportedMessage
       _$CapabilityStatementSupportedMessageFromJson(json);
 }
 
+/// [CapabilityStatementDocument] A Capability Statement documents a set of
 @freezed
 class CapabilityStatementDocument with _$CapabilityStatementDocument {
+  /// [CapabilityStatementDocument] A Capability Statement documents a set of
   CapabilityStatementDocument._();
 
   /// [CapabilityStatementDocument] A Capability Statement documents a set of
@@ -1541,8 +1565,10 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   }
 }
 
+/// [CompartmentDefinition] A compartment definition that defines how
 @freezed
 class CompartmentDefinition with Resource, _$CompartmentDefinition {
+  /// [CompartmentDefinition] A compartment definition that defines how
   CompartmentDefinition._();
 
   /// [CompartmentDefinition] A compartment definition that defines how
@@ -1749,8 +1775,10 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   }
 }
 
+/// [CompartmentDefinitionResource] A compartment definition that defines
 @freezed
 class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
+  /// [CompartmentDefinitionResource] A compartment definition that defines
   CompartmentDefinitionResource._();
 
   /// [CompartmentDefinitionResource] A compartment definition that defines
@@ -1837,8 +1865,10 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   }
 }
 
+/// [ExampleScenario] Example of workflow instance.
 @freezed
 class ExampleScenario with Resource, _$ExampleScenario {
+  /// [ExampleScenario] Example of workflow instance.
   ExampleScenario._();
 
   /// [ExampleScenario] Example of workflow instance.
@@ -2052,8 +2082,10 @@ class ExampleScenario with Resource, _$ExampleScenario {
   }
 }
 
+/// [ExampleScenarioActor] Example of workflow instance.
 @freezed
 class ExampleScenarioActor with _$ExampleScenarioActor {
+  /// [ExampleScenarioActor] Example of workflow instance.
   ExampleScenarioActor._();
 
   /// [ExampleScenarioActor] Example of workflow instance.
@@ -2142,8 +2174,10 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
   }
 }
 
+/// [ExampleScenarioInstance] Example of workflow instance.
 @freezed
 class ExampleScenarioInstance with _$ExampleScenarioInstance {
+  /// [ExampleScenarioInstance] Example of workflow instance.
   ExampleScenarioInstance._();
 
   /// [ExampleScenarioInstance] Example of workflow instance.
@@ -2239,8 +2273,10 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
   }
 }
 
+/// [ExampleScenarioVersion] Example of workflow instance.
 @freezed
 class ExampleScenarioVersion with _$ExampleScenarioVersion {
+  /// [ExampleScenarioVersion] Example of workflow instance.
   ExampleScenarioVersion._();
 
   /// [ExampleScenarioVersion] Example of workflow instance.
@@ -2317,8 +2353,10 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
   }
 }
 
+/// [ExampleScenarioContainedInstance] Example of workflow instance.
 @freezed
 class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
+  /// [ExampleScenarioContainedInstance] Example of workflow instance.
   ExampleScenarioContainedInstance._();
 
   /// [ExampleScenarioContainedInstance] Example of workflow instance.
@@ -2384,8 +2422,10 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
       _$ExampleScenarioContainedInstanceFromJson(json);
 }
 
+/// [ExampleScenarioProcess] Example of workflow instance.
 @freezed
 class ExampleScenarioProcess with _$ExampleScenarioProcess {
+  /// [ExampleScenarioProcess] Example of workflow instance.
   ExampleScenarioProcess._();
 
   /// [ExampleScenarioProcess] Example of workflow instance.
@@ -2477,8 +2517,10 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
   }
 }
 
+/// [ExampleScenarioStep] Example of workflow instance.
 @freezed
 class ExampleScenarioStep with _$ExampleScenarioStep {
+  /// [ExampleScenarioStep] Example of workflow instance.
   ExampleScenarioStep._();
 
   /// [ExampleScenarioStep] Example of workflow instance.
@@ -2559,8 +2601,10 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
   }
 }
 
+/// [ExampleScenarioOperation] Example of workflow instance.
 @freezed
 class ExampleScenarioOperation with _$ExampleScenarioOperation {
+  /// [ExampleScenarioOperation] Example of workflow instance.
   ExampleScenarioOperation._();
 
   /// [ExampleScenarioOperation] Example of workflow instance.
@@ -2681,8 +2725,10 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
   }
 }
 
+/// [ExampleScenarioAlternative] Example of workflow instance.
 @freezed
 class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
+  /// [ExampleScenarioAlternative] Example of workflow instance.
   ExampleScenarioAlternative._();
 
   /// [ExampleScenarioAlternative] Example of workflow instance.
@@ -2764,8 +2810,10 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   }
 }
 
+/// [GraphDefinition] A formal computable definition of a graph of resources
 @freezed
 class GraphDefinition with Resource, _$GraphDefinition {
+  /// [GraphDefinition] A formal computable definition of a graph of resources
   GraphDefinition._();
 
   /// [GraphDefinition] A formal computable definition of a graph of resources
@@ -2973,8 +3021,10 @@ class GraphDefinition with Resource, _$GraphDefinition {
   }
 }
 
+/// [GraphDefinitionLink] A formal computable definition of a graph of
 @freezed
 class GraphDefinitionLink with _$GraphDefinitionLink {
+  /// [GraphDefinitionLink] A formal computable definition of a graph of
   GraphDefinitionLink._();
 
   /// [GraphDefinitionLink] A formal computable definition of a graph of
@@ -3077,8 +3127,10 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   }
 }
 
+/// [GraphDefinitionTarget] A formal computable definition of a graph of
 @freezed
 class GraphDefinitionTarget with _$GraphDefinitionTarget {
+  /// [GraphDefinitionTarget] A formal computable definition of a graph of
   GraphDefinitionTarget._();
 
   /// [GraphDefinitionTarget] A formal computable definition of a graph of
@@ -3167,8 +3219,10 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
   }
 }
 
+/// [GraphDefinitionCompartment] A formal computable definition of a graph
 @freezed
 class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
+  /// [GraphDefinitionCompartment] A formal computable definition of a graph
   GraphDefinitionCompartment._();
 
   /// [GraphDefinitionCompartment] A formal computable definition of a graph
@@ -3268,8 +3322,10 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   }
 }
 
+/// [ImplementationGuide] A set of rules of how a particular interoperability
 @freezed
 class ImplementationGuide with Resource, _$ImplementationGuide {
+  /// [ImplementationGuide] A set of rules of how a particular interoperability
   ImplementationGuide._();
 
   /// [ImplementationGuide] A set of rules of how a particular interoperability
@@ -3517,8 +3573,10 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   }
 }
 
+/// [ImplementationGuideDependsOn] A set of rules of how a particular
 @freezed
 class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
+  /// [ImplementationGuideDependsOn] A set of rules of how a particular
   ImplementationGuideDependsOn._();
 
   /// [ImplementationGuideDependsOn] A set of rules of how a particular
@@ -3605,8 +3663,10 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   }
 }
 
+/// [ImplementationGuideGlobal] A set of rules of how a particular
 @freezed
 class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
+  /// [ImplementationGuideGlobal] A set of rules of how a particular
   ImplementationGuideGlobal._();
 
   /// [ImplementationGuideGlobal] A set of rules of how a particular
@@ -3684,8 +3744,10 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   }
 }
 
+/// [ImplementationGuideDefinition] A set of rules of how a particular
 @freezed
 class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
+  /// [ImplementationGuideDefinition] A set of rules of how a particular
   ImplementationGuideDefinition._();
 
   /// [ImplementationGuideDefinition] A set of rules of how a particular
@@ -3774,8 +3836,10 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   }
 }
 
+/// [ImplementationGuideGrouping] A set of rules of how a particular
 @freezed
 class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
+  /// [ImplementationGuideGrouping] A set of rules of how a particular
   ImplementationGuideGrouping._();
 
   /// [ImplementationGuideGrouping] A set of rules of how a particular
@@ -3857,8 +3921,10 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   }
 }
 
+/// [ImplementationGuideResource] A set of rules of how a particular
 @freezed
 class ImplementationGuideResource with _$ImplementationGuideResource {
+  /// [ImplementationGuideResource] A set of rules of how a particular
   ImplementationGuideResource._();
 
   /// [ImplementationGuideResource] A set of rules of how a particular
@@ -3976,8 +4042,10 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   }
 }
 
+/// [ImplementationGuidePage] A set of rules of how a particular
 @freezed
 class ImplementationGuidePage with _$ImplementationGuidePage {
+  /// [ImplementationGuidePage] A set of rules of how a particular
   ImplementationGuidePage._();
 
   /// [ImplementationGuidePage] A set of rules of how a particular
@@ -4071,8 +4139,10 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   }
 }
 
+/// [ImplementationGuideParameter] A set of rules of how a particular
 @freezed
 class ImplementationGuideParameter with _$ImplementationGuideParameter {
+  /// [ImplementationGuideParameter] A set of rules of how a particular
   ImplementationGuideParameter._();
 
   /// [ImplementationGuideParameter] A set of rules of how a particular
@@ -4155,8 +4225,10 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   }
 }
 
+/// [ImplementationGuideTemplate] A set of rules of how a particular
 @freezed
 class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
+  /// [ImplementationGuideTemplate] A set of rules of how a particular
   ImplementationGuideTemplate._();
 
   /// [ImplementationGuideTemplate] A set of rules of how a particular
@@ -4243,8 +4315,10 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   }
 }
 
+/// [ImplementationGuideManifest] A set of rules of how a particular
 @freezed
 class ImplementationGuideManifest with _$ImplementationGuideManifest {
+  /// [ImplementationGuideManifest] A set of rules of how a particular
   ImplementationGuideManifest._();
 
   /// [ImplementationGuideManifest] A set of rules of how a particular
@@ -4343,8 +4417,10 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   }
 }
 
+/// [ImplementationGuideResource1] A set of rules of how a particular
 @freezed
 class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
+  /// [ImplementationGuideResource1] A set of rules of how a particular
   ImplementationGuideResource1._();
 
   /// [ImplementationGuideResource1] A set of rules of how a particular
@@ -4439,8 +4515,10 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   }
 }
 
+/// [ImplementationGuidePage1] A set of rules of how a particular
 @freezed
 class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
+  /// [ImplementationGuidePage1] A set of rules of how a particular
   ImplementationGuidePage1._();
 
   /// [ImplementationGuidePage1] A set of rules of how a particular
@@ -4527,8 +4605,10 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   }
 }
 
+/// [MessageDefinition] Defines the characteristics of a message that can be
 @freezed
 class MessageDefinition with Resource, _$MessageDefinition {
+  /// [MessageDefinition] Defines the characteristics of a message that can be
   MessageDefinition._();
 
   /// [MessageDefinition] Defines the characteristics of a message that can be
@@ -4789,8 +4869,10 @@ class MessageDefinition with Resource, _$MessageDefinition {
   }
 }
 
+/// [MessageDefinitionFocus] Defines the characteristics of a message that
 @freezed
 class MessageDefinitionFocus with _$MessageDefinitionFocus {
+  /// [MessageDefinitionFocus] Defines the characteristics of a message that
   MessageDefinitionFocus._();
 
   /// [MessageDefinitionFocus] Defines the characteristics of a message that
@@ -4884,8 +4966,10 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   }
 }
 
+/// [MessageDefinitionAllowedResponse] Defines the characteristics of a
 @freezed
 class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
+  /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
   MessageDefinitionAllowedResponse._();
 
   /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
@@ -4953,8 +5037,10 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
       _$MessageDefinitionAllowedResponseFromJson(json);
 }
 
+/// [OperationDefinition] A formal computable definition of an operation (on
 @freezed
 class OperationDefinition with Resource, _$OperationDefinition {
+  /// [OperationDefinition] A formal computable definition of an operation (on
   OperationDefinition._();
 
   /// [OperationDefinition] A formal computable definition of an operation (on
@@ -5232,8 +5318,10 @@ class OperationDefinition with Resource, _$OperationDefinition {
   }
 }
 
+/// [OperationDefinitionParameter] A formal computable definition of an
 @freezed
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
+  /// [OperationDefinitionParameter] A formal computable definition of an
   OperationDefinitionParameter._();
 
   /// [OperationDefinitionParameter] A formal computable definition of an
@@ -5367,8 +5455,10 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   }
 }
 
+/// [OperationDefinitionBinding] A formal computable definition of an
 @freezed
 class OperationDefinitionBinding with _$OperationDefinitionBinding {
+  /// [OperationDefinitionBinding] A formal computable definition of an
   OperationDefinitionBinding._();
 
   /// [OperationDefinitionBinding] A formal computable definition of an
@@ -5520,8 +5610,10 @@ class OperationDefinitionReferencedFrom
       _$OperationDefinitionReferencedFromFromJson(json);
 }
 
+/// [OperationDefinitionOverload] A formal computable definition of an
 @freezed
 class OperationDefinitionOverload with _$OperationDefinitionOverload {
+  /// [OperationDefinitionOverload] A formal computable definition of an
   OperationDefinitionOverload._();
 
   /// [OperationDefinitionOverload] A formal computable definition of an
@@ -5600,8 +5692,10 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   }
 }
 
+/// [SearchParameter] A search parameter that defines a named search item
 @freezed
 class SearchParameter with Resource, _$SearchParameter {
+  /// [SearchParameter] A search parameter that defines a named search item
   SearchParameter._();
 
   /// [SearchParameter] A search parameter that defines a named search item
@@ -5891,8 +5985,10 @@ class SearchParameter with Resource, _$SearchParameter {
   }
 }
 
+/// [SearchParameterComponent] A search parameter that defines a named
 @freezed
 class SearchParameterComponent with _$SearchParameterComponent {
+  /// [SearchParameterComponent] A search parameter that defines a named
   SearchParameterComponent._();
 
   /// [SearchParameterComponent] A search parameter that defines a named
@@ -5969,8 +6065,10 @@ class SearchParameterComponent with _$SearchParameterComponent {
   }
 }
 
+/// [StructureDefinition] A definition of a FHIR structure. This resource is
 @freezed
 class StructureDefinition with Resource, _$StructureDefinition {
+  /// [StructureDefinition] A definition of a FHIR structure. This resource is
   StructureDefinition._();
 
   /// [StructureDefinition] A definition of a FHIR structure. This resource is
@@ -6264,8 +6362,10 @@ class StructureDefinition with Resource, _$StructureDefinition {
   }
 }
 
+/// [StructureDefinitionMapping] A definition of a FHIR structure. This
 @freezed
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
+  /// [StructureDefinitionMapping] A definition of a FHIR structure. This
   StructureDefinitionMapping._();
 
   /// [StructureDefinitionMapping] A definition of a FHIR structure. This
@@ -6360,8 +6460,10 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   }
 }
 
+/// [StructureDefinitionContext] A definition of a FHIR structure. This
 @freezed
 class StructureDefinitionContext with _$StructureDefinitionContext {
+  /// [StructureDefinitionContext] A definition of a FHIR structure. This
   StructureDefinitionContext._();
 
   /// [StructureDefinitionContext] A definition of a FHIR structure. This
@@ -6443,8 +6545,10 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   }
 }
 
+/// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
 @freezed
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
+  /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
   StructureDefinitionSnapshot._();
 
   /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
@@ -6515,8 +6619,10 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   }
 }
 
+/// [StructureDefinitionDifferential] A definition of a FHIR structure. This
 @freezed
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
+  /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
   StructureDefinitionDifferential._();
 
   /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
@@ -6588,8 +6694,10 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   }
 }
 
+/// [StructureMap] A Map of relationships between 2 structures that can be
 @freezed
 class StructureMap with Resource, _$StructureMap {
+  /// [StructureMap] A Map of relationships between 2 structures that can be
   StructureMap._();
 
   /// [StructureMap] A Map of relationships between 2 structures that can be
@@ -6814,8 +6922,10 @@ class StructureMap with Resource, _$StructureMap {
   }
 }
 
+/// [StructureMapStructure] A Map of relationships between 2 structures that
 @freezed
 class StructureMapStructure with _$StructureMapStructure {
+  /// [StructureMapStructure] A Map of relationships between 2 structures that
   StructureMapStructure._();
 
   /// [StructureMapStructure] A Map of relationships between 2 structures that
@@ -6903,8 +7013,10 @@ class StructureMapStructure with _$StructureMapStructure {
   }
 }
 
+/// [StructureMapGroup] A Map of relationships between 2 structures that can
 @freezed
 class StructureMapGroup with _$StructureMapGroup {
+  /// [StructureMapGroup] A Map of relationships between 2 structures that can
   StructureMapGroup._();
 
   /// [StructureMapGroup] A Map of relationships between 2 structures that can
@@ -7003,8 +7115,10 @@ class StructureMapGroup with _$StructureMapGroup {
   }
 }
 
+/// [StructureMapInput] A Map of relationships between 2 structures that can
 @freezed
 class StructureMapInput with _$StructureMapInput {
+  /// [StructureMapInput] A Map of relationships between 2 structures that can
   StructureMapInput._();
 
   /// [StructureMapInput] A Map of relationships between 2 structures that can
@@ -7094,8 +7208,10 @@ class StructureMapInput with _$StructureMapInput {
   }
 }
 
+/// [StructureMapRule] A Map of relationships between 2 structures that can
 @freezed
 class StructureMapRule with _$StructureMapRule {
+  /// [StructureMapRule] A Map of relationships between 2 structures that can
   StructureMapRule._();
 
   /// [StructureMapRule] A Map of relationships between 2 structures that can
@@ -7185,8 +7301,10 @@ class StructureMapRule with _$StructureMapRule {
   }
 }
 
+/// [StructureMapSource] A Map of relationships between 2 structures that
 @freezed
 class StructureMapSource with _$StructureMapSource {
+  /// [StructureMapSource] A Map of relationships between 2 structures that
   StructureMapSource._();
 
   /// [StructureMapSource] A Map of relationships between 2 structures that
@@ -7582,8 +7700,10 @@ class StructureMapSource with _$StructureMapSource {
   }
 }
 
+/// [StructureMapTarget] A Map of relationships between 2 structures that
 @freezed
 class StructureMapTarget with _$StructureMapTarget {
+  /// [StructureMapTarget] A Map of relationships between 2 structures that
   StructureMapTarget._();
 
   /// [StructureMapTarget] A Map of relationships between 2 structures that
@@ -7694,8 +7814,10 @@ class StructureMapTarget with _$StructureMapTarget {
   }
 }
 
+/// [StructureMapParameter] A Map of relationships between 2 structures that
 @freezed
 class StructureMapParameter with _$StructureMapParameter {
+  /// [StructureMapParameter] A Map of relationships between 2 structures that
   StructureMapParameter._();
 
   /// [StructureMapParameter] A Map of relationships between 2 structures that
@@ -7791,8 +7913,10 @@ class StructureMapParameter with _$StructureMapParameter {
   }
 }
 
+/// [StructureMapDependent] A Map of relationships between 2 structures that
 @freezed
 class StructureMapDependent with _$StructureMapDependent {
+  /// [StructureMapDependent] A Map of relationships between 2 structures that
   StructureMapDependent._();
 
   /// [StructureMapDependent] A Map of relationships between 2 structures that

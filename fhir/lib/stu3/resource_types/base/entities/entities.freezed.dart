@@ -1132,7 +1132,9 @@ class _$_Device extends _Device {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceToJson(this);
+    return _$$_DeviceToJson(
+      this,
+    );
   }
 }
 
@@ -1754,7 +1756,9 @@ class _$_DeviceUdi extends _DeviceUdi {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceUdiToJson(this);
+    return _$$_DeviceUdiToJson(
+      this,
+    );
   }
 }
 
@@ -2598,7 +2602,9 @@ class _$_DeviceComponent extends _DeviceComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceComponentToJson(this);
+    return _$$_DeviceComponentToJson(
+      this,
+    );
   }
 }
 
@@ -2931,7 +2937,9 @@ class _$_DeviceComponentProductionSpecification
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceComponentProductionSpecificationToJson(this);
+    return _$$_DeviceComponentProductionSpecificationToJson(
+      this,
+    );
   }
 }
 
@@ -3758,7 +3766,9 @@ class _$_DeviceMetric extends _DeviceMetric {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceMetricToJson(this);
+    return _$$_DeviceMetricToJson(
+      this,
+    );
   }
 }
 
@@ -4127,7 +4137,9 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceMetricCalibrationToJson(this);
+    return _$$_DeviceMetricCalibrationToJson(
+      this,
+    );
   }
 }
 
@@ -5029,7 +5041,9 @@ class _$_Endpoint extends _Endpoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EndpointToJson(this);
+    return _$$_EndpointToJson(
+      this,
+    );
   }
 }
 
@@ -6467,7 +6481,9 @@ class _$_HealthcareService extends _HealthcareService {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceToJson(this);
+    return _$$_HealthcareServiceToJson(
+      this,
+    );
   }
 }
 
@@ -6966,7 +6982,9 @@ class _$_HealthcareServiceAvailableTime
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceAvailableTimeToJson(this);
+    return _$$_HealthcareServiceAvailableTimeToJson(
+      this,
+    );
   }
 }
 
@@ -7213,7 +7231,9 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceNotAvailableToJson(this);
+    return _$$_HealthcareServiceNotAvailableToJson(
+      this,
+    );
   }
 }
 
@@ -8235,7 +8255,9 @@ class _$_Location extends _Location {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationToJson(this);
+    return _$$_LocationToJson(
+      this,
+    );
   }
 }
 
@@ -8624,7 +8646,9 @@ class _$_LocationPosition extends _LocationPosition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationPositionToJson(this);
+    return _$$_LocationPositionToJson(
+      this,
+    );
   }
 }
 
@@ -9430,7 +9454,9 @@ class _$_Organization extends _Organization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrganizationToJson(this);
+    return _$$_OrganizationToJson(
+      this,
+    );
   }
 }
 
@@ -9759,7 +9785,9 @@ class _$_OrganizationContact extends _OrganizationContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrganizationContactToJson(this);
+    return _$$_OrganizationContactToJson(
+      this,
+    );
   }
 }
 
@@ -10441,7 +10469,9 @@ class _$_Substance extends _Substance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceToJson(this);
+    return _$$_SubstanceToJson(
+      this,
+    );
   }
 }
 
@@ -10752,7 +10782,9 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceInstanceToJson(this);
+    return _$$_SubstanceInstanceToJson(
+      this,
+    );
   }
 }
 
@@ -10984,7 +11016,9 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceIngredientToJson(this);
+    return _$$_SubstanceIngredientToJson(
+      this,
+    );
   }
 }
 

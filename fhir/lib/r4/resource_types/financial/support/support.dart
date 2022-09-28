@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'support.freezed.dart';
 part 'support.g.dart';
 
+/// [Coverage] Financial instrument which may be used to reimburse or pay for
 @freezed
 class Coverage with Resource, _$Coverage {
+  /// [Coverage] Financial instrument which may be used to reimburse or pay for
   Coverage._();
 
   /// [Coverage] Financial instrument which may be used to reimburse or pay for
@@ -204,8 +206,10 @@ class Coverage with Resource, _$Coverage {
   }
 }
 
+/// [CoverageClass] Financial instrument which may be used to reimburse or
 @freezed
 class CoverageClass with _$CoverageClass {
+  /// [CoverageClass] Financial instrument which may be used to reimburse or
   CoverageClass._();
 
   /// [CoverageClass] Financial instrument which may be used to reimburse or
@@ -290,8 +294,10 @@ class CoverageClass with _$CoverageClass {
   }
 }
 
+/// [CoverageCostToBeneficiary] Financial instrument which may be used to
 @freezed
 class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
+  /// [CoverageCostToBeneficiary] Financial instrument which may be used to
   CoverageCostToBeneficiary._();
 
   /// [CoverageCostToBeneficiary] Financial instrument which may be used to
@@ -371,8 +377,10 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   }
 }
 
+/// [CoverageException] Financial instrument which may be used to reimburse
 @freezed
 class CoverageException with _$CoverageException {
+  /// [CoverageException] Financial instrument which may be used to reimburse
   CoverageException._();
 
   /// [CoverageException] Financial instrument which may be used to reimburse
@@ -445,8 +453,10 @@ class CoverageException with _$CoverageException {
   }
 }
 
+/// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
 @freezed
 class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
+  /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
   CoverageEligibilityRequest._();
 
   /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
@@ -782,8 +792,10 @@ class CoverageEligibilityRequestInsurance
       _$CoverageEligibilityRequestInsuranceFromJson(json);
 }
 
+/// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
 @freezed
 class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
+  /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
   CoverageEligibilityRequestItem._();
 
   /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
@@ -962,8 +974,10 @@ class CoverageEligibilityRequestDiagnosis
       _$CoverageEligibilityRequestDiagnosisFromJson(json);
 }
 
+/// [CoverageEligibilityResponse] This resource provides eligibility and plan
 @freezed
 class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
+  /// [CoverageEligibilityResponse] This resource provides eligibility and plan
   CoverageEligibilityResponse._();
 
   /// [CoverageEligibilityResponse] This resource provides eligibility and plan
@@ -1226,8 +1240,10 @@ class CoverageEligibilityResponseInsurance
       _$CoverageEligibilityResponseInsuranceFromJson(json);
 }
 
+/// [CoverageEligibilityResponseItem] This resource provides eligibility and
 @freezed
 class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
+  /// [CoverageEligibilityResponseItem] This resource provides eligibility and
   CoverageEligibilityResponseItem._();
 
   /// [CoverageEligibilityResponseItem] This resource provides eligibility and
@@ -1460,8 +1476,10 @@ class CoverageEligibilityResponseBenefit
       _$CoverageEligibilityResponseBenefitFromJson(json);
 }
 
+/// [CoverageEligibilityResponseError] This resource provides eligibility
 @freezed
 class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
+  /// [CoverageEligibilityResponseError] This resource provides eligibility
   CoverageEligibilityResponseError._();
 
   /// [CoverageEligibilityResponseError] This resource provides eligibility
@@ -1521,8 +1539,10 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
       _$CoverageEligibilityResponseErrorFromJson(json);
 }
 
+/// [EnrollmentRequest] This resource provides the insurance enrollment
 @freezed
 class EnrollmentRequest with Resource, _$EnrollmentRequest {
+  /// [EnrollmentRequest] This resource provides the insurance enrollment
   EnrollmentRequest._();
 
   /// [EnrollmentRequest] This resource provides the insurance enrollment
@@ -1653,8 +1673,10 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   }
 }
 
+/// [EnrollmentResponse] This resource provides enrollment and plan details
 @freezed
 class EnrollmentResponse with Resource, _$EnrollmentResponse {
+  /// [EnrollmentResponse] This resource provides enrollment and plan details
   EnrollmentResponse._();
 
   /// [EnrollmentResponse] This resource provides enrollment and plan details

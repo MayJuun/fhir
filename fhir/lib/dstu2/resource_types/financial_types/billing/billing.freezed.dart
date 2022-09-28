@@ -845,7 +845,9 @@ class _$_Account extends _Account {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AccountToJson(this);
+    return _$$_AccountToJson(
+      this,
+    );
   }
 }
 
@@ -2254,7 +2256,9 @@ class _$_Claim extends _Claim {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimToJson(this);
+    return _$$_ClaimToJson(
+      this,
+    );
   }
 }
 
@@ -2717,7 +2721,9 @@ class _$_ClaimPayee extends _ClaimPayee {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimPayeeToJson(this);
+    return _$$_ClaimPayeeToJson(
+      this,
+    );
   }
 }
 
@@ -3015,7 +3021,9 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimDiagnosisToJson(this);
+    return _$$_ClaimDiagnosisToJson(
+      this,
+    );
   }
 }
 
@@ -3435,7 +3443,9 @@ class _$_ClaimCoverage extends _ClaimCoverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimCoverageToJson(this);
+    return _$$_ClaimCoverageToJson(
+      this,
+    );
   }
 }
 
@@ -4225,7 +4235,9 @@ class _$_ClaimItem extends _ClaimItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimItemToJson(this);
+    return _$$_ClaimItemToJson(
+      this,
+    );
   }
 }
 
@@ -4828,7 +4840,9 @@ class _$_ClaimItemDetail extends _ClaimItemDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimItemDetailToJson(this);
+    return _$$_ClaimItemDetailToJson(
+      this,
+    );
   }
 }
 
@@ -5380,7 +5394,9 @@ class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimDetailSubDetailToJson(this);
+    return _$$_ClaimDetailSubDetailToJson(
+      this,
+    );
   }
 }
 
@@ -5690,7 +5706,9 @@ class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimItemProsthesisToJson(this);
+    return _$$_ClaimItemProsthesisToJson(
+      this,
+    );
   }
 }
 
@@ -5984,7 +6002,9 @@ class _$_ClaimMissingTeeth extends _ClaimMissingTeeth {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimMissingTeethToJson(this);
+    return _$$_ClaimMissingTeethToJson(
+      this,
+    );
   }
 }
 
@@ -7340,7 +7360,9 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseToJson(this);
+    return _$$_ClaimResponseToJson(
+      this,
+    );
   }
 }
 
@@ -7833,7 +7855,9 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseItemToJson(this);
+    return _$$_ClaimResponseItemToJson(
+      this,
+    );
   }
 }
 
@@ -8178,7 +8202,9 @@ class _$_ClaimResponseItemAdjudication extends _ClaimResponseItemAdjudication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseItemAdjudicationToJson(this);
+    return _$$_ClaimResponseItemAdjudicationToJson(
+      this,
+    );
   }
 }
 
@@ -8474,7 +8500,9 @@ class _$_ClaimResponseItemDetail extends _ClaimResponseItemDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseItemDetailToJson(this);
+    return _$$_ClaimResponseItemDetailToJson(
+      this,
+    );
   }
 }
 
@@ -8739,7 +8767,9 @@ class _$_ClaimResponseDetailSubDetail extends _ClaimResponseDetailSubDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseDetailSubDetailToJson(this);
+    return _$$_ClaimResponseDetailSubDetailToJson(
+      this,
+    );
   }
 }
 
@@ -9127,7 +9157,9 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseAddItemToJson(this);
+    return _$$_ClaimResponseAddItemToJson(
+      this,
+    );
   }
 }
 
@@ -9442,7 +9474,9 @@ class _$_ClaimResponseAddItemDetail extends _ClaimResponseAddItemDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseAddItemDetailToJson(this);
+    return _$$_ClaimResponseAddItemDetailToJson(
+      this,
+    );
   }
 }
 
@@ -9744,7 +9778,9 @@ class _$_ClaimResponseError extends _ClaimResponseError {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseErrorToJson(this);
+    return _$$_ClaimResponseErrorToJson(
+      this,
+    );
   }
 }
 
@@ -10135,7 +10171,9 @@ class _$_ClaimResponseNote extends _ClaimResponseNote {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseNoteToJson(this);
+    return _$$_ClaimResponseNoteToJson(
+      this,
+    );
   }
 }
 
@@ -10570,7 +10608,9 @@ class _$_ClaimResponseCoverage extends _ClaimResponseCoverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseCoverageToJson(this);
+    return _$$_ClaimResponseCoverageToJson(
+      this,
+    );
   }
 }
 

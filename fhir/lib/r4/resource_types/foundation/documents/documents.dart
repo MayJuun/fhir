@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'documents.freezed.dart';
 part 'documents.g.dart';
 
+/// [CatalogEntry] Catalog entries are wrappers that contextualize items
 @freezed
 class CatalogEntry with Resource, _$CatalogEntry {
+  /// [CatalogEntry] Catalog entries are wrappers that contextualize items
   CatalogEntry._();
 
   /// [CatalogEntry] Catalog entries are wrappers that contextualize items
@@ -174,8 +176,10 @@ class CatalogEntry with Resource, _$CatalogEntry {
   }
 }
 
+/// [CatalogEntryRelatedEntry] Catalog entries are wrappers that
 @freezed
 class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
+  /// [CatalogEntryRelatedEntry] Catalog entries are wrappers that
   CatalogEntryRelatedEntry._();
 
   /// [CatalogEntryRelatedEntry] Catalog entries are wrappers that
@@ -251,8 +255,10 @@ class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
   }
 }
 
+/// [Composition] A set of healthcare-related information that is assembled
 @freezed
 class Composition with Resource, _$Composition {
+  /// [Composition] A set of healthcare-related information that is assembled
   Composition._();
 
   /// [Composition] A set of healthcare-related information that is assembled
@@ -437,8 +443,10 @@ class Composition with Resource, _$Composition {
   }
 }
 
+/// [CompositionAttester] A set of healthcare-related information that is
 @freezed
 class CompositionAttester with _$CompositionAttester {
+  /// [CompositionAttester] A set of healthcare-related information that is
   CompositionAttester._();
 
   /// [CompositionAttester] A set of healthcare-related information that is
@@ -527,8 +535,10 @@ class CompositionAttester with _$CompositionAttester {
   }
 }
 
+/// [CompositionRelatesTo] A set of healthcare-related information that is
 @freezed
 class CompositionRelatesTo with _$CompositionRelatesTo {
+  /// [CompositionRelatesTo] A set of healthcare-related information that is
   CompositionRelatesTo._();
 
   /// [CompositionRelatesTo] A set of healthcare-related information that is
@@ -615,8 +625,10 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
   }
 }
 
+/// [CompositionEvent] A set of healthcare-related information that is
 @freezed
 class CompositionEvent with _$CompositionEvent {
+  /// [CompositionEvent] A set of healthcare-related information that is
   CompositionEvent._();
 
   /// [CompositionEvent] A set of healthcare-related information that is
@@ -707,8 +719,10 @@ class CompositionEvent with _$CompositionEvent {
   }
 }
 
+/// [CompositionSection] A set of healthcare-related information that is
 @freezed
 class CompositionSection with _$CompositionSection {
+  /// [CompositionSection] A set of healthcare-related information that is
   CompositionSection._();
 
   /// [CompositionSection] A set of healthcare-related information that is
@@ -840,8 +854,10 @@ class CompositionSection with _$CompositionSection {
   }
 }
 
+/// [DocumentManifest] A collection of documents compiled for a purpose
 @freezed
 class DocumentManifest with Resource, _$DocumentManifest {
+  /// [DocumentManifest] A collection of documents compiled for a purpose
   DocumentManifest._();
 
   /// [DocumentManifest] A collection of documents compiled for a purpose
@@ -1007,8 +1023,10 @@ class DocumentManifest with Resource, _$DocumentManifest {
   }
 }
 
+/// [DocumentManifestRelated] A collection of documents compiled for a
 @freezed
 class DocumentManifestRelated with _$DocumentManifestRelated {
+  /// [DocumentManifestRelated] A collection of documents compiled for a
   DocumentManifestRelated._();
 
   /// [DocumentManifestRelated] A collection of documents compiled for a
@@ -1082,8 +1100,10 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
   }
 }
 
+/// [DocumentReference] A reference to a document of any kind for any
 @freezed
 class DocumentReference with Resource, _$DocumentReference {
+  /// [DocumentReference] A reference to a document of any kind for any
   DocumentReference._();
 
   /// [DocumentReference] A reference to a document of any kind for any
@@ -1270,8 +1290,10 @@ class DocumentReference with Resource, _$DocumentReference {
   }
 }
 
+/// [DocumentReferenceRelatesTo] A reference to a document of any kind for
 @freezed
 class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
+  /// [DocumentReferenceRelatesTo] A reference to a document of any kind for
   DocumentReferenceRelatesTo._();
 
   /// [DocumentReferenceRelatesTo] A reference to a document of any kind for
@@ -1351,8 +1373,10 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   }
 }
 
+/// [DocumentReferenceContent] A reference to a document of any kind for any
 @freezed
 class DocumentReferenceContent with _$DocumentReferenceContent {
+  /// [DocumentReferenceContent] A reference to a document of any kind for any
   DocumentReferenceContent._();
 
   /// [DocumentReferenceContent] A reference to a document of any kind for any
@@ -1431,8 +1455,10 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   }
 }
 
+/// [DocumentReferenceContext] A reference to a document of any kind for any
 @freezed
 class DocumentReferenceContext with _$DocumentReferenceContext {
+  /// [DocumentReferenceContext] A reference to a document of any kind for any
   DocumentReferenceContext._();
 
   /// [DocumentReferenceContext] A reference to a document of any kind for any

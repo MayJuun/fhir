@@ -1583,7 +1583,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementToJson(this);
+    return _$$_CapabilityStatementToJson(
+      this,
+    );
   }
 }
 
@@ -2139,7 +2141,9 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementSoftwareToJson(this);
+    return _$$_CapabilityStatementSoftwareToJson(
+      this,
+    );
   }
 }
 
@@ -2515,7 +2519,9 @@ class _$_CapabilityStatementImplementation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementImplementationToJson(this);
+    return _$$_CapabilityStatementImplementationToJson(
+      this,
+    );
   }
 }
 
@@ -3022,7 +3028,9 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementRestToJson(this);
+    return _$$_CapabilityStatementRestToJson(
+      this,
+    );
   }
 }
 
@@ -3398,7 +3406,9 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementSecurityToJson(this);
+    return _$$_CapabilityStatementSecurityToJson(
+      this,
+    );
   }
 }
 
@@ -4452,7 +4462,9 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementResourceToJson(this);
+    return _$$_CapabilityStatementResourceToJson(
+      this,
+    );
   }
 }
 
@@ -4886,7 +4898,9 @@ class _$_CapabilityStatementInteraction
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementInteractionToJson(this);
+    return _$$_CapabilityStatementInteractionToJson(
+      this,
+    );
   }
 }
 
@@ -5297,7 +5311,9 @@ class _$_CapabilityStatementSearchParam
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementSearchParamToJson(this);
+    return _$$_CapabilityStatementSearchParamToJson(
+      this,
+    );
   }
 }
 
@@ -5664,7 +5680,9 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementOperationToJson(this);
+    return _$$_CapabilityStatementOperationToJson(
+      this,
+    );
   }
 }
 
@@ -6007,7 +6025,9 @@ class _$_CapabilityStatementInteraction1
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementInteraction1ToJson(this);
+    return _$$_CapabilityStatementInteraction1ToJson(
+      this,
+    );
   }
 }
 
@@ -6400,7 +6420,9 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementMessagingToJson(this);
+    return _$$_CapabilityStatementMessagingToJson(
+      this,
+    );
   }
 }
 
@@ -6714,7 +6736,9 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementEndpointToJson(this);
+    return _$$_CapabilityStatementEndpointToJson(
+      this,
+    );
   }
 }
 
@@ -7014,7 +7038,9 @@ class _$_CapabilityStatementSupportedMessage
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementSupportedMessageToJson(this);
+    return _$$_CapabilityStatementSupportedMessageToJson(
+      this,
+    );
   }
 }
 
@@ -7364,7 +7390,9 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementDocumentToJson(this);
+    return _$$_CapabilityStatementDocumentToJson(
+      this,
+    );
   }
 }
 
@@ -8519,7 +8547,9 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompartmentDefinitionToJson(this);
+    return _$$_CompartmentDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -9022,7 +9052,9 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompartmentDefinitionResourceToJson(this);
+    return _$$_CompartmentDefinitionResourceToJson(
+      this,
+    );
   }
 }
 
@@ -10203,7 +10235,9 @@ class _$_ExampleScenario extends _ExampleScenario {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioToJson(this);
+    return _$$_ExampleScenarioToJson(
+      this,
+    );
   }
 }
 
@@ -10749,7 +10783,9 @@ class _$_ExampleScenarioActor extends _ExampleScenarioActor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioActorToJson(this);
+    return _$$_ExampleScenarioActorToJson(
+      this,
+    );
   }
 }
 
@@ -11256,7 +11292,9 @@ class _$_ExampleScenarioInstance extends _ExampleScenarioInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioInstanceToJson(this);
+    return _$$_ExampleScenarioInstanceToJson(
+      this,
+    );
   }
 }
 
@@ -11606,7 +11644,9 @@ class _$_ExampleScenarioVersion extends _ExampleScenarioVersion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioVersionToJson(this);
+    return _$$_ExampleScenarioVersionToJson(
+      this,
+    );
   }
 }
 
@@ -11942,7 +11982,9 @@ class _$_ExampleScenarioContainedInstance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioContainedInstanceToJson(this);
+    return _$$_ExampleScenarioContainedInstanceToJson(
+      this,
+    );
   }
 }
 
@@ -12407,7 +12449,9 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioProcessToJson(this);
+    return _$$_ExampleScenarioProcessToJson(
+      this,
+    );
   }
 }
 
@@ -12783,7 +12827,9 @@ class _$_ExampleScenarioStep extends _ExampleScenarioStep {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioStepToJson(this);
+    return _$$_ExampleScenarioStepToJson(
+      this,
+    );
   }
 }
 
@@ -13505,7 +13551,9 @@ class _$_ExampleScenarioOperation extends _ExampleScenarioOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioOperationToJson(this);
+    return _$$_ExampleScenarioOperationToJson(
+      this,
+    );
   }
 }
 
@@ -13910,7 +13958,9 @@ class _$_ExampleScenarioAlternative extends _ExampleScenarioAlternative {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExampleScenarioAlternativeToJson(this);
+    return _$$_ExampleScenarioAlternativeToJson(
+      this,
+    );
   }
 }
 
@@ -15049,7 +15099,9 @@ class _$_GraphDefinition extends _GraphDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GraphDefinitionToJson(this);
+    return _$$_GraphDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -15672,7 +15724,9 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GraphDefinitionLinkToJson(this);
+    return _$$_GraphDefinitionLinkToJson(
+      this,
+    );
   }
 }
 
@@ -16095,7 +16149,9 @@ class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GraphDefinitionTargetToJson(this);
+    return _$$_GraphDefinitionTargetToJson(
+      this,
+    );
   }
 }
 
@@ -16595,7 +16651,9 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GraphDefinitionCompartmentToJson(this);
+    return _$$_GraphDefinitionCompartmentToJson(
+      this,
+    );
   }
 }
 
@@ -18006,7 +18064,9 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideToJson(this);
+    return _$$_ImplementationGuideToJson(
+      this,
+    );
   }
 }
 
@@ -18497,7 +18557,9 @@ class _$_ImplementationGuideDependsOn extends _ImplementationGuideDependsOn {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideDependsOnToJson(this);
+    return _$$_ImplementationGuideDependsOnToJson(
+      this,
+    );
   }
 }
 
@@ -18797,7 +18859,9 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideGlobalToJson(this);
+    return _$$_ImplementationGuideGlobalToJson(
+      this,
+    );
   }
 }
 
@@ -19157,7 +19221,9 @@ class _$_ImplementationGuideDefinition extends _ImplementationGuideDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideDefinitionToJson(this);
+    return _$$_ImplementationGuideDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -19492,7 +19558,9 @@ class _$_ImplementationGuideGrouping extends _ImplementationGuideGrouping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideGroupingToJson(this);
+    return _$$_ImplementationGuideGroupingToJson(
+      this,
+    );
   }
 }
 
@@ -20072,7 +20140,9 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideResourceToJson(this);
+    return _$$_ImplementationGuideResourceToJson(
+      this,
+    );
   }
 }
 
@@ -20552,7 +20622,9 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuidePageToJson(this);
+    return _$$_ImplementationGuidePageToJson(
+      this,
+    );
   }
 }
 
@@ -20896,7 +20968,9 @@ class _$_ImplementationGuideParameter extends _ImplementationGuideParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideParameterToJson(this);
+    return _$$_ImplementationGuideParameterToJson(
+      this,
+    );
   }
 }
 
@@ -21282,7 +21356,9 @@ class _$_ImplementationGuideTemplate extends _ImplementationGuideTemplate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideTemplateToJson(this);
+    return _$$_ImplementationGuideTemplateToJson(
+      this,
+    );
   }
 }
 
@@ -21730,7 +21806,9 @@ class _$_ImplementationGuideManifest extends _ImplementationGuideManifest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideManifestToJson(this);
+    return _$$_ImplementationGuideManifestToJson(
+      this,
+    );
   }
 }
 
@@ -22160,7 +22238,9 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuideResource1ToJson(this);
+    return _$$_ImplementationGuideResource1ToJson(
+      this,
+    );
   }
 }
 
@@ -22559,7 +22639,9 @@ class _$_ImplementationGuidePage1 extends _ImplementationGuidePage1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImplementationGuidePage1ToJson(this);
+    return _$$_ImplementationGuidePage1ToJson(
+      this,
+    );
   }
 }
 
@@ -24095,7 +24177,9 @@ class _$_MessageDefinition extends _MessageDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageDefinitionToJson(this);
+    return _$$_MessageDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -24656,7 +24740,9 @@ class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageDefinitionFocusToJson(this);
+    return _$$_MessageDefinitionFocusToJson(
+      this,
+    );
   }
 }
 
@@ -24966,7 +25052,9 @@ class _$_MessageDefinitionAllowedResponse
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageDefinitionAllowedResponseToJson(this);
+    return _$$_MessageDefinitionAllowedResponseToJson(
+      this,
+    );
   }
 }
 
@@ -26620,7 +26708,9 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionToJson(this);
+    return _$$_OperationDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -27520,7 +27610,9 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionParameterToJson(this);
+    return _$$_OperationDefinitionParameterToJson(
+      this,
+    );
   }
 }
 
@@ -27874,7 +27966,9 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionBindingToJson(this);
+    return _$$_OperationDefinitionBindingToJson(
+      this,
+    );
   }
 }
 
@@ -28204,7 +28298,9 @@ class _$_OperationDefinitionReferencedFrom
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionReferencedFromToJson(this);
+    return _$$_OperationDefinitionReferencedFromToJson(
+      this,
+    );
   }
 }
 
@@ -28546,7 +28642,9 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionOverloadToJson(this);
+    return _$$_OperationDefinitionOverloadToJson(
+      this,
+    );
   }
 }
 
@@ -30320,7 +30418,9 @@ class _$_SearchParameter extends _SearchParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchParameterToJson(this);
+    return _$$_SearchParameterToJson(
+      this,
+    );
   }
 }
 
@@ -30816,7 +30916,9 @@ class _$_SearchParameterComponent extends _SearchParameterComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchParameterComponentToJson(this);
+    return _$$_SearchParameterComponentToJson(
+      this,
+    );
   }
 }
 
@@ -32543,7 +32645,9 @@ class _$_StructureDefinition extends _StructureDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionToJson(this);
+    return _$$_StructureDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -33170,7 +33274,9 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionMappingToJson(this);
+    return _$$_StructureDefinitionMappingToJson(
+      this,
+    );
   }
 }
 
@@ -33516,7 +33622,9 @@ class _$_StructureDefinitionContext extends _StructureDefinitionContext {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionContextToJson(this);
+    return _$$_StructureDefinitionContextToJson(
+      this,
+    );
   }
 }
 
@@ -33763,7 +33871,9 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionSnapshotToJson(this);
+    return _$$_StructureDefinitionSnapshotToJson(
+      this,
+    );
   }
 }
 
@@ -34003,7 +34113,9 @@ class _$_StructureDefinitionDifferential
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionDifferentialToJson(this);
+    return _$$_StructureDefinitionDifferentialToJson(
+      this,
+    );
   }
 }
 
@@ -35252,7 +35364,9 @@ class _$_StructureMap extends _StructureMap {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapToJson(this);
+    return _$$_StructureMapToJson(
+      this,
+    );
   }
 }
 
@@ -35780,7 +35894,9 @@ class _$_StructureMapStructure extends _StructureMapStructure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapStructureToJson(this);
+    return _$$_StructureMapStructureToJson(
+      this,
+    );
   }
 }
 
@@ -36276,7 +36392,9 @@ class _$_StructureMapGroup extends _StructureMapGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapGroupToJson(this);
+    return _$$_StructureMapGroupToJson(
+      this,
+    );
   }
 }
 
@@ -36730,7 +36848,9 @@ class _$_StructureMapInput extends _StructureMapInput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapInputToJson(this);
+    return _$$_StructureMapInputToJson(
+      this,
+    );
   }
 }
 
@@ -37179,7 +37299,9 @@ class _$_StructureMapRule extends _StructureMapRule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapRuleToJson(this);
+    return _$$_StructureMapRuleToJson(
+      this,
+    );
   }
 }
 
@@ -40080,7 +40202,9 @@ class _$_StructureMapSource extends _StructureMapSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapSourceToJson(this);
+    return _$$_StructureMapSourceToJson(
+      this,
+    );
   }
 }
 
@@ -41014,7 +41138,9 @@ class _$_StructureMapTarget extends _StructureMapTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapTargetToJson(this);
+    return _$$_StructureMapTargetToJson(
+      this,
+    );
   }
 }
 
@@ -41543,7 +41669,9 @@ class _$_StructureMapParameter extends _StructureMapParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapParameterToJson(this);
+    return _$$_StructureMapParameterToJson(
+      this,
+    );
   }
 }
 
@@ -41894,7 +42022,9 @@ class _$_StructureMapDependent extends _StructureMapDependent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureMapDependentToJson(this);
+    return _$$_StructureMapDependentToJson(
+      this,
+    );
   }
 }
 

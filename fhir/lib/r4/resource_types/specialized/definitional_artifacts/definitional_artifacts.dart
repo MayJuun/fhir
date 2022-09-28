@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
 
+/// [ActivityDefinition] This resource allows for the definition of some
 @freezed
 class ActivityDefinition with Resource, _$ActivityDefinition {
+  /// [ActivityDefinition] This resource allows for the definition of some
   ActivityDefinition._();
 
   /// [ActivityDefinition] This resource allows for the definition of some
@@ -425,8 +427,10 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   }
 }
 
+/// [ActivityDefinitionParticipant] This resource allows for the definition
 @freezed
 class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
+  /// [ActivityDefinitionParticipant] This resource allows for the definition
   ActivityDefinitionParticipant._();
 
   /// [ActivityDefinitionParticipant] This resource allows for the definition
@@ -503,8 +507,10 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   }
 }
 
+/// [ActivityDefinitionDynamicValue] This resource allows for the definition
 @freezed
 class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
+  /// [ActivityDefinitionDynamicValue] This resource allows for the definition
   ActivityDefinitionDynamicValue._();
 
   /// [ActivityDefinitionDynamicValue] This resource allows for the definition
@@ -589,8 +595,10 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   }
 }
 
+/// [DeviceDefinition] The characteristics, operational status and
 @freezed
 class DeviceDefinition with Resource, _$DeviceDefinition {
+  /// [DeviceDefinition] The characteristics, operational status and
   DeviceDefinition._();
 
   /// [DeviceDefinition] The characteristics, operational status and
@@ -869,8 +877,10 @@ class DeviceDefinitionUdiDeviceIdentifier
       _$DeviceDefinitionUdiDeviceIdentifierFromJson(json);
 }
 
+/// [DeviceDefinitionDeviceName] The characteristics, operational status and
 @freezed
 class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
+  /// [DeviceDefinitionDeviceName] The characteristics, operational status and
   DeviceDefinitionDeviceName._();
 
   /// [DeviceDefinitionDeviceName] The characteristics, operational status and
@@ -950,8 +960,10 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   }
 }
 
+/// [DeviceDefinitionSpecialization] The characteristics, operational status
 @freezed
 class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
+  /// [DeviceDefinitionSpecialization] The characteristics, operational status
   DeviceDefinitionSpecialization._();
 
   /// [DeviceDefinitionSpecialization] The characteristics, operational status
@@ -1031,8 +1043,10 @@ class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
   }
 }
 
+/// [DeviceDefinitionCapability] The characteristics, operational status and
 @freezed
 class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
+  /// [DeviceDefinitionCapability] The characteristics, operational status and
   DeviceDefinitionCapability._();
 
   /// [DeviceDefinitionCapability] The characteristics, operational status and
@@ -1104,8 +1118,10 @@ class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
   }
 }
 
+/// [DeviceDefinitionProperty] The characteristics, operational status and
 @freezed
 class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
+  /// [DeviceDefinitionProperty] The characteristics, operational status and
   DeviceDefinitionProperty._();
 
   /// [DeviceDefinitionProperty] The characteristics, operational status and
@@ -1181,8 +1197,10 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   }
 }
 
+/// [DeviceDefinitionMaterial] The characteristics, operational status and
 @freezed
 class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
+  /// [DeviceDefinitionMaterial] The characteristics, operational status and
   DeviceDefinitionMaterial._();
 
   /// [DeviceDefinitionMaterial] The characteristics, operational status and
@@ -1264,8 +1282,10 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   }
 }
 
+/// [EventDefinition] The EventDefinition resource provides a reusable
 @freezed
 class EventDefinition with Resource, _$EventDefinition {
+  /// [EventDefinition] The EventDefinition resource provides a reusable
   EventDefinition._();
 
   /// [EventDefinition] The EventDefinition resource provides a reusable
@@ -1551,8 +1571,10 @@ class EventDefinition with Resource, _$EventDefinition {
   }
 }
 
+/// [ObservationDefinition] Set of definitional characteristics for a kind of
 @freezed
 class ObservationDefinition with Resource, _$ObservationDefinition {
+  /// [ObservationDefinition] Set of definitional characteristics for a kind of
   ObservationDefinition._();
 
   /// [ObservationDefinition] Set of definitional characteristics for a kind of
@@ -1894,8 +1916,10 @@ class ObservationDefinitionQualifiedInterval
       _$ObservationDefinitionQualifiedIntervalFromJson(json);
 }
 
+/// [PlanDefinition] This resource allows for the definition of various types
 @freezed
 class PlanDefinition with Resource, _$PlanDefinition {
+  /// [PlanDefinition] This resource allows for the definition of various types
   PlanDefinition._();
 
   /// [PlanDefinition] This resource allows for the definition of various types
@@ -2202,8 +2226,10 @@ class PlanDefinition with Resource, _$PlanDefinition {
   }
 }
 
+/// [PlanDefinitionGoal] This resource allows for the definition of various
 @freezed
 class PlanDefinitionGoal with _$PlanDefinitionGoal {
+  /// [PlanDefinitionGoal] This resource allows for the definition of various
   PlanDefinitionGoal._();
 
   /// [PlanDefinitionGoal] This resource allows for the definition of various
@@ -2300,8 +2326,10 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   }
 }
 
+/// [PlanDefinitionTarget] This resource allows for the definition of
 @freezed
 class PlanDefinitionTarget with _$PlanDefinitionTarget {
+  /// [PlanDefinitionTarget] This resource allows for the definition of
   PlanDefinitionTarget._();
 
   /// [PlanDefinitionTarget] This resource allows for the definition of
@@ -2402,8 +2430,10 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
   }
 }
 
+/// [PlanDefinitionAction] This resource allows for the definition of
 @freezed
 class PlanDefinitionAction with _$PlanDefinitionAction {
+  /// [PlanDefinitionAction] This resource allows for the definition of
   PlanDefinitionAction._();
 
   /// [PlanDefinitionAction] This resource allows for the definition of
@@ -2657,8 +2687,10 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   }
 }
 
+/// [PlanDefinitionCondition] This resource allows for the definition of
 @freezed
 class PlanDefinitionCondition with _$PlanDefinitionCondition {
+  /// [PlanDefinitionCondition] This resource allows for the definition of
   PlanDefinitionCondition._();
 
   /// [PlanDefinitionCondition] This resource allows for the definition of
@@ -2737,8 +2769,10 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   }
 }
 
+/// [PlanDefinitionRelatedAction] This resource allows for the definition of
 @freezed
 class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
+  /// [PlanDefinitionRelatedAction] This resource allows for the definition of
   PlanDefinitionRelatedAction._();
 
   /// [PlanDefinitionRelatedAction] This resource allows for the definition of
@@ -2827,8 +2861,10 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   }
 }
 
+/// [PlanDefinitionParticipant] This resource allows for the definition of
 @freezed
 class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
+  /// [PlanDefinitionParticipant] This resource allows for the definition of
   PlanDefinitionParticipant._();
 
   /// [PlanDefinitionParticipant] This resource allows for the definition of
@@ -2907,8 +2943,10 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   }
 }
 
+/// [PlanDefinitionDynamicValue] This resource allows for the definition of
 @freezed
 class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
+  /// [PlanDefinitionDynamicValue] This resource allows for the definition of
   PlanDefinitionDynamicValue._();
 
   /// [PlanDefinitionDynamicValue] This resource allows for the definition of
@@ -2994,8 +3032,10 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   }
 }
 
+/// [Questionnaire] A structured set of questions intended to guide the
 @freezed
 class Questionnaire with Resource, _$Questionnaire {
+  /// [Questionnaire] A structured set of questions intended to guide the
   Questionnaire._();
 
   /// [Questionnaire] A structured set of questions intended to guide the
@@ -3249,8 +3289,10 @@ class Questionnaire with Resource, _$Questionnaire {
   }
 }
 
+/// [QuestionnaireItem] A structured set of questions intended to guide the
 @freezed
 class QuestionnaireItem with _$QuestionnaireItem {
+  /// [QuestionnaireItem] A structured set of questions intended to guide the
   QuestionnaireItem._();
 
   /// [QuestionnaireItem] A structured set of questions intended to guide the
@@ -3431,8 +3473,10 @@ class QuestionnaireItem with _$QuestionnaireItem {
   }
 }
 
+/// [QuestionnaireEnableWhen] A structured set of questions intended to
 @freezed
 class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
+  /// [QuestionnaireEnableWhen] A structured set of questions intended to
   QuestionnaireEnableWhen._();
 
   /// [QuestionnaireEnableWhen] A structured set of questions intended to
@@ -3574,8 +3618,10 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   }
 }
 
+/// [QuestionnaireAnswerOption] A structured set of questions intended to
 @freezed
 class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
+  /// [QuestionnaireAnswerOption] A structured set of questions intended to
   QuestionnaireAnswerOption._();
 
   /// [QuestionnaireAnswerOption] A structured set of questions intended to
@@ -3686,8 +3732,10 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   }
 }
 
+/// [QuestionnaireInitial] A structured set of questions intended to guide
 @freezed
 class QuestionnaireInitial with _$QuestionnaireInitial {
+  /// [QuestionnaireInitial] A structured set of questions intended to guide
   QuestionnaireInitial._();
 
   /// [QuestionnaireInitial] A structured set of questions intended to guide
@@ -3815,8 +3863,10 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   }
 }
 
+/// [SpecimenDefinition] A kind of specimen with associated set of
 @freezed
 class SpecimenDefinition with Resource, _$SpecimenDefinition {
+  /// [SpecimenDefinition] A kind of specimen with associated set of
   SpecimenDefinition._();
 
   /// [SpecimenDefinition] A kind of specimen with associated set of
@@ -3940,8 +3990,10 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   }
 }
 
+/// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
 @freezed
 class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
+  /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
   SpecimenDefinitionTypeTested._();
 
   /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
@@ -4045,8 +4097,10 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   }
 }
 
+/// [SpecimenDefinitionContainer] A kind of specimen with associated set of
 @freezed
 class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
+  /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
   SpecimenDefinitionContainer._();
 
   /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
@@ -4153,8 +4207,10 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   }
 }
 
+/// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
 @freezed
 class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
+  /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
   SpecimenDefinitionAdditive._();
 
   /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
@@ -4230,8 +4286,10 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   }
 }
 
+/// [SpecimenDefinitionHandling] A kind of specimen with associated set of
 @freezed
 class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
+  /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
   SpecimenDefinitionHandling._();
 
   /// [SpecimenDefinitionHandling] A kind of specimen with associated set of

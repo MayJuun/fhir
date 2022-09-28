@@ -393,6 +393,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
   }
 }
 
+/// [Ingredient] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
 class Ingredient with Resource, _$Ingredient {
   Ingredient._();
@@ -498,6 +499,7 @@ class Ingredient with Resource, _$Ingredient {
   }
 }
 
+/// [IngredientManufacturer] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
 class IngredientManufacturer with _$IngredientManufacturer {
   IngredientManufacturer._();
@@ -556,6 +558,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
   }
 }
 
+/// [IngredientSubstance] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
 class IngredientSubstance with _$IngredientSubstance {
   IngredientSubstance._();
@@ -613,6 +616,7 @@ class IngredientSubstance with _$IngredientSubstance {
   }
 }
 
+/// [IngredientStrength] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
 class IngredientStrength with _$IngredientStrength {
   IngredientStrength._();
@@ -715,6 +719,7 @@ class IngredientStrength with _$IngredientStrength {
   }
 }
 
+/// [IngredientReferenceStrength] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
 class IngredientReferenceStrength with _$IngredientReferenceStrength {
   IngredientReferenceStrength._();
@@ -787,6 +792,7 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
   }
 }
 
+/// [ClinicalUseDefinition] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
 class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   ClinicalUseDefinition._();
@@ -1018,6 +1024,7 @@ class ClinicalUseDefinitionOtherTherapy
   }
 }
 
+/// [ClinicalUseDefinitionIndication] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
 class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
   ClinicalUseDefinitionIndication._();
@@ -1095,6 +1102,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
   }
 }
 
+/// [ClinicalUseDefinitionInteraction] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
 class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
   ClinicalUseDefinitionInteraction._();
@@ -1161,6 +1169,7 @@ class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
   }
 }
 
+/// [ClinicalUseDefinitionInteractant] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
 class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
   ClinicalUseDefinitionInteractant._();
@@ -1279,6 +1288,7 @@ class ClinicalUseDefinitionUndesirableEffect
   }
 }
 
+/// [ClinicalUseDefinitionWarning] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
 class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
   ClinicalUseDefinitionWarning._();
@@ -1337,6 +1347,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
   }
 }
 
+/// [ManufacturedItemDefinition] The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product.
 @freezed
 class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   ManufacturedItemDefinition._();
@@ -1512,6 +1523,7 @@ class ManufacturedItemDefinitionProperty
   }
 }
 
+/// [MedicinalProductDefinition] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
 @freezed
 class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   MedicinalProductDefinition._();
@@ -1744,6 +1756,7 @@ class MedicinalProductDefinitionContact
   }
 }
 
+/// [MedicinalProductDefinitionName] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
 @freezed
 class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   MedicinalProductDefinitionName._();
@@ -2156,6 +2169,7 @@ class MedicinalProductDefinitionCharacteristic
   }
 }
 
+/// [PackagedProductDefinition] A medically related item or items, in a container or package.
 @freezed
 class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   PackagedProductDefinition._();
@@ -2347,6 +2361,7 @@ class PackagedProductDefinitionLegalStatusOfSupply
   }
 }
 
+/// [PackagedProductDefinitionPackage] A medically related item or items, in a container or package.
 @freezed
 class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
   PackagedProductDefinitionPackage._();
@@ -2571,6 +2586,7 @@ class PackagedProductDefinitionContainedItem
   }
 }
 
+/// [RegulatedAuthorization] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
 @freezed
 class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   RegulatedAuthorization._();
@@ -2694,6 +2710,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   }
 }
 
+/// [RegulatedAuthorizationCase] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
 @freezed
 class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   RegulatedAuthorizationCase._();
@@ -2766,6 +2783,7 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   }
 }
 
+/// [SubstanceDefinition] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
 class SubstanceDefinition with Resource, _$SubstanceDefinition {
   SubstanceDefinition._();
@@ -2913,6 +2931,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   }
 }
 
+/// [SubstanceDefinitionMoiety] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
 class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   SubstanceDefinitionMoiety._();
@@ -3000,6 +3019,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   }
 }
 
+/// [SubstanceDefinitionProperty] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
 class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
   SubstanceDefinitionProperty._();
@@ -3138,6 +3158,7 @@ class SubstanceDefinitionMolecularWeight
   }
 }
 
+/// [SubstanceDefinitionStructure] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
 class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   SubstanceDefinitionStructure._();
@@ -3289,6 +3310,7 @@ class SubstanceDefinitionRepresentation
   }
 }
 
+/// [SubstanceDefinitionCode] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
 class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   SubstanceDefinitionCode._();
@@ -3358,6 +3380,7 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   }
 }
 
+/// [SubstanceDefinitionName] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
 class SubstanceDefinitionName with _$SubstanceDefinitionName {
   SubstanceDefinitionName._();
@@ -3448,6 +3471,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
   }
 }
 
+/// [SubstanceDefinitionOfficial] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
 class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   SubstanceDefinitionOfficial._();
@@ -3511,6 +3535,7 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   }
 }
 
+/// [SubstanceDefinitionRelationship] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
 class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
   SubstanceDefinitionRelationship._();
@@ -3668,6 +3693,7 @@ class SubstanceDefinitionSourceMaterial
   }
 }
 
+/// [SubstanceNucleicAcid] Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
 @freezed
 class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   SubstanceNucleicAcid._();
@@ -3761,6 +3787,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   }
 }
 
+/// [SubstanceNucleicAcidSubunit] Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
 @freezed
 class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   SubstanceNucleicAcidSubunit._();
@@ -3845,6 +3872,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   }
 }
 
+/// [SubstanceNucleicAcidLinkage] Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
 @freezed
 class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   SubstanceNucleicAcidLinkage._();
@@ -3917,6 +3945,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   }
 }
 
+/// [SubstanceNucleicAcidSugar] Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
 @freezed
 class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   SubstanceNucleicAcidSugar._();
@@ -3983,6 +4012,7 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   }
 }
 
+/// [SubstancePolymer] Properties of a substance specific to it being a polymer.
 @freezed
 class SubstancePolymer with Resource, _$SubstancePolymer {
   SubstancePolymer._();
@@ -4079,6 +4109,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   }
 }
 
+/// [SubstancePolymerMonomerSet] Properties of a substance specific to it being a polymer.
 @freezed
 class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   SubstancePolymerMonomerSet._();
@@ -4136,6 +4167,7 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   }
 }
 
+/// [SubstancePolymerStartingMaterial] Properties of a substance specific to it being a polymer.
 @freezed
 class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   SubstancePolymerStartingMaterial._();
@@ -4204,6 +4236,7 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   }
 }
 
+/// [SubstancePolymerRepeat] Properties of a substance specific to it being a polymer.
 @freezed
 class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   SubstancePolymerRepeat._();
@@ -4268,6 +4301,7 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   }
 }
 
+/// [SubstancePolymerRepeatUnit] Properties of a substance specific to it being a polymer.
 @freezed
 class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   SubstancePolymerRepeatUnit._();
@@ -4485,6 +4519,7 @@ class SubstancePolymerStructuralRepresentation
   }
 }
 
+/// [SubstanceProtein] A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
 @freezed
 class SubstanceProtein with Resource, _$SubstanceProtein {
   SubstanceProtein._();
@@ -4575,6 +4610,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   }
 }
 
+/// [SubstanceProteinSubunit] A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
 @freezed
 class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   SubstanceProteinSubunit._();
@@ -4960,6 +4996,7 @@ class SubstanceReferenceInformationTarget
   }
 }
 
+/// [SubstanceSourceMaterial] Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
 @freezed
 class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   SubstanceSourceMaterial._();
@@ -5147,6 +5184,7 @@ class SubstanceSourceMaterialFractionDescription
   }
 }
 
+/// [SubstanceSourceMaterialOrganism] Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
 @freezed
 class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   SubstanceSourceMaterialOrganism._();
@@ -5227,6 +5265,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   }
 }
 
+/// [SubstanceSourceMaterialAuthor] Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
 @freezed
 class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   SubstanceSourceMaterialAuthor._();
@@ -5287,6 +5326,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   }
 }
 
+/// [SubstanceSourceMaterialHybrid] Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
 @freezed
 class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   SubstanceSourceMaterialHybrid._();

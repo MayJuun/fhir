@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
+/// [Endpoint] The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b, a REST endpoint for another FHIR server, or a s/Mime email address. This may include any security context information.
 @freezed
 class Endpoint with Resource, _$Endpoint {
   Endpoint._();
@@ -132,6 +133,7 @@ class Endpoint with Resource, _$Endpoint {
   }
 }
 
+/// [HealthcareService] The details of a healthcare service available at a location.
 @freezed
 class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
@@ -298,6 +300,7 @@ class HealthcareService with Resource, _$HealthcareService {
   }
 }
 
+/// [HealthcareServiceEligibility] The details of a healthcare service available at a location.
 @freezed
 class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   HealthcareServiceEligibility._();
@@ -358,6 +361,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   }
 }
 
+/// [HealthcareServiceAvailableTime] The details of a healthcare service available at a location.
 @freezed
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
@@ -434,6 +438,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   }
 }
 
+/// [HealthcareServiceNotAvailable] The details of a healthcare service available at a location.
 @freezed
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
@@ -494,6 +499,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   }
 }
 
+/// [Location] Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
 @freezed
 class Location with Resource, _$Location {
   Location._();
@@ -639,6 +645,7 @@ class Location with Resource, _$Location {
   }
 }
 
+/// [LocationPosition] Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
 @freezed
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
@@ -708,6 +715,7 @@ class LocationPosition with _$LocationPosition {
   }
 }
 
+/// [LocationHoursOfOperation] Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
 @freezed
 class LocationHoursOfOperation with _$LocationHoursOfOperation {
   LocationHoursOfOperation._();
@@ -783,6 +791,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   }
 }
 
+/// [Organization] A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
 @freezed
 class Organization with Resource, _$Organization {
   Organization._();
@@ -900,6 +909,7 @@ class Organization with Resource, _$Organization {
   }
 }
 
+/// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship between 2 distinct organizations, that is not a part-of relationship/sub-division relationship.
 @freezed
 class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   OrganizationAffiliation._();

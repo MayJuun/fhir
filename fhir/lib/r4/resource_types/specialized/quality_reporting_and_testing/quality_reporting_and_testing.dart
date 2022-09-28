@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'quality_reporting_and_testing.freezed.dart';
 part 'quality_reporting_and_testing.g.dart';
 
+/// [Measure] The Measure resource provides the definition of a quality
 @freezed
 class Measure with Resource, _$Measure {
+  /// [Measure] The Measure resource provides the definition of a quality
   Measure._();
 
   /// [Measure] The Measure resource provides the definition of a quality
@@ -387,8 +389,10 @@ class Measure with Resource, _$Measure {
   }
 }
 
+/// [MeasureGroup] The Measure resource provides the definition of a quality
 @freezed
 class MeasureGroup with _$MeasureGroup {
+  /// [MeasureGroup] The Measure resource provides the definition of a quality
   MeasureGroup._();
 
   /// [MeasureGroup] The Measure resource provides the definition of a quality
@@ -474,8 +478,10 @@ class MeasureGroup with _$MeasureGroup {
   }
 }
 
+/// [MeasurePopulation] The Measure resource provides the definition of a
 @freezed
 class MeasurePopulation with _$MeasurePopulation {
+  /// [MeasurePopulation] The Measure resource provides the definition of a
   MeasurePopulation._();
 
   /// [MeasurePopulation] The Measure resource provides the definition of a
@@ -554,8 +560,10 @@ class MeasurePopulation with _$MeasurePopulation {
   }
 }
 
+/// [MeasureStratifier] The Measure resource provides the definition of a
 @freezed
 class MeasureStratifier with _$MeasureStratifier {
+  /// [MeasureStratifier] The Measure resource provides the definition of a
   MeasureStratifier._();
 
   /// [MeasureStratifier] The Measure resource provides the definition of a
@@ -643,8 +651,10 @@ class MeasureStratifier with _$MeasureStratifier {
   }
 }
 
+/// [MeasureComponent] The Measure resource provides the definition of a
 @freezed
 class MeasureComponent with _$MeasureComponent {
+  /// [MeasureComponent] The Measure resource provides the definition of a
   MeasureComponent._();
 
   /// [MeasureComponent] The Measure resource provides the definition of a
@@ -729,8 +739,10 @@ class MeasureComponent with _$MeasureComponent {
   }
 }
 
+/// [MeasureSupplementalData] The Measure resource provides the definition
 @freezed
 class MeasureSupplementalData with _$MeasureSupplementalData {
+  /// [MeasureSupplementalData] The Measure resource provides the definition
   MeasureSupplementalData._();
 
   /// [MeasureSupplementalData] The Measure resource provides the definition
@@ -821,8 +833,10 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   }
 }
 
+/// [MeasureReport] The MeasureReport resource contains the results of the
 @freezed
 class MeasureReport with Resource, _$MeasureReport {
+  /// [MeasureReport] The MeasureReport resource contains the results of the
   MeasureReport._();
 
   /// [MeasureReport] The MeasureReport resource contains the results of the
@@ -982,8 +996,10 @@ class MeasureReport with Resource, _$MeasureReport {
   }
 }
 
+/// [MeasureReportGroup] The MeasureReport resource contains the results of
 @freezed
 class MeasureReportGroup with _$MeasureReportGroup {
+  /// [MeasureReportGroup] The MeasureReport resource contains the results of
   MeasureReportGroup._();
 
   /// [MeasureReportGroup] The MeasureReport resource contains the results of
@@ -1067,8 +1083,10 @@ class MeasureReportGroup with _$MeasureReportGroup {
   }
 }
 
+/// [MeasureReportPopulation] The MeasureReport resource contains the
 @freezed
 class MeasureReportPopulation with _$MeasureReportPopulation {
+  /// [MeasureReportPopulation] The MeasureReport resource contains the
   MeasureReportPopulation._();
 
   /// [MeasureReportPopulation] The MeasureReport resource contains the
@@ -1148,8 +1166,10 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   }
 }
 
+/// [MeasureReportStratifier] The MeasureReport resource contains the
 @freezed
 class MeasureReportStratifier with _$MeasureReportStratifier {
+  /// [MeasureReportStratifier] The MeasureReport resource contains the
   MeasureReportStratifier._();
 
   /// [MeasureReportStratifier] The MeasureReport resource contains the
@@ -1225,8 +1245,10 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   }
 }
 
+/// [MeasureReportStratum] The MeasureReport resource contains the results
 @freezed
 class MeasureReportStratum with _$MeasureReportStratum {
+  /// [MeasureReportStratum] The MeasureReport resource contains the results
   MeasureReportStratum._();
 
   /// [MeasureReportStratum] The MeasureReport resource contains the results
@@ -1310,8 +1332,10 @@ class MeasureReportStratum with _$MeasureReportStratum {
   }
 }
 
+/// [MeasureReportComponent] The MeasureReport resource contains the results
 @freezed
 class MeasureReportComponent with _$MeasureReportComponent {
+  /// [MeasureReportComponent] The MeasureReport resource contains the results
   MeasureReportComponent._();
 
   /// [MeasureReportComponent] The MeasureReport resource contains the results
@@ -1384,8 +1408,10 @@ class MeasureReportComponent with _$MeasureReportComponent {
   }
 }
 
+/// [MeasureReportPopulation1] The MeasureReport resource contains the
 @freezed
 class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
+  /// [MeasureReportPopulation1] The MeasureReport resource contains the
   MeasureReportPopulation1._();
 
   /// [MeasureReportPopulation1] The MeasureReport resource contains the
@@ -1466,8 +1492,10 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   }
 }
 
+/// [TestReport] A summary of information based on the results of executing a
 @freezed
 class TestReport with Resource, _$TestReport {
+  /// [TestReport] A summary of information based on the results of executing a
   TestReport._();
 
   /// [TestReport] A summary of information based on the results of executing a
@@ -1633,8 +1661,10 @@ class TestReport with Resource, _$TestReport {
   }
 }
 
+/// [TestReportParticipant] A summary of information based on the results of
 @freezed
 class TestReportParticipant with _$TestReportParticipant {
+  /// [TestReportParticipant] A summary of information based on the results of
   TestReportParticipant._();
 
   /// [TestReportParticipant] A summary of information based on the results of
@@ -1718,8 +1748,10 @@ class TestReportParticipant with _$TestReportParticipant {
   }
 }
 
+/// [TestReportSetup] A summary of information based on the results of
 @freezed
 class TestReportSetup with _$TestReportSetup {
+  /// [TestReportSetup] A summary of information based on the results of
   TestReportSetup._();
 
   /// [TestReportSetup] A summary of information based on the results of
@@ -1788,8 +1820,10 @@ class TestReportSetup with _$TestReportSetup {
   }
 }
 
+/// [TestReportAction] A summary of information based on the results of
 @freezed
 class TestReportAction with _$TestReportAction {
+  /// [TestReportAction] A summary of information based on the results of
   TestReportAction._();
 
   /// [TestReportAction] A summary of information based on the results of
@@ -1862,8 +1896,10 @@ class TestReportAction with _$TestReportAction {
   }
 }
 
+/// [TestReportOperation] A summary of information based on the results of
 @freezed
 class TestReportOperation with _$TestReportOperation {
+  /// [TestReportOperation] A summary of information based on the results of
   TestReportOperation._();
 
   /// [TestReportOperation] A summary of information based on the results of
@@ -1947,8 +1983,10 @@ class TestReportOperation with _$TestReportOperation {
   }
 }
 
+/// [TestReportAssert] A summary of information based on the results of
 @freezed
 class TestReportAssert with _$TestReportAssert {
+  /// [TestReportAssert] A summary of information based on the results of
   TestReportAssert._();
 
   /// [TestReportAssert] A summary of information based on the results of
@@ -2032,8 +2070,10 @@ class TestReportAssert with _$TestReportAssert {
   }
 }
 
+/// [TestReportTest] A summary of information based on the results of
 @freezed
 class TestReportTest with _$TestReportTest {
+  /// [TestReportTest] A summary of information based on the results of
   TestReportTest._();
 
   /// [TestReportTest] A summary of information based on the results of
@@ -2116,8 +2156,10 @@ class TestReportTest with _$TestReportTest {
   }
 }
 
+/// [TestReportAction1] A summary of information based on the results of
 @freezed
 class TestReportAction1 with _$TestReportAction1 {
+  /// [TestReportAction1] A summary of information based on the results of
   TestReportAction1._();
 
   /// [TestReportAction1] A summary of information based on the results of
@@ -2190,8 +2232,10 @@ class TestReportAction1 with _$TestReportAction1 {
   }
 }
 
+/// [TestReportTeardown] A summary of information based on the results of
 @freezed
 class TestReportTeardown with _$TestReportTeardown {
+  /// [TestReportTeardown] A summary of information based on the results of
   TestReportTeardown._();
 
   /// [TestReportTeardown] A summary of information based on the results of
@@ -2260,8 +2304,10 @@ class TestReportTeardown with _$TestReportTeardown {
   }
 }
 
+/// [TestReportAction2] A summary of information based on the results of
 @freezed
 class TestReportAction2 with _$TestReportAction2 {
+  /// [TestReportAction2] A summary of information based on the results of
   TestReportAction2._();
 
   /// [TestReportAction2] A summary of information based on the results of
@@ -2330,8 +2376,10 @@ class TestReportAction2 with _$TestReportAction2 {
   }
 }
 
+/// [TestScript] A structured set of tests against a FHIR server or client
 @freezed
 class TestScript with Resource, _$TestScript {
+  /// [TestScript] A structured set of tests against a FHIR server or client
   TestScript._();
 
   /// [TestScript] A structured set of tests against a FHIR server or client
@@ -2577,8 +2625,10 @@ class TestScript with Resource, _$TestScript {
   }
 }
 
+/// [TestScriptOrigin] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptOrigin with _$TestScriptOrigin {
+  /// [TestScriptOrigin] A structured set of tests against a FHIR server or
   TestScriptOrigin._();
 
   /// [TestScriptOrigin] A structured set of tests against a FHIR server or
@@ -2655,8 +2705,10 @@ class TestScriptOrigin with _$TestScriptOrigin {
   }
 }
 
+/// [TestScriptDestination] A structured set of tests against a FHIR server
 @freezed
 class TestScriptDestination with _$TestScriptDestination {
+  /// [TestScriptDestination] A structured set of tests against a FHIR server
   TestScriptDestination._();
 
   /// [TestScriptDestination] A structured set of tests against a FHIR server
@@ -2733,8 +2785,10 @@ class TestScriptDestination with _$TestScriptDestination {
   }
 }
 
+/// [TestScriptMetadata] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptMetadata with _$TestScriptMetadata {
+  /// [TestScriptMetadata] A structured set of tests against a FHIR server or
   TestScriptMetadata._();
 
   /// [TestScriptMetadata] A structured set of tests against a FHIR server or
@@ -2808,8 +2862,10 @@ class TestScriptMetadata with _$TestScriptMetadata {
   }
 }
 
+/// [TestScriptLink] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptLink with _$TestScriptLink {
+  /// [TestScriptLink] A structured set of tests against a FHIR server or
   TestScriptLink._();
 
   /// [TestScriptLink] A structured set of tests against a FHIR server or
@@ -2889,8 +2945,10 @@ class TestScriptLink with _$TestScriptLink {
   }
 }
 
+/// [TestScriptCapability] A structured set of tests against a FHIR server
 @freezed
 class TestScriptCapability with _$TestScriptCapability {
+  /// [TestScriptCapability] A structured set of tests against a FHIR server
   TestScriptCapability._();
 
   /// [TestScriptCapability] A structured set of tests against a FHIR server
@@ -3003,8 +3061,10 @@ class TestScriptCapability with _$TestScriptCapability {
   }
 }
 
+/// [TestScriptFixture] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptFixture with _$TestScriptFixture {
+  /// [TestScriptFixture] A structured set of tests against a FHIR server or
   TestScriptFixture._();
 
   /// [TestScriptFixture] A structured set of tests against a FHIR server or
@@ -3093,8 +3153,10 @@ class TestScriptFixture with _$TestScriptFixture {
   }
 }
 
+/// [TestScriptVariable] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptVariable with _$TestScriptVariable {
+  /// [TestScriptVariable] A structured set of tests against a FHIR server or
   TestScriptVariable._();
 
   /// [TestScriptVariable] A structured set of tests against a FHIR server or
@@ -3218,8 +3280,10 @@ class TestScriptVariable with _$TestScriptVariable {
   }
 }
 
+/// [TestScriptSetup] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptSetup with _$TestScriptSetup {
+  /// [TestScriptSetup] A structured set of tests against a FHIR server or
   TestScriptSetup._();
 
   /// [TestScriptSetup] A structured set of tests against a FHIR server or
@@ -3289,8 +3353,10 @@ class TestScriptSetup with _$TestScriptSetup {
   }
 }
 
+/// [TestScriptAction] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptAction with _$TestScriptAction {
+  /// [TestScriptAction] A structured set of tests against a FHIR server or
   TestScriptAction._();
 
   /// [TestScriptAction] A structured set of tests against a FHIR server or
@@ -3364,8 +3430,10 @@ class TestScriptAction with _$TestScriptAction {
   }
 }
 
+/// [TestScriptOperation] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptOperation with _$TestScriptOperation {
+  /// [TestScriptOperation] A structured set of tests against a FHIR server or
   TestScriptOperation._();
 
   /// [TestScriptOperation] A structured set of tests against a FHIR server or
@@ -3542,8 +3610,10 @@ class TestScriptOperation with _$TestScriptOperation {
   }
 }
 
+/// [TestScriptRequestHeader] A structured set of tests against a FHIR
 @freezed
 class TestScriptRequestHeader with _$TestScriptRequestHeader {
+  /// [TestScriptRequestHeader] A structured set of tests against a FHIR
   TestScriptRequestHeader._();
 
   /// [TestScriptRequestHeader] A structured set of tests against a FHIR
@@ -3622,8 +3692,10 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   }
 }
 
+/// [TestScriptAssert] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptAssert with _$TestScriptAssert {
+  /// [TestScriptAssert] A structured set of tests against a FHIR server or
   TestScriptAssert._();
 
   /// [TestScriptAssert] A structured set of tests against a FHIR server or
@@ -3846,8 +3918,10 @@ class TestScriptAssert with _$TestScriptAssert {
   }
 }
 
+/// [TestScriptTest] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptTest with _$TestScriptTest {
+  /// [TestScriptTest] A structured set of tests against a FHIR server or
   TestScriptTest._();
 
   /// [TestScriptTest] A structured set of tests against a FHIR server or
@@ -3931,8 +4005,10 @@ class TestScriptTest with _$TestScriptTest {
   }
 }
 
+/// [TestScriptAction1] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptAction1 with _$TestScriptAction1 {
+  /// [TestScriptAction1] A structured set of tests against a FHIR server or
   TestScriptAction1._();
 
   /// [TestScriptAction1] A structured set of tests against a FHIR server or
@@ -4006,8 +4082,10 @@ class TestScriptAction1 with _$TestScriptAction1 {
   }
 }
 
+/// [TestScriptTeardown] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptTeardown with _$TestScriptTeardown {
+  /// [TestScriptTeardown] A structured set of tests against a FHIR server or
   TestScriptTeardown._();
 
   /// [TestScriptTeardown] A structured set of tests against a FHIR server or
@@ -4077,8 +4155,10 @@ class TestScriptTeardown with _$TestScriptTeardown {
   }
 }
 
+/// [TestScriptAction2] A structured set of tests against a FHIR server or
 @freezed
 class TestScriptAction2 with _$TestScriptAction2 {
+  /// [TestScriptAction2] A structured set of tests against a FHIR server or
   TestScriptAction2._();
 
   /// [TestScriptAction2] A structured set of tests against a FHIR server or

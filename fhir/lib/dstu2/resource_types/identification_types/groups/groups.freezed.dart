@@ -703,7 +703,9 @@ class _$_Organization extends _Organization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrganizationToJson(this);
+    return _$$_OrganizationToJson(
+      this,
+    );
   }
 }
 
@@ -1125,7 +1127,9 @@ class _$_OrganizationContact extends _OrganizationContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OrganizationContactToJson(this);
+    return _$$_OrganizationContactToJson(
+      this,
+    );
   }
 }
 
@@ -2299,7 +2303,9 @@ class _$_HealthcareService extends _HealthcareService {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceToJson(this);
+    return _$$_HealthcareServiceToJson(
+      this,
+    );
   }
 }
 
@@ -2681,7 +2687,9 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceServiceTypeToJson(this);
+    return _$$_HealthcareServiceServiceTypeToJson(
+      this,
+    );
   }
 }
 
@@ -3126,7 +3134,9 @@ class _$_HealthcareServiceAvailableTime
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceAvailableTimeToJson(this);
+    return _$$_HealthcareServiceAvailableTimeToJson(
+      this,
+    );
   }
 }
 
@@ -3459,7 +3469,9 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HealthcareServiceNotAvailableToJson(this);
+    return _$$_HealthcareServiceNotAvailableToJson(
+      this,
+    );
   }
 }
 
@@ -4241,7 +4253,9 @@ class _$_Group extends _Group {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupToJson(this);
+    return _$$_GroupToJson(
+      this,
+    );
   }
 }
 
@@ -4756,7 +4770,9 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupCharacteristicToJson(this);
+    return _$$_GroupCharacteristicToJson(
+      this,
+    );
   }
 }
 
@@ -5097,7 +5113,9 @@ class _$_GroupMember extends _GroupMember {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupMemberToJson(this);
+    return _$$_GroupMemberToJson(
+      this,
+    );
   }
 }
 

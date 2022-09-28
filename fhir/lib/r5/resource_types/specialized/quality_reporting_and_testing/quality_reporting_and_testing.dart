@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'quality_reporting_and_testing.freezed.dart';
 part 'quality_reporting_and_testing.g.dart';
 
+/// [Measure] The Measure resource provides the definition of a quality measure.
 @freezed
 class Measure with Resource, _$Measure {
   Measure._();
@@ -286,6 +287,7 @@ class Measure with Resource, _$Measure {
   }
 }
 
+/// [MeasureGroup] The Measure resource provides the definition of a quality measure.
 @freezed
 class MeasureGroup with _$MeasureGroup {
   MeasureGroup._();
@@ -370,6 +372,7 @@ class MeasureGroup with _$MeasureGroup {
   }
 }
 
+/// [MeasurePopulation] The Measure resource provides the definition of a quality measure.
 @freezed
 class MeasurePopulation with _$MeasurePopulation {
   MeasurePopulation._();
@@ -442,6 +445,7 @@ class MeasurePopulation with _$MeasurePopulation {
   }
 }
 
+/// [MeasureStratifier] The Measure resource provides the definition of a quality measure.
 @freezed
 class MeasureStratifier with _$MeasureStratifier {
   MeasureStratifier._();
@@ -508,6 +512,7 @@ class MeasureStratifier with _$MeasureStratifier {
   }
 }
 
+/// [MeasureComponent] The Measure resource provides the definition of a quality measure.
 @freezed
 class MeasureComponent with _$MeasureComponent {
   MeasureComponent._();
@@ -571,6 +576,7 @@ class MeasureComponent with _$MeasureComponent {
   }
 }
 
+/// [MeasureSupplementalData] The Measure resource provides the definition of a quality measure.
 @freezed
 class MeasureSupplementalData with _$MeasureSupplementalData {
   MeasureSupplementalData._();
@@ -637,6 +643,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   }
 }
 
+/// [MeasureReport] The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
 @freezed
 class MeasureReport with Resource, _$MeasureReport {
   MeasureReport._();
@@ -763,6 +770,7 @@ class MeasureReport with Resource, _$MeasureReport {
   }
 }
 
+/// [MeasureReportGroup] The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
 @freezed
 class MeasureReportGroup with _$MeasureReportGroup {
   MeasureReportGroup._();
@@ -845,6 +853,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   }
 }
 
+/// [MeasureReportPopulation] The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
 @freezed
 class MeasureReportPopulation with _$MeasureReportPopulation {
   MeasureReportPopulation._();
@@ -908,6 +917,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   }
 }
 
+/// [MeasureReportStratifier] The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
 @freezed
 class MeasureReportStratifier with _$MeasureReportStratifier {
   MeasureReportStratifier._();
@@ -965,6 +975,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   }
 }
 
+/// [MeasureReportStratum] The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
 @freezed
 class MeasureReportStratum with _$MeasureReportStratum {
   MeasureReportStratum._();
@@ -1062,6 +1073,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   }
 }
 
+/// [MeasureReportComponent] The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
 @freezed
 class MeasureReportComponent with _$MeasureReportComponent {
   MeasureReportComponent._();
@@ -1134,6 +1146,7 @@ class MeasureReportComponent with _$MeasureReportComponent {
   }
 }
 
+/// [MeasureReportPopulation1] The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
 @freezed
 class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
@@ -1197,6 +1210,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   }
 }
 
+/// [TestReport] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReport with Resource, _$TestReport {
   TestReport._();
@@ -1323,6 +1337,7 @@ class TestReport with Resource, _$TestReport {
   }
 }
 
+/// [TestReportParticipant] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportParticipant with _$TestReportParticipant {
   TestReportParticipant._();
@@ -1392,6 +1407,7 @@ class TestReportParticipant with _$TestReportParticipant {
   }
 }
 
+/// [TestReportSetup] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportSetup with _$TestReportSetup {
   TestReportSetup._();
@@ -1446,6 +1462,7 @@ class TestReportSetup with _$TestReportSetup {
   }
 }
 
+/// [TestReportAction] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportAction with _$TestReportAction {
   TestReportAction._();
@@ -1503,6 +1520,7 @@ class TestReportAction with _$TestReportAction {
   }
 }
 
+/// [TestReportOperation] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportOperation with _$TestReportOperation {
   TestReportOperation._();
@@ -1572,6 +1590,7 @@ class TestReportOperation with _$TestReportOperation {
   }
 }
 
+/// [TestReportAssert] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportAssert with _$TestReportAssert {
   TestReportAssert._();
@@ -1641,6 +1660,7 @@ class TestReportAssert with _$TestReportAssert {
   }
 }
 
+/// [TestReportTest] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportTest with _$TestReportTest {
   TestReportTest._();
@@ -1707,6 +1727,7 @@ class TestReportTest with _$TestReportTest {
   }
 }
 
+/// [TestReportAction1] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportAction1 with _$TestReportAction1 {
   TestReportAction1._();
@@ -1764,6 +1785,7 @@ class TestReportAction1 with _$TestReportAction1 {
   }
 }
 
+/// [TestReportTeardown] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportTeardown with _$TestReportTeardown {
   TestReportTeardown._();
@@ -1818,6 +1840,7 @@ class TestReportTeardown with _$TestReportTeardown {
   }
 }
 
+/// [TestReportAction2] A summary of information based on the results of executing a TestScript.
 @freezed
 class TestReportAction2 with _$TestReportAction2 {
   TestReportAction2._();
@@ -1872,6 +1895,7 @@ class TestReportAction2 with _$TestReportAction2 {
   }
 }
 
+/// [TestScript] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScript with Resource, _$TestScript {
   TestScript._();
@@ -2052,6 +2076,7 @@ class TestScript with Resource, _$TestScript {
   }
 }
 
+/// [TestScriptOrigin] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptOrigin with _$TestScriptOrigin {
   TestScriptOrigin._();
@@ -2112,6 +2137,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
   }
 }
 
+/// [TestScriptDestination] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptDestination with _$TestScriptDestination {
   TestScriptDestination._();
@@ -2172,6 +2198,7 @@ class TestScriptDestination with _$TestScriptDestination {
   }
 }
 
+/// [TestScriptMetadata] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
@@ -2229,6 +2256,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   }
 }
 
+/// [TestScriptLink] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptLink with _$TestScriptLink {
   TestScriptLink._();
@@ -2292,6 +2320,7 @@ class TestScriptLink with _$TestScriptLink {
   }
 }
 
+/// [TestScriptCapability] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptCapability with _$TestScriptCapability {
   TestScriptCapability._();
@@ -2382,6 +2411,7 @@ class TestScriptCapability with _$TestScriptCapability {
   }
 }
 
+/// [TestScriptScope] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptScope with _$TestScriptScope {
   TestScriptScope._();
@@ -2442,6 +2472,7 @@ class TestScriptScope with _$TestScriptScope {
   }
 }
 
+/// [TestScriptFixture] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
@@ -2508,6 +2539,7 @@ class TestScriptFixture with _$TestScriptFixture {
   }
 }
 
+/// [TestScriptVariable] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
@@ -2607,6 +2639,7 @@ class TestScriptVariable with _$TestScriptVariable {
   }
 }
 
+/// [TestScriptSetup] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
@@ -2661,6 +2694,7 @@ class TestScriptSetup with _$TestScriptSetup {
   }
 }
 
+/// [TestScriptAction] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptAction with _$TestScriptAction {
   TestScriptAction._();
@@ -2718,6 +2752,7 @@ class TestScriptAction with _$TestScriptAction {
   }
 }
 
+/// [TestScriptOperation] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptOperation with _$TestScriptOperation {
   TestScriptOperation._();
@@ -2865,6 +2900,7 @@ class TestScriptOperation with _$TestScriptOperation {
   }
 }
 
+/// [TestScriptRequestHeader] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptRequestHeader with _$TestScriptRequestHeader {
   TestScriptRequestHeader._();
@@ -2928,6 +2964,7 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   }
 }
 
+/// [TestScriptAssert] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptAssert with _$TestScriptAssert {
   TestScriptAssert._();
@@ -3118,6 +3155,7 @@ class TestScriptAssert with _$TestScriptAssert {
   }
 }
 
+/// [TestScriptTest] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
@@ -3184,6 +3222,7 @@ class TestScriptTest with _$TestScriptTest {
   }
 }
 
+/// [TestScriptAction1] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptAction1 with _$TestScriptAction1 {
   TestScriptAction1._();
@@ -3241,6 +3280,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   }
 }
 
+/// [TestScriptTeardown] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
@@ -3295,6 +3335,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
   }
 }
 
+/// [TestScriptAction2] A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
 @freezed
 class TestScriptAction2 with _$TestScriptAction2 {
   TestScriptAction2._();

@@ -14,8 +14,10 @@ import '../../../../r4.dart';
 part 'management.freezed.dart';
 part 'management.g.dart';
 
+/// [Encounter] An interaction between a patient and healthcare provider(s)
 @freezed
 class Encounter with Resource, _$Encounter {
+  /// [Encounter] An interaction between a patient and healthcare provider(s)
   Encounter._();
 
   /// [Encounter] An interaction between a patient and healthcare provider(s)
@@ -222,8 +224,10 @@ class Encounter with Resource, _$Encounter {
   }
 }
 
+/// [EncounterStatusHistory] An interaction between a patient and healthcare
 @freezed
 class EncounterStatusHistory with _$EncounterStatusHistory {
+  /// [EncounterStatusHistory] An interaction between a patient and healthcare
   EncounterStatusHistory._();
 
   /// [EncounterStatusHistory] An interaction between a patient and healthcare
@@ -300,8 +304,10 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
   }
 }
 
+/// [EncounterClassHistory] An interaction between a patient and healthcare
 @freezed
 class EncounterClassHistory with _$EncounterClassHistory {
+  /// [EncounterClassHistory] An interaction between a patient and healthcare
   EncounterClassHistory._();
 
   /// [EncounterClassHistory] An interaction between a patient and healthcare
@@ -374,8 +380,10 @@ class EncounterClassHistory with _$EncounterClassHistory {
   }
 }
 
+/// [EncounterParticipant] An interaction between a patient and healthcare
 @freezed
 class EncounterParticipant with _$EncounterParticipant {
+  /// [EncounterParticipant] An interaction between a patient and healthcare
   EncounterParticipant._();
 
   /// [EncounterParticipant] An interaction between a patient and healthcare
@@ -453,8 +461,10 @@ class EncounterParticipant with _$EncounterParticipant {
   }
 }
 
+/// [EncounterDiagnosis] An interaction between a patient and healthcare
 @freezed
 class EncounterDiagnosis with _$EncounterDiagnosis {
+  /// [EncounterDiagnosis] An interaction between a patient and healthcare
   EncounterDiagnosis._();
 
   /// [EncounterDiagnosis] An interaction between a patient and healthcare
@@ -537,8 +547,10 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
   }
 }
 
+/// [EncounterHospitalization] An interaction between a patient and
 @freezed
 class EncounterHospitalization with _$EncounterHospitalization {
+  /// [EncounterHospitalization] An interaction between a patient and
   EncounterHospitalization._();
 
   /// [EncounterHospitalization] An interaction between a patient and
@@ -637,8 +649,10 @@ class EncounterHospitalization with _$EncounterHospitalization {
   }
 }
 
+/// [EncounterLocation] An interaction between a patient and healthcare
 @freezed
 class EncounterLocation with _$EncounterLocation {
+  /// [EncounterLocation] An interaction between a patient and healthcare
   EncounterLocation._();
 
   /// [EncounterLocation] An interaction between a patient and healthcare
@@ -725,8 +739,10 @@ class EncounterLocation with _$EncounterLocation {
   }
 }
 
+/// [EpisodeOfCare] An association between a patient and an organization /
 @freezed
 class EpisodeOfCare with Resource, _$EpisodeOfCare {
+  /// [EpisodeOfCare] An association between a patient and an organization /
   EpisodeOfCare._();
 
   /// [EpisodeOfCare] An association between a patient and an organization /
@@ -879,8 +895,10 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   }
 }
 
+/// [EpisodeOfCareStatusHistory] An association between a patient and an
 @freezed
 class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
+  /// [EpisodeOfCareStatusHistory] An association between a patient and an
   EpisodeOfCareStatusHistory._();
 
   /// [EpisodeOfCareStatusHistory] An association between a patient and an
@@ -958,8 +976,10 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   }
 }
 
+/// [EpisodeOfCareDiagnosis] An association between a patient and an
 @freezed
 class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
+  /// [EpisodeOfCareDiagnosis] An association between a patient and an
   EpisodeOfCareDiagnosis._();
 
   /// [EpisodeOfCareDiagnosis] An association between a patient and an
@@ -1041,8 +1061,10 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   }
 }
 
+/// [Flag] Prospective warnings of potential issues when providing care to
 @freezed
 class Flag with Resource, _$Flag {
+  /// [Flag] Prospective warnings of potential issues when providing care to
   Flag._();
 
   /// [Flag] Prospective warnings of potential issues when providing care to
@@ -1177,8 +1199,10 @@ class Flag with Resource, _$Flag {
   }
 }
 
+/// [library] The Library resource is a general-purpose container for
 @freezed
 class Library with Resource, _$Library {
+  /// [library] The Library resource is a general-purpose container for
   Library._();
 
   /// [library] The Library resource is a general-purpose container for
@@ -1484,8 +1508,10 @@ class Library with Resource, _$Library {
   }
 }
 
+/// [List] A list is a curated collection of resources.
 @freezed
 class List_ with Resource, _$List_ {
+  /// [List] A list is a curated collection of resources.
   List_._();
 
   /// [List] A list is a curated collection of resources.
@@ -1643,8 +1669,10 @@ class List_ with Resource, _$List_ {
   }
 }
 
+/// [ListEntry] A list is a curated collection of resources.
 @freezed
 class ListEntry with _$ListEntry {
+  /// [ListEntry] A list is a curated collection of resources.
   ListEntry._();
 
   /// [ListEntry] A list is a curated collection of resources.

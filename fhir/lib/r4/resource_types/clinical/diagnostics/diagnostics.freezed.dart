@@ -711,7 +711,9 @@ class _$_BodyStructure extends _BodyStructure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BodyStructureToJson(this);
+    return _$$_BodyStructureToJson(
+      this,
+    );
   }
 }
 
@@ -1856,7 +1858,9 @@ class _$_DiagnosticReport extends _DiagnosticReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DiagnosticReportToJson(this);
+    return _$$_DiagnosticReportToJson(
+      this,
+    );
   }
 }
 
@@ -2253,7 +2257,9 @@ class _$_DiagnosticReportMedia extends _DiagnosticReportMedia {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DiagnosticReportMediaToJson(this);
+    return _$$_DiagnosticReportMediaToJson(
+      this,
+    );
   }
 }
 
@@ -3404,7 +3410,9 @@ class _$_ImagingStudy extends _ImagingStudy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImagingStudyToJson(this);
+    return _$$_ImagingStudyToJson(
+      this,
+    );
   }
 }
 
@@ -4193,7 +4201,9 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImagingStudySeriesToJson(this);
+    return _$$_ImagingStudySeriesToJson(
+      this,
+    );
   }
 }
 
@@ -4523,7 +4533,9 @@ class _$_ImagingStudyPerformer extends _ImagingStudyPerformer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImagingStudyPerformerToJson(this);
+    return _$$_ImagingStudyPerformerToJson(
+      this,
+    );
   }
 }
 
@@ -4922,7 +4934,9 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ImagingStudyInstanceToJson(this);
+    return _$$_ImagingStudyInstanceToJson(
+      this,
+    );
   }
 }
 
@@ -6280,7 +6294,9 @@ class _$_Media extends _Media {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MediaToJson(this);
+    return _$$_MediaToJson(
+      this,
+    );
   }
 }
 
@@ -7443,7 +7459,9 @@ class _$_MolecularSequence extends _MolecularSequence {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceToJson(this);
+    return _$$_MolecularSequenceToJson(
+      this,
+    );
   }
 }
 
@@ -8176,7 +8194,9 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceReferenceSeqToJson(this);
+    return _$$_MolecularSequenceReferenceSeqToJson(
+      this,
+    );
   }
 }
 
@@ -8744,7 +8764,9 @@ class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceVariantToJson(this);
+    return _$$_MolecularSequenceVariantToJson(
+      this,
+    );
   }
 }
 
@@ -9704,7 +9726,9 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceQualityToJson(this);
+    return _$$_MolecularSequenceQualityToJson(
+      this,
+    );
   }
 }
 
@@ -10383,7 +10407,9 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceRocToJson(this);
+    return _$$_MolecularSequenceRocToJson(
+      this,
+    );
   }
 }
 
@@ -10970,7 +10996,9 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceRepositoryToJson(this);
+    return _$$_MolecularSequenceRepositoryToJson(
+      this,
+    );
   }
 }
 
@@ -11431,7 +11459,9 @@ class _$_MolecularSequenceStructureVariant
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceStructureVariantToJson(this);
+    return _$$_MolecularSequenceStructureVariantToJson(
+      this,
+    );
   }
 }
 
@@ -11772,7 +11802,9 @@ class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceOuterToJson(this);
+    return _$$_MolecularSequenceOuterToJson(
+      this,
+    );
   }
 }
 
@@ -12101,7 +12133,9 @@ class _$_MolecularSequenceInner extends _MolecularSequenceInner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MolecularSequenceInnerToJson(this);
+    return _$$_MolecularSequenceInnerToJson(
+      this,
+    );
   }
 }
 
@@ -13901,7 +13935,9 @@ class _$_Observation extends _Observation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationToJson(this);
+    return _$$_ObservationToJson(
+      this,
+    );
   }
 }
 
@@ -14506,7 +14542,9 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationReferenceRangeToJson(this);
+    return _$$_ObservationReferenceRangeToJson(
+      this,
+    );
   }
 }
 
@@ -15321,7 +15359,9 @@ class _$_ObservationComponent extends _ObservationComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ObservationComponentToJson(this);
+    return _$$_ObservationComponentToJson(
+      this,
+    );
   }
 }
 
@@ -16235,7 +16275,9 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseToJson(this);
+    return _$$_QuestionnaireResponseToJson(
+      this,
+    );
   }
 }
 
@@ -16737,7 +16779,9 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseItemToJson(this);
+    return _$$_QuestionnaireResponseItemToJson(
+      this,
+    );
   }
 }
 
@@ -17564,7 +17608,9 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseAnswerToJson(this);
+    return _$$_QuestionnaireResponseAnswerToJson(
+      this,
+    );
   }
 }
 
@@ -18499,7 +18545,9 @@ class _$_Specimen extends _Specimen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenToJson(this);
+    return _$$_SpecimenToJson(
+      this,
+    );
   }
 }
 
@@ -19100,7 +19148,9 @@ class _$_SpecimenCollection extends _SpecimenCollection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenCollectionToJson(this);
+    return _$$_SpecimenCollectionToJson(
+      this,
+    );
   }
 }
 
@@ -19538,7 +19588,9 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenProcessingToJson(this);
+    return _$$_SpecimenProcessingToJson(
+      this,
+    );
   }
 }
 
@@ -20013,7 +20065,9 @@ class _$_SpecimenContainer extends _SpecimenContainer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpecimenContainerToJson(this);
+    return _$$_SpecimenContainerToJson(
+      this,
+    );
   }
 }
 

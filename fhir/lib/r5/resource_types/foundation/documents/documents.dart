@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'documents.freezed.dart';
 part 'documents.g.dart';
 
+/// [Composition] A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).
 @freezed
 class Composition with Resource, _$Composition {
   Composition._();
@@ -165,6 +166,7 @@ class Composition with Resource, _$Composition {
   }
 }
 
+/// [CompositionAttester] A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).
 @freezed
 class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
@@ -228,6 +230,7 @@ class CompositionAttester with _$CompositionAttester {
   }
 }
 
+/// [CompositionEvent] A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).
 @freezed
 class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
@@ -288,6 +291,7 @@ class CompositionEvent with _$CompositionEvent {
   }
 }
 
+/// [CompositionSection] A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).
 @freezed
 class CompositionSection with _$CompositionSection {
   CompositionSection._();
@@ -375,6 +379,7 @@ class CompositionSection with _$CompositionSection {
   }
 }
 
+/// [DocumentManifest] A collection of documents compiled for a purpose together with metadata that applies to the collection.
 @freezed
 class DocumentManifest with Resource, _$DocumentManifest {
   DocumentManifest._();
@@ -495,6 +500,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
   }
 }
 
+/// [DocumentManifestRelated] A collection of documents compiled for a purpose together with metadata that applies to the collection.
 @freezed
 class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
@@ -552,6 +558,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
   }
 }
 
+/// [DocumentReference] A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this "document" encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.
 @freezed
 class DocumentReference with Resource, _$DocumentReference {
   DocumentReference._();
@@ -702,6 +709,7 @@ class DocumentReference with Resource, _$DocumentReference {
   }
 }
 
+/// [DocumentReferenceAttester] A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this "document" encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.
 @freezed
 class DocumentReferenceAttester with _$DocumentReferenceAttester {
   DocumentReferenceAttester._();
@@ -768,6 +776,7 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
   }
 }
 
+/// [DocumentReferenceRelatesTo] A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this "document" encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.
 @freezed
 class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
@@ -825,6 +834,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   }
 }
 
+/// [DocumentReferenceContent] A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this "document" encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.
 @freezed
 class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
@@ -885,6 +895,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   }
 }
 
+/// [DocumentReferenceProfile] A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this "document" encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.
 @freezed
 class DocumentReferenceProfile with _$DocumentReferenceProfile {
   DocumentReferenceProfile._();

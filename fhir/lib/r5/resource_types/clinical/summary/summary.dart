@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'summary.freezed.dart';
 part 'summary.g.dart';
 
+/// [AdverseEvent] An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
 @freezed
 class AdverseEvent with Resource, _$AdverseEvent {
   AdverseEvent._();
@@ -178,6 +179,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
   }
 }
 
+/// [AdverseEventParticipant] An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
 @freezed
 class AdverseEventParticipant with _$AdverseEventParticipant {
   AdverseEventParticipant._();
@@ -235,6 +237,7 @@ class AdverseEventParticipant with _$AdverseEventParticipant {
   }
 }
 
+/// [AdverseEventSuspectEntity] An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
 @freezed
 class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   AdverseEventSuspectEntity._();
@@ -295,6 +298,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   }
 }
 
+/// [AdverseEventCausality] An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
 @freezed
 class AdverseEventCausality with _$AdverseEventCausality {
   AdverseEventCausality._();
@@ -355,6 +359,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
   }
 }
 
+/// [AdverseEventContributingFactor] An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
 @freezed
 class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
   AdverseEventContributingFactor._();
@@ -413,6 +418,7 @@ class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
   }
 }
 
+/// [AdverseEventPreventiveAction] An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
 @freezed
 class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
   AdverseEventPreventiveAction._();
@@ -470,6 +476,7 @@ class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
   }
 }
 
+/// [AdverseEventMitigatingAction] An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
 @freezed
 class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
   AdverseEventMitigatingAction._();
@@ -527,6 +534,7 @@ class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
   }
 }
 
+/// [AdverseEventSupportingInfo] An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
 @freezed
 class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
   AdverseEventSupportingInfo._();
@@ -584,6 +592,7 @@ class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
   }
 }
 
+/// [AllergyIntolerance] Risk of harmful or undesirable physiological response which is specific to an individual and associated with exposure to a substance.
 @freezed
 class AllergyIntolerance with Resource, _$AllergyIntolerance {
   AllergyIntolerance._();
@@ -734,6 +743,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   }
 }
 
+/// [AllergyIntoleranceParticipant] Risk of harmful or undesirable physiological response which is specific to an individual and associated with exposure to a substance.
 @freezed
 class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
   AllergyIntoleranceParticipant._();
@@ -789,6 +799,7 @@ class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
   }
 }
 
+/// [AllergyIntoleranceReaction] Risk of harmful or undesirable physiological response which is specific to an individual and associated with exposure to a substance.
 @freezed
 class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
@@ -870,6 +881,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   }
 }
 
+/// [ClinicalImpression] A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score.
 @freezed
 class ClinicalImpression with Resource, _$ClinicalImpression {
   ClinicalImpression._();
@@ -1017,6 +1029,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   }
 }
 
+/// [ClinicalImpressionFinding] A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score.
 @freezed
 class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
@@ -1077,6 +1090,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   }
 }
 
+/// [Condition] A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
 @freezed
 class Condition with Resource, _$Condition {
   Condition._();
@@ -1236,6 +1250,7 @@ class Condition with Resource, _$Condition {
   }
 }
 
+/// [ConditionParticipant] A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
 @freezed
 class ConditionParticipant with _$ConditionParticipant {
   ConditionParticipant._();
@@ -1291,6 +1306,7 @@ class ConditionParticipant with _$ConditionParticipant {
   }
 }
 
+/// [ConditionStage] A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
 @freezed
 class ConditionStage with _$ConditionStage {
   ConditionStage._();
@@ -1351,6 +1367,7 @@ class ConditionStage with _$ConditionStage {
   }
 }
 
+/// [DetectedIssue] Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
 @freezed
 class DetectedIssue with Resource, _$DetectedIssue {
   DetectedIssue._();
@@ -1477,6 +1494,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
   }
 }
 
+/// [DetectedIssueEvidence] Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
 @freezed
 class DetectedIssueEvidence with _$DetectedIssueEvidence {
   DetectedIssueEvidence._();
@@ -1534,6 +1552,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
   }
 }
 
+/// [DetectedIssueMitigation] Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
 @freezed
 class DetectedIssueMitigation with _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
@@ -1597,6 +1616,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   }
 }
 
+/// [FamilyMemberHistory] Significant health conditions for a person related to the patient relevant in the context of care for the patient.
 @freezed
 class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   FamilyMemberHistory._();
@@ -1780,6 +1800,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   }
 }
 
+/// [FamilyMemberHistoryCondition] Significant health conditions for a person related to the patient relevant in the context of care for the patient.
 @freezed
 class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
@@ -1861,6 +1882,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   }
 }
 
+/// [FamilyMemberHistoryProcedure] Significant health conditions for a person related to the patient relevant in the context of care for the patient.
 @freezed
 class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
   FamilyMemberHistoryProcedure._();
@@ -1948,6 +1970,7 @@ class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
   }
 }
 
+/// [Procedure] An action that is or was performed on or for a patient, practitioner, device, organization, or location. For example, this can be a physical intervention on a patient like an operation, or less invasive like long term services, counseling, or hypnotherapy.  This can be a quality or safety inspection for a location, organization, or device.  This can be an accreditation procedure on a practitioner for licensing.
 @freezed
 class Procedure with Resource, _$Procedure {
   Procedure._();
@@ -2140,6 +2163,7 @@ class Procedure with Resource, _$Procedure {
   }
 }
 
+/// [ProcedurePerformer] An action that is or was performed on or for a patient, practitioner, device, organization, or location. For example, this can be a physical intervention on a patient like an operation, or less invasive like long term services, counseling, or hypnotherapy.  This can be a quality or safety inspection for a location, organization, or device.  This can be an accreditation procedure on a practitioner for licensing.
 @freezed
 class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
@@ -2200,6 +2224,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
   }
 }
 
+/// [ProcedureFocalDevice] An action that is or was performed on or for a patient, practitioner, device, organization, or location. For example, this can be a physical intervention on a patient like an operation, or less invasive like long term services, counseling, or hypnotherapy.  This can be a quality or safety inspection for a location, organization, or device.  This can be an accreditation procedure on a practitioner for licensing.
 @freezed
 class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();

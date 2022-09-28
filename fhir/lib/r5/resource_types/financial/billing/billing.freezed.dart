@@ -1275,7 +1275,9 @@ class _$_Claim extends _Claim {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimToJson(this);
+    return _$$_ClaimToJson(
+      this,
+    );
   }
 }
 
@@ -1694,7 +1696,9 @@ class _$_ClaimRelated extends _ClaimRelated {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimRelatedToJson(this);
+    return _$$_ClaimRelatedToJson(
+      this,
+    );
   }
 }
 
@@ -1966,7 +1970,9 @@ class _$_ClaimPayee extends _ClaimPayee {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimPayeeToJson(this);
+    return _$$_ClaimPayeeToJson(
+      this,
+    );
   }
 }
 
@@ -2377,7 +2383,9 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimCareTeamToJson(this);
+    return _$$_ClaimCareTeamToJson(
+      this,
+    );
   }
 }
 
@@ -3045,7 +3053,9 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimSupportingInfoToJson(this);
+    return _$$_ClaimSupportingInfoToJson(
+      this,
+    );
   }
 }
 
@@ -3512,7 +3522,9 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimDiagnosisToJson(this);
+    return _$$_ClaimDiagnosisToJson(
+      this,
+    );
   }
 }
 
@@ -3964,7 +3976,9 @@ class _$_ClaimProcedure extends _ClaimProcedure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimProcedureToJson(this);
+    return _$$_ClaimProcedureToJson(
+      this,
+    );
   }
 }
 
@@ -4515,7 +4529,9 @@ class _$_ClaimInsurance extends _ClaimInsurance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimInsuranceToJson(this);
+    return _$$_ClaimInsuranceToJson(
+      this,
+    );
   }
 }
 
@@ -4913,7 +4929,9 @@ class _$_ClaimAccident extends _ClaimAccident {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimAccidentToJson(this);
+    return _$$_ClaimAccidentToJson(
+      this,
+    );
   }
 }
 
@@ -6059,7 +6077,9 @@ class _$_ClaimItem extends _ClaimItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimItemToJson(this);
+    return _$$_ClaimItemToJson(
+      this,
+    );
   }
 }
 
@@ -6770,7 +6790,9 @@ class _$_ClaimDetail extends _ClaimDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimDetailToJson(this);
+    return _$$_ClaimDetailToJson(
+      this,
+    );
   }
 }
 
@@ -7392,7 +7414,9 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimSubDetailToJson(this);
+    return _$$_ClaimSubDetailToJson(
+      this,
+    );
   }
 }
 
@@ -8793,7 +8817,9 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseToJson(this);
+    return _$$_ClaimResponseToJson(
+      this,
+    );
   }
 }
 
@@ -9291,7 +9317,9 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseItemToJson(this);
+    return _$$_ClaimResponseItemToJson(
+      this,
+    );
   }
 }
 
@@ -9666,7 +9694,9 @@ class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseAdjudicationToJson(this);
+    return _$$_ClaimResponseAdjudicationToJson(
+      this,
+    );
   }
 }
 
@@ -10052,7 +10082,9 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseDetailToJson(this);
+    return _$$_ClaimResponseDetailToJson(
+      this,
+    );
   }
 }
 
@@ -10417,7 +10449,9 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseSubDetailToJson(this);
+    return _$$_ClaimResponseSubDetailToJson(
+      this,
+    );
   }
 }
 
@@ -11447,7 +11481,9 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseAddItemToJson(this);
+    return _$$_ClaimResponseAddItemToJson(
+      this,
+    );
   }
 }
 
@@ -12060,7 +12096,9 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseDetail1ToJson(this);
+    return _$$_ClaimResponseDetail1ToJson(
+      this,
+    );
   }
 }
 
@@ -12590,7 +12628,9 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseSubDetail1ToJson(this);
+    return _$$_ClaimResponseSubDetail1ToJson(
+      this,
+    );
   }
 }
 
@@ -12885,7 +12925,9 @@ class _$_ClaimResponseTotal extends _ClaimResponseTotal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseTotalToJson(this);
+    return _$$_ClaimResponseTotalToJson(
+      this,
+    );
   }
 }
 
@@ -13305,7 +13347,9 @@ class _$_ClaimResponsePayment extends _ClaimResponsePayment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponsePaymentToJson(this);
+    return _$$_ClaimResponsePaymentToJson(
+      this,
+    );
   }
 }
 
@@ -13727,7 +13771,9 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseProcessNoteToJson(this);
+    return _$$_ClaimResponseProcessNoteToJson(
+      this,
+    );
   }
 }
 
@@ -14188,7 +14234,9 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseInsuranceToJson(this);
+    return _$$_ClaimResponseInsuranceToJson(
+      this,
+    );
   }
 }
 
@@ -14615,7 +14663,9 @@ class _$_ClaimResponseError extends _ClaimResponseError {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClaimResponseErrorToJson(this);
+    return _$$_ClaimResponseErrorToJson(
+      this,
+    );
   }
 }
 
@@ -15634,7 +15684,9 @@ class _$_Invoice extends _Invoice {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InvoiceToJson(this);
+    return _$$_InvoiceToJson(
+      this,
+    );
   }
 }
 
@@ -15989,7 +16041,9 @@ class _$_InvoiceParticipant extends _InvoiceParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InvoiceParticipantToJson(this);
+    return _$$_InvoiceParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -16348,7 +16402,9 @@ class _$_InvoiceLineItem extends _InvoiceLineItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InvoiceLineItemToJson(this);
+    return _$$_InvoiceLineItemToJson(
+      this,
+    );
   }
 }
 
@@ -16742,7 +16798,9 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InvoicePriceComponentToJson(this);
+    return _$$_InvoicePriceComponentToJson(
+      this,
+    );
   }
 }
 

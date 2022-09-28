@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'medications.freezed.dart';
 part 'medications.g.dart';
 
+/// [Immunization] Describes the event of a patient being administered a
 @freezed
 class Immunization with Resource, _$Immunization {
+  /// [Immunization] Describes the event of a patient being administered a
   Immunization._();
 
   /// [Immunization] Describes the event of a patient being administered a
@@ -248,8 +250,10 @@ class Immunization with Resource, _$Immunization {
   }
 }
 
+/// [ImmunizationPerformer] Describes the event of a patient being
 @freezed
 class ImmunizationPerformer with _$ImmunizationPerformer {
+  /// [ImmunizationPerformer] Describes the event of a patient being
   ImmunizationPerformer._();
 
   /// [ImmunizationPerformer] Describes the event of a patient being
@@ -323,8 +327,10 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
   }
 }
 
+/// [ImmunizationEducation] Describes the event of a patient being
 @freezed
 class ImmunizationEducation with _$ImmunizationEducation {
+  /// [ImmunizationEducation] Describes the event of a patient being
   ImmunizationEducation._();
 
   /// [ImmunizationEducation] Describes the event of a patient being
@@ -417,8 +423,10 @@ class ImmunizationEducation with _$ImmunizationEducation {
   }
 }
 
+/// [ImmunizationReaction] Describes the event of a patient being
 @freezed
 class ImmunizationReaction with _$ImmunizationReaction {
+  /// [ImmunizationReaction] Describes the event of a patient being
   ImmunizationReaction._();
 
   /// [ImmunizationReaction] Describes the event of a patient being
@@ -500,8 +508,10 @@ class ImmunizationReaction with _$ImmunizationReaction {
   }
 }
 
+/// [ImmunizationProtocolApplied] Describes the event of a patient being
 @freezed
 class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
+  /// [ImmunizationProtocolApplied] Describes the event of a patient being
   ImmunizationProtocolApplied._();
 
   /// [ImmunizationProtocolApplied] Describes the event of a patient being
@@ -610,8 +620,10 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   }
 }
 
+/// [ImmunizationEvaluation] Describes a comparison of an immunization event
 @freezed
 class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
+  /// [ImmunizationEvaluation] Describes a comparison of an immunization event
   ImmunizationEvaluation._();
 
   /// [ImmunizationEvaluation] Describes a comparison of an immunization event
@@ -795,8 +807,10 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   }
 }
 
+/// [ImmunizationRecommendation] A patient's point-in-time set of
 @freezed
 class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
+  /// [ImmunizationRecommendation] A patient's point-in-time set of
   ImmunizationRecommendation._();
 
   /// [ImmunizationRecommendation] A patient's point-in-time set of
@@ -1119,8 +1133,10 @@ class ImmunizationRecommendationDateCriterion
       _$ImmunizationRecommendationDateCriterionFromJson(json);
 }
 
+/// [Medication] This resource is primarily used for the identification and
 @freezed
 class Medication with Resource, _$Medication {
+  /// [Medication] This resource is primarily used for the identification and
   Medication._();
 
   /// [Medication] This resource is primarily used for the identification and
@@ -1262,8 +1278,10 @@ class Medication with Resource, _$Medication {
   }
 }
 
+/// [MedicationIngredient] This resource is primarily used for the
 @freezed
 class MedicationIngredient with _$MedicationIngredient {
+  /// [MedicationIngredient] This resource is primarily used for the
   MedicationIngredient._();
 
   /// [MedicationIngredient] This resource is primarily used for the
@@ -1351,8 +1369,10 @@ class MedicationIngredient with _$MedicationIngredient {
   }
 }
 
+/// [MedicationBatch] This resource is primarily used for the identification
 @freezed
 class MedicationBatch with _$MedicationBatch {
+  /// [MedicationBatch] This resource is primarily used for the identification
   MedicationBatch._();
 
   /// [MedicationBatch] This resource is primarily used for the identification
@@ -1432,8 +1452,10 @@ class MedicationBatch with _$MedicationBatch {
   }
 }
 
+/// [MedicationAdministration] Describes the event of a patient consuming or
 @freezed
 class MedicationAdministration with Resource, _$MedicationAdministration {
+  /// [MedicationAdministration] Describes the event of a patient consuming or
   MedicationAdministration._();
 
   /// [MedicationAdministration] Describes the event of a patient consuming or
@@ -1711,8 +1733,10 @@ class MedicationAdministrationPerformer
       _$MedicationAdministrationPerformerFromJson(json);
 }
 
+/// [MedicationAdministrationDosage] Describes the event of a patient
 @freezed
 class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
+  /// [MedicationAdministrationDosage] Describes the event of a patient
   MedicationAdministrationDosage._();
 
   /// [MedicationAdministrationDosage] Describes the event of a patient
@@ -1826,8 +1850,10 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   }
 }
 
+/// [MedicationDispense] Indicates that a medication product is to be or has
 @freezed
 class MedicationDispense with Resource, _$MedicationDispense {
+  /// [MedicationDispense] Indicates that a medication product is to be or has
   MedicationDispense._();
 
   /// [MedicationDispense] Indicates that a medication product is to be or has
@@ -2056,8 +2082,10 @@ class MedicationDispense with Resource, _$MedicationDispense {
   }
 }
 
+/// [MedicationDispensePerformer] Indicates that a medication product is to
 @freezed
 class MedicationDispensePerformer with _$MedicationDispensePerformer {
+  /// [MedicationDispensePerformer] Indicates that a medication product is to
   MedicationDispensePerformer._();
 
   /// [MedicationDispensePerformer] Indicates that a medication product is to
@@ -2134,8 +2162,10 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   }
 }
 
+/// [MedicationDispenseSubstitution] Indicates that a medication product is
 @freezed
 class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
+  /// [MedicationDispenseSubstitution] Indicates that a medication product is
   MedicationDispenseSubstitution._();
 
   /// [MedicationDispenseSubstitution] Indicates that a medication product is
@@ -2224,8 +2254,10 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   }
 }
 
+/// [MedicationKnowledge] Information about a medication that is used to
 @freezed
 class MedicationKnowledge with Resource, _$MedicationKnowledge {
+  /// [MedicationKnowledge] Information about a medication that is used to
   MedicationKnowledge._();
 
   /// [MedicationKnowledge] Information about a medication that is used to
@@ -2495,8 +2527,10 @@ class MedicationKnowledgeRelatedMedicationKnowledge
       _$MedicationKnowledgeRelatedMedicationKnowledgeFromJson(json);
 }
 
+/// [MedicationKnowledgeMonograph] Information about a medication that is
 @freezed
 class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
+  /// [MedicationKnowledgeMonograph] Information about a medication that is
   MedicationKnowledgeMonograph._();
 
   /// [MedicationKnowledgeMonograph] Information about a medication that is
@@ -2569,8 +2603,10 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   }
 }
 
+/// [MedicationKnowledgeIngredient] Information about a medication that is
 @freezed
 class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
+  /// [MedicationKnowledgeIngredient] Information about a medication that is
   MedicationKnowledgeIngredient._();
 
   /// [MedicationKnowledgeIngredient] Information about a medication that is
@@ -2656,8 +2692,10 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   }
 }
 
+/// [MedicationKnowledgeCost] Information about a medication that is used to
 @freezed
 class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
+  /// [MedicationKnowledgeCost] Information about a medication that is used to
   MedicationKnowledgeCost._();
 
   /// [MedicationKnowledgeCost] Information about a medication that is used to
@@ -2875,8 +2913,10 @@ class MedicationKnowledgeAdministrationGuidelines
       _$MedicationKnowledgeAdministrationGuidelinesFromJson(json);
 }
 
+/// [MedicationKnowledgeDosage] Information about a medication that is used
 @freezed
 class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
+  /// [MedicationKnowledgeDosage] Information about a medication that is used
   MedicationKnowledgeDosage._();
 
   /// [MedicationKnowledgeDosage] Information about a medication that is used
@@ -3085,8 +3125,10 @@ class MedicationKnowledgeMedicineClassification
       _$MedicationKnowledgeMedicineClassificationFromJson(json);
 }
 
+/// [MedicationKnowledgePackaging] Information about a medication that is
 @freezed
 class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
+  /// [MedicationKnowledgePackaging] Information about a medication that is
   MedicationKnowledgePackaging._();
 
   /// [MedicationKnowledgePackaging] Information about a medication that is
@@ -3239,8 +3281,10 @@ class MedicationKnowledgeDrugCharacteristic
       _$MedicationKnowledgeDrugCharacteristicFromJson(json);
 }
 
+/// [MedicationKnowledgeRegulatory] Information about a medication that is
 @freezed
 class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
+  /// [MedicationKnowledgeRegulatory] Information about a medication that is
   MedicationKnowledgeRegulatory._();
 
   /// [MedicationKnowledgeRegulatory] Information about a medication that is
@@ -3320,8 +3364,10 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   }
 }
 
+/// [MedicationKnowledgeSubstitution] Information about a medication that is
 @freezed
 class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
+  /// [MedicationKnowledgeSubstitution] Information about a medication that is
   MedicationKnowledgeSubstitution._();
 
   /// [MedicationKnowledgeSubstitution] Information about a medication that is
@@ -3398,8 +3444,10 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   }
 }
 
+/// [MedicationKnowledgeSchedule] Information about a medication that is
 @freezed
 class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
+  /// [MedicationKnowledgeSchedule] Information about a medication that is
   MedicationKnowledgeSchedule._();
 
   /// [MedicationKnowledgeSchedule] Information about a medication that is
@@ -3468,8 +3516,10 @@ class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
   }
 }
 
+/// [MedicationKnowledgeMaxDispense] Information about a medication that is
 @freezed
 class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
+  /// [MedicationKnowledgeMaxDispense] Information about a medication that is
   MedicationKnowledgeMaxDispense._();
 
   /// [MedicationKnowledgeMaxDispense] Information about a medication that is
@@ -3543,8 +3593,10 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   }
 }
 
+/// [MedicationKnowledgeKinetics] Information about a medication that is
 @freezed
 class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
+  /// [MedicationKnowledgeKinetics] Information about a medication that is
   MedicationKnowledgeKinetics._();
 
   /// [MedicationKnowledgeKinetics] Information about a medication that is
@@ -3621,8 +3673,10 @@ class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
   }
 }
 
+/// [MedicationRequest] An order or request for both supply of the medication
 @freezed
 class MedicationRequest with Resource, _$MedicationRequest {
+  /// [MedicationRequest] An order or request for both supply of the medication
   MedicationRequest._();
 
   /// [MedicationRequest] An order or request for both supply of the medication
@@ -3912,8 +3966,10 @@ class MedicationRequest with Resource, _$MedicationRequest {
   }
 }
 
+/// [MedicationRequestDispenseRequest] An order or request for both supply
 @freezed
 class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
+  /// [MedicationRequestDispenseRequest] An order or request for both supply
   MedicationRequestDispenseRequest._();
 
   /// [MedicationRequestDispenseRequest] An order or request for both supply
@@ -4010,8 +4066,10 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
       _$MedicationRequestDispenseRequestFromJson(json);
 }
 
+/// [MedicationRequestInitialFill] An order or request for both supply of
 @freezed
 class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
+  /// [MedicationRequestInitialFill] An order or request for both supply of
   MedicationRequestInitialFill._();
 
   /// [MedicationRequestInitialFill] An order or request for both supply of
@@ -4089,8 +4147,10 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   }
 }
 
+/// [MedicationRequestSubstitution] An order or request for both supply of
 @freezed
 class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
+  /// [MedicationRequestSubstitution] An order or request for both supply of
   MedicationRequestSubstitution._();
 
   /// [MedicationRequestSubstitution] An order or request for both supply of
@@ -4175,8 +4235,10 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   }
 }
 
+/// [MedicationStatement] A record of a medication that is being consumed by
 @freezed
 class MedicationStatement with Resource, _$MedicationStatement {
+  /// [MedicationStatement] A record of a medication that is being consumed by
   MedicationStatement._();
 
   /// [MedicationStatement] A record of a medication that is being consumed by

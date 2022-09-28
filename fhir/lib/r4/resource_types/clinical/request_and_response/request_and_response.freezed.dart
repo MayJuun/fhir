@@ -1213,7 +1213,9 @@ class _$_Communication extends _Communication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationToJson(this);
+    return _$$_CommunicationToJson(
+      this,
+    );
   }
 }
 
@@ -1664,7 +1666,9 @@ class _$_CommunicationPayload extends _CommunicationPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationPayloadToJson(this);
+    return _$$_CommunicationPayloadToJson(
+      this,
+    );
   }
 }
 
@@ -2915,7 +2919,9 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestToJson(this);
+    return _$$_CommunicationRequestToJson(
+      this,
+    );
   }
 }
 
@@ -3371,7 +3377,9 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestPayloadToJson(this);
+    return _$$_CommunicationRequestPayloadToJson(
+      this,
+    );
   }
 }
 
@@ -4783,7 +4791,9 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceRequestToJson(this);
+    return _$$_DeviceRequestToJson(
+      this,
+    );
   }
 }
 
@@ -5320,7 +5330,9 @@ class _$_DeviceRequestParameter extends _DeviceRequestParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceRequestParameterToJson(this);
+    return _$$_DeviceRequestParameterToJson(
+      this,
+    );
   }
 }
 
@@ -6293,7 +6305,9 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceUseStatementToJson(this);
+    return _$$_DeviceUseStatementToJson(
+      this,
+    );
   }
 }
 
@@ -7437,7 +7451,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GuidanceResponseToJson(this);
+    return _$$_GuidanceResponseToJson(
+      this,
+    );
   }
 }
 
@@ -8423,7 +8439,9 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyDeliveryToJson(this);
+    return _$$_SupplyDeliveryToJson(
+      this,
+    );
   }
 }
 
@@ -8812,7 +8830,9 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyDeliverySuppliedItemToJson(this);
+    return _$$_SupplyDeliverySuppliedItemToJson(
+      this,
+    );
   }
 }
 
@@ -9909,7 +9929,9 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestToJson(this);
+    return _$$_SupplyRequestToJson(
+      this,
+    );
   }
 }
 
@@ -10409,7 +10431,9 @@ class _$_SupplyRequestParameter extends _SupplyRequestParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestParameterToJson(this);
+    return _$$_SupplyRequestParameterToJson(
+      this,
+    );
   }
 }
 

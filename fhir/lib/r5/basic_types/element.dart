@@ -12,6 +12,7 @@ import '../../r5.dart';
 part 'element.freezed.dart';
 part 'element.g.dart';
 
+/// [Element]: Base definition for all elements in a resource.
 @freezed
 class Element with _$Element {
   Element._();

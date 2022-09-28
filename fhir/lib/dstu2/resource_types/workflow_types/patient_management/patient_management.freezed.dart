@@ -1045,7 +1045,9 @@ class _$_Encounter extends _Encounter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EncounterToJson(this);
+    return _$$_EncounterToJson(
+      this,
+    );
   }
 }
 
@@ -1447,7 +1449,9 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EncounterStatusHistoryToJson(this);
+    return _$$_EncounterStatusHistoryToJson(
+      this,
+    );
   }
 }
 
@@ -1758,7 +1762,9 @@ class _$_EncounterParticipant extends _EncounterParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EncounterParticipantToJson(this);
+    return _$$_EncounterParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -2341,7 +2347,9 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EncounterHospitalizationToJson(this);
+    return _$$_EncounterHospitalizationToJson(
+      this,
+    );
   }
 }
 
@@ -2705,7 +2713,9 @@ class _$_EncounterLocation extends _EncounterLocation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EncounterLocationToJson(this);
+    return _$$_EncounterLocationToJson(
+      this,
+    );
   }
 }
 
@@ -3507,7 +3517,9 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EpisodeOfCareToJson(this);
+    return _$$_EpisodeOfCareToJson(
+      this,
+    );
   }
 }
 
@@ -3880,7 +3892,9 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EpisodeOfCareStatusHistoryToJson(this);
+    return _$$_EpisodeOfCareStatusHistoryToJson(
+      this,
+    );
   }
 }
 
@@ -4192,7 +4206,9 @@ class _$_EpisodeOfCareCareTeam extends _EpisodeOfCareCareTeam {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EpisodeOfCareCareTeamToJson(this);
+    return _$$_EpisodeOfCareCareTeamToJson(
+      this,
+    );
   }
 }
 
@@ -5104,7 +5120,9 @@ class _$_Communication extends _Communication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationToJson(this);
+    return _$$_CommunicationToJson(
+      this,
+    );
   }
 }
 
@@ -5517,7 +5535,9 @@ class _$_CommunicationPayload extends _CommunicationPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationPayloadToJson(this);
+    return _$$_CommunicationPayloadToJson(
+      this,
+    );
   }
 }
 
@@ -6231,7 +6251,9 @@ class _$_Flag extends _Flag {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FlagToJson(this);
+    return _$$_FlagToJson(
+      this,
+    );
   }
 }
 

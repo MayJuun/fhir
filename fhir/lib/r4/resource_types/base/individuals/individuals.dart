@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
+/// [Group] Represents a defined collection of entities that may be discussed
 @freezed
 class Group with Resource, _$Group {
+  /// [Group] Represents a defined collection of entities that may be discussed
   Group._();
 
   /// [Group] Represents a defined collection of entities that may be discussed
@@ -169,8 +171,10 @@ class Group with Resource, _$Group {
   }
 }
 
+/// [GroupCharacteristic] Represents a defined collection of entities that
 @freezed
 class GroupCharacteristic with _$GroupCharacteristic {
+  /// [GroupCharacteristic] Represents a defined collection of entities that
   GroupCharacteristic._();
 
   /// [GroupCharacteristic] Represents a defined collection of entities that
@@ -275,8 +279,10 @@ class GroupCharacteristic with _$GroupCharacteristic {
   }
 }
 
+/// [GroupMember] Represents a defined collection of entities that may be
 @freezed
 class GroupMember with _$GroupMember {
+  /// [GroupMember] Represents a defined collection of entities that may be
   GroupMember._();
 
   /// [GroupMember] Represents a defined collection of entities that may be
@@ -359,8 +365,10 @@ class GroupMember with _$GroupMember {
   }
 }
 
+/// [Patient] Demographics and other administrative information about an
 @freezed
 class Patient with Resource, _$Patient {
+  /// [Patient] Demographics and other administrative information about an
   Patient._();
 
   /// [Patient] Demographics and other administrative information about an
@@ -554,8 +562,10 @@ class Patient with Resource, _$Patient {
   }
 }
 
+/// [PatientContact] Demographics and other administrative information about
 @freezed
 class PatientContact with _$PatientContact {
+  /// [PatientContact] Demographics and other administrative information about
   PatientContact._();
 
   /// [PatientContact] Demographics and other administrative information about
@@ -650,8 +660,10 @@ class PatientContact with _$PatientContact {
   }
 }
 
+/// [PatientCommunication] Demographics and other administrative information
 @freezed
 class PatientCommunication with _$PatientCommunication {
+  /// [PatientCommunication] Demographics and other administrative information
   PatientCommunication._();
 
   /// [PatientCommunication] Demographics and other administrative information
@@ -731,8 +743,10 @@ class PatientCommunication with _$PatientCommunication {
   }
 }
 
+/// [PatientLink] Demographics and other administrative information about an
 @freezed
 class PatientLink with _$PatientLink {
+  /// [PatientLink] Demographics and other administrative information about an
   PatientLink._();
 
   /// [PatientLink] Demographics and other administrative information about an
@@ -808,8 +822,10 @@ class PatientLink with _$PatientLink {
   }
 }
 
+/// [Person] Demographics and administrative information about a person
 @freezed
 class Person with Resource, _$Person {
+  /// [Person] Demographics and administrative information about a person
   Person._();
 
   /// [Person] Demographics and administrative information about a person
@@ -952,8 +968,10 @@ class Person with Resource, _$Person {
   }
 }
 
+/// [PersonLink] Demographics and administrative information about a person
 @freezed
 class PersonLink with _$PersonLink {
+  /// [PersonLink] Demographics and administrative information about a person
   PersonLink._();
 
   /// [PersonLink] Demographics and administrative information about a person
@@ -1029,8 +1047,10 @@ class PersonLink with _$PersonLink {
   }
 }
 
+/// [Practitioner] A person who is directly or indirectly involved in the
 @freezed
 class Practitioner with Resource, _$Practitioner {
+  /// [Practitioner] A person who is directly or indirectly involved in the
   Practitioner._();
 
   /// [Practitioner] A person who is directly or indirectly involved in the
@@ -1181,8 +1201,10 @@ class Practitioner with Resource, _$Practitioner {
   }
 }
 
+/// [PractitionerQualification] A person who is directly or indirectly
 @freezed
 class PractitionerQualification with _$PractitionerQualification {
+  /// [PractitionerQualification] A person who is directly or indirectly
   PractitionerQualification._();
 
   /// [PractitionerQualification] A person who is directly or indirectly
@@ -1261,8 +1283,10 @@ class PractitionerQualification with _$PractitionerQualification {
   }
 }
 
+/// [PractitionerRole] A specific set of Roles/Locations/specialties/services
 @freezed
 class PractitionerRole with Resource, _$PractitionerRole {
+  /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
   PractitionerRole._();
 
   /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
@@ -1424,8 +1448,10 @@ class PractitionerRole with Resource, _$PractitionerRole {
   }
 }
 
+/// [PractitionerRoleAvailableTime] A specific set of
 @freezed
 class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
+  /// [PractitionerRoleAvailableTime] A specific set of
   PractitionerRoleAvailableTime._();
 
   /// [PractitionerRoleAvailableTime] A specific set of
@@ -1520,8 +1546,10 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   }
 }
 
+/// [PractitionerRoleNotAvailable] A specific set of
 @freezed
 class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
+  /// [PractitionerRoleNotAvailable] A specific set of
   PractitionerRoleNotAvailable._();
 
   /// [PractitionerRoleNotAvailable] A specific set of
@@ -1599,8 +1627,10 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   }
 }
 
+/// [RelatedPerson] Information about a person that is involved in the care
 @freezed
 class RelatedPerson with Resource, _$RelatedPerson {
+  /// [RelatedPerson] Information about a person that is involved in the care
   RelatedPerson._();
 
   /// [RelatedPerson] Information about a person that is involved in the care
@@ -1753,8 +1783,10 @@ class RelatedPerson with Resource, _$RelatedPerson {
   }
 }
 
+/// [RelatedPersonCommunication] Information about a person that is involved
 @freezed
 class RelatedPersonCommunication with _$RelatedPersonCommunication {
+  /// [RelatedPersonCommunication] Information about a person that is involved
   RelatedPersonCommunication._();
 
   /// [RelatedPersonCommunication] Information about a person that is involved

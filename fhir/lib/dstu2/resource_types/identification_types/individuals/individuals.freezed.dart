@@ -1195,7 +1195,9 @@ class _$_Patient extends _Patient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientToJson(this);
+    return _$$_PatientToJson(
+      this,
+    );
   }
 }
 
@@ -1766,7 +1768,9 @@ class _$_PatientContact extends _PatientContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientContactToJson(this);
+    return _$$_PatientContactToJson(
+      this,
+    );
   }
 }
 
@@ -2093,7 +2097,9 @@ class _$_PatientAnimal extends _PatientAnimal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientAnimalToJson(this);
+    return _$$_PatientAnimalToJson(
+      this,
+    );
   }
 }
 
@@ -2389,7 +2395,9 @@ class _$_PatientCommunication extends _PatientCommunication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientCommunicationToJson(this);
+    return _$$_PatientCommunicationToJson(
+      this,
+    );
   }
 }
 
@@ -2686,7 +2694,9 @@ class _$_PatientLink extends _PatientLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientLinkToJson(this);
+    return _$$_PatientLinkToJson(
+      this,
+    );
   }
 }
 
@@ -3526,7 +3536,9 @@ class _$_Practitioner extends _Practitioner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerToJson(this);
+    return _$$_PractitionerToJson(
+      this,
+    );
   }
 }
 
@@ -4023,7 +4035,9 @@ class _$_PractitionerPractitionerRole extends _PractitionerPractitionerRole {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerPractitionerRoleToJson(this);
+    return _$$_PractitionerPractitionerRoleToJson(
+      this,
+    );
   }
 }
 
@@ -4376,7 +4390,9 @@ class _$_PractitionerQualification extends _PractitionerQualification {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerQualificationToJson(this);
+    return _$$_PractitionerQualificationToJson(
+      this,
+    );
   }
 }
 
@@ -5172,7 +5188,9 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelatedPersonToJson(this);
+    return _$$_RelatedPersonToJson(
+      this,
+    );
   }
 }
 

@@ -155,7 +155,9 @@ class _$_Element extends _Element {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementToJson(this);
+    return _$$_ElementToJson(
+      this,
+    );
   }
 }
 

@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
+/// [BiologicallyDerivedProduct] A material substance originating from a
 @freezed
 class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
+  /// [BiologicallyDerivedProduct] A material substance originating from a
   BiologicallyDerivedProduct._();
 
   /// [BiologicallyDerivedProduct] A material substance originating from a
@@ -474,8 +476,10 @@ class BiologicallyDerivedProductStorage
       _$BiologicallyDerivedProductStorageFromJson(json);
 }
 
+/// [Device] A type of a manufactured item that is used in the provision of
 @freezed
 class Device with Resource, _$Device {
+  /// [Device] A type of a manufactured item that is used in the provision of
   Device._();
 
   /// [Device] A type of a manufactured item that is used in the provision of
@@ -705,8 +709,10 @@ class Device with Resource, _$Device {
   }
 }
 
+/// [DeviceUdiCarrier] A type of a manufactured item that is used in the
 @freezed
 class DeviceUdiCarrier with _$DeviceUdiCarrier {
+  /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
   DeviceUdiCarrier._();
 
   /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
@@ -830,8 +836,10 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   }
 }
 
+/// [DeviceDeviceName] A type of a manufactured item that is used in the
 @freezed
 class DeviceDeviceName with _$DeviceDeviceName {
+  /// [DeviceDeviceName] A type of a manufactured item that is used in the
   DeviceDeviceName._();
 
   /// [DeviceDeviceName] A type of a manufactured item that is used in the
@@ -912,8 +920,10 @@ class DeviceDeviceName with _$DeviceDeviceName {
   }
 }
 
+/// [DeviceSpecialization] A type of a manufactured item that is used in the
 @freezed
 class DeviceSpecialization with _$DeviceSpecialization {
+  /// [DeviceSpecialization] A type of a manufactured item that is used in the
   DeviceSpecialization._();
 
   /// [DeviceSpecialization] A type of a manufactured item that is used in the
@@ -990,8 +1000,10 @@ class DeviceSpecialization with _$DeviceSpecialization {
   }
 }
 
+/// [DeviceVersion] A type of a manufactured item that is used in the
 @freezed
 class DeviceVersion with _$DeviceVersion {
+  /// [DeviceVersion] A type of a manufactured item that is used in the
   DeviceVersion._();
 
   /// [DeviceVersion] A type of a manufactured item that is used in the
@@ -1070,8 +1082,10 @@ class DeviceVersion with _$DeviceVersion {
   }
 }
 
+/// [DeviceProperty] A type of a manufactured item that is used in the
 @freezed
 class DeviceProperty with _$DeviceProperty {
+  /// [DeviceProperty] A type of a manufactured item that is used in the
   DeviceProperty._();
 
   /// [DeviceProperty] A type of a manufactured item that is used in the
@@ -1148,8 +1162,10 @@ class DeviceProperty with _$DeviceProperty {
   }
 }
 
+/// [DeviceMetric] Describes a measurement, calculation or setting capability
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
+  /// [DeviceMetric] Describes a measurement, calculation or setting capability
   DeviceMetric._();
 
   /// [DeviceMetric] Describes a measurement, calculation or setting capability
@@ -1316,8 +1332,10 @@ class DeviceMetric with Resource, _$DeviceMetric {
   }
 }
 
+/// [DeviceMetricCalibration] Describes a measurement, calculation or
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
+  /// [DeviceMetricCalibration] Describes a measurement, calculation or
   DeviceMetricCalibration._();
 
   /// [DeviceMetricCalibration] Describes a measurement, calculation or
@@ -1401,8 +1419,10 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   }
 }
 
+/// [NutritionProduct] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProduct with Resource, _$NutritionProduct {
+  /// [NutritionProduct] A food or supplement that is consumed by patients.
   NutritionProduct._();
 
   /// [NutritionProduct] A food or supplement that is consumed by patients.
@@ -1506,8 +1526,10 @@ class NutritionProduct with Resource, _$NutritionProduct {
   }
 }
 
+/// [NutritionProductNutrient] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProductNutrient with _$NutritionProductNutrient {
+  /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
   NutritionProductNutrient._();
 
   /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
@@ -1563,8 +1585,10 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   }
 }
 
+/// [NutritionProductIngredient] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProductIngredient with _$NutritionProductIngredient {
+  /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
   NutritionProductIngredient._();
 
   /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
@@ -1619,8 +1643,10 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   }
 }
 
+/// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
+  /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
   NutritionProductCharacteristic._();
 
   /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
@@ -1699,8 +1725,10 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   }
 }
 
+/// [NutritionProductInstance] A food or supplement that is consumed by patients.
 @freezed
 class NutritionProductInstance with _$NutritionProductInstance {
+  /// [NutritionProductInstance] A food or supplement that is consumed by patients.
   NutritionProductInstance._();
 
   /// [NutritionProductInstance] A food or supplement that is consumed by patients.
@@ -1783,8 +1811,10 @@ class NutritionProductInstance with _$NutritionProductInstance {
   }
 }
 
+/// [Substance] A homogeneous material with a definite composition.
 @freezed
 class Substance with Resource, _$Substance {
+  /// [Substance] A homogeneous material with a definite composition.
   Substance._();
 
   /// [Substance] A homogeneous material with a definite composition.
@@ -1915,8 +1945,10 @@ class Substance with Resource, _$Substance {
   }
 }
 
+/// [SubstanceInstance] A homogeneous material with a definite composition.
 @freezed
 class SubstanceInstance with _$SubstanceInstance {
+  /// [SubstanceInstance] A homogeneous material with a definite composition.
   SubstanceInstance._();
 
   /// [SubstanceInstance] A homogeneous material with a definite composition.
@@ -1995,8 +2027,10 @@ class SubstanceInstance with _$SubstanceInstance {
   }
 }
 
+/// [SubstanceIngredient] A homogeneous material with a definite
 @freezed
 class SubstanceIngredient with _$SubstanceIngredient {
+  /// [SubstanceIngredient] A homogeneous material with a definite
   SubstanceIngredient._();
 
   /// [SubstanceIngredient] A homogeneous material with a definite

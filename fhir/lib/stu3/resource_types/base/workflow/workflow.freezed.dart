@@ -1205,7 +1205,9 @@ class _$_Appointment extends _Appointment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentToJson(this);
+    return _$$_AppointmentToJson(
+      this,
+    );
   }
 }
 
@@ -1637,7 +1639,9 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentParticipantToJson(this);
+    return _$$_AppointmentParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -2430,7 +2434,9 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentResponseToJson(this);
+    return _$$_AppointmentResponseToJson(
+      this,
+    );
   }
 }
 
@@ -3584,7 +3590,9 @@ class _$_ProcessRequest extends _ProcessRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessRequestToJson(this);
+    return _$$_ProcessRequestToJson(
+      this,
+    );
   }
 }
 
@@ -3880,7 +3888,9 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessRequestItemToJson(this);
+    return _$$_ProcessRequestItemToJson(
+      this,
+    );
   }
 }
 
@@ -4787,7 +4797,9 @@ class _$_ProcessResponse extends _ProcessResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessResponseToJson(this);
+    return _$$_ProcessResponseToJson(
+      this,
+    );
   }
 }
 
@@ -5090,7 +5102,9 @@ class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessResponseProcessNoteToJson(this);
+    return _$$_ProcessResponseProcessNoteToJson(
+      this,
+    );
   }
 }
 
@@ -6106,7 +6120,9 @@ class _$_RequestGroup extends _RequestGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RequestGroupToJson(this);
+    return _$$_RequestGroupToJson(
+      this,
+    );
   }
 }
 
@@ -7253,7 +7269,9 @@ class _$_RequestGroupAction extends _RequestGroupAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RequestGroupActionToJson(this);
+    return _$$_RequestGroupActionToJson(
+      this,
+    );
   }
 }
 
@@ -7706,7 +7724,9 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RequestGroupConditionToJson(this);
+    return _$$_RequestGroupConditionToJson(
+      this,
+    );
   }
 }
 
@@ -8033,7 +8053,9 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RequestGroupRelatedActionToJson(this);
+    return _$$_RequestGroupRelatedActionToJson(
+      this,
+    );
   }
 }
 
@@ -8759,7 +8781,9 @@ class _$_Schedule extends _Schedule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduleToJson(this);
+    return _$$_ScheduleToJson(
+      this,
+    );
   }
 }
 
@@ -9708,7 +9732,9 @@ class _$_Slot extends _Slot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SlotToJson(this);
+    return _$$_SlotToJson(
+      this,
+    );
   }
 }
 
@@ -11258,7 +11284,9 @@ class _$_Task extends _Task {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskToJson(this);
+    return _$$_TaskToJson(
+      this,
+    );
   }
 }
 
@@ -11592,7 +11620,9 @@ class _$_TaskRequester extends _TaskRequester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskRequesterToJson(this);
+    return _$$_TaskRequesterToJson(
+      this,
+    );
   }
 }
 
@@ -11830,7 +11860,9 @@ class _$_TaskRestriction extends _TaskRestriction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskRestrictionToJson(this);
+    return _$$_TaskRestrictionToJson(
+      this,
+    );
   }
 }
 
@@ -14081,7 +14113,9 @@ class _$_TaskInput extends _TaskInput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskInputToJson(this);
+    return _$$_TaskInputToJson(
+      this,
+    );
   }
 }
 
@@ -16568,7 +16602,9 @@ class _$_TaskOutput extends _TaskOutput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskOutputToJson(this);
+    return _$$_TaskOutputToJson(
+      this,
+    );
   }
 }
 

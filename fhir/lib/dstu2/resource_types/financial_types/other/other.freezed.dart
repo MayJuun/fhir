@@ -823,7 +823,9 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitToJson(this);
+    return _$$_ExplanationOfBenefitToJson(
+      this,
+    );
   }
 }
 

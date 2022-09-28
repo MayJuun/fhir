@@ -12,6 +12,7 @@ import '../../r5.dart';
 part 'backbone_type.freezed.dart';
 part 'backbone_type.g.dart';
 
+/// [BackboneType]: Base definition for the few data types that are allowed to carry modifier extensions.
 @freezed
 class BackboneType with _$BackboneType {
   BackboneType._();

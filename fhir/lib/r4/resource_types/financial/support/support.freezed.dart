@@ -1085,7 +1085,9 @@ class _$_Coverage extends _Coverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageToJson(this);
+    return _$$_CoverageToJson(
+      this,
+    );
   }
 }
 
@@ -1537,7 +1539,9 @@ class _$_CoverageClass extends _CoverageClass {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageClassToJson(this);
+    return _$$_CoverageClassToJson(
+      this,
+    );
   }
 }
 
@@ -1888,7 +1892,9 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageCostToBeneficiaryToJson(this);
+    return _$$_CoverageCostToBeneficiaryToJson(
+      this,
+    );
   }
 }
 
@@ -2166,7 +2172,9 @@ class _$_CoverageException extends _CoverageException {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageExceptionToJson(this);
+    return _$$_CoverageExceptionToJson(
+      this,
+    );
   }
 }
 
@@ -3167,7 +3175,9 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestToJson(this);
+    return _$$_CoverageEligibilityRequestToJson(
+      this,
+    );
   }
 }
 
@@ -3618,7 +3628,9 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestSupportingInfoToJson(this);
+    return _$$_CoverageEligibilityRequestSupportingInfoToJson(
+      this,
+    );
   }
 }
 
@@ -3996,7 +4008,9 @@ class _$_CoverageEligibilityRequestInsurance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestInsuranceToJson(this);
+    return _$$_CoverageEligibilityRequestInsuranceToJson(
+      this,
+    );
   }
 }
 
@@ -4570,7 +4584,9 @@ class _$_CoverageEligibilityRequestItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestItemToJson(this);
+    return _$$_CoverageEligibilityRequestItemToJson(
+      this,
+    );
   }
 }
 
@@ -4891,7 +4907,9 @@ class _$_CoverageEligibilityRequestDiagnosis
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestDiagnosisToJson(this);
+    return _$$_CoverageEligibilityRequestDiagnosisToJson(
+      this,
+    );
   }
 }
 
@@ -6003,7 +6021,9 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseToJson(this);
+    return _$$_CoverageEligibilityResponseToJson(
+      this,
+    );
   }
 }
 
@@ -6475,7 +6495,9 @@ class _$_CoverageEligibilityResponseInsurance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseInsuranceToJson(this);
+    return _$$_CoverageEligibilityResponseInsuranceToJson(
+      this,
+    );
   }
 }
 
@@ -7273,7 +7295,9 @@ class _$_CoverageEligibilityResponseItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseItemToJson(this);
+    return _$$_CoverageEligibilityResponseItemToJson(
+      this,
+    );
   }
 }
 
@@ -7868,7 +7892,9 @@ class _$_CoverageEligibilityResponseBenefit
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseBenefitToJson(this);
+    return _$$_CoverageEligibilityResponseBenefitToJson(
+      this,
+    );
   }
 }
 
@@ -8155,7 +8181,9 @@ class _$_CoverageEligibilityResponseError
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseErrorToJson(this);
+    return _$$_CoverageEligibilityResponseErrorToJson(
+      this,
+    );
   }
 }
 
@@ -8866,7 +8894,9 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EnrollmentRequestToJson(this);
+    return _$$_EnrollmentRequestToJson(
+      this,
+    );
   }
 }
 
@@ -9716,7 +9746,9 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EnrollmentResponseToJson(this);
+    return _$$_EnrollmentResponseToJson(
+      this,
+    );
   }
 }
 

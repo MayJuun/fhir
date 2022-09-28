@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
+/// [Endpoint] The technical details of an endpoint that can be used for
 @freezed
 class Endpoint with Resource, _$Endpoint {
+  /// [Endpoint] The technical details of an endpoint that can be used for
   Endpoint._();
 
   /// [Endpoint] The technical details of an endpoint that can be used for
@@ -177,8 +179,10 @@ class Endpoint with Resource, _$Endpoint {
   }
 }
 
+/// [HealthcareService] The details of a healthcare service available at a
 @freezed
 class HealthcareService with Resource, _$HealthcareService {
+  /// [HealthcareService] The details of a healthcare service available at a
   HealthcareService._();
 
   /// [HealthcareService] The details of a healthcare service available at a
@@ -396,8 +400,10 @@ class HealthcareService with Resource, _$HealthcareService {
   }
 }
 
+/// [HealthcareServiceEligibility] The details of a healthcare service
 @freezed
 class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
+  /// [HealthcareServiceEligibility] The details of a healthcare service
   HealthcareServiceEligibility._();
 
   /// [HealthcareServiceEligibility] The details of a healthcare service
@@ -472,8 +478,10 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   }
 }
 
+/// [HealthcareServiceAvailableTime] The details of a healthcare service
 @freezed
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
+  /// [HealthcareServiceAvailableTime] The details of a healthcare service
   HealthcareServiceAvailableTime._();
 
   /// [HealthcareServiceAvailableTime] The details of a healthcare service
@@ -568,8 +576,10 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   }
 }
 
+/// [HealthcareServiceNotAvailable] The details of a healthcare service
 @freezed
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
+  /// [HealthcareServiceNotAvailable] The details of a healthcare service
   HealthcareServiceNotAvailable._();
 
   /// [HealthcareServiceNotAvailable] The details of a healthcare service
@@ -646,8 +656,10 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   }
 }
 
+/// [Location] Details and position information for a physical place where
 @freezed
 class Location with Resource, _$Location {
+  /// [Location] Details and position information for a physical place where
   Location._();
 
   /// [Location] Details and position information for a physical place where
@@ -840,8 +852,10 @@ class Location with Resource, _$Location {
   }
 }
 
+/// [LocationPosition] Details and position information for a physical place
 @freezed
 class LocationPosition with _$LocationPosition {
+  /// [LocationPosition] Details and position information for a physical place
   LocationPosition._();
 
   /// [LocationPosition] Details and position information for a physical place
@@ -929,8 +943,10 @@ class LocationPosition with _$LocationPosition {
   }
 }
 
+/// [LocationHoursOfOperation] Details and position information for a
 @freezed
 class LocationHoursOfOperation with _$LocationHoursOfOperation {
+  /// [LocationHoursOfOperation] Details and position information for a
   LocationHoursOfOperation._();
 
   /// [LocationHoursOfOperation] Details and position information for a
@@ -1022,8 +1038,10 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   }
 }
 
+/// [Organization] A formally or informally recognized grouping of people or
 @freezed
 class Organization with Resource, _$Organization {
+  /// [Organization] A formally or informally recognized grouping of people or
   Organization._();
 
   /// [Organization] A formally or informally recognized grouping of people or
@@ -1169,8 +1187,10 @@ class Organization with Resource, _$Organization {
   }
 }
 
+/// [OrganizationContact] A formally or informally recognized grouping of
 @freezed
 class OrganizationContact with _$OrganizationContact {
+  /// [OrganizationContact] A formally or informally recognized grouping of
   OrganizationContact._();
 
   /// [OrganizationContact] A formally or informally recognized grouping of
@@ -1252,8 +1272,10 @@ class OrganizationContact with _$OrganizationContact {
   }
 }
 
+/// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
 @freezed
 class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
+  /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
   OrganizationAffiliation._();
 
   /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship

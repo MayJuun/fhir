@@ -1,5 +1,10 @@
 # fhir
 
+## [0.9.1]
+
+* Added some comments to satisfy requirements on pub.dev
+* updated dependencies
+
 ## [0.9.0]
 
 * Fixed some comparisons in primitive types

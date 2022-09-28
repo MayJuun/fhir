@@ -14,6 +14,7 @@ import '../../../../r5.dart';
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
+/// [BodyStructure] Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
 @freezed
 class BodyStructure with Resource, _$BodyStructure {
   BodyStructure._();
@@ -116,6 +117,7 @@ class BodyStructure with Resource, _$BodyStructure {
   }
 }
 
+/// [BodyStructureIncludedStructure] Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
 @freezed
 class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
   BodyStructureIncludedStructure._();
@@ -175,6 +177,7 @@ class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
   }
 }
 
+/// [BodyStructureExcludedStructure] Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
 @freezed
 class BodyStructureExcludedStructure with _$BodyStructureExcludedStructure {
   BodyStructureExcludedStructure._();
@@ -234,6 +237,7 @@ class BodyStructureExcludedStructure with _$BodyStructureExcludedStructure {
   }
 }
 
+/// [DiagnosticReport] The findings and interpretation of diagnostic tests performed on patients, groups of patients, products, substances, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports. The report also includes non-clinical context such as batch analysis and stability reporting of products and substances.
 @freezed
 class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
@@ -381,6 +385,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   }
 }
 
+/// [DiagnosticReportMedia] The findings and interpretation of diagnostic tests performed on patients, groups of patients, products, substances, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports. The report also includes non-clinical context such as batch analysis and stability reporting of products and substances.
 @freezed
 class DiagnosticReportMedia with _$DiagnosticReportMedia {
   DiagnosticReportMedia._();
@@ -441,6 +446,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   }
 }
 
+/// [ImagingSelection] A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
 @freezed
 class ImagingSelection with Resource, _$ImagingSelection {
   ImagingSelection._();
@@ -567,6 +573,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
   }
 }
 
+/// [ImagingSelectionPerformer] A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
 @freezed
 class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
   ImagingSelectionPerformer._();
@@ -621,6 +628,7 @@ class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
   }
 }
 
+/// [ImagingSelectionInstance] A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
 @freezed
 class ImagingSelectionInstance with _$ImagingSelectionInstance {
   ImagingSelectionInstance._();
@@ -702,6 +710,7 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
   }
 }
 
+/// [ImagingSelectionImageRegion] A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.
 @freezed
 class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
   ImagingSelectionImageRegion._();
@@ -768,6 +777,7 @@ class ImagingSelectionImageRegion with _$ImagingSelectionImageRegion {
   }
 }
 
+/// [ImagingStudy] Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 @freezed
 class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
@@ -909,6 +919,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   }
 }
 
+/// [ImagingStudySeries] Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 @freezed
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
@@ -1011,6 +1022,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
   }
 }
 
+/// [ImagingStudyPerformer] Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 @freezed
 class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ImagingStudyPerformer._();
@@ -1068,6 +1080,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   }
 }
 
+/// [ImagingStudyInstance] Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 @freezed
 class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
@@ -1140,6 +1153,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   }
 }
 
+/// [MolecularSequence] Representation of a molecular sequence.
 @freezed
 class MolecularSequence with Resource, _$MolecularSequence {
   MolecularSequence._();
@@ -1248,6 +1262,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
   }
 }
 
+/// [MolecularSequenceRelative] Representation of a molecular sequence.
 @freezed
 class MolecularSequenceRelative with _$MolecularSequenceRelative {
   MolecularSequenceRelative._();
@@ -1306,6 +1321,7 @@ class MolecularSequenceRelative with _$MolecularSequenceRelative {
   }
 }
 
+/// [MolecularSequenceReference] Representation of a molecular sequence.
 @freezed
 class MolecularSequenceReference with _$MolecularSequenceReference {
   MolecularSequenceReference._();
@@ -1400,6 +1416,7 @@ class MolecularSequenceReference with _$MolecularSequenceReference {
   }
 }
 
+/// [MolecularSequenceEdit] Representation of a molecular sequence.
 @freezed
 class MolecularSequenceEdit with _$MolecularSequenceEdit {
   MolecularSequenceEdit._();
@@ -1479,6 +1496,7 @@ class MolecularSequenceEdit with _$MolecularSequenceEdit {
   }
 }
 
+/// [Observation] Measurements and simple assertions made about a patient, device or other subject.
 @freezed
 class Observation with Resource, _$Observation {
   Observation._();
@@ -1708,6 +1726,7 @@ class Observation with Resource, _$Observation {
   }
 }
 
+/// [ObservationTriggeredBy] Measurements and simple assertions made about a patient, device or other subject.
 @freezed
 class ObservationTriggeredBy with _$ObservationTriggeredBy {
   ObservationTriggeredBy._();
@@ -1772,6 +1791,7 @@ class ObservationTriggeredBy with _$ObservationTriggeredBy {
   }
 }
 
+/// [ObservationReferenceRange] Measurements and simple assertions made about a patient, device or other subject.
 @freezed
 class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
@@ -1847,6 +1867,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
   }
 }
 
+/// [ObservationComponent] Measurements and simple assertions made about a patient, device or other subject.
 @freezed
 class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
@@ -1961,6 +1982,7 @@ class ObservationComponent with _$ObservationComponent {
   }
 }
 
+/// [QuestionnaireResponse] A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
 @freezed
 class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
@@ -2072,6 +2094,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   }
 }
 
+/// [QuestionnaireResponseItem] A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
 @freezed
 class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
@@ -2147,6 +2170,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   }
 }
 
+/// [QuestionnaireResponseAnswer] A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
 @freezed
 class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
@@ -2261,6 +2285,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   }
 }
 
+/// [Specimen] A sample to be used for analysis.
 @freezed
 class Specimen with Resource, _$Specimen {
   Specimen._();
@@ -2381,6 +2406,7 @@ class Specimen with Resource, _$Specimen {
   }
 }
 
+/// [SpecimenFeature] A sample to be used for analysis.
 @freezed
 class SpecimenFeature with _$SpecimenFeature {
   SpecimenFeature._();
@@ -2439,6 +2465,7 @@ class SpecimenFeature with _$SpecimenFeature {
   }
 }
 
+/// [SpecimenCollection] A sample to be used for analysis.
 @freezed
 class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
@@ -2526,6 +2553,7 @@ class SpecimenCollection with _$SpecimenCollection {
   }
 }
 
+/// [SpecimenProcessing] A sample to be used for analysis.
 @freezed
 class SpecimenProcessing with _$SpecimenProcessing {
   SpecimenProcessing._();
@@ -2598,6 +2626,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
   }
 }
 
+/// [SpecimenContainer] A sample to be used for analysis.
 @freezed
 class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();

@@ -963,7 +963,9 @@ class _$_Appointment extends _Appointment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentToJson(this);
+    return _$$_AppointmentToJson(
+      this,
+    );
   }
 }
 
@@ -1459,7 +1461,9 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentParticipantToJson(this);
+    return _$$_AppointmentParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -2275,7 +2279,9 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentResponseToJson(this);
+    return _$$_AppointmentResponseToJson(
+      this,
+    );
   }
 }
 
@@ -2956,7 +2962,9 @@ class _$_Schedule extends _Schedule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduleToJson(this);
+    return _$$_ScheduleToJson(
+      this,
+    );
   }
 }
 
@@ -3771,7 +3779,9 @@ class _$_Slot extends _Slot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SlotToJson(this);
+    return _$$_SlotToJson(
+      this,
+    );
   }
 }
 

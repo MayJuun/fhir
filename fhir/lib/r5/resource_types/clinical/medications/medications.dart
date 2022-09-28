@@ -13,6 +13,7 @@ import '../../../../r5.dart';
 part 'medications.freezed.dart';
 part 'medications.g.dart';
 
+/// [Immunization] Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
 @freezed
 class Immunization with Resource, _$Immunization {
   Immunization._();
@@ -205,6 +206,7 @@ class Immunization with Resource, _$Immunization {
   }
 }
 
+/// [ImmunizationPerformer] Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
 @freezed
 class ImmunizationPerformer with _$ImmunizationPerformer {
   ImmunizationPerformer._();
@@ -262,6 +264,7 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
   }
 }
 
+/// [ImmunizationEducation] Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
 @freezed
 class ImmunizationEducation with _$ImmunizationEducation {
   ImmunizationEducation._();
@@ -337,6 +340,7 @@ class ImmunizationEducation with _$ImmunizationEducation {
   }
 }
 
+/// [ImmunizationReaction] Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
 @freezed
 class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
@@ -403,6 +407,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
   }
 }
 
+/// [ImmunizationProtocolApplied] Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
 @freezed
 class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   ImmunizationProtocolApplied._();
@@ -478,6 +483,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   }
 }
 
+/// [ImmunizationEvaluation] Describes a comparison of an immunization event against published recommendations to determine if the administration is "valid" in relation to those  recommendations.
 @freezed
 class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   ImmunizationEvaluation._();
@@ -607,6 +613,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   }
 }
 
+/// [ImmunizationRecommendation] A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
 @freezed
 class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ImmunizationRecommendation._();
@@ -874,6 +881,7 @@ class ImmunizationRecommendationDateCriterion
   }
 }
 
+/// [Medication] This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
 @freezed
 class Medication with Resource, _$Medication {
   Medication._();
@@ -973,6 +981,7 @@ class Medication with Resource, _$Medication {
   }
 }
 
+/// [MedicationIngredient] This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
 @freezed
 class MedicationIngredient with _$MedicationIngredient {
   MedicationIngredient._();
@@ -1042,6 +1051,7 @@ class MedicationIngredient with _$MedicationIngredient {
   }
 }
 
+/// [MedicationBatch] This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
 @freezed
 class MedicationBatch with _$MedicationBatch {
   MedicationBatch._();
@@ -1105,6 +1115,7 @@ class MedicationBatch with _$MedicationBatch {
   }
 }
 
+/// [MedicationAdministration] Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
 @freezed
 class MedicationAdministration with Resource, _$MedicationAdministration {
   MedicationAdministration._();
@@ -1325,6 +1336,7 @@ class MedicationAdministrationPerformer
   }
 }
 
+/// [MedicationAdministrationDosage] Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
 @freezed
 class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
@@ -1401,6 +1413,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   }
 }
 
+/// [MedicationDispense] Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.
 @freezed
 class MedicationDispense with Resource, _$MedicationDispense {
   MedicationDispense._();
@@ -1573,6 +1586,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   }
 }
 
+/// [MedicationDispensePerformer] Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.
 @freezed
 class MedicationDispensePerformer with _$MedicationDispensePerformer {
   MedicationDispensePerformer._();
@@ -1630,6 +1644,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   }
 }
 
+/// [MedicationDispenseSubstitution] Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.
 @freezed
 class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
@@ -1697,6 +1712,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   }
 }
 
+/// [MedicationKnowledge] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledge with Resource, _$MedicationKnowledge {
   MedicationKnowledge._();
@@ -1902,6 +1918,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   }
 }
 
+/// [MedicationKnowledgeMonograph] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   MedicationKnowledgeMonograph._();
@@ -1959,6 +1976,7 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   }
 }
 
+/// [MedicationKnowledgeCost] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   MedicationKnowledgeCost._();
@@ -2217,6 +2235,7 @@ class MedicationKnowledgeDosingGuideline
   }
 }
 
+/// [MedicationKnowledgeDosage] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   MedicationKnowledgeDosage._();
@@ -2414,6 +2433,7 @@ class MedicationKnowledgeMedicineClassification
   }
 }
 
+/// [MedicationKnowledgePackaging] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   MedicationKnowledgePackaging._();
@@ -2471,6 +2491,7 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   }
 }
 
+/// [MedicationKnowledgeRegulatory] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   MedicationKnowledgeRegulatory._();
@@ -2534,6 +2555,7 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   }
 }
 
+/// [MedicationKnowledgeSubstitution] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   MedicationKnowledgeSubstitution._();
@@ -2595,6 +2617,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   }
 }
 
+/// [MedicationKnowledgeMaxDispense] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   MedicationKnowledgeMaxDispense._();
@@ -2653,6 +2676,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   }
 }
 
+/// [MedicationKnowledgeIngredient] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   MedicationKnowledgeIngredient._();
@@ -2864,6 +2888,7 @@ class MedicationKnowledgeStorageGuideline
   }
 }
 
+/// [MedicationKnowledgeDefinitional] Information about a medication that is used to support knowledge.
 @freezed
 class MedicationKnowledgeDefinitional with _$MedicationKnowledgeDefinitional {
   MedicationKnowledgeDefinitional._();
@@ -2993,6 +3018,7 @@ class MedicationKnowledgeEnvironmentalSetting
   }
 }
 
+/// [MedicationRequest] An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
 @freezed
 class MedicationRequest with Resource, _$MedicationRequest {
   MedicationRequest._();
@@ -3185,6 +3211,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
   }
 }
 
+/// [MedicationRequestDose] An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
 @freezed
 class MedicationRequestDose with _$MedicationRequestDose {
   MedicationRequestDose._();
@@ -3247,6 +3274,7 @@ class MedicationRequestDose with _$MedicationRequestDose {
   }
 }
 
+/// [MedicationRequestDispenseRequest] An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
 @freezed
 class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   MedicationRequestDispenseRequest._();
@@ -3331,6 +3359,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   }
 }
 
+/// [MedicationRequestInitialFill] An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
 @freezed
 class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   MedicationRequestInitialFill._();
@@ -3388,6 +3417,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   }
 }
 
+/// [MedicationRequestSubstitution] An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
 @freezed
 class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   MedicationRequestSubstitution._();
@@ -3451,6 +3481,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   }
 }
 
+/// [MedicationUsage] A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains.
 @freezed
 class MedicationUsage with Resource, _$MedicationUsage {
   MedicationUsage._();
@@ -3586,6 +3617,7 @@ class MedicationUsage with Resource, _$MedicationUsage {
   }
 }
 
+/// [MedicationUsageAdherence] A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. The primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information. The MedicationUsage resource was previously called MedicationStatement.
 @freezed
 class MedicationUsageAdherence with _$MedicationUsageAdherence {
   MedicationUsageAdherence._();

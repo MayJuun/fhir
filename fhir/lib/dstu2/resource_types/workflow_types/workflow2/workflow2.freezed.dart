@@ -788,7 +788,9 @@ class _$_ProcessRequest extends _ProcessRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessRequestToJson(this);
+    return _$$_ProcessRequestToJson(
+      this,
+    );
   }
 }
 
@@ -1082,7 +1084,9 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessRequestItemToJson(this);
+    return _$$_ProcessRequestItemToJson(
+      this,
+    );
   }
 }
 
@@ -1821,7 +1825,9 @@ class _$_ProcessResponse extends _ProcessResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessResponseToJson(this);
+    return _$$_ProcessResponseToJson(
+      this,
+    );
   }
 }
 
@@ -2137,7 +2143,9 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessResponseNotesToJson(this);
+    return _$$_ProcessResponseNotesToJson(
+      this,
+    );
   }
 }
 
@@ -2947,7 +2955,9 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestToJson(this);
+    return _$$_SupplyRequestToJson(
+      this,
+    );
   }
 }
 
@@ -3288,7 +3298,9 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestWhenToJson(this);
+    return _$$_SupplyRequestWhenToJson(
+      this,
+    );
   }
 }
 
@@ -4095,7 +4107,9 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyDeliveryToJson(this);
+    return _$$_SupplyDeliveryToJson(
+      this,
+    );
   }
 }
 

@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
+/// [Group] Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
 @freezed
 class Group with Resource, _$Group {
   Group._();
@@ -133,6 +134,7 @@ class Group with Resource, _$Group {
   }
 }
 
+/// [GroupCharacteristic] Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
 @freezed
 class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
@@ -214,6 +216,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
   }
 }
 
+/// [GroupMember] Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
 @freezed
 class GroupMember with _$GroupMember {
   GroupMember._();
@@ -277,6 +280,7 @@ class GroupMember with _$GroupMember {
   }
 }
 
+/// [Patient] Demographics and other administrative information about an individual or animal receiving care or other health-related services.
 @freezed
 class Patient with Resource, _$Patient {
   Patient._();
@@ -431,6 +435,7 @@ class Patient with Resource, _$Patient {
   }
 }
 
+/// [PatientContact] Demographics and other administrative information about an individual or animal receiving care or other health-related services.
 @freezed
 class PatientContact with _$PatientContact {
   PatientContact._();
@@ -506,6 +511,7 @@ class PatientContact with _$PatientContact {
   }
 }
 
+/// [PatientCommunication] Demographics and other administrative information about an individual or animal receiving care or other health-related services.
 @freezed
 class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
@@ -566,6 +572,7 @@ class PatientCommunication with _$PatientCommunication {
   }
 }
 
+/// [PatientLink] Demographics and other administrative information about an individual or animal receiving care or other health-related services.
 @freezed
 class PatientLink with _$PatientLink {
   PatientLink._();
@@ -626,6 +633,7 @@ class PatientLink with _$PatientLink {
   }
 }
 
+/// [Person] Demographics and administrative information about a person independent of a specific health-related context.
 @freezed
 class Person with Resource, _$Person {
   Person._();
@@ -754,6 +762,7 @@ class Person with Resource, _$Person {
   }
 }
 
+/// [PersonCommunication] "Demographics and administrative information about a person independent of a specific health-related context."
 @freezed
 class PersonCommunication with _$PersonCommunication {
   PersonCommunication._();
@@ -813,6 +822,7 @@ class PersonCommunication with _$PersonCommunication {
   }
 }
 
+/// [PersonLink] Demographics and administrative information about a person independent of a specific health-related context.
 @freezed
 class PersonLink with _$PersonLink {
   PersonLink._();
@@ -873,6 +883,7 @@ class PersonLink with _$PersonLink {
   }
 }
 
+/// [Practitioner] A person who is directly or indirectly involved in the provisioning of healthcare.
 @freezed
 class Practitioner with Resource, _$Practitioner {
   Practitioner._();
@@ -996,6 +1007,7 @@ class Practitioner with Resource, _$Practitioner {
   }
 }
 
+/// [PractitionerQualification] A person who is directly or indirectly involved in the provisioning of healthcare.
 @freezed
 class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
@@ -1059,6 +1071,7 @@ class PractitionerQualification with _$PractitionerQualification {
   }
 }
 
+/// [PractitionerRole] A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
 @freezed
 class PractitionerRole with Resource, _$PractitionerRole {
   PractitionerRole._();
@@ -1183,6 +1196,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
   }
 }
 
+/// [PractitionerRoleAvailableTime] A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
 @freezed
 class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   PractitionerRoleAvailableTime._();
@@ -1258,6 +1272,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   }
 }
 
+/// [PractitionerRoleNotAvailable] A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
 @freezed
 class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   PractitionerRoleNotAvailable._();
@@ -1318,6 +1333,7 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   }
 }
 
+/// [RelatedPerson] Information about a person that is involved in a patient's health or the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
 @freezed
 class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
@@ -1435,6 +1451,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
   }
 }
 
+/// [RelatedPersonCommunication] Information about a person that is involved in a patient's health or the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
 @freezed
 class RelatedPersonCommunication with _$RelatedPersonCommunication {
   RelatedPersonCommunication._();

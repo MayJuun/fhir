@@ -834,7 +834,9 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BiologicallyDerivedProductToJson(this);
+    return _$$_BiologicallyDerivedProductToJson(
+      this,
+    );
   }
 }
 
@@ -1281,7 +1283,9 @@ class _$_BiologicallyDerivedProductCollection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BiologicallyDerivedProductCollectionToJson(this);
+    return _$$_BiologicallyDerivedProductCollectionToJson(
+      this,
+    );
   }
 }
 
@@ -1723,7 +1727,9 @@ class _$_BiologicallyDerivedProductProcessing
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BiologicallyDerivedProductProcessingToJson(this);
+    return _$$_BiologicallyDerivedProductProcessingToJson(
+      this,
+    );
   }
 }
 
@@ -2107,7 +2113,9 @@ class _$_BiologicallyDerivedProductManipulation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BiologicallyDerivedProductManipulationToJson(this);
+    return _$$_BiologicallyDerivedProductManipulationToJson(
+      this,
+    );
   }
 }
 
@@ -2534,7 +2542,9 @@ class _$_BiologicallyDerivedProductStorage
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BiologicallyDerivedProductStorageToJson(this);
+    return _$$_BiologicallyDerivedProductStorageToJson(
+      this,
+    );
   }
 }
 
@@ -4017,7 +4027,9 @@ class _$_Device extends _Device {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceToJson(this);
+    return _$$_DeviceToJson(
+      this,
+    );
   }
 }
 
@@ -4702,7 +4714,9 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceUdiCarrierToJson(this);
+    return _$$_DeviceUdiCarrierToJson(
+      this,
+    );
   }
 }
 
@@ -5062,7 +5076,9 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceDeviceNameToJson(this);
+    return _$$_DeviceDeviceNameToJson(
+      this,
+    );
   }
 }
 
@@ -5365,7 +5381,9 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceSpecializationToJson(this);
+    return _$$_DeviceSpecializationToJson(
+      this,
+    );
   }
 }
 
@@ -5698,7 +5716,9 @@ class _$_DeviceVersion extends _DeviceVersion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceVersionToJson(this);
+    return _$$_DeviceVersionToJson(
+      this,
+    );
   }
 }
 
@@ -5997,7 +6017,9 @@ class _$_DeviceProperty extends _DeviceProperty {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DevicePropertyToJson(this);
+    return _$$_DevicePropertyToJson(
+      this,
+    );
   }
 }
 
@@ -6822,7 +6844,9 @@ class _$_DeviceMetric extends _DeviceMetric {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceMetricToJson(this);
+    return _$$_DeviceMetricToJson(
+      this,
+    );
   }
 }
 
@@ -7266,7 +7290,9 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceMetricCalibrationToJson(this);
+    return _$$_DeviceMetricCalibrationToJson(
+      this,
+    );
   }
 }
 
@@ -8013,7 +8039,9 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionProductToJson(this);
+    return _$$_NutritionProductToJson(
+      this,
+    );
   }
 }
 
@@ -8339,7 +8367,9 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionProductNutrientToJson(this);
+    return _$$_NutritionProductNutrientToJson(
+      this,
+    );
   }
 }
 
@@ -8608,7 +8638,9 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionProductIngredientToJson(this);
+    return _$$_NutritionProductIngredientToJson(
+      this,
+    );
   }
 }
 
@@ -9118,7 +9150,9 @@ class _$_NutritionProductCharacteristic
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionProductCharacteristicToJson(this);
+    return _$$_NutritionProductCharacteristicToJson(
+      this,
+    );
   }
 }
 
@@ -9670,7 +9704,9 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionProductInstanceToJson(this);
+    return _$$_NutritionProductInstanceToJson(
+      this,
+    );
   }
 }
 
@@ -10387,7 +10423,9 @@ class _$_Substance extends _Substance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceToJson(this);
+    return _$$_SubstanceToJson(
+      this,
+    );
   }
 }
 
@@ -10773,7 +10811,9 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceInstanceToJson(this);
+    return _$$_SubstanceInstanceToJson(
+      this,
+    );
   }
 }
 
@@ -11092,7 +11132,9 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubstanceIngredientToJson(this);
+    return _$$_SubstanceIngredientToJson(
+      this,
+    );
   }
 }
 

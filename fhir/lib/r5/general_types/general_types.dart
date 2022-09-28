@@ -663,6 +663,7 @@ class Ratio with _$Ratio {
   }
 }
 
+/// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
 @freezed
 class RatioRange with _$RatioRange {
   RatioRange._();

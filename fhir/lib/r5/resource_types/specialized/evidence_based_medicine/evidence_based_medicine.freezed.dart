@@ -1016,7 +1016,9 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtifactAssessmentToJson(this);
+    return _$$_ArtifactAssessmentToJson(
+      this,
+    );
   }
 }
 
@@ -1701,7 +1703,9 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtifactAssessmentContentToJson(this);
+    return _$$_ArtifactAssessmentContentToJson(
+      this,
+    );
   }
 }
 
@@ -3325,7 +3329,9 @@ class _$_Citation extends _Citation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationToJson(this);
+    return _$$_CitationToJson(
+      this,
+    );
   }
 }
 
@@ -3782,7 +3788,9 @@ class _$_CitationSummary extends _CitationSummary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationSummaryToJson(this);
+    return _$$_CitationSummaryToJson(
+      this,
+    );
   }
 }
 
@@ -4058,7 +4066,9 @@ class _$_CitationClassification extends _CitationClassification {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationClassificationToJson(this);
+    return _$$_CitationClassificationToJson(
+      this,
+    );
   }
 }
 
@@ -4379,7 +4389,9 @@ class _$_CitationStatusDate extends _CitationStatusDate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationStatusDateToJson(this);
+    return _$$_CitationStatusDateToJson(
+      this,
+    );
   }
 }
 
@@ -5056,7 +5068,9 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationCitedArtifactToJson(this);
+    return _$$_CitationCitedArtifactToJson(
+      this,
+    );
   }
 }
 
@@ -5398,7 +5412,9 @@ class _$_CitationVersion extends _CitationVersion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationVersionToJson(this);
+    return _$$_CitationVersionToJson(
+      this,
+    );
   }
 }
 
@@ -5723,7 +5739,9 @@ class _$_CitationStatusDate1 extends _CitationStatusDate1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationStatusDate1ToJson(this);
+    return _$$_CitationStatusDate1ToJson(
+      this,
+    );
   }
 }
 
@@ -6052,7 +6070,9 @@ class _$_CitationTitle extends _CitationTitle {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationTitleToJson(this);
+    return _$$_CitationTitleToJson(
+      this,
+    );
   }
 }
 
@@ -6440,7 +6460,9 @@ class _$_CitationAbstract extends _CitationAbstract {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationAbstractToJson(this);
+    return _$$_CitationAbstractToJson(
+      this,
+    );
   }
 }
 
@@ -6783,7 +6805,9 @@ class _$_CitationPart extends _CitationPart {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationPartToJson(this);
+    return _$$_CitationPartToJson(
+      this,
+    );
   }
 }
 
@@ -7359,7 +7383,9 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationRelatesToToJson(this);
+    return _$$_CitationRelatesToToJson(
+      this,
+    );
   }
 }
 
@@ -8135,7 +8161,9 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationPublicationFormToJson(this);
+    return _$$_CitationPublicationFormToJson(
+      this,
+    );
   }
 }
 
@@ -8613,7 +8641,9 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationPublishedInToJson(this);
+    return _$$_CitationPublishedInToJson(
+      this,
+    );
   }
 }
 
@@ -9022,7 +9052,9 @@ class _$_CitationPeriodicRelease extends _CitationPeriodicRelease {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationPeriodicReleaseToJson(this);
+    return _$$_CitationPeriodicReleaseToJson(
+      this,
+    );
   }
 }
 
@@ -9571,7 +9603,9 @@ class _$_CitationDateOfPublication extends _CitationDateOfPublication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationDateOfPublicationToJson(this);
+    return _$$_CitationDateOfPublicationToJson(
+      this,
+    );
   }
 }
 
@@ -9900,7 +9934,9 @@ class _$_CitationWebLocation extends _CitationWebLocation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationWebLocationToJson(this);
+    return _$$_CitationWebLocationToJson(
+      this,
+    );
   }
 }
 
@@ -10205,7 +10241,9 @@ class _$_CitationClassification1 extends _CitationClassification1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationClassification1ToJson(this);
+    return _$$_CitationClassification1ToJson(
+      this,
+    );
   }
 }
 
@@ -10527,7 +10565,9 @@ class _$_CitationContributorship extends _CitationContributorship {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationContributorshipToJson(this);
+    return _$$_CitationContributorshipToJson(
+      this,
+    );
   }
 }
 
@@ -10894,7 +10934,9 @@ class _$_CitationSummary1 extends _CitationSummary1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationSummary1ToJson(this);
+    return _$$_CitationSummary1ToJson(
+      this,
+    );
   }
 }
 
@@ -11432,7 +11474,9 @@ class _$_CitationEntry extends _CitationEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationEntryToJson(this);
+    return _$$_CitationEntryToJson(
+      this,
+    );
   }
 }
 
@@ -11764,7 +11808,9 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationContributionInstanceToJson(this);
+    return _$$_CitationContributionInstanceToJson(
+      this,
+    );
   }
 }
 
@@ -13497,7 +13543,9 @@ class _$_Evidence extends _Evidence {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceToJson(this);
+    return _$$_EvidenceToJson(
+      this,
+    );
   }
 }
 
@@ -14097,7 +14145,9 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableDefinitionToJson(this);
+    return _$$_EvidenceVariableDefinitionToJson(
+      this,
+    );
   }
 }
 
@@ -14698,7 +14748,9 @@ class _$_EvidenceStatistic extends _EvidenceStatistic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceStatisticToJson(this);
+    return _$$_EvidenceStatisticToJson(
+      this,
+    );
   }
 }
 
@@ -15201,7 +15253,9 @@ class _$_EvidenceSampleSize extends _EvidenceSampleSize {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceSampleSizeToJson(this);
+    return _$$_EvidenceSampleSizeToJson(
+      this,
+    );
   }
 }
 
@@ -15703,7 +15757,9 @@ class _$_EvidenceAttributeEstimate extends _EvidenceAttributeEstimate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceAttributeEstimateToJson(this);
+    return _$$_EvidenceAttributeEstimateToJson(
+      this,
+    );
   }
 }
 
@@ -16058,7 +16114,9 @@ class _$_EvidenceModelCharacteristic extends _EvidenceModelCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceModelCharacteristicToJson(this);
+    return _$$_EvidenceModelCharacteristicToJson(
+      this,
+    );
   }
 }
 
@@ -16451,7 +16509,9 @@ class _$_EvidenceModelCharacteristicVariable
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceModelCharacteristicVariableToJson(this);
+    return _$$_EvidenceModelCharacteristicVariableToJson(
+      this,
+    );
   }
 }
 
@@ -16903,7 +16963,9 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceCertaintyToJson(this);
+    return _$$_EvidenceCertaintyToJson(
+      this,
+    );
   }
 }
 
@@ -18598,7 +18660,9 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportToJson(this);
+    return _$$_EvidenceReportToJson(
+      this,
+    );
   }
 }
 
@@ -19035,7 +19099,9 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportSubjectToJson(this);
+    return _$$_EvidenceReportSubjectToJson(
+      this,
+    );
   }
 }
 
@@ -19553,7 +19619,9 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportCharacteristicToJson(this);
+    return _$$_EvidenceReportCharacteristicToJson(
+      this,
+    );
   }
 }
 
@@ -19876,7 +19944,9 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportRelatesToToJson(this);
+    return _$$_EvidenceReportRelatesToToJson(
+      this,
+    );
   }
 }
 
@@ -20263,7 +20333,9 @@ class _$_EvidenceReportTarget extends _EvidenceReportTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportTargetToJson(this);
+    return _$$_EvidenceReportTargetToJson(
+      this,
+    );
   }
 }
 
@@ -20893,7 +20965,9 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportSectionToJson(this);
+    return _$$_EvidenceReportSectionToJson(
+      this,
+    );
   }
 }
 
@@ -22645,7 +22719,9 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableToJson(this);
+    return _$$_EvidenceVariableToJson(
+      this,
+    );
   }
 }
 
@@ -23703,7 +23779,9 @@ class _$_EvidenceVariableCharacteristic
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableCharacteristicToJson(this);
+    return _$$_EvidenceVariableCharacteristicToJson(
+      this,
+    );
   }
 }
 
@@ -24147,7 +24225,9 @@ class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableCategoryToJson(this);
+    return _$$_EvidenceVariableCategoryToJson(
+      this,
+    );
   }
 }
 
@@ -24738,7 +24818,9 @@ class _$_EvidenceVariableDefByTypeAndValue
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableDefByTypeAndValueToJson(this);
+    return _$$_EvidenceVariableDefByTypeAndValueToJson(
+      this,
+    );
   }
 }
 
@@ -25126,7 +25208,9 @@ class _$_EvidenceVariableDefByCombination
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableDefByCombinationToJson(this);
+    return _$$_EvidenceVariableDefByCombinationToJson(
+      this,
+    );
   }
 }
 
@@ -25677,7 +25761,9 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableTimeFromEventToJson(this);
+    return _$$_EvidenceVariableTimeFromEventToJson(
+      this,
+    );
   }
 }
 

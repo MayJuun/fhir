@@ -13,8 +13,10 @@ part 'general_types.enums.dart';
 part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 
+/// [Annotation] A  text note which also  contains information about who made
 @freezed
 class Annotation with _$Annotation {
+  /// [Annotation] A  text note which also  contains information about who made
   Annotation._();
 
   /// [Annotation] A  text note which also  contains information about who made
@@ -86,8 +88,10 @@ class Annotation with _$Annotation {
   }
 }
 
+/// [Attachment] For referring to data content defined in other formats.
 @freezed
 class Attachment with _$Attachment {
+  /// [Attachment] For referring to data content defined in other formats.
   Attachment._();
 
   /// [Attachment] For referring to data content defined in other formats.
@@ -191,8 +195,10 @@ class Attachment with _$Attachment {
   }
 }
 
+/// [Identifier] An identifier - identifies some entity uniquely and
 @freezed
 class Identifier with _$Identifier {
+  /// [Identifier] An identifier - identifies some entity uniquely and
   Identifier._();
 
   /// [Identifier] An identifier - identifies some entity uniquely and
@@ -273,8 +279,10 @@ class Identifier with _$Identifier {
   }
 }
 
+/// [CodeableConcept] A concept that may be defined by a formal reference to
 @freezed
 class CodeableConcept with _$CodeableConcept {
+  /// [CodeableConcept] A concept that may be defined by a formal reference to
   CodeableConcept._();
 
   /// [CodeableConcept] A concept that may be defined by a formal reference to
@@ -336,8 +344,10 @@ class CodeableConcept with _$CodeableConcept {
   }
 }
 
+/// [Coding] A reference to a code defined by a terminology system.
 @freezed
 class Coding with _$Coding {
+  /// [Coding] A reference to a code defined by a terminology system.
   Coding._();
 
   /// [Coding] A reference to a code defined by a terminology system.
@@ -426,8 +436,10 @@ class Coding with _$Coding {
   }
 }
 
+/// [Quantity] A measured amount (or an amount that can potentially be
 @freezed
 class Quantity with _$Quantity {
+  /// [Quantity] A measured amount (or an amount that can potentially be
   Quantity._();
 
   /// [Quantity] A measured amount (or an amount that can potentially be
@@ -517,8 +529,10 @@ class Quantity with _$Quantity {
   }
 }
 
+/// [Duration] A length of time.
 @freezed
 class FhirDuration with _$FhirDuration {
+  /// [Duration] A length of time.
   FhirDuration._();
 
   /// [Duration] A length of time.
@@ -605,8 +619,10 @@ class FhirDuration with _$FhirDuration {
   }
 }
 
+/// [Distance] A length - a value with a unit that is a physical distance.
 @freezed
 class Distance with _$Distance {
+  /// [Distance] A length - a value with a unit that is a physical distance.
   Distance._();
 
   /// [Distance] A length - a value with a unit that is a physical distance.
@@ -693,8 +709,10 @@ class Distance with _$Distance {
   }
 }
 
+/// [Count] A measured amount (or an amount that can potentially be
 @freezed
 class Count with _$Count {
+  /// [Count] A measured amount (or an amount that can potentially be
   Count._();
 
   /// [Count] A measured amount (or an amount that can potentially be
@@ -782,8 +800,10 @@ class Count with _$Count {
   }
 }
 
+/// [Money] An amount of economic utility in some recognized currency.
 @freezed
 class Money with _$Money {
+  /// [Money] An amount of economic utility in some recognized currency.
   Money._();
 
   /// [Money] An amount of economic utility in some recognized currency.
@@ -843,8 +863,10 @@ class Money with _$Money {
   }
 }
 
+/// [Age] A duration of time during which an organism (or a process) has
 @freezed
 class Age with _$Age {
+  /// [Age] A duration of time during which an organism (or a process) has
   Age._();
 
   /// [Age] A duration of time during which an organism (or a process) has
@@ -928,8 +950,10 @@ class Age with _$Age {
   }
 }
 
+/// [Range] A set of ordered Quantities defined by a low and high limit.
 @freezed
 class Range with _$Range {
+  /// [Range] A set of ordered Quantities defined by a low and high limit.
   Range._();
 
   /// [Range] A set of ordered Quantities defined by a low and high limit.
@@ -983,8 +1007,10 @@ class Range with _$Range {
   }
 }
 
+/// [Period] A time period defined by a start and end date and optionally
 @freezed
 class Period with _$Period {
+  /// [Period] A time period defined by a start and end date and optionally
   Period._();
 
   /// [Period] A time period defined by a start and end date and optionally
@@ -1049,8 +1075,10 @@ class Period with _$Period {
   }
 }
 
+/// [Ratio] A relationship of two Quantity values - expressed as a numerator
 @freezed
 class Ratio with _$Ratio {
+  /// [Ratio] A relationship of two Quantity values - expressed as a numerator
   Ratio._();
 
   /// [Ratio] A relationship of two Quantity values - expressed as a numerator
@@ -1105,8 +1133,10 @@ class Ratio with _$Ratio {
   }
 }
 
+/// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
 @freezed
 class RatioRange with _$RatioRange {
+  /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
   RatioRange._();
 
   /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
@@ -1155,8 +1185,10 @@ class RatioRange with _$RatioRange {
   }
 }
 
+/// [SampledData] A series of measurements taken by a device, with upper and
 @freezed
 class SampledData with _$SampledData {
+  /// [SampledData] A series of measurements taken by a device, with upper and
   SampledData._();
 
   /// [SampledData] A series of measurements taken by a device, with upper and
@@ -1258,8 +1290,10 @@ class SampledData with _$SampledData {
   }
 }
 
+/// [Signature] A signature along with supporting context. The signature may
 @freezed
 class Signature with _$Signature {
+  /// [Signature] A signature along with supporting context. The signature may
   Signature._();
 
   /// [Signature] A signature along with supporting context. The signature may
@@ -1356,8 +1390,10 @@ class Signature with _$Signature {
   }
 }
 
+/// [HumanName] A human's name with the ability to identify parts and usage.
 @freezed
 class HumanName with _$HumanName {
+  /// [HumanName] A human's name with the ability to identify parts and usage.
   HumanName._();
 
   /// [HumanName] A human's name with the ability to identify parts and usage.
@@ -1454,8 +1490,10 @@ class HumanName with _$HumanName {
   }
 }
 
+/// [Address] An address expressed using postal conventions (as opposed to
 @freezed
 class Address with _$Address {
+  /// [Address] An address expressed using postal conventions (as opposed to
   Address._();
 
   /// [Address] An address expressed using postal conventions (as opposed to
@@ -1577,8 +1615,10 @@ class Address with _$Address {
   }
 }
 
+/// [ContactPoint] Details for all kinds of technology mediated contact
 @freezed
 class ContactPoint with _$ContactPoint {
+  /// [ContactPoint] Details for all kinds of technology mediated contact
   ContactPoint._();
 
   /// [ContactPoint] Details for all kinds of technology mediated contact
@@ -1661,8 +1701,10 @@ class ContactPoint with _$ContactPoint {
   }
 }
 
+/// [Timing] Specifies an event that may occur multiple times. Timing
 @freezed
 class Timing with _$Timing {
+  /// [Timing] Specifies an event that may occur multiple times. Timing
   Timing._();
 
   /// [Timing] Specifies an event that may occur multiple times. Timing
@@ -1749,8 +1791,10 @@ class Timing with _$Timing {
   }
 }
 
+/// [TimingRepeat] Specifies an event that may occur multiple times. Timing
 @freezed
 class TimingRepeat with _$TimingRepeat {
+  /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
   TimingRepeat._();
 
   /// [TimingRepeat] Specifies an event that may occur multiple times. Timing

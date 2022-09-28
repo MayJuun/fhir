@@ -14,6 +14,7 @@ import '../../../../r5.dart';
 part 'management.freezed.dart';
 part 'management.g.dart';
 
+/// [Encounter] An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 @freezed
 class Encounter with Resource, _$Encounter {
   Encounter._();
@@ -170,6 +171,7 @@ class Encounter with Resource, _$Encounter {
   }
 }
 
+/// [EncounterStatusHistory] An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 @freezed
 class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
@@ -230,6 +232,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
   }
 }
 
+/// [EncounterClassHistory] An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 @freezed
 class EncounterClassHistory with _$EncounterClassHistory {
   EncounterClassHistory._();
@@ -287,6 +290,7 @@ class EncounterClassHistory with _$EncounterClassHistory {
   }
 }
 
+/// [EncounterParticipant] An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 @freezed
 class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
@@ -347,6 +351,7 @@ class EncounterParticipant with _$EncounterParticipant {
   }
 }
 
+/// [EncounterDiagnosis] An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 @freezed
 class EncounterDiagnosis with _$EncounterDiagnosis {
   EncounterDiagnosis._();
@@ -410,6 +415,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
   }
 }
 
+/// [EncounterHospitalization] An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 @freezed
 class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
@@ -488,6 +494,7 @@ class EncounterHospitalization with _$EncounterHospitalization {
   }
 }
 
+/// [EncounterLocation] An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
 @freezed
 class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
@@ -554,6 +561,7 @@ class EncounterLocation with _$EncounterLocation {
   }
 }
 
+/// [EpisodeOfCare] An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
 @freezed
 class EpisodeOfCare with Resource, _$EpisodeOfCare {
   EpisodeOfCare._();
@@ -665,6 +673,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   }
 }
 
+/// [EpisodeOfCareStatusHistory] An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
 @freezed
 class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
@@ -725,6 +734,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   }
 }
 
+/// [EpisodeOfCareDiagnosis] An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
 @freezed
 class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   EpisodeOfCareDiagnosis._();
@@ -788,6 +798,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   }
 }
 
+/// [Flag] Prospective warnings of potential issues when providing care to the patient.
 @freezed
 class Flag with Resource, _$Flag {
   Flag._();
@@ -885,6 +896,7 @@ class Flag with Resource, _$Flag {
   }
 }
 
+/// [Library] The Library resource is a general-purpose container for knowledge asset definitions. It can be used to describe and expose existing knowledge assets such as logic libraries and information model descriptions, as well as to describe a collection of knowledge assets.
 @freezed
 class Library with Resource, _$Library {
   Library._();
@@ -1098,6 +1110,7 @@ class Library with Resource, _$Library {
   }
 }
 
+/// [List] A list is a curated collection of resources.
 @freezed
 class List_ with Resource, _$List_ {
   List_._();
@@ -1255,6 +1268,7 @@ class List_ with Resource, _$List_ {
   }
 }
 
+/// [ListEntry] A list is a curated collection of resources.
 @freezed
 class ListEntry with _$ListEntry {
   ListEntry._();

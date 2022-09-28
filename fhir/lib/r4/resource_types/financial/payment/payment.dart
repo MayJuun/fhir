@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'payment.freezed.dart';
 part 'payment.g.dart';
 
+/// [PaymentNotice] This resource provides the status of the payment for
 @freezed
 class PaymentNotice with Resource, _$PaymentNotice {
+  /// [PaymentNotice] This resource provides the status of the payment for
   PaymentNotice._();
 
   /// [PaymentNotice] This resource provides the status of the payment for
@@ -165,8 +167,10 @@ class PaymentNotice with Resource, _$PaymentNotice {
   }
 }
 
+/// [PaymentReconciliation] This resource provides the details including
 @freezed
 class PaymentReconciliation with Resource, _$PaymentReconciliation {
+  /// [PaymentReconciliation] This resource provides the details including
   PaymentReconciliation._();
 
   /// [PaymentReconciliation] This resource provides the details including
@@ -336,8 +340,10 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   }
 }
 
+/// [PaymentReconciliationDetail] This resource provides the details
 @freezed
 class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
+  /// [PaymentReconciliationDetail] This resource provides the details
   PaymentReconciliationDetail._();
 
   /// [PaymentReconciliationDetail] This resource provides the details
@@ -443,8 +449,10 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   }
 }
 
+/// [PaymentReconciliationProcessNote] This resource provides the details
 @freezed
 class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
+  /// [PaymentReconciliationProcessNote] This resource provides the details
   PaymentReconciliationProcessNote._();
 
   /// [PaymentReconciliationProcessNote] This resource provides the details

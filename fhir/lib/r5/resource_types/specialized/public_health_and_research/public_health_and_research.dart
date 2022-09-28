@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 
+/// [ResearchStudy] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudy with Resource, _$ResearchStudy {
   ResearchStudy._();
@@ -219,6 +220,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   }
 }
 
+/// [ResearchStudyLabel] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyLabel with _$ResearchStudyLabel {
   ResearchStudyLabel._();
@@ -279,6 +281,7 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
   }
 }
 
+/// [ResearchStudyFocus] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyFocus with _$ResearchStudyFocus {
   ResearchStudyFocus._();
@@ -342,6 +345,7 @@ class ResearchStudyFocus with _$ResearchStudyFocus {
   }
 }
 
+/// [ResearchStudyClassification] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyClassification with _$ResearchStudyClassification {
   ResearchStudyClassification._();
@@ -399,6 +403,7 @@ class ResearchStudyClassification with _$ResearchStudyClassification {
   }
 }
 
+/// [ResearchStudyAssociatedParty] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
   ResearchStudyAssociatedParty._();
@@ -468,6 +473,7 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
   }
 }
 
+/// [ResearchStudyStatusDate] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyStatusDate with _$ResearchStudyStatusDate {
   ResearchStudyStatusDate._();
@@ -531,6 +537,7 @@ class ResearchStudyStatusDate with _$ResearchStudyStatusDate {
   }
 }
 
+/// [ResearchStudyRecruitment] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
   ResearchStudyRecruitment._();
@@ -600,6 +607,7 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
   }
 }
 
+/// [ResearchStudyComparisonGroup] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
   ResearchStudyComparisonGroup._();
@@ -681,6 +689,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
   }
 }
 
+/// [ResearchStudyObjective] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyObjective with _$ResearchStudyObjective {
   ResearchStudyObjective._();
@@ -747,6 +756,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   }
 }
 
+/// [ResearchStudyOutcomeMeasure] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
   ResearchStudyOutcomeMeasure._();
@@ -816,6 +826,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
   }
 }
 
+/// [ResearchStudyWebLocation] A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects or stability data about drug products or drug substances.
 @freezed
 class ResearchStudyWebLocation with _$ResearchStudyWebLocation {
   ResearchStudyWebLocation._();
@@ -876,6 +887,7 @@ class ResearchStudyWebLocation with _$ResearchStudyWebLocation {
   }
 }
 
+/// [ResearchSubject] A physical entity which is the primary unit of operational and/or administrative interest in a study.
 @freezed
 class ResearchSubject with Resource, _$ResearchSubject {
   ResearchSubject._();
@@ -984,6 +996,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   }
 }
 
+/// [ResearchSubjectProgress] A physical entity which is the primary unit of operational and/or administrative interest in a study.
 @freezed
 class ResearchSubjectProgress with _$ResearchSubjectProgress {
   ResearchSubjectProgress._();

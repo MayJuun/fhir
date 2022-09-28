@@ -2301,7 +2301,9 @@ class _$_FhirExtension extends _FhirExtension {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FhirExtensionToJson(this);
+    return _$$_FhirExtensionToJson(
+      this,
+    );
   }
 }
 

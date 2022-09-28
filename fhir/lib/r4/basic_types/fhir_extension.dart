@@ -12,8 +12,10 @@ import '../../r4.dart';
 part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
 
+/// [extension] Optional Extension Element - found in all resources.
 @freezed
 class FhirExtension with _$FhirExtension {
+  /// [extension] Optional Extension Element - found in all resources.
   FhirExtension._();
 
   /// [extension] Optional Extension Element - found in all resources.

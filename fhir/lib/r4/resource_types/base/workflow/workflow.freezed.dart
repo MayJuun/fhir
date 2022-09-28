@@ -1290,7 +1290,9 @@ class _$_Appointment extends _Appointment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentToJson(this);
+    return _$$_AppointmentToJson(
+      this,
+    );
   }
 }
 
@@ -1838,7 +1840,9 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentParticipantToJson(this);
+    return _$$_AppointmentParticipantToJson(
+      this,
+    );
   }
 }
 
@@ -2641,7 +2645,9 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppointmentResponseToJson(this);
+    return _$$_AppointmentResponseToJson(
+      this,
+    );
   }
 }
 
@@ -3427,7 +3433,9 @@ class _$_Schedule extends _Schedule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduleToJson(this);
+    return _$$_ScheduleToJson(
+      this,
+    );
   }
 }
 
@@ -4371,7 +4379,9 @@ class _$_Slot extends _Slot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SlotToJson(this);
+    return _$$_SlotToJson(
+      this,
+    );
   }
 }
 
@@ -6000,7 +6010,9 @@ class _$_Task extends _Task {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskToJson(this);
+    return _$$_TaskToJson(
+      this,
+    );
   }
 }
 
@@ -6476,7 +6488,9 @@ class _$_TaskRestriction extends _TaskRestriction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskRestrictionToJson(this);
+    return _$$_TaskRestrictionToJson(
+      this,
+    );
   }
 }
 
@@ -8750,7 +8764,9 @@ class _$_TaskInput extends _TaskInput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskInputToJson(this);
+    return _$$_TaskInputToJson(
+      this,
+    );
   }
 }
 
@@ -11262,7 +11278,9 @@ class _$_TaskOutput extends _TaskOutput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskOutputToJson(this);
+    return _$$_TaskOutputToJson(
+      this,
+    );
   }
 }
 
@@ -12510,7 +12528,9 @@ class _$_VerificationResult extends _VerificationResult {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VerificationResultToJson(this);
+    return _$$_VerificationResultToJson(
+      this,
+    );
   }
 }
 
@@ -13056,7 +13076,9 @@ class _$_VerificationResultPrimarySource
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VerificationResultPrimarySourceToJson(this);
+    return _$$_VerificationResultPrimarySourceToJson(
+      this,
+    );
   }
 }
 
@@ -13644,7 +13666,9 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VerificationResultAttestationToJson(this);
+    return _$$_VerificationResultAttestationToJson(
+      this,
+    );
   }
 }
 
@@ -14016,7 +14040,9 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VerificationResultValidatorToJson(this);
+    return _$$_VerificationResultValidatorToJson(
+      this,
+    );
   }
 }
 

@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
+/// [Appointment] A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
 @freezed
 class Appointment with Resource, _$Appointment {
   Appointment._();
@@ -175,6 +176,7 @@ class Appointment with Resource, _$Appointment {
   }
 }
 
+/// [AppointmentParticipant] A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
 @freezed
 class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
@@ -247,6 +249,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   }
 }
 
+/// [AppointmentResponse] A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
 @freezed
 class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
@@ -355,6 +358,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   }
 }
 
+/// [Schedule] A container for slots of time that may be available for booking appointments.
 @freezed
 class Schedule with Resource, _$Schedule {
   Schedule._();
@@ -457,6 +461,7 @@ class Schedule with Resource, _$Schedule {
   }
 }
 
+/// [Slot] A slot of time on a schedule that may be available for booking appointments.
 @freezed
 class Slot with Resource, _$Slot {
   Slot._();
@@ -575,6 +580,7 @@ class Slot with Resource, _$Slot {
   }
 }
 
+/// [Task] A task to be performed.
 @freezed
 class Task with Resource, _$Task {
   Task._();
@@ -759,6 +765,7 @@ class Task with Resource, _$Task {
   }
 }
 
+/// [TaskRestriction] A task to be performed.
 @freezed
 class TaskRestriction with _$TaskRestriction {
   TaskRestriction._();
@@ -822,6 +829,7 @@ class TaskRestriction with _$TaskRestriction {
   }
 }
 
+/// [TaskInput] A task to be performed.
 @freezed
 class TaskInput with _$TaskInput {
   TaskInput._();
@@ -1095,6 +1103,7 @@ class TaskInput with _$TaskInput {
   }
 }
 
+/// [TaskOutput] A task to be performed.
 @freezed
 class TaskOutput with _$TaskOutput {
   TaskOutput._();
@@ -1367,6 +1376,7 @@ class TaskOutput with _$TaskOutput {
   }
 }
 
+/// [Transport] Record of transport of item.
 @freezed
 class Transport with Resource, _$Transport {
   Transport._();
@@ -1560,6 +1570,7 @@ class Transport with Resource, _$Transport {
   }
 }
 
+/// [TransportRestriction] Record of transport of item.
 @freezed
 class TransportRestriction with _$TransportRestriction {
   TransportRestriction._();
@@ -1621,6 +1632,7 @@ class TransportRestriction with _$TransportRestriction {
   }
 }
 
+/// [TransportInput] Record of transport of item.
 @freezed
 class TransportInput with _$TransportInput {
   TransportInput._();
@@ -1892,6 +1904,7 @@ class TransportInput with _$TransportInput {
   }
 }
 
+/// [TransportOutput] Record of transport of item.
 @freezed
 class TransportOutput with _$TransportOutput {
   TransportOutput._();
@@ -2163,6 +2176,7 @@ class TransportOutput with _$TransportOutput {
   }
 }
 
+/// [VerificationResult] Describes validation requirements, source(s), status and dates for one or more elements.
 @freezed
 class VerificationResult with Resource, _$VerificationResult {
   VerificationResult._();
@@ -2292,6 +2306,7 @@ class VerificationResult with Resource, _$VerificationResult {
   }
 }
 
+/// [VerificationResultPrimarySource] Describes validation requirements, source(s), status and dates for one or more elements.
 @freezed
 class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   VerificationResultPrimarySource._();
@@ -2368,6 +2383,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   }
 }
 
+/// [VerificationResultAttestation] Describes validation requirements, source(s), status and dates for one or more elements.
 @freezed
 class VerificationResultAttestation with _$VerificationResultAttestation {
   VerificationResultAttestation._();
@@ -2454,6 +2470,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
   }
 }
 
+/// [VerificationResultValidator] Describes validation requirements, source(s), status and dates for one or more elements.
 @freezed
 class VerificationResultValidator with _$VerificationResultValidator {
   VerificationResultValidator._();

@@ -12,8 +12,10 @@ import '../../../../r4.dart';
 part 'general.freezed.dart';
 part 'general.g.dart';
 
+/// [Account] A financial tool for tracking value accrued for a particular
 @freezed
 class Account with Resource, _$Account {
+  /// [Account] A financial tool for tracking value accrued for a particular
   Account._();
 
   /// [Account] A financial tool for tracking value accrued for a particular
@@ -167,8 +169,10 @@ class Account with Resource, _$Account {
   }
 }
 
+/// [AccountCoverage] A financial tool for tracking value accrued for a
 @freezed
 class AccountCoverage with _$AccountCoverage {
+  /// [AccountCoverage] A financial tool for tracking value accrued for a
   AccountCoverage._();
 
   /// [AccountCoverage] A financial tool for tracking value accrued for a
@@ -248,8 +252,10 @@ class AccountCoverage with _$AccountCoverage {
   }
 }
 
+/// [AccountGuarantor] A financial tool for tracking value accrued for a
 @freezed
 class AccountGuarantor with _$AccountGuarantor {
+  /// [AccountGuarantor] A financial tool for tracking value accrued for a
   AccountGuarantor._();
 
   /// [AccountGuarantor] A financial tool for tracking value accrued for a
@@ -330,8 +336,10 @@ class AccountGuarantor with _$AccountGuarantor {
   }
 }
 
+/// [ChargeItem] The resource ChargeItem describes the provision of
 @freezed
 class ChargeItem with Resource, _$ChargeItem {
+  /// [ChargeItem] The resource ChargeItem describes the provision of
   ChargeItem._();
 
   /// [ChargeItem] The resource ChargeItem describes the provision of
@@ -561,8 +569,10 @@ class ChargeItem with Resource, _$ChargeItem {
   }
 }
 
+/// [ChargeItemPerformer] The resource ChargeItem describes the provision of
 @freezed
 class ChargeItemPerformer with _$ChargeItemPerformer {
+  /// [ChargeItemPerformer] The resource ChargeItem describes the provision of
   ChargeItemPerformer._();
 
   /// [ChargeItemPerformer] The resource ChargeItem describes the provision of
@@ -640,8 +650,10 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
   }
 }
 
+/// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
 @freezed
 class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
+  /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
   ChargeItemDefinition._();
 
   /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
@@ -1135,8 +1147,10 @@ class ChargeItemDefinitionPriceComponent
       _$ChargeItemDefinitionPriceComponentFromJson(json);
 }
 
+/// [Contract] Legally enforceable, formally recorded unilateral or bilateral
 @freezed
 class Contract with Resource, _$Contract {
+  /// [Contract] Legally enforceable, formally recorded unilateral or bilateral
   Contract._();
 
   /// [Contract] Legally enforceable, formally recorded unilateral or bilateral
@@ -1434,8 +1448,10 @@ class Contract with Resource, _$Contract {
   }
 }
 
+/// [ContractContentDefinition] Legally enforceable, formally recorded
 @freezed
 class ContractContentDefinition with _$ContractContentDefinition {
+  /// [ContractContentDefinition] Legally enforceable, formally recorded
   ContractContentDefinition._();
 
   /// [ContractContentDefinition] Legally enforceable, formally recorded
@@ -1538,8 +1554,10 @@ class ContractContentDefinition with _$ContractContentDefinition {
   }
 }
 
+/// [ContractTerm] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractTerm with _$ContractTerm {
+  /// [ContractTerm] Legally enforceable, formally recorded unilateral or
   ContractTerm._();
 
   /// [ContractTerm] Legally enforceable, formally recorded unilateral or
@@ -1658,8 +1676,10 @@ class ContractTerm with _$ContractTerm {
   }
 }
 
+/// [ContractSecurityLabel] Legally enforceable, formally recorded
 @freezed
 class ContractSecurityLabel with _$ContractSecurityLabel {
+  /// [ContractSecurityLabel] Legally enforceable, formally recorded
   ContractSecurityLabel._();
 
   /// [ContractSecurityLabel] Legally enforceable, formally recorded
@@ -1744,8 +1764,10 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
   }
 }
 
+/// [ContractOffer] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractOffer with _$ContractOffer {
+  /// [ContractOffer] Legally enforceable, formally recorded unilateral or
   ContractOffer._();
 
   /// [ContractOffer] Legally enforceable, formally recorded unilateral or
@@ -1856,8 +1878,10 @@ class ContractOffer with _$ContractOffer {
   }
 }
 
+/// [ContractParty] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractParty with _$ContractParty {
+  /// [ContractParty] Legally enforceable, formally recorded unilateral or
   ContractParty._();
 
   /// [ContractParty] Legally enforceable, formally recorded unilateral or
@@ -1929,8 +1953,10 @@ class ContractParty with _$ContractParty {
   }
 }
 
+/// [ContractAnswer] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractAnswer with _$ContractAnswer {
+  /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
   ContractAnswer._();
 
   /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
@@ -2092,8 +2118,10 @@ class ContractAnswer with _$ContractAnswer {
   }
 }
 
+/// [ContractAsset] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractAsset with _$ContractAsset {
+  /// [ContractAsset] Legally enforceable, formally recorded unilateral or
   ContractAsset._();
 
   /// [ContractAsset] Legally enforceable, formally recorded unilateral or
@@ -2223,8 +2251,10 @@ class ContractAsset with _$ContractAsset {
   }
 }
 
+/// [ContractContext] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractContext with _$ContractContext {
+  /// [ContractContext] Legally enforceable, formally recorded unilateral or
   ContractContext._();
 
   /// [ContractContext] Legally enforceable, formally recorded unilateral or
@@ -2305,8 +2335,10 @@ class ContractContext with _$ContractContext {
   }
 }
 
+/// [ContractValuedItem] Legally enforceable, formally recorded unilateral
 @freezed
 class ContractValuedItem with _$ContractValuedItem {
+  /// [ContractValuedItem] Legally enforceable, formally recorded unilateral
   ContractValuedItem._();
 
   /// [ContractValuedItem] Legally enforceable, formally recorded unilateral
@@ -2456,8 +2488,10 @@ class ContractValuedItem with _$ContractValuedItem {
   }
 }
 
+/// [ContractAction] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractAction with _$ContractAction {
+  /// [ContractAction] Legally enforceable, formally recorded unilateral or
   ContractAction._();
 
   /// [ContractAction] Legally enforceable, formally recorded unilateral or
@@ -2640,8 +2674,10 @@ class ContractAction with _$ContractAction {
   }
 }
 
+/// [ContractSubject] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractSubject with _$ContractSubject {
+  /// [ContractSubject] Legally enforceable, formally recorded unilateral or
   ContractSubject._();
 
   /// [ContractSubject] Legally enforceable, formally recorded unilateral or
@@ -2714,8 +2750,10 @@ class ContractSubject with _$ContractSubject {
   }
 }
 
+/// [ContractSigner] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractSigner with _$ContractSigner {
+  /// [ContractSigner] Legally enforceable, formally recorded unilateral or
   ContractSigner._();
 
   /// [ContractSigner] Legally enforceable, formally recorded unilateral or
@@ -2790,8 +2828,10 @@ class ContractSigner with _$ContractSigner {
   }
 }
 
+/// [ContractFriendly] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractFriendly with _$ContractFriendly {
+  /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
   ContractFriendly._();
 
   /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
@@ -2867,8 +2907,10 @@ class ContractFriendly with _$ContractFriendly {
   }
 }
 
+/// [ContractLegal] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractLegal with _$ContractLegal {
+  /// [ContractLegal] Legally enforceable, formally recorded unilateral or
   ContractLegal._();
 
   /// [ContractLegal] Legally enforceable, formally recorded unilateral or
@@ -2940,8 +2982,10 @@ class ContractLegal with _$ContractLegal {
   }
 }
 
+/// [ContractRule] Legally enforceable, formally recorded unilateral or
 @freezed
 class ContractRule with _$ContractRule {
+  /// [ContractRule] Legally enforceable, formally recorded unilateral or
   ContractRule._();
 
   /// [ContractRule] Legally enforceable, formally recorded unilateral or
@@ -3015,8 +3059,10 @@ class ContractRule with _$ContractRule {
   }
 }
 
+/// [ExplanationOfBenefit] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
+  /// [ExplanationOfBenefit] This resource provides: the claim details;
   ExplanationOfBenefit._();
 
   /// [ExplanationOfBenefit] This resource provides: the claim details;
@@ -3310,8 +3356,10 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   }
 }
 
+/// [ExplanationOfBenefitRelated] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
+  /// [ExplanationOfBenefitRelated] This resource provides: the claim details;
   ExplanationOfBenefitRelated._();
 
   /// [ExplanationOfBenefitRelated] This resource provides: the claim details;
@@ -3389,8 +3437,10 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   }
 }
 
+/// [ExplanationOfBenefitPayee] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
+  /// [ExplanationOfBenefitPayee] This resource provides: the claim details;
   ExplanationOfBenefitPayee._();
 
   /// [ExplanationOfBenefitPayee] This resource provides: the claim details;
@@ -3465,8 +3515,10 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   }
 }
 
+/// [ExplanationOfBenefitCareTeam] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
+  /// [ExplanationOfBenefitCareTeam] This resource provides: the claim
   ExplanationOfBenefitCareTeam._();
 
   /// [ExplanationOfBenefitCareTeam] This resource provides: the claim
@@ -3676,8 +3728,10 @@ class ExplanationOfBenefitSupportingInfo
       _$ExplanationOfBenefitSupportingInfoFromJson(json);
 }
 
+/// [ExplanationOfBenefitDiagnosis] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
+  /// [ExplanationOfBenefitDiagnosis] This resource provides: the claim
   ExplanationOfBenefitDiagnosis._();
 
   /// [ExplanationOfBenefitDiagnosis] This resource provides: the claim
@@ -3771,8 +3825,10 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   }
 }
 
+/// [ExplanationOfBenefitProcedure] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
+  /// [ExplanationOfBenefitProcedure] This resource provides: the claim
   ExplanationOfBenefitProcedure._();
 
   /// [ExplanationOfBenefitProcedure] This resource provides: the claim
@@ -3866,8 +3922,10 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   }
 }
 
+/// [ExplanationOfBenefitInsurance] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
+  /// [ExplanationOfBenefitInsurance] This resource provides: the claim
   ExplanationOfBenefitInsurance._();
 
   /// [ExplanationOfBenefitInsurance] This resource provides: the claim
@@ -3956,8 +4014,10 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   }
 }
 
+/// [ExplanationOfBenefitAccident] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
+  /// [ExplanationOfBenefitAccident] This resource provides: the claim
   ExplanationOfBenefitAccident._();
 
   /// [ExplanationOfBenefitAccident] This resource provides: the claim
@@ -4043,8 +4103,10 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   }
 }
 
+/// [ExplanationOfBenefitItem] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
+  /// [ExplanationOfBenefitItem] This resource provides: the claim details;
   ExplanationOfBenefitItem._();
 
   /// [ExplanationOfBenefitItem] This resource provides: the claim details;
@@ -4236,8 +4298,10 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   }
 }
 
+/// [ExplanationOfBenefitAdjudication] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
+  /// [ExplanationOfBenefitAdjudication] This resource provides: the claim
   ExplanationOfBenefitAdjudication._();
 
   /// [ExplanationOfBenefitAdjudication] This resource provides: the claim
@@ -4315,8 +4379,10 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
       _$ExplanationOfBenefitAdjudicationFromJson(json);
 }
 
+/// [ExplanationOfBenefitDetail] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
+  /// [ExplanationOfBenefitDetail] This resource provides: the claim details;
   ExplanationOfBenefitDetail._();
 
   /// [ExplanationOfBenefitDetail] This resource provides: the claim details;
@@ -4448,8 +4514,10 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   }
 }
 
+/// [ExplanationOfBenefitSubDetail] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
+  /// [ExplanationOfBenefitSubDetail] This resource provides: the claim
   ExplanationOfBenefitSubDetail._();
 
   /// [ExplanationOfBenefitSubDetail] This resource provides: the claim
@@ -4578,8 +4646,10 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   }
 }
 
+/// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
+  /// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
   ExplanationOfBenefitAddItem._();
 
   /// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
@@ -4746,8 +4816,10 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   }
 }
 
+/// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
+  /// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
   ExplanationOfBenefitDetail1._();
 
   /// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
@@ -4859,8 +4931,10 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   }
 }
 
+/// [ExplanationOfBenefitSubDetail1] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
+  /// [ExplanationOfBenefitSubDetail1] This resource provides: the claim
   ExplanationOfBenefitSubDetail1._();
 
   /// [ExplanationOfBenefitSubDetail1] This resource provides: the claim
@@ -4969,8 +5043,10 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   }
 }
 
+/// [ExplanationOfBenefitTotal] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
+  /// [ExplanationOfBenefitTotal] This resource provides: the claim details;
   ExplanationOfBenefitTotal._();
 
   /// [ExplanationOfBenefitTotal] This resource provides: the claim details;
@@ -5048,8 +5124,10 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   }
 }
 
+/// [ExplanationOfBenefitPayment] This resource provides: the claim details;
 @freezed
 class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
+  /// [ExplanationOfBenefitPayment] This resource provides: the claim details;
   ExplanationOfBenefitPayment._();
 
   /// [ExplanationOfBenefitPayment] This resource provides: the claim details;
@@ -5141,8 +5219,10 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   }
 }
 
+/// [ExplanationOfBenefitProcessNote] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
+  /// [ExplanationOfBenefitProcessNote] This resource provides: the claim
   ExplanationOfBenefitProcessNote._();
 
   /// [ExplanationOfBenefitProcessNote] This resource provides: the claim
@@ -5329,8 +5409,10 @@ class ExplanationOfBenefitBenefitBalance
       _$ExplanationOfBenefitBenefitBalanceFromJson(json);
 }
 
+/// [ExplanationOfBenefitFinancial] This resource provides: the claim
 @freezed
 class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
+  /// [ExplanationOfBenefitFinancial] This resource provides: the claim
   ExplanationOfBenefitFinancial._();
 
   /// [ExplanationOfBenefitFinancial] This resource provides: the claim
@@ -5429,8 +5511,10 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   }
 }
 
+/// [InsurancePlan] Details of a Health Insurance product/plan provided by an
 @freezed
 class InsurancePlan with Resource, _$InsurancePlan {
+  /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
   InsurancePlan._();
 
   /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
@@ -5597,8 +5681,10 @@ class InsurancePlan with Resource, _$InsurancePlan {
   }
 }
 
+/// [InsurancePlanContact] Details of a Health Insurance product/plan
 @freezed
 class InsurancePlanContact with _$InsurancePlanContact {
+  /// [InsurancePlanContact] Details of a Health Insurance product/plan
   InsurancePlanContact._();
 
   /// [InsurancePlanContact] Details of a Health Insurance product/plan
@@ -5677,8 +5763,10 @@ class InsurancePlanContact with _$InsurancePlanContact {
   }
 }
 
+/// [InsurancePlanCoverage] Details of a Health Insurance product/plan
 @freezed
 class InsurancePlanCoverage with _$InsurancePlanCoverage {
+  /// [InsurancePlanCoverage] Details of a Health Insurance product/plan
   InsurancePlanCoverage._();
 
   /// [InsurancePlanCoverage] Details of a Health Insurance product/plan
@@ -5754,8 +5842,10 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
   }
 }
 
+/// [InsurancePlanBenefit] Details of a Health Insurance product/plan
 @freezed
 class InsurancePlanBenefit with _$InsurancePlanBenefit {
+  /// [InsurancePlanBenefit] Details of a Health Insurance product/plan
   InsurancePlanBenefit._();
 
   /// [InsurancePlanBenefit] Details of a Health Insurance product/plan
@@ -5835,8 +5925,10 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
   }
 }
 
+/// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
 @freezed
 class InsurancePlanLimit with _$InsurancePlanLimit {
+  /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
   InsurancePlanLimit._();
 
   /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
@@ -5909,8 +6001,10 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
   }
 }
 
+/// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
 @freezed
 class InsurancePlanPlan with _$InsurancePlanPlan {
+  /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
   InsurancePlanPlan._();
 
   /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
@@ -5998,8 +6092,10 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
   }
 }
 
+/// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
 @freezed
 class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
+  /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
   InsurancePlanGeneralCost._();
 
   /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
@@ -6084,8 +6180,10 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   }
 }
 
+/// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
 @freezed
 class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
+  /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
   InsurancePlanSpecificCost._();
 
   /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
@@ -6158,8 +6256,10 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   }
 }
 
+/// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
 @freezed
 class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
+  /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
   InsurancePlanBenefit1._();
 
   /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
@@ -6232,8 +6332,10 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   }
 }
 
+/// [InsurancePlanCost] Details of a Health Insurance product/plan provided
 @freezed
 class InsurancePlanCost with _$InsurancePlanCost {
+  /// [InsurancePlanCost] Details of a Health Insurance product/plan provided
   InsurancePlanCost._();
 
   /// [InsurancePlanCost] Details of a Health Insurance product/plan provided

@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
+/// [CarePlan] Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
 @freezed
 class CarePlan with Resource, _$CarePlan {
   CarePlan._();
@@ -171,6 +172,7 @@ class CarePlan with Resource, _$CarePlan {
   }
 }
 
+/// [CarePlanActivity] Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
 @freezed
 class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
@@ -234,6 +236,7 @@ class CarePlanActivity with _$CarePlanActivity {
   }
 }
 
+/// [CarePlanPlannedActivityDetail] Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
 @freezed
 class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
   CarePlanPlannedActivityDetail._();
@@ -369,6 +372,7 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
   }
 }
 
+/// [CareTeam] The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.
 @freezed
 class CareTeam with Resource, _$CareTeam {
   CareTeam._();
@@ -480,6 +484,7 @@ class CareTeam with Resource, _$CareTeam {
   }
 }
 
+/// [CareTeamParticipant] The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.
 @freezed
 class CareTeamParticipant with _$CareTeamParticipant {
   CareTeamParticipant._();
@@ -546,6 +551,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
   }
 }
 
+/// [Goal] Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
 @freezed
 class Goal with Resource, _$Goal {
   Goal._();
@@ -682,6 +688,7 @@ class Goal with Resource, _$Goal {
   }
 }
 
+/// [GoalTarget] Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
 @freezed
 class GoalTarget with _$GoalTarget {
   GoalTarget._();
@@ -775,6 +782,7 @@ class GoalTarget with _$GoalTarget {
   }
 }
 
+/// [NutritionIntake] A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.
 @freezed
 class NutritionIntake with Resource, _$NutritionIntake {
   NutritionIntake._();
@@ -928,6 +936,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
   }
 }
 
+/// [NutritionIntakeConsumedItem] A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.
 @freezed
 class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
   NutritionIntakeConsumedItem._();
@@ -1003,6 +1012,7 @@ class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
   }
 }
 
+/// [NutritionIntakeIngredientLabel] A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.
 @freezed
 class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
   NutritionIntakeIngredientLabel._();
@@ -1061,6 +1071,7 @@ class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
   }
 }
 
+/// [NutritionIntakePerformer] A record of food or fluid that is being consumed by a patient.   A NutritionIntake may indicate that the patient may be consuming the food or fluid now or has consumed the food or fluid in the past.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay or through an app that tracks food or fluids consumed.   The consumption information may come from sources such as the patient's memory, from a nutrition label,  or from a clinician documenting observed intake.
 @freezed
 class NutritionIntakePerformer with _$NutritionIntakePerformer {
   NutritionIntakePerformer._();
@@ -1118,6 +1129,7 @@ class NutritionIntakePerformer with _$NutritionIntakePerformer {
   }
 }
 
+/// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
 class NutritionOrder with Resource, _$NutritionOrder {
   NutritionOrder._();
@@ -1256,6 +1268,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
   }
 }
 
+/// [NutritionOrderOralDiet] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
 class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
@@ -1328,6 +1341,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   }
 }
 
+/// [NutritionOrderNutrient] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
 class NutritionOrderNutrient with _$NutritionOrderNutrient {
   NutritionOrderNutrient._();
@@ -1385,6 +1399,7 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
   }
 }
 
+/// [NutritionOrderTexture] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
 class NutritionOrderTexture with _$NutritionOrderTexture {
   NutritionOrderTexture._();
@@ -1442,6 +1457,7 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
   }
 }
 
+/// [NutritionOrderSupplement] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
 class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
@@ -1514,6 +1530,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
   }
 }
 
+/// [NutritionOrderEnteralFormula] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
 class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
@@ -1603,6 +1620,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   }
 }
 
+/// [NutritionOrderAdministration] A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
 class NutritionOrderAdministration with _$NutritionOrderAdministration {
   NutritionOrderAdministration._();
@@ -1666,6 +1684,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
   }
 }
 
+/// [RequestGroup] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
 class RequestGroup with Resource, _$RequestGroup {
   RequestGroup._();
@@ -1811,6 +1830,7 @@ class RequestGroup with Resource, _$RequestGroup {
   }
 }
 
+/// [RequestGroupAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
 class RequestGroupAction with _$RequestGroupAction {
   RequestGroupAction._();
@@ -1979,6 +1999,7 @@ class RequestGroupAction with _$RequestGroupAction {
   }
 }
 
+/// [RequestGroupCondition] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
 class RequestGroupCondition with _$RequestGroupCondition {
   RequestGroupCondition._();
@@ -2039,6 +2060,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
   }
 }
 
+/// [RequestGroupRelatedAction] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
 class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
@@ -2108,6 +2130,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   }
 }
 
+/// [RequestGroupParticipant] A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
 @freezed
 class RequestGroupParticipant with _$RequestGroupParticipant {
   RequestGroupParticipant._();
@@ -2177,6 +2200,7 @@ class RequestGroupParticipant with _$RequestGroupParticipant {
   }
 }
 
+/// [RiskAssessment] An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
 @freezed
 class RiskAssessment with Resource, _$RiskAssessment {
   RiskAssessment._();
@@ -2309,6 +2333,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   }
 }
 
+/// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
 @freezed
 class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
@@ -2393,6 +2418,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   }
 }
 
+/// [ServiceRequest] A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
 @freezed
 class ServiceRequest with Resource, _$ServiceRequest {
   ServiceRequest._();
@@ -2603,6 +2629,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   }
 }
 
+/// [VisionPrescription] An authorization for the provision of glasses and/or contact lenses to a patient.
 @freezed
 class VisionPrescription with Resource, _$VisionPrescription {
   VisionPrescription._();
@@ -2834,6 +2861,7 @@ class VisionPrescriptionLensSpecification
   }
 }
 
+/// [VisionPrescriptionPrism] An authorization for the provision of glasses and/or contact lenses to a patient.
 @freezed
 class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   VisionPrescriptionPrism._();

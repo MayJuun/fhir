@@ -13,8 +13,10 @@ part 'metadata_types.enums.dart';
 part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';
 
+/// [ContactDetail] Specifies contact information for a person or
 @freezed
 class ContactDetail with _$ContactDetail {
+  /// [ContactDetail] Specifies contact information for a person or
   ContactDetail._();
 
   /// [ContactDetail] Specifies contact information for a person or
@@ -75,8 +77,10 @@ class ContactDetail with _$ContactDetail {
   }
 }
 
+/// [Contributor] A contributor to the content of a knowledge asset,
 @freezed
 class Contributor with _$Contributor {
+  /// [Contributor] A contributor to the content of a knowledge asset,
   Contributor._();
 
   /// [Contributor] A contributor to the content of a knowledge asset,
@@ -144,8 +148,10 @@ class Contributor with _$Contributor {
   }
 }
 
+/// [DataRequirement] Describes a required data item for evaluation in terms
 @freezed
 class DataRequirement with _$DataRequirement {
+  /// [DataRequirement] Describes a required data item for evaluation in terms
   DataRequirement._();
 
   /// [DataRequirement] Describes a required data item for evaluation in terms
@@ -252,8 +258,10 @@ class DataRequirement with _$DataRequirement {
   }
 }
 
+/// [DataRequirementCodeFilter] Describes a required data item for
 @freezed
 class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
+  /// [DataRequirementCodeFilter] Describes a required data item for
   DataRequirementCodeFilter._();
 
   /// [DataRequirementCodeFilter] Describes a required data item for
@@ -354,8 +362,10 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   }
 }
 
+/// [DataRequirementDateFilter] Describes a required data item for
 @freezed
 class DataRequirementDateFilter with _$DataRequirementDateFilter {
+  /// [DataRequirementDateFilter] Describes a required data item for
   DataRequirementDateFilter._();
 
   /// [DataRequirementDateFilter] Describes a required data item for
@@ -470,8 +480,10 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   }
 }
 
+/// [DataRequirementSort] Describes a required data item for evaluation in
 @freezed
 class DataRequirementSort with _$DataRequirementSort {
+  /// [DataRequirementSort] Describes a required data item for evaluation in
   DataRequirementSort._();
 
   /// [DataRequirementSort] Describes a required data item for evaluation in
@@ -555,8 +567,10 @@ class DataRequirementSort with _$DataRequirementSort {
   }
 }
 
+/// [ParameterDefinition] The parameters to the module. This collection
 @freezed
 class ParameterDefinition with _$ParameterDefinition {
+  /// [ParameterDefinition] The parameters to the module. This collection
   ParameterDefinition._();
 
   /// [ParameterDefinition] The parameters to the module. This collection
@@ -653,8 +667,10 @@ class ParameterDefinition with _$ParameterDefinition {
   }
 }
 
+/// [RelatedArtifact] Related artifacts such as additional documentation,
 @freezed
 class RelatedArtifact with _$RelatedArtifact {
+  /// [RelatedArtifact] Related artifacts such as additional documentation,
   RelatedArtifact._();
 
   /// [RelatedArtifact] Related artifacts such as additional documentation,
@@ -748,8 +764,10 @@ class RelatedArtifact with _$RelatedArtifact {
   }
 }
 
+/// [TriggerDefinition] A description of a triggering event. Triggering
 @freezed
 class TriggerDefinition with _$TriggerDefinition {
+  /// [TriggerDefinition] A description of a triggering event. Triggering
   TriggerDefinition._();
 
   /// [TriggerDefinition] A description of a triggering event. Triggering
@@ -845,8 +863,10 @@ class TriggerDefinition with _$TriggerDefinition {
   }
 }
 
+/// [UsageContext] Specifies clinical/business/etc. metadata that can be used
 @freezed
 class UsageContext with _$UsageContext {
+  /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
   UsageContext._();
 
   /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
@@ -919,8 +939,10 @@ class UsageContext with _$UsageContext {
   }
 }
 
+/// [Expression] A expression that is evaluated in a specified context and
 @freezed
 class Expression with _$Expression {
+  /// [Expression] A expression that is evaluated in a specified context and
   Expression._();
 
   /// [Expression] A expression that is evaluated in a specified context and
