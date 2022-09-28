@@ -1,5 +1,9 @@
 # fhir_at_rest
 
+## [0.9.1]
+
+* Updated dependencies
+
 ## [0.9.0]
 
 * Improved exception throwing
