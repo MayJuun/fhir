@@ -15,6 +15,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.1.0"
+  antlr4:
+    dependency: "direct main"
+    description:
+      name: antlr4
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.11.1"
   args:
     dependency: transitive
     description:
