@@ -3,46 +3,64 @@ part of '../fhirPathDartVisitor.dart';
 List? _$visitBooleanLiteral(
   BooleanLiteralContext ctx,
   FhirPathDartVisitor visitor,
-) =>
-    [ctx.text == 'true'];
+) {
+  visitor.context = [ctx.text == 'true'];
+  return visitor.context;
+}
 
 List? _$visitNumberLiteral(
   NumberLiteralContext ctx,
   FhirPathDartVisitor visitor,
 ) {
   final value = num.tryParse(ctx.text);
-  return value == null ? [] : [value];
+  visitor.context = value == null ? [] : [value];
+  return visitor.context;
 }
 
 List? _$visitStringLiteral(
   StringLiteralContext ctx,
   FhirPathDartVisitor visitor,
-) =>
-    [ctx.text.substring(1, ctx.text.length - 1)];
+) {
+  var newString = ctx.text.substring(1, ctx.text.length - 1);
+  if (newString != '' &&
+      newString[0] == r'\' &&
+      !escapeSequences.contains(newString)) {
+    visitor.context = [newString.substring(1)];
+  } else {
+    visitor.context = [newString];
+  }
+  return visitor.context;
+}
 
 List? _$visitDateLiteral(
   DateLiteralContext ctx,
   FhirPathDartVisitor visitor,
-) =>
-    [ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text];
+) {
+  visitor.context = [
+    ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text
+  ];
+  return visitor.context;
+}
 
 List? _$visitDateTimeLiteral(
   DateTimeLiteralContext ctx,
   FhirPathDartVisitor visitor,
-) =>
-    [ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text];
+) {
+  visitor.context = [
+    ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text
+  ];
+  return visitor.context;
+}
 
 List? _$visitTimeLiteral(
   TimeLiteralContext ctx,
   FhirPathDartVisitor visitor,
-) =>
-    [ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text];
-
-List? _$visitQuantity(
-  QuantityContext ctx,
-  FhirPathDartVisitor visitor,
-) =>
-    [ctx.text];
+) {
+  visitor.context = [
+    ctx.text.startsWith('@T') ? ctx.text.substring(2) : ctx.text
+  ];
+  return visitor.context;
+}
 
 List? _$visitLiteralTerm(
   LiteralTermContext ctx,
@@ -143,6 +161,17 @@ List? _$visitIdentifier(
   return finalResults;
 }
 
+const escapeSequences = [
+  r"\'",
+  r'\"',
+  r'\`',
+  r'\r',
+  r'\n',
+  r'\t',
+  r'\f',
+  r'\\',
+  r'\uXXXX',
+];
 // class EnvVariableParser extends ValueParser<String> {
 //   List execute(List results, Map<String, dynamic> passed) {
 //     final variableName = value.replaceAll('`', '');

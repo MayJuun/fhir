@@ -2,10 +2,8 @@ export 'aggregate_interpreters.dart';
 export 'collection_interpreters.dart';
 export 'combining_interpreters.dart';
 export 'filtering_interpreters.dart';
-export 'math_interpreters.dart';
 export 'navigation_interpreters.dart';
 export 'string_interpreters.dart';
-export 'utility_interpreters.dart';
 
 // constants.js
 // datetime.js

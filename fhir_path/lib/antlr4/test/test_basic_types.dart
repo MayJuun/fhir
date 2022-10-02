@@ -1,5 +1,6 @@
 // Package imports:
 import 'package:antlr4/antlr4.dart';
+import 'package:fhir/r4.dart';
 import 'package:fhir_path/antlr4/antlr4/fhirPathParser.dart';
 import 'package:fhir_path/antlr4/walk_fhir_path.dart';
 import 'package:test/test.dart';
@@ -176,35 +177,35 @@ void testBasicTypes() {
       final result1 = parseResult('@T14:34:28');
       expect(lastChildType(result1.getChild(result1.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result1)?.first, 'T14:34:28');
+      expect(visitor.visit(result1)?.first, '14:34:28');
 
       final result2 = parseResult('@T06:55:28');
       expect(lastChildType(result2.getChild(result2.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result2)?.first, 'T06:55:28');
+      expect(visitor.visit(result2)?.first, '06:55:28');
 
       final result3 = parseResult('@T06:55:28.559');
       expect(lastChildType(result3.getChild(result3.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result3)?.first, 'T06:55:28.559');
+      expect(visitor.visit(result3)?.first, '06:55:28.559');
 
       final result4 = parseResult('@T06:55');
       expect(lastChildType(result4.getChild(result4.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result4)?.first, 'T06:55');
+      expect(visitor.visit(result4)?.first, '06:55');
 
       final result5 = parseResult('@T06:54');
       expect(lastChildType(result5.getChild(result5.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result5)?.first, 'T06:54');
+      expect(visitor.visit(result5)?.first, '06:54');
     });
 
     test('Quantity', () {
       final result1 = parseResult("4.5 'mg'");
-      expect(visitor.visit(result1)?.first, "4.5'mg'");
+      expect(visitor.visit(result1)?.first, "4.5 'mg'");
 
       final result2 = parseResult("100 '[degF]'");
-      expect(visitor.visit(result2)?.first, "100'[degF]'");
+      expect(visitor.visit(result2)?.first, "100 '[degF]'");
     });
 
     // test('Duration quantities', () {
@@ -218,29 +219,30 @@ void testBasicTypes() {
     //   expect(walkFhirPath(context: null, pathExpression: r"1 week != 1 'w'"),
     //       [true]);
     // });
-    // test('Non-Escape Sequences', () {
-    //   /// ToDo: figure out escape sequences
-    //   expect(
-    //       ((parseResult(r"'\p' // 'p'") as ParserList).first as StringParser)
-    //           .value,
-    //       'p');
-    //   expect(
-    //       ((parseResult(r"'\\p' // '\p'") as ParserList).first as StringParser)
-    //           .value,
-    //       r'\p');
-    //   expect(
-    //       ((parseResult(r"'\3' // '3'") as ParserList).first as StringParser)
-    //           .value,
-    //       '3');
-    //   expect(
-    //       ((parseResult(r"'\u005' // 'u005'") as ParserList).first
-    //               as StringParser)
-    //           .value,
-    //       'u005');
-    // expect(
-    //     ((parseResult(r"'\' // ''") as ParserList).first as StringParser)
-    //         .value,
-    //     '');
-    // });
+    test('Non-Escape Sequences', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: r"'\p' \'// 'p'"),
+          ['p']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: r"'\\p' // '\p'"),
+          [r'\p']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: r"'\3' // '3'"),
+          ['3']);
+
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: r"'\u005' // 'u005'"),
+          ['u005']);
+      // expect(
+      //     walkFhirPath(
+      //         context: resource.toJson(), pathExpression: r"'\' // ''"),
+      //     ['']);
+    });
   });
 }
+
+final resource = Patient();
