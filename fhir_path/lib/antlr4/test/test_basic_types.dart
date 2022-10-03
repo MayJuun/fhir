@@ -98,106 +98,110 @@ void testBasicTypes() {
       final result1 = parseResult('@2015-02-04');
       expect(lastChildType(result1.getChild(result1.childCount - 1)!),
           DateLiteralContext);
-      expect(visitor.visit(result1)?.first, '2015-02-04');
+      expect(visitor.visit(result1)?.first, Date('2015-02-04'));
 
       final result2 = parseResult('@2018-06-12');
       expect(lastChildType(result2.getChild(result2.childCount - 1)!),
           DateLiteralContext);
-      expect(visitor.visit(result2)?.first, '2018-06-12');
+      expect(visitor.visit(result2)?.first, Date('2018-06-12'));
 
       final result3 = parseResult('@2018-06-12');
       expect(lastChildType(result3.getChild(result3.childCount - 1)!),
           DateLiteralContext);
-      expect(visitor.visit(result3)?.first, '2018-06-12');
+      expect(visitor.visit(result3)?.first, Date('2018-06-12'));
 
       final result4 = parseResult('@2018-06-12');
       expect(lastChildType(result4.getChild(result4.childCount - 1)!),
           DateLiteralContext);
-      expect(visitor.visit(result4)?.first, '2018-06-12');
+      expect(visitor.visit(result4)?.first, Date('2018-06-12'));
 
       final result5 = parseResult('@2018-06');
       expect(lastChildType(result5.getChild(result5.childCount - 1)!),
           DateLiteralContext);
-      expect(visitor.visit(result5)?.first, '2018-06');
+      expect(visitor.visit(result5)?.first, Date('2018-06'));
 
       final result6 = parseResult('@2018');
       expect(lastChildType(result6.getChild(result6.childCount - 1)!),
           DateLiteralContext);
-      expect(visitor.visit(result6)?.first, '2018');
+      expect(visitor.visit(result6)?.first, Date('2018'));
     });
 
     test('DateTime', () {
       final result1 = parseResult('@2015-02-04T14:34:28+09:00');
       expect(lastChildType(result1.getChild(result1.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result1)?.first, '2015-02-04T14:34:28+09:00');
+      expect(visitor.visit(result1)?.first,
+          FhirDateTime('2015-02-04T14:34:28+09:00'));
 
       final result2 = parseResult('@2018-02-04T14:38:28+09:00');
       expect(lastChildType(result2.getChild(result2.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result2)?.first, '2018-02-04T14:38:28+09:00');
+      expect(visitor.visit(result2)?.first,
+          FhirDateTime('2018-02-04T14:38:28+09:00'));
 
       final result3 = parseResult('@2014-01-25T14:30:14.559');
       expect(lastChildType(result3.getChild(result3.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result3)?.first, '2014-01-25T14:30:14.559');
+      expect(visitor.visit(result3)?.first,
+          FhirDateTime('2014-01-25T14:30:14.559'));
 
       final result4 = parseResult(
           '@2014-01-25T14:30:14.559Z // A date time with UTC timezone offset');
       expect(lastChildType(result4.getChild(result4.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result4)?.first, '2014-01-25T14:30:14.559Z');
+      expect(visitor.visit(result4)?.first,
+          FhirDateTime('2014-01-25T14:30:14.559Z'));
 
       final result5 = parseResult(
           '@2014-01-25T14:30 // A partial DateTime with year, month, day, hour, and minute');
       expect(lastChildType(result5.getChild(result5.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result5)?.first, '2014-01-25T14:30');
+      expect(visitor.visit(result5)?.first, FhirDateTime('2014-01-25T14:30'));
 
       final result6 = parseResult(
           '@2014-03-25T // A partial DateTime with year, month, and day');
       expect(lastChildType(result6.getChild(result6.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result6)?.first, '2014-03-25T');
+      expect(visitor.visit(result6)?.first, FhirDateTime('2014-03-25T'));
 
       final result7 =
           parseResult('@2014-01T // A partial DateTime with year and month');
       expect(lastChildType(result7.getChild(result7.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result7)?.first, '2014-01T');
+      expect(visitor.visit(result7)?.first, FhirDateTime('2014-01T'));
 
       final result8 =
           parseResult('@2014T // A partial DateTime with only the year');
       expect(lastChildType(result8.getChild(result8.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result8)?.first, '2014T');
+      expect(visitor.visit(result8)?.first, FhirDateTime('2014T'));
     });
 
     test('Time', () {
       final result1 = parseResult('@T14:34:28');
       expect(lastChildType(result1.getChild(result1.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result1)?.first, '14:34:28');
+      expect(visitor.visit(result1)?.first, Time('14:34:28'));
 
       final result2 = parseResult('@T06:55:28');
       expect(lastChildType(result2.getChild(result2.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result2)?.first, '06:55:28');
+      expect(visitor.visit(result2)?.first, Time('06:55:28'));
 
       final result3 = parseResult('@T06:55:28.559');
       expect(lastChildType(result3.getChild(result3.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result3)?.first, '06:55:28.559');
+      expect(visitor.visit(result3)?.first, Time('06:55:28.559'));
 
       final result4 = parseResult('@T06:55');
       expect(lastChildType(result4.getChild(result4.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result4)?.first, '06:55');
+      expect(visitor.visit(result4)?.first, Time('06:55'));
 
       final result5 = parseResult('@T06:54');
       expect(lastChildType(result5.getChild(result5.childCount - 1)!),
           TimeLiteralContext);
-      expect(visitor.visit(result5)?.first, '06:54');
+      expect(visitor.visit(result5)?.first, Time('06:54'));
     });
 
     test('Quantity', () {

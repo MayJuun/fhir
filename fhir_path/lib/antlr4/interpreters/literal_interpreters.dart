@@ -37,7 +37,7 @@ List? _$visitDateLiteral(
   FhirPathDartVisitor visitor,
 ) {
   visitor.context = [
-    ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text
+    Date(ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text)
   ];
   return visitor.context;
 }
@@ -47,7 +47,7 @@ List? _$visitDateTimeLiteral(
   FhirPathDartVisitor visitor,
 ) {
   visitor.context = [
-    ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text
+    FhirDateTime(ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text)
   ];
   return visitor.context;
 }
@@ -57,7 +57,7 @@ List? _$visitTimeLiteral(
   FhirPathDartVisitor visitor,
 ) {
   visitor.context = [
-    ctx.text.startsWith('@T') ? ctx.text.substring(2) : ctx.text
+    Time(ctx.text.startsWith('@T') ? ctx.text.substring(2) : ctx.text)
   ];
   return visitor.context;
 }
@@ -172,53 +172,59 @@ const escapeSequences = [
   r'\\',
   r'\uXXXX',
 ];
-// class EnvVariableParser extends ValueParser<String> {
-//   List execute(List results, Map<String, dynamic> passed) {
-//     final variableName = value.replaceAll('`', '');
 
-//     if (variableName == '%sct') {
-//       return ['http://snomed.info/sct'];
-//     }
+List? _$visitExternalConstant(
+  ExternalConstantContext ctx,
+  FhirPathDartVisitor visitor,
+) {
+  final variableName = ctx.text;
 
-//     if (variableName == '%loinc') {
-//       return ['http://loinc.org'];
-//     }
+  if (variableName == '%sct') {
+    return ['http://snomed.info/sct'];
+  }
 
-//     if (variableName == '%ucum') {
-//       return ['http://unitsofmeasure.org'];
-//     }
+  if (variableName == '%loinc') {
+    return ['http://loinc.org'];
+  }
 
-//     if (variableName.startsWith('%vs-')) {
-//       final valueSet = variableName.substring(4);
-//       return ['http://hl7.org/fhir/ValueSet/$valueSet'];
-//     }
+  if (variableName == '%ucum') {
+    return ['http://unitsofmeasure.org'];
+  }
 
-//     if (variableName.startsWith('%ext-')) {
-//       final extension = variableName.substring(5);
-//       return ['http://hl7.org/fhir/StructureDefinition/$extension'];
-//     }
+  if (variableName.startsWith('%vs-')) {
+    final valueSet = variableName.substring(4);
+    return ['http://hl7.org/fhir/ValueSet/$valueSet'];
+  }
 
-//     final passedValue = passed[variableName];
-//     if (passedValue == null) {
-//       throw FhirPathEvaluationException(
-//           'Variable $variableName does not exist.',
-//           variables: passed);
-//     }
+  if (variableName.startsWith('%ext-')) {
+    final extension = variableName.substring(5);
+    return ['http://hl7.org/fhir/StructureDefinition/$extension'];
+  }
 
-//     if (passedValue is! Function()) {
-//       return passedValue is List ? passedValue : [passedValue];
-//     } else {
-//       try {
-//         final result = passedValue();
+  final passedValue = visitor.environment[variableName];
+  if (passedValue == null) {
+    throw FhirPathEvaluationException('Variable $variableName does not exist.',
+        variables: visitor.environment);
+  }
 
-//         return result is List ? result : [result];
-//       } catch (ex) {
-//         throw FhirPathEvaluationException(
-//             'Variable $value could not be lazily evaluated.',
-//             cause: ex);
-//       }
-//     }
-//   }
+  if (passedValue is! Function()) {
+    return passedValue is List ? passedValue : [passedValue];
+  } else {
+    try {
+      final result = passedValue();
+
+      return result is List ? result : [result];
+    } catch (ex) {
+      throw FhirPathEvaluationException(
+          'Variable $variableName could not be lazily evaluated.',
+          cause: ex);
+    }
+  }
+}
+
+
+
+
 
 
 // class DelimitedIdentifierParser extends ValueParser<String> {

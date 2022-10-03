@@ -21,6 +21,7 @@ part 'interpreters/quantity_interpreters.dart';
 part 'interpreters/function_interpreters.dart';
 part 'interpreters/math_interpreters.dart';
 part 'interpreters/utility_interpreters.dart';
+part 'interpreters/equality_interpreters.dart';
 
 /// This is the overriden class for [FhirPathVisitor],
 /// which can be extended to create a visitor which only needs to handle
@@ -52,7 +53,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   final Map<String, dynamic> environment;
 
   /// This is purely for testing purposes
-  static const bool printType = true;
+  static const bool printType = false;
   void printContextType(ParseTree ctx) {
     if (printType) {
       print('${ctx.runtimeType} : ${ctx.text}');
@@ -60,9 +61,11 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   }
 
   void printChildren(ParseTree ctx) {
+    print('PRINT CHILDREN');
     for (var i = 0; i < ctx.childCount; i++) {
       print('${ctx.getChild(i).runtimeType} : ${ctx.getChild(i)!.text}');
     }
+    print('****************');
   }
 
   List execute(ExpressionContext ctx) => visit(ctx) ?? [];
@@ -128,7 +131,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitEqualityExpression(EqualityExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitEqualityExpression(ctx, this);
   }
 
   @override
@@ -232,7 +235,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitExternalConstant(ExternalConstantContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitExternalConstant(ctx, this);
   }
 
   @override

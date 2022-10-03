@@ -5,6 +5,60 @@ List? _$visitFunction(
   FhirPathDartVisitor visitor,
 ) {
   final results = visitor.context.toList();
+  if (ctx.childCount == 3) {
+    return _noArgumentFunctions(ctx, visitor, results);
+  } else if (ctx.childCount == 4) {
+    return _argumentFunctions(ctx, visitor, results);
+  } else {
+    throw _wrongArgLength(ctx.text, results);
+  }
+}
+
+List _argumentFunctions(
+  FunctionContext ctx,
+  FhirPathDartVisitor visitor,
+  List results,
+) {
+  if (ctx.getChild(1)!.text != '(' ||
+      ctx.getChild(1) is! TerminalNodeImpl ||
+      ctx.getChild(3)!.text != ')' ||
+      ctx.getChild(3) is! TerminalNodeImpl) {
+    throw _wrongTypes(ctx.text, results, ctx.children);
+  }
+  final function = ctx.getChild(0)!.text;
+  final args = visitor.visit(ctx.getChild(2)!);
+  switch (function) {
+    case 'log':
+      {
+        if (results.isEmpty || (args?.isEmpty ?? true)) {
+          visitor.context = [];
+        } else if (results.first is! num &&
+            num.tryParse(results.first.toString()) == null) {
+          throw _wrongTypes('log()', results, ctx.children);
+        } else if (args!.length > 1) {
+          throw _wrongArgLength('log()', args);
+        } else if (args.first is! num &&
+            num.tryParse(args.first.toString()) == null) {
+          throw _wrongTypes('log()', results, args);
+        } else {
+          final num input =
+              results.first is num ? results.first : num.parse(results.first);
+          final num value =
+              args.first is num ? args.first : num.parse(args.first);
+          visitor.context = [log(input) / log(value)];
+        }
+      }
+      break;
+  }
+
+  return visitor.context;
+}
+
+List _noArgumentFunctions(
+  FunctionContext ctx,
+  FhirPathDartVisitor visitor,
+  List results,
+) {
   switch (ctx.text) {
     case 'empty()':
       {
@@ -451,25 +505,6 @@ List? _$visitFunction(
                 : results.first is num
                     ? [log(results.first)]
                     : throw _wrongTypes('.ln()', results, 'none');
-      }
-      break;
-    case 'log()':
-      {
-        print('LOG');
-        print(results);
-        print(ctx.text);
-        visitor.printChildren(ctx);
-
-        // final executedValue = value.execute(results.toList(), passed);
-        // return results.isEmpty
-        //     ? []
-        //     : results.length > 1
-        //         ? throw _wrongLength('.log()', results)'
-        //         : executedValue.length > 1
-        //             ? throw _wrongArgLength('log()', executedValue)
-        //             : executedValue.first is num && results.first is num
-        //                 ? [log(results.first) / log(executedValue.first)]
-        //                 : throw _wrongTypes('log()', results, executedValue);
       }
       break;
     case 'power()':
