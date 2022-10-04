@@ -1,11 +1,12 @@
 // Package imports:
 import 'package:antlr4/antlr4.dart';
 import 'package:fhir/r4.dart';
-import 'package:fhir_path/antlr4/antlr4/fhirPathParser.dart';
-import 'package:fhir_path/antlr4/walk_fhir_path.dart';
 import 'package:test/test.dart';
 
+import '../antlr4/fhirPathParser.dart';
 import '../fhirPathDartVisitor.dart';
+import '../utils/fhir_path_quantity.dart';
+import '../walk_fhir_path.dart';
 
 ExpressionContext parseResult(dynamic arg) => parseFhirPath(arg.toString());
 
@@ -78,8 +79,10 @@ void testBasicTypes() {
           NumberLiteralContext);
       expect(parseResult('45').text, '45');
 
-      // expect((((parseResult('-5') as ParserList)).first as ValueParser).value,
-      //     (ParserList([IntegerParser('-5')]).first as ValueParser).value);
+      final result3 = parseResult('-5');
+      expect(lastChildType(result3.getChild(result3.childCount - 1)!),
+          NumberLiteralContext);
+      expect(parseResult('-5').text, '-5');
     });
 
     test('Decimal', () {
@@ -206,10 +209,12 @@ void testBasicTypes() {
 
     test('Quantity', () {
       final result1 = parseResult("4.5 'mg'");
-      expect(visitor.visit(result1)?.first, "4.5 'mg'");
+      expect(visitor.visit(result1)?.first,
+          FhirPathQuantity.fromString("4.5 'mg'"));
 
       final result2 = parseResult("100 '[degF]'");
-      expect(visitor.visit(result2)?.first, "100 '[degF]'");
+      expect(visitor.visit(result2)?.first,
+          FhirPathQuantity.fromString("100 '[degF]'"));
     });
 
     // test('Duration quantities', () {

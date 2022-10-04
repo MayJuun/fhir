@@ -1,29 +1,40 @@
-import 'package:antlr4/antlr4.dart';
+// import 'package:antlr4/antlr4.dart';
 
-import 'antlr4/fhirPathLexer.dart';
-import 'antlr4/fhirPathParser.dart';
-import 'fhirPathDartVisitor.dart';
+// import 'antlr4/fhirPathLexer.dart';
+// import 'antlr4/fhirPathParser.dart';
+// import 'fhirPathDartVisitor.dart';
 
-Type lastChildType(ParseTree tree) {
-  Type type = tree.runtimeType;
-  print(type);
-  for (var i = 0; i < tree.childCount; i++) {
-    type = lastChildType(tree.getChild(i)!);
-  }
-  return type == TerminalNodeImpl ? tree.runtimeType : type;
-}
+// Type lastChildType(ParseTree tree) {
+//   Type type = tree.runtimeType;
+//   print(type);
+//   for (var i = 0; i < tree.childCount; i++) {
+//     type = lastChildType(tree.getChild(i)!);
+//   }
+//   return type == TerminalNodeImpl ? tree.runtimeType : type;
+// }
+
+@JS()
+library ucum;
+
+import 'package:js/js.dart';
+
+// @JS('ucum.convert')
+external ucum. .convert(dynamic obj1, dynamic obj2, dynamic obj3);
 
 void main() async {
-  final input = await InputStream.fromString('{ }.empty()');
-  final lexer = FhirPathLexer(input);
-  final tokens = CommonTokenStream(lexer);
-  final parser = FhirPathParser(tokens);
-  parser.buildParseTree = true;
-  final tree = parser.expression();
-  lastChildType(tree);
-  final visitor = FhirPathDartVisitor({}, {});
-  print(visitor.visit(tree));
+  var oneInch = ucum.convert(2.54, 'cm', '[in_i]');
+  print(oneInch);
+  // final input = await InputStream.fromString('{ }.empty()');
+  // final lexer = FhirPathLexer(input);
+  // final tokens = CommonTokenStream(lexer);
+  // final parser = FhirPathParser(tokens);
+  // parser.buildParseTree = true;
+  // final tree = parser.expression();
+  // lastChildType(tree);
+  // final visitor = FhirPathDartVisitor({}, {});
+  // print(visitor.visit(tree));
 }
+
 
 // final patient = Patient.fromJson({
 //   "resourceType": "Patient",

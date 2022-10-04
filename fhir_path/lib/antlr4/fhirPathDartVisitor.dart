@@ -11,6 +11,7 @@ import 'package:fhir/r5.dart' as r5;
 import 'package:fhir/stu3.dart' as stu3;
 import 'package:antlr4/antlr4.dart';
 import 'antlr4/antlr4.dart';
+import 'utils/fhir_path_quantity.dart';
 import 'utils/utils.dart';
 import 'walk_fhir_path.dart';
 
@@ -53,7 +54,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   final Map<String, dynamic> environment;
 
   /// This is purely for testing purposes
-  static const bool printType = false;
+  static const bool printType = true;
   void printContextType(ParseTree ctx) {
     if (printType) {
       print('${ctx.runtimeType} : ${ctx.text}');

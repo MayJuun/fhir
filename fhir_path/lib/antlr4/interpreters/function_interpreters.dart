@@ -363,7 +363,7 @@ List _noArgumentFunctions(
             : results.length > 1
                 ? throw _conversionException('.convertsToTime()', results)
                 : results.first is Time
-                    ? [results.first]
+                    ? [true]
                     : results.first is String && Time(results.first).isValid
                         ? [true]
                         : [false];

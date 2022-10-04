@@ -53,30 +53,28 @@ void testBasicOperators() {
                 context: resource.toJson(),
                 pathExpression: '@2021-06-06 = @2021-05-06'),
             [false]);
-        // expect(
-        //     lexer()
-        //         .parse('@2021-06-06T12:36 = @2021-06-06T12:36')
-        //         .value
-        //         .execute([], {}),
-        //     [true]);
-        // expect(
-        //     lexer()
-        //         .parse('@2021-06-06T12:36 = @2021-05-06T12:35')
-        //         .value
-        //         .execute([], {}),
-        //     [false]);
-        // expect(
-        //     lexer()
-        //         .parse('@2012-01-01T10:30:31.0 = @2012-01-01T10:30:31')
-        //         .value
-        //         .execute([], {}),
-        //     [true]);
-        // expect(
-        //     lexer()
-        //         .parse('@2012-01-01T10:30:31.1 = @2012-01-01T10:30:31')
-        //         .value
-        //         .execute([], {}),
-        //     [false]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@2021-06-06T12:36 = @2021-06-06T12:36'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@2021-06-06T12:36 = @2021-05-06T12:35'),
+            [false]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression:
+                    '@2012-01-01T10:30:31.0 = @2012-01-01T10:30:31'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression:
+                    '@2012-01-01T10:30:31.1 = @2012-01-01T10:30:31'),
+            [false]);
         expect(
             walkFhirPath(
                 context: resource.toJson(),
@@ -191,30 +189,28 @@ void testBasicOperators() {
                 context: resource.toJson(),
                 pathExpression: '@2021-06-06 != @2021-05-06'),
             [true]);
-        // expect(
-        //     lexer()
-        //         .parse('@2021-06-06T12:36 != @2021-06-06T12:36')
-        //         .value
-        //         .execute([], {}),
-        //     [false]);
-        // expect(
-        //     lexer()
-        //         .parse('@2021-06-06T12:36 != @2021-05-06T12:35')
-        //         .value
-        //         .execute([], {}),
-        //     [true]);
-        // expect(
-        //     lexer()
-        //         .parse('@2012-01-01T10:30:31.0 != @2012-01-01T10:30:31')
-        //         .value
-        //         .execute([], {}),
-        //     [false]);
-        // expect(
-        //     lexer()
-        //         .parse('@2012-01-01T10:30:31.1 != @2012-01-01T10:30:31')
-        //         .value
-        //         .execute([], {}),
-        //     [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@2021-06-06T12:36 != @2021-06-06T12:36'),
+            [false]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@2021-06-06T12:36 != @2021-05-06T12:35'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression:
+                    '@2012-01-01T10:30:31.0 != @2012-01-01T10:30:31'),
+            [false]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression:
+                    '@2012-01-01T10:30:31.1 != @2012-01-01T10:30:31'),
+            [true]);
         expect(
             walkFhirPath(
                 context: resource.toJson(),
@@ -238,32 +234,90 @@ void testBasicOperators() {
       });
 
       //   /// ToDo: !~ (not equivalent)
-      //   test('> : ', () {
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@T12:25 > @T12:25'), [false]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@T12:27 > @T12:25'), [true]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: "'String' > 'String'"), [false]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: "'string' > 'String'"), [true]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '10 > 5 // true'), [true]);
-      //     expect(
-      //         walkFhirPath(context: resource.toJson(), pathExpression:
-      //             '10 > 5.0 // false; note the 10 is converted to a decimal to perform the comparison'),
-      //         [true]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: "'abc' > 'ABC' // true"), [true]);
-      //     // expect(
-      //     //     walkFhirPath(context: resource.toJson(), pathExpression:
-      //     //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
-      //     //     [true]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@2018-03-01 > @2018-01-01 // true'), [true]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@2018-03 > @2018-03-01 // empty ({ })'), []);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@2018-03-01T10:30:00 > @2018-03-01T10:00:00 // true'),
-      //         [true]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@2018-03-01T10 > @2018-03-01T10:30 // empty ({ })'), []);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@2018-03-01T10:30:00 > @2018-03-01T10:30:00.0 // false'),
-      //         [false]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@T10:30:00 > @T10:00:00 // true'), [true]);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@T10 > @T10:30 // empty ({ })'), []);
-      //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@T10:30:00 > @T10:30:00.0 // false'), [false]);
-      //   });
+      test('> : ', () {
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@T12:25 > @T12:25'),
+            [false]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@T12:27 > @T12:25'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: "'String' > 'String'"),
+            [false]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: "'string' > 'String'"),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(), pathExpression: '10 > 5 // true'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression:
+                    '10 > 5.0 // false; note the 10 is converted to a decimal to perform the comparison'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: "'abc' > 'ABC' // true"),
+            [true]);
+        // expect(
+        //     walkFhirPath(context: resource.toJson(), pathExpression:
+        //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
+        //     [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@2018-03-01 > @2018-01-01 // true'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@2018-03 > @2018-03-01 // empty ({ })'),
+            []);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression:
+                    '@2018-03-01T10:30:00 > @2018-03-01T10:00:00 // true'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression:
+                    '@2018-03-01T10 > @2018-03-01T10:30 // empty ({ })'),
+            []);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression:
+                    '@2018-03-01T10:30:00 > @2018-03-01T10:30:00.0 // false'),
+            [false]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@T10:30:00 > @T10:00:00 // true'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@T10 > @T10:30 // empty ({ })'),
+            []);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '@T10:30:00 > @T10:30:00.0 // false'),
+            [false]);
+      });
       //   test('< : ', () {
       //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@T12:25 < @T12:25'), [false]);
       //     expect(walkFhirPath(context: resource.toJson(), pathExpression: '@T12:27 < @T12:25'), [false]);

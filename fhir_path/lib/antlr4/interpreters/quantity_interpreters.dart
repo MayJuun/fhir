@@ -33,10 +33,14 @@ List? _$visitQuantity(
           'amount = $amount\n'
           'unit = $unit');
     } else {
-      visitor.context = ['${amount.first} ${unit!.first}'];
+      visitor.context = [
+        FhirPathQuantity.fromString('${amount.first} ${unit!.first}')
+      ];
     }
   } else {
-    visitor.context = [ctx.text];
+    throw FhirPathInvalidExpressionException('A quantity requires both a unit '
+        'as well as an amount, which should require two arguments, but this '
+        'has ${ctx.childCount} arguments');
   }
   return visitor.context;
 }
