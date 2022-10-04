@@ -14,11 +14,43 @@ List? _$visitEqualityExpression(
   switch (operator) {
     case '=':
       {
-        print(before?.first.runtimeType);
-        print(after?.first.runtimeType);
-        final equal = deepEquals(before, after);
-        print(equal);
-        visitor.context = [equal];
+        if ((before?.isEmpty ?? true) || (after?.isEmpty ?? true)) {
+          visitor.context = [];
+        } else if (before!.length != after!.length) {
+          visitor.context = [false];
+        } else {
+          visitor.context = [true];
+          for (var i = 0; i < before.length; i++) {
+            if (before[i] is FhirDateTime || before[i] is Date) {
+              if (after[i] is FhirDateTime || after[i] is Date) {
+                final beforeString = before[i].toString();
+                final afterString = after[i].toString();
+                final longerString = beforeString.length > afterString.length
+                    ? beforeString
+                    : afterString;
+                final shorterString =
+                    longerString == beforeString ? afterString : beforeString;
+                if (shorterString !=
+                    longerString.substring(0, shorterString.length)) {
+                  visitor.context = [false];
+                } else {
+                  for (var j = shorterString.length;
+                      j < longerString.length;
+                      j++) {
+                    if (num.tryParse(longerString[j]) != null &&
+                        longerString[j] != '0') {
+                      visitor.context = [];
+                    }
+                  }
+                }
+              } else {
+                visitor.context = [false];
+              }
+            } else if ((before[i] != after[i] && after[i] != before[i])) {
+              visitor.context = [false];
+            }
+          }
+        }
       }
       break;
     case '~':

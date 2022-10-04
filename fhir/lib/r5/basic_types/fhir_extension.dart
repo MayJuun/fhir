@@ -12,17 +12,17 @@ import '../../r5.dart';
 part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
 
-/// [extension]: Optional Extension Element - found in all resources.
+/// [extension_]: Optional Extension Element - found in all resources.
 @freezed
 class FhirExtension with _$FhirExtension {
   FhirExtension._();
 
-  /// [extension]: Optional Extension Element - found in all resources.
+  /// [extension_]: Optional Extension Element - found in all resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -234,7 +234,7 @@ class FhirExtension with _$FhirExtension {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
