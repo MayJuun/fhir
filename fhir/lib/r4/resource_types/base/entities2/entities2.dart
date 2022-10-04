@@ -1426,7 +1426,6 @@ class NutritionProduct with Resource, _$NutritionProduct {
   NutritionProduct._();
 
   /// [NutritionProduct] A food or supplement that is consumed by patients.
-
   ///
   /// [resourceType] This is a NutritionProduct resource;
   ///
@@ -1449,7 +1448,6 @@ class NutritionProduct with Resource, _$NutritionProduct {
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [code] The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.;
@@ -1467,8 +1465,6 @@ class NutritionProduct with Resource, _$NutritionProduct {
   /// [ingredient] Ingredients contained in this product.;
   ///
   /// [knownAllergen] Allergens that are known or suspected to be a part of this nutrition product.;
-  ///
-  /// [characteristic] Specifies descriptive properties of the nutrition product.;
   ///
   /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
   ///
@@ -1533,14 +1529,12 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   NutritionProductNutrient._();
 
   /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [item] The (relevant) nutrients in the product.;
@@ -1592,7 +1586,6 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   NutritionProductIngredient._();
 
   /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
@@ -1650,7 +1643,6 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   NutritionProductCharacteristic._();
 
   /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
@@ -1732,14 +1724,12 @@ class NutritionProductInstance with _$NutritionProductInstance {
   NutritionProductInstance._();
 
   /// [NutritionProductInstance] A food or supplement that is consumed by patients.
-
   ///
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   ///
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   ///
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   ///
   /// [quantity] The amount of items or instances that the resource considers, for instance when referring to 2 identical units together.;
