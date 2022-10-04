@@ -2094,15 +2094,7 @@ class MedicinalProductDefinitionCharacteristic
   ///
   /// [valueCodeableConcept] A value for the characteristic.text.;
   ///
-  /// [valueString] A value for the characteristic.text.;
-  ///
-  /// [valueStringElement] (_valueString): Extensions for valueString;
-  ///
   /// [valueQuantity] A value for the characteristic.text.;
-  ///
-  /// [valueInteger] A value for the characteristic.text.;
-  ///
-  /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
   ///
   /// [valueDate] A value for the characteristic.text.;
   ///
