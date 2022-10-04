@@ -115,30 +115,127 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   factory BiologicallyDerivedProduct({
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+
+        /// [resourceType] This is a BiologicallyDerivedProduct resource
         R4ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    ///  Once assigned, this value never changes.
     String? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not always
+    ///  be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when the
+    /// resource was constructed, and which must be understood when processing the
+    /// content. Often, this is a reference to an implementation guide that
+    ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [implicitRulesElement] Extensions for implicitRules
+    @JsonKey(name: '_implicitRules')
+        Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
+
+    /// [languageElement] Extensions for language
+    @JsonKey(name: '_language')
+        Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource
+    /// and can be used to represent the content of the resource to a human. The
+    /// narrative need not encode all the structured data, but is required to
+    /// contain sufficient detail to make it "clinically safe" for a human to just
+    /// read the narrative. Resource definitions may define what content should be
+    ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart
+    /// from the resource that contains them - they cannot be identified
+    /// independently, and nor can they have their own independent transaction
+    ///  scope.
     List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the resource. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer
+    /// can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the resource and that modifies the
+    /// understanding of the element that contains it and/or the understanding of
+    /// the containing element's descendants. Usually modifier elements provide
+    /// negation or qualification. To make the use of extensions safe and
+    /// manageable, there is a strict set of governance applied to the definition
+    /// and use of extensions. Though any implementer is allowed to define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [identifier] This records identifiers associated with this biologically
+    /// derived product instance that are defined by business processes and/or
+    /// used to refer to it when a direct URL reference to the resource itself is
+    /// not appropriate (e.g. in CDA documents, or in written / printed
+    ///  documentation).
     List<Identifier>? identifier,
+
+    /// [productCategory] Broad category of this product.
     Code? productCategory,
-    @JsonKey(name: '_productCategory') Element? productCategoryElement,
+
+    /// [productCategoryElement] Extensions for productCategory
+    @JsonKey(name: '_productCategory')
+        Element? productCategoryElement,
+
+    /// [productCode] A code that identifies the kind of this biologically
+    ///  derived product (SNOMED Ctcode).
     CodeableConcept? productCode,
+
+    /// [status] Whether the product is currently available.
     Code? status,
-    @JsonKey(name: '_status') Element? statusElement,
+
+    /// [statusElement] Extensions for status
+    @JsonKey(name: '_status')
+        Element? statusElement,
+
+    /// [request] Procedure request to obtain this biologically derived product.
     List<Reference>? request,
+
+    /// [quantity] Number of discrete units within this product.
     Integer? quantity,
-    @JsonKey(name: '_quantity') Element? quantityElement,
+
+    /// [quantityElement] Extensions for quantity
+    @JsonKey(name: '_quantity')
+        Element? quantityElement,
+
+    /// [parent] Parent product (if any).
     List<Reference>? parent,
+
+    /// [collection] How this product was collected.
     BiologicallyDerivedProductCollection? collection,
+
+    /// [processing] Any processing of the product during collection that does
+    /// not change the fundamental nature of the product. For example adding
+    ///  anti-coagulants during the collection of Peripheral Blood Stem Cells.
     List<BiologicallyDerivedProductProcessing>? processing,
+
+    /// [manipulation] Any manipulation of product post-collection that is
+    /// intended to alter the product.  For example a buffy-coat enrichment or CD8
+    /// reduction of Peripheral Blood Stem Cells to make it more suitable for
+    ///  infusion.
     BiologicallyDerivedProductManipulation? manipulation,
+
+    /// [storage] Product storage.
     List<BiologicallyDerivedProductStorage>? storage,
   }) = _BiologicallyDerivedProduct;
 
@@ -214,13 +311,47 @@ class BiologicallyDerivedProductCollection
   ///
   /// [collectedPeriod] Time of product collection.
   factory BiologicallyDerivedProductCollection({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [collector] Healthcare professional who is performing the collection.
     Reference? collector,
+
+    /// [source] The patient or entity, such as a hospital or vendor in the case
+    ///  of a processed/manipulated/manufactured product, providing the product.
     Reference? source,
+
+    /// [collectedDateTime] Time of product collection.
     FhirDateTime? collectedDateTime,
+
+    /// [collectedDateTimeElement] Extensions for collectedDateTime
     @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
+
+    /// [collectedPeriod] Time of product collection.
     Period? collectedPeriod,
   }) = _BiologicallyDerivedProductCollection;
 
@@ -291,15 +422,52 @@ class BiologicallyDerivedProductProcessing
   ///
   /// [timePeriod] Time of processing.
   factory BiologicallyDerivedProductProcessing({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [description] Description of of processing.
     String? description,
+
+    /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [procedure] Procesing code.
     CodeableConcept? procedure,
+
+    /// [additive] Substance added during processing.
     Reference? additive,
+
+    /// [timeDateTime] Time of processing.
     FhirDateTime? timeDateTime,
+
+    /// [timeDateTimeElement] Extensions for timeDateTime
     @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
+
+    /// [timePeriod] Time of processing.
     Period? timePeriod,
   }) = _BiologicallyDerivedProductProcessing;
 
@@ -367,13 +535,46 @@ class BiologicallyDerivedProductManipulation
   ///
   /// [timePeriod] Time of manipulation.
   factory BiologicallyDerivedProductManipulation({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [description] Description of manipulation.
     String? description,
+
+    /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [timeDateTime] Time of manipulation.
     FhirDateTime? timeDateTime,
+
+    /// [timeDateTimeElement] Extensions for timeDateTime
     @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
+
+    /// [timePeriod] Time of manipulation.
     Period? timePeriod,
   }) = _BiologicallyDerivedProductManipulation;
 
@@ -444,15 +645,52 @@ class BiologicallyDerivedProductStorage
   ///
   /// [duration] Storage timeperiod.
   factory BiologicallyDerivedProductStorage({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [description] Description of storage.
     String? description,
+
+    /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [temperature] Storage temperature.
     Decimal? temperature,
+
+    /// [temperatureElement] Extensions for temperature
     @JsonKey(name: '_temperature') Element? temperatureElement,
+
+    /// [scale] Temperature scale used.
     Code? scale,
+
+    /// [scaleElement] Extensions for scale
     @JsonKey(name: '_scale') Element? scaleElement,
+
+    /// [duration] Storage timeperiod.
     Period? duration,
   }) = _BiologicallyDerivedProductStorage;
 
@@ -633,52 +871,210 @@ class Device with Resource, _$Device {
   factory Device({
     @Default(R4ResourceType.Device)
     @JsonKey(unknownEnumValue: R4ResourceType.Device)
+
+        /// [resourceType] This is a Device resource
         R4ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    ///  Once assigned, this value never changes.
     String? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not always
+    ///  be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when the
+    /// resource was constructed, and which must be understood when processing the
+    /// content. Often, this is a reference to an implementation guide that
+    ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [implicitRulesElement] Extensions for implicitRules
+    @JsonKey(name: '_implicitRules')
+        Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
+
+    /// [languageElement] Extensions for language
+    @JsonKey(name: '_language')
+        Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource
+    /// and can be used to represent the content of the resource to a human. The
+    /// narrative need not encode all the structured data, but is required to
+    /// contain sufficient detail to make it "clinically safe" for a human to just
+    /// read the narrative. Resource definitions may define what content should be
+    ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart
+    /// from the resource that contains them - they cannot be identified
+    /// independently, and nor can they have their own independent transaction
+    ///  scope.
     List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the resource. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer
+    /// can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the resource and that modifies the
+    /// understanding of the element that contains it and/or the understanding of
+    /// the containing element's descendants. Usually modifier elements provide
+    /// negation or qualification. To make the use of extensions safe and
+    /// manageable, there is a strict set of governance applied to the definition
+    /// and use of extensions. Though any implementer is allowed to define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [identifier] Unique instance identifiers assigned to a device by
+    ///  manufacturers other organizations or owners.
     List<Identifier>? identifier,
+
+    /// [definition] The reference to the definition for the device.
     Reference? definition,
+
+    /// [udiCarrier] Unique device identifier (UDI) assigned to device label or
+    /// package.  Note that the Device may include multiple udiCarriers as it
+    /// either may include just the udiCarrier for the jurisdiction it is sold, or
+    ///  for multiple jurisdictions it could have been sold.
     List<DeviceUdiCarrier>? udiCarrier,
+
+    /// [status] Status of the Device availability.
     Code? status,
-    @JsonKey(name: '_status') Element? statusElement,
+
+    /// [statusElement] Extensions for status
+    @JsonKey(name: '_status')
+        Element? statusElement,
+
+    /// [statusReason] Reason for the dtatus of the Device availability.
     List<CodeableConcept>? statusReason,
+
+    /// [distinctIdentifier] The distinct identification string as required by
+    /// regulation for a human cell, tissue, or cellular and tissue-based
+    ///  product.
     String? distinctIdentifier,
-    @JsonKey(name: '_distinctIdentifier') Element? distinctIdentifierElement,
+
+    /// [distinctIdentifierElement] Extensions for distinctIdentifier
+    @JsonKey(name: '_distinctIdentifier')
+        Element? distinctIdentifierElement,
+
+    /// [manufacturer] A name of the manufacturer.
     String? manufacturer,
-    @JsonKey(name: '_manufacturer') Element? manufacturerElement,
+
+    /// [manufacturerElement] Extensions for manufacturer
+    @JsonKey(name: '_manufacturer')
+        Element? manufacturerElement,
+
+    /// [manufactureDate] The date and time when the device was manufactured.
     FhirDateTime? manufactureDate,
-    @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
+
+    /// [manufactureDateElement] Extensions for manufactureDate
+    @JsonKey(name: '_manufactureDate')
+        Element? manufactureDateElement,
+
+    /// [expirationDate] The date and time beyond which this device is no longer
+    ///  valid or should not be used (if applicable).
     FhirDateTime? expirationDate,
-    @JsonKey(name: '_expirationDate') Element? expirationDateElement,
+
+    /// [expirationDateElement] Extensions for expirationDate
+    @JsonKey(name: '_expirationDate')
+        Element? expirationDateElement,
+
+    /// [lotNumber] Lot number assigned by the manufacturer.
     String? lotNumber,
-    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+
+    /// [lotNumberElement] Extensions for lotNumber
+    @JsonKey(name: '_lotNumber')
+        Element? lotNumberElement,
+
+    /// [serialNumber] The serial number assigned by the organization when the
+    ///  device was manufactured.
     String? serialNumber,
-    @JsonKey(name: '_serialNumber') Element? serialNumberElement,
+
+    /// [serialNumberElement] Extensions for serialNumber
+    @JsonKey(name: '_serialNumber')
+        Element? serialNumberElement,
+
+    /// [deviceName] This represents the manufacturer's name of the device as
+    /// provided by the device, from a UDI label, or by a person describing the
+    /// Device.  This typically would be used when a person provides the name(s)
+    /// or when the device represents one of the names available from
+    ///  DeviceDefinition.
     List<DeviceDeviceName>? deviceName,
+
+    /// [modelNumber] The model number for the device.
     String? modelNumber,
-    @JsonKey(name: '_modelNumber') Element? modelNumberElement,
+
+    /// [modelNumberElement] Extensions for modelNumber
+    @JsonKey(name: '_modelNumber')
+        Element? modelNumberElement,
+
+    /// [partNumber] The part number of the device.
     String? partNumber,
-    @JsonKey(name: '_partNumber') Element? partNumberElement,
+
+    /// [partNumberElement] Extensions for partNumber
+    @JsonKey(name: '_partNumber')
+        Element? partNumberElement,
+
+    /// [type] The kind or type of device.
     CodeableConcept? type,
+
+    /// [specialization] The capabilities supported on a  device, the standards
+    /// to which the device conforms for a particular purpose, and used for the
+    ///  communication.
     List<DeviceSpecialization>? specialization,
+
+    /// [version] The actual design of the device or software version running on
+    ///  the device.
     List<DeviceVersion>? version,
+
+    /// [property] The actual configuration settings of a device as it actually
+    ///  operates, e.g., regulation status, time properties.
     List<DeviceProperty>? property,
+
+    /// [patient] Patient information, If the device is affixed to a person.
     Reference? patient,
+
+    /// [owner] An organization that is responsible for the provision and ongoing
+    ///  maintenance of the device.
     Reference? owner,
+
+    /// [contact] Contact details for an organization or a particular human that
+    ///  is responsible for the device.
     List<ContactPoint>? contact,
+
+    /// [location] The place where the device can be found.
     Reference? location,
+
+    /// [url] A network address on which the device may be contacted directly.
     FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
+
+    /// [urlElement] Extensions for url
+    @JsonKey(name: '_url')
+        Element? urlElement,
+
+    /// [note] Descriptive information, usage information or implantation
+    ///  information that is not captured in an existing element.
     List<Annotation>? note,
+
+    /// [safety] Provides additional safety characteristics about a medical
+    ///  device.  For example devices containing latex.
     List<CodeableConcept>? safety,
+
+    /// [parent] The parent device.
     Reference? parent,
   }) = _Device;
 
@@ -788,20 +1184,88 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   ///
   /// [entryTypeElement] Extensions for entryType
   factory DeviceUdiCarrier({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [deviceIdentifier] The device identifier (DI) is a mandatory, fixed
+    /// portion of a UDI that identifies the labeler and the specific version or
+    ///  model of a device.
     String? deviceIdentifier,
+
+    /// [deviceIdentifierElement] Extensions for deviceIdentifier
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
+
+    /// [issuer] Organization that is charged with issuing UDIs for devices.  For
+    ///  example, the US FDA issuers include :
+    /// 1) GS1:
+    /// http://hl7.org/fhir/NamingSystem/gs1-di,
+    /// 2) HIBCC:
+    /// http://hl7.org/fhir/NamingSystem/hibcc-dI,
+    /// 3) ICCBBA for blood containers:
+    /// http://hl7.org/fhir/NamingSystem/iccbba-blood-di,
+    /// 4) ICCBA for other devices:
+    /// http://hl7.org/fhir/NamingSystem/iccbba-other-di.
     FhirUri? issuer,
+
+    /// [issuerElement] Extensions for issuer
     @JsonKey(name: '_issuer') Element? issuerElement,
+
+    /// [jurisdiction] The identity of the authoritative source for UDI
+    /// generation within a  jurisdiction.  All UDIs are globally unique within a
+    /// single namespace with the appropriate repository uri as the system.  For
+    /// example,  UDIs of devices managed in the U.S. by the FDA, the value is
+    ///  http://hl7.org/fhir/NamingSystem/fda-udi.
     FhirUri? jurisdiction,
+
+    /// [jurisdictionElement] Extensions for jurisdiction
     @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
+
+    /// [carrierAIDC] The full UDI carrier of the Automatic Identification and
+    /// Data Capture (AIDC) technology representation of the barcode string as
+    /// printed on the packaging of the device - e.g., a barcode or RFID.
+    /// Because of limitations on character sets in XML and the need to round-trip
+    ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
     Base64Binary? carrierAIDC,
+
+    /// [carrierAIDCElement] Extensions for carrierAIDC
     @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
+
+    /// [carrierHRF] The full UDI carrier as the human readable form (HRF)
+    /// representation of the barcode string as printed on the packaging of the
+    ///  device.
     String? carrierHRF,
+
+    /// [carrierHRFElement] Extensions for carrierHRF
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
+
+    /// [entryType] A coded entry to indicate how the data was entered.
     Code? entryType,
+
+    /// [entryTypeElement] Extensions for entryType
     @JsonKey(name: '_entryType') Element? entryTypeElement,
   }) = _DeviceUdiCarrier;
 
@@ -880,12 +1344,45 @@ class DeviceDeviceName with _$DeviceDeviceName {
   ///
   /// [typeElement] Extensions for type
   factory DeviceDeviceName({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] The name of the device.
     String? name,
+
+    /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [type] The type of deviceName.
+    /// UDILabelName | UserFriendlyName | PatientReportedName |
+    ///  ManufactureDeviceName | ModelName.
     Code? type,
+
+    /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDeviceName;
 
@@ -961,11 +1458,41 @@ class DeviceSpecialization with _$DeviceSpecialization {
   ///
   /// [versionElement] Extensions for version
   factory DeviceSpecialization({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [systemType] The standard that is used to operate and communicate.
     required CodeableConcept systemType,
+
+    /// [version] The version of the standard that is used to operate and
+    ///  communicate.
     String? version,
+
+    /// [versionElement] Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
   }) = _DeviceSpecialization;
 
@@ -1042,12 +1569,43 @@ class DeviceVersion with _$DeviceVersion {
   ///
   /// [valueElement] Extensions for value
   factory DeviceVersion({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [type] The type of the device version.
     CodeableConcept? type,
+
+    /// [component] A single component of the device version.
     Identifier? component,
+
+    /// [value] The version text.
     String? value,
+
+    /// [valueElement] Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
   }) = _DeviceVersion;
 
@@ -1123,11 +1681,41 @@ class DeviceProperty with _$DeviceProperty {
   ///
   /// [valueCode] Property value as a code, e.g., NTP4 (synced to NTP).
   factory DeviceProperty({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [type] Code that specifies the property DeviceDefinitionPropetyCode
+    ///  (Extensible).
     required CodeableConcept type,
+
+    /// [valueQuantity] Property value as a quantity.
     List<Quantity>? valueQuantity,
+
+    /// [valueCode] Property value as a code, e.g., NTP4 (synced to NTP).
     List<CodeableConcept>? valueCode,
   }) = _DeviceProperty;
 
@@ -1278,29 +1866,140 @@ class DeviceMetric with Resource, _$DeviceMetric {
   factory DeviceMetric({
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+
+        /// [resourceType] This is a DeviceMetric resource
         R4ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    ///  Once assigned, this value never changes.
     String? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not always
+    ///  be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when the
+    /// resource was constructed, and which must be understood when processing the
+    /// content. Often, this is a reference to an implementation guide that
+    ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [implicitRulesElement] Extensions for implicitRules
+    @JsonKey(name: '_implicitRules')
+        Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
+
+    /// [languageElement] Extensions for language
+    @JsonKey(name: '_language')
+        Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource
+    /// and can be used to represent the content of the resource to a human. The
+    /// narrative need not encode all the structured data, but is required to
+    /// contain sufficient detail to make it "clinically safe" for a human to just
+    /// read the narrative. Resource definitions may define what content should be
+    ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart
+    /// from the resource that contains them - they cannot be identified
+    /// independently, and nor can they have their own independent transaction
+    ///  scope.
     List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the resource. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer
+    /// can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the resource and that modifies the
+    /// understanding of the element that contains it and/or the understanding of
+    /// the containing element's descendants. Usually modifier elements provide
+    /// negation or qualification. To make the use of extensions safe and
+    /// manageable, there is a strict set of governance applied to the definition
+    /// and use of extensions. Though any implementer is allowed to define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [identifier] Unique instance identifiers assigned to a device by the
+    /// device or gateway software, manufacturers, other organizations or owners.
+    ///  For example: handle ID.
     List<Identifier>? identifier,
+
+    /// [type] Describes the type of the metric. For example: Heart Rate, PEEP
+    ///  Setting, etc.
     required CodeableConcept type,
+
+    /// [unit] Describes the unit that an observed value determined for this
+    ///  metric will have. For example: Percent, Seconds, etc.
     CodeableConcept? unit,
+
+    /// [source] Describes the link to the  Device that this DeviceMetric belongs
+    /// to and that contains administrative device information such as
+    ///  manufacturer, serial number, etc.
     Reference? source,
+
+    /// [parent] Describes the link to the  Device that this DeviceMetric belongs
+    /// to and that provide information about the location of this DeviceMetric in
+    /// the containment structure of the parent Device. An example would be a
+    /// Device that represents a Channel. This reference can be used by a client
+    /// application to distinguish DeviceMetrics that have the same type, but
+    ///  should be interpreted based on their containment location.
     Reference? parent,
+
+    /// [operationalStatus] Indicates current operational state of the device.
+    ///  For example: On, Off, Standby, etc.
     Code? operationalStatus,
-    @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
+
+    /// [operationalStatusElement] Extensions for operationalStatus
+    @JsonKey(name: '_operationalStatus')
+        Element? operationalStatusElement,
+
+    /// [color] Describes the color representation for the metric. This is often
+    /// used to aid clinicians to track and identify parameter types by color. In
+    /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
+    /// example; the parameters are displayed in different characteristic colors,
+    ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
     Code? color,
-    @JsonKey(name: '_color') Element? colorElement,
+
+    /// [colorElement] Extensions for color
+    @JsonKey(name: '_color')
+        Element? colorElement,
+
+    /// [category] Indicates the category of the observation generation process.
+    ///  A DeviceMetric can be for example a setting, measurement, or calculation.
     Code? category,
-    @JsonKey(name: '_category') Element? categoryElement,
+
+    /// [categoryElement] Extensions for category
+    @JsonKey(name: '_category')
+        Element? categoryElement,
+
+    /// [measurementPeriod] Describes the measurement repetition time. This is
+    /// not necessarily the same as the update period. The measurement repetition
+    /// time can range from milliseconds up to hours. An example for a measurement
+    /// repetition time in the range of milliseconds is the sampling rate of an
+    /// ECG. An example for a measurement repetition time in the range of hours is
+    /// a NIBP that is triggered automatically every hour. The update period may
+    /// be different than the measurement repetition time, if the device does not
+    /// update the published observed value with the same frequency as it was
+    ///  measured.
     Timing? measurementPeriod,
+
+    /// [calibration] Describes the calibrations that have been performed or that
+    ///  are required to be performed.
     List<DeviceMetricCalibration>? calibration,
   }) = _DeviceMetric;
 
@@ -1377,14 +2076,49 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   ///
   /// [timeElement] Extensions for time
   factory DeviceMetricCalibration({
+    /// [id] Unique id for the element within a resource (for internal
+    ///  references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the element. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance  applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies the
+    /// understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [type] Describes the type of the calibration method.
     Code? type,
+
+    /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [state] Describes the state of the calibration.
     Code? state,
+
+    /// [stateElement] Extensions for state
     @JsonKey(name: '_state') Element? stateElement,
+
+    /// [time] Describes the time last calibration has been performed.
     Instant? time,
+
+    /// [timeElement] Extensions for time
     @JsonKey(name: '_time') Element? timeElement,
   }) = _DeviceMetricCalibration;
 
@@ -1470,27 +2204,69 @@ class NutritionProduct with Resource, _$NutritionProduct {
   ///
   /// [note] Comments made about the product.;
   factory NutritionProduct({
+    /// [resourceType] This is a NutritionProduct resource;
     @Default(R4ResourceType.NutritionProduct) R4ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     String? id,
+
+    /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.;
     Code? language,
+
+    /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
     List<Resource>? contained,
+
+    /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
     List<FhirExtension>? modifierExtension,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
+
+    /// [code] The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.;
     CodeableConcept? code,
+
+    /// [manufacturer] The organisation (manufacturer, representative or legal authorisation holder) that is responsible for the device.;
+
     List<Reference>? manufacturer,
+
+    /// [nutrient] The product's nutritional information expressed by the nutrients.;
+
     List<NutritionProductNutrient>? nutrient,
+
+    /// [ingredient] Ingredients contained in this product.;
+
     List<NutritionProductIngredient>? ingredient,
+
+    /// [knownAllergen] Allergens that are known or suspected to be a part of this nutrition product.;
+
     List<CodeableReference>? knownAllergen,
     List<NutritionProductCharacteristic>? productCharacteristic,
+
+    /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
+
     List<NutritionProductInstance>? instance,
+
+    /// [note] Comments made about the product.;
+
     List<Annotation>? note,
   }) = _NutritionProduct;
 
@@ -1541,10 +2317,25 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   ///
   /// [amount] The amount of nutrient expressed in one or more units: X per pack / per serving / per dose.;
   factory NutritionProductNutrient({
+    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+
     List<FhirExtension>? modifierExtension,
+
+    /// [item] The (relevant) nutrients in the product.;
+
     CodeableReference? item,
+
+    /// [amount] The amount of nutrient expressed in one or more units: X per pack / per serving / per dose.;
+
     List<Ratio>? amount,
   }) = _NutritionProductNutrient;
 
@@ -1598,10 +2389,25 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   ///
   /// [amount] The amount of ingredient that is in the product.;
   factory NutritionProductIngredient({
+    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+
     List<FhirExtension>? modifierExtension,
+
+    /// [item] The ingredient contained in the product.;
+
     required CodeableReference item,
+
+    /// [amount] The amount of ingredient that is in the product.;
+
     List<Ratio>? amount,
   }) = _NutritionProductIngredient;
 
@@ -1670,18 +2476,55 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   factory NutritionProductCharacteristic({
+    /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+
     String? id,
+
+    /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+
     List<FhirExtension>? modifierExtension,
+
+    /// [type] A code specifying which characteristic of the product is being described (for example, colour, shape).;
+
     required CodeableConcept type,
+
+    /// [valueCodeableConcept] The actual characteristic value corresponding to the type.;
+
     CodeableConcept? valueCodeableConcept,
+
+    /// [valueString] The actual characteristic value corresponding to the type.;
+
     Markdown? valueString,
+
+    /// [valueStringElement] (_valueString): Extensions for valueString;
+
     @JsonKey(name: '_valueString') Element? valueStringElement,
+
+    /// [valueQuantity] The actual characteristic value corresponding to the type.;
+
     Quantity? valueQuantity,
+
+    /// [valueBase64Binary] The actual characteristic value corresponding to the type.;
+
     Base64Binary? valueBase64Binary,
+
+    /// [valueBase64BinaryElement] (_valueBase64Binary): Extensions for valueBase64Binary;
+
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+
+    /// [valueAttachment] The actual characteristic value corresponding to the type.;
+
     Attachment? valueAttachment,
+
+    /// [valueBoolean] The actual characteristic value corresponding to the type.;
+
     Boolean? valueBoolean,
+
+    /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
+
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
   }) = _NutritionProductCharacteristic;
 
@@ -1897,8 +2740,14 @@ class Substance with Resource, _$Substance {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
+
+    /// [status] The current state of the product.;
     Code? status,
+
+    /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [category] Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.;
     List<CodeableConcept>? category,
     required CodeableConcept code,
     String? description,
