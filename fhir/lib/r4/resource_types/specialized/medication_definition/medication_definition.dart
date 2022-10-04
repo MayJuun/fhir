@@ -652,8 +652,6 @@ class IngredientStrength with _$IngredientStrength {
   ///
   /// [textConcentrationElement] (_textConcentration): Extensions for textConcentration;
   ///
-  /// [basis] A code that indicates if the strength is, for example, based on the ingredient substance as stated or on the substance base (when the ingredient is a salt).;
-  ///
   /// [measurementPoint] For when strength is measured at a particular point or distance. There are products where strength is measured at a particular point. For example, the strength of the ingredient in some inhalers is measured at a particular position relative to the point of aerosolization.;
   ///
   /// [measurementPointElement] (_measurementPoint): Extensions for measurementPoint;
