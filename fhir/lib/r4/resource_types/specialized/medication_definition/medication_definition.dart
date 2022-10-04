@@ -1593,8 +1593,6 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   ///
   /// [packagedMedicinalProduct] Package type for the product. See also the PackagedProductDefinition resource.;
   ///
-  /// [comprisedOf] A medicinal manufactured item that this product consists of, such as a tablet or capsule. Used as a direct link when the item's packaging is not being recorded (see also PackagedProductDefinition.package.containedItem.item).;
-  ///
   /// [ingredient] The ingredients of this medicinal product - when not detailed in other resources. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource, or indirectly via incoming AdministrableProductDefinition, PackagedProductDefinition or ManufacturedItemDefinition references. In cases where those levels of detail are not used, the ingredients may be specified directly here as codes.;
   ///
   /// [impurity] Any component of the drug product which is not the chemical entity defined as the drug substance, or an excipient in the drug product. This includes process-related impurities and contaminants, product-related impurities including degradation products.;
