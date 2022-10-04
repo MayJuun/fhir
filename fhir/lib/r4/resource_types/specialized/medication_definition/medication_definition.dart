@@ -2930,8 +2930,6 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   ///
   /// [property] General specifications for this substance.;
   ///
-  /// [referenceInformation] General information detailing this substance.;
-  ///
   /// [molecularWeight] The molecular weight or weight range (for proteins, polymers or nucleic acids).;
   ///
   /// [structure] Structural information.;
