@@ -1236,11 +1236,6 @@ class ElementDefinition with _$ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [fixedMeta] Specifies a value that SHALL be exactly the value  for this
-  /// element in the instance. For purposes of comparison, non-significant
-  /// whitespace is ignored, and all values must be an exact match (case and
-  ///  accent sensitive). Missing elements/attributes must also be missing.
-  ///
   /// [patternBase64Binary] Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
