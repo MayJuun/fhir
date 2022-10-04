@@ -109,17 +109,10 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      name: fhir
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.0"
-  fhir_yaml:
-    dependency: transitive
-    description:
-      name: fhir_yaml
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.0"
+      path: "../fhir"
+      relative: true
+    source: path
+    version: "0.9.1"
   file:
     dependency: transitive
     description:
@@ -145,7 +138,7 @@ packages:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.3"
+    version: "2.1.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -208,14 +201,14 @@ packages:
       name: js
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.3"
+    version: "0.6.4"
   json_annotation:
     dependency: transitive
     description:
       name: json_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.6.0"
+    version: "4.7.0"
   lints:
     dependency: transitive
     description:
@@ -376,7 +369,7 @@ packages:
       name: sembast
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.2.0+1"
+    version: "3.3.0"
   sembast_sqflite:
     dependency: "direct main"
     description:
@@ -444,14 +437,14 @@ packages:
       name: sqflite
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.3"
+    version: "2.1.0"
   sqflite_common:
     dependency: transitive
     description:
       name: sqflite_common
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.1+1"
+    version: "2.3.0"
   sqflite_common_ffi:
     dependency: "direct main"
     description:
@@ -507,21 +500,21 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.21.4"
+    version: "1.21.6"
   test_api:
     dependency: transitive
     description:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.12"
+    version: "0.4.14"
   test_core:
     dependency: transitive
     description:
       name: test_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.16"
+    version: "0.4.18"
   tint:
     dependency: transitive
     description:
@@ -600,5 +593,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=2.17.0 <3.0.0"
-  flutter: ">=3.0.0"
+  dart: ">=2.18.0 <3.0.0"
+  flutter: ">=3.3.0-0"
