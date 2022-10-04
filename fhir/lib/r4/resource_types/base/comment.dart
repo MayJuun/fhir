@@ -2,7 +2,8 @@ import 'dart:io';
 
 Future<void> main() async {
   final dir = Directory('.');
-  final fileList = await dir.list().map((event) => event.path).toList();
+  final fileList =
+      await dir.list(recursive: true).map((event) => event.path).toList();
   for (final file in fileList) {
     final newStrings = <String>[];
     if (!file.contains('freezed') &&
