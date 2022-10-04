@@ -648,10 +648,6 @@ class IngredientStrength with _$IngredientStrength {
   ///
   /// [concentrationRatioRange] The strength per unitary volume (or mass).;
   ///
-  /// [concentrationCodeableConcept] The strength per unitary volume (or mass).;
-  ///
-  /// [concentrationQuantity] The strength per unitary volume (or mass).;
-  ///
   /// [textConcentration] A textual represention of either the whole of the concentration strength or a part of it - with the rest being in Strength.concentration as a ratio.;
   ///
   /// [textConcentrationElement] (_textConcentration): Extensions for textConcentration;
