@@ -12,242 +12,242 @@ import '../../r5.dart';
 part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
 
-/// [extension_]: Optional Extension Element - found in all resources.
+/// [extension_] Optional Extension Element - found in all resources.
 @freezed
 class FhirExtension with _$FhirExtension {
   FhirExtension._();
 
-  /// [extension_]: Optional Extension Element - found in all resources.
+  /// [extension_] Optional Extension Element - found in all resources.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension_] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [url]: Source of the definition for the extension code - a logical name or
+  /// [url] Source of the definition for the extension code - a logical name or
   ///  a URL.
   ///
-  /// [urlElement]: Extensions for url
+  /// [urlElement] Extensions for url
   ///
-  /// [valueBase64Binary]: Value of extension - must be one of a constrained set
+  /// [valueBase64Binary] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   ///
-  /// [valueBoolean]: Value of extension - must be one of a constrained set of
+  /// [valueBoolean] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueBooleanElement]: Extensions for valueBoolean
+  /// [valueBooleanElement] Extensions for valueBoolean
   ///
-  /// [valueCanonical]: Value of extension - must be one of a constrained set of
+  /// [valueCanonical] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueCanonicalElement]: Extensions for valueCanonical
+  /// [valueCanonicalElement] Extensions for valueCanonical
   ///
-  /// [valueCode]: Value of extension - must be one of a constrained set of the
+  /// [valueCode] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueCodeElement]: Extensions for valueCode
+  /// [valueCodeElement] Extensions for valueCode
   ///
-  /// [valueDate]: Value of extension - must be one of a constrained set of the
+  /// [valueDate] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueDateElement]: Extensions for valueDate
+  /// [valueDateElement] Extensions for valueDate
   ///
-  /// [valueDateTime]: Value of extension - must be one of a constrained set of
+  /// [valueDateTime] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueDateTimeElement]: Extensions for valueDateTime
+  /// [valueDateTimeElement] Extensions for valueDateTime
   ///
-  /// [valueDecimal]: Value of extension - must be one of a constrained set of
+  /// [valueDecimal] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueDecimalElement]: Extensions for valueDecimal
+  /// [valueDecimalElement] Extensions for valueDecimal
   ///
-  /// [valueId]: Value of extension - must be one of a constrained set of the
+  /// [valueId] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueIdElement]: Extensions for valueId
+  /// [valueIdElement] Extensions for valueId
   ///
-  /// [valueInstant]: Value of extension - must be one of a constrained set of
+  /// [valueInstant] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueInstantElement]: Extensions for valueInstant
+  /// [valueInstantElement] Extensions for valueInstant
   ///
-  /// [valueInteger]: Value of extension - must be one of a constrained set of
+  /// [valueInteger] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueIntegerElement]: Extensions for valueInteger
+  /// [valueIntegerElement] Extensions for valueInteger
   ///
-  /// [valueMarkdown]: Value of extension - must be one of a constrained set of
+  /// [valueMarkdown] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueMarkdownElement]: Extensions for valueMarkdown
+  /// [valueMarkdownElement] Extensions for valueMarkdown
   ///
-  /// [valueOid]: Value of extension - must be one of a constrained set of the
+  /// [valueOid] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueOidElement]: Extensions for valueOid
+  /// [valueOidElement] Extensions for valueOid
   ///
-  /// [valuePositiveInt]: Value of extension - must be one of a constrained set
+  /// [valuePositiveInt] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valuePositiveIntElement]: Extensions for valuePositiveInt
+  /// [valuePositiveIntElement] Extensions for valuePositiveInt
   ///
-  /// [valueString]: Value of extension - must be one of a constrained set of
+  /// [valueString] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueStringElement]: Extensions for valueString
+  /// [valueStringElement] Extensions for valueString
   ///
-  /// [valueTime]: Value of extension - must be one of a constrained set of the
+  /// [valueTime] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueTimeElement]: Extensions for valueTime
+  /// [valueTimeElement] Extensions for valueTime
   ///
-  /// [valueUnsignedInt]: Value of extension - must be one of a constrained set
+  /// [valueUnsignedInt] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueUnsignedIntElement]: Extensions for valueUnsignedInt
+  /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   ///
-  /// [valueUri]: Value of extension - must be one of a constrained set of the
+  /// [valueUri] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueUriElement]: Extensions for valueUri
+  /// [valueUriElement] Extensions for valueUri
   ///
-  /// [valueUrl]: Value of extension - must be one of a constrained set of the
+  /// [valueUrl] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueUrlElement]: Extensions for valueUrl
+  /// [valueUrlElement] Extensions for valueUrl
   ///
-  /// [valueUuid]: Value of extension - must be one of a constrained set of the
+  /// [valueUuid] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueUuidElement]: Extensions for valueUuid
+  /// [valueUuidElement] Extensions for valueUuid
   ///
-  /// [valueAddress]: Value of extension - must be one of a constrained set of
+  /// [valueAddress] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueAge]: Value of extension - must be one of a constrained set of the
+  /// [valueAge] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueAnnotation]: Value of extension - must be one of a constrained set
+  /// [valueAnnotation] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueAttachment]: Value of extension - must be one of a constrained set
+  /// [valueAttachment] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueCodeableConcept]: Value of extension - must be one of a constrained
+  /// [valueCodeableConcept] Value of extension - must be one of a constrained
   /// set of the data types (see [Extensibility](extensibility.html) for a
   ///  list).
   ///
-  /// [valueCoding]: Value of extension - must be one of a constrained set of
+  /// [valueCoding] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueContactPoint]: Value of extension - must be one of a constrained set
+  /// [valueContactPoint] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueCount]: Value of extension - must be one of a constrained set of the
+  /// [valueCount] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueDistance]: Value of extension - must be one of a constrained set of
+  /// [valueDistance] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueDuration]: Value of extension - must be one of a constrained set of
+  /// [valueDuration] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueHumanName]: Value of extension - must be one of a constrained set of
+  /// [valueHumanName] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueIdentifier]: Value of extension - must be one of a constrained set
+  /// [valueIdentifier] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueMoney]: Value of extension - must be one of a constrained set of the
+  /// [valueMoney] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valuePeriod]: Value of extension - must be one of a constrained set of
+  /// [valuePeriod] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueQuantity]: Value of extension - must be one of a constrained set of
+  /// [valueQuantity] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueRange]: Value of extension - must be one of a constrained set of the
+  /// [valueRange] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueRatio]: Value of extension - must be one of a constrained set of the
+  /// [valueRatio] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueReference]: Value of extension - must be one of a constrained set of
+  /// [valueReference] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueSampledData]: Value of extension - must be one of a constrained set
+  /// [valueSampledData] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueSignature]: Value of extension - must be one of a constrained set of
+  /// [valueSignature] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueTiming]: Value of extension - must be one of a constrained set of
+  /// [valueTiming] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueContactDetail]: Value of extension - must be one of a constrained
+  /// [valueContactDetail] Value of extension - must be one of a constrained
   /// set of the data types (see [Extensibility](extensibility.html) for a
   ///  list).
   ///
-  /// [valueContributor]: Value of extension - must be one of a constrained set
+  /// [valueContributor] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueDataRequirement]: Value of extension - must be one of a constrained
+  /// [valueDataRequirement] Value of extension - must be one of a constrained
   /// set of the data types (see [Extensibility](extensibility.html) for a
   ///  list).
   ///
-  /// [valueExpression]: Value of extension - must be one of a constrained set
+  /// [valueExpression] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueParameterDefinition]: Value of extension - must be one of a
+  /// [valueParameterDefinition] Value of extension - must be one of a
   /// constrained set of the data types (see [Extensibility](extensibility.html)
   ///  for a list).
   ///
-  /// [valueRelatedArtifact]: Value of extension - must be one of a constrained
+  /// [valueRelatedArtifact] Value of extension - must be one of a constrained
   /// set of the data types (see [Extensibility](extensibility.html) for a
   ///  list).
   ///
-  /// [valueTriggerDefinition]: Value of extension - must be one of a
+  /// [valueTriggerDefinition] Value of extension - must be one of a
   /// constrained set of the data types (see [Extensibility](extensibility.html)
   ///  for a list).
   ///
-  /// [valueUsageContext]: Value of extension - must be one of a constrained set
+  /// [valueUsageContext] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueDosage]: Value of extension - must be one of a constrained set of
+  /// [valueDosage] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [valueMeta]: Value of extension - must be one of a constrained set of the
+  /// [valueMeta] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   ///
-  /// [Narrative]: A human-readable summary of the resource conveying the
+  /// [Narrative] A human-readable summary of the resource conveying the
   ///  essential clinical and business information for the resource.
   ///
-  /// [id]: Unique id for the element within a resource (for internal
+  /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension_] May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  /// [status]: The status of the narrative - whether it's entirely generated
+  /// [status] The status of the narrative - whether it's entirely generated
   /// (from just the defined data or the extensions too), or whether a human
   ///  authored it and it may contain additional data.
   ///
-  /// [statusElement]: Extensions for status
+  /// [statusElement] Extensions for status
   ///
-  /// [div]: The actual narrative content, a stripped down version of XHTML.
+  /// [div] The actual narrative content, a stripped down version of XHTML.
   factory FhirExtension({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
