@@ -1946,7 +1946,7 @@ class ParametersParameter with _$ParametersParameter {
   ///
   /// [resource] If the parameter is a whole resource.
   ///
-  /// [part] A named part of a multi-part parameter.
+  /// [part_] A named part of a multi-part parameter.
   factory ParametersParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
