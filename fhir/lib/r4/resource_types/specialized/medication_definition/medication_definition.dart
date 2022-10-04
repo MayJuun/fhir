@@ -2940,12 +2940,6 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   ///
   /// [relationship] A link between this substance and another, with details of the relationship.;
   ///
-  /// [nucleicAcid] Data items specific to nucleic acids.;
-  ///
-  /// [polymer] Data items specific to polymers.;
-  ///
-  /// [protein] Data items specific to proteins.;
-  ///
   /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
   factory SubstanceDefinition({
     @Default(R4ResourceType.SubstanceDefinition) R4ResourceType resourceType,
