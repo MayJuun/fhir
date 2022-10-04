@@ -13,17 +13,16 @@
 //   return type == TerminalNodeImpl ? tree.runtimeType : type;
 // }
 
-@JS()
-library ucum;
+@JS('console')
+library main;
 
 import 'package:js/js.dart';
 
-// @JS('ucum.convert')
-external ucum. .convert(dynamic obj1, dynamic obj2, dynamic obj3);
+@JS('log')
+external void log(dynamic str);
 
 void main() async {
-  var oneInch = ucum.convert(2.54, 'cm', '[in_i]');
-  print(oneInch);
+  log('Hello World!');
   // final input = await InputStream.fromString('{ }.empty()');
   // final lexer = FhirPathLexer(input);
   // final tokens = CommonTokenStream(lexer);
