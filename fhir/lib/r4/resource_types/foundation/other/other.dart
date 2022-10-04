@@ -368,7 +368,7 @@ class BundleLink with _$BundleLink {
   ///  modifierExtension itself).
   ///
   /// [relation] A name which details the functional use for this link - see
-  /// [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
+  /// (http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
   ///
   /// [relationElement] Extensions for relation
   ///
@@ -2527,10 +2527,6 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [version] The identifier that is used to identify this version of the subscription topic when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the Topic author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions are orderable.;
   ///
   /// [versionElement] (_version): Extensions for version;
-  ///
-  /// [name] A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
   ///
   /// [title] A short, descriptive, user-friendly title for the SubscriptionTopic, for example, "admission".;
   ///
