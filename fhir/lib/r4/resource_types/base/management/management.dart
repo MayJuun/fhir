@@ -159,40 +159,138 @@ class Encounter with Resource, _$Encounter {
   factory Encounter({
     @Default(R4ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+  /// [resourceType] This is a Encounter resource
         R4ResourceType resourceType,
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
     String? id,
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
     Meta? meta,
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+  /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+  /// [language] The base language in which the resource is written.
     Code? language,
+  /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
     List<Resource>? contained,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [identifier] Identifier(s) by which this encounter is known.
     List<Identifier>? identifier,
+  /// [status] planned | arrived | triaged | in-progress | onleave | finished |
+  ///  cancelled +.
     Code? status,
+  /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+  /// [statusHistory] The status history permits the encounter resource to
+  /// contain the status history without needing to read through the historical
+  ///  versions of the resource, or even have the server store them.
     List<EncounterStatusHistory>? statusHistory,
+  /// [class] Concepts representing classification of patient encounter such as
+  /// ambulatory (outpatient), inpatient, emergency, home health or others due
+  ///  to local variations.
     @JsonKey(name: 'class') required Coding class_,
+  /// [classHistory] The class history permits the tracking of the encounters
+  /// transitions without needing to go  through the resource history.  This
+  /// would be used for a case where an admission starts of as an emergency
+  /// encounter, then transitions into an inpatient scenario. Doing this and not
+  /// restarting a new encounter ensures that any lab/diagnostic results can
+  /// more easily follow the patient and not require re-processing and not get
+  ///  lost or cancelled during a kind of discharge from emergency to inpatient.
     List<EncounterClassHistory>? classHistory,
+  /// [type] Specific type of encounter (e.g. e-mail consultation, surgical
+  ///  day-care, skilled nursing, rehabilitation).
     List<CodeableConcept>? type,
+  /// [serviceType] Broad categorization of the service that is to be provided
+  ///  (e.g. cardiology).
     CodeableConcept? serviceType,
+  /// [priority] Indicates the urgency of the encounter.
     CodeableConcept? priority,
+  /// [subject] The patient or group present at the encounter.
     Reference? subject,
+  /// [episodeOfCare] Where a specific encounter should be classified as a part
+  /// of a specific episode(s) of care this field should be used. This
+  /// association can facilitate grouping of related encounters together for a
+  /// specific purpose, such as government reporting, issue tracking,
+  /// association via a common problem.  The association is recorded on the
+  /// encounter as these are typically created after the episode of care and
+  /// grouped on entry rather than editing the episode of care to append another
+  ///  encounter to it (the episode of care could span years).
     List<Reference>? episodeOfCare,
+  /// [basedOn] The request this encounter satisfies (e.g. incoming referral or
+  ///  procedure request).
     List<Reference>? basedOn,
+  /// [participant] The list of people responsible for providing the service.
     List<EncounterParticipant>? participant,
+  /// [appointment] The appointment that scheduled this encounter.
     List<Reference>? appointment,
+  /// [period] The start and end time of the encounter.
     Period? period,
+  /// [length] Quantity of time the encounter lasted. This excludes the time
+  ///  during leaves of absence.
     FhirDuration? length,
+  /// [reasonCode] Reason the encounter takes place, expressed as a code. For
+  ///  admissions, this can be used for a coded admission diagnosis.
     List<CodeableConcept>? reasonCode,
+  /// [reasonReference] Reason the encounter takes place, expressed as a code.
+  ///  For admissions, this can be used for a coded admission diagnosis.
     List<Reference>? reasonReference,
+  /// [diagnosis] The list of diagnosis relevant to this encounter.
     List<EncounterDiagnosis>? diagnosis,
+  /// [account] The set of accounts that may be used for billing for this
+  ///  Encounter.
     List<Reference>? account,
+  /// [hospitalization] Details about the admission to a healthcare service.
     EncounterHospitalization? hospitalization,
+  /// [location] List of locations where  the patient has been during this
+  ///  encounter.
     List<EncounterLocation>? location,
+  /// [serviceProvider] The organization that is primarily responsible for this
+  /// Encounter's services. This MAY be the same as the organization on the
+  /// Patient record, however it could be different, such as if the actor
+  /// performing the services was from an external organization (which may be
+  /// billed seperately) for an external consultation.  Refer to the example
+  ///  bundle showing an abbreviated set of Encounters for a colonoscopy.
     Reference? serviceProvider,
+  /// [partOf] Another Encounter of which this encounter is a part of
+  ///  (administratively or in time).
     Reference? partOf,
   }) = _Encounter;
 
@@ -265,11 +363,36 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
   ///
   /// [period] The time that the episode was in the specified status.
   factory EncounterStatusHistory({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [status] planned | arrived | triaged | in-progress | onleave | finished |
+  ///  cancelled +.
     Code? status,
+  /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+  /// [period] The time that the episode was in the specified status.
     required Period period,
   }) = _EncounterStatusHistory;
 
@@ -342,10 +465,33 @@ class EncounterClassHistory with _$EncounterClassHistory {
   ///
   /// [period] The time that the episode was in the specified class.
   factory EncounterClassHistory({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [class] inpatient | outpatient | ambulatory | emergency +.
     @JsonKey(name: 'class') required Coding class_,
+  /// [period] The time that the episode was in the specified class.
     required Period period,
   }) = _EncounterClassHistory;
 
@@ -422,11 +568,37 @@ class EncounterParticipant with _$EncounterParticipant {
   ///
   /// [individual] Persons involved in the encounter other than the patient.
   factory EncounterParticipant({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [type] Role of participant in encounter.
     List<CodeableConcept>? type,
+  /// [period] The period of time that the specified participant participated
+  /// in the encounter. These can overlap or be sub-sets of the overall
+  ///  encounter's period.
     Period? period,
+  /// [individual] Persons involved in the encounter other than the patient.
     Reference? individual,
   }) = _EncounterParticipant;
 
@@ -507,12 +679,41 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
   ///
   /// [rankElement] Extensions for rank
   factory EncounterDiagnosis({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [condition] Reason the encounter takes place, as specified using
+  /// information from another resource. For admissions, this is the admission
+  /// diagnosis. The indication will typically be a Condition (with other
+  ///  resources referenced in the evidence.detail), or a Procedure.
     required Reference condition,
+  /// [use] Role that this diagnosis has within the encounter (e.g. admission,
+  ///  billing, discharge …).
     CodeableConcept? use,
+  /// [rank] Ranking of the diagnosis (for each role type).
     PositiveInt? rank,
+  /// [rankElement] Extensions for rank
     @JsonKey(name: '_rank') Element? rankElement,
   }) = _EncounterDiagnosis;
 
@@ -604,17 +805,52 @@ class EncounterHospitalization with _$EncounterHospitalization {
   ///
   /// [dischargeDisposition] Category or kind of location after discharge.
   factory EncounterHospitalization({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [preAdmissionIdentifier] Pre-admission identifier.
     Identifier? preAdmissionIdentifier,
+  /// [origin] The location/organization from which the patient came before
+  ///  admission.
     Reference? origin,
+  /// [admitSource] From where patient was admitted (physician referral,
+  ///  transfer).
     CodeableConcept? admitSource,
+  /// [reAdmission] Whether this hospitalization is a readmission and why if
+  ///  known.
     CodeableConcept? reAdmission,
+  /// [dietPreference] Diet preferences reported by the patient.
     List<CodeableConcept>? dietPreference,
+  /// [specialCourtesy] Special courtesies (VIP, board member).
     List<CodeableConcept>? specialCourtesy,
+  /// [specialArrangement] Any special requests that have been made for this
+  /// hospitalization encounter, such as the provision of specific equipment or
+  ///  other things.
     List<CodeableConcept>? specialArrangement,
+  /// [destination] Location/organization to which the patient is discharged.
     Reference? destination,
+  /// [dischargeDisposition] Category or kind of location after discharge.
     CodeableConcept? dischargeDisposition,
   }) = _EncounterHospitalization;
 
@@ -698,13 +934,44 @@ class EncounterLocation with _$EncounterLocation {
   /// [period] Time period during which the patient was present at the
   ///  location.
   factory EncounterLocation({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [location] The location where the encounter takes place.
     required Reference location,
+  /// [status] The status of the participants' presence at the specified
+  /// location during the period specified. If the participant is no longer at
+  ///  the location, then the period will have an end date/time.
     Code? status,
+  /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+  /// [physicalType] This will be used to specify the required levels
+  /// (bed/ward/room/etc.) desired to be recorded to simplify either messaging
+  ///  or query.
     CodeableConcept? physicalType,
+  /// [period] Time period during which the patient was present at the
+  ///  location.
     Period? period,
   }) = _EncounterLocation;
 
@@ -841,29 +1108,94 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   factory EpisodeOfCare({
     @Default(R4ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+  /// [resourceType] This is a EpisodeOfCare resource
         R4ResourceType resourceType,
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
     String? id,
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
     Meta? meta,
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+  /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+  /// [language] The base language in which the resource is written.
     Code? language,
+  /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
     List<Resource>? contained,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [identifier] The EpisodeOfCare may be known by different identifiers for
+  /// different contexts of use, such as when an external agency is tracking the
+  ///  Episode for funding purposes.
     List<Identifier>? identifier,
+  /// [status] planned | waitlist | active | onhold | finished | cancelled.
     Code? status,
+  /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+  /// [statusHistory] The history of statuses that the EpisodeOfCare has been
+  ///  through (without requiring processing the history of the resource).
     List<EpisodeOfCareStatusHistory>? statusHistory,
+  /// [type] A classification of the type of episode of care; e.g. specialist
+  ///  referral, disease management, type of funded care.
     List<CodeableConcept>? type,
+  /// [diagnosis] The list of diagnosis relevant to this episode of care.
     List<EpisodeOfCareDiagnosis>? diagnosis,
+  /// [patient] The patient who is the focus of this episode of care.
     required Reference patient,
+  /// [managingOrganization] The organization that has assumed the specific
+  ///  responsibilities for the specified duration.
     Reference? managingOrganization,
+  /// [period] The interval during which the managing organization assumes the
+  ///  defined responsibility.
     Period? period,
+  /// [referralRequest] Referral Request(s) that are fulfilled by this
+  ///  EpisodeOfCare, incoming referrals.
     List<Reference>? referralRequest,
+  /// [careManager] The practitioner that is the care manager/care coordinator
+  ///  for this patient.
     Reference? careManager,
+  /// [team] The list of practitioners that may be facilitating this episode of
+  ///  care for specific purposes.
     List<Reference>? team,
+  /// [account] The set of accounts that may be used for billing for this
+  ///  EpisodeOfCare.
     List<Reference>? account,
   }) = _EpisodeOfCare;
 
@@ -937,11 +1269,36 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   /// [period] The period during this EpisodeOfCare that the specific status
   ///  applied.
   factory EpisodeOfCareStatusHistory({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [status] planned | waitlist | active | onhold | finished | cancelled.
     Code? status,
+  /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+  /// [period] The period during this EpisodeOfCare that the specific status
+  ///  applied.
     required Period period,
   }) = _EpisodeOfCareStatusHistory;
 
@@ -1021,12 +1378,39 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   ///
   /// [rankElement] Extensions for rank
   factory EpisodeOfCareDiagnosis({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [condition] A list of conditions/problems/diagnoses that this episode of
+  ///  care is intended to be providing care for.
     required Reference condition,
+  /// [role] Role that this diagnosis has within the episode of care (e.g.
+  ///  admission, billing, discharge …).
     CodeableConcept? role,
+  /// [rank] Ranking of the diagnosis (for each role type).
     PositiveInt? rank,
+  /// [rankElement] Extensions for rank
     @JsonKey(name: '_rank') Element? rankElement,
   }) = _EpisodeOfCareDiagnosis;
 
@@ -1151,25 +1535,84 @@ class Flag with Resource, _$Flag {
   factory Flag({
     @Default(R4ResourceType.Flag)
     @JsonKey(unknownEnumValue: R4ResourceType.Flag)
+  /// [resourceType] This is a Flag resource
         R4ResourceType resourceType,
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
     String? id,
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
     Meta? meta,
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+  /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+  /// [language] The base language in which the resource is written.
     Code? language,
+  /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
     List<Resource>? contained,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [identifier] Business identifiers assigned to this flag by the performer
+  /// or other systems which remain constant as the resource is updated and
+  ///  propagates from server to server.
     List<Identifier>? identifier,
+  /// [status] Supports basic workflow.
     Code? status,
+  /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+  /// [category] Allows a flag to be divided into different categories like
+  /// clinical, administrative etc. Intended to be used as a means of filtering
+  ///  which flags are displayed to particular user or in a given context.
     List<CodeableConcept>? category,
+  /// [code] The coded value or textual component of the flag to display to the
+  ///  user.
     required CodeableConcept code,
+  /// [subject] The patient, location, group, organization, or practitioner
+  ///  etc. this is about record this flag is associated with.
     required Reference subject,
+  /// [period] The period of time from the activation of the flag to
+  /// inactivation of the flag. If the flag is active, the end of the period
+  ///  should be unspecified.
     Period? period,
+  /// [encounter] This alert is only relevant during the encounter.
     Reference? encounter,
+  /// [author] The person, organization or device that created the flag.
     Reference? author,
   }) = _Flag;
 
@@ -1199,13 +1642,13 @@ class Flag with Resource, _$Flag {
   }
 }
 
-/// [library] The Library resource is a general-purpose container for
+/// [Library] The Library resource is a general-purpose container for
 @freezed
 class Library with Resource, _$Library {
-  /// [library] The Library resource is a general-purpose container for
+  /// [Library] The Library resource is a general-purpose container for
   Library._();
 
-  /// [library] The Library resource is a general-purpose container for
+  /// [Library] The Library resource is a general-purpose container for
   /// knowledge asset definitions. It can be used to describe and expose
   /// existing knowledge assets such as logic libraries and information model
   ///  descriptions, as well as to describe a collection of knowledge assets.
@@ -1420,63 +1863,213 @@ class Library with Resource, _$Library {
   factory Library({
     @Default(R4ResourceType.Library)
     @JsonKey(unknownEnumValue: R4ResourceType.Library)
+  /// [resourceType] This is a Library resource
         R4ResourceType resourceType,
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
     String? id,
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
     Meta? meta,
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+  /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+  /// [language] The base language in which the resource is written.
     Code? language,
+  /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
     List<Resource>? contained,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [url] An absolute URI that is used to identify this library when it is
+  /// referenced in a specification, model, design or an instance; also called
+  /// its canonical identifier. This SHOULD be globally unique and SHOULD be a
+  /// literal address at which at which an authoritative instance of this
+  /// library is (or will be) published. This URL can be the target of a
+  /// canonical reference. It SHALL remain the same when the library is stored
+  ///  on different servers.
     FhirUri? url,
+  /// [urlElement] Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+  /// [identifier] A formal identifier that is used to identify this library
+  /// when it is represented in other formats, or referenced in a specification,
+  /// model, design or an instance. e.g. CMS or NQF identifiers for a measure
+  /// artifact. Note that at least one identifier is required for
+  ///  non-experimental active artifacts.
     List<Identifier>? identifier,
+  /// [version] The identifier that is used to identify this version of the
+  /// library when it is referenced in a specification, model, design or
+  /// instance. This is an arbitrary value managed by the library author and is
+  /// not expected to be globally unique. For example, it might be a timestamp
+  /// (e.g. yyyymmdd) if a managed version is not available. There is also no
+  /// expectation that versions can be placed in a lexicographical sequence. To
+  /// provide a version consistent with the Decision Support Service
+  /// specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more
+  /// information on versioning knowledge assets, refer to the Decision Support
+  /// Service specification. Note that a version is required for
+  ///  non-experimental active artifacts.
     String? version,
+  /// [versionElement] Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+  /// [name] A natural language name identifying the library. This name should
+  /// be usable as an identifier for the module by machine processing
+  ///  applications such as code generation.
     String? name,
+  /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+  /// [title] A short, descriptive, user-friendly title for the library.
     String? title,
+  /// [titleElement] Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+  /// [subtitle] An explanatory or alternate title for the library giving
+  ///  additional information about its content.
     String? subtitle,
+  /// [subtitleElement] Extensions for subtitle
     @JsonKey(name: '_subtitle') Element? subtitleElement,
+  /// [status] The status of this library. Enables tracking the life-cycle of
+  ///  the content.
     Code? status,
+  /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+  /// [experimental] A Boolean value to indicate that this library is authored
+  /// for testing purposes (or education/evaluation/marketing) and is not
+  ///  intended to be used for genuine usage.
     Boolean? experimental,
+  /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+  /// [type] Identifies the type of library such as a Logic Library, Model
+  ///  Definition, Asset Collection, or Module Definition.
     required CodeableConcept type,
+  /// [subjectCodeableConcept] A code or group definition that describes the
+  ///  intended subject of the contents of the library.
     CodeableConcept? subjectCodeableConcept,
+  /// [subjectReference] A code or group definition that describes the intended
+  ///  subject of the contents of the library.
     Reference? subjectReference,
+  /// [date] The date  (and optionally time) when the library was published.
+  /// The date must change when the business version changes and it must change
+  /// if the status code changes. In addition, it should change when the
+  ///  substantive content of the library changes.
     FhirDateTime? date,
+  /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+  /// [publisher] The name of the organization or individual that published the
+  ///  library.
     String? publisher,
+  /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
     List<ContactDetail>? contact,
+  /// [description] A free text natural language description of the library
+  ///  from a consumer's perspective.
     Markdown? description,
+  /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+  /// [useContext] The content was developed with a focus and intent of
+  /// supporting the contexts that are listed. These contexts may be general
+  /// categories (gender, age, ...) or may be references to specific programs
+  /// (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate library instances.
     List<UsageContext>? useContext,
+  /// [jurisdiction] A legal or geographic region in which the library is
+  ///  intended to be used.
     List<CodeableConcept>? jurisdiction,
+  /// [purpose] Explanation of why this library is needed and why it has been
+  ///  designed as it has.
     Markdown? purpose,
+  /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+  /// [usage] A detailed description of how the library is used from a clinical
+  ///  perspective.
     String? usage,
+  /// [usageElement] Extensions for usage
     @JsonKey(name: '_usage') Element? usageElement,
+  /// [copyright] A copyright statement relating to the library and/or its
+  /// contents. Copyright statements are generally legal restrictions on the use
+  ///  and publishing of the library.
     Markdown? copyright,
+  /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+  /// [approvalDate] The date on which the resource content was approved by the
+  /// publisher. Approval happens once when the content is officially approved
+  ///  for usage.
     Date? approvalDate,
+  /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+  /// [lastReviewDate] The date on which the resource content was last
+  /// reviewed. Review happens periodically after approval but does not change
+  ///  the original approval date.
     Date? lastReviewDate,
+  /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+  /// [effectivePeriod] The period during which the library content was or is
+  ///  planned to be in active use.
     Period? effectivePeriod,
+  /// [topic] Descriptive topics related to the content of the library. Topics
+  /// provide a high-level categorization of the library that can be useful for
+  ///  filtering and searching.
     List<CodeableConcept>? topic,
+  /// [author] An individiual or organization primarily involved in the
+  ///  creation and maintenance of the content.
     List<ContactDetail>? author,
+  /// [editor] An individual or organization primarily responsible for internal
+  ///  coherence of the content.
     List<ContactDetail>? editor,
+  /// [reviewer] An individual or organization primarily responsible for review
+  ///  of some aspect of the content.
     List<ContactDetail>? reviewer,
+  /// [endorser] An individual or organization responsible for officially
+  ///  endorsing the content for use in some setting.
     List<ContactDetail>? endorser,
+  /// [relatedArtifact] Related artifacts such as additional documentation,
+  ///  justification, or bibliographic references.
     List<RelatedArtifact>? relatedArtifact,
+  /// [parameter] The parameter element defines parameters used by the library.
     List<ParameterDefinition>? parameter,
+  /// [dataRequirement] Describes a set of data that must be provided in order
+  /// to be able to successfully perform the computations defined by the
+  ///  library.
     List<DataRequirement>? dataRequirement,
+  /// [content] The content of the library as an Attachment. The content may be
+  /// a reference to a url, or may be directly embedded as a base-64 string.
+  /// Either way, the contentType of the attachment determines how to interpret
+  ///  the content.
     List<Attachment>? content,
   }) = _Library;
 
@@ -1613,33 +2206,100 @@ class List_ with Resource, _$List_ {
   factory List_({
     @Default(R4ResourceType.List_)
     @JsonKey(unknownEnumValue: R4ResourceType.List_)
+  /// [resourceType] This is a List resource
         R4ResourceType resourceType,
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
     String? id,
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
     Meta? meta,
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+  /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+  /// [language] The base language in which the resource is written.
     Code? language,
+  /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+  /// [text] A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
+  /// [contained] These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
     List<Resource>? contained,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [identifier] Identifier for the List assigned for business purposes
+  ///  outside the context of FHIR.
     List<Identifier>? identifier,
+  /// [status] Indicates the current state of this list.
     Code? status,
+  /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+  /// [mode] How this list was prepared - whether it is a working list that is
+  /// suitable for being maintained on an ongoing basis, or if it represents a
+  /// snapshot of a list of items from another source, or whether it is a
+  ///  prepared list where items may be marked as added, modified or deleted.
     Code? mode,
+  /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
+  /// [title] A label for the list assigned by the author.
     String? title,
+  /// [titleElement] Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+  /// [code] This code defines the purpose of the list - why it was created.
     CodeableConcept? code,
+  /// [subject] The common subject (or patient) of the resources that are in
+  ///  the list if there is one.
     Reference? subject,
+  /// [encounter] The encounter that is the context in which this list was
+  ///  created.
     Reference? encounter,
+  /// [date] The date that the list was prepared.
     FhirDateTime? date,
+  /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+  /// [source] The entity responsible for deciding what the contents of the
+  /// list were. Where the list was created by a human, this is the same as the
+  ///  author of the list.
     Reference? source,
+  /// [orderedBy] What order applies to the items in the list.
     CodeableConcept? orderedBy,
+  /// [note] Comments that apply to the overall list.
     List<Annotation>? note,
+  /// [entry] Entries in this list.
     List<ListEntry>? entry,
+  /// [emptyReason] If the list is empty, why the list is empty.
     CodeableConcept? emptyReason,
   }) = _List_;
 
@@ -1714,14 +2374,42 @@ class ListEntry with _$ListEntry {
   ///
   /// [item] A reference to the actual resource from which data was derived.
   factory ListEntry({
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
     String? id,
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+  /// [flag] The flag allows the system constructing the list to indicate the
+  ///  role and significance of the item in the list.
     CodeableConcept? flag,
+  /// [deleted] True if this item is marked as deleted in the list.
     Boolean? deleted,
+  /// [deletedElement] Extensions for deleted
     @JsonKey(name: '_deleted') Element? deletedElement,
+  /// [date] When this item was added to the list.
     FhirDateTime? date,
+  /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+  /// [item] A reference to the actual resource from which data was derived.
     required Reference item,
   }) = _ListEntry;
 
