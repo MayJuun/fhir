@@ -2734,9 +2734,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   ///
   /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
   ///
-  /// [attachedDocument] Additional information or supporting documentation about the authorization.;
-  ///
-  /// [case] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
+  /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
   factory RegulatedAuthorization({
     @Default(R4ResourceType.RegulatedAuthorization) R4ResourceType resourceType,
     String? id,
