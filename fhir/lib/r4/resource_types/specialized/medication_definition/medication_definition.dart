@@ -2218,8 +2218,6 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   ///
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
   ///
-  /// [attachedDocument] Additional information or supporting documentation about the packaged product.;
-  ///
   /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
   factory PackagedProductDefinition({
     @Default(R4ResourceType.PackagedProductDefinition)
