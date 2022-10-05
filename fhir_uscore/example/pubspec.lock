@@ -32,31 +32,24 @@ packages:
   fhir:
     dependency: transitive
     description:
-      name: fhir
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.0"
+      path: "../../fhir"
+      relative: true
+    source: path
+    version: "0.9.1"
   fhir_at_rest:
     dependency: transitive
     description:
-      name: fhir_at_rest
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.0"
+      path: "../../fhir_at_rest"
+      relative: true
+    source: path
+    version: "0.9.1"
   fhir_uscore:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.0.0"
-  fhir_yaml:
-    dependency: transitive
-    description:
-      name: fhir_yaml
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.0"
+    version: "0.9.1"
   freezed_annotation:
     dependency: transitive
     description:
@@ -142,4 +135,4 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=2.17.0 <3.0.0"
+  dart: ">=2.18.0 <3.0.0"

@@ -13,16 +13,68 @@
 //   return type == TerminalNodeImpl ? tree.runtimeType : type;
 // }
 
-@JS('console')
-library main;
-
-import 'package:js/js.dart';
-
-@JS('log')
-external void log(dynamic str);
+import 'package:units_converter/units_converter.dart';
 
 void main() async {
-  log('Hello World!');
+  Length()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Area()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Energy()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Force()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Length()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Mass()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Power()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Pressure()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Speed()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Temperature()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Time()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Torque()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  Volume()
+    ..getAll().forEach((element) {
+      print(element.name);
+    });
+  // var object = js.JS(context['Object']);
+  // object['greeting'] = 'Hello';
+  // object['greet'] = (name) => "${object['greeting']} $name";
+  // var message = object.callMethod('greet', ['JavaScript']);
+  // context['console'].callMethod('log', [message]);
+  // js.callMethod({}, 'console.log', ['Hello World!']);
+  // log('Hello World!');
   // final input = await InputStream.fromString('{ }.empty()');
   // final lexer = FhirPathLexer(input);
   // final tokens = CommonTokenStream(lexer);

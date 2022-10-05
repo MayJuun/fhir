@@ -18,7 +18,7 @@ import 'walk_fhir_path.dart';
 part 'interpreters/existence_interpreters.dart';
 part 'interpreters/subsetting_interpreters.dart';
 part 'interpreters/literal_interpreters.dart';
-part 'interpreters/quantity_interpreters.dart';
+part 'quantity/quantity_interpreters.dart';
 part 'interpreters/function_interpreters.dart';
 part 'interpreters/math_interpreters.dart';
 part 'interpreters/utility_interpreters.dart';
