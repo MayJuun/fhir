@@ -216,18 +216,17 @@ void testBasicTypes() {
       expect(visitor.visit(result2)?.first,
           FhirPathQuantity.fromString("100 '[degF]'"));
     });
-
-    // test('Duration quantities', () {
-    //   expect(
-    //       walkFhirPath(context: null, pathExpression: r"1 seconds = 1 second"),
-    //       [true]);
-    //   expect(walkFhirPath(context: null, pathExpression: r"1 seconds = 1 's'"),
-    //       [true]);
-    //   expect(walkFhirPath(context: null, pathExpression: r"2 seconds = 2 's'"),
-    //       [true]);
-    //   expect(walkFhirPath(context: null, pathExpression: r"1 week != 1 'w'"),
-    //       [true]);
-    // });
+    test('Duration quantities', () {
+      expect(
+          walkFhirPath(context: null, pathExpression: r"1 seconds = 1 second"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"1 seconds = 1 's'"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"2 seconds = 2 's'"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"1 week != 1 'w'"),
+          [true]);
+    });
     test('Non-Escape Sequences', () {
       expect(
           walkFhirPath(

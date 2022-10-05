@@ -1,6 +1,9 @@
 import 'package:units_converter/units_converter.dart';
 
 const unitCodeMap = {
+  ///
+  /// LENGTH
+  ///
   'm': LENGTH.meters,
   'cm': LENGTH.centimeters,
   '[in_br]': LENGTH.inches,
@@ -28,6 +31,10 @@ const unitCodeMap = {
   'AU': LENGTH.astronomicalUnits,
   '[ly]': LENGTH.lightYears,
   'pc': LENGTH.parsec,
+
+  ///
+  /// AREA
+  ///
   'm2': AREA.squareMeters,
   'cm2': AREA.squareCentimeters,
   '[sin_i]': AREA.squareInches,
@@ -40,6 +47,10 @@ const unitCodeMap = {
   '[smi_us]': AREA.squareMiles,
   '[acr_us]': AREA.acres,
   'ar': AREA.are,
+
+  ///
+  /// ENERGY
+  ///
   'J': ENERGY.joules,
   'cal': ENERGY.calories,
   'kcal': ENERGY.kilocalories,
@@ -52,40 +63,26 @@ const unitCodeMap = {
 // FORCE.kilogramForce,
 // FORCE.poundal,
 
-// LENGTH.meters,
-// LENGTH.centimeters,
-// LENGTH.inches,
-// LENGTH.feet,
-// LENGTH.feetUs,
-// LENGTH.mils,
-// LENGTH.nauticalMiles,
-// LENGTH.yards,
-// LENGTH.miles,
-// LENGTH.millimeters,
-// LENGTH.micrometers,
-// LENGTH.nanometers,
-// LENGTH.angstroms,
-// LENGTH.picometers,
-// LENGTH.kilometers,
-// LENGTH.astronomicalUnits,
-// LENGTH.lightYears,
-// LENGTH.parsec,
+  ///
+  ///MASS
+  ///
+  'g': MASS.grams,
+  'kg': MASS.kilograms,
+  '[lb_av]': MASS.pounds,
+  '[oz_av]': MASS.ounces,
 
-// MASS.grams,
-// MASS.ettograms,
-// MASS.kilograms,
-// MASS.pounds,
-// MASS.ounces,
-// MASS.stones,
-// MASS.quintals,
-// MASS.tons,
-// MASS.centigrams,
-// MASS.milligrams,
+  /// note this is a metric ton
+  't': MASS.tons,
+  'cg': MASS.centigrams,
+  'mg': MASS.milligrams,
 // MASS.uma,
 // MASS.carats,
 // MASS.pennyweights,
-// MASS.troyOunces,
+  '[oz_tr]': MASS.troyOunces,
 
+  ///
+  /// POWER
+  ///
 // POWER.watt,
 // POWER.milliwatt,
 // POWER.kilowatt,
@@ -94,6 +91,9 @@ const unitCodeMap = {
 // POWER.europeanHorsePower,
 // POWER.imperialHorsePower,
 
+  ///
+  /// PRESSURE
+  ///
 // PRESSURE.pascal,
 // PRESSURE.bar,
 // PRESSURE.millibar,
@@ -103,6 +103,9 @@ const unitCodeMap = {
 // PRESSURE.inchOfMercury,
 // PRESSURE.hectoPascal,
 
+  ///
+  /// SPEED
+  ///
 // SPEED.metersPerSecond,
 // SPEED.kilometersPerHour,
 // SPEED.milesPerHour,
@@ -110,24 +113,30 @@ const unitCodeMap = {
 // SPEED.minutesPerKilometer,
 // SPEED.feetsPerSecond,
 
-// TEMPERATURE.fahrenheit,
-// TEMPERATURE.celsius,
-// TEMPERATURE.kelvin,
+  ///
+  ///TEMPERATURE
+  ///
+  '[degF]': TEMPERATURE.fahrenheit,
+  'Cel': TEMPERATURE.celsius,
+  'K': TEMPERATURE.kelvin,
 // TEMPERATURE.reamur,
 // TEMPERATURE.romer,
 // TEMPERATURE.delisle,
 // TEMPERATURE.rankine,
 
-// TIME.seconds,
-// TIME.deciseconds,
-// TIME.centiseconds,
-// TIME.milliseconds,
-// TIME.microseconds,
-// TIME.nanoseconds,
-// TIME.minutes,
-// TIME.hours,
-// TIME.days,
-// TIME.weeks,
+  ///
+  ///TIME
+  ///
+  's': TIME.seconds,
+  'ds': TIME.deciseconds,
+  'cs': TIME.centiseconds,
+  'ms': TIME.milliseconds,
+  'us': TIME.microseconds,
+  'ns': TIME.nanoseconds,
+  'min': TIME.minutes,
+  'h': TIME.hours,
+  'd': TIME.days,
+  'wk': TIME.weeks,
 // TIME.years365,
 // TIME.lustrum,
 // TIME.decades,
@@ -140,22 +149,22 @@ const unitCodeMap = {
 // TORQUE.kilogramForceMeter,
 // TORQUE.poundalMeter,
 
-// VOLUME.cubicMeters,
-// VOLUME.liters,
+  'm3': VOLUME.cubicMeters,
+  'L': VOLUME.liters,
 // VOLUME.imperialGallons,
-// VOLUME.usGallons,
+  '[gal_us]': VOLUME.usGallons,
 // VOLUME.imperialPints,
 // VOLUME.imperialFluidOunces,
 // VOLUME.imperialGill,
-// VOLUME.usPints,
-// VOLUME.usFluidOunces,
+  '[pt_us]': VOLUME.usPints,
+  '[foz_us]': VOLUME.usFluidOunces,
 // VOLUME.usGill,
-// VOLUME.milliliters,
+  'mL': VOLUME.milliliters,
 // VOLUME.tablespoonsUs,
 // VOLUME.australianTablespoons,
-// VOLUME.cups,
-// VOLUME.cubicCentimeters,
-// VOLUME.cubicInches,
+  '[cup_us]': VOLUME.cups,
+  'cm3': VOLUME.cubicCentimeters,
+  '[cin_i]': VOLUME.cubicInches,
 // VOLUME.cubicFeet,
-// VOLUME.cubicMillimeters,
+  'mm3': VOLUME.cubicMillimeters,
 };

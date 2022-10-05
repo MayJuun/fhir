@@ -10,7 +10,6 @@ List? _$visitEqualityExpression(
   final before = visitor.visit(ctx.getChild(0)!);
   final after = visitor.visit(ctx.getChild(2)!);
   final operator = ctx.getChild(1)?.text;
-
   void isEqual() {
     if ((before?.isEmpty ?? true) || (after?.isEmpty ?? true)) {
       visitor.context = [];
