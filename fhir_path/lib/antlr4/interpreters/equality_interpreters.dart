@@ -7,27 +7,27 @@ List? _$visitEqualityExpression(
   if (ctx.childCount != 3) {
     throw _wrongArgLength('log()', ctx.children ?? []);
   }
-  final before = visitor.visit(ctx.getChild(0)!);
-  final after = visitor.visit(ctx.getChild(2)!);
+  final lhs = visitor.visit(ctx.getChild(0)!);
+  final rhs = visitor.visit(ctx.getChild(2)!);
   final operator = ctx.getChild(1)?.text;
   void isEqual() {
-    if ((before?.isEmpty ?? true) || (after?.isEmpty ?? true)) {
+    if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
       visitor.context = [];
-    } else if (before!.length != after!.length) {
+    } else if (lhs!.length != rhs!.length) {
       visitor.context = [false];
     } else {
       /// set true as default
       visitor.context = [true];
 
-      /// for each entry in before and after (we checked above to ensure they
+      /// for each entry in lhs and rhs (we checked above to ensure they
       /// were the same length)
-      for (var i = 0; i < before.length; i++) {
+      for (var i = 0; i < lhs.length; i++) {
         /// we have to check if they're dates, because comparisons are different
-        if (before[i] is FhirDateTime || before[i] is Date) {
+        if (lhs[i] is FhirDateTime || lhs[i] is Date) {
           /// check and ensure both of them are Dates or DateTimes
-          if (after[i] is FhirDateTime || after[i] is Date) {
+          if (rhs[i] is FhirDateTime || rhs[i] is Date) {
             /// get the strings for both
-            final beforeList = before[i]
+            final lhsList = lhs[i]
                 .toString()
                 .split('T')
                 .map((e) => e
@@ -36,7 +36,7 @@ List? _$visitEqualityExpression(
                     .expand((element) => element))
                 .expand((element) => element);
 
-            final afterList = after[i]
+            final rhsList = rhs[i]
                 .toString()
                 .split('T')
                 .map((e) => e
@@ -44,12 +44,12 @@ List? _$visitEqualityExpression(
                     .map((e) => e.split(':'))
                     .expand((element) => element))
                 .expand((element) => element);
-            if (beforeList.length != afterList.length) {
+            if (lhsList.length != rhsList.length) {
               visitor.context = [];
             } else {
-              for (var i = 0; i < beforeList.length; i++) {
-                if (num.parse(beforeList.elementAt(i)) !=
-                    num.parse(afterList.elementAt(i))) {
+              for (var i = 0; i < lhsList.length; i++) {
+                if (num.parse(lhsList.elementAt(i)) !=
+                    num.parse(rhsList.elementAt(i))) {
                   visitor.context = [false];
                 }
               }
@@ -61,7 +61,7 @@ List? _$visitEqualityExpression(
         }
 
         /// If they aren't we can just compare them as usual
-        else if ((before[i] != after[i] || after[i] != before[i])) {
+        else if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
           visitor.context = [false];
         }
       }
@@ -76,7 +76,7 @@ List? _$visitEqualityExpression(
       break;
     case '~':
       {
-        visitor.context = [deepEquals(before, after)];
+        visitor.context = [deepEquals(lhs, rhs)];
       }
       break;
     case '!=':
@@ -89,166 +89,224 @@ List? _$visitEqualityExpression(
       break;
     case '!~':
       {
-        visitor.context = [!deepEquals(before, after)];
+        visitor.context = [!deepEquals(lhs, rhs)];
       }
       break;
   }
 
   return visitor.context;
 }
+
+const _allowedTypes = [
+  String,
+  num,
+  int,
+  double,
+  Date,
+  FhirDateTime,
+  Time,
+  FhirPathQuantity,
+];
+
+enum _Comparator { gt, gte, lt, lte }
 
 List? _$visitInequalityExpression(
   InequalityExpressionContext ctx,
   FhirPathDartVisitor visitor,
 ) {
+  /// must be 3 children or nodes
   if (ctx.childCount != 3) {
     throw _wrongArgLength('log()', ctx.children ?? []);
   }
-  final before = visitor.visit(ctx.getChild(0)!);
-  final after = visitor.visit(ctx.getChild(2)!);
+
+  /// calculate the two arguments and the comparator
+  final lhs = visitor.visit(ctx.getChild(0)!);
+  final rhs = visitor.visit(ctx.getChild(2)!);
   final operator = ctx.getChild(1)?.text;
 
-  void isEqual() {
-    if ((before?.isEmpty ?? true) || (after?.isEmpty ?? true)) {
-      visitor.context = [];
-    } else if (before!.length != after!.length) {
-      visitor.context = [false];
-    } else {
-      /// set true as default
-      visitor.context = [true];
+  /// if either of them is empty, return an empty list
+  if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
+    visitor.context = [];
+  } else
 
-      /// for each entry in before and after (we checked above to ensure they
-      /// were the same length)
-      for (var i = 0; i < before.length; i++) {
-        /// we have to check if they're dates, because comparisons are different
-        if (before[i] is FhirDateTime || before[i] is Date) {
-          /// check and ensure both of them are Dates or DateTimes
-          if (after[i] is FhirDateTime || after[i] is Date) {
-            /// get the strings for both
-            final beforeList = before[i]
-                .toString()
-                .split('T')
-                .map((e) => e
-                    .split('-')
-                    .map((e) => e.split(':'))
-                    .expand((element) => element))
-                .expand((element) => element);
+  /// if either contains more than one item, this is an error
+  if (lhs!.length != 1 || rhs!.length != 1) {
+    throw _wrongArgLength(
+      operator ?? ctx.text,
+      ['Left-hand side: $lhs', 'Right-hand side: $rhs'],
+    );
+  } else
 
-            final afterList = after[i]
-                .toString()
-                .split('T')
-                .map((e) => e
-                    .split('-')
-                    .map((e) => e.split(':'))
-                    .expand((element) => element))
-                .expand((element) => element);
-            if (beforeList.length != afterList.length) {
-              visitor.context = [];
-            } else {
-              for (var i = 0; i < beforeList.length; i++) {
-                if (num.parse(beforeList.elementAt(i)) !=
-                    num.parse(afterList.elementAt(i))) {
-                  visitor.context = [false];
-                }
-              }
-            }
-          } else {
-            /// If not it means only one is, so this is false
-            visitor.context = [false];
-          }
-        }
-
-        /// If they aren't we can just compare them as usual
-        else if ((before[i] != after[i] || after[i] != before[i])) {
-          visitor.context = [false];
-        }
-      }
+  /// check to ensure the types are allowed for comparisons
+  if (!_allowedTypes.contains(lhs.first.runtimeType) ||
+      !_allowedTypes.contains(rhs.first.runtimeType)) {
+    throw FhirPathEvaluationException(
+        'The comparator $operator cannot work with the types '
+        'passed.\n'
+        'LHS: $lhs\n'
+        'RHS: $rhs',
+        operation: operator,
+        arguments: [lhs, rhs]);
+  } else {
+    _Comparator comparator;
+    switch (operator) {
+      case '>':
+        comparator = _Comparator.gt;
+        break;
+      case '<':
+        comparator = _Comparator.lt;
+        break;
+      case '>=':
+        comparator = _Comparator.gte;
+        break;
+      case '<=':
+        comparator = _Comparator.lte;
+        break;
+      default:
+        throw FhirPathEvaluationException(
+            'The comparator $operator is not a comparator '
+            'passed.\n'
+            'LHS: $lhs\n'
+            'RHS: $rhs',
+            operation: operator,
+            arguments: [lhs, rhs]);
     }
+    final newResult = compare(comparator, lhs.first, rhs.first);
+    visitor.context = newResult == null ? [] : [newResult];
   }
-
-  void isGreaterThan() {
-    if ((before?.isEmpty ?? true) || (after?.isEmpty ?? true)) {
-      visitor.context = [];
-    } else if (before!.length != after!.length) {
-      visitor.context = [false];
-    } else {
-      /// set true as default
-      visitor.context = [true];
-
-      /// for each entry in before and after (we checked above to ensure they
-      /// were the same length)
-      for (var i = 0; i < before.length; i++) {
-        /// we have to check if they're dates, because comparisons are different
-        if (before[i] is FhirDateTime || before[i] is Date) {
-          /// check and ensure both of them are Dates or DateTimes
-          if (after[i] is FhirDateTime || after[i] is Date) {
-            /// get the strings for both
-            final beforeList = before[i]
-                .toString()
-                .split('T')
-                .map((e) => e
-                    .split('-')
-                    .map((e) => e.split(':'))
-                    .expand((element) => element))
-                .expand((element) => element);
-
-            final afterList = after[i]
-                .toString()
-                .split('T')
-                .map((e) => e
-                    .split('-')
-                    .map((e) => e.split(':'))
-                    .expand((element) => element))
-                .expand((element) => element);
-            if (beforeList.length != afterList.length) {
-              visitor.context = [];
-            } else {
-              for (var i = 0; i < beforeList.length; i++) {
-                if (num.parse(beforeList.elementAt(i)) !=
-                    num.parse(afterList.elementAt(i))) {
-                  visitor.context = [false];
-                }
-              }
-            }
-          } else {
-            /// If not it means only one is, so this is false
-            visitor.context = [false];
-          }
-        }
-
-        /// If they aren't we can just compare them as usual
-        else if ((before[i] != after[i] || after[i] != before[i])) {
-          visitor.context = [false];
-        }
-      }
-    }
-  }
-
-  switch (operator) {
-    case '>':
-      {
-        isEqual();
-      }
-      break;
-    case '<':
-      {
-        visitor.context = [deepEquals(before, after)];
-      }
-      break;
-    case '>=':
-      {
-        isEqual();
-        if (visitor.context.isNotEmpty) {
-          visitor.context = [!visitor.context.first];
-        }
-      }
-      break;
-    case '<=':
-      {
-        visitor.context = [!deepEquals(before, after)];
-      }
-      break;
-  }
-
   return visitor.context;
 }
+
+// This is going to assume that if a String is being compared
+// with a Date, DateTime, or Time, and the String is a valid format of a Time
+// or DateTime, then they should still be compared
+// another type, for instance:
+// Patient.birthDate = "1981-09-18"
+// today() = Date("2022-04-15")
+// this will throw an error, despite the fact that they should be comparable
+// could consider testing it, e.g.
+bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
+  switch (lhs.runtimeType) {
+    case num:
+      return rhs is num
+          ? makeComparison(comparator, lhs, rhs)
+          : rhs is FhirNumber && rhs.isValid
+              ? makeComparison(comparator, lhs, rhs.valueNumber)
+              : throw cannotCompareException(comparator, lhs, rhs);
+    case int:
+      return rhs is num
+          ? makeComparison(comparator, lhs, rhs)
+          : rhs is FhirNumber && rhs.isValid
+              ? makeComparison(comparator, lhs, rhs.valueNumber)
+              : throw cannotCompareException(comparator, lhs, rhs);
+    case double:
+      return rhs is num
+          ? makeComparison(comparator, lhs, rhs)
+          : rhs is FhirNumber && rhs.isValid
+              ? makeComparison(comparator, lhs, rhs.valueNumber)
+              : throw cannotCompareException(comparator, lhs, rhs);
+    case Date:
+      return rhs is FhirDateTimeBase
+          ? lhs.isValid && rhs.isValid
+              ? makeComparison(comparator, lhs, rhs)
+              : throw invalidException(comparator, lhs, rhs)
+          : throw cannotCompareException(comparator, lhs, rhs);
+    case FhirDateTime:
+      return rhs is FhirDateTimeBase
+          ? lhs.isValid && rhs.isValid
+              ? makeComparison(comparator, lhs, rhs)
+              : throw invalidException(comparator, lhs, rhs)
+          : throw cannotCompareException(comparator, lhs, rhs);
+    case Time:
+      return rhs is Time
+          ? lhs.isValid && rhs.isValid
+              ? makeComparison(comparator, lhs, rhs)
+              : throw invalidException(comparator, lhs, rhs)
+          : throw cannotCompareException(comparator, lhs, rhs);
+    case FhirPathQuantity:
+      return rhs is FhirPathQuantity
+          ? makeComparison(comparator, lhs, rhs)
+          : throw cannotCompareException(comparator, lhs, rhs);
+
+    /// Default should be when lhs is a String
+    default:
+      {
+        if (rhs is String) {
+          return (comparator == _Comparator.gt || comparator == _Comparator.lt)
+              ? lhs == rhs
+                  ? false
+                  : comparator == _Comparator.gt
+                      ? stringGt(lhs, rhs)
+                      : !stringGt(lhs, rhs)
+              : lhs == rhs
+                  ? true
+                  : comparator == _Comparator.gte
+                      ? stringGt(lhs, rhs)
+                      : !stringGt(lhs, rhs);
+        } else if (rhs is Time && Time(lhs).isValid) {
+          return makeComparison(comparator, Time(lhs), rhs);
+        } else if ((rhs is Date || rhs is FhirDateTime) &&
+            FhirDateTime(lhs).isValid) {
+          return makeComparison(comparator, FhirDateTime(lhs), rhs);
+        }
+        throw FhirPathEvaluationException(
+          'Can only compare Strings to other Strings',
+          operation: '$comparator',
+          arguments: [lhs, rhs],
+        );
+      }
+  }
+}
+
+bool? makeComparison(_Comparator comparator, dynamic param1, dynamic param2) {
+  print(param1);
+  print(param2);
+  try {
+    switch (comparator) {
+      case _Comparator.gt:
+        return param1 > param2;
+      case _Comparator.gte:
+        return param1 >= param2;
+      case _Comparator.lt:
+        return param1 < param2;
+      case _Comparator.lte:
+        return param1 <= param2;
+    }
+  } catch (e) {
+    if (e is UnequalPrecision) {
+      return null;
+    } else {
+      throw e;
+    }
+  }
+}
+
+bool stringGt(String lhs, dynamic rhs) {
+  final runes1 = lhs.runes.toList();
+  final runes2 = rhs.runes.toList();
+  if (runes1.length < runes2.length) {
+    return false;
+  }
+  for (var i = 0; i < runes1.length; i++) {
+    if (runes2[i] > runes1[i]) {
+      return false;
+    } else if (runes2[i] < runes1[i]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+Exception cannotCompareException(
+        _Comparator comparator, dynamic lhs, dynamic rhs) =>
+    FhirPathEvaluationException(
+        'The comparator $comparator was not passed types that can be '
+        'compared.\n'
+        'lhs: $lhs - ${lhs.runtimeType}\n'
+        'lhs: $rhs - ${rhs.runtimeType}\n');
+
+Exception invalidException(_Comparator comparator, dynamic lhs, dynamic rhs) =>
+    FhirPathEvaluationException(
+        'The comparator $comparator was not passed two valid types.\n'
+        'lhs: $lhs - ${lhs.runtimeType} - Valid? ${lhs.isValid}\n'
+        'lhs: $rhs - ${rhs.runtimeType} - Valid? ${rhs.isValid}\n');

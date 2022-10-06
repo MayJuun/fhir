@@ -4,6 +4,8 @@
 import 'primitive_type_exceptions.dart';
 import 'primitive_types.dart';
 
+enum _Comparator { eq, gt, gte, lt, lte }
+
 abstract class FhirDateTimeBase {
   const FhirDateTimeBase(
       this.valueString, this.valueDateTime, this.isValid, this.parseError);
@@ -24,6 +26,76 @@ abstract class FhirDateTimeBase {
   String toJson() => valueString;
   String toYaml() => valueString;
 
+  /// Comparison method for FhirDateTimes
+  bool compare(_Comparator comparator, Object o) {
+    /// first, easy check if they're identical
+    if (identical(this, o)) {
+      switch (comparator) {
+        case _Comparator.eq:
+          return true;
+        case _Comparator.gt:
+          return false;
+        case _Comparator.gte:
+          return true;
+        case _Comparator.lt:
+          return false;
+        case _Comparator.lte:
+          return true;
+      }
+    }
+
+    /// create a right-hand-side value
+    final rhs = o is FhirDateTimeBase
+        ? o
+        : o is String
+            ? FhirDateTime(o)
+            : null;
+
+    /// If it's null, and the comparison is ==, then it's false, otherwise, we
+    /// throw an error for values we can't compare
+    if (rhs == null) {
+      switch (comparator) {
+        case _Comparator.eq:
+          return false;
+        default:
+          throw InvalidTypes<FhirDateTimeBase>(
+              'Two values were passed to the date time '
+              '"$comparator" comparison operator, '
+              'they were not both valid FhirDateTimeBase types\n'
+              'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
+              'Argument 2: $o (${o.runtimeType}): Valid - false}');
+      }
+    }
+
+    /// if either is not valid, we don't continue to try and compare them, we
+    /// throw an error
+    if (!rhs.isValid || !isValid) {}
+
+    /// get the strings for both
+    final lhsList = toString()
+        .split('T')
+        .map((e) =>
+            e.split('-').map((e) => e.split(':')).expand((element) => element))
+        .expand((element) => element);
+
+    final rhsList = rhs[i]
+        .toString()
+        .split('T')
+        .map((e) =>
+            e.split('-').map((e) => e.split(':')).expand((element) => element))
+        .expand((element) => element);
+    if (lhsList.length != rhsList.length) {
+      visitor.context = [];
+    } else {
+      for (var i = 0; i < lhsList.length; i++) {
+        if (num.parse(lhsList.elementAt(i)) !=
+            num.parse(rhsList.elementAt(i))) {
+          visitor.context = [false];
+        }
+      }
+    }
+  }
+
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
@@ -36,19 +108,6 @@ abstract class FhirDateTimeBase {
               : false;
 
   bool _greaterThan(Object o, String comparator) {
-    // print('_greaterThan');
-    // print(this);
-    // print(valueString);
-    // print(runtimeType);
-    // if (this is Date) {
-    //   print((this as Date).precision);
-    // }
-    // print(o);
-    // print(o.runtimeType);
-    // if (o is Date) {
-    //   print(o.valueString);
-    //   print(o.precision);
-    // }
     return identical(this, o)
         ? false
         : o is! FhirDateTimeBase
@@ -93,35 +152,4 @@ abstract class FhirDateTimeBase {
   bool operator <(Object o) => this != o && !_greaterThan(o, '<');
 
   bool operator <=(Object o) => this == o || !_greaterThan(o, '<=');
-  // identical(this, o)
-  //     ? false
-  //     : o is! FhirDateTimeBase
-  //         ? o is String && isValid && FhirDateTime(o).isValid
-  //             ? o.length == toString().length
-  //                 ? value!.isBefore(FhirDateTime(o).value!)
-  //                 : throw ArgumentError(
-  //                     'Two values were passed to the date time "<" comparison operator, '
-  //                     'they did not have the same precision\n'
-  //                     'Argument 1: $value\nArgument 2: $o ')
-  //             : o is DateTime && isValid
-  //                 ? value!.isBefore(o)
-  //                 : throw ArgumentError(
-  //                     'Two values were passed to the date time "<" comparison operator, '
-  //                     'they were not both valid FhirDateTimeBase types\n'
-  //                     'Argument 1: $value (${value.runtimeType})\n'
-  //                     'Argument 2: $o (${o.runtimeType})')
-  //         : isValid && o.isValid
-  //             ? o.toString().length == toString().length
-  //                 ? value!.isBefore(o.value!)
-  //                 : throw ArgumentError(
-  //                     'Two values were passed to the date time "<" comparison operator, '
-  //                     'they were not both valid FhirDateTimeBase types\n'
-  //                     'Argument 1: $value (${value.runtimeType})\n'
-  //                     'Argument 2: $o (${o.runtimeType})')
-  //             : throw ArgumentError(
-  //                 'Two values were passed to the date time "<" comparison operator, '
-  //                 'they were not both valid FhirDateTimeBase types\n'
-  //                 'Argument 1: $value (${value.runtimeType})\n'
-  //                 'Argument 2: $o (${o.runtimeType})');
-
 }

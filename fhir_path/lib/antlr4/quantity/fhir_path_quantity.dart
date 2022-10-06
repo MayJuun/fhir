@@ -61,4 +61,59 @@ class FhirPathQuantity {
       }
     }
   }
+
+  bool compare(_Comparator comparator, Object o) {
+    if (identical(this, o)) {
+      return true;
+    } else if (o is! FhirPathQuantity) {
+      return false;
+    } else {
+      final fromUnit = stringUnitToProperty[unit];
+      final toUnit = stringUnitToProperty[o.unit];
+      if ((fromUnit is Ratio && toUnit is! Ratio) ||
+          (fromUnit is! Ratio && toUnit is Ratio)) {
+        return false;
+      } else if (fromUnit is Ratio) {
+        final convertedAmount =
+            amount.convertRatioFromTo(fromUnit, toUnit as Ratio);
+        if (convertedAmount != null) {
+          switch (comparator) {
+            case _Comparator.gt:
+              return convertedAmount > o.amount;
+            case _Comparator.gte:
+              return convertedAmount >= o.amount;
+            case _Comparator.lt:
+              return convertedAmount < o.amount;
+            case _Comparator.lte:
+              return convertedAmount <= o.amount;
+          }
+        } else {
+          return false;
+        }
+      } else {
+        final convertedAmount = amount.convertFromTo(fromUnit, toUnit);
+        if (convertedAmount != null) {
+          switch (comparator) {
+            case _Comparator.gt:
+              return convertedAmount > o.amount;
+            case _Comparator.gte:
+              return convertedAmount >= o.amount;
+            case _Comparator.lt:
+              return convertedAmount < o.amount;
+            case _Comparator.lte:
+              return convertedAmount <= o.amount;
+          }
+        } else {
+          return false;
+        }
+      }
+    }
+  }
+
+  bool operator >(Object o) => compare(_Comparator.gt, o);
+  bool operator >=(Object o) => compare(_Comparator.gte, o);
+  bool operator <(Object o) => compare(_Comparator.lt, o);
+  bool operator <=(Object o) => compare(_Comparator.lte, o);
 }
+
+enum _Comparator { gt, gte, lt, lte }
