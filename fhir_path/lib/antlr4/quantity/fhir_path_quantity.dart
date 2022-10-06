@@ -1,5 +1,8 @@
-import 'duration_code.dart';
-import 'exceptions.dart';
+import 'package:units_converter/units_converter.dart';
+
+import '../utils/duration_code.dart';
+import '../utils/exceptions.dart';
+import 'string_unit_to_property.dart';
 
 class FhirPathQuantity {
   factory FhirPathQuantity.fromString(String quantityString) {
@@ -45,12 +48,17 @@ class FhirPathQuantity {
       return true;
     } else if (o is! FhirPathQuantity) {
       return false;
-    } else if (amount != o.amount) {
-      return false;
-    } else if (unit != o.unit) {
-      return false;
     } else {
-      return true;
+      final fromUnit = stringUnitToProperty[unit];
+      final toUnit = stringUnitToProperty[o.unit];
+      if ((fromUnit is Ratio && toUnit is! Ratio) ||
+          (fromUnit is! Ratio && toUnit is Ratio)) {
+        return false;
+      } else if (fromUnit is Ratio) {
+        return amount.convertRatioFromTo(fromUnit, toUnit as Ratio) == o.amount;
+      } else {
+        return amount.convertFromTo(fromUnit, toUnit) == o.amount;
+      }
     }
   }
 }

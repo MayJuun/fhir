@@ -644,9 +644,8 @@ bool _isAllTypes(List results) =>
     results.first is! Date &&
     results.first is! FhirDateTime &&
     results.first is! Time &&
-    results.first is! DateTime
-    // && results.first is! FhirPathQuantity
-    ;
+    results.first is! DateTime &&
+    results.first is! FhirPathQuantity;
 
 Exception _conversionException(String function, List results) =>
     FhirPathEvaluationException(

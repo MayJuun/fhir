@@ -10,10 +10,10 @@ import 'test_paths.dart';
 
 void main() {
   testBasicTypes();
-  // testPaths();
-  // testNoArgFxns();
+  testPaths();
+  testNoArgFxns();
   // testArgFxns();
-  // testBasicOperators();
+  testBasicOperators();
   // testQuestionnaire();
   // testDateTimes();
   // testFhirPathTestSuite();

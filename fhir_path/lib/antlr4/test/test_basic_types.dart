@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 
 import '../antlr4/fhirPathParser.dart';
 import '../fhirPathDartVisitor.dart';
-import '../utils/fhir_path_quantity.dart';
+import '../quantity/fhir_path_quantity.dart';
 import '../walk_fhir_path.dart';
 
 ExpressionContext parseResult(dynamic arg) => parseFhirPath(arg.toString());
@@ -224,8 +224,8 @@ void testBasicTypes() {
           [true]);
       expect(walkFhirPath(context: null, pathExpression: r"2 seconds = 2 's'"),
           [true]);
-      expect(walkFhirPath(context: null, pathExpression: r"1 week != 1 'w'"),
-          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"1 week != 1 'wk'"),
+          [false]);
     });
     test('Non-Escape Sequences', () {
       expect(
