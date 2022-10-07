@@ -93,90 +93,90 @@ void testArgFxns() {
               }),
           [true]);
     });
-    // test('\$this', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: r'Patient.name.exists($this)'),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: r'Patient.name.where($this)'),
-    //       [
-    //         {
-    //           'use': 'official',
-    //           'family': 'Faulkenberry',
-    //           'given': ['Jason', 'Grey']
-    //         },
-    //         {
-    //           'use': 'official',
-    //           'family': 'Faulkenberry',
-    //           'given': ['Jason', 'Grey']
-    //         },
-    //         {
-    //           'family': 'Niel',
-    //           'given': ['Kristin']
-    //         },
-    //         {
-    //           'family': 'Smith',
-    //           'given': ['John', 'Jacob', 'Jingleheimer']
-    //         }
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: r'Patient.name.given.where($this)'),
-    //       [
-    //         'Jason',
-    //         'Grey',
-    //         'Jason',
-    //         'Grey',
-    //         'Kristin',
-    //         'John',
-    //         'Jacob',
-    //         'Jingleheimer',
-    //       ]);
-    // });
-    // test('exists', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'name.given.exists()'),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'Patient.language.exists()'),
-    //       [false]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "telecom.exists(system = 'email')"),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "telecom.exists(system = 'email' and use = 'mobile')"),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "telecom.exists(system = 'sms' and use = 'mobile')"),
-    //       [false]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "telecom.exists(system = 'email' and use = 'any')"),
-    //       [false]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(), pathExpression: '{}.exists()'),
-    //       [false]);
-    // });
+    test('\$this', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: r'Patient.name.exists($this)'),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: r'Patient.name.where($this)'),
+          [
+            {
+              'use': 'official',
+              'family': 'Faulkenberry',
+              'given': ['Jason', 'Grey']
+            },
+            {
+              'use': 'official',
+              'family': 'Faulkenberry',
+              'given': ['Jason', 'Grey']
+            },
+            {
+              'family': 'Niel',
+              'given': ['Kristin']
+            },
+            {
+              'family': 'Smith',
+              'given': ['John', 'Jacob', 'Jingleheimer']
+            }
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: r'Patient.name.given.where($this)'),
+          [
+            'Jason',
+            'Grey',
+            'Jason',
+            'Grey',
+            'Kristin',
+            'John',
+            'Jacob',
+            'Jingleheimer',
+          ]);
+    });
+    test('exists', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'name.given.exists()'),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.language.exists()'),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "telecom.exists(system = 'email')"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "telecom.exists(system = 'email' and use = 'mobile')"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "telecom.exists(system = 'sms' and use = 'mobile')"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "telecom.exists(system = 'email' and use = 'any')"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: '{}.exists()'),
+          [false]);
+    });
     // test('all', () {
     //   expect(
     //       walkFhirPath(

@@ -254,7 +254,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitThisInvocation(ThisInvocationContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitThisInvocation(ctx, this);
   }
 
   @override

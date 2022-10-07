@@ -12,8 +12,8 @@ void main() {
   testBasicTypes();
   testPaths();
   testNoArgFxns();
+  // testBasicOperators();
   // testArgFxns();
-  testBasicOperators();
   // testQuestionnaire();
   // testDateTimes();
   // testFhirPathTestSuite();
