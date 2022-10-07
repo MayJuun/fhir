@@ -5,11 +5,20 @@ List? _$visitEqualityExpression(
   FhirPathDartVisitor visitor,
 ) {
   if (ctx.childCount != 3) {
-    throw _wrongArgLength('log()', ctx.children ?? []);
+    throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
   }
+  final originalContext = visitor.context;
+  ctx.children?.forEach((element) {
+    print(element.text);
+  });
   final lhs = visitor.visit(ctx.getChild(0)!);
+  visitor.context = originalContext;
   final rhs = visitor.visit(ctx.getChild(2)!);
+  visitor.context = originalContext;
   final operator = ctx.getChild(1)?.text;
+  print('LHS $lhs');
+  print('RHS $rhs');
+  print(operator);
   void compare(bool equivalent) {
     if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
       if (equivalent) {
@@ -107,7 +116,9 @@ List? _$visitEqualityExpression(
       break;
   }
 
-  return visitor.context;
+  final returnValue = visitor.context;
+  visitor.context = originalContext;
+  return returnValue;
 }
 
 const _allowedTypes = [
@@ -131,10 +142,13 @@ List? _$visitInequalityExpression(
   if (ctx.childCount != 3) {
     throw _wrongArgLength('log()', ctx.children ?? []);
   }
+  final originalContext = visitor.context;
 
   /// calculate the two arguments and the comparator
   final lhs = visitor.visit(ctx.getChild(0)!);
+  visitor.context = originalContext;
   final rhs = visitor.visit(ctx.getChild(2)!);
+  visitor.context = originalContext;
   final operator = ctx.getChild(1)?.text;
 
   /// if either of them is empty, return an empty list

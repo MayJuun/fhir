@@ -12,25 +12,25 @@ void testNoArgFxns() {
           walkFhirPath(
               context: resource.toJson(),
               pathExpression: 'name.family.empty()'));
-      // expect(
-      //     [false],
-      //     walkFhirPath(
-      //         context: resource.toJson(),
-      //         pathExpression: 'name.given.empty()'));
-      // expect(
-      //     [true],
-      //     walkFhirPath(
-      //         context: resource.toJson(),
-      //         pathExpression: 'Patient.language.empty()'));
-      // expect(
-      //     [true],
-      //     walkFhirPath(
-      //         context: resource.toJson(),
-      //         pathExpression: 'Patient.name.period.empty()'));
-      // expect(
-      //     [true],
-      //     walkFhirPath(
-      //         context: resource.toJson(), pathExpression: '{ }.empty()'));
+      expect(
+          [false],
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'name.given.empty()'));
+      expect(
+          [true],
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.language.empty()'));
+      expect(
+          [true],
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.period.empty()'));
+      expect(
+          [true],
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: '{ }.empty()'));
     });
     test('allTrue', () {
       expect(

@@ -16,7 +16,11 @@ List? _$visitFunction(
     final function = ctx.childCount == 4
         ? ctx.getChild(0)!.text
         : ctx.text.replaceAll('()', '');
+    final originalContext = visitor.context;
     final args = visitor.visit(ctx.getChild(2)!);
+    print('FUNCTION: $function');
+    visitor.context = originalContext;
+    print(visitor.context);
     switch (function) {
       case 'empty':
         {
@@ -502,23 +506,6 @@ List? _$visitFunction(
           //     : [pow(finalvisitor.context, finalValue)];
         }
         break;
-      case 'round':
-        {
-          // final executedValue = value.execute(visitor.context.toList(), passed);
-          // return visitor.context.isEmpty
-          //     ? []
-          //     : visitor.context.length > 1
-          //         ? throw _wrongLength('.round()', visitor.context)
-          //         : visitor.context.first is num
-          //             ? [
-          //                 executedValue.isEmpty
-          //                     ? visitor.context.first.round().toDecimal()
-          //                     : double.parse(
-          //                         visitor.context.first.toStringAsFixed(executedValue.first))
-          //               ]
-          //             : throw _wrongTypes('.round()', visitor.context, executedValue);
-        }
-        break;
       case 'sqrt':
         {
           visitor.context = visitor.context.isEmpty
@@ -563,7 +550,17 @@ List? _$visitFunction(
         break;
       case 'exists':
         {
-          visitor.context = [visitor.context.isEmpty];
+          if (ctx.childCount == 4) {
+            visitor.context.retainWhere((element) {
+              final result =
+                  visitor.copyWith(context: [element]).visit(ctx.getChild(2)!);
+              return result != null &&
+                  result.isNotEmpty &&
+                  result.length == 1 &&
+                  (ctx.getChild(2)!.text == r'$this' || result.first);
+            });
+          }
+          visitor.context = [visitor.context.isNotEmpty];
         }
         break;
       case 'log':
@@ -607,25 +604,21 @@ List? _$visitFunction(
                               '.round()', visitor.context, args);
         }
         break;
-      case 'exists':
-        {
-          print('ARGS: $args');
-          print('CONTEXT: ${visitor.context}');
-          print('FUNCTION: $function');
-          print('RESULTS: $visitor.context');
-          visitor.context = [visitor.context.isEmpty];
-        }
-        break;
       case 'where':
-        {}
+        {
+          visitor.context.retainWhere((element) {
+            final result = visitor.copyWith(context: [element]).visit(
+                ctx.getChild(ctx.childCount == 3 ? 1 : 2)!);
+            return result != null &&
+                result.isNotEmpty &&
+                result.length == 1 &&
+                (ctx.getChild(2)!.text == r'$this' || result.first);
+          });
+        }
         break;
 
       default:
-        {
-          // print(ctx.text);
-          // print(ctx.runtimeType);
-          // visitor.printChildren(ctx);
-        }
+        {}
     }
     return visitor.context;
   }

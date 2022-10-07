@@ -35,8 +35,11 @@ List? _$visitAdditiveExpression(
         'this was passed the incorrect number of arguments: ${ctx.childCount}\n'
         '${ctx.children?.map((e) => e.text).toList()}');
   }
+  final originalContext = visitor.context;
   final lhs = visitor.visit(ctx.getChild(0)!);
+  visitor.context = originalContext;
   final rhs = visitor.visit(ctx.getChild(2)!);
+  visitor.context = originalContext;
   final operator = ctx.getChild(1)!.text;
 
   if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
@@ -214,8 +217,11 @@ List? _$visitMultiplicativeExpression(
         'this was passed the incorrect number of arguments: ${ctx.childCount}\n'
         '${ctx.children?.map((e) => e.text).toList()}');
   }
+  final originalContext = visitor.context;
   final lhs = visitor.visit(ctx.getChild(0)!);
+  visitor.context = originalContext;
   final rhs = visitor.visit(ctx.getChild(2)!);
+  visitor.context = originalContext;
   final operator = ctx.getChild(1)!.text;
   if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
     visitor.context = [];

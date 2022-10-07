@@ -33,7 +33,7 @@ part 'interpreters/equality_interpreters.dart';
 class FhirPathDartVisitor extends ParseTreeVisitor<List>
     implements FhirPathVisitor<List> {
   /// Private Constructor
-  FhirPathDartVisitor._(this.context, this.environment);
+  FhirPathDartVisitor._(this._context, this.environment);
 
   /// Primary Constructor
   factory FhirPathDartVisitor(
@@ -50,7 +50,13 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
       FhirPathDartVisitor._(
           context ?? this.context, environment ?? this.environment);
 
-  List<dynamic> context;
+  List<dynamic> _context;
+  List<dynamic> get context => _context;
+  set context(List<dynamic> newContext) {
+    print('CONTEXT: $newContext');
+    _context = newContext;
+  }
+
   final Map<String, dynamic> environment;
 
   /// This is purely for testing purposes
