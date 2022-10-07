@@ -84,13 +84,13 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitAdditiveExpression(AdditiveExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitAdditiveExpression(ctx, this);
   }
 
   @override
   List? visitMultiplicativeExpression(MultiplicativeExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitMultiplicativeExpression(ctx, this);
   }
 
   @override
@@ -150,7 +150,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitTypeExpression(TypeExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitTypeExpression(ctx, this);
   }
 
   @override

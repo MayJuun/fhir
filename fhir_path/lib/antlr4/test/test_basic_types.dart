@@ -165,19 +165,19 @@ void testBasicTypes() {
           '@2014-03-25T // A partial DateTime with year, month, and day');
       expect(lastChildType(result6.getChild(result6.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result6)?.first, FhirDateTime('2014-03-25T'));
+      expect(visitor.visit(result6)?.first, FhirDateTime('2014-03-25'));
 
       final result7 =
           parseResult('@2014-01T // A partial DateTime with year and month');
       expect(lastChildType(result7.getChild(result7.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result7)?.first, FhirDateTime('2014-01T'));
+      expect(visitor.visit(result7)?.first, FhirDateTime('2014-01'));
 
       final result8 =
           parseResult('@2014T // A partial DateTime with only the year');
       expect(lastChildType(result8.getChild(result8.childCount - 1)!),
           DateTimeLiteralContext);
-      expect(visitor.visit(result8)?.first, FhirDateTime('2014T'));
+      expect(visitor.visit(result8)?.first, FhirDateTime('2014'));
     });
 
     test('Time', () {

@@ -46,9 +46,9 @@ List? _$visitDateTimeLiteral(
   DateTimeLiteralContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  visitor.context = [
-    FhirDateTime(ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text)
-  ];
+  var dateText = ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text;
+  dateText = dateText.endsWith('T') ? dateText.replaceAll('T', '') : dateText;
+  visitor.context = [FhirDateTime(dateText)];
   return visitor.context;
 }
 
@@ -106,7 +106,7 @@ List? _$visitIdentifier(
                       : visitor.environment.context?['resourceType'] ==
                           identifierName)) {
     finalResults.add(visitor.environment.context);
-  } else {
+  } else if (results.isNotEmpty) {
     results.forEachIndexed((i, r) {
       if (r is Map) {
         String jsonIdentifierName = identifierName;
@@ -154,6 +154,8 @@ List? _$visitIdentifier(
         }
       }
     });
+  } else {
+    finalResults.add(identifierName);
   }
 
   visitor.environment['__extension'] = finalPrimitiveExtensions;

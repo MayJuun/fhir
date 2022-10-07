@@ -10,9 +10,13 @@ List? _$visitEqualityExpression(
   final lhs = visitor.visit(ctx.getChild(0)!);
   final rhs = visitor.visit(ctx.getChild(2)!);
   final operator = ctx.getChild(1)?.text;
-  void isEqual() {
+  void compare(bool equivalent) {
     if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
-      visitor.context = [];
+      if (equivalent) {
+        visitor.context = [(lhs?.isEmpty ?? true) && (rhs?.isEmpty ?? true)];
+      } else {
+        visitor.context = [];
+      }
     } else if (lhs!.length != rhs!.length) {
       visitor.context = [false];
     } else {
@@ -26,33 +30,37 @@ List? _$visitEqualityExpression(
         if (lhs[i] is FhirDateTime || lhs[i] is Date) {
           /// check and ensure both of them are Dates or DateTimes
           if (rhs[i] is FhirDateTime || rhs[i] is Date) {
-            /// get the strings for both
-            final lhsList = lhs[i]
-                .toString()
-                .split('T')
-                .map((e) => e
-                    .split('-')
-                    .map((e) => e.split(':'))
-                    .expand((element) => element))
-                .expand((element) => element);
-
-            final rhsList = rhs[i]
-                .toString()
-                .split('T')
-                .map((e) => e
-                    .split('-')
-                    .map((e) => e.split(':'))
-                    .expand((element) => element))
-                .expand((element) => element);
-            if (lhsList.length != rhsList.length) {
-              visitor.context = [];
-            } else {
-              for (var i = 0; i < lhsList.length; i++) {
-                if (num.parse(lhsList.elementAt(i)) !=
-                    num.parse(rhsList.elementAt(i))) {
+            try {
+              if (lhs[i] != rhs[i]) {
+                if (equivalent) {
                   visitor.context = [false];
+                } else {
+                  var lhsDatePrecision =
+                      '-'.allMatches(lhs[i].toString()).length;
+                  lhsDatePrecision =
+                      lhsDatePrecision > 2 ? 2 : lhsDatePrecision;
+                  var rhsDatePrecision =
+                      '-'.allMatches(rhs[i].toString()).length;
+                  rhsDatePrecision =
+                      rhsDatePrecision > 2 ? 2 : rhsDatePrecision;
+                  var lhsTimePrecision =
+                      ':'.allMatches(lhs[i].toString()).length;
+                  lhsTimePrecision =
+                      lhsTimePrecision > 2 ? 2 : lhsTimePrecision;
+                  var rhsTimePrecision =
+                      ':'.allMatches(rhs[i].toString()).length;
+                  rhsTimePrecision =
+                      rhsTimePrecision > 2 ? 2 : rhsTimePrecision;
+                  if (lhsDatePrecision != rhsDatePrecision ||
+                      lhsTimePrecision != rhsTimePrecision) {
+                    visitor.context = [];
+                  } else {
+                    visitor.context = [false];
+                  }
                 }
               }
+            } catch (e) {
+              visitor.context = [];
             }
           } else {
             /// If not it means only one is, so this is false
@@ -61,8 +69,10 @@ List? _$visitEqualityExpression(
         }
 
         /// If they aren't we can just compare them as usual
-        else if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
-          visitor.context = [false];
+        else {
+          if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
+            visitor.context = [false];
+          }
         }
       }
     }
@@ -71,17 +81,17 @@ List? _$visitEqualityExpression(
   switch (operator) {
     case '=':
       {
-        isEqual();
+        compare(false);
       }
       break;
     case '~':
       {
-        visitor.context = [deepEquals(lhs, rhs)];
+        compare(true);
       }
       break;
     case '!=':
       {
-        isEqual();
+        compare(false);
         if (visitor.context.isNotEmpty) {
           visitor.context = [!visitor.context.first];
         }
@@ -89,7 +99,10 @@ List? _$visitEqualityExpression(
       break;
     case '!~':
       {
-        visitor.context = [!deepEquals(lhs, rhs)];
+        compare(true);
+        if (visitor.context.isNotEmpty) {
+          visitor.context = [!visitor.context.first];
+        }
       }
       break;
   }
@@ -259,8 +272,6 @@ bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
 }
 
 bool? makeComparison(_Comparator comparator, dynamic param1, dynamic param2) {
-  print(param1);
-  print(param2);
   try {
     switch (comparator) {
       case _Comparator.gt:

@@ -49,6 +49,23 @@ List _argumentFunctions(
         }
       }
       break;
+    case 'round':
+      {
+        visitor.context = results.isEmpty
+            ? []
+            : results.length > 1
+                ? throw _wrongLength('.round()', results)
+                : args == null
+                    ? throw _requiresList('round()', visitor.context)
+                    : results.first is num
+                        ? [
+                            args.isEmpty
+                                ? results.first.round().toDecimal()
+                                : double.parse(
+                                    results.first.toStringAsFixed(args.first))
+                          ]
+                        : throw _wrongTypes('.round()', results, args);
+      }
   }
 
   return visitor.context;
@@ -509,10 +526,6 @@ List _noArgumentFunctions(
       break;
     case 'power()':
       {
-        print('POWER');
-        print(results);
-        print(ctx.text);
-
         // final executedValue = value.execute(results.toList(), passed);
         // if (results.isEmpty || executedValue.isEmpty) {
         //   return [];
@@ -534,10 +547,6 @@ List _noArgumentFunctions(
       break;
     case 'round()':
       {
-        print('ROUND');
-        print(results);
-        print(ctx.text);
-
         // final executedValue = value.execute(results.toList(), passed);
         // return results.isEmpty
         //     ? []
@@ -594,9 +603,9 @@ List _noArgumentFunctions(
       break;
     default:
       {
-        print(ctx.text);
-        print(ctx.runtimeType);
-        visitor.printChildren(ctx);
+        // print(ctx.text);
+        // print(ctx.runtimeType);
+        // visitor.printChildren(ctx);
       }
   }
   return visitor.context;

@@ -13,61 +13,16 @@
 //   return type == TerminalNodeImpl ? tree.runtimeType : type;
 // }
 
-import 'package:units_converter/units_converter.dart';
+// import 'package:fhir/r4.dart';
+// import 'package:units_converter/units_converter.dart';
 
 void main() async {
-  Length()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Area()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Energy()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Force()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Length()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Mass()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Power()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Pressure()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Speed()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Temperature()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Time()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Torque()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
-  Volume()
-    ..getAll().forEach((element) {
-      print(element.name);
-    });
+  print(0 % 4);
+  print(4 % 0);
+  // print(FhirDateTime('2018-03-01') > FhirDateTime('2018-01-01'));
+  // print(FhirDateTime('2018-01-01') > FhirDateTime('2018-01-01'));
+  // print(FhirDateTime('2014-01').iso8601String);
+  // print(FhirDateTime('2015-02-04T14:34:28+09:00').iso8601String);
   // var object = js.JS(context['Object']);
   // object['greeting'] = 'Hello';
   // object['greet'] = (name) => "${object['greeting']} $name";
