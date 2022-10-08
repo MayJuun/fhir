@@ -668,7 +668,168 @@ List? _$visitFunction(
               .toList();
         }
         break;
+      case 'repeat':
+        {
+          visitor.context = visitor.context
+              .map((e) => visitor.copyWith(context: [e]).visit(
+                  ctx.getChild(ctx.childCount == 3 ? 1 : 2)!))
+              .expand((element) => element ?? [])
+              .toList();
 
+          final newContext = visitor.context.toList();
+          var cont = true;
+
+          while (cont) {
+            final newerContext = newContext
+                .map((e) => visitor.copyWith(context: [e]).visit(
+                    ctx.getChild(ctx.childCount == 3 ? 1 : 2)!))
+                .expand((element) => element ?? [])
+                .toList();
+            newerContext
+                .removeWhere((element) => foundInList(newContext, element));
+            if (newerContext.isNotEmpty) {
+              newContext.addAll(newerContext);
+            } else {
+              cont = false;
+            }
+          }
+          visitor.context = newContext;
+        }
+        break;
+      case 'ofType':
+        {
+          bool checkOfType(String? _type) {
+            if (_type == null) {
+              throw FhirPathEvaluationException(
+                  'The function ofType was not passed a Type',
+                  collection: visitor.context);
+            } else if (visitor.environment.isVersion(FhirVersion.r4)
+                ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+                    .contains(_type)
+                : visitor.environment.isVersion(FhirVersion.r5)
+                    ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                        .contains(_type)
+                    : visitor.environment.isVersion(FhirVersion.dstu2)
+                        ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                            .contains(_type)
+                        : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                            .contains(_type)) {
+              visitor.context.retainWhere((element) =>
+                  element is Map && element['resourceType'] == _type);
+              return true;
+            } else if ([
+              'string',
+              'boolean',
+              'integer',
+              'decimal',
+              'date',
+              'dateTime',
+              'time',
+              'quantity',
+            ].contains(_type.toLowerCase())) {
+              _type = _type.toLowerCase();
+              visitor.context.retainWhere((element) => _type == 'string'
+                  ? element is String
+                  : _type == 'boolean'
+                      ? element is bool || element is Boolean
+                      : _type == 'integer'
+                          ? element is int || element is Integer
+                          : _type == 'decimal'
+                              ? element is double || element is Decimal
+                              : _type == 'date'
+                                  ? element is Date
+                                  : _type == 'datetime'
+                                      ? element is DateTime ||
+                                          element is FhirDateTime
+                                      : _type == 'time'
+                                          ? element is Time
+                                          : _type == 'quantity'
+                                              ? isQuantity(element)
+                                              : false);
+              return true;
+            } else {
+              return false;
+            }
+          }
+
+          var _type = ctx.getChild(2)?.text;
+          final success = checkOfType(_type);
+          if (!success) {
+            final result = visitor.copyWith().visit(ctx.getChild(2)!);
+            if (result != null && result.isNotEmpty && result.first is String) {
+              checkOfType(result.first);
+            }
+          }
+        }
+        break;
+      case 'skip':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
+          if (args == null ||
+              args.isEmpty ||
+              args.length != 1 ||
+              args.first is! num) {
+            throw _wrongTypes('skip', visitor.context, args);
+          } else if (args.first > 0 && visitor.context.isNotEmpty) {
+            if (visitor.context.length < args.first) {
+              visitor.context = [];
+            } else {
+              visitor.context = visitor.context.sublist(args.first);
+            }
+          }
+        }
+        break;
+      case 'take':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
+          if (args == null ||
+              args.isEmpty ||
+              args.length != 1 ||
+              args.first is! num) {
+            throw _wrongTypes('take', visitor.context, args);
+          } else if (args.first > 0 && visitor.context.isNotEmpty) {
+            if (visitor.context.length >= args.first) {
+              visitor.context = visitor.context.sublist(0, args.first);
+            }
+          }
+        }
+        break;
+      case 'intersect':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
+          final initialContext = visitor.context.toSet();
+          visitor.context = [];
+          for (var value in initialContext) {
+            if (notFoundInList(visitor.context, value) &&
+                foundInList(args ?? [], value)) {
+              visitor.context.add(value);
+            }
+          }
+        }
+        break;
+      case 'exclude':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
+          visitor.context
+              .retainWhere((element) => notFoundInList(args ?? [], element));
+        }
+        break;
+      case 'union':
+        {
+          final List<dynamic> args =
+              visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? [];
+          print(visitor.context);
+          print(visitor.context.runtimeType);
+          print(args.runtimeType);
+          args.addAll(visitor.context.toList());
+          visitor.context = [];
+          for (var value in args) {
+            if (notFoundInList(visitor.context, value)) {
+              visitor.context.add(value);
+            }
+          }
+        }
+        break;
       default:
         {}
     }

@@ -16,9 +16,14 @@
 // import 'package:fhir/r4.dart';
 // import 'package:units_converter/units_converter.dart';
 
+import 'dart:convert';
+
+import 'package:fhir/r4.dart';
+
 void main() async {
-  print(0 % 4);
-  print(4 % 0);
+  print(jsonEncode(resource.toJson()));
+  // print(0 % 4);
+  // print(4 % 0);
   // print(FhirDateTime('2018-03-01') > FhirDateTime('2018-01-01'));
   // print(FhirDateTime('2018-01-01') > FhirDateTime('2018-01-01'));
   // print(FhirDateTime('2014-01').iso8601String);
@@ -40,6 +45,111 @@ void main() async {
   // final visitor = FhirPathDartVisitor({}, {});
   // print(visitor.visit(tree));
 }
+
+final resource = Patient(
+  telecom: [
+    ContactPoint(
+        system: ContactPointSystem.email,
+        use: ContactPointUse.mobile,
+        rank: PositiveInt(3)),
+  ],
+  address: [
+    Address(
+      period: Period(
+        extension_: [
+          FhirExtension(
+            valueCount: Count(unit: 'Mg'),
+          ),
+          FhirExtension(
+            valueCount: Count(unit: 'mL'),
+          ),
+        ],
+      ),
+    ),
+    Address(
+      period: Period(
+        extension_: [
+          FhirExtension(
+            extension_: [
+              FhirExtension(
+                extension_: [
+                  FhirExtension(
+                    extension_: [
+                      FhirExtension(
+                        valueCount: Count(unit: 'Kg'),
+                      ),
+                      FhirExtension(
+                        valueCount: Count(unit: 'Km'),
+                      ),
+                    ],
+                    valueCount: Count(unit: 'Kg'),
+                  ),
+                  FhirExtension(
+                    valueCount: Count(unit: 'Km'),
+                  ),
+                ],
+                valueCount: Count(unit: 'Kg'),
+              ),
+              FhirExtension(
+                valueCount: Count(unit: 'Km'),
+              ),
+            ],
+            valueCount: Count(unit: 'Kg'),
+          ),
+          FhirExtension(
+            valueCount: Count(unit: 'Km'),
+          ),
+        ],
+      ),
+    ),
+    Address(
+      period: Period(
+        extension_: [
+          FhirExtension(
+            valueCount: Count(unit: 'Feet'),
+          ),
+          FhirExtension(
+            valueCount: Count(unit: 'inches'),
+          ),
+        ],
+      ),
+    ),
+  ],
+  deceasedBoolean: Boolean(false),
+  name: [
+    HumanName(
+      use: HumanNameUse.official,
+      family: 'Faulkenberry',
+      given: [
+        'Jason',
+        'Grey',
+      ],
+    ),
+    HumanName(
+      use: HumanNameUse.official,
+      family: 'Faulkenberry',
+      given: [
+        'Jason',
+        'Grey',
+      ],
+    ),
+    HumanName(
+      family: 'Niel',
+      given: [
+        'Kristin',
+      ],
+    ),
+    HumanName(
+      family: 'Smith',
+      given: [
+        'John',
+        'Jacob',
+        'Jingleheimer',
+      ],
+    ),
+  ],
+);
+
 
 
 // final patient = Patient.fromJson({

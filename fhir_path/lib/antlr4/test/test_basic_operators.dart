@@ -880,42 +880,42 @@ void testBasicOperators() {
         expect(walkFhirPath(context: resource.toJson(), pathExpression: '1/0'),
             []);
       });
-      // test('- : ', () {
-      //   expect(
-      //       walkFhirPath(context: resource.toJson(), pathExpression: '75-70'),
-      //       [5]);
-      //   expect(
-      //       walkFhirPath(
-      //           context: resource.toJson(), pathExpression: '75-70-75'),
-      //       [-70]);
-      // });
-      // test('Precedence : ', () {
-      //   expect(
-      //       walkFhirPath(
-      //           context: resource.toJson(), pathExpression: '75+70-75'),
-      //       [70]);
-      //   expect(
-      //       walkFhirPath(
-      //           context: resource.toJson(), pathExpression: '1+2*3+4 = 11'),
-      //       [true]);
-      //   expect(
-      //       walkFhirPath(
-      //           context: resource.toJson(), pathExpression: '1+2*-3+4 = -1'),
-      //       [true]);
-      //   expect(
-      //       walkFhirPath(
-      //           context: resource.toJson(), pathExpression: '-1-2*3 = -7'),
-      //       [true]);
-      //   expect(
-      //       walkFhirPath(
-      //           context: resource.toJson(), pathExpression: '1-2*3-4*5 = -25'),
-      //       [true]);
-      //   expect(
-      //       walkFhirPath(
-      //           context: resource.toJson(),
-      //           pathExpression: '1-2.ceiling()*3-4*5.ceiling() = -25'),
-      //       [true]);
-      // });
+      test('- : ', () {
+        expect(
+            walkFhirPath(context: resource.toJson(), pathExpression: '75-70'),
+            [5]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(), pathExpression: '75-70-75'),
+            [-70]);
+      });
+      test('Precedence : ', () {
+        expect(
+            walkFhirPath(
+                context: resource.toJson(), pathExpression: '75+70-75'),
+            [70]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(), pathExpression: '1+2*3+4 = 11'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(), pathExpression: '1+2*-3+4 = -1'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(), pathExpression: '-1-2*3 = -7'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(), pathExpression: '1-2*3-4*5 = -25'),
+            [true]);
+        expect(
+            walkFhirPath(
+                context: resource.toJson(),
+                pathExpression: '1-2.ceiling()*3-4*5.ceiling() = -25'),
+            [true]);
+      });
     },
   );
 }

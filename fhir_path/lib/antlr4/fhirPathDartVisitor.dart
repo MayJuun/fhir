@@ -55,14 +55,14 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   List<dynamic> get context => _context;
 
   set context(List<dynamic> newContext) {
-    print('NEWCONTEXT: $newContext');
+    // print('NEWCONTEXT: $newContext');
     _context = newContext;
   }
 
   final Map<String, dynamic> environment;
 
   /// This is purely for testing purposes
-  static const bool printType = true;
+  static const bool printType = false;
   void printContextType(ParseTree ctx) {
     if (printType) {
       print('${ctx.runtimeType} : ${ctx.text}');

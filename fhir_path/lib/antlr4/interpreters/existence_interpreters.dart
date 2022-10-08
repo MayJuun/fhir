@@ -24,7 +24,7 @@ _$visitTypeExpression(
     throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
   }
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
-  final rhsText = ctx.getChild(2)!.text?.toLowerCase();
+  final rhsText = ctx.getChild(2)!.text;
 
   final List<dynamic>? rhs = (visitor.environment.isVersion(FhirVersion.r4)
               ? r4.ResourceUtils.resourceTypeFromStringMap.keys
@@ -46,7 +46,7 @@ _$visitTypeExpression(
             'dateTime',
             'time',
             'quantity',
-          ].contains(rhsText)
+          ].contains(rhsText?.toLowerCase())
       ? [ctx.getChild(2)!.text]
       : visitor.copyWith().visit(ctx.getChild(2)!);
 
@@ -62,94 +62,86 @@ _$visitTypeExpression(
         'Operand1: $lhs\n'
         'Operand2: $rhs',
         collection: visitor.context);
-  }
-
-    visitor.context =
-        ?
-        : (visitor.environment.isVersion(FhirVersion.r4)
-                    ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+  } else if (operator == 'is') {
+    visitor.context = (visitor.environment.isVersion(FhirVersion.r4)
+                ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+                    .contains(rhs.first)
+                : visitor.environment.isVersion(FhirVersion.r5)
+                    ? r5.ResourceUtils.resourceTypeFromStringMap.keys
                         .contains(rhs.first)
-                    : visitor.environment.isVersion(FhirVersion.r5)
-                        ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                    : visitor.environment.isVersion(FhirVersion.dstu2)
+                        ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
                             .contains(rhs.first)
-                        : visitor.environment.isVersion(FhirVersion.dstu2)
-                            ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
-                                .contains(rhs.first)
-                            : stu3.ResourceUtils.resourceTypeFromStringMap.keys
-                                .contains(rhs.first)) &&
-                lhs.first is Map &&
-                lhs.first['resourceType'] == rhs.first
-            ? [true]
-            : rhs.first == 'String'
-                ? [lhs.first is String]
-                : rhs.first == 'Boolean'
-                    ? [lhs.first is bool || lhs.first is Boolean]
-                    : rhs.first == 'Integer'
+                        : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                            .contains(rhs.first)) &&
+            lhs.first is Map &&
+            lhs.first['resourceType'] == rhs.first
+        ? [true]
+        : rhs.first == 'String'
+            ? [lhs.first is String]
+            : rhs.first == 'Boolean'
+                ? [lhs.first is bool || lhs.first is Boolean]
+                : rhs.first == 'Integer'
+                    ? [
+                        (lhs.first is int || lhs.first is Integer) &&
+
+                            /// This is because of transpilation to javascript
+                            !lhs.first.toString().contains('.')
+                      ]
+                    : rhs.first == 'Decimal'
                         ? [
-                            (lhs.first is int || lhs.first is Integer) &&
+                            (lhs.first is double || lhs.first is Decimal) &&
 
                                 /// This is because of transpilation to javascript
-                                !lhs.first.toString().contains('.')
+                                lhs.first.toString().contains('.')
                           ]
-                        : rhs.first == 'Decimal'
-                            ? [
-                                (lhs.first is double || lhs.first is Decimal) &&
-
-                                    /// This is because of transpilation to javascript
-                                    lhs.first.toString().contains('.')
-                              ]
-                            : rhs.first == 'Date'
-                                ? [lhs.first is Date]
-                                : rhs.first == 'DateTime'
-                                    ? [
-                                        lhs.first is DateTime ||
-                                            lhs.first is FhirDateTime
-                                      ]
-                                    : rhs.first == 'Time'
-                                        ? [lhs.first is Time]
-                                        : rhs.first == 'Quantity'
-                                            ? [isQuantity(lhs.first)]
-                                            : [false];
-
-  //     final identifierValue = rhs!.first;
-  //     if (((visitor.environment.isVersion(FhirVersion.r4)
-  //                 ? r4.ResourceUtils.resourceTypeFromStringMap.keys
-  //                     .contains(identifierValue)
-  //                 : visitor.environment.isVersion(FhirVersion.r5)
-  //                     ? r5.ResourceUtils.resourceTypeFromStringMap.keys
-  //                         .contains(identifierValue)
-  //                     : visitor.environment.isVersion(FhirVersion.dstu2)
-  //                         ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
-  //                             .contains(identifierValue)
-  //                         : stu3.ResourceUtils.resourceTypeFromStringMap.keys
-  //                             .contains(identifierValue)) &&
-  //             lhs!.first is Map &&
-  //             lhs.first['resourceType'] == identifierValue) ||
-  //         (identifierValue.toLowerCase() == 'string' &&
-  //             (lhs!.first is String)) ||
-  //         (identifierValue.toLowerCase() == 'boolean' &&
-  //             (lhs!.first is bool || lhs.first is Boolean)) ||
-  //         (identifierValue.toLowerCase() == 'integer' &&
-  //             (lhs!.first is int || lhs.first is Integer)) ||
-  //         (identifierValue.toLowerCase() == 'decimal' &&
-  //             (lhs!.first is double || lhs.first is Decimal)) ||
-  //         (identifierValue.toLowerCase() == 'date' && lhs!.first is Date) ||
-  //         (identifierValue.toLowerCase() == 'datetime' &&
-  //             (lhs!.first is DateTime || lhs.first is FhirDateTime)) ||
-  //         (identifierValue.toLowerCase() == 'time' && lhs!.first is Time) ||
-  //         (identifierValue == 'quantity' && lhs!.first is FhirPathQuantity)) {
-  //       visitor.context = lhs;
-  //     } else if (FhirDatatypes.contains(identifierValue)) {
-  //       /// TODO
-  //       // final polymorphicString = 'value' + identifierValue;
-  //       // final polymorphicIdentifier = IdentifierParser(polymorphicString);
-  //       // final polymorphicParserList = ParserList([polymorphicIdentifier]);
-  //       // return polymorphicParserList.execute(results.toList(), passed);
-  //     } else {
-  //       visitor.context = [];
-  //     }
-  //   }
-  // }
+                        : rhs.first == 'Date'
+                            ? [lhs.first is Date]
+                            : rhs.first == 'DateTime'
+                                ? [
+                                    lhs.first is DateTime ||
+                                        lhs.first is FhirDateTime
+                                  ]
+                                : rhs.first == 'Time'
+                                    ? [lhs.first is Time]
+                                    : rhs.first == 'Quantity'
+                                        ? [isQuantity(lhs.first)]
+                                        : [false];
+  } else if (((visitor.environment.isVersion(FhirVersion.r4)
+              ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+                  .contains(rhs.first)
+              : visitor.environment.isVersion(FhirVersion.r5)
+                  ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                      .contains(rhs.first)
+                  : visitor.environment.isVersion(FhirVersion.dstu2)
+                      ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                          .contains(rhs.first)
+                      : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                          .contains(rhs.first)) &&
+          lhs.first is Map &&
+          lhs.first['resourceType'] == rhs.first) ||
+      (rhs.first.toLowerCase() == 'string' && (lhs.first is String)) ||
+      (rhs.first.toLowerCase() == 'boolean' &&
+          (lhs.first is bool || lhs.first is Boolean)) ||
+      (rhs.first.toLowerCase() == 'integer' &&
+          (lhs.first is int || lhs.first is Integer)) ||
+      (rhs.first.toLowerCase() == 'decimal' &&
+          (lhs.first is double || lhs.first is Decimal)) ||
+      (rhs.first.toLowerCase() == 'date' && lhs.first is Date) ||
+      (rhs.first.toLowerCase() == 'datetime' &&
+          (lhs.first is DateTime || lhs.first is FhirDateTime)) ||
+      (rhs.first.toLowerCase() == 'time' && lhs.first is Time) ||
+      (rhs.first == 'quantity' && lhs.first is FhirPathQuantity)) {
+    visitor.context = lhs;
+  } else if (FhirDatatypes.contains(rhs.first)) {
+    /// TODO
+    // final polymorphicString = 'value' + rhs.first;
+    // final polymorphicIdentifier = IdentifierParser(polymorphicString);
+    // final polymorphicParserList = ParserList([polymorphicIdentifier]);
+    // return polymorphicParserList.execute(results.toList(), passed);
+  } else {
+    visitor.context = [];
+  }
 
   return visitor.context;
 }

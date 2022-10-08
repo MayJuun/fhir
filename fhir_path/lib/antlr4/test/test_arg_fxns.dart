@@ -351,266 +351,266 @@ void testArgFxns() {
             {'resourceType': 'Practitioner', 'id': '5'}
           ]);
     });
-    // test('repeat', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               'Patient.address.period.extension.extension.extension.repeat(extension)'),
-    //       [
-    //         {
-    //           'valueCount': {'unit': 'Kg'}
-    //         },
-    //         {
-    //           'valueCount': {'unit': 'Km'}
-    //         }
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               'Patient.address.period.extension.extension.repeat(extension)'),
-    //       [
-    //         {
-    //           "extension": [
-    //             {
-    //               "valueCount": {"unit": "Kg"}
-    //             },
-    //             {
-    //               "valueCount": {"unit": "Km"}
-    //             }
-    //           ],
-    //           "valueCount": {"unit": "Kg"}
-    //         },
-    //         {
-    //           "valueCount": {"unit": "Km"}
-    //         },
-    //         {
-    //           "valueCount": {"unit": "Kg"}
-    //         }
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               'Patient.address.period.extension.repeat(extension)'),
-    //       [
-    //         {
-    //           "extension": [
-    //             {
-    //               "extension": [
-    //                 {
-    //                   "valueCount": {"unit": "Kg"}
-    //                 },
-    //                 {
-    //                   "valueCount": {"unit": "Km"}
-    //                 }
-    //               ],
-    //               "valueCount": {"unit": "Kg"}
-    //             },
-    //             {
-    //               "valueCount": {"unit": "Km"}
-    //             }
-    //           ],
-    //           "valueCount": {"unit": "Kg"}
-    //         },
-    //         {
-    //           "valueCount": {"unit": "Km"}
-    //         },
-    //         {
-    //           "extension": [
-    //             {
-    //               "valueCount": {"unit": "Kg"}
-    //             },
-    //             {
-    //               "valueCount": {"unit": "Km"}
-    //             }
-    //           ],
-    //           "valueCount": {"unit": "Kg"}
-    //         },
-    //         {
-    //           "valueCount": {"unit": "Kg"}
-    //         },
-    //       ]);
-    // });
-    // test('ofType', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: bundle.toJson(),
-    //           pathExpression:
-    //               walkPath("Bundle.entry.resource.ofType(Patient)")),
-    //       [
-    //         {"resourceType": "Patient", "id": "1"},
-    //         {"resourceType": "Patient", "id": "3"},
-    //         {"resourceType": "Patient", "id": "6"},
-    //         {"resourceType": "Patient", "id": "7"},
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: bundle.toJson(),
-    //           pathExpression:
-    //               walkPath("Bundle.entry.resource.ofType(Practitioner)")),
-    //       [
-    //         {"resourceType": "Practitioner", "id": "2"},
-    //         {"resourceType": "Practitioner", "id": "4"},
-    //         {"resourceType": "Practitioner", "id": "5"},
-    //       ]);
-    // });
-    // test('index', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(), pathExpression: 'Patient.name[3]'),
-    //       [
-    //         {
-    //           'family': 'Smith',
-    //           'given': [
-    //             'John',
-    //             'Jacob',
-    //             'Jingleheimer',
-    //           ]
-    //         }
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(), pathExpression: 'Patient.name[12]'),
-    //       []);
-    // });
-    // test('skip', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'Patient.name.id.skip(1)'),
-    //       []);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'Patient.name.given.skip(3)'),
-    //       [
-    //         'Grey',
-    //         'Kristin',
-    //         'John',
-    //         'Jacob',
-    //         'Jingleheimer',
-    //       ]);
-    // });
-    // test('take', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'Patient.name.id.take(1)'),
-    //       []);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'Patient.name.given.take(3)'),
-    //       [
-    //         'Jason',
-    //         'Grey',
-    //         'Jason',
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'Patient.name.given.take(13)'),
-    //       [
-    //         'Jason',
-    //         'Grey',
-    //         'Jason',
-    //         'Grey',
-    //         'Kristin',
-    //         'John',
-    //         'Jacob',
-    //         'Jingleheimer',
-    //       ]);
-    // });
-    // test('intersect', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.given.intersect(%nameList)",
-    //           environment: {'%nameList': 'Jason'}),
-    //       ['Jason']);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.given.intersect(%nameList)",
-    //           environment: {
-    //             '%nameList': ['Jason', 'Kristin']
-    //           }),
-    //       ['Jason', 'Kristin']);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.given.intersect(%nameList)",
-    //           environment: {
-    //             '%nameList': ['Jason', 'Fnuts']
-    //           }),
-    //       ['Jason']);
-    // });
-    // test('exclude', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.given.exclude(%nameList)",
-    //           environment: {'%nameList': 'Jason'}),
-    //       [
-    //         'Grey',
-    //         'Grey',
-    //         'Kristin',
-    //         'John',
-    //         'Jacob',
-    //         'Jingleheimer',
-    //       ]);
+    test('repeat', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  'Patient.address.period.extension.extension.extension.repeat(extension)'),
+          [
+            {
+              'valueCount': {'unit': 'Kg'}
+            },
+            {
+              'valueCount': {'unit': 'Km'}
+            }
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  'Patient.address.period.extension.extension.repeat(extension)'),
+          [
+            {
+              "extension": [
+                {
+                  "valueCount": {"unit": "Kg"}
+                },
+                {
+                  "valueCount": {"unit": "Km"}
+                }
+              ],
+              "valueCount": {"unit": "Kg"}
+            },
+            {
+              "valueCount": {"unit": "Km"}
+            },
+            {
+              "valueCount": {"unit": "Kg"}
+            }
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  'Patient.address.period.extension.repeat(extension)'),
+          [
+            {
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "valueCount": {"unit": "Kg"}
+                    },
+                    {
+                      "valueCount": {"unit": "Km"}
+                    }
+                  ],
+                  "valueCount": {"unit": "Kg"}
+                },
+                {
+                  "valueCount": {"unit": "Km"}
+                }
+              ],
+              "valueCount": {"unit": "Kg"}
+            },
+            {
+              "valueCount": {"unit": "Km"}
+            },
+            {
+              "extension": [
+                {
+                  "valueCount": {"unit": "Kg"}
+                },
+                {
+                  "valueCount": {"unit": "Km"}
+                }
+              ],
+              "valueCount": {"unit": "Kg"}
+            },
+            {
+              "valueCount": {"unit": "Kg"}
+            },
+          ]);
+    });
+    test('ofType', () {
+      expect(
+          walkFhirPath(
+              context: bundle.toJson(),
+              pathExpression:
+                  walkPath("Bundle.entry.resource.ofType(Patient)")),
+          [
+            {"resourceType": "Patient", "id": "1"},
+            {"resourceType": "Patient", "id": "3"},
+            {"resourceType": "Patient", "id": "6"},
+            {"resourceType": "Patient", "id": "7"},
+          ]);
+      expect(
+          walkFhirPath(
+              context: bundle.toJson(),
+              pathExpression:
+                  walkPath("Bundle.entry.resource.ofType(Practitioner)")),
+          [
+            {"resourceType": "Practitioner", "id": "2"},
+            {"resourceType": "Practitioner", "id": "4"},
+            {"resourceType": "Practitioner", "id": "5"},
+          ]);
+    });
+    test('index', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: 'Patient.name[3]'),
+          [
+            {
+              'family': 'Smith',
+              'given': [
+                'John',
+                'Jacob',
+                'Jingleheimer',
+              ]
+            }
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: 'Patient.name[12]'),
+          []);
+    });
+    test('skip', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.id.skip(1)'),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.skip(3)'),
+          [
+            'Grey',
+            'Kristin',
+            'John',
+            'Jacob',
+            'Jingleheimer',
+          ]);
+    });
+    test('take', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.id.take(1)'),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.take(3)'),
+          [
+            'Jason',
+            'Grey',
+            'Jason',
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.take(13)'),
+          [
+            'Jason',
+            'Grey',
+            'Jason',
+            'Grey',
+            'Kristin',
+            'John',
+            'Jacob',
+            'Jingleheimer',
+          ]);
+    });
+    test('intersect', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.given.intersect(%nameList)",
+              environment: {'%nameList': 'Jason'}),
+          ['Jason']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.given.intersect(%nameList)",
+              environment: {
+                '%nameList': ['Jason', 'Kristin']
+              }),
+          ['Jason', 'Kristin']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.given.intersect(%nameList)",
+              environment: {
+                '%nameList': ['Jason', 'Fnuts']
+              }),
+          ['Jason']);
+    });
+    test('exclude', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.given.exclude(%nameList)",
+              environment: {'%nameList': 'Jason'}),
+          [
+            'Grey',
+            'Grey',
+            'Kristin',
+            'John',
+            'Jacob',
+            'Jingleheimer',
+          ]);
 
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.given.exclude(%nameList)",
-    //           environment: {
-    //             '%nameList': ['Jason', 'Kristin']
-    //           }),
-    //       [
-    //         'Grey',
-    //         'Grey',
-    //         'John',
-    //         'Jacob',
-    //         'Jingleheimer',
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.given.exclude(%nameList)",
-    //           environment: {
-    //             '%nameList': ['Jason', 'Fnuts']
-    //           }),
-    //       [
-    //         'Grey',
-    //         'Grey',
-    //         'Kristin',
-    //         'John',
-    //         'Jacob',
-    //         'Jingleheimer',
-    //       ]);
-    // });
-    // test('union', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("%a.union(%b)"),
-    //           environment: {
-    //             '%a': [1, 1, 2, 3],
-    //             '%b': [2, 3]
-    //           }),
-    //       [1, 2, 3]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("%a.union()"),
-    //           environment: {
-    //             '%a': [1, 1, 2, 3],
-    //           }),
-    //       [1, 2, 3]);
-    // });
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.given.exclude(%nameList)",
+              environment: {
+                '%nameList': ['Jason', 'Kristin']
+              }),
+          [
+            'Grey',
+            'Grey',
+            'John',
+            'Jacob',
+            'Jingleheimer',
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.given.exclude(%nameList)",
+              environment: {
+                '%nameList': ['Jason', 'Fnuts']
+              }),
+          [
+            'Grey',
+            'Grey',
+            'Kristin',
+            'John',
+            'Jacob',
+            'Jingleheimer',
+          ]);
+    });
+    test('union', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("%a.union(%b)"),
+              environment: {
+                '%a': [1, 1, 2, 3],
+                '%b': [2, 3]
+              }),
+          [1, 2, 3]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("%a.union()"),
+              environment: {
+                '%a': [1, 1, 2, 3],
+              }),
+          [1, 2, 3]);
+    });
     // test('combine', () {
     //   expect(
     //       walkFhirPath(
