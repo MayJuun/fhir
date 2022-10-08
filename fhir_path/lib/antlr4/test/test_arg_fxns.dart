@@ -177,180 +177,180 @@ void testArgFxns() {
               context: resource.toJson(), pathExpression: '{}.exists()'),
           [false]);
     });
-    // test('all', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'Patient.language.all()'),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "name.all(use = 'official')"),
-    //       [false]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "name.all(use = 'usual')"),
-    //       [false]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "telecom.all(system = 'email')"),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "telecom.all(use = 'mobile')"),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "telecom.all(system = 'email' and use = 'mobile')"),
-    //       [true]);
-    // });
-    // test('subsetOf', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "Patient.name.given[2].subsetOf(Patient.name.given)"),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "Patient.name.given.subsetOf(Patient.name.given)"),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.subsetOf(Patient.name.given)"),
-    //       [false]);
-    // });
-    // test('supersetOf', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "Patient.name.given.supersetOf(Patient.name.given[2])"),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "Patient.name.given.supersetOf(Patient.name.given)"),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.given.supersetOf(Patient.name)"),
-    //       [false]);
-    // });
-    // test('where', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.telecom.where(use = 'mobile')"),
-    //       [
-    //         {
-    //           'system': 'email',
-    //           'use': 'mobile',
-    //           'rank': 3,
-    //         }
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "Patient.telecom.where(use = 'mobile' and rank = 3)"),
-    //       [
-    //         {
-    //           'system': 'email',
-    //           'use': 'mobile',
-    //           'rank': 3,
-    //         }
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "Patient.telecom.where(use = 'mobile' and system = 'email')"),
-    //       [
-    //         {
-    //           'system': 'email',
-    //           'use': 'mobile',
-    //           'rank': 3,
-    //         }
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "Patient.telecom.where(use = 'mobile' and system = 'email' and rank = 3)"),
-    //       [
-    //         {
-    //           'system': 'email',
-    //           'use': 'mobile',
-    //           'rank': 3,
-    //         }
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               "Patient.telecom.where(use = 'mobile' and rank = 2)"),
-    //       []);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: "Patient.name.where(use = 'official')"),
-    //       [
-    //         {
-    //           'use': 'official',
-    //           'family': 'Faulkenberry',
-    //           'given': [
-    //             'Jason',
-    //             'Grey',
-    //           ]
-    //         },
-    //         {
-    //           'use': 'official',
-    //           'family': 'Faulkenberry',
-    //           'given': [
-    //             'Jason',
-    //             'Grey',
-    //           ]
-    //         }
-    //       ]);
-    // });
-    // test('select', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: 'Patient.telecom.select(rank as integer)'),
-    //       [3]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: bundle.toJson(),
-    //           pathExpression: 'Bundle.entry.select(resource as Patient)'),
-    //       [
-    //         {'resourceType': 'Patient', 'id': '1'},
-    //         {'resourceType': 'Patient', 'id': '3'},
-    //         {'resourceType': 'Patient', 'id': '6'},
-    //         {'resourceType': 'Patient', 'id': '7'}
-    //       ]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: bundle.toJson(),
-    //           pathExpression: 'Bundle.entry.select(resource as Practitioner)'),
-    //       [
-    //         {'resourceType': 'Practitioner', 'id': '2'},
-    //         {'resourceType': 'Practitioner', 'id': '4'},
-    //         {'resourceType': 'Practitioner', 'id': '5'}
-    //       ]);
-    // });
+    test('all', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.language.all()'),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "name.all(use = 'official')"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "name.all(use = 'usual')"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "telecom.all(system = 'email')"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "telecom.all(use = 'mobile')"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "telecom.all(system = 'email' and use = 'mobile')"),
+          [true]);
+    });
+    test('subsetOf', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "Patient.name.given[2].subsetOf(Patient.name.given)"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "Patient.name.given.subsetOf(Patient.name.given)"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.subsetOf(Patient.name.given)"),
+          [false]);
+    });
+    test('supersetOf', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "Patient.name.given.supersetOf(Patient.name.given[2])"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "Patient.name.given.supersetOf(Patient.name.given)"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.given.supersetOf(Patient.name)"),
+          [false]);
+    });
+    test('where', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.telecom.where(use = 'mobile')"),
+          [
+            {
+              'system': 'email',
+              'use': 'mobile',
+              'rank': 3,
+            }
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "Patient.telecom.where(use = 'mobile' and rank = 3)"),
+          [
+            {
+              'system': 'email',
+              'use': 'mobile',
+              'rank': 3,
+            }
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "Patient.telecom.where(use = 'mobile' and system = 'email')"),
+          [
+            {
+              'system': 'email',
+              'use': 'mobile',
+              'rank': 3,
+            }
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "Patient.telecom.where(use = 'mobile' and system = 'email' and rank = 3)"),
+          [
+            {
+              'system': 'email',
+              'use': 'mobile',
+              'rank': 3,
+            }
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  "Patient.telecom.where(use = 'mobile' and rank = 2)"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.where(use = 'official')"),
+          [
+            {
+              'use': 'official',
+              'family': 'Faulkenberry',
+              'given': [
+                'Jason',
+                'Grey',
+              ]
+            },
+            {
+              'use': 'official',
+              'family': 'Faulkenberry',
+              'given': [
+                'Jason',
+                'Grey',
+              ]
+            }
+          ]);
+    });
+    test('select', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.telecom.select(rank as integer)'),
+          [3]);
+      expect(
+          walkFhirPath(
+              context: bundle.toJson(),
+              pathExpression: 'Bundle.entry.select(resource as Patient)'),
+          [
+            {'resourceType': 'Patient', 'id': '1'},
+            {'resourceType': 'Patient', 'id': '3'},
+            {'resourceType': 'Patient', 'id': '6'},
+            {'resourceType': 'Patient', 'id': '7'}
+          ]);
+      expect(
+          walkFhirPath(
+              context: bundle.toJson(),
+              pathExpression: 'Bundle.entry.select(resource as Practitioner)'),
+          [
+            {'resourceType': 'Practitioner', 'id': '2'},
+            {'resourceType': 'Practitioner', 'id': '4'},
+            {'resourceType': 'Practitioner', 'id': '5'}
+          ]);
+    });
     // test('repeat', () {
     //   expect(
     //       walkFhirPath(

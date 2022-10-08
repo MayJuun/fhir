@@ -4,15 +4,11 @@ List? _$visitIndexerExpression(
   IndexerExpressionContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  final tempVisitor = visitor.copyWith();
   if (ctx.expressions().length != 2 && ctx.children != 4) {
     throw Exception('IndexerExpression passed incorrect context');
   }
-  final originalContext = visitor.context;
-  final List? results = visitor.visit(ctx.getChild(0)!);
-  visitor.context = originalContext;
-  final List? value = visitor.visit(ctx.getChild(2)!);
-  visitor.context = originalContext;
+  final List? results = visitor.copyWith().visit(ctx.getChild(0)!);
+  final List? value = visitor.copyWith().visit(ctx.getChild(2)!);
 
   visitor.context = results == null ||
           results.isEmpty ||

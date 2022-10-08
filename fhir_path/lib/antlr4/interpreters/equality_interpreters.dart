@@ -8,17 +8,11 @@ List? _$visitEqualityExpression(
     throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
   }
   final originalContext = visitor.context;
-  ctx.children?.forEach((element) {
-    print(element.text);
-  });
   final lhs = visitor.visit(ctx.getChild(0)!);
   visitor.context = originalContext;
   final rhs = visitor.visit(ctx.getChild(2)!);
   visitor.context = originalContext;
   final operator = ctx.getChild(1)?.text;
-  print('LHS $lhs');
-  print('RHS $rhs');
-  print(operator);
   void compare(bool equivalent) {
     if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
       if (equivalent) {

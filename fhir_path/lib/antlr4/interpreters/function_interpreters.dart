@@ -16,11 +16,6 @@ List? _$visitFunction(
     final function = ctx.childCount == 4
         ? ctx.getChild(0)!.text
         : ctx.text.replaceAll('()', '');
-    final originalContext = visitor.context;
-    final args = visitor.visit(ctx.getChild(2)!);
-    print('FUNCTION: $function');
-    visitor.context = originalContext;
-    print(visitor.context);
     switch (function) {
       case 'empty':
         {
@@ -563,8 +558,55 @@ List? _$visitFunction(
           visitor.context = [visitor.context.isNotEmpty];
         }
         break;
+      case 'all':
+        {
+          if (ctx.childCount == 4) {
+            final oldCount = visitor.context.length;
+            visitor.context.retainWhere((element) {
+              final result =
+                  visitor.copyWith(context: [element]).visit(ctx.getChild(2)!);
+              return result != null &&
+                  result.isNotEmpty &&
+                  result.length == 1 &&
+                  (ctx.getChild(2)!.text == r'$this' || result.first);
+            });
+            visitor.context = [oldCount == visitor.context.length];
+          } else {
+            visitor.context = [true];
+          }
+        }
+        break;
+      case 'subsetOf':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
+          if (visitor.context.isEmpty) {
+            visitor.context = [true];
+          } else if (args?.isEmpty ?? true) {
+            visitor.context = [false];
+          } else {
+            visitor.context = [
+              args!.toSet().containsAll(visitor.context.toSet())
+            ];
+          }
+        }
+        break;
+      case 'supersetOf':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
+          if (visitor.context.isEmpty) {
+            visitor.context = [false];
+          } else if (args?.isEmpty ?? true) {
+            visitor.context = [true];
+          } else {
+            visitor.context = [
+              visitor.context.toSet().containsAll(args!.toSet())
+            ];
+          }
+        }
+        break;
       case 'log':
         {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
           if (visitor.context.isEmpty || (args?.isEmpty ?? true)) {
             visitor.context = [];
           } else if (visitor.context.first is! num &&
@@ -587,6 +629,7 @@ List? _$visitFunction(
         break;
       case 'round':
         {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
           visitor.context = visitor.context.isEmpty
               ? []
               : visitor.context.length > 1
@@ -614,6 +657,15 @@ List? _$visitFunction(
                 result.length == 1 &&
                 (ctx.getChild(2)!.text == r'$this' || result.first);
           });
+        }
+        break;
+      case 'select':
+        {
+          visitor.context = visitor.context
+              .map((e) => visitor.copyWith(context: [e]).visit(
+                  ctx.getChild(ctx.childCount == 3 ? 1 : 2)!))
+              .expand((element) => element ?? [])
+              .toList();
         }
         break;
 

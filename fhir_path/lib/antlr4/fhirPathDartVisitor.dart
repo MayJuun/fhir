@@ -23,6 +23,7 @@ part 'interpreters/function_interpreters.dart';
 part 'interpreters/math_interpreters.dart';
 part 'interpreters/utility_interpreters.dart';
 part 'interpreters/equality_interpreters.dart';
+part 'interpreters/boolean_logic_interpreters.dart';
 
 /// This is the overriden class for [FhirPathVisitor],
 /// which can be extended to create a visitor which only needs to handle
@@ -52,8 +53,9 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
 
   List<dynamic> _context;
   List<dynamic> get context => _context;
+
   set context(List<dynamic> newContext) {
-    print('CONTEXT: $newContext');
+    print('NEWCONTEXT: $newContext');
     _context = newContext;
   }
 
@@ -64,6 +66,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   void printContextType(ParseTree ctx) {
     if (printType) {
       print('${ctx.runtimeType} : ${ctx.text}');
+      // print('TYPECONTEXT: ${_context}');
     }
   }
 
@@ -114,7 +117,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitAndExpression(AndExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitAndExpression(ctx, this);
   }
 
   @override

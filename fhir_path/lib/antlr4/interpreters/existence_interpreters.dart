@@ -23,36 +23,49 @@ _$visitTypeExpression(
   if (ctx.childCount != 3) {
     throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
   }
+  final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
+  final rhsText = ctx.getChild(2)!.text?.toLowerCase();
 
-  final originalContext = visitor.context;
-  final lhs = visitor.visit(ctx.getChild(0)!);
-  visitor.context = originalContext;
-
-  /// ToDo: this feels like a workaround
-  var rhs = [
-    'String',
-    'Boolean',
-    'Integer',
-    'Decimal',
-    'Date',
-    'DateTime',
-    'Time',
-    'Quantity',
-  ].contains(ctx.getChild(2)!.text)
+  final List<dynamic>? rhs = (visitor.environment.isVersion(FhirVersion.r4)
+              ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+                  .contains(rhsText)
+              : visitor.environment.isVersion(FhirVersion.r5)
+                  ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                      .contains(rhsText)
+                  : visitor.environment.isVersion(FhirVersion.dstu2)
+                      ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                          .contains(rhsText)
+                      : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                          .contains(rhsText)) ||
+          [
+            'string',
+            'boolean',
+            'integer',
+            'decimal',
+            'date',
+            'dateTime',
+            'time',
+            'quantity',
+          ].contains(rhsText)
       ? [ctx.getChild(2)!.text]
-      : visitor.visit(ctx.getChild(2)!);
+      : visitor.copyWith().visit(ctx.getChild(2)!);
 
-  if (ctx.getChild(1)?.text == 'is') {
-    visitor.context = (lhs?.isEmpty ?? true) ||
-            lhs!.length != 1 ||
-            (rhs?.isEmpty ?? true) ||
-            rhs!.length != 1
-        ? throw FhirPathEvaluationException(
-            'the "is" operation requires two operands, this was '
-            'passed the following\n'
-            'Operand1: $lhs\n'
-            'Operand2: $rhs',
-            collection: visitor.context)
+  final operator = ctx.getChild(1)?.text;
+
+  if ((lhs?.isEmpty ?? true) ||
+      lhs!.length != 1 ||
+      (rhs?.isEmpty ?? true) ||
+      rhs!.length != 1) {
+    throw FhirPathEvaluationException(
+        'the "$operator" operation requires two operands, this was '
+        'passed the following\n'
+        'Operand1: $lhs\n'
+        'Operand2: $rhs',
+        collection: visitor.context);
+  }
+
+    visitor.context =
+        ?
         : (visitor.environment.isVersion(FhirVersion.r4)
                     ? r4.ResourceUtils.resourceTypeFromStringMap.keys
                         .contains(rhs.first)
@@ -97,7 +110,46 @@ _$visitTypeExpression(
                                         : rhs.first == 'Quantity'
                                             ? [isQuantity(lhs.first)]
                                             : [false];
-  }
+
+  //     final identifierValue = rhs!.first;
+  //     if (((visitor.environment.isVersion(FhirVersion.r4)
+  //                 ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+  //                     .contains(identifierValue)
+  //                 : visitor.environment.isVersion(FhirVersion.r5)
+  //                     ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+  //                         .contains(identifierValue)
+  //                     : visitor.environment.isVersion(FhirVersion.dstu2)
+  //                         ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+  //                             .contains(identifierValue)
+  //                         : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+  //                             .contains(identifierValue)) &&
+  //             lhs!.first is Map &&
+  //             lhs.first['resourceType'] == identifierValue) ||
+  //         (identifierValue.toLowerCase() == 'string' &&
+  //             (lhs!.first is String)) ||
+  //         (identifierValue.toLowerCase() == 'boolean' &&
+  //             (lhs!.first is bool || lhs.first is Boolean)) ||
+  //         (identifierValue.toLowerCase() == 'integer' &&
+  //             (lhs!.first is int || lhs.first is Integer)) ||
+  //         (identifierValue.toLowerCase() == 'decimal' &&
+  //             (lhs!.first is double || lhs.first is Decimal)) ||
+  //         (identifierValue.toLowerCase() == 'date' && lhs!.first is Date) ||
+  //         (identifierValue.toLowerCase() == 'datetime' &&
+  //             (lhs!.first is DateTime || lhs.first is FhirDateTime)) ||
+  //         (identifierValue.toLowerCase() == 'time' && lhs!.first is Time) ||
+  //         (identifierValue == 'quantity' && lhs!.first is FhirPathQuantity)) {
+  //       visitor.context = lhs;
+  //     } else if (FhirDatatypes.contains(identifierValue)) {
+  //       /// TODO
+  //       // final polymorphicString = 'value' + identifierValue;
+  //       // final polymorphicIdentifier = IdentifierParser(polymorphicString);
+  //       // final polymorphicParserList = ParserList([polymorphicIdentifier]);
+  //       // return polymorphicParserList.execute(results.toList(), passed);
+  //     } else {
+  //       visitor.context = [];
+  //     }
+  //   }
+  // }
 
   return visitor.context;
 }
