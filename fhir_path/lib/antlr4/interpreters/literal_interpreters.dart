@@ -4,7 +4,7 @@ List? _$visitBooleanLiteral(
   BooleanLiteralContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  visitor.context = [ctx.text == 'true'];
+  visitor.context = <dynamic>[ctx.text == 'true'];
   return visitor.context;
 }
 
@@ -13,7 +13,7 @@ List? _$visitNumberLiteral(
   FhirPathDartVisitor visitor,
 ) {
   final value = num.tryParse(ctx.text);
-  visitor.context = value == null ? [] : [value];
+  visitor.context = value == null ? <dynamic>[] : <dynamic>[value];
   return visitor.context;
 }
 
@@ -25,9 +25,9 @@ List? _$visitStringLiteral(
   if (newString != '' &&
       newString[0] == r'\' &&
       !escapeSequences.contains(newString)) {
-    visitor.context = [newString.substring(1)];
+    visitor.context = <dynamic>[newString.substring(1)];
   } else {
-    visitor.context = [newString];
+    visitor.context = <dynamic>[newString];
   }
   return visitor.context;
 }
@@ -36,7 +36,7 @@ List? _$visitDateLiteral(
   DateLiteralContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  visitor.context = [
+  visitor.context = <dynamic>[
     Date(ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text)
   ];
   return visitor.context;
@@ -48,7 +48,7 @@ List? _$visitDateTimeLiteral(
 ) {
   var dateText = ctx.text.startsWith('@') ? ctx.text.substring(1) : ctx.text;
   dateText = dateText.endsWith('T') ? dateText.replaceAll('T', '') : dateText;
-  visitor.context = [FhirDateTime(dateText)];
+  visitor.context = <dynamic>[FhirDateTime(dateText)];
   return visitor.context;
 }
 
@@ -56,7 +56,7 @@ List? _$visitTimeLiteral(
   TimeLiteralContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  visitor.context = [
+  visitor.context = <dynamic>[
     Time(ctx.text.startsWith('@T') ? ctx.text.substring(2) : ctx.text)
   ];
   return visitor.context;
@@ -83,7 +83,7 @@ List? _$visitIdentifier(
           (ctx.childCount == 1 &&
               ctx.getChild(0).runtimeType == TerminalNodeImpl))
       ? visitor.context
-      : visitor.visitChildren(ctx) ?? [];
+      : visitor.visitChildren(ctx) ?? <dynamic>[];
   final finalResults = [];
   final finalPrimitiveExtensions =
       List<dynamic>.filled(results.length, null, growable: false);
@@ -182,25 +182,27 @@ List? _$visitExternalConstant(
   final variableName = ctx.text;
 
   if (variableName == '%sct') {
-    return ['http://snomed.info/sct'];
+    visitor.context = <dynamic>['http://snomed.info/sct'];
   }
 
   if (variableName == '%loinc') {
-    return ['http://loinc.org'];
+    visitor.context = <dynamic>['http://loinc.org'];
   }
 
   if (variableName == '%ucum') {
-    return ['http://unitsofmeasure.org'];
+    visitor.context = <dynamic>['http://unitsofmeasure.org'];
   }
 
   if (variableName.startsWith('%vs-')) {
     final valueSet = variableName.substring(4);
-    return ['http://hl7.org/fhir/ValueSet/$valueSet'];
+    visitor.context = <dynamic>['http://hl7.org/fhir/ValueSet/$valueSet'];
   }
 
   if (variableName.startsWith('%ext-')) {
     final extension = variableName.substring(5);
-    return ['http://hl7.org/fhir/StructureDefinition/$extension'];
+    visitor.context = <dynamic>[
+      'http://hl7.org/fhir/StructureDefinition/$extension'
+    ];
   }
 
   final passedValue = visitor.environment[variableName];
@@ -210,16 +212,20 @@ List? _$visitExternalConstant(
   }
 
   if (passedValue is! Function()) {
-    return passedValue is List ? passedValue : [passedValue];
+    visitor.context = passedValue is List
+        ? List<dynamic>.from(passedValue)
+        : <dynamic>[passedValue];
   } else {
     try {
       final result = passedValue();
-
-      return result is List ? result : [result];
+      visitor.context =
+          result is List ? List<dynamic>.from(result) : <dynamic>[result];
     } catch (ex) {
       throw FhirPathEvaluationException(
           'Variable $variableName could not be lazily evaluated.',
           cause: ex);
     }
   }
+
+  return visitor.context;
 }

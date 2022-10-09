@@ -62,7 +62,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   final Map<String, dynamic> environment;
 
   /// This is purely for testing purposes
-  static const bool printType = false;
+  static const bool printType = true;
   void printContextType(ParseTree ctx) {
     if (printType) {
       print('${ctx.runtimeType} : ${ctx.text}');
@@ -287,7 +287,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitParamList(ParamListContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitParamList(ctx, this);
   }
 
   @override

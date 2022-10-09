@@ -9,7 +9,7 @@ List? _$visitAndExpression(
   }
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
-  visitor.context = [
+  visitor.context = <dynamic>[
     lhs != null &&
         lhs.length == 1 &&
         lhs.first &&

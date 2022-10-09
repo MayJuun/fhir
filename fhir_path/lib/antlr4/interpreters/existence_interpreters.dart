@@ -5,15 +5,14 @@ List? _$visitNullLiteral(
   FhirPathDartVisitor visitor,
 ) {
   if (ctx.text == '{}') {
-    visitor.context = [];
-    return [];
+    visitor.context = <dynamic>[];
   } else if (ctx.childCount > 0) {
     final newVisitor = visitor.copyWith(context: []);
     return newVisitor.visitChildren(ctx);
   } else {
-    visitor.context = [];
-    return [];
+    visitor.context = <dynamic>[];
   }
+  return visitor.context;
 }
 
 _$visitTypeExpression(
@@ -135,12 +134,13 @@ _$visitTypeExpression(
     visitor.context = lhs;
   } else if (FhirDatatypes.contains(rhs.first)) {
     /// TODO
-    // final polymorphicString = 'value' + rhs.first;
+    final polymorphicString = 'value' + rhs.first;
+
     // final polymorphicIdentifier = IdentifierParser(polymorphicString);
     // final polymorphicParserList = ParserList([polymorphicIdentifier]);
     // return polymorphicParserList.execute(results.toList(), passed);
   } else {
-    visitor.context = [];
+    visitor.context = <dynamic>[];
   }
 
   return visitor.context;

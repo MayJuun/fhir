@@ -10,7 +10,7 @@ List? _$visitParenthesizedTerm(
         'parentheses (as far as the parser is concerned, but this was called with '
         'a ${ctx.childCount} contexts/children');
   }
-  visitor.context = visitor.visit(ctx.getChild(1)!) ?? [];
+  visitor.context = visitor.visit(ctx.getChild(1)!) ?? <dynamic>[];
   return visitor.context;
 }
 
@@ -19,6 +19,26 @@ List? _$visitThisInvocation(
   FhirPathDartVisitor visitor,
 ) {
   return visitor.context;
+}
+
+List? _$visitParamList(
+  ParamListContext ctx,
+  FhirPathDartVisitor visitor,
+) {
+  final commaIndex = ctx.children?.indexWhere(
+      (element) => element is TerminalNodeImpl && element.text == ',');
+  if (commaIndex != null && commaIndex != -1) {
+    final tempContext = [];
+    ctx.children?.forEach((element) {
+      if (element is! TerminalNodeImpl && element.text != ',') {
+        tempContext.addAll(visitor.copyWith().visit(element) ?? []);
+      }
+    });
+    visitor.context = tempContext;
+    return visitor.context;
+  } else {
+    return visitor.visitChildren(ctx);
+  }
 }
 
 class IterationContext {

@@ -7,24 +7,23 @@ List? _$visitEqualityExpression(
   if (ctx.childCount != 3) {
     throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
   }
-  final originalContext = visitor.context;
-  final lhs = visitor.visit(ctx.getChild(0)!);
-  visitor.context = originalContext;
-  final rhs = visitor.visit(ctx.getChild(2)!);
-  visitor.context = originalContext;
+  final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
+  final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
   final operator = ctx.getChild(1)?.text;
   void compare(bool equivalent) {
     if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
       if (equivalent) {
-        visitor.context = [(lhs?.isEmpty ?? true) && (rhs?.isEmpty ?? true)];
+        visitor.context = <dynamic>[
+          (lhs?.isEmpty ?? true) && (rhs?.isEmpty ?? true)
+        ];
       } else {
-        visitor.context = [];
+        visitor.context = <dynamic>[];
       }
     } else if (lhs!.length != rhs!.length) {
-      visitor.context = [false];
+      visitor.context = <dynamic>[false];
     } else {
       /// set true as default
-      visitor.context = [true];
+      visitor.context = <dynamic>[true];
 
       /// for each entry in lhs and rhs (we checked above to ensure they
       /// were the same length)
@@ -36,7 +35,7 @@ List? _$visitEqualityExpression(
             try {
               if (lhs[i] != rhs[i]) {
                 if (equivalent) {
-                  visitor.context = [false];
+                  visitor.context = <dynamic>[false];
                 } else {
                   var lhsDatePrecision =
                       '-'.allMatches(lhs[i].toString()).length;
@@ -56,25 +55,25 @@ List? _$visitEqualityExpression(
                       rhsTimePrecision > 2 ? 2 : rhsTimePrecision;
                   if (lhsDatePrecision != rhsDatePrecision ||
                       lhsTimePrecision != rhsTimePrecision) {
-                    visitor.context = [];
+                    visitor.context = <dynamic>[];
                   } else {
-                    visitor.context = [false];
+                    visitor.context = <dynamic>[false];
                   }
                 }
               }
             } catch (e) {
-              visitor.context = [];
+              visitor.context = <dynamic>[];
             }
           } else {
             /// If not it means only one is, so this is false
-            visitor.context = [false];
+            visitor.context = <dynamic>[false];
           }
         }
 
         /// If they aren't we can just compare them as usual
         else {
           if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
-            visitor.context = [false];
+            visitor.context = <dynamic>[false];
           }
         }
       }
@@ -96,7 +95,7 @@ List? _$visitEqualityExpression(
       {
         compare(false);
         if (visitor.context.isNotEmpty) {
-          visitor.context = [!visitor.context.first];
+          visitor.context = <dynamic>[!visitor.context.first];
         }
       }
       break;
@@ -104,15 +103,13 @@ List? _$visitEqualityExpression(
       {
         compare(true);
         if (visitor.context.isNotEmpty) {
-          visitor.context = [!visitor.context.first];
+          visitor.context = <dynamic>[!visitor.context.first];
         }
       }
       break;
   }
 
-  final returnValue = visitor.context;
-  visitor.context = originalContext;
-  return returnValue;
+  return visitor.context;
 }
 
 const _allowedTypes = [
@@ -136,18 +133,15 @@ List? _$visitInequalityExpression(
   if (ctx.childCount != 3) {
     throw _wrongArgLength('log()', ctx.children ?? []);
   }
-  final originalContext = visitor.context;
 
   /// calculate the two arguments and the comparator
-  final lhs = visitor.visit(ctx.getChild(0)!);
-  visitor.context = originalContext;
-  final rhs = visitor.visit(ctx.getChild(2)!);
-  visitor.context = originalContext;
+  final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
+  final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
   final operator = ctx.getChild(1)?.text;
 
   /// if either of them is empty, return an empty list
   if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
-    visitor.context = [];
+    visitor.context = <dynamic>[];
   } else
 
   /// if either contains more than one item, this is an error
@@ -193,7 +187,7 @@ List? _$visitInequalityExpression(
             arguments: [lhs, rhs]);
     }
     final newResult = compare(comparator, lhs.first, rhs.first);
-    visitor.context = newResult == null ? [] : [newResult];
+    visitor.context = newResult == null ? <dynamic>[] : <dynamic>[newResult];
   }
   return visitor.context;
 }

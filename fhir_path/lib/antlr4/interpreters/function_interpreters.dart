@@ -19,43 +19,45 @@ List? _$visitFunction(
     switch (function) {
       case 'empty':
         {
-          visitor.context = [visitor.context.isEmpty];
+          visitor.context = <dynamic>[visitor.context.isEmpty];
         }
         break;
       case 'allTrue':
         {
-          visitor.context = [
+          visitor.context = <dynamic>[
             !visitor.context.any((element) => element == false)
           ];
         }
         break;
       case 'anyTrue':
         {
-          visitor.context = [visitor.context.any((element) => element == true)];
+          visitor.context = <dynamic>[
+            visitor.context.any((element) => element == true)
+          ];
         }
         break;
       case 'allFalse':
         {
-          visitor.context = [
+          visitor.context = <dynamic>[
             !visitor.context.any((element) => element == true)
           ];
         }
         break;
       case 'anyFalse':
         {
-          visitor.context = [
+          visitor.context = <dynamic>[
             visitor.context.any((element) => element == false)
           ];
         }
         break;
       case 'count':
         {
-          visitor.context = [visitor.context.length];
+          visitor.context = <dynamic>[visitor.context.length];
         }
         break;
       case 'distinct':
         {
-          var resultsList = [];
+          var resultsList = <dynamic>[];
           for (var results in visitor.context) {
             if (notFoundInList(resultsList, results)) {
               resultsList.add(results);
@@ -66,13 +68,15 @@ List? _$visitFunction(
         break;
       case 'isDistinct':
         {
-          final resultsList = [];
+          final resultsList = <dynamic>[];
           for (var results in visitor.context) {
             if (notFoundInList(resultsList, results)) {
               resultsList.add(results);
             }
           }
-          visitor.context = [resultsList.length == visitor.context.length];
+          visitor.context = <dynamic>[
+            resultsList.length == visitor.context.length
+          ];
         }
         break;
       case 'single':
@@ -80,7 +84,7 @@ List? _$visitFunction(
           visitor.context = visitor.context.length == 1
               ? visitor.context
               : visitor.context.isEmpty
-                  ? []
+                  ? <dynamic>[]
                   : throw FhirPathEvaluationException(
                       'The List ${visitor.context} is only allowed to contain one '
                       'item if evaluated using the .single() function',
@@ -90,20 +94,22 @@ List? _$visitFunction(
         break;
       case 'first':
         {
-          visitor.context =
-              visitor.context.isEmpty ? [] : [visitor.context.first];
+          visitor.context = visitor.context.isEmpty
+              ? <dynamic>[]
+              : <dynamic>[visitor.context.first];
         }
         break;
       case 'last':
         {
-          visitor.context =
-              visitor.context.isEmpty ? [] : [visitor.context.last];
+          visitor.context = visitor.context.isEmpty
+              ? <dynamic>[]
+              : <dynamic>[visitor.context.last];
         }
         break;
       case 'tail':
         {
           if (visitor.context.length < 2) {
-            visitor.context = [];
+            visitor.context = <dynamic>[];
           } else {
             visitor.context.removeAt(0);
             visitor.context = visitor.context;
@@ -113,11 +119,11 @@ List? _$visitFunction(
       case 'toBoolean':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException('.toBoolean()', visitor.context)
                   : _isNotAcceptedType(visitor.context)
-                      ? []
+                      ? <dynamic>[]
                       : visitor.context.first == true ||
                               visitor.context.first == 1 ||
                               ['true', 't', 'yes', 'y', '1', '1.0'].indexWhere(
@@ -127,7 +133,7 @@ List? _$visitFunction(
                                               .toString()
                                               .toLowerCase()) !=
                                   -1
-                          ? [true]
+                          ? <dynamic>[true]
                           : visitor.context.first == false ||
                                   visitor.context.first == 0 ||
                                   ['false', 'f', 'no', 'n', '0', '0.0']
@@ -137,19 +143,19 @@ List? _$visitFunction(
                                                   .toString()
                                                   .toLowerCase()) !=
                                       -1
-                              ? [false]
-                              : [];
+                              ? <dynamic>[false]
+                              : <dynamic>[];
         }
         break;
       case 'convertsToBoolean':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException(
                       '.convertsToBoolean()', visitor.context)
                   : _isNotAcceptedType(visitor.context)
-                      ? [false]
+                      ? <dynamic>[false]
                       : visitor.context.first is bool ||
                               visitor.context.first == 1 ||
                               visitor.context.first == 0 ||
@@ -172,178 +178,182 @@ List? _$visitFunction(
                                           .toString()
                                           .toLowerCase()) !=
                                   -1
-                          ? [true]
-                          : [false];
+                          ? <dynamic>[true]
+                          : <dynamic>[false];
         }
         break;
       case 'toInteger':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException('.toInteger()', visitor.context)
                   : _isNotAcceptedType(visitor.context)
-                      ? [false]
+                      ? <dynamic>[false]
                       : visitor.context.first is bool
-                          ? [visitor.context.first == true ? 1 : 0]
+                          ? <dynamic>[visitor.context.first == true ? 1 : 0]
                           : visitor.context.first is num
-                              ? [visitor.context.first.toInt()]
+                              ? <dynamic>[visitor.context.first.toInt()]
                               : int.tryParse(visitor.context.first) != null
-                                  ? [int.parse(visitor.context.first)]
-                                  : [];
+                                  ? <dynamic>[int.parse(visitor.context.first)]
+                                  : <dynamic>[];
         }
         break;
       case 'convertsToInteger':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException(
                       '.convertsToInteger()', visitor.context)
                   : _isNotAcceptedType(visitor.context)
-                      ? []
+                      ? <dynamic>[]
                       : visitor.context.first is bool
-                          ? [true]
+                          ? <dynamic>[true]
                           : visitor.context.first is num
-                              ? [true]
+                              ? <dynamic>[true]
                               : int.tryParse(visitor.context.first) != null
-                                  ? [true]
-                                  : [false];
+                                  ? <dynamic>[true]
+                                  : <dynamic>[false];
         }
         break;
       case 'toDate':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException('.toDate()', visitor.context)
                   : Date(visitor.context.first.toString()).isValid
-                      ? [Date(visitor.context.first.toString())]
-                      : [];
+                      ? <dynamic>[Date(visitor.context.first.toString())]
+                      : <dynamic>[];
         }
         break;
       case 'convertsToDate':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException(
                       '.convertsToDate()', visitor.context)
-                  : [Date(visitor.context.first.toString()).isValid];
+                  : <dynamic>[Date(visitor.context.first.toString()).isValid];
         }
         break;
       case 'toDateTime':
         visitor.context = visitor.context.isEmpty
-            ? []
+            ? <dynamic>[]
             : visitor.context.length > 1
                 ? throw _conversionException('.toDateTime()', visitor.context)
                 : FhirDateTime(visitor.context.first.toString()).isValid
-                    ? [FhirDateTime(visitor.context.first.toString())]
-                    : [];
+                    ? <dynamic>[FhirDateTime(visitor.context.first.toString())]
+                    : <dynamic>[];
         break;
       case 'convertsToDateTime':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException(
                       '.convertsToDateTime()', visitor.context)
                   : FhirDateTime(visitor.context.first.toString()).isValid
-                      ? [FhirDateTime(visitor.context.first.toString()).isValid]
-                      : [];
+                      ? <dynamic>[
+                          FhirDateTime(visitor.context.first.toString()).isValid
+                        ]
+                      : <dynamic>[];
         }
         break;
       case 'toDecimal':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException('.toDecimal()', visitor.context)
                   : _isNotAcceptedType(visitor.context)
-                      ? [false]
+                      ? <dynamic>[false]
                       : visitor.context.first is bool
-                          ? [visitor.context.first == true ? 1 : 0]
+                          ? <dynamic>[visitor.context.first == true ? 1 : 0]
                           : visitor.context.first is num
-                              ? [visitor.context.first.toDouble()]
+                              ? <dynamic>[visitor.context.first.toDouble()]
                               : double.tryParse(visitor.context.first) != null
-                                  ? [double.parse(visitor.context.first)]
-                                  : [];
+                                  ? <dynamic>[
+                                      double.parse(visitor.context.first)
+                                    ]
+                                  : <dynamic>[];
         }
         break;
       case 'convertsToDecimal':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException(
                       '.convertsToDecimal()', visitor.context)
                   : _isNotAcceptedType(visitor.context)
-                      ? []
+                      ? <dynamic>[]
                       : visitor.context.first is bool
-                          ? [true]
+                          ? <dynamic>[true]
                           : visitor.context.first is num
-                              ? [true]
+                              ? <dynamic>[true]
                               : double.tryParse(visitor.context.first) != null
-                                  ? [true]
-                                  : [false];
+                                  ? <dynamic>[true]
+                                  : <dynamic>[false];
         }
         break;
       case 'toString':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException('.toString()', visitor.context)
                   : _isAllTypes(visitor.context)
-                      ? [false]
-                      : [visitor.context.first.toString()];
+                      ? <dynamic>[false]
+                      : <dynamic>[visitor.context.first.toString()];
         }
         break;
       case 'convertsToString':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException(
                       '.convertsToString()', visitor.context)
                   : _isAllTypes(visitor.context)
-                      ? [false]
-                      : [true];
+                      ? <dynamic>[false]
+                      : <dynamic>[true];
         }
         break;
       case 'toTime':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException('.toTime()', visitor.context)
                   : visitor.context.first is Time
-                      ? [visitor.context.first]
+                      ? <dynamic>[visitor.context.first]
                       : visitor.context.first is String &&
                               Time(visitor.context.first).isValid
-                          ? [Time(visitor.context.first)]
-                          : [];
+                          ? <dynamic>[Time(visitor.context.first)]
+                          : <dynamic>[];
         }
         break;
       case 'convertsToTime':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException(
                       '.convertsToTime()', visitor.context)
                   : visitor.context.first is Time
-                      ? [true]
+                      ? <dynamic>[true]
                       : visitor.context.first is String &&
                               Time(visitor.context.first).isValid
-                          ? [true]
-                          : [false];
+                          ? <dynamic>[true]
+                          : <dynamic>[false];
         }
         break;
       case 'toQuantity':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException('.toQuantity()', visitor.context)
                   // : visitor.context.first is FhirPathQuantity
@@ -352,63 +362,63 @@ List? _$visitFunction(
                   //         ? [FhirPathQuantity(visitor.context.first, '1')]
                   //         : visitor.context.first is String
                   //             ? [FhirPathQuantity.fromString(visitor.context.first)]
-                  : [];
+                  : <dynamic>[];
         }
         break;
       case 'convertsToQuantity':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException(
                       '.convertsToQuantity()', visitor.context)
                   : (visitor.context.first is num ||
                           // visitor.context.first is FhirPathQuantity ||
                           visitor.context.first is bool)
-                      ? [true]
+                      ? <dynamic>[true]
                       // : (visitor.context.first is String &&
                       //         ToQuantityParser()
                       //             .execute(visitor.context, passed)
                       //             .isNotEmpty)
                       //     ? [true]
-                      : [false];
+                      : <dynamic>[false];
         }
         break;
       case 'upper':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _requiresList('.upper()', visitor.context)
-                  : [visitor.context.first.toString().toUpperCase()];
+                  : <dynamic>[visitor.context.first.toString().toUpperCase()];
         }
         break;
       case 'lower':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _requiresList('.lower()', visitor.context)
-                  : [visitor.context.first.toString().toLowerCase()];
+                  : <dynamic>[visitor.context.first.toString().toLowerCase()];
         }
         break;
       case 'length':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _requiresList('.length()', visitor.context)
                   : visitor.context.first is String
-                      ? [visitor.context.first.length]
+                      ? <dynamic>[visitor.context.first.length]
                       : visitor.context.first is String
-                          ? [visitor.context.first.value.length]
+                          ? <dynamic>[visitor.context.first.value.length]
                           : throw _requiresString('.length()', visitor.context);
         }
         break;
       case 'toChars':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _requiresList('.toChars()', visitor.context)
                   : visitor.context.first is String
@@ -421,13 +431,13 @@ List? _$visitFunction(
       case 'abs':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _wrongLength('.abs()', visitor.context)
                   : visitor.context.first is num
                       ? visitor.context.first.abs().isNaN
-                          ? []
-                          : [(visitor.context.first as num).abs()]
+                          ? <dynamic>[]
+                          : <dynamic>[(visitor.context.first as num).abs()]
                       // : visitor.context.first is FhirPathQuantity
                       // ? visitor.context.first.abs().isNaN
                       // ? []
@@ -438,11 +448,11 @@ List? _$visitFunction(
       case 'ceiling':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _wrongLength('.ceiling()', visitor.context)
                   : visitor.context.first is num
-                      ? [visitor.context.first.ceil()]
+                      ? <dynamic>[visitor.context.first.ceil()]
                       : throw _wrongTypes(
                           '.ceiling()', visitor.context, 'none');
         }
@@ -450,85 +460,86 @@ List? _$visitFunction(
       case 'exp':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _wrongLength('.exp()', visitor.context)
                   : visitor.context.first is num
-                      ? [exp(visitor.context.first)]
+                      ? <dynamic>[exp(visitor.context.first)]
                       : throw _wrongTypes('.exp()', visitor.context, 'none');
         }
         break;
       case 'floor':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _wrongLength('.floor()', visitor.context)
                   : visitor.context.first is num
-                      ? [visitor.context.first.floor()]
+                      ? <dynamic>[visitor.context.first.floor()]
                       : throw _wrongTypes('.floor()', visitor.context, 'none');
         }
         break;
       case 'ln':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _wrongLength('.ln()', visitor.context)
                   : visitor.context.first is num
-                      ? [log(visitor.context.first)]
+                      ? <dynamic>[log(visitor.context.first)]
                       : throw _wrongTypes('.ln()', visitor.context, 'none');
         }
         break;
       case 'power':
         {
-          // final executedValue = value.execute(visitor.context.toList(), passed);
-          // if (visitor.context.isEmpty || executedValue.isEmpty) {
-          //   return [];
-          // } else if (visitor.context.length > 1) {
-          //   throw _wrongLength('.power()', visitor.context);
-          // } else if (executedValue.length > 1) {
-          //   throw _wrongArgLength('.power()', executedValue);
-          // }
-          // final finalvisitor.context = visitor.context.first is num
-          //     ? visitor.context.first
-          //     : throw _wrongTypes('.power()', visitor.context, executedValue);
-          // final finalValue = executedValue.first is num
-          //     ? executedValue.first
-          //     : throw _wrongTypes('.power()', visitor.context, executedValue);
-          // return pow(finalvisitor.context, finalValue).isNaN
-          //     ? []
-          //     : [pow(finalvisitor.context, finalValue)];
+          final args = visitor.copyWith().visit(ctx.getChild(2)!);
+          if (visitor.context.isEmpty || (args?.isEmpty ?? true)) {
+            visitor.context = [];
+          } else if (visitor.context.length > 1) {
+            throw _wrongLength('.power()', visitor.context);
+          } else if (args!.length > 1) {
+            throw _wrongArgLength('.power()', args);
+          } else {
+            final base = visitor.context.first is num
+                ? visitor.context.first
+                : throw _wrongTypes(
+                    '.power()', visitor.context, visitor.context);
+            final exponent = args.first is num
+                ? args.first
+                : throw _wrongTypes('.power()', visitor.context, args);
+            visitor.context =
+                pow(base, exponent).isNaN ? [] : [pow(base, exponent)];
+          }
         }
         break;
       case 'sqrt':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _wrongLength('.sqrt()', visitor.context)
                   : visitor.context.first is num
                       ? (sqrt(visitor.context.first).isNaN
-                          ? []
-                          : [sqrt(visitor.context.first)])
+                          ? <dynamic>[]
+                          : <dynamic>[sqrt(visitor.context.first)])
                       : throw _wrongTypes('.sqrt()', visitor.context, 'none');
         }
         break;
       case 'truncate':
         {
           visitor.context = visitor.context.isEmpty
-              ? []
+              ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _wrongLength('.truncate()', visitor.context)
                   : visitor.context.first is num
-                      ? [(visitor.context.first).toInt()]
+                      ? <dynamic>[(visitor.context.first).toInt()]
                       : throw _wrongTypes(
                           '.truncate()', visitor.context, 'none');
         }
         break;
       case 'children':
         {
-          final finalResults = [];
+          final finalResults = <dynamic>[];
           for (var r in visitor.context) {
             if (r is Map) {
               r.forEach((key, value) {
@@ -570,9 +581,9 @@ List? _$visitFunction(
                   result.length == 1 &&
                   (ctx.getChild(2)!.text == r'$this' || result.first);
             });
-            visitor.context = [oldCount == visitor.context.length];
+            visitor.context = <dynamic>[oldCount == visitor.context.length];
           } else {
-            visitor.context = [true];
+            visitor.context = <dynamic>[true];
           }
         }
         break;
@@ -580,11 +591,11 @@ List? _$visitFunction(
         {
           final args = visitor.copyWith().visit(ctx.getChild(2)!);
           if (visitor.context.isEmpty) {
-            visitor.context = [true];
+            visitor.context = <dynamic>[true];
           } else if (args?.isEmpty ?? true) {
-            visitor.context = [false];
+            visitor.context = <dynamic>[false];
           } else {
-            visitor.context = [
+            visitor.context = <dynamic>[
               args!.toSet().containsAll(visitor.context.toSet())
             ];
           }
@@ -594,11 +605,11 @@ List? _$visitFunction(
         {
           final args = visitor.copyWith().visit(ctx.getChild(2)!);
           if (visitor.context.isEmpty) {
-            visitor.context = [false];
+            visitor.context = <dynamic>[false];
           } else if (args?.isEmpty ?? true) {
-            visitor.context = [true];
+            visitor.context = <dynamic>[true];
           } else {
-            visitor.context = [
+            visitor.context = <dynamic>[
               visitor.context.toSet().containsAll(args!.toSet())
             ];
           }
@@ -608,7 +619,7 @@ List? _$visitFunction(
         {
           final args = visitor.copyWith().visit(ctx.getChild(2)!);
           if (visitor.context.isEmpty || (args?.isEmpty ?? true)) {
-            visitor.context = [];
+            visitor.context = <dynamic>[];
           } else if (visitor.context.first is! num &&
               num.tryParse(visitor.context.first.toString()) == null) {
             throw _wrongTypes('log()', visitor.context, ctx.children);
@@ -623,28 +634,30 @@ List? _$visitFunction(
                 : num.parse(visitor.context.first);
             final num value =
                 args.first is num ? args.first : num.parse(args.first);
-            visitor.context = [log(input) / log(value)];
+            visitor.context = <dynamic>[log(input) / log(value)];
           }
         }
         break;
       case 'round':
         {
-          final args = visitor.copyWith().visit(ctx.getChild(2)!);
+          final args = ctx.childCount == 3
+              ? [0]
+              : visitor.copyWith().visit(ctx.getChild(2)!);
           visitor.context = visitor.context.isEmpty
               ? []
               : visitor.context.length > 1
                   ? throw _wrongLength('.round()', visitor.context)
-                  : args == null
-                      ? throw _requiresList('round()', visitor.context)
-                      : visitor.context.first is num
-                          ? [
-                              args.isEmpty
-                                  ? visitor.context.first.round().toDecimal()
-                                  : double.parse(visitor.context.first
-                                      .toStringAsFixed(args.first))
-                            ]
-                          : throw _wrongTypes(
-                              '.round()', visitor.context, args);
+                  : args == null ||
+                          args.isEmpty ||
+                          args.length != 1 ||
+                          args.first is! num
+                      ? throw _requiresList('round()', args ?? [])
+                      : visitor.context.first is! num
+                          ? throw _wrongTypes('.round()', visitor.context, args)
+                          : <dynamic>[
+                              double.parse(visitor.context.first
+                                  .toStringAsFixed(args.first))
+                            ];
         }
         break;
       case 'where':
@@ -772,7 +785,7 @@ List? _$visitFunction(
             throw _wrongTypes('skip', visitor.context, args);
           } else if (args.first > 0 && visitor.context.isNotEmpty) {
             if (visitor.context.length < args.first) {
-              visitor.context = [];
+              visitor.context = <dynamic>[];
             } else {
               visitor.context = visitor.context.sublist(args.first);
             }
@@ -798,7 +811,7 @@ List? _$visitFunction(
         {
           final args = visitor.copyWith().visit(ctx.getChild(2)!);
           final initialContext = visitor.context.toSet();
-          visitor.context = [];
+          visitor.context = <dynamic>[];
           for (var value in initialContext) {
             if (notFoundInList(visitor.context, value) &&
                 foundInList(args ?? [], value)) {
@@ -816,18 +829,202 @@ List? _$visitFunction(
         break;
       case 'union':
         {
-          final List<dynamic> args =
-              visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? [];
-          print(visitor.context);
-          print(visitor.context.runtimeType);
-          print(args.runtimeType);
-          args.addAll(visitor.context.toList());
-          visitor.context = [];
+          final args = [
+            ...visitor.context,
+            ...(visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? [])
+          ];
+          visitor.context = <dynamic>[];
           for (var value in args) {
             if (notFoundInList(visitor.context, value)) {
               visitor.context.add(value);
             }
           }
+        }
+        break;
+      case 'combine':
+        {
+          visitor.context.addAll(
+              visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? []);
+        }
+        break;
+      case 'indexOf':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!)?.toList();
+          visitor.context = visitor.context.isEmpty
+              ? []
+              : visitor.context.length > 1
+                  ? throw _requiresList('.indexOf()', visitor.context)
+                  : args == null ||
+                          args.isEmpty ||
+                          args.length != 1 ||
+                          args.first is! String
+                      ? throw _requiresString('.indexOf()', visitor.context)
+                      : args.first == ''
+                          ? []
+                          : [
+                              visitor.context.first
+                                  .toString()
+                                  .indexOf(args.first)
+                            ];
+        }
+        break;
+      case 'substring':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!)?.toList();
+          visitor.context = visitor.context.isEmpty ||
+                  args == null ||
+                  args.isEmpty
+              ? []
+              : visitor.context.length > 1
+                  ? throw _requiresList('.substring()', visitor.context)
+                  : visitor.context.first is! String
+                      ? throw _requiresString('.substring()', visitor.context)
+                      : args.first is int &&
+                              (args.first >= visitor.context.first.length ||
+                                  args.first < 0)
+                          ? []
+                          : args.length == 1 && args.first is int
+                              ? [
+                                  visitor.context.first
+                                      .toString()
+                                      .substring(args.first)
+                                ]
+                              : args.length == 2 &&
+                                      args.first is int &&
+                                      args.last is int
+                                  ? [
+                                      visitor.context.first
+                                          .toString()
+                                          .substring(
+                                            args.first,
+                                            (args.first + args.last) >
+                                                    visitor.context.first
+                                                        .toString()
+                                                        .length
+                                                ? null
+                                                : args.first + args.last,
+                                          )
+                                    ]
+                                  : throw FhirPathEvaluationException(
+                                      'The function .substring() was not provided the '
+                                      ' proper parameters.',
+                                      operation: '.substring()',
+                                      collection: visitor.context,
+                                      arguments: args);
+        }
+        break;
+      case 'startsWith':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!)?.toList();
+          visitor.context = visitor.context.isEmpty
+              ? []
+              : visitor.context.length > 1
+                  ? throw _requiresList('.startsWith()', visitor.context)
+                  : args == null || args.isEmpty
+                      ? [true]
+                      : args.length != 1 || args.first is! String
+                          ? throw _requiresString(
+                              '.startsWith()', visitor.context)
+                          : visitor.context.first.toString() == ''
+                              ? [true]
+                              : [
+                                  visitor.context.first
+                                      .toString()
+                                      .startsWith(args.first)
+                                ];
+        }
+        break;
+      case 'endsWith':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!)?.toList();
+          visitor.context = visitor.context.isEmpty
+              ? []
+              : visitor.context.length > 1
+                  ? throw _requiresList('.endsWith()', visitor.context)
+                  : args == null || args.isEmpty
+                      ? [true]
+                      : args.length != 1 || args.first is! String
+                          ? throw _requiresString(
+                              '.startsWith()', visitor.context)
+                          : args.first.toString() == ''
+                              ? [true]
+                              : [
+                                  visitor.context.first
+                                      .toString()
+                                      .endsWith(args.first)
+                                ];
+        }
+        break;
+      case 'contains':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!)?.toList();
+          visitor.context = visitor.context.isEmpty
+              ? []
+              : args == null || args.isEmpty
+                  ? [true]
+                  : args.length != 1 || args.first is! String
+                      ? throw _requiresString('.startsWith()', visitor.context)
+                      : args.first == ''
+                          ? [true]
+                          : visitor.context
+                              .map((e) => e is String && e.contains(args.first))
+                              .toList();
+        }
+        break;
+      case 'replace':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!)?.toList();
+          visitor.context = visitor.context.isEmpty
+              ? []
+              : visitor.context.length > 1 || args == null || args.isEmpty
+                  ? throw _requiresList('.replace()', visitor.context)
+                  : args.length > 2 ||
+                          args.first is! String ||
+                          args.last is! String
+                      ? throw _requiresString('.replace()', visitor.context)
+                      : [
+                          visitor.context.first
+                              .toString()
+                              .replaceAll(args.first, args.last)
+                        ];
+        }
+        break;
+      case 'matches':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!)?.toList();
+          visitor.context = visitor.context.isEmpty
+              ? []
+              : visitor.context.length > 1 || args == null || args.isEmpty
+                  ? throw _requiresList('.matches()', visitor.context)
+                  : args.first is! String
+                      ? throw _requiresString('.matches()', visitor.context)
+                      : [
+                          RegExp(args.first)
+                              .hasMatch(visitor.context.first.toString())
+                        ];
+        }
+        break;
+      case 'replaceMatchs':
+        {
+          final args = visitor.copyWith().visit(ctx.getChild(2)!)?.toList();
+          visitor.context = visitor.context.isEmpty
+              ? []
+              : visitor.context.length > 1 || args == null || args.isEmpty
+                  ? throw _requiresList('.replace()', visitor.context)
+                  : args.first is! String ||
+                          args.last is! String ||
+                          args.length != 2
+                      ? throw FhirPathEvaluationException(
+                          'The function .replace() was not provided the '
+                          ' proper parameters.',
+                          operation: '.replace()',
+                          collection: visitor.context,
+                          arguments: args)
+                      : [
+                          visitor.context.first
+                              .toString()
+                              .replaceAll(RegExp('${args.first}'), args.last)
+                        ];
         }
         break;
       default:

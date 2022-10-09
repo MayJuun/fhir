@@ -611,219 +611,219 @@ void testArgFxns() {
               }),
           [1, 2, 3]);
     });
-    // test('combine', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("%a.combine(%b)"),
-    //           environment: {
-    //             '%a': [1, 1, 2, 3],
-    //             '%b': [2, 3]
-    //           }),
-    //       [2, 3, 1, 1, 2, 3]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("%a.combine()"),
-    //           environment: {
-    //             '%a': [1, 1, 2, 3],
-    //           }),
-    //       [1, 1, 2, 3]);
-    // });
-    // test('indexOf', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.indexOf('bc') // 1")),
-    //       [1]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.indexOf('x') // -1")),
-    //       [-1]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.indexOf('abcdefg') // 0")),
-    //       [0]);
-    // });
-    // test('Substring Function', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.substring(3) // 'defg'")),
-    //       ['defg']);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.substring(1, 2) // 'bc'")),
-    //       ['bc']);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.substring(6, 2) // 'g'")),
-    //       ['g']);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.substring(7, 1) // { }")),
-    //       []);
-    // });
-    // test('startsWith', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.startsWith('abc') // true")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.startsWith('xyz') // false")),
-    //       [false]);
-    // });
-    // test('endsWith', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.endsWith('efg') // true")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abcdefg'.endsWith('abc') // false")),
-    //       [false]);
-    // });
-    // test('contains', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abc'.contains('b') // true")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abc'.contains('bc') // true")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abc'.contains('d') // false")),
-    //       [false]);
-    // });
-    // test('replace', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               walkPath("'abcdefg'.replace('cde', '123') // 'ab123fg'")),
-    //       ['ab123fg']);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               walkPath("'abcdefg'.replace('cde', '') // 'abfg'")),
-    //       ['abfg']);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'abc'.replace('', 'x') // 'xaxbxcx'")),
-    //       ['xaxbxcx']);
-    // });
-    // test('matches', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'hello'.matches('hello')")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("35.matches('[2-9]|[12]\d|3[0-6]')")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("38.matches('[2-9]|[12]\d|3[0-6]')")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'35'.matches('[2-9]|[12]\d|3[0-6]')")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'38'.matches('[2-9]|[12]\d|3[0-6]')")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'google'.matches('g(oog)+le')")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression:
-    //               walkPath("'googoogoogoogle'.matches('g(oog)+le')")),
-    //       [true]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("'goooooogle'.matches('g(oog)+le')")),
-    //       [false]);
-    // });
+    test('combine', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("%a.combine(%b)"),
+              environment: {
+                '%a': [1, 1, 2, 3],
+                '%b': [2, 3]
+              }),
+          [1, 1, 2, 3, 2, 3]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("%a.combine()"),
+              environment: {
+                '%a': [1, 1, 2, 3],
+              }),
+          [1, 1, 2, 3]);
+    });
+    test('indexOf', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.indexOf('bc') // 1")),
+          [1]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.indexOf('x') // -1")),
+          [-1]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.indexOf('abcdefg') // 0")),
+          [0]);
+    });
+    test('Substring Function', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.substring(3) // 'defg'")),
+          ['defg']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.substring(1, 2) // 'bc'")),
+          ['bc']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.substring(6, 2) // 'g'")),
+          ['g']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.substring(7, 1) // { }")),
+          []);
+    });
+    test('startsWith', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.startsWith('abc') // true")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.startsWith('xyz') // false")),
+          [false]);
+    });
+    test('endsWith', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.endsWith('efg') // true")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abcdefg'.endsWith('abc') // false")),
+          [false]);
+    });
+    test('contains', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abc'.contains('b') // true")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abc'.contains('bc') // true")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abc'.contains('d') // false")),
+          [false]);
+    });
+    test('replace', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  walkPath("'abcdefg'.replace('cde', '123') // 'ab123fg'")),
+          ['ab123fg']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  walkPath("'abcdefg'.replace('cde', '') // 'abfg'")),
+          ['abfg']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'abc'.replace('', 'x') // 'xaxbxcx'")),
+          ['xaxbxcx']);
+    });
+    test('matches', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'hello'.matches('hello')")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("35.matches('[2-9]|[12]\d|3[0-6]')")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("38.matches('[2-9]|[12]\d|3[0-6]')")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'35'.matches('[2-9]|[12]\d|3[0-6]')")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'38'.matches('[2-9]|[12]\d|3[0-6]')")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'google'.matches('g(oog)+le')")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression:
+                  walkPath("'googoogoogoogle'.matches('g(oog)+le')")),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("'goooooogle'.matches('g(oog)+le')")),
+          [false]);
+    });
 
-    // /// ToDo replaceMatches
-    // test('log', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("16.log(2) // 4.0")),
-    //       [4.0]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("100.0.log(10.0) // 2.0")),
-    //       [2.0]);
-    // });
-    // test('power', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("2.power(3) // 8")),
-    //       [8]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("2.5.power(2) // 6.25")),
-    //       [6.25]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("(-1).power(0.5) // empty ({ })")),
-    //       []);
-    // });
-    // test('round', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("1.round() // 1")),
-    //       [1]);
-    //   expect(
-    //       walkFhirPath(
-    //           context: resource.toJson(),
-    //           pathExpression: walkPath("3.14159.round(3) // 3.142")),
-    //       [3.142]);
-    // });
+    /// ToDo replaceMatches
+    test('log', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("16.log(2) // 4.0")),
+          [4.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("100.0.log(10.0) // 2.0")),
+          [2.0]);
+    });
+    test('power', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("2.power(3) // 8")),
+          [8]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("2.5.power(2) // 6.25")),
+          [6.25]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("(-1).power(0.5) // empty ({ })")),
+          []);
+    });
+    test('round', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("1.round() // 1")),
+          [1]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: walkPath("3.14159.round(3) // 3.142")),
+          [3.142]);
+    });
 
-    // test('complex-extension', () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: questionnaireResponse,
-    //           pathExpression:
-    //               r'%context.repeat(item).answer.value.extension(%`ext-ordinalValue`).value.sum()'),
-    //       [13]);
-    // });
+    test('complex-extension', () {
+      expect(
+          walkFhirPath(
+              context: questionnaireResponse,
+              pathExpression:
+                  r'%context.repeat(item).answer.value.extension(%`ext-ordinalValue`).value.sum()'),
+          [13]);
+    });
 
     // test('iif-basic', () {
     //   expect(
