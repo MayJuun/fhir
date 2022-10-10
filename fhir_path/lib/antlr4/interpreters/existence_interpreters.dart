@@ -135,6 +135,7 @@ _$visitTypeExpression(
   } else if (FhirDatatypes.contains(rhs.first)) {
     /// TODO
     final polymorphicString = 'value' + rhs.first;
+    print(ctx.getChild(2).runtimeType);
 
     // final polymorphicIdentifier = IdentifierParser(polymorphicString);
     // final polymorphicParserList = ParserList([polymorphicIdentifier]);

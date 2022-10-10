@@ -1027,6 +1027,61 @@ List? _$visitFunction(
                         ];
         }
         break;
+      case 'iif':
+        {
+          if(ctx)
+          //   if (value.first is! CommaParser) {
+          //     // While this happens at eval time, it is due to incorrect syntax
+          //     throw FhirPathInvalidExpressionException(
+          //       'The function iif must have a criterion expression, followed by '
+          //       ' a true-result collection, and an optional other-wise-result. '
+          //       'Instead it has: ${value.first}',
+          //     );
+          //   }
+
+          //   final criterionResultParser = value.first as CommaParser;
+          //   List<dynamic> criterionCollection = [];
+          //   if (criterionResultParser.before.first is CommaParser) {
+          //     criterionCollection.addAll(
+          //         (criterionResultParser.before.first as CommaParser)
+          //             .before
+          //             .execute([], passed));
+          //   } else {
+          //     criterionCollection
+          //         .addAll(criterionResultParser.before.execute([], passed));
+          //   }
+
+          //   final criterion = SingletonEvaluation.toBool(criterionCollection,
+          //       name: 'criterion expression',
+          //       operation: 'iif',
+          //       collection: results);
+
+          //   // Short-circuit: Only evaluate what matches the criterion.
+          //   if (criterion == true) {
+          //     final trueResultParser = criterionResultParser.before.first
+          //             is CommaParser
+          //         ? (criterionResultParser.before.first as CommaParser).after
+          //         : (criterionResultParser.after.first is CommaParser)
+          //             ? (criterionResultParser.after.first as CommaParser).before
+          //             : criterionResultParser.after.first;
+
+          //     final trueResult = trueResultParser.execute([], passed);
+
+          //     return trueResult;
+          //   } else {
+          //     final otherwiseResultParser =
+          //         (criterionResultParser.after.first is CommaParser)
+          //             ? (criterionResultParser.after.first as CommaParser).after
+          //             : criterionResultParser.before.first is CommaParser
+          //                 ? criterionResultParser.after
+          //                 : EmptySetParser();
+
+          //     final otherwiseResult = otherwiseResultParser.execute([], passed);
+
+          //     return otherwiseResult;
+          //   }
+        }
+        break;
       default:
         {}
     }

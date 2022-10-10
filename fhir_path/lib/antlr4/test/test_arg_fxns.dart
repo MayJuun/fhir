@@ -816,28 +816,29 @@ void testArgFxns() {
           [3.142]);
     });
 
-    test('complex-extension', () {
-      expect(
-          walkFhirPath(
-              context: questionnaireResponse,
-              pathExpression:
-                  r'%context.repeat(item).answer.value.extension(%`ext-ordinalValue`).value.sum()'),
-          [13]);
-    });
-
-    // test('iif-basic', () {
+    /// TODO: complex-extension
+    // test('complex-extension', () {
     //   expect(
-    //       walkFhirPath(context: null, pathExpression: 'iif(true, 1, 0)'), [1]);
-    //   expect(
-    //       walkFhirPath(context: null, pathExpression: 'iif(false, 1, 0)'), [0]);
-    //   expect(walkFhirPath(context: null, pathExpression: 'iif({}, 1, 0)'), [0]);
-    //   // non-empty, non-bool is true.
-    //   expect(walkFhirPath(context: null, pathExpression: 'iif(5, 1, 0)'), [1]);
-    //   expect(walkFhirPath(context: null, pathExpression: 'iif(true, 1)'), [1]);
-    //   expect(walkFhirPath(context: null, pathExpression: 'iif(false, 1)'), []);
-    //   expect(() => walkFhirPath(context: null, pathExpression: 'iif(false)'),
-    //       throwsA(TypeMatcher<FhirPathInvalidExpressionException>()));
+    //       walkFhirPath(
+    //           context: questionnaireResponse,
+    //           pathExpression:
+    //               r'%context.repeat(item).answer.value.extension(%`ext-ordinalValue`).value.sum()'),
+    //       [13]);
     // });
+
+    test('iif-basic', () {
+      expect(
+          walkFhirPath(context: null, pathExpression: 'iif(true, 1, 0)'), [1]);
+      //   expect(
+      //       walkFhirPath(context: null, pathExpression: 'iif(false, 1, 0)'), [0]);
+      //   expect(walkFhirPath(context: null, pathExpression: 'iif({}, 1, 0)'), [0]);
+      //   // non-empty, non-bool is true.
+      //   expect(walkFhirPath(context: null, pathExpression: 'iif(5, 1, 0)'), [1]);
+      //   expect(walkFhirPath(context: null, pathExpression: 'iif(true, 1)'), [1]);
+      //   expect(walkFhirPath(context: null, pathExpression: 'iif(false, 1)'), []);
+      //   expect(() => walkFhirPath(context: null, pathExpression: 'iif(false)'),
+      //       throwsA(TypeMatcher<FhirPathInvalidExpressionException>()));
+    });
     // test('iif-short-circuit', () {
     //   // non-existent identifier should never be evaluated
     //   expect(
