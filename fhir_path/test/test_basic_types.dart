@@ -246,6 +246,8 @@ void testBasicTypes() {
           walkFhirPath(
               context: resource.toJson(), pathExpression: r"'\u005' // 'u005'"),
           ['u005']);
+
+      /// TODO: escape sequence
       // expect(
       //     walkFhirPath(
       //         context: resource.toJson(), pathExpression: r"'\' // ''"),

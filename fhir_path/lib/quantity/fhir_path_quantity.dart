@@ -195,6 +195,22 @@ class FhirPathQuantity {
   }
 
   dynamic add(dynamic lhs) {
+    if (!(unit == 'year' ||
+        unit == 'month' ||
+        unit == 'week' ||
+        unit == 'day' ||
+        unit == 'hour' ||
+        unit == 'minute' ||
+        unit == 'second' ||
+        unit == 'milisecond')) {
+      throw FhirPathEvaluationException(
+        'Date & Time additions must be done with the proper units.\n'
+        '$lhs + $amount $unit was attempted, this is invalid',
+        cause: lhs,
+        operation: '+',
+        arguments: [lhs, this],
+      );
+    }
     final yearAmount = (unit == 'year'
             ? amount
             : unit == 'month'

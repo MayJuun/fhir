@@ -961,25 +961,24 @@ void testArgFxns() {
           ['1 is below 2']);
     });
 
-    /// TODO: extension
-    // group('extensions', () {
-    //   test(
-    //       'extensionOnPolymorphic',
-    //       () => expect(
-    //           walkFhirPath(
-    //               context: questionnaireResponse,
-    //               pathExpression:
-    //                   r'%context.repeat(item).answer.value.extension.where(url=%`ext-ordinalValue`).value'),
-    //           [4, 5, 4]));
-    //   test(
-    //       'extensionOnPrimitive',
-    //       () => expect(
-    //           walkFhirPath(
-    //               context: patientExample(),
-    //               pathExpression:
-    //                   r'Patient.contact.name.family.extension(%`ext-humanname-own-prefix`).value'),
-    //           ['VV']));
-    // });
+    group('extensions', () {
+      test(
+          'extensionOnPolymorphic',
+          () => expect(
+              walkFhirPath(
+                  context: questionnaireResponse,
+                  pathExpression:
+                      r'%context.repeat(item).answer.value.extension.where(url=%`ext-ordinalValue`).value'),
+              [4, 5, 4]));
+      test(
+          'extensionOnPrimitive',
+          () => expect(
+              walkFhirPath(
+                  context: patientExample(),
+                  pathExpression:
+                      r'Patient.contact.name.family.extension(%`ext-humanname-own-prefix`).value'),
+              ['VV']));
+    });
 
     /// ToDo: trace
   });

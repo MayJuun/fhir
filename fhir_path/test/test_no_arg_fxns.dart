@@ -1,9 +1,7 @@
 // Package imports:
 import 'package:fhir/r4.dart';
+import 'package:fhir_path/fhir_path.dart';
 import 'package:test/test.dart';
-
-// Project imports:
-import '../lib/walk_fhir_path.dart';
 
 void testNoArgFxns() {
   group('Functions w/o Arguments: ', () {
@@ -1017,13 +1015,17 @@ void testNoArgFxns() {
               context: resource.toJson(),
               pathExpression: "(-5.5).abs() // 5.5"),
           [5.5]);
-      // print(walkFhirPath(
-      //     context: resource.toJson(), pathExpression: "today() + 5.5 'mg'"));
-      // expect(
-      //     walkFhirPath(
-      //         context: resource.toJson(),
-      //         pathExpression: "(-5.5 'mg').abs() // 5.5 'mg'"),
-      //     FhirPathQuantity(5.5, "'mg'"));
+      expect(
+        () => walkFhirPath(
+            context: resource.toJson(), pathExpression: "today() + 5.5 'mg'"),
+        throwsA(TypeMatcher<FhirPathEvaluationException>()),
+      );
+
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "(-5.5 'mg').abs() // 5.5 'mg'"),
+          [FhirPathQuantity(5.5, "mg")]);
     });
     test('ceiling', () {
       expect(
@@ -1198,30 +1200,34 @@ void testNoArgFxns() {
           ]);
     });
 
-    // /// ToDo: descendants
+    /// ToDo: descendants
 
-    // test('DateTimeFunctions', () {
-    //   expect(
-    //       walkFhirPath(context: resource.toJson(), pathExpression: "now()")
-    //           .first
-    //           .toString()
-    //           .substring(0, 12),
-    //       DateTime.now().toIso8601String().substring(0, 12));
-    //   expect(
-    //       walkFhirPath(
-    //               context: resource.toJson(), pathExpression: "timeOfDay()")
-    //           .first
-    //           .toString()
-    //           .substring(0, 11),
-    //       Time(DateTime.now()
-    //           .toIso8601String()
-    //           .split('T')
-    //           .last
-    //           .substring(0, 11)));
-    //   expect(
-    //       walkFhirPath(context: resource.toJson(), pathExpression: "today()"),
-    //       [Date(DateTime.now().toIso8601String().split('T').first)]);
-    // });
+    test('DateTimeFunctions', () {
+      final startNow = DateTime.now();
+      final resultNow =
+          walkFhirPath(context: resource.toJson(), pathExpression: "now()");
+      final endNow = DateTime.now();
+      expect(
+          startNow.isBefore(resultNow.first) && endNow.isAfter(resultNow.first),
+          true);
+
+      final startTimeOfDay = Time(
+          DateTime.now().toIso8601String().split('T').last.substring(0, 11));
+      final resultTimeOfDay = walkFhirPath(
+              context: resource.toJson(), pathExpression: "timeOfDay()")
+          .first;
+      final endTimeOfDay = Time(
+          DateTime.now().toIso8601String().split('T').last.substring(0, 11));
+
+      expect(
+          startTimeOfDay <= resultTimeOfDay && endTimeOfDay >= resultTimeOfDay,
+          true);
+
+      expect(
+          walkFhirPath(context: resource.toJson(), pathExpression: "today()")
+              .first,
+          Date(DateTime.now().toIso8601String().split('T').first));
+    });
   });
 }
 

@@ -4,27 +4,79 @@ List? _$visitPolarityExpression(
   PolarityExpressionContext ctx,
   FhirPathDartVisitor visitor,
 ) {
+  /// Correct number of children
   if (ctx.childCount == 2) {
+    /// find the polarity
     final polarity = [
       ctx.getChild(0).runtimeType == TerminalNodeImpl
           ? ctx.getChild(0)!.text
           : visitor.copyWith().visit(ctx.getChild(0)!)
     ];
+
+    /// get the amount (will usually be a number)
     final amount = visitor.copyWith().visit(ctx.getChild(1)!);
-    if (polarity.length != 1 || amount?.length != 1) {
+
+    /// if there's more than one value, or the polarity is not a '+' or a '-'
+    /// throw the exception
+    if (polarity.length != 1 ||
+        amount?.length != 1 ||
+        !(polarity.first == '-' || polarity.first == '+')) {
       throw FhirPathInvalidExpressionException(
           'A polarity requires both a polarity and an amount, '
           'this is missing at least one of them:\n'
           'amount = $polarity\n'
           'unit = $amount');
     } else {
-      final number = num.tryParse('${polarity.first}${amount!.first}');
-      visitor.context = number == null
-          ? throw FhirPathInvalidExpressionException(
-              'A polarity can only be applied to numbers, but instead the '
-              'following argument was passed:\n'
-              '${polarity.first}${amount.first}')
-          : <dynamic>[number];
+      /// define if polarity is positive or negative
+      final bool negative = polarity.first == '-';
+
+      /// if the amount is a [num] ber, it's easy
+      if (amount!.first is num) {
+        visitor.context = [negative ? -amount.first : amount.first];
+
+        /// if it's a [FhirNumber], this is also valid
+      } else if (amount.first is FhirNumber &&
+          (amount.first as FhirNumber).isValid) {
+        visitor.context = [
+          negative
+              ? -((amount.first as FhirNumber).valueNumber!)
+              : (amount.first as FhirNumber).valueNumber!
+        ];
+      } else if (amount.first is FhirPathQuantity) {
+        visitor.context = [
+          FhirPathQuantity(
+            negative
+                ? -(amount.first as FhirPathQuantity).amount
+                : (amount.first as FhirPathQuantity).amount,
+            (amount.first as FhirPathQuantity).unit,
+          )
+        ];
+      } else if (amount.first is String) {
+        final number = num.tryParse(amount.first);
+        if (number != null) {
+          visitor.context = [negative ? -number : number];
+        } else {
+          try {
+            final quantity = FhirPathQuantity.fromString(amount.first);
+            visitor.context = [
+              FhirPathQuantity(
+                negative ? -quantity.amount : quantity.amount,
+                quantity.unit,
+              )
+            ];
+          } catch (e) {
+            throw FhirPathInvalidExpressionException(
+                'A polarity can only be applied to numbers, but instead the '
+                'following argument was passed:\n'
+                '${polarity.first}${amount.first}');
+          }
+        }
+      } else {
+        throw FhirPathInvalidExpressionException(
+            'A polarity can only be applied to numbers, but instead the '
+            'following argument was passed:\n'
+            '${polarity.first}${amount.first}');
+      }
     }
   }
   return visitor.context;

@@ -18,7 +18,6 @@ List? _$visitThisInvocation(
   ThisInvocationContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  print('THIS: ${visitor.context}');
   return visitor.context;
 }
 

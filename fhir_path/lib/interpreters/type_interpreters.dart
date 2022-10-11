@@ -120,14 +120,7 @@ _$visitTypeExpression(
   } else if (FhirDatatypes.contains(rhs.first)) {
     /// TODO: this seems cumbersome
     final polymorphicString = 'value' + rhs.first;
-    final newContext = (FhirPathParser(
-      CommonTokenStream(
-        FhirPathLexer(
-          InputStream.fromString(polymorphicString),
-        ),
-      ),
-    )..buildParseTree = true)
-        .expression();
+    final newContext = visitor.newContext(polymorphicString);
     visitor.context = visitor.copyWith().visit(newContext) ?? [];
   } else {
     visitor.context = <dynamic>[];

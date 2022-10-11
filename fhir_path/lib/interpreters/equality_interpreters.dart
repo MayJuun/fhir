@@ -9,14 +9,6 @@ List? _$visitEqualityExpression(
   }
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
-  print(lhs);
-  print(rhs);
-  if (lhs?.isNotEmpty ?? false) {
-    print('LHS: ${lhs?.first.runtimeType}');
-  }
-  if (rhs?.isNotEmpty ?? false) {
-    print('RHS: ${rhs?.first.runtimeType}');
-  }
   final operator = ctx.getChild(1)?.text;
   void compare(bool equivalent) {
     if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
