@@ -367,21 +367,45 @@ List? _$visitFunction(
         break;
       case 'convertsToQuantity':
         {
-          visitor.context = visitor.context.isEmpty
-              ? <dynamic>[]
-              : visitor.context.length > 1
-                  ? throw _conversionException(
-                      '.convertsToQuantity()', visitor.context)
-                  : (visitor.context.first is num ||
-                          // visitor.context.first is FhirPathQuantity ||
-                          visitor.context.first is bool)
-                      ? <dynamic>[true]
-                      // : (visitor.context.first is String &&
-                      //         ToQuantityParser()
-                      //             .execute(visitor.context, passed)
-                      //             .isNotEmpty)
-                      //     ? [true]
-                      : <dynamic>[false];
+          /// if the context is empty leave it that way
+          if (visitor.context.isNotEmpty) {
+            /// if there's more than 1 item in context, throw exception
+            if (visitor.context.length > 1) {
+              throw _conversionException(
+                  '.convertsToQuantity()', visitor.context);
+            }
+
+            /// otherwise if the first item is a Quantity already, a num or a
+            /// bool, this is considered true
+            else if (visitor.context.first is FhirPathQuantity ||
+                visitor.context.first is num ||
+                visitor.context.first is bool) {
+              visitor.context = [true];
+            }
+
+            /// If it's a string
+            else if (visitor.context.first is String) {
+              /// We try and create a FhirPathQuantity
+              try {
+                FhirPathQuantity.fromString(visitor.context.first);
+
+                /// If no error is thrown, then it is and we return true
+                visitor.context = [true];
+              }
+
+              /// If there's an exception, it's because the String is not a
+              /// Quantity, and we return false
+
+              catch (e) {
+                visitor.context = [false];
+              }
+            }
+
+            /// Otherwise it's definitely false
+            else {
+              visitor.context = [false];
+            }
+          }
         }
         break;
       case 'upper':

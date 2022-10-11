@@ -9,6 +9,14 @@ List? _$visitEqualityExpression(
   }
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhs = visitor.copyWith().visit(ctx.getChild(2)!);
+  print(lhs);
+  print(rhs);
+  if (lhs?.isNotEmpty ?? false) {
+    print('LHS: ${lhs?.first.runtimeType}');
+  }
+  if (rhs?.isNotEmpty ?? false) {
+    print('RHS: ${rhs?.first.runtimeType}');
+  }
   final operator = ctx.getChild(1)?.text;
   void compare(bool equivalent) {
     if ((lhs?.isEmpty ?? true) || (rhs?.isEmpty ?? true)) {
@@ -28,10 +36,26 @@ List? _$visitEqualityExpression(
       /// for each entry in lhs and rhs (we checked above to ensure they
       /// were the same length)
       for (var i = 0; i < lhs.length; i++) {
-        /// we have to check if they're dates, because comparisons are different
-        if (lhs[i] is FhirDateTime || lhs[i] is Date) {
-          /// check and ensure both of them are Dates or DateTimes
-          if (rhs[i] is FhirDateTime || rhs[i] is Date) {
+        /// we check to see if any of the values are DateTimes
+        if (lhs[i] is FhirDateTime ||
+            lhs[i] is Date ||
+            rhs[i] is FhirDateTime ||
+            rhs[i] is Date) {
+          print(lhs[i]);
+          print(rhs[i]);
+          print(lhs[i].toString());
+          print(rhs[i].toString());
+
+          /// As long as one is, we convert them both to strings then back
+          /// to DateTimes
+          final lhsDateTime = FhirDateTime(lhs[i].toString());
+          final rhsDateTime = FhirDateTime(rhs[i].toString());
+
+          print('lhs ${lhsDateTime.isValid}');
+          print('rhs ${rhsDateTime.isValid}');
+
+          /// As long as they are both valid we try and compare them
+          if (lhsDateTime.isValid && rhsDateTime.isValid) {
             try {
               if (lhs[i] != rhs[i]) {
                 if (equivalent) {
@@ -70,7 +94,7 @@ List? _$visitEqualityExpression(
           }
         }
 
-        /// If they aren't we can just compare them as usual
+        /// If they aren't dateTimes we can just compare them as usual
         else {
           if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
             visitor.context = <dynamic>[false];

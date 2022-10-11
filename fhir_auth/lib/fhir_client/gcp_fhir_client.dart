@@ -9,6 +9,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 // Project imports:
 import 'secure_fhir_client.dart';
 
+/// FHIR Cleint that
 class GcpFhirClient extends SecureFhirClient {
   GcpFhirClient({
     super.redirectUri,
@@ -28,6 +29,7 @@ class GcpFhirClient extends SecureFhirClient {
 
   final GoogleSignIn _googleSignIn;
 
+  /// Method to login the client
   @override
   Future<void> login() async {
     try {
@@ -38,14 +40,20 @@ class GcpFhirClient extends SecureFhirClient {
     }
   }
 
+  /// Logs the client out and deletes any security information that shouldn't be stored
   Future<void> logout() async => await _googleSignIn.signOut();
 
+  /// Checks if client isSignedIn (same as isLoggedIn), maintained because some
+  /// clients use one and some prefer the other
   @override
   Future<bool> isSignedIn() async => await _googleSignIn.isSignedIn();
 
+  /// Checks if client isLoggedIn (same as isSignedIn), maintained because some
+  /// clients use one and some prefer the other
   @override
   Future<bool> isLoggedIn() async => await _googleSignIn.isSignedIn();
 
+  /// Adds security/authorizaton headers to all http requests made with this client
   @override
   Future<Map<String, String>> newHeaders(Map<String, String>? headers) async {
     headers ??= <String, String>{};
