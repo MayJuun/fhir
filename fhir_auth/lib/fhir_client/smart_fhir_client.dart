@@ -143,6 +143,7 @@ class SmartFhirClient extends SecureFhirClient {
   /// EHR Launch scenarios.
   String? tenant;
 
+  /// Method to login the client
   @override
   Future<void> login() async {
     if (!(await isLoggedIn())) {
@@ -221,11 +222,15 @@ class SmartFhirClient extends SecureFhirClient {
     }
   }
 
+  /// Checks if client isSignedIn (same as isLoggedIn), maintained because some
+  /// clients use one and some prefer the other
   @override
   Future<bool> isSignedIn() async =>
       client?.credentials.accessToken != null &&
       (client!.credentials.expiration?.isAfter(DateTime.now()) ?? false);
 
+  /// Checks if client isLoggedIn (same as isSignedIn), maintained because some
+  /// clients use one and some prefer the other
   @override
   Future<bool> isLoggedIn() async =>
       client?.credentials.accessToken != null &&

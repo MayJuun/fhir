@@ -34,15 +34,37 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.read({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [type] - the type of resource you're looking for
     required Stu3ResourceType type,
+
+    /// [id] - the id for the resource
     required Id id,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirReadRequest;
 
@@ -50,7 +72,7 @@ class FhirRequest with _$FhirRequest {
   /// [base] - the base URI for the FHIR server
   /// [type] - the type of resource you're looking for
   /// [id] - the id for the resource
-  /// [vid] - the version id of the rsource
+  /// [vid] - the version id of the resource
   /// [pretty] - pretty print the json formatting in the response
   /// [summary] - do you want the result to be a summary
   /// [format] - currently requests json, but could consider requesting
@@ -62,16 +84,40 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.vRead({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [type] - the type of resource you're looking for
     required Stu3ResourceType type,
+
+    /// [id] - the id for the resource
     required Id id,
+
+    /// [vid] - the version id of the resource
     required Id vid,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirVReadRequest;
 
@@ -88,14 +134,32 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.update({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
     required Resource resource,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirUpdateRequest;
 
@@ -112,14 +176,32 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.patch({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
     required Resource resource,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirPatchRequest;
 
@@ -138,15 +220,37 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.delete({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [type] - the type of resource you're looking for
     required Stu3ResourceType type,
+
+    /// [id] - the id for the resource
     required Id id,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirDeleteRequest;
 
@@ -163,14 +267,32 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.create({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
     required Resource resource,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirCreateRequest;
 
@@ -190,16 +312,39 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.search({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [type] - the type of resource you're looking for
     required Stu3ResourceType type,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [usePost] - defines if you would prefer to use a post request instead of
+    ///   a get request for this search
     @Default(false) bool usePost,
     @Default(RestfulRequest.get_) RestfulRequest restfulRequest,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirSearchRequest;
 
@@ -216,13 +361,31 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.searchAll({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirSearchAllRequest;
 
@@ -240,14 +403,35 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.capabilities({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [mode] - defines the mode as defined https://www.hl7.org/fhir/http.html#capabilities
+
     @Default(Mode.full) Mode mode,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirCapabilitiesRequest;
 
@@ -265,14 +449,34 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.transaction({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [bundle] - the bundle to be uploaded
     required Bundle bundle,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirTransactionRequest;
 
@@ -290,14 +494,32 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.batch({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
     required Bundle bundle,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirBatchRequest;
 
@@ -325,19 +547,54 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.history({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [type] - the type of resource you're looking for
     required Stu3ResourceType type,
+
+    /// [id] - the id for the resource
     required Id id,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [count] - The maximum number of search results on a page, excluding related
+    ///   resources included by _include or _revinclude or OperationOutcomes. The
+    ///   server is not bound to return the number requested, but cannot return more
     int? count,
+
+    /// [since] - Only include resource versions that were created at or after the
+    /// given instant in time
     Instant? since,
+
+    /// [at] - Only include resource versions that were current at some point
+    ///   during the time period specified in the date time value
     FhirDateTime? at,
+
+    /// [reference] - Only include resource versions that are referenced in
+    ///   the specified list
     String? reference,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirHistoryRequest;
 
@@ -364,18 +621,51 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyType({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [type] - the type of resource you're looking for
     required Stu3ResourceType type,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [count] - The maximum number of search results on a page, excluding related
+    ///   resources included by _include or _revinclude or OperationOutcomes. The
+    ///   server is not bound to return the number requested, but cannot return more
     int? count,
+
+    /// [since] - Only include resource versions that were created at or after the
+    ///   given instant in time
     Instant? since,
+
+    /// [at] - Only include resource versions that were current at some point
+    ///   during the time period specified in the date time value
     FhirDateTime? at,
+
+    /// [reference] - Only include resource versions that are referenced in
+    ///   the specified list
     String? reference,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirHistoryTypeRequest;
 
@@ -401,17 +691,48 @@ class FhirRequest with _$FhirRequest {
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyAll({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [count] - The maximum number of search results on a page, excluding related
+    ///   resources included by _include or _revinclude or OperationOutcomes. The
+    ///   server is not bound to return the number requested, but cannot return more
     int? count,
+
+    /// [since] - Only include resource versions that were created at or after the
+    ///   given instant in time
     Instant? since,
+
+    /// [at] - Only include resource versions that were current at some point
+    ///   during the time period specified in the date time value
     FhirDateTime? at,
+
+    /// [reference] - Only include resource versions that are referenced in
+    ///   the specified list
     String? reference,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirHistoryAllRequest;
 
@@ -426,26 +747,49 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
-  /// [fhirParameters] - any extra fhirParameters
+  /// [fhirParameter] - any extra fhirParameters
   ///   ToDo: why did I include this?
   /// [usePost] - defines if you would prefer to use a post request instead of Get
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.operation({
+    /// [base] - the base URI for the FHIR server
     required Uri base,
     Stu3ResourceType? type,
     Id? id,
+
+    /// [pretty] - pretty print the json formatting in the response
     @Default(false) bool pretty,
+
+    /// [summary] - do you want the result to be a summary
     @Default(Summary.none) Summary summary,
+
+    /// [format] - currently requests json, but could consider requesting
+    ///   json+fhir or fhir+json (would not request XML as this library doesn't
+    ///   work with XML)
     @Default('json') String format,
+
+    /// [elements] - elements you need to pass in
     @Default(<String>[]) List<String> elements,
+
+    /// [parameters] - any extra parameters
     @Default(<String>[]) List<String> parameters,
+
+    /// [fhirParameter] - any extra fhirParameters
     @Default(<String, dynamic>{}) Map<String, dynamic> fhirParameter,
     required String operation,
+
+    /// [usePost] - defines if you would prefer to use a post request instead of
+    ///   a get request for this search
     @Default(false) bool usePost,
     @Default(false) bool useFormData,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) = FhirOperationRequest;
 
@@ -683,9 +1027,22 @@ class FhirRequest with _$FhirRequest {
   /// private method for return a list of the history parameters for history
   /// requests
   List<String> _hxParameters(
+    /// [count] - The maximum number of search results on a page, excluding related
+    ///   resources included by _include or _revinclude or OperationOutcomes. The
+    ///   server is not bound to return the number requested, but cannot return more
+
     int? count,
+
+    /// [since] - Only include resource versions that were created at or after the
+    ///   given instant in time
     Instant? since,
+
+    /// [at] - Only include resource versions that were current at some point
+    ///   during the time period specified in the date time value
     FhirDateTime? at,
+
+    /// [reference] - Only include resource versions that are referenced in
+    ///   the specified list
     String? reference,
   ) {
     final List<String> parameters = [];
@@ -715,6 +1072,9 @@ class FhirRequest with _$FhirRequest {
     String requestType, {
     Resource? resource,
     String? formData,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
   }) async {
     try {
@@ -872,7 +1232,12 @@ class FhirRequest with _$FhirRequest {
     Map<String, dynamic>? resource,
     String? formData,
     Encoding? encoding,
+
+    /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+    ///   but there are some older systems that won't accept that
     MimeType? mimeType,
+
+    /// [client] - if there's a specific client that you're going to be using
     Client? client,
   }) async {
     headers ??= <String, String>{};

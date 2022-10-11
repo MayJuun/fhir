@@ -16,13 +16,31 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$FhirRequest {
+  /// [base] - the base URI for the FHIR server
   Uri get base => throw _privateConstructorUsedError;
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty => throw _privateConstructorUsedError;
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary => throw _privateConstructorUsedError;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format => throw _privateConstructorUsedError;
+
+  /// [elements] - elements you need to pass in
   List<String> get elements => throw _privateConstructorUsedError;
+
+  /// [parameters] - any extra parameters
   List<String> get parameters => throw _privateConstructorUsedError;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType => throw _privateConstructorUsedError;
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -841,22 +859,39 @@ class _$FhirReadRequest extends FhirReadRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [type] - the type of resource you're looking for
   @override
   final R5ResourceType type;
+
+  /// [id] - the id for the resource
   @override
   final Id id;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -864,7 +899,10 @@ class _$FhirReadRequest extends FhirReadRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -872,8 +910,12 @@ class _$FhirReadRequest extends FhirReadRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -1594,22 +1636,45 @@ abstract class FhirReadRequest extends FhirRequest {
   FhirReadRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
+
+  /// [type] - the type of resource you're looking for
   R5ResourceType get type;
+
+  /// [id] - the id for the resource
   Id get id;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -1731,24 +1796,43 @@ class _$FhirVReadRequest extends FhirVReadRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [type] - the type of resource you're looking for
   @override
   final R5ResourceType type;
+
+  /// [id] - the id for the resource
   @override
   final Id id;
+
+  /// [vid] - the version id of the resource
   @override
   final Id vid;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -1756,7 +1840,10 @@ class _$FhirVReadRequest extends FhirVReadRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -1764,8 +1851,12 @@ class _$FhirVReadRequest extends FhirVReadRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -2489,23 +2580,48 @@ abstract class FhirVReadRequest extends FhirRequest {
   FhirVReadRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
+
+  /// [type] - the type of resource you're looking for
   R5ResourceType get type;
+
+  /// [id] - the id for the resource
   Id get id;
+
+  /// [vid] - the version id of the resource
   Id get vid;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -2613,20 +2729,33 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
   @override
   final Resource resource;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -2634,7 +2763,10 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -2642,8 +2774,12 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -3361,21 +3497,40 @@ abstract class FhirUpdateRequest extends FhirRequest {
   FhirUpdateRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   Resource get resource;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -3483,20 +3638,33 @@ class _$FhirPatchRequest extends FhirPatchRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
   @override
   final Resource resource;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -3504,7 +3672,10 @@ class _$FhirPatchRequest extends FhirPatchRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -3512,8 +3683,12 @@ class _$FhirPatchRequest extends FhirPatchRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -4231,21 +4406,40 @@ abstract class FhirPatchRequest extends FhirRequest {
   FhirPatchRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   Resource get resource;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -4360,22 +4554,39 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [type] - the type of resource you're looking for
   @override
   final R5ResourceType type;
+
+  /// [id] - the id for the resource
   @override
   final Id id;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -4383,7 +4594,10 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -4391,8 +4605,12 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -5113,22 +5331,45 @@ abstract class FhirDeleteRequest extends FhirRequest {
   FhirDeleteRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
+
+  /// [type] - the type of resource you're looking for
   R5ResourceType get type;
+
+  /// [id] - the id for the resource
   Id get id;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -5236,20 +5477,33 @@ class _$FhirCreateRequest extends FhirCreateRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
   @override
   final Resource resource;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -5257,7 +5511,10 @@ class _$FhirCreateRequest extends FhirCreateRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -5265,8 +5522,12 @@ class _$FhirCreateRequest extends FhirCreateRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -5984,21 +6245,40 @@ abstract class FhirCreateRequest extends FhirRequest {
   FhirCreateRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   Resource get resource;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -6120,20 +6400,35 @@ class _$FhirSearchRequest extends FhirSearchRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [type] - the type of resource you're looking for
   @override
   final R5ResourceType type;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -6141,7 +6436,10 @@ class _$FhirSearchRequest extends FhirSearchRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -6149,14 +6447,21 @@ class _$FhirSearchRequest extends FhirSearchRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  ///   a get request for this search
   @override
   @JsonKey()
   final bool usePost;
   @override
   @JsonKey()
   final RestfulRequest restfulRequest;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -6881,23 +7186,47 @@ abstract class FhirSearchRequest extends FhirRequest {
   FhirSearchRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
+
+  /// [type] - the type of resource you're looking for
   R5ResourceType get type;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
+
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  ///   a get request for this search
   bool get usePost;
   RestfulRequest get restfulRequest;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -6998,18 +7327,31 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -7017,7 +7359,10 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -7025,8 +7370,12 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -7742,20 +8091,39 @@ abstract class FhirSearchAllRequest extends FhirRequest {
   FhirSearchAllRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -7864,18 +8232,31 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -7883,7 +8264,10 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -7891,11 +8275,17 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [mode] - defines the mode as defined https://www.hl7.org/fhir/http.html#capabilities
   @override
   @JsonKey()
   final Mode mode;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -8614,21 +9004,42 @@ abstract class FhirCapabilitiesRequest extends FhirRequest {
   FhirCapabilitiesRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
+
+  /// [mode] - defines the mode as defined https://www.hl7.org/fhir/http.html#capabilities
   Mode get mode;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -8746,18 +9157,31 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -8765,7 +9189,10 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -8775,8 +9202,13 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
 
   @override
   final Bundle bundle;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -9495,21 +9927,40 @@ abstract class FhirTransactionRequest extends FhirRequest {
   FhirTransactionRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   Bundle get bundle;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -9626,18 +10077,31 @@ class _$FhirBatchRequest extends FhirBatchRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -9645,7 +10109,10 @@ class _$FhirBatchRequest extends FhirBatchRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -9655,8 +10122,13 @@ class _$FhirBatchRequest extends FhirBatchRequest {
 
   @override
   final Bundle bundle;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -10374,21 +10846,40 @@ abstract class FhirBatchRequest extends FhirRequest {
   FhirBatchRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
   Bundle get bundle;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -10531,22 +11022,39 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [type] - the type of resource you're looking for
   @override
   final R5ResourceType type;
+
+  /// [id] - the id for the resource
   @override
   final Id id;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -10554,7 +11062,10 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -10562,16 +11073,33 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
   @override
   final int? count;
+
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
   @override
   final Instant? since;
+
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
   @override
   final FhirDateTime? at;
+
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
   @override
   final String? reference;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -11305,26 +11833,62 @@ abstract class FhirHistoryRequest extends FhirRequest {
   FhirHistoryRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
+
+  /// [type] - the type of resource you're looking for
   R5ResourceType get type;
+
+  /// [id] - the id for the resource
   Id get id;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
+
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
   int? get count;
+
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
   Instant? get since;
+
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
   FhirDateTime? get at;
+
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
   String? get reference;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -11461,20 +12025,35 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [type] - the type of resource you're looking for
   @override
   final R5ResourceType type;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -11482,7 +12061,10 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -11490,16 +12072,33 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
   @override
   final int? count;
+
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
   @override
   final Instant? since;
+
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
   @override
   final FhirDateTime? at;
+
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
   @override
   final String? reference;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -12230,25 +12829,59 @@ abstract class FhirHistoryTypeRequest extends FhirRequest {
   FhirHistoryTypeRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
+
+  /// [type] - the type of resource you're looking for
   R5ResourceType get type;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
+
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
   int? get count;
+
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
   Instant? get since;
+
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
   FhirDateTime? get at;
+
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
   String? get reference;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -12377,18 +13010,31 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
         _parameters = parameters,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -12396,7 +13042,10 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -12404,16 +13053,33 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
   @override
   final int? count;
+
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
   @override
   final Instant? since;
+
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
   @override
   final FhirDateTime? at;
+
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
   @override
   final String? reference;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -13141,24 +13807,56 @@ abstract class FhirHistoryAllRequest extends FhirRequest {
   FhirHistoryAllRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
+
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
   int? get count;
+
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
   Instant? get since;
+
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
   FhirDateTime? get at;
+
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
   String? get reference;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
@@ -13302,22 +14000,35 @@ class _$FhirOperationRequest extends FhirOperationRequest {
         _fhirParameter = fhirParameter,
         super._();
 
+  /// [base] - the base URI for the FHIR server
   @override
   final Uri base;
   @override
   final R5ResourceType? type;
   @override
   final Id? id;
+
+  /// [pretty] - pretty print the json formatting in the response
   @override
   @JsonKey()
   final bool pretty;
+
+  /// [summary] - do you want the result to be a summary
   @override
   @JsonKey()
   final Summary summary;
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   @override
   @JsonKey()
   final String format;
+
+  /// [elements] - elements you need to pass in
   final List<String> _elements;
+
+  /// [elements] - elements you need to pass in
   @override
   @JsonKey()
   List<String> get elements {
@@ -13325,7 +14036,10 @@ class _$FhirOperationRequest extends FhirOperationRequest {
     return EqualUnmodifiableListView(_elements);
   }
 
+  /// [parameters] - any extra parameters
   final List<String> _parameters;
+
+  /// [parameters] - any extra parameters
   @override
   @JsonKey()
   List<String> get parameters {
@@ -13333,7 +14047,10 @@ class _$FhirOperationRequest extends FhirOperationRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  /// [fhirParameter] - any extra fhirParameters
   final Map<String, dynamic> _fhirParameter;
+
+  /// [fhirParameter] - any extra fhirParameters
   @override
   @JsonKey()
   Map<String, dynamic> get fhirParameter {
@@ -13343,14 +14060,22 @@ class _$FhirOperationRequest extends FhirOperationRequest {
 
   @override
   final String operation;
+
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  ///   a get request for this search
   @override
   @JsonKey()
   final bool usePost;
   @override
   @JsonKey()
   final bool useFormData;
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   @override
   final MimeType? mimeType;
+
+  /// [client] - if there's a specific client that you're going to be using
   @override
   final Client? client;
 
@@ -14125,26 +14850,50 @@ abstract class FhirOperationRequest extends FhirRequest {
   FhirOperationRequest._() : super._();
 
   @override
+
+  /// [base] - the base URI for the FHIR server
   Uri get base;
   R5ResourceType? get type;
   Id? get id;
   @override
+
+  /// [pretty] - pretty print the json formatting in the response
   bool get pretty;
   @override
+
+  /// [summary] - do you want the result to be a summary
   Summary get summary;
   @override
+
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
   String get format;
   @override
+
+  /// [elements] - elements you need to pass in
   List<String> get elements;
   @override
+
+  /// [parameters] - any extra parameters
   List<String> get parameters;
+
+  /// [fhirParameter] - any extra fhirParameters
   Map<String, dynamic> get fhirParameter;
   String get operation;
+
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  ///   a get request for this search
   bool get usePost;
   bool get useFormData;
   @override
+
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   MimeType? get mimeType;
   @override
+
+  /// [client] - if there's a specific client that you're going to be using
   Client? get client;
   @override
   @JsonKey(ignore: true)
