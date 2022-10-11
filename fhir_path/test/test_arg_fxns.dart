@@ -1,10 +1,11 @@
 // Package imports:
+import 'dart:convert';
+
 import 'package:fhir/r4.dart';
 import 'package:test/test.dart';
 
-// Project imports:
-import 'package:fhir_path/fhir_path.dart';
-import 'test_fp_test_suite.dart';
+import '../lib/utils/utils.dart';
+import '../lib/walk_fhir_path.dart';
 
 dynamic walkPath(dynamic arg) => arg;
 
@@ -619,7 +620,7 @@ void testArgFxns() {
                 '%a': [1, 1, 2, 3],
                 '%b': [2, 3]
               }),
-          [2, 3, 1, 1, 2, 3]);
+          [1, 1, 2, 3, 2, 3]);
       expect(
           walkFhirPath(
               context: resource.toJson(),
@@ -815,14 +816,15 @@ void testArgFxns() {
           [3.142]);
     });
 
-    test('complex-extension', () {
-      expect(
-          walkFhirPath(
-              context: questionnaireResponse,
-              pathExpression:
-                  r'%context.repeat(item).answer.value.extension(%`ext-ordinalValue`).value.sum()'),
-          [13]);
-    });
+    /// TODO: complex-extension
+    // test('complex-extension', () {
+    //   expect(
+    //       walkFhirPath(
+    //           context: questionnaireResponse,
+    //           pathExpression:
+    //               r'%context.repeat(item).answer.value.extension(%`ext-ordinalValue`).value.sum()'),
+    //       [13]);
+    // });
 
     test('iif-basic', () {
       expect(
@@ -830,7 +832,7 @@ void testArgFxns() {
       expect(
           walkFhirPath(context: null, pathExpression: 'iif(false, 1, 0)'), [0]);
       expect(walkFhirPath(context: null, pathExpression: 'iif({}, 1, 0)'), [0]);
-      // non-empty, non-bool is true.
+      // TODO: is this correct functionality? non-empty, non-bool is true.
       expect(walkFhirPath(context: null, pathExpression: 'iif(5, 1, 0)'), [1]);
       expect(walkFhirPath(context: null, pathExpression: 'iif(true, 1)'), [1]);
       expect(walkFhirPath(context: null, pathExpression: 'iif(false, 1)'), []);
@@ -845,10 +847,11 @@ void testArgFxns() {
               pathExpression: 'iif(true, 1, %resource.blurb)'),
           [1]);
       // non-existent identifier should throw
-      // expect(
-      //     () =>
-      //         walkFhirPath(context: resource.toJson(), pathExpression: 'iif(false, 1, %resource.blurb)'),
-      //     throwsA(TypeMatcher<FhirPathEvaluationException>()));
+      expect(
+          () => walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'iif(false, 1, %resource.blurb)'),
+          throwsA(TypeMatcher<FhirPathEvaluationException>()));
     });
     test('iif-with-variables', () {
       expect(
@@ -956,24 +959,25 @@ void testArgFxns() {
           ['1 is below 2']);
     });
 
-    group('extensions', () {
-      test(
-          'extensionOnPolymorphic',
-          () => expect(
-              walkFhirPath(
-                  context: questionnaireResponse,
-                  pathExpression:
-                      r'%context.repeat(item).answer.value.extension.where(url=%`ext-ordinalValue`).value'),
-              [4, 5, 4]));
-      test(
-          'extensionOnPrimitive',
-          () => expect(
-              walkFhirPath(
-                  context: patientExample(),
-                  pathExpression:
-                      r'Patient.contact.name.family.extension(%`ext-humanname-own-prefix`).value'),
-              ['VV']));
-    });
+    /// TODO: extension
+    // group('extensions', () {
+    //   test(
+    //       'extensionOnPolymorphic',
+    //       () => expect(
+    //           walkFhirPath(
+    //               context: questionnaireResponse,
+    //               pathExpression:
+    //                   r'%context.repeat(item).answer.value.extension.where(url=%`ext-ordinalValue`).value'),
+    //           [4, 5, 4]));
+    //   test(
+    //       'extensionOnPrimitive',
+    //       () => expect(
+    //           walkFhirPath(
+    //               context: patientExample(),
+    //               pathExpression:
+    //                   r'Patient.contact.name.family.extension(%`ext-humanname-own-prefix`).value'),
+    //           ['VV']));
+    // });
 
     /// ToDo: trace
   });
@@ -1163,3 +1167,173 @@ final bundle = Bundle(
     BundleEntry(resource: Patient(id: '7')),
   ],
 );
+
+Map<String, dynamic>? patientExample() {
+  return jsonDecode(patientJsonString);
+}
+
+const patientJsonString = r'''{
+	"resourceType": "Patient",
+	"id": "example",
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tbody><tr><td>Name</td><td>Peter James \r\n              <b>Chalmers</b> (\"Jim\")\r\n            </td></tr><tr><td>Address</td><td>534 Erewhon, Pleasantville, Vic, 3999</td></tr><tr><td>Contacts</td><td>Home: unknown. Work: (03) 5555 6473</td></tr><tr><td>Id</td><td>MRN: 12345 (Acme Healthcare)</td></tr></tbody></table></div>"
+	},
+	"identifier": [
+		{
+			"use": "usual",
+			"type": {
+				"coding": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+						"code": "MR"
+					}
+				]
+			},
+			"system": "urn:oid:1.2.36.146.595.217.0.1",
+			"value": "12345",
+			"period": {
+				"start": "2001-05-06"
+			},
+			"assigner": {
+				"display": "Acme Healthcare"
+			}
+		}
+	],
+	"active": true,
+	"name": [
+		{
+			"use": "official",
+			"family": "Chalmers",
+			"given": [
+				"Peter",
+				"James"
+			]
+		},
+		{
+			"use": "usual",
+			"given": [
+				"Jim"
+			]
+		},
+		{
+			"use": "maiden",
+			"family": "Windsor",
+			"given": [
+				"Peter",
+				"James"
+			],
+			"period": {
+				"end": "2002"
+			}
+		}
+	],
+	"telecom": [
+		{
+			"use": "home"
+		},
+		{
+			"system": "phone",
+			"value": "(03) 5555 6473",
+			"use": "work",
+			"rank": 1
+		},
+		{
+			"system": "phone",
+			"value": "(03) 3410 5613",
+			"use": "mobile",
+			"rank": 2
+		},
+		{
+			"system": "phone",
+			"value": "(03) 5555 8834",
+			"use": "old",
+			"period": {
+				"end": "2014"
+			}
+		}
+	],
+	"gender": "male",
+	"_birthDate": {
+		"extension": [
+			{
+				"url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+				"valueDateTime": "1974-12-25T14:35:45-05:00"
+			}
+		]
+	},
+	"birthDate": "1974-12-25",
+	"deceasedBoolean": false,
+	"address": [
+		{
+			"use": "home",
+			"type": "both",
+			"text": "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+			"line": [
+				"534 Erewhon St"
+			],
+			"city": "PleasantVille",
+			"district": "Rainbow",
+			"state": "Vic",
+			"postalCode": "3999",
+			"period": {
+				"start": "1974-12-25"
+			}
+		}
+	],
+	"contact": [
+		{
+			"relationship": [
+				{
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+							"code": "N"
+						}
+					]
+				}
+			],
+			"name": {
+				"_family": {
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+							"valueString": "VV"
+						}
+					]
+				},
+				"family": "du Marché",
+				"given": [
+					"Bénédicte"
+				]
+			},
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "+33 (237) 998327"
+				}
+			],
+			"address": {
+				"use": "home",
+				"type": "both",
+				"line": [
+					"534 Erewhon St"
+				],
+				"city": "PleasantVille",
+				"district": "Rainbow",
+				"state": "Vic",
+				"postalCode": "3999",
+				"period": {
+					"start": "1974-12-25"
+				}
+			},
+			"gender": "female",
+			"period": {
+				"start": "2012"
+			}
+		}
+	],
+	"managingOrganization": {
+		"reference": "Organization/1"
+	}
+}''';

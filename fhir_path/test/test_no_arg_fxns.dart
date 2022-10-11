@@ -2,8 +2,7 @@
 import 'package:fhir/r4.dart';
 import 'package:test/test.dart';
 
-// Project imports:
-import 'package:fhir_path/fhir_path.dart';
+import '../lib/walk_fhir_path.dart';
 
 void testNoArgFxns() {
   group('Functions w/o Arguments: ', () {
@@ -765,8 +764,8 @@ void testNoArgFxns() {
           [true]);
     });
 
-    /// ToDo: toQuantity
-    /// ToDo: convertsToQuantity
+    // /// ToDo: toQuantity
+    // /// ToDo: convertsToQuantity
     test('toString', () {
       expect(
           walkFhirPath(
@@ -1017,10 +1016,12 @@ void testNoArgFxns() {
               context: resource.toJson(),
               pathExpression: "(-5.5).abs() // 5.5"),
           [5.5]);
-      print(walkFhirPath(
-          context: resource.toJson(), pathExpression: "today() + 5.5 'mg'"));
+      // print(walkFhirPath(
+      //     context: resource.toJson(), pathExpression: "today() + 5.5 'mg'"));
       // expect(
-      //     walkFhirPath(context: //         resource.toJson(), pathExpression: "(-5.5 'mg').abs() // 5.5 'mg'"),
+      //     walkFhirPath(
+      //         context: resource.toJson(),
+      //         pathExpression: "(-5.5 'mg').abs() // 5.5 'mg'"),
       //     FhirPathQuantity(5.5, "'mg'"));
     });
     test('ceiling', () {
@@ -1074,12 +1075,27 @@ void testNoArgFxns() {
               context: resource.toJson(), pathExpression: "1.0.ln() // 0.0"),
           [0.0]);
     });
+    test('log', () {
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "16.log(2) // 4.0"),
+          [4.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "100.0.log(10.0) // 2.0"),
+          [2.0]);
+    });
     test('sqrt', () {
       expect(
           walkFhirPath(
               context: resource.toJson(), pathExpression: "81.sqrt() // 9.0"),
           [9.0]);
-      // expect(walkFhirPath(context: resource.toJson(), pathExpression: "(-1).sqrt() // empty"), []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "(-1).sqrt() // empty"),
+          []);
     });
     test('truncate', () {
       expect(
@@ -1181,30 +1197,30 @@ void testNoArgFxns() {
           ]);
     });
 
-    /// ToDo: descendants
+    // /// ToDo: descendants
 
-    test('DateTimeFunctions', () {
-      expect(
-          walkFhirPath(context: resource.toJson(), pathExpression: "now()")
-              .first
-              .toString()
-              .substring(0, 12),
-          DateTime.now().toIso8601String().substring(0, 12));
-      expect(
-          walkFhirPath(
-                  context: resource.toJson(), pathExpression: "timeOfDay()")
-              .first
-              .toString()
-              .substring(0, 11),
-          Time(DateTime.now()
-              .toIso8601String()
-              .split('T')
-              .last
-              .substring(0, 11)));
-      expect(
-          walkFhirPath(context: resource.toJson(), pathExpression: "today()"),
-          [Date(DateTime.now().toIso8601String().split('T').first)]);
-    });
+    // test('DateTimeFunctions', () {
+    //   expect(
+    //       walkFhirPath(context: resource.toJson(), pathExpression: "now()")
+    //           .first
+    //           .toString()
+    //           .substring(0, 12),
+    //       DateTime.now().toIso8601String().substring(0, 12));
+    //   expect(
+    //       walkFhirPath(
+    //               context: resource.toJson(), pathExpression: "timeOfDay()")
+    //           .first
+    //           .toString()
+    //           .substring(0, 11),
+    //       Time(DateTime.now()
+    //           .toIso8601String()
+    //           .split('T')
+    //           .last
+    //           .substring(0, 11)));
+    //   expect(
+    //       walkFhirPath(context: resource.toJson(), pathExpression: "today()"),
+    //       [Date(DateTime.now().toIso8601String().split('T').first)]);
+    // });
   });
 }
 
