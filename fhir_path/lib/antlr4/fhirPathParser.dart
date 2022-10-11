@@ -1,9 +1,12 @@
 // Generated from FhirPath.g4 by ANTLR 4.11.1
 // ignore_for_file: unused_import, unused_local_variable, prefer_single_quotes
+
+// Package imports:
 import 'package:antlr4/antlr4.dart';
 
-import 'fhirPathVisitor.dart';
+// Project imports:
 import 'fhirPathBaseVisitor.dart';
+import 'fhirPathVisitor.dart';
 
 const int RULE_expression = 0,
     RULE_term = 1,

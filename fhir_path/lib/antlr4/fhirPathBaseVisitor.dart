@@ -1,7 +1,10 @@
 // Generated from FhirPath.g4 by ANTLR 4.11.1
 // ignore_for_file: unused_import, unused_local_variable, prefer_single_quotes
+
+// Package imports:
 import 'package:antlr4/antlr4.dart';
 
+// Project imports:
 import 'fhirPathParser.dart';
 import 'fhirPathVisitor.dart';
 

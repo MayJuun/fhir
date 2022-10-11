@@ -1,7 +1,8 @@
 // Generated from FhirPath.g4 by ANTLR 4.11.1
 // ignore_for_file: unused_import, unused_local_variable, prefer_single_quotes
-import 'package:antlr4/antlr4.dart';
 
+// Package imports:
+import 'package:antlr4/antlr4.dart';
 
 class FhirPathLexer extends Lexer {
   static final checkVersion = () => RuntimeMetaData.checkVersion('4.11.1', RuntimeMetaData.VERSION);

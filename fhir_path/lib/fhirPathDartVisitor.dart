@@ -1,15 +1,19 @@
 // Generated from FhirPath.g4 by ANTLR 4.11.1
 // ignore_for_file: unused_import, unused_local_variable, prefer_single_quotes
-// Package imports:
+
+// Dart imports:
 import 'dart:math';
 
+// Package imports:
+import 'package:antlr4/antlr4.dart';
 import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
 import 'package:fhir/stu3.dart' as stu3;
-import 'package:antlr4/antlr4.dart';
+
+// Project imports:
 import 'antlr4/antlr4.dart';
 import 'quantity/fhir_path_quantity.dart';
 import 'utils/utils.dart';
