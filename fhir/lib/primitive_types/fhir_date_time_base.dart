@@ -4,8 +4,6 @@
 import 'primitive_type_exceptions.dart';
 import 'primitive_types.dart';
 
-enum Comparator { eq, gt, gte, lt, lte }
-
 abstract class FhirDateTimeBase {
   const FhirDateTimeBase(
       this.valueString, this.valueDateTime, this.isValid, this.parseError);
@@ -28,6 +26,9 @@ abstract class FhirDateTimeBase {
 
   /// Comparison method for FhirDateTimes
   bool _compare(Comparator comparator, Object o) {
+    print('THIS $this');
+    print('OBJECT $o');
+
     /// first, easy check if they're identical
     if (identical(this, o)) {
       switch (comparator) {
@@ -110,6 +111,9 @@ abstract class FhirDateTimeBase {
     /// 2020-01-01T12:01:01 < 2022
     /// The above would always be true (assuming the 2022 is correct) even if
     /// the 2022 was a more precise date
+
+    print('THIS $lhsList');
+    print('OBJECT $rhsList');
 
     bool? comparePrecisionValue(
         Comparator comparator, String lhsValue, String rhsValue) {
