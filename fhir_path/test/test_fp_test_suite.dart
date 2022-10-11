@@ -10,214 +10,8 @@ import '../lib/walk_fhir_path.dart';
 
 /// FHIRPath Test Suite - reference="http://hl7.org/fhirpath|2.0.0"
 void testFhirPathTestSuite() {
-  /*
-group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
-<test name="testExtractBirthDate" description="Extract birthDate" inputfile="patient-example.xml" predicate="false">
-<expression>birthDate</expression>
-<output type="date">1974-12-25</output>
-});
-<test name="testPatientHasBirthDate" description="patient has a birthDate" inputfile="patient-example.xml" predicate="true">
-<expression>birthDate</expression>
-<output type="boolean">true</output>
-});
-<test name="testPatientTelecomTypes" description="patient telecom types" inputfile="patient-example.xml">
-<expression>telecom.use</expression>
-<output type="code">home</output>
-<output type="code">work</output>
-<output type="code">mobile</output>
-<output type="code">old</output>
-});
-});*/
-
-// Tests ported from the Java Unit Tests
-  group('testBasics - Tests ported from the Java Unit Tests', () {
-// test(patient(), "name.given", 3, "string");
-    test("testSimple", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(), pathExpression: r"name.given[3]"),
-          ["Peter"]);
-    });
-// <output type="string">James</output>
-// <output type="string">Jim</output>
-// <output type="string">Peter</output>
-// <output type="string">James</output>
-// });
-
-// test(patient(), "name.period", 0);
-// <test name="testSimpleNone" inputfile="patient-example.xml">
-// <expression>name.suffix</expression>
-// });
-
-// test(patient(), "name.\"given\"", 3, "string");
-    test("testEscapedIdentifier", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(), pathExpression: r"name.`given`[3]"),
-          ["Peter"]);
-    });
-// <output type="string">James</output>
-// <output type="string">Jim</output>
-// <output type="string">Peter</output>
-// <output type="string">James</output>
-// });
-    test("testSimpleBackTick1", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"`Patient`.name.`given`[3]"),
-          ["Peter"]);
-    });
-// <output type="string">James</output>
-// <output type="string">Jim</output>
-// <output type="string">Peter</output>
-// <output type="string">James</output>
-
-// testWrong(patient(), "name.given1");
-/*<test name="testSimpleFail" inputfile="patient-example.xml" mode="strict">
-<expression invalid="semantic">name.given1</expression>
-});*/
-
-    // test(patient(), "Patient.name.given", 3, "string");
-    test("testSimpleWithContext", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"Patient.name.given[3]"),
-          ["Peter"]);
-    });
-// <output type="string">Peter</output>
-// <output type="string">James</output>
-// <output type="string">Jim</output>
-// <output type="string">Peter</output>
-// <output type="string">James</output>
-// });
-
-// testWrong(patient(), "Encounter.name.given");
-/*<test name="testSimpleWithWrongContext" inputfile="patient-example.xml" mode="strict">
-<expression invalid="semantic">Encounter.name.given</expression>*/
-  });
-
-  group('testObservations', () {
-// test(observation(), "Observation.value.unit", 1, "string");
-    test("testPolymorphismA", () {
-      expect(
-          walkFhirPath(
-              context: observationExample(),
-              pathExpression: r"Observation.value.unit"),
-          ["lbs"]);
-    });
-
-// testWrong(observation(), "Observation.valueQuantity.unit");
-/*<test name="testPolymorphismB" inputfile="observation-example.xml" mode="strict">
-<expression invalid="semantic">Observation.valueQuantity.unit</expression>
-});*/
-
-    test("testPolymorphismIsA", () {
-      expect(
-          walkFhirPath(
-              context: observationExample(),
-              pathExpression: r"Observation.value is Quantity"),
-          [true]);
-    });
-
-    // FIXED: Test makes wrong assumption about precedence
-    // test("testPolymorphismIsB", () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: observationExample(),
-    //           pathExpression: r"Observation.value is Period.not()"),
-    //       [true]);
-    // });
-    test("testPolymorphismIsB-fixed", () {
-      expect(
-          walkFhirPath(
-              context: observationExample(),
-              pathExpression: r"(Observation.value is Period).not()"),
-          [true]);
-    });
-
-// testBoolean(observation(), "Observation.value.as(Quantity).unit", true);
-    test("testPolymorphismAsA", () {
-      expect(
-          () => walkFhirPath(
-              context: observationExample(),
-              pathExpression: r"Observation.value.as(Quantity).unit"),
-          throwsA(isA<FhirPathDeprecatedExpressionException>()));
-    });
-
-// testBoolean(observation(), "(Observation.value as Quantity).unit", true);
-    test("testPolymorphismAsAFunction", () {
-      expect(
-          walkFhirPath(
-              context: observationExample(),
-              pathExpression: r"(Observation.value as Quantity).unit"),
-          ["lbs"]);
-    });
-
-// testWrong(observation(), "(Observation.value as Period).unit");
-// /*<test name="testPolymorphismAsB" inputfile="observation-example.xml" mode="strict">
-// <expression invalid="semantic">(Observation.value as Period).unit</expression>
-// });*/
-
-// test(observation(), "Observation.value.as(Period).start", 0);
-// /*<test name="testPolymorphismAsBFunction" inputfile="observation-example.xml">
-// <expression>Observation.value.as(Period).start</expression>
-// });
-// });
-// */
-    group('testDollar', () {
-// test(patient(), "Patient.name.given.where(substring($this.length()-3) = 'out')", 0);
-      test('testDollarThis1', () {
-        expect(
-            walkFhirPath(
-                context: patientExample(),
-                pathExpression:
-                    r"Patient.name.given.where(substring($this.length()-3) = 'out')"),
-            []);
-      });
-
-// test(patient(), "Patient.name.given.where(substring($this.length()-3) = 'ter')", 1, "string");
-      test("testDollarThis2", () {
-        expect(
-            walkFhirPath(
-                context: patientExample(),
-                pathExpression:
-                    r"Patient.name.given.where(substring($this.length()-3) = 'ter')"),
-            ["Peter", "Peter"]);
-      });
-    });
-
-    // FIXED: this appears to only capture the first given name, but it should capture three
-    // test("testDollarOrderAllowed", () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: patientExample(),
-    //           pathExpression: r"Patient.name.skip(1).given"),
-    //       ["Jim"]);
-    // });
-    test("testDollarOrderAllowed-fixed", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"Patient.name.skip(1).given[0]"),
-          ["Jim"]);
-    });
-// <output type="string">Peter</output>
-// <output type="string">James</output>
-// });
-
-// <test name="testDollarOrderAllowedA" inputfile="patient-example.xml">
-// <expression>Patient.name.skip(3).given</expression>
-// });
-
-// <test name="testDollarOrderNotAllowed" inputfile="patient-example.xml" mode="strict" checkOrderedFunctions="true">
-// <expression invalid="semantic">Patient.children().skip(1)</expression>
-// });
-  });
-
   group('testLiterals', () {
-// testBoolean(patient(), "Patient.name.exists() = true", true);
+    // testBoolean(patient(), "Patient.name.exists() = true", true);
     test("testLiteralTrue", () {
       expect(
           walkFhirPath(
@@ -226,7 +20,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
           [true]);
     });
 
-// testBoolean(patient(), "Patient.name.empty() = false", true);
+    // testBoolean(patient(), "Patient.name.empty() = false", true);
     test("testLiteralFalse", () {
       expect(
           walkFhirPath(
@@ -235,7 +29,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
           [true]);
     });
 
-// testBoolean(patient(), "Patient.name.given.first() = 'Peter'", true);
+    // testBoolean(patient(), "Patient.name.given.first() = 'Peter'", true);
     test("testLiteralString", () {
       expect(
           walkFhirPath(
@@ -472,11 +266,11 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
               pathExpression: r"@T14:34:28.123 is Time"),
           [true]);
     });
-// TODO: throws errors, doesn't return false, depends on parsing
-//   Current: "@T14:34:28Z" => TimeParser (@T14:34:28) + IdentifierParser (Z)
+    // TODO: throws errors, doesn't return false, depends on parsing
+    //   Current: "@T14:34:28Z" => TimeParser (@T14:34:28) + IdentifierParser (Z)
 
     test("testLiteralTimeUtc", () {
-//<test name="testLiteralTimeUTC" inputfile="patient-example.xml" invalid="true"><expression>@T14:34:28Z is Time</expression>});
+      //<test name="testLiteralTimeUTC" inputfile="patient-example.xml" invalid="true"><expression>@T14:34:28Z is Time</expression>});
 
       expect(
           walkFhirPath(
@@ -486,7 +280,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
     });
 
     test("testLiteralTimeTimezoneOffset", () {
-// <test name="testLiteralTimeTimezoneOffset" inputfile="patient-example.xml" invalid="true"><expression>@T14:34:28+10:00 is Time</expression>});
+      // <test name="testLiteralTimeTimezoneOffset" inputfile="patient-example.xml" invalid="true"><expression>@T14:34:28+10:00 is Time</expression>});
 
       expect(
           walkFhirPath(
@@ -602,7 +396,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
     // Both arguments must be of the same type (or implicitly convertible to
     // the same type), and the evaluator will throw an error if the types differ.
     test("testLiteralDecimalLessThanInteger", () {
-// /*<test name="testLiteralDecimalLessThanInvalid" inputfile="observation-example.xml"><expression invalid="semantic">Observation.value.value < 'test'</expression>// no output - empty set});*/
+      // /*<test name="testLiteralDecimalLessThanInvalid" inputfile="observation-example.xml"><expression invalid="semantic">Observation.value.value < 'test'</expression>// no output - empty set});*/
 
       expect(
           () => walkFhirPath(
@@ -964,7 +758,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
           [true]);
     });
   });
-// FIXED: Incorrect test case. Wrong assumptions around precedence
+  // FIXED: Incorrect test case. Wrong assumptions around precedence
 /*    test("testStringLiteralIsNotInteger", () {
       expect(walkFhirPath(context: patientExample(), pathExpression: r"'1' is Integer.not()"), [true]);
     }); */
@@ -982,7 +776,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
             pathExpression: r"true.convertsToInteger()"),
         [true]);
   });
-// FIXED: Incorrect test case. Wrong assumptions around precedence
+  // FIXED: Incorrect test case. Wrong assumptions around precedence
 /*    test("testBooleanLiteralIsNotInteger", () {
       expect(walkFhirPath(context: patientExample(), pathExpression: r"true is Integer.not()"), [true]);
     }); */
@@ -993,12 +787,12 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
             pathExpression: r"(true is Integer).not()"),
         [true]);
   });
-// TODO: Incorrect test case. Wrong assumptions around precedence
+  // TODO: Incorrect test case. Wrong assumptions around precedence
 /*    test("testDateIsNotInteger", () {
       expect(walkFhirPath(context: patientExample(), pathExpression: r"@2013-04-05 is Integer.not()"),
           [true]);
     }); */
-// FIXED: Incorrect test case. Wrong assumptions around precedence
+  // FIXED: Incorrect test case. Wrong assumptions around precedence
   test("testDateIsNotInteger-fixed", () {
     expect(
         walkFhirPath(
@@ -1081,7 +875,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
             pathExpression: r"'1'.convertsToDecimal()"),
         [true]);
   });
-// TODO: Incorrect precedence
+  // TODO: Incorrect precedence
 /*    test("testStringIntegerLiteralIsNotDecimal", () {
       expect(walkFhirPath(context: patientExample(), pathExpression: r"'1' is Decimal.not()"), [true]);
     }); */
@@ -1106,7 +900,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
             pathExpression: r"'1.0'.convertsToDecimal()"),
         [true]);
   });
-// TODO: Incorrect precedence
+  // TODO: Incorrect precedence
   /*    test("testStringDecimalLiteralIsNotDecimal", () {
       expect(walkFhirPath(context: patientExample(), pathExpression: r"'1.0' is Decimal.not()"), [true]);
     }); */
@@ -1178,7 +972,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
             pathExpression: r"1.convertsToQuantity()"),
         [true]);
   });
-// TODO: Wrong assumption about precedence
+  // TODO: Wrong assumption about precedence
   /*    test("testIntegerLiteralIsNotQuantity", () {
       expect(walkFhirPath(context: patientExample(), pathExpression: r"1 is Quantity.not()"), [true]);
     }); */
@@ -1415,7 +1209,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
             context: patientExample(), pathExpression: r"1.convertsToString()"),
         [true]);
   });
-// TODO: Incorrect assumptions about precedence
+  // TODO: Incorrect assumptions about precedence
 /*    test("testIntegerLiteralIsNotString", () {
       expect(walkFhirPath(context: patientExample(), pathExpression: r"1 is String.not()"), [true]);
     }); */
@@ -1756,7 +1550,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
 <expression>Questionnaire.descendants().linkId.select(substring(0,1)).distinct().count()</expression>
 <output type="integer">2</output>
 });*/
-//   });
+  //   });
 
   group('testCount', () {
     test("testCount1", () {
@@ -2565,18 +2359,18 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
           walkFhirPath(context: patientExample(), pathExpression: r"(1) = (1)"),
           [true]);
     });
-// TODO: This test is applying =, which are explicitly order-dependent,
+    // TODO: This test is applying =, which are explicitly order-dependent,
     // on two unions, which are explicitly not order-dependent
 /*      test("testEquality5", () {
         expect(walkFhirPath(context: patientExample(), pathExpression: r"(1 | 2) = (1 | 2)"), [true]);
       }); */
-// TODO: This test is applying =, which are explicitly order-dependent,
+    // TODO: This test is applying =, which are explicitly order-dependent,
     // on two unions, which are explicitly not order-dependent
 /*      test("testEquality6", () {
         expect(walkFhirPath(context: patientExample(), pathExpression: r"(1 | 2 | 3) = (1 | 2 | 3)"),
             [true]);
       }); */
-// TODO: This test is applying =, which are explicitly order-dependent,
+    // TODO: This test is applying =, which are explicitly order-dependent,
     // on two unions, which are explicitly not order-dependent
 /*      test("testEquality7", () {
         expect(walkFhirPath(context: patientExample(), "(1 | 1) = (1 | 2 | {})"), []);
@@ -2676,7 +2470,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
               context: patientExample(), pathExpression: r"name = name"),
           [true]);
     });
-// TODO: union is not in defined order
+    // TODO: union is not in defined order
 /*      test("testEquality26", () {
         expect(
             walkFhirPath(context: patientExample(), pathExpression: r"name.take(2) = name.take(2).first() | name.take(2).last()"),
@@ -2689,7 +2483,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
               pathExpression: r"name.take(2) = name.take(2).select($this)"),
           [true]);
     });
-// TODO: union is not in defined order
+    // TODO: union is not in defined order
 /*      test("testEquality27", () {
         expect(
             walkFhirPath(context: patientExample(), pathExpression: r"name.take(2) = name.take(2).last() | name.take(2).first()"),
@@ -4663,7 +4457,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
   group('testPrecedence', () {
 /*<test name="testPrecedence1" name="testUnaryPrecedence" inputfile="patient-example.xml">
 <expression invalid="semantic">-1.convertsToInteger()</expression>
-// should error because unary does not work on boolean: -(1.convertsToInteger())
+        // should error because unary does not work on boolean: -(1.convertsToInteger())
 });*/
 
     test("testPrecedence2", () {
@@ -4823,7 +4617,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
               pathExpression: r"Patient.active is boolean"),
           [true]);
     });
-// TODO: Incorrect assumption about precedence
+    // TODO: Incorrect assumption about precedence
 /*      test("testType12", () {
         expect(
             walkFhirPath(context: patientExample(), pathExpression: r"Patient.active is Boolean.not()"),
@@ -4843,7 +4637,7 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
               pathExpression: r"Patient.active is FHIR.boolean"),
           [true]);
     });
-// TODO: Incorrect assumption about precedence
+    // TODO: Incorrect assumption about precedence
 /*      test("testType14", () {
         expect(
             walkFhirPath(

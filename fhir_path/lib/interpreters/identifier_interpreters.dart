@@ -17,7 +17,7 @@ List? _$visitIdentifier(
             (ctx.childCount == 1 &&
                 ctx.getChild(0).runtimeType == TerminalNodeImpl))
         ? visitor.context
-        : visitor.visitChildren(ctx) ?? <dynamic>[];
+        : visitor.copyWith().visitChildren(ctx) ?? <dynamic>[];
     final finalResults = [];
     final finalPrimitiveExtensions =
         List<dynamic>.filled(results.length, null, growable: false);
@@ -35,12 +35,11 @@ List? _$visitIdentifier(
                 ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
                     .contains(identifierName)
                 : stu3.ResourceUtils.resourceTypeFromStringMap.keys
-                        .contains(identifierName) &&
-                    (visitor.environment.hasNoContext
-                        ? false
-                        : visitor.environment.context?['resourceType'] ==
-                            identifierName)) {
-      finalResults.add(visitor.environment.context);
+                    .contains(identifierName)) {
+      if (visitor.environment.context?['resourceType'] == identifierName &&
+          !visitor.environment.hasNoContext) {
+        finalResults.add(visitor.environment.context);
+      }
     } else if (results.isNotEmpty) {
       results.forEachIndexed((i, r) {
         if (r is Map) {
