@@ -20,7 +20,7 @@ dependencies:
   path_provider: ^2.0.11
   sembast: ^3.3.0
   sembast_sqflite: ^2.0.1
-  sqflite: ^2.1.0
+  sqflite: ^2.1.0+1
   sqflite_common_ffi: ^2.1.1+1
 
 dev_dependencies:

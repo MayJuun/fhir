@@ -19,7 +19,12 @@ List? _$visitPolarityExpression(
           'unit = $amount');
     } else {
       final number = num.tryParse('${polarity.first}${amount!.first}');
-      visitor.context = number == null ? <dynamic>[] : <dynamic>[number];
+      visitor.context = number == null
+          ? throw FhirPathInvalidExpressionException(
+              'A polarity can only be applied to numbers, but instead the '
+              'following argument was passed:\n'
+              '${polarity.first}${amount.first}')
+          : <dynamic>[number];
     }
   }
   return visitor.context;

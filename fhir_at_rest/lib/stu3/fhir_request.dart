@@ -16,6 +16,7 @@ part 'fhir_request.freezed.dart';
 
 /// The class for making requests to a FHIR server
 class FhirRequest with _$FhirRequest {
+  /// Private constructor
   FhirRequest._();
 
   /// READ constructor

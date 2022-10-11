@@ -27,7 +27,7 @@ _$visitTypeExpression(
             'integer',
             'decimal',
             'date',
-            'dateTime',
+            'datetime',
             'time',
             'quantity',
           ].contains(rhsText?.toLowerCase())
