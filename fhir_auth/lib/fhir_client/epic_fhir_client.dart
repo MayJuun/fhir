@@ -1,9 +1,6 @@
 // Package imports:
-import 'dart:convert';
-
 import 'package:fhir/r4.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
-import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'smart_fhir_client.dart';
@@ -104,51 +101,4 @@ class EpicFhirClient extends SmartFhirClient {
 
   /// The provider's FHIR ID number.
   String? userProviderNumber;
-
-  // @override
-  // Future<http.Response> post(Uri url,
-  //     {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-  //   if (client != null) {
-  //     var stream = await http
-  //         .post(
-  //           url,
-  //           headers: await newHeaders(headers),
-  //           body: body,
-  //         )
-  //         .asStream();
-
-  //     // request.followRedirects = false;
-  //     // final stream = await client!.send(request);
-  //     final responseBytes = await stream?.listen((event) {
-  //       print(event.headers);
-  //       print(event.body);
-  //     });
-
-  //     // print('*************************************************');
-  //     // print(stream.headers);
-  //     // print(stream.statusCode);
-  //     // print(stream.request);
-  //     // print(stream.headers);
-  //     // print(stream.isRedirect);
-  //     // print(stream.persistentConnection);
-  //     // print(stream.reasonPhrase);
-  //     // print(stream.reasonPhrase);
-  //     // print('*************************************************');
-
-  //     // final response = http.Response.bytes(
-  //     //   responseBytes.toList(),
-  //     //   stream.statusCode,
-  //     //   request: stream.request,
-  //     //   headers: stream.headers,
-  //     //   isRedirect: false,
-  //     //   persistentConnection: stream.persistentConnection,
-  //     //   reasonPhrase: stream.reasonPhrase,
-  //     // );
-
-  //     // print(response);
-
-  //     // return response;
-  //   }
-  //   return http.Response('No Client', 400);
-  // }
 }
