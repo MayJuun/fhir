@@ -8,9 +8,9 @@ List? _$visitPolarityExpression(
     final polarity = [
       ctx.getChild(0).runtimeType == TerminalNodeImpl
           ? ctx.getChild(0)!.text
-          : visitor.visit(ctx.getChild(0)!)
+          : visitor.copyWith().visit(ctx.getChild(0)!)
     ];
-    final amount = visitor.visit(ctx.getChild(1)!);
+    final amount = visitor.copyWith().visit(ctx.getChild(1)!);
     if (polarity.length != 1 || amount?.length != 1) {
       throw FhirPathInvalidExpressionException(
           'A polarity requires both a polarity and an amount, '
