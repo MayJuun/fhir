@@ -3,6 +3,7 @@
 
 // Dart imports:
 import 'dart:math';
+import 'dart:developer' as developer;
 
 // Package imports:
 import 'package:antlr4/antlr4.dart';
@@ -37,32 +38,46 @@ part 'interpreters/identifier_interpreters.dart';
 class FhirPathDartVisitor extends ParseTreeVisitor<List>
     implements FhirPathVisitor<List> {
   /// Private Constructor
-  FhirPathDartVisitor._(this._context, this.environment);
+  FhirPathDartVisitor._(this._context, this.environment, this.identifierOnly);
 
   /// Primary Constructor
   factory FhirPathDartVisitor(
           Map<String, dynamic>? context, Map<String, dynamic> environment) =>
-      FhirPathDartVisitor._(
-          context == null || context.isEmpty ? [] : [context], environment);
+      FhirPathDartVisitor._(context == null || context.isEmpty ? [] : [context],
+          environment, false);
 
   /// Easy copyWith function
-  FhirPathDartVisitor copyWith({
-    List<dynamic>? context,
-    Map<String, dynamic>? environment,
-    bool? printType,
-  }) =>
+  FhirPathDartVisitor copyWith(
+          {List<dynamic>? context,
+          Map<String, dynamic>? environment,
+          bool? printType,
+          identifierOnly}) =>
       FhirPathDartVisitor._(
-          context ?? this.context, environment ?? this.environment);
+        context ?? this.context,
+        environment ?? this.environment,
+        identifierOnly ?? this.identifierOnly,
+      );
 
+  /// CONTEXT
   List<dynamic> _context;
-  List<dynamic> get context => _context;
-  bool identifierOnly = false;
 
+  /// CONTEXT getter
+  List<dynamic> get context => _context;
+
+  /// CONTEXT setter (partly for debugging)
   set context(List<dynamic> newContext) {
-    // print('NEWCONTEXT: $newContext');
+    // developer.log('NEWCONTEXT: $newContext');
     _context = newContext;
   }
 
+  /// Convenience variable because sometimes you don't want the identifier to
+  /// be applied to the context, you just want the identifier
+  bool identifierOnly;
+
+  /// Environment and any variables that are passed in initially
+  final Map<String, dynamic> environment;
+
+  /// Convenience method to create a new context
   ExpressionContext newContext(String string) => (FhirPathParser(
         CommonTokenStream(
           FhirPathLexer(
@@ -72,25 +87,28 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
       )..buildParseTree = true)
           .expression();
 
-  final Map<String, dynamic> environment;
-
   /// This is purely for testing purposes
-  static const bool printType = false;
+  static const bool printType = true;
+
+  /// Prints off the immediate context being used
   void printContextType(ParseTree ctx) {
     if (printType) {
       print('${ctx.runtimeType} : ${ctx.text}');
-      // print('TYPECONTEXT: ${_context}');
+      // developer.log('TYPECONTEXT: ${_context}');
     }
   }
 
+  /// Allows easy logging of the children of the current context
   void printChildren(ParseTree ctx) {
-    print('PRINT CHILDREN');
+    developer.log('PRINT CHILDREN');
     for (var i = 0; i < ctx.childCount; i++) {
-      print('${ctx.getChild(i).runtimeType} : ${ctx.getChild(i)!.text}');
+      developer
+          .log('${ctx.getChild(i).runtimeType} : ${ctx.getChild(i)!.text}');
     }
-    print('****************');
+    developer.log('COMPLETED PRINTING CHILDREN');
   }
 
+  /// This is the beginning of how you evaluate an expression
   List execute(ExpressionContext ctx) => visit(ctx) ?? [];
 
   @override
@@ -148,7 +166,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitInvocationExpression(InvocationExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitInvocationExpression(ctx, this);
   }
 
   @override

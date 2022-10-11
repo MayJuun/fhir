@@ -100,51 +100,45 @@ List? _$visitExternalConstant(
   ExternalConstantContext ctx,
   FhirPathDartVisitor visitor,
 ) {
-  final variableName = ctx.text;
+  visitor.identifierOnly = true;
+  final name = visitor.copyWith().visit(ctx.getChild(1)!)?.first;
+  visitor.identifierOnly = false;
+  final variableName = '%$name';
 
   if (variableName == '%sct') {
     visitor.context = <dynamic>['http://snomed.info/sct'];
-  }
-
-  if (variableName == '%loinc') {
+  } else if (variableName == '%loinc') {
     visitor.context = <dynamic>['http://loinc.org'];
-  }
-
-  if (variableName == '%ucum') {
+  } else if (variableName == '%ucum') {
     visitor.context = <dynamic>['http://unitsofmeasure.org'];
-  }
-
-  if (variableName.startsWith('%vs-')) {
+  } else if (variableName.startsWith('%vs-')) {
     final valueSet = variableName.substring(4);
     visitor.context = <dynamic>['http://hl7.org/fhir/ValueSet/$valueSet'];
-  }
-
-  if (variableName.startsWith('%ext-')) {
+  } else if (variableName.startsWith('%ext-')) {
     final extension = variableName.substring(5);
     visitor.context = <dynamic>[
       'http://hl7.org/fhir/StructureDefinition/$extension'
     ];
-  }
-
-  final passedValue = visitor.environment[variableName];
-  if (passedValue == null) {
-    throw FhirPathEvaluationException('Variable $variableName does not exist.',
-        variables: visitor.environment);
-  }
-
-  if (passedValue is! Function()) {
-    visitor.context = passedValue is List
-        ? List<dynamic>.from(passedValue)
-        : <dynamic>[passedValue];
   } else {
-    try {
-      final result = passedValue();
-      visitor.context =
-          result is List ? List<dynamic>.from(result) : <dynamic>[result];
-    } catch (ex) {
+    final passedValue = visitor.environment[variableName];
+    if (passedValue == null) {
       throw FhirPathEvaluationException(
-          'Variable $variableName could not be lazily evaluated.',
-          cause: ex);
+          'Variable $variableName does not exist.',
+          variables: visitor.environment);
+    } else if (passedValue is! Function()) {
+      visitor.context = passedValue is List
+          ? List<dynamic>.from(passedValue)
+          : <dynamic>[passedValue];
+    } else {
+      try {
+        final result = passedValue();
+        visitor.context =
+            result is List ? List<dynamic>.from(result) : <dynamic>[result];
+      } catch (ex) {
+        throw FhirPathEvaluationException(
+            'Variable $variableName could not be lazily evaluated.',
+            cause: ex);
+      }
     }
   }
 

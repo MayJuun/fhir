@@ -10,7 +10,7 @@ _$visitTypeExpression(
   final lhs = visitor.copyWith().visit(ctx.getChild(0)!);
   final rhsText = ctx.getChild(2)!.text;
 
-  final List<dynamic>? rhs = (visitor.environment.isVersion(FhirVersion.r4)
+  List<dynamic>? rhs = (visitor.environment.isVersion(FhirVersion.r4)
               ? r4.ResourceUtils.resourceTypeFromStringMap.keys
                   .contains(rhsText)
               : visitor.environment.isVersion(FhirVersion.r5)
@@ -33,6 +33,12 @@ _$visitTypeExpression(
           ].contains(rhsText?.toLowerCase())
       ? [ctx.getChild(2)!.text]
       : visitor.copyWith().visit(ctx.getChild(2)!);
+
+  if (rhs?.isEmpty ?? true) {
+    visitor.identifierOnly = true;
+    rhs = visitor.copyWith().visit(ctx.getChild(2)!);
+    visitor.identifierOnly = false;
+  }
 
   final operator = ctx.getChild(1)?.text;
 
@@ -127,4 +133,25 @@ _$visitTypeExpression(
   }
 
   return visitor.context;
+}
+
+List? _$visitInvocationExpression(
+  InvocationExpressionContext ctx,
+  FhirPathDartVisitor visitor,
+) {
+  /// TODO: this seems rough
+  if (ctx.childCount == 3 &&
+      ctx.getChild(2) is FunctionInvocationContext &&
+      (ctx.getChild(2)!.text?.startsWith('extension') ?? false)) {
+    visitor.identifierOnly = true;
+    final identifier = visitor.copyWith().visit(ctx.getChild(0)!);
+    visitor.identifierOnly = false;
+    final identifierExtension = '_${identifier?.first}';
+    final newString =
+        '${ctx.getChild(0)!.text!.replaceAll(identifier!.first, identifierExtension)}'
+        '${ctx.getChild(1)!.text}${ctx.getChild(2)!.text}';
+    return visitor.visitChildren(visitor.newContext(newString));
+  } else {
+    return visitor.visitChildren(ctx);
+  }
 }

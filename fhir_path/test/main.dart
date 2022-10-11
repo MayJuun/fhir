@@ -30,7 +30,7 @@ void main() async {
   print(tokens.numberOfOnChannelTokens);
   final parser = FhirPathParser(tokens);
   parser.buildParseTree = true;
-  final tree = parser.expression();
+  // final tree = parser.expression();
   // final visitor = FhirPathDartVisitor({}, {});
   // print(visitor.visit(tree));
 }

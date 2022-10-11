@@ -248,10 +248,10 @@ void testBasicTypes() {
           ['u005']);
 
       /// TODO: escape sequence
-      // expect(
-      //     walkFhirPath(
-      //         context: resource.toJson(), pathExpression: r"'\' // ''"),
-      //     ['']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: r"'\' // ''"),
+          ['']);
     });
   });
 }

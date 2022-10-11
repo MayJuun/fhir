@@ -14,7 +14,7 @@ void main() {
   testNoArgFxns();
   testBasicOperators();
   testArgFxns();
-  // testQuestionnaire();
-  // testDateTimes();
-  // testFhirPathTestSuite();
+  testQuestionnaire();
+  testDateTimes();
+  testFhirPathTestSuite();
 }

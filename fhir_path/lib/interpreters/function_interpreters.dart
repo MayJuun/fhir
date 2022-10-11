@@ -462,11 +462,18 @@ List? _$visitFunction(
                       ? visitor.context.first.abs().isNaN
                           ? <dynamic>[]
                           : <dynamic>[(visitor.context.first as num).abs()]
-                      // : visitor.context.first is FhirPathQuantity
-                      // ? visitor.context.first.abs().isNaN
-                      // ? []
-                      // : [(visitor.context.first as FhirPathQuantity).abs()]
-                      : throw _wrongTypes('.abs()', visitor.context, 'none');
+                      : visitor.context.first is FhirPathQuantity
+                          ? [
+                              FhirPathQuantity(
+                                (visitor.context.first as FhirPathQuantity)
+                                    .amount
+                                    .abs(),
+                                (visitor.context.first as FhirPathQuantity)
+                                    .unit,
+                              )
+                            ]
+                          : throw _wrongTypes(
+                              '.abs()', visitor.context, 'none');
         }
         break;
       case 'ceiling':
@@ -1131,28 +1138,15 @@ List? _$visitFunction(
         }
         break;
       case 'extension':
-
-        /// TODO: extension
-        {
-          if (visitor.context.isNotEmpty) {
-            final extensionUrl = visitor.copyWith().visit(ctx.getChild(2)!);
-            if (extensionUrl == null) {
-              visitor.context = [];
-            } else {
-              // .extension(exturl) is short-hand for .extension.where(url='exturl')
-              // final urlEquals = EqualsParser();
-              // urlEquals.before = ParserList([IdentifierParser('url')]);
-              // urlEquals.after = ParserList([StringParser("'$extensionUrl'")]);
-              // final extensionUrlPredicate = ParserList([
-              //   urlEquals,
-              // ]);
-              // final whereParser = FpWhereParser();
-              // whereParser.value = extensionUrlPredicate;
-              // final extensionParsers =
-              //     ParserList([IdentifierParser('extension'), whereParser]);
-
-              // return extensionParsers.execute(results.toList(), passed);
-            }
+        if (visitor.context.isNotEmpty) {
+          final extensionUrl = visitor.copyWith().visit(ctx.getChild(2)!);
+          if (extensionUrl == null) {
+            visitor.context = [];
+          } else {
+            // .extension(exturl) is short-hand for .extension.where(url='exturl')
+            final newExtension = "extension.where(url='${extensionUrl.first}')";
+            final newContext = visitor.newContext(newExtension);
+            visitor.context = visitor.copyWith().visit(newContext) ?? [];
           }
         }
         break;
@@ -1176,7 +1170,34 @@ List? _$visitFunction(
         break;
       case 'today':
         {
-          visitor.context = [Date(DateTime.now())];
+          visitor.context = [
+            Date(DateTime.now().toIso8601String().split('T').first)
+          ];
+        }
+        break;
+      case 'now':
+        {
+          visitor.context = [DateTime.now()];
+        }
+        break;
+      case 'timeOfDay':
+        {
+          visitor.context = [
+            Time(DateTime.now()
+                .toIso8601String()
+                .split('T')
+                .last
+                .substring(0, 11))
+          ];
+        }
+        break;
+      case 'not':
+        {
+          visitor.context = visitor.context.isEmpty ||
+                  visitor.context.length != 1 ||
+                  visitor.context.first is! bool
+              ? []
+              : [!visitor.context.first];
         }
         break;
       default:

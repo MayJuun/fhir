@@ -74,62 +74,64 @@ void testQuestionnaire() {
           [13]);
     });
   });
-  // group('Faiadashu', () {
-  //   test('EnableWhen with specific polymorphic items', () {
-  //     expect(
-  //         walkFhirPath(
-  //           context: faiadashuResponse.toJson(),
-  //           pathExpression:
-  //               "%resource.repeat(item).where(linkId='4.2.b.1').answer.valueCoding.code "
-  //               "="
-  //               "'female' "
-  //               "and"
-  //               " today().toString().substring(0, 4).toInteger() "
-  //               "-"
-  //               " %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() "
-  //               ">="
-  //               " 40",
-  //           resource: faiadashuResponse.toJson(),
-  //         ),
-  //         [false]);
-  //   });
-  //   test('EnableWhen using generic value polymorphic type', () {
-  //     expect(
-  //         walkFhirPath(
-  //           context: faiadashuResponse.toJson(),
-  //           pathExpression:
-  //               "%resource.repeat(item).where(linkId='4.2.b.1').answer.value.code "
-  //               "="
-  //               "'female' "
-  //               "and"
-  //               " today().toString().substring(0, 4).toInteger() "
-  //               "-"
-  //               " %resource.repeat(item).where(linkId='4.2.b.5').answer.value.toString().substring(0, 4).toInteger() "
-  //               ">="
-  //               " 40",
-  //           resource: faiadashuResponse.toJson(),
-  //         ),
-  //         [false]);
-  //   });
-  //   test('EnableWhen using a defined polymorphic type', () {
-  //     expect(
-  //         walkFhirPath(
-  //           context: faiadashuResponse.toJson(),
-  //           pathExpression:
-  //               "%resource.repeat(item).where(linkId='4.2.b.1').answer.(value as Coding).code "
-  //               "="
-  //               "'female' "
-  //               "and"
-  //               " today().toString().substring(0, 4).toInteger() "
-  //               "-"
-  //               " %resource.repeat(item).where(linkId='4.2.b.5').answer.(value as Date).toString().substring(0, 4).toInteger() "
-  //               ">="
-  //               " 40",
-  //           resource: faiadashuResponse.toJson(),
-  //         ),
-  //         [false]);
-  //   });
-  // });
+  group('Faiadashu', () {
+    test('EnableWhen with specific polymorphic items', () {
+      expect(
+          walkFhirPath(
+            context: faiadashuResponse.toJson(),
+            pathExpression:
+                "%resource.repeat(item).where(linkId='4.2.b.1').answer.valueCoding.code "
+                "="
+                "'female' "
+                "and"
+                " today().toString().substring(0, 4).toInteger() "
+                "-"
+                " %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() "
+                ">="
+                " 40",
+            resource: faiadashuResponse.toJson(),
+          ),
+          [false]);
+    });
+    test('EnableWhen using generic value polymorphic type', () {
+      expect(
+          walkFhirPath(
+            context: faiadashuResponse.toJson(),
+            pathExpression:
+                "%resource.repeat(item).where(linkId='4.2.b.1').answer.value.code "
+                "="
+                "'female' "
+                "and"
+                " today().toString().substring(0, 4).toInteger() "
+                "-"
+                " %resource.repeat(item).where(linkId='4.2.b.5').answer.value.toString().substring(0, 4).toInteger() "
+                ">="
+                " 40",
+            resource: faiadashuResponse.toJson(),
+          ),
+          [false]);
+    });
+
+    /// TODO: EnableWhen using a defined polymorphic type
+    test('EnableWhen using a defined polymorphic type', () {
+      expect(
+          walkFhirPath(
+            context: faiadashuResponse.toJson(),
+            pathExpression:
+                "%resource.repeat(item).where(linkId='4.2.b.1').answer.(value as Coding).code "
+                "="
+                "'female' "
+                "and"
+                " today().toString().substring(0, 4).toInteger() "
+                "-"
+                " %resource.repeat(item).where(linkId='4.2.b.5').answer.(value as Date).toString().substring(0, 4).toInteger() "
+                ">="
+                " 40",
+            resource: faiadashuResponse.toJson(),
+          ),
+          [false]);
+    });
+  });
   group('More Complicated Responses', () {
     test('Contains on more than one item', () {
       expect(
