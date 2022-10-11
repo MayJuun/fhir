@@ -36,7 +36,7 @@ Future<void> main() async {
     });
   });
 
-  final id = '12345';
+  const id = '12345';
   group('Saving Things:', () {
     test('Save Patient', () async {
       final humanName = HumanName(family: 'Atreides', given: ['Duke']);

@@ -67,10 +67,8 @@ class FhirClient implements http.Client {
   void close() {}
 
   @override
-  Future<http.Response> head(Uri url, {Map<String, String>? headers}) {
-    // TODO: implement head
-    throw UnimplementedError();
-  }
+  Future<http.Response> head(Uri url, {Map<String, String>? headers}) async =>
+      await http.head(url, headers: headers);
 
   @override
   Future<String> read(Uri url, {Map<String, String>? headers}) async =>
@@ -82,8 +80,8 @@ class FhirClient implements http.Client {
           (await http.get(url, headers: headers)).body.codeUnits);
 
   @override
-  Future<http.StreamedResponse> send(http.BaseRequest request) {
-    // TODO: implement send
-    throw UnimplementedError();
+  Future<http.StreamedResponse> send(http.BaseRequest request) async {
+    final client = http.Client();
+    return await client.send(request);
   }
 }

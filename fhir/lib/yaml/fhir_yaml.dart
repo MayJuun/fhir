@@ -1,7 +1,7 @@
 /// From Package: https://github.com/alexei-sintotski/json2yaml
 /// https://github.com/alexei-sintotski/json2yaml/blob/master/lib/src/json2yaml.dart
 
-// ignore_for_file: prefer_if_elements_to_conditional_expressions
+// ignore_for_file: prefer_if_elements_to_conditional_expressions, noop_primitive_operations
 
 /// Yaml formatting control options
 enum YamlStyle {
