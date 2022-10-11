@@ -605,11 +605,11 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
     test("testLiteralDecimalLessThanInteger", () {
 // /*<test name="testLiteralDecimalLessThanInvalid" inputfile="observation-example.xml"><expression invalid="semantic">Observation.value.value < 'test'</expression>// no output - empty set});*/
 
-      //   expect(
-      //       walkFhirPath(
-      //           context: observationExample(),
-      //           pathExpression: r"Observation.value.value < 'test'"),
-      //       []);
+      expect(
+          walkFhirPath(
+              context: observationExample(),
+              pathExpression: r"Observation.value.value < 'test'"),
+          []);
     });
   });
 
@@ -624,12 +624,13 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
           [true]);
     });
     // requires date to look in extension
-    // test("testDateNotEqual", () {
-    //   expect(
-    //       walkFhirPath(
-    //           patientExample(), "Patient.birthDate != @1974-12-25T12:34:00"),
-    //       []);
-    // });
+    test("testDateNotEqual", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: "Patient.birthDate != @1974-12-25T12:34:00"),
+          []);
+    });
     test("testDateNotEqualTimezoneOffsetBefore", () {
       expect(
           walkFhirPath(
@@ -638,360 +639,360 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
                   r"Patient.birthDate != @1974-12-25T12:34:00-10:00"),
           [true]);
     });
-    test("testDateNotEqualTimezoneOffsetAfter", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression:
-                  r"Patient.birthDate != @1974-12-25T12:34:00+10:00"),
-          [true]);
-    });
-    test("testDateNotEqualUTC", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"Patient.birthDate != @1974-12-25T12:34:00Z"),
-          [true]);
-    });
-    test("testDateNotEqualTimeSecond", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"Patient.birthDate != @T12:14:15"),
-          [true]);
-    });
-    test("testDateNotEqualTimeMinute", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"Patient.birthDate != @T12:14"),
-          [true]);
-    });
-    test("testDateNotEqualToday", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"Patient.birthDate < today()"),
-          [true]);
-    });
-    // todo: now() is a DateTime including timezone offset, so this should be
-    // null, unless it pulls in the birthDate extension
-    // test("testDateTimeGreaterThanDate", () {
-    //   print('testing the error here');
-    //   expect(
-    //       walkFhirPath(
-    //           context: patientExample(),
-    //           pathExpression: r"now() > Patient.birthDate"),
-    //       [true]);
-    // });
+//     test("testDateNotEqualTimezoneOffsetAfter", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression:
+//                   r"Patient.birthDate != @1974-12-25T12:34:00+10:00"),
+//           [true]);
+//     });
+//     test("testDateNotEqualUTC", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"Patient.birthDate != @1974-12-25T12:34:00Z"),
+//           [true]);
+//     });
+//     test("testDateNotEqualTimeSecond", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"Patient.birthDate != @T12:14:15"),
+//           [true]);
+//     });
+//     test("testDateNotEqualTimeMinute", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"Patient.birthDate != @T12:14"),
+//           [true]);
+//     });
+//     test("testDateNotEqualToday", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"Patient.birthDate < today()"),
+//           [true]);
+//     });
+//     // todo: now() is a DateTime including timezone offset, so this should be
+//     // null, unless it pulls in the birthDate extension
+//     // test("testDateTimeGreaterThanDate", () {
+//     //   print('testing the error here');
+//     //   expect(
+//     //       walkFhirPath(
+//     //           context: patientExample(),
+//     //           pathExpression: r"now() > Patient.birthDate"),
+//     //       [true]);
+//     // });
 
-    test("testLiteralDateTimeTZGreater", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression:
-                  r"@2017-11-05T01:30:00.0-04:00 > @2017-11-05T01:15:00.0-05:00"),
-          [false]);
-    });
-    test("testLiteralDateTimeTZLess", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression:
-                  r"@2017-11-05T01:30:00.0-04:00 < @2017-11-05T01:15:00.0-05:00"),
-          [true]);
-    });
-    test("testLiteralDateTimeTZEqualFalse", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression:
-                  r"@2017-11-05T01:30:00.0-04:00 = @2017-11-05T01:15:00.0-05:00"),
-          [false]);
-    });
-    test("testLiteralDateTimeTZEqualTrue", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression:
-                  r"@2017-11-05T01:30:00.0-04:00 = @2017-11-05T00:30:00.0-05:00"),
-          [true]);
-    });
-  });
-  test("testLiteralUnicode", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: r"Patient.name.given.first() = 'P\u0065ter'"),
-        [true]);
-  });
+//     test("testLiteralDateTimeTZGreater", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression:
+//                   r"@2017-11-05T01:30:00.0-04:00 > @2017-11-05T01:15:00.0-05:00"),
+//           [false]);
+//     });
+//     test("testLiteralDateTimeTZLess", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression:
+//                   r"@2017-11-05T01:30:00.0-04:00 < @2017-11-05T01:15:00.0-05:00"),
+//           [true]);
+//     });
+//     test("testLiteralDateTimeTZEqualFalse", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression:
+//                   r"@2017-11-05T01:30:00.0-04:00 = @2017-11-05T01:15:00.0-05:00"),
+//           [false]);
+//     });
+//     test("testLiteralDateTimeTZEqualTrue", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression:
+//                   r"@2017-11-05T01:30:00.0-04:00 = @2017-11-05T00:30:00.0-05:00"),
+//           [true]);
+//     });
+//   });
+//   test("testLiteralUnicode", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: r"Patient.name.given.first() = 'P\u0065ter'"),
+//         [true]);
+//   });
 
-  test("testCollectionNotEmpty", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: r"Patient.name.given.empty().not()"),
-        [true]);
-  });
-  test("testCollectionNotEqualEmpty", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: "Patient.name.given != {}"),
-        []);
-  });
+//   test("testCollectionNotEmpty", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: r"Patient.name.given.empty().not()"),
+//         [true]);
+//   });
+//   test("testCollectionNotEqualEmpty", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: "Patient.name.given != {}"),
+//         []);
+//   });
 
-  test("testExpressions", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: "Patient.name.select(given | family).distinct()"),
-        unorderedEquals(['Peter', 'James', 'Chalmers', 'Jim', 'Windsor']));
-  });
+//   test("testExpressions", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: "Patient.name.select(given | family).distinct()"),
+//         unorderedEquals(['Peter', 'James', 'Chalmers', 'Jim', 'Windsor']));
+//   });
 
-  test("testExpressionsEqual", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: r"Patient.name.given.count() = 1 + 4"),
-        [true]);
-  });
+//   test("testExpressionsEqual", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: r"Patient.name.given.count() = 1 + 4"),
+//         [true]);
+//   });
 
-  test("testNotEmpty", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: r"Patient.name.empty().not()"),
-        [true]);
-  });
-  test("testEmpty", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(), pathExpression: r"Patient.link.empty()"),
-        [true]);
-  });
+//   test("testNotEmpty", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: r"Patient.name.empty().not()"),
+//         [true]);
+//   });
+//   test("testEmpty", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(), pathExpression: r"Patient.link.empty()"),
+//         [true]);
+//   });
 
-  test("testLiteralNotTrue", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(), pathExpression: r"true.not() = false"),
-        [true]);
-  });
-  test("testLiteralNotFalse", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(), pathExpression: r"false.not() = true"),
-        [true]);
-  });
-  test("testIntegerBooleanNotTrue", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(), pathExpression: r"(0).not() = true"),
-        [true]);
-  });
-  test("testIntegerBooleanNotFalse", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(), pathExpression: r"(1).not() = false"),
-        [true]);
-  });
-  test("testNotInvalid", () {
-    expect(
-        () => walkFhirPath(
-            context: patientExample(), pathExpression: r"(1|2).not() = false"),
-        throwsA(TypeMatcher<FhirPathEvaluationException>()));
-  });
+//   test("testLiteralNotTrue", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(), pathExpression: r"true.not() = false"),
+//         [true]);
+//   });
+//   test("testLiteralNotFalse", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(), pathExpression: r"false.not() = true"),
+//         [true]);
+//   });
+//   test("testIntegerBooleanNotTrue", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(), pathExpression: r"(0).not() = true"),
+//         [true]);
+//   });
+//   test("testIntegerBooleanNotFalse", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(), pathExpression: r"(1).not() = false"),
+//         [true]);
+//   });
+//   test("testNotInvalid", () {
+//     expect(
+//         () => walkFhirPath(
+//             context: patientExample(), pathExpression: r"(1|2).not() = false"),
+//         throwsA(TypeMatcher<FhirPathEvaluationException>()));
+//   });
 
-  group('testTypes', () {
-    test("testStringYearConvertsToDate", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015'.convertsToDate()"),
-          [true]);
-    });
-    test("testStringMonthConvertsToDate", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015-02'.convertsToDate()"),
-          [true]);
-    });
-    test("testStringDayConvertsToDate", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015-02-04'.convertsToDate()"),
-          [true]);
-    });
+//   group('testTypes', () {
+//     test("testStringYearConvertsToDate", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015'.convertsToDate()"),
+//           [true]);
+//     });
+//     test("testStringMonthConvertsToDate", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015-02'.convertsToDate()"),
+//           [true]);
+//     });
+//     test("testStringDayConvertsToDate", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015-02-04'.convertsToDate()"),
+//           [true]);
+//     });
 
-    test("testStringYearConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015'.convertsToDateTime()"),
-          [true]);
-    });
-    test("testStringMonthConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015-02'.convertsToDateTime()"),
-          [true]);
-    });
-    test("testStringDayConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015-02-04'.convertsToDateTime()"),
-          [true]);
-    });
-    test("testStringHourConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015-02-04T14'.convertsToDateTime()"),
-          [true]);
-    });
-    test("testStringMinuteConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015-02-04T14:34'.convertsToDateTime()"),
-          [true]);
-    });
-    test("testStringSecondConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015-02-04T14:34:28'.convertsToDateTime()"),
-          [true]);
-    });
-    test("testStringMillisecondConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression:
-                  r"'2015-02-04T14:34:28.123'.convertsToDateTime()"),
-          [true]);
-    });
-    test("testStringUTCConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'2015-02-04T14:34:28Z'.convertsToDateTime()"),
-          [true]);
-    });
-    test("testStringTZConvertsToDateTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression:
-                  r"'2015-02-04T14:34:28+10:00'.convertsToDateTime()"),
-          [true]);
-    });
+//     test("testStringYearConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015'.convertsToDateTime()"),
+//           [true]);
+//     });
+//     test("testStringMonthConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015-02'.convertsToDateTime()"),
+//           [true]);
+//     });
+//     test("testStringDayConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015-02-04'.convertsToDateTime()"),
+//           [true]);
+//     });
+//     test("testStringHourConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015-02-04T14'.convertsToDateTime()"),
+//           [true]);
+//     });
+//     test("testStringMinuteConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015-02-04T14:34'.convertsToDateTime()"),
+//           [true]);
+//     });
+//     test("testStringSecondConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015-02-04T14:34:28'.convertsToDateTime()"),
+//           [true]);
+//     });
+//     test("testStringMillisecondConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression:
+//                   r"'2015-02-04T14:34:28.123'.convertsToDateTime()"),
+//           [true]);
+//     });
+//     test("testStringUTCConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'2015-02-04T14:34:28Z'.convertsToDateTime()"),
+//           [true]);
+//     });
+//     test("testStringTZConvertsToDateTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression:
+//                   r"'2015-02-04T14:34:28+10:00'.convertsToDateTime()"),
+//           [true]);
+//     });
 
-    test("testStringHourConvertsToTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'14'.convertsToTime()"),
-          [true]);
-    });
-    test("testStringMinuteConvertsToTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'14:34'.convertsToTime()"),
-          [true]);
-    });
-    test("testStringSecondConvertsToTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'14:34:28'.convertsToTime()"),
-          [true]);
-    });
-    test("testStringMillisecondConvertsToTime", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'14:34:28.123'.convertsToTime()"),
-          [true]);
-    });
+//     test("testStringHourConvertsToTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'14'.convertsToTime()"),
+//           [true]);
+//     });
+//     test("testStringMinuteConvertsToTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'14:34'.convertsToTime()"),
+//           [true]);
+//     });
+//     test("testStringSecondConvertsToTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'14:34:28'.convertsToTime()"),
+//           [true]);
+//     });
+//     test("testStringMillisecondConvertsToTime", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'14:34:28.123'.convertsToTime()"),
+//           [true]);
+//     });
 
-    test("testIntegerLiteralConvertsToInteger", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"1.convertsToInteger()"),
-          [true]);
-    });
-    test("testIntegerLiteralIsInteger", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(), pathExpression: r"1 is Integer"),
-          [true]);
-    });
-    // todo: integrate: models https://hl7.org/fhirpath/#models
-    //
-    // test("testIntegerLiteralIsSystemInteger", () {
-    //   expect(
-    //       walkFhirPath(
-    //           context: patientExample(),
-    //           pathExpression: r"1 is System.Integer"),
-    //       [true]);
-    // });
-    test("testStringLiteralConvertsToInteger", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'1'.convertsToInteger()"),
-          [true]);
-    });
-    test("testStringLiteralConvertsToIntegerFalse", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'a'.convertsToInteger().not()"),
-          [true]);
-    });
-    test("testStringDecimalConvertsToIntegerFalse", () {
-      expect(
-          walkFhirPath(
-              context: patientExample(),
-              pathExpression: r"'1.0'.convertsToInteger().not()"),
-          [true]);
-    });
-  });
-// // TODO: Incorrect test case. Wrong assumptions around precedence
-// /*    test("testStringLiteralIsNotInteger", () {
-//       expect(walkFhirPath(context: patientExample(), pathExpression: r"'1' is Integer.not()"), [true]);
-//     }); */
-  test("testStringLiteralIsNotInteger-fixed", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: r"('1' is Integer).not()"),
-        [true]);
-  });
-  test("testBooleanLiteralConvertsToInteger", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: r"true.convertsToInteger()"),
-        [true]);
-  });
-// // TODO: Incorrect test case. Wrong assumptions around precedence
-// /*    test("testBooleanLiteralIsNotInteger", () {
-//       expect(walkFhirPath(context: patientExample(), pathExpression: r"true is Integer.not()"), [true]);
-//     }); */
-  test("testBooleanLiteralIsNotInteger-fixed", () {
-    expect(
-        walkFhirPath(
-            context: patientExample(),
-            pathExpression: r"(true is Integer).not()"),
-        [true]);
+//     test("testIntegerLiteralConvertsToInteger", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"1.convertsToInteger()"),
+//           [true]);
+//     });
+//     test("testIntegerLiteralIsInteger", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(), pathExpression: r"1 is Integer"),
+//           [true]);
+//     });
+//     // todo: integrate: models https://hl7.org/fhirpath/#models
+//     //
+//     // test("testIntegerLiteralIsSystemInteger", () {
+//     //   expect(
+//     //       walkFhirPath(
+//     //           context: patientExample(),
+//     //           pathExpression: r"1 is System.Integer"),
+//     //       [true]);
+//     // });
+//     test("testStringLiteralConvertsToInteger", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'1'.convertsToInteger()"),
+//           [true]);
+//     });
+//     test("testStringLiteralConvertsToIntegerFalse", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'a'.convertsToInteger().not()"),
+//           [true]);
+//     });
+//     test("testStringDecimalConvertsToIntegerFalse", () {
+//       expect(
+//           walkFhirPath(
+//               context: patientExample(),
+//               pathExpression: r"'1.0'.convertsToInteger().not()"),
+//           [true]);
+//     });
+//   });
+// // // TODO: Incorrect test case. Wrong assumptions around precedence
+// // /*    test("testStringLiteralIsNotInteger", () {
+// //       expect(walkFhirPath(context: patientExample(), pathExpression: r"'1' is Integer.not()"), [true]);
+// //     }); */
+//   test("testStringLiteralIsNotInteger-fixed", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: r"('1' is Integer).not()"),
+//         [true]);
+//   });
+//   test("testBooleanLiteralConvertsToInteger", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: r"true.convertsToInteger()"),
+//         [true]);
+//   });
+// // // TODO: Incorrect test case. Wrong assumptions around precedence
+// // /*    test("testBooleanLiteralIsNotInteger", () {
+// //       expect(walkFhirPath(context: patientExample(), pathExpression: r"true is Integer.not()"), [true]);
+// //     }); */
+//   test("testBooleanLiteralIsNotInteger-fixed", () {
+//     expect(
+//         walkFhirPath(
+//             context: patientExample(),
+//             pathExpression: r"(true is Integer).not()"),
+//         [true]);
   });
 // // TODO: Incorrect test case. Wrong assumptions around precedence
 // /*    test("testDateIsNotInteger", () {

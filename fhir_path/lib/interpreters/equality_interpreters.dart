@@ -41,40 +41,32 @@ List? _$visitEqualityExpression(
             lhs[i] is Date ||
             rhs[i] is FhirDateTime ||
             rhs[i] is Date) {
-          print(lhs[i]);
-          print(rhs[i]);
-          print(lhs[i].toString());
-          print(rhs[i].toString());
-
           /// As long as one is, we convert them both to strings then back
           /// to DateTimes
           final lhsDateTime = FhirDateTime(lhs[i].toString());
           final rhsDateTime = FhirDateTime(rhs[i].toString());
 
-          print('lhs ${lhsDateTime.isValid}');
-          print('rhs ${rhsDateTime.isValid}');
-
           /// As long as they are both valid we try and compare them
           if (lhsDateTime.isValid && rhsDateTime.isValid) {
             try {
-              if (lhs[i] != rhs[i]) {
+              if (lhsDateTime != rhsDateTime) {
                 if (equivalent) {
                   visitor.context = <dynamic>[false];
                 } else {
                   var lhsDatePrecision =
-                      '-'.allMatches(lhs[i].toString()).length;
+                      '-'.allMatches(lhsDateTime.toString()).length;
                   lhsDatePrecision =
                       lhsDatePrecision > 2 ? 2 : lhsDatePrecision;
                   var rhsDatePrecision =
-                      '-'.allMatches(rhs[i].toString()).length;
+                      '-'.allMatches(rhsDateTime.toString()).length;
                   rhsDatePrecision =
                       rhsDatePrecision > 2 ? 2 : rhsDatePrecision;
                   var lhsTimePrecision =
-                      ':'.allMatches(lhs[i].toString()).length;
+                      ':'.allMatches(lhsDateTime.toString()).length;
                   lhsTimePrecision =
                       lhsTimePrecision > 2 ? 2 : lhsTimePrecision;
                   var rhsTimePrecision =
-                      ':'.allMatches(rhs[i].toString()).length;
+                      ':'.allMatches(rhsDateTime.toString()).length;
                   rhsTimePrecision =
                       rhsTimePrecision > 2 ? 2 : rhsTimePrecision;
                   if (lhsDatePrecision != rhsDatePrecision ||
