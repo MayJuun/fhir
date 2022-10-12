@@ -10,7 +10,7 @@ It contains packages for the 3 released FHIR versions:
 
 As well as the R5 (constantly in flux as it's actively being balloted):
 
-- [R5 v4.6.0 - 	FHIR Release #5: Snapshot #1 (Jan 2022 Connectathon)](https://hl7.org/fhir/2021May/)
+- [R5 v4.6.0 - FHIR Release #5: Snapshot #1 (Jan 2022 Connectathon)](https://hl7.org/fhir/2021May/)
 
 ## Say Hello
 
@@ -129,6 +129,7 @@ It will be false, because it will use the DateTime ```==``` instead.
 - For validating the toYaml() functions, I first read the map into a Resource, convert it into Yaml, convert it back into a Resource, and then use that in the validation function above.
 - There are two files that seem to have random nulls in the middle, I'm not sure why, they don't seem to serve any purpose, and they don't currently transfer into Yaml at this point.
 - Exceptions: this package does not support input such as the following, and will throw an error:
+
 ```json
 "timingTiming": {
   "event": [
@@ -136,6 +137,7 @@ It will be false, because it will use the DateTime ```==``` instead.
   ]
 }
 ```
+
 ## Code Generation
 
 I think it's the new compiling. It's actually great though, [json_serializable](https://pub.dev/packages/json_serializable) and [freezed](https://pub.dev/packages/freezed) are used extensively throughout. In order to allow a field to contain any resource, it is passed to the resource class and is passed to a switch case statement (which feels a little clunky, but I haven't managed a better way yet). I've removed the resource.g.dart files for all versions. It didn't appear to ever be used, but did lose me points on pub.dev. But if it changes your functionality, please let me know. It will state that there's an error when you run code generation however.
@@ -209,20 +211,21 @@ FHIR® is a registered trademark of Health Level Seven International (HL7) and i
 
 - FYI, I've decided it's silly to maintain this as a separate package when it always goes together, and it's just a single file. So I'm deprecating fhir_yaml and just including it in the main package. This was the readme from that package (and giving credit where credit is due)
 
-# toYaml
+## toYaml
 
 This is just my personal branch of the [json2yaml](https://github.com/alexei-sintotski/json2yaml) package by [Alexei Sintotski](https://github.com/alexei-sintotski). However, in order to be able to include it in some of my other packages, it needs to be published. I have added some additional formatting because some of the json that I needed to transform included complicated html/xml tags, plus I wanted to try and remove any extra lines that weren't necessary.
 
-# json2yaml [![Build Status](https://travis-ci.com/alexei-sintotski/json2yaml.svg?branch=master)](https://travis-ci.com/alexei-sintotski/json2yaml) [![codecov](https://codecov.io/gh/alexei-sintotski/json2yaml/branch/master/graph/badge.svg)](https://codecov.io/gh/alexei-sintotski/json2yaml) [![pubspec_lock version](https://img.shields.io/pub/v/json2yaml?label=json2yaml)](https://pub.dev/packages/json2yaml)
+## json2yaml
+
 Dart package to render JSON data to YAML
 
-This is for working with our [fhir](https://pub.dev/packages/fhir) package. FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7. 
+This is for working with our [fhir](https://pub.dev/packages/fhir) package. FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7.
 
 ## json2yaml()
 
 json2yaml is the function to format JSON data to YAML.
 
-```
+```dart
   const developerData = {
     'name': "Martin D'vloper",
     'job': 'Developer',
@@ -246,7 +249,7 @@ This function is implemented in a very basic and perhaps naive way, please let m
 
 To use fhir_yaml, add the following dependency to pubspec.yaml:
 
-```
+```yaml
 dependencies:
   fhir_yaml: ^0.2.1
 ```
@@ -255,13 +258,14 @@ dependencies:
 
 json2yaml supports the optional argument to customize YAML formatting for various use cases.
 At the moment, it supports the three following formatting styles:
+
 - YamlStyle.generic (default) -- Default formatting style applicable in most cases
 - YamlStyle.pubspecYaml -- YAML formatting style following pubspec.yaml formatting conventions
 - YamlStyle.pubspecLock -- YAML formatting style following pubspec.lock formatting conventions
 
 YAML style is supplied as an optional argument to json2yaml():
 
-```
+```dart
 /// Yaml formatting control options
 enum YamlStyle {
   generic,
@@ -275,6 +279,5 @@ String json2yaml(
   YamlStyle yamlStyle = YamlStyle.generic,
 });
 ```
-
 
 FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®
