@@ -1,11 +1,16 @@
 /// From Package: https://github.com/alexei-sintotski/json2yaml
 /// https://github.com/alexei-sintotski/json2yaml/blob/master/test/json2yaml_test.dart
 // ignore_for_file: use_raw_strings
+
+// Dart imports:
 import 'dart:convert';
 
-import 'package:fhir/yaml/fhir_yaml.dart';
+// Package imports:
 import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
+
+// Project imports:
+import 'package:fhir/yaml/fhir_yaml.dart';
 
 void main() {
   group('$json2yaml', () {

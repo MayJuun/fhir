@@ -4,14 +4,11 @@
 import 'dart:convert';
 
 // Package imports:
-
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../dstu2.dart';
-
-//
 
 part 'resource.g.dart';
 part 'resource_from_json.dart';
