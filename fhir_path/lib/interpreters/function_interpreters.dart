@@ -815,7 +815,7 @@ List? _$visitFunction(
               args.first is! num) {
             throw _wrongTypes('skip', visitor.context, args);
           } else if (args.first > 0 && visitor.context.isNotEmpty) {
-            if (visitor.context.length < args.first) {
+            if (visitor.context.length <= args.first) {
               visitor.context = <dynamic>[];
             } else {
               visitor.context = visitor.context.sublist(args.first);
@@ -1193,11 +1193,73 @@ List? _$visitFunction(
         break;
       case 'not':
         {
-          visitor.context = visitor.context.isEmpty ||
-                  visitor.context.length != 1 ||
-                  visitor.context.first is! bool
-              ? []
-              : [!visitor.context.first];
+          if (visitor.context.isEmpty ||
+              visitor.context.length != 1 ||
+              [
+                    'true',
+                    't',
+                    'yes',
+                    'y',
+                    '1',
+                    '1.0',
+                    'false',
+                    'f',
+                    'no',
+                    'n',
+                    '0',
+                    '0.0'
+                  ].indexWhere((element) =>
+                      element ==
+                      visitor.context.first.toString().toLowerCase()) ==
+                  -1) {
+            visitor.context = [];
+          } else {
+            visitor.context = visitor.context.first == true ||
+                    visitor.context.first == 1 ||
+                    [
+                          'true',
+                          't',
+                          'yes',
+                          'y',
+                          '1',
+                          '1.0',
+                        ].indexWhere((element) =>
+                            element ==
+                            visitor.context.first.toString().toLowerCase()) !=
+                        -1
+                ? <dynamic>[true]
+                : visitor.context.first == false ||
+                        visitor.context.first == 0 ||
+                        ['false', 'f', 'no', 'n', '0', '0.0'].indexWhere(
+                                (element) =>
+                                    element ==
+                                    visitor.context.first
+                                        .toString()
+                                        .toLowerCase()) !=
+                            -1
+                    ? <dynamic>[false]
+                    : <dynamic>[];
+            if (visitor.context.isNotEmpty) {
+              visitor.context = [!visitor.context.first];
+            }
+          }
+        }
+        break;
+      case 'children':
+        {
+          final results = [];
+          for (var context in visitor.context) {
+            if (context is Map) {
+              context.forEach((key, value) {
+                if (value is List) {
+                  results.addAll(value);
+                } else {
+                  results.add(value);
+                }
+              });
+            }
+          }
+          visitor.context = results;
         }
         break;
       default:

@@ -136,7 +136,7 @@ class FhirPathDartVisitor extends ParseTreeVisitor<List>
   @override
   List? visitUnionExpression(UnionExpressionContext ctx) {
     printContextType(ctx);
-    return visitChildren(ctx);
+    return _$visitUnionExpression(ctx, this);
   }
 
   @override

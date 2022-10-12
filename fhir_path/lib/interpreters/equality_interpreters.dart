@@ -126,6 +126,7 @@ const _allowedTypes = [
   int,
   double,
   Date,
+  DateTime,
   FhirDateTime,
   Time,
   FhirPathQuantity,
@@ -139,7 +140,7 @@ List? _$visitInequalityExpression(
 ) {
   /// must be 3 children or nodes
   if (ctx.childCount != 3) {
-    throw _wrongArgLength('log()', ctx.children ?? []);
+    throw _wrongArgLength('${ctx.text}', ctx.children ?? []);
   }
 
   /// calculate the two arguments and the comparator
@@ -215,41 +216,65 @@ bool? compare(_Comparator comparator, dynamic lhs, dynamic rhs) {
           ? makeComparison(comparator, lhs, rhs)
           : rhs is FhirNumber && rhs.isValid
               ? makeComparison(comparator, lhs, rhs.valueNumber)
-              : throw cannotCompareException(comparator, lhs, rhs);
+              : rhs is String && num.tryParse(rhs) != null
+                  ? makeComparison(comparator, lhs, num.parse(rhs))
+                  : throw cannotCompareException(comparator, lhs, rhs);
     case int:
       return rhs is num
           ? makeComparison(comparator, lhs, rhs)
           : rhs is FhirNumber && rhs.isValid
               ? makeComparison(comparator, lhs, rhs.valueNumber)
-              : throw cannotCompareException(comparator, lhs, rhs);
+              : rhs is String && num.tryParse(rhs) != null
+                  ? makeComparison(comparator, lhs, num.parse(rhs))
+                  : throw cannotCompareException(comparator, lhs, rhs);
     case double:
       return rhs is num
           ? makeComparison(comparator, lhs, rhs)
           : rhs is FhirNumber && rhs.isValid
               ? makeComparison(comparator, lhs, rhs.valueNumber)
-              : throw cannotCompareException(comparator, lhs, rhs);
+              : rhs is String && num.tryParse(rhs) != null
+                  ? makeComparison(comparator, lhs, num.parse(rhs))
+                  : throw cannotCompareException(comparator, lhs, rhs);
     case Date:
       return rhs is FhirDateTimeBase
           ? lhs.isValid && rhs.isValid
               ? makeComparison(comparator, lhs, rhs)
               : throw invalidException(comparator, lhs, rhs)
-          : throw cannotCompareException(comparator, lhs, rhs);
+          : rhs is String && FhirDateTime(rhs).isValid
+              ? makeComparison(comparator, lhs, rhs)
+              : throw cannotCompareException(comparator, lhs, rhs);
+    case DateTime:
+      return (rhs is FhirDateTimeBase && rhs.isValid)
+          ? makeComparison(comparator, FhirDateTime(lhs), rhs)
+          : rhs is DateTime
+              ? makeComparison(comparator, FhirDateTime(lhs), FhirDateTime(rhs))
+              : rhs is String && FhirDateTime(rhs).isValid
+                  ? makeComparison(
+                      comparator, FhirDateTime(lhs), FhirDateTime(rhs))
+                  : throw cannotCompareException(comparator, lhs, rhs);
     case FhirDateTime:
       return rhs is FhirDateTimeBase
           ? lhs.isValid && rhs.isValid
               ? makeComparison(comparator, lhs, rhs)
               : throw invalidException(comparator, lhs, rhs)
-          : throw cannotCompareException(comparator, lhs, rhs);
+          : rhs is String && FhirDateTime(rhs).isValid
+              ? makeComparison(comparator, lhs, FhirDateTime(rhs))
+              : throw cannotCompareException(comparator, lhs, rhs);
     case Time:
       return rhs is Time
           ? lhs.isValid && rhs.isValid
               ? makeComparison(comparator, lhs, rhs)
               : throw invalidException(comparator, lhs, rhs)
-          : throw cannotCompareException(comparator, lhs, rhs);
+          : rhs is String && Time(rhs).isValid
+              ? makeComparison(comparator, lhs, Time(rhs))
+              : throw cannotCompareException(comparator, lhs, rhs);
     case FhirPathQuantity:
       return rhs is FhirPathQuantity
           ? makeComparison(comparator, lhs, rhs)
-          : throw cannotCompareException(comparator, lhs, rhs);
+          : rhs is String
+              ? makeComparison(
+                  comparator, lhs, FhirPathQuantity.fromString(rhs))
+              : throw cannotCompareException(comparator, lhs, rhs);
 
     /// Default should be when lhs is a String
     default:

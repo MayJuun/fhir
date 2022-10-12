@@ -6,7 +6,7 @@ import 'package:fhir_path/fhir_path.dart';
 
 void main() async {
   // print(jsonEncode(resource.toJson()));
-  print('abc'.replaceAll('', 'x'));
+  // print('abc'.replaceAll('', 'x'));
   // print(0 % 4);
   // print(4 % 0);
   // print(FhirDateTime('2018-03-01') > FhirDateTime('2018-01-01'));
@@ -20,18 +20,24 @@ void main() async {
   // context['console'].callMethod('log', [message]);
   // js.callMethod({}, 'console.log', ['Hello World!']);
   // log('Hello World!');
-  final input = await InputStream.fromString('valueParser');
-  final lexer = FhirPathLexer(input);
-  print(lexer.channelNames);
-  print(lexer.ruleNames);
-  print(lexer.modeNames);
-  print(lexer.tokenFactory);
-  final tokens = CommonTokenStream(lexer);
-  print(tokens.numberOfOnChannelTokens);
-  final parser = FhirPathParser(tokens);
-  parser.buildParseTree = true;
+  parseFhirPath(r"  ");
+  parseFhirPath(r"@T14:34:28Z is Time");
+  // final input = InputStream.fromString(r"@T14:34:28Z is Time");
+  // final lexer = FhirPathLexer(input);
+  // // lexer.allTokens.forEach((element) {
+  // //   print(element.text);
+  // // });
+  // final tokens = CommonTokenStream(lexer);
+  // final parser = FhirPathParser(tokens);
+  // parser.buildParseTree = true;
+  // print('31');
   // final tree = parser.expression();
+  // print('33');
+  // tree.children?.forEach((element) {
+  //   print(element.text);
+  // });
   // final visitor = FhirPathDartVisitor({}, {});
+  // tree.children?.forEach((e) => print(e.text));
   // print(visitor.visit(tree));
 }
 

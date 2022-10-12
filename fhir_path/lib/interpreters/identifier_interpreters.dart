@@ -10,6 +10,7 @@ List? _$visitIdentifier(
   } else {
     identifierName = ctx.text;
   }
+
   if (visitor.identifierOnly) {
     visitor.context = [identifierName];
   } else {
@@ -88,12 +89,10 @@ List? _$visitIdentifier(
           }
         }
       });
-    } else {
-      finalResults.add(identifierName);
     }
-
     visitor.environment['__extension'] = finalPrimitiveExtensions;
     visitor.context = finalResults;
   }
+
   return visitor.context;
 }

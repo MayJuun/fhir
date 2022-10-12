@@ -89,3 +89,20 @@ List? _$visitAndExpression(
   ];
   return visitor.context;
 }
+
+List? _$visitUnionExpression(
+  UnionExpressionContext ctx,
+  FhirPathDartVisitor visitor,
+) {
+  final args = [
+    ...(visitor.copyWith().visit(ctx.getChild(0)!)?.toList() ?? []),
+    ...(visitor.copyWith().visit(ctx.getChild(2)!)?.toList() ?? [])
+  ];
+  visitor.context = <dynamic>[];
+  for (var value in args) {
+    if (notFoundInList(visitor.context, value)) {
+      visitor.context.add(value);
+    }
+  }
+  return visitor.context;
+}

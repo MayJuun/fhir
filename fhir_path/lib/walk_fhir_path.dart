@@ -96,6 +96,7 @@ ExpressionContext parseFhirPath(String pathExpression) {
     final tree = parser.expression();
     return tree;
   } catch (error) {
+    // print(error.runtimeType);
     // if (error is ParserException) {
     //   throw FhirPathInvalidExpressionException(
     //     'Expression could not be parsed: ${error.message}',

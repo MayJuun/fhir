@@ -44,6 +44,18 @@ List? _$visitStringLiteral(
   } else {
     visitor.context = <dynamic>[newString];
   }
+  final Pattern unicodePattern = new RegExp(r'\\u([0-9A-Fa-f]{4})');
+  final String newStr = visitor.context.first.replaceAllMapped(unicodePattern,
+      (Match unicodeMatch) {
+    if (unicodeMatch.group(1) == null) {
+      return '';
+    } else {
+      final int hexCode = int.parse(unicodeMatch.group(1)!, radix: 16);
+      final unicode = String.fromCharCode(hexCode);
+      return unicode;
+    }
+  });
+  visitor.context = [newStr];
   return visitor.context;
 }
 
