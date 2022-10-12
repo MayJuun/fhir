@@ -1264,7 +1264,7 @@ const _$OperationOutcomeIssueCodeEnumMap = {
   OperationOutcomeIssueCode.exception: 'exception',
   OperationOutcomeIssueCode.timeout: 'timeout',
   OperationOutcomeIssueCode.throttled: 'throttled',
-  OperationOutcomeIssueCode.information: 'information',
+  OperationOutcomeIssueCode.informational: 'informational',
 };
 
 _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>

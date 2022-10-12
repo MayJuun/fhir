@@ -38,8 +38,6 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
     newId = response.id;
 
     if (newId is! String) {
-      print('is operation outcome: ${response is OperationOutcome}');
-      print((response as OperationOutcome).issue.first.code);
       if (response is OperationOutcome &&
           response.issue.isNotEmpty &&
           response.issue.first.location != null &&
@@ -60,22 +58,21 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
           );
 
           final response = await request2.request();
-          // print('Response from read:\n${response.toJson()}');
+          print('Response from read:\n${response.toJson()}');
         }
       } else if (response is OperationOutcome &&
-          response.issue.first.code == Code('information')) {
-        print('INFORMATION OPERATION OUTCOME');
+          (response.issue.first.code == Code('informational') ||
+              response.issue.first.severity == Code('information'))) {
+        final code = newPatient.identifier?.first.value;
         final request2 = FhirRequest.search(
           base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
           type: R4ResourceType.Patient,
-          parameters: [
-            'identifier=${newPatient.identifier!.first.value}|system=https://www.mayjuun.com'
-          ],
+          parameters: ['identifier=https://www.mayjuun.com|$code'],
           client: client,
         );
 
         final response = await request2.request();
-        // print('Response from read:\n${response.toJson()}');
+        print('Response from read:\n${response.toJson()}');
       }
     } else {
       final request2 = FhirRequest.read(
@@ -86,7 +83,7 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
       );
 
       final response = await request2.request();
-      // print('Response from read:\n${response.toJson()}');
+      print('Response from read:\n${response.toJson()}');
     }
   }
 }
@@ -107,6 +104,7 @@ Patient _newPatient() => Patient.fromJson({
               {"system": "https://www.mayjuun.com", "code": "cuestionario"}
             ]
           },
+          "system": "https://www.mayjuun.com",
           "value": generateRandomString(12)
         },
         {
@@ -128,5 +126,5 @@ Patient _newPatient() => Patient.fromJson({
         }
       ],
       "gender": "male",
-      "birthDate": "1973-06-03",
+      "birthDate": "1973-06-03"
     });
