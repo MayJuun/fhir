@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/fhir_client/epic_fhir_client.dart';
@@ -21,10 +23,11 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
   print('logged in');
 
   if (client.fhirUri.value != null) {
-    print('Patient to be uploaded:\n${_newPatient.toJson()}');
+    final newPatient = _newPatient();
+    print('Patient to be uploaded:\n${newPatient.toJson()}');
     final request1 = FhirRequest.create(
       base: client.fhirUri.value!,
-      resource: _newPatient,
+      resource: newPatient,
       client: client,
     );
 
@@ -35,10 +38,13 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
     newId = response.id;
 
     if (newId is! String) {
+      print('is operation outcome: ${response is OperationOutcome}');
+      print((response as OperationOutcome).issue.first.code);
       if (response is OperationOutcome &&
           response.issue.isNotEmpty &&
           response.issue.first.location != null &&
           response.issue.first.location!.isNotEmpty) {
+        print('OPERATION OUTCOME');
         final location = response.issue.first.location!.first;
         final resourceType =
             ResourceUtils.resourceTypeFromStringMap[location.split('/').first];
@@ -54,8 +60,22 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
           );
 
           final response = await request2.request();
-          print('Response from read:\n${response.toJson()}');
+          // print('Response from read:\n${response.toJson()}');
         }
+      } else if (response is OperationOutcome &&
+          response.issue.first.severity == Code('information')) {
+        print('INFORMATION OPERATION OUTCOME');
+        final request2 = FhirRequest.search(
+          base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
+          type: R4ResourceType.Patient,
+          parameters: [
+            'identifier=${newPatient.identifier!.first.value}|system=https://www.mayjuun.com'
+          ],
+          client: client,
+        );
+
+        final response = await request2.request();
+        // print('Response from read:\n${response.toJson()}');
       }
     } else {
       final request2 = FhirRequest.read(
@@ -66,32 +86,47 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
       );
 
       final response = await request2.request();
-      print('Response from read:\n${response.toJson()}');
+      // print('Response from read:\n${response.toJson()}');
     }
   }
 }
 
-final _newPatient = Patient.fromJson({
-  "resourceType": "Patient",
-  "identifier": [
-    {
-      "type": {
-        "coding": [
-          {"system": "http://hl7.org/fhir/sid/us-ssn", "code": "SB"}
-        ]
-      },
-      "system": "urn:oid:2.16.840.1.113883.4.1",
-      "value": "444114567"
-    }
-  ],
-  "name": [
-    {
-      "use": "usual",
-      "text": "Derrick Lin",
-      "family": "Lin",
-      "given": ["Derrick"]
-    }
-  ],
-  "gender": "male",
-  "birthDate": "1973-06-03",
-});
+String generateRandomString(int len) {
+  var r = Random();
+  const _chars =
+      'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+  return List.generate(len, (index) => _chars[r.nextInt(_chars.length)]).join();
+}
+
+Patient _newPatient() => Patient.fromJson({
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "type": {
+            "coding": [
+              {"system": "https://www.mayjuun.com", "code": "cuestionario"}
+            ]
+          },
+          "value": generateRandomString(12)
+        },
+        {
+          "type": {
+            "coding": [
+              {"system": "http://hl7.org/fhir/sid/us-ssn", "code": "SB"}
+            ]
+          },
+          "system": "urn:oid:2.16.840.1.113883.4.1",
+          "value": "444114567"
+        }
+      ],
+      "name": [
+        {
+          "use": "usual",
+          "text": "Derrick Lin",
+          "family": "Lin",
+          "given": ["Derrick"]
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1973-06-03",
+    });
