@@ -80,6 +80,25 @@ List? _$visitEqualityExpression(
 
         /// If they aren't dateTimes we can just compare them as usual
         else {
+          if (lhs[i] is FhirPathQuantity || rhs[i] is FhirPathQuantity) {
+            if (lhs[i] is FhirPathQuantity) {
+              if (equivalent) {
+                visitor.context = <dynamic>[
+                  (lhs[i] as FhirPathQuantity).equivalent(rhs[i])
+                ];
+              } else {
+                visitor.context = <dynamic>[lhs[i] == rhs[i]];
+              }
+            } else {
+              if (equivalent) {
+                visitor.context = <dynamic>[
+                  (rhs[i] as FhirPathQuantity).equivalent(lhs[i])
+                ];
+              } else {
+                visitor.context = <dynamic>[rhs[i] == lhs[i]];
+              }
+            }
+          }
           if ((lhs[i] != rhs[i] || rhs[i] != lhs[i])) {
             visitor.context = <dynamic>[false];
           }

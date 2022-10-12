@@ -14,35 +14,51 @@ import 'unit_code.dart';
 
 class FhirPathQuantity {
   factory FhirPathQuantity.fromString(String quantityString) {
-    final qtyParts = quantityString.split(' ');
-    if (qtyParts.length != 2) {
+    if (FhirPathQuantity.fhirPathQuantityRegex
+        .hasMatch(quantityString.replaceAll(r"\'", "'"))) {
+      final match = FhirPathQuantity.fhirPathQuantityRegex
+          .firstMatch(quantityString.replaceAll(r"\'", "'"));
+      final value = match?.namedGroup('value');
+      if (value == null) {
+        throw FhirPathEvaluationException(
+            'Malformed quantity: $quantityString');
+      }
+      final unit = match?.namedGroup('unit');
+      final time = match?.namedGroup('time');
+      String unitString = '';
+
+      if (unit == null && time == null) {
+        // Special logic for UCUM, where the empty unit is '1';
+        unitString = '1';
+      } else if (unit != null) {
+        unitString = unit;
+      } else if (time != null) {
+        unitString = time;
+      }
+
+      // Cannot just replace all apostrophes, as some units have one in the middle.
+      if (unitString.startsWith("'")) {
+        unitString = unitString.substring(1, unitString.length - 1);
+      }
+
+      // Escaped ' can all be removed
+      unitString.replaceAll(r"\'", '');
+
+      // Try to normalize time-valued units
+      unitString = timeValuedQuantitiesUnits[unitString] ?? unitString;
+
+      return FhirPathQuantity(num.parse(value), unitString);
+    } else {
       throw FhirPathEvaluationException('Malformed quantity: $quantityString');
     }
-    final amountString = qtyParts.first;
-    String unitString = qtyParts.last;
-
-    // Cannot just replace all apostrophes, as some units have one in the middle.
-    if (unitString.startsWith("'")) {
-      unitString = unitString.substring(1, unitString.length - 1);
-    }
-
-    // Escaped ' can all be removed
-    unitString.replaceAll(r"\'", '');
-
-    // Try to normalize time-valued units
-    unitString = timeValuedQuantitiesUnits[unitString] ?? unitString;
-
-    // Special logic for UCUM, where the empty unit is '1';
-    if (unitString.isEmpty) {
-      unitString = '1';
-    }
-
-    return FhirPathQuantity(num.parse(amountString), unitString);
   }
 
   FhirPathQuantity(this.amount, this.unit);
   num amount;
   String unit;
+
+  static RegExp fhirPathQuantityRegex = RegExp(
+      r"^(?<value>(\+|-)?\d+(\.\d+)?)\s*('(?<unit>[^']+)'|(?<time>[a-zA-Z]+))?$");
 
   String get value => toString();
   bool get isNaN => amount.isNaN;
@@ -51,7 +67,7 @@ class FhirPathQuantity {
       definiteQuantityDurationUnits.containsKey(unit);
   String toString() => isTimeValued ? '$amount $unit' : "$amount '$unit'";
 
-  bool operator ==(Object o) {
+  bool _eq(Object o, bool equivalent) {
     if (identical(this, o)) {
       return true;
     } else if (o is! FhirPathQuantity) {
@@ -59,16 +75,74 @@ class FhirPathQuantity {
     } else {
       final fromUnit = stringUnitToProperty[unit];
       final toUnit = stringUnitToProperty[o.unit];
-      if ((fromUnit is Ratio && toUnit is! Ratio) ||
-          (fromUnit is! Ratio && toUnit is Ratio)) {
-        return false;
-      } else if (fromUnit is Ratio) {
-        return amount.convertRatioFromTo(fromUnit, toUnit as Ratio) == o.amount;
+      if (fromUnit == null || toUnit == null) {
+        if (fromUnit == null && toUnit == null) {
+          if ((unit == 1 || num.tryParse(unit.toString()) == 1) &&
+              (o.unit == 1 || num.tryParse(o.unit.toString()) == 1)) {
+            if (equivalent) {
+              final sigDigsLhs = amount.toStringAsExponential().split('e');
+              final sigDigsRhs = o.amount.toStringAsExponential().split('e');
+              if (sigDigsLhs.first.length < sigDigsRhs.first.length) {
+                o.amount = num.parse(
+                    '${sigDigsRhs.first.toString().substring(0, sigDigsLhs.first.length)}'
+                    'e${sigDigsRhs.last}');
+              } else {
+                amount = num.parse(
+                    '${sigDigsLhs.first.toString().substring(0, sigDigsRhs.first.length)}'
+                    'e${sigDigsLhs.last}');
+              }
+              return amount == o.amount;
+            } else {
+              return amount == o.amount;
+            }
+          } else {
+            return false;
+          }
+        } else {
+          return false;
+        }
       } else {
-        return amount.convertFromTo(fromUnit, toUnit) == o.amount;
+        if ((fromUnit is Ratio && toUnit is! Ratio) ||
+            (fromUnit is! Ratio && toUnit is Ratio)) {
+          return false;
+        } else if (fromUnit is Ratio) {
+          if (equivalent) {
+            final sigDigsLhs = amount.toStringAsExponential().split('e');
+            final sigDigsRhs = o.amount.toStringAsExponential().split('e');
+            if (sigDigsLhs.first.length < sigDigsRhs.first.length) {
+              o.amount = num.parse(
+                  '${sigDigsRhs.first.toString().substring(0, sigDigsLhs.first.length)}'
+                  'e${sigDigsRhs.last}');
+            } else {
+              amount = num.parse(
+                  '${sigDigsLhs.first.toString().substring(0, sigDigsRhs.first.length)}'
+                  'e${sigDigsLhs.last}');
+            }
+          }
+          return amount.convertRatioFromTo(fromUnit, toUnit as Ratio) ==
+              o.amount;
+        } else {
+          if (equivalent) {
+            final sigDigsLhs = amount.toStringAsExponential().split('e');
+            final sigDigsRhs = o.amount.toStringAsExponential().split('e');
+            if (sigDigsLhs.first.length < sigDigsRhs.first.length) {
+              o.amount = num.parse(
+                  '${sigDigsRhs.first.toString().substring(0, sigDigsLhs.first.length)}'
+                  'e${sigDigsRhs.last}');
+            } else {
+              amount = num.parse(
+                  '${sigDigsLhs.first.toString().substring(0, sigDigsRhs.first.length)}'
+                  'e${sigDigsLhs.last}');
+            }
+          }
+          return amount.convertFromTo(fromUnit, toUnit) == o.amount;
+        }
       }
     }
   }
+
+  bool operator ==(Object o) => _eq(o, false);
+  bool equivalent(Object o) => _eq(o, true);
 
   bool compare(_Comparator comparator, Object o) {
     if (identical(this, o)) {
@@ -132,10 +206,17 @@ class FhirPathQuantity {
       final value = amount + o.amount;
       return FhirPathQuantity(value, unit);
     } else {
-      /// TODO: Should work on being able to multiply these values
-      throw primitives.InvalidTypes<FhirPathQuantity>(
-          'A + operator was attemped with an object that was not a FhirPathQuantity: '
-          'instead this was passed $o which is a type ${o.runtimeType}');
+      final fromUnit = stringUnitToProperty[o.unit];
+      final toUnit = stringUnitToProperty[unit];
+      final convertedAmount = o.amount.convertFromTo(fromUnit, toUnit);
+      if (convertedAmount == null) {
+        throw primitives.InvalidTypes<FhirPathQuantity>(
+            'A + operator was attemped with two units types that are not '
+            'comparable: $this and $o');
+      } else {
+        amount = amount + convertedAmount;
+        return this;
+      }
     }
   }
 
@@ -148,10 +229,17 @@ class FhirPathQuantity {
       final value = amount - o.amount;
       return FhirPathQuantity(value, unit);
     } else {
-      /// TODO: Should work on being able to multiply these values
-      throw primitives.InvalidTypes<FhirPathQuantity>(
-          'A + operator was attemped with an object that was not a FhirPathQuantity: '
-          'instead this was passed $o which is a type ${o.runtimeType}');
+      final fromUnit = stringUnitToProperty[o.unit];
+      final toUnit = stringUnitToProperty[unit];
+      final convertedAmount = o.amount.convertFromTo(fromUnit, toUnit);
+      if (convertedAmount == null) {
+        throw primitives.InvalidTypes<FhirPathQuantity>(
+            'A + operator was attemped with two units types that are not '
+            'comparable: $this and $o');
+      } else {
+        amount = amount - convertedAmount;
+        return this;
+      }
     }
   }
 
@@ -180,7 +268,7 @@ class FhirPathQuantity {
       final value = amount / o.amount;
       return FhirPathQuantity(value, unit);
     } else {
-      /// TODO: Should work on being able to multiply these values
+      /// TODO: Should work on being able to divide these values
       throw primitives.InvalidTypes<FhirPathQuantity>(
           'A / operator was attemped with an object that was not a FhirPathQuantity: '
           'instead this was passed $o which is a type ${o.runtimeType}');

@@ -356,13 +356,16 @@ List? _$visitFunction(
               ? <dynamic>[]
               : visitor.context.length > 1
                   ? throw _conversionException('.toQuantity()', visitor.context)
-                  // : visitor.context.first is FhirPathQuantity
-                  //     ? [visitor.context.first]
-                  //     : visitor.context.first is num
-                  //         ? [FhirPathQuantity(visitor.context.first, '1')]
-                  //         : visitor.context.first is String
-                  //             ? [FhirPathQuantity.fromString(visitor.context.first)]
-                  : <dynamic>[];
+                  : visitor.context.first is FhirPathQuantity
+                      ? [visitor.context.first]
+                      : visitor.context.first is num
+                          ? [FhirPathQuantity(visitor.context.first, '1')]
+                          : visitor.context.first is String
+                              ? [
+                                  FhirPathQuantity.fromString(
+                                      visitor.context.first)
+                                ]
+                              : <dynamic>[];
         }
         break;
       case 'convertsToQuantity':
@@ -383,22 +386,11 @@ List? _$visitFunction(
               visitor.context = [true];
             }
 
-            /// If it's a string
-            else if (visitor.context.first is String) {
-              /// We try and create a FhirPathQuantity
-              try {
-                FhirPathQuantity.fromString(visitor.context.first);
-
-                /// If no error is thrown, then it is and we return true
-                visitor.context = [true];
-              }
-
-              /// If there's an exception, it's because the String is not a
-              /// Quantity, and we return false
-
-              catch (e) {
-                visitor.context = [false];
-              }
+            /// If it's a string & convertible to a Quantity using the Regex
+            else if (visitor.context.first is String &&
+                FhirPathQuantity.fhirPathQuantityRegex
+                    .hasMatch(visitor.context.first.replaceAll(r"\'", "'"))) {
+              visitor.context = [true];
             }
 
             /// Otherwise it's definitely false
@@ -1097,7 +1089,7 @@ List? _$visitFunction(
             /// doesn't equal 1 or the single entry is a not a boolean, then
             /// we throw an error
             else if (condition!.length != 1) {
-              throw FhirPathInvalidExpressionException(
+              throw FhirPathEvaluationException(
                 'The function iif must have a criterion expression, that evaluates'
                 ' to a boolean, instead this evaluated to: $condition',
               );
@@ -1212,33 +1204,38 @@ List? _$visitFunction(
                       element ==
                       visitor.context.first.toString().toLowerCase()) ==
                   -1) {
-            visitor.context = [];
+            throw FhirPathEvaluationException(
+              'The function not() must be passed a single boolean value,'
+              'instead it was passed ${visitor.context}',
+            );
           } else {
-            visitor.context = visitor.context.first == true ||
-                    visitor.context.first == 1 ||
-                    [
-                          'true',
-                          't',
-                          'yes',
-                          'y',
-                          '1',
-                          '1.0',
-                        ].indexWhere((element) =>
-                            element ==
-                            visitor.context.first.toString().toLowerCase()) !=
-                        -1
-                ? <dynamic>[true]
-                : visitor.context.first == false ||
-                        visitor.context.first == 0 ||
-                        ['false', 'f', 'no', 'n', '0', '0.0'].indexWhere(
-                                (element) =>
-                                    element ==
-                                    visitor.context.first
-                                        .toString()
-                                        .toLowerCase()) !=
-                            -1
-                    ? <dynamic>[false]
-                    : <dynamic>[];
+            if (visitor.context.first == true ||
+                visitor.context.first == 1 ||
+                [
+                      'true',
+                      't',
+                      'yes',
+                      'y',
+                      '1',
+                      '1.0',
+                    ].indexWhere((element) =>
+                        element ==
+                        visitor.context.first.toString().toLowerCase()) !=
+                    -1) {
+              visitor.context = <dynamic>[true];
+            } else if (visitor.context.first == false ||
+                visitor.context.first == 0 ||
+                ['false', 'f', 'no', 'n', '0', '0.0'].indexWhere((element) =>
+                        element ==
+                        visitor.context.first.toString().toLowerCase()) !=
+                    -1) {
+              visitor.context = <dynamic>[false];
+            } else {
+              throw FhirPathEvaluationException(
+                'The function not must be passed a single boolean value,'
+                'instead it was passed ${visitor.context}',
+              );
+            }
             if (visitor.context.isNotEmpty) {
               visitor.context = [!visitor.context.first];
             }
@@ -1260,6 +1257,12 @@ List? _$visitFunction(
             }
           }
           visitor.context = results;
+        }
+        break;
+      case 'descendants':
+        {
+          final newContext = visitor.newContext('repeat(children())');
+          visitor.context = visitor.copyWith().visit(newContext) ?? [];
         }
         break;
       default:

@@ -1,10 +1,22 @@
-// Package imports:
-import 'package:antlr4/antlr4.dart';
+// // Package imports:
+// import 'package:antlr4/antlr4.dart';
 
-// Project imports:
-import 'package:fhir_path/fhir_path.dart';
+// // Project imports:
+// import 'package:fhir_path/fhir_path.dart';
 
 void main() async {
+  final tempString1 = '1.a';
+  final tempString2 = '1 wk';
+  final regexp = RegExp(
+      r"^(?<value>(\+|-)?\d+(\.\d+)?)\s*('(?<unit>[^']+)'|(?<time>[a-zA-Z]+))?$");
+  //    (?:'value'(\+|-)?\d+(\.\d+)?)\s*('(?:'unit'[^']+)'|(?'time'[a-zA-Z]+))?
+  // print('value1 ${regexp.firstMatch(tempString1)?.namedGroup('value')}');
+  // print('unit1 ${regexp.firstMatch(tempString1)?.namedGroup('unit')}');
+  // print('time1 ${regexp.firstMatch(tempString1)?.namedGroup('time')}');
+  print(regexp.hasMatch(tempString1));
+  // print(tempString1);
+  // print(regexp.hasMatch(tempString2));
+  // print(tempString2);
   // print(jsonEncode(resource.toJson()));
   // print('abc'.replaceAll('', 'x'));
   // print(0 % 4);
@@ -20,8 +32,8 @@ void main() async {
   // context['console'].callMethod('log', [message]);
   // js.callMethod({}, 'console.log', ['Hello World!']);
   // log('Hello World!');
-  parseFhirPath(r"  ");
-  parseFhirPath(r"@T14:34:28Z is Time");
+  // parseFhirPath(r"  ");
+  // parseFhirPath(r"@T14:34:28Z is Time");
   // final input = InputStream.fromString(r"@T14:34:28Z is Time");
   // final lexer = FhirPathLexer(input);
   // // lexer.allTokens.forEach((element) {
