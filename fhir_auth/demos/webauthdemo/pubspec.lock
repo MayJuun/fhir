@@ -53,30 +53,23 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      name: fhir
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.0"
+      path: "../../../fhir"
+      relative: true
+    source: path
+    version: "0.9.1"
   fhir_at_rest:
     dependency: "direct main"
     description:
-      name: fhir_at_rest
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.0"
+      path: "../../../fhir_at_rest"
+      relative: true
+    source: path
+    version: "0.9.1"
   fhir_auth:
     dependency: "direct main"
     description:
       path: "../.."
       relative: true
     source: path
-    version: "0.9.0"
-  fhir_yaml:
-    dependency: transitive
-    description:
-      name: fhir_yaml
-      url: "https://pub.dartlang.org"
-    source: hosted
     version: "0.9.0"
   flutter:
     dependency: "direct main"
@@ -106,28 +99,28 @@ packages:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.3"
+    version: "2.1.0"
   google_sign_in:
     dependency: "direct main"
     description:
       name: google_sign_in
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.4.0"
+    version: "5.4.2"
   google_sign_in_android:
     dependency: transitive
     description:
       name: google_sign_in_android
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.1"
+    version: "6.1.1"
   google_sign_in_ios:
     dependency: transitive
     description:
       name: google_sign_in_ios
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.4.0"
+    version: "5.5.0"
   google_sign_in_platform_interface:
     dependency: transitive
     description:
@@ -148,7 +141,7 @@ packages:
       name: http
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.13.4"
+    version: "0.13.5"
   http_parser:
     dependency: transitive
     description:
@@ -169,7 +162,7 @@ packages:
       name: json_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.6.0"
+    version: "4.7.0"
   jwt_decoder:
     dependency: transitive
     description:
@@ -293,7 +286,7 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.1.4"
+    version: "6.1.6"
   url_launcher_android:
     dependency: transitive
     description:
@@ -365,5 +358,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=2.17.0 <3.0.0"
+  dart: ">=2.18.0 <3.0.0"
   flutter: ">=2.10.0"
