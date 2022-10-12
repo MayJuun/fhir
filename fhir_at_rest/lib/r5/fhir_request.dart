@@ -1334,7 +1334,8 @@ class FhirRequest with _$FhirRequest {
         if (result.statusCode == 200 || result.statusCode == 201) {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
-                code: Code('information'),
+                severity: Code('information'),
+                code: Code('informational'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was: \n'
@@ -1347,7 +1348,8 @@ class FhirRequest with _$FhirRequest {
         } else {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
-                code: Code('information'),
+                severity: Code('information'),
+                code: Code('informational'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was: \n'

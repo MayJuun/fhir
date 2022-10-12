@@ -63,7 +63,7 @@ Future<void> epicClinicianRequest(Uri fhirCallback) async {
           // print('Response from read:\n${response.toJson()}');
         }
       } else if (response is OperationOutcome &&
-          response.issue.first.severity == Code('information')) {
+          response.issue.first.code == Code('information')) {
         print('INFORMATION OPERATION OUTCOME');
         final request2 = FhirRequest.search(
           base: client.fhirUri.value ?? Uri.parse('127.0.0.1'),
