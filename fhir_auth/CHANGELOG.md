@@ -7,6 +7,11 @@
 * Internal launch for patients and users for Epic and Meld (HAPI)
 * External launch for patients and users for Google, Meld (HAPI), and Epic
 
+## [0.9.0-1]
+
+* Successfully does external and internal web launches to Epic for patients
+* For users, successfully logs in externally, doesn't return all needed headers
+
 ## [0.8.1]
 
 * Added demos

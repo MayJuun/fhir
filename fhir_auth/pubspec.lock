@@ -135,7 +135,7 @@ packages:
     source: hosted
     version: "1.6.1"
   crypto:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: crypto
       url: "https://pub.dartlang.org"
@@ -189,7 +189,7 @@ packages:
     source: hosted
     version: "0.4.1"
   flutter_web_plugins:
-    dependency: transitive
+    dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
