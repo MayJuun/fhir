@@ -150,8 +150,8 @@ enum OperationOutcomeIssueCode {
   timeout,
   @JsonValue('throttled')
   throttled,
-  @JsonValue('informational')
-  informational,
+  @JsonValue('information')
+  information,
 }
 
 enum SubscriptionStatus {

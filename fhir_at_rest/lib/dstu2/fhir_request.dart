@@ -1337,7 +1337,7 @@ class FhirRequest with _$FhirRequest {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
                 severity: IssueSeverity.information,
-                code: Code('informational'),
+                code: Code('information'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was: \n'
@@ -1351,7 +1351,7 @@ class FhirRequest with _$FhirRequest {
           return OperationOutcome(issue: [
             OperationOutcomeIssue(
                 severity: IssueSeverity.information,
-                code: Code('informational'),
+                code: Code('information'),
                 diagnostics: 'Your request succeeded with a status of '
                     '${result.statusCode}\nbut the result did not have a body\n'
                     'Your request was: \n'
